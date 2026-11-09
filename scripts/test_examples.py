@@ -57,7 +57,7 @@ class QuadrotorExample(unittest.TestCase):
         self.assertIn("not ODrive firmware", self.evidence["scope"]["controller"])
 
     def test_media_artifacts_present(self):
-        for name in ("media/circuit-lab.png", "media/quad-cad.png"):
+        for name in ("media/circuit-lab.png", "media/quad-cad.png", "media/quadrotor-demo.mp4"):
             self.assertGreater((Q / name).stat().st_size, 10000)
 
 

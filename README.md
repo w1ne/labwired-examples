@@ -10,6 +10,10 @@ This repository is for runnable hardware verification stories, **not concept art
 | --- | --- | --- | --- |
 | [Quadrotor BLDC propulsion](examples/robotics/quadrotor-bldc/) | STM32L476 compiled C, six-step BLDC, Hall/encoder inputs, motor speed + fault shutdown | Four independently articulated rotor joints in KernelCAD | One motor channel model-verified; CAD joints motion-checked. No flight simulation. |
 
+## Featured video
+
+[Watch the 35-second LabWired × KernelCAD quadrotor workflow](examples/robotics/quadrotor-bldc/media/quadrotor-demo.mp4). Recorded from actual CAD, firmware simulation, and live fault injection. It does not show verified aircraft flight.
+
 ## Run
 
 Open an example directory. It contains firmware source, the exact LabWired circuit JSON, observed test evidence, editable KernelCAD source when appropriate, and screenshots recorded from the actual tools. Each example links to a runnable LabWired project and a versioned KernelCAD design.

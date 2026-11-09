@@ -4,6 +4,8 @@ Rebuild a **modern ODrive-class motor-control function** from first principles: 
 
 **This example does not run ODrive firmware or reproduce the proprietary modern ODrive PCB.** The firmware is a simple, inspectable **six-step commutator**, not field-oriented control. A quadcopter uses four propulsion channels: we verified **one** motor electronically, and modeled four rotors mechanically. The projects are linked by design intent, not yet by a shared live physics clock.
 
+[**Watch the 35-second recorded demo (MP4)**](media/quadrotor-demo.mp4) — 1280×720 at 30 fps, H.264. Actual application footage, with no fabricated serial traces.
+
 ## Open the working projects
 
 - **[Run the LabWired circuit and firmware](https://app.labwired.com/?share=15By9JQ39JOy&run=1)** — Cortex-M4, STM32 TIM1, one motor, inverter fault.
@@ -67,3 +69,17 @@ The public [LabWired Core firmware-in-loop model](https://github.com/w1ne/labwir
 - Recorded Studio footage showing the full hardware-to-motion workflow.
 
 **Current status: model-verified single BLDC channel plus motion-checked drone geometry. Not flight-ready.**
+
+## Recording provenance
+
+The video uses genuine browser recordings from the real applications, not a generated visualization. The recorder and assembler are checked in:
+
+- [media/capture.mjs](media/capture.mjs) captures the actual KernelCAD and LabWired browser interactions through Playwright's video recorder. Requires Node.js 22+, Playwright and Chrome.
+- [media/render.sh](media/render.sh) trims the four clips and makes a captioned 1280×720 H.264 MP4 with FFmpeg. Only scene labels and title/end cards are added.
+
+Reproduce from the repository root: install Playwright (npm install playwright), then execute the following commands from your shell:
+
+    node examples/robotics/quadrotor-bldc/media/capture.mjs artifacts/quadrotor-video
+    bash examples/robotics/quadrotor-bldc/media/render.sh artifacts/quadrotor-video examples/robotics/quadrotor-bldc/media/quadrotor-demo.mp4
+
+The recording proves only the displayed application behavior. It is not physical flight validation or a live telemetry-driven CAD animation.
