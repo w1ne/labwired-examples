@@ -1,0 +1,56 @@
+{
+  "schema": "labwired-examples/verification-record/v1",
+  "as_of": "2026-11-09",
+  "project": {
+    "labwired_url": "https://app.labwired.com/?share=15By9JQ39JOy&run=1",
+    "labwired_project_id": "d8d3ab87f78c442f801782bae0f6c24c",
+    "kernelcad_url": "https://app.kernelcad.com/p/DyJ405zg?version=2",
+    "kernelcad_slug": "DyJ405zg",
+    "kernelcad_revision": 2
+  },
+  "scope": {
+    "electronic_motor_channels": 1,
+    "cad_propeller_joints": 4,
+    "controller": "custom STM32L476 six-step PWM / Hall; not ODrive firmware",
+    "motor_model": "reduced-order BLDC/inverter, 24 V, seven pole pairs, no aerodynamics"
+  },
+  "firmware": {
+    "build_status": "ok",
+    "build_target": "stm32l476",
+    "language": "c",
+    "firmware_ref": "sha256:c6e69803a9b95ebf3f12b2d141059b2e206a6b9ce5ce7cd53e369da0a50cf3e5"
+  },
+  "cases": [
+    {
+      "name": "spin-up",
+      "verdict": "model_verified",
+      "oracle": {"serial_contains": "TARGET REACHED", "motor_id": "rotor1", "min_abs_rpm": 100},
+      "observed": {"serial_marker": "TARGET REACHED", "peak_abs_rpm": 6189.73915536955},
+      "notes": "Reverified on this exact compiled firmware reference with the stated simulator oracle."
+    },
+    {
+      "name": "inverter fault disables inverter",
+      "verdict": "model_verified",
+      "stimulus": {"component": "fault", "channel": "pressed", "value": 1, "after_cycles": 1250000},
+      "oracle": {
+        "serial_contains": ["FAULT DRIVER", "INVERTER OFF"],
+        "gpio": {"pin": "PB0", "state": "low"}
+      },
+      "observed": {"applied": true, "at_cycle": 1250000, "serial_markers": ["FAULT DRIVER", "INVERTER OFF"], "PB0": "low"}
+    }
+  ],
+  "cad": {
+    "verdict": "motion_checked",
+    "poses_checked": 13,
+    "revolute_joints": 4,
+    "reported_collisions": 0,
+    "gravity_checked": false,
+    "aerodynamics_checked": false
+  },
+  "model_gaps": [
+    "MCU supply assumed ideal 3.3 V, power-on/brownout not simulated",
+    "No physical gate driver or MOSFET transient/current-sense FOC models",
+    "No propeller thrust, flight dynamics or telemetry-driven CAD animation",
+    "Four CAD rotors but only one electrical motor channel verified"
+  ]
+}

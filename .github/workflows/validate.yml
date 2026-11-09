@@ -1,0 +1,14 @@
+name: Example source and evidence integrity
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate manifest, CAD and wiring contracts
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
