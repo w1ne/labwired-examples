@@ -13,7 +13,7 @@ python3 scripts/heypcb_evidence.py
 python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 
-To **fetch the upstream sources and compare their actual Git blob SHA** (including pinned LICENSE files), without storing third-party PCB assets:
+To **fetch the upstream sources and compare their actual Git blob SHA** (including pinned LICENSE files and matching their actual MIT/CERN-OHL-S-2.0 text to the recorded SPDX identifier), without storing third-party PCB assets:
 
 ```sh
 python3 scripts/heypcb_evidence.py --verify-source

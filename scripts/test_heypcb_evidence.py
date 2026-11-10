@@ -205,6 +205,32 @@ class HeyPcbAcceptance(unittest.TestCase):
         self.assertEqual(fetched, 2)
         self.assertIn("pinned source pad/net topology differs", " ".join(errors))
 
+    def test_pinned_license_text_must_match_declared_spdx(self):
+        source = b'(kicad_pcb (footprint "R" (property "Reference" "R1") (pad "1" smd rect (net "VDD"))))'
+        mit = (b"MIT License\n\nCopyright (c) HeyPCB\n\n"
+               b"Permission is hereby granted, free of charge\n"
+               b"THE SOFTWARE IS PROVIDED \"AS IS\"\n")
+        cern = (b"CERN Open Hardware Licence Version 2 - Strongly Reciprocal\n"
+                b"CERN-OHL-W and CERN-OHL-S may also be mentioned in this text.")
+        self.assertEqual(mod.declared_license_spdx(mit), "MIT")
+        self.assertEqual(mod.declared_license_spdx(cern), "CERN-OHL-S-2.0")
+        self.assertIsNone(mod.declared_license_spdx(b"GPL-3.0\nMIT License\n"))
+        self.assertIsNone(mod.declared_license_spdx(b"MIT License\nNo distribution permitted."))
+        board = copy.deepcopy(DATA["boards"][0])
+        board["source"]["blob_sha"] = mod.git_blob_sha(source)
+        board["source"]["license_blob_sha"] = mod.git_blob_sha(cern)
+        board["source"]["license_spdx"] = "MIT"
+        board["source_topology"] = mod.source_topology(source)
+        urls = {
+            mod.raw_source_url(board["source"], board["source"]["path"]): source,
+            mod.raw_source_url(board["source"], board["source"]["license_path"]): cern,
+        }
+        with patch.object(mod, "urlopen", side_effect=lambda url, timeout: io.BytesIO(urls[url])):
+            errors, fetched = mod.verify_pinned_sources({"boards": [board]})
+        self.assertEqual(fetched, 2)
+        self.assertIn("pinned LICENSE text declares CERN-OHL-S-2.0, not manifest MIT",
+                      " ".join(errors))
+
     def test_git_blob_hash(self):
         fixture = b"hello-kicad"
         import hashlib
