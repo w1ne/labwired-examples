@@ -60,6 +60,12 @@ def netpad(f,padnum,name):
 # Origin is offset by the upstream footprint's body center (x0.12,y3.425).
 # Rear-mounted MCU sits beneath the LCD, with a USB-C panel extension to the top.
 mcu=footprint(str(ROOT/'vendor'),'WeAct-BlackPill-v3-kicad9','A1','WeAct Black Pill STM32F411CEU6',39.12,25.575,rot=180,back=True)
+# Selected header's manufacturer-recommended carrier holes; vendor footprint stays intact.
+assembly=json.loads((ROOT/'assembly-interfaces.json').read_text())
+header=assembly['headers']['A1']
+for pad in mcu.Pads():
+    if pad.GetNumber() in header['carrierPadNumbers']:
+        pad.SetDrillSize(xy(header['carrierHoleDiameterMm'],header['carrierHoleDiameterMm']))
 pinmap={5:'PA8',11:'PB3',12:'PB4',13:'PB5',14:'PB6',15:'PB7',16:'PB8',17:'PB9',19:'GND',28:'PA2',29:'PA3',30:'PA4',31:'PA5',33:'PA7',34:'PB0',35:'PB1',37:'PB10',38:'3V3',39:'GND',44:'GND'}
 for num,name in pinmap.items():
     if name in nets:netpad(mcu,num,name)
