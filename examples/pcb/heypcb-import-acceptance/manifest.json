@@ -42,7 +42,44 @@
         ],
         "net_completeness": "not_measured",
         "pin_completeness": "not_measured",
-        "active_models": "incomplete"
+        "active_models": "incomplete",
+        "model_gaps": [
+          {
+            "ref": "DS1",
+            "part": "ST7920 128x64 LCD",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "SW1",
+            "part": "RESET switch",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "SW2",
+            "part": "POWER switch",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "U1",
+            "part": "AT89S52-24PU 8051 MCU",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "U2",
+            "part": "AS6C62256 SRAM",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "U3",
+            "part": "74HC573 latch",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "Y1",
+            "part": "11.0592 MHz crystal",
+            "import_resolution": "dropped"
+          }
+        ]
       },
       "whole_board": {
         "verdict": "UNSUPPORTED",
@@ -82,7 +119,19 @@
         ],
         "net_completeness": "not_measured",
         "pin_completeness": "not_measured",
-        "active_models": "incomplete"
+        "active_models": "incomplete",
+        "model_gaps": [
+          {
+            "ref": "D1",
+            "part": "SS34 Schottky diode",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "U1",
+            "part": "MT3608 boost controller",
+            "import_resolution": "mapped_without_behavior"
+          }
+        ]
       },
       "whole_board": {
         "verdict": "UNSUPPORTED",
@@ -123,7 +172,24 @@
         ],
         "net_completeness": "not_measured",
         "pin_completeness": "not_measured",
-        "active_models": "incomplete"
+        "active_models": "incomplete",
+        "model_gaps": [
+          {
+            "ref": "Q1",
+            "part": "AO3401A P-MOSFET",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "U1",
+            "part": "TPS563201 buck regulator",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "U2",
+            "part": "AP63203WU-7 buck regulator",
+            "import_resolution": "dropped"
+          }
+        ]
       },
       "whole_board": {
         "verdict": "UNSUPPORTED",
@@ -164,7 +230,24 @@
         ],
         "net_completeness": "not_measured",
         "pin_completeness": "not_measured",
-        "active_models": "incomplete"
+        "active_models": "incomplete",
+        "model_gaps": [
+          {
+            "ref": "Q1",
+            "part": "DMP3013SFV P-MOSFET",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "SW1",
+            "part": "VSET 5/9/12/15 switch",
+            "import_resolution": "dropped"
+          },
+          {
+            "ref": "U1",
+            "part": "HUSB238_002DD USB-C PD sink",
+            "import_resolution": "dropped"
+          }
+        ]
       },
       "whole_board": {
         "verdict": "UNSUPPORTED",
@@ -203,7 +286,14 @@
         ],
         "net_completeness": "not_measured",
         "pin_completeness": "not_measured",
-        "active_models": "incomplete"
+        "active_models": "incomplete",
+        "model_gaps": [
+          {
+            "ref": "U1",
+            "part": "TPS2116 power multiplexer",
+            "import_resolution": "dropped"
+          }
+        ]
       },
       "whole_board": {
         "verdict": "UNSUPPORTED",
@@ -242,7 +332,14 @@
         ],
         "net_completeness": "not_measured",
         "pin_completeness": "not_measured",
-        "active_models": "incomplete"
+        "active_models": "incomplete",
+        "model_gaps": [
+          {
+            "ref": "U1",
+            "part": "TPS259251 eFuse",
+            "import_resolution": "dropped"
+          }
+        ]
       },
       "whole_board": {
         "verdict": "UNSUPPORTED",
@@ -281,7 +378,14 @@
         ],
         "net_completeness": "not_measured",
         "pin_completeness": "not_measured",
-        "active_models": "incomplete"
+        "active_models": "incomplete",
+        "model_gaps": [
+          {
+            "ref": "U1",
+            "part": "INA226 current/voltage monitor",
+            "import_resolution": "dropped"
+          }
+        ]
       },
       "whole_board": {
         "verdict": "UNSUPPORTED",

@@ -64,8 +64,32 @@ def validate_manifest(document):
                or counts[k] < 0 for k in ("mapped", "dropped", "ignored")):
             errors.append(label + "invalid import part counts")
         coverage = b.get("model_coverage", {})
-        if not isinstance(coverage.get("unmodeled_refs"), list):
+        refs = coverage.get("unmodeled_refs")
+        if not isinstance(refs, list) or any(not isinstance(ref, str) or not ref for ref in refs):
             errors.append(label + "missing unmodeled references")
+        gaps = coverage.get("model_gaps")
+        if not isinstance(gaps, list):
+            errors.append(label + "missing per-reference model-gap inventory")
+        else:
+            gap_refs = []
+            dropped = 0
+            for gap in gaps:
+                if not isinstance(gap, dict):
+                    errors.append(label + "malformed model-gap entry")
+                    continue
+                ref, part, resolution = (gap.get(k) for k in ("ref", "part", "import_resolution"))
+                if not isinstance(ref, str) or not re.fullmatch(r"[A-Za-z]+[0-9]+", ref):
+                    errors.append(label + "invalid model-gap reference")
+                if not isinstance(part, str) or len(part.strip()) < 3:
+                    errors.append(label + "model-gap part identity required")
+                if resolution not in ("dropped", "mapped_without_behavior"):
+                    errors.append(label + "invalid model-gap import resolution")
+                dropped += (resolution == "dropped")
+                gap_refs.append(ref)
+            if isinstance(refs, list) and (len(gap_refs) != len(set(gap_refs)) or set(gap_refs) != set(refs)):
+                errors.append(label + "model-gap references differ from unmodeled refs")
+            if isinstance(counts.get("dropped"), int) and dropped != counts["dropped"]:
+                errors.append(label + "model-gap dropped references differ from import count")
         if coverage.get("net_completeness") not in ("not_measured", "partial", "complete"):
             errors.append(label + "missing net completeness measurement status")
         if coverage.get("pin_completeness") not in ("not_measured", "partial", "complete"):
@@ -115,6 +139,29 @@ def validate_manifest(document):
     return errors
 
 
+def model_gap_report(document):
+    """Group actual import gaps without treating a mapped device as simulated."""
+    by_part = {}
+    for board in document["boards"]:
+        for gap in board["model_coverage"]["model_gaps"]:
+            entry = by_part.setdefault(gap["part"], {"part": gap["part"], "locations": []})
+            entry["locations"].append({
+                "board": board["id"], "ref": gap["ref"],
+                "import_resolution": gap["import_resolution"],
+            })
+    parts = sorted(by_part.values(), key=lambda item: (-len(item["locations"]), item["part"]))
+    return {
+        "recorded_date": document["recorded_date"],
+        "evidence_source": document["evidence_source"],
+        "sample_boards": len(document["boards"]),
+        "full_boards_verified": sum(b["stages"]["whole_board_verified"] == "passed" for b in document["boards"]),
+        "model_gap_references": sum(len(p["locations"]) for p in parts),
+        "dropped_references": sum(x["import_resolution"] == "dropped" for p in parts for x in p["locations"]),
+        "mapped_without_behavior_references": sum(x["import_resolution"] == "mapped_without_behavior" for p in parts for x in p["locations"]),
+        "models": parts,
+    }
+
+
 def raw_source_url(src, path):
     return SOURCE_PREFIX + src["repo"] + "/" + src["commit"] + "/" + path
 
@@ -145,6 +192,7 @@ def verify_pinned_sources(document, timeout=20):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--verify-source", action="store_true", help="fetch pinned public sources and compare Git blob SHA")
+    parser.add_argument("--model-gaps", action="store_true", help="print evidence-scoped, machine-readable unmodeled-part backlog")
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
     args = parser.parse_args()
     data = json.loads(args.manifest.read_text())
@@ -157,6 +205,9 @@ def main():
         for error in errors:
             print("FAIL:", error)
         return 1
+    if args.model_gaps:
+        print(json.dumps(model_gap_report(data), indent=2))
+        return 0
     print(f"PASS: {len(data['boards'])} pinned PCB records; whole-board verified: "
           f"{sum(b['stages']['whole_board_verified'] == 'passed' for b in data['boards'])}; "
           f"external source blobs checked: {checked}")

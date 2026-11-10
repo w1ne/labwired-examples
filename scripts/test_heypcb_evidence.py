@@ -95,6 +95,39 @@ class HeyPcbAcceptance(unittest.TestCase):
         self.assertIn("whole-board verdict must be passed, blocked or not_verified",
                       " ".join(mod.validate_manifest(altered)))
 
+    def test_model_gap_inventory_reports_unmodeled_active_parts(self):
+        summary = mod.model_gap_report(DATA)
+        self.assertEqual(summary["model_gap_references"], 18)
+        self.assertEqual(summary["dropped_references"], 17)
+        self.assertEqual(summary["mapped_without_behavior_references"], 1)
+        self.assertEqual(summary["full_boards_verified"], 0)
+        boost = next(b for b in DATA["boards"] if b["id"] == "power-kit/boost-1s")
+        self.assertEqual(next(g for g in boost["model_coverage"]["model_gaps"] if g["ref"] == "U1")["import_resolution"], "mapped_without_behavior")
+        self.assertTrue(any(x["part"].startswith("MT3608") for x in summary["models"]))
+
+    def test_dropped_count_and_unmodeled_reference_inventory_must_match(self):
+        altered = copy.deepcopy(DATA)
+        b = altered["boards"][1]
+        b["model_coverage"]["model_gaps"] = [x for x in b["model_coverage"]["model_gaps"] if x["ref"] != "D1"]
+        errors = " ".join(mod.validate_manifest(altered))
+        self.assertIn("model-gap references differ from unmodeled refs", errors)
+        self.assertIn("model-gap dropped references differ from import count", errors)
+
+    def test_mapped_active_does_not_count_as_dropped(self):
+        altered = copy.deepcopy(DATA)
+        b = altered["boards"][1]
+        b["model_coverage"]["model_gaps"][1]["import_resolution"] = "dropped"
+        self.assertIn("model-gap dropped references differ from import count", " ".join(mod.validate_manifest(altered)))
+
+    def test_model_gap_identity_and_resolution_are_required(self):
+        altered = copy.deepcopy(DATA)
+        b = altered["boards"][0]
+        b["model_coverage"]["model_gaps"][0]["part"] = ""
+        b["model_coverage"]["model_gaps"][1]["import_resolution"] = "simulated"
+        errors = " ".join(mod.validate_manifest(altered))
+        self.assertIn("model-gap part identity required", errors)
+        self.assertIn("invalid model-gap import resolution", errors)
+
     def test_git_blob_hash(self):
         fixture = b"hello-kicad"
         import hashlib

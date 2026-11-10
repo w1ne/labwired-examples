@@ -23,6 +23,14 @@ The gate rejects a fabricated whole-board PASS unless source, model and pin/net 
 
 For the public technical summary, see [KiCad PCB import and simulation coverage](https://labwired.com/kicad-pcb-simulation/). HeyPCB is an independent open-hardware publisher and does not endorse LabWired.
 
+The pinned sample also records **18 unmodeled part references** across the seven boards: **17 dropped at import** and **one mapped without a behavioral model** (the `MT3608` in `boost-1s`). Obtain the deterministic component-level gap report with:
+
+```sh
+python3 scripts/heypcb_evidence.py --model-gaps
+```
+
+This is an engineering backlog for the **recorded 2026-11-10 sample**, not a claim about current model availability or the wider HeyPCB catalog. The validation gate requires every unmodeled reference to have a part identity and import resolution. It checks that the dropped gap count matches the import result; a mapped symbol without behavior cannot silently be counted as a simulated IC. A source pin, partial import or passing subcircuit does not establish whole-board verification.
+
 The evidence gate treats analog and firmware results as **independent proof axes**.
 An analog subcircuit can pass while active components remain unmapped, if its test
 scope, input/output observations, and negative control are recorded. A digital
