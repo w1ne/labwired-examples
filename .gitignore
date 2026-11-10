@@ -5,3 +5,17 @@ capture-frames/
 
 __pycache__/
 *.pyc
+
+# KiCad per-user state and unreviewed experiments.
+**/*.kicad_prl
+**/*-candidate.kicad_pcb
+**/*-candidate.kicad_pro
+**/*-upstream-original.kicad_pcb
+**/validation/candidate/
+**/validation/rework/
+**/validation/baseline/
+**/validation/global-config/
+**/fabrication-review/*.log
+**/validation/*.log
+# Schematic SVG batch is redistributed as a compact ZIP; local extraction ignored.
+**/fabrication-review/schematic-svg/

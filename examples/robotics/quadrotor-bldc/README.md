@@ -29,6 +29,20 @@ Rebuild a **modern ODrive-class motor-control function** from first principles: 
 
 These are *simulator-model results*, not tests of a real inverter, power stage, physical propeller or aircraft. Power-on and brownout are not modeled: the simulator assumes an ideal 3.3 V MCU rail.
 
+## Real four-motor PCB and commercial propulsion parts
+
+The actual hardware design is a separate, routed 4-in-1 **OpenESC** derivative,
+not the STM32 single-axis simulator represented by this older recording:
+
+- [Complete KiCad 10 ESC schematic/PCB and KiCad design rules](hardware/esc-4in1/)
+- [Real-world four motor, propeller, frame, FC and battery wiring](hardware/assembly-wiring.md)
+- [Complete system BOM, with manufacturer links and pending sourcing](hardware/system-bom.csv)
+- [Native DRC, ERC and package-pad manufacturing review](hardware/esc-4in1/validation/README.md)
+
+The complete motor power stage is **not** yet simulated in LabWired and the
+physical PCB remains a review-only source until unresolved NC pad/DRC/ ERC
+findings are corrected.
+
 ## Editable files
 
 - [firmware/main.c](firmware/main.c) — compiled six-step STM32 firmware with TIM1 complementary PWM, Hall/encoder inputs, UART diagnostics and safe inverter-disable path.

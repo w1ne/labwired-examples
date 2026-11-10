@@ -1,0 +1,18 @@
+
+# KiCad CLI generated SVGs preserve its own formatting; do not flag their trailing spaces.
+examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/**/*.svg -whitespace
+examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/*.svg -whitespace
+
+# KiCad and manufacturing exporters own the formatting of these generated files.
+*.kicad_pcb -whitespace
+*.kicad_sch -whitespace
+*.kicad_sym -whitespace
+*.kicad_mod -whitespace
+*.svg -whitespace
+*.gbr -whitespace
+*.gbrjob -whitespace
+# ISO 10303 STEP models are machine-generated assets; treat them as binary.
+*.step binary
+# KiCad fabrication CSV and preserved test reports have exporter-specific spaces.
+*.csv -whitespace
+examples/robotics/quadrotor-bldc/hardware/esc-4in1/validation/*.txt -whitespace

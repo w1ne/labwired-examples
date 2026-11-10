@@ -1,0 +1,137 @@
+"""Mechanical/PCB release-data contract checks.
+
+These are static source-consistency tests. They do not replace KiCad ERC,
+physical DRC, circuit simulation, a first-article inspection or a flight test.
+"""
+import collections
+import csv
+import pathlib
+import re
+import unittest
+from zipfile import ZipFile
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+H = ROOT / "examples" / "robotics" / "quadrotor-bldc" / "hardware"
+E = H / "esc-4in1"
+R = E / "fabrication-review"
+
+
+def read_csv(path):
+    with open(path, newline="", encoding="utf-8-sig") as file:
+        return list(csv.DictReader(file))
+
+
+def findings(report):
+    return collections.Counter(
+        re.findall(r"^\[([^\]]+)\]", report.read_text(), re.MULTILINE)
+    )
+
+
+class ESCPhysicalBoard(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.board = (E / "4in1.kicad_pcb").read_text()
+        cls.sch = (E / "4in1.kicad_sch").read_text()
+        cls.placements = read_csv(R / "placement.csv")
+        cls.components = read_csv(R / "pcb-all-components.csv")
+        cls.grouped = read_csv(R / "pcba-bom-grouped.csv")
+        cls.system = read_csv(H / "system-bom.csv")
+
+    def test_real_board_source_with_six_layer_stack(self):
+        self.assertIn("(kicad_pcb", self.board)
+        self.assertIn("(kicad_sch", self.sch)
+        for layer in ("F.Cu", "In1.Cu", "In2.Cu", "In3.Cu", "In4.Cu", "B.Cu"):
+            self.assertIn('"' + layer + '"', self.board)
+        self.assertGreater((E / "4in1.kicad_dru").stat().st_size, 1000)
+        self.assertGreater((E / "4in1.kicad_pro").stat().st_size, 10000)
+        self.assertGreater((E / "ESC.kicad_sch").stat().st_size, 200000)
+
+    def test_footprint_references_unique_and_bom_identical(self):
+        refs = re.findall(
+            r'(?m)^\t\t\(property "Reference" "([^"]+)"', self.board
+        )
+        self.assertEqual(len(refs), 222)
+        self.assertEqual(len(set(refs)), 222)
+        bom_refs = {row["Designator"] for row in self.components}
+        self.assertEqual(len(bom_refs), 222)
+        self.assertEqual(bom_refs, set(refs))
+        self.assertEqual(len([r for r in self.components if r["Population"] == "ASSEMBLE"]), 213)
+
+    def test_placements_and_grouped_bom_reconcile(self):
+        placements = {row["Ref"] for row in self.placements}
+        assembled = {
+            row["Designator"] for row in self.components if row["Population"] == "ASSEMBLE"
+        }
+        self.assertEqual(len(self.placements), len(placements))
+        self.assertEqual(len(placements), 213)
+        self.assertEqual(placements, assembled)
+        self.assertEqual(len(self.grouped), 22)
+        self.assertEqual(sum(int(row["Quantity"]) for row in self.grouped), 213)
+        self.assertTrue(all(row["LCSC Part #"] for row in self.grouped))
+        for row in self.grouped:
+            for ref in row["Designator"].split(", "):
+                self.assertIn(ref, assembled)
+
+    def test_four_real_motor_power_channels(self):
+        by_value = collections.Counter(
+            (row["Value"] for row in self.components
+             if row["Population"] == "ASSEMBLE")
+        )
+        self.assertEqual(by_value["AT32F421G8U7"], 4)
+        self.assertEqual(by_value["NSG2065Q"], 4)
+        self.assertEqual(by_value["SP40N01GHNK"], 24)
+        self.assertEqual(by_value["4.7uF"], 52)
+
+    def test_49_bulk_caps_wired_in_schematic(self):
+        references = {row["new_reference"] for row in read_csv(E / "board-only-caps.csv")}
+        self.assertEqual(references, {"C" + str(i) for i in range(501, 550)})
+        for ref in references:
+            self.assertEqual(
+                self.sch.count('(property "Reference" "' + ref + '"'), 1
+            )
+        # These are source-level checks; the archived KiCad netlist carries
+        # exact node membership (C501..C549 on +BATT and GND).
+        netlist = (R / "schematic.net").read_text()
+        for ref in ("C501", "C510", "C530", "C549"):
+            self.assertIn('(ref "' + ref + '")', netlist)
+
+    def test_drc_report_is_not_misrepresented_as_clean(self):
+        drc = findings(E / "validation" / "drc-final.txt")
+        self.assertEqual(drc["lib_footprint_mismatch"], 6)
+        self.assertEqual(drc["net_conflict"], 16)
+        for violation in ("shorting_items", "clearance", "unconnected_items"):
+            self.assertEqual(drc[violation], 0)
+        self.assertEqual(sum(drc.values()), 22)
+
+    def test_inherited_erc_findings_explicit(self):
+        erc = findings(E / "validation" / "erc-final.txt")
+        self.assertEqual(sum(erc.values()), 352)
+        self.assertEqual(erc["pin_to_pin"], 240)
+        self.assertIn("Do not order", (E / "README.md").read_text())
+
+    def test_gerber_data_is_review_only(self):
+        with ZipFile(R / "esc-4in1-gerbers-REVIEW-ONLY.zip") as archive:
+            names = archive.namelist()
+            self.assertEqual(len(names), 15)
+            self.assertTrue(any(name.endswith(".drl") for name in names))
+            self.assertTrue(any(name.endswith(".gtl") for name in names))
+            self.assertTrue(any(name.endswith(".gbl") for name in names))
+            self.assertTrue(any(name.endswith(".g4") for name in names))
+        self.assertGreater((R / "pcb-top.svg").stat().st_size, 100000)
+
+    def test_factory_motors_and_props_specified_separately(self):
+        index = {r["Designator"]: r for r in self.system}
+        self.assertEqual(index["M1-M4"]["Quantity"], "4")
+        self.assertIn("ECO223062400", index["M1-M4"]["Manufacturer Part Number"])
+        self.assertEqual(index["P1-P4"]["Quantity"], "4")
+        self.assertIn("Gemfan", index["P1-P4"]["Manufacturer"])
+        self.assertIn("4S", index["BAT1"]["Description"])
+        self.assertIn("12", (H / "assembly-wiring.md").read_text())
+        modules = (ROOT / ".gitmodules").read_text()
+        for name in ("esc-4in1/KiCad-Library", "flight-controller-openfc-lite",
+                     "frame-openframe-5f"):
+            self.assertIn(name, modules)
+
+
+if __name__ == "__main__":
+    unittest.main()
