@@ -97,11 +97,11 @@ class ESCPhysicalBoard(unittest.TestCase):
 
     def test_drc_report_is_not_misrepresented_as_clean(self):
         drc = findings(E / "validation" / "drc-final.txt")
-        self.assertEqual(drc["lib_footprint_mismatch"], 3)
-        self.assertEqual(drc["net_conflict"], 9)
+        self.assertEqual(drc["lib_footprint_mismatch"], 2)
+        self.assertEqual(drc["net_conflict"], 6)
         for violation in ("shorting_items", "clearance", "unconnected_items"):
             self.assertEqual(drc[violation], 0)
-        self.assertEqual(sum(drc.values()), 12)
+        self.assertEqual(sum(drc.values()), 8)
 
     def test_gate_driver_nc_pads_restored_and_isolated(self):
         # The five actual QFN pads must be physical PCB objects, each with a
@@ -136,6 +136,25 @@ class ESCPhysicalBoard(unittest.TestCase):
             self.assertIn("4in1-in4-back.drl", archive.namelist())
         review = (E / "validation" / "u9-power-reroute-20261110.md").read_text()
         self.assertIn("Do NOT order", review)
+
+    def test_u7_three_nc_pads_and_current_feedback_microvias(self):
+        marker = '(property "Reference" "U7"'
+        idx = self.board.find(marker)
+        self.assertGreater(idx, 0)
+        start = self.board.rfind("\n\t(footprint ", 0, idx)
+        end = self.board.find("\n\t(footprint ", idx)
+        footprint = self.board[start:end if end >= 0 else None]
+        for number, name in (("8", "PA2"), ("23", "PA15"), ("24", "PB3")):
+            self.assertIn('(pad "' + number + '" smd', footprint)
+            self.assertIn(f'unconnected-(U7-{name}-Pad{number})', footprint)
+        for x,y in ((71.35,48.1198), (71.92,50.2), (70.4,51.05),
+                    (70.71,48.1198), (73.67,52.05), (73.9,53.509117)):
+            self.assertIn(f'(at {x} {y})', self.board)
+        self.assertIn('"/ESC3/FBCOMMON"', self.board)
+        with ZipFile(R / "esc-4in1-gerbers-REVIEW-ONLY.zip") as archive:
+            self.assertIn('4in1-in4-back.drl', archive.namelist())
+        evidence = (E / 'validation' / 'u7-power-feedback-reroute-20261110.md').read_text()
+        self.assertIn('not an approved product', evidence)
 
     def test_inherited_erc_findings_explicit(self):
         erc = findings(E / "validation" / "erc-final.txt")

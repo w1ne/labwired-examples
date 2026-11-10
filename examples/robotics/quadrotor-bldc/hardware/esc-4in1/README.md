@@ -19,8 +19,8 @@ sensing. The manufacturer documents AM32-compatible control firmware.
   capacitors (originally only on the PCB), each wired to +BATT and GND.
 - ESC.kicad_sch: complete repeated one-motor controller and gate driver.
 - 4in1.kicad_pcb: routed 6-layer board, 222 uniquely numbered footprints,
-  195 original routed nets plus 7 isolated NC pin identities (202 named nets);
-  2,920 routing items, including 1,703 vias.
+  195 original routed nets plus 10 isolated NC pin identities (205 named nets);
+  2,916 routing items, including 1,708 vias.
 - 4in1.kicad_pro, 4in1.kicad_dru: original manufacturer PCB rule settings.
 - Local footprints, 3D shapes and symbols plus pinned KiCad-Library submodule.
 - board-only-caps.csv: mapping of the 49 originally duplicate designators
@@ -39,29 +39,35 @@ sensing. The manufacturer documents AM32-compatible control firmware.
    symbol aliases. The copied board outline footprint was synchronized.
 5. A first KiCad-checked revision restored U6 pins 5/7 and U10 pins
    5/7/8, removing one overlapping GND track and two GND stitching vias.
-6. This revision restored U9 AT32F421 pins 23/24, rerouting GND on In1.Cu
-   and +3V3 on In4.Cu. The new blind microvia and vias inside solder pads
-   need explicit fabrication-process approval. See
-   [the U9 engineering review](validation/u9-power-reroute-20261110.md).
+6. The U9 revision restored U9 AT32F421 pins 23/24, rerouting GND
+   on In1.Cu and +3V3 on In4.Cu with blind microvia/via-in-pad.
+   See [the U9 engineering review](validation/u9-power-reroute-20261110.md).
+7. This revision restores all three U7 AT32F421 missing NC pins 8/23/24,
+   rerouting +3V3, GND and analog FBCOMMON on In4.Cu. The narrower +3V3
+   routing, high-density blind microvias, and a 20-micrometer motor-phase
+   via move require fab, current-density and thermal review. See
+   [the U7 review](validation/u7-power-feedback-reroute-20261110.md).
 
 ## Current verification (review-only)
 
 Original copper is fully routed: 0 unconnected items, and no currently
 reported copper shorts under the supplied project rules. However,
-native KiCad DRC reports **3 package-footprint library mismatches**
-(U2/U5/U7 AT32F421) and **9 missing physical MCU pads** in schematic
+native KiCad DRC reports **2 package-footprint library mismatches**
+(U2/U5 AT32F421) and **6 missing physical MCU pads** in schematic
 parity:
-- AT32F421 U2/U5/U7: pin 8 and pins 23/24 are still missing.
+- AT32F421 U2/U5: pins 8, 23, 24 are still missing.
+- AT32F421 U7: pins 8/23/24 restored with full power/feedback rerouting.
 - AT32F421 U9: pins 23/24 restored with six-layer rerouting.
 - NSG2065Q U6 pins 5/7 and U10 pins 5/7/8 restored.
 
-The remaining 9 are unconnected MCU pins in the schematic but omitted
+The remaining 6 are unconnected MCU pins in the schematic but omitted
 from their real physical footprints. Restoring all 16 pads at once
 without rerouting produced 17 shorts, so that candidate was rejected.
 Native KiCad 10 reports **no physical shorts, clearance failures or
-unrouted items** in this revision, but manufacturer approval is still
-required for the new blind microvia, all three vias inside solder pads,
-remaining MCU pads, and changed GND return stitching.
+unrouted items** in this revision. Manufacturing approval remains blocked
+on 7 blind microvias (including solder pad microvias), power/current-feedback
+trace cross-section and return-current review, the remaining MCU pads,
+and inherited electrical ERC findings.
 
 The complete schematic ERC has 352 inherited findings (same category counts
 as the original design, including pin electrical types and library issues).
