@@ -3,6 +3,8 @@ import copy
 import importlib.util
 import json
 import pathlib
+import io
+from unittest.mock import patch
 import unittest
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -127,6 +129,81 @@ class HeyPcbAcceptance(unittest.TestCase):
         errors = " ".join(mod.validate_manifest(altered))
         self.assertIn("model-gap part identity required", errors)
         self.assertIn("invalid model-gap import resolution", errors)
+
+    def test_source_footprints_reconcile_with_import_classification(self):
+        self.assertEqual(sum(b["source_topology"]["footprints"] for b in DATA["boards"]), 129)
+        self.assertEqual(sum(b["source_topology"]["pads"] for b in DATA["boards"]), 575)
+        self.assertEqual(sum(b["source_topology"]["pads_with_nets"] for b in DATA["boards"]), 510)
+        self.assertEqual(sum(b["source_topology"]["pads_without_nets"] for b in DATA["boards"]), 65)
+        for b in DATA["boards"]:
+            self.assertEqual(b["source_topology"]["footprints"], sum(b["import_counts"].values()))
+            self.assertEqual(b["model_coverage"]["net_completeness"], "not_measured")
+            self.assertEqual(b["model_coverage"]["pin_completeness"], "not_measured")
+
+    def test_source_reconciliation_rejects_missing_footprint_classification(self):
+        altered = copy.deepcopy(DATA)
+        altered["boards"][0]["import_counts"]["ignored"] -= 1
+        self.assertIn("source footprints not reconciled", " ".join(mod.validate_manifest(altered)))
+
+    def test_invented_import_net_pin_completeness_is_rejected(self):
+        altered = copy.deepcopy(DATA)
+        b = altered["boards"][0]
+        b["model_coverage"]["net_completeness"] = "complete"
+        b["model_coverage"]["pin_completeness"] = "complete"
+        self.assertIn("complete connectivity requires reproducible imported pad/net comparison",
+                      " ".join(mod.validate_manifest(altered)))
+
+    def test_invalid_source_pad_counts_and_hash_are_rejected(self):
+        altered = copy.deepcopy(DATA)
+        topology = altered["boards"][0]["source_topology"]
+        topology["pads_without_nets"] += 1
+        self.assertIn("source connected/unconnected pad totals differ", " ".join(mod.validate_manifest(altered)))
+        topology["pad_net_sha256"] = "not-a-hash"
+        self.assertIn("invalid pinned source pad/net inventory", " ".join(mod.validate_manifest(altered)))
+
+    def test_source_kicad_pad_parser_handles_nested_and_unconnected_pads(self):
+        pcb = b'''(kicad_pcb (version 20260206)
+            (footprint "Chip" (property "Reference" "U1")
+              (property "Value" "quoted (not a pad)")
+              (pad "1" smd rect (net "IO(A)"))
+              (pad "2" smd rect)
+              (pad "2" smd rect (net 0 ""))
+            )
+            (footprint "Header" (fp_text reference "J1")
+              (pad "1" thru_hole circle (net 1 "IO(A)")))
+          )'''
+        topology = mod.source_topology(pcb)
+        self.assertEqual(topology["footprints"], 2)
+        self.assertEqual(topology["pads"], 4)
+        self.assertEqual(topology["pads_with_nets"], 2)
+        self.assertEqual(topology["pads_without_nets"], 2)
+        self.assertEqual(topology["distinct_pad_nets"], 1)
+        self.assertEqual(len(topology["pad_net_sha256"]), 64)
+        modified = pcb.replace(b'IO(A)', b'IO(B)')
+        self.assertNotEqual(mod.source_topology(modified)["pad_net_sha256"], topology["pad_net_sha256"])
+        with self.assertRaises(ValueError):
+            mod.source_topology(pcb[:-1])
+
+    def test_pinned_source_check_detects_pin_net_changes_even_when_rehashed(self):
+        # Simulate a pin reassignment in a new pinned blob. The new byte SHA
+        # is valid, but the recorded topology from the prior design must fail.
+        pcb = b'''(kicad_pcb (footprint "R" (property "Reference" "R1")
+                    (pad "1" smd rect (net "VDD"))
+                    (pad "2" smd rect (net "GND"))))'''
+        modified = pcb.replace(b'VDD', b'VCC')
+        example = copy.deepcopy(DATA["boards"][0])
+        example["source"]["blob_sha"] = mod.git_blob_sha(modified)
+        example["source"]["license_blob_sha"] = mod.git_blob_sha(b'MIT')
+        example["source_topology"] = mod.source_topology(pcb)
+        example["import_counts"] = {"mapped": 1, "dropped": 0, "ignored": 0}
+        urls = {
+            mod.raw_source_url(example["source"], example["source"]["path"]): modified,
+            mod.raw_source_url(example["source"], example["source"]["license_path"]): b'MIT',
+        }
+        with patch.object(mod, "urlopen", side_effect=lambda url, timeout: io.BytesIO(urls[url])):
+            errors, fetched = mod.verify_pinned_sources({"boards": [example]})
+        self.assertEqual(fetched, 2)
+        self.assertIn("pinned source pad/net topology differs", " ".join(errors))
 
     def test_git_blob_hash(self):
         fixture = b"hello-kicad"
