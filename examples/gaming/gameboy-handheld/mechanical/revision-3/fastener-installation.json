@@ -1,0 +1,1493 @@
+{
+  "source": {
+    "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+    "byteLength": 31338
+  },
+  "request": {
+    "check": "fastener-installation",
+    "stations": [
+      {
+        "part": "case-tl-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-tl-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 3
+      },
+      {
+        "part": "case-tr-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-tr-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 3
+      },
+      {
+        "part": "case-bl-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-bl-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 3
+      },
+      {
+        "part": "case-br-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-br-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 3
+      },
+      {
+        "part": "pcb-mount-tl-screw",
+        "against": [
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-tl-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 3
+      },
+      {
+        "part": "pcb-mount-tr-screw",
+        "against": [
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-tr-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 3
+      },
+      {
+        "part": "pcb-mount-bl-screw",
+        "against": [
+          "button-support",
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-bl-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 5
+      },
+      {
+        "part": "pcb-mount-br-screw",
+        "against": [
+          "button-support",
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-br-nut",
+        "minEngagementMm": 2,
+        "maxProtrusionMm": 5
+      }
+    ]
+  },
+  "result": {
+    "ok": false,
+    "source": "local",
+    "assembly": "labwired-gameboy-assembly-detail",
+    "status": "partial",
+    "counts": {
+      "requested": 8,
+      "measured": 8,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 8
+    },
+    "stations": [
+      {
+        "part": "case-tl-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-tl-nut",
+        "catalogId": "iso-4762-m2-5x20",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "case-tl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "case-tl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "case-tl-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "case-tl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 0.00999999999999801,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "case-tl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "case-tl-nut",
+            "status": "pass",
+            "value": 2.25,
+            "unit": "mm",
+            "limit": 3,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      },
+      {
+        "part": "case-tr-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-tr-nut",
+        "catalogId": "iso-4762-m2-5x20",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "case-tr-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "case-tr-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "case-tr-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "case-tr-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 0.00999999999999801,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "case-tr-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "case-tr-nut",
+            "status": "pass",
+            "value": 2.25,
+            "unit": "mm",
+            "limit": 3,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      },
+      {
+        "part": "case-bl-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-bl-nut",
+        "catalogId": "iso-4762-m2-5x20",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "case-bl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "case-bl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "case-bl-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "case-bl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 0.00999999999999801,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "case-bl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "case-bl-nut",
+            "status": "pass",
+            "value": 2.25,
+            "unit": "mm",
+            "limit": 3,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      },
+      {
+        "part": "case-br-screw",
+        "against": [
+          "front-shell",
+          "rear-shell"
+        ],
+        "engagementPart": "case-br-nut",
+        "catalogId": "iso-4762-m2-5x20",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "front-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "case-br-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "case-br-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "case-br-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "case-br-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 0.00999999999999801,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "case-br-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "case-br-nut",
+            "status": "pass",
+            "value": 2.25,
+            "unit": "mm",
+            "limit": 3,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      },
+      {
+        "part": "pcb-mount-tl-screw",
+        "against": [
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-tl-nut",
+        "catalogId": "iso-4762-m2-5x8",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "pcb-mount-tl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "pcb-mount-tl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "pcb-mount-tl-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "pcb-mount-tl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 1.7763568394002505e-15,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "pcb-mount-tl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "pcb-mount-tl-nut",
+            "status": "pass",
+            "value": 1.9499999999999993,
+            "unit": "mm",
+            "limit": 3,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      },
+      {
+        "part": "pcb-mount-tr-screw",
+        "against": [
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-tr-nut",
+        "catalogId": "iso-4762-m2-5x8",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "pcb-mount-tr-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "pcb-mount-tr-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "pcb-mount-tr-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "pcb-mount-tr-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 1.7763568394002505e-15,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "pcb-mount-tr-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "pcb-mount-tr-nut",
+            "status": "pass",
+            "value": 1.9499999999999993,
+            "unit": "mm",
+            "limit": 3,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      },
+      {
+        "part": "pcb-mount-bl-screw",
+        "against": [
+          "button-support",
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-bl-nut",
+        "catalogId": "iso-4762-m2-5x20",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "button-support",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "button-support",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "button-support",
+            "status": "pass",
+            "value": 2.8,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "button-support",
+            "status": "pass",
+            "value": 9.8,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "pcb-mount-bl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "pcb-mount-bl-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "pcb-mount-bl-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "pcb-mount-bl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "pcb-mount-bl-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "pcb-mount-bl-nut",
+            "status": "pass",
+            "value": 4.149999999999999,
+            "unit": "mm",
+            "limit": 5,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      },
+      {
+        "part": "pcb-mount-br-screw",
+        "against": [
+          "button-support",
+          "main-pcb-envelope",
+          "rear-shell"
+        ],
+        "engagementPart": "pcb-mount-br-nut",
+        "catalogId": "iso-4762-m2-5x20",
+        "status": "partial",
+        "metrics": [
+          {
+            "name": "coaxial-offset",
+            "part": "button-support",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "button-support",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "button-support",
+            "status": "pass",
+            "value": 2.8,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "button-support",
+            "status": "pass",
+            "value": 9.8,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "main-pcb-envelope",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axis-tilt",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "deg",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "bore-diameter",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "axial-overlap",
+            "part": "rear-shell",
+            "status": "unknown",
+            "value": null,
+            "unit": "mm",
+            "limit": null,
+            "basis": "Missing, ambiguous, breached or non-through BREP bore.",
+            "repairHint": "Resolve the unsupported geometry/metadata and rerun this explicit station."
+          },
+          {
+            "name": "coaxial-offset",
+            "part": "pcb-mount-br-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "Distance of screw bearing center to measured bore axis.",
+            "repairHint": null
+          },
+          {
+            "name": "axis-tilt",
+            "part": "pcb-mount-br-nut",
+            "status": "pass",
+            "value": 0,
+            "unit": "deg",
+            "limit": 1,
+            "basis": "Angle between measured bore axis and catalog bearing-to-tip axis.",
+            "repairHint": null
+          },
+          {
+            "name": "bore-diameter",
+            "part": "pcb-mount-br-nut",
+            "status": "pass",
+            "value": 2.6,
+            "unit": "mm",
+            "limit": 2.5,
+            "basis": "BREP bore diameter and conservative shank envelope at shaft-clipped bore endpoint planes, including tilt accumulated from the bearing.",
+            "repairHint": null
+          },
+          {
+            "name": "axial-overlap",
+            "part": "pcb-mount-br-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 0,
+            "basis": "Axial interval overlap of measured cylindrical bore with catalog shank.",
+            "repairHint": null
+          },
+          {
+            "name": "bearing-gap",
+            "part": null,
+            "status": "pass",
+            "value": 0,
+            "unit": "mm",
+            "limit": 0.05,
+            "basis": "BREP minimum distance between actual trimmed head annulus and facing target material; four support directions at geometry-derived radii.",
+            "repairHint": null
+          },
+          {
+            "name": "engagement",
+            "part": "pcb-mount-br-nut",
+            "status": "pass",
+            "value": 2,
+            "unit": "mm",
+            "limit": 2,
+            "basis": "Geometric axial overlap with receiver cylindrical bore; no thread-contact/strength certification.",
+            "repairHint": null
+          },
+          {
+            "name": "tip-protrusion",
+            "part": "pcb-mount-br-nut",
+            "status": "pass",
+            "value": 4.149999999999999,
+            "unit": "mm",
+            "limit": 5,
+            "basis": "Catalog tip beyond measured receiver cylindrical outlet along the screw axis.",
+            "repairHint": null
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "Explicit stations only; unlisted fasteners are not audited.",
+      "Flat annular-bearing screws and full open cylindrical bores only; unsupported/ambiguous geometry is unknown.",
+      "Engagement is modeled axial overlap. Simplified threads cannot certify thread contact, strength, torque, preload or physical installation.",
+      "Bearing support is checked at four radial locations on facing trimmed faces; this is not a pressure/contact-area analysis."
+    ],
+    "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+  }
+}

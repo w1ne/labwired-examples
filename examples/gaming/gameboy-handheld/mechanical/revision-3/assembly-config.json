@@ -1,0 +1,155 @@
+{
+  "schema": "labwired.handheld-assembly-detail.v1",
+  "units": "mm",
+  "baseKernelCad": {
+    "slug": "kQAFdaQs",
+    "revision": 2,
+    "sourceSha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78"
+  },
+  "module": {
+    "reference": "A1",
+    "model": "WeAct Black Pill V3.0",
+    "boardWidthMm": 20.78,
+    "boardLengthMm": 52.38,
+    "boardThicknessMm": 1.6,
+    "componentHeightAllowanceMm": 3.4,
+    "outlineDatum": "centered on mean of main header pad centers; exact pin-to-outline offset remains unmeasured",
+    "source": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/master/images/STM32F4x1_V30_BoardShape.png",
+    "unverified": [
+      "PCB thickness",
+      "component heights",
+      "pin-to-outline datum",
+      "purchased module hole tolerances",
+      "USB mating-plane location"
+    ],
+    "headerSeating": "Both board faces seat against the 2.54 mm header collars; module header-face Z = carrier underside Z - collar height.",
+    "modeledHoleDiameterMm": 1.02,
+    "holeDiameterBasis": "Unmeasured V3.0 clearance assumption. The comparative V3.1 STEP has 0.9 mm holes; no interchangeability or guaranteed fit with the selected square pins is claimed."
+  },
+  "switch": {
+    "candidate": "Omron B3F-1000",
+    "bodyMm": [
+      6,
+      6,
+      3.4
+    ],
+    "actuatorDiameterMm": 3.5,
+    "heightMm": 4.3,
+    "heightToleranceMm": 0.2,
+    "pretravelMm": {
+      "minimum": 0.15,
+      "nominal": 0.25,
+      "maximum": 0.45
+    },
+    "freeGapMm": 0.2,
+    "plungerRadiusMm": 1.5,
+    "guideRadialClearanceMm": 0.25,
+    "supportPlateBottomZ": 23.2,
+    "supportPlateThicknessMm": 1.6,
+    "roundButtonStopTravelMm": 0.65,
+    "dpadFlangeRadiusMm": 11,
+    "dpadFlangeThicknessMm": 0.8,
+    "source": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf",
+    "limitation": "Nominal geometric motion only. Switch pretravel is not an allowable overtravel specification. Installed gap, switch height and printed tolerance require adjustment before load testing.",
+    "supportFootRadiusMm": 3.6,
+    "dpadFlangeBottomZ": 25.8,
+    "dpadPivotCenterZ": 25.0,
+    "dpadOpeningClearancePerSideMm": 0.6
+  },
+  "fasteners": {
+    "thread": "M2.5",
+    "pitchMm": 0.45,
+    "shaftDiameterMm": 2.5,
+    "clearanceHoleDiameterMm": 2.8,
+    "headDiameterMm": 4.5,
+    "headHeightMm": 2.5,
+    "headSocketAcrossFlatsMm": 2,
+    "headSocketDepthMm": 1.1,
+    "caseScrewLengthMm": 20,
+    "caseHeadSeatZ": 27.4,
+    "caseNutTopZ": 11.7,
+    "pcbTopScrewLengthMm": 8,
+    "pcbBottomScrewLengthMm": 20,
+    "pcbNutTopZ": 11.0,
+    "nutAcrossFlatsMm": 5,
+    "nutHeightMm": 2,
+    "nutFlatClearancePerSideMm": 0.15,
+    "nutAxialClearanceMm": 0.1,
+    "caseBossRadiusMm": 4.2,
+    "pcbBossRadiusMm": 4.1,
+    "sources": [
+      "https://www.accu.co.uk/metric-cap-head-screws/3057-SSC-M2-5-20-A4",
+      "https://www.accu.co.uk/hexagon-nuts/642965-HPN-M2-5-5-BR"
+    ],
+    "limitation": "Screws use catalog clearance envelopes; nuts use nominal clearance bores without modeled threads. Axial engagement is calculated and audited when supported; thread strength, tightening torque and printed boss strength are not verified.",
+    "screwGeometry": "KernelCAD local ISO 4762 catalog, detail=envelope; lengths 8 and 20 mm",
+    "pcbBottomBoreBottomZ": 4.3,
+    "pcbTopBoreBottomZ": 6.3,
+    "caseBoreBottomZ": 6.9,
+    "bezelAccessDiameterMm": 5.8,
+    "driverShaftReservationDiameterMm": 4.0,
+    "driverAccessLimitation": "A straight 4 mm-diameter shaft corridor is reserved from above. The actual tool, its recess engagement and hand clearance are not selected or validated."
+  },
+  "directUsb": {
+    "connectorId": "usb1",
+    "openingMm": [
+      13.2,
+      8.2
+    ],
+    "plugModel": "SparkFun CAB-15455 / ACCA-2517 male end",
+    "plugOvermoldMm": [
+      12.4,
+      22,
+      7.4
+    ],
+    "strainReliefLengthMm": 5,
+    "cableDiameterMm": 4.3,
+    "cableDiameterToleranceMm": 0.1,
+    "shoulderBeyondMatingPlaneMm": 0.5,
+    "source": "https://cdn.sparkfun.com/assets/8/0/8/7/4/ACCA-2517_Model.pdf",
+    "limitation": "Direct-access proposal. The inspected male overmold is real; module USB center, mating-plane datum and fully seated shoulder offset remain assumptions. No internal extension or selected flexible cable routing is claimed.",
+    "receptacleHeightMm": 3.2,
+    "receptacleWidthMm": 9.2,
+    "receptacleDepthMm": 7.4,
+    "centerZBasis": "module component face minus half the provisional receptacle height; exact connector datum remains unmeasured"
+  },
+  "speakerReservation": {
+    "center": [
+      26,
+      35,
+      26
+    ],
+    "reason": "Moves the unselected speaker envelope clear of the lower carrier screw heads and button support."
+  },
+  "displayStack": {
+    "pcbBottomZ": 22.6,
+    "pcbThicknessMm": 1.6,
+    "frameBottomZ": 24.3,
+    "frameHeightMm": 2.7,
+    "glassBottomZ": 24.4,
+    "glassThicknessMm": 2.4,
+    "limitation": "Original nominal LCD height envelope is retained. Connector height, PCB/component thickness and screen retention need the purchased module dimensions; only XY outline and active area are manufacturer sourced."
+  },
+  "connectorAccess": {
+    "J1": {
+      "wireExitHeightMm": 3.0,
+      "supportWindowMarginsMm": {
+        "x": 2.05,
+        "lowerY": 3.2,
+        "upperY": 0.3
+      },
+      "solderAllowanceMm": 1.2,
+      "limitation": "Wire exit volume is a design reservation, not a measured harness route or a specified bend radius."
+    }
+  },
+  "omissions": [
+    "C1 and C2 capacitor bodies and leads",
+    "Most switch terminal tails and solder joints",
+    "Other small carrier components",
+    "Full LCD harness, wire bends, strain relief and connector seating",
+    "Exact purchased V3.0 board-to-header and USB mating datums",
+    "Final LCD retention and connector height",
+    "Battery-service-cover retention",
+    "Battery, protection/charging circuit and selected speaker"
+  ]
+}

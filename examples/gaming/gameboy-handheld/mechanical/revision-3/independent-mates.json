@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+      "byteLength": 31338
+    },
+    "parameters": {
+      "values": {
+        "pressedControl": "rest",
+        "plungerAdjustmentMm": "0.0",
+        "travelCase": "nominal"
+      },
+      "sha256": "bd24b74769122dc666bb84dc772787dd592d06c3e8a6c0fddfd89cba5ba2a7e5"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+    "identitySha256": "3a221c4741753f8626a60df5f8bac9c17f57afb77fb10e6aaf17e19a7fa91ba8"
+  },
+  "featureCount": 400,
+  "validator": {
+    "status": "solved",
+    "partCount": 59,
+    "jointCount": 58,
+    "diagnosticCounts": {
+      "info:assembly.mounting-hole.unverified": 116
+    }
+  },
+  "interferenceSummary": {
+    "rawCount": 0,
+    "contactNoiseCount": 0,
+    "actionableCount": 0,
+    "capMm3": 0.01,
+    "contactThicknessMm": 0.01,
+    "pairs": []
+  },
+  "fitness": {
+    "functional": true,
+    "repairMode": "none",
+    "repairDirective": "No repair needed. Preserve the current topology and keep validating with review_cad after changes.",
+    "passedChecks": [
+      "validator-no-errors"
+    ],
+    "blockingReasons": [],
+    "mechanismSummary": {
+      "sampleCount": 0,
+      "interferenceCount": 0,
+      "trackedConnectorCount": 0
+    }
+  },
+  "mechanism": "real",
+  "mechanismFailures": [],
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "scope": "Independent static review only. Source-variant poses and access envelopes are in pose-checks.json. Numeric connectors do not establish hole diameter compatibility or physical fit.",
+  "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+}

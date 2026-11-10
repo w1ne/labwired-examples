@@ -1,0 +1,1237 @@
+{
+  "schema": "labwired.nominal-pose-checks.v1",
+  "source": {
+    "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+    "byteLength": 31338
+  },
+  "pcbSha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+  "scope": "Eight single-control maximum specified pretravel poses with nominal 4.3 mm switch height and zero plunger adjustment. Also four straight 4 mm driver-shaft corridors and an exact 30 mm positive-Y sweep of the modeled USB overmold and axial strain relief. Purchased-part tolerances, simultaneous D-pad combinations, switch overtravel/forces and USB metal plug seating are not established.",
+  "checks": [
+    {
+      "id": "btn-up",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          33.229030134723196
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "a5ce808c74521c65374e041d6f684a0770ee8acb2a1fdd1b71df2561234c3682",
+          "byteLength": 31340
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-up",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "c6287427c22cb6cadaa662cafd709e71b7310841684b042fb8a6d9d5854336d8"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "1e8fa9a2635c386c157bcd696326accf73e813ee01208b2affeb0f5051b9557f"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "btn-down",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          33.229030134723196
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "edafd9fc85163b37fb1a2e23fd3780247526ff570f951e304cb06b6fb63a7abf",
+          "byteLength": 31342
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-down",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "a29fa826e01e9436320225b6fcbfdef851be2f7196c36057ef2a465f62c4b458"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "f159fb47011e545d6c5f8f308741301402dc524f7e33e954cb191265328398c5"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "btn-left",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          33.229030134723196
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "80d98940a36c19396f7bd927eda9349fab0dda2d3891389471062b53afe9d18a",
+          "byteLength": 31342
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-left",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "f153ab4e90df07bede1a34ee31519612261f8d3725be2db55d09d1f26f507eeb"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "b69b616d2201549d4c0c503d2927dcf1766da8583aca9a65b91ee3b4a0d81186"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "btn-right",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          33.2290301347232
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "f57327caf001960fdad10b18392147f2e440c97dc84b83ecaa5f3fa86102b7ce",
+          "byteLength": 31343
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-right",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "ae8623b9d64711c66ae88243c1e6b85943a9a897cc94b3c0e5728bc2feb00636"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "c23c3242698806ffe0ab077b5c02c435efc29bcccdf0cf8d0e8e79f67956bb6c"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "btn-a",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          32.3
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "7b889cb27e63c159012fee78e8e629525be111f1ab3e8ddf30f2ba0e1868d186",
+          "byteLength": 31339
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-a",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "d1c504fff5da08296ea1eef5af5c44716c345a60f725f2ed572c681eb2bf2ece"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "9dedc20ed76680adef4d86fd7e206bd198c31481352da5f6773dbd5f610b9569"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "btn-b",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          32.3
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "e75e9ca8ea1ac38c2c653fd90d9ac9f3269b8322f7a5726227d19d31e455d9d9",
+          "byteLength": 31339
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-b",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "15cb8a4ae88098024d1bdacc4c612365f250d34062cc8b88aaf319b22af484fc"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "c70c7779b58e5096e4bfa9de4788cd17a62f2f9610f0e35607c5ff7a3ba2bb5d"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "btn-select",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          32.3
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "d6713fab5b5989f4b41659ff68be942359507808a188d4046d391751577d5954",
+          "byteLength": 31344
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-select",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "d9a0c780e07542232f5dea4329dc3fdb12d81016e260fb908e751d7632dd5468"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "b1227fb75dfbfd300a18f27fd2771b9a3625c8411974ea6bbda2fe1e9794bf55"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "btn-start",
+      "kind": "button-maximum-pretravel",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162188.68900180003,
+        "faceCount": 1452,
+        "size": [
+          90,
+          164.585,
+          32.3
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162188.68900180003
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "8c6a2fba7efd73d2d12f009f24b0519cbab77932b10a5bf2b8abf2c65b54b9bb",
+          "byteLength": 31343
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "btn-start",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "maximum"
+          },
+          "sha256": "c2ce7dd1f497bb615a4aaf1cc91011684fb5a2dbe2e7f560a7ef49d8013cbcca"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "843840e66352233f7b8eee4f7d6a8c413c0d0e1067b617f882caf40a93bef72e"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "case-driver-access",
+      "kind": "four-straight-4mm-shaft-reservations",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 162691.3438263744,
+        "faceCount": 1460,
+        "size": [
+          90,
+          164.585,
+          39.9
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 408,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 162691.3438263744
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "dbf635c106a26b610b5429cc8172f964e87a0c83712404eaf4c09934cd259a52",
+          "byteLength": 31476
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "rest",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "nominal"
+          },
+          "sha256": "bd24b74769122dc666bb84dc772787dd592d06c3e8a6c0fddfd89cba5ba2a7e5"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "20f6cb5d31cc27433fb26b6ffeac69f6738fdcc6c47c9d2092bf3290c67122f7"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "id": "usb-overmold-withdrawal",
+      "kind": "exact-30mm-positive-y-swept-envelope",
+      "ok": true,
+      "buildOk": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 164941.48900180002,
+        "faceCount": 1452,
+        "size": [
+          90,
+          194.585,
+          32.3
+        ]
+      },
+      "parts": {
+        "count": 59,
+        "names": [
+          "rear-shell",
+          "front-shell",
+          "battery-service-cover",
+          "display-bezel",
+          "lcd1-pcb-envelope",
+          "lcd1-frame-envelope",
+          "lcd1-active-glass",
+          "main-pcb-envelope",
+          "J1-mated-header-envelope",
+          "J1-wire-exit-reservation",
+          "J1-solder-envelope",
+          "button-support",
+          "SW1-body",
+          "SW1-actuator",
+          "SW2-body",
+          "SW2-actuator",
+          "SW3-body",
+          "SW3-actuator",
+          "SW4-body",
+          "SW4-actuator",
+          "SW5-body",
+          "SW5-actuator",
+          "SW6-body",
+          "SW6-actuator",
+          "SW7-body",
+          "SW7-actuator",
+          "SW8-body",
+          "SW8-actuator",
+          "dpad",
+          "btn-b",
+          "btn-a",
+          "btn-select",
+          "btn-start",
+          "A1-header-left",
+          "A1-solder-left-envelope",
+          "A1-header-right",
+          "A1-solder-right-envelope",
+          "A1-pcb-envelope",
+          "A1-component-height-envelope",
+          "A1-usb-receptacle-envelope",
+          "usb-external-plug-envelope",
+          "case-tl-nut",
+          "case-tl-screw",
+          "case-tr-nut",
+          "case-tr-screw",
+          "case-bl-nut",
+          "case-bl-screw",
+          "case-br-nut",
+          "case-br-screw",
+          "pcb-mount-tl-nut",
+          "pcb-mount-tl-screw",
+          "pcb-mount-tr-nut",
+          "pcb-mount-tr-screw",
+          "pcb-mount-bl-nut",
+          "pcb-mount-bl-screw",
+          "pcb-mount-br-nut",
+          "pcb-mount-br-screw",
+          "battery-reserved-envelope",
+          "speaker-reserved-envelope"
+        ]
+      },
+      "featureCount": 400,
+      "diagnostics": [],
+      "stepValidity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 164941.48900180002
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "bfc724708ecd78724f542da3308b4f09f46c9ade6de0d18e501e800b86ae587c",
+          "byteLength": 31344
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "rest",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "nominal"
+          },
+          "sha256": "bd24b74769122dc666bb84dc772787dd592d06c3e8a6c0fddfd89cba5ba2a7e5"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "9eef1309b4084339769456717b7cceb6240dbc2265eff1f86dceb4d94305b1a7"
+      },
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    }
+  ],
+  "collisionCheckBasis": {
+    "entrypoint": "return a.solvedModel({});",
+    "ignoredPairs": [],
+    "positiveControl": "collision-regression.json",
+    "scope": "Full evaluation of each source variant includes solved-model collision checking; the positive control demonstrates that gate. Results mean no blocking collision diagnostics for the modeled bodies at each stated pose or swept-envelope case. The tool does not return a per-case interferenceSummary."
+  }
+}

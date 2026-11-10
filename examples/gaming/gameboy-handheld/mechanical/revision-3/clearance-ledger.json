@@ -1,0 +1,282 @@
+{
+  "schema": "labwired.nominal-clearance-ledger.v1",
+  "units": "mm",
+  "proofClass": "nominal geometric calculations; no physical fit or manufacturing acceptance",
+  "cadSourceSha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+  "pcbSha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+  "inputSources": {
+    "design-interfaces.json": "538c35c16001219509d9a0f504cf3ba7d4d06bd59296706bc3d551184b0cee6a",
+    "pcb/carrier-layout.json": "3b6a68fda5b1c35b4b4defbc37b7229f7de88c238baa8dc4c85756a7f6a34804",
+    "pcb/assembly-interfaces.json": "28378e05772b217934dfd36c0b2c474a01ac4c085ac1ba77d1124f297afea60d",
+    "mechanical/labwired-gameboy.kcad.ts": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78",
+    "mechanical/revision-3/assembly-config.json": "2ca978a8a0eaa0f8f7ea16095b7e0e5d572223a14a126260d58451e5d3df0723",
+    "mechanical/revision-3/assembly-body.ts": "7212c9d922e9b91d3bdff0f614a5f93cc98b086a265102256dad8752504e9903",
+    "mechanical/revision-3/build_assembly.py": "c9d9b467f2580034a8b0917d18652ac963f9ef555037d8234793c3ca73853333"
+  },
+  "nominalCalculations": {
+    "header": {
+      "collarHeightMm": 2.54,
+      "moduleHeaderFaceZ": 10.86,
+      "moduleComponentFaceZ": 9.26,
+      "postTipZ": 19.24,
+      "fullPinProtrusionAboveCarrierMm": 4.24,
+      "pinToLcdUndersideMm": 3.36,
+      "componentEnvelopeToRearFloorMm": 3.46,
+      "moduleTailTipZ": 8.32,
+      "pinDiagonalMm": 0.898026,
+      "carrierHoleNominalDiametricMarginMm": 0.121974,
+      "moduleHoleBasis": "Unmeasured V3.0 clearance assumption. The comparative V3.1 STEP has 0.9 mm holes; no interchangeability or guaranteed fit with the selected square pins is claimed.",
+      "physicalFit": "unverified; pin, finished-hole and module tolerances are not established"
+    },
+    "usb": {
+      "mouthYAssumption": 137.185,
+      "centerZAssumption": 7.66,
+      "mouthToInsideWallMm": 8.415,
+      "mouthToOutsideWallMm": 10.815,
+      "overmoldShoulderYAssumption": 137.685,
+      "overmoldInsertionPastOutsideWallMm": 10.315,
+      "openingSideClearanceMm": 0.4,
+      "openingVerticalClearanceMm": 0.4,
+      "overmoldToRearFloorMm": 1.56,
+      "overmoldToCarrierUndersideMm": 2.04,
+      "physicalFit": "Direct-access proposal. The inspected male overmold is real; module USB center, mating-plane datum and fully seated shoulder offset remain assumptions. No internal extension or selected flexible cable routing is claimed."
+    },
+    "buttons": {
+      "nominalGapMm": 0.2,
+      "nominalCapStrokeMm": 0.45,
+      "maximumNominalHeightCapStrokeMm": 0.65,
+      "minimumHeightWorstCaseStrokeMm": 0.85,
+      "ordinaryButtonStopTravelMm": 0.65,
+      "requiresMeasuredPlungerAdjustment": true,
+      "poses": [
+        {
+          "id": "btn-up",
+          "switchCenterMm": [
+            -24.0,
+            62.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "leverRadiusMm": 8.0,
+          "rotationDegrees": 4.759541,
+          "sphereTipDescentMm": 0.65
+        },
+        {
+          "id": "btn-down",
+          "switchCenterMm": [
+            -24.0,
+            46.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "leverRadiusMm": 8.0,
+          "rotationDegrees": 4.759541,
+          "sphereTipDescentMm": 0.65
+        },
+        {
+          "id": "btn-left",
+          "switchCenterMm": [
+            -32.0,
+            54.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "leverRadiusMm": 8.0,
+          "rotationDegrees": 4.759541,
+          "sphereTipDescentMm": 0.65
+        },
+        {
+          "id": "btn-right",
+          "switchCenterMm": [
+            -16.0,
+            54.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "leverRadiusMm": 8.0,
+          "rotationDegrees": 4.759541,
+          "sphereTipDescentMm": 0.65
+        },
+        {
+          "id": "btn-a",
+          "switchCenterMm": [
+            33.0,
+            64.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "capTranslationMm": 0.65
+        },
+        {
+          "id": "btn-b",
+          "switchCenterMm": [
+            18.0,
+            52.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "capTranslationMm": 0.65
+        },
+        {
+          "id": "btn-select",
+          "switchCenterMm": [
+            -8.0,
+            28.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "capTranslationMm": 0.65
+        },
+        {
+          "id": "btn-start",
+          "switchCenterMm": [
+            9.0,
+            28.0
+          ],
+          "maximumSpecifiedPretravelMm": 0.45,
+          "capTranslationMm": 0.65
+        }
+      ],
+      "physicalFit": "Nominal geometric motion only. Switch pretravel is not an allowable overtravel specification. Installed gap, switch height and printed tolerance require adjustment before load testing."
+    },
+    "fasteners": [
+      {
+        "id": "case-tl",
+        "lengthMm": 20,
+        "headSeatZ": 27.4,
+        "tipZ": 7.4,
+        "nutZ": [
+          9.65,
+          11.65
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 2.25,
+        "blindBoreTipClearanceMm": 0.5
+      },
+      {
+        "id": "case-tr",
+        "lengthMm": 20,
+        "headSeatZ": 27.4,
+        "tipZ": 7.4,
+        "nutZ": [
+          9.65,
+          11.65
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 2.25,
+        "blindBoreTipClearanceMm": 0.5
+      },
+      {
+        "id": "case-bl",
+        "lengthMm": 20,
+        "headSeatZ": 27.4,
+        "tipZ": 7.4,
+        "nutZ": [
+          9.65,
+          11.65
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 2.25,
+        "blindBoreTipClearanceMm": 0.5
+      },
+      {
+        "id": "case-br",
+        "lengthMm": 20,
+        "headSeatZ": 27.4,
+        "tipZ": 7.4,
+        "nutZ": [
+          9.65,
+          11.65
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 2.25,
+        "blindBoreTipClearanceMm": 0.5
+      },
+      {
+        "id": "pcb-mount-tl",
+        "lengthMm": 8,
+        "headSeatZ": 15.0,
+        "tipZ": 7.0,
+        "nutZ": [
+          8.95,
+          10.95
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 1.95,
+        "blindBoreTipClearanceMm": 0.7
+      },
+      {
+        "id": "pcb-mount-tr",
+        "lengthMm": 8,
+        "headSeatZ": 15.0,
+        "tipZ": 7.0,
+        "nutZ": [
+          8.95,
+          10.95
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 1.95,
+        "blindBoreTipClearanceMm": 0.7
+      },
+      {
+        "id": "pcb-mount-bl",
+        "lengthMm": 20,
+        "headSeatZ": 24.8,
+        "tipZ": 4.8,
+        "nutZ": [
+          8.95,
+          10.95
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 4.15,
+        "blindBoreTipClearanceMm": 0.5
+      },
+      {
+        "id": "pcb-mount-br",
+        "lengthMm": 20,
+        "headSeatZ": 24.8,
+        "tipZ": 4.8,
+        "nutZ": [
+          8.95,
+          10.95
+        ],
+        "axialEngagementMm": 2.0,
+        "tipProtrusionMm": 4.15,
+        "blindBoreTipClearanceMm": 0.5
+      }
+    ],
+    "fastenerProofLimit": "These are axial calculations. See fastener-installation.json for BREP measurements and unsupported blind/captive-bore results. No thread strength or torque proof.",
+    "driver": {
+      "reservedShaftDiameterMm": 4.0,
+      "shellCounterboreDiameterMm": 5.1,
+      "bezelScallopDiameterMm": 5.8,
+      "nominalRadialClearanceMm": 0.55,
+      "limitation": "A straight 4 mm-diameter shaft corridor is reserved from above. The actual tool, its recess engagement and hand clearance are not selected or validated."
+    },
+    "J1": {
+      "bodyBoundsCaseMm": [
+        [
+          -8.95,
+          73.2
+        ],
+        [
+          8.95,
+          77.7
+        ]
+      ],
+      "matedZ": [
+        15.0,
+        23.0
+      ],
+      "separationToLcdInYmm": 7.65,
+      "wireExitReservationMm": 3.0,
+      "tailTipZ": 11.6,
+      "tailToBatteryReservationMm": 2.3,
+      "previousPlacementNominalLcdOverlapMm": 0.4,
+      "limitation": "Combined nominal header/housing box, straight nominal terminal envelope and reserved wire-exit volume. Retention kinks, exact supplied housing and the harness route are unverified."
+    }
+  },
+  "omissions": [
+    "C1 and C2 capacitor bodies and leads",
+    "Most switch terminal tails and solder joints",
+    "Other small carrier components",
+    "Full LCD harness, wire bends, strain relief and connector seating",
+    "Exact purchased V3.0 board-to-header and USB mating datums",
+    "Final LCD retention and connector height",
+    "Battery-service-cover retention",
+    "Battery, protection/charging circuit and selected speaker"
+  ]
+}

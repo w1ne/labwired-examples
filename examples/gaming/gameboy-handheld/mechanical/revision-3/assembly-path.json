@@ -1,0 +1,933 @@
+{
+  "source": {
+    "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+    "byteLength": 31338
+  },
+  "request": {
+    "check": "assembly-path",
+    "sequence": true,
+    "workBudget": 2500
+  },
+  "result": {
+    "ok": false,
+    "source": "local",
+    "basis": "continuous-triangle-mesh",
+    "limitations": [
+      "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+    ],
+    "model": {
+      "rigidParts": true,
+      "motion": "straight-line-translation",
+      "motionModels": [
+        "straight-line-translation"
+      ],
+      "testedDirections": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "gravity": "not-modelled",
+      "basis": "continuous-triangle-mesh",
+      "tessellation": {
+        "linearMm": 0.01,
+        "relative": true,
+        "angularRad": 0.05,
+        "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+      },
+      "clearanceMm": 0,
+      "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+      "toolReach": "not-modelled"
+    },
+    "parts": [
+      {
+        "part": "rear-shell",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "front-shell",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "battery-service-cover",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "display-bezel",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "lcd1-pcb-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "lcd1-frame-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "lcd1-active-glass",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "main-pcb-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "J1-mated-header-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "J1-wire-exit-reservation",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "J1-solder-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "button-support",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW1-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW1-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW2-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW2-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW3-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW3-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW4-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW4-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW5-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW5-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW6-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW6-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW7-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW7-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW8-body",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "SW8-actuator",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "dpad",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "btn-b",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "btn-a",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "btn-select",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "btn-start",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "A1-header-left",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "A1-solder-left-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "A1-header-right",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "A1-solder-right-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "A1-pcb-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "A1-component-height-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "A1-usb-receptacle-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "usb-external-plug-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-tl-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-tl-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-tr-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-tr-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-bl-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-bl-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-br-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "case-br-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-tl-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-tl-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-tr-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-tr-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-bl-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-bl-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-br-nut",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "pcb-mount-br-screw",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "battery-reserved-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      },
+      {
+        "part": "speaker-reserved-envelope",
+        "removable": false,
+        "validDirections": [],
+        "directions": [],
+        "state": {
+          "kind": "unknown",
+          "reason": "budget"
+        }
+      }
+    ],
+    "blockingGraph": {
+      "parts": [
+        "rear-shell",
+        "front-shell",
+        "battery-service-cover",
+        "display-bezel",
+        "lcd1-pcb-envelope",
+        "lcd1-frame-envelope",
+        "lcd1-active-glass",
+        "main-pcb-envelope",
+        "J1-mated-header-envelope",
+        "J1-wire-exit-reservation",
+        "J1-solder-envelope",
+        "button-support",
+        "SW1-body",
+        "SW1-actuator",
+        "SW2-body",
+        "SW2-actuator",
+        "SW3-body",
+        "SW3-actuator",
+        "SW4-body",
+        "SW4-actuator",
+        "SW5-body",
+        "SW5-actuator",
+        "SW6-body",
+        "SW6-actuator",
+        "SW7-body",
+        "SW7-actuator",
+        "SW8-body",
+        "SW8-actuator",
+        "dpad",
+        "btn-b",
+        "btn-a",
+        "btn-select",
+        "btn-start",
+        "A1-header-left",
+        "A1-solder-left-envelope",
+        "A1-header-right",
+        "A1-solder-right-envelope",
+        "A1-pcb-envelope",
+        "A1-component-height-envelope",
+        "A1-usb-receptacle-envelope",
+        "usb-external-plug-envelope",
+        "case-tl-nut",
+        "case-tl-screw",
+        "case-tr-nut",
+        "case-tr-screw",
+        "case-bl-nut",
+        "case-bl-screw",
+        "case-br-nut",
+        "case-br-screw",
+        "pcb-mount-tl-nut",
+        "pcb-mount-tl-screw",
+        "pcb-mount-tr-nut",
+        "pcb-mount-tr-screw",
+        "pcb-mount-bl-nut",
+        "pcb-mount-bl-screw",
+        "pcb-mount-br-nut",
+        "pcb-mount-br-screw",
+        "battery-reserved-envelope",
+        "speaker-reserved-envelope"
+      ],
+      "directions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "edges": []
+    },
+    "stuckParts": [
+      "rear-shell",
+      "front-shell",
+      "battery-service-cover",
+      "display-bezel",
+      "lcd1-pcb-envelope",
+      "lcd1-frame-envelope",
+      "lcd1-active-glass",
+      "main-pcb-envelope",
+      "J1-mated-header-envelope",
+      "J1-wire-exit-reservation",
+      "J1-solder-envelope",
+      "button-support",
+      "SW1-body",
+      "SW1-actuator",
+      "SW2-body",
+      "SW2-actuator",
+      "SW3-body",
+      "SW3-actuator",
+      "SW4-body",
+      "SW4-actuator",
+      "SW5-body",
+      "SW5-actuator",
+      "SW6-body",
+      "SW6-actuator",
+      "SW7-body",
+      "SW7-actuator",
+      "SW8-body",
+      "SW8-actuator",
+      "dpad",
+      "btn-b",
+      "btn-a",
+      "btn-select",
+      "btn-start",
+      "A1-header-left",
+      "A1-solder-left-envelope",
+      "A1-header-right",
+      "A1-solder-right-envelope",
+      "A1-pcb-envelope",
+      "A1-component-height-envelope",
+      "A1-usb-receptacle-envelope",
+      "usb-external-plug-envelope",
+      "case-tl-nut",
+      "case-tl-screw",
+      "case-tr-nut",
+      "case-tr-screw",
+      "case-bl-nut",
+      "case-bl-screw",
+      "case-br-nut",
+      "case-br-screw",
+      "pcb-mount-tl-nut",
+      "pcb-mount-tl-screw",
+      "pcb-mount-tr-nut",
+      "pcb-mount-tr-screw",
+      "pcb-mount-bl-nut",
+      "pcb-mount-bl-screw",
+      "pcb-mount-br-nut",
+      "pcb-mount-br-screw",
+      "battery-reserved-envelope",
+      "speaker-reserved-envelope"
+    ],
+    "sequence": {
+      "steps": [],
+      "model": {
+        "rigidParts": true,
+        "motion": "straight-line-translation",
+        "motionModels": [
+          "straight-line-translation"
+        ],
+        "testedDirections": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            -1
+          ]
+        ],
+        "gravity": "not-modelled",
+        "basis": "continuous-triangle-mesh",
+        "tessellation": {
+          "linearMm": 0.01,
+          "relative": true,
+          "angularRad": 0.05,
+          "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+        },
+        "clearanceMm": 0,
+        "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+        "toolReach": "not-modelled"
+      },
+      "unknown": [
+        "rear-shell",
+        "front-shell",
+        "battery-service-cover",
+        "display-bezel",
+        "lcd1-pcb-envelope",
+        "lcd1-frame-envelope",
+        "lcd1-active-glass",
+        "main-pcb-envelope",
+        "J1-mated-header-envelope",
+        "J1-wire-exit-reservation",
+        "J1-solder-envelope",
+        "button-support",
+        "SW1-body",
+        "SW1-actuator",
+        "SW2-body",
+        "SW2-actuator",
+        "SW3-body",
+        "SW3-actuator",
+        "SW4-body",
+        "SW4-actuator",
+        "SW5-body",
+        "SW5-actuator",
+        "SW6-body",
+        "SW6-actuator",
+        "SW7-body",
+        "SW7-actuator",
+        "SW8-body",
+        "SW8-actuator",
+        "dpad",
+        "btn-b",
+        "btn-a",
+        "btn-select",
+        "btn-start",
+        "A1-header-left",
+        "A1-solder-left-envelope",
+        "A1-header-right",
+        "A1-solder-right-envelope",
+        "A1-pcb-envelope",
+        "A1-component-height-envelope",
+        "A1-usb-receptacle-envelope",
+        "usb-external-plug-envelope",
+        "case-tl-nut",
+        "case-tl-screw",
+        "case-tr-nut",
+        "case-tr-screw",
+        "case-bl-nut",
+        "case-bl-screw",
+        "case-br-nut",
+        "case-br-screw",
+        "pcb-mount-tl-nut",
+        "pcb-mount-tl-screw",
+        "pcb-mount-tr-nut",
+        "pcb-mount-tr-screw",
+        "pcb-mount-bl-nut",
+        "pcb-mount-bl-screw",
+        "pcb-mount-br-nut",
+        "pcb-mount-br-screw",
+        "battery-reserved-envelope",
+        "speaker-reserved-envelope"
+      ]
+    },
+    "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+  }
+}

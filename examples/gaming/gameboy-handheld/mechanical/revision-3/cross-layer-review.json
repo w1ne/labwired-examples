@@ -1,0 +1,18 @@
+{
+  "schema": "labwired.independent-interface-review.v1",
+  "source": {
+    "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+    "byteLength": 31338
+  },
+  "reviewer": "gameboy_board_binding",
+  "method": "read-only comparison of generated source/constants against frozen native PCB export and interface files; no evaluator rerun or file changes",
+  "result": "no new integration blocker",
+  "facts": [
+    "All recorded input hashes and generated I/P/C constants match the frozen files.",
+    "All 40 A1 and 8 J1 pad centers and drills match the PCB export; the linear-pattern assumptions hold.",
+    "All 8 switch centers match PCB pad means and shared control centers.",
+    "J1 pin 1 is case (-7,76); combined body bounds are x±8.95,y73.2–77.7,z15–23.",
+    "The support notch x±11,y70–78 opens through the support plate edge and clears the 3 mm wire-exit reservation."
+  ],
+  "scope": "The carrier CAD is an envelope. It omits 32 switch drill holes, 4 optional SWD holes and vias; the native PCB/STEP exports contain the drill geometry. Purchased-module, USB, retention and harness limitations remain."
+}
