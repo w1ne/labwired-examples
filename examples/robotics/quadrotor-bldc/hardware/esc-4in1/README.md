@@ -19,8 +19,8 @@ sensing. The manufacturer documents AM32-compatible control firmware.
   capacitors (originally only on the PCB), each wired to +BATT and GND.
 - ESC.kicad_sch: complete repeated one-motor controller and gate driver.
 - 4in1.kicad_pcb: routed 6-layer board, 222 uniquely numbered footprints,
-  195 original routed nets plus 10 isolated NC pin identities (205 named nets);
-  2,916 routing items, including 1,708 vias.
+  195 original routed nets plus 13 isolated NC pin identities (208 named nets);
+  2,915 routing items, including 1,712 vias.
 - 4in1.kicad_pro, 4in1.kicad_dru: original manufacturer PCB rule settings.
 - Local footprints, 3D shapes and symbols plus pinned KiCad-Library submodule.
 - board-only-caps.csv: mapping of the 49 originally duplicate designators
@@ -48,24 +48,30 @@ sensing. The manufacturer documents AM32-compatible control firmware.
    via move require fab, current-density and thermal review. See
    [the U7 review](validation/u7-power-feedback-reroute-20261110.md).
 
+8. This revision restores U5 AT32F421 pins 8, 23, 24 and routes its
+   GND, +3V3 and analog ESC2/FBCOMMON paths on In4.Cu using four
+   additional blind microvias. See the
+   [U5 physical routing review](validation/u5-power-feedback-reroute-20261110.md).
+
 ## Current verification (review-only)
 
 Original copper is fully routed: 0 unconnected items, and no currently
 reported copper shorts under the supplied project rules. However,
-native KiCad DRC reports **2 package-footprint library mismatches**
-(U2/U5 AT32F421) and **6 missing physical MCU pads** in schematic
+native KiCad DRC reports **1 package-footprint library mismatch**
+(U2 AT32F421) and **3 missing physical MCU pads** in schematic
 parity:
-- AT32F421 U2/U5: pins 8, 23, 24 are still missing.
+- AT32F421 U2: pins 8, 23, 24 are still missing.
+- AT32F421 U5: pins 8/23/24 restored with power and feedback rerouting.
 - AT32F421 U7: pins 8/23/24 restored with full power/feedback rerouting.
 - AT32F421 U9: pins 23/24 restored with six-layer rerouting.
 - NSG2065Q U6 pins 5/7 and U10 pins 5/7/8 restored.
 
-The remaining 6 are unconnected MCU pins in the schematic but omitted
+The remaining 3 are unconnected MCU pins in the schematic but omitted
 from their real physical footprints. Restoring all 16 pads at once
 without rerouting produced 17 shorts, so that candidate was rejected.
 Native KiCad 10 reports **no physical shorts, clearance failures or
 unrouted items** in this revision. Manufacturing approval remains blocked
-on 7 blind microvias (including solder pad microvias), power/current-feedback
+on 11 blind microvias (including solder pad microvias), power/current-feedback
 trace cross-section and return-current review, the remaining MCU pads,
 and inherited electrical ERC findings.
 

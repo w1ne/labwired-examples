@@ -9,9 +9,9 @@ local/pinned symbol and footprint libraries.
 
 - 222 unique physical component reference numbers.
 - 0 unconnected copper items.
-- 195 original routed nets plus 10 isolated NC pin nets; 2,916 track/via items.
-- 2 footprint library mismatches (U2, U5).
-- 6 schematic-to-board parity mismatches because MCU package pads
+- 195 original routed nets plus 13 isolated NC pin nets; 2,915 track/via items.
+- 1 footprint library mismatch (U2).
+- 3 schematic-to-board parity mismatches because MCU package pads
   are absent from specific IC footprints.
 - No copper short or clearance violation was reported on the
   board as checked with its original missing pads.
@@ -23,7 +23,7 @@ not tied to an NC pad or bypassed with a false DRC exclusion.
 
 Still omitted, not accepted:
 - U2 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
-- U5 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
+- U5 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3) — restored in this revision
 - U7 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3) — restored in this revision
 - U9 AT32F421: 23 (PA15), 24 (PB3) — restored in this revision
 
@@ -34,7 +34,7 @@ Fixed in this partial rework:
   GND track at (65.6801,42.0100)-(65.6801,42.6301) removed.
 
 **KiCad native check:** 0 copper short/clearance violations, 0 unconnected
-items, 2 AT32F421 footprint mismatches, and 6 parity findings. The original
+items, 1 AT32F421 footprint mismatch, and 3 parity findings. The original
 bulk caps, net mapping, and 213 assembly components remain unchanged.
 The removed GND stitching features need EMI/thermal and return-current review.
 U9 was rerouted using a blind B.Cu–In4.Cu microvia and two through vias in
@@ -48,6 +48,10 @@ reroute +3V3, GND and ESC3 current feedback. A former 0.8 mm In2.Cu
 +3V3 spur is replaced by a 0.3 mm In4.Cu route, requiring power-integrity
 and current-density review. See
 [u7-power-feedback-reroute-20261110.md](u7-power-feedback-reroute-20261110.md).
+The U5 revision adds four more blind B.Cu/In4.Cu microvias to route
++3V3, GND and the ESC2 analog current feedback around physical MCU pins.
+The new factory-process and analog-signal risks are documented in
+[u5-power-feedback-reroute-20261110.md](u5-power-feedback-reroute-20261110.md).
 This is not a production sign-off.
 
 The missing pins are explicitly unconnected in the exported
@@ -98,7 +102,7 @@ thermal, propeller thrust and flight have not been tested.
 
 ## Required release gates
 
-1. Restore 6 remaining AT32F421 package pads on U2/U5; U7/U9 and both NSG2065Q driver NC sets are restored.
+1. Restore 3 remaining AT32F421 package pads on U2; U5/U7/U9 and both NSG2065Q driver NC sets are restored.
 2. Reroute all intersecting copper, vias and plane connections
    while maintaining phase-current paths, via design rules and
    6-layer stack impedance/thermal design.

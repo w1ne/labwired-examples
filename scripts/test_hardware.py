@@ -97,11 +97,11 @@ class ESCPhysicalBoard(unittest.TestCase):
 
     def test_drc_report_is_not_misrepresented_as_clean(self):
         drc = findings(E / "validation" / "drc-final.txt")
-        self.assertEqual(drc["lib_footprint_mismatch"], 2)
-        self.assertEqual(drc["net_conflict"], 6)
+        self.assertEqual(drc["lib_footprint_mismatch"], 1)
+        self.assertEqual(drc["net_conflict"], 3)
         for violation in ("shorting_items", "clearance", "unconnected_items"):
             self.assertEqual(drc[violation], 0)
-        self.assertEqual(sum(drc.values()), 8)
+        self.assertEqual(sum(drc.values()), 4)
 
     def test_gate_driver_nc_pads_restored_and_isolated(self):
         # The five actual QFN pads must be physical PCB objects, each with a
@@ -155,6 +155,22 @@ class ESCPhysicalBoard(unittest.TestCase):
             self.assertIn('4in1-in4-back.drl', archive.namelist())
         evidence = (E / 'validation' / 'u7-power-feedback-reroute-20261110.md').read_text()
         self.assertIn('not an approved product', evidence)
+
+    def test_u5_three_nc_pads_and_four_new_blind_vias(self):
+        marker = '(property "Reference" "U5"'
+        idx = self.board.find(marker)
+        self.assertGreater(idx, 0)
+        start = self.board.rfind("\n\t(footprint ", 0, idx)
+        end = self.board.find("\n\t(footprint ", idx)
+        footprint = self.board[start:end if end >= 0 else None]
+        for number, name in (("8", "PA2"), ("23", "PA15"), ("24", "PB3")):
+            self.assertIn('(pad "' + number + '" smd', footprint)
+            self.assertIn(f'unconnected-(U5-{name}-Pad{number})', footprint)
+        for x,y in ((79.99,42.4101), (80.63,42.4101),
+                    (77.88,38.46), (77.5,36.99)):
+            self.assertIn(f'(at {x} {y})', self.board)
+        evidence = (E / 'validation' / 'u5-power-feedback-reroute-20261110.md').read_text()
+        self.assertIn('not ready for', evidence)
 
     def test_inherited_erc_findings_explicit(self):
         erc = findings(E / "validation" / "erc-final.txt")

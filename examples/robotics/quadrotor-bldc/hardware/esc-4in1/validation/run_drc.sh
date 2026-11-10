@@ -15,9 +15,9 @@ import collections,re,sys
 s=open(sys.argv[1]).read()
 c=collections.Counter(re.findall(r'^\[([^\]]+)\]',s,re.M))
 print('KiCad native report:',dict(c))
-expected={'lib_footprint_mismatch':2,'net_conflict':6}
+expected={'lib_footprint_mismatch':1,'net_conflict':3}
 if dict(c)!=expected:
     raise SystemExit('DRC result changed; review all new findings.')
 print('No physical shorts, clearance errors or unrouted connections.')
-print('NOT FABRICATION APPROVED: 6 missing MCU pads and inherited ERC.')
+print('NOT FABRICATION APPROVED: 3 missing MCU pads and inherited ERC.')
 PY
