@@ -7,9 +7,22 @@ not a new LabWired API or simulator. Tracks0.25mm, vias0.6/0.3mm, clearance0.2mm
 import pcbnew as p
 import numpy as np
 from pathlib import Path
-import json,math,heapq,time
+import argparse,json,math,heapq,time
 ROOT=Path(__file__).resolve().parent
-board=p.LoadBoard(str(ROOT/'handheld-carrier-unrouted.kicad_pcb'))
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--input',type=Path,default=ROOT/'handheld-carrier-unrouted.kicad_pcb')
+parser.add_argument('--nets',nargs='+',help='Reroute only these nets; preserve other copper geometry')
+args=parser.parse_args()
+board=p.LoadBoard(str(args.input))
+selected=set(args.nets) if args.nets else None
+if selected:
+    unknown=selected-{n.GetNetname() for n in board.GetNetsByNetcode().values()}
+    if unknown:parser.error('Unknown nets: '+', '.join(sorted(unknown)))
+    # Keep the KiCad 9 SWIG wrappers alive while mutating their native container.
+    input_tracks=list(board.GetTracks())
+    for item in input_tracks:
+        if item.GetNetname() in selected:board.Remove(item)
+preserved_track_items=len(list(board.GetTracks()))
 layout=json.loads((ROOT/'carrier-layout.json').read_text())
 G=.2;NX=391;NY=661
 grid=np.zeros((2,NY,NX),dtype=np.int16)
@@ -28,6 +41,9 @@ for dy in range(-4,5):
 grid[:,~safe]=-1
 def point(x,y):return int(round(x/G)),int(round(y/G))
 def mmxy(v):return p.ToMM(v.x),p.ToMM(v.y)
+def add_track(a,z,l,net):
+    if abs(a[0]-z[0])+abs(a[1]-z[1])<1e-7:return
+    t=p.PCB_TRACK(board);t.SetStart(p.VECTOR2I(p.FromMM(a[0]),p.FromMM(a[1])));t.SetEnd(p.VECTOR2I(p.FromMM(z[0]),p.FromMM(z[1])));t.SetWidth(p.FromMM(.25));t.SetLayer(p.F_Cu if l==0 else p.B_Cu);t.SetNetCode(net);board.Add(t)
 pad_groups={}
 for f in board.GetFootprints():
     for pad in f.Pads():
@@ -40,6 +56,37 @@ for f in board.GetFootprints():
         iy0=max(0,int((y-sy/2-clearance)/G));iy1=min(NY-1,int(math.ceil((y+sy/2+clearance)/G)))
         for l in layers:grid[l,iy0:iy1+1,ix0:ix1+1]=owner
         if net:pad_groups.setdefault(net,[]).append({'name':f'{f.GetReference()}.{pad.GetNumber()}','x':x,'y':y,'layers':layers})
+
+# Reserve ground escape copper before routing any signal. Derive its origin
+# from the connector pad so a placement change cannot leave a stale escape.
+gnd=next(n for n in pad_groups if board.FindNet(n).GetNetname()=='GND')
+if selected is None or 'GND' in selected:
+    connector=next(f for f in board.GetFootprints() if f.GetReference()=='J1')
+    ground_pad=next(pad for pad in connector.Pads() if pad.GetNumber()=='2')
+    gx,gy=mmxy(ground_pad.GetPosition())
+    add_track((gx,gy),(gx,gy+5),0,gnd)
+    stitch=p.PCB_VIA(board);stitch.SetPosition(p.VECTOR2I(p.FromMM(40),p.FromMM(6)))
+    stitch.SetWidth(p.F_Cu,p.FromMM(.6));stitch.SetWidth(p.B_Cu,p.FromMM(.6))
+    stitch.SetDrill(p.FromMM(.3));stitch.SetViaType(p.VIATYPE_THROUGH)
+    stitch.SetLayerPair(p.F_Cu,p.B_Cu);stitch.SetNetCode(gnd);board.Add(stitch)
+
+# An incremental route must treat retained copper as an obstacle. Reserve its
+# physical radius, the new trace radius, clearance and a grid-quantization margin.
+for item in board.GetTracks():
+    is_via=isinstance(item,p.PCB_VIA)
+    ax,ay=mmxy(item.GetStart());bx,by=mmxy(item.GetEnd())
+    width=p.ToMM(item.GetWidth(p.F_Cu) if is_via else item.GetWidth())
+    radius=width/2+.125+.2+.15
+    x0=max(0,int((min(ax,bx)-radius)/G));x1=min(NX-1,int(math.ceil((max(ax,bx)+radius)/G)))
+    y0=max(0,int((min(ay,by)-radius)/G));y1=min(NY-1,int(math.ceil((max(ay,by)+radius)/G)))
+    qx,qy=xx[y0:y1+1,x0:x1+1],yy[y0:y1+1,x0:x1+1]
+    length2=(bx-ax)**2+(by-ay)**2
+    t=np.clip(((qx-ax)*(bx-ax)+(qy-ay)*(by-ay))/length2,0,1) if length2 else 0
+    mask=(qx-(ax+t*(bx-ax)))**2+(qy-(ay+t*(by-ay)))**2<=radius**2
+    layers=[0,1] if is_via else [0 if item.GetLayer()==p.F_Cu else 1]
+    for layer in layers:
+        region=grid[layer,y0:y1+1,x0:x1+1]
+        region[mask & (region==0)]=item.GetNetCode() or -2
 
 def valid(l,x,y,net):return 0<=x<NX and 0<=y<NY and (grid[l,y,x]==0 or grid[l,y,x]==net)
 def via_ok(x,y,net):
@@ -78,9 +125,6 @@ def astar(a,z,net):
         if counter>700000:break
     return None
 
-def add_track(a,z,l,net):
-    if abs(a[0]-z[0])+abs(a[1]-z[1])<1e-7:return
-    t=p.PCB_TRACK(board);t.SetStart(p.VECTOR2I(p.FromMM(a[0]),p.FromMM(a[1])));t.SetEnd(p.VECTOR2I(p.FromMM(z[0]),p.FromMM(z[1])));t.SetWidth(p.FromMM(.25));t.SetLayer(p.F_Cu if l==0 else p.B_Cu);t.SetNetCode(net);board.Add(t)
 def add_path(path,a,z,net):
     for l,x,y in path:
         for dy in range(-3,4):
@@ -107,6 +151,7 @@ def add_path(path,a,z,net):
 # Reserve a short outward fanout for every connected module pin before routing.
 # This prevents an earlier net from blocking escape from a later header pin.
 for net,pads in pad_groups.items():
+    if selected and board.FindNet(net).GetNetname() not in selected:continue
     if board.FindNet(net).GetNetname()=='GND':continue
     for a in pads:
         if not a['name'].startswith('A1.') or int(a['name'].split('.')[1])>40:continue
@@ -121,6 +166,7 @@ for net,pads in pad_groups.items():
 done=[];failed=[];t0=time.time()
 order=sorted(pad_groups,key=lambda n:(board.FindNet(n).GetNetname()=='GND',-len(pad_groups[n])))
 for net in order:
+    if selected and board.FindNet(net).GetNetname() not in selected:continue
     if board.FindNet(net).GetNetname()=='GND':continue
     pending=pad_groups[net][:];connected=[pending.pop(0)]
     while pending:
@@ -132,20 +178,12 @@ for net in order:
         connected.append(z)
 # Ground uses KiCad-filled copper planes. The zone engine applies precise pad,
 # track, drill and board-edge clearances; GND does not need grid-routed tracks.
-gnd=next(n for n in pad_groups if board.FindNet(n).GetNetname()=='GND')
-# Give the ground pin an explicit escape below the dense LCD connector.
-# Neighboring signal pads constrain the thermal spokes at this one position.
-add_track((58,17),(58,22),0,gnd)
-# Stitch the upper module-header ground region to the opposite copper plane.
-stitch=p.PCB_VIA(board);stitch.SetPosition(p.VECTOR2I(p.FromMM(40),p.FromMM(6)))
-stitch.SetWidth(p.F_Cu,p.FromMM(.6));stitch.SetWidth(p.B_Cu,p.FromMM(.6))
-stitch.SetDrill(p.FromMM(.3));stitch.SetViaType(p.VIATYPE_THROUGH)
-stitch.SetLayerPair(p.F_Cu,p.B_Cu);stitch.SetNetCode(gnd);board.Add(stitch)
 for f in board.GetFootprints():
     if f.GetReference()=='J1':
         for pad in f.Pads():
             if pad.GetNumber()=='2':pad.SetLocalZoneConnection(p.ZONE_CONNECTION_FULL)
 for layer in (p.F_Cu,p.B_Cu):
+    if any(zone.GetLayer()==layer and zone.GetNetCode()==gnd for zone in board.Zones()):continue
     zone=p.ZONE(board);zone.SetLayer(layer);zone.SetNetCode(gnd)
     zone.SetLocalClearance(p.FromMM(.25));zone.SetThermalReliefGap(p.FromMM(.25))
     zone.SetThermalReliefSpokeWidth(p.FromMM(.35));zone.SetMinThickness(p.FromMM(.2))
@@ -156,4 +194,5 @@ for layer in (p.F_Cu,p.B_Cu):
 p.ZONE_FILLER(board).Fill(board.Zones())
 p.SaveBoard(str(ROOT/'handheld-carrier.kicad_pcb'),board)
 out={'routed_connections':len(done),'unrouted_connections':len(failed),'ground_strategy':'KiCad-filled F.Cu and B.Cu planes, 0.25 mm local clearance','failures':failed,'seconds':round(time.time()-t0,2),'track_width_mm':.25,'clearance_mm':.2,'via_diameter_mm':.6,'via_drill_mm':.3,'grid_mm':G,'status':'DRC required'}
+if selected:out.update(routing_scope='selected nets',rerouted_nets=sorted(selected),preserved_track_items=preserved_track_items)
 (ROOT/'routing-report.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out),flush=True)

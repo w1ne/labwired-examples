@@ -1,9 +1,11 @@
 References,Quantity,Part,Footprint or interface,Notes
 A1,1,WeAct Black Pill STM32F411CEU6 v3,DIP-40 15.24 mm plus optional SWD,Rear mounted; USB powered
-A1 headers,2,Samtec TSW-120-07-G-S,2 x single-row 20-pin 2.54 mm; direct solder,1.02 mm nominal carrier holes; confirm module-hole and pin tolerances
-J1,1,JST B8B-PH-K-S,PH 2.0 mm vertical 8-pin,Waveshare stock display cable
-SW1-SW8,8,Normally open 6 mm tactile switch,KiCad SW_PUSH_6mm,Select actuator height after measuring button plungers
+A1 headers,2,Samtec TSW-120-07-G-S,2 x single-row 20-pin 2.54 mm; direct solder,1.02 mm nominal carrier holes; selected strip fit to purchased module remains unverified
+J1,1,JST B8B-PH-K-S(LF)(SN),PH 2.0 mm vertical 8-pin,0.875 mm nominal CAD hole; require 0.85-0.90 mm finished PTH; below LCD
+LCD harness housing,1,JST PHR-8,Carrier-end PH 2.0 mm 8-position housing,Required re-termination of included cable controller end; do not assume PH-to-PH cable or wire order
+SW1-SW8,8,Omron B3F-1000,6.5 x 4.5 mm pin grid; 4.3 mm nominal actuator height,1.0 mm nominal holes; 0.9-1.1 mm finished range; no unreviewed 6 mm substitutes
 C1,1,10 uF 6.3 V X7R,0805,3.3 V bulk bypass
 C2,1,100 nF 16 V X7R,0603,3.3 V bypass
 LCD1,1,Waveshare 2.4-inch ILI9341 LCD module,70.5 x 43.3 mm; PH 2.0 cable,Mounted above carrier; not soldered directly
-USB1,1,Panel-mounted USB-C extension/pigtail,Case top opening to Black Pill USB-C,Exact purchased assembly and strain relief remain to be chosen
+LCD harness contacts,8,JST SPH-002T-P0.5S candidate,PH contacts; AWG 30-24 / insulation OD 0.8-1.5 mm,Use only after confirming supplied wire dimensions and crimp specification; do not reuse incompatible crimps
+LCD harness,1,Waveshare included PH2.0 8-pin 200 mm cable,Retain LCD plug; re-terminate controller end into PHR-8,Required assembly operation; verify eight endpoint functions from assembly-interfaces.json without color assumptions; length/routing unverified
