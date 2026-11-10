@@ -6,8 +6,11 @@ import re
 from pathlib import Path
 from urllib.request import urlopen
 
+from heypcb_topology import source_topology
+
 MANIFEST = Path(__file__).resolve().parents[1] / "examples/pcb/heypcb-import-acceptance/manifest.json"
 SHA = re.compile(r"^[0-9a-f]{40}$")
+SHA256 = re.compile(r"^[0-9a-f]{64}$")
 STAGES = ("fetched", "parsed", "imported", "mapped", "analog_simulated", "firmware_verified", "whole_board_verified")
 GOOD = {"passed", "partial", "not_verified", "blocked"}
 SOURCE_PREFIX = "https://raw.githubusercontent.com/"
@@ -63,6 +66,25 @@ def validate_manifest(document):
         if any(not isinstance(counts.get(k), int) or isinstance(counts.get(k), bool)
                or counts[k] < 0 for k in ("mapped", "dropped", "ignored")):
             errors.append(label + "invalid import part counts")
+        # This is a source-side pad/net baseline, NOT proof that the imported
+        # circuit preserved the original connectivity. Reconcile every physical
+        # footprint with its import classification before comparing pins.
+        topology = b.get("source_topology", {})
+        topology_counts = ("footprints", "pads", "pads_with_nets", "pads_without_nets", "distinct_pad_nets")
+        if not isinstance(topology, dict) or any(
+            not isinstance(topology.get(field), int) or isinstance(topology.get(field), bool)
+            or topology[field] < 0 for field in topology_counts
+        ) or not SHA256.fullmatch(topology.get("pad_net_sha256", "")):
+            errors.append(label + "missing or invalid pinned source pad/net inventory")
+        else:
+            if topology["pads_with_nets"] + topology["pads_without_nets"] != topology["pads"]:
+                errors.append(label + "source connected/unconnected pad totals differ")
+            if topology["distinct_pad_nets"] > topology["pads_with_nets"]:
+                errors.append(label + "source named net count exceeds connected pads")
+            if all(isinstance(counts.get(k), int) for k in ("mapped", "dropped", "ignored")) and (
+                sum(counts[k] for k in ("mapped", "dropped", "ignored")) != topology["footprints"]
+            ):
+                errors.append(label + "source footprints not reconciled with mapped/dropped/ignored counts")
         coverage = b.get("model_coverage", {})
         refs = coverage.get("unmodeled_refs")
         if not isinstance(refs, list) or any(not isinstance(ref, str) or not ref for ref in refs):
@@ -94,6 +116,18 @@ def validate_manifest(document):
             errors.append(label + "missing net completeness measurement status")
         if coverage.get("pin_completeness") not in ("not_measured", "partial", "complete"):
             errors.append(label + "missing pin completeness measurement status")
+        # A user cannot turn source-only counts into a complete imported pin/net
+        # claim. Require an independently identified importer run and the exact
+        # matching canonical pad/net digest before raising either status.
+        if coverage.get("net_completeness") == "complete" or coverage.get("pin_completeness") == "complete":
+            comparison = coverage.get("import_net_pin_comparison", {})
+            if (not isinstance(comparison, dict) or
+                not SHA.fullmatch(comparison.get("labwired_commit", "")) or
+                comparison.get("tool") != "labwired_import" or
+                comparison.get("source_pad_net_sha256") != topology.get("pad_net_sha256") or
+                comparison.get("imported_pad_net_sha256") != topology.get("pad_net_sha256") or
+                not comparison.get("replay_command")):
+                errors.append(label + "complete connectivity requires reproducible imported pad/net comparison")
         if status["mapped"] == "passed" and (counts.get("dropped", 0) or coverage.get("unmodeled_refs")):
             errors.append(label + "cannot report complete model map with dropped/unmodeled parts")
         whole = b.get("whole_board", {})
@@ -175,7 +209,7 @@ def verify_pinned_sources(document, timeout=20):
         for path, sha in ((src["path"], src["blob_sha"]), (src["license_path"], src["license_blob_sha"])):
             url = raw_source_url(src, path)
             if url in checked:
-                actual = checked[url]
+                actual, payload = checked[url]
             else:
                 with urlopen(url, timeout=timeout) as response:
                     payload = response.read(8 * 1024 * 1024 + 1)
@@ -183,9 +217,17 @@ def verify_pinned_sources(document, timeout=20):
                     errors.append(f"{b['id']}: exceeds 8 MiB per source")
                     continue
                 actual = git_blob_sha(payload)
-                checked[url] = actual
+                checked[url] = (actual, payload)
             if actual != sha:
                 errors.append(f"{b['id']}: Git blob SHA mismatch for {url}: {actual} != {sha}")
+            elif path == src["path"]:
+                try:
+                    measured = source_topology(payload)
+                except (UnicodeDecodeError, ValueError) as err:
+                    errors.append(f"{b['id']}: cannot parse pinned KiCad pad/net topology: {err}")
+                else:
+                    if measured != b["source_topology"]:
+                        errors.append(f"{b['id']}: pinned source pad/net topology differs from manifest")
     return errors, len(checked)
 
 
