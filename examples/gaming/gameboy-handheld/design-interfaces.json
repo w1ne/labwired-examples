@@ -1,0 +1,231 @@
+{
+  "schema": "labwired.handheld-mechanical-interfaces.v1",
+  "units": "mm",
+  "coordinateSystem": {
+    "x": "right",
+    "y": "toward top of handheld",
+    "z": "toward front",
+    "origin": "rear bottom center"
+  },
+  "status": "engineering-concept; component heights and fit require supplier drawing confirmation",
+  "case": {
+    "width": 90,
+    "height": 148,
+    "depth": 30,
+    "wall": 2.4,
+    "radius": 7,
+    "seamZ": 16,
+    "seamGap": 0.25
+  },
+  "pcb": {
+    "id": "main-pcb",
+    "width": 78,
+    "height": 132,
+    "thickness": 1.6,
+    "center": [
+      0,
+      74,
+      14.2
+    ],
+    "radius": 3,
+    "mountHoleDiameter": 2.8,
+    "mounts": [
+      {
+        "id": "pcb-mount-tl",
+        "at": [
+          -29,
+          132,
+          13.4
+        ]
+      },
+      {
+        "id": "pcb-mount-tr",
+        "at": [
+          29,
+          132,
+          13.4
+        ]
+      },
+      {
+        "id": "pcb-mount-bl",
+        "at": [
+          -29,
+          16,
+          13.4
+        ]
+      },
+      {
+        "id": "pcb-mount-br",
+        "at": [
+          29,
+          16,
+          13.4
+        ]
+      }
+    ]
+  },
+  "caseFasteners": [
+    {
+      "id": "case-tl",
+      "at": [
+        -36,
+        136,
+        16
+      ]
+    },
+    {
+      "id": "case-tr",
+      "at": [
+        36,
+        136,
+        16
+      ]
+    },
+    {
+      "id": "case-bl",
+      "at": [
+        -36,
+        12,
+        16
+      ]
+    },
+    {
+      "id": "case-br",
+      "at": [
+        36,
+        12,
+        16
+      ]
+    }
+  ],
+  "display": {
+    "id": "lcd1",
+    "catalogType": "ili9341",
+    "manufacturer": "Waveshare",
+    "model": "2.4inch LCD Module",
+    "source": "https://www.waveshare.com/wiki/2.4inch_LCD_Module",
+    "outline": [
+      70.5,
+      43.3
+    ],
+    "activeArea": [
+      48.96,
+      36.72
+    ],
+    "heightAllowance": 6,
+    "center": [
+      0,
+      107,
+      24.2
+    ],
+    "window": [
+      50,
+      38
+    ],
+    "bezel": [
+      75,
+      60
+    ],
+    "note": "XY dimensions from manufacturer; connector and height keep-outs are provisional"
+  },
+  "controls": [
+    {
+      "id": "dpad",
+      "kind": "cross",
+      "center": [
+        -24,
+        54,
+        30
+      ],
+      "span": 23,
+      "bar": 7.2
+    },
+    {
+      "id": "btn-b",
+      "kind": "round",
+      "center": [
+        18,
+        52,
+        30
+      ],
+      "diameter": 10.4
+    },
+    {
+      "id": "btn-a",
+      "kind": "round",
+      "center": [
+        33,
+        64,
+        30
+      ],
+      "diameter": 10.4
+    },
+    {
+      "id": "btn-select",
+      "kind": "pill",
+      "center": [
+        -8,
+        28,
+        30
+      ],
+      "size": [
+        11,
+        4.6
+      ]
+    },
+    {
+      "id": "btn-start",
+      "kind": "pill",
+      "center": [
+        9,
+        28,
+        30
+      ],
+      "size": [
+        11,
+        4.6
+      ]
+    }
+  ],
+  "connectors": [
+    {
+      "id": "usb1",
+      "type": "usb-c",
+      "center": [
+        0,
+        148,
+        10
+      ],
+      "opening": [
+        10,
+        4
+      ],
+      "note": "Panel-mounted USB-C extension/pigtail to the rear-mounted WeAct Black Pill; not directly aligned with the MCU connector. Exact purchased connector and cable require fit confirmation."
+    }
+  ],
+  "battery": {
+    "id": "battery-envelope",
+    "size": [
+      48,
+      58,
+      7
+    ],
+    "center": [
+      0,
+      47,
+      5.8
+    ],
+    "note": "Reserved geometric envelope only; no cell or power circuit selected"
+  },
+  "speaker": {
+    "id": "speaker1",
+    "center": [
+      26,
+      22,
+      26.0
+    ],
+    "diameter": 19,
+    "height": 3,
+    "slots": 5
+  }
+}

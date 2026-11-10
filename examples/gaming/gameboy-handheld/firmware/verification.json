@@ -1,0 +1,27 @@
+{
+  "target": "stm32f411ceu6-blackpill",
+  "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+  "max_steps": 50000000,
+  "oracle": {
+    "serial": [
+      {
+        "contains": "INPUT=000000ef"
+      },
+      {
+        "matches": "DMG_FRAME=[0-9]+ x=4[9]|DMG_FRAME=[0-9]+ x=5[0-9]"
+      }
+    ],
+    "display": {
+      "painted": true,
+      "min_ink_bytes": 10000
+    }
+  },
+  "stimuli": [
+    {
+      "component": "btn-right",
+      "channel": "pressed",
+      "value": 1,
+      "after_cycles": 22000000
+    }
+  ]
+}

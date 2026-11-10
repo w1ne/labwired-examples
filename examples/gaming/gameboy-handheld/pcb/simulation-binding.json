@@ -1,0 +1,96 @@
+{
+  "schema": "labwired.carrier-simulation-binding.v1",
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "diagram": "../firmware/circuit.json",
+  "pcb": "handheld-carrier.kicad_pcb",
+  "pcb_sha256": "c72cf7ab603ba08f37182de79a0bb5d3efb69830acc1d44b8daa040b121f94ae",
+  "mechanical_revision": 2,
+  "bindings": {
+    "mcu": {
+      "pcb_ref": "A1",
+      "type": "stm32f411ceu6-blackpill",
+      "physical_pin_to_signal": {
+        "5": "PA8",
+        "11": "PB3",
+        "12": "PB4",
+        "13": "PB5",
+        "14": "PB6",
+        "15": "PB7",
+        "16": "PB8",
+        "17": "PB9",
+        "19": "GND",
+        "28": "PA2",
+        "29": "PA3",
+        "30": "PA4",
+        "31": "PA5",
+        "33": "PA7",
+        "34": "PB0",
+        "35": "PB1",
+        "37": "PB10",
+        "38": "3V3",
+        "39": "GND",
+        "44": "GND"
+      }
+    },
+    "lcd1": {
+      "pcb_ref": "J1",
+      "external_module": "Waveshare 2.4-inch ILI9341",
+      "pins": [
+        "3V3",
+        "GND",
+        "PA7",
+        "PA5",
+        "PA4",
+        "PB0",
+        "PB1",
+        "PA8"
+      ]
+    },
+    "btn-up": {
+      "pcb_ref": "SW1",
+      "pin1": "PB3",
+      "pin2": "GND"
+    },
+    "btn-down": {
+      "pcb_ref": "SW2",
+      "pin1": "PB4",
+      "pin2": "GND"
+    },
+    "btn-left": {
+      "pcb_ref": "SW3",
+      "pin1": "PB5",
+      "pin2": "GND"
+    },
+    "btn-right": {
+      "pcb_ref": "SW4",
+      "pin1": "PB6",
+      "pin2": "GND"
+    },
+    "btn-a": {
+      "pcb_ref": "SW5",
+      "pin1": "PB7",
+      "pin2": "GND"
+    },
+    "btn-b": {
+      "pcb_ref": "SW6",
+      "pin1": "PB8",
+      "pin2": "GND"
+    },
+    "btn-select": {
+      "pcb_ref": "SW7",
+      "pin1": "PB9",
+      "pin2": "GND"
+    },
+    "btn-start": {
+      "pcb_ref": "SW8",
+      "pin1": "PB10",
+      "pin2": "GND"
+    }
+  },
+  "decoupling": [
+    "C1",
+    "C2"
+  ],
+  "physical_tested": false,
+  "automatic_import": "design_only; see import-report.json"
+}

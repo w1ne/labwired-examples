@@ -1,0 +1,36 @@
+{
+  "schema": "labwired.example-provenance.v1",
+  "firmware_source_sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+  "firmware_elf_sha256": "569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+  "rom_sha256": "ba6831d85072c5ea42f98ec0269e60a385dd75a974be2d1b6a9c640b6a38909f",
+  "sources": [
+    {
+      "path": "firmware/peanut_gb.h",
+      "url": "https://raw.githubusercontent.com/deltabeard/Peanut-GB/master/peanut_gb.h",
+      "sha256": "cf7777068492474d084f7dca0b00724d4dcdeab7f9a6c91a5d3a82e60d1cf728",
+      "bytes": 102999,
+      "license": "MIT; notice retained"
+    },
+    {
+      "path": "pcb/vendor/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/master/Hardware/KiCAD/WeAct.pretty/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod",
+      "sha256": "0471e96920efae81ed43f2a1c0a5aa4526ae8c3db9da9c60cd873c9463f2b612",
+      "bytes": 12839,
+      "license": "Upstream README permits vendoring; named license not declared"
+    },
+    {
+      "path": "pcb/vendor/WeAct-BlackPillv3.kicad_sym",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/master/Hardware/KiCAD/WeAct-BlackPillv3.kicad_sym",
+      "sha256": "f4c7cda1e6e637add1822cadb066a7504607fa13e09f2bd39df4d6f700c69047",
+      "bytes": 20843,
+      "license": "Upstream README permits vendoring; named license not declared"
+    },
+    {
+      "path": "pcb/vendor/README.upstream.md",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/master/Hardware/KiCAD/README.md",
+      "sha256": "856fb38bb92af9c8e7a52999bca4bd2cb086a045b03ccdb0cbc2c310e0e9cfc1",
+      "bytes": 6105,
+      "purpose": "Upstream vendoring permission, module dimensions and physical pad numbering"
+    }
+  ]
+}

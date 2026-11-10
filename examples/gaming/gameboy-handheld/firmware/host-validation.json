@@ -1,0 +1,13 @@
+{
+  "schema": "labwired.example-host-validation.v1",
+  "tested_at": "2026-11-10T18:28:46.005848+00:00",
+  "status": "passed",
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "compile_command": "cc -std=c99 -O2 firmware/host_verify.c -o /tmp/wire-runner-host-verify",
+  "run_command": "/tmp/wire-runner-host-verify",
+  "stdout": "PASS: original 32768-byte DMG ROM; all 8 controls; collision/score; pause; palette; 17424 scanlines.\n",
+  "stderr": "pc=01bf lcd=93 ly=144 lines=1296 x=48 y=80\n",
+  "rom_sha256": "ba6831d85072c5ea42f98ec0269e60a385dd75a974be2d1b6a9c640b6a38909f",
+  "peanut_gb_sha256": "cf7777068492474d084f7dca0b00724d4dcdeab7f9a6c91a5d3a82e60d1cf728",
+  "scope": "Host execution of the original ROM through the same Peanut-GB core; not MCU timing or physical hardware."
+}

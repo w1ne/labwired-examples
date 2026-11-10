@@ -1,0 +1,1843 @@
+{
+  "stageTimingsMs": {
+    "evaluate-source": 2052,
+    "default-pose-geometry": 2015,
+    "mechanical-review": 155,
+    "pose-envelope": 4,
+    "physical-use-case": 1,
+    "mechanism-truth": 3136
+  },
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78",
+      "byteLength": 11178
+    },
+    "parameters": {
+      "values": {
+        "caseWidth": 90,
+        "caseHeight": 148,
+        "caseDepth": 30,
+        "wall": 2.4
+      },
+      "sha256": "5e3310e7014063b5927d8becbc634090672f77c74627ce3b2d1f88492cf7ea4c"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+    "identitySha256": "7bc3401ae4ea2f4ee1b953a628683d6ccc1a6fc290f08eeb1041c931d834abae"
+  },
+  "featureCount": 157,
+  "diagnostics": [
+    {
+      "id": "d1",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "front-shell",
+      "partA": "rear-shell",
+      "message": "Mate 'front-shell' (fastened) side 'rear-shell.front-shell': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'rear-shell.front-shell' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d2",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "front-shell",
+      "partB": "front-shell",
+      "message": "Mate 'front-shell' (fastened) side 'front-shell.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d3",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "battery-service-cover",
+      "partA": "rear-shell",
+      "message": "Mate 'battery-service-cover' (fastened) side 'rear-shell.battery-service-cover': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'rear-shell.battery-service-cover' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d4",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "battery-service-cover",
+      "partB": "battery-service-cover",
+      "message": "Mate 'battery-service-cover' (fastened) side 'battery-service-cover.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'battery-service-cover.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d5",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "display-bezel",
+      "partA": "front-shell",
+      "message": "Mate 'display-bezel' (fastened) side 'front-shell.display-bezel': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.display-bezel' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d6",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "display-bezel",
+      "partB": "display-bezel",
+      "message": "Mate 'display-bezel' (fastened) side 'display-bezel.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'display-bezel.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d7",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lcd1-pcb-envelope",
+      "partA": "front-shell",
+      "message": "Mate 'lcd1-pcb-envelope' (fastened) side 'front-shell.lcd1-pcb-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.lcd1-pcb-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d8",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lcd1-pcb-envelope",
+      "partB": "lcd1-pcb-envelope",
+      "message": "Mate 'lcd1-pcb-envelope' (fastened) side 'lcd1-pcb-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lcd1-pcb-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d9",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lcd1-frame-envelope",
+      "partA": "lcd1-pcb-envelope",
+      "message": "Mate 'lcd1-frame-envelope' (fastened) side 'lcd1-pcb-envelope.lcd1-frame-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lcd1-pcb-envelope.lcd1-frame-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d10",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lcd1-frame-envelope",
+      "partB": "lcd1-frame-envelope",
+      "message": "Mate 'lcd1-frame-envelope' (fastened) side 'lcd1-frame-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lcd1-frame-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d11",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lcd1-active-glass",
+      "partA": "lcd1-pcb-envelope",
+      "message": "Mate 'lcd1-active-glass' (fastened) side 'lcd1-pcb-envelope.lcd1-active-glass': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lcd1-pcb-envelope.lcd1-active-glass' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d12",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lcd1-active-glass",
+      "partB": "lcd1-active-glass",
+      "message": "Mate 'lcd1-active-glass' (fastened) side 'lcd1-active-glass.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lcd1-active-glass.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d13",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "main-pcb-envelope",
+      "partA": "rear-shell",
+      "message": "Mate 'main-pcb-envelope' (fastened) side 'rear-shell.main-pcb-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'rear-shell.main-pcb-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d14",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "main-pcb-envelope",
+      "partB": "main-pcb-envelope",
+      "message": "Mate 'main-pcb-envelope' (fastened) side 'main-pcb-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'main-pcb-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d15",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "dpad",
+      "partA": "front-shell",
+      "message": "Mate 'dpad' (fastened) side 'front-shell.dpad': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.dpad' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d16",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "dpad",
+      "partB": "dpad",
+      "message": "Mate 'dpad' (fastened) side 'dpad.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'dpad.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d17",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-b",
+      "partA": "front-shell",
+      "message": "Mate 'btn-b' (fastened) side 'front-shell.btn-b': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.btn-b' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d18",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-b",
+      "partB": "btn-b",
+      "message": "Mate 'btn-b' (fastened) side 'btn-b.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'btn-b.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d19",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-a",
+      "partA": "front-shell",
+      "message": "Mate 'btn-a' (fastened) side 'front-shell.btn-a': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.btn-a' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d20",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-a",
+      "partB": "btn-a",
+      "message": "Mate 'btn-a' (fastened) side 'btn-a.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'btn-a.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d21",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-select",
+      "partA": "front-shell",
+      "message": "Mate 'btn-select' (fastened) side 'front-shell.btn-select': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.btn-select' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d22",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-select",
+      "partB": "btn-select",
+      "message": "Mate 'btn-select' (fastened) side 'btn-select.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'btn-select.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d23",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-start",
+      "partA": "front-shell",
+      "message": "Mate 'btn-start' (fastened) side 'front-shell.btn-start': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.btn-start' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d24",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "btn-start",
+      "partB": "btn-start",
+      "message": "Mate 'btn-start' (fastened) side 'btn-start.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'btn-start.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d25",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "battery-reserved-envelope",
+      "partA": "battery-service-cover",
+      "message": "Mate 'battery-reserved-envelope' (fastened) side 'battery-service-cover.battery-reserved-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'battery-service-cover.battery-reserved-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d26",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "battery-reserved-envelope",
+      "partB": "battery-reserved-envelope",
+      "message": "Mate 'battery-reserved-envelope' (fastened) side 'battery-reserved-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'battery-reserved-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d27",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "speaker-reserved-envelope",
+      "partA": "front-shell",
+      "message": "Mate 'speaker-reserved-envelope' (fastened) side 'front-shell.speaker-reserved-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'front-shell.speaker-reserved-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "id": "d28",
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "speaker-reserved-envelope",
+      "partB": "speaker-reserved-envelope",
+      "message": "Mate 'speaker-reserved-envelope' (fastened) side 'speaker-reserved-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'speaker-reserved-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    }
+  ],
+  "assembly": "labwired-gameboy-handheld",
+  "validator": {
+    "status": "solved",
+    "diagnostics": [
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "front-shell",
+        "partA": "rear-shell",
+        "message": "Mate 'front-shell' (fastened) side 'rear-shell.front-shell': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'rear-shell.front-shell' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "front-shell",
+        "partB": "front-shell",
+        "message": "Mate 'front-shell' (fastened) side 'front-shell.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "battery-service-cover",
+        "partA": "rear-shell",
+        "message": "Mate 'battery-service-cover' (fastened) side 'rear-shell.battery-service-cover': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'rear-shell.battery-service-cover' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "battery-service-cover",
+        "partB": "battery-service-cover",
+        "message": "Mate 'battery-service-cover' (fastened) side 'battery-service-cover.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'battery-service-cover.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "display-bezel",
+        "partA": "front-shell",
+        "message": "Mate 'display-bezel' (fastened) side 'front-shell.display-bezel': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.display-bezel' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "display-bezel",
+        "partB": "display-bezel",
+        "message": "Mate 'display-bezel' (fastened) side 'display-bezel.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'display-bezel.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "lcd1-pcb-envelope",
+        "partA": "front-shell",
+        "message": "Mate 'lcd1-pcb-envelope' (fastened) side 'front-shell.lcd1-pcb-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.lcd1-pcb-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "lcd1-pcb-envelope",
+        "partB": "lcd1-pcb-envelope",
+        "message": "Mate 'lcd1-pcb-envelope' (fastened) side 'lcd1-pcb-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'lcd1-pcb-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "lcd1-frame-envelope",
+        "partA": "lcd1-pcb-envelope",
+        "message": "Mate 'lcd1-frame-envelope' (fastened) side 'lcd1-pcb-envelope.lcd1-frame-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'lcd1-pcb-envelope.lcd1-frame-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "lcd1-frame-envelope",
+        "partB": "lcd1-frame-envelope",
+        "message": "Mate 'lcd1-frame-envelope' (fastened) side 'lcd1-frame-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'lcd1-frame-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "lcd1-active-glass",
+        "partA": "lcd1-pcb-envelope",
+        "message": "Mate 'lcd1-active-glass' (fastened) side 'lcd1-pcb-envelope.lcd1-active-glass': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'lcd1-pcb-envelope.lcd1-active-glass' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "lcd1-active-glass",
+        "partB": "lcd1-active-glass",
+        "message": "Mate 'lcd1-active-glass' (fastened) side 'lcd1-active-glass.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'lcd1-active-glass.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "main-pcb-envelope",
+        "partA": "rear-shell",
+        "message": "Mate 'main-pcb-envelope' (fastened) side 'rear-shell.main-pcb-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'rear-shell.main-pcb-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "main-pcb-envelope",
+        "partB": "main-pcb-envelope",
+        "message": "Mate 'main-pcb-envelope' (fastened) side 'main-pcb-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'main-pcb-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "dpad",
+        "partA": "front-shell",
+        "message": "Mate 'dpad' (fastened) side 'front-shell.dpad': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.dpad' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "dpad",
+        "partB": "dpad",
+        "message": "Mate 'dpad' (fastened) side 'dpad.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'dpad.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-b",
+        "partA": "front-shell",
+        "message": "Mate 'btn-b' (fastened) side 'front-shell.btn-b': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.btn-b' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-b",
+        "partB": "btn-b",
+        "message": "Mate 'btn-b' (fastened) side 'btn-b.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'btn-b.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-a",
+        "partA": "front-shell",
+        "message": "Mate 'btn-a' (fastened) side 'front-shell.btn-a': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.btn-a' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-a",
+        "partB": "btn-a",
+        "message": "Mate 'btn-a' (fastened) side 'btn-a.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'btn-a.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-select",
+        "partA": "front-shell",
+        "message": "Mate 'btn-select' (fastened) side 'front-shell.btn-select': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.btn-select' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-select",
+        "partB": "btn-select",
+        "message": "Mate 'btn-select' (fastened) side 'btn-select.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'btn-select.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-start",
+        "partA": "front-shell",
+        "message": "Mate 'btn-start' (fastened) side 'front-shell.btn-start': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.btn-start' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "btn-start",
+        "partB": "btn-start",
+        "message": "Mate 'btn-start' (fastened) side 'btn-start.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'btn-start.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "battery-reserved-envelope",
+        "partA": "battery-service-cover",
+        "message": "Mate 'battery-reserved-envelope' (fastened) side 'battery-service-cover.battery-reserved-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'battery-service-cover.battery-reserved-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "battery-reserved-envelope",
+        "partB": "battery-reserved-envelope",
+        "message": "Mate 'battery-reserved-envelope' (fastened) side 'battery-reserved-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'battery-reserved-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "speaker-reserved-envelope",
+        "partA": "front-shell",
+        "message": "Mate 'speaker-reserved-envelope' (fastened) side 'front-shell.speaker-reserved-envelope': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'front-shell.speaker-reserved-envelope' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "severity": "info",
+        "mateName": "speaker-reserved-envelope",
+        "partB": "speaker-reserved-envelope",
+        "message": "Mate 'speaker-reserved-envelope' (fastened) side 'speaker-reserved-envelope.mount': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+        "hint": "mounting-hole.unverified — side 'speaker-reserved-envelope.mount' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+      }
+    ],
+    "partCount": 15,
+    "jointCount": 14
+  },
+  "poseEnvelope": {
+    "samples": [
+      {
+        "name": "current",
+        "poses": {},
+        "reason": "capture-time/default mate poses"
+      }
+    ],
+    "diagnostics": [],
+    "interferencePairs": [],
+    "clearancePairs": [],
+    "connectorPoses": [
+      {
+        "sampleName": "current",
+        "ref": "rear-shell.front-shell",
+        "partName": "rear-shell",
+        "connectorName": "front-shell",
+        "world": [
+          38,
+          136,
+          16.125
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "rear-shell.battery-service-cover",
+        "partName": "rear-shell",
+        "connectorName": "battery-service-cover",
+        "world": [
+          26.6,
+          47,
+          1.2
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "rear-shell.main-pcb-envelope",
+        "partName": "rear-shell",
+        "connectorName": "main-pcb-envelope",
+        "world": [
+          -27,
+          132,
+          13.4
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.mount",
+        "partName": "front-shell",
+        "connectorName": "mount",
+        "world": [
+          38,
+          136,
+          16.125
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.display-bezel",
+        "partName": "front-shell",
+        "connectorName": "display-bezel",
+        "world": [
+          32,
+          107,
+          30.03
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.lcd1-pcb-envelope",
+        "partName": "front-shell",
+        "connectorName": "lcd1-pcb-envelope",
+        "world": [
+          34.5,
+          107,
+          22.5
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.dpad",
+        "partName": "front-shell",
+        "connectorName": "dpad",
+        "world": [
+          -14,
+          58.1,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.btn-b",
+        "partName": "front-shell",
+        "connectorName": "btn-b",
+        "world": [
+          23.8,
+          52,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.btn-a",
+        "partName": "front-shell",
+        "connectorName": "btn-a",
+        "world": [
+          38.8,
+          64,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.btn-select",
+        "partName": "front-shell",
+        "connectorName": "btn-select",
+        "world": [
+          -2,
+          28,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.btn-start",
+        "partName": "front-shell",
+        "connectorName": "btn-start",
+        "world": [
+          15,
+          28,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "front-shell.speaker-reserved-envelope",
+        "partName": "front-shell",
+        "connectorName": "speaker-reserved-envelope",
+        "world": [
+          35,
+          22,
+          27.55
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "battery-service-cover.mount",
+        "partName": "battery-service-cover",
+        "connectorName": "mount",
+        "world": [
+          26.6,
+          47,
+          1.2
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "battery-service-cover.battery-reserved-envelope",
+        "partName": "battery-service-cover",
+        "connectorName": "battery-reserved-envelope",
+        "world": [
+          0,
+          47,
+          2.5
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "display-bezel.mount",
+        "partName": "display-bezel",
+        "connectorName": "mount",
+        "world": [
+          32,
+          107,
+          30.03
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "lcd1-pcb-envelope.mount",
+        "partName": "lcd1-pcb-envelope",
+        "connectorName": "mount",
+        "world": [
+          34.5,
+          107,
+          22.5
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "lcd1-pcb-envelope.lcd1-frame-envelope",
+        "partName": "lcd1-pcb-envelope",
+        "connectorName": "lcd1-frame-envelope",
+        "world": [
+          25.5,
+          107,
+          24.25
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "lcd1-pcb-envelope.lcd1-active-glass",
+        "partName": "lcd1-pcb-envelope",
+        "connectorName": "lcd1-active-glass",
+        "world": [
+          0,
+          107,
+          24.3
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "lcd1-frame-envelope.mount",
+        "partName": "lcd1-frame-envelope",
+        "connectorName": "mount",
+        "world": [
+          25.5,
+          107,
+          24.25
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "lcd1-active-glass.mount",
+        "partName": "lcd1-active-glass",
+        "connectorName": "mount",
+        "world": [
+          0,
+          107,
+          24.3
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "main-pcb-envelope.mount",
+        "partName": "main-pcb-envelope",
+        "connectorName": "mount",
+        "world": [
+          -27,
+          132,
+          13.4
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "dpad.mount",
+        "partName": "dpad",
+        "connectorName": "mount",
+        "world": [
+          -14,
+          58.1,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "btn-b.mount",
+        "partName": "btn-b",
+        "connectorName": "mount",
+        "world": [
+          23.8,
+          52,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "btn-a.mount",
+        "partName": "btn-a",
+        "connectorName": "mount",
+        "world": [
+          38.8,
+          64,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "btn-select.mount",
+        "partName": "btn-select",
+        "connectorName": "mount",
+        "world": [
+          -2,
+          28,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "btn-start.mount",
+        "partName": "btn-start",
+        "connectorName": "mount",
+        "world": [
+          15,
+          28,
+          27.45
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "battery-reserved-envelope.mount",
+        "partName": "battery-reserved-envelope",
+        "connectorName": "mount",
+        "world": [
+          0,
+          47,
+          2.5
+        ]
+      },
+      {
+        "sampleName": "current",
+        "ref": "speaker-reserved-envelope.mount",
+        "partName": "speaker-reserved-envelope",
+        "connectorName": "mount",
+        "world": [
+          35,
+          22,
+          27.55
+        ]
+      }
+    ],
+    "connectorWorkspace": [
+      {
+        "ref": "battery-reserved-envelope.mount",
+        "partName": "battery-reserved-envelope",
+        "connectorName": "mount",
+        "min": [
+          0,
+          47,
+          2.5
+        ],
+        "max": [
+          0,
+          47,
+          2.5
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "battery-service-cover.battery-reserved-envelope",
+        "partName": "battery-service-cover",
+        "connectorName": "battery-reserved-envelope",
+        "min": [
+          0,
+          47,
+          2.5
+        ],
+        "max": [
+          0,
+          47,
+          2.5
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "battery-service-cover.mount",
+        "partName": "battery-service-cover",
+        "connectorName": "mount",
+        "min": [
+          26.6,
+          47,
+          1.2
+        ],
+        "max": [
+          26.6,
+          47,
+          1.2
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "btn-a.mount",
+        "partName": "btn-a",
+        "connectorName": "mount",
+        "min": [
+          38.8,
+          64,
+          27.45
+        ],
+        "max": [
+          38.8,
+          64,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "btn-b.mount",
+        "partName": "btn-b",
+        "connectorName": "mount",
+        "min": [
+          23.8,
+          52,
+          27.45
+        ],
+        "max": [
+          23.8,
+          52,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "btn-select.mount",
+        "partName": "btn-select",
+        "connectorName": "mount",
+        "min": [
+          -2,
+          28,
+          27.45
+        ],
+        "max": [
+          -2,
+          28,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "btn-start.mount",
+        "partName": "btn-start",
+        "connectorName": "mount",
+        "min": [
+          15,
+          28,
+          27.45
+        ],
+        "max": [
+          15,
+          28,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "display-bezel.mount",
+        "partName": "display-bezel",
+        "connectorName": "mount",
+        "min": [
+          32,
+          107,
+          30.03
+        ],
+        "max": [
+          32,
+          107,
+          30.03
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "dpad.mount",
+        "partName": "dpad",
+        "connectorName": "mount",
+        "min": [
+          -14,
+          58.1,
+          27.45
+        ],
+        "max": [
+          -14,
+          58.1,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.btn-a",
+        "partName": "front-shell",
+        "connectorName": "btn-a",
+        "min": [
+          38.8,
+          64,
+          27.45
+        ],
+        "max": [
+          38.8,
+          64,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.btn-b",
+        "partName": "front-shell",
+        "connectorName": "btn-b",
+        "min": [
+          23.8,
+          52,
+          27.45
+        ],
+        "max": [
+          23.8,
+          52,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.btn-select",
+        "partName": "front-shell",
+        "connectorName": "btn-select",
+        "min": [
+          -2,
+          28,
+          27.45
+        ],
+        "max": [
+          -2,
+          28,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.btn-start",
+        "partName": "front-shell",
+        "connectorName": "btn-start",
+        "min": [
+          15,
+          28,
+          27.45
+        ],
+        "max": [
+          15,
+          28,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.display-bezel",
+        "partName": "front-shell",
+        "connectorName": "display-bezel",
+        "min": [
+          32,
+          107,
+          30.03
+        ],
+        "max": [
+          32,
+          107,
+          30.03
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.dpad",
+        "partName": "front-shell",
+        "connectorName": "dpad",
+        "min": [
+          -14,
+          58.1,
+          27.45
+        ],
+        "max": [
+          -14,
+          58.1,
+          27.45
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.lcd1-pcb-envelope",
+        "partName": "front-shell",
+        "connectorName": "lcd1-pcb-envelope",
+        "min": [
+          34.5,
+          107,
+          22.5
+        ],
+        "max": [
+          34.5,
+          107,
+          22.5
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.mount",
+        "partName": "front-shell",
+        "connectorName": "mount",
+        "min": [
+          38,
+          136,
+          16.125
+        ],
+        "max": [
+          38,
+          136,
+          16.125
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "front-shell.speaker-reserved-envelope",
+        "partName": "front-shell",
+        "connectorName": "speaker-reserved-envelope",
+        "min": [
+          35,
+          22,
+          27.55
+        ],
+        "max": [
+          35,
+          22,
+          27.55
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "lcd1-active-glass.mount",
+        "partName": "lcd1-active-glass",
+        "connectorName": "mount",
+        "min": [
+          0,
+          107,
+          24.3
+        ],
+        "max": [
+          0,
+          107,
+          24.3
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "lcd1-frame-envelope.mount",
+        "partName": "lcd1-frame-envelope",
+        "connectorName": "mount",
+        "min": [
+          25.5,
+          107,
+          24.25
+        ],
+        "max": [
+          25.5,
+          107,
+          24.25
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "lcd1-pcb-envelope.lcd1-active-glass",
+        "partName": "lcd1-pcb-envelope",
+        "connectorName": "lcd1-active-glass",
+        "min": [
+          0,
+          107,
+          24.3
+        ],
+        "max": [
+          0,
+          107,
+          24.3
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "lcd1-pcb-envelope.lcd1-frame-envelope",
+        "partName": "lcd1-pcb-envelope",
+        "connectorName": "lcd1-frame-envelope",
+        "min": [
+          25.5,
+          107,
+          24.25
+        ],
+        "max": [
+          25.5,
+          107,
+          24.25
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "lcd1-pcb-envelope.mount",
+        "partName": "lcd1-pcb-envelope",
+        "connectorName": "mount",
+        "min": [
+          34.5,
+          107,
+          22.5
+        ],
+        "max": [
+          34.5,
+          107,
+          22.5
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "main-pcb-envelope.mount",
+        "partName": "main-pcb-envelope",
+        "connectorName": "mount",
+        "min": [
+          -27,
+          132,
+          13.4
+        ],
+        "max": [
+          -27,
+          132,
+          13.4
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "rear-shell.battery-service-cover",
+        "partName": "rear-shell",
+        "connectorName": "battery-service-cover",
+        "min": [
+          26.6,
+          47,
+          1.2
+        ],
+        "max": [
+          26.6,
+          47,
+          1.2
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "rear-shell.front-shell",
+        "partName": "rear-shell",
+        "connectorName": "front-shell",
+        "min": [
+          38,
+          136,
+          16.125
+        ],
+        "max": [
+          38,
+          136,
+          16.125
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "rear-shell.main-pcb-envelope",
+        "partName": "rear-shell",
+        "connectorName": "main-pcb-envelope",
+        "min": [
+          -27,
+          132,
+          13.4
+        ],
+        "max": [
+          -27,
+          132,
+          13.4
+        ],
+        "travelMm": 0
+      },
+      {
+        "ref": "speaker-reserved-envelope.mount",
+        "partName": "speaker-reserved-envelope",
+        "connectorName": "mount",
+        "min": [
+          35,
+          22,
+          27.55
+        ],
+        "max": [
+          35,
+          22,
+          27.55
+        ],
+        "travelMm": 0
+      }
+    ],
+    "mateCouplings": [],
+    "scalarMatePoseDefaults": {},
+    "interferenceCoverage": {
+      "requestedSampleCount": 1,
+      "completedSampleCount": 1,
+      "cachedSceneSampleCount": 1,
+      "fallbackSampleCount": 0
+    }
+  },
+  "connectorWorkspace": [
+    {
+      "ref": "battery-reserved-envelope.mount",
+      "partName": "battery-reserved-envelope",
+      "connectorName": "mount",
+      "min": [
+        0,
+        47,
+        2.5
+      ],
+      "max": [
+        0,
+        47,
+        2.5
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "battery-service-cover.battery-reserved-envelope",
+      "partName": "battery-service-cover",
+      "connectorName": "battery-reserved-envelope",
+      "min": [
+        0,
+        47,
+        2.5
+      ],
+      "max": [
+        0,
+        47,
+        2.5
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "battery-service-cover.mount",
+      "partName": "battery-service-cover",
+      "connectorName": "mount",
+      "min": [
+        26.6,
+        47,
+        1.2
+      ],
+      "max": [
+        26.6,
+        47,
+        1.2
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "btn-a.mount",
+      "partName": "btn-a",
+      "connectorName": "mount",
+      "min": [
+        38.8,
+        64,
+        27.45
+      ],
+      "max": [
+        38.8,
+        64,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "btn-b.mount",
+      "partName": "btn-b",
+      "connectorName": "mount",
+      "min": [
+        23.8,
+        52,
+        27.45
+      ],
+      "max": [
+        23.8,
+        52,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "btn-select.mount",
+      "partName": "btn-select",
+      "connectorName": "mount",
+      "min": [
+        -2,
+        28,
+        27.45
+      ],
+      "max": [
+        -2,
+        28,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "btn-start.mount",
+      "partName": "btn-start",
+      "connectorName": "mount",
+      "min": [
+        15,
+        28,
+        27.45
+      ],
+      "max": [
+        15,
+        28,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "display-bezel.mount",
+      "partName": "display-bezel",
+      "connectorName": "mount",
+      "min": [
+        32,
+        107,
+        30.03
+      ],
+      "max": [
+        32,
+        107,
+        30.03
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "dpad.mount",
+      "partName": "dpad",
+      "connectorName": "mount",
+      "min": [
+        -14,
+        58.1,
+        27.45
+      ],
+      "max": [
+        -14,
+        58.1,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.btn-a",
+      "partName": "front-shell",
+      "connectorName": "btn-a",
+      "min": [
+        38.8,
+        64,
+        27.45
+      ],
+      "max": [
+        38.8,
+        64,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.btn-b",
+      "partName": "front-shell",
+      "connectorName": "btn-b",
+      "min": [
+        23.8,
+        52,
+        27.45
+      ],
+      "max": [
+        23.8,
+        52,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.btn-select",
+      "partName": "front-shell",
+      "connectorName": "btn-select",
+      "min": [
+        -2,
+        28,
+        27.45
+      ],
+      "max": [
+        -2,
+        28,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.btn-start",
+      "partName": "front-shell",
+      "connectorName": "btn-start",
+      "min": [
+        15,
+        28,
+        27.45
+      ],
+      "max": [
+        15,
+        28,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.display-bezel",
+      "partName": "front-shell",
+      "connectorName": "display-bezel",
+      "min": [
+        32,
+        107,
+        30.03
+      ],
+      "max": [
+        32,
+        107,
+        30.03
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.dpad",
+      "partName": "front-shell",
+      "connectorName": "dpad",
+      "min": [
+        -14,
+        58.1,
+        27.45
+      ],
+      "max": [
+        -14,
+        58.1,
+        27.45
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.lcd1-pcb-envelope",
+      "partName": "front-shell",
+      "connectorName": "lcd1-pcb-envelope",
+      "min": [
+        34.5,
+        107,
+        22.5
+      ],
+      "max": [
+        34.5,
+        107,
+        22.5
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.mount",
+      "partName": "front-shell",
+      "connectorName": "mount",
+      "min": [
+        38,
+        136,
+        16.125
+      ],
+      "max": [
+        38,
+        136,
+        16.125
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "front-shell.speaker-reserved-envelope",
+      "partName": "front-shell",
+      "connectorName": "speaker-reserved-envelope",
+      "min": [
+        35,
+        22,
+        27.55
+      ],
+      "max": [
+        35,
+        22,
+        27.55
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "lcd1-active-glass.mount",
+      "partName": "lcd1-active-glass",
+      "connectorName": "mount",
+      "min": [
+        0,
+        107,
+        24.3
+      ],
+      "max": [
+        0,
+        107,
+        24.3
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "lcd1-frame-envelope.mount",
+      "partName": "lcd1-frame-envelope",
+      "connectorName": "mount",
+      "min": [
+        25.5,
+        107,
+        24.25
+      ],
+      "max": [
+        25.5,
+        107,
+        24.25
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "lcd1-pcb-envelope.lcd1-active-glass",
+      "partName": "lcd1-pcb-envelope",
+      "connectorName": "lcd1-active-glass",
+      "min": [
+        0,
+        107,
+        24.3
+      ],
+      "max": [
+        0,
+        107,
+        24.3
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "lcd1-pcb-envelope.lcd1-frame-envelope",
+      "partName": "lcd1-pcb-envelope",
+      "connectorName": "lcd1-frame-envelope",
+      "min": [
+        25.5,
+        107,
+        24.25
+      ],
+      "max": [
+        25.5,
+        107,
+        24.25
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "lcd1-pcb-envelope.mount",
+      "partName": "lcd1-pcb-envelope",
+      "connectorName": "mount",
+      "min": [
+        34.5,
+        107,
+        22.5
+      ],
+      "max": [
+        34.5,
+        107,
+        22.5
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "main-pcb-envelope.mount",
+      "partName": "main-pcb-envelope",
+      "connectorName": "mount",
+      "min": [
+        -27,
+        132,
+        13.4
+      ],
+      "max": [
+        -27,
+        132,
+        13.4
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "rear-shell.battery-service-cover",
+      "partName": "rear-shell",
+      "connectorName": "battery-service-cover",
+      "min": [
+        26.6,
+        47,
+        1.2
+      ],
+      "max": [
+        26.6,
+        47,
+        1.2
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "rear-shell.front-shell",
+      "partName": "rear-shell",
+      "connectorName": "front-shell",
+      "min": [
+        38,
+        136,
+        16.125
+      ],
+      "max": [
+        38,
+        136,
+        16.125
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "rear-shell.main-pcb-envelope",
+      "partName": "rear-shell",
+      "connectorName": "main-pcb-envelope",
+      "min": [
+        -27,
+        132,
+        13.4
+      ],
+      "max": [
+        -27,
+        132,
+        13.4
+      ],
+      "travelMm": 0
+    },
+    {
+      "ref": "speaker-reserved-envelope.mount",
+      "partName": "speaker-reserved-envelope",
+      "connectorName": "mount",
+      "min": [
+        35,
+        22,
+        27.55
+      ],
+      "max": [
+        35,
+        22,
+        27.55
+      ],
+      "travelMm": 0
+    }
+  ],
+  "physicalUseCaseStaticCertificates": [],
+  "physicalUseCaseJointReactionCertificates": [],
+  "physicalUseCaseJointStructuralCertificates": [],
+  "fitness": {
+    "functional": true,
+    "repairMode": "none",
+    "repairDirective": "No repair needed. Preserve the current topology and keep validating with review_cad after changes.",
+    "passedChecks": [
+      "validator-no-errors",
+      "pose-envelope-solved",
+      "pose-envelope-no-interference"
+    ],
+    "blockingReasons": [],
+    "mechanismSummary": {
+      "sampleCount": 1,
+      "interferenceCount": 0,
+      "trackedConnectorCount": 0
+    }
+  },
+  "repairContext": {
+    "blockingReasons": [],
+    "topDiagnostics": [
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "mateName": "front-shell"
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "mateName": "front-shell"
+      },
+      {
+        "code": "assembly.mounting-hole.unverified",
+        "mateName": "battery-service-cover"
+      }
+    ],
+    "preserveInterfaces": [],
+    "designGoal": "Independently validate the fixed mates and static clearances of the saved revision 2 Game Boy-compatible handheld packaging concept."
+  },
+  "rawInterferencePairs": [],
+  "interferenceSummary": {
+    "rawCount": 0,
+    "contactNoiseCount": 0,
+    "actionableCount": 0,
+    "capMm3": 0.01,
+    "contactThicknessMm": 0.01,
+    "pairs": []
+  },
+  "mechanism": "real",
+  "mechanismFailures": [],
+  "geometry": {
+    "objectCount": 1,
+    "components": [
+      [
+        "battery-reserved-envelope",
+        "battery-service-cover",
+        "btn-a",
+        "btn-b",
+        "btn-select",
+        "btn-start",
+        "display-bezel",
+        "dpad",
+        "front-shell",
+        "lcd1-active-glass",
+        "lcd1-frame-envelope",
+        "lcd1-pcb-envelope",
+        "main-pcb-envelope",
+        "rear-shell",
+        "speaker-reserved-envelope"
+      ]
+    ],
+    "floatingParts": [],
+    "gapMm": 0.5
+  },
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ok": true,
+  "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+}

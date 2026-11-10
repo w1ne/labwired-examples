@@ -1,0 +1,1384 @@
+{
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "project": {
+    "id": "f44771855a18a70d418e363622de2e28",
+    "name": "Game Boy recreation \u2014 Wire Runner",
+    "content_hash": "1458d69ac4a73b0bfcea2dd6acdff40795f80fa7d80dcc7ff2daffd5ba7bfb85",
+    "open_url": "https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1",
+    "pcb_board_id": null,
+    "source_bytes": 121279
+  },
+  "diagram": {
+    "version": 1,
+    "board": "stm32f411ceu6-blackpill",
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "stm32f411ceu6-blackpill",
+        "x": 60,
+        "y": 240,
+        "attrs": {
+          "label": "STM32F411 / DMG emulator"
+        }
+      },
+      {
+        "id": "lcd1",
+        "type": "ili9341",
+        "x": 290,
+        "y": 40,
+        "attrs": {
+          "label": "Game Boy 160x144 / ILI9341",
+          "rotation": "90",
+          "voltage": "3.3"
+        }
+      },
+      {
+        "id": "btn-up",
+        "type": "button",
+        "x": 330,
+        "y": 360,
+        "attrs": {
+          "label": "UP",
+          "key": "up"
+        }
+      },
+      {
+        "id": "btn-down",
+        "type": "button",
+        "x": 330,
+        "y": 470,
+        "attrs": {
+          "label": "DOWN",
+          "key": "down"
+        }
+      },
+      {
+        "id": "btn-left",
+        "type": "button",
+        "x": 270,
+        "y": 415,
+        "attrs": {
+          "label": "LEFT",
+          "key": "left"
+        }
+      },
+      {
+        "id": "btn-right",
+        "type": "button",
+        "x": 390,
+        "y": 415,
+        "attrs": {
+          "label": "RIGHT",
+          "key": "right"
+        }
+      },
+      {
+        "id": "btn-a",
+        "type": "button",
+        "x": 540,
+        "y": 380,
+        "attrs": {
+          "label": "A",
+          "key": "z"
+        }
+      },
+      {
+        "id": "btn-b",
+        "type": "button",
+        "x": 485,
+        "y": 430,
+        "attrs": {
+          "label": "B",
+          "key": "x"
+        }
+      },
+      {
+        "id": "btn-select",
+        "type": "button",
+        "x": 405,
+        "y": 540,
+        "attrs": {
+          "label": "SELECT",
+          "key": "select"
+        }
+      },
+      {
+        "id": "btn-start",
+        "type": "button",
+        "x": 480,
+        "y": 540,
+        "attrs": {
+          "label": "START",
+          "key": "start"
+        }
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "VCC"
+        },
+        "color": "#dd6666"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "GND"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA5"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "SCK"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA7"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "MOSI"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA4"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "CS"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB0"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "DC"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "RESET"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA8"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "LED"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB3"
+        },
+        "to": {
+          "part": "btn-up",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-up",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB4"
+        },
+        "to": {
+          "part": "btn-down",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-down",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB5"
+        },
+        "to": {
+          "part": "btn-left",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-left",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "to": {
+          "part": "btn-right",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-right",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "to": {
+          "part": "btn-a",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-a",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        "to": {
+          "part": "btn-b",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-b",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB9"
+        },
+        "to": {
+          "part": "btn-select",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-select",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB10"
+        },
+        "to": {
+          "part": "btn-start",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-start",
+          "pin": "2"
+        },
+        "color": "#555555"
+      }
+    ],
+    "firmware": {
+      "board": "stm32f411ceu6-blackpill",
+      "language": "c",
+      "artifact": {
+        "ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643"
+      },
+      "source": {
+        "treeRef": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0",
+        "files": [
+          {
+            "path": "src/main.c",
+            "ref": "sha256:267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e"
+          }
+        ]
+      }
+    },
+    "mechanical": {
+      "provider": "kernelcad",
+      "slug": "kQAFdaQs",
+      "version": 2,
+      "meshProvenance": "e713f4b94b377905927c41d0b4e82397d4ac23efbe397158acc4b13d7d4dca08",
+      "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+      "title": "Game Boy handheld enclosure"
+    }
+  },
+  "project_diagram": {
+    "version": 1,
+    "board": "stm32f411ceu6-blackpill",
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "stm32f411ceu6-blackpill",
+        "x": 60,
+        "y": 240,
+        "attrs": {
+          "label": "STM32F411 / DMG emulator"
+        }
+      },
+      {
+        "id": "lcd1",
+        "type": "ili9341",
+        "x": 290,
+        "y": 40,
+        "attrs": {
+          "label": "Game Boy 160x144 / ILI9341",
+          "rotation": "90",
+          "voltage": "3.3"
+        }
+      },
+      {
+        "id": "btn-up",
+        "type": "button",
+        "x": 330,
+        "y": 360,
+        "attrs": {
+          "label": "UP",
+          "key": "up"
+        }
+      },
+      {
+        "id": "btn-down",
+        "type": "button",
+        "x": 330,
+        "y": 470,
+        "attrs": {
+          "label": "DOWN",
+          "key": "down"
+        }
+      },
+      {
+        "id": "btn-left",
+        "type": "button",
+        "x": 270,
+        "y": 415,
+        "attrs": {
+          "label": "LEFT",
+          "key": "left"
+        }
+      },
+      {
+        "id": "btn-right",
+        "type": "button",
+        "x": 390,
+        "y": 415,
+        "attrs": {
+          "label": "RIGHT",
+          "key": "right"
+        }
+      },
+      {
+        "id": "btn-a",
+        "type": "button",
+        "x": 540,
+        "y": 380,
+        "attrs": {
+          "label": "A",
+          "key": "z"
+        }
+      },
+      {
+        "id": "btn-b",
+        "type": "button",
+        "x": 485,
+        "y": 430,
+        "attrs": {
+          "label": "B",
+          "key": "x"
+        }
+      },
+      {
+        "id": "btn-select",
+        "type": "button",
+        "x": 405,
+        "y": 540,
+        "attrs": {
+          "label": "SELECT",
+          "key": "select"
+        }
+      },
+      {
+        "id": "btn-start",
+        "type": "button",
+        "x": 480,
+        "y": 540,
+        "attrs": {
+          "label": "START",
+          "key": "start"
+        }
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "VCC"
+        },
+        "color": "#dd6666"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "GND"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA5"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "SCK"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA7"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "MOSI"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA4"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "CS"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB0"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "DC"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "RESET"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA8"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "LED"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB3"
+        },
+        "to": {
+          "part": "btn-up",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-up",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB4"
+        },
+        "to": {
+          "part": "btn-down",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-down",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB5"
+        },
+        "to": {
+          "part": "btn-left",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-left",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "to": {
+          "part": "btn-right",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-right",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "to": {
+          "part": "btn-a",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-a",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        "to": {
+          "part": "btn-b",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-b",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB9"
+        },
+        "to": {
+          "part": "btn-select",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-select",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB10"
+        },
+        "to": {
+          "part": "btn-start",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-start",
+          "pin": "2"
+        },
+        "color": "#555555"
+      }
+    ],
+    "firmware": {
+      "board": "stm32f411ceu6-blackpill",
+      "language": "c",
+      "artifact": {
+        "ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643"
+      },
+      "source": {
+        "treeRef": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0",
+        "files": [
+          {
+            "path": "src/main.c",
+            "ref": "sha256:267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e"
+          }
+        ]
+      }
+    },
+    "mechanical": {
+      "provider": "kernelcad",
+      "slug": "kQAFdaQs",
+      "version": 2,
+      "meshProvenance": "e713f4b94b377905927c41d0b4e82397d4ac23efbe397158acc4b13d7d4dca08",
+      "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+      "title": "Game Boy handheld enclosure"
+    }
+  },
+  "compile": {
+    "ok": true,
+    "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+    "firmware_blob_path": "/v1/blobs/sha256/569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+    "runnable": true,
+    "capability": {
+      "requested": "stm32f411ceu6-blackpill",
+      "resolved_id": "stm32f411ceu6-blackpill",
+      "chip": "stm32f411ceu6",
+      "mode": "compile_and_run",
+      "hosted_compile": true,
+      "hosted_run": true,
+      "toolchains": [
+        "c",
+        "cpp",
+        "arduino",
+        "rust"
+      ],
+      "preserve_requested_hardware": true,
+      "automatic_substitution": false
+    },
+    "simulation_status": "available",
+    "verification_status": "not_run",
+    "diagnostics": []
+  },
+  "upload": {
+    "ok": true,
+    "source_tree_ref": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0",
+    "files": [
+      {
+        "path": "src/main.c",
+        "ref": "sha256:267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+        "blob_path": "/v1/blobs/sha256/267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+        "size": 121279
+      }
+    ],
+    "total_bytes": 121279
+  },
+  "input_verification": {
+    "ok": true,
+    "status": "model_verified",
+    "proven": true,
+    "gaps": [
+      {
+        "code": "approximation",
+        "scope": "model",
+        "detail": "device time derived from cpu_hz (100000000 Hz); PLL reconfiguration is not tracked",
+        "address": "0x0",
+        "pc": "0x0"
+      },
+      {
+        "code": "approximation",
+        "scope": "model",
+        "detail": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal 3.3 V rail, so power-on and brown-out reset are not simulated",
+        "address": "0x0",
+        "pc": "0x0"
+      }
+    ],
+    "unmodeled_faults": [
+      {
+        "access": "derived_device_time",
+        "pc": "0x0",
+        "count": 1,
+        "note": "device time derived from cpu_hz (100000000 Hz); PLL reconfiguration is not tracked",
+        "address": "0x0"
+      },
+      {
+        "access": "unpowered_rail_assumed",
+        "pc": "0x0",
+        "count": 1,
+        "note": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal 3.3 V rail, so power-on and brown-out reset are not simulated",
+        "address": "0x0"
+      }
+    ],
+    "verification": "serial contains \"INPUT=000000ef\"; serial matches /DMG_FRAME=[0-9]+ x=4[9]|DMG_FRAME=[0-9]+ x=5[0-9]/; display PAINTED on framebuffer (refresh_gen=n/a, ink=153600>=10000). Model-verified deterministically while driven with btn-right/pressed=1 at cycle 22000000 (applied).",
+    "run_status": "pass",
+    "stop_reason": "max_steps",
+    "oracle_results": [
+      {
+        "kind": "serial",
+        "passed": true,
+        "detail": "serial contains \"INPUT=000000ef\""
+      },
+      {
+        "kind": "serial",
+        "passed": true,
+        "detail": "serial matches /DMG_FRAME=[0-9]+ x=4[9]|DMG_FRAME=[0-9]+ x=5[0-9]/"
+      },
+      {
+        "kind": "display",
+        "passed": true,
+        "detail": "display PAINTED on framebuffer (refresh_gen=n/a, ink=153600>=10000)"
+      }
+    ],
+    "stimuli": [
+      {
+        "channel": "pressed",
+        "value": 1,
+        "outcome": "applied",
+        "at_cycle": 22000000,
+        "component": "btn-right"
+      }
+    ],
+    "diagnosis": {
+      "faulting_pc": "0x0800040e",
+      "summary": "Ran the full 50000000-step budget without halting, having produced 20 lines of firmware serial output and 1 painted peripheral artifact. The firmware was running and reporting, so this is either a long-running program that needs a larger budget or an infinite loop / busy-wait on a status bit that never changes (e.g. polling a peripheral the twin does not model).",
+      "hint": "This run is ALREADY at the largest budget this run path accepts (50000000 steps \u2014 a max_steps past it is REFUSED with a config_error, not truncated). Raising max_steps is not an option here: the answer is elsewhere. Otherwise check for spin-loops that wait on a hardware status bit, and prefer software delay loops over peripheral-flag polls. Consult docs/firmware-scaffolds/README.md for the list of modeled peripherals."
+    }
+  },
+  "lab": {
+    "ok": true,
+    "state": "ready",
+    "title": "Game Boy recreation \u2014 Wire Runner",
+    "inline_component_uri": "ui://widget/labwired-hardware-lab-v14.html",
+    "inline_frame_url": "https://app.labwired.com/?embed=true&run=1&share=aV3vKsFaQjTi",
+    "studio_url": "https://app.labwired.com/?share=aV3vKsFaQjTi",
+    "share_url": "https://app.labwired.com/?share=aV3vKsFaQjTi",
+    "scene": {
+      "board": "stm32f411ceu6-blackpill",
+      "parts": [
+        {
+          "id": "mcu",
+          "type": "stm32f411ceu6-blackpill",
+          "x": 60,
+          "y": 240,
+          "rotate": 0,
+          "attrs": {
+            "label": "STM32F411 / DMG emulator"
+          }
+        },
+        {
+          "id": "lcd1",
+          "type": "ili9341",
+          "x": 290,
+          "y": 40,
+          "rotate": 0,
+          "attrs": {
+            "label": "Game Boy 160x144 / ILI9341",
+            "rotation": "90",
+            "voltage": "3.3"
+          }
+        },
+        {
+          "id": "btn-up",
+          "type": "button",
+          "x": 330,
+          "y": 360,
+          "rotate": 0,
+          "attrs": {
+            "label": "UP",
+            "key": "up"
+          }
+        },
+        {
+          "id": "btn-down",
+          "type": "button",
+          "x": 330,
+          "y": 470,
+          "rotate": 0,
+          "attrs": {
+            "label": "DOWN",
+            "key": "down"
+          }
+        },
+        {
+          "id": "btn-left",
+          "type": "button",
+          "x": 270,
+          "y": 415,
+          "rotate": 0,
+          "attrs": {
+            "label": "LEFT",
+            "key": "left"
+          }
+        },
+        {
+          "id": "btn-right",
+          "type": "button",
+          "x": 390,
+          "y": 415,
+          "rotate": 0,
+          "attrs": {
+            "label": "RIGHT",
+            "key": "right"
+          }
+        },
+        {
+          "id": "btn-a",
+          "type": "button",
+          "x": 540,
+          "y": 380,
+          "rotate": 0,
+          "attrs": {
+            "label": "A",
+            "key": "z"
+          }
+        },
+        {
+          "id": "btn-b",
+          "type": "button",
+          "x": 485,
+          "y": 430,
+          "rotate": 0,
+          "attrs": {
+            "label": "B",
+            "key": "x"
+          }
+        },
+        {
+          "id": "btn-select",
+          "type": "button",
+          "x": 405,
+          "y": 540,
+          "rotate": 0,
+          "attrs": {
+            "label": "SELECT",
+            "key": "select"
+          }
+        },
+        {
+          "id": "btn-start",
+          "type": "button",
+          "x": 480,
+          "y": 540,
+          "rotate": 0,
+          "attrs": {
+            "label": "START",
+            "key": "start"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "VCC"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "VCC"
+          },
+          "color": "#dd6666"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "GND"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PA5"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "SCK"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PA7"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "MOSI"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PA4"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "CS"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB0"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "DC"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB1"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "RESET"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PA8"
+          },
+          "to": {
+            "part": "lcd1",
+            "pin": "LED"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB3"
+          },
+          "to": {
+            "part": "btn-up",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-up",
+            "pin": "2"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB4"
+          },
+          "to": {
+            "part": "btn-down",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-down",
+            "pin": "2"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB5"
+          },
+          "to": {
+            "part": "btn-left",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-left",
+            "pin": "2"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB6"
+          },
+          "to": {
+            "part": "btn-right",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-right",
+            "pin": "2"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB7"
+          },
+          "to": {
+            "part": "btn-a",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-a",
+            "pin": "2"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB8"
+          },
+          "to": {
+            "part": "btn-b",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-b",
+            "pin": "2"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB9"
+          },
+          "to": {
+            "part": "btn-select",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-select",
+            "pin": "2"
+          },
+          "color": "#555555"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "PB10"
+          },
+          "to": {
+            "part": "btn-start",
+            "pin": "1"
+          },
+          "color": "#6da6ce"
+        },
+        {
+          "from": {
+            "part": "mcu",
+            "pin": "GND"
+          },
+          "to": {
+            "part": "btn-start",
+            "pin": "2"
+          },
+          "color": "#555555"
+        }
+      ],
+      "nets": []
+    },
+    "evidence": {
+      "status": "ready",
+      "runnable": true,
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "code": "PIN_LACKS_SPI",
+          "message": "PB0 isn't SPI-capable \u2014 fine if this is a control line (DC/RST/BUSY/etc.).",
+          "fix": "SPI MOSI/MISO/SCK signals must go to SPI-capable pins.",
+          "location": {
+            "pin": "PB0",
+            "part_id": "lcd1"
+          }
+        },
+        {
+          "severity": "warning",
+          "code": "PIN_LACKS_SPI",
+          "message": "PB1 isn't SPI-capable \u2014 fine if this is a control line (DC/RST/BUSY/etc.).",
+          "fix": "SPI MOSI/MISO/SCK signals must go to SPI-capable pins.",
+          "location": {
+            "pin": "PB1",
+            "part_id": "lcd1"
+          }
+        },
+        {
+          "severity": "warning",
+          "code": "PIN_LACKS_SPI",
+          "message": "PA8 isn't SPI-capable \u2014 fine if this is a control line (DC/RST/BUSY/etc.).",
+          "fix": "SPI MOSI/MISO/SCK signals must go to SPI-capable pins.",
+          "location": {
+            "pin": "PA8",
+            "part_id": "lcd1"
+          }
+        }
+      ],
+      "firmware": {
+        "compiled": true,
+        "attached": true,
+        "source": "agent-elf",
+        "detail": "The lab replays the precompiled firmware artifacts you supplied."
+      }
+    },
+    "lab_id": "aV3vKsFaQjTi",
+    "build_status": "ok",
+    "simulation_status": "ready",
+    "open_url": "https://app.labwired.com/?share=aV3vKsFaQjTi",
+    "preview": null,
+    "preview_missing": "widget_template_uri_only",
+    "compiler_errors": []
+  },
+  "failures": [
+    {
+      "tool": "project_create",
+      "reason": "AMBIGUOUS_FIRMWARE_INPUT",
+      "detail": "source plus diagram.firmware.artifact"
+    },
+    {
+      "tool": "project_verify",
+      "reason": "SOURCE_TOO_LARGE_USE_SOURCE_REF",
+      "detail": "Inline source is 121279 bytes; store it with labwired_put_source and pass source_tree_ref instead."
+    }
+  ],
+  "pcb": {
+    "path": "../pcb/handheld-carrier.kicad_pcb",
+    "report": "../pcb/drc-routed.json",
+    "violations": 0,
+    "unconnected_items": 0,
+    "sha256": "c72cf7ab603ba08f37182de79a0bb5d3efb69830acc1d44b8daa040b121f94ae",
+    "automatic_import": "design_only"
+  },
+  "browser_validation": {
+    "status": "passed_local",
+    "report": "browser-validation.json",
+    "width": 320,
+    "height": 240,
+    "pointer_input": "btn-right",
+    "x_before": 48,
+    "x_after": 63,
+    "release_observed": true,
+    "page_errors": 0,
+    "limitation": "Local Vite source build; production rollout checked separately."
+  }
+}
