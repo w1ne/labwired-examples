@@ -8,6 +8,7 @@ This repository is for runnable hardware verification stories, **not concept art
 
 | Example | Firmware and electronics | Mechanics | Evidence |
 | --- | --- | --- | --- |
+| [Industrial BLDC fault verification](examples/industrial/bldc-fault-verification/) | STM32L476 compiled C, 24 V motor plant, three digital fault flags, inverter shutdown | No mechanical model in this example | Normal spin-up and 3 fault scenarios model-verified; ideal MCU supply, no physical bench |
 | [Quadrotor BLDC propulsion](examples/robotics/quadrotor-bldc/) | STM32L476 compiled C, six-step BLDC, Hall/encoder inputs, motor speed + fault shutdown | Four independently articulated rotor joints in KernelCAD | One motor channel model-verified; CAD joints motion-checked. No flight simulation. |
 
 ## Featured video

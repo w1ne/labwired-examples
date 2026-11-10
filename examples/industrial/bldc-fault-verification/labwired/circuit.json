@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "board": "stm32l476",
+  "parts": [
+    {
+      "id": "ctrl",
+      "type": "nucleo-l476rg",
+      "x": 60,
+      "y": 120,
+      "attrs": {
+        "label": "STM32L476 Industrial Drive"
+      }
+    },
+    {
+      "id": "rotor1",
+      "type": "bldc-motor",
+      "x": 575,
+      "y": 130,
+      "attrs": {
+        "label": "24 V BLDC Drive",
+        "supply_voltage_v": "24",
+        "resistance_ohm": "0.35",
+        "inductance_h": "0.00018",
+        "torque_constant_nm_per_a": "0.04",
+        "back_emf_constant_v_per_rad_s": "0.04",
+        "rotor_inertia_kg_m2": "0.0000001",
+        "pole_pairs": "7",
+        "current_limit_a": "40",
+        "encoder_cpr": "2048"
+      }
+    },
+    {
+      "id": "fault",
+      "type": "button-module",
+      "x": 345,
+      "y": 430,
+      "attrs": {
+        "label": "DRIVER FAULT"
+      }
+    },
+    {
+      "id": "overcurrent",
+      "type": "button-module",
+      "x": 345,
+      "y": 530,
+      "attrs": {
+        "label": "OVERCURRENT"
+      }
+    },
+    {
+      "id": "undervoltage",
+      "type": "button-module",
+      "x": 345,
+      "y": 630,
+      "attrs": {
+        "label": "UNDERVOLTAGE"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PA8"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "AH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PB13"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "AL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PA9"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "BH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PB14"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "BL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PA10"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "CH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PB15"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "CL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "ENABLE"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PC0"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "HALL_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PC1"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "HALL_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PC2"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "HALL_C"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PC3"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "ENC_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PC4"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "ENC_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PC5"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "INDEX"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PB7"
+      },
+      "to": {
+        "part": "fault",
+        "pin": "SIG"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "fault",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "fault",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PB6"
+      },
+      "to": {
+        "part": "overcurrent",
+        "pin": "SIG"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "overcurrent",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "overcurrent",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "PC7"
+      },
+      "to": {
+        "part": "undervoltage",
+        "pin": "SIG"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "undervoltage",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "undervoltage",
+        "pin": "GND"
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "labwired-examples/verification-record/v1",
+  "as_of": "2026-11-10",
+  "project": {
+    "studio_url": "https://app.labwired.com/?share=3qFhHMhZdvCo",
+    "share_id": "3qFhHMhZdvCo",
+    "firmware_source": "../../robotics/quadrotor-bldc/firmware/main.c",
+    "build_target": "stm32l476",
+    "firmware_ref": "sha256:c6e69803a9b95ebf3f12b2d141059b2e206a6b9ce5ce7cd53e369da0a50cf3e5",
+    "build_status": "ok"
+  },
+  "model": {
+    "plant": "reduced-order 24 V BLDC, Hall/encoder feedback, STM32L476 six-step PWM and inverter enable",
+    "real_hardware_measured": false,
+    "power_rail": "ideal 3.3 V MCU supply; undervoltage is a digital input, not a simulated rail collapse"
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 9,
+    "warning_code": "PIN_LACKS_PWM",
+    "notes": "Current catalog checker emits warnings for complementary TIM1 and Hall/encoder signal roles; simulator verification proceeded. These warnings need review."
+  },
+  "cases": [
+    {
+      "name": "normal startup and target acquisition",
+      "verdict": "model_verified",
+      "stimuli": [],
+      "oracle": {
+        "serial_contains": [
+          "BLDC READY",
+          "TARGET REACHED"
+        ],
+        "motor": {
+          "id": "rotor1",
+          "min_abs_rpm": 100
+        }
+      },
+      "observed": {
+        "peak_abs_rpm": 6189.73915536955
+      }
+    },
+    {
+      "name": "driver fault",
+      "verdict": "model_verified",
+      "stimuli": [
+        {
+          "component": "fault",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 1250000,
+          "outcome": "applied",
+          "at_cycle": 1250000
+        }
+      ],
+      "oracle": {
+        "serial_contains": [
+          "FAULT DRIVER",
+          "INVERTER OFF"
+        ],
+        "gpio": {
+          "pin": "PB0",
+          "state": "low"
+        }
+      },
+      "observed": {
+        "serial_markers_present": true,
+        "PB0": "low",
+        "stimulus_applied": true
+      }
+    },
+    {
+      "name": "overcurrent flag",
+      "verdict": "model_verified",
+      "stimuli": [
+        {
+          "component": "overcurrent",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 1250000,
+          "outcome": "applied",
+          "at_cycle": 1250000
+        }
+      ],
+      "oracle": {
+        "serial_contains": [
+          "FAULT OVERCURRENT",
+          "INVERTER OFF"
+        ],
+        "gpio": {
+          "pin": "PB0",
+          "state": "low"
+        }
+      },
+      "observed": {
+        "serial_markers_present": true,
+        "PB0": "low",
+        "stimulus_applied": true
+      }
+    },
+    {
+      "name": "undervoltage flag",
+      "verdict": "model_verified",
+      "stimuli": [
+        {
+          "component": "undervoltage",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 1250000,
+          "outcome": "applied",
+          "at_cycle": 1250000
+        }
+      ],
+      "oracle": {
+        "serial_contains": [
+          "FAULT UNDERVOLTAGE",
+          "INVERTER OFF"
+        ],
+        "gpio": {
+          "pin": "PB0",
+          "state": "low"
+        }
+      },
+      "observed": {
+        "serial_markers_present": true,
+        "PB0": "low",
+        "stimulus_applied": true
+      }
+    }
+  ],
+  "limitations": [
+    "No physical bench validation or measured simulation-to-hardware agreement",
+    "Reduced-order electrical motor plant, not MOSFET-level inverter SPICE, gate-driver, current shunt, thermals or switching transients",
+    "Supply remains ideal 3.3 V; digital UNDERVOLTAGE flag does not simulate supply collapse or brownout",
+    "No industrial safety certification, functional-safety tool qualification or guaranteed shutdown latency",
+    "Share page smoke-checked HTTP 200, board renders, and its firmware is attached; interactive fault-button click sequence not separately browser-certified"
+  ]
+}
