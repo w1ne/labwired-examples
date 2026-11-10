@@ -97,11 +97,27 @@ class ESCPhysicalBoard(unittest.TestCase):
 
     def test_drc_report_is_not_misrepresented_as_clean(self):
         drc = findings(E / "validation" / "drc-final.txt")
-        self.assertEqual(drc["lib_footprint_mismatch"], 6)
-        self.assertEqual(drc["net_conflict"], 16)
+        self.assertEqual(drc["lib_footprint_mismatch"], 4)
+        self.assertEqual(drc["net_conflict"], 11)
         for violation in ("shorting_items", "clearance", "unconnected_items"):
             self.assertEqual(drc[violation], 0)
-        self.assertEqual(sum(drc.values()), 22)
+        self.assertEqual(sum(drc.values()), 15)
+
+    def test_gate_driver_nc_pads_restored_and_isolated(self):
+        # The five actual QFN pads must be physical PCB objects, each with a
+        # unique isolated KiCad NC net, not a dummy schematic placeholder.
+        for ref, pins in {"U6": ("5", "7"), "U10": ("5", "7", "8")}.items():
+            marker = '(property "Reference" "' + ref + '"'
+            at = self.board.find(marker)
+            self.assertGreater(at, 0, ref)
+            begin = self.board.rfind("\n\t(footprint ", 0, at)
+            self.assertGreater(begin, 0, ref)
+            end = self.board.find("\n\t(footprint ", at)
+            footprint = self.board[begin:end if end >= 0 else None]
+            for pin in pins:
+                self.assertIn('(pad "' + pin + '" smd', footprint)
+                self.assertIn(f'unconnected-({ref}-NC-Pad{pin})', footprint)
+
 
     def test_inherited_erc_findings_explicit(self):
         erc = findings(E / "validation" / "erc-final.txt")

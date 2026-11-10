@@ -19,7 +19,8 @@ sensing. The manufacturer documents AM32-compatible control firmware.
   capacitors (originally only on the PCB), each wired to +BATT and GND.
 - ESC.kicad_sch: complete repeated one-motor controller and gate driver.
 - 4in1.kicad_pcb: routed 6-layer board, 222 uniquely numbered footprints,
-  195 copper nets, 2,922 routing items including 1,702 vias.
+  195 original routed nets plus 5 isolated NC pin identities (200 named nets);
+  2,919 routing items, including 1,700 vias.
 - 4in1.kicad_pro, 4in1.kicad_dru: original manufacturer PCB rule settings.
 - Local footprints, 3D shapes and symbols plus pinned KiCad-Library submodule.
 - board-only-caps.csv: mapping of the 49 originally duplicate designators
@@ -36,20 +37,29 @@ sensing. The manufacturer documents AM32-compatible control firmware.
    manufacturer/MPN fields were synchronized to the schematic.
 4. KiCad 10 libraries were configured to resolve legacy footprint and
    symbol aliases. The copied board outline footprint was synchronized.
-5. PCB copper geometry, layer stack, tracks and vias were not changed.
+5. In a follow-up KiCad-checked revision, restored **U6 pins 5/7 and U10 pins
+   5/7/8** from exact component footprints, each assigned its own isolated NC
+   net to match the schematic. Removed one ground track under U10 and two
+   ground stitching vias under U6; all other source copper was retained.
+   Via stitching density and current return paths still require review.
 
 ## Current verification (review-only)
 
 Original copper is fully routed: 0 unconnected items, and no currently
 reported copper shorts under the supplied project rules. However,
-native KiCad physical DRC still reports 6 package-footprint mismatches
-and schematic parity reports 16 omitted package pads:
-- AT32F421: U2/U5/U7 pin 8 and pins 23/24, and U9 pins 23/24.
-- NSG2065Q: U6 pins 5/7, and U10 pins 5/7/8.
+native KiCad DRC still reports **4 package-footprint library mismatches**
+(U2/U5/U7/U9 AT32F421) and **11 missing physical MCU pads** in schematic
+parity:
+- AT32F421: U2/U5/U7 pin 8 and pins 23/24, plus U9 pins 23/24.
+- NSG2065Q: U6 pins 5/7 and U10 pins 5/7/8 **restored and DRC-checked**.
 
-These are unconnected pins in the schematic but omitted physical pads.
-Restoring all 16 package pads without moving the adjacent copper
-produced 17 shorting-item findings. That candidate was rejected.
+The remaining 11 are unconnected MCU pins in the schematic but still
+omitted from their real physical footprints. Restoring all 16 pads at once
+without rerouting produced 17 shorting-item findings; that candidate was
+rejected. The five gate-driver pads were fixed separately. Native KiCad 10
+reports **no new physical shorts, clearance violations, or unrouted items**,
+but manufacturing readiness still requires MCU pad/trace rework and a physical
+review of the removed ground stitching features.
 
 The complete schematic ERC has 352 inherited findings (same category counts
 as the original design, including pin electrical types and library issues).
