@@ -1,0 +1,316 @@
+{
+  "schema": "labwired.heypcb.acceptance.v1",
+  "recorded_date": "2026-11-10",
+  "scope": "seven PCB files tested on unmerged w1ne/labwired PR #2934; not production imports or whole-board verification",
+  "evidence_source": "https://github.com/w1ne/labwired/pull/2934",
+  "corpus_index_note": "239 candidate designs from 30 repositories in separate unmerged index; not 239 imported, mapped or simulated boards",
+  "boards": [
+    {
+      "id": "hello-8051",
+      "source": {
+        "repo": "HeyPCB/hello-8051",
+        "commit": "4e7012c4ee22ade59bbd5d0e9979c046df4ae71a",
+        "license_spdx": "MIT",
+        "license_path": "LICENSE",
+        "license_blob_sha": "fafa07eb7a4d778cb580b235b4457e2a1eefe999",
+        "path": "hello.kicad_pcb",
+        "blob_sha": "dc83f538512149fba6f60dc0bb5c5c1844b9160c"
+      },
+      "stages": {
+        "fetched": "passed",
+        "parsed": "passed",
+        "imported": "passed",
+        "mapped": "partial",
+        "analog_simulated": "not_verified",
+        "firmware_verified": "not_verified",
+        "whole_board_verified": "blocked"
+      },
+      "import_counts": {
+        "mapped": 15,
+        "dropped": 7,
+        "ignored": 5
+      },
+      "model_coverage": {
+        "unmodeled_refs": [
+          "DS1",
+          "SW1",
+          "SW2",
+          "U1",
+          "U2",
+          "U3",
+          "Y1"
+        ],
+        "net_completeness": "not_measured",
+        "pin_completeness": "not_measured",
+        "active_models": "incomplete"
+      },
+      "whole_board": {
+        "verdict": "UNSUPPORTED",
+        "run_status": "not_started",
+        "evidence_class": "design_checked"
+      }
+    },
+    {
+      "id": "power-kit/boost-1s",
+      "source": {
+        "repo": "HeyPCB/power-kit",
+        "commit": "bd7e304ea939418d7c09d0ec867a6c693ecaa258",
+        "license_spdx": "CERN-OHL-S-2.0",
+        "license_path": "LICENSE",
+        "license_blob_sha": "0f1092207caa645ff426e0cc40b7eaad69caecb1",
+        "path": "boards/boost-1s/kicad/power_boost_1s.kicad_pcb",
+        "blob_sha": "c100a274ce62ceba593f0ae44a4e18203f536430"
+      },
+      "stages": {
+        "fetched": "passed",
+        "parsed": "passed",
+        "imported": "passed",
+        "mapped": "partial",
+        "analog_simulated": "not_verified",
+        "firmware_verified": "not_verified",
+        "whole_board_verified": "blocked"
+      },
+      "import_counts": {
+        "mapped": 11,
+        "dropped": 1,
+        "ignored": 1
+      },
+      "model_coverage": {
+        "unmodeled_refs": [
+          "D1",
+          "U1"
+        ],
+        "net_completeness": "not_measured",
+        "pin_completeness": "not_measured",
+        "active_models": "incomplete"
+      },
+      "whole_board": {
+        "verdict": "UNSUPPORTED",
+        "run_status": "not_started",
+        "evidence_class": "design_checked"
+      }
+    },
+    {
+      "id": "power-kit/dual-rail",
+      "source": {
+        "repo": "HeyPCB/power-kit",
+        "commit": "bd7e304ea939418d7c09d0ec867a6c693ecaa258",
+        "license_spdx": "CERN-OHL-S-2.0",
+        "license_path": "LICENSE",
+        "license_blob_sha": "0f1092207caa645ff426e0cc40b7eaad69caecb1",
+        "path": "boards/dual-rail/kicad/power_dual_buck.kicad_pcb",
+        "blob_sha": "d38c898a3e6cb728698cce575d64855ca193b3d0"
+      },
+      "stages": {
+        "fetched": "passed",
+        "parsed": "passed",
+        "imported": "passed",
+        "mapped": "partial",
+        "analog_simulated": "not_verified",
+        "firmware_verified": "not_verified",
+        "whole_board_verified": "blocked"
+      },
+      "import_counts": {
+        "mapped": 26,
+        "dropped": 3,
+        "ignored": 5
+      },
+      "model_coverage": {
+        "unmodeled_refs": [
+          "Q1",
+          "U1",
+          "U2"
+        ],
+        "net_completeness": "not_measured",
+        "pin_completeness": "not_measured",
+        "active_models": "incomplete"
+      },
+      "whole_board": {
+        "verdict": "UNSUPPORTED",
+        "run_status": "not_started",
+        "evidence_class": "design_checked"
+      }
+    },
+    {
+      "id": "power-kit/pd-trigger",
+      "source": {
+        "repo": "HeyPCB/power-kit",
+        "commit": "bd7e304ea939418d7c09d0ec867a6c693ecaa258",
+        "license_spdx": "CERN-OHL-S-2.0",
+        "license_path": "LICENSE",
+        "license_blob_sha": "0f1092207caa645ff426e0cc40b7eaad69caecb1",
+        "path": "boards/pd-trigger/kicad/power_pd_trigger.kicad_pcb",
+        "blob_sha": "29625bc1f65725b3c4dcba93fb6e1daef033774d"
+      },
+      "stages": {
+        "fetched": "passed",
+        "parsed": "passed",
+        "imported": "passed",
+        "mapped": "partial",
+        "analog_simulated": "not_verified",
+        "firmware_verified": "not_verified",
+        "whole_board_verified": "blocked"
+      },
+      "import_counts": {
+        "mapped": 12,
+        "dropped": 3,
+        "ignored": 2
+      },
+      "model_coverage": {
+        "unmodeled_refs": [
+          "Q1",
+          "SW1",
+          "U1"
+        ],
+        "net_completeness": "not_measured",
+        "pin_completeness": "not_measured",
+        "active_models": "incomplete"
+      },
+      "whole_board": {
+        "verdict": "UNSUPPORTED",
+        "run_status": "not_started",
+        "evidence_class": "design_checked"
+      }
+    },
+    {
+      "id": "power-kit/power-mux",
+      "source": {
+        "repo": "HeyPCB/power-kit",
+        "commit": "bd7e304ea939418d7c09d0ec867a6c693ecaa258",
+        "license_spdx": "CERN-OHL-S-2.0",
+        "license_path": "LICENSE",
+        "license_blob_sha": "0f1092207caa645ff426e0cc40b7eaad69caecb1",
+        "path": "boards/power-mux/kicad/power_mux_usb_bat.kicad_pcb",
+        "blob_sha": "ea746848a846672c72888312943583e61c36c314"
+      },
+      "stages": {
+        "fetched": "passed",
+        "parsed": "passed",
+        "imported": "passed",
+        "mapped": "partial",
+        "analog_simulated": "not_verified",
+        "firmware_verified": "not_verified",
+        "whole_board_verified": "blocked"
+      },
+      "import_counts": {
+        "mapped": 12,
+        "dropped": 1,
+        "ignored": 2
+      },
+      "model_coverage": {
+        "unmodeled_refs": [
+          "U1"
+        ],
+        "net_completeness": "not_measured",
+        "pin_completeness": "not_measured",
+        "active_models": "incomplete"
+      },
+      "whole_board": {
+        "verdict": "UNSUPPORTED",
+        "run_status": "not_started",
+        "evidence_class": "design_checked"
+      }
+    },
+    {
+      "id": "power-kit/usb-efuse",
+      "source": {
+        "repo": "HeyPCB/power-kit",
+        "commit": "bd7e304ea939418d7c09d0ec867a6c693ecaa258",
+        "license_spdx": "CERN-OHL-S-2.0",
+        "license_path": "LICENSE",
+        "license_blob_sha": "0f1092207caa645ff426e0cc40b7eaad69caecb1",
+        "path": "boards/usb-efuse/kicad/power_efuse_usb.kicad_pcb",
+        "blob_sha": "dff3bf4fdd12472289742435f2ba4c31e22161b0"
+      },
+      "stages": {
+        "fetched": "passed",
+        "parsed": "passed",
+        "imported": "passed",
+        "mapped": "partial",
+        "analog_simulated": "not_verified",
+        "firmware_verified": "not_verified",
+        "whole_board_verified": "blocked"
+      },
+      "import_counts": {
+        "mapped": 12,
+        "dropped": 1,
+        "ignored": 2
+      },
+      "model_coverage": {
+        "unmodeled_refs": [
+          "U1"
+        ],
+        "net_completeness": "not_measured",
+        "pin_completeness": "not_measured",
+        "active_models": "incomplete"
+      },
+      "whole_board": {
+        "verdict": "UNSUPPORTED",
+        "run_status": "not_started",
+        "evidence_class": "design_checked"
+      }
+    },
+    {
+      "id": "power-kit/usb-c-meter",
+      "source": {
+        "repo": "HeyPCB/power-kit",
+        "commit": "bd7e304ea939418d7c09d0ec867a6c693ecaa258",
+        "license_spdx": "CERN-OHL-S-2.0",
+        "license_path": "LICENSE",
+        "license_blob_sha": "0f1092207caa645ff426e0cc40b7eaad69caecb1",
+        "path": "boards/usb-c-meter/kicad/power_usb_meter.kicad_pcb",
+        "blob_sha": "fd6946494bb341273c8263188dcd074de9ec07d6"
+      },
+      "stages": {
+        "fetched": "passed",
+        "parsed": "passed",
+        "imported": "passed",
+        "mapped": "partial",
+        "analog_simulated": "not_verified",
+        "firmware_verified": "not_verified",
+        "whole_board_verified": "blocked"
+      },
+      "import_counts": {
+        "mapped": 4,
+        "dropped": 1,
+        "ignored": 3
+      },
+      "model_coverage": {
+        "unmodeled_refs": [
+          "U1"
+        ],
+        "net_completeness": "not_measured",
+        "pin_completeness": "not_measured",
+        "active_models": "incomplete"
+      },
+      "whole_board": {
+        "verdict": "UNSUPPORTED",
+        "run_status": "not_started",
+        "evidence_class": "design_checked"
+      }
+    }
+  ],
+  "subcircuit_bench": {
+    "board_id": "power-kit/boost-1s",
+    "scope": "imported 15k/2k feedback divider only, ideal 5V source, separate Arduino UNO observer (not a power-kit board MCU)",
+    "model_verified": true,
+    "analog_circuit": "resistor divider",
+    "positive": {
+      "oracle": "serial expected marker",
+      "observed": "POWERKIT_DIVIDER_OK\\r\\n",
+      "run_status": "pass"
+    },
+    "negative": {
+      "change": "swap the 15k and 2k divider resistors",
+      "oracle": "same expected marker",
+      "observed": "POWERKIT_DIVIDER_BAD\\r\\n",
+      "run_status": "fail"
+    },
+    "evidence_class": "firmware_model_verified",
+    "whole_board_verified": false,
+    "missing_models": [
+      "MT3608 switching regulator",
+      "SS34 diode"
+    ]
+  }
+}
