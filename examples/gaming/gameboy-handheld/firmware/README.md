@@ -5,10 +5,10 @@ This project runs the MIT-licensed Peanut-GB DMG emulator as STM32F411 firmware.
 ## Open the project
 
 - [Saved LabWired project](https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1)
-- [Pinned firmware lab](https://app.labwired.com/?share=aV3vKsFaQjTi&run=1)
-- [KernelCAD enclosure, revision 2](https://app.kernelcad.com/p/kQAFdaQs?version=2)
+- [Original pinned firmware checkpoint](https://app.labwired.com/?share=aV3vKsFaQjTi&run=1)
+- [KernelCAD enclosure, revision 3](https://app.kernelcad.com/p/kQAFdaQs?version=3)
 
-The saved project contains the full editable C source, pinned compiled artifact, 10 circuit parts, 24 wires, right-button verification stimulus, and the exact KernelCAD revision and mesh provenance. The current production UI may require the separate CAD link until the generic mechanical-view integration is deployed.
+The saved project contains the full editable C source, pinned compiled artifact, 10 circuit parts, 24 wires, right-button press/release verification track, and the exact KernelCAD revision and mesh provenance. The CAD-view integration is in PR3040; production rollout is checked separately.
 
 ## Play
 
@@ -29,11 +29,11 @@ Select **Preview** in LabWired to operate the buttons. Hold the on-screen button
 | Up / Down / Left / Right | PB3 / PB4 / PB5 / PB6 | SW1 / SW2 / SW3 / SW4 |
 | A / B / Select / Start | PB7 / PB8 / PB9 / PB10 | SW5 / SW6 / SW7 / SW8 |
 
-The display is the Waveshare 2.4-inch ILI9341 module, connected through its PH2.0 cable. The module is 70.5 × 43.3 mm. The firmware programs a 320 × 240 landscape display and scales the DMG image to 240 × 216 pixels, centered at (40, 12).
+The display is the Waveshare 2.4-inch ILI9341 module, connected through its PH2.0 cable. The supplied controller end must be re-terminated into the carrier's JST PHR-8 housing; use the contact, wire and endpoint-function requirements in `../pcb/assembly-interfaces.json`. The module is 70.5 × 43.3 mm. The firmware programs a 320 × 240 landscape display and scales the DMG image to 240 × 216 pixels, centered at (40, 12).
 
 The carrier is a two-layer 78 × 132 mm board. It uses the upstream WeAct Black Pill v3 physical footprint, the published Waveshare connector order, eight 6 mm through-hole switches, and two bypass capacitors. Its PCB mounts at case coordinates x ±29 mm, y 16 / 132 mm match the shared mechanical interface. Corner notches clear the case closure posts.
 
-USB powers the Black Pill. A panel-mounted USB-C extension/pigtail reaches the case top opening; the MCU module's USB connector is recessed. The enclosure reserves battery and speaker volume, but neither is electrically implemented.
+USB powers the Black Pill through the detailed enclosure's direct-access opening. The USB plug envelope and insertion path are checked geometrically; the purchased module datum and fully seated cable fit remain unmeasured. The enclosure reserves battery and speaker volume, but neither is electrically implemented.
 
 ## Validation and limits
 

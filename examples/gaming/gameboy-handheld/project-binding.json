@@ -1,0 +1,42 @@
+{
+  "schema": "labwired.project-assembly-binding.v1",
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+  "previous_content_hash": "1458d69ac4a73b0bfcea2dd6acdff40795f80fa7d80dcc7ff2daffd5ba7bfb85",
+  "editable_source_preserved": true,
+  "source_sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+  "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "kQAFdaQs",
+    "version": 3,
+    "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+    "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+    "title": "Game Boy handheld enclosure"
+  },
+  "pcb": {
+    "native_source_sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "attached_board_id": null,
+    "status": "native-attachment-pending",
+    "pending_requirements": [
+      "generic-native-import-api-deployment",
+      "owner-browser-sign-in"
+    ]
+  },
+  "stimuli": [
+    {
+      "channel": "pressed",
+      "value": 1,
+      "component": "btn-right",
+      "after_cycles": 22000000
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "component": "btn-right",
+      "after_cycles": 35000000
+    }
+  ],
+  "physical_hardware_tested": false,
+  "readback_verified": true
+}

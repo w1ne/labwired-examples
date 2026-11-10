@@ -8,9 +8,10 @@
     "rom_behavior": "host_test_passed",
     "browser": "local_source_build_passed",
     "pcb": "drc_passed",
-    "mechanical": "static_fixed_mates_solved",
+    "mechanical": "nominal_assembly_and_access_checked",
     "physical_hardware_tested": false,
-    "controls": "8_driven_stm32_cases_passed"
+    "controls": "8_driven_stm32_cases_passed",
+    "native_pcb_attached": false
   },
   "target": {
     "board": "stm32f411ceu6-blackpill",
@@ -36,30 +37,49 @@
   },
   "pcb": {
     "path": "pcb/handheld-carrier.kicad_pcb",
-    "sha256": "c72cf7ab603ba08f37182de79a0bb5d3efb69830acc1d44b8daa040b121f94ae",
+    "sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
     "simulation_binding": "pcb/simulation-binding.json",
-    "automatic_twin_import": false
+    "automatic_twin_import": false,
+    "export_verification": "pcb/export-validation.json"
   },
   "mechanical": {
-    "path": "mechanical/labwired-gameboy.kcad.ts",
-    "sha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78",
+    "path": "mechanical/revision-3/labwired-gameboy-assembly.kcad.ts",
+    "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
     "provider": "kernelcad",
     "slug": "kQAFdaQs",
-    "revision": 2,
-    "mesh_provenance": "e713f4b94b377905927c41d0b4e82397d4ac23efbe397158acc4b13d7d4dca08",
-    "fixed_mate_review": "mechanical/independent-mates.json"
+    "revision": 3,
+    "mesh_provenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+    "generator": "mechanical/revision-3/build_assembly.py",
+    "derived_interfaces": "mechanical/revision-3/derived-interfaces.json",
+    "fixed_mate_review": "mechanical/revision-3/independent-mates.json",
+    "pose_checks": "mechanical/revision-3/pose-checks.json",
+    "export_verification": "mechanical/revision-3/export-verification.json",
+    "part_classification": "mechanical/revision-3/parts.json",
+    "historical_revision_2_reference": "mechanical/kernelcad-reference-v2.json"
   },
   "project": {
     "id": "f44771855a18a70d418e363622de2e28",
     "url": "https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1",
-    "firmware_share": "https://app.labwired.com/?share=aV3vKsFaQjTi&run=1"
+    "firmware_share": "https://app.labwired.com/?share=aV3vKsFaQjTi&run=1",
+    "binding": "project-binding.json",
+    "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "firmware_share_scope": "Original firmware checkpoint; predates detailed CAD revision 3."
   },
   "evidence": {
-    "firmware": "firmware/evidence.json",
+    "firmware": "firmware/control-validation.json",
     "host_rom": "firmware/host-validation.json",
     "browser": "firmware/browser-validation.json",
     "pcb_drc": "pcb/drc-routed.json",
-    "cad": "mechanical/evidence-v2.json"
+    "cad": "mechanical/revision-3/evaluation.json",
+    "firmware_initial": "firmware/evidence.json",
+    "control_requests": "firmware/control-vectors.json",
+    "browser_view_continuity_revision_2": "firmware/browser-view-continuity.json",
+    "browser_style_revision_2": "firmware/browser-style-validation.json",
+    "pcb_exports": "pcb/export-validation.json",
+    "cad_fixed_mates": "mechanical/revision-3/independent-mates.json",
+    "cad_poses": "mechanical/revision-3/pose-checks.json",
+    "cad_exports": "mechanical/revision-3/export-verification.json",
+    "cad_revision_2_historical": "mechanical/evidence-v2.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -77,8 +97,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10234,
-      "sha256": "ef43954766e1139e97add1703254835a627fb53b8f5d908a2fe84274fe477fe2"
+      "bytes": 13662,
+      "sha256": "60108fec64fd59657e587b868b272841c09e7739eb10cb4471af7e173fa37fb9"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -92,13 +112,23 @@
     },
     {
       "path": "firmware/README.md",
-      "bytes": 6430,
-      "sha256": "772f673c52d6565a8f36f2bd4eb5d878fdf9684029f43d6bcf04ab13905cbd30"
+      "bytes": 6684,
+      "sha256": "8861a7b1350e190150c85f64cc22ac33e2819b0bc70a9d6a7a8c89ceff26fdcd"
+    },
+    {
+      "path": "firmware/browser-style-validation.json",
+      "bytes": 1327,
+      "sha256": "d601731690beed17a531ca33ac6b2d55a95d07c0d532f145179e78be0aec2ce8"
     },
     {
       "path": "firmware/browser-validation.json",
       "bytes": 3877,
       "sha256": "6b5411371c68cfb96ff7e4f3d6ad111d0a47c15f0a3df3abf4e80ffb6fb1a1b3"
+    },
+    {
+      "path": "firmware/browser-view-continuity.json",
+      "bytes": 4281,
+      "sha256": "83c6f3f136760e795c553abd85ac647164d24abfaff3580c6ffc532d64fd3d1d"
     },
     {
       "path": "firmware/build_firmware.py",
@@ -113,7 +143,7 @@
     {
       "path": "firmware/circuit.json",
       "bytes": 6770,
-      "sha256": "af45c8ab24683257b7880769c438f966c139b5eff0ca1009898233c88a477e84"
+      "sha256": "cefadd59ba734ca5c87e7af53bbc4f86a02a19a7dd964fbaf1432413cfb92ba8"
     },
     {
       "path": "firmware/control-validation.json",
@@ -167,8 +197,8 @@
     },
     {
       "path": "firmware/verification.json",
-      "bytes": 559,
-      "sha256": "7ea600e3638f6dc0da4cc5160fd53dfe392c3315d95d69b067ab022dcde3b051"
+      "bytes": 738,
+      "sha256": "b07e1aa33f9dbbfea7f74c4482bf06a326bbc385989f62aee6d1c877e9fb1278"
     },
     {
       "path": "firmware/wire_runner.gb",
@@ -182,13 +212,13 @@
     },
     {
       "path": "kernelcad-reference.json",
-      "bytes": 1669,
-      "sha256": "9740df107ba0f2ebd18d61ff4f6f527f9edf4c53b5ea5f0f425e900c3b02b6a2"
+      "bytes": 2405,
+      "sha256": "9dd830133699bd71126bc155bc8c20b842ce16be3e5d413a60bc62cb2c22c27b"
     },
     {
       "path": "mechanical/README.md",
-      "bytes": 4435,
-      "sha256": "9174017d97893fe9a2bdfcd212de03cb47d7a1b24aac60c316996068fdc3d479"
+      "bytes": 4735,
+      "sha256": "1b8631e2f8136fa37e3db9508ced43cdb10e91e1a13b59c9642e4242886cb9d0"
     },
     {
       "path": "mechanical/download-verification-v2.json",
@@ -216,44 +246,189 @@
       "sha256": "d91ce9970537c24cb61580daf6c287bc0c8925b095ddb4be29f1c4aa68bf8918"
     },
     {
+      "path": "mechanical/kernelcad-reference-v2.json",
+      "bytes": 1669,
+      "sha256": "9740df107ba0f2ebd18d61ff4f6f527f9edf4c53b5ea5f0f425e900c3b02b6a2"
+    },
+    {
       "path": "mechanical/labwired-gameboy.kcad.ts",
       "bytes": 11178,
       "sha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78"
     },
     {
+      "path": "mechanical/revision-3/README.md",
+      "bytes": 13085,
+      "sha256": "c55da4e19de6c8a6c1e2f71edefd4279dcae14ad493f4e30a2736c78b5c6cc50"
+    },
+    {
+      "path": "mechanical/revision-3/assembly-body.ts",
+      "bytes": 17484,
+      "sha256": "7212c9d922e9b91d3bdff0f614a5f93cc98b086a265102256dad8752504e9903"
+    },
+    {
+      "path": "mechanical/revision-3/assembly-config.json",
+      "bytes": 5937,
+      "sha256": "2ca978a8a0eaa0f8f7ea16095b7e0e5d572223a14a126260d58451e5d3df0723"
+    },
+    {
+      "path": "mechanical/revision-3/assembly-path.json",
+      "bytes": 21793,
+      "sha256": "b918ecde95d8f3916d0f3bd6cbe90ddc22287567c50d5c4cf0aea311c4050c63"
+    },
+    {
+      "path": "mechanical/revision-3/build_assembly.py",
+      "bytes": 5250,
+      "sha256": "c9d9b467f2580034a8b0917d18652ac963f9ef555037d8234793c3ca73853333"
+    },
+    {
+      "path": "mechanical/revision-3/build_check_cases.py",
+      "bytes": 2198,
+      "sha256": "e1189b4a20b518752f0a87c8b6e20f15359137e89fa6495a3a314f22619d0e45"
+    },
+    {
+      "path": "mechanical/revision-3/check_dimensions.py",
+      "bytes": 7804,
+      "sha256": "0262918d7f68dfe2212db037fd7b3063b0d104b3270d468e9d65b8b28e0771cd"
+    },
+    {
+      "path": "mechanical/revision-3/clearance-ledger.json",
+      "bytes": 8851,
+      "sha256": "ef81dbfc7004eeaee8d4ebd05af2a8410a9ab1a21e1a954e5e91bc11f75efcd6"
+    },
+    {
+      "path": "mechanical/revision-3/collision-regression.json",
+      "bytes": 1319,
+      "sha256": "fb61f63f124190cd5cfcf4db50c2d6c73b96554a9999532585ab0d0e35e1eaf7"
+    },
+    {
+      "path": "mechanical/revision-3/cross-layer-review.json",
+      "bytes": 1147,
+      "sha256": "52a33a4a207eb71319c470947282f25c05bf9257b47bd5eac63f31ae049cabdb"
+    },
+    {
+      "path": "mechanical/revision-3/derived-interfaces.json",
+      "bytes": 29333,
+      "sha256": "e29dec6cb545cae325ac74e3bae94e4225b68b16b997ee7aa374e8e641ce2680"
+    },
+    {
+      "path": "mechanical/revision-3/design-loop.json",
+      "bytes": 10775,
+      "sha256": "ab0818830969d89696c074c3657bd3cea68b502c56b1d4591400f08d6f08b173"
+    },
+    {
+      "path": "mechanical/revision-3/evaluation.json",
+      "bytes": 2898,
+      "sha256": "0f7012fa63741b73dabe455e7a0c36badee90a80a57b6d89707b8779a21789af"
+    },
+    {
+      "path": "mechanical/revision-3/export-verification.json",
+      "bytes": 5644,
+      "sha256": "588f0eab9b1c362ff7a602595de4114e94fe5eb856d1e4e5f39937bcccb762cc"
+    },
+    {
+      "path": "mechanical/revision-3/fastener-installation.json",
+      "bytes": 52905,
+      "sha256": "d27ce1c3d0fd0bc1033b8cceeaf1e46f94f078619336fd899d522059f5533a89"
+    },
+    {
+      "path": "mechanical/revision-3/independent-mates.json",
+      "bytes": 2197,
+      "sha256": "8bc9c115d1ad751a782938b370c33ec47972a5b12aa2c62d9bc12d23d4290ee5"
+    },
+    {
+      "path": "mechanical/revision-3/kernelcad-reference.json",
+      "bytes": 1799,
+      "sha256": "95e58414d4c49115905cf72df1bf6c6386b8a3e6612cf7b397ad2a019e2efd60"
+    },
+    {
+      "path": "mechanical/revision-3/labwired-gameboy-assembly.kcad.ts",
+      "bytes": 31338,
+      "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6"
+    },
+    {
+      "path": "mechanical/revision-3/media/exterior.png",
+      "bytes": 116986,
+      "sha256": "6b988620cb69b6cfdf45f59a5cf1ea34f44479a6e30f9b7344b4b3f495bad167"
+    },
+    {
+      "path": "mechanical/revision-3/media/section-right.png",
+      "bytes": 66097,
+      "sha256": "08bbe90403b683e5d94031d863ee945f36246b1df8cbb50fbfe4584d11271cdf"
+    },
+    {
+      "path": "mechanical/revision-3/part-stats.json",
+      "bytes": 21950,
+      "sha256": "dea241eccce1f9bf6c39e0a3ff7e4e99f26834e57bf027e136df823d7c4b7beb"
+    },
+    {
+      "path": "mechanical/revision-3/parts.json",
+      "bytes": 1929,
+      "sha256": "029d0cd4cfb3819f8cc79e6145790680271f96c1b3022128dcf4e361b03ac53d"
+    },
+    {
+      "path": "mechanical/revision-3/pose-checks.json",
+      "bytes": 35719,
+      "sha256": "01eac13a5c49391a839c3ae7d33f2e21ba358abac6cf3819569f8adbda7bf9e8"
+    },
+    {
+      "path": "mechanical/revision-3/step-reimport.json",
+      "bytes": 22133,
+      "sha256": "03be6fae19efbf02edb30170eb56d3221e3572ab9db8ace29e205a4bc3255758"
+    },
+    {
       "path": "pcb/README.md",
-      "bytes": 5053,
-      "sha256": "55717a355bc94eeb9485a2c54e5c36a1f46dbab7de5be251600871733f6d7521"
+      "bytes": 13500,
+      "sha256": "6369718e2aa75634625d673131549591611b8a6da7279a43809447fc4ddb80d7"
+    },
+    {
+      "path": "pcb/assembly-interfaces.json",
+      "bytes": 11266,
+      "sha256": "28378e05772b217934dfd36c0b2c474a01ac4c085ac1ba77d1124f297afea60d"
     },
     {
       "path": "pcb/bom.csv",
-      "bytes": 700,
-      "sha256": "64d9b7e0f286a990b31be0c50e04d3bd525348312798389b97ccea978f3f58e7"
+      "bytes": 1451,
+      "sha256": "754cc8777e53070bd270bd2c30d20412895ef65c76ad384ceb9cc50261eee08a"
     },
     {
       "path": "pcb/build_carrier.py",
-      "bytes": 7859,
-      "sha256": "03d40a4562f11c910c77099c4242d20cc4a5e23bc75ffbe6d0b3ed72ec19c46b"
+      "bytes": 8590,
+      "sha256": "278fd97903b37f0ae977e77558ee00180165bfdef16d70a29a3e93c9afebdc20"
     },
     {
       "path": "pcb/carrier-layout.json",
-      "bytes": 40097,
-      "sha256": "079b9cebaff778f3e656799c07dc899e5a36dc743117349952d83487b487108d"
+      "bytes": 40629,
+      "sha256": "3b6a68fda5b1c35b4b4defbc37b7229f7de88c238baa8dc4c85756a7f6a34804"
+    },
+    {
+      "path": "pcb/connector-correction.json",
+      "bytes": 2742,
+      "sha256": "f0f7bd36eaff157a6ab9569ff3691347a9bf9d5ceedbbccfa60e100795806854"
     },
     {
       "path": "pcb/drc-routed.json",
       "bytes": 282,
-      "sha256": "4869dd5a0411e55919baa8e15074e317071788f7e9b7011b4e2a2e16adbf0fff"
+      "sha256": "113e38ec7bfe46819d7bd6c0794178eb7c04f8001e48fbd3defdde06b784f91b"
+    },
+    {
+      "path": "pcb/export-validation.json",
+      "bytes": 5376,
+      "sha256": "2ca45df8c025c47eb5258a7779fe192eebf29500f4f5c50f89339d485f912993"
     },
     {
       "path": "pcb/handheld-carrier.kicad_pcb",
-      "bytes": 555802,
-      "sha256": "c72cf7ab603ba08f37182de79a0bb5d3efb69830acc1d44b8daa040b121f94ae"
+      "bytes": 573344,
+      "sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df"
     },
     {
       "path": "pcb/handheld-carrier.kicad_pro",
       "bytes": 8369,
       "sha256": "da0e861a151bafdd6cb6fafea0ec1a74024fc4c1aa60611301a16bf50686455b"
+    },
+    {
+      "path": "pcb/header-correction.json",
+      "bytes": 371,
+      "sha256": "ffeccbeecf9bf7e33ec90249275ea081bd1171734abb01533d7f42709bd152f8"
     },
     {
       "path": "pcb/import-report.json",
@@ -262,23 +437,23 @@
     },
     {
       "path": "pcb/positions.csv",
-      "bytes": 1166,
-      "sha256": "f7e0c3b3b334e42f876316fad0524122524b388e6590e5b8a0a35cc6f6ebbde6"
+      "bytes": 1149,
+      "sha256": "7fcf52e8adcb53ee1cfb67c50a19ff95ed96784f0be3265a97cb1b2e7cdcff7b"
     },
     {
       "path": "pcb/route_carrier.py",
-      "bytes": 8371,
-      "sha256": "662c782776581bb4eb111b2273e921bb08c501d53e76c19ab040c95c7926df84"
+      "bytes": 10667,
+      "sha256": "fa65e9cef769068907cec34ad36b62eb56f6227292c7d777c73764a7031f14ba"
     },
     {
       "path": "pcb/routing-report.json",
-      "bytes": 570,
-      "sha256": "c0493cfdf20c52c2253ba016576b154a3e61010d18b891ed54b435fa898c204f"
+      "bytes": 1001,
+      "sha256": "ba5b03ae75ce83dd32b820555ebace549d2fe00d64ade8ad0c13512d0bba0171"
     },
     {
       "path": "pcb/simulation-binding.json",
-      "bytes": 1956,
-      "sha256": "a31c60ea52b97a6cfe6cfddb0d64f71fc4665fe7deb47c0859b37affaf4511f0"
+      "bytes": 2009,
+      "sha256": "8e94dcd6b3c4382abaf63c838a6e5c8ed3c4590b457030e1fbc62202a855c507"
     },
     {
       "path": "pcb/vendor/README.upstream.md",
@@ -299,6 +474,11 @@
       "path": "pcb/vendor/WeAct-BlackPillv3.kicad_sym",
       "bytes": 20843,
       "sha256": "f4c7cda1e6e637add1822cadb066a7504607fa13e09f2bd39df4d6f700c69047"
+    },
+    {
+      "path": "project-binding.json",
+      "bytes": 1416,
+      "sha256": "067b87a110944d61550f3123222e4ebc7ad2193ff295171bf77247f14a1192bf"
     },
     {
       "path": "source-provenance.json",
