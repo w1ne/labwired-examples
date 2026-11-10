@@ -37,12 +37,14 @@ class GameBoyExample(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             copied = pathlib.Path(tmp) / 'gameboy'
             shutil.copytree(GAME, copied)
+            mechanical = read('manifest.json')['mechanical']
             for script in ('firmware/build_rom.py', 'firmware/build_firmware.py',
-                           'mechanical/generate_enclosure.py'):
+                           'mechanical/generate_enclosure.py', mechanical['generator']):
                 subprocess.run([sys.executable, str(copied / script)], check=True,
                                capture_output=True, text=True, timeout=10)
             for name in ('firmware/wire_runner.gb', 'firmware/wire_runner_rom.h',
-                         'firmware/gameboy.c', 'mechanical/labwired-gameboy.kcad.ts'):
+                         'firmware/gameboy.c', 'mechanical/labwired-gameboy.kcad.ts',
+                         mechanical['path'], mechanical['derived_interfaces']):
                 self.assertEqual((copied / name).read_bytes(), (GAME / name).read_bytes(), name)
 
     def test_original_rom_behavior_on_real_peanut_core(self):
@@ -60,16 +62,23 @@ class GameBoyExample(unittest.TestCase):
 
     def test_fixed_mates_and_shared_mounts_keep_the_same_source_identity(self):
         ref = read('kernelcad-reference.json')
-        review = read('mechanical/independent-mates.json')
+        mechanical = read('manifest.json')['mechanical']
+        review = read(mechanical['fixed_mate_review'])
+        derived = read(mechanical['derived_interfaces'])
         interfaces = read('design-interfaces.json')
         layout = read('pcb/carrier-layout.json')
         routing = read('pcb/routing-report.json')
         self.assertEqual(digest(ref['sourceFile']), ref['sourceSha256'])
+        self.assertEqual(mechanical['path'], ref['sourceFile'])
+        self.assertEqual(mechanical['sha256'], ref['sourceSha256'])
+        self.assertEqual(derived['derived']['pcbSha256'], digest('pcb/handheld-carrier.kicad_pcb'))
+        for path, expected in derived['sources'].items():
+            self.assertEqual(digest(path), expected, path)
         self.assertEqual(review['evaluationEvidence']['source']['sha256'], ref['sourceSha256'])
         self.assertEqual(digest('design-interfaces.json'), ref['interfaceSha256'])
         self.assertEqual(routing['interface_sha256'], ref['interfaceSha256'])
         self.assertEqual(review['validator']['status'], 'solved')
-        self.assertEqual((review['validator']['partCount'], review['validator']['jointCount']), (15, 14))
+        self.assertEqual((review['validator']['partCount'], review['validator']['jointCount']), (59, 58))
         self.assertEqual(review['interferenceSummary']['actionableCount'], 0)
         self.assertFalse(ref['physicalAssemblyVerified'])
         self.assertEqual(layout['mounts'], interfaces['pcb']['mounts'])
@@ -91,8 +100,28 @@ class GameBoyExample(unittest.TestCase):
         provenance = read('source-provenance.json')
         pcb_hash = digest('pcb/handheld-carrier.kicad_pcb')
         self.assertEqual(pcb_hash, binding['pcb_sha256'])
+        self.assertEqual(pcb_hash, read('kernelcad-reference.json')['pcbSha256'])
         self.assertEqual(pcb_hash, layout['pcb_sha256'])
         self.assertEqual(pcb_hash, read('pcb/routing-report.json')['pcb_sha256'])
+        exported = read('pcb/export-validation.json')
+        self.assertEqual(exported['input_sha256'], pcb_hash)
+        self.assertEqual(exported['carrier_layout_sha256'], digest('pcb/carrier-layout.json'))
+        self.assertEqual(exported['assembly_interfaces_sha256'], digest('pcb/assembly-interfaces.json'))
+        self.assertEqual(exported['project_settings_sha256'], digest('pcb/handheld-carrier.kicad_pro'))
+        self.assertEqual((exported['drc']['violations'], exported['drc']['unconnected_items']), (0, 0))
+        self.assertFalse(exported['physical_fit_verified'])
+        self.assertFalse(exported['manufacturing_signoff'])
+        imported = read('pcb/final-import-report.json')
+        self.assertEqual(imported['source']['sha256'], pcb_hash)
+        self.assertEqual(imported['source']['bytes'], (GAME / 'pcb/handheld-carrier.kicad_pcb').stat().st_size)
+        self.assertTrue(imported['result']['design_context_ok'])
+        self.assertFalse(imported['result']['twin_buildable'])
+        self.assertEqual(imported['result']['mode'], 'design_only')
+        mappings = imported['result']['mapping']
+        self.assertEqual({row['ref'] for row in mappings}, {row['ref'] for row in layout['components']})
+        self.assertEqual({status: sum(row['status'] == status for row in mappings)
+                          for status in ('mapped', 'dropped', 'ignored')},
+                         {'mapped': 2, 'dropped': 9, 'ignored': 5})
         self.assertEqual(read('pcb/drc-routed.json')['violations'], [])
         self.assertEqual(read('pcb/drc-routed.json')['unconnected_items'], [])
         self.assertEqual({p['type'] for p in diagram['parts']}, {'stm32f411ceu6-blackpill', 'ili9341', 'button'})
@@ -114,10 +143,39 @@ class GameBoyExample(unittest.TestCase):
         self.assertEqual((stimulus['component'], stimulus['at_cycle'], stimulus['value'], stimulus['outcome']),
                          (requested['component'], requested['after_cycles'], requested['value'], 'applied'))
         self.assertEqual(verify['max_steps'], 50000000)
-        self.assertIn('matches', verify['oracle']['serial'][1])
+        self.assertTrue(any('matches' in clause for clause in verify['oracle']['serial']))
         self.assertEqual(diagram['mechanical']['version'], read('kernelcad-reference.json')['revision'])
         self.assertEqual(diagram['mechanical']['meshProvenance'], read('kernelcad-reference.json')['meshProvenance'])
         self.assertFalse(binding['physical_tested'])
+        controls = read('firmware/control-validation.json')
+        vectors = read('firmware/control-vectors.json')
+        self.assertEqual(controls['source_sha256'], digest('firmware/gameboy.c'))
+        self.assertEqual(controls['rom_sha256'], digest('firmware/wire_runner.gb'))
+        self.assertEqual(controls['firmware_ref'], diagram['firmware']['artifact']['ref'])
+        self.assertEqual(vectors['firmware_ref'], controls['firmware_ref'])
+        self.assertEqual(vectors['diagram'], {key: diagram[key] for key in ('version', 'board', 'parts', 'wires')})
+        requests = {case['name']: case for case in vectors['cases']}
+        self.assertEqual(set(requests), {'up', 'down', 'left', 'right', 'a', 'b', 'select', 'start'})
+        self.assertEqual(verify['oracle'], requests['right']['oracle'])
+        self.assertEqual(verify['stimuli'], requests['right']['stimuli'])
+        saved = read('project-binding.json')
+        self.assertTrue(saved['readback_verified'])
+        self.assertEqual(saved['mechanical'], diagram['mechanical'])
+        self.assertEqual(saved['stimuli'], verify['stimuli'])
+        self.assertEqual(saved['source_sha256'], digest('firmware/gameboy.c'))
+        self.assertEqual(saved['firmware_ref'], verify['firmware_ref'])
+        self.assertEqual(saved['pcb']['native_source_sha256'], pcb_hash)
+        self.assertEqual(saved['content_hash'], read('manifest.json')['project']['content_hash'])
+        self.assertEqual({case['name'] for case in controls['cases']}, set(requests))
+        self.assertFalse(controls['physical_hardware_tested'])
+        for case in controls['cases']:
+            self.assertEqual(case['status'], 'model_verified', case['name'])
+            self.assertTrue(all(result['passed'] for result in case['oracle_results']), case['name'])
+            expected = requests[case['name']]['stimuli']
+            self.assertEqual(len(case['stimuli']), len(expected), case['name'])
+            for actual, request in zip(case['stimuli'], expected):
+                self.assertEqual((actual['component'], actual['channel'], actual['at_cycle'], actual['value'], actual['outcome']),
+                                 (request['component'], request['channel'], request['after_cycles'], request['value'], 'applied'))
 
 
 if __name__ == '__main__':

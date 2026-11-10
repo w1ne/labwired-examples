@@ -1,0 +1,290 @@
+{
+  "schema": "labwired.carrier-assembly-interfaces.v1",
+  "pcbSha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+  "physicalFitVerified": false,
+  "headers": {
+    "A1": {
+      "partNumber": "TSW-120-07-G-S",
+      "quantity": 2,
+      "positionsPerRow": 20,
+      "pitchMm": 2.54,
+      "pinSquareMm": 0.635,
+      "carrierHoleDiameterMm": 1.02,
+      "bodyHeightMm": 2.54,
+      "postLengthMm": 5.84,
+      "tailLengthMm": 2.54,
+      "carrierPadNumbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "moduleSide": "rear",
+      "mounting": "direct solder; no socket stack",
+      "nominalAnnularRingMm": 0.29,
+      "unpopulatedOptionalPads": [
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "sources": {
+        "product": "https://www.samtec.com/products/tsw-120-07-g-s",
+        "drawing": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf",
+        "recommendedFootprint": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-x-x-xx-xxx-footprint.pdf"
+      },
+      "toleranceLimitation": "The Samtec footprint specifies nominal 1.02 mm holes. Its marketing drawing labels the 0.025 inch square terminal as reference. No finished-hole or terminal cross-section tolerance has been established here. Confirm finished plated-hole limits, purchased module holes, pin tolerance, seating, and solder access before fabrication or assembly.",
+      "stackLimitation": "Post and tail dimensions are nominal. Module thickness and maximum component height remain unmeasured; the enclosure records its proposed stack separately.",
+      "moduleFitRequirement": "The Samtec strips are a carrier-side candidate, not a validated fit for the purchased WeAct V3.0 module. A 0.635 mm nominal square pin has a 0.898026 mm diagonal; a 0.9 mm module hole would leave only 0.001974 mm nominal diametral clearance before tolerances. Measure the purchased module finished holes and establish pin cross-section/tolerance, hole tolerance, plating and insertion fit before assembly. Keep the carrier nominal holes at 1.02 mm."
+    }
+  },
+  "displayBacklight": {
+    "module": "Waveshare 2.4-inch ILI9341 LCD Module",
+    "carrierConnector": "J1",
+    "carrierPin": "8",
+    "mcuSignal": "PA8",
+    "interface": "active-high transistor base control through on-module 1 kOhm R5",
+    "circuit": "U2 NPN_SOT23 sinks four LED cathodes through four 39 Ohm resistors. R6 10 kOhm pulls its base to VCC. Emitter is GND. LCD LED anode is VCC.",
+    "source": "https://files.waveshare.com/upload/1/18/2.4inch_LCD_Module_Sch.pdf",
+    "scope": "Applies to the linked Waveshare module schematic, not a bare ILI9341 panel or arbitrary breakout. Module regulator and backlight current margin remain unmeasured."
+  },
+  "connectors": {
+    "J1": {
+      "partNumber": "B8B-PH-K-S(LF)(SN)",
+      "manufacturer": "JST",
+      "quantity": 1,
+      "positions": 8,
+      "pitchMm": 2.0,
+      "pin1PadNumber": "1",
+      "terminalSquareMm": 0.5,
+      "terminalTailLengthMm": 3.4,
+      "carrierHoleDiameterMm": 0.875,
+      "finishedHoleRequirementMm": {
+        "minimum": 0.85,
+        "maximum": 0.9,
+        "target": 0.875,
+        "targetTolerancePlusMinus": 0.025
+      },
+      "holePitchToleranceMm": 0.05,
+      "holePitchToleranceAccumulationAllowed": false,
+      "bodyBoundsFromPin1Mm": [
+        [
+          -1.95,
+          -1.7,
+          0
+        ],
+        [
+          15.95,
+          2.8,
+          6
+        ]
+      ],
+      "matedHeightMm": 8,
+      "matingHousing": "PHR-8",
+      "matingHousingBodyMm": [
+        17.8,
+        4.5,
+        6.85
+      ],
+      "nominalAnnularRingMm": 0.1625,
+      "annularRingAtMaximumFinishedHoleMm": 0.15,
+      "sources": {
+        "catalog": "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf",
+        "finishedHoleGuidance": "https://www.jst.com/resources/faq/",
+        "terminalDrawing": "https://www.pololu.com/file/0J373/JST_ePH.pdf"
+      },
+      "drawingScope": "JST manufacturer catalog; the explicit 0.5 mm square-terminal drawing is the older manufacturer PDF mirrored by Pololu. Current JST catalog gives 3.4 mm as a reference tail dimension. Pin/kink tolerances are not established here.",
+      "fabricationRequirement": "For the planned plated glass-epoxy carrier, require 0.85-0.90 mm FINISHED PTH diameter for all eight J1 holes. The 0.875 mm KiCad/Excellon diameter is a nominal design target, not a measured finished hole or a prescribed pre-plating drill. Fabricator must choose drill compensation and confirm finished-hole, positional and annular-ring tolerances before manufacture.",
+      "matingLimitation": "Use the specified PHR-8 carrier-end housing with compatible JST contacts. The Waveshare included cable is not established as a PH-to-PH harness. Re-termination of its controller end is required; identify each conductor by continuity to the LCD signal and verify cavity orientation. The purchased LCD-end housing, crimp, wire dimensions, exit/bend radius and strain relief remain unmeasured."
+    }
+  },
+  "switches": {
+    "controls": {
+      "manufacturer": "Omron",
+      "partNumber": "B3F-1000",
+      "quantity": 8,
+      "references": [
+        "SW1",
+        "SW2",
+        "SW3",
+        "SW4",
+        "SW5",
+        "SW6",
+        "SW7",
+        "SW8"
+      ],
+      "bodyMm": [
+        6,
+        6
+      ],
+      "bodyToleranceMm": 0.2,
+      "heightMm": 4.3,
+      "heightToleranceMm": 0.2,
+      "actuatorDiameterMm": 3.5,
+      "leadSectionMm": [
+        0.7,
+        0.3
+      ],
+      "holePatternMm": [
+        6.5,
+        4.5
+      ],
+      "holePatternToleranceMm": 0.1,
+      "carrierHoleDiameterMm": 1.0,
+      "finishedHoleRequirementMm": {
+        "minimum": 0.9,
+        "maximum": 1.1,
+        "target": 1.0,
+        "targetTolerancePlusMinus": 0.1
+      },
+      "pretravelMm": {
+        "nominal": 0.25,
+        "minimum": 0.15,
+        "maximum": 0.45
+      },
+      "topViewCommonPairs": [
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "carrierPadMapping": "At the shown top-view orientation, Omron 4-3 form the upper 6.5 mm row (KiCad pad 1 / GPIO); Omron 2-1 form the lower row (KiCad pad 2 / GND). The carrier footprint numbers are two electrical common groups, not four Omron terminal numbers.",
+      "sources": {
+        "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf",
+        "sha256": "be9cf69e5f43fb7689448a2097c19858e5643c0e2e49cd77d018881543e27a1f"
+      },
+      "fabricationRequirement": "Use the centered 1.0 mm nominal hole target and verify 0.9-1.1 mm finished holes and the stated non-accumulated pattern positions. Manufacturer PCB processing dimensions are reference values; final solder process and finished-hole capability remain to be confirmed.",
+      "fitLimitation": "Applies only to B3F-1000. Generic 6 mm tactile alternatives are unsupported until their drawings are checked. The drawing general tolerance is not sufficient to establish a purchased-pin worst-case fit."
+    }
+  },
+  "harnesses": {
+    "LCD1": {
+      "quantity": 1,
+      "status": "required assembly operation; not built or continuity-tested",
+      "sourceCable": "Waveshare included PH2.0 8-pin 200 mm cable",
+      "assemblyMethod": "Retain the supplied LCD-end plug. Remove the controller-end individual GPIO sockets and re-terminate into one JST PHR-8 housing using eight new compatible contacts. Confirm the actual wire dimensions before choosing/crimping contacts; do not reuse an incompatible crimp. A sourced custom replacement must meet the same signal continuity and verified mating requirements.",
+      "carrierEnd": {
+        "housing": "PHR-8",
+        "quantity": 1,
+        "contactCandidate": "SPH-002T-P0.5S",
+        "contactQuantity": 8,
+        "contactWireRangeAWG": [
+          30,
+          24
+        ],
+        "contactConductorRangeMm2": [
+          0.05,
+          0.22
+        ],
+        "contactInsulationDiameterRangeMm": [
+          0.8,
+          1.5
+        ],
+        "wireFitVerified": false
+      },
+      "lcdEnd": {
+        "connector": "Original Waveshare PH2.0 plug",
+        "schematicConnector": "J2 (8 signal contacts; J1 parallel header has the same numbered signals)",
+        "matingFitVerified": false
+      },
+      "continuity": [
+        {
+          "carrierJ1Pad": "1",
+          "carrierNet": "3V3",
+          "lcdConnectorSignalPin": "1",
+          "lcdSignal": "VCC"
+        },
+        {
+          "carrierJ1Pad": "2",
+          "carrierNet": "GND",
+          "lcdConnectorSignalPin": "2",
+          "lcdSignal": "GND"
+        },
+        {
+          "carrierJ1Pad": "3",
+          "carrierNet": "PA7",
+          "lcdConnectorSignalPin": "3",
+          "lcdSignal": "DIN"
+        },
+        {
+          "carrierJ1Pad": "4",
+          "carrierNet": "PA5",
+          "lcdConnectorSignalPin": "4",
+          "lcdSignal": "SCK"
+        },
+        {
+          "carrierJ1Pad": "5",
+          "carrierNet": "PA4",
+          "lcdConnectorSignalPin": "5",
+          "lcdSignal": "CS"
+        },
+        {
+          "carrierJ1Pad": "6",
+          "carrierNet": "PB0",
+          "lcdConnectorSignalPin": "6",
+          "lcdSignal": "DC"
+        },
+        {
+          "carrierJ1Pad": "7",
+          "carrierNet": "PB1",
+          "lcdConnectorSignalPin": "7",
+          "lcdSignal": "RST"
+        },
+        {
+          "carrierJ1Pad": "8",
+          "carrierNet": "PA8",
+          "lcdConnectorSignalPin": "8",
+          "lcdSignal": "BL"
+        }
+      ],
+      "orientationRequirement": "Identify pin 1 from the actual header/housing marks and mounting/mating-face drawings. Do not infer pin numbers from left-to-right viewing direction or wire colors. The numerical map is the required endpoint connectivity, not evidence that an off-the-shelf cable is straight-through.",
+      "acceptanceCheck": "With both ends disconnected and unpowered, verify all eight specified end-to-end connections and isolation between all other conductors. Then verify VCC/GND polarity against the actual carrier and LCD pin labels before mating. Record the completed harness pinout.",
+      "lengthAndRoutingLimitation": "200 mm is the supplied cable length, not a validated enclosure routing length. Route or shorten the harness only after a dry assembly confirms slack, wire exit, bend radius and strain relief. The CAD wire-exit reservation is not a manufacturer bend specification.",
+      "sources": {
+        "includedCable": "https://www.waveshare.com/2.4inch-LCD-Module.htm",
+        "lcdPinout": "https://files.waveshare.com/upload/1/18/2.4inch_LCD_Module_Sch.pdf",
+        "housingAndContact": "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+      }
+    }
+  }
+}

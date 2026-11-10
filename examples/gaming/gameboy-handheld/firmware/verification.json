@@ -8,7 +8,10 @@
         "contains": "INPUT=000000ef"
       },
       {
-        "matches": "DMG_FRAME=[0-9]+ x=4[9]|DMG_FRAME=[0-9]+ x=5[0-9]"
+        "contains": "INPUT=000000ff"
+      },
+      {
+        "matches": "DMG_FRAME=[0-9]+ x=5[0-9] y=80"
       }
     ],
     "display": {
@@ -22,6 +25,13 @@
       "channel": "pressed",
       "value": 1,
       "after_cycles": 22000000
+    },
+    {
+      "component": "btn-right",
+      "channel": "pressed",
+      "value": 0,
+      "after_cycles": 35000000
     }
-  ]
+  ],
+  "output": "serial"
 }

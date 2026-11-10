@@ -1,0 +1,766 @@
+{
+  "testedAt": "2026-11-10T21:12:04.330Z",
+  "environment": "current-head production-mode local preview",
+  "localAuthDisabled": true,
+  "previewOrigin": "http://127.0.0.1:5198",
+  "expected": {
+    "commit": "6c183167521892eb9266990558e0f63e2ce05507",
+    "projectId": "f44771855a18a70d418e363622de2e28",
+    "contentHash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "slug": "kQAFdaQs",
+    "revision": 3,
+    "provenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196"
+  },
+  "results": [
+    {
+      "mobile": false,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "errors": [],
+      "windowErrors": [],
+      "cdpExceptions": [],
+      "consoleErrors": [
+        {
+          "phase": "MCU running",
+          "text": "Failed to load resource: the server responded with a status of 400 ()",
+          "location": {
+            "url": "https://labwired-local-dev.clerk.accounts.dev/v1/dev_browser?__clerk_api_version=2025-11-10&_clerk_js_version=5.128.0",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "MCU running",
+          "text": "Error: ClerkJS: Something went wrong initializing Clerk in development mode. We were unable to attribute this request to an instance running on Clerk. Make sure that your Clerk Publishable Key is correct.\n    at s (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:1:2740)\n    at Object.e [as setup] (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:12827)\n    at async ea.setupDevelopment (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:13470)\n    at async ea.create (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:9765)\n    at async #ee (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:80751)\n    at async tP.load (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:44353)\n    at async cn.loadClerkJS (http://127.0.0.1:5198/assets/clerk-Ca0gw6XX.js:23:55048)",
+          "location": {
+            "url": "http://127.0.0.1:5198/assets/clerk-Ca0gw6XX.js",
+            "line": 22,
+            "column": 55226,
+            "lineNumber": 22,
+            "columnNumber": 55226
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Refused to execute script from 'https://app.kernelcad.com/fonts-unblock.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+          "location": {
+            "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "location": {
+            "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196&mode=viewer&customize=false",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: net::ERR_FAILED",
+          "location": {
+            "url": "https://telemetry.kernelcad.com/v1/events",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: the server responded with a status of 404 ()",
+          "location": {
+            "url": "https://mesh.kernelcad.com/anim-artifacts/kQAFdaQs/v3.json?provenance=9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: the server responded with a status of 404 ()",
+          "location": {
+            "url": "https://mesh.kernelcad.com/anim-artifacts/kQAFdaQs/v3.json?provenance=9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "location": {
+            "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196&mode=viewer&customize=false",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: net::ERR_FAILED",
+          "location": {
+            "url": "https://telemetry.kernelcad.com/v1/events",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "failedRequests": [
+        {
+          "phase": "MCU running",
+          "url": "https://api.labwired.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_ABORTED"
+          }
+        },
+        {
+          "phase": "MCU running",
+          "url": "https://api.labwired.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_ABORTED"
+          }
+        },
+        {
+          "phase": "MCU running",
+          "url": "https://api.labwired.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_ABORTED"
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "url": "https://telemetry.kernelcad.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_FAILED"
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "url": "https://telemetry.kernelcad.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_FAILED"
+          }
+        }
+      ],
+      "phase": "completed",
+      "passed": true,
+      "before": {
+        "cycles": 24716988,
+        "pc": 134220856,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "cad": {
+        "origin": "https://app.kernelcad.com",
+        "at": 22239.399999976158,
+        "data": {
+          "source": "kernelcad-embed",
+          "type": "kernelcad.viewer-status",
+          "status": "model_displayed",
+          "revision": 3,
+          "geometryNonempty": true,
+          "cameraFitted": true,
+          "framePresented": true
+        }
+      },
+      "iframeSrc": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+      "visibleStart": {
+        "cycles": 98717616,
+        "pc": 134221814,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "visibleEnd": {
+        "cycles": 133717616,
+        "pc": 134221838,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "after": {
+        "cycles": 208717616,
+        "pc": 134234258,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "sameIframeAfterReturn": true,
+      "sameRuntimeWorkerObject": true,
+      "sameIframeAfterReopen": true,
+      "reopened": {
+        "state": {
+          "cycles": 233717616,
+          "pc": 134218592,
+          "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+          "workerId": 2
+        },
+        "messages": [
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 11540.899999976158,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "detail": "Loading mesh…"
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 11541.100000023842,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "detail": "Loading mesh…",
+              "geometryNonempty": false,
+              "cameraFitted": false,
+              "framePresented": false
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 11773.300000011921,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "geometryNonempty": false,
+              "cameraFitted": false,
+              "framePresented": false,
+              "detail": null
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 11774.899999976158,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "detail": "Loading mesh…"
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 11872.899999976158,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "geometryNonempty": false,
+              "cameraFitted": false,
+              "framePresented": false,
+              "detail": null
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 22222.100000023842,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "model_displayed",
+              "revision": 3,
+              "geometryNonempty": true,
+              "cameraFitted": true,
+              "framePresented": true,
+              "detail": null
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 22239.399999976158,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "model_displayed",
+              "revision": 3,
+              "geometryNonempty": true,
+              "cameraFitted": true,
+              "framePresented": true
+            }
+          }
+        ],
+        "workers": [
+          {
+            "id": 1,
+            "url": "blob:http://127.0.0.1:5198/2cf46152-7a2d-4883-ac96-42dbbd579cc9",
+            "snapshotCount": 0
+          },
+          {
+            "id": 2,
+            "url": "/assets/sim.worker-DUPnNeMF.js",
+            "snapshotCount": 57
+          }
+        ]
+      },
+      "cycleGainWhileCadVisible": 35000000,
+      "sameRuntimeWorker": true,
+      "exactPinnedIframe": true
+    },
+    {
+      "mobile": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": [],
+      "windowErrors": [],
+      "cdpExceptions": [],
+      "consoleErrors": [
+        {
+          "phase": "initial page",
+          "text": "Failed to load resource: the server responded with a status of 400 ()",
+          "location": {
+            "url": "https://labwired-local-dev.clerk.accounts.dev/v1/dev_browser?__clerk_api_version=2025-11-10&_clerk_js_version=5.128.0",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "initial page",
+          "text": "Error: ClerkJS: Something went wrong initializing Clerk in development mode. We were unable to attribute this request to an instance running on Clerk. Make sure that your Clerk Publishable Key is correct.\n    at s (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:1:2740)\n    at Object.e [as setup] (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:12827)\n    at async ea.setupDevelopment (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:13470)\n    at async ea.create (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:9765)\n    at async #ee (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:80751)\n    at async tP.load (https://labwired-local-dev.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:5:44353)\n    at async cn.loadClerkJS (http://127.0.0.1:5198/assets/clerk-Ca0gw6XX.js:23:55048)",
+          "location": {
+            "url": "http://127.0.0.1:5198/assets/clerk-Ca0gw6XX.js",
+            "line": 22,
+            "column": 55226,
+            "lineNumber": 22,
+            "columnNumber": 55226
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Refused to execute script from 'https://app.kernelcad.com/fonts-unblock.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+          "location": {
+            "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "location": {
+            "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196&mode=viewer&customize=false",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: net::ERR_FAILED",
+          "location": {
+            "url": "https://telemetry.kernelcad.com/v1/events",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: the server responded with a status of 404 ()",
+          "location": {
+            "url": "https://mesh.kernelcad.com/anim-artifacts/kQAFdaQs/v3.json?provenance=9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: the server responded with a status of 404 ()",
+          "location": {
+            "url": "https://mesh.kernelcad.com/anim-artifacts/kQAFdaQs/v3.json?provenance=9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "location": {
+            "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196&mode=viewer&customize=false",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "text": "Failed to load resource: net::ERR_FAILED",
+          "location": {
+            "url": "https://telemetry.kernelcad.com/v1/events",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "failedRequests": [
+        {
+          "phase": "MCU running",
+          "url": "https://api.labwired.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_ABORTED"
+          }
+        },
+        {
+          "phase": "MCU running",
+          "url": "https://api.labwired.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_ABORTED"
+          }
+        },
+        {
+          "phase": "MCU running",
+          "url": "https://api.labwired.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_ABORTED"
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "url": "https://telemetry.kernelcad.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_FAILED"
+          }
+        },
+        {
+          "phase": "opening CAD",
+          "url": "https://telemetry.kernelcad.com/v1/events",
+          "failure": {
+            "errorText": "net::ERR_FAILED"
+          }
+        }
+      ],
+      "phase": "completed",
+      "passed": true,
+      "before": {
+        "cycles": 23762944,
+        "pc": 134222492,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "cad": {
+        "origin": "https://app.kernelcad.com",
+        "at": 15310.700000047684,
+        "data": {
+          "source": "kernelcad-embed",
+          "type": "kernelcad.viewer-status",
+          "status": "model_displayed",
+          "revision": 3,
+          "geometryNonempty": true,
+          "cameraFitted": true,
+          "framePresented": true
+        }
+      },
+      "iframeSrc": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+      "visibleStart": {
+        "cycles": 92118951,
+        "pc": 134221222,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "visibleEnd": {
+        "cycles": 127118951,
+        "pc": 134231758,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "after": {
+        "cycles": 192118951,
+        "pc": 134220836,
+        "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+        "workerId": 2
+      },
+      "sameIframeAfterReturn": true,
+      "sameRuntimeWorkerObject": true,
+      "sameIframeAfterReopen": true,
+      "reopened": {
+        "state": {
+          "cycles": 217118951,
+          "pc": 134220858,
+          "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+          "workerId": 2
+        },
+        "messages": [
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 7949.600000023842,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "detail": "Loading mesh…"
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 7949.700000047684,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "detail": "Loading mesh…",
+              "geometryNonempty": false,
+              "cameraFitted": false,
+              "framePresented": false
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 8220.900000035763,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "geometryNonempty": false,
+              "cameraFitted": false,
+              "framePresented": false,
+              "detail": null
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 8227.200000047684,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "detail": "Loading mesh…"
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 8363,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "loading",
+              "revision": 3,
+              "geometryNonempty": false,
+              "cameraFitted": false,
+              "framePresented": false,
+              "detail": null
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 14062.200000047684,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "model_displayed",
+              "revision": 3,
+              "geometryNonempty": true,
+              "cameraFitted": true,
+              "framePresented": true,
+              "detail": null
+            }
+          },
+          {
+            "origin": "https://app.kernelcad.com",
+            "at": 15310.700000047684,
+            "data": {
+              "source": "kernelcad-embed",
+              "type": "kernelcad.viewer-status",
+              "status": "model_displayed",
+              "revision": 3,
+              "geometryNonempty": true,
+              "cameraFitted": true,
+              "framePresented": true
+            }
+          }
+        ],
+        "workers": [
+          {
+            "id": 1,
+            "url": "blob:http://127.0.0.1:5198/c9883e73-a26e-4238-8857-4b30669638ad",
+            "snapshotCount": 0
+          },
+          {
+            "id": 2,
+            "url": "/assets/sim.worker-DUPnNeMF.js",
+            "snapshotCount": 49
+          }
+        ]
+      },
+      "cycleGainWhileCadVisible": 35000000,
+      "sameRuntimeWorker": true,
+      "exactPinnedIframe": true
+    }
+  ],
+  "passed": true,
+  "appCommit": "6c183167521892eb9266990558e0f63e2ce05507",
+  "buildManifest": {
+    "commit": "6c183167521892eb9266990558e0f63e2ce05507",
+    "builtAt": "2026-11-10T21:10:59.593Z",
+    "buildTime": 1794345059594,
+    "assets": {
+      "main": [
+        "/assets/main-BXDD9f6_.js"
+      ],
+      "wasm": [
+        "/wasm/labwired_wasm.d7459741ce01.js",
+        "/wasm/labwired_wasm_bg.d5c7e8bb5f83.wasm"
+      ],
+      "firmware": [
+        "/wasm/demo-ads1115-adc-lab.elf",
+        "/wasm/demo-adxl345-sensor-lab.elf",
+        "/wasm/demo-arduino-uno-r4-minima.elf",
+        "/wasm/demo-arduino-zero.elf",
+        "/wasm/demo-atmega1281-io.elf",
+        "/wasm/demo-blinky.elf",
+        "/wasm/demo-bme280-weather-lab.elf",
+        "/wasm/demo-brd2709a-agent-deck.elf",
+        "/wasm/demo-canmod-gps-sim.elf",
+        "/wasm/demo-capacitive-touch-lab.elf",
+        "/wasm/demo-ds3231-rtc-lab.elf",
+        "/wasm/demo-epaper-tricolor-lab.elf",
+        "/wasm/demo-esp32-epaper-lab.elf",
+        "/wasm/demo-esp32c3-blink.elf",
+        "/wasm/demo-esp32c3-display-workshop-128x32.elf",
+        "/wasm/demo-esp32c3-display-workshop.elf",
+        "/wasm/demo-esp32c3-leo-airquality.elf",
+        "/wasm/demo-esp32s3-doomlike-lab.elf",
+        "/wasm/demo-esp32s3-hello-world.elf",
+        "/wasm/demo-esp32s3-oled.elf",
+        "/wasm/demo-f103-can-dashboard.elf",
+        "/wasm/demo-f103-can-engine.elf",
+        "/wasm/demo-f103-can-sensor-250k.elf",
+        "/wasm/demo-f103-can-sensor-500k.elf",
+        "/wasm/demo-f103-uds-ecu-broken.elf",
+        "/wasm/demo-f103-uds-ecu.elf",
+        "/wasm/demo-feather-f405.elf",
+        "/wasm/demo-h735-telematics-lab.elf",
+        "/wasm/demo-ili9341-tft-lab.elf",
+        "/wasm/demo-ina219-power-lab.elf",
+        "/wasm/demo-iolink-dido.elf",
+        "/wasm/demo-iolink-station-master-4port.elf",
+        "/wasm/demo-iolink-station-sensor.elf",
+        "/wasm/demo-kw41z-fxos8700-activity.elf",
+        "/wasm/demo-kw41z-lcd-activity.elf",
+        "/wasm/demo-labwired-ereader.elf",
+        "/wasm/demo-max31855-thermocouple-lab.elf",
+        "/wasm/demo-metro-m4.elf",
+        "/wasm/demo-mpu6050-sensor-lab.elf",
+        "/wasm/demo-nano-33-iot.elf",
+        "/wasm/demo-neo6m-gps-lab.elf",
+        "/wasm/demo-nokia5110-invaders-lab.elf",
+        "/wasm/demo-nrf52-dk.elf",
+        "/wasm/demo-nrf52840-ble-collector.elf",
+        "/wasm/demo-nrf52840-ble-sensor.elf",
+        "/wasm/demo-nrf52840-obd2-ecu.elf",
+        "/wasm/demo-nrf52840-obd2-scanner.elf",
+        "/wasm/demo-nrf52840-proximity.elf",
+        "/wasm/demo-nrf52840-rtt-lab.elf",
+        "/wasm/demo-nrf52840-secure-boot.elf",
+        "/wasm/demo-nrf5340-dk.elf",
+        "/wasm/demo-nrf54l15-smart-ring-lab.elf",
+        "/wasm/demo-ntc-thermistor-lab.elf",
+        "/wasm/demo-nucleo-f401.elf",
+        "/wasm/demo-nucleo-f407.elf",
+        "/wasm/demo-nucleo-u575-star-catcher.elf",
+        "/wasm/demo-nucleo-wb55rg.elf",
+        "/wasm/demo-nucleo-wba52cg.elf",
+        "/wasm/demo-openai-deck-s3.elf",
+        "/wasm/demo-pic24f04ka200-xc16-uart-smoke.elf",
+        "/wasm/demo-pic24f04ka201-xc16-uart-smoke.elf",
+        "/wasm/demo-pic24f08ka101-xc16-uart-smoke.elf",
+        "/wasm/demo-pic24f08ka102-xc16-uart-smoke.elf",
+        "/wasm/demo-pic24f16ka101-xc16-uart-smoke.elf",
+        "/wasm/demo-pic24f16ka102-xc16-uart-smoke.elf",
+        "/wasm/demo-quectel-bg770a-lab.elf",
+        "/wasm/demo-rp2040-pico.elf",
+        "/wasm/demo-seeed-xiao-nrf52840-sense.elf",
+        "/wasm/demo-ssd1306-hello-lab.elf",
+        "/wasm/demo-stm32f103-cpu-smoke.elf",
+        "/wasm/demo-stm32f401-cpu-smoke.elf",
+        "/wasm/demo-stm32f407-cpu-smoke.elf",
+        "/wasm/demo-stm32f7-discovery.elf",
+        "/wasm/demo-stm32h5-uds-ecu.elf",
+        "/wasm/demo-stm32h735.elf",
+        "/wasm/demo-stm32l476-blink.elf",
+        "/wasm/demo-teensy-41.elf",
+        "/wasm/demo-uart-relay-chain-relay.elf",
+        "/wasm/demo-uart-relay-chain-source.elf",
+        "/wasm/demo-uno-modbus-rtu-lab.elf",
+        "/wasm/demo-vl53l1x-tof-lab.elf",
+        "/wasm/demo-ydlidar-scan-lab.elf",
+        "/wasm/gpio-net-avr-fight.elf",
+        "/wasm/gpio-net-avr.elf",
+        "/wasm/gpio-net-stm-fight.elf",
+        "/wasm/gpio-net-stm.elf"
+      ],
+      "flash": [
+        "/wasm/demo-esp32c3-ble-gatt-notify-flash.bin",
+        "/wasm/demo-esp32c3-display-workshop-128x32-flash.bin",
+        "/wasm/demo-esp32c3-display-workshop-flash.bin",
+        "/wasm/demo-esp32c3-oled-flash.bin",
+        "/wasm/demo-esp32s3-doom-lab-flash.bin"
+      ]
+    }
+  },
+  "priorDevelopmentEvidence": {
+    "viewProof": "/data/work-scratch/gameboy-revision3-view-proof.json",
+    "desktopDiagnosticLog": "/tmp/lw-gameboy-revision3-desktop-diagnostic.log",
+    "desktopViewPassed": false,
+    "mobileViewPassed": true,
+    "desktopViewError": "TypeError: Cannot read properties of null (reading addEventListener); no stack recorded by that earlier script",
+    "desktopDiagnosticError": "React dev logComponentRender Performance.measure DataCloneError: data cannot be cloned, out of memory",
+    "failedDiagnosticOrphanProcessCleanedUp": true,
+    "productionPassDoesNotChangeTheseDevelopmentFailures": true
+  },
+  "buildManifestSha256": "8394b0c4b56152a41a19580849d97749dd1e3cb991da3651868b230164b3d6b9",
+  "savedProject": {
+    "httpStatus": 200,
+    "id": "f44771855a18a70d418e363622de2e28",
+    "contentHash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "mechanical": {
+      "provider": "kernelcad",
+      "slug": "kQAFdaQs",
+      "version": 3,
+      "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+      "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+      "title": "Game Boy handheld enclosure"
+    }
+  },
+  "finishedAt": "2026-11-10T21:13:17.229Z"
+}

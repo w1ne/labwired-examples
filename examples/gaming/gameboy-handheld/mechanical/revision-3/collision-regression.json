@@ -1,0 +1,24 @@
+{
+  "schema": "labwired.cad-collision-regression.v1",
+  "failedBaseSourceSha256": "e39d5548984a8f16dda32cf9421bd60af0e32f2169bf60d9b14c818c63cc4df0",
+  "failedVariantSourceSha256": "58a8a18e1fe34af9cc120aa7a36571c13b90dcc2a4a2a55d278210c01fd1b60f",
+  "failedVariantBytes": 31244,
+  "inputFingerprintMethod": "Exact failed tool input reconstructed from the recorded evaluated base and original default-parameter substitutions; base hash matches the earlier evaluation.",
+  "parameters": {
+    "pressedControl": "btn-up",
+    "travelCase": "maximum",
+    "plungerAdjustmentMm": "0.0"
+  },
+  "observedResult": {
+    "ok": false,
+    "buildOk": false,
+    "code": "feature.invalid-args",
+    "message": "Overlapping bodies: Parts 'front-shell' and 'dpad' overlap by 0.21 mm\u00b3 (0.020 mm thick) near (-24.0, 62.0, 29.7).",
+    "volumeMm3": 0.21,
+    "thicknessMm": 0.02
+  },
+  "correction": "Increase D-pad opening clearance from 0.4 to 0.6 mm per side.",
+  "finalBaseSourceSha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+  "finalVariantSourceSha256": "a5ce808c74521c65374e041d6f684a0770ee8acb2a1fdd1b71df2561234c3682",
+  "finalOutcome": "All ten final source variants pass full evaluation with no blocking collision diagnostics. No interferenceSummary field was returned for these calls."
+}

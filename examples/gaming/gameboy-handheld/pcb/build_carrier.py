@@ -58,15 +58,24 @@ def netpad(f,padnum,name):
         if pad.GetNumber()==str(padnum):pad.SetNet(nets[name])
 
 # Origin is offset by the upstream footprint's body center (x0.12,y3.425).
-# Rear-mounted MCU sits beneath the LCD, with a USB-C panel extension to the top.
+# Rear-mounted MCU sits beneath the LCD; the enclosure provides direct USB-C access.
 mcu=footprint(str(ROOT/'vendor'),'WeAct-BlackPill-v3-kicad9','A1','WeAct Black Pill STM32F411CEU6',39.12,25.575,rot=180,back=True)
+# Selected header's manufacturer-recommended carrier holes; vendor footprint stays intact.
+assembly=json.loads((ROOT/'assembly-interfaces.json').read_text())
+header=assembly['headers']['A1']
+for pad in mcu.Pads():
+    if pad.GetNumber() in header['carrierPadNumbers']:
+        pad.SetDrillSize(xy(header['carrierHoleDiameterMm'],header['carrierHoleDiameterMm']))
 pinmap={5:'PA8',11:'PB3',12:'PB4',13:'PB5',14:'PB6',15:'PB7',16:'PB8',17:'PB9',19:'GND',28:'PA2',29:'PA3',30:'PA4',31:'PA5',33:'PA7',34:'PB0',35:'PB1',37:'PB10',38:'3V3',39:'GND',44:'GND'}
 for num,name in pinmap.items():
     if name in nets:netpad(mcu,num,name)
 mcu.Reference().SetVisible(False);mcu.Value().SetVisible(False)
 # Keep unconnected module GPIO/SWD pins physically present, with no carrier net.
 
-j=footprint('/usr/share/kicad/footprints/Connector_JST.pretty','JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical','J1','Waveshare LCD PH2.0 cable',56,17)
+j=footprint('/usr/share/kicad/footprints/Connector_JST.pretty','JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical','J1','Waveshare LCD PH2.0 cable',32,64)
+connector=assembly['connectors']['J1']
+for pad in j.Pads():
+    pad.SetDrillSize(xy(connector['carrierHoleDiameterMm'],connector['carrierHoleDiameterMm']))
 for i,name in enumerate(['3V3','GND','PA7','PA5','PA4','PB0','PB1','PA8'],1):netpad(j,i,name)
 j.Reference().SetVisible(False);j.Value().SetVisible(False)
 
@@ -77,6 +86,9 @@ for ref,label,ident,pin in [('SW5','A','btn-a','PB7'),('SW6','B','btn-b','PB8'),
 for ref,label,x,y,net in buttons:
     xx,yy=case_xy(x,y)
     f=footprint('/usr/share/kicad/footprints/Button_Switch_THT.pretty','SW_PUSH_6mm',ref,label,xx-3.25,yy-2.25)
+    switch=assembly['switches']['controls']
+    for pad in f.Pads():
+        pad.SetDrillSize(xy(switch['carrierHoleDiameterMm'],switch['carrierHoleDiameterMm']))
     netpad(f,1,net);netpad(f,2,'GND')
     f.Reference().SetVisible(False);f.Value().SetVisible(False)
     text(label,xx,yy+5,.8)
@@ -93,8 +105,8 @@ for i,m in enumerate(spec['pcb']['mounts'],1):
     pad=p.PAD(f);pad.SetAttribute(p.PAD_ATTRIB_NPTH);pad.SetShape(p.PAD_SHAPE_CIRCLE);pad.SetSize(xy(spec['pcb']['mountHoleDiameter'],spec['pcb']['mountHoleDiameter']));pad.SetDrillSize(xy(spec['pcb']['mountHoleDiameter'],spec['pcb']['mountHoleDiameter']));pad.SetLayerSet(p.LSET.AllCuMask());pad.SetPosition(xy(x,y));f.Add(pad)
     f.Reference().SetVisible(False);f.Value().SetVisible(False)
 
-text('LABWIRED',39,63,2)
-text('GAME BOY / WIRE RUNNER',39,67,1)
+text('LABWIRED',39,70,2)
+text('GAME BOY / WIRE RUNNER',39,72.5,1)
 text('USB POWER - REV A',39,123,1)
 text('Engineering prototype',39,127,.8)
 # LCD module outline on fabrication/user layer, not a copper or mechanical part.
@@ -108,6 +120,6 @@ b.GetDesignSettings().SetBoardThickness(mm(spec['pcb']['thickness']))
 p.SaveBoard(str(ROOT/'handheld-carrier-unrouted.kicad_pcb'),b)
 layout={'schema':'labwired.carrier-layout.v1','units':'mm','pcb_coordinates':{'origin':'top-left','x':'right','y':'down'},'transform_to_case':{'x':f'pcb_x{left:+g}','y':f'{top:g}-pcb_y','z':str(spec['pcb']['center'][2])},'outline':outline,'mounts':spec['pcb']['mounts'],'components':[],'module_pinmap':pinmap,'lcd_connector':{'reference':'J1','pins':['3V3','GND','PA7','PA5','PA4','PB0','PB1','PA8'],'signal_names':['VCC','GND','DIN','CLK','CS','DC','RST','BL']},'sources':{'mcu_footprint':'https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/tree/master/Hardware/KiCAD','display_pinout':'https://www.waveshare.com/wiki/2.4inch_LCD_Module'},'status':'placed; routing and DRC pending'}
 for f in b.GetFootprints():
-    pos=f.GetPosition();layout['components'].append({'ref':f.GetReference(),'value':f.GetValue(),'x':p.ToMM(pos.x),'y':p.ToMM(pos.y),'side':'bottom' if f.IsFlipped() else 'top','pads':[{'number':pad.GetNumber(),'x':p.ToMM(pad.GetPosition().x),'y':p.ToMM(pad.GetPosition().y),'net':pad.GetNetname(),'sx':p.ToMM(pad.GetSize().x),'sy':p.ToMM(pad.GetSize().y),'drill':p.ToMM(pad.GetDrillSize().x),'npth':pad.GetAttribute()==p.PAD_ATTRIB_NPTH,'smd':pad.GetAttribute()==p.PAD_ATTRIB_SMD} for pad in f.Pads()]})
+    pos=f.GetPosition();layout['components'].append({'ref':f.GetReference(),'value':f.GetValue(),'x':p.ToMM(pos.x),'y':p.ToMM(pos.y),'rotationDegrees':f.GetOrientationDegrees(),'side':'bottom' if f.IsFlipped() else 'top','pads':[{'number':pad.GetNumber(),'x':p.ToMM(pad.GetPosition().x),'y':p.ToMM(pad.GetPosition().y),'net':pad.GetNetname(),'sx':p.ToMM(pad.GetSize().x),'sy':p.ToMM(pad.GetSize().y),'drill':p.ToMM(pad.GetDrillSize().x),'npth':pad.GetAttribute()==p.PAD_ATTRIB_NPTH,'smd':pad.GetAttribute()==p.PAD_ATTRIB_SMD} for pad in f.Pads()]})
 (ROOT/'carrier-layout.json').write_text(json.dumps(layout,indent=2)+'\n')
 print(json.dumps({'pcb':str(ROOT/'handheld-carrier-unrouted.kicad_pcb'),'footprints':len(layout['components']),'nets':len(nets),'outline_points':len(outline)}))

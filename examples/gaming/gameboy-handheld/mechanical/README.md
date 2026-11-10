@@ -1,12 +1,14 @@
-# LabWired handheld enclosure
+# Historical revision 2 packaging concept
 
-This is an evaluated, static packaging concept for the LabWired Game Boy recreation. It is generated from the shared `../design-interfaces.json`, which defines the intended carrier PCB outline, mounting holes, LCD envelope, controls, and connector aperture.
+The current assembly is [revision 3](revision-3/README.md), pinned by `../kernelcad-reference.json`. This directory preserves revision 2's source and evidence for reproducibility. Its old USB extension assumption, export counts and interference results do not describe revision 3.
+
+Revision 2 is an evaluated, static packaging concept for the LabWired Game Boy recreation. It is generated from the shared `../design-interfaces.json`, which defines the intended carrier PCB outline, mounting holes, LCD envelope, controls, and connector aperture.
 
 ## Model and files
 
 Studio project: https://app.kernelcad.com/p/kQAFdaQs?version=2
 
-The revision-pinned embed URL and model identity are in `../kernelcad-reference.json`. The source is `labwired-gameboy.kcad.ts`. Regenerate it with `python3 generate_enclosure.py` after an interface change, then evaluate it through KernelCAD before replacing the saved revision.
+The revision-pinned embed URL and model identity are in `kernelcad-reference-v2.json`. The source is `labwired-gameboy.kcad.ts`. Regenerate it with `python3 generate_enclosure.py` after an interface change, then evaluate it through KernelCAD before replacing the saved revision.
 
 The compact Git contribution keeps editable CAD and validation records. Generated STEP, GLB and STL files are omitted. The recorded export set contains 15 bodies: 9 fabrication candidates (front shell, rear shell, service cover, bezel, D-pad, A, B, Start and Select), 5 component envelopes, and 1 active-glass reference. The 6 reference bodies are not fabrication parts.
 

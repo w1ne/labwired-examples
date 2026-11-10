@@ -1,0 +1,175 @@
+{
+  "schema": "labwired.pcb-export-validation.v1",
+  "recorded_at": "2026-11-10T20:27:36.704669+00:00",
+  "input_source": "pcb/handheld-carrier.kicad_pcb",
+  "input_sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+  "project_settings_sha256": "da0e861a151bafdd6cb6fafea0ec1a74024fc4c1aa60611301a16bf50686455b",
+  "carrier_layout_sha256": "3b6a68fda5b1c35b4b4defbc37b7229f7de88c238baa8dc4c85756a7f6a34804",
+  "assembly_interfaces_sha256": "28378e05772b217934dfd36c0b2c474a01ac4c085ac1ba77d1124f297afea60d",
+  "exporter": "KiCad 9.0.2+dfsg-1",
+  "drc": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "report": "drc-routed.json"
+  },
+  "drill": {
+    "format": "Excellon metric; separate PTH and NPTH",
+    "source_coordinate_rounding_mm": 0.001,
+    "PTH": {
+      "hit_counts_by_nominal_diameter_mm": {
+        "0.3": 36,
+        "0.8": 4,
+        "0.875": 8,
+        "1.0": 32,
+        "1.02": 40
+      },
+      "all_coordinates_match_native_pads_and_vias": true
+    },
+    "NPTH": {
+      "hit_counts_by_nominal_diameter_mm": {
+        "2.8": 4
+      },
+      "all_coordinates_match_native_pads_and_vias": true
+    },
+    "finished_hole_requirements": {
+      "J1_mm": [
+        0.85,
+        0.9
+      ],
+      "SW1_SW8_mm": [
+        0.9,
+        1.1
+      ]
+    },
+    "scope": "Excellon diameters are nominal design targets. Fabricator must compensate drilling and confirm final plated-hole dimensions, positions and annular ring."
+  },
+  "step": {
+    "nominal_source_board_thickness_mm": 1.6,
+    "body": {
+      "file": "handheld-carrier.step",
+      "valid": true,
+      "solid_count": 1,
+      "valid_solids": 1,
+      "dimensions_mm": [
+        78.0,
+        132.0,
+        1.51
+      ],
+      "checked_cylindrical_holes": {
+        "A1": {
+          "diameter_mm": 1.02,
+          "matched_holes": 40
+        },
+        "J1": {
+          "diameter_mm": 0.875,
+          "matched_holes": 8
+        },
+        "SW": {
+          "diameter_mm": 1.0,
+          "matched_holes": 32
+        }
+      }
+    },
+    "with_copper": {
+      "file": "handheld-carrier-with-copper.step",
+      "valid": true,
+      "solid_count": 363,
+      "valid_solids": 363,
+      "dimensions_mm": [
+        78.0,
+        132.0,
+        1.59
+      ]
+    },
+    "scope": "Electronic components are excluded. Reported extents are KiCad export geometry, not measured manufactured thickness."
+  },
+  "physical_fit_verified": false,
+  "manufacturing_signoff": false,
+  "files": [
+    {
+      "path": "drc-routed.json",
+      "bytes": 282,
+      "sha256": "113e38ec7bfe46819d7bd6c0794178eb7c04f8001e48fbd3defdde06b784f91b"
+    },
+    {
+      "path": "drill/handheld-carrier-NPTH-drl_map.svg",
+      "bytes": 37053,
+      "sha256": "8dfe77a89151ee2d0906219bb62673eca3471cb918c5b8fefafea46f954bce9b"
+    },
+    {
+      "path": "drill/handheld-carrier-NPTH.drl",
+      "bytes": 395,
+      "sha256": "0d2492ab24d747a7033e21ea6980fe6df8840a9a672c709cd90d81d310f56a45"
+    },
+    {
+      "path": "drill/handheld-carrier-PTH-drl_map.svg",
+      "bytes": 113187,
+      "sha256": "c3f2a2cece0d17ed5d88f6e05a51e8f058f1dd7b83d2a854b01a793328f07363"
+    },
+    {
+      "path": "drill/handheld-carrier-PTH.drl",
+      "bytes": 2212,
+      "sha256": "517f5872f2e16298738e84252037c0e17f38159b83bb32da2830e43a70b75ddc"
+    },
+    {
+      "path": "gerbers/handheld-carrier-B_Cu.gbl",
+      "bytes": 195893,
+      "sha256": "db71dbb057649008923890a1abdae06844719d87274eb288cba72cd2b1b1d8ef"
+    },
+    {
+      "path": "gerbers/handheld-carrier-B_Mask.gbs",
+      "bytes": 3565,
+      "sha256": "9a89722054c8a6900b94d25c97cdd7f9291ea7a7bfb9a487fd83f3b749b8684d"
+    },
+    {
+      "path": "gerbers/handheld-carrier-B_Paste.gbp",
+      "bytes": 473,
+      "sha256": "c73968c12a1b64721de44117d84216a8dd797e625d1d6c9b3361ff0b33693556"
+    },
+    {
+      "path": "gerbers/handheld-carrier-B_Silkscreen.gbo",
+      "bytes": 3958,
+      "sha256": "b4a5cb15d8f87dd68391a3d080703d7e8c80da99b1fe7516c5d12cf7dd441cf6"
+    },
+    {
+      "path": "gerbers/handheld-carrier-Edge_Cuts.gm1",
+      "bytes": 11871,
+      "sha256": "9922cb91103abb4a833cbcf5380f75cc224811a10ebe299f54a56b859ab9835e"
+    },
+    {
+      "path": "gerbers/handheld-carrier-F_Cu.gtl",
+      "bytes": 190695,
+      "sha256": "69fd9b8106e21f4774aa0f9a50d1fae8d18b99badb9d9a475a771103a2935b06"
+    },
+    {
+      "path": "gerbers/handheld-carrier-F_Mask.gts",
+      "bytes": 3920,
+      "sha256": "31da623b58d50e341ff43e2cea2eb59eb1a683b7ed7643fbcc9967bdce2bdb14"
+    },
+    {
+      "path": "gerbers/handheld-carrier-F_Paste.gtp",
+      "bytes": 1368,
+      "sha256": "604aaaedd17c68f1a6eed7d221211ae1f3aba746861cfd6a73f56ff1ed71fb1f"
+    },
+    {
+      "path": "gerbers/handheld-carrier-F_Silkscreen.gto",
+      "bytes": 38275,
+      "sha256": "1d7234c32c5584a1d6ce1a7d6b9114c1afbbe5fef5b930b9e80d3f328f5d8570"
+    },
+    {
+      "path": "gerbers/handheld-carrier-job.gbrjob",
+      "bytes": 2778,
+      "sha256": "ff266262f3d51c93d5ba0f61c84cff843b34c502f154bf93acde6bec3096201a"
+    },
+    {
+      "path": "handheld-carrier-with-copper.step",
+      "bytes": 9652682,
+      "sha256": "38d8315f17dd4dfc788ba6f2dfb5a4ca5d56697fe90d3fe3aecf27665668a188"
+    },
+    {
+      "path": "handheld-carrier.step",
+      "bytes": 559700,
+      "sha256": "93ffb5e18d5975487d511a25b1691f79c1f3c4ebce032858397337ae3d542e8b"
+    }
+  ]
+}

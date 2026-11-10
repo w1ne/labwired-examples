@@ -1,0 +1,261 @@
+{
+  "schema": "labwired.native-pcb-design-import.v1",
+  "source": {
+    "path": "pcb/handheld-carrier.kicad_pcb",
+    "sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "bytes": 573344
+  },
+  "operation": "labwired_import",
+  "board_hint": "stm32f411ceu6-blackpill",
+  "scope": "Final PCB design-context coverage only. Does not attach a native board or replace the saved runnable circuit.",
+  "physical_hardware_tested": false,
+  "result": {
+    "ok": true,
+    "source_kind": "kicad_pcb",
+    "pack": {
+      "board": "stm32f411ceu6-blackpill",
+      "user_context": "Final native routed carrier for the existing Game Boy handheld project f44771855a18a70d418e363622de2e28. This is a design-context coverage import of the exact supplied PCB, not a request to replace the saved runnable circuit or generate another PCB. Report the actual native pad/net coverage, supported mappings and unresolved parts. Source SHA-256 e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df.",
+      "agent_brief": "KiCad board (`.kicad_pcb`, version 20241229): 16 symbol(s), 16 net(s) \u2192 2 catalog part(s), 2 wire(s), 9 design-only, 5 ignored (no simulation behaviour).\n5 symbol(s) ignored (connectors, test points, mounting holes, fiducials, jumpers): no simulation behaviour, so they are NOT model gaps and do not make a run unproven.\nBoard hint/resolved: stm32f411ceu6-blackpill.\nMCU symbol not mapped: no imported symbol mapped to an mcu-class catalog part \u2014 `board` sets the pin map, it does not add the MCU node. Twin not minted.\nDesign context only \u2014 use labwired_part / labwired_datasheet for dropped parts; do not invent pins.\nUser: Final native routed carrier for the existing Game Boy handheld project f44771855a18a70d418e363622de2e28. This is a design-context coverage import of the exact supplied PCB, not a request to replace the saved runnable circuit or generate another PCB. Report the actual native pad/net coverage, supported mappings and unresolved parts. Source SHA-256 e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df.",
+      "coverage_md": "# Import coverage\n\n- source: kicad_pcb\n- board: `stm32f411ceu6-blackpill`\n- supported: 2\n- dropped: 9\n- ignored: 5\n- mcu_mapped: false \u2014 no imported symbol mapped to an mcu-class catalog part \u2014 `board` sets the pin map, it does not add the MCU node\n- mint_ok: false\n- twin_buildable: false\n\n## Mapped\n- `C1` \u00b7 10uF 6.3V X7R \u2192 capacitor\n- `C2` \u00b7 100nF 16V X7R \u2192 capacitor\n\n## Dropped / design-only (never invent pins)\n### switch (8)\n- `SW1` \u00b7 UP \u2014 switch \u2014 symbol UP is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW2` \u00b7 DOWN \u2014 switch \u2014 symbol DOWN is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW3` \u00b7 LEFT \u2014 switch \u2014 symbol LEFT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW4` \u00b7 RIGHT \u2014 switch \u2014 symbol RIGHT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW5` \u00b7 A \u2014 switch \u2014 symbol A is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW6` \u00b7 B \u2014 switch \u2014 symbol B is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW7` \u00b7 SELECT \u2014 switch \u2014 symbol SELECT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW8` \u00b7 START \u2014 switch \u2014 symbol START is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n\n### ic (1)\n- `A1` \u00b7 WeAct Black Pill STM32F411CEU6 \u2014 ic \u2014 symbol WeAct Black Pill STM32F411CEU6 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n\n## Ignored (no simulation behaviour \u2014 not a model gap)\n- `H1` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `H2` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `H3` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `H4` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `J1` \u00b7 Waveshare LCD PH2.0 cable \u2014 connector \u2014 KiCad reserves the `J` designator for it; no simulation behaviour\n",
+      "mapping": [
+        {
+          "ref": "A1",
+          "value": "WeAct Black Pill STM32F411CEU6",
+          "status": "dropped",
+          "reason": "ic \u2014 symbol WeAct Black Pill STM32F411CEU6 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "ic"
+        },
+        {
+          "ref": "C1",
+          "value": "10uF 6.3V X7R",
+          "status": "mapped",
+          "catalog_type": "capacitor",
+          "value_source": "sku"
+        },
+        {
+          "ref": "C2",
+          "value": "100nF 16V X7R",
+          "status": "mapped",
+          "catalog_type": "capacitor",
+          "value_source": "sku"
+        },
+        {
+          "ref": "H1",
+          "value": "",
+          "status": "ignored",
+          "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+        },
+        {
+          "ref": "H2",
+          "value": "",
+          "status": "ignored",
+          "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+        },
+        {
+          "ref": "H3",
+          "value": "",
+          "status": "ignored",
+          "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+        },
+        {
+          "ref": "H4",
+          "value": "",
+          "status": "ignored",
+          "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+        },
+        {
+          "ref": "J1",
+          "value": "Waveshare LCD PH2.0 cable",
+          "status": "ignored",
+          "reason": "connector \u2014 KiCad reserves the `J` designator for it; no simulation behaviour",
+          "symbol_class": "connector"
+        },
+        {
+          "ref": "SW1",
+          "value": "UP",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol UP is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        },
+        {
+          "ref": "SW2",
+          "value": "DOWN",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol DOWN is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        },
+        {
+          "ref": "SW3",
+          "value": "LEFT",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol LEFT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        },
+        {
+          "ref": "SW4",
+          "value": "RIGHT",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol RIGHT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        },
+        {
+          "ref": "SW5",
+          "value": "A",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol A is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        },
+        {
+          "ref": "SW6",
+          "value": "B",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol B is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        },
+        {
+          "ref": "SW7",
+          "value": "SELECT",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol SELECT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        },
+        {
+          "ref": "SW8",
+          "value": "START",
+          "status": "dropped",
+          "reason": "switch \u2014 symbol START is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+          "symbol_class": "switch"
+        }
+      ],
+      "mint_ok": false,
+      "supported_part_count": 2,
+      "twin_buildable": false,
+      "design_context_ok": true,
+      "source_kind": "kicad_pcb"
+    },
+    "mapping": [
+      {
+        "ref": "A1",
+        "value": "WeAct Black Pill STM32F411CEU6",
+        "status": "dropped",
+        "reason": "ic \u2014 symbol WeAct Black Pill STM32F411CEU6 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "ic"
+      },
+      {
+        "ref": "C1",
+        "value": "10uF 6.3V X7R",
+        "status": "mapped",
+        "catalog_type": "capacitor",
+        "value_source": "sku"
+      },
+      {
+        "ref": "C2",
+        "value": "100nF 16V X7R",
+        "status": "mapped",
+        "catalog_type": "capacitor",
+        "value_source": "sku"
+      },
+      {
+        "ref": "H1",
+        "value": "",
+        "status": "ignored",
+        "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+      },
+      {
+        "ref": "H2",
+        "value": "",
+        "status": "ignored",
+        "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+      },
+      {
+        "ref": "H3",
+        "value": "",
+        "status": "ignored",
+        "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+      },
+      {
+        "ref": "H4",
+        "value": "",
+        "status": "ignored",
+        "reason": "mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour"
+      },
+      {
+        "ref": "J1",
+        "value": "Waveshare LCD PH2.0 cable",
+        "status": "ignored",
+        "reason": "connector \u2014 KiCad reserves the `J` designator for it; no simulation behaviour",
+        "symbol_class": "connector"
+      },
+      {
+        "ref": "SW1",
+        "value": "UP",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol UP is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      },
+      {
+        "ref": "SW2",
+        "value": "DOWN",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol DOWN is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      },
+      {
+        "ref": "SW3",
+        "value": "LEFT",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol LEFT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      },
+      {
+        "ref": "SW4",
+        "value": "RIGHT",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol RIGHT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      },
+      {
+        "ref": "SW5",
+        "value": "A",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol A is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      },
+      {
+        "ref": "SW6",
+        "value": "B",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol B is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      },
+      {
+        "ref": "SW7",
+        "value": "SELECT",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol SELECT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      },
+      {
+        "ref": "SW8",
+        "value": "START",
+        "status": "dropped",
+        "reason": "switch \u2014 symbol START is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "switch"
+      }
+    ],
+    "coverage_md": "# Import coverage\n\n- source: kicad_pcb\n- board: `stm32f411ceu6-blackpill`\n- supported: 2\n- dropped: 9\n- ignored: 5\n- mcu_mapped: false \u2014 no imported symbol mapped to an mcu-class catalog part \u2014 `board` sets the pin map, it does not add the MCU node\n- mint_ok: false\n- twin_buildable: false\n\n## Mapped\n- `C1` \u00b7 10uF 6.3V X7R \u2192 capacitor\n- `C2` \u00b7 100nF 16V X7R \u2192 capacitor\n\n## Dropped / design-only (never invent pins)\n### switch (8)\n- `SW1` \u00b7 UP \u2014 switch \u2014 symbol UP is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW2` \u00b7 DOWN \u2014 switch \u2014 symbol DOWN is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW3` \u00b7 LEFT \u2014 switch \u2014 symbol LEFT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW4` \u00b7 RIGHT \u2014 switch \u2014 symbol RIGHT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW5` \u00b7 A \u2014 switch \u2014 symbol A is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW6` \u00b7 B \u2014 switch \u2014 symbol B is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW7` \u00b7 SELECT \u2014 switch \u2014 symbol SELECT is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `SW8` \u00b7 START \u2014 switch \u2014 symbol START is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n\n### ic (1)\n- `A1` \u00b7 WeAct Black Pill STM32F411CEU6 \u2014 ic \u2014 symbol WeAct Black Pill STM32F411CEU6 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n\n## Ignored (no simulation behaviour \u2014 not a model gap)\n- `H1` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `H2` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `H3` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `H4` \u00b7  \u2014 mounting hole \u2014 KiCad reserves the `H` designator for it; no simulation behaviour\n- `J1` \u00b7 Waveshare LCD PH2.0 cable \u2014 connector \u2014 KiCad reserves the `J` designator for it; no simulation behaviour\n",
+    "agent_brief": "KiCad board (`.kicad_pcb`, version 20241229): 16 symbol(s), 16 net(s) \u2192 2 catalog part(s), 2 wire(s), 9 design-only, 5 ignored (no simulation behaviour).\n5 symbol(s) ignored (connectors, test points, mounting holes, fiducials, jumpers): no simulation behaviour, so they are NOT model gaps and do not make a run unproven.\nBoard hint/resolved: stm32f411ceu6-blackpill.\nMCU symbol not mapped: no imported symbol mapped to an mcu-class catalog part \u2014 `board` sets the pin map, it does not add the MCU node. Twin not minted.\nDesign context only \u2014 use labwired_part / labwired_datasheet for dropped parts; do not invent pins.\nUser: Final native routed carrier for the existing Game Boy handheld project f44771855a18a70d418e363622de2e28. This is a design-context coverage import of the exact supplied PCB, not a request to replace the saved runnable circuit or generate another PCB. Report the actual native pad/net coverage, supported mappings and unresolved parts. Source SHA-256 e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df.\nValues rewritten for the analog solver: `C1` 10uF read from `10uF 6.3V X7R` \u2014 a complete value spelled in the symbol name; `C2` 100nF read from `100nF 16V X7R` \u2014 a complete value spelled in the symbol name",
+    "design_context_ok": true,
+    "twin_buildable": false,
+    "mode": "design_only",
+    "next": [
+      "labwired_part",
+      "labwired_datasheet",
+      "agent_draft",
+      "catalog_gap_report",
+      "labwired_import"
+    ],
+    "summary": "mode=design_only \u00b7 quality=ok \u00b7 design_context_ok=true \u00b7 twin_buildable=false \u00b7 board=stm32f411ceu6-blackpill \u00b7 mapping=2 mapped / 9 dropped \u00b7 goal=Final native routed carrier for the existing Game Boy handheld project f44771855",
+    "quality": "ok"
+  }
+}

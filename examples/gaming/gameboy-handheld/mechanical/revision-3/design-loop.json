@@ -1,0 +1,216 @@
+{
+  "ok": true,
+  "goal": "Accept the final Game Boy nominal static packaging study with source-bound rest geometry, independent static mate review, separately evaluated button poses and access envelopes, and explicit purchased-part/retention/harness limitations. This is not an articulated workspace or manufacturing acceptance claim.",
+  "attempts": [
+    {
+      "id": "01",
+      "title": "Attempt 01",
+      "ok": true,
+      "functional": true,
+      "qualityOk": true,
+      "featureCount": 400,
+      "diagnosticCount": 116,
+      "reviewFacts": [],
+      "visualReview": {
+        "accepted": true,
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png",
+        "findings": [
+          "One handheld assembly is shown; the model contains 59 named bodies with 58 fixed mates.",
+          "The 90×148×30 mm shell keeps the intended vertical handheld proportion, with the display above the controls.",
+          "Exterior shows the screen surround, D-pad, A/B, Start/Select, speaker slots, seam and case screw access.",
+          "The section locates the PCB/module/header stack, button support and connector inside the shell. The external plug and labeled keepouts have deliberate roles.",
+          "Header collars seat between board faces; support feet share the lower PCB fasteners; case screws have captive nuts. Cover and LCD retention remain declared unfinished details.",
+          "Display and controls face +Z, the USB plug approaches from +Y, and the Black Pill components face the rear.",
+          "The section shows separate shells, carrier, guided plungers, header pins, LCD and relocated J1 with wire-exit space.",
+          "Exterior and center section agree on the shell stack and external plug location; neither view is a physical fit or load test."
+        ],
+        "checks": [
+          {
+            "code": "main-object-count",
+            "passed": true,
+            "finding": "One handheld assembly is shown; the model contains 59 named bodies with 58 fixed mates.",
+            "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+          },
+          {
+            "code": "proportions-match-reference",
+            "passed": true,
+            "finding": "The 90×148×30 mm shell keeps the intended vertical handheld proportion, with the display above the controls.",
+            "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+          },
+          {
+            "code": "required-visible-features",
+            "passed": true,
+            "finding": "Exterior shows the screen surround, D-pad, A/B, Start/Select, speaker slots, seam and case screw access.",
+            "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+          },
+          {
+            "code": "no-stray-or-floating-geometry",
+            "passed": true,
+            "finding": "The section locates the PCB/module/header stack, button support and connector inside the shell. The external plug and labeled keepouts have deliberate roles.",
+            "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+          },
+          {
+            "code": "attachment-plausibility",
+            "passed": true,
+            "finding": "Header collars seat between board faces; support feet share the lower PCB fasteners; case screws have captive nuts. Cover and LCD retention remain declared unfinished details.",
+            "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+          },
+          {
+            "code": "semantic-orientation-alignment",
+            "passed": true,
+            "finding": "Display and controls face +Z, the USB plug approaches from +Y, and the Black Pill components face the rear.",
+            "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+          },
+          {
+            "code": "device-depth-and-construction",
+            "passed": true,
+            "finding": "The section shows separate shells, carrier, guided plungers, header pins, LCD and relocated J1 with wire-exit space.",
+            "screenshotPath": "/tmp/kernelcad-preview-6Z1egt/right.png"
+          },
+          {
+            "code": "canonical-views-physically-coherent",
+            "passed": true,
+            "finding": "Exterior and center section agree on the shell stack and external plug location; neither view is a physical fit or load test.",
+            "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+          }
+        ]
+      },
+      "repairMode": "none",
+      "passedChecks": [
+        "validator-no-errors"
+      ],
+      "blockingReasons": [],
+      "mechanismSummary": {
+        "sampleCount": 0,
+        "interferenceCount": 0,
+        "trackedConnectorCount": 0
+      },
+      "requirements": {
+        "ok": true,
+        "status": "not-declared",
+        "entries": [],
+        "summary": {
+          "pass": 0,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+          "byteLength": 31338
+        },
+        "parameters": {
+          "values": {
+            "pressedControl": "rest",
+            "plungerAdjustmentMm": "0.0",
+            "travelCase": "nominal"
+          },
+          "sha256": "bd24b74769122dc666bb84dc772787dd592d06c3e8a6c0fddfd89cba5ba2a7e5"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "3a221c4741753f8626a60df5f8bac9c17f57afb77fb10e6aaf17e19a7fa91ba8"
+      },
+      "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+    }
+  ],
+  "visualReview": {
+    "accepted": true,
+    "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png",
+    "findings": [
+      "One handheld assembly is shown; the model contains 59 named bodies with 58 fixed mates.",
+      "The 90×148×30 mm shell keeps the intended vertical handheld proportion, with the display above the controls.",
+      "Exterior shows the screen surround, D-pad, A/B, Start/Select, speaker slots, seam and case screw access.",
+      "The section locates the PCB/module/header stack, button support and connector inside the shell. The external plug and labeled keepouts have deliberate roles.",
+      "Header collars seat between board faces; support feet share the lower PCB fasteners; case screws have captive nuts. Cover and LCD retention remain declared unfinished details.",
+      "Display and controls face +Z, the USB plug approaches from +Y, and the Black Pill components face the rear.",
+      "The section shows separate shells, carrier, guided plungers, header pins, LCD and relocated J1 with wire-exit space.",
+      "Exterior and center section agree on the shell stack and external plug location; neither view is a physical fit or load test."
+    ],
+    "checks": [
+      {
+        "code": "main-object-count",
+        "passed": true,
+        "finding": "One handheld assembly is shown; the model contains 59 named bodies with 58 fixed mates.",
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+      },
+      {
+        "code": "proportions-match-reference",
+        "passed": true,
+        "finding": "The 90×148×30 mm shell keeps the intended vertical handheld proportion, with the display above the controls.",
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+      },
+      {
+        "code": "required-visible-features",
+        "passed": true,
+        "finding": "Exterior shows the screen surround, D-pad, A/B, Start/Select, speaker slots, seam and case screw access.",
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+      },
+      {
+        "code": "no-stray-or-floating-geometry",
+        "passed": true,
+        "finding": "The section locates the PCB/module/header stack, button support and connector inside the shell. The external plug and labeled keepouts have deliberate roles.",
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+      },
+      {
+        "code": "attachment-plausibility",
+        "passed": true,
+        "finding": "Header collars seat between board faces; support feet share the lower PCB fasteners; case screws have captive nuts. Cover and LCD retention remain declared unfinished details.",
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+      },
+      {
+        "code": "semantic-orientation-alignment",
+        "passed": true,
+        "finding": "Display and controls face +Z, the USB plug approaches from +Y, and the Black Pill components face the rear.",
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+      },
+      {
+        "code": "device-depth-and-construction",
+        "passed": true,
+        "finding": "The section shows separate shells, carrier, guided plungers, header pins, LCD and relocated J1 with wire-exit space.",
+        "screenshotPath": "/tmp/kernelcad-preview-6Z1egt/right.png"
+      },
+      {
+        "code": "canonical-views-physically-coherent",
+        "passed": true,
+        "finding": "Exterior and center section agree on the shell stack and external plug location; neither view is a physical fit or load test.",
+        "screenshotPath": "/tmp/kernelcad-preview-saGpsa/iso.png"
+      }
+    ]
+  },
+  "images": {
+    "exterior": {
+      "name": "iso",
+      "path": "/tmp/kernelcad-preview-saGpsa/iso.png",
+      "description": "Geometric Z-up three-quarter overview — camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+      "byte_count": 116986,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261110-uu0U9zi94y4BtxxE54BT8A/render-iso.png?exp=1794429499&sig=tvuRDQhXRIrmdw07LKJ6SNOQ7dRMKffbSNdfS47bBO0",
+      "expires_at": "2026-11-11T20:38:19.000Z",
+      "inline": true
+    },
+    "section": {
+      "name": "right",
+      "path": "/tmp/kernelcad-preview-6Z1egt/right.png",
+      "description": "Right side elevation — camera on +X; screen right = +Y, screen up = +Z.",
+      "byte_count": 66097,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261110-jitODTsqa8t1qGVA-m9iWQ/render-right.png?exp=1794429583&sig=O2EUT_nGpw10DXmVlUc6AX9fxt5zFkaF4c_iouK3FTc",
+      "expires_at": "2026-11-11T20:39:43.000Z",
+      "inline": true
+    }
+  },
+  "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+}
