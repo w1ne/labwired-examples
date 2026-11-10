@@ -9,9 +9,9 @@ local/pinned symbol and footprint libraries.
 
 - 222 unique physical component reference numbers.
 - 0 unconnected copper items.
-- 195 copper nets and 2,922 track/via items.
-- 6 footprint library mismatches (U2, U5, U6, U7, U9, U10).
-- 16 schematic-to-board parity mismatches because package pads
+- 195 original routed nets plus 5 isolated NC pin nets; 2,919 track/via items.
+- 4 footprint library mismatches (U2, U5, U7, U9).
+- 11 schematic-to-board parity mismatches because MCU package pads
   are absent from specific IC footprints.
 - No copper short or clearance violation was reported on the
   board as checked with its original missing pads.
@@ -21,13 +21,23 @@ The candidate with all missing package pads restored shows
 conflicts. It was not promoted. Nearby copper must be rerouted,
 not tied to an NC pad or bypassed with a false DRC exclusion.
 
-Pin-level NC omissions:
+Still omitted, not accepted:
 - U2 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
 - U5 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
 - U7 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
 - U9 AT32F421: 23 (PA15), 24 (PB3)
-- U6 NSG2065Q: 5 (NC), 7 (NC)
-- U10 NSG2065Q: 5 (NC), 7 (NC), 8 (NC)
+
+Fixed in this partial rework:
+- U6 NSG2065Q: restored 5/7 as electrically isolated NC pads; two colliding
+  GND stitching vias at (85.1249, 38.6229) and (86.1029, 39.5050) removed.
+- U10 NSG2065Q: restored 5/7/8 as electrically isolated NC pads; one B.Cu
+  GND track at (65.6801,42.0100)-(65.6801,42.6301) removed.
+
+**KiCad native check:** 0 copper short/clearance violations, 0 unconnected
+items, 4 AT32F421 footprint mismatches, and 11 parity findings. The original
+bulk caps, net mapping, and 213 assembly components remain unchanged.
+The removed GND stitching features need EMI/thermal and return-current review.
+This is not a production sign-off.
 
 The missing pins are explicitly unconnected in the exported
 schematic netlist. This does NOT permit connecting them to nearby
@@ -67,7 +77,7 @@ resolve all high-severity ERC issues.
 Files saved in this directory:
 - drc-final.txt: native physical DRC plus parity.
 - erc-final.txt: native ERC on the corrected top-level schematic.
-- drc-with-pads in validation/rework/out (local engineering test only).
+- DRC negative controls in validation/rework (local engineering test only).
 - nc-route-audit.txt: route geometry around the omitted pads.
 
 The reviewed Gerber ZIP is tagged REVIEW-ONLY. It is not a
@@ -77,7 +87,7 @@ thermal, propeller thrust and flight have not been tested.
 
 ## Required release gates
 
-1. Restore 16 package pads using correct manufacturer footprints.
+1. Restore 11 remaining AT32F421 package pads using correct footprints; the five NSG2065Q NC pads are restored.
 2. Reroute all intersecting copper, vias and plane connections
    while maintaining phase-current paths, via design rules and
    6-layer stack impedance/thermal design.

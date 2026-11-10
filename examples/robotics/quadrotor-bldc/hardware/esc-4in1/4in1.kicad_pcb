@@ -34524,6 +34524,26 @@
 			(pintype "unspecified")
 			(uuid "344388f3-5646-402f-ad8e-21310e4a7a00")
 		)
+		(pad "5" smd roundrect
+			(at -1.92 -0.750064 90)
+			(size 0.55 0.28)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.2)
+			(pinfunction "COM_6")
+			(pintype "unspecified")
+			(net "unconnected-(U6-NC-Pad5)")
+			(uuid "34d4f20b-9457-4017-9453-1436cb431c06")
+		)
+		(pad "7" smd roundrect
+			(at -1.249936 -1.91 90)
+			(size 0.28 0.55)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.2)
+			(pinfunction "NC_8")
+			(pintype "unspecified+no_connect")
+			(net "unconnected-(U6-NC-Pad7)")
+			(uuid "401c718b-9f0c-4c8d-aeb0-a7f76663b3b9")
+		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.step"
 			(offset
@@ -41727,6 +41747,36 @@
 			(pinfunction "COM_25")
 			(pintype "unspecified")
 			(uuid "fc25d998-8c8a-4bd6-975f-249004fab7f5")
+		)
+		(pad "5" smd roundrect
+			(at -1.92 -0.750064 270)
+			(size 0.55 0.28)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.2)
+			(pinfunction "COM_6")
+			(pintype "unspecified")
+			(net "unconnected-(U10-NC-Pad5)")
+			(uuid "4ae333f5-523a-49a3-bf5b-cf4ebe7b40bb")
+		)
+		(pad "7" smd roundrect
+			(at -1.249936 -1.91 270)
+			(size 0.28 0.55)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.2)
+			(pinfunction "LO3_9")
+			(pintype "unspecified")
+			(net "unconnected-(U10-NC-Pad7)")
+			(uuid "586ea2d7-f9f1-423e-a74f-95bf51cf48fa")
+		)
+		(pad "8" smd roundrect
+			(at -0.750064 -1.91 270)
+			(size 0.28 0.55)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.2)
+			(pinfunction "LO3_9")
+			(pintype "unspecified")
+			(net "unconnected-(U10-NC-Pad8)")
+			(uuid "6e21156a-c03c-46b4-8aa8-afeedcb8cae9")
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.step"
@@ -65535,14 +65585,7 @@
 		(net "GND")
 		(uuid "5d90f083-5369-4ea6-a0cc-92ee25c22a77")
 	)
-	(via
-		(at 85.124936 38.622929)
-		(size 0.45)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net "GND")
-		(uuid "5e62448d-7bc5-4744-b354-17803474c128")
-	)
+
 	(via
 		(at 79.760002 32.571994)
 		(size 0.45)
@@ -67816,14 +67859,7 @@
 		(net "GND")
 		(uuid "ec1d1bfc-c846-4dd8-9aef-fac149d983e5")
 	)
-	(via
-		(at 86.102948 39.505)
-		(size 0.45)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net "GND")
-		(uuid "ede51678-b015-4d7f-bac3-78587573e8a7")
-	)
+
 	(via
 		(at 57.13 47.14)
 		(size 0.45)
@@ -68264,14 +68300,7 @@
 		(net "GND")
 		(uuid "37cc50be-85d3-4a6a-98d7-e8bad4a6e550")
 	)
-	(segment
-		(start 65.680064 42.01)
-		(end 65.680064 42.630128)
-		(width 0.5)
-		(layer "B.Cu")
-		(net "GND")
-		(uuid "3bb47490-8cdf-4652-8174-f00cd57aa771")
-	)
+
 	(segment
 		(start 75.399926 49.519935)
 		(end 75.16 49.759861)
