@@ -1,0 +1,64 @@
+{
+  "schema": "labwired.browser-diagnostic-assessment.v1",
+  "sourceProof": "/data/work-scratch/gameboy-revision3-production-view-proof.json",
+  "sourceProofSha256": "24361d58f538042332229b2b651e27f38a032e368609b8ed321ea9f5c339a226",
+  "appCommit": "6c183167521892eb9266990558e0f63e2ce05507",
+  "functionalViewContractPassed": true,
+  "uncaughtExceptionsAbsent": true,
+  "cleanConsole": false,
+  "scope": "Production-mode local preview with auth disabled. The proof passed flag gates the exact saved CAD/frame/Worker/cycle contract and zero uncaught exceptions. It does not claim a clean console, production deployment, or signed-in editing.",
+  "cases": [
+    {
+      "mobile": false,
+      "cycleGainWhileCadVisible": 35000000,
+      "sameIframeAfterReturn": true,
+      "sameIframeAfterReopen": true,
+      "sameRuntimeWorkerObject": true,
+      "uncaughtExceptionCounts": {
+        "page": 0,
+        "window": 0,
+        "cdp": 0
+      },
+      "consoleErrorCount": 9
+    },
+    {
+      "mobile": true,
+      "cycleGainWhileCadVisible": 35000000,
+      "sameIframeAfterReturn": true,
+      "sameIframeAfterReopen": true,
+      "sameRuntimeWorkerObject": true,
+      "uncaughtExceptionCounts": {
+        "page": 0,
+        "window": 0,
+        "cdp": 0
+      },
+      "consoleErrorCount": 9
+    }
+  ],
+  "errorScope": [
+    {
+      "category": "Prior dev memory error",
+      "status": "retained failure",
+      "evidence": "React dev logComponentRender calls Performance.measure with changed-prop details; prior stack ends in this development bundle path. The failed script left a renderer at about 9 GB RSS; its verified process tree was stopped. No production uncaught memory error reproduced."
+    },
+    {
+      "category": "Prior null addEventListener TypeError",
+      "status": "not reproduced; origin unresolved",
+      "evidence": "The original script stored only the error text. Neither production desktop nor mobile produced this uncaught error; no missing stack or root cause is invented."
+    },
+    {
+      "category": "Local Clerk initialization",
+      "status": "console error retained",
+      "evidence": "The established VITE_DISABLE_AUTH=true local build uses the placeholder key in packages/playground/src/clerk.ts while main.tsx still wraps the app in ClerkProvider. The placeholder instance returns400 and logs initialization failure. This run does not validate sign-in."
+    },
+    {
+      "category": "KernelCAD resource errors",
+      "status": "console errors retained",
+      "evidence": "fonts-unblock.js returned text/html and was MIME-rejected; telemetry preflight lacked CORS allow-origin; revision-3 animation artifact requests returned404. The exact revision-3 static mesh nevertheless produced geometry/camera/frame-ready and remained displayed."
+    }
+  ],
+  "sourceChanges": false,
+  "productionDeploy": false,
+  "ownerSessionChanged": false,
+  "nativePcbAttached": false
+}

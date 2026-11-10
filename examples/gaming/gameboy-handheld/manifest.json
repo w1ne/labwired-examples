@@ -6,12 +6,14 @@
   "proof": {
     "firmware": "model_verified",
     "rom_behavior": "host_test_passed",
-    "browser": "local_source_build_passed",
+    "browser": "current_assembly_functional_contract_passed_local_production_preview",
     "pcb": "drc_passed",
     "mechanical": "nominal_assembly_and_access_checked",
     "physical_hardware_tested": false,
     "controls": "8_driven_stm32_cases_passed",
-    "native_pcb_attached": false
+    "native_pcb_attached": false,
+    "browser_clean_console": false,
+    "browser_production_deployed": false
   },
   "target": {
     "board": "stm32f411ceu6-blackpill",
@@ -40,7 +42,8 @@
     "sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
     "simulation_binding": "pcb/simulation-binding.json",
     "automatic_twin_import": false,
-    "export_verification": "pcb/export-validation.json"
+    "export_verification": "pcb/export-validation.json",
+    "import_coverage": "pcb/final-import-report.json"
   },
   "mechanical": {
     "path": "mechanical/revision-3/labwired-gameboy-assembly.kcad.ts",
@@ -79,7 +82,10 @@
     "cad_fixed_mates": "mechanical/revision-3/independent-mates.json",
     "cad_poses": "mechanical/revision-3/pose-checks.json",
     "cad_exports": "mechanical/revision-3/export-verification.json",
-    "cad_revision_2_historical": "mechanical/evidence-v2.json"
+    "cad_revision_2_historical": "mechanical/evidence-v2.json",
+    "browser_current_assembly": "firmware/browser-revision3-validation.json",
+    "browser_current_diagnostics": "firmware/browser-revision3-assessment.json",
+    "pcb_import": "pcb/final-import-report.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -97,8 +103,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13662,
-      "sha256": "60108fec64fd59657e587b868b272841c09e7739eb10cb4471af7e173fa37fb9"
+      "bytes": 14847,
+      "sha256": "090728e6a0b9b90d0eaea6320e0b94cc1ad971517c0c9c8e37f0f66907d96eb6"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -114,6 +120,16 @@
       "path": "firmware/README.md",
       "bytes": 6684,
       "sha256": "8861a7b1350e190150c85f64cc22ac33e2819b0bc70a9d6a7a8c89ceff26fdcd"
+    },
+    {
+      "path": "firmware/browser-revision3-assessment.json",
+      "bytes": 2916,
+      "sha256": "3187751c828eecc1c2f81f572dfe5f1a26b6a4f60b731911b34c7d3dec591a55"
+    },
+    {
+      "path": "firmware/browser-revision3-validation.json",
+      "bytes": 32083,
+      "sha256": "24361d58f538042332229b2b651e27f38a032e368609b8ed321ea9f5c339a226"
     },
     {
       "path": "firmware/browser-style-validation.json",
@@ -377,8 +393,8 @@
     },
     {
       "path": "pcb/README.md",
-      "bytes": 13500,
-      "sha256": "6369718e2aa75634625d673131549591611b8a6da7279a43809447fc4ddb80d7"
+      "bytes": 13667,
+      "sha256": "e086e242e99bb129771b7bd241e1444ca7a980de82030d0302753770db1aa8f2"
     },
     {
       "path": "pcb/assembly-interfaces.json",
@@ -414,6 +430,11 @@
       "path": "pcb/export-validation.json",
       "bytes": 5376,
       "sha256": "2ca45df8c025c47eb5258a7779fe192eebf29500f4f5c50f89339d485f912993"
+    },
+    {
+      "path": "pcb/final-import-report.json",
+      "bytes": 17450,
+      "sha256": "c0a02141b824864d8c05e48cedf10547cb3cda4f37f468ae2b71ca0d85b4f8a1"
     },
     {
       "path": "pcb/handheld-carrier.kicad_pcb",

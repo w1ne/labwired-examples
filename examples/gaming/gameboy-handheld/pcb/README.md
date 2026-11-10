@@ -11,7 +11,8 @@ The routed two-layer carrier passes KiCad 9.0.2 DRC with **0 violations and 0 un
 - `simulation-binding.json`: correspondence between PCB references and the verified LabWired circuit.
 - `drc-routed.json` / `routing-report.json`: exact checks and source hashes.
 - `export-validation.json`: final Gerber, drill and STEP byte/hash verification, all 124 drill coordinates, and the exact PCB/layout/interface identities.
-- `import-report.json`: historical LabWired design-context import coverage before the final connector correction.
+- `final-import-report.json`: current LabWired design-context coverage bound to the final native PCB hash.
+- `import-report.json`: historical import coverage before the connector correction.
 
 Generated fabrication and plot binaries are omitted from this compact contribution. Use the editable routed board to regenerate Gerber, drill, STEP and layer plots in KiCad 9 after rerunning DRC.
 
@@ -33,7 +34,7 @@ The current DRC report checks the complete routed KiCad board. It is not a schem
 
 The PCB has not been ordered or assembled. Before fabrication, measure the purchased Black Pill, LCD cable and switch actuator heights. Check USB plug access, regulator current margin, display backlight current, cable exit, mechanical clearances and soldering access. The CAD uses component envelopes and does not establish exact component or connector fit.
 
-The recorded `labwired_import` coverage on the earlier carrier revision accepted the design context but did not map the WeAct module or these switch footprints to a runnable twin. It mapped the two capacitors, marked nine components design-only and ignored five non-simulated connectors or mounting holes. Native import/attachment of the final connector-corrected board is pending the generic API adapter deployment and owner browser sign-in. The verified LabWired circuit therefore remains linked through the explicit simulation binding, not through an automatic import claim. No placeholder PCB is attached to the saved project.
+A fresh `labwired_import` of the final native PCB accepts the design context but does not map the WeAct module or these switch footprints to a runnable twin. It maps the two capacitors, marks nine components design-only and ignores five non-simulated connectors or mounting holes. `final-import-report.json` records the exact source hash and result: `mode: design_only`, `twin_buildable: false`. Native import/attachment of the final connector-corrected board is pending the generic API adapter deployment and owner browser sign-in. The verified LabWired circuit therefore remains linked through the explicit simulation binding, not through an automatic import claim. No placeholder PCB is attached to the saved project.
 
 ## Rebuild
 

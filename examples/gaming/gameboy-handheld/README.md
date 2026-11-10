@@ -40,7 +40,9 @@ The display is the Waveshare 2.4-inch ILI9341 module with a 70.5 × 43.3 mm PCB 
 | All eight controls through STM32 GPIO | 8/8 model cases pass; press/release receipts, direction movement, two-pixel A steps, B reset, Start pause/resume and Select palette change | `firmware/control-validation.json`; exact requests in `firmware/control-vectors.json` |
 | Original ROM behavior | Pass for all eight controls, score collection, pause, palette, and 17,424 scanlines | `firmware/host-validation.json`; host frame in `firmware/frame.png` |
 | Live browser display and input | Pass on local source build: 320 × 240 correctly oriented LCD; Right moves player x = 48 to 63; release observed; 0 page errors | `firmware/browser-validation.json` |
-| View switching preserves the running MCU | Desktop and mobile pass; the same worker advances by 60,000,000 and 70,000,000 cycles while CAD is visible | `firmware/browser-view-continuity.json` (local production preview, CAD revision 2) |
+| Current revision 3 viewer and runtime | Desktop and mobile production preview pass the view contract; exact revision loads, the iframe and Worker persist, and the MCU advances by 35,000,000 cycles while CAD is visible; 0 uncaught exceptions | `firmware/browser-revision3-validation.json` and `browser-revision3-assessment.json` |
+| Historical revision 2 view continuity | Desktop and mobile passed; the same worker advanced by 60,000,000 and 70,000,000 cycles while CAD was visible | `firmware/browser-view-continuity.json` (earlier local production preview) |
+| Final native PCB design-context import | Accepted; 2 mapped, 9 design-only, 5 ignored; automatic runnable twin is unavailable | `pcb/final-import-report.json` |
 | Carrier PCB DRC | 0 violations, 0 unconnected items, KiCad 9.0.2 | `pcb/drc-routed.json` and `pcb/routing-report.json` |
 | CAD static design loop | Pass for revision 3, 59 parts, 400 features, valid geometry | `mechanical/revision-3/evaluation.json`; `design-loop.json` in the same directory |
 | Independent fixed-mate review | 59 parts, 58 solved fixed mates, 1 static pose; 0 actionable interference | `mechanical/revision-3/independent-mates.json` |
@@ -50,6 +52,8 @@ The display is the Waveshare 2.4-inch ILI9341 module with a 70.5 × 43.3 mm PCB 
 | PCB export integrity | 9 Gerber layers, job metadata, all 124 drill coordinates, and valid bare-board/copper STEP exports match the final PCB | `pcb/export-validation.json` |
 
 The browser display fix propagates the simulator's live width and height into the renderer. It prevents a landscape 320 × 240 ILI9341 buffer from being decoded with a portrait 240 × 320 stride. The app integration includes separate regression tests for display decoding, the simulation host, and the Wasm bridge. Browser evidence is recorded separately as JSON; a painted-display oracle alone does not establish correct browser rendering.
+
+The current revision 3 view check uses application commit `6c183167521892eb9266990558e0f63e2ce05507` in a local production-mode build with authentication disabled. It does not establish deployment or signed-in editing. Each form factor retains nine console/resource errors from the local placeholder sign-in instance and KernelCAD font, telemetry and optional animation requests. The exact static mesh renders and the running MCU survives view switches; the record explicitly has `cleanConsole: false`. Earlier development failures remain recorded: a React development instrumentation memory error and an unlocalized `null.addEventListener` error that did not reproduce in the production preview.
 
 ## Scope and material limits
 

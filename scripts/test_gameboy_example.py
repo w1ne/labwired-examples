@@ -111,6 +111,17 @@ class GameBoyExample(unittest.TestCase):
         self.assertEqual((exported['drc']['violations'], exported['drc']['unconnected_items']), (0, 0))
         self.assertFalse(exported['physical_fit_verified'])
         self.assertFalse(exported['manufacturing_signoff'])
+        imported = read('pcb/final-import-report.json')
+        self.assertEqual(imported['source']['sha256'], pcb_hash)
+        self.assertEqual(imported['source']['bytes'], (GAME / 'pcb/handheld-carrier.kicad_pcb').stat().st_size)
+        self.assertTrue(imported['result']['design_context_ok'])
+        self.assertFalse(imported['result']['twin_buildable'])
+        self.assertEqual(imported['result']['mode'], 'design_only')
+        mappings = imported['result']['mapping']
+        self.assertEqual({row['ref'] for row in mappings}, {row['ref'] for row in layout['components']})
+        self.assertEqual({status: sum(row['status'] == status for row in mappings)
+                          for status in ('mapped', 'dropped', 'ignored')},
+                         {'mapped': 2, 'dropped': 9, 'ignored': 5})
         self.assertEqual(read('pcb/drc-routed.json')['violations'], [])
         self.assertEqual(read('pcb/drc-routed.json')['unconnected_items'], [])
         self.assertEqual({p['type'] for p in diagram['parts']}, {'stm32f411ceu6-blackpill', 'ili9341', 'button'})
