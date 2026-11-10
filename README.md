@@ -18,6 +18,8 @@ This repository is for runnable hardware verification stories, **not concept art
 
 Open an example directory. It contains firmware source, the exact LabWired circuit JSON, observed test evidence, editable KernelCAD source when appropriate, and screenshots recorded from the actual tools. Each example links to a runnable LabWired project and a versioned KernelCAD design.
 
+For an introduction to firmware-aware circuit simulation, use the [LabWired circuit simulator guide](https://labwired.com/circuit-simulator/). It links to a GPIO-to-RC oscilloscope demonstration and explains the different browser linear-circuit and native ngspice capabilities. The quadrotor example above is a separate motor-control verification.
+
 ## Contribution standard
 
 New examples need catalog-validated connectivity, compilable firmware, an explicit test oracle, and precise model limits. For mechanical projects, keep editable KernelCAD source and verified joints. See [CONTRIBUTING.md](CONTRIBUTING.md).
