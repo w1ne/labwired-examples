@@ -196,6 +196,24 @@ def model_gap_report(document):
     }
 
 
+def declared_license_spdx(payload: bytes) -> str | None:
+    """Conservatively identify the actual allowed licence in a pinned LICENSE.
+
+    The manifest label alone is not proof of permission. Reject ambiguous and
+    unsupported licence texts rather than interpreting a mention in the body
+    of another licence as its declaration.
+    """
+    header = payload[:512].decode("utf-8-sig", errors="replace")
+    first_line = next((line.strip() for line in header.splitlines() if line.strip()), "")
+    if (first_line == "MIT License" and
+        b"Permission is hereby granted, free of charge" in payload and
+        b"THE SOFTWARE IS PROVIDED" in payload):
+        return "MIT"
+    if first_line == "CERN Open Hardware Licence Version 2 - Strongly Reciprocal":
+        return "CERN-OHL-S-2.0"
+    return None
+
+
 def raw_source_url(src, path):
     return SOURCE_PREFIX + src["repo"] + "/" + src["commit"] + "/" + path
 
@@ -220,6 +238,13 @@ def verify_pinned_sources(document, timeout=20):
                 checked[url] = (actual, payload)
             if actual != sha:
                 errors.append(f"{b['id']}: Git blob SHA mismatch for {url}: {actual} != {sha}")
+            elif path == src["license_path"]:
+                declared = declared_license_spdx(payload)
+                if declared != src["license_spdx"]:
+                    errors.append(
+                        f"{b['id']}: pinned LICENSE text declares {declared or 'unknown/unsupported'}, "
+                        f"not manifest {src['license_spdx']}"
+                    )
             elif path == src["path"]:
                 try:
                     measured = source_topology(payload)
