@@ -97,11 +97,11 @@ class ESCPhysicalBoard(unittest.TestCase):
 
     def test_drc_report_is_not_misrepresented_as_clean(self):
         drc = findings(E / "validation" / "drc-final.txt")
-        self.assertEqual(drc["lib_footprint_mismatch"], 4)
-        self.assertEqual(drc["net_conflict"], 11)
+        self.assertEqual(drc["lib_footprint_mismatch"], 3)
+        self.assertEqual(drc["net_conflict"], 9)
         for violation in ("shorting_items", "clearance", "unconnected_items"):
             self.assertEqual(drc[violation], 0)
-        self.assertEqual(sum(drc.values()), 15)
+        self.assertEqual(sum(drc.values()), 12)
 
     def test_gate_driver_nc_pads_restored_and_isolated(self):
         # The five actual QFN pads must be physical PCB objects, each with a
@@ -119,6 +119,24 @@ class ESCPhysicalBoard(unittest.TestCase):
                 self.assertIn(f'unconnected-({ref}-NC-Pad{pin})', footprint)
 
 
+    def test_u9_nc_pads_and_blind_drill(self):
+        marker = '(property "Reference" "U9"'
+        idx = self.board.find(marker)
+        self.assertGreater(idx, 0)
+        begin = self.board.rfind("\n\t(footprint ", 0, idx)
+        stop = self.board.find("\n\t(footprint ", idx)
+        footprint = self.board[begin:stop if stop >= 0 else None]
+        for pin, name in (("23", "PA15"), ("24", "PB3")):
+            self.assertIn('(pad "' + pin + '" smd', footprint)
+            self.assertIn(f'unconnected-(U9-{name}-Pad{pin})', footprint)
+        self.assertIn('(via micro', self.board)
+        self.assertIn('(layers "In4.Cu" "B.Cu")', self.board)
+        self.assertIn('(at 70.64 38.46)', self.board)
+        with ZipFile(R / "esc-4in1-gerbers-REVIEW-ONLY.zip") as archive:
+            self.assertIn("4in1-in4-back.drl", archive.namelist())
+        review = (E / "validation" / "u9-power-reroute-20261110.md").read_text()
+        self.assertIn("Do NOT order", review)
+
     def test_inherited_erc_findings_explicit(self):
         erc = findings(E / "validation" / "erc-final.txt")
         self.assertEqual(sum(erc.values()), 352)
@@ -128,7 +146,7 @@ class ESCPhysicalBoard(unittest.TestCase):
     def test_gerber_data_is_review_only(self):
         with ZipFile(R / "esc-4in1-gerbers-REVIEW-ONLY.zip") as archive:
             names = archive.namelist()
-            self.assertEqual(len(names), 15)
+            self.assertEqual(len(names), 16)
             self.assertTrue(any(name.endswith(".drl") for name in names))
             self.assertTrue(any(name.endswith(".gtl") for name in names))
             self.assertTrue(any(name.endswith(".gbl") for name in names))

@@ -55237,6 +55237,26 @@
 			(pintype "unspecified")
 			(uuid "1974a2f4-de64-4e31-804c-43c48dd0ed7e")
 		)
+		(pad "23" smd roundrect
+			(at 0.800025 1.88)
+			(size 0.2 0.55)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.25)
+			(pinfunction "PA14_22")
+			(pintype "unspecified")
+			(net "unconnected-(U9-PA15-Pad23)")
+			(uuid "16c84f10-6b17-46a1-aa41-64a2427fd79f")
+		)
+		(pad "24" smd roundrect
+			(at 0.399721 1.88)
+			(size 0.2 0.55)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.25)
+			(pinfunction "PB4_25")
+			(pintype "unspecified")
+			(net "unconnected-(U9-PB3-Pad24)")
+			(uuid "290ea4a4-2a92-4002-92b3-3f76da165ebc")
+		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/4in1ESC-30x30.3dshapes/QFN-28_L4.0-W4.0-P0.40-TL-EP2.4.step"
 			(offset
@@ -68949,14 +68969,7 @@
 		(net "GND")
 		(uuid "f256dc94-b851-44ae-924a-fc1f36965606")
 	)
-	(segment
-		(start 71.200076 38.539924)
-		(end 71.200076 40.790609)
-		(width 0.2)
-		(layer "B.Cu")
-		(net "GND")
-		(uuid "f4803572-996d-426e-9f19-fe3da76e863f")
-	)
+
 	(segment
 		(start 75.13 52.089861)
 		(end 75.13 51.509861)
@@ -82277,14 +82290,7 @@
 		(net "+3V3")
 		(uuid "78c4ca83-d164-499c-b419-79d86f9517b0")
 	)
-	(segment
-		(start 70.499822 41.220178)
-		(end 70.499822 40.240178)
-		(width 0.2)
-		(layer "B.Cu")
-		(net "+3V3")
-		(uuid "796e4c0c-9d16-4e12-907d-b8fcc63f1021")
-	)
+
 	(segment
 		(start 75.07 41.260064)
 		(end 75.07 40.695064)
@@ -82429,14 +82435,7 @@
 		(net "+3V3")
 		(uuid "c07fa693-e35d-41df-a5db-c11e1b7bd110")
 	)
-	(segment
-		(start 70.75 39.99)
-		(end 70.75 38.52)
-		(width 0.2)
-		(layer "B.Cu")
-		(net "+3V3")
-		(uuid "c1948066-04ca-4528-845b-1f087007de05")
-	)
+
 	(segment
 		(start 76.185 40.022168)
 		(end 76.2 40.007168)
@@ -82477,14 +82476,7 @@
 		(net "+3V3")
 		(uuid "d4460106-9237-4f13-9a5c-d22819aed618")
 	)
-	(segment
-		(start 70.499822 40.240178)
-		(end 70.75 39.99)
-		(width 0.2)
-		(layer "B.Cu")
-		(net "+3V3")
-		(uuid "d4dc46e1-52fa-4d7f-92c5-80f9ed4f2ecf")
-	)
+
 	(segment
 		(start 70.71 48.119797)
 		(end 70.71 48.326803)
@@ -105826,4 +105818,44 @@
 		)
 	)
 	(embedded_fonts no)
+	(via
+		(at 71.28 38.46)
+		(size 0.45)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net "GND")
+		(uuid "3ad556c7-2e94-5f04-9144-660ee68d5083")
+	)
+	(via
+		(at 71.85 40.53)
+		(size 0.45)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net "GND")
+		(uuid "e6d719d7-a99e-50dc-9611-f7fa6042c725")
+	)
+	(segment
+		(start 71.28 38.46)
+		(end 71.85 40.53)
+		(width 0.2)
+		(layer "In1.Cu")
+		(net "GND")
+		(uuid "def18d6f-0bb5-56f5-8b2d-da4c671bfc73")
+	)
+	(via micro
+		(at 70.64 38.46)
+		(size 0.4)
+		(drill 0.2)
+		(layers "In4.Cu" "B.Cu")
+		(net "+3V3")
+		(uuid "c0e203dc-f16b-5e16-a9ca-b8928ce745f9")
+	)
+	(segment
+		(start 70.64 38.46)
+		(end 70.28 41.44)
+		(width 0.2)
+		(layer "In4.Cu")
+		(net "+3V3")
+		(uuid "804448b5-0be9-591c-81bc-672becc7cd23")
+	)
 )

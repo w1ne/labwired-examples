@@ -9,9 +9,9 @@ local/pinned symbol and footprint libraries.
 
 - 222 unique physical component reference numbers.
 - 0 unconnected copper items.
-- 195 original routed nets plus 5 isolated NC pin nets; 2,919 track/via items.
-- 4 footprint library mismatches (U2, U5, U7, U9).
-- 11 schematic-to-board parity mismatches because MCU package pads
+- 195 original routed nets plus 7 isolated NC pin nets; 2,920 track/via items.
+- 3 footprint library mismatches (U2, U5, U7).
+- 9 schematic-to-board parity mismatches because MCU package pads
   are absent from specific IC footprints.
 - No copper short or clearance violation was reported on the
   board as checked with its original missing pads.
@@ -25,7 +25,7 @@ Still omitted, not accepted:
 - U2 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
 - U5 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
 - U7 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
-- U9 AT32F421: 23 (PA15), 24 (PB3)
+- U9 AT32F421: 23 (PA15), 24 (PB3) — restored in this revision
 
 Fixed in this partial rework:
 - U6 NSG2065Q: restored 5/7 as electrically isolated NC pads; two colliding
@@ -34,9 +34,15 @@ Fixed in this partial rework:
   GND track at (65.6801,42.0100)-(65.6801,42.6301) removed.
 
 **KiCad native check:** 0 copper short/clearance violations, 0 unconnected
-items, 4 AT32F421 footprint mismatches, and 11 parity findings. The original
+items, 3 AT32F421 footprint mismatches, and 9 parity findings. The original
 bulk caps, net mapping, and 213 assembly components remain unchanged.
 The removed GND stitching features need EMI/thermal and return-current review.
+U9 was rerouted using a blind B.Cu–In4.Cu microvia and two through vias in
+solder pads. The new In4.Cu-to-B.Cu drill is exported separately as
+fabrication-review/gerbers/4in1-in4-back.drl. The fabricator must approve
+the six-layer lamination, laser microvia, filled/capped via-in-pad assembly
+and soldermask/paste process. See
+[u9-power-reroute-20261110.md](u9-power-reroute-20261110.md).
 This is not a production sign-off.
 
 The missing pins are explicitly unconnected in the exported
@@ -87,7 +93,7 @@ thermal, propeller thrust and flight have not been tested.
 
 ## Required release gates
 
-1. Restore 11 remaining AT32F421 package pads using correct footprints; the five NSG2065Q NC pads are restored.
+1. Restore 9 remaining AT32F421 package pads using correct footprints; U9 and both NSG2065Q driver NC sets are restored.
 2. Reroute all intersecting copper, vias and plane connections
    while maintaining phase-current paths, via design rules and
    6-layer stack impedance/thermal design.
