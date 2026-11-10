@@ -55,6 +55,46 @@ class HeyPcbAcceptance(unittest.TestCase):
         self.assertIn("requires a passing positive and failing negative control",
                       " ".join(mod.validate_manifest(altered)))
 
+    def test_partial_board_can_have_scoped_analog_proof(self):
+        altered = copy.deepcopy(DATA)
+        board = altered["boards"][1]
+        self.assertEqual(board["stages"]["mapped"], "partial")
+        board["stages"]["analog_simulated"] = "passed"
+        board["analog_proof"] = {
+            "scope": "subcircuit",
+            "input": "ideal 5 V source across a divider",
+            "output": "captured ADC voltage with measured tolerance",
+            "negative_control": "swap divider resistor values and fail the oracle",
+        }
+        self.assertEqual(mod.validate_manifest(altered), [])
+
+    def test_digital_firmware_oracle_does_not_require_analog(self):
+        altered = copy.deepcopy(DATA)
+        board = altered["boards"][0]
+        board["stages"]["firmware_verified"] = "passed"
+        board["whole_board"]["firmware_oracle"] = "UART marker on a modeled MCU"
+        board["whole_board"]["firmware_negative_control"] = "remove UART bridge and fail assertion"
+        self.assertEqual(mod.validate_manifest(altered), [])
+
+    def test_unscoped_analog_result_rejected(self):
+        altered = copy.deepcopy(DATA)
+        altered["boards"][1]["stages"]["analog_simulated"] = "passed"
+        self.assertIn("analog PASS without scoped input/output and negative control",
+                      " ".join(mod.validate_manifest(altered)))
+
+    def test_firmware_requires_negative_control(self):
+        altered = copy.deepcopy(DATA)
+        altered["boards"][0]["stages"]["firmware_verified"] = "passed"
+        altered["boards"][0]["whole_board"]["firmware_oracle"] = "UART marker"
+        self.assertIn("firmware PASS without input/oracle and negative control",
+                      " ".join(mod.validate_manifest(altered)))
+
+    def test_partial_whole_board_status_is_rejected(self):
+        altered = copy.deepcopy(DATA)
+        altered["boards"][0]["stages"]["whole_board_verified"] = "partial"
+        self.assertIn("whole-board verdict must be passed, blocked or not_verified",
+                      " ".join(mod.validate_manifest(altered)))
+
     def test_git_blob_hash(self):
         fixture = b"hello-kicad"
         import hashlib

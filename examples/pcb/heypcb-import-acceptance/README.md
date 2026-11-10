@@ -22,3 +22,10 @@ python3 scripts/heypcb_evidence.py --verify-source
 The gate rejects a fabricated whole-board PASS unless source, model and pin/net completeness, behavioral oracles, and a negative control are present. It intentionally does **not** invent missing net/pin measurements, substitute MCU models, invoke the simulation runner, or transform PR results into production capability. Future real imports should publish their machine-readable input and output, with a versioned LabWired build and explicit test stimuli, before upgrading stages.
 
 For the public technical summary, see [KiCad PCB import and simulation coverage](https://labwired.com/kicad-pcb-simulation/). HeyPCB is an independent open-hardware publisher and does not endorse LabWired.
+
+The evidence gate treats analog and firmware results as **independent proof axes**.
+An analog subcircuit can pass while active components remain unmapped, if its test
+scope, input/output observations, and negative control are recorded. A digital
+firmware test does not require an unrelated analog run. Neither is a full-board
+pass. A whole-board PASS requires an explicit declaration of which proof axes
+apply, complete net/pin/model coverage, and its own positive and negative controls.

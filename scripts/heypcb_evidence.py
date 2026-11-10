@@ -49,9 +49,16 @@ def validate_manifest(document):
         if set(status) != set(STAGES) or any(s not in GOOD for s in status.values()):
             errors.append(label + "incomplete or invalid stage vocabulary")
             continue
-        for preceding, following in zip(STAGES, STAGES[1:]):
+        # Acquisition stages are sequential; behavioral proof axes are independent.
+        # A digital-only board can pass a firmware oracle with no analog simulation,
+        # and an imported subcircuit can pass an analog test despite unmapped ICs.
+        for preceding, following in (("fetched", "parsed"), ("parsed", "imported")):
             if status[following] == "passed" and status[preceding] != "passed":
                 errors.append(label + f"{following} passed without {preceding} passed")
+        if status["mapped"] in ("passed", "partial") and status["imported"] != "passed":
+            errors.append(label + "mapped evidence without successful import")
+        if status["whole_board_verified"] == "partial":
+            errors.append(label + "whole-board verdict must be passed, blocked or not_verified")
         counts = b.get("import_counts", {})
         if any(not isinstance(counts.get(k), int) or isinstance(counts.get(k), bool)
                or counts[k] < 0 for k in ("mapped", "dropped", "ignored")):
@@ -66,8 +73,26 @@ def validate_manifest(document):
         if status["mapped"] == "passed" and (counts.get("dropped", 0) or coverage.get("unmodeled_refs")):
             errors.append(label + "cannot report complete model map with dropped/unmodeled parts")
         whole = b.get("whole_board", {})
+        analog = b.get("analog_proof", {})
+        if status["analog_simulated"] == "passed":
+            if (status["imported"] != "passed" or
+                analog.get("scope") not in ("subcircuit", "whole_board") or
+                not all(analog.get(field) for field in ("input", "output", "negative_control"))):
+                errors.append(label + "analog PASS without scoped input/output and negative control")
+        if status["firmware_verified"] == "passed":
+            if (status["imported"] != "passed" or
+                not whole.get("firmware_oracle") or
+                not whole.get("firmware_negative_control")):
+                errors.append(label + "firmware PASS without input/oracle and negative control")
         if status["whole_board_verified"] == "passed":
-            if (status["analog_simulated"] != "passed" or
+            # Applicability is explicit: firmware is not mandatory on a power-only
+            # circuit; analog proof is not mandatory on a digital-only circuit.
+            analog_required = whole.get("requires_analog")
+            firmware_required = whole.get("requires_firmware")
+            if (not isinstance(analog_required, bool) or
+                not isinstance(firmware_required, bool) or
+                (analog_required and status["analog_simulated"] != "passed") or
+                (firmware_required and status["firmware_verified"] != "passed") or
                 status["mapped"] != "passed" or
                 status["imported"] != "passed" or
                 coverage.get("net_completeness") != "complete" or
@@ -82,8 +107,6 @@ def validate_manifest(document):
                 errors.append(label + "whole-board PASS without required model and oracle evidence")
         if whole.get("verdict") == "UNSUPPORTED" and (whole.get("run_status") != "not_started" or status["whole_board_verified"] == "passed"):
             errors.append(label + "UNSUPPORTED board cannot claim simulation")
-        if status["firmware_verified"] == "passed" and not whole.get("firmware_oracle"):
-            errors.append(label + "firmware PASS without board-level firmware oracle")
     bench = document.get("subcircuit_bench", {})
     if bench.get("whole_board_verified") is not False or bench.get("board_id") not in seen:
         errors.append("subcircuit bench cannot be treated as whole-board proof")
