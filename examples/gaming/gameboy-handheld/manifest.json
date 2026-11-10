@@ -9,7 +9,8 @@
     "browser": "local_source_build_passed",
     "pcb": "drc_passed",
     "mechanical": "static_fixed_mates_solved",
-    "physical_hardware_tested": false
+    "physical_hardware_tested": false,
+    "controls": "8_driven_stm32_cases_passed"
   },
   "target": {
     "board": "stm32f411ceu6-blackpill",
@@ -91,8 +92,8 @@
     },
     {
       "path": "firmware/README.md",
-      "bytes": 5958,
-      "sha256": "b51621da685911aed362a4bcb86086bd69bc3a69dcab59911f2bc4c346362371"
+      "bytes": 6430,
+      "sha256": "772f673c52d6565a8f36f2bd4eb5d878fdf9684029f43d6bcf04ab13905cbd30"
     },
     {
       "path": "firmware/browser-validation.json",
@@ -113,6 +114,16 @@
       "path": "firmware/circuit.json",
       "bytes": 6770,
       "sha256": "af45c8ab24683257b7880769c438f966c139b5eff0ca1009898233c88a477e84"
+    },
+    {
+      "path": "firmware/control-validation.json",
+      "bytes": 29394,
+      "sha256": "99220e329f6df01ec43e9998c47976f3d7bf1ec79dd06f43f148ae8ba1f348f3"
+    },
+    {
+      "path": "firmware/control-vectors.json",
+      "bytes": 14250,
+      "sha256": "2f9559f8e18546c2e87dd28e6d4d2525a0b357f1ee117e5426e6ab6204fa29fa"
     },
     {
       "path": "firmware/evidence.json",
@@ -294,5 +305,7 @@
       "bytes": 1846,
       "sha256": "36eaaaf10b48a64814ce9fff82be66916fbe0b59cddc1b507d75200d88b11283"
     }
-  ]
+  ],
+  "control_verification_arguments": "firmware/control-vectors.json",
+  "control_verification_evidence": "firmware/control-validation.json"
 }

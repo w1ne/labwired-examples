@@ -1,0 +1,714 @@
+{
+  "schema_version": 1,
+  "board": "stm32f411ceu6-blackpill",
+  "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+  "max_steps": 50000000,
+  "diagram": {
+    "version": 1,
+    "board": "stm32f411ceu6-blackpill",
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "stm32f411ceu6-blackpill",
+        "x": 60,
+        "y": 240,
+        "attrs": {
+          "label": "STM32F411 / DMG emulator"
+        }
+      },
+      {
+        "id": "lcd1",
+        "type": "ili9341",
+        "x": 290,
+        "y": 40,
+        "attrs": {
+          "label": "Game Boy 160x144 / ILI9341",
+          "rotation": "90",
+          "voltage": "3.3"
+        }
+      },
+      {
+        "id": "btn-up",
+        "type": "button",
+        "x": 330,
+        "y": 360,
+        "attrs": {
+          "label": "UP",
+          "key": "up"
+        }
+      },
+      {
+        "id": "btn-down",
+        "type": "button",
+        "x": 330,
+        "y": 470,
+        "attrs": {
+          "label": "DOWN",
+          "key": "down"
+        }
+      },
+      {
+        "id": "btn-left",
+        "type": "button",
+        "x": 270,
+        "y": 415,
+        "attrs": {
+          "label": "LEFT",
+          "key": "left"
+        }
+      },
+      {
+        "id": "btn-right",
+        "type": "button",
+        "x": 390,
+        "y": 415,
+        "attrs": {
+          "label": "RIGHT",
+          "key": "right"
+        }
+      },
+      {
+        "id": "btn-a",
+        "type": "button",
+        "x": 540,
+        "y": 380,
+        "attrs": {
+          "label": "A",
+          "key": "z"
+        }
+      },
+      {
+        "id": "btn-b",
+        "type": "button",
+        "x": 485,
+        "y": 430,
+        "attrs": {
+          "label": "B",
+          "key": "x"
+        }
+      },
+      {
+        "id": "btn-select",
+        "type": "button",
+        "x": 405,
+        "y": 540,
+        "attrs": {
+          "label": "SELECT",
+          "key": "select"
+        }
+      },
+      {
+        "id": "btn-start",
+        "type": "button",
+        "x": 480,
+        "y": 540,
+        "attrs": {
+          "label": "START",
+          "key": "start"
+        }
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "VCC"
+        },
+        "color": "#dd6666"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "GND"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA5"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "SCK"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA7"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "MOSI"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA4"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "CS"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB0"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "DC"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "RESET"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA8"
+        },
+        "to": {
+          "part": "lcd1",
+          "pin": "LED"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB3"
+        },
+        "to": {
+          "part": "btn-up",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-up",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB4"
+        },
+        "to": {
+          "part": "btn-down",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-down",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB5"
+        },
+        "to": {
+          "part": "btn-left",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-left",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "to": {
+          "part": "btn-right",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-right",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "to": {
+          "part": "btn-a",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-a",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        "to": {
+          "part": "btn-b",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-b",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB9"
+        },
+        "to": {
+          "part": "btn-select",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-select",
+          "pin": "2"
+        },
+        "color": "#555555"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB10"
+        },
+        "to": {
+          "part": "btn-start",
+          "pin": "1"
+        },
+        "color": "#6da6ce"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "btn-start",
+          "pin": "2"
+        },
+        "color": "#555555"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "up",
+      "stimuli": [
+        {
+          "component": "btn-up",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-up",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 35000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=000000bf"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "DMG_FRAME=[0-9]+ x=48 y=7[0-9]"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "full"
+    },
+    {
+      "name": "down",
+      "stimuli": [
+        {
+          "component": "btn-down",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-down",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 35000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=0000007f"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "DMG_FRAME=[0-9]+ x=48 y=8[1-9]"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "serial"
+    },
+    {
+      "name": "left",
+      "stimuli": [
+        {
+          "component": "btn-left",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-left",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 35000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=000000df"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "DMG_FRAME=[0-9]+ x=4[0-7] y=80"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "serial"
+    },
+    {
+      "name": "right",
+      "stimuli": [
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 35000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=000000ef"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "DMG_FRAME=[0-9]+ x=5[0-9] y=80"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "serial"
+    },
+    {
+      "name": "a",
+      "stimuli": [
+        {
+          "component": "btn-a",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 25000000
+        },
+        {
+          "component": "btn-a",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 35000000
+        },
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 35000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=000000fe"
+          },
+          {
+            "contains": "INPUT=000000ee"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "DMG_FRAME=[0-9]+ x=50 y=80"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "serial"
+    },
+    {
+      "name": "b",
+      "stimuli": [
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 29000000
+        },
+        {
+          "component": "btn-b",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 31000000
+        },
+        {
+          "component": "btn-b",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 39000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=000000fd"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "INPUT=000000fd\\nDMG_FRAME=[0-9]+ x=48 y=80 score=0"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "serial"
+    },
+    {
+      "name": "select",
+      "stimuli": [
+        {
+          "component": "btn-select",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-select",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 35000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=000000fb"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "INPUT=000000fb\\nDMG_FRAME=[0-9]+ x=48 y=80 score=0 hash=(?!782db7fd)[0-9a-f]+"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "serial"
+    },
+    {
+      "name": "start",
+      "stimuli": [
+        {
+          "component": "btn-start",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 22000000
+        },
+        {
+          "component": "btn-start",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 26000000
+        },
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 28000000
+        },
+        {
+          "component": "btn-start",
+          "channel": "pressed",
+          "value": 1,
+          "after_cycles": 40000000
+        },
+        {
+          "component": "btn-start",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 43000000
+        },
+        {
+          "component": "btn-right",
+          "channel": "pressed",
+          "value": 0,
+          "after_cycles": 46000000
+        }
+      ],
+      "oracle": {
+        "serial": [
+          {
+            "contains": "INPUT=000000f7"
+          },
+          {
+            "contains": "INPUT=000000e7"
+          },
+          {
+            "contains": "INPUT=000000ff"
+          },
+          {
+            "matches": "INPUT=000000ef\\nINPUT=000000e7\\nDMG_FRAME=[0-9]+ x=49 y=80"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      },
+      "output": "serial"
+    }
+  ]
+}
