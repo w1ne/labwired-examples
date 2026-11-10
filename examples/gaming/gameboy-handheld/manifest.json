@@ -1,0 +1,298 @@
+{
+  "manifest_version": 1,
+  "id": "gameboy-handheld",
+  "title": "Game Boy-compatible handheld: Wire Runner",
+  "recorded_date": "2026-11-10",
+  "proof": {
+    "firmware": "model_verified",
+    "rom_behavior": "host_test_passed",
+    "browser": "local_source_build_passed",
+    "pcb": "drc_passed",
+    "mechanical": "static_fixed_mates_solved",
+    "physical_hardware_tested": false
+  },
+  "target": {
+    "board": "stm32f411ceu6-blackpill",
+    "language": "c",
+    "entry_path": "src/main.c"
+  },
+  "source": {
+    "path": "firmware/gameboy.c",
+    "sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+    "tree_ref": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0"
+  },
+  "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+  "rom": {
+    "path": "firmware/wire_runner.gb",
+    "sha256": "ba6831d85072c5ea42f98ec0269e60a385dd75a974be2d1b6a9c640b6a38909f",
+    "origin": "original homebrew; no Nintendo assets"
+  },
+  "circuit": "firmware/circuit.json",
+  "verification_arguments": "firmware/verification.json",
+  "shared_interfaces": {
+    "path": "design-interfaces.json",
+    "sha256": "538c35c16001219509d9a0f504cf3ba7d4d06bd59296706bc3d551184b0cee6a"
+  },
+  "pcb": {
+    "path": "pcb/handheld-carrier.kicad_pcb",
+    "sha256": "c72cf7ab603ba08f37182de79a0bb5d3efb69830acc1d44b8daa040b121f94ae",
+    "simulation_binding": "pcb/simulation-binding.json",
+    "automatic_twin_import": false
+  },
+  "mechanical": {
+    "path": "mechanical/labwired-gameboy.kcad.ts",
+    "sha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78",
+    "provider": "kernelcad",
+    "slug": "kQAFdaQs",
+    "revision": 2,
+    "mesh_provenance": "e713f4b94b377905927c41d0b4e82397d4ac23efbe397158acc4b13d7d4dca08",
+    "fixed_mate_review": "mechanical/independent-mates.json"
+  },
+  "project": {
+    "id": "f44771855a18a70d418e363622de2e28",
+    "url": "https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1",
+    "firmware_share": "https://app.labwired.com/?share=aV3vKsFaQjTi&run=1"
+  },
+  "evidence": {
+    "firmware": "firmware/evidence.json",
+    "host_rom": "firmware/host-validation.json",
+    "browser": "firmware/browser-validation.json",
+    "pcb_drc": "pcb/drc-routed.json",
+    "cad": "mechanical/evidence-v2.json"
+  },
+  "omitted_generated_files": [
+    "ELF",
+    "Gerber",
+    "Excellon drill",
+    "STEP",
+    "GLB",
+    "STL"
+  ],
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1098,
+      "sha256": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10234,
+      "sha256": "ef43954766e1139e97add1703254835a627fb53b8f5d908a2fe84274fe477fe2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1789,
+      "sha256": "e63d50ec9007ebdc98010ed90d0f470a56c3d27afc7c0ca11d46c4b1bce67f28"
+    },
+    {
+      "path": "design-interfaces.json",
+      "bytes": 3674,
+      "sha256": "538c35c16001219509d9a0f504cf3ba7d4d06bd59296706bc3d551184b0cee6a"
+    },
+    {
+      "path": "firmware/README.md",
+      "bytes": 5958,
+      "sha256": "b51621da685911aed362a4bcb86086bd69bc3a69dcab59911f2bc4c346362371"
+    },
+    {
+      "path": "firmware/browser-validation.json",
+      "bytes": 3877,
+      "sha256": "6b5411371c68cfb96ff7e4f3d6ad111d0a47c15f0a3df3abf4e80ffb6fb1a1b3"
+    },
+    {
+      "path": "firmware/build_firmware.py",
+      "bytes": 496,
+      "sha256": "33fbf9ca80b227ded7e2d52d0ecffea10e5cf63c29c90e16dab0a01e0e630c40"
+    },
+    {
+      "path": "firmware/build_rom.py",
+      "bytes": 9044,
+      "sha256": "4407334ad7684dd71576e7d2d4fb53d27b7641a586b4b10c5d5354ff5cee28ef"
+    },
+    {
+      "path": "firmware/circuit.json",
+      "bytes": 6770,
+      "sha256": "af45c8ab24683257b7880769c438f966c139b5eff0ca1009898233c88a477e84"
+    },
+    {
+      "path": "firmware/evidence.json",
+      "bytes": 30638,
+      "sha256": "46bad433924d4905b278de93904bd035e6b18cacc1dea74c52ab41b74adbdae8"
+    },
+    {
+      "path": "firmware/frame.png",
+      "bytes": 4305,
+      "sha256": "478d2ebf8afebb701b9be37b68717c8e5cd13366d28f620560f2f447c6cccbf2"
+    },
+    {
+      "path": "firmware/gameboy.c",
+      "bytes": 121279,
+      "sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e"
+    },
+    {
+      "path": "firmware/host-validation.json",
+      "bytes": 788,
+      "sha256": "c1f1d616d12e50bb3923bb8c03d74193349796384efb921117ee456cb247f85d"
+    },
+    {
+      "path": "firmware/host_verify.c",
+      "bytes": 2346,
+      "sha256": "62d2eae0164bd956da3cbbd60dc0fc538edb34fab48e612f7ac114109ae48b82"
+    },
+    {
+      "path": "firmware/main.c",
+      "bytes": 5420,
+      "sha256": "45758fba8faf32c4f3ef334766f71f28145c52b2cdbe3ace458b24e4398e6d64"
+    },
+    {
+      "path": "firmware/peanut_gb.h",
+      "bytes": 102999,
+      "sha256": "cf7777068492474d084f7dca0b00724d4dcdeab7f9a6c91a5d3a82e60d1cf728"
+    },
+    {
+      "path": "firmware/rom-manifest.json",
+      "bytes": 627,
+      "sha256": "b2ee24951dcb427706293ed64ae37bcd1302a6af495218f0cef43ef2c521ac4f"
+    },
+    {
+      "path": "firmware/verification.json",
+      "bytes": 559,
+      "sha256": "7ea600e3638f6dc0da4cc5160fd53dfe392c3315d95d69b067ab022dcde3b051"
+    },
+    {
+      "path": "firmware/wire_runner.gb",
+      "bytes": 32768,
+      "sha256": "ba6831d85072c5ea42f98ec0269e60a385dd75a974be2d1b6a9c640b6a38909f"
+    },
+    {
+      "path": "firmware/wire_runner_rom.h",
+      "bytes": 12910,
+      "sha256": "a88bc3cbc91e291c6a2b9c04a7f301b32bca9a36967df5c23100e482a82d7317"
+    },
+    {
+      "path": "kernelcad-reference.json",
+      "bytes": 1669,
+      "sha256": "9740df107ba0f2ebd18d61ff4f6f527f9edf4c53b5ea5f0f425e900c3b02b6a2"
+    },
+    {
+      "path": "mechanical/README.md",
+      "bytes": 4435,
+      "sha256": "9174017d97893fe9a2bdfcd212de03cb47d7a1b24aac60c316996068fdc3d479"
+    },
+    {
+      "path": "mechanical/download-verification-v2.json",
+      "bytes": 3077,
+      "sha256": "801a95e1aed05ad278736bda28e2fa6aedfce60655db01bcf06cef04173d00b4"
+    },
+    {
+      "path": "mechanical/enclosure-v2-iso.png",
+      "bytes": 161611,
+      "sha256": "19be70013bab0d292da270971b558c1f1cde8edfbe93cbb6ada658a2b818b05a"
+    },
+    {
+      "path": "mechanical/evidence-v2.json",
+      "bytes": 38395,
+      "sha256": "98945e71ae9dd9b5e37a25221377dd384e905fcbf9263efd650d0cf99e45ad6c"
+    },
+    {
+      "path": "mechanical/generate_enclosure.py",
+      "bytes": 8115,
+      "sha256": "318cd9fd4ce539f2019e8ac271a4c9039cddb2711b4097d7f2f2a577dd125a28"
+    },
+    {
+      "path": "mechanical/independent-mates.json",
+      "bytes": 70707,
+      "sha256": "d91ce9970537c24cb61580daf6c287bc0c8925b095ddb4be29f1c4aa68bf8918"
+    },
+    {
+      "path": "mechanical/labwired-gameboy.kcad.ts",
+      "bytes": 11178,
+      "sha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78"
+    },
+    {
+      "path": "pcb/README.md",
+      "bytes": 5053,
+      "sha256": "55717a355bc94eeb9485a2c54e5c36a1f46dbab7de5be251600871733f6d7521"
+    },
+    {
+      "path": "pcb/bom.csv",
+      "bytes": 700,
+      "sha256": "64d9b7e0f286a990b31be0c50e04d3bd525348312798389b97ccea978f3f58e7"
+    },
+    {
+      "path": "pcb/build_carrier.py",
+      "bytes": 7859,
+      "sha256": "03d40a4562f11c910c77099c4242d20cc4a5e23bc75ffbe6d0b3ed72ec19c46b"
+    },
+    {
+      "path": "pcb/carrier-layout.json",
+      "bytes": 40097,
+      "sha256": "079b9cebaff778f3e656799c07dc899e5a36dc743117349952d83487b487108d"
+    },
+    {
+      "path": "pcb/drc-routed.json",
+      "bytes": 282,
+      "sha256": "4869dd5a0411e55919baa8e15074e317071788f7e9b7011b4e2a2e16adbf0fff"
+    },
+    {
+      "path": "pcb/handheld-carrier.kicad_pcb",
+      "bytes": 555802,
+      "sha256": "c72cf7ab603ba08f37182de79a0bb5d3efb69830acc1d44b8daa040b121f94ae"
+    },
+    {
+      "path": "pcb/handheld-carrier.kicad_pro",
+      "bytes": 8369,
+      "sha256": "da0e861a151bafdd6cb6fafea0ec1a74024fc4c1aa60611301a16bf50686455b"
+    },
+    {
+      "path": "pcb/import-report.json",
+      "bytes": 16035,
+      "sha256": "4c18a6f0c31c14107c4ded0169ac46302a5ec655b19bc2ccdc532a12fa1aaf16"
+    },
+    {
+      "path": "pcb/positions.csv",
+      "bytes": 1166,
+      "sha256": "f7e0c3b3b334e42f876316fad0524122524b388e6590e5b8a0a35cc6f6ebbde6"
+    },
+    {
+      "path": "pcb/route_carrier.py",
+      "bytes": 8371,
+      "sha256": "662c782776581bb4eb111b2273e921bb08c501d53e76c19ab040c95c7926df84"
+    },
+    {
+      "path": "pcb/routing-report.json",
+      "bytes": 570,
+      "sha256": "c0493cfdf20c52c2253ba016576b154a3e61010d18b891ed54b435fa898c204f"
+    },
+    {
+      "path": "pcb/simulation-binding.json",
+      "bytes": 1956,
+      "sha256": "a31c60ea52b97a6cfe6cfddb0d64f71fc4665fe7deb47c0859b37affaf4511f0"
+    },
+    {
+      "path": "pcb/vendor/README.upstream.md",
+      "bytes": 6105,
+      "sha256": "856fb38bb92af9c8e7a52999bca4bd2cb086a045b03ccdb0cbc2c310e0e9cfc1"
+    },
+    {
+      "path": "pcb/vendor/WeAct-BlackPill-v3-kicad9.kicad_mod",
+      "bytes": 12801,
+      "sha256": "05a2011310f8f5cbdb1b02008596ff71de2ee8d3898fe926cf581c5a5ebf3c69"
+    },
+    {
+      "path": "pcb/vendor/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod",
+      "bytes": 12839,
+      "sha256": "0471e96920efae81ed43f2a1c0a5aa4526ae8c3db9da9c60cd873c9463f2b612"
+    },
+    {
+      "path": "pcb/vendor/WeAct-BlackPillv3.kicad_sym",
+      "bytes": 20843,
+      "sha256": "f4c7cda1e6e637add1822cadb066a7504607fa13e09f2bd39df4d6f700c69047"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 1846,
+      "sha256": "36eaaaf10b48a64814ce9fff82be66916fbe0b59cddc1b507d75200d88b11283"
+    }
+  ]
+}

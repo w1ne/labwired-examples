@@ -1,0 +1,60 @@
+{
+  "testedAt": "2026-11-10T18:26:11.670Z",
+  "environment": "local Vite, live Wasm",
+  "url": "http://127.0.0.1:5196/?share=aV3vKsFaQjTi&run=1&board=stm32f411ceu6-blackpill",
+  "errors": [],
+  "before": {
+    "cycles": 76436466,
+    "pc": 134218592,
+    "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+    "display": {
+      "lcd1": {
+        "width": 320,
+        "height": 240,
+        "generation": 10,
+        "length": 153600
+      }
+    }
+  },
+  "held": {
+    "cycles": 146206896,
+    "pc": 134220866,
+    "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\nINPUT=000000ef\nDMG_FRAME=66 x=49 y=80 score=0 hash=0e44b8b6 lines=9072\nDMG_FRAME=67 x=50 y=80 score=0 hash=57245366 lines=9216\nDMG_FRAME=68 x=51 y=80 score=0 hash=a9300436 lines=9360\nDMG_FRAME=69 x=52 y=80 score=0 hash=bfe34302 lines=9504\nDMG_FRAME=70 x=53 y=80 score=0 hash=cc26fa9a lines=9648\nDMG_FRAME=71 x=54 y=80 score=0 hash=8e8b83a2 lines=9792\nDMG_FRAME=72 x=55 y=80 score=0 hash=c29bf28d lines=9936\nDMG_FRAME=73 x=56 y=80 score=0 hash=82b63c01 lines=10080\nDMG_FRAME=74 x=57 y=80 score=0 hash=44d8595a lines=10224\n",
+    "display": {
+      "lcd1": {
+        "width": 320,
+        "height": 240,
+        "generation": 14,
+        "length": 153600
+      }
+    }
+  },
+  "after": {
+    "cycles": 189283963,
+    "pc": 134218602,
+    "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\nINPUT=000000ef\nDMG_FRAME=66 x=49 y=80 score=0 hash=0e44b8b6 lines=9072\nDMG_FRAME=67 x=50 y=80 score=0 hash=57245366 lines=9216\nDMG_FRAME=68 x=51 y=80 score=0 hash=a9300436 lines=9360\nDMG_FRAME=69 x=52 y=80 score=0 hash=bfe34302 lines=9504\nDMG_FRAME=70 x=53 y=80 score=0 hash=cc26fa9a lines=9648\nDMG_FRAME=71 x=54 y=80 score=0 hash=8e8b83a2 lines=9792\nDMG_FRAME=72 x=55 y=80 score=0 hash=c29bf28d lines=9936\nDMG_FRAME=73 x=56 y=80 score=0 hash=82b63c01 lines=10080\nDMG_FRAME=74 x=57 y=80 score=0 hash=44d8595a lines=10224\nDMG_FRAME=75 x=58 y=80 score=0 hash=3c1ae1e2 lines=10368\nDMG_FRAME=76 x=59 y=80 score=0 hash=f887ac3a lines=10512\nDMG_FRAME=77 x=60 y=80 score=0 hash=62a24766 lines=10656\nDMG_FRAME=78 x=61 y=80 score=0 hash=8ec7bdb6 lines=10800\nDMG_FRAME=79 x=62 y=80 score=0 hash=f3c48766 lines=10944\nDMG_FRAME=80 x=63 y=80 score=0 hash=1ba2a089 lines=11088\nINPUT=000000ff\n",
+    "display": {
+      "lcd1": {
+        "width": 320,
+        "height": 240,
+        "generation": 17,
+        "length": 153600
+      }
+    }
+  },
+  "frameChanged": true,
+  "button": "btn-right",
+  "action": "pointer hold and release",
+  "frameHashes": {
+    "gameboy-live-before.png": "fc1e97bbdcae643a19e269498e03ff108aefae99090cff08409018a5fad65d3a",
+    "gameboy-live-after.png": "7bb647170fcfe29c19566f851b8717a89322af5281c6752877944abe17948247"
+  },
+  "artifactRef": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+  "projectId": "f44771855a18a70d418e363622de2e28",
+  "displayReview": {
+    "status": "passed",
+    "before": "320×240 correctly oriented; WIRE RUNNER title, border, player and diamond legible",
+    "after": "right input changes the rendered player position",
+    "method": "Observed actual LCD image rendered from live Wasm display bytes; no mock or replacement frame"
+  }
+}

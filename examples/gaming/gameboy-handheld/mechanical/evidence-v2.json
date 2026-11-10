@@ -1,0 +1,1050 @@
+{
+  "studio": {
+    "ok": true,
+    "show_electronics": true,
+    "hardwarePack": {
+      "schema": "hardware-pack/v1",
+      "kernelcad": {
+        "url": "https://app.kernelcad.com/p/kQAFdaQs?version=2",
+        "slug": "kQAFdaQs",
+        "version": 2
+      },
+      "labwired": {
+        "url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=kQAFdaQs&kernelcad_revision=2",
+        "mcp_url": "https://api.labwired.com/mcp",
+        "tools": [
+          "labwired_hardware_pack",
+          "labwired_list",
+          "labwired_describe",
+          "labwired_project_get",
+          "labwired_export",
+          "labwired_verify"
+        ]
+      },
+      "buy_device_url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=kQAFdaQs&kernelcad_revision=2&device=1",
+      "purchase_mode": "review_separate_orders",
+      "companion_access": "use_connected_plugin_or_open_link"
+    },
+    "project_id": "16657620-a945-4c56-920e-b4f63ac7637a",
+    "slug": "kQAFdaQs",
+    "version": 2,
+    "title": "LabWired Handheld \u2014 Game Boy Recreation",
+    "url": "https://app.kernelcad.com/p/kQAFdaQs?version=2&show_electronics=1",
+    "embedUrl": "https://app.kernelcad.com/embed/kQAFdaQs?revision=2&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv2.json%3Fprovenance%3De713f4b94b377905927c41d0b4e82397d4ac23efbe397158acc4b13d7d4dca08",
+    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/kQAFdaQs/v2.json?provenance=e713f4b94b377905927c41d0b4e82397d4ac23efbe397158acc4b13d7d4dca08",
+    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/kQAFdaQs/revisions/2/mesh-artifact?download=1&provenance=e713f4b94b377905927c41d0b4e82397d4ac23efbe397158acc4b13d7d4dca08",
+    "updated": true,
+    "project_note": "Saved as revision 2 of project 'kQAFdaQs': https://app.kernelcad.com/p/kQAFdaQs?version=2&show_electronics=1 (title: LabWired Handheld \u2014 Game Boy Recreation). Next save: pass project: 'kQAFdaQs'. Pass new_project: true only for a separate model.",
+    "previewDelivered": false,
+    "previewStatus": "skipped",
+    "previewHint": "Preview skipped (include_preview:false). Project was saved; call get_latest_render for a PNG, or omit include_preview on the next open_in_studio.",
+    "meshStatus": "ready",
+    "meshSaved": true,
+    "projectSaved": true,
+    "meshReady": true,
+    "viewerPainted": false,
+    "paintHint": "Do NOT claim the interactive viewer painted unless the widget reports viewerPainted=true (ui/update-model-context or widgetState.modelContent) \u2014 tools/call always leaves viewerPainted=false. projectSaved\u2260viewerPainted. meshReady=false with meshStatus=building is OK \u2014 embed retries meshUrl. Do NOT call get_model_mesh or get_latest_render to force interactive paint; use open_in_studio only.",
+    "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+  },
+  "designLoop": {
+    "ok": true,
+    "goal": "Static handheld packaging with carrier mounts moved to x\u00b129mm,y16/132mm, preserving2.36mmweb beside4.3mmcasepostnotches. USBusespanelmountedextension. No physical manufacturing claim.",
+    "finalAttemptId": "01",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Attempt 01",
+        "ok": true,
+        "functional": true,
+        "qualityOk": true,
+        "featureCount": 157,
+        "diagnosticCount": 28,
+        "reviewFacts": [],
+        "repairMode": "none",
+        "passedChecks": [
+          "validator-no-errors",
+          "pose-envelope-solved",
+          "pose-envelope-no-interference"
+        ],
+        "blockingReasons": [],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 0,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": true,
+          "status": "not-declared",
+          "entries": [],
+          "summary": {
+            "pass": 0,
+            "fail": 0,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78",
+            "byteLength": 11178
+          },
+          "parameters": {
+            "values": {
+              "caseWidth": 90,
+              "caseHeight": 148,
+              "caseDepth": 30,
+              "wall": 2.4
+            },
+            "sha256": "5e3310e7014063b5927d8becbc634090672f77c74627ce3b2d1f88492cf7ea4c"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.4",
+            "revision": "40c8a380064e46cfa8aad3bbe145ed7fb3c1f06c"
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+          "identitySha256": "7bc3401ae4ea2f4ee1b953a628683d6ccc1a6fc290f08eeb1041c931d834abae"
+        },
+        "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Static handheld packaging with carrier mounts moved to x\u00b129mm,y16/132mm, preserving2.36mmweb beside4.3mmcasepostnotches. USBusespanelmountedextension. No physical manufacturing claim.",
+      "steps": []
+    },
+    "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+  },
+  "exports": [
+    {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 142870.58963670788,
+        "faceCount": 364,
+        "size": [
+          90,
+          148,
+          32.3
+        ]
+      },
+      "output_path": "/tmp/kernelcad-mcp-exports/out/tVFgNVaIr41v0cudPI5ZAg/labwired-gameboy.step",
+      "byte_count": 1225038,
+      "feature_count": 157,
+      "format": "step",
+      "diagnostics": [],
+      "download_url": "https://api.kernelcad.com/api/v1/exports/20261110-uAZzA9Vs_BTSlTQttQsn_A/labwired-gameboy.step?exp=1794420143&sig=Ej1CKhpRKJO6YaHsBnhpxKWeHn57V_GCNhF41er9mg4",
+      "expires_at": "2026-11-11T18:02:23.000Z",
+      "downloads": [
+        {
+          "filename": "labwired-gameboy.step",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-uAZzA9Vs_BTSlTQttQsn_A/labwired-gameboy.step?exp=1794420143&sig=Ej1CKhpRKJO6YaHsBnhpxKWeHn57V_GCNhF41er9mg4",
+          "expires_at": "2026-11-11T18:02:23.000Z",
+          "byte_count": 1225038,
+          "content_type": "model/step",
+          "sha256": "7c8a4433ba1dca9d4b3a108a29b920d57ad1a149446ea207f0bb1260949ff16f",
+          "inline": false,
+          "primary": true
+        }
+      ],
+      "server_path_note": "`output_path` / `written[].output_path` / `mesh_files` are paths on the kernelCAD SERVER, not on your or the user's machine. Use them only as `file` in later calls to this server (e.g. inspect({ of: \"step\", file })). To give the user the file, share `downloads[].url`.",
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 142870.58963670788,
+        "faceCount": 364,
+        "size": [
+          90,
+          148,
+          32.3
+        ]
+      },
+      "output_path": "/tmp/kernelcad-mcp-exports/out/eS64nzCmdICd2w3pMq-0vg/labwired-gameboy.glb",
+      "byte_count": 1263816,
+      "feature_count": 157,
+      "format": "glb",
+      "diagnostics": [],
+      "download_url": "https://api.kernelcad.com/api/v1/exports/20261110-v2JNlfnYWBoxt_vx0dVtNQ/labwired-gameboy.glb?exp=1794420138&sig=IaCOme-nPtJEWFgCXoiE0DhKhh_TGg3HObW68d_OQKI",
+      "expires_at": "2026-11-11T18:02:18.000Z",
+      "downloads": [
+        {
+          "filename": "labwired-gameboy.glb",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-v2JNlfnYWBoxt_vx0dVtNQ/labwired-gameboy.glb?exp=1794420138&sig=IaCOme-nPtJEWFgCXoiE0DhKhh_TGg3HObW68d_OQKI",
+          "expires_at": "2026-11-11T18:02:18.000Z",
+          "byte_count": 1263816,
+          "content_type": "model/gltf-binary",
+          "sha256": "cd1b5de87a13f40d5860c9d8937fa45f98cf1b7712179ec616185a9c3e280bc7",
+          "inline": false,
+          "primary": true
+        }
+      ],
+      "server_path_note": "`output_path` / `written[].output_path` / `mesh_files` are paths on the kernelCAD SERVER, not on your or the user's machine. Use them only as `file` in later calls to this server (e.g. inspect({ of: \"step\", file })). To give the user the file, share `downloads[].url`.",
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    },
+    {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 142870.58963670788,
+        "faceCount": 364,
+        "size": [
+          90,
+          148,
+          32.3
+        ]
+      },
+      "written": [
+        {
+          "part": "rear-shell",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/rear-shell.stl",
+          "byte_count": 961484,
+          "watertight": true
+        },
+        {
+          "part": "front-shell",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/front-shell.stl",
+          "byte_count": 1224484,
+          "watertight": true
+        },
+        {
+          "part": "battery-service-cover",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/battery-service-cover.stl",
+          "byte_count": 102284,
+          "watertight": true
+        },
+        {
+          "part": "display-bezel",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/display-bezel.stl",
+          "byte_count": 102484,
+          "watertight": true
+        },
+        {
+          "part": "lcd1-pcb-envelope",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/lcd1-pcb-envelope.stl",
+          "byte_count": 51084,
+          "watertight": true
+        },
+        {
+          "part": "lcd1-frame-envelope",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/lcd1-frame-envelope.stl",
+          "byte_count": 102484,
+          "watertight": true
+        },
+        {
+          "part": "lcd1-active-glass",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/lcd1-active-glass.stl",
+          "byte_count": 51084,
+          "watertight": true
+        },
+        {
+          "part": "main-pcb-envelope",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/main-pcb-envelope.stl",
+          "byte_count": 316684,
+          "watertight": true
+        },
+        {
+          "part": "dpad",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/dpad.stl",
+          "byte_count": 52684,
+          "watertight": true
+        },
+        {
+          "part": "btn-b",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/btn-b.stl",
+          "byte_count": 100684,
+          "watertight": true
+        },
+        {
+          "part": "btn-a",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/btn-a.stl",
+          "byte_count": 100684,
+          "watertight": true
+        },
+        {
+          "part": "btn-select",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/btn-select.stl",
+          "byte_count": 102284,
+          "watertight": true
+        },
+        {
+          "part": "btn-start",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/btn-start.stl",
+          "byte_count": 102284,
+          "watertight": true
+        },
+        {
+          "part": "battery-reserved-envelope",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/battery-reserved-envelope.stl",
+          "byte_count": 51084,
+          "watertight": true
+        },
+        {
+          "part": "speaker-reserved-envelope",
+          "output_path": "/tmp/kernelcad-mcp-exports/out/PSPbxHojriDzqqAKqW0A7w/labwired-gameboy-print-parts/speaker-reserved-envelope.stl",
+          "byte_count": 50284,
+          "watertight": true
+        }
+      ],
+      "diagnostics": [],
+      "download_url": "https://api.kernelcad.com/api/v1/exports/20261110-kw7F93xk_utCqWoL233ysg/labwired-gameboy-print-parts_rear-shell.stl?exp=1794420129&sig=xzOO1sm0MyBCAYPQpNtx2Dd5mdN3XBntmZFqHzpddpc",
+      "expires_at": "2026-11-11T18:02:09.000Z",
+      "downloads": [
+        {
+          "filename": "labwired-gameboy-print-parts_rear-shell.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-kw7F93xk_utCqWoL233ysg/labwired-gameboy-print-parts_rear-shell.stl?exp=1794420129&sig=xzOO1sm0MyBCAYPQpNtx2Dd5mdN3XBntmZFqHzpddpc",
+          "expires_at": "2026-11-11T18:02:09.000Z",
+          "byte_count": 961484,
+          "content_type": "model/stl",
+          "sha256": "b63922bc192a9faf338b44aa4c20a28edda916afd18f61e59e4ccbdaa13027b6",
+          "relative_path": "labwired-gameboy-print-parts/rear-shell.stl",
+          "inline": false,
+          "primary": true
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_front-shell.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-9PYMB6uCl3u2m-6w2YfaWQ/labwired-gameboy-print-parts_front-shell.stl?exp=1794420129&sig=DwzHseu0OO7vZpDixJZjx-X1WEF_YABwaNrkWsg65EE",
+          "expires_at": "2026-11-11T18:02:09.000Z",
+          "byte_count": 1224484,
+          "content_type": "model/stl",
+          "sha256": "176bb9898305766591cffa2677d704df200945c0d0de7a1beb688a711618d77a",
+          "relative_path": "labwired-gameboy-print-parts/front-shell.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_battery-service-cover.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-4tPSpeiUoP3aDFBJjTqeCQ/labwired-gameboy-print-parts_battery-service-cover.stl?exp=1794420129&sig=aTk-6VDS6AqDq3z-IpG1JOHq6joQ-WIeNBncG6exiCs",
+          "expires_at": "2026-11-11T18:02:09.000Z",
+          "byte_count": 102284,
+          "content_type": "model/stl",
+          "sha256": "c6f79678ab914edf4b61657082ffd5cefd773e539eebf7b15c6cde61e216f4c9",
+          "relative_path": "labwired-gameboy-print-parts/battery-service-cover.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_display-bezel.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-dpEhGXe5q9YrD3MHIrLGkg/labwired-gameboy-print-parts_display-bezel.stl?exp=1794420130&sig=3Crijyxlmd3cTKjXy8hFuLzMcJOzwZEHy7JlvsZ3ucI",
+          "expires_at": "2026-11-11T18:02:10.000Z",
+          "byte_count": 102484,
+          "content_type": "model/stl",
+          "sha256": "b2408bdbca6b4eeb71ec1870df5ed053cfe75a5210a01c8aed2ceef3d0f63f92",
+          "relative_path": "labwired-gameboy-print-parts/display-bezel.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_lcd1-pcb-envelope.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-Sno9njd1Y6Pw84nOZKk9hg/labwired-gameboy-print-parts_lcd1-pcb-envelope.stl?exp=1794420130&sig=JkEgT89iA1zVaLgyGXs4qNbUvjnUENF-C9RiONvuXj8",
+          "expires_at": "2026-11-11T18:02:10.000Z",
+          "byte_count": 51084,
+          "content_type": "model/stl",
+          "sha256": "120046e0da7b3045d466e2f59fb39c1e726649c12ec6e6ea039b3d49cb61f102",
+          "relative_path": "labwired-gameboy-print-parts/lcd1-pcb-envelope.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_lcd1-frame-envelope.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-m1mIY8UBuhfOZPrjocDs1w/labwired-gameboy-print-parts_lcd1-frame-envelope.stl?exp=1794420130&sig=waDAO5zg4eInKug9toS8cHRQnnQAfkzrj-vF-NyOGjA",
+          "expires_at": "2026-11-11T18:02:10.000Z",
+          "byte_count": 102484,
+          "content_type": "model/stl",
+          "sha256": "302634bea5c885ec06abb4f6cdf8e7ba1de9966da620a21bc2958d12b72dee03",
+          "relative_path": "labwired-gameboy-print-parts/lcd1-frame-envelope.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_lcd1-active-glass.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-5a12uWWDKdg-P7KLjdKgWA/labwired-gameboy-print-parts_lcd1-active-glass.stl?exp=1794420130&sig=x3QixVgIr58WQpsAWeF5Qoh7lApaPN6rlnGtiJ_FL0U",
+          "expires_at": "2026-11-11T18:02:10.000Z",
+          "byte_count": 51084,
+          "content_type": "model/stl",
+          "sha256": "af4ec845ef37864072f19556af94efd799a7838be26e5400158df25dfbbe501f",
+          "relative_path": "labwired-gameboy-print-parts/lcd1-active-glass.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_main-pcb-envelope.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-DssWGeIs4WjDmR5RDOvtQA/labwired-gameboy-print-parts_main-pcb-envelope.stl?exp=1794420130&sig=HokJcDO9o_X4cRBawtpHr-mwWVy1pn_hK-Pqy0gJxiM",
+          "expires_at": "2026-11-11T18:02:10.000Z",
+          "byte_count": 316684,
+          "content_type": "model/stl",
+          "sha256": "21bfa614bce80b88e343ee4f5fad307a5eab9590e59fb52b7670e97758fb07e0",
+          "relative_path": "labwired-gameboy-print-parts/main-pcb-envelope.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_dpad.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-v8qcBe7Vi0ZZwgveFyt18Q/labwired-gameboy-print-parts_dpad.stl?exp=1794420131&sig=HMaLUGH8cwOY9jOCBEqg9Q9JZv5JK5yx_mxADZDf258",
+          "expires_at": "2026-11-11T18:02:11.000Z",
+          "byte_count": 52684,
+          "content_type": "model/stl",
+          "sha256": "6c7d117e9db97c73a1d10ba52a1e94958e98b8ff14b6dd6751bc3067ee41b747",
+          "relative_path": "labwired-gameboy-print-parts/dpad.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_btn-b.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-Re50cNvF8ghplFwIZfAwig/labwired-gameboy-print-parts_btn-b.stl?exp=1794420131&sig=Cpy2ka3yamM2DwYlhzGYeUfropaRW6Ib2-0rQjisC50",
+          "expires_at": "2026-11-11T18:02:11.000Z",
+          "byte_count": 100684,
+          "content_type": "model/stl",
+          "sha256": "a8953496fb70fdc040a8e023b3722b918bb005ebeb88c8d472538a124c300d52",
+          "relative_path": "labwired-gameboy-print-parts/btn-b.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_btn-a.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-TGrKW1QNZI_PTelmLIDSVw/labwired-gameboy-print-parts_btn-a.stl?exp=1794420131&sig=2mHiKG4shvg_iXJ7put-Irk9cssX2VsqfcZnTLX9N3o",
+          "expires_at": "2026-11-11T18:02:11.000Z",
+          "byte_count": 100684,
+          "content_type": "model/stl",
+          "sha256": "7c208e54790846b3dd8e3d344951efd7c0c748e0330da5e2aa4d2c7933be7574",
+          "relative_path": "labwired-gameboy-print-parts/btn-a.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_btn-select.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-ZVBVpttD2L84-A1vEsz8Mw/labwired-gameboy-print-parts_btn-select.stl?exp=1794420131&sig=fw13tfgArxrbhxfOBJ4_sIUtNWynyl5Hk8hWREvIgXM",
+          "expires_at": "2026-11-11T18:02:11.000Z",
+          "byte_count": 102284,
+          "content_type": "model/stl",
+          "sha256": "def35477dc32d11c7224b86d247760754eea293e1b5afbd854aa9b2451021d4e",
+          "relative_path": "labwired-gameboy-print-parts/btn-select.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_btn-start.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-LHsBhEsc7cz6TES3Pv372Q/labwired-gameboy-print-parts_btn-start.stl?exp=1794420131&sig=vFBjnrtQKW6Q0AF1zOMQPhrmcOadtK_DtbcSraG2kwA",
+          "expires_at": "2026-11-11T18:02:11.000Z",
+          "byte_count": 102284,
+          "content_type": "model/stl",
+          "sha256": "5732d976f7c48ae3b6320b2e9107a806e330d81aeee4795ee0f86ecbac2b00ed",
+          "relative_path": "labwired-gameboy-print-parts/btn-start.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_battery-reserved-envelope.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-SwZ25M0NCbAi-Fs96hcE8w/labwired-gameboy-print-parts_battery-reserved-envelope.stl?exp=1794420132&sig=DaWtD3GzxQ88arci55UTgfb0SivXcjCxaC3fDHlY3MY",
+          "expires_at": "2026-11-11T18:02:12.000Z",
+          "byte_count": 51084,
+          "content_type": "model/stl",
+          "sha256": "07e51598d6842c955d92bf2fe9a9da6d0b059227ec3d08aa232064ed7add2c3e",
+          "relative_path": "labwired-gameboy-print-parts/battery-reserved-envelope.stl",
+          "inline": false,
+          "primary": false
+        },
+        {
+          "filename": "labwired-gameboy-print-parts_speaker-reserved-envelope.stl",
+          "url": "https://api.kernelcad.com/api/v1/exports/20261110-m8pfC1njTsbPuec2Y48t2g/labwired-gameboy-print-parts_speaker-reserved-envelope.stl?exp=1794420132&sig=4xcll0xCKyQ17c0LVNBL8YOWCyekgwxDYZscXcDZhL0",
+          "expires_at": "2026-11-11T18:02:12.000Z",
+          "byte_count": 50284,
+          "content_type": "model/stl",
+          "sha256": "72866076a5b015c2c7df2454a3d1a278a5aa61a237b984555427fb7d855b270c",
+          "relative_path": "labwired-gameboy-print-parts/speaker-reserved-envelope.stl",
+          "inline": false,
+          "primary": false
+        }
+      ],
+      "server_path_note": "`output_path` / `written[].output_path` / `mesh_files` are paths on the kernelCAD SERVER, not on your or the user's machine. Use them only as `file` in later calls to this server (e.g. inspect({ of: \"step\", file })). To give the user the file, share `downloads[].url`.",
+      "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+    }
+  ],
+  "validation": {
+    "sourceSha256": "3e8b8d6c3b8c4406a688c1d0055bfe58e986fb1023b63a536c4cd10e570dab78",
+    "pcbMounts": {
+      "x": [
+        -29,
+        29
+      ],
+      "y": [
+        16,
+        132
+      ],
+      "holeDiameter": 2.8
+    },
+    "casePostClearanceRadius": 4.3,
+    "minimumMountHoleEdgeWebMm": 2.3622577482985494
+  },
+  "stepReinspection": {
+    "ok": true,
+    "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z",
+    "solidCount": 15,
+    "solids": [
+      {
+        "index": 0,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -45,
+            0,
+            0
+          ],
+          "max": [
+            45,
+            148,
+            16
+          ]
+        },
+        "volumeMm3": 41920.19089683068,
+        "faceCount": 65
+      },
+      {
+        "index": 1,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -45,
+            0,
+            16.25
+          ],
+          "max": [
+            45,
+            148,
+            30
+          ]
+        },
+        "volumeMm3": 40108.0799145282,
+        "faceCount": 127
+      },
+      {
+        "index": 2,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -26.5,
+            14.5,
+            0.20000000298023224
+          ],
+          "max": [
+            26.5,
+            79.5,
+            2.200000047683716
+          ]
+        },
+        "volumeMm3": 6852.923248160498,
+        "faceCount": 19
+      },
+      {
+        "index": 3,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -37.5,
+            77,
+            30.049999237060547
+          ],
+          "max": [
+            37.5,
+            137,
+            31.549999237060547
+          ]
+        },
+        "volumeMm3": 3854.933614313506,
+        "faceCount": 18
+      },
+      {
+        "index": 4,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -35.25,
+            85.3499984741211,
+            22.600000381469727
+          ],
+          "max": [
+            35.25,
+            128.64999389648438,
+            24.200000762939453
+          ]
+        },
+        "volumeMm3": 4881.5480345616625,
+        "faceCount": 10
+      },
+      {
+        "index": 5,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -26.200000762939453,
+            86.5999984741211,
+            24.299999237060547
+          ],
+          "max": [
+            26.200000762939453,
+            127.4000015258789,
+            27
+          ]
+        },
+        "volumeMm3": 823.2182531498763,
+        "faceCount": 18
+      },
+      {
+        "index": 6,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -24.479999542236328,
+            88.63999938964844,
+            24.399999618530273
+          ],
+          "max": [
+            24.479999542236328,
+            125.36000061035156,
+            26.799999237060547
+          ]
+        },
+        "volumeMm3": 4314.664472894749,
+        "faceCount": 10
+      },
+      {
+        "index": 7,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -39,
+            8,
+            13.399999618530273
+          ],
+          "max": [
+            39,
+            140,
+            15
+          ]
+        },
+        "volumeMm3": 16098.284483470652,
+        "faceCount": 16
+      },
+      {
+        "index": 8,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -36.975341796875,
+            41.00616455078125,
+            26.100000381469727
+          ],
+          "max": [
+            -11,
+            66.99383544921875,
+            32.29999923706055
+          ]
+        },
+        "volumeMm3": 2033.9149901480353,
+        "faceCount": 20
+      },
+      {
+        "index": 9,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            11.300000190734863,
+            45.31873321533203,
+            26.200000762939453
+          ],
+          "max": [
+            24.700000762939453,
+            58.68126678466797,
+            32.29999923706055
+          ]
+        },
+        "volumeMm3": 579.8720304069484,
+        "faceCount": 5
+      },
+      {
+        "index": 10,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            26.299999237060547,
+            57.31873321533203,
+            26.200000762939453
+          ],
+          "max": [
+            39.70000076293945,
+            70.68126678466797,
+            32.29999923706055
+          ]
+        },
+        "volumeMm3": 579.8720304069486,
+        "faceCount": 5
+      },
+      {
+        "index": 11,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -14.399999618530273,
+            24.799999237060547,
+            26.200000762939453
+          ],
+          "max": [
+            -1.600000023841858,
+            31.200000762939453,
+            31.399999618530273
+          ]
+        },
+        "volumeMm3": 269.2905598503408,
+        "faceCount": 19
+      },
+      {
+        "index": 12,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            2.5999999046325684,
+            24.799999237060547,
+            26.200000762939453
+          ],
+          "max": [
+            15.399999618530273,
+            31.200000762939453,
+            31.399999618530273
+          ]
+        },
+        "volumeMm3": 269.29055985034086,
+        "faceCount": 19
+      },
+      {
+        "index": 13,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            -24,
+            18,
+            2.299999952316284
+          ],
+          "max": [
+            24,
+            76,
+            9.300000190734863
+          ]
+        },
+        "volumeMm3": 19433.92033717623,
+        "faceCount": 10
+      },
+      {
+        "index": 14,
+        "brepCheck": "valid",
+        "bboxExact": {
+          "min": [
+            16.5,
+            12.5,
+            24.5
+          ],
+          "max": [
+            35.5,
+            31.5,
+            27.5
+          ]
+        },
+        "volumeMm3": 850.5862109594366,
+        "faceCount": 3
+      }
+    ]
+  },
+  "render": {
+    "ok": true,
+    "images": [
+      {
+        "name": "iso",
+        "path": "/tmp/kernelcad-preview-oVH0W7/iso.png",
+        "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+        "byte_count": 161611,
+        "url": "https://api.kernelcad.com/api/v1/exports/20261110-lJjd5czBL2mTxnVxm0hUOg/render-iso.png?exp=1794420529&sig=VRdaKYb11nU2LMHoLS1Dc0b7xzV7QkZdwpf87293Ho4",
+        "expires_at": "2026-11-11T18:08:49.000Z",
+        "inline": true,
+        "local_file": "enclosure-v2-iso.png",
+        "sha256": "19be70013bab0d292da270971b558c1f1cde8edfbe93cbb6ada658a2b818b05a"
+      },
+      {
+        "name": "front",
+        "path": "/tmp/kernelcad-preview-oVH0W7/front.png",
+        "description": "Front elevation \u2014 camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+        "byte_count": 25010,
+        "url": "https://api.kernelcad.com/api/v1/exports/20261110-1A3Nvy7-gO3AcglnQJjkTg/render-front.png?exp=1794420529&sig=VJwHT15Oca7_WFAlxBY9oHFWya22N8O8SfWOZNIWt-k",
+        "expires_at": "2026-11-11T18:08:49.000Z",
+        "inline": true,
+        "local_file": "enclosure-v2-bottom.png",
+        "sha256": "4d6f8d57a813aaa4827f94975f2ecf5c6da0ac052d96fb52572a58225fb2f090"
+      }
+    ],
+    "out_dir": "/tmp/kernelcad-preview-oVH0W7",
+    "bounds": {
+      "min": [
+        -45,
+        0,
+        0
+      ],
+      "max": [
+        45,
+        148,
+        32.29999923706055
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 142870.58963670788,
+      "faceCount": 364,
+      "size": [
+        90,
+        148,
+        32.3
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 18412,
+    "diagnostics": [],
+    "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+    "images_inline_count": 2,
+    "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+  },
+  "downloadVerification": [
+    {
+      "file": "labwired-gameboy.step",
+      "bytes": 1225038,
+      "sha256": "7c8a4433ba1dca9d4b3a108a29b920d57ad1a149446ea207f0bb1260949ff16f",
+      "verified": true
+    },
+    {
+      "file": "labwired-gameboy.glb",
+      "bytes": 1263816,
+      "sha256": "cd1b5de87a13f40d5860c9d8937fa45f98cf1b7712179ec616185a9c3e280bc7",
+      "verified": true
+    },
+    {
+      "file": "print-parts/rear-shell.stl",
+      "bytes": 961484,
+      "sha256": "b63922bc192a9faf338b44aa4c20a28edda916afd18f61e59e4ccbdaa13027b6",
+      "verified": true
+    },
+    {
+      "file": "print-parts/front-shell.stl",
+      "bytes": 1224484,
+      "sha256": "176bb9898305766591cffa2677d704df200945c0d0de7a1beb688a711618d77a",
+      "verified": true
+    },
+    {
+      "file": "print-parts/battery-service-cover.stl",
+      "bytes": 102284,
+      "sha256": "c6f79678ab914edf4b61657082ffd5cefd773e539eebf7b15c6cde61e216f4c9",
+      "verified": true
+    },
+    {
+      "file": "print-parts/display-bezel.stl",
+      "bytes": 102484,
+      "sha256": "b2408bdbca6b4eeb71ec1870df5ed053cfe75a5210a01c8aed2ceef3d0f63f92",
+      "verified": true
+    },
+    {
+      "file": "reference-components/lcd1-pcb-envelope.stl",
+      "bytes": 51084,
+      "sha256": "120046e0da7b3045d466e2f59fb39c1e726649c12ec6e6ea039b3d49cb61f102",
+      "verified": true
+    },
+    {
+      "file": "reference-components/lcd1-frame-envelope.stl",
+      "bytes": 102484,
+      "sha256": "302634bea5c885ec06abb4f6cdf8e7ba1de9966da620a21bc2958d12b72dee03",
+      "verified": true
+    },
+    {
+      "file": "reference-components/lcd1-active-glass.stl",
+      "bytes": 51084,
+      "sha256": "af4ec845ef37864072f19556af94efd799a7838be26e5400158df25dfbbe501f",
+      "verified": true
+    },
+    {
+      "file": "reference-components/main-pcb-envelope.stl",
+      "bytes": 316684,
+      "sha256": "21bfa614bce80b88e343ee4f5fad307a5eab9590e59fb52b7670e97758fb07e0",
+      "verified": true
+    },
+    {
+      "file": "print-parts/dpad.stl",
+      "bytes": 52684,
+      "sha256": "6c7d117e9db97c73a1d10ba52a1e94958e98b8ff14b6dd6751bc3067ee41b747",
+      "verified": true
+    },
+    {
+      "file": "print-parts/btn-b.stl",
+      "bytes": 100684,
+      "sha256": "a8953496fb70fdc040a8e023b3722b918bb005ebeb88c8d472538a124c300d52",
+      "verified": true
+    },
+    {
+      "file": "print-parts/btn-a.stl",
+      "bytes": 100684,
+      "sha256": "7c208e54790846b3dd8e3d344951efd7c0c748e0330da5e2aa4d2c7933be7574",
+      "verified": true
+    },
+    {
+      "file": "print-parts/btn-select.stl",
+      "bytes": 102284,
+      "sha256": "def35477dc32d11c7224b86d247760754eea293e1b5afbd854aa9b2451021d4e",
+      "verified": true
+    },
+    {
+      "file": "print-parts/btn-start.stl",
+      "bytes": 102284,
+      "sha256": "5732d976f7c48ae3b6320b2e9107a806e330d81aeee4795ee0f86ecbac2b00ed",
+      "verified": true
+    },
+    {
+      "file": "reference-components/battery-reserved-envelope.stl",
+      "bytes": 51084,
+      "sha256": "07e51598d6842c955d92bf2fe9a9da6d0b059227ec3d08aa232064ed7add2c3e",
+      "verified": true
+    },
+    {
+      "file": "reference-components/speaker-reserved-envelope.stl",
+      "bytes": 50284,
+      "sha256": "72866076a5b015c2c7df2454a3d1a278a5aa61a237b984555427fb7d855b270c",
+      "verified": true
+    }
+  ],
+  "frontRender": {
+    "ok": true,
+    "images": [
+      {
+        "name": "top",
+        "path": "/tmp/kernelcad-preview-jFSHgU/top.png",
+        "description": "Geometric +Z top-down plan \u2014 camera on +Z looking down; screen right = +X, screen up = +Y. For imported parts, this is not necessarily the product exterior.",
+        "byte_count": 71459,
+        "url": "https://api.kernelcad.com/api/v1/exports/20261110-hTiijedrYYKo53I9CIcHYA/render-top.png?exp=1794420724&sig=BtqoFjBG3Hq_o4D5URx__KoRJN6ePDYgiztcYg_63Fg",
+        "expires_at": "2026-11-11T18:12:04.000Z",
+        "inline": true,
+        "local_file": "enclosure-v2-front.png",
+        "sha256": "428f03d3d2258f0956d863deb0a36efbdbd1c7949768ff1a91841dca156dabeb"
+      }
+    ],
+    "out_dir": "/tmp/kernelcad-preview-jFSHgU",
+    "bounds": {
+      "min": [
+        -45,
+        0,
+        0
+      ],
+      "max": [
+        45,
+        148,
+        32.29999923706055
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 142870.58963670788,
+      "faceCount": 364,
+      "size": [
+        90,
+        148,
+        32.3
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 18040,
+    "diagnostics": [],
+    "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+    "images_inline_count": 1,
+    "serverBuild": "0.1.0+40c8a380064e@2026-11-10T12:01:00.156Z"
+  },
+  "partsIndex": [
+    {
+      "part": "btn-select",
+      "role": "fabrication-candidate",
+      "file": "print-parts/btn-select.stl"
+    },
+    {
+      "part": "dpad",
+      "role": "fabrication-candidate",
+      "file": "print-parts/dpad.stl"
+    },
+    {
+      "part": "front-shell",
+      "role": "fabrication-candidate",
+      "file": "print-parts/front-shell.stl"
+    },
+    {
+      "part": "main-pcb-envelope",
+      "role": "reference-component",
+      "file": "reference-components/main-pcb-envelope.stl"
+    },
+    {
+      "part": "btn-a",
+      "role": "fabrication-candidate",
+      "file": "print-parts/btn-a.stl"
+    },
+    {
+      "part": "battery-service-cover",
+      "role": "fabrication-candidate",
+      "file": "print-parts/battery-service-cover.stl"
+    },
+    {
+      "part": "lcd1-pcb-envelope",
+      "role": "reference-component",
+      "file": "reference-components/lcd1-pcb-envelope.stl"
+    },
+    {
+      "part": "btn-b",
+      "role": "fabrication-candidate",
+      "file": "print-parts/btn-b.stl"
+    },
+    {
+      "part": "btn-start",
+      "role": "fabrication-candidate",
+      "file": "print-parts/btn-start.stl"
+    },
+    {
+      "part": "rear-shell",
+      "role": "fabrication-candidate",
+      "file": "print-parts/rear-shell.stl"
+    },
+    {
+      "part": "lcd1-frame-envelope",
+      "role": "reference-component",
+      "file": "reference-components/lcd1-frame-envelope.stl"
+    },
+    {
+      "part": "battery-reserved-envelope",
+      "role": "reference-component",
+      "file": "reference-components/battery-reserved-envelope.stl"
+    },
+    {
+      "part": "display-bezel",
+      "role": "fabrication-candidate",
+      "file": "print-parts/display-bezel.stl"
+    },
+    {
+      "part": "speaker-reserved-envelope",
+      "role": "reference-component",
+      "file": "reference-components/speaker-reserved-envelope.stl"
+    },
+    {
+      "part": "lcd1-active-glass",
+      "role": "reference-component",
+      "file": "reference-components/lcd1-active-glass.stl"
+    }
+  ]
+}
