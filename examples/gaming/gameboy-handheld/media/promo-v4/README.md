@@ -73,8 +73,18 @@ receives actual simulated display updates; its mapped controls feed that same
 simulation. WebGL2 is required for the interactive CAD view. The project remains
 unlisted and retains its existing firmware, geometry and nine electronics bindings.
 
-The [hosted MCU evidence](../../firmware/brick-breaker-verification.json) and
-[earlier public browser observation](../promo-v3/evidence/public-ui-observation.json)
-are independent of this video. The latter records working circuit gameplay and
-the tested cloud browser's WebGL initialization limit. An offline render does not
-establish real-time browser behavior or physical hardware operation.
+The [visible production-browser receipt](browser-verification.json), recorded on
+2026-11-11, verifies revision 3 geometry and all nine LCD/control bindings in a
+separate Chrome profile using software WebGL. Real pointer presses on the model
+moved the paddle from x=68 to x=113 with RIGHT, then launched the ball with A;
+the LCD hash changed from `152236bb` to `0a80022b`. At 60% native explosion,
+display observations advanced from 266 to 289 while simulation remained running.
+The browser was left open in the assembled front view after native B reset,
+with score 0, three lives and all inputs released.
+
+These observations are independent of the video and the
+[hosted MCU oracle](../../firmware/brick-breaker-verification.json). The receipt
+retains nonblocking telemetry CORS and HTTP 401 errors. Native PCB authentication
+and board mapping, physical hardware, and real-time 60 fps are outside its scope.
+The [earlier cloud-browser observation](../promo-v3/evidence/public-ui-observation.json)
+retains that environment's WebGL initialization limit as a separate result.
