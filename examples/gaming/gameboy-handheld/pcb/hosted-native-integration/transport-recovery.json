@@ -1,0 +1,37 @@
+{
+  "scope": "Client transport recovery for this exact project owner, PCB hash and rules input hash. No auth or ownership change occurred.",
+  "client_attempts": 2,
+  "confirmed_admitted_jobs": 1,
+  "first_client_attempt": {
+    "intended_at": "2026-11-11T14:27:09.280951Z",
+    "result": "Page API evaluation timed out; no HTTP receipt or job identity returned",
+    "task_owned_tab_closed": true
+  },
+  "narrow_readonly_recovery": [
+    {
+      "checked_at": "2026-11-11T14:37:29.929Z",
+      "matching_admitted_jobs": 0,
+      "rows_written": 0
+    },
+    {
+      "checked_at": "2026-11-11T14:40:33.472Z",
+      "matching_admitted_jobs": 0,
+      "rows_written": 0,
+      "after_original_tab_closed": true
+    }
+  ],
+  "replacement_editor_get_probe": {
+    "result": "Renderer stopped responding before any second native request",
+    "native_post_sent": false,
+    "task_owned_tab_closed": true
+  },
+  "successful_recovery": {
+    "method": "Same normal owner browser session on the lightweight account route, with owner project GET before each API call and an in-page durable response receipt",
+    "started_at": "2026-11-11T14:47:16.628Z",
+    "job_id": "15645376-e293-4b4a-b94b-bfbd8b011e49",
+    "same_job_polled": true,
+    "unsupported_idempotency_fields_added": false
+  },
+  "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+  "rules_input_ref": "sha256:5ff96c7c114eb2717e3554f34bff2635e12cf2d1e82eee25d2f6d99e81544d0c"
+}

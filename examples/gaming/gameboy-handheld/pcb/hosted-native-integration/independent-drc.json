@@ -1,0 +1,114 @@
+{
+  "operation": "validate_imported",
+  "endpoint": "POST /v1/studio/pcb",
+  "request": {
+    "action": "validate_imported",
+    "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "rules_ref": "sha256:389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819"
+  },
+  "http_status": 200,
+  "started_at": "2026-11-11T14:48:20.873Z",
+  "completed_at": "2026-11-11T14:48:29.638Z",
+  "response": {
+    "status": "drc_passed",
+    "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "drc": {
+      "passed": true,
+      "kicad_version": "9.0.2",
+      "warnings": 0,
+      "schematic_parity_checked": false
+    },
+    "files": [
+      {
+        "name": "pcb_e7224485389ac1b2-rev0-fab.zip",
+        "bytes": 1808394
+      },
+      {
+        "name": "board-B_Cu.gbl",
+        "bytes": 195882
+      },
+      {
+        "name": "board-B_Mask.gbs",
+        "bytes": 3554
+      },
+      {
+        "name": "board-B_Paste.gbp",
+        "bytes": 462
+      },
+      {
+        "name": "board-B_Silkscreen.gbo",
+        "bytes": 3947
+      },
+      {
+        "name": "board-Edge_Cuts.gm1",
+        "bytes": 11860
+      },
+      {
+        "name": "board-F_Cu.gtl",
+        "bytes": 190684
+      },
+      {
+        "name": "board-F_Mask.gts",
+        "bytes": 3909
+      },
+      {
+        "name": "board-F_Paste.gtp",
+        "bytes": 1357
+      },
+      {
+        "name": "board-F_Silkscreen.gto",
+        "bytes": 38264
+      },
+      {
+        "name": "board-NPTH-drl_map.pdf",
+        "bytes": 10832
+      },
+      {
+        "name": "board-NPTH.drl",
+        "bytes": 395
+      },
+      {
+        "name": "board-PTH-drl_map.pdf",
+        "bytes": 22203
+      },
+      {
+        "name": "board-PTH.drl",
+        "bytes": 2212
+      },
+      {
+        "name": "board-job.gbrjob",
+        "bytes": 2666
+      },
+      {
+        "name": "board.kicad_dru",
+        "bytes": 6070
+      },
+      {
+        "name": "board.kicad_pcb",
+        "bytes": 573344
+      },
+      {
+        "name": "board.kicad_pro",
+        "bytes": 3903
+      },
+      {
+        "name": "bom.csv",
+        "bytes": 441
+      },
+      {
+        "name": "positions.csv",
+        "bytes": 1064
+      },
+      {
+        "name": "board.step",
+        "bytes": 732571
+      }
+    ],
+    "artifact_hash": "8c4501c32d5b27f148ccefddc3493024ef81d5c45d62937bd7b1ed944c245f98",
+    "manufacturing_verified": false,
+    "lpddr4_si_verified": false,
+    "functional_simulation_verified": false,
+    "warning": "KiCad DRC is not full LPDDR4 power, stackup, impedance, SI, memory-controller or hardware verification."
+  },
+  "scope": "Independent hosted KiCad DRC of the preserved native PCB and its exact resolved rules. Schematic parity, physical hardware, supplier capability and full-board functional simulation are not established. This result does not overwrite the separate import BoardDoc status."
+}

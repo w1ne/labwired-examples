@@ -1,0 +1,56 @@
+{
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "operation": "labwired_project_verify",
+  "request": {
+    "max_steps": 50000000,
+    "oracle": {
+      "serial": [
+        {
+          "contains": "INPUT=000000ef"
+        },
+        {
+          "contains": "INPUT=000000ff"
+        },
+        {
+          "matches": "DMG_FRAME=[0-9]+ x=5[0-9] y=80"
+        }
+      ],
+      "display": {
+        "painted": true,
+        "min_ink_bytes": 10000
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "ok": true,
+    "verified": true,
+    "verified_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "markers": [
+      "INPUT=000000ef",
+      "INPUT=000000ff"
+    ]
+  },
+  "readback": {
+    "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "verified_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "pcb_board_id": null,
+    "evidence": [
+      {
+        "kind": "sim_verify",
+        "status": "model_verified",
+        "created_at": 1794402276392,
+        "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+        "pcb_board_id": null,
+        "pcb_board_rev": null,
+        "artifact_hash": null,
+        "ref": null,
+        "fresh": true,
+        "stale_reason": null
+      }
+    ]
+  },
+  "scope": "Hosted simulated firmware and declared input/display oracle; no native PCB attachment or physical hardware validation."
+}

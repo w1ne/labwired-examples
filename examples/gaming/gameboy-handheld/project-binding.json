@@ -16,18 +16,20 @@
   },
   "pcb": {
     "native_source_sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
-    "attached_board_id": null,
-    "status": "native-attachment-pending",
+    "attached_board_id": "pcb_c8da1d7776dba9bc",
+    "status": "native-preserved-independent-drc-passed-attached",
     "pending_requirements": [
-      "source-preserving-native-import-api-and-builder-deployment",
-      "project-board-owner-and-revision-guard-deployment",
-      "hosted-preserved-source-and-independent-drc",
-      "native-board-attachment-and-readback",
       "live-production-board-cad-firmware-proof"
     ],
-    "attached_board_rev": null,
+    "attached_board_rev": 0,
     "requested_import_mode": "preserve",
-    "local_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json"
+    "local_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json",
+    "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "rules_ref": "sha256:389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819",
+    "rules_digest": "85915592fc0647b75a752e74a1cb3bf552990c2d538ce6f1156da769b9fe1b2e",
+    "hosted_integration_evidence": "pcb/hosted-native-integration/README.md",
+    "attachment_readback": "pcb/hosted-native-integration/attachment-readback.json",
+    "independent_drc": "pcb/hosted-native-integration/independent-drc.json"
   },
   "stimuli": [
     {
@@ -46,12 +48,22 @@
   "physical_hardware_tested": false,
   "readback_verified": true,
   "last_owner_check": {
-    "observed_at": "2026-11-11T00:50:33.388Z",
+    "observed_at": "2026-11-11T14:49:20.182Z",
     "http_status": 200,
     "is_owner": true,
     "role": "owner",
     "project_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
-    "method": "normal signed-in project GET; authority must be rechecked before attachment",
-    "evidence": "firmware/production-view/owner-access-webgl.json"
+    "method": "normal signed-in project GET and project-board GET after owner PUT",
+    "evidence": "pcb/hosted-native-integration/attachment-readback.json"
+  },
+  "verified_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+  "visibility": "unlisted",
+  "recorded_at": "2026-11-11T14:49:20.182Z",
+  "snapshot_scope": "Saved project immediately after native PCB attachment; generic electronics binding has not yet been saved in this snapshot.",
+  "prepared_electronics_bindings": {
+    "path": "mechanical/revision-3/electronics-bindings.json",
+    "sha256": "13b10cfbeb705aace7fdfcc97c1ca7e493c33122a9450cc5e782d08304ddecd5",
+    "status": "prepared-not-applied",
+    "provenance": "mechanical/revision-3/electronics-bindings-provenance.json"
   }
 }

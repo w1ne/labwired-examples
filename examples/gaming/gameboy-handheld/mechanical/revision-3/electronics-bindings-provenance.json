@@ -1,0 +1,122 @@
+{
+  "status": "prepared-not-applied",
+  "projectId": "f44771855a18a70d418e363622de2e28",
+  "expectedBaseContentHash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+  "kernelcad": {
+    "slug": "kQAFdaQs",
+    "revision": 3,
+    "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196"
+  },
+  "bindingsSha256": "13b10cfbeb705aace7fdfcc97c1ca7e493c33122a9450cc5e782d08304ddecd5",
+  "displayOrientation": {
+    "rotation": 0,
+    "basis": "Prior actual lcd1 framebuffer snapshot in firmware/browser-validation.json is 320x240; unchanged pinned firmware initializes MADCTL=0x28. Diagram rotation is a 2D component pose only. Confirm upright orientation in current live integration.",
+    "width": 320,
+    "height": 240
+  },
+  "dpadGeometry": {
+    "centerMm": [
+      -24,
+      54,
+      30
+    ],
+    "spanMm": 23,
+    "barMm": 7.2,
+    "armRegionsExcludeCenterPivot": true,
+    "switchCenterMappingChecks": [
+      {
+        "component": "btn-up",
+        "modelPointMm": [
+          -24,
+          62
+        ],
+        "normalizedPoint": [
+          0.5,
+          0.8478260869565217
+        ],
+        "matchingRegions": [
+          "btn-up"
+        ]
+      },
+      {
+        "component": "btn-down",
+        "modelPointMm": [
+          -24,
+          46
+        ],
+        "normalizedPoint": [
+          0.5,
+          0.15217391304347827
+        ],
+        "matchingRegions": [
+          "btn-down"
+        ]
+      },
+      {
+        "component": "btn-left",
+        "modelPointMm": [
+          -32,
+          54
+        ],
+        "normalizedPoint": [
+          0.15217391304347827,
+          0.5
+        ],
+        "matchingRegions": [
+          "btn-left"
+        ]
+      },
+      {
+        "component": "btn-right",
+        "modelPointMm": [
+          -16,
+          54
+        ],
+        "normalizedPoint": [
+          0.8478260869565217,
+          0.5
+        ],
+        "matchingRegions": [
+          "btn-right"
+        ]
+      }
+    ]
+  },
+  "travel": {
+    "mm": 0.45,
+    "basis": "0.20 mm initial gap + 0.25 mm nominal switch pretravel from revision-3 assembly-config.json",
+    "scope": "Runtime visual displacement only. The shared dpad is one mesh; its four input bindings must aggregate pressed state. This is not the articulated tilt pose or mechanical force/overtravel simulation."
+  },
+  "unchanged": [
+    "firmware",
+    "source",
+    "wiring",
+    "model source",
+    "model revision"
+  ],
+  "checks": {
+    "allCadPartNamesExist": true,
+    "allInputComponentsMatchSavedCircuitIds": true,
+    "allFourSwitchCentersResolveToExactlyOneDirection": true,
+    "receiverContractAccepted": true
+  },
+  "sources": [
+    {
+      "path": "mechanical/revision-3/derived-interfaces.json",
+      "sha256": "e29dec6cb545cae325ac74e3bae94e4225b68b16b997ee7aa374e8e641ce2680"
+    },
+    {
+      "path": "mechanical/revision-3/part-stats.json",
+      "sha256": "dea241eccce1f9bf6c39e0a3ff7e4e99f26834e57bf027e136df823d7c4b7beb"
+    },
+    {
+      "path": "mechanical/revision-3/assembly-config.json",
+      "sha256": "2ca978a8a0eaa0f8f7ea16095b7e0e5d572223a14a126260d58451e5d3df0723"
+    },
+    {
+      "path": "firmware/browser-validation.json",
+      "sha256": "6b5411371c68cfb96ff7e4f3d6ad111d0a47c15f0a3df3abf4e80ffb6fb1a1b3"
+    }
+  ],
+  "scope": "Example configuration prepared for diagram.mechanical.electronics; not a CAD source mutation. Application to the saved project and its later content hash are recorded separately."
+}

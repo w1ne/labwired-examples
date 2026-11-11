@@ -11,11 +11,14 @@
     "mechanical": "nominal_assembly_and_access_checked",
     "physical_hardware_tested": false,
     "controls": "8_driven_stm32_cases_passed",
-    "native_pcb_attached": false,
+    "native_pcb_attached": true,
     "browser_clean_console": false,
     "browser_production_deployed": true,
     "native_preserve_preflight": "local_exact_source_drc_passed",
-    "browser_owner_rendering_verified": false
+    "browser_owner_rendering_verified": false,
+    "saved_project_verification": "declared_oracle_passed_at_pre_binding_attachment_checkpoint",
+    "hosted_native_pcb": "exact_source_readback_and_independent_kicad_drc_passed",
+    "generic_electronics_bindings": "prepared_not_applied"
   },
   "target": {
     "board": "stm32f411ceu6-blackpill",
@@ -46,7 +49,11 @@
     "automatic_twin_import": false,
     "export_verification": "pcb/export-validation.json",
     "import_coverage": "pcb/final-import-report.json",
-    "preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json"
+    "preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json",
+    "board_id": "pcb_c8da1d7776dba9bc",
+    "rev": 0,
+    "rules_ref": "sha256:389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819",
+    "hosted_integration": "pcb/hosted-native-integration/README.md"
   },
   "mechanical": {
     "path": "mechanical/revision-3/labwired-gameboy-assembly.kcad.ts",
@@ -61,7 +68,8 @@
     "pose_checks": "mechanical/revision-3/pose-checks.json",
     "export_verification": "mechanical/revision-3/export-verification.json",
     "part_classification": "mechanical/revision-3/parts.json",
-    "historical_revision_2_reference": "mechanical/kernelcad-reference-v2.json"
+    "historical_revision_2_reference": "mechanical/kernelcad-reference-v2.json",
+    "prepared_electronics_bindings": "mechanical/revision-3/electronics-bindings.json"
   },
   "project": {
     "id": "f44771855a18a70d418e363622de2e28",
@@ -69,7 +77,11 @@
     "firmware_share": "https://app.labwired.com/?share=aV3vKsFaQjTi&run=1",
     "binding": "project-binding.json",
     "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
-    "firmware_share_scope": "Original firmware checkpoint; predates detailed CAD revision 3."
+    "firmware_share_scope": "Original firmware checkpoint; predates detailed CAD revision 3.",
+    "verified_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "visibility": "unlisted",
+    "recorded_at": "2026-11-11T14:49:20.182Z",
+    "snapshot_scope": "After PCB attachment and before generic electronics-binding save"
   },
   "evidence": {
     "firmware": "firmware/control-validation.json",
@@ -93,7 +105,12 @@
     "browser_production": "firmware/production-view/index.json",
     "browser_production_owner": "firmware/production-view/owner-access-webgl.json",
     "browser_production_desktop": "firmware/production-view/desktop-guest.json",
-    "browser_production_mobile": "firmware/production-view/mobile-guest.json"
+    "browser_production_mobile": "firmware/production-view/mobile-guest.json",
+    "saved_project_verification": "firmware/saved-project-verification.json",
+    "pcb_hosted_native": "pcb/hosted-native-integration/README.md",
+    "pcb_hosted_drc": "pcb/hosted-native-integration/independent-drc.json",
+    "pcb_attachment": "pcb/hosted-native-integration/attachment-readback.json",
+    "electronics_bindings": "mechanical/revision-3/electronics-bindings-provenance.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -111,8 +128,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 16981,
-      "sha256": "20f8911e756dcb581dc9a6b97739f7305714098e4f139f7f966a88430e3056a9"
+      "bytes": 17966,
+      "sha256": "4446ea2530571951ff727ffa13c66ca7e9a6d528c69c8514224a283ecda27f96"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -260,6 +277,11 @@
       "sha256": "b2ee24951dcb427706293ed64ae37bcd1302a6af495218f0cef43ef2c521ac4f"
     },
     {
+      "path": "firmware/saved-project-verification.json",
+      "bytes": 1520,
+      "sha256": "e8243948cbf7b78c312d9e44783abd0532777354ccc66b82985b7c3f4e8018f1"
+    },
+    {
       "path": "firmware/verification.json",
       "bytes": 738,
       "sha256": "b07e1aa33f9dbbfea7f74c4482bf06a326bbc385989f62aee6d1c877e9fb1278"
@@ -321,8 +343,8 @@
     },
     {
       "path": "mechanical/revision-3/README.md",
-      "bytes": 13085,
-      "sha256": "c55da4e19de6c8a6c1e2f71edefd4279dcae14ad493f4e30a2736c78b5c6cc50"
+      "bytes": 14399,
+      "sha256": "0fe374e01841d64edaf1fcabb299c0fd73513ad014b9ac999b3f36614b54b390"
     },
     {
       "path": "mechanical/revision-3/assembly-body.ts",
@@ -378,6 +400,16 @@
       "path": "mechanical/revision-3/design-loop.json",
       "bytes": 10775,
       "sha256": "ab0818830969d89696c074c3657bd3cea68b502c56b1d4591400f08d6f08b173"
+    },
+    {
+      "path": "mechanical/revision-3/electronics-bindings-provenance.json",
+      "bytes": 3497,
+      "sha256": "e17207ad3124044c9f7909301b4adfd09381ab0e9ad1badc2b0b36eb692b8e19"
+    },
+    {
+      "path": "mechanical/revision-3/electronics-bindings.json",
+      "bytes": 1975,
+      "sha256": "13b10cfbeb705aace7fdfcc97c1ca7e493c33122a9450cc5e782d08304ddecd5"
     },
     {
       "path": "mechanical/revision-3/evaluation.json",
@@ -441,8 +473,8 @@
     },
     {
       "path": "pcb/README.md",
-      "bytes": 14037,
-      "sha256": "dfd0238202be99451d45dde01bf579142559d638303d70ae8b67e693ca6a3d99"
+      "bytes": 14380,
+      "sha256": "b0e357a93d3f2fef5d088cd45f29a5a97e889061d8b0fa26363b0a1b5c2bf62d"
     },
     {
       "path": "pcb/assembly-interfaces.json",
@@ -498,6 +530,51 @@
       "path": "pcb/header-correction.json",
       "bytes": 371,
       "sha256": "ffeccbeecf9bf7e33ec90249275ea081bd1171734abb01533d7f42709bd152f8"
+    },
+    {
+      "path": "pcb/hosted-native-integration/README.md",
+      "bytes": 4739,
+      "sha256": "8f3bed4a03cab1e2939143d947c50db83b7fad3c8144072591d499250e472632"
+    },
+    {
+      "path": "pcb/hosted-native-integration/admission.json",
+      "bytes": 4298,
+      "sha256": "02721ad8ae2e5e5747d54f15b5580b411cfd8b398fcb1b322e901b9fa09e74f8"
+    },
+    {
+      "path": "pcb/hosted-native-integration/attachment-readback.json",
+      "bytes": 1852,
+      "sha256": "fbed896f881e34ef26023a94cabeed561358df649c59e5aad413cdc3307ab845"
+    },
+    {
+      "path": "pcb/hosted-native-integration/board-view.json",
+      "bytes": 4428,
+      "sha256": "d985c560849de1de38046b9c83c9a3bead398378ae5a76788af09628fbd64803"
+    },
+    {
+      "path": "pcb/hosted-native-integration/deployments.json",
+      "bytes": 836,
+      "sha256": "5a684cd23aaf1e1b6f5a39b8fc351a7dd73cd672aac64f052132a19e380081a5"
+    },
+    {
+      "path": "pcb/hosted-native-integration/independent-drc.json",
+      "bytes": 2930,
+      "sha256": "4369ffe64cac3786bd60d6ce8d175fb332d248dd6eea6fd99c7a25336c9071f3"
+    },
+    {
+      "path": "pcb/hosted-native-integration/request-summary.json",
+      "bytes": 1865,
+      "sha256": "7dbeb0822d9f9c2519be738156962ad108edacf964af1721f29ddb7aaaac4c6f"
+    },
+    {
+      "path": "pcb/hosted-native-integration/source-and-rules-readback.json",
+      "bytes": 1267,
+      "sha256": "a9261d60760852a5c5898585e1f7c3088b3ae71497933ceabb16ffba921ef3b8"
+    },
+    {
+      "path": "pcb/hosted-native-integration/transport-recovery.json",
+      "bytes": 1469,
+      "sha256": "26980f66fce96c826120f9e47a44c6c91958d9911c17c4bbf9f4861bbcc86204"
     },
     {
       "path": "pcb/import-report.json",
@@ -606,8 +683,8 @@
     },
     {
       "path": "project-binding.json",
-      "bytes": 2186,
-      "sha256": "72029860d05fa79ab0fe2ac54abbb7e97ab81130a8def24c9f9d58d6bc93569c"
+      "bytes": 3116,
+      "sha256": "897fedfb965d778cb6e608b48a6b8155b00c5db5ddfb6c51a0769e9b21e2d892"
     },
     {
       "path": "source-provenance.json",

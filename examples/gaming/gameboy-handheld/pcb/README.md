@@ -12,7 +12,8 @@ The routed two-layer carrier passes KiCad 9.0.2 DRC with **0 violations and 0 un
 - `drc-routed.json` / `routing-report.json`: exact checks and source hashes.
 - `export-validation.json`: final Gerber, drill and STEP byte/hash verification, all 124 drill coordinates, and the exact PCB/layout/interface identities.
 - `final-import-report.json`: current LabWired design-context coverage bound to the final native PCB hash.
-- `native-preserve-preflight/`: exact-source local preservation, generated rules and independent KiCad DRC evidence; hosted attachment remains pending.
+- `native-preserve-preflight/`: exact-source local preservation, generated rules and independent KiCad DRC evidence.
+- `hosted-native-integration/`: production source/rules readback, separate hosted KiCad DRC and the verified owner project attachment.
 - `import-report.json`: historical import coverage before the connector correction.
 
 Generated fabrication and plot binaries are omitted from this compact contribution. Use the editable routed board to regenerate Gerber, drill, STEP and layer plots in KiCad 9 after rerunning DRC.
@@ -37,7 +38,7 @@ The PCB has not been ordered or assembled. Before fabrication, measure the purch
 
 A fresh `labwired_import` of the final native PCB accepts the design context but does not map the WeAct module or these switch footprints to a runnable twin. It maps the two capacitors, marks nine components design-only and ignores five non-simulated connectors or mounting holes. `final-import-report.json` records the exact source hash and result: `mode: design_only`, `twin_buildable: false`.
 
-The final connector-corrected board passes the exact-source local preservation and generated-rule DRC preflight in `native-preserve-preflight/`. Normal owner access has been observed. Hosted native attachment remains pending the source-preserving API/builder and project-board authority fixes, followed by hosted independent DRC and attachment readback. The verified LabWired circuit therefore remains linked through the explicit simulation binding, not through an automatic import claim. No placeholder PCB is attached to the saved project.
+The final connector-corrected board passes both the local preflight in `native-preserve-preflight/` and the later independent hosted KiCad 9.0.2 DRC in `hosted-native-integration/`. The normal owner API attached `pcb_c8da1d7776dba9bc`, revision 0, on 2026-11-11 at 14:49 UTC. Downloaded PCB and rule artifacts match the exact authored/preflight bytes. The fresh attachment comparison changed only `pcb_board_id` and `pcb_board_rev`; editable source, circuit, stimuli, CAD revision and unlisted visibility were preserved. The stored import record reports routing and DRC as not run because preservation and independent validation are separate operations. The runnable circuit continues to use the explicit simulation binding; native import does not automatically create its MCU models.
 
 ## Rebuild
 

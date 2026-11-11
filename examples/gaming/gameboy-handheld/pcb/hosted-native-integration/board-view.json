@@ -1,0 +1,230 @@
+{
+  "operation": "labwired_pcb_view",
+  "observed_date": "2026-11-11",
+  "response": {
+    "board_id": "pcb_c8da1d7776dba9bc",
+    "rev": 0,
+    "head_rev": 0,
+    "name": "Game Boy handheld carrier \u2014 final connector correction",
+    "outline": {
+      "width": 78,
+      "height": 132
+    },
+    "nets": [
+      {
+        "code": 1,
+        "name": "GND"
+      },
+      {
+        "code": 2,
+        "name": "3V3"
+      },
+      {
+        "code": 3,
+        "name": "PA4"
+      },
+      {
+        "code": 4,
+        "name": "PA5"
+      },
+      {
+        "code": 5,
+        "name": "PA7"
+      },
+      {
+        "code": 6,
+        "name": "PB0"
+      },
+      {
+        "code": 7,
+        "name": "PB1"
+      },
+      {
+        "code": 8,
+        "name": "PA8"
+      },
+      {
+        "code": 9,
+        "name": "PB3"
+      },
+      {
+        "code": 10,
+        "name": "PB4"
+      },
+      {
+        "code": 11,
+        "name": "PB5"
+      },
+      {
+        "code": 12,
+        "name": "PB6"
+      },
+      {
+        "code": 13,
+        "name": "PB7"
+      },
+      {
+        "code": 14,
+        "name": "PB8"
+      },
+      {
+        "code": 15,
+        "name": "PB9"
+      },
+      {
+        "code": 16,
+        "name": "PB10"
+      }
+    ],
+    "parts": [
+      {
+        "ref": "SW7",
+        "value": "SELECT",
+        "x": 27.75,
+        "y": 109.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "J1",
+        "value": "Waveshare LCD PH2.0 cable",
+        "x": 32,
+        "y": 64,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "H1",
+        "value": "",
+        "x": 10,
+        "y": 8,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "H3",
+        "value": "",
+        "x": 10,
+        "y": 124,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "SW1",
+        "value": "UP",
+        "x": 11.75,
+        "y": 75.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "H2",
+        "value": "",
+        "x": 68,
+        "y": 8,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "SW8",
+        "value": "START",
+        "x": 44.75,
+        "y": 109.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "SW4",
+        "value": "RIGHT",
+        "x": 19.75,
+        "y": 83.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "C1",
+        "value": "10uF 6.3V X7R",
+        "x": 57,
+        "y": 27,
+        "rot": 90,
+        "side": "top"
+      },
+      {
+        "ref": "C2",
+        "value": "100nF 16V X7R",
+        "x": 63,
+        "y": 27,
+        "rot": 90,
+        "side": "top"
+      },
+      {
+        "ref": "H4",
+        "value": "",
+        "x": 68,
+        "y": 124,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "SW5",
+        "value": "A",
+        "x": 68.75,
+        "y": 73.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "SW2",
+        "value": "DOWN",
+        "x": 11.75,
+        "y": 91.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "SW6",
+        "value": "B",
+        "x": 53.75,
+        "y": 85.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "SW3",
+        "value": "LEFT",
+        "x": 3.75,
+        "y": 83.75,
+        "rot": 0,
+        "side": "top"
+      },
+      {
+        "ref": "A1",
+        "value": "WeAct Black Pill STM32F411CEU6",
+        "x": 39.12,
+        "y": 25.575,
+        "rot": 0,
+        "side": "bottom"
+      }
+    ],
+    "netsComplete": 16,
+    "netsTotal": 16,
+    "routing_status": "not_run",
+    "unrouted": [],
+    "violations": [],
+    "summary": "rev 0: native 2-layer board preserved; routing not run, independent KiCad DRC is separate",
+    "layer_count": 2,
+    "capabilities": {
+      "route": "supported",
+      "view": "supported",
+      "simulation": "model_gaps"
+    },
+    "limitations": [],
+    "native_artifact": {
+      "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+      "rules_ref": "sha256:389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819",
+      "rules_digest": "85915592fc0647b75a752e74a1cb3bf552990c2d538ce6f1156da769b9fe1b2e"
+    },
+    "export": null
+  },
+  "scope": "Read-only representation of the preserved native PCB. The view response is not the separate KiCad DRC receipt."
+}
