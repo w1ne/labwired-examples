@@ -1,0 +1,51 @@
+{
+  "preparedAt": "2026-11-11T00:12:12.168Z",
+  "operation": "local existing routeImportedKiCadNative mode preserve",
+  "mode": "preserve",
+  "status": "imported",
+  "networkCalls": 0,
+  "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+  "inputRulesRef": "sha256:5ff96c7c114eb2717e3554f34bff2635e12cf2d1e82eee25d2f6d99e81544d0c",
+  "rulesDigest": "85915592fc0647b75a752e74a1cb3bf552990c2d538ce6f1156da769b9fe1b2e",
+  "rules_ref": "sha256:389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819",
+  "layerCount": 2,
+  "importer": "native-kicad-preserved",
+  "provenance": "native-kicad-preserved",
+  "warnings": [
+    "Original native PCB bytes preserved; routing and independent KiCad DRC were not run",
+    "Run validate_imported with the returned PCB and rules references before fabrication"
+  ],
+  "files": {
+    "board.kicad_pcb": {
+      "path": "/data/work-scratch/gameboy-native-attachment-20261111/diagnostic/preserve-preflight/board.kicad_pcb",
+      "bytes": 573344,
+      "sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df"
+    },
+    "board.kicad_pro": {
+      "path": "/data/work-scratch/gameboy-native-attachment-20261111/diagnostic/preserve-preflight/board.kicad_pro",
+      "bytes": 3903,
+      "sha256": "df9021aea019a2a8dc776044ea291df4c9822c406fadd9d25058a324f9593818"
+    },
+    "board.kicad_dru": {
+      "path": "/data/work-scratch/gameboy-native-attachment-20261111/diagnostic/preserve-preflight/board.kicad_dru",
+      "bytes": 6070,
+      "sha256": "b3b30bb55c757c08152f2a046d55d86a33b4b480699c1d70575e65557b0a5bd1"
+    },
+    "applied-rules.json": {
+      "path": "/data/work-scratch/gameboy-native-attachment-20261111/diagnostic/preserve-preflight/applied-rules.json",
+      "bytes": 2075,
+      "sha256": "7cc071a1934a1df94d5e9c4bbd406688e083c708c2cb51c3580c84e9c9fa0d9a"
+    },
+    "rule-artifact.json": {
+      "path": "/data/work-scratch/gameboy-native-attachment-20261111/diagnostic/preserve-preflight/rule-artifact.json",
+      "bytes": 12524,
+      "sha256": "389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819"
+    }
+  },
+  "sourceFiles": {
+    "services/labwired-builder/src/route-imported-native.ts": "7e606652f8be492c36e0776538f0e688524b255af9879fbfb327f7462cc97f61",
+    "services/labwired-builder/src/agent-routing-rules.ts": "188939fbec6a2d16334a05c5f2da654d0981f5a21fee5e91e52fdfdd15643cb2"
+  },
+  "drcRun": false,
+  "hostedJobSubmitted": false
+}

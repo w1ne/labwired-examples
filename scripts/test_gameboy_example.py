@@ -33,6 +33,52 @@ class GameBoyExample(unittest.TestCase):
         self.assertFalse(manifest['proof']['physical_hardware_tested'])
         self.assertFalse(manifest['pcb']['automatic_twin_import'])
 
+    def test_native_preserve_preflight_binds_exact_source_and_generated_rules(self):
+        prefix = 'pcb/native-preserve-preflight/'
+        summary = read(prefix + 'local-preserve-drc-preflight.json')
+        preparation = read(prefix + 'preparation-result.json')
+        execution = read(prefix + 'drc-execution.json')
+        report = read(prefix + 'drc.json')
+        pcb_path = 'pcb/handheld-carrier.kicad_pcb'
+        pcb_ref = 'sha256:' + digest(pcb_path)
+        self.assertEqual(summary['pcb_ref'], pcb_ref)
+        self.assertEqual(summary['pcb_bytes'], (GAME / pcb_path).stat().st_size)
+        self.assertTrue(summary['passed'])
+        self.assertFalse(summary['hosted_job_submitted'])
+        self.assertFalse(summary['canonical_project_mutated'])
+        self.assertEqual((preparation['mode'], preparation['status'], preparation['networkCalls']),
+                         ('preserve', 'imported', 0))
+        self.assertEqual(preparation['pcb_ref'], pcb_ref)
+        for name, identity in preparation['files'].items():
+            path = pcb_path if name == 'board.kicad_pcb' else prefix + name
+            self.assertEqual(digest(path), identity['sha256'], name)
+            self.assertEqual((GAME / path).stat().st_size, identity['bytes'], name)
+        self.assertEqual(execution['inputSha256Before'], execution['inputSha256After'])
+        self.assertTrue(execution['inputsUnchanged'])
+        self.assertEqual(execution['inputSha256Before'], summary['input_sha256'])
+        self.assertEqual(execution['exitCode'], 0)
+        self.assertEqual(execution['kicadVersion'], report['kicad_version'])
+        self.assertEqual(execution['drcReportSha256'], digest(prefix + 'drc.json'))
+        self.assertEqual(summary['drc']['report_sha256'], digest(prefix + 'drc.json'))
+        self.assertEqual(report['violations'], [])
+        self.assertEqual(report['unconnected_items'], [])
+        self.assertFalse(summary['drc']['schematic_parity_checked'])
+        rule_artifact = read(prefix + 'rule-artifact.json')
+        self.assertEqual(rule_artifact['pcb_ref'], pcb_ref)
+        self.assertEqual(rule_artifact['pro'], (GAME / prefix / 'board.kicad_pro').read_text())
+        self.assertEqual(rule_artifact['dru'], (GAME / prefix / 'board.kicad_dru').read_text())
+        self.assertEqual(rule_artifact['applied_rules'], read(prefix + 'applied-rules.json'))
+        self.assertEqual(summary['rules_ref'], 'sha256:' + digest(prefix + 'rule-artifact.json'))
+        self.assertEqual(preparation['rules_ref'], summary['rules_ref'])
+        wire_json = lambda value: json.dumps(value, ensure_ascii=False, separators=(',', ':')).encode()
+        self.assertEqual(hashlib.sha256(wire_json(rule_artifact['applied_rules'])).hexdigest(),
+                         summary['rules_digest'])
+        self.assertEqual('sha256:' + hashlib.sha256(wire_json(read(prefix + 'requested-rules.json'))).hexdigest(),
+                         preparation['inputRulesRef'])
+        saved = read('project-binding.json')
+        self.assertEqual(saved['pcb']['local_preserve_preflight'], prefix + 'local-preserve-drc-preflight.json')
+        self.assertEqual(read('manifest.json')['pcb']['preserve_preflight'], saved['pcb']['local_preserve_preflight'])
+
     def test_source_rom_and_cad_generators_reproduce_recorded_bytes(self):
         with tempfile.TemporaryDirectory() as tmp:
             copied = pathlib.Path(tmp) / 'gameboy'

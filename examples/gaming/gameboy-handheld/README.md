@@ -44,6 +44,7 @@ The display is the Waveshare 2.4-inch ILI9341 module with a 70.5 × 43.3 mm PCB 
 | Historical revision 2 view continuity | Desktop and mobile passed; the same worker advanced by 60,000,000 and 70,000,000 cycles while CAD was visible | `firmware/browser-view-continuity.json` (earlier local production preview) |
 | Final native PCB design-context import | Accepted; 2 mapped, 9 design-only, 5 ignored; automatic runnable twin is unavailable | `pcb/final-import-report.json` |
 | Carrier PCB DRC | 0 violations, 0 unconnected items, KiCad 9.0.2 | `pcb/drc-routed.json` and `pcb/routing-report.json` |
+| Exact-source preservation and generated-rule DRC | Local pass: original 573,344-byte PCB retained; 0 preparation network calls; KiCad 9.0.2 reports 0 violations and 0 unconnected items with the generated rule bundle | `pcb/native-preserve-preflight/local-preserve-drc-preflight.json` and adjacent raw reports/rules |
 | CAD static design loop | Pass for revision 3, 59 parts, 400 features, valid geometry | `mechanical/revision-3/evaluation.json`; `design-loop.json` in the same directory |
 | Independent fixed-mate review | 59 parts, 58 solved fixed mates, 1 static pose; 0 actionable interference | `mechanical/revision-3/independent-mates.json` |
 | Nominal button and access checks | 8 single-control maximum-pretravel variants, 4 driver corridors and a 30 mm USB withdrawal sweep have no blocking collision diagnostics | `mechanical/revision-3/pose-checks.json`; `collision-regression.json` records the D-pad correction |
@@ -65,7 +66,9 @@ The firmware uses the 16 MHz HSI clock and 4 MHz SPI. Simulation timing follows 
 
 The ROM omits the Nintendo logo header and starts through the emulator's post-boot state. It has not been validated with an original Game Boy boot ROM or a physical cartridge. The included firmware exercises this original ROM; it does not establish compatibility with every commercial game.
 
-The first generic PCB generation returned a 123 × 88 mm placeholder board with an incorrect MCU footprint. That board is detached from the saved project. The accurate KiCad carrier is included here; its native attachment is pending the generic API adapter deployment and owner browser sign-in. The existing KiCad import accepts it as design context but cannot automatically derive the runnable twin from the WeAct module and switch footprints. The explicit simulation binding therefore remains the electrical handoff. No automatic round-trip or exact assembled fit is claimed.
+The first generic PCB generation returned a 123 × 88 mm placeholder board with an incorrect MCU footprint. That board is detached from the saved project. The accurate KiCad carrier is included here. Normal owner access was observed on 2026-11-10; native attachment is pending deployment of source-preserving admission and the project-board ownership/revision guard, then hosted independent DRC and attachment readback. The local preservation preflight checks the exact authored PCB and generated rules without a hosted job or project mutation. Its pass does not establish a hosted board identity or live production integration.
+
+The existing KiCad import accepts it as design context but cannot automatically derive the runnable twin from the WeAct module and switch footprints. The explicit simulation binding therefore remains the electrical handoff. No automatic round-trip or exact assembled fit is claimed.
 
 ## Files and reproduction
 

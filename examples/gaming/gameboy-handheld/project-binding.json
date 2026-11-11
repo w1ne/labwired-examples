@@ -19,9 +19,15 @@
     "attached_board_id": null,
     "status": "native-attachment-pending",
     "pending_requirements": [
-      "generic-native-import-api-deployment",
-      "owner-browser-sign-in"
-    ]
+      "source-preserving-native-import-api-and-builder-deployment",
+      "project-board-owner-and-revision-guard-deployment",
+      "hosted-preserved-source-and-independent-drc",
+      "native-board-attachment-and-readback",
+      "live-production-board-cad-firmware-proof"
+    ],
+    "attached_board_rev": null,
+    "requested_import_mode": "preserve",
+    "local_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json"
   },
   "stimuli": [
     {
@@ -38,5 +44,12 @@
     }
   ],
   "physical_hardware_tested": false,
-  "readback_verified": true
+  "readback_verified": true,
+  "last_owner_check": {
+    "observed_at": "2026-11-10T23:11:54.926Z",
+    "is_owner": true,
+    "role": "owner",
+    "project_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "method": "normal signed-in project GET with refreshed browser session; authority must be rechecked before attachment"
+  }
 }

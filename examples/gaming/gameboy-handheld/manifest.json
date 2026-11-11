@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "gameboy-handheld",
   "title": "Game Boy-compatible handheld: Wire Runner",
-  "recorded_date": "2026-11-10",
+  "recorded_date": "2026-11-11",
   "proof": {
     "firmware": "model_verified",
     "rom_behavior": "host_test_passed",
@@ -13,7 +13,8 @@
     "controls": "8_driven_stm32_cases_passed",
     "native_pcb_attached": false,
     "browser_clean_console": false,
-    "browser_production_deployed": false
+    "browser_production_deployed": false,
+    "native_preserve_preflight": "local_exact_source_drc_passed"
   },
   "target": {
     "board": "stm32f411ceu6-blackpill",
@@ -43,7 +44,8 @@
     "simulation_binding": "pcb/simulation-binding.json",
     "automatic_twin_import": false,
     "export_verification": "pcb/export-validation.json",
-    "import_coverage": "pcb/final-import-report.json"
+    "import_coverage": "pcb/final-import-report.json",
+    "preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json"
   },
   "mechanical": {
     "path": "mechanical/revision-3/labwired-gameboy-assembly.kcad.ts",
@@ -85,7 +87,8 @@
     "cad_revision_2_historical": "mechanical/evidence-v2.json",
     "browser_current_assembly": "firmware/browser-revision3-validation.json",
     "browser_current_diagnostics": "firmware/browser-revision3-assessment.json",
-    "pcb_import": "pcb/final-import-report.json"
+    "pcb_import": "pcb/final-import-report.json",
+    "pcb_native_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -103,8 +106,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14847,
-      "sha256": "090728e6a0b9b90d0eaea6320e0b94cc1ad971517c0c9c8e37f0f66907d96eb6"
+      "bytes": 15501,
+      "sha256": "6339dae4856d0a9c834c25f86613b038de4490ff5e817e8af14b82fc9516ecf3"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -393,8 +396,8 @@
     },
     {
       "path": "pcb/README.md",
-      "bytes": 13667,
-      "sha256": "e086e242e99bb129771b7bd241e1444ca7a980de82030d0302753770db1aa8f2"
+      "bytes": 14037,
+      "sha256": "dfd0238202be99451d45dde01bf579142559d638303d70ae8b67e693ca6a3d99"
     },
     {
       "path": "pcb/assembly-interfaces.json",
@@ -457,6 +460,66 @@
       "sha256": "4c18a6f0c31c14107c4ded0169ac46302a5ec655b19bc2ccdc532a12fa1aaf16"
     },
     {
+      "path": "pcb/native-preserve-preflight/README.md",
+      "bytes": 3779,
+      "sha256": "f3404979e7a54f00bb01179230dd6e90d8d82160d13f51319c9a9f457e117129"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/applied-rules.json",
+      "bytes": 2075,
+      "sha256": "7cc071a1934a1df94d5e9c4bbd406688e083c708c2cb51c3580c84e9c9fa0d9a"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/board.kicad_dru",
+      "bytes": 6070,
+      "sha256": "b3b30bb55c757c08152f2a046d55d86a33b4b480699c1d70575e65557b0a5bd1"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/board.kicad_pro",
+      "bytes": 3903,
+      "sha256": "df9021aea019a2a8dc776044ea291df4c9822c406fadd9d25058a324f9593818"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/drc-execution.json",
+      "bytes": 1516,
+      "sha256": "2ec24bd4638e0d889906f7b408da31511f2d7dfb668917f527babf725ba738c3"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/drc.json",
+      "bytes": 271,
+      "sha256": "8fc3eb71402518e8e71af37f55ec74f551c98494193907a7f2179e83a6ef8fd7"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/drc.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/drc.stdout.log",
+      "bytes": 176,
+      "sha256": "c82dfc72e572b1bfe2eab4f7b078aabd174a2c25ac940e85c96d128b55c691f8"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json",
+      "bytes": 1661,
+      "sha256": "792dfeab9c7870cb42eafcdbabd32da47e1c5db2409814daca8b3da7f9105684"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/preparation-result.json",
+      "bytes": 2474,
+      "sha256": "00c59a52ea9c2ced761d15b471559a088fdb389c9274a752b02a5793623e813b"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/requested-rules.json",
+      "bytes": 1059,
+      "sha256": "05ca8b2bf7e4b3553cf518e410bd8978211669bbf1605ad05566e5fd8905932a"
+    },
+    {
+      "path": "pcb/native-preserve-preflight/rule-artifact.json",
+      "bytes": 12524,
+      "sha256": "389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819"
+    },
+    {
       "path": "pcb/positions.csv",
       "bytes": 1149,
       "sha256": "7fcf52e8adcb53ee1cfb67c50a19ff95ed96784f0be3265a97cb1b2e7cdcff7b"
@@ -498,8 +561,8 @@
     },
     {
       "path": "project-binding.json",
-      "bytes": 1416,
-      "sha256": "067b87a110944d61550f3123222e4ebc7ad2193ff295171bf77247f14a1192bf"
+      "bytes": 2125,
+      "sha256": "5caaa32acc81260c7a13579a1da106fc181cbca038a17186327b02168cdf6089"
     },
     {
       "path": "source-provenance.json",

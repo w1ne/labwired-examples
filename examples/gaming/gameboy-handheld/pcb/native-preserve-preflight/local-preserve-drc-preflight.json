@@ -1,0 +1,37 @@
+{
+  "scope": "local source-preservation and independent KiCad DRC preflight; no hosted admission or attachment",
+  "preparedAt": "2026-11-11T00:12:12.168Z",
+  "drcFinishedAt": "2026-11-11T00:13:21.719633+00:00",
+  "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+  "pcb_bytes": 573344,
+  "rules_ref": "sha256:389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819",
+  "input_rules_ref": "sha256:5ff96c7c114eb2717e3554f34bff2635e12cf2d1e82eee25d2f6d99e81544d0c",
+  "rules_digest": "85915592fc0647b75a752e74a1cb3bf552990c2d538ce6f1156da769b9fe1b2e",
+  "preparation": {
+    "mode": "preserve",
+    "status": "imported",
+    "network_calls": 0,
+    "layer_count": 2
+  },
+  "drc": {
+    "kicad_version": "9.0.2",
+    "exit_code": 0,
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity_checked": false,
+    "input_hashes_unchanged": true,
+    "report_sha256": "8fc3eb71402518e8e71af37f55ec74f551c98494193907a7f2179e83a6ef8fd7"
+  },
+  "input_sha256": {
+    "board.kicad_pcb": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "board.kicad_pro": "df9021aea019a2a8dc776044ea291df4c9822c406fadd9d25058a324f9593818",
+    "board.kicad_dru": "b3b30bb55c757c08152f2a046d55d86a33b4b480699c1d70575e65557b0a5bd1"
+  },
+  "source_files": {
+    "services/labwired-builder/src/route-imported-native.ts": "7e606652f8be492c36e0776538f0e688524b255af9879fbfb327f7462cc97f61",
+    "services/labwired-builder/src/agent-routing-rules.ts": "188939fbec6a2d16334a05c5f2da654d0981f5a21fee5e91e52fdfdd15643cb2"
+  },
+  "passed": true,
+  "hosted_job_submitted": false,
+  "canonical_project_mutated": false
+}
