@@ -1,0 +1,118 @@
+{
+  "fourMotorsInitiallyRunning": true,
+  "selectedFault1AppliedThroughUI": true,
+  "motor1DisabledWhileOthersRun": true,
+  "pauseHoldsExactPoseFor5s": true,
+  "pauseMarksLastObserved": true,
+  "resetClearsSamples": true,
+  "finalBeforePause": [
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M1",
+      "sampleCurrent": "true",
+      "positionRad": "79.08531848031485",
+      "speedRpm": "0.00022510979703162215",
+      "controlState": "off:external-enable",
+      "faults": "",
+      "text": "M10 RPMoff:external-enable"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M2",
+      "sampleCurrent": "true",
+      "positionRad": "-197.31761373033106",
+      "speedRpm": "-2381.8539652174527",
+      "controlState": "inverter",
+      "faults": "",
+      "text": "M2-2,382 RPMinverter"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M3",
+      "sampleCurrent": "true",
+      "positionRad": "-197.1639193844708",
+      "speedRpm": "-2391.379655022561",
+      "controlState": "inverter",
+      "faults": "",
+      "text": "M3-2,391 RPMinverter"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M4",
+      "sampleCurrent": "true",
+      "positionRad": "197.11377674575073",
+      "speedRpm": "1994.755622937531",
+      "controlState": "inverter",
+      "faults": "",
+      "text": "M41,995 RPMinverter"
+    }
+  ],
+  "pausedRows": [
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M1",
+      "sampleCurrent": "false",
+      "positionRad": "79.0853187835162",
+      "speedRpm": "0.00013821557603343023",
+      "controlState": "off:external-enable",
+      "faults": "",
+      "text": "M10 RPMoff:external-enableLast observed / no current sample"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M2",
+      "sampleCurrent": "false",
+      "positionRad": "-201.3676122451188",
+      "speedRpm": "-2447.395234812012",
+      "controlState": "inverter",
+      "faults": "",
+      "text": "M2-2,447 RPMinverterLast observed / no current sample"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M3",
+      "sampleCurrent": "false",
+      "positionRad": "-201.21410992900232",
+      "speedRpm": "-2498.8402292406986",
+      "controlState": "inverter",
+      "faults": "",
+      "text": "M3-2,499 RPMinverterLast observed / no current sample"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M4",
+      "sampleCurrent": "false",
+      "positionRad": "201.16200482502705",
+      "speedRpm": "1992.9184190110968",
+      "controlState": "inverter",
+      "faults": "",
+      "text": "M41,993 RPMinverterLast observed / no current sample"
+    }
+  ],
+  "stoppedRows": [
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M1",
+      "sampleCurrent": "false",
+      "text": "M1No sample"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M2",
+      "sampleCurrent": "false",
+      "text": "M2No sample"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M3",
+      "sampleCurrent": "false",
+      "text": "M3No sample"
+    },
+    {
+      "testid": "runtime-motor-row",
+      "motionId": "M4",
+      "sampleCurrent": "false",
+      "text": "M4No sample"
+    }
+  ]
+}

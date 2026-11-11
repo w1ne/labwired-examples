@@ -60,10 +60,11 @@ The location mapping is provisional, not proof of channel order on assembled har
   mounting pattern, M5 prop shaft; selected for 4S.
 - 1 × Gemfan Hurricane 51433-3 package, four polycarbonate propellers:
   2 CW + 2 CCW, 5.1-inch class, M5 center bore.
-- With OpenFrame-5F 226 mm diagonal wheelbase, adjacent motor axes are
-  approximately 226/sqrt(2) = 159.8 mm apart. For 129.7 mm propeller
-  diameter, nominal tip-to-tip clearance is about 30.1 mm. This is a geometric
-  estimate only; propeller flex, frame geometry and wire routing remain untested.
+- The evaluated OpenFrame-5F has motor axes at [±89, ±69.534420756] mm.
+  Its 226 mm diagonal is not a square-X layout. The minimum adjacent-axis
+  distance is 139.0688 mm. A 129.7 mm propeller sweep leaves 9.3688 mm
+  nominal disk-to-disk clearance. This is a geometric estimate; propeller
+  flex, tolerance, frame deformation and wire routing remain untested.
 - Opposite motors should rotate in the same direction. Match installed CW/CCW
   props to the measured direction and Betaflight's configured prop-in/prop-out
   convention; never infer direction solely from an ESC channel number.
@@ -84,6 +85,8 @@ The location mapping is provisional, not proof of channel order on assembled har
    vibration, fasteners, and battery retention under controlled conditions.
 
 No physical power-on, thermal, vibration, aerodynamic, flight or transient
-validation has been performed. The original OpenESC PCB has 16 deliberately
-omitted NC-device pads; a manufacturing and assembly review is mandatory
-before board fabrication. See esc-4in1/validation/README.md.
+validation has been performed. The reviewed ESC now has 1,067 pads, including
+the three MCU package pads omitted by the previous repaired footprint. Native
+ERC, DRC, connectivity and schematic-to-PCB parity checks pass within their
+configured scope. The 15 microvias, six-layer stackup, assembly clearances and
+power behavior still require manufacturing review. See [electrical validation](esc-4in1/validation/README.md).

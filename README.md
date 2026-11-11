@@ -11,11 +11,11 @@ This repository is for runnable hardware verification stories, **not concept art
 | [Game Boy-compatible handheld](examples/gaming/gameboy-handheld/) | STM32F411 C firmware runs Peanut-GB and an original ROM; ILI9341 and eight controls | Shared carrier/case interfaces, routed KiCad source, 14 fixed CAD mates | Driven MCU model verification, host ROM behavior, local browser input, PCB DRC and static CAD checks; no physical hardware |
 | [HeyPCB imported-board acceptance sample](examples/pcb/heypcb-import-acceptance/) | Seven pinned KiCad PCB files and model-gap evidence; no full-board pass | No mechanical model | Source blobs verified; seven imports reported in unmerged PR #2934; none completely simulated |
 | [Industrial BLDC fault verification](examples/industrial/bldc-fault-verification/) | STM32L476 compiled C, 24 V motor plant, three digital fault flags, inverter shutdown | No mechanical model in this example | Normal spin-up and 3 fault scenarios model-verified; ideal MCU supply, no physical bench |
-| [Quadrotor BLDC propulsion](examples/robotics/quadrotor-bldc/) | STM32L476 compiled C, six-step BLDC, Hall/encoder inputs, motor speed + fault shutdown | Four independently articulated rotor joints in KernelCAD | One motor channel model-verified; CAD joints motion-checked. No flight simulation. |
+| [Quadrotor co-design](examples/robotics/quadrotor-bldc/) | Four STM32L476 C channels; separate native six-layer ESC with zero configured ERC/DRC findings | 36-part KernelCAD frame and four rotor joints; populated-board assembly candidate remains blocked | Candidate browser: 360 exact motor/CAD observations, isolated fault, pause and reset. Actual board simulation and flight remain open. |
 
 ## Featured video
 
-[Watch the 35-second LabWired × KernelCAD quadrotor workflow](examples/robotics/quadrotor-bldc/media/quadrotor-demo.mp4). Recorded from actual CAD, firmware simulation, and live fault injection. It does not show verified aircraft flight.
+[Watch the 75-second quadrotor co-design engineering preview](examples/robotics/quadrotor-bldc/media/quadrotor-engineering-preview.mp4): editable CAD, exploded assembly, native schematic/PCB, four live motor channels, a selected-channel fault, pause and reset. This is actual application footage of a candidate STM32 propulsion bench. The physical OpenESC board and aircraft flight are not simulated by that bench.
 
 ## Run
 

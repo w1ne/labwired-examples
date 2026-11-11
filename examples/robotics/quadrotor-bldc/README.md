@@ -1,99 +1,94 @@
-# Quadrotor propulsion: LabWired × KernelCAD
+# Quadrotor co-design: LabWired + KernelCAD
 
-Rebuild a **modern ODrive-class motor-control function** from first principles: one verified STM32L476 BLDC propulsion channel in LabWired and an editable four-rotor drone concept in KernelCAD.
+This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, and a **four-channel STM32 propulsion bench**. The motor bench uses real compiled firmware and reduced-order motor models. It does not yet simulate the electronics or flight controller on the physical boards.
 
-**This example does not run ODrive firmware or reproduce the proprietary modern ODrive PCB.** The firmware is a simple, inspectable **six-step commutator**, not field-oriented control. A quadcopter uses four propulsion channels: we verified **one** motor electronically, and modeled four rotors mechanically. The projects are linked by design intent, not yet by a shared live physics clock.
+## Recorded engineering preview
 
-[**Watch the 35-second recorded demo (MP4)**](media/quadrotor-demo.mp4) — 1280×720 at 30 fps, H.264. Actual application footage, with no fabricated serial traces.
+[Watch the 75-second co-design video](media/quadrotor-engineering-preview.mp4). It uses actual KernelCAD screens, native KiCad exports and an audited candidate browser run. CAD inspection is time-compressed; runtime scenes play at recorded speed. The final scene states that physical-board simulation and flight control remain open.
 
-## Open the working projects
+[Video provenance and reproduction](media/README.md) · [Final runtime evidence](labwired/evidence/20261111-final/evidence.json)
 
-- **[Run the LabWired circuit and firmware](https://app.labwired.com/?share=15By9JQ39JOy&run=1)** — Cortex-M4, STM32 TIM1, one motor, inverter fault.
-- **[View KernelCAD drone, revision 2](https://app.kernelcad.com/p/DyJ405zg?version=2)** — six named CAD bodies, four rotor revolute joints and a spin/stop animation timeline.
-- [Original BLDC model and CI fault test in LabWired Core](https://github.com/w1ne/labwired-core/blob/main/examples/nucleo-l476rg-bldc/README.md).
+## Open the projects
 
-![Parametric quadrotor concept evaluated in KernelCAD](media/quad-cad.png)
-![Actual LabWired circuit screenshot](media/circuit-lab.png)
+- [Four-channel LabWired propulsion project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit)
+- [KernelCAD OpenFrame-5F assembly, revision 3](https://app.kernelcad.com/p/DyJ405zg?version=3)
+- [Complete system identity and model boundaries](system-integration.json)
+- [Physical wiring and system BOM](hardware/assembly-wiring.md)
+- [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
 
-## Verified behavior
+The saved LabWired project links to the versioned KernelCAD model. Its circuit contains four controllers, four motors, four independent fault inputs and 64 wires. A logic analyzer can appear as an extra editor instrument; it is not a physical component of the aircraft.
 
-| Test | Observed | Status |
+## What the artifacts establish
+
+| Artifact | Current scope | Evidence |
 | --- | --- | --- |
-| Firmware compile | Hosted C compiler produced executable STM32L476 ELF | Pass |
-| Model spin-up | Firmware emitted TARGET REACHED; measured peak absolute speed ≈ 6,190 RPM | **model_verified** |
-| Inverter fault | SimInput fault.pressed=1 at cycle 1,250,000; firmware emitted FAULT DRIVER and INVERTER OFF | **model_verified** |
-| Inverter gating | PB0 external inverter enable read LOW after the fault | **model_verified** |
-| Mechanical CAD | Four revolute rotor mates; 13 poses checked; no collisions reported | **Motion checked** |
-| Actual ODrive firmware / FOC | Not used; current-sense FOC and gate-driver IC not modeled | Not implemented |
-| Propeller thrust and flight | No aerodynamic model or flight-control loop connected | Not verified |
+| KernelCAD source | Pinned OpenFrame-5F rev2.2 frame, electronic stack, four rotor joints | [Mechanical checks and source identity](cad/README.md) |
+| Physical OpenESC | Four AT32F421 controllers, four gate drivers, 24 MOSFETs; six copper layers | [Native electrical/layout review](hardware/esc-4in1/validation/) |
+| Firmware bench | Four independent STM32L476 six-step commutators, Hall/encoder feedback, latched inverter shutdown | [Exact source and circuit manifest](labwired/four-channel-project.json) |
+| Motor-to-CAD binding | Observed motor position/RPM mapped to explicit rotor/propeller groups | [Revision-pinned mapping](cad/runtime-bindings.json) |
+| Aircraft flight | No connected IMU, flight-controller firmware, thrust model or six-degree-of-freedom body | Not implemented |
 
-These are *simulator-model results*, not tests of a real inverter, power stage, physical propeller or aircraft. Power-on and brownout are not modeled: the simulator assumes an ideal 3.3 V MCU rail.
+The CAD exploded view is an assembly illustration. The mechanism check samples rotor poses. Neither establishes a complete physical assembly path, frame strength or flight performance.
 
-## Real four-motor PCB and commercial propulsion parts
+## Physical board and simulated bench
 
-The actual hardware design is a separate, routed 4-in-1 **OpenESC** derivative,
-not the STM32 single-axis simulator represented by this older recording:
+These are two distinct electrical targets. Keep this distinction visible in recordings and demonstrations.
 
-- [Complete KiCad 10 ESC schematic/PCB and KiCad design rules](hardware/esc-4in1/)
-- [Real-world four motor, propeller, frame, FC and battery wiring](hardware/assembly-wiring.md)
-- [Complete system BOM, with manufacturer links and pending sourcing](hardware/system-bom.csv)
-- [Native DRC, ERC and package-pad manufacturing review](hardware/esc-4in1/validation/README.md)
-
-The complete motor power stage is **not** yet simulated in LabWired and the
-physical PCB remains a review-only source until unresolved NC pad/DRC/ ERC
-findings are corrected.
-
-## Editable files
-
-- [firmware/main.c](firmware/main.c) — compiled six-step STM32 firmware with TIM1 complementary PWM, Hall/encoder inputs, UART diagnostics and safe inverter-disable path.
-- [labwired/circuit.json](labwired/circuit.json) — complete wiring: actual catalog IDs for STM32L476, bldc-motor and button-module.
-- [labwired/evidence.json](labwired/evidence.json) — reproducible acceptance oracles, input stimuli, outcomes and limitations.
-- [cad/drone.kcad.ts](cad/drone.kcad.ts) — parametric four-rotor design. Animation is visual only, **not** motor telemetry.
-- [media/](media/) — screenshots captured from real Studio sessions.
-
-## Electrical signals
-
-| STM32L476 | Component pin | Role |
+| Property | Physical aircraft design | Firmware simulation |
 | --- | --- | --- |
-| PA8/PB13 | BLDC AH/AL | Phase A main/complementary PWM |
-| PA9/PB14 | BLDC BH/BL | Phase B main/complementary PWM |
-| PA10/PB15 | BLDC CH/CL | Phase C main/complementary PWM |
-| PB0 | BLDC ENABLE | External inverter enable |
-| PC0–PC2 | BLDC HALL_A/B/C | Rotor Hall feedback |
-| PC3–PC5 | BLDC ENC_A/B/INDEX | Quadrature feedback |
-| PB7 | button-module SIG | Inject inverter fault |
+| ESC MCU | Four AT32F421G8U7 | Four STM32L476 |
+| ESC firmware | AM32 / DShot | Inspectable six-step commutator |
+| Flight controller | RP2354B / Betaflight | Not running |
+| DC supply | 4S LiPo: 14.8 V nominal, 16.8 V full | Ideal 24 V |
+| Motor | EMAX ECO II 2306 2400KV | Reduced-order BLDC plant; Ke and Kt are both 0.04 in their SI units |
+| Gate drivers and MOSFETs | Native schematic and PCB | Functional motor/inverter plant, no transistor transients |
+| PCB-to-simulation equivalence | Required for a full hardware twin | Not established |
 
-The bldc-motor part is a **combined simulation plant**, not a manufacturable 13-pin BLDC device. A physical 24 V inverter needs gate driver, MOSFETs, current/voltage measurement, supply and thermal design.
+The native PCB has **222 footprints, 1,067 pads and 210 nets**. KiCad 10.0.8 reports zero ERC errors/warnings, zero DRC violations, zero unconnected items and zero schematic/PCB parity differences within the configured checks. The importer retains all components, nets and pin endpoints. However, **37 functional parts lack runnable models**; nine further inert entries are connectors/testpoints. The actual board remains design-only. A clean rule check does not provide motor-current, thermal, switching-transient or flight evidence.
 
-## Reproduce tests through LabWired MCP
+The populated PCB evaluates by itself. Its complete BREP assembly exceeded the hosted 1,024 MB memory limit. A lower-memory native component mesh then exposed a generic hosted-input defect, repaired in [KernelCAD-server PR #655](https://github.com/w1ne/kernelCAD-server/pull/655). The proposed 2 mm stack lift improves the calculated lower clearance from 0.32 mm to 2.32 mm, but the populated assembly candidate has not passed. Saved revision 3 remains unchanged. See [mechanical evidence and limits](cad/README.md).
 
-1. Use labwired_compile with the contents of firmware/main.c, board stm32l476, language c, entryPath src/main.c. Use the returned immutable firmware_ref.
-2. Call labwired_verify with that reference, target stm32l476, and the JSON diagram. Require UART substring TARGET REACHED and motor rotor1 at least 100 RPM. Only successful model_verified counts.
-3. In a separate call, drive input { component: fault, channel: pressed, value: 1, after_cycles: 1250000 } and require BOTH UART substrings FAULT DRIVER and INVERTER OFF plus GPIO PB0 == low. Confirm that the tool reports the stimulus actually applied; an undriven run is not fault proof.
-4. Open the KernelCAD revision and review rotorCW / rotorCCW and per-part joints. The saved animation does not yet consume live LabWired RPM.
+## Reproduce the four-channel bench
 
-The public [LabWired Core firmware-in-loop model](https://github.com/w1ne/labwired-core/tree/main/examples/nucleo-l476rg-bldc) provides the independent reference. The example here is a compiled C adaptation.
+1. Load [four-channel-circuit.json](labwired/four-channel-circuit.json).
+2. Use the exact source identified for each controller in [four-channel-project.json](labwired/four-channel-project.json). Compile each as C with board `stm32l476` and entry path `src/main.c`.
+3. Run all four controllers together. Their duty commands are 600, 640, 680 and 720 per mille. Require observed rotor motion and the firmware's Hall/encoder feedback markers.
+4. Drive `fault1` through `fault4` independently. Require the selected controller's `FAULT DRIVER` and `INVERTER OFF` markers and its inverter-enable output low. Confirm that the other channels continue before faulting them.
+5. Use `cad/runtime-bindings.json` for the evaluated KernelCAD revision. The bridge must receive real `positionRad` and `speedRpm`; a timed visual animation is not a substitute.
+6. Pause and stop the simulation. Verify that the viewer stops advancing and does not reuse stale telemetry as a new run.
 
-## Technical roadmap
+The multi-MCU loader correction [LabWired PR #3094](https://github.com/w1ne/labwired/pull/3094) merged after required CI passed. Hosted deployment and model verification are separate gates. The generic live bridge is in [LabWired PR #3106](https://github.com/w1ne/labwired/pull/3106) and [KernelCAD-app PR #121](https://github.com/w1ne/kernelCAD-app/pull/121). The candidate diagram with authored motion metadata is [four-channel-circuit.runtime-candidate.json](labwired/four-channel-circuit.runtime-candidate.json); it does not imply that production has deployed these changes.
 
-- Four independent motor plants, four firmware channels and unequal speed setpoints.
-- Actual three-phase driver, MOSFET and current-sensor models and real field-oriented control.
-- Verified propeller load coefficients, shaft inertia and a mechanical handoff to KernelCAD.
-- Aerodynamic forces, flight dynamics and closed-loop attitude control.
-- Recorded Studio footage showing the full hardware-to-motion workflow.
+## Observed candidate behavior
 
-**Current status: model-verified single BLDC channel plus motion-checked drone geometry. Not flight-ready.**
+The [independent final audit](labwired/evidence/20261111-final/independent-audit.json) establishes:
 
-## Recording provenance
+- Four hosted compilations match the exact saved C sources. The four worker channels report their separate identifiers and duty commands.
+- **360 of 360** received CAD motion observations match raw motor angle, RPM, control state and faults, with only the authored direction sign applied. No final-run observations are excluded.
+- Fault1 disables M1 and remains latched after release. All **244** post-fault M1 observations are off; each other channel stays in inverter state for **243 of 243** observations before pause.
+- Pause holds all four observed poses across at least five seconds and labels samples Last observed. Worker stepping stops.
+- Reset reinitializes all four controllers and clears every motor sample. The receiver briefly reports stopped, then settles paused with no samples.
 
-The video uses genuine browser recordings from the real applications, not a generated visualization. The recorder and assembler are checked in:
+This is a browser candidate result, not a physical-board or flight result. The preserved receipts include source/ELF hashes, passive Worker and CAD frames, the exact recorder, and replayable Python audits. [Re-run the audit](labwired/evidence/20261111-final/README.md).
 
-- [media/capture.mjs](media/capture.mjs) captures the actual KernelCAD and LabWired browser interactions through Playwright's video recorder. Requires Node.js 22+, Playwright and Chrome.
-- [media/render.sh](media/render.sh) trims the four clips and makes a captioned 1280×720 H.264 MP4 with FFmpeg. Only scene labels and title/end cards are added.
+## Complete the physical hardware twin
 
-Reproduce from the repository root: install Playwright (npm install playwright), then execute the following commands from your shell:
+The remaining work is concrete:
 
-    node examples/robotics/quadrotor-bldc/media/capture.mjs artifacts/quadrotor-video
-    bash examples/robotics/quadrotor-bldc/media/render.sh artifacts/quadrotor-video examples/robotics/quadrotor-bldc/media/quadrotor-demo.mp4
+- Onboard the actual AT32F421 peripheral model and run the intended AM32 build.
+- Run the RP2354B flight-controller firmware with IMU inputs and four DShot channels.
+- Add the actual power stage, motor parameters, battery behavior and propeller loads. Calibrate them against component data and measured behavior.
+- Connect forces and moments to the airframe dynamics, then test arming, command loss, attitude control and individual motor faults.
+- Establish copper-to-model equivalence and a physical assembly/power-on validation record.
 
-The recording proves only the displayed application behavior. It is not physical flight validation or a live telemetry-driven CAD animation.
+Until those gates pass, use **co-design engineering preview** or **four-channel propulsion bench** to describe this example.
+
+## Files and earlier evidence
+
+- [firmware/channels/](firmware/channels/) stores the four exact saved-project sources, with SHA-256 digests in the project manifest.
+- [cad/drone.kcad.ts](cad/drone.kcad.ts) matches the saved revision and imports immutable source CAD.
+- [cad/evidence/](cad/evidence/) contains full evaluation, motion, assembly-budget and export receipts.
+- [hardware/esc-4in1/](hardware/esc-4in1/) contains editable native electrical files, local libraries and validation reports.
+- [media/](media/) contains recordings and the scripts that produced them.
+
+The original [35-second single-channel recording](media/quadrotor-demo.mp4), [single-channel circuit](labwired/circuit.json), [firmware](firmware/main.c) and [evidence](labwired/evidence.json) are retained as historical reference. They do not establish four-channel operation. The original motor test uses a simulated inverter; it does not run ODrive firmware or reproduce a proprietary ODrive PCB.

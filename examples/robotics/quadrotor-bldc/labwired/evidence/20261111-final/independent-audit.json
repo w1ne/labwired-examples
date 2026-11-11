@@ -1,0 +1,308 @@
+{
+  "verdict": "PASS within local patched four-channel reduced-order motor bench scope",
+  "scope": "Real saved C sources and hosted compiler, existing WASM MCU/motor plants, local candidate sender and CAD receiver; not deployed production and not actual OpenESC/flight validation.",
+  "trace_directory": "/tmp/quad-runtime-final",
+  "compile_results": [
+    {
+      "chip": "ctrl1",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 600,
+      "source_sha256": "52bc858c1d750a9c3db7cba7aa6e58d54dc1a9990df00c3bc988a3c826e59d59",
+      "elf_bytes": 83640,
+      "elf_sha256": "4a4b6d500b43ec3c9d42c31c41d406e3f89098a96a329cb420a49e24c11ac57f",
+      "saved_source_exact": true
+    },
+    {
+      "chip": "ctrl2",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 640,
+      "source_sha256": "aab1da646dd23c119b7b585b313acad8a68f21cc83ab20f0d9154e8682e6e812",
+      "elf_bytes": 83640,
+      "elf_sha256": "d67fc642deca70574e02834597408bd30eb8346c190fa887843a826d7725a72a",
+      "saved_source_exact": true
+    },
+    {
+      "chip": "ctrl3",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 680,
+      "source_sha256": "d8927b124c6c541c1dc3005f110aa2ade9c9f2de2ecde36eb2ab5f88e5e1a6ad",
+      "elf_bytes": 83640,
+      "elf_sha256": "359d91c6e40f95971d988fc20c6a277bb26215c1452f7ba0979483feea3b2755",
+      "saved_source_exact": true
+    },
+    {
+      "chip": "ctrl4",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 720,
+      "source_sha256": "adcfb98ad8f5885ab9fa511eaae8d69717ae01dc46d52f748b2d8516020ac1cb",
+      "elf_bytes": 83640,
+      "elf_sha256": "5c36b83c07c8a4023ae488166c73b3dc975ae65b21fbec73b455c8c956f2c934",
+      "saved_source_exact": true
+    }
+  ],
+  "worker_initializations": [
+    {
+      "chip": "ctrl1",
+      "epoch_ms": 1794405780229,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl2",
+      "epoch_ms": 1794405784081,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl3",
+      "epoch_ms": 1794405784897,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl4",
+      "epoch_ms": 1794405785211,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl1",
+      "epoch_ms": 1794405880767,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl2",
+      "epoch_ms": 1794405881480,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl3",
+      "epoch_ms": 1794405882175,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl4",
+      "epoch_ms": 1794405884474,
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    }
+  ],
+  "worker_binary_identity_limit": "Capture retains boot payload length but not boot-payload bytes; compiler ELF hashes plus per-node UART identifiers/duty and source loading path establish the observed compile/boot chain.",
+  "cad_raw_equality": {
+    "fields": [
+      "absolute shaft angle",
+      "speed RPM",
+      "control state",
+      "fault list"
+    ],
+    "mapping_signs": {
+      "M1": 1,
+      "M2": -1,
+      "M3": -1,
+      "M4": 1
+    },
+    "exact_matches": 360,
+    "mismatches": [],
+    "common_capture_end_epoch_ms": 1794405887641,
+    "excluded_tail_observations": 0,
+    "exclusion_reason": "CAD capture continues after worker capture ends; no corresponding raw record is available.",
+    "matched_observation_age_ms_min_max": [
+      164,
+      4490
+    ]
+  },
+  "fault": {
+    "kind": "Simulated active-HIGH ctrl1 GPIO PB7 driver-fault input; firmware disables inverter",
+    "press": {
+      "epoch_ms": 1794405818515,
+      "chip": "ctrl1",
+      "method": "setBoardIoInput",
+      "args": [
+        "fault1",
+        true
+      ]
+    },
+    "release": {
+      "epoch_ms": 1794405836932,
+      "chip": "ctrl1",
+      "method": "setBoardIoInput",
+      "args": [
+        "fault1",
+        false
+      ]
+    },
+    "first_disabled_epoch_ms": 1794405819052,
+    "no_transistor_fault_injected": true,
+    "channels": [
+      {
+        "chip": "ctrl1",
+        "before_rpm": 2474.099284869317,
+        "final_rpm": 0.00011894268951821867,
+        "final_control_state": "off:external-enable",
+        "final_cycles": 64433184,
+        "samples_after_first_motor_disabled": 244,
+        "post_fault_states": {
+          "off:external-enable": 244
+        },
+        "uart": "ROTOR 1 READY duty_permille=600\r\nROTOR 1 HALL LOCKED\r\nROTOR 1 FAULT DRIVER\r\nROTOR 1 INVERTER OFF\r\n"
+      },
+      {
+        "chip": "ctrl2",
+        "before_rpm": 2243.1061855261414,
+        "final_rpm": 2445.286281559519,
+        "final_control_state": "inverter",
+        "final_cycles": 64933184,
+        "samples_after_first_motor_disabled": 243,
+        "post_fault_states": {
+          "inverter": 243
+        },
+        "uart": "ROTOR 2 READY duty_permille=640\r\nROTOR 2 HALL LOCKED\r\n"
+      },
+      {
+        "chip": "ctrl3",
+        "before_rpm": 2148.734116247622,
+        "final_rpm": 2474.9764415155773,
+        "final_control_state": "inverter",
+        "final_cycles": 64933184,
+        "samples_after_first_motor_disabled": 243,
+        "post_fault_states": {
+          "inverter": 243
+        },
+        "uart": "ROTOR 3 READY duty_permille=680\r\nROTOR 3 HALL LOCKED\r\n"
+      },
+      {
+        "chip": "ctrl4",
+        "before_rpm": 2645.725228094773,
+        "final_rpm": 2606.991005294818,
+        "final_control_state": "inverter",
+        "final_cycles": 64933184,
+        "samples_after_first_motor_disabled": 243,
+        "post_fault_states": {
+          "inverter": 243
+        },
+        "uart": "ROTOR 4 READY duty_permille=720\r\nROTOR 4 HALL LOCKED\r\n"
+      }
+    ]
+  },
+  "cad_frame_states": {
+    "running": 90,
+    "paused": 209,
+    "stopped": 10
+  },
+  "explicit_pause_test": {
+    "verified": true,
+    "held_positions_rad": [
+      "79.0853187835162",
+      "-201.3676122451188",
+      "-201.21410992900232",
+      "201.16200482502705"
+    ],
+    "pause_to_hold_marker_ms": 10812,
+    "all_four_samples_marked_last_observed": true,
+    "no_worker_run_frames_after_1s_quiescence_until_reset": true
+  },
+  "reset_test": {
+    "verified": true,
+    "final_status": "paused",
+    "observed_sequence": "Transient stopped while reinitializing, then paused with zero observed motions",
+    "all_four_positions_and_speeds_cleared": true,
+    "all_four_worker_nodes_reinitialized": true
+  },
+  "fault_interval_end_epoch_ms": 1794405863248,
+  "fault_interval_limit": "Before explicit pause/reset; reset observations are not used to assert uninterrupted peer operation.",
+  "source_provenance": {
+    "sourceTrees": [
+      {
+        "path": "/data/worktrees/labwired-motor-cad-bridge-20261111",
+        "head": "e621975b4122ad18b691899625bd9c5b420795a1",
+        "dirty": ""
+      },
+      {
+        "path": "/data/worktrees/kernelcad-motor-runtime-20261111",
+        "head": "f0977630d222d22030168371b491b397a91aba92",
+        "dirty": ""
+      }
+    ],
+    "scriptSha256": "11117c7853c2c303e5edcab45bf0ab6aa14e79099a12ef3a036a5f8378be9e67",
+    "localDevelopmentAuthDisabled": true,
+    "compiler": "https://api.labwired.com/v1/compile",
+    "receiverBrowserOrigin": "https://app.kernelcad.com",
+    "receiverAssetOrigin": "http://127.0.0.1:4331",
+    "savedProjectId": "7c92d38a4f2ac205aa91502291fde0d8",
+    "cadRevision": 3
+  },
+  "worker_errors": [
+    {
+      "chip": "ctrl1",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl2",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl3",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl4",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl1",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl2",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl3",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl4",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    }
+  ],
+  "worker_errors_scope": "8 unsupported runtime snapshot queries across initial boot and reset; no initError, stepError or commandError in captured Worker traffic. Simulation observations and UART continue.",
+  "engine_errors": [],
+  "known_environment_errors": [
+    "Development Clerk initialization HTTP 400",
+    "Vite HMR websocket failure on locally routed CAD origin"
+  ],
+  "physical_limits": [
+    "24 V generic BLDC plant differs from selected 4S 14.8 V nominal / 16.8 V full hardware",
+    "STM32L476 bench firmware differs from actual AT32F421/AM32 ESC and RP2354B/Betaflight FC",
+    "No actual MOSFET/gate-driver switching, battery sag, thermal or EMI proof",
+    "No calibrated propeller thrust, airframe rigid-body dynamics, attitude loop or flight proof",
+    "CAD applies one-way observed shaft poses; geometry does not feed forces back into the motor model"
+  ],
+  "input_sha256": {
+    "compiles.json": "7e0d6019b0b7159fac63b0e699c36e3fe1d9ef70be0b413ffd4dad84731fffc7",
+    "worker-final.json": "0011773d71919aafdc27f566fbacc84d0f1a268d7e0dcecc9d7a97026c74b8c2",
+    "cad-final.json": "65e20af4b64b031f2a1b7feb223125501b95dc498a4ce8109203cd1c9164632b",
+    "events.json": "ab5fe000963b0d0949c5641f357c9bf0b029dfb74b420aac864a38bd31723a9c",
+    "local-project-fixture.json": "4c61754a92a6f9dab3e8e82146ba70ed9c51e19f9e11acb4d4c01a6378f77710",
+    "provenance.json": "612c93b9f74b0ac1b275f3ba87439d479f9f869bc5bc914560d051a1970a29cf",
+    "ui-paused.json": "30ab66abc0539ecc6be975e445b4b7849bba1239a15aa13e04582f786cab623c",
+    "ui-pause-held.json": "30ab66abc0539ecc6be975e445b4b7849bba1239a15aa13e04582f786cab623c",
+    "ui-stopped.json": "d84509e272e357d03d310e3eb89a2f5ce4614649f6811c65aaffb6bbddff0477",
+    "assertions.json": "911b81b8210371baff15d3cee79a888d1a12c93b0154d796681b64a8fbb88ea9"
+  }
+}

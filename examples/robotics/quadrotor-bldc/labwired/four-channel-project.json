@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+  "url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+  "board": "stm32l476",
+  "entry_path": "src/main.c",
+  "language": "c",
+  "channels": [
+    {
+      "controller": "ctrl1",
+      "motor": "rotor1",
+      "fault_input": "fault1",
+      "duty_per_mille": 600,
+      "source": "firmware/channels/ctrl1.c",
+      "sha256": "52bc858c1d750a9c3db7cba7aa6e58d54dc1a9990df00c3bc988a3c826e59d59"
+    },
+    {
+      "controller": "ctrl2",
+      "motor": "rotor2",
+      "fault_input": "fault2",
+      "duty_per_mille": 640,
+      "source": "firmware/channels/ctrl2.c",
+      "sha256": "aab1da646dd23c119b7b585b313acad8a68f21cc83ab20f0d9154e8682e6e812"
+    },
+    {
+      "controller": "ctrl3",
+      "motor": "rotor3",
+      "fault_input": "fault3",
+      "duty_per_mille": 680,
+      "source": "firmware/channels/ctrl3.c",
+      "sha256": "d8927b124c6c541c1dc3005f110aa2ade9c9f2de2ecde36eb2ab5f88e5e1a6ad"
+    },
+    {
+      "controller": "ctrl4",
+      "motor": "rotor4",
+      "fault_input": "fault4",
+      "duty_per_mille": 720,
+      "source": "firmware/channels/ctrl4.c",
+      "sha256": "adcfb98ad8f5885ab9fa511eaae8d69717ae01dc46d52f748b2d8516020ac1cb"
+    }
+  ],
+  "diagram": "labwired/four-channel-circuit.json",
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "DyJ405zg",
+    "version": 3,
+    "title": "Quadrotor \u00b7 OpenFrame-5F assembly"
+  },
+  "simulation_scope": "Four independent STM32L476 six-step commutators with reduced-order BLDC plants. Physical AT32F421/AM32 ESC and RP2354B flight controller are separate hardware references.",
+  "flight_dynamics": false,
+  "physical_hardware_tested": false
+}

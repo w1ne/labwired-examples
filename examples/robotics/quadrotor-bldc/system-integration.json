@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-11",
+  "name": "Quadrotor co-design engineering preview",
+  "mechanics": {
+    "project": "DyJ405zg",
+    "revision": 3,
+    "source": "cad/drone.kcad.ts",
+    "frame": "OpenFrame-5F rev2.2",
+    "wheelbase_mm": 226,
+    "motor_centers_mm": [
+      [
+        89,
+        69.534420756
+      ],
+      [
+        89,
+        -69.534420756
+      ],
+      [
+        -89,
+        69.534420756
+      ],
+      [
+        -89,
+        -69.534420756
+      ]
+    ],
+    "propeller_sweep_diameter_mm": 129.7,
+    "minimum_nominal_sweep_gap_mm": 9.368841512000017
+  },
+  "physical_electronics": {
+    "esc": "hardware/esc-4in1/4in1.kicad_pcb",
+    "schematic": "hardware/esc-4in1/4in1.kicad_sch",
+    "esc_mcu": "4 x AT32F421G8U7",
+    "esc_firmware": "AM32 / DShot",
+    "flight_controller": "OpenFC-Lite RP2354B / Betaflight",
+    "battery_nominal_v": 14.8,
+    "battery_full_v": 16.8,
+    "motor": "EMAX ECO II 2306 2400KV",
+    "netlist_simulation_equivalence": false
+  },
+  "simulated_electronics": {
+    "project": "7c92d38a4f2ac205aa91502291fde0d8",
+    "manifest": "labwired/four-channel-project.json",
+    "mcu": "4 x STM32L476",
+    "firmware": "Six-step commutation with Hall/encoder feedback and fault latch",
+    "motor_model": "Reduced-order BLDC plant",
+    "dc_bus_v": 24,
+    "back_emf_constant": 0.04,
+    "torque_constant": 0.04,
+    "model_is_physical_ESC": false
+  },
+  "integration": {
+    "motion_binding": "cad/runtime-bindings.json",
+    "source_quantity": "Observed simulator positionRad, speedRpm, controlState and fault flags",
+    "mechanical_feedback_into_motor_load": false,
+    "propeller_thrust_model": false,
+    "six_dof_airframe": false,
+    "closed_loop_flight_controller": false,
+    "physical_tests": false
+  }
+}
