@@ -13,7 +13,7 @@ Independent `kicad-cli pcb drc` then returned exit code 0, zero violations and z
 | `local-preserve-drc-preflight.json` | Combined observed result, exact source/rule identities and limits. |
 | `preparation-result.json` | Preservation output identities, input/resolved-rule hashes, zero network calls and the implementation source-file hashes. |
 | `drc-execution.json` | Actual local command, timestamps, return code and before/after input hashes. |
-| `drc.json`, `drc.stdout.log`, `drc.stderr.log` | Unmodified KiCad report and process output. |
+| `drc.json`, `drc-stdout.txt`, `drc-stderr.txt` | Unmodified KiCad report and process output. |
 | `requested-rules.json` | The explicit rule request used for the measured preservation preparation. |
 | `applied-rules.json` | The resolved rule plan, including per-net entries. |
 | `board.kicad_pro`, `board.kicad_dru` | Exact generated rules checked by KiCad; they do not replace the authored project settings beside the carrier source. |
