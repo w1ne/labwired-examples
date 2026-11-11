@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "defaults": {
+    "track_width_mm": 0.25,
+    "clearance_mm": 0.2,
+    "via_diameter_mm": 0.6,
+    "via_drill_mm": 0.3
+  },
+  "fabrication": {
+    "reference": "Frozen carrier prototype geometry and KiCad project settings; supplier process capability has not been qualified.",
+    "min_track_width_mm": 0.25,
+    "min_clearance_mm": 0.2,
+    "min_drill_mm": 0.3,
+    "min_annular_ring_mm": 0.1,
+    "min_hole_to_hole_mm": 0.25,
+    "min_edge_clearance_mm": 0.5
+  },
+  "sources": [
+    {
+      "kind": "assumption",
+      "reference": "https://github.com/w1ne/labwired-examples/blob/b04f875de219a9f1eff8b1312e82fea614a3fb37/examples/gaming/gameboy-handheld/pcb/README.md",
+      "rationale": "Preserve the authored prototype: every source segment is 0.25 mm; net clearance 0.2 mm; vias 0.6/0.3 mm. Existing KiCad project requires 0.3 mm minimum hole, 0.1 mm annular ring, 0.25 mm hole-to-hole and 0.5 mm edge clearance. These are design constraints, not supplier qualification or measured hardware limits."
+    }
+  ],
+  "net_classes": [
+    {
+      "name": "Default",
+      "track_width_mm": 0.25,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 0.6,
+      "via_drill_mm": 0.3,
+      "nets": [
+        "3V3",
+        "GND",
+        "PA4",
+        "PA5",
+        "PA7",
+        "PA8",
+        "PB0",
+        "PB1",
+        "PB10",
+        "PB3",
+        "PB4",
+        "PB5",
+        "PB6",
+        "PB7",
+        "PB8",
+        "PB9"
+      ],
+      "parts": [],
+      "sources": [
+        {
+          "kind": "assumption",
+          "reference": "https://github.com/w1ne/labwired-examples/blob/b04f875de219a9f1eff8b1312e82fea614a3fb37/examples/gaming/gameboy-handheld/pcb/README.md",
+          "rationale": "Preserve the authored prototype: every source segment is 0.25 mm; net clearance 0.2 mm; vias 0.6/0.3 mm. Existing KiCad project requires 0.3 mm minimum hole, 0.1 mm annular ring, 0.25 mm hole-to-hole and 0.5 mm edge clearance. These are design constraints, not supplier qualification or measured hardware limits."
+        }
+      ]
+    }
+  ]
+}

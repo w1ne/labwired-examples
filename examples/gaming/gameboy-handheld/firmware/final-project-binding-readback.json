@@ -1,0 +1,62 @@
+{
+  "operation": "normal owner project GET after root electronics save and normal declared-oracle verification",
+  "read_at": "2026-11-11T15:00:13.139Z",
+  "http_status": 200,
+  "owner": true,
+  "role": "owner",
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "previous_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+  "content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "verified_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "changed_project_fields_since_attachment": [
+    "content_hash",
+    "diagram_json",
+    "evidence",
+    "updated_at",
+    "verified_hash"
+  ],
+  "only_diagram_change": "mechanical.electronics",
+  "unchanged_fields": [
+    "source_code",
+    "source_language",
+    "source_entry_path",
+    "stimuli_json",
+    "pcb_board_id",
+    "pcb_board_rev",
+    "visibility"
+  ],
+  "source_sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+  "source_bytes": 121279,
+  "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+  "source_tree_ref": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0",
+  "mechanical_reference_without_electronics": {
+    "provider": "kernelcad",
+    "slug": "kQAFdaQs",
+    "version": 3,
+    "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+    "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+    "title": "Game Boy handheld enclosure"
+  },
+  "binding_sha256": "13b10cfbeb705aace7fdfcc97c1ca7e493c33122a9450cc5e782d08304ddecd5",
+  "bindings_match_prepared_configuration": true,
+  "input_bindings": 8,
+  "display_bindings": 1,
+  "pcb_board_id": "pcb_c8da1d7776dba9bc",
+  "pcb_board_rev": 0,
+  "visibility": "unlisted",
+  "verification_evidence": [
+    {
+      "kind": "sim_verify",
+      "status": "model_verified",
+      "created_at": 1794409146766,
+      "content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "artifact_hash": null,
+      "ref": null,
+      "fresh": true,
+      "stale_reason": null
+    }
+  ],
+  "scope": "The 14:49 attachment proof remains unchanged. This later snapshot records the separately authorized electronics metadata save and its fresh firmware proof."
+}

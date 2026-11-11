@@ -1,0 +1,1216 @@
+{
+  "ok": true,
+  "startedAt": "2026-11-11T15:14:01.173Z",
+  "startedSeconds": 57.786,
+  "finishedAt": "2026-11-11T15:14:23.588Z",
+  "finishedSeconds": 80.202,
+  "value": {
+    "before": {
+      "parent": {
+        "messages": [
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "detail": "Loading mesh…",
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 7326.699999988079
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "detail": "Loading mesh…",
+            "geometryNonempty": false,
+            "cameraFitted": false,
+            "framePresented": false,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 7326.799999952316
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "geometryNonempty": false,
+            "cameraFitted": false,
+            "framePresented": false,
+            "detail": null,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 8357
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "model_displayed",
+            "revision": 3,
+            "geometryNonempty": true,
+            "cameraFitted": true,
+            "framePresented": true,
+            "detail": null,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17097.69999998808
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "model_displayed",
+            "revision": 3,
+            "geometryNonempty": true,
+            "cameraFitted": true,
+            "framePresented": true,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17114.899999976158
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.runtime.ready",
+            "v": 1,
+            "revision": 3,
+            "accepted": [
+              "lcd1",
+              "btn-up",
+              "btn-down",
+              "btn-left",
+              "btn-right",
+              "btn-a",
+              "btn-b",
+              "btn-select",
+              "btn-start"
+            ],
+            "missingParts": [],
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17123.299999952316
+          }
+        ],
+        "frames": 0,
+        "displayFrames": 0,
+        "uartByChip": {
+          "foreground": {
+            "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n",
+            "cycles": 1247544259
+          }
+        },
+        "uartEvents": [
+          {
+            "chip": "foreground",
+            "cycles": 13157499,
+            "wallMs": 10198.399999976158,
+            "appended": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 15409694,
+            "wallMs": 10354.299999952316,
+            "appended": "DMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 18270710,
+            "wallMs": 10953.099999964237,
+            "appended": "DMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 24111951,
+            "wallMs": 12162.599999964237,
+            "appended": "DMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n"
+          }
+        ]
+      },
+      "child": {
+        "messages": [
+          {
+            "source": "kernelcad-runtime-host",
+            "v": 1,
+            "type": "kernelcad.runtime.bind",
+            "model": {
+              "slug": "kQAFdaQs",
+              "revision": 3
+            },
+            "bindings": {
+              "displays": [
+                {
+                  "id": "lcd1",
+                  "part": "lcd1-active-glass",
+                  "face": "+z",
+                  "rotation": 0
+                }
+              ],
+              "inputs": [
+                {
+                  "id": "btn-up",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.34347826086956523,
+                    0.6565217391304348,
+                    0.6565217391304348,
+                    1
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-down",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.34347826086956523,
+                    0,
+                    0.6565217391304348,
+                    0.34347826086956523
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-left",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0,
+                    0.34347826086956523,
+                    0.34347826086956523,
+                    0.6565217391304348
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-right",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.6565217391304348,
+                    0.34347826086956523,
+                    1,
+                    0.6565217391304348
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-a",
+                  "part": "btn-a",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-b",
+                  "part": "btn-b",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-select",
+                  "part": "btn-select",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-start",
+                  "part": "btn-start",
+                  "face": "+z",
+                  "travelMm": 0.45
+                }
+              ]
+            },
+            "origin": "https://app.labwired.com",
+            "observedAtMs": 10342.599999964237
+          }
+        ],
+        "frames": 270,
+        "displayFrames": 49,
+        "uartByChip": {},
+        "uartEvents": [],
+        "lastDisplay": [
+          {
+            "id": "lcd1",
+            "width": 320,
+            "height": 240,
+            "bytes": 307200,
+            "fnv1a32": "ac01d08a"
+          }
+        ],
+        "firstDisplay": [
+          {
+            "id": "lcd1",
+            "width": 320,
+            "height": 240,
+            "bytes": 307200,
+            "fnv1a32": "ac01d08a"
+          }
+        ],
+        "lastFrame": {
+          "state": "running",
+          "sequence": 270,
+          "inputs": [
+            {
+              "id": "btn-up",
+              "value": 0
+            },
+            {
+              "id": "btn-down",
+              "value": 0
+            },
+            {
+              "id": "btn-left",
+              "value": 0
+            },
+            {
+              "id": "btn-right",
+              "value": 0
+            },
+            {
+              "id": "btn-a",
+              "value": 0
+            },
+            {
+              "id": "btn-b",
+              "value": 0
+            },
+            {
+              "id": "btn-select",
+              "value": 0
+            },
+            {
+              "id": "btn-start",
+              "value": 0
+            }
+          ],
+          "displays": [
+            {
+              "id": "lcd1",
+              "width": 320,
+              "height": 240,
+              "bytes": 307200,
+              "sample": [
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255
+              ]
+            }
+          ]
+        },
+        "latestFrameAt": 1794410045810,
+        "now": 1794410045810
+      }
+    },
+    "held": {
+      "parent": {
+        "messages": [
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "detail": "Loading mesh…",
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 7326.699999988079
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "detail": "Loading mesh…",
+            "geometryNonempty": false,
+            "cameraFitted": false,
+            "framePresented": false,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 7326.799999952316
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "geometryNonempty": false,
+            "cameraFitted": false,
+            "framePresented": false,
+            "detail": null,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 8357
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "model_displayed",
+            "revision": 3,
+            "geometryNonempty": true,
+            "cameraFitted": true,
+            "framePresented": true,
+            "detail": null,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17097.69999998808
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "model_displayed",
+            "revision": 3,
+            "geometryNonempty": true,
+            "cameraFitted": true,
+            "framePresented": true,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17114.899999976158
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.runtime.ready",
+            "v": 1,
+            "revision": 3,
+            "accepted": [
+              "lcd1",
+              "btn-up",
+              "btn-down",
+              "btn-left",
+              "btn-right",
+              "btn-a",
+              "btn-b",
+              "btn-select",
+              "btn-start"
+            ],
+            "missingParts": [],
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17123.299999952316
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.runtime.input",
+            "v": 1,
+            "sequence": 1,
+            "id": "btn-right",
+            "value": 1,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 62463.799999952316
+          }
+        ],
+        "frames": 0,
+        "displayFrames": 0,
+        "uartByChip": {
+          "foreground": {
+            "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\nINPUT=000000ef\nDMG_FRAME=749 x=49 y=80 score=0 hash=0e44b8b6 lines=107424\nDMG_FRAME=750 x=50 y=80 score=0 hash=57245366 lines=107568\nDMG_FRAME=751 x=51 y=80 score=0 hash=a9300436 lines=107712\nDMG_FRAME=752 x=52 y=80 score=0 hash=bfe34302 lines=107856\nDMG_FRAME=753 x=53 y=80 score=0 hash=cc26fa9a lines=108000\nDMG_FRAME=754 x=54 y=80 score=0 hash=8e8b83a2 lines=108144\nDMG_FRAME=755 x=55 y=80 score=0 hash=c29bf28d lines=108288\nDMG_FRAME=756 x=56 y=80 score=0 hash=82b63c01 lines=108432\nDMG_FRAME=757 x=57 y=80 score=0 hash=44d8595a lines=108576\nDMG_FRAME=758 x=58 y=80 score=0 hash=3c1ae1e2 lines=108720\nDMG_FRAME=759 x=59 y=80 score=0 hash=f887ac3a lines=108864\nDMG_FRAME=760 x=60 y=80 score=0 hash=62a24766 lines=109008\nDMG_FRAME=761 x=61 y=80 score=0 hash=8ec7bdb6 lines=109152\nDMG_FRAME=762 x=62 y=80 score=0 hash=f3c48766 lines=109296\nDMG_FRAME=763 x=63 y=80 score=0 hash=1ba2a089 lines=109440\nDMG_FRAME=764 x=64 y=80 score=0 hash=7c641dfd lines=109584\nDMG_FRAME=765 x=65 y=80 score=0 hash=2a5478b6 lines=109728\nDMG_FRAME=766 x=66 y=80 score=0 hash=b88b0766 lines=109872\nDMG_FRAME=767 x=67 y=80 score=0 hash=87cde436 lines=110016\nDMG_FRAME=768 x=68 y=80 score=0 hash=54829802 lines=110160\nDMG_FRAME=769 x=69 y=80 score=0 hash=eda6b99a lines=110304\nDMG_FRAME=770 x=70 y=80 score=0 hash=301370a2 lines=110448\nDMG_FRAME=771 x=71 y=80 score=0 hash=448f948d lines=110592\nDMG_FRAME=772 x=72 y=80 score=0 hash=8619d901 lines=110736\nDMG_FRAME=773 x=73 y=80 score=0 hash=364ee85a lines=110880\nDMG_FRAME=774 x=74 y=80 score=0 hash=1752bee2 lines=111024\nDMG_FRAME=775 x=75 y=80 score=0 hash=3c81c33a lines=111168\n",
+            "cycles": 1353473754
+          }
+        },
+        "uartEvents": [
+          {
+            "chip": "foreground",
+            "cycles": 13157499,
+            "wallMs": 10198.399999976158,
+            "appended": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 15409694,
+            "wallMs": 10354.299999952316,
+            "appended": "DMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 18270710,
+            "wallMs": 10953.099999964237,
+            "appended": "DMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 24111951,
+            "wallMs": 12162.599999964237,
+            "appended": "DMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1302544259,
+            "wallMs": 62970.69999998808,
+            "appended": "INPUT=000000ef\nDMG_FRAME=749 x=49 y=80 score=0 hash=0e44b8b6 lines=107424\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1306656386,
+            "wallMs": 63550.09999996424,
+            "appended": "DMG_FRAME=750 x=50 y=80 score=0 hash=57245366 lines=107568\nDMG_FRAME=751 x=51 y=80 score=0 hash=a9300436 lines=107712\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1308677212,
+            "wallMs": 63777.39999997616,
+            "appended": "DMG_FRAME=752 x=52 y=80 score=0 hash=bfe34302 lines=107856\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1310566335,
+            "wallMs": 64103.39999997616,
+            "appended": "DMG_FRAME=753 x=53 y=80 score=0 hash=cc26fa9a lines=108000\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1312503416,
+            "wallMs": 65439.89999997616,
+            "appended": "DMG_FRAME=754 x=54 y=80 score=0 hash=8e8b83a2 lines=108144\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1314716802,
+            "wallMs": 65644.29999995232,
+            "appended": "DMG_FRAME=755 x=55 y=80 score=0 hash=c29bf28d lines=108288\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1317657457,
+            "wallMs": 65927.69999998808,
+            "appended": "DMG_FRAME=756 x=56 y=80 score=0 hash=82b63c01 lines=108432\nDMG_FRAME=757 x=57 y=80 score=0 hash=44d8595a lines=108576\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1320701001,
+            "wallMs": 66270.39999997616,
+            "appended": "DMG_FRAME=758 x=58 y=80 score=0 hash=3c1ae1e2 lines=108720\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1323807436,
+            "wallMs": 66494.39999997616,
+            "appended": "DMG_FRAME=759 x=59 y=80 score=0 hash=f887ac3a lines=108864\nDMG_FRAME=760 x=60 y=80 score=0 hash=62a24766 lines=109008\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1327103227,
+            "wallMs": 67272.09999996424,
+            "appended": "DMG_FRAME=761 x=61 y=80 score=0 hash=8ec7bdb6 lines=109152\nDMG_FRAME=762 x=62 y=80 score=0 hash=f3c48766 lines=109296\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1331316589,
+            "wallMs": 67653.39999997616,
+            "appended": "DMG_FRAME=763 x=63 y=80 score=0 hash=1ba2a089 lines=109440\nDMG_FRAME=764 x=64 y=80 score=0 hash=7c641dfd lines=109584\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1335339761,
+            "wallMs": 68366.19999998808,
+            "appended": "DMG_FRAME=765 x=65 y=80 score=0 hash=2a5478b6 lines=109728\nDMG_FRAME=766 x=66 y=80 score=0 hash=b88b0766 lines=109872\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1340339761,
+            "wallMs": 68783.89999997616,
+            "appended": "DMG_FRAME=767 x=67 y=80 score=0 hash=87cde436 lines=110016\nDMG_FRAME=768 x=68 y=80 score=0 hash=54829802 lines=110160\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1345339761,
+            "wallMs": 69263.19999998808,
+            "appended": "DMG_FRAME=769 x=69 y=80 score=0 hash=eda6b99a lines=110304\nDMG_FRAME=770 x=70 y=80 score=0 hash=301370a2 lines=110448\nDMG_FRAME=771 x=71 y=80 score=0 hash=448f948d lines=110592\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1349636966,
+            "wallMs": 69974.09999996424,
+            "appended": "DMG_FRAME=772 x=72 y=80 score=0 hash=8619d901 lines=110736\nDMG_FRAME=773 x=73 y=80 score=0 hash=364ee85a lines=110880\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1353473754,
+            "wallMs": 70327.29999995232,
+            "appended": "DMG_FRAME=774 x=74 y=80 score=0 hash=1752bee2 lines=111024\nDMG_FRAME=775 x=75 y=80 score=0 hash=3c81c33a lines=111168\n"
+          }
+        ]
+      },
+      "child": {
+        "messages": [
+          {
+            "source": "kernelcad-runtime-host",
+            "v": 1,
+            "type": "kernelcad.runtime.bind",
+            "model": {
+              "slug": "kQAFdaQs",
+              "revision": 3
+            },
+            "bindings": {
+              "displays": [
+                {
+                  "id": "lcd1",
+                  "part": "lcd1-active-glass",
+                  "face": "+z",
+                  "rotation": 0
+                }
+              ],
+              "inputs": [
+                {
+                  "id": "btn-up",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.34347826086956523,
+                    0.6565217391304348,
+                    0.6565217391304348,
+                    1
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-down",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.34347826086956523,
+                    0,
+                    0.6565217391304348,
+                    0.34347826086956523
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-left",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0,
+                    0.34347826086956523,
+                    0.34347826086956523,
+                    0.6565217391304348
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-right",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.6565217391304348,
+                    0.34347826086956523,
+                    1,
+                    0.6565217391304348
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-a",
+                  "part": "btn-a",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-b",
+                  "part": "btn-b",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-select",
+                  "part": "btn-select",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-start",
+                  "part": "btn-start",
+                  "face": "+z",
+                  "travelMm": 0.45
+                }
+              ]
+            },
+            "origin": "https://app.labwired.com",
+            "observedAtMs": 10342.599999964237
+          }
+        ],
+        "frames": 310,
+        "displayFrames": 64,
+        "uartByChip": {},
+        "uartEvents": [],
+        "lastDisplay": [
+          {
+            "id": "lcd1",
+            "width": 320,
+            "height": 240,
+            "bytes": 307200,
+            "fnv1a32": "8bdf87f2"
+          }
+        ],
+        "firstDisplay": [
+          {
+            "id": "lcd1",
+            "width": 320,
+            "height": 240,
+            "bytes": 307200,
+            "fnv1a32": "ac01d08a"
+          }
+        ],
+        "lastFrame": {
+          "state": "running",
+          "sequence": 310,
+          "inputs": [
+            {
+              "id": "btn-up",
+              "value": 0
+            },
+            {
+              "id": "btn-down",
+              "value": 0
+            },
+            {
+              "id": "btn-left",
+              "value": 0
+            },
+            {
+              "id": "btn-right",
+              "value": 1
+            },
+            {
+              "id": "btn-a",
+              "value": 0
+            },
+            {
+              "id": "btn-b",
+              "value": 0
+            },
+            {
+              "id": "btn-select",
+              "value": 0
+            },
+            {
+              "id": "btn-start",
+              "value": 0
+            }
+          ],
+          "displays": [
+            {
+              "id": "lcd1",
+              "width": 320,
+              "height": 240,
+              "bytes": 307200,
+              "sample": [
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255
+              ]
+            }
+          ]
+        },
+        "latestFrameAt": 1794410054201,
+        "now": 1794410054202
+      }
+    },
+    "after": {
+      "parent": {
+        "messages": [
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "detail": "Loading mesh…",
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 7326.699999988079
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "detail": "Loading mesh…",
+            "geometryNonempty": false,
+            "cameraFitted": false,
+            "framePresented": false,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 7326.799999952316
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "loading",
+            "revision": 3,
+            "geometryNonempty": false,
+            "cameraFitted": false,
+            "framePresented": false,
+            "detail": null,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 8357
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "model_displayed",
+            "revision": 3,
+            "geometryNonempty": true,
+            "cameraFitted": true,
+            "framePresented": true,
+            "detail": null,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17097.69999998808
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.viewer-status",
+            "status": "model_displayed",
+            "revision": 3,
+            "geometryNonempty": true,
+            "cameraFitted": true,
+            "framePresented": true,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17114.899999976158
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.runtime.ready",
+            "v": 1,
+            "revision": 3,
+            "accepted": [
+              "lcd1",
+              "btn-up",
+              "btn-down",
+              "btn-left",
+              "btn-right",
+              "btn-a",
+              "btn-b",
+              "btn-select",
+              "btn-start"
+            ],
+            "missingParts": [],
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 17123.299999952316
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.runtime.input",
+            "v": 1,
+            "sequence": 1,
+            "id": "btn-right",
+            "value": 1,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 62463.799999952316
+          },
+          {
+            "source": "kernelcad-embed",
+            "type": "kernelcad.runtime.input",
+            "v": 1,
+            "sequence": 2,
+            "id": "btn-right",
+            "value": 0,
+            "origin": "https://app.kernelcad.com",
+            "observedAtMs": 72317.19999998808
+          }
+        ],
+        "frames": 0,
+        "displayFrames": 0,
+        "uartByChip": {
+          "foreground": {
+            "uart": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\nDMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\nINPUT=000000ef\nDMG_FRAME=749 x=49 y=80 score=0 hash=0e44b8b6 lines=107424\nDMG_FRAME=750 x=50 y=80 score=0 hash=57245366 lines=107568\nDMG_FRAME=751 x=51 y=80 score=0 hash=a9300436 lines=107712\nDMG_FRAME=752 x=52 y=80 score=0 hash=bfe34302 lines=107856\nDMG_FRAME=753 x=53 y=80 score=0 hash=cc26fa9a lines=108000\nDMG_FRAME=754 x=54 y=80 score=0 hash=8e8b83a2 lines=108144\nDMG_FRAME=755 x=55 y=80 score=0 hash=c29bf28d lines=108288\nDMG_FRAME=756 x=56 y=80 score=0 hash=82b63c01 lines=108432\nDMG_FRAME=757 x=57 y=80 score=0 hash=44d8595a lines=108576\nDMG_FRAME=758 x=58 y=80 score=0 hash=3c1ae1e2 lines=108720\nDMG_FRAME=759 x=59 y=80 score=0 hash=f887ac3a lines=108864\nDMG_FRAME=760 x=60 y=80 score=0 hash=62a24766 lines=109008\nDMG_FRAME=761 x=61 y=80 score=0 hash=8ec7bdb6 lines=109152\nDMG_FRAME=762 x=62 y=80 score=0 hash=f3c48766 lines=109296\nDMG_FRAME=763 x=63 y=80 score=0 hash=1ba2a089 lines=109440\nDMG_FRAME=764 x=64 y=80 score=0 hash=7c641dfd lines=109584\nDMG_FRAME=765 x=65 y=80 score=0 hash=2a5478b6 lines=109728\nDMG_FRAME=766 x=66 y=80 score=0 hash=b88b0766 lines=109872\nDMG_FRAME=767 x=67 y=80 score=0 hash=87cde436 lines=110016\nDMG_FRAME=768 x=68 y=80 score=0 hash=54829802 lines=110160\nDMG_FRAME=769 x=69 y=80 score=0 hash=eda6b99a lines=110304\nDMG_FRAME=770 x=70 y=80 score=0 hash=301370a2 lines=110448\nDMG_FRAME=771 x=71 y=80 score=0 hash=448f948d lines=110592\nDMG_FRAME=772 x=72 y=80 score=0 hash=8619d901 lines=110736\nDMG_FRAME=773 x=73 y=80 score=0 hash=364ee85a lines=110880\nDMG_FRAME=774 x=74 y=80 score=0 hash=1752bee2 lines=111024\nDMG_FRAME=775 x=75 y=80 score=0 hash=3c81c33a lines=111168\nDMG_FRAME=776 x=76 y=80 score=0 hash=85e3fb66 lines=111312\nDMG_FRAME=777 x=77 y=80 score=0 hash=4fdc3db6 lines=111456\nDMG_FRAME=778 x=78 y=80 score=0 hash=0df63b66 lines=111600\nDMG_FRAME=779 x=79 y=80 score=0 hash=22588b89 lines=111744\nDMG_FRAME=780 x=80 y=80 score=0 hash=9d9503fd lines=111888\nDMG_FRAME=781 x=81 y=80 score=0 hash=bef438b6 lines=112032\nDMG_FRAME=782 x=82 y=80 score=0 hash=3c1cbb66 lines=112176\nDMG_FRAME=783 x=83 y=80 score=0 hash=b133c436 lines=112320\nDMG_FRAME=784 x=84 y=80 score=0 hash=cb72ad02 lines=112464\nDMG_FRAME=785 x=85 y=80 score=0 hash=4628b89a lines=112608\nDMG_FRAME=786 x=86 y=80 score=0 hash=76161da2 lines=112752\nDMG_FRAME=787 x=87 y=80 score=0 hash=9776b68d lines=112896\nINPUT=000000ff\n",
+            "cycles": 1491131643
+          }
+        },
+        "uartEvents": [
+          {
+            "chip": "foreground",
+            "cycles": 13157499,
+            "wallMs": 10198.399999976158,
+            "appended": "LABWIRED DMG BOOT\nDMG_ROM_OK title=WIRE_RUNNER bytes=32768\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 15409694,
+            "wallMs": 10354.299999952316,
+            "appended": "DMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 18270710,
+            "wallMs": 10953.099999964237,
+            "appended": "DMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 24111951,
+            "wallMs": 12162.599999964237,
+            "appended": "DMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1302544259,
+            "wallMs": 62970.69999998808,
+            "appended": "INPUT=000000ef\nDMG_FRAME=749 x=49 y=80 score=0 hash=0e44b8b6 lines=107424\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1306656386,
+            "wallMs": 63550.09999996424,
+            "appended": "DMG_FRAME=750 x=50 y=80 score=0 hash=57245366 lines=107568\nDMG_FRAME=751 x=51 y=80 score=0 hash=a9300436 lines=107712\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1308677212,
+            "wallMs": 63777.39999997616,
+            "appended": "DMG_FRAME=752 x=52 y=80 score=0 hash=bfe34302 lines=107856\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1310566335,
+            "wallMs": 64103.39999997616,
+            "appended": "DMG_FRAME=753 x=53 y=80 score=0 hash=cc26fa9a lines=108000\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1312503416,
+            "wallMs": 65439.89999997616,
+            "appended": "DMG_FRAME=754 x=54 y=80 score=0 hash=8e8b83a2 lines=108144\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1314716802,
+            "wallMs": 65644.29999995232,
+            "appended": "DMG_FRAME=755 x=55 y=80 score=0 hash=c29bf28d lines=108288\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1317657457,
+            "wallMs": 65927.69999998808,
+            "appended": "DMG_FRAME=756 x=56 y=80 score=0 hash=82b63c01 lines=108432\nDMG_FRAME=757 x=57 y=80 score=0 hash=44d8595a lines=108576\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1320701001,
+            "wallMs": 66270.39999997616,
+            "appended": "DMG_FRAME=758 x=58 y=80 score=0 hash=3c1ae1e2 lines=108720\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1323807436,
+            "wallMs": 66494.39999997616,
+            "appended": "DMG_FRAME=759 x=59 y=80 score=0 hash=f887ac3a lines=108864\nDMG_FRAME=760 x=60 y=80 score=0 hash=62a24766 lines=109008\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1327103227,
+            "wallMs": 67272.09999996424,
+            "appended": "DMG_FRAME=761 x=61 y=80 score=0 hash=8ec7bdb6 lines=109152\nDMG_FRAME=762 x=62 y=80 score=0 hash=f3c48766 lines=109296\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1331316589,
+            "wallMs": 67653.39999997616,
+            "appended": "DMG_FRAME=763 x=63 y=80 score=0 hash=1ba2a089 lines=109440\nDMG_FRAME=764 x=64 y=80 score=0 hash=7c641dfd lines=109584\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1335339761,
+            "wallMs": 68366.19999998808,
+            "appended": "DMG_FRAME=765 x=65 y=80 score=0 hash=2a5478b6 lines=109728\nDMG_FRAME=766 x=66 y=80 score=0 hash=b88b0766 lines=109872\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1340339761,
+            "wallMs": 68783.89999997616,
+            "appended": "DMG_FRAME=767 x=67 y=80 score=0 hash=87cde436 lines=110016\nDMG_FRAME=768 x=68 y=80 score=0 hash=54829802 lines=110160\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1345339761,
+            "wallMs": 69263.19999998808,
+            "appended": "DMG_FRAME=769 x=69 y=80 score=0 hash=eda6b99a lines=110304\nDMG_FRAME=770 x=70 y=80 score=0 hash=301370a2 lines=110448\nDMG_FRAME=771 x=71 y=80 score=0 hash=448f948d lines=110592\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1349636966,
+            "wallMs": 69974.09999996424,
+            "appended": "DMG_FRAME=772 x=72 y=80 score=0 hash=8619d901 lines=110736\nDMG_FRAME=773 x=73 y=80 score=0 hash=364ee85a lines=110880\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1353473754,
+            "wallMs": 70327.29999995232,
+            "appended": "DMG_FRAME=774 x=74 y=80 score=0 hash=1752bee2 lines=111024\nDMG_FRAME=775 x=75 y=80 score=0 hash=3c81c33a lines=111168\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1357697488,
+            "wallMs": 70726.09999996424,
+            "appended": "DMG_FRAME=776 x=76 y=80 score=0 hash=85e3fb66 lines=111312\nDMG_FRAME=777 x=77 y=80 score=0 hash=4fdc3db6 lines=111456\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1361529498,
+            "wallMs": 71073.29999995232,
+            "appended": "DMG_FRAME=778 x=78 y=80 score=0 hash=0df63b66 lines=111600\nDMG_FRAME=779 x=79 y=80 score=0 hash=22588b89 lines=111744\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1364623043,
+            "wallMs": 71464,
+            "appended": "DMG_FRAME=780 x=80 y=80 score=0 hash=9d9503fd lines=111888\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1367020374,
+            "wallMs": 71754.79999995232,
+            "appended": "DMG_FRAME=781 x=81 y=80 score=0 hash=bef438b6 lines=112032\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1371131643,
+            "wallMs": 72077.19999998808,
+            "appended": "DMG_FRAME=782 x=82 y=80 score=0 hash=3c1cbb66 lines=112176\nDMG_FRAME=783 x=83 y=80 score=0 hash=b133c436 lines=112320\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1376131643,
+            "wallMs": 72399.79999995232,
+            "appended": "DMG_FRAME=784 x=84 y=80 score=0 hash=cb72ad02 lines=112464\nDMG_FRAME=785 x=85 y=80 score=0 hash=4628b89a lines=112608\nDMG_FRAME=786 x=86 y=80 score=0 hash=76161da2 lines=112752\n"
+          },
+          {
+            "chip": "foreground",
+            "cycles": 1381131643,
+            "wallMs": 72637.79999995232,
+            "appended": "DMG_FRAME=787 x=87 y=80 score=0 hash=9776b68d lines=112896\nINPUT=000000ff\n"
+          }
+        ]
+      },
+      "child": {
+        "messages": [
+          {
+            "source": "kernelcad-runtime-host",
+            "v": 1,
+            "type": "kernelcad.runtime.bind",
+            "model": {
+              "slug": "kQAFdaQs",
+              "revision": 3
+            },
+            "bindings": {
+              "displays": [
+                {
+                  "id": "lcd1",
+                  "part": "lcd1-active-glass",
+                  "face": "+z",
+                  "rotation": 0
+                }
+              ],
+              "inputs": [
+                {
+                  "id": "btn-up",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.34347826086956523,
+                    0.6565217391304348,
+                    0.6565217391304348,
+                    1
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-down",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.34347826086956523,
+                    0,
+                    0.6565217391304348,
+                    0.34347826086956523
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-left",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0,
+                    0.34347826086956523,
+                    0.34347826086956523,
+                    0.6565217391304348
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-right",
+                  "part": "dpad",
+                  "face": "+z",
+                  "region": [
+                    0.6565217391304348,
+                    0.34347826086956523,
+                    1,
+                    0.6565217391304348
+                  ],
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-a",
+                  "part": "btn-a",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-b",
+                  "part": "btn-b",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-select",
+                  "part": "btn-select",
+                  "face": "+z",
+                  "travelMm": 0.45
+                },
+                {
+                  "id": "btn-start",
+                  "part": "btn-start",
+                  "face": "+z",
+                  "travelMm": 0.45
+                }
+              ]
+            },
+            "origin": "https://app.labwired.com",
+            "observedAtMs": 10342.599999964237
+          }
+        ],
+        "frames": 353,
+        "displayFrames": 81,
+        "uartByChip": {},
+        "uartEvents": [],
+        "lastDisplay": [
+          {
+            "id": "lcd1",
+            "width": 320,
+            "height": 240,
+            "bytes": 307200,
+            "fnv1a32": "94eea4d2"
+          }
+        ],
+        "firstDisplay": [
+          {
+            "id": "lcd1",
+            "width": 320,
+            "height": 240,
+            "bytes": 307200,
+            "fnv1a32": "ac01d08a"
+          }
+        ],
+        "lastFrame": {
+          "state": "running",
+          "sequence": 353,
+          "inputs": [
+            {
+              "id": "btn-up",
+              "value": 0
+            },
+            {
+              "id": "btn-down",
+              "value": 0
+            },
+            {
+              "id": "btn-left",
+              "value": 0
+            },
+            {
+              "id": "btn-right",
+              "value": 0
+            },
+            {
+              "id": "btn-a",
+              "value": 0
+            },
+            {
+              "id": "btn-b",
+              "value": 0
+            },
+            {
+              "id": "btn-select",
+              "value": 0
+            },
+            {
+              "id": "btn-start",
+              "value": 0
+            }
+          ],
+          "displays": [
+            {
+              "id": "lcd1",
+              "width": 320,
+              "height": 240,
+              "bytes": 307200,
+              "sample": [
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255,
+                9,
+                57,
+                9,
+                255
+              ]
+            }
+          ]
+        },
+        "latestFrameAt": 1794410061646,
+        "now": 1794410063584,
+        "pointerEvents": [
+          {
+            "type": "pointerdown",
+            "button": 0,
+            "pointerId": 1,
+            "x": 891,
+            "y": 553.90625,
+            "target": "CANVAS"
+          }
+        ]
+      }
+    }
+  }
+}

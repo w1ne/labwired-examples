@@ -1,0 +1,123 @@
+{
+  "schema": "labwired.production-view-evidence.v1",
+  "recorded_at": "2026-11-11T00:57:57.093Z",
+  "scope": "Deployed frontend: authenticated owner authority and isolated public guest CAD/runtime rendering are separate observations. Native PCB integration remains pending.",
+  "project": {
+    "id": "f44771855a18a70d418e363622de2e28",
+    "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "url": "https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1",
+    "parts": 10,
+    "wires": 24
+  },
+  "firmware": {
+    "board": "stm32f411ceu6-blackpill",
+    "language": "c",
+    "source_sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+    "source_bytes": 121279,
+    "source_tree_ref": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0",
+    "artifact_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+    "identity_basis": "Normal public saved-project readback; source text SHA-256 was computed in the browser. Running Worker snapshots and ROM boot/frame output were observed. This check did not rebuild or independently hash the loaded ELF bytes."
+  },
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "kQAFdaQs",
+    "version": 3,
+    "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+    "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+    "title": "Game Boy handheld enclosure",
+    "source_path": "mechanical/revision-3/labwired-gameboy-assembly.kcad.ts",
+    "source_sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6"
+  },
+  "native_pcb": {
+    "source_sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "attached_board_id": null,
+    "attached_board_rev": null,
+    "native_navigation_verified": false,
+    "hosted_preserve_submitted": false
+  },
+  "owner": {
+    "record": "owner-access-webgl.json",
+    "record_sha256": "01cdf02f2c569a15c9e4ae147879199f23fd2495fdeec8802bd0eb05c5fd8d64",
+    "http_status": 200,
+    "is_owner": true,
+    "role": "owner",
+    "observed_at": "2026-11-11T00:50:33.388Z",
+    "rendering_verified": false,
+    "webgl_limitation_reproduced_on_blank_canvas": true
+  },
+  "surfaces": [
+    {
+      "surface": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "record": "desktop-guest.json",
+      "record_sha256": "23691bfc4f398e3b455df562101415a26ce14c3f17226f4b7acfd926192de3b2",
+      "served_commit": "bacc11ed98f975ff1849617678ac784463d9bca6",
+      "served_manifest_observed_at": "2026-11-11T00:53:49.862Z",
+      "actual_document_main_assets": [
+        "/assets/main-CJ46J2Ep.js"
+      ],
+      "simulation_worker_asset": "/assets/sim.worker-hboyiWJK.js",
+      "asset_identity_basis": "Observed document module and Worker constructor URLs; separate full asset-byte hashing was not performed.",
+      "cad_screenshot": {
+        "path": "desktop-cad.png",
+        "bytes": 221299,
+        "sha256": "f0cc0ead15d29ced304aed727c511725d0167c0e0c77bfae5c8c455720415c51"
+      },
+      "functional_contract_passed": true,
+      "cycle_gain_while_cad_visible": 45000000,
+      "uncaught_exception_count": 0,
+      "clean_console": false
+    },
+    {
+      "surface": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record": "mobile-guest.json",
+      "record_sha256": "59e7d9cd96b286c094d7b847845f3d0b4d43904096e30bf3be4372ff4fba5689",
+      "served_commit": "93386ad2c73f06353e84915b13b847b2c49860de",
+      "served_manifest_observed_at": "2026-11-11T00:57:39.239Z",
+      "actual_document_main_assets": [
+        "/assets/main-DOIPb5VZ.js"
+      ],
+      "simulation_worker_asset": "/assets/sim.worker-hboyiWJK.js",
+      "asset_identity_basis": "Observed document module and Worker constructor URLs; separate full asset-byte hashing was not performed.",
+      "cad_screenshot": {
+        "path": "mobile-cad.png",
+        "bytes": 83162,
+        "sha256": "2df193b079851096cd146a00e328e6f0dc2138b382b13ee69811d5d4a72254f6"
+      },
+      "functional_contract_passed": true,
+      "cycle_gain_while_cad_visible": 65000000,
+      "uncaught_exception_count": 0,
+      "clean_console": false
+    }
+  ],
+  "release_equivalence": {
+    "commits": [
+      "bacc11ed98f975ff1849617678ac784463d9bca6",
+      "93386ad2c73f06353e84915b13b847b2c49860de"
+    ],
+    "observed_git_diff_paths": [
+      ".github/workflows/pages-deploy.yml"
+    ],
+    "meaning": "The two observed frontend builds have the same product source; their build identity and asset names remain recorded separately."
+  },
+  "interrupted_attempts": {
+    "record": "interrupted-attempts.json",
+    "record_sha256": "74cd5e6ff9ce7ba8ce5d91147650e14dd3949d1aaee18a50e97c634ea7774ed6"
+  },
+  "results": {
+    "production_frontend_observed": true,
+    "guest_desktop_and_mobile_cad_runtime_contract_passed": true,
+    "owner_rendering_verified": false,
+    "clean_console": false,
+    "canonical_mutation": false,
+    "native_pcb_attached": false,
+    "physical_hardware_tested": false
+  }
+}

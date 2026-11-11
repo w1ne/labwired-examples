@@ -1,8 +1,8 @@
 {
   "schema": "labwired.project-assembly-binding.v1",
   "project_id": "f44771855a18a70d418e363622de2e28",
-  "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
-  "previous_content_hash": "1458d69ac4a73b0bfcea2dd6acdff40795f80fa7d80dcc7ff2daffd5ba7bfb85",
+  "content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "previous_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
   "editable_source_preserved": true,
   "source_sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
   "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
@@ -16,12 +16,18 @@
   },
   "pcb": {
     "native_source_sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
-    "attached_board_id": null,
-    "status": "native-attachment-pending",
-    "pending_requirements": [
-      "generic-native-import-api-deployment",
-      "owner-browser-sign-in"
-    ]
+    "attached_board_id": "pcb_c8da1d7776dba9bc",
+    "status": "native-preserved-independent-drc-passed-attached",
+    "pending_requirements": [],
+    "attached_board_rev": 0,
+    "requested_import_mode": "preserve",
+    "local_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json",
+    "pcb_ref": "sha256:e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "rules_ref": "sha256:389ac1b2b1d20720e62044bddd96947134d28b1bdad5cd4ec13597fb4be20819",
+    "rules_digest": "85915592fc0647b75a752e74a1cb3bf552990c2d538ce6f1156da769b9fe1b2e",
+    "hosted_integration_evidence": "pcb/hosted-native-integration/README.md",
+    "attachment_readback": "pcb/hosted-native-integration/attachment-readback.json",
+    "independent_drc": "pcb/hosted-native-integration/independent-drc.json"
   },
   "stimuli": [
     {
@@ -38,5 +44,42 @@
     }
   ],
   "physical_hardware_tested": false,
-  "readback_verified": true
+  "readback_verified": true,
+  "last_owner_check": {
+    "observed_at": "2026-11-11T15:00:13.139Z",
+    "http_status": 200,
+    "is_owner": true,
+    "role": "owner",
+    "project_content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+    "method": "normal owner project GET after electronics save and declared-oracle verification",
+    "evidence": "firmware/final-project-binding-readback.json"
+  },
+  "verified_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "visibility": "unlisted",
+  "recorded_at": "2026-11-11T15:00:13.139Z",
+  "snapshot_scope": "Saved project after generic electronics metadata save and fresh declared-oracle firmware verification. PCB attachment has its separate operation-scoped proof.",
+  "electronics_bindings": {
+    "path": "mechanical/revision-3/electronics-bindings.json",
+    "sha256": "13b10cfbeb705aace7fdfcc97c1ca7e493c33122a9450cc5e782d08304ddecd5",
+    "status": "saved-and-oracle-verified",
+    "provenance": "mechanical/revision-3/electronics-bindings-provenance.json",
+    "verification": "firmware/saved-project-verification-final.json",
+    "readback": "firmware/final-project-binding-readback.json"
+  },
+  "saved_verification": {
+    "request_and_result": "firmware/saved-project-verification-final.json",
+    "max_steps": 50000000,
+    "proof": "oracle",
+    "oracle_source": "declared"
+  },
+  "browser_runtime_proof": {
+    "evidence": "media/runtime-control-proof.json",
+    "scope": "Actual simulated MCU, manual Right press/release and live LCD on production builds served through GET response proxies; final public deployment is a separate release check."
+  },
+  "promotional_video": {
+    "path": "media/gameboy-wire-runner-promo.mp4",
+    "sha256": "052b5fdbe0e2f68165461f3dec552bd7dc1776df714c393d82fdadf3ecad92d1",
+    "bytes": 4770240,
+    "duration_seconds": 57.367
+  }
 }

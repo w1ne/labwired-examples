@@ -1,0 +1,224 @@
+{
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "operation": "labwired_project_verify",
+  "request": {
+    "project_id": "f44771855a18a70d418e363622de2e28",
+    "max_steps": 50000000,
+    "oracle": {
+      "serial": [
+        {
+          "contains": "INPUT=000000ef"
+        },
+        {
+          "contains": "INPUT=000000ff"
+        },
+        {
+          "matches": "DMG_FRAME=[0-9]+ x=5[0-9] y=80"
+        }
+      ],
+      "display": {
+        "painted": true,
+        "min_ink_bytes": 10000
+      }
+    }
+  },
+  "response": {
+    "ok": true,
+    "status": 200,
+    "verified": true,
+    "verified_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "markers": [
+      "INPUT=000000ef",
+      "INPUT=000000ff"
+    ]
+  },
+  "readback": {
+    "content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+    "verified_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+    "pcb_board_id": "pcb_c8da1d7776dba9bc",
+    "pcb_board_rev": 0,
+    "visibility": "unlisted",
+    "is_owner": true,
+    "role": "owner",
+    "source_bytes": 121279,
+    "firmware": {
+      "board": "stm32f411ceu6-blackpill",
+      "language": "c",
+      "artifact": {
+        "ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643"
+      },
+      "source": {
+        "treeRef": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0",
+        "files": [
+          {
+            "path": "src/main.c",
+            "ref": "sha256:267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e"
+          }
+        ]
+      }
+    },
+    "mechanical": {
+      "provider": "kernelcad",
+      "slug": "kQAFdaQs",
+      "version": 3,
+      "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+      "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+      "title": "Game Boy handheld enclosure",
+      "electronics": {
+        "version": 1,
+        "displays": [
+          {
+            "id": "lcd1",
+            "component": "lcd1",
+            "part": "lcd1-active-glass",
+            "face": "+z",
+            "rotation": 0
+          }
+        ],
+        "inputs": [
+          {
+            "id": "btn-up",
+            "component": "btn-up",
+            "part": "dpad",
+            "channel": "pressed",
+            "face": "+z",
+            "region": [
+              0.34347826086956523,
+              0.6565217391304348,
+              0.6565217391304348,
+              1
+            ],
+            "travelMm": 0.45
+          },
+          {
+            "id": "btn-down",
+            "component": "btn-down",
+            "part": "dpad",
+            "channel": "pressed",
+            "face": "+z",
+            "region": [
+              0.34347826086956523,
+              0,
+              0.6565217391304348,
+              0.34347826086956523
+            ],
+            "travelMm": 0.45
+          },
+          {
+            "id": "btn-left",
+            "component": "btn-left",
+            "part": "dpad",
+            "channel": "pressed",
+            "face": "+z",
+            "region": [
+              0,
+              0.34347826086956523,
+              0.34347826086956523,
+              0.6565217391304348
+            ],
+            "travelMm": 0.45
+          },
+          {
+            "id": "btn-right",
+            "component": "btn-right",
+            "part": "dpad",
+            "channel": "pressed",
+            "face": "+z",
+            "region": [
+              0.6565217391304348,
+              0.34347826086956523,
+              1,
+              0.6565217391304348
+            ],
+            "travelMm": 0.45
+          },
+          {
+            "id": "btn-a",
+            "component": "btn-a",
+            "part": "btn-a",
+            "channel": "pressed",
+            "face": "+z",
+            "travelMm": 0.45
+          },
+          {
+            "id": "btn-b",
+            "component": "btn-b",
+            "part": "btn-b",
+            "channel": "pressed",
+            "face": "+z",
+            "travelMm": 0.45
+          },
+          {
+            "id": "btn-select",
+            "component": "btn-select",
+            "part": "btn-select",
+            "channel": "pressed",
+            "face": "+z",
+            "travelMm": 0.45
+          },
+          {
+            "id": "btn-start",
+            "component": "btn-start",
+            "part": "btn-start",
+            "channel": "pressed",
+            "face": "+z",
+            "travelMm": 0.45
+          }
+        ]
+      }
+    },
+    "stimuli": [
+      {
+        "channel": "pressed",
+        "value": 1,
+        "component": "btn-right",
+        "after_cycles": 22000000
+      },
+      {
+        "channel": "pressed",
+        "value": 0,
+        "component": "btn-right",
+        "after_cycles": 35000000
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "sim_verify",
+        "status": "model_verified",
+        "created_at": 1794409146766,
+        "content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+        "pcb_board_id": null,
+        "pcb_board_rev": null,
+        "artifact_hash": null,
+        "ref": null,
+        "fresh": true,
+        "stale_reason": null
+      }
+    ]
+  },
+  "recorded_at": "2026-11-11T15:00:08.789Z",
+  "prior_observed_evidence": [
+    {
+      "kind": "sim_verify",
+      "status": "inconclusive",
+      "created_at": 1794409010930,
+      "content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "artifact_hash": null,
+      "ref": null,
+      "fresh": true,
+      "stale_reason": null
+    }
+  ],
+  "budget": {
+    "explicit_max_steps": 50000000,
+    "default_when_omitted_for_stm32f411": 8000000,
+    "saved_press_cycle": 22000000,
+    "saved_release_cycle": 35000000,
+    "note": "The generic endpoint forwards the explicit budget; no oracle weakening or endpoint change was required. The earlier inconclusive request's exact budget is not part of this record."
+  },
+  "scope": "Hosted saved-project firmware and declared input/display oracle after the generic electronics metadata save. Independent native PCB DRC and actual browser interaction are separate evidence classes."
+}

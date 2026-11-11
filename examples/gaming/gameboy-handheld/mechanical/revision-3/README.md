@@ -71,6 +71,14 @@ The bounded assembly-path run returned **unknown for all 59 parts** after its wo
 
 `clearance-ledger.json` records nominal calculations and assumptions. `cross-layer-review.json` records a separate read-only comparison against the frozen PCB inputs. `design-loop.json` records the green static design loop and actual CAD screenshot review. The modeled aggregate volume is 162,188.689 mm³ and includes hardware and clearance envelopes; it is not a plastic-use estimate.
 
+## Generic live electronics configuration
+
+`electronics-bindings.json` is the exact version-1 value saved at `diagram.mechanical.electronics`. It maps `lcd1` to the existing `lcd1-active-glass` face and all eight circuit control IDs to the existing button/D-pad parts. It does not edit the evaluated CAD source or create another simulation. `electronics-bindings-provenance.json` records the exact CAD/source identities and coordinate checks. The saved configuration and fresh declared-oracle firmware verification are recorded in `../../firmware/final-project-binding-readback.json` and `../../firmware/saved-project-verification-final.json`. The later metadata save preserves the evaluated CAD revision and all firmware/circuit source identities.
+
+The bindings use the positive-Z face, with local face coordinates `u = x`, `v = y`. Four disjoint normalized arm regions select directions on the shared `dpad` mesh; the center pivot is excluded. The receiver must aggregate simultaneous pressed states for that shared part. The 0.45 mm displacement represents the nominal 0.20 mm gap plus 0.25 mm switch pretravel. It is a visual runtime displacement, not a continuous tilt or force model.
+
+The display binding uses rotation 0 because the MCU snapshot is already 320 × 240 landscape. The circuit component's rotation 90 setting describes its 2D pose and does not rotate runtime pixels. The generic viewer's exploded view is an inspection aid; the bounded mechanical assembly-path check above still returned no validated sequence.
+
 ## Export and fabrication classes
 
 `parts.json` classifies all 59 bodies. **Only ten are fabrication candidates:** front shell, rear shell, service cover, bezel, button support, D-pad, A, B, Start and Select. The other 49 are purchased-hardware envelopes, component references or clearance reservations. Do not print the full assembly or the purchased-part envelopes.

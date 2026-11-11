@@ -1,0 +1,218 @@
+{
+  "record": "runtime-control-observation.json",
+  "capture_started_at": "2026-11-11T15:14:01.173Z",
+  "capture_finished_at": "2026-11-11T15:14:23.588Z",
+  "phases": {
+    "before": {
+      "mcu_cycles": 1247544259,
+      "last_rom_positions": [
+        {
+          "frame": 2,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "frame": 3,
+          "x": 48,
+          "y": 80
+        },
+        {
+          "frame": 4,
+          "x": 48,
+          "y": 80
+        }
+      ],
+      "input_uart_values": [],
+      "runtime_inputs": [],
+      "runtime_ready": [
+        {
+          "revision": 3,
+          "accepted": [
+            "lcd1",
+            "btn-up",
+            "btn-down",
+            "btn-left",
+            "btn-right",
+            "btn-a",
+            "btn-b",
+            "btn-select",
+            "btn-start"
+          ],
+          "missingParts": []
+        }
+      ],
+      "display": [
+        {
+          "id": "lcd1",
+          "width": 320,
+          "height": 240,
+          "bytes": 307200,
+          "fnv1a32": "ac01d08a"
+        }
+      ],
+      "frame_sequence": 270,
+      "state": "running",
+      "bridge_origins": [
+        "https://app.kernelcad.com",
+        "https://app.labwired.com"
+      ]
+    },
+    "held": {
+      "mcu_cycles": 1353473754,
+      "last_rom_positions": [
+        {
+          "frame": 773,
+          "x": 73,
+          "y": 80
+        },
+        {
+          "frame": 774,
+          "x": 74,
+          "y": 80
+        },
+        {
+          "frame": 775,
+          "x": 75,
+          "y": 80
+        }
+      ],
+      "input_uart_values": [
+        "000000ef"
+      ],
+      "runtime_inputs": [
+        {
+          "id": "btn-right",
+          "value": 1,
+          "sequence": 1,
+          "observedAtMs": 62463.799999952316
+        }
+      ],
+      "runtime_ready": [
+        {
+          "revision": 3,
+          "accepted": [
+            "lcd1",
+            "btn-up",
+            "btn-down",
+            "btn-left",
+            "btn-right",
+            "btn-a",
+            "btn-b",
+            "btn-select",
+            "btn-start"
+          ],
+          "missingParts": []
+        }
+      ],
+      "display": [
+        {
+          "id": "lcd1",
+          "width": 320,
+          "height": 240,
+          "bytes": 307200,
+          "fnv1a32": "8bdf87f2"
+        }
+      ],
+      "frame_sequence": 310,
+      "state": "running",
+      "bridge_origins": [
+        "https://app.kernelcad.com",
+        "https://app.labwired.com"
+      ]
+    },
+    "after": {
+      "mcu_cycles": 1491131643,
+      "last_rom_positions": [
+        {
+          "frame": 785,
+          "x": 85,
+          "y": 80
+        },
+        {
+          "frame": 786,
+          "x": 86,
+          "y": 80
+        },
+        {
+          "frame": 787,
+          "x": 87,
+          "y": 80
+        }
+      ],
+      "input_uart_values": [
+        "000000ef",
+        "000000ff"
+      ],
+      "runtime_inputs": [
+        {
+          "id": "btn-right",
+          "value": 1,
+          "sequence": 1,
+          "observedAtMs": 62463.799999952316
+        },
+        {
+          "id": "btn-right",
+          "value": 0,
+          "sequence": 2,
+          "observedAtMs": 72317.19999998808
+        }
+      ],
+      "runtime_ready": [
+        {
+          "revision": 3,
+          "accepted": [
+            "lcd1",
+            "btn-up",
+            "btn-down",
+            "btn-left",
+            "btn-right",
+            "btn-a",
+            "btn-b",
+            "btn-select",
+            "btn-start"
+          ],
+          "missingParts": []
+        }
+      ],
+      "display": [
+        {
+          "id": "lcd1",
+          "width": 320,
+          "height": 240,
+          "bytes": 307200,
+          "fnv1a32": "94eea4d2"
+        }
+      ],
+      "frame_sequence": 353,
+      "state": "running",
+      "bridge_origins": [
+        "https://app.kernelcad.com",
+        "https://app.labwired.com"
+      ]
+    }
+  },
+  "environment": {
+    "kind": "Actual app with production builds served through GET response proxies under public app origins",
+    "app_url": "https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1&engine=worker",
+    "response_proxies_used": true,
+    "clean_console": false,
+    "retained_nonfatal_console_diagnostics": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Unexpected token '<'",
+      "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  "assertions": {
+    "right_press_then_release": true,
+    "uart_ef_then_ff": true,
+    "player_x_48_to_87": true,
+    "nine_bindings_accepted_no_missing_parts": true,
+    "display_hashes_changed": true
+  },
+  "original_record_sha256": "9f135c5c05f5b45b321b5f5798f120c0c96178f476607a3e748c8b3b1df7ab12",
+  "record_sha256": "c7ccced5c687d61ae93f2c04def7b22a6ad42473e884b092d5646ac5bba9b6e7",
+  "sanitization": "Runtime bridge session nonces omitted; UART, framebuffer hashes, input events and cycle counts retained."
+}

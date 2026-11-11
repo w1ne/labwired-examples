@@ -1,0 +1,366 @@
+{
+  "schema": "labwired.production-owner-view-observation.v1",
+  "scope": "Normal signed-in owner readback and real owner Chrome rendering limitation. No project mutation or authentication change.",
+  "browser_version": "Chrome/156.0.8078.79",
+  "started_at": "2026-11-11T00:39:16.903Z",
+  "finished_at": "2026-11-11T00:41:46.881Z",
+  "owner_readback": {
+    "httpStatus": 200,
+    "is_owner": true,
+    "role": "owner",
+    "id": "f44771855a18a70d418e363622de2e28",
+    "contentHash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "pcbBoardId": null,
+    "pcbBoardRev": null,
+    "parts": 10,
+    "wires": 24,
+    "firmwareRef": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
+    "mechanical": {
+      "provider": "kernelcad",
+      "slug": "kQAFdaQs",
+      "version": 3,
+      "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+      "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+      "title": "Game Boy handheld enclosure"
+    },
+    "observedAt": "2026-11-11T00:50:33.388Z"
+  },
+  "rendering_passed": false,
+  "canonical_mutation": false,
+  "native_pcb_attached": false,
+  "raw_evidence": [
+    {
+      "task_record": "frontend-live/frontend-proof.json",
+      "bytes": 1442582,
+      "sha256": "b29b2020618f1cdb80639189e424ec81bca58de6272b734599e2bb74a8bb036a"
+    },
+    {
+      "task_record": "frontend-live/webgl-capability.json",
+      "bytes": 2911,
+      "sha256": "880f02c0b4383c4efa0c78f782b14849b857db8317f1cffd5943a8b47386525a"
+    },
+    {
+      "task_record": "frontend-live/owner-cleanup-readback.json",
+      "bytes": 1327,
+      "sha256": "26c0909a9d0271272f3d73b32fe733d30d891026ecd3597cce32c36060dc17e4"
+    }
+  ],
+  "cases": [
+    {
+      "surface": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "build": {
+        "httpStatus": 200,
+        "commit": "bacc11ed98f975ff1849617678ac784463d9bca6",
+        "builtAt": "2026-11-11T00:26:31.455Z",
+        "mainAssets": [
+          "/assets/main-CJ46J2Ep.js"
+        ],
+        "documentModules": [
+          "/assets/main-CJ46J2Ep.js",
+          "/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+        ],
+        "observedAt": "2026-11-11T00:39:19.605Z",
+        "visibility": "visible",
+        "focused": true,
+        "sha256": "c2fd80700570b688a97f498bb6f720e9b6e1b70908fa03e3cd25f441786e6a3c",
+        "documentUsesServedMain": true
+      },
+      "phase": "opening pinned CAD",
+      "rendering_passed": false,
+      "failure": "exact CAD ready event timed out",
+      "before": {
+        "cycles": 32966187,
+        "workerId": 3
+      },
+      "after_timeout": {
+        "cycles": 2282966187,
+        "workerId": 3
+      },
+      "uncaught_exception_count": 1,
+      "console_error_count": 11,
+      "clean_console": false,
+      "uncaught_exceptions": [
+        {
+          "phase": "opening pinned CAD",
+          "text": "Uncaught (in promise)",
+          "description": "Error: Error creating WebGL context.",
+          "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+          "line_number_zero_based": 4299,
+          "column_number_zero_based": 24502,
+          "first_call_frames": [
+            {
+              "functionName": "Nte",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4299,
+              "columnNumber": 24502
+            },
+            {
+              "functionName": "configure",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 9895
+            },
+            {
+              "functionName": "le",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 19480
+            },
+            {
+              "functionName": "",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 20092
+            }
+          ],
+          "remaining_async_stack_retained_only_in_raw_task_record": true
+        }
+      ]
+    },
+    {
+      "surface": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "build": {
+        "httpStatus": 200,
+        "commit": "bacc11ed98f975ff1849617678ac784463d9bca6",
+        "builtAt": "2026-11-11T00:26:31.455Z",
+        "mainAssets": [
+          "/assets/main-CJ46J2Ep.js"
+        ],
+        "documentModules": [
+          "/assets/main-CJ46J2Ep.js",
+          "/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+        ],
+        "observedAt": "2026-11-11T00:40:33.546Z",
+        "visibility": "visible",
+        "focused": true,
+        "sha256": "c2fd80700570b688a97f498bb6f720e9b6e1b70908fa03e3cd25f441786e6a3c",
+        "documentUsesServedMain": true
+      },
+      "phase": "opening pinned CAD",
+      "rendering_passed": false,
+      "failure": "exact CAD ready event timed out",
+      "before": {
+        "cycles": 38346187,
+        "workerId": 3
+      },
+      "after_timeout": {
+        "cycles": 2548346187,
+        "workerId": 3
+      },
+      "uncaught_exception_count": 5,
+      "console_error_count": 36,
+      "clean_console": false,
+      "uncaught_exceptions": [
+        {
+          "phase": "checking served build and owner identity",
+          "text": "Uncaught (in promise)",
+          "description": "Error: Error creating WebGL context.",
+          "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+          "line_number_zero_based": 4299,
+          "column_number_zero_based": 24502,
+          "first_call_frames": [
+            {
+              "functionName": "Nte",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4299,
+              "columnNumber": 24502
+            },
+            {
+              "functionName": "configure",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 9895
+            },
+            {
+              "functionName": "le",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 19480
+            },
+            {
+              "functionName": "",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 20092
+            }
+          ],
+          "remaining_async_stack_retained_only_in_raw_task_record": true
+        },
+        {
+          "phase": "waiting for firmware frame",
+          "text": "Uncaught (in promise)",
+          "description": "Error: Error creating WebGL context.",
+          "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+          "line_number_zero_based": 4299,
+          "column_number_zero_based": 24502,
+          "first_call_frames": [
+            {
+              "functionName": "Nte",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4299,
+              "columnNumber": 24502
+            },
+            {
+              "functionName": "configure",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 9895
+            },
+            {
+              "functionName": "le",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 19480
+            },
+            {
+              "functionName": "",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 20092
+            }
+          ],
+          "remaining_async_stack_retained_only_in_raw_task_record": true
+        },
+        {
+          "phase": "waiting for firmware frame",
+          "text": "Uncaught (in promise)",
+          "description": "Error: Error creating WebGL context.",
+          "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+          "line_number_zero_based": 4299,
+          "column_number_zero_based": 24502,
+          "first_call_frames": [
+            {
+              "functionName": "Nte",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4299,
+              "columnNumber": 24502
+            },
+            {
+              "functionName": "configure",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 9895
+            },
+            {
+              "functionName": "le",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 19480
+            },
+            {
+              "functionName": "",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 20092
+            }
+          ],
+          "remaining_async_stack_retained_only_in_raw_task_record": true
+        },
+        {
+          "phase": "waiting for firmware frame",
+          "text": "Uncaught (in promise)",
+          "description": "Error: Error creating WebGL context.",
+          "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+          "line_number_zero_based": 4299,
+          "column_number_zero_based": 24502,
+          "first_call_frames": [
+            {
+              "functionName": "Nte",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4299,
+              "columnNumber": 24502
+            },
+            {
+              "functionName": "configure",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 9895
+            },
+            {
+              "functionName": "le",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 19480
+            },
+            {
+              "functionName": "",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 20092
+            }
+          ],
+          "remaining_async_stack_retained_only_in_raw_task_record": true
+        },
+        {
+          "phase": "waiting for firmware frame",
+          "text": "Uncaught (in promise)",
+          "description": "Error: Error creating WebGL context.",
+          "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+          "line_number_zero_based": 4299,
+          "column_number_zero_based": 24502,
+          "first_call_frames": [
+            {
+              "functionName": "Nte",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4299,
+              "columnNumber": 24502
+            },
+            {
+              "functionName": "configure",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 9895
+            },
+            {
+              "functionName": "le",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 19480
+            },
+            {
+              "functionName": "",
+              "url": "https://app.kernelcad.com/assets/index-eslTnCEI.js",
+              "lineNumber": 4310,
+              "columnNumber": 20092
+            }
+          ],
+          "remaining_async_stack_retained_only_in_raw_task_record": true
+        }
+      ]
+    }
+  ],
+  "webgl_probe": {
+    "observed_at": "2026-11-11T00:44:05.275Z",
+    "scope": "one blank background tab in the same owner Chrome; no app/model loaded",
+    "settings_changed": false,
+    "feature_status": {
+      "webgl": "disabled_off",
+      "opengl": "disabled_off"
+    },
+    "contexts": [
+      {
+        "kind": "webgl2",
+        "created": false
+      },
+      {
+        "kind": "webgl",
+        "created": false
+      }
+    ],
+    "creation_error": "BindToCurrentSequence failed",
+    "own_blank_tab_closed": true
+  },
+  "limitations": [
+    "Owner geometry, fitted camera and frame readiness were not established.",
+    "The independent blank-canvas failure establishes a browser WebGL limitation; no application source change was made.",
+    "Only public project identities, authority booleans, build identities and bounded diagnostics are included; private browser/session diagnostics and owner screenshots are excluded."
+  ]
+}

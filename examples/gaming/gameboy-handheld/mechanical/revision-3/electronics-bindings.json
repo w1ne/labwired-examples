@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "displays": [
+    {
+      "id": "lcd1",
+      "component": "lcd1",
+      "part": "lcd1-active-glass",
+      "face": "+z",
+      "rotation": 0
+    }
+  ],
+  "inputs": [
+    {
+      "id": "btn-up",
+      "component": "btn-up",
+      "part": "dpad",
+      "channel": "pressed",
+      "face": "+z",
+      "region": [
+        0.34347826086956523,
+        0.6565217391304348,
+        0.6565217391304348,
+        1
+      ],
+      "travelMm": 0.45
+    },
+    {
+      "id": "btn-down",
+      "component": "btn-down",
+      "part": "dpad",
+      "channel": "pressed",
+      "face": "+z",
+      "region": [
+        0.34347826086956523,
+        0,
+        0.6565217391304348,
+        0.34347826086956523
+      ],
+      "travelMm": 0.45
+    },
+    {
+      "id": "btn-left",
+      "component": "btn-left",
+      "part": "dpad",
+      "channel": "pressed",
+      "face": "+z",
+      "region": [
+        0,
+        0.34347826086956523,
+        0.34347826086956523,
+        0.6565217391304348
+      ],
+      "travelMm": 0.45
+    },
+    {
+      "id": "btn-right",
+      "component": "btn-right",
+      "part": "dpad",
+      "channel": "pressed",
+      "face": "+z",
+      "region": [
+        0.6565217391304348,
+        0.34347826086956523,
+        1,
+        0.6565217391304348
+      ],
+      "travelMm": 0.45
+    },
+    {
+      "id": "btn-a",
+      "component": "btn-a",
+      "part": "btn-a",
+      "channel": "pressed",
+      "face": "+z",
+      "travelMm": 0.45
+    },
+    {
+      "id": "btn-b",
+      "component": "btn-b",
+      "part": "btn-b",
+      "channel": "pressed",
+      "face": "+z",
+      "travelMm": 0.45
+    },
+    {
+      "id": "btn-select",
+      "component": "btn-select",
+      "part": "btn-select",
+      "channel": "pressed",
+      "face": "+z",
+      "travelMm": 0.45
+    },
+    {
+      "id": "btn-start",
+      "component": "btn-start",
+      "part": "btn-start",
+      "channel": "pressed",
+      "face": "+z",
+      "travelMm": 0.45
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "startedAt": "2026-11-11T00:13:21.018761+00:00",
+  "finishedAt": "2026-11-11T00:13:21.719633+00:00",
+  "command": [
+    "/usr/bin/kicad-cli",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--units",
+    "mm",
+    "--severity-all",
+    "--exit-code-violations",
+    "--output",
+    "/workspace/scratch/c07111ce73bf/work/gameboy-native-attachment-20261110/diagnostic/preserve-preflight/drc.json",
+    "/workspace/scratch/c07111ce73bf/work/gameboy-native-attachment-20261110/diagnostic/preserve-preflight/board.kicad_pcb"
+  ],
+  "exitCode": 0,
+  "inputSha256Before": {
+    "board.kicad_pcb": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "board.kicad_pro": "df9021aea019a2a8dc776044ea291df4c9822c406fadd9d25058a324f9593818",
+    "board.kicad_dru": "b3b30bb55c757c08152f2a046d55d86a33b4b480699c1d70575e65557b0a5bd1"
+  },
+  "inputSha256After": {
+    "board.kicad_pcb": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
+    "board.kicad_pro": "df9021aea019a2a8dc776044ea291df4c9822c406fadd9d25058a324f9593818",
+    "board.kicad_dru": "b3b30bb55c757c08152f2a046d55d86a33b4b480699c1d70575e65557b0a5bd1"
+  },
+  "inputsUnchanged": true,
+  "drcReportSha256": "8fc3eb71402518e8e71af37f55ec74f551c98494193907a7f2179e83a6ef8fd7",
+  "kicadVersion": "9.0.2",
+  "counts": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "sourceRulesDigest": "85915592fc0647b75a752e74a1cb3bf552990c2d538ce6f1156da769b9fe1b2e",
+  "hostedJobSubmitted": false
+}

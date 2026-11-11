@@ -1,0 +1,152 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_track_width": 0.25,
+        "min_clearance": 0.2,
+        "min_through_hole_diameter": 0.3,
+        "min_via_annular_width": 0.1,
+        "min_hole_to_hole": 0.25,
+        "min_copper_edge_clearance": 0.5
+      },
+      "via_dimensions": [
+        {
+          "diameter": 0.6,
+          "drill": 0.3
+        }
+      ]
+    }
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "clearance": 0.2,
+        "track_width": 0.25,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      }
+    ],
+    "netclass_assignments": {
+      "3V3": [
+        "Default"
+      ],
+      "GND": [
+        "Default"
+      ],
+      "PA4": [
+        "Default"
+      ],
+      "PA5": [
+        "Default"
+      ],
+      "PA7": [
+        "Default"
+      ],
+      "PA8": [
+        "Default"
+      ],
+      "PB0": [
+        "Default"
+      ],
+      "PB1": [
+        "Default"
+      ],
+      "PB10": [
+        "Default"
+      ],
+      "PB3": [
+        "Default"
+      ],
+      "PB4": [
+        "Default"
+      ],
+      "PB5": [
+        "Default"
+      ],
+      "PB6": [
+        "Default"
+      ],
+      "PB7": [
+        "Default"
+      ],
+      "PB8": [
+        "Default"
+      ],
+      "PB9": [
+        "Default"
+      ]
+    },
+    "meta": {
+      "version": 4
+    }
+  },
+  "meta": {
+    "filename": "board.kicad_pro",
+    "version": 3
+  },
+  "labwired": {
+    "rules_digest": "85915592fc0647b75a752e74a1cb3bf552990c2d538ce6f1156da769b9fe1b2e",
+    "agent_selected_rules": {
+      "version": 1,
+      "defaults": {
+        "track_width_mm": 0.25,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 0.6,
+        "via_drill_mm": 0.3
+      },
+      "fabrication": {
+        "reference": "Frozen carrier prototype geometry and KiCad project settings; supplier process capability has not been qualified.",
+        "min_track_width_mm": 0.25,
+        "min_clearance_mm": 0.2,
+        "min_drill_mm": 0.3,
+        "min_annular_ring_mm": 0.1,
+        "min_hole_to_hole_mm": 0.25,
+        "min_edge_clearance_mm": 0.5
+      },
+      "sources": [
+        {
+          "kind": "assumption",
+          "reference": "https://github.com/w1ne/labwired-examples/blob/b04f875de219a9f1eff8b1312e82fea614a3fb37/examples/gaming/gameboy-handheld/pcb/README.md",
+          "rationale": "Preserve the authored prototype: every source segment is 0.25 mm; net clearance 0.2 mm; vias 0.6/0.3 mm. Existing KiCad project requires 0.3 mm minimum hole, 0.1 mm annular ring, 0.25 mm hole-to-hole and 0.5 mm edge clearance. These are design constraints, not supplier qualification or measured hardware limits."
+        }
+      ],
+      "net_classes": [
+        {
+          "name": "Default",
+          "track_width_mm": 0.25,
+          "clearance_mm": 0.2,
+          "via_diameter_mm": 0.6,
+          "via_drill_mm": 0.3,
+          "nets": [
+            "3V3",
+            "GND",
+            "PA4",
+            "PA5",
+            "PA7",
+            "PA8",
+            "PB0",
+            "PB1",
+            "PB10",
+            "PB3",
+            "PB4",
+            "PB5",
+            "PB6",
+            "PB7",
+            "PB8",
+            "PB9"
+          ],
+          "parts": [],
+          "sources": [
+            {
+              "kind": "assumption",
+              "reference": "https://github.com/w1ne/labwired-examples/blob/b04f875de219a9f1eff8b1312e82fea614a3fb37/examples/gaming/gameboy-handheld/pcb/README.md",
+              "rationale": "Preserve the authored prototype: every source segment is 0.25 mm; net clearance 0.2 mm; vias 0.6/0.3 mm. Existing KiCad project requires 0.3 mm minimum hole, 0.1 mm annular ring, 0.25 mm hole-to-hole and 0.5 mm edge clearance. These are design constraints, not supplier qualification or measured hardware limits."
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing_verified": false
+  }
+}
