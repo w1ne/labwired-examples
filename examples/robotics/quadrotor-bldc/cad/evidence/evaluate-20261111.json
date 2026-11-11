@@ -1,0 +1,184 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 158451.13781656427
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -523.8327832184896,
+            -220,
+            -3
+          ],
+          "max": [
+            275.2,
+            220,
+            916.4154509256549
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-KZi61U",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 158451.13781656427,
+    "faceCount": 2176,
+    "size": [
+      277.9073227154059,
+      251.55129268382842,
+      39.3
+    ]
+  },
+  "featureCount": 158,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.thread",
+      "severity": "info",
+      "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+      "hint": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "M4 threaded hole tap drill"
+        }
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.hole-by-cylinder",
+      "severity": "info",
+      "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+      "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "clearance hole through plate"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "2dadaf6482a11c689df8544e1bbcb8ecbda5c21154809602b4d069a19fd14f9a",
+      "byteLength": 8373
+    },
+    "parameters": {
+      "values": {
+        "rotor1Angle": 0,
+        "rotor2Angle": 0,
+        "rotor3Angle": 0,
+        "rotor4Angle": 0
+      },
+      "sha256": "2840ecdb84bea879d65315e427d6cf7970b71a4524b246939d7bf6886766556b"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "72e5cd4fd02a3dacb5ba854eb0d3f345d6d20a19"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "139a211f354660bc228fdb8c42f61662156207d8c8d894858778acb034718038"
+  },
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 36,
+    "names": [
+      "frame-bottom",
+      "frame-cross",
+      "frame-middle",
+      "camera-side-left",
+      "camera-side-right",
+      "arm-rear-right",
+      "arm-front-right",
+      "arm-rear-left",
+      "arm-front-left",
+      "standoff-rear-left",
+      "standoff-rear-right",
+      "standoff-middle-left",
+      "standoff-middle-right",
+      "frame-top",
+      "esc-grommet-1-ENVELOPE",
+      "esc-grommet-2-ENVELOPE",
+      "esc-grommet-3-ENVELOPE",
+      "esc-grommet-4-ENVELOPE",
+      "esc-board",
+      "fc-grommet-1-ENVELOPE",
+      "fc-grommet-2-ENVELOPE",
+      "fc-grommet-3-ENVELOPE",
+      "fc-grommet-4-ENVELOPE",
+      "fc-board-ENVELOPE",
+      "motor-base-rear-right-ENVELOPE",
+      "rotor-rear-right-ENVELOPE",
+      "prop-rear-right-ENVELOPE",
+      "motor-base-front-right-ENVELOPE",
+      "rotor-front-right-ENVELOPE",
+      "prop-front-right-ENVELOPE",
+      "motor-base-rear-left-ENVELOPE",
+      "rotor-rear-left-ENVELOPE",
+      "prop-rear-left-ENVELOPE",
+      "motor-base-front-left-ENVELOPE",
+      "rotor-front-left-ENVELOPE",
+      "prop-front-left-ENVELOPE"
+    ]
+  },
+  "mechanism": "real",
+  "mechanismSummary": {
+    "verdict": "real",
+    "maxLevel": "ok",
+    "statement": "Motion checked: 13 poses across 4 joints (each joint at its limits), animation within limits on 4 joints, all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+    "checked": [
+      "13 poses across 4 joints (each joint at its limits)",
+      "animation within limits on 4 joints",
+      "all mates satisfied",
+      "no collisions",
+      "fastened parts stay rigid"
+    ],
+    "skipped": [
+      "gravity hold and drop-on-release were not checked"
+    ],
+    "failures": []
+  },
+  "reviewHint": "This model has articulated mates, and evaluate_script's mechanism check is shallow: it does not check joint-support intents, pose-envelope overlap at declared mate limits, or gravity drop / static hold. Run review_cad for pose-envelope + gravity checks before calling the mechanism done.",
+  "serverBuild": "0.1.0+72e5cd4fd02a@2026-11-11T13:09:28.200Z"
+}
+
