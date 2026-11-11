@@ -1,0 +1,402 @@
+{
+  "tool": "labwired_import",
+  "source_kind": "netlist",
+  "ok": true,
+  "mode": "design_only",
+  "parser": "kicad_net",
+  "twin_buildable": false,
+  "design_context_ok": true,
+  "counts": {
+    "components": 222,
+    "nets": 210,
+    "simulated": 176,
+    "inert": 46,
+    "droppedPinEndpoints": 0
+  },
+  "mcu": null,
+  "runnable": false,
+  "runnableReasons": [
+    "MCU_UNRESOLVED",
+    "ERC_ERRORS"
+  ],
+  "diagnostics": [
+    {
+      "severity": "error",
+      "code": "NO_MCU",
+      "message": "Diagram has no MCU. The board field sets the pin map but does not add the MCU node.",
+      "fix": "Add the board's MCU as a part (a component of class `mcu` — see labwired_list kind=mcu, e.g. type \"esp32-c3-supermini\" or \"stm32-dev\") and wire peripherals to its pins."
+    }
+  ],
+  "unmappedParts": [
+    {
+      "refdes": "J1",
+      "libId": "QuadRoot_components:SM08B-SRSS-TB",
+      "value": "SM08B-SRSS-TB",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U3",
+      "libId": "QuadRoot_components:4in1ESC",
+      "value": "~",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U12",
+      "libId": "QuadRoot_components:INA186A3IDCKR",
+      "value": "INA186A3IDCKR",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U13",
+      "libId": "QuadRoot_components:LMR54406DBVR",
+      "value": "LMR54406DBVR",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U14",
+      "libId": "QuadRoot_components:XRIM160808SR47MBCD",
+      "value": "FTC160808S4R7MBCA",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U15",
+      "libId": "QuadRoot_components:TLV76733DRVR",
+      "value": "TLV76733DRVR",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q1",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q2",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q6",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q11",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q16",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q21",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP1",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP4",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U2",
+      "libId": "QuadEsc_ESCLibrary:AT32F421G8U7",
+      "value": "AT32F421G8U7",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U4",
+      "libId": "QuadEsc_components:NSG2065Q",
+      "value": "NSG2065Q",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q3",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q7",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q8",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q12",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q17",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q22",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP2",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP5",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U5",
+      "libId": "QuadEsc_ESCLibrary:AT32F421G8U7",
+      "value": "AT32F421G8U7",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U6",
+      "libId": "QuadEsc_components:NSG2065Q",
+      "value": "NSG2065Q",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q4",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q9",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q13",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q14",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q18",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q23",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP3",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP6",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U7",
+      "libId": "QuadEsc_ESCLibrary:AT32F421G8U7",
+      "value": "AT32F421G8U7",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U8",
+      "libId": "QuadEsc_components:NSG2065Q",
+      "value": "NSG2065Q",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q5",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q10",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q15",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q19",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q20",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "Q24",
+      "libId": "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660",
+      "value": "SP40N01GHNK",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP7",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "TP8",
+      "libId": "Connector:TestPoint",
+      "value": "TestPoint",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U9",
+      "libId": "QuadEsc_ESCLibrary:AT32F421G8U7",
+      "value": "AT32F421G8U7",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    },
+    {
+      "refdes": "U10",
+      "libId": "QuadEsc_components:NSG2065Q",
+      "value": "NSG2065Q",
+      "mappedType": null,
+      "coverage": "inert",
+      "note": "no LabWired model; kept for wiring"
+    }
+  ],
+  "unmappedPins": [],
+  "coverage_md": "# Import coverage\n\n- source: netlist\n- board: `?`\n- supported: 176\n- dropped: 37\n- ignored: 9\n- mcu_mapped: false\n- mint_ok: false\n- twin_buildable: false\n\n## Mapped\n- `C2` · 4.7uF → capacitor\n- `C3` · 4.7uF → capacitor\n- `C32` · 100nF → capacitor\n- `C33` · 100nF → capacitor\n- `C34` · 100nF → capacitor\n- `C35` · 100nF → capacitor\n- `C36` · 100nF → capacitor\n- `C37` · 100nF → capacitor\n- `C38` · 100nF → capacitor\n- `C39` · 100nF → capacitor\n- `C4` · 22uF → capacitor\n- `C40` · 100nF → capacitor\n- `C41` · 100nF → capacitor\n- `C42` · 1uF → capacitor\n- `C47` · 22uF → capacitor\n- `C48` · 100nF → capacitor\n- `C49` · 100nF → capacitor\n- `C50` · 100nF → capacitor\n- `C501` · 4.7uF → capacitor\n- `C502` · 4.7uF → capacitor\n- `C503` · 4.7uF → capacitor\n- `C504` · 4.7uF → capacitor\n- `C505` · 4.7uF → capacitor\n- `C506` · 4.7uF → capacitor\n- `C507` · 4.7uF → capacitor\n- `C508` · 4.7uF → capacitor\n- `C509` · 4.7uF → capacitor\n- `C51` · 22uF → capacitor\n- `C510` · 4.7uF → capacitor\n- `C511` · 4.7uF → capacitor\n- `C512` · 4.7uF → capacitor\n- `C513` · 4.7uF → capacitor\n- `C514` · 4.7uF → capacitor\n- `C515` · 4.7uF → capacitor\n- `C516` · 4.7uF → capacitor\n- `C517` · 4.7uF → capacitor\n- `C518` · 4.7uF → capacitor\n- `C519` · 4.7uF → capacitor\n- `C52` · 100nF → capacitor\n- `C520` · 4.7uF → capacitor\n- `C521` · 4.7uF → capacitor\n- `C522` · 4.7uF → capacitor\n- `C523` · 4.7uF → capacitor\n- `C524` · 4.7uF → capacitor\n- `C525` · 4.7uF → capacitor\n- `C526` · 4.7uF → capacitor\n- `C527` · 4.7uF → capacitor\n- `C528` · 4.7uF → capacitor\n- `C529` · 4.7uF → capacitor\n- `C53` · 100nF → capacitor\n- `C530` · 4.7uF → capacitor\n- `C531` · 4.7uF → capacitor\n- `C532` · 4.7uF → capacitor\n- `C533` · 4.7uF → capacitor\n- `C534` · 4.7uF → capacitor\n- `C535` · 4.7uF → capacitor\n- `C536` · 4.7uF → capacitor\n- `C537` · 4.7uF → capacitor\n- `C538` · 4.7uF → capacitor\n- `C539` · 4.7uF → capacitor\n- `C54` · 100nF → capacitor\n- `C540` · 4.7uF → capacitor\n- `C541` · 4.7uF → capacitor\n- `C542` · 4.7uF → capacitor\n- `C543` · 4.7uF → capacitor\n- `C544` · 4.7uF → capacitor\n- `C545` · 4.7uF → capacitor\n- `C546` · 4.7uF → capacitor\n- `C547` · 4.7uF → capacitor\n- `C548` · 4.7uF → capacitor\n- `C549` · 4.7uF → capacitor\n- `C55` · 100nF → capacitor\n- `C56` · 100nF → capacitor\n- `C57` · 100nF → capacitor\n- `C58` · 100nF → capacitor\n- `C59` · 100nF → capacitor\n- `C6` · 4.7uF → capacitor\n- `C60` · 100nF → capacitor\n- `C61` · 100nF → capacitor\n- `C62` · 100nF → capacitor\n- `C63` · 100nF → capacitor\n- `C64` · 100nF → capacitor\n- `C65` · 100nF → capacitor\n- `C66` · 100nF → capacitor\n- `C67` · 100nF → capacitor\n- `C68` · 100nF → capacitor\n- `C74` · 100nF → capacitor\n- `C75` · 100nF → capacitor\n- `C76` · 100nF → capacitor\n- `C81` · 100nF → capacitor\n- `C86` · 22uF → capacitor\n- `C93` · 100nF → capacitor\n- `C94` · 100nF → capacitor\n- `R10` · 10k → resistor\n- `R11` · 1k → resistor\n- `R12` · 10k → resistor\n- `R120` · 115k → resistor\n- `R121` · 10k → resistor\n- `R13` · 10k → resistor\n- `R14` · 1k → resistor\n- `R15` · 10k → resistor\n- `R18` · 10k → resistor\n- `R19` · 10k → resistor\n- `R20` · 220R → resistor\n- `R21` · 10k → resistor\n- `R22` · 10k → resistor\n- `R23` · 15R → resistor\n- `R24` · 15R → resistor\n- `R25` · 10k → resistor\n- `R26` · 1k → resistor\n- `R27` · 10k → resistor\n- `R28` · 10k → resistor\n- `R29` · 1k → resistor\n- `R30` · 10k → resistor\n- `R31` · 10k → resistor\n- `R32` · 1k → resistor\n- `R33` · 10k → resistor\n- `R34` · 10k → resistor\n- `R35` · 1k → resistor\n- `R36` · 10k → resistor\n- `R37` · 15R → resistor\n- `R38` · 15R → resistor\n- `R39` · 220R → resistor\n- `R40` · 10k → resistor\n- `R41` · 10k → resistor\n- `R42` · 15R → resistor\n- `R43` · 15R → resistor\n- `R44` · 15R → resistor\n- `R45` · 15R → resistor\n- `R46` · 10k → resistor\n- `R47` · 1k → resistor\n- `R48` · 10k → resistor\n- `R49` · 10k → resistor\n- `R50` · 1k → resistor\n- `R51` · 10k → resistor\n- `R52` · 10k → resistor\n- `R53` · 1k → resistor\n- `R54` · 10k → resistor\n- `R55` · 15R → resistor\n- `R56` · 15R → resistor\n- `R57` · 220R → resistor\n- `R58` · 10k → resistor\n- `R59` · 10k → resistor\n- `R60` · 15R → resistor\n- `R61` · 15R → resistor\n- `R62` · 15R → resistor\n- `R63` · 15R → resistor\n- `R64` · 10k → resistor\n- `R65` · 1k → resistor\n- `R66` · 10k → resistor\n- `R67` · 10k → resistor\n- `R68` · 1k → resistor\n- `R69` · 10k → resistor\n- `R70` · 10k → resistor\n- `R71` · 1k → resistor\n- `R72` · 10k → resistor\n- `R73` · 1k → resistor\n- `R74` · 15R → resistor\n- `R75` · 15R → resistor\n- `R76` · 15R → resistor\n- `R77` · 15R → resistor\n- `R78` · 15R → resistor\n- `R79` · 15R → resistor\n- `R80` · 15R → resistor\n- `R81` · 15R → resistor\n- `R82` · 15R → resistor\n- `R83` · 15R → resistor\n- `R84` · 10R → resistor\n- `R85` · 10R → resistor\n- `R86` · 10R → resistor\n- `R87` · 220R → resistor\n- `R88` · 10R → resistor\n- `R89` · 1k → resistor\n- `R90` · 1k → resistor\n- `Rsense1` · 0.2mR → resistor\n- `Rsense2` · 0.2mR → resistor\n\n## Dropped / design-only (never invent pins)\n### bjt (24)\n- `Q1` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q10` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q11` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q12` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q13` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q14` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q15` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q16` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q17` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q18` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q19` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q2` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q20` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q21` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q22` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q23` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q24` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q3` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q4` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q5` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q6` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q7` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q8` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `Q9` · SP40N01GHNK — bjt — symbol QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n\n### ic (13)\n- `U10` · NSG2065Q — ic — symbol QuadEsc_components:NSG2065Q is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U12` · INA186A3IDCKR — ic — symbol QuadRoot_components:INA186A3IDCKR is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U13` · LMR54406DBVR — ic — symbol QuadRoot_components:LMR54406DBVR is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U14` · FTC160808S4R7MBCA — ic — symbol QuadRoot_components:XRIM160808SR47MBCD is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U15` · TLV76733DRVR — ic — symbol QuadRoot_components:TLV76733DRVR is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U2` · AT32F421G8U7 — ic — symbol QuadEsc_ESCLibrary:AT32F421G8U7 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U3` · ~ — ic — symbol QuadRoot_components:4in1ESC is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U4` · NSG2065Q — ic — symbol QuadEsc_components:NSG2065Q is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U5` · AT32F421G8U7 — ic — symbol QuadEsc_ESCLibrary:AT32F421G8U7 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U6` · NSG2065Q — ic — symbol QuadEsc_components:NSG2065Q is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U7` · AT32F421G8U7 — ic — symbol QuadEsc_ESCLibrary:AT32F421G8U7 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U8` · NSG2065Q — ic — symbol QuadEsc_components:NSG2065Q is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n- `U9` · AT32F421G8U7 — ic — symbol QuadEsc_ESCLibrary:AT32F421G8U7 is not in the catalog; no model for this class yet. Design via labwired_part/datasheet; never invent pins\n\n## Ignored (no simulation behaviour — not a model gap)\n- `J1` · SM08B-SRSS-TB — connector — KiCad reserves the `J` designator for it; no simulation behaviour\n- `TP1` · TestPoint — test point — a probe pad, no simulation behaviour\n- `TP2` · TestPoint — test point — a probe pad, no simulation behaviour\n- `TP3` · TestPoint — test point — a probe pad, no simulation behaviour\n- `TP4` · TestPoint — test point — a probe pad, no simulation behaviour\n- `TP5` · TestPoint — test point — a probe pad, no simulation behaviour\n- `TP6` · TestPoint — test point — a probe pad, no simulation behaviour\n- `TP7` · TestPoint — test point — a probe pad, no simulation behaviour\n- `TP8` · TestPoint — test point — a probe pad, no simulation behaviour\n"
+}

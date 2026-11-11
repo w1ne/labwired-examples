@@ -1,70 +1,121 @@
-// LabWired x KernelCAD / drone propulsion concept
-// Dimensions in mm. Four independent ESC/motor channels are represented mechanically;
-// LabWired firmware-in-loop proof currently covers one 24V six-step BLDC channel.
-meta({name:'labwired-quad-bldc-rig',license:'CC0-1.0',title:'LabWired x KernelCAD — Quad BLDC propulsion rig',
-  description:'Parametric quadrotor with four revolute propeller shafts, ESC board and landing skids. Motor control comes from LabWired firmware-in-loop.'});
-const spinCW = param('rotorCW',0,{min:-2160,max:2160,label:'CW rotor angle'});
-const spinCCW = param('rotorCCW',0,{min:-2160,max:2160,label:'CCW rotor angle'});
-const armReach = 205;
-const motorR = 23;
-const chassisZ = 55;
-const corners:[string,number,number,number][]=[
- ['front-left',145,-145,45],['front-right',145,145,135],
- ['rear-left',-145,-145,315],['rear-right',-145,145,225]];
-// Carbon/metal frame: central sealed electronics bay + four diagonal arms.
-let chassis = box(148,132,24,true).translate(0,0,68);
-for(const [name,x,y,angle] of corners){
-  const beam=box(armReach+7,20,15).translate(-7,-10,chassisZ).rotateZ(Math.atan2(y,x)*180/Math.PI);
-  const stator=cylinder(28,motorR).translate(x,y,57);
-  chassis=chassis.union(beam).union(stator);
-}
-// Landing skids are part of the monocoque concept geometry.
-for(const side of [-1,1]){
-  chassis=chassis.union(box(14,165,10).translate(side*53-7,-82.5,0));
-  for(const yy of [-60,60]){
-    chassis=chassis.union(box(12,12,56).translate(side*53-6,yy-6,0));
-  }
-}
-// Mounting bosses rise from the top deck, supporting a separate removable ESC board.
-for(const [x,y] of [[-27,-18],[27,-18],[-27,18],[27,18]]){
-  chassis=chassis.union(cylinder(11,3.6).translate(x,y,80));
-}
-chassis=chassis.finish('anodized-black');
-// ESC controller card and voltage/current telemetry electronics, concept-level positions.
-// Not a validated transistor/PCB layout; electronics truth is held in LabWired.
-const pcb=box(68,48,1.6).translate(-34,-24,91).finish('paint-matte',{color:'#136c5d'});
-function propBlade(){
-  return path().moveTo(0,-9).lineTo(18,-17).lineTo(47,-16)
-    .lineTo(80,-10).lineTo(111,-5).lineTo(116,0)
-    .lineTo(88,7).lineTo(46,13).lineTo(16,13).lineTo(0,8)
-    .close().extrude(4);
-}
-const rig=assembly('labwired-quad-bldc');
-const frame=rig.part('carbon-monocoque',chassis,{material:'aluminum-6061'});
-const esc=rig.part('esc-controller-board',pcb,{material:'abs'});
+// LabWired x KernelCAD: OpenFrame-5F mechanical integration model, mm.
+// Frame: unmodified OpenDrone rev2.2 STEP, pinned by commit and SHA-256 in
+// mechanical-evidence.json. OpenFrame hardware is CERN-OHL-S-2.0.
+// This is an assembly/clearance model, not a flight or strength simulation.
+// The motor bodies, propeller blade profiles and FC are marked ENVELOPE:
+// they are not EMAX/Gemfan/OpenFC manufacturing geometry. Props retain the
+// published 129.7 mm sweep diameter, three blades, 6 mm hub and 5 mm bore.
+meta({name:'labwired-quad-openframe-5f',
+  title:'LabWired quadrotor — OpenFrame-5F integration',
+  description:'Pinned 226 mm OpenFrame-5F frame, four independently posed rotor joints, real ESC board outline and nominal tri-blade envelopes. Visual motion only; no live firmware telemetry or flight dynamics.'});
+
+const rotor1 = param('rotor1Angle',0,{min:-2160,max:2160,label:'M1 rear-right angle (deg)'});
+const rotor2 = param('rotor2Angle',0,{min:-2160,max:2160,label:'M2 front-right angle (deg)'});
+const rotor3 = param('rotor3Angle',0,{min:-2160,max:2160,label:'M3 rear-left angle (deg)'});
+const rotor4 = param('rotor4Angle',0,{min:-2160,max:2160,label:'M4 front-left angle (deg)'});
+
+// Onshape part exports already share the assembly frame. +Z is up, -Y is
+// forward (camera). Actual motor centres are NOT a square-X arrangement.
+const motorX = 89;
+const motorY = 69.534420756;
+const propRadius = 64.85;
+const stackY = -12.75;
+const armFile = 'https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step';
+const standoffFile = 'https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-M3-F-F-20-OD5.step';
 const origin=(x:number,y:number,z:number)=>({kind:'vec3' as const,value:[x,y,z] as [number,number,number]});
-frame.connector('esc-seat',{type:'frame',origin:origin(27,18,91)});
-esc.connector('esc-seat',{type:'frame',origin:origin(27,18,91)});
-rig.mate('esc-board-bolts','carbon-monocoque.esc-seat','esc-controller-board.esc-seat','fastened');
-for(const [name,x,y] of corners){
-  // Separate moving bell, shaft cap and twin blade pair: physically a rotor.
-  let rotor=cylinder(17,21).union(cylinder(7,12).translate(0,0,14));
-  rotor=rotor.union(propBlade().rotateY(4).translate(0,0,19))
-    .union(propBlade().rotateZ(180).rotateY(4).translate(0,0,19));
-  rotor=rotor.translate(x,y,85).finish('anodized-black');
-  const p=rig.part('rotor-'+name,rotor,{material:'abs'});
-  frame.connector('shaft-'+name,{type:'axis',origin:origin(x,y,85),axis:[0,0,1]});
-  p.connector('shaft-'+name,{type:'axis',origin:origin(x,y,85),axis:[0,0,1]});
-  const angle = name==='front-left'||name==='rear-right'?spinCW:spinCCW;
-  rig.mate('prop-shaft-'+name,
-   'carbon-monocoque.shaft-'+name,
-   'rotor-'+name+'.shaft-'+name,'revolute',{pose:angle,limitsDeg:[-2160,2160]});
+const rig=assembly('labwired-quad-bldc');
+
+const baseShape = await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Base-Bot.step");
+const base = rig.part('frame-bottom',baseShape.finish('paint-matte',{color:'#24282c'}));
+const partRefs:any = {'frame-bottom':base};
+function attach(name:string,shape:any,point:[number,number,number],finish='paint-matte',color='#24282c',parentName='frame-bottom'){
+  const parent=partRefs[parentName];
+  const p=rig.part(name,shape.finish(finish,{color}));
+  parent.connector(name,{type:'frame',origin:origin(...point)});
+  p.connector('seat',{type:'frame',origin:origin(...point)});
+  rig.mate(name+'-mount',parentName+'.'+name,name+'.seat','fastened');
+  partRefs[name]=p;
+  return p;
 }
-animationView({name:'Spin-up and commanded stop (visual; not a flight dynamics model)',fps:24,
- tracks:[
-  {param:'rotorCW',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:1850,value:1800},
-    {atMs:2600,value:2160},{atMs:3200,value:2160}]},
-  {param:'rotorCCW',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:1850,value:-1800},
-    {atMs:2600,value:-2160},{atMs:3200,value:-2160}]}
- ]});
+attach('frame-cross',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Cross.step"),[0,0,0]);
+attach('frame-middle',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Base-Top.step"),[0,0,6],'paint-matte','#24282c','frame-cross');
+attach('camera-side-left',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-L.step"),[13.75,-58,0],'anodized','#d6a528');
+attach('camera-side-right',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-R.step"),[-13.75,-58,0],'anodized','#d6a528');
+
+// A fresh imported handle for each instance avoids shared-handle transforms.
+attach('arm-rear-right',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step"),[23,17.96956941,0]);
+attach('arm-front-right',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateX(180).translate(0,0,6),[23,-17.96956941,0]);
+attach('arm-rear-left',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateY(180).translate(0,0,6),[-23,17.96956941,0]);
+attach('arm-front-left',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateZ(180),[-23,-17.96956941,0]);
+for(const [name,dx,dy,x,y] of [
+  ['rear-left',0,0,-10.25,69.5],['rear-right',20.5,0,10.25,69.5],
+  ['middle-left',-2.5,-45.5,-12.75,24],['middle-right',23,-45.5,12.75,24]
+] as [string,number,number,number,number][]){
+  attach('standoff-'+name,(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-M3-F-F-20-OD5.step")).translate(dx,dy,0),[x,y,9],'anodized-black','#24282c','frame-middle');
+}
+
+attach('frame-top',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Top.step"),[-10.25,69.5,29],'paint-matte','#24282c','standoff-rear-left');
+
+// Stack support rings are nominal soft-mount ENVELOPES. Their heights are
+// assembly assumptions, not measured compressed grommet dimensions.
+for(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2.5]]){
+  const ring=cylinder(3.4,3.5).subtract(cylinder(3.4,2)).translate(x,y,9);
+  attach('esc-grommet-'+index+'-ENVELOPE',ring,[x,y,9],'rubber','#363a3f','frame-middle');
+}
+
+// Board geometry comes from the example's native KiCad export; solid 5 is
+// the PCB substrate. Holes measured at 30.5 mm pitch, 4 mm diameter.
+// Board undersurface z=12.4 leaves 3.4 mm above the 9 mm middle plate.
+const escShape = await lib.fromSTEP("https://raw.githubusercontent.com/w1ne/labwired-examples/c108ed0/examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/esc-board-preview.step",{solid:5});
+attach('esc-board',escShape.translate(-75.63257,34.6,12.4),[-15.25,-28,12.4],'paint-matte','#14735b','esc-grommet-1-ENVELOPE');
+for(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2.5]]){
+  const ring=cylinder(6.07,3.5).subtract(cylinder(6.07,2)).translate(x,y,13.93);
+  attach('fc-grommet-'+index+'-ENVELOPE',ring,[x,y,13.93],'rubber','#363a3f','esc-board');
+}
+// FC ENVELOPE: 40 x 40 x 1.6 mm, four 4 mm holes on 30.5 mm centres.
+// Component heights, connector overhang and soft-mount compression are unverified.
+let fc=box(40,40,1.6).translate(-20,stackY-20,20);
+for(const x of [-15.25,15.25])for(const y of [stackY-15.25,stackY+15.25]){
+  fc=fc.subtract(cylinder(3.6,2).translate(x,y,19));
+}
+attach('fc-board-ENVELOPE',fc,[-15.25,-28,20],'paint-matte','#18575e','fc-grommet-1-ENVELOPE');
+
+// Nominal blades for visual sweep checks only. The clipping cylinder fixes
+// the maximum radius; these straight sections are not a Gemfan airfoil.
+function nominalProp(){
+  let p=cylinder(6,7);
+  for(const a of [0,120,240]){
+    const blade=path().moveTo(5,-3).lineTo(17,-8).lineTo(38,-10)
+      .lineTo(58,-7).lineTo(65,-1).lineTo(62,3).lineTo(38,8)
+      .lineTo(15,7).lineTo(5,3).close().extrude(1.6).translate(0,0,2.2).rotateZ(a);
+    p=p.union(blade);
+  }
+  return p.intersect(cylinder(6,propRadius)).subtract(cylinder(8,2.5).translate(0,0,-1));
+}
+const motorRows:[string,number,number,any,string][]=[
+  ['rear-right',motorX,motorY,rotor1,'#e66f35'],
+  ['front-right',motorX,-motorY,rotor2,'#e66f35'],
+  ['rear-left',-motorX,motorY,rotor3,'#427daf'],
+  ['front-left',-motorX,-motorY,rotor4,'#427daf']
+];
+for(const [name,x,y,angle,color] of motorRows){
+  // Motor ENVELOPE: 28 mm OD, 3 mm mounting foot and 15 mm bell.
+  // Exact stator, magnets, bearings, thread engagement and mass are absent.
+  const foot=attach('motor-base-'+name+'-ENVELOPE',cylinder(3,14).translate(x,y,6),[x,y,6],'anodized-black','#24282c','arm-'+name);
+  const bellShape=cylinder(15,14).union(cylinder(12,2.5).translate(0,0,15)).translate(x,y,9.3).finish('anodized-black');
+  const bell=rig.part('rotor-'+name+'-ENVELOPE',bellShape);
+  foot.connector('axis',{type:'axis',origin:origin(x,y,9.3),axis:[0,0,1]});
+  bell.connector('axis',{type:'axis',origin:origin(x,y,9.3),axis:[0,0,1]});
+  rig.mate('prop-shaft-'+name,'motor-base-'+name+'-ENVELOPE.axis','rotor-'+name+'-ENVELOPE.axis','revolute',{pose:angle,limitsDeg:[-2160,2160]});
+  const prop=rig.part('prop-'+name+'-ENVELOPE',nominalProp().translate(x,y,25.3).finish('polycarbonate',{color}));
+  bell.connector('prop-seat',{type:'frame',origin:origin(x,y,25.3)});
+  prop.connector('prop-seat',{type:'frame',origin:origin(x,y,25.3)});
+  rig.mate('prop-nut-'+name,'rotor-'+name+'-ENVELOPE.prop-seat','prop-'+name+'-ENVELOPE.prop-seat','fastened');
+}
+animationView({name:'Four rotor joint demonstration — visual only',fps:24,tracks:[
+  {param:'rotor1Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:2160},{atMs:3200,value:2160}]},
+  {param:'rotor2Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:-1800},{atMs:3200,value:-1800}]},
+  {param:'rotor3Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:-1440},{atMs:3200,value:-1440}]},
+  {param:'rotor4Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:1080},{atMs:3200,value:1080}]}
+]});
 return rig.model();

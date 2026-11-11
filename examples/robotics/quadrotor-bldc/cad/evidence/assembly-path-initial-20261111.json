@@ -1,0 +1,623 @@
+{
+  "ok": false,
+  "source": "local",
+  "basis": "continuous-triangle-mesh",
+  "limitations": [
+    "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+  ],
+  "model": {
+    "rigidParts": true,
+    "motion": "straight-line-translation",
+    "motionModels": [
+      "straight-line-translation"
+    ],
+    "testedDirections": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "gravity": "not-modelled",
+    "basis": "continuous-triangle-mesh",
+    "tessellation": {
+      "linearMm": 0.01,
+      "relative": true,
+      "angularRad": 0.05,
+      "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+    },
+    "clearanceMm": 0,
+    "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+    "toolReach": "not-modelled"
+  },
+  "parts": [
+    {
+      "part": "frame-bottom",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "frame-cross",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "frame-middle",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "camera-side-left",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "camera-side-right",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "arm-rear-right",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "arm-front-right",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "arm-rear-left",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "arm-front-left",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "standoff-rear-left",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "standoff-rear-right",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "standoff-middle-left",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "standoff-middle-right",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "frame-top",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "esc-grommet-1-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "esc-grommet-2-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "esc-grommet-3-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "esc-grommet-4-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "esc-board",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "fc-grommet-1-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "fc-grommet-2-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "fc-grommet-3-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "fc-grommet-4-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "fc-board-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "motor-base-rear-right-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "rotor-rear-right-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "prop-rear-right-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "motor-base-front-right-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "rotor-front-right-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "prop-front-right-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "motor-base-rear-left-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "rotor-rear-left-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "prop-rear-left-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "motor-base-front-left-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "rotor-front-left-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "prop-front-left-ENVELOPE",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    }
+  ],
+  "blockingGraph": {
+    "parts": [
+      "frame-bottom",
+      "frame-cross",
+      "frame-middle",
+      "camera-side-left",
+      "camera-side-right",
+      "arm-rear-right",
+      "arm-front-right",
+      "arm-rear-left",
+      "arm-front-left",
+      "standoff-rear-left",
+      "standoff-rear-right",
+      "standoff-middle-left",
+      "standoff-middle-right",
+      "frame-top",
+      "esc-grommet-1-ENVELOPE",
+      "esc-grommet-2-ENVELOPE",
+      "esc-grommet-3-ENVELOPE",
+      "esc-grommet-4-ENVELOPE",
+      "esc-board",
+      "fc-grommet-1-ENVELOPE",
+      "fc-grommet-2-ENVELOPE",
+      "fc-grommet-3-ENVELOPE",
+      "fc-grommet-4-ENVELOPE",
+      "fc-board-ENVELOPE",
+      "motor-base-rear-right-ENVELOPE",
+      "rotor-rear-right-ENVELOPE",
+      "prop-rear-right-ENVELOPE",
+      "motor-base-front-right-ENVELOPE",
+      "rotor-front-right-ENVELOPE",
+      "prop-front-right-ENVELOPE",
+      "motor-base-rear-left-ENVELOPE",
+      "rotor-rear-left-ENVELOPE",
+      "prop-rear-left-ENVELOPE",
+      "motor-base-front-left-ENVELOPE",
+      "rotor-front-left-ENVELOPE",
+      "prop-front-left-ENVELOPE"
+    ],
+    "directions": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "edges": []
+  },
+  "stuckParts": [
+    "frame-bottom",
+    "frame-cross",
+    "frame-middle",
+    "camera-side-left",
+    "camera-side-right",
+    "arm-rear-right",
+    "arm-front-right",
+    "arm-rear-left",
+    "arm-front-left",
+    "standoff-rear-left",
+    "standoff-rear-right",
+    "standoff-middle-left",
+    "standoff-middle-right",
+    "frame-top",
+    "esc-grommet-1-ENVELOPE",
+    "esc-grommet-2-ENVELOPE",
+    "esc-grommet-3-ENVELOPE",
+    "esc-grommet-4-ENVELOPE",
+    "esc-board",
+    "fc-grommet-1-ENVELOPE",
+    "fc-grommet-2-ENVELOPE",
+    "fc-grommet-3-ENVELOPE",
+    "fc-grommet-4-ENVELOPE",
+    "fc-board-ENVELOPE",
+    "motor-base-rear-right-ENVELOPE",
+    "rotor-rear-right-ENVELOPE",
+    "prop-rear-right-ENVELOPE",
+    "motor-base-front-right-ENVELOPE",
+    "rotor-front-right-ENVELOPE",
+    "prop-front-right-ENVELOPE",
+    "motor-base-rear-left-ENVELOPE",
+    "rotor-rear-left-ENVELOPE",
+    "prop-rear-left-ENVELOPE",
+    "motor-base-front-left-ENVELOPE",
+    "rotor-front-left-ENVELOPE",
+    "prop-front-left-ENVELOPE"
+  ],
+  "sequence": {
+    "steps": [],
+    "model": {
+      "rigidParts": true,
+      "motion": "straight-line-translation",
+      "motionModels": [
+        "straight-line-translation"
+      ],
+      "testedDirections": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "gravity": "not-modelled",
+      "basis": "continuous-triangle-mesh",
+      "tessellation": {
+        "linearMm": 0.01,
+        "relative": true,
+        "angularRad": 0.05,
+        "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+      },
+      "clearanceMm": 0,
+      "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+      "toolReach": "not-modelled"
+    },
+    "unknown": [
+      "frame-bottom",
+      "frame-cross",
+      "frame-middle",
+      "camera-side-left",
+      "camera-side-right",
+      "arm-rear-right",
+      "arm-front-right",
+      "arm-rear-left",
+      "arm-front-left",
+      "standoff-rear-left",
+      "standoff-rear-right",
+      "standoff-middle-left",
+      "standoff-middle-right",
+      "frame-top",
+      "esc-grommet-1-ENVELOPE",
+      "esc-grommet-2-ENVELOPE",
+      "esc-grommet-3-ENVELOPE",
+      "esc-grommet-4-ENVELOPE",
+      "esc-board",
+      "fc-grommet-1-ENVELOPE",
+      "fc-grommet-2-ENVELOPE",
+      "fc-grommet-3-ENVELOPE",
+      "fc-grommet-4-ENVELOPE",
+      "fc-board-ENVELOPE",
+      "motor-base-rear-right-ENVELOPE",
+      "rotor-rear-right-ENVELOPE",
+      "prop-rear-right-ENVELOPE",
+      "motor-base-front-right-ENVELOPE",
+      "rotor-front-right-ENVELOPE",
+      "prop-front-right-ENVELOPE",
+      "motor-base-rear-left-ENVELOPE",
+      "rotor-rear-left-ENVELOPE",
+      "prop-rear-left-ENVELOPE",
+      "motor-base-front-left-ENVELOPE",
+      "rotor-front-left-ENVELOPE",
+      "prop-front-left-ENVELOPE"
+    ]
+  },
+  "serverBuild": "0.1.0+72e5cd4fd02a@2026-11-11T13:09:28.200Z"
+}

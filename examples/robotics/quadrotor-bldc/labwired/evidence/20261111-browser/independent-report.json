@@ -1,0 +1,212 @@
+{
+  "verdict": "PASS within local patched four-channel reduced-order motor bench scope",
+  "scope": "Real saved C sources and hosted compiler, existing WASM MCU/motor plants, local candidate sender and CAD receiver; not deployed production and not actual OpenESC/flight validation.",
+  "trace_directory": "/tmp/quad-runtime-fault",
+  "compile_results": [
+    {
+      "chip": "ctrl1",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 600,
+      "source_sha256": "52bc858c1d750a9c3db7cba7aa6e58d54dc1a9990df00c3bc988a3c826e59d59",
+      "elf_bytes": 83640,
+      "elf_sha256": "4a4b6d500b43ec3c9d42c31c41d406e3f89098a96a329cb420a49e24c11ac57f",
+      "saved_source_exact": true
+    },
+    {
+      "chip": "ctrl2",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 640,
+      "source_sha256": "aab1da646dd23c119b7b585b313acad8a68f21cc83ab20f0d9154e8682e6e812",
+      "elf_bytes": 83640,
+      "elf_sha256": "d67fc642deca70574e02834597408bd30eb8346c190fa887843a826d7725a72a",
+      "saved_source_exact": true
+    },
+    {
+      "chip": "ctrl3",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 680,
+      "source_sha256": "d8927b124c6c541c1dc3005f110aa2ade9c9f2de2ecde36eb2ab5f88e5e1a6ad",
+      "elf_bytes": 83640,
+      "elf_sha256": "359d91c6e40f95971d988fc20c6a277bb26215c1452f7ba0979483feea3b2755",
+      "saved_source_exact": true
+    },
+    {
+      "chip": "ctrl4",
+      "board": "stm32l476",
+      "language": "c",
+      "duty_permille": 720,
+      "source_sha256": "adcfb98ad8f5885ab9fa511eaae8d69717ae01dc46d52f748b2d8516020ac1cb",
+      "elf_bytes": 83640,
+      "elf_sha256": "5c36b83c07c8a4023ae488166c73b3dc975ae65b21fbec73b455c8c956f2c934",
+      "saved_source_exact": true
+    }
+  ],
+  "worker_initializations": [
+    {
+      "chip": "ctrl1",
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl2",
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl3",
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    },
+    {
+      "chip": "ctrl4",
+      "firmware_bytes": 83640,
+      "clock_source": "systemYaml/chipYaml in raw trace"
+    }
+  ],
+  "worker_binary_identity_limit": "Capture retains boot payload length but not boot-payload bytes; compiler ELF hashes plus per-node UART identifiers/duty and source loading path establish the observed compile/boot chain.",
+  "cad_raw_equality": {
+    "fields": [
+      "absolute shaft angle",
+      "speed RPM",
+      "control state",
+      "fault list"
+    ],
+    "mapping_signs": {
+      "M1": 1,
+      "M2": -1,
+      "M3": -1,
+      "M4": 1
+    },
+    "exact_matches": 480,
+    "mismatches": [],
+    "common_capture_end_epoch_ms": 1794405327861,
+    "excluded_tail_observations": 44,
+    "exclusion_reason": "CAD capture continues after worker capture ends; no corresponding raw record is available.",
+    "matched_observation_age_ms_min_max": [
+      142,
+      2475
+    ]
+  },
+  "fault": {
+    "kind": "Simulated active-HIGH ctrl1 GPIO PB7 driver-fault input; firmware disables inverter",
+    "press": {
+      "epoch_ms": 1794405281401,
+      "chip": "ctrl1",
+      "method": "setBoardIoInput",
+      "args": [
+        "fault1",
+        true
+      ]
+    },
+    "release": {
+      "epoch_ms": 1794405303011,
+      "chip": "ctrl1",
+      "method": "setBoardIoInput",
+      "args": [
+        "fault1",
+        false
+      ]
+    },
+    "first_disabled_epoch_ms": 1794405281912,
+    "no_transistor_fault_injected": true,
+    "channels": [
+      {
+        "chip": "ctrl1",
+        "before_rpm": 2478.033107937923,
+        "final_rpm": 3.336388311985212e-06,
+        "final_control_state": "off:external-enable",
+        "final_cycles": 84010778,
+        "samples_after_first_motor_disabled": 286,
+        "post_fault_states": {
+          "off:external-enable": 286
+        },
+        "uart": "ROTOR 1 READY duty_permille=600\r\nROTOR 1 HALL LOCKED\r\nROTOR 1 FAULT DRIVER\r\nROTOR 1 INVERTER OFF\r\n"
+      },
+      {
+        "chip": "ctrl2",
+        "before_rpm": 2227.7656787671726,
+        "final_rpm": 2534.505727192892,
+        "final_control_state": "inverter",
+        "final_cycles": 84510778,
+        "samples_after_first_motor_disabled": 286,
+        "post_fault_states": {
+          "inverter": 286
+        },
+        "uart": "ROTOR 2 READY duty_permille=640\r\nROTOR 2 HALL LOCKED\r\n"
+      },
+      {
+        "chip": "ctrl3",
+        "before_rpm": 2135.1344549338946,
+        "final_rpm": 2626.5176840052795,
+        "final_control_state": "inverter",
+        "final_cycles": 84510778,
+        "samples_after_first_motor_disabled": 286,
+        "post_fault_states": {
+          "inverter": 286
+        },
+        "uart": "ROTOR 3 READY duty_permille=680\r\nROTOR 3 HALL LOCKED\r\n"
+      },
+      {
+        "chip": "ctrl4",
+        "before_rpm": 2491.770089898253,
+        "final_rpm": 2328.1318478462986,
+        "final_control_state": "inverter",
+        "final_cycles": 84510778,
+        "samples_after_first_motor_disabled": 286,
+        "post_fault_states": {
+          "inverter": 286
+        },
+        "uart": "ROTOR 4 READY duty_permille=720\r\nROTOR 4 HALL LOCKED\r\n"
+      }
+    ]
+  },
+  "cad_frame_states": {
+    "running": 131,
+    "paused": 93
+  },
+  "explicit_pause_test": "Skipped: UI Pause button count was zero. Paused CAD frames occurred when CAD view was hidden.",
+  "worker_errors": [
+    {
+      "chip": "ctrl1",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl2",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl3",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    },
+    {
+      "chip": "ctrl4",
+      "type": "queryError",
+      "message": "runtime snapshot is not supported for this CPU"
+    }
+  ],
+  "worker_errors_scope": "Four unsupported runtime snapshot queries; no initError, stepError or commandError in captured Worker traffic. Simulation observations and UART continue.",
+  "known_environment_errors": [
+    "Development Clerk initialization HTTP 400",
+    "Vite HMR websocket failure on locally routed CAD origin"
+  ],
+  "physical_limits": [
+    "24 V generic BLDC plant differs from selected 4S 14.8 V nominal / 16.8 V full hardware",
+    "STM32L476 bench firmware differs from actual AT32F421/AM32 ESC and RP2354B/Betaflight FC",
+    "No actual MOSFET/gate-driver switching, battery sag, thermal or EMI proof",
+    "No calibrated propeller thrust, airframe rigid-body dynamics, attitude loop or flight proof",
+    "CAD applies one-way observed shaft poses; geometry does not feed forces back into the motor model"
+  ],
+  "input_sha256": {
+    "compiles.json": "379109c15bbb53baf52e18ed439cc8c064d4059dd1d15a78d2a4452e5cbb8d7f",
+    "worker-final.json": "ab535c1958f71a297b56682b6d46761cb15778089ded07b094f5d9ef42907688",
+    "cad-final.json": "2ccb5810e91407748096f2e74b3084fd4e3123ddb5a61874c117976b71a7e09b",
+    "events.json": "3d650c99711352359c14faa54cd24d13432c02356da7da5f76bbdff4d12d6849",
+    "local-project-fixture.json": "4c61754a92a6f9dab3e8e82146ba70ed9c51e19f9e11acb4d4c01a6378f77710"
+  }
+}

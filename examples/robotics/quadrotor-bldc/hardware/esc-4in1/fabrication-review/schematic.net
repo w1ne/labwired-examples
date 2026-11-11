@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/work/4in1.kicad_sch")
-		(date "2026-11-10T19:59:41")
+		(date "2026-11-11T13:35:45")
 		(tool "Eeschema 10.0.8")
 		(textvar
 			(name "DOC_FIRMWARE") "AM32")
@@ -22,6 +22,10 @@
 			(name "DOC_TAGLINE") "AM32 4-in-1 BLDC ESC, 4x independent AT32F421 channels, DShot")
 		(textvar
 			(name "DOC_VARIANT") "30×30")
+		(textvar
+			(name "KICAD10_3DMODEL_DIR") "${KIPRJMOD}/reviewed-models")
+		(textvar
+			(name "KICAD9_3DMODEL_DIR") "${KIPRJMOD}/reviewed-models")
 		(textvar
 			(name "OPENDRONE_LIB") "${KIPRJMOD}/KiCad-Library")
 		(sheet
@@ -668,7 +672,7 @@
 		(comp
 			(ref "C40")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -689,7 +693,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -697,7 +701,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadRoot_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -763,7 +767,7 @@
 		(comp
 			(ref "C41")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -784,7 +788,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -792,7 +796,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadRoot_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -887,7 +891,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadRoot_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -1180,7 +1184,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadRoot_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -1275,7 +1279,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadRoot_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -1370,7 +1374,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadRoot_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -1465,7 +1469,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadRoot_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -1659,7 +1663,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -1754,7 +1758,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -5379,7 +5383,7 @@
 					(name "Description") "JST SH series 8-pin 1.0mm pitch SMD connector, Betaflight standard")
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "SM08B-SRSS-TB")
 				(description "JST SH series 8-pin 1.0mm pitch SMD connector, Betaflight standard")
 			)
@@ -5502,7 +5506,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -5597,7 +5601,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -5692,7 +5696,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -6166,7 +6170,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "4in1ESC")
 				(description "")
 			)
@@ -6297,7 +6301,7 @@
 					(name "Description") "INA186 36V, Low-Power, Precision, Voltage-Output Current Sense Amplifier, 100V/V gain")
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "INA186A3IDCKR")
 				(description "INA186 36V, Low-Power, Precision, Voltage-Output Current Sense Amplifier, 100V/V gain")
 			)
@@ -6379,7 +6383,7 @@
 		(comp
 			(ref "U13")
 			(value "LMR54406DBVR")
-			(footprint "4in1ESC:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR")
+			(footprint "QuadrotorReviewed:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR")
 			(datasheet "https://www.lcsc.com/datasheet/C5219316.pdf")
 			(fields
 				(field
@@ -6402,7 +6406,7 @@
 				(field
 					(name "LCSC") "C5219316")
 				(field
-					(name "Footprint") "4in1ESC:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR")
+					(name "Footprint") "QuadrotorReviewed:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR")
 				(field
 					(name "Datasheet") "https://www.lcsc.com/datasheet/C5219316.pdf")
 				(field
@@ -6410,7 +6414,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "LMR54406DBVR")
 				(description "")
 			)
@@ -6521,7 +6525,7 @@
 					(name "Description") "4.7uH")
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "XRIM160808SR47MBCD")
 				(description "")
 			)
@@ -6616,7 +6620,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadRoot_components")
 				(part "TLV76733DRVR")
 				(description "")
 			)
@@ -6697,7 +6701,7 @@
 		(comp
 			(ref "C32")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -6718,7 +6722,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -6726,7 +6730,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -6792,7 +6796,7 @@
 		(comp
 			(ref "C36")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -6813,7 +6817,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -6821,7 +6825,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -6916,7 +6920,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -7011,7 +7015,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -7106,7 +7110,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -7172,7 +7176,7 @@
 		(comp
 			(ref "C53")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -7193,7 +7197,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -7201,7 +7205,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -7296,7 +7300,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -7393,7 +7397,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -7497,7 +7501,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -7601,7 +7605,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -7705,7 +7709,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -7809,7 +7813,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -7913,7 +7917,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -8015,7 +8019,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -8110,7 +8114,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -8205,7 +8209,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_220R")
 				(description "")
 			)
@@ -8300,7 +8304,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -8399,7 +8403,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -8494,7 +8498,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -8589,7 +8593,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -8684,7 +8688,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -8779,7 +8783,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -8874,7 +8878,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -8969,7 +8973,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -9064,7 +9068,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -9159,7 +9163,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -9254,7 +9258,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -9353,7 +9357,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -9452,7 +9456,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -9551,7 +9555,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -9650,7 +9654,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -9956,7 +9960,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "AT32F421G8U7")
 				(description "")
 			)
@@ -10132,7 +10136,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "NSG2065Q")
 				(description "")
 			)
@@ -10267,7 +10271,7 @@
 		(comp
 			(ref "C33")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -10288,7 +10292,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -10296,7 +10300,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -10362,7 +10366,7 @@
 		(comp
 			(ref "C37")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -10383,7 +10387,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -10391,7 +10395,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -10486,7 +10490,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -10581,7 +10585,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -10676,7 +10680,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -10742,7 +10746,7 @@
 		(comp
 			(ref "C56")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -10763,7 +10767,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -10771,7 +10775,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -10866,7 +10870,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -10963,7 +10967,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -11067,7 +11071,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -11171,7 +11175,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -11275,7 +11279,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -11379,7 +11383,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -11483,7 +11487,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -11585,7 +11589,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -11680,7 +11684,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -11775,7 +11779,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -11870,7 +11874,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -11965,7 +11969,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -12060,7 +12064,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -12155,7 +12159,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -12250,7 +12254,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -12345,7 +12349,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -12444,7 +12448,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -12539,7 +12543,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -12634,7 +12638,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -12729,7 +12733,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_220R")
 				(description "")
 			)
@@ -12824,7 +12828,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -12923,7 +12927,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -13022,7 +13026,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -13121,7 +13125,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -13220,7 +13224,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -13526,7 +13530,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "AT32F421G8U7")
 				(description "")
 			)
@@ -13702,7 +13706,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "NSG2065Q")
 				(description "")
 			)
@@ -13837,7 +13841,7 @@
 		(comp
 			(ref "C34")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -13858,7 +13862,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -13866,7 +13870,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -13932,7 +13936,7 @@
 		(comp
 			(ref "C38")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -13953,7 +13957,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -13961,7 +13965,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -14056,7 +14060,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -14151,7 +14155,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -14246,7 +14250,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -14312,7 +14316,7 @@
 		(comp
 			(ref "C62")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -14333,7 +14337,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -14341,7 +14345,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -14436,7 +14440,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -14533,7 +14537,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -14637,7 +14641,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -14741,7 +14745,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -14845,7 +14849,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -14949,7 +14953,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -15053,7 +15057,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -15155,7 +15159,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -15254,7 +15258,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -15349,7 +15353,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -15444,7 +15448,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -15543,7 +15547,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -15638,7 +15642,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -15733,7 +15737,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -15828,7 +15832,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -15923,7 +15927,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -16018,7 +16022,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -16113,7 +16117,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -16208,7 +16212,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -16303,7 +16307,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -16398,7 +16402,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_220R")
 				(description "")
 			)
@@ -16493,7 +16497,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -16592,7 +16596,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -16691,7 +16695,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -16790,7 +16794,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -17096,7 +17100,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "AT32F421G8U7")
 				(description "")
 			)
@@ -17272,7 +17276,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "NSG2065Q")
 				(description "")
 			)
@@ -17407,7 +17411,7 @@
 		(comp
 			(ref "C35")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -17428,7 +17432,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -17436,7 +17440,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -17502,7 +17506,7 @@
 		(comp
 			(ref "C39")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -17523,7 +17527,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -17531,7 +17535,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -17626,7 +17630,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -17721,7 +17725,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -17816,7 +17820,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -17882,7 +17886,7 @@
 		(comp
 			(ref "C67")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0402_WIDE")
+			(footprint "QuadrotorReviewed:C_0402_WIDE")
 			(datasheet "https://item.szlcsc.com/360022.html")
 			(fields
 				(field
@@ -17903,7 +17907,7 @@
 				(field
 					(name "MPN") "CL05B104KB54PNC")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0402_WIDE")
+					(name "Footprint") "QuadrotorReviewed:C_0402_WIDE")
 				(field
 					(name "Datasheet") "https://item.szlcsc.com/360022.html")
 				(field
@@ -17911,7 +17915,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -18006,7 +18010,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "GRM033R61C104KE84D")
 				(description "")
 			)
@@ -18103,7 +18107,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -18207,7 +18211,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -18311,7 +18315,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -18415,7 +18419,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -18519,7 +18523,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -18623,7 +18627,7 @@
 					(name "Description") "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS")
 			)
 			(libsource
-				(lib "PCM_Transistor_MOSFET_AKL")
+				(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 				(part "2N6660")
 				(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			)
@@ -18725,7 +18729,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -18824,7 +18828,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -18923,7 +18927,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -19018,7 +19022,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -19113,7 +19117,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -19212,7 +19216,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -19307,7 +19311,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -19402,7 +19406,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -19497,7 +19501,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -19592,7 +19596,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -19687,7 +19691,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -19782,7 +19786,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -19877,7 +19881,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_1kR")
 				(description "")
 			)
@@ -19972,7 +19976,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "0201_10kR")
 				(description "")
 			)
@@ -20067,7 +20071,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -20166,7 +20170,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -20265,7 +20269,7 @@
 					(name "Description") "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
 			(libsource
-				(lib "PCM_Resistor_AKL")
+				(lib "QuadEsc_PCM_Resistor_AKL")
 				(part "R_0402")
 				(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			)
@@ -20364,7 +20368,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "0201_220R")
 				(description "")
 			)
@@ -20666,7 +20670,7 @@
 				)
 			)
 			(libsource
-				(lib "ESCLibrary")
+				(lib "QuadEsc_ESCLibrary")
 				(part "AT32F421G8U7")
 				(description "")
 			)
@@ -20842,7 +20846,7 @@
 				)
 			)
 			(libsource
-				(lib "components")
+				(lib "QuadEsc_components")
 				(part "NSG2065Q")
 				(description "")
 			)
@@ -21077,7 +21081,7 @@
 			)
 		)
 		(libpart
-			(lib "ESCLibrary")
+			(lib "QuadEsc_ESCLibrary")
 			(part "0201_10kR")
 			(docs "https://item.szlcsc.com/239136.html")
 			(fields
@@ -21099,17 +21103,17 @@
 				(pin
 					(num "1")
 					(name "1")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "2")
 					(name "2")
-					(type "unspecified")
+					(type "passive")
 				)
 			)
 		)
 		(libpart
-			(lib "ESCLibrary")
+			(lib "QuadEsc_ESCLibrary")
 			(part "0201_220R")
 			(docs "https://item.szlcsc.com/239136.html")
 			(fields
@@ -21131,17 +21135,17 @@
 				(pin
 					(num "1")
 					(name "1")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "2")
 					(name "2")
-					(type "unspecified")
+					(type "passive")
 				)
 			)
 		)
 		(libpart
-			(lib "ESCLibrary")
+			(lib "QuadEsc_ESCLibrary")
 			(part "AT32F421G8U7")
 			(docs "https://item.szlcsc.com/2794672.html")
 			(fields
@@ -21163,152 +21167,152 @@
 				(pin
 					(num "1")
 					(name "BOOT0")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "2")
 					(name "PF0/OSC_IN")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "3")
 					(name "PF1/OSC_OUT")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "4")
 					(name "NRST")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "5")
 					(name "VDDA")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "6")
 					(name "PA0")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "7")
 					(name "PA1")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "8")
 					(name "PA2")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "9")
 					(name "PA3")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "10")
 					(name "PA4")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "11")
 					(name "PA5")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "12")
 					(name "PA6")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "13")
 					(name "PA7")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "14")
 					(name "PB0")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "15")
 					(name "PB1")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "16")
 					(name "VSS")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "17")
 					(name "VDD")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "18")
 					(name "PA8")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "19")
 					(name "PA9")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "20")
 					(name "PA10")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "21")
 					(name "PA13")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "22")
 					(name "PA14")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "23")
 					(name "PA15")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "24")
 					(name "PB3")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "25")
 					(name "PB4")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "26")
 					(name "PB5")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "27")
 					(name "PB6")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "28")
 					(name "PB7")
-					(type "unspecified")
+					(type "bidirectional")
 				)
 				(pin
 					(num "29")
 					(name "VSS")
-					(type "unspecified")
+					(type "power_in")
 				)
 			)
 		)
 		(libpart
-			(lib "ESCLibrary")
+			(lib "QuadEsc_ESCLibrary")
 			(part "GRM033R61C104KE84D")
 			(docs "https://item.szlcsc.com/360022.html")
 			(fields
@@ -21330,17 +21334,17 @@
 				(pin
 					(num "1")
 					(name "1")
-					(type "input")
+					(type "passive")
 				)
 				(pin
 					(num "2")
 					(name "2")
-					(type "input")
+					(type "passive")
 				)
 			)
 		)
 		(libpart
-			(lib "PCM_Resistor_AKL")
+			(lib "QuadEsc_PCM_Resistor_AKL")
 			(part "R_0402")
 			(description "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library")
 			(footprints
@@ -21373,7 +21377,7 @@
 			)
 		)
 		(libpart
-			(lib "PCM_Transistor_MOSFET_AKL")
+			(lib "QuadEsc_PCM_Transistor_MOSFET_AKL")
 			(part "2N6660")
 			(description "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library")
 			(docs "https://www.tme.eu/Document/5ed933c46c767af29b5a52c786b35e4a/2N6660.pdf")
@@ -21408,7 +21412,7 @@
 			)
 		)
 		(libpart
-			(lib "components")
+			(lib "QuadEsc_components")
 			(part "0201_10kR")
 			(docs "https://item.szlcsc.com/239136.html")
 			(fields
@@ -21430,17 +21434,17 @@
 				(pin
 					(num "1")
 					(name "1")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "2")
 					(name "2")
-					(type "unspecified")
+					(type "passive")
 				)
 			)
 		)
 		(libpart
-			(lib "components")
+			(lib "QuadEsc_components")
 			(part "0201_1kR")
 			(docs "https://item.szlcsc.com/239136.html")
 			(fields
@@ -21462,293 +21466,17 @@
 				(pin
 					(num "1")
 					(name "1")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "2")
 					(name "2")
-					(type "unspecified")
+					(type "passive")
 				)
 			)
 		)
 		(libpart
-			(lib "components")
-			(part "4in1ESC")
-			(fields
-				(field
-					(name "Reference") "U4")
-				(field
-					(name "Value")
-				)
-				(field
-					(name "Footprint") "4in1ESC-30x30:4in1ESC")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "VBAT")
-					(type "power_in")
-				)
-				(pin
-					(num "2")
-					(name "BATGND")
-					(type "power_in")
-				)
-				(pin
-					(num "3")
-					(name "VBAT+")
-					(type "power_out")
-				)
-				(pin
-					(num "4")
-					(name "GND")
-					(type "power_out")
-				)
-				(pin
-					(num "5")
-					(name "CUR")
-					(type "output")
-				)
-				(pin
-					(num "6")
-					(name "TX")
-					(type "output")
-				)
-				(pin
-					(num "7")
-					(name "M1")
-					(type "input")
-				)
-				(pin
-					(num "8")
-					(name "M2")
-					(type "input")
-				)
-				(pin
-					(num "9")
-					(name "M3")
-					(type "input")
-				)
-				(pin
-					(num "10")
-					(name "M4")
-					(type "input")
-				)
-				(pin
-					(num "11")
-					(name "Hole")
-					(type "power_out")
-				)
-				(pin
-					(num "12")
-					(name "4A")
-					(type "bidirectional")
-				)
-				(pin
-					(num "13")
-					(name "4B")
-					(type "bidirectional")
-				)
-				(pin
-					(num "14")
-					(name "4C")
-					(type "bidirectional")
-				)
-				(pin
-					(num "15")
-					(name "3B")
-					(type "bidirectional")
-				)
-				(pin
-					(num "16")
-					(name "3C")
-					(type "bidirectional")
-				)
-				(pin
-					(num "17")
-					(name "3A")
-					(type "bidirectional")
-				)
-				(pin
-					(num "18")
-					(name "2A")
-					(type "bidirectional")
-				)
-				(pin
-					(num "19")
-					(name "2C")
-					(type "bidirectional")
-				)
-				(pin
-					(num "20")
-					(name "2B")
-					(type "bidirectional")
-				)
-				(pin
-					(num "21")
-					(name "1C")
-					(type "bidirectional")
-				)
-				(pin
-					(num "22")
-					(name "1B")
-					(type "bidirectional")
-				)
-				(pin
-					(num "23")
-					(name "1A")
-					(type "bidirectional")
-				)
-			)
-		)
-		(libpart
-			(lib "components")
-			(part "GRM033R61C104KE84D")
-			(docs "https://item.szlcsc.com/360022.html")
-			(fields
-				(field
-					(name "Reference") "C")
-				(field
-					(name "Value") "100nF 16v")
-				(field
-					(name "Footprint") "4in1ESC-30x30:C_0201_0603Metric")
-				(field
-					(name "Datasheet") "https://item.szlcsc.com/360022.html")
-				(field
-					(name "Description")
-				)
-				(field
-					(name "LCSC") "C76937")
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "1")
-					(type "input")
-				)
-				(pin
-					(num "2")
-					(name "2")
-					(type "input")
-				)
-			)
-		)
-		(libpart
-			(lib "components")
-			(part "INA186A3IDCKR")
-			(description "INA186 36V, Low-Power, Precision, Voltage-Output Current Sense Amplifier, 100V/V gain")
-			(docs "https://www.ti.com/lit/ds/symlink/ina186.pdf")
-			(fields
-				(field
-					(name "Reference") "U")
-				(field
-					(name "Value") "INA186A3IDCKR")
-				(field
-					(name "Footprint") "4in1ESC-30x30:SOT-363_SC-70-6")
-				(field
-					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/ina186.pdf")
-				(field
-					(name "Description") "INA186 36V, Low-Power, Precision, Voltage-Output Current Sense Amplifier, 100V/V gain")
-				(field
-					(name "LCSC") "C2058245")
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "REF")
-					(type "unspecified")
-				)
-				(pin
-					(num "2")
-					(name "GND")
-					(type "power_in")
-				)
-				(pin
-					(num "3")
-					(name "VS")
-					(type "power_in")
-				)
-				(pin
-					(num "4")
-					(name "+IN")
-					(type "unspecified")
-				)
-				(pin
-					(num "5")
-					(name "-IN")
-					(type "unspecified")
-				)
-				(pin
-					(num "6")
-					(name "OUT")
-					(type "output")
-				)
-			)
-		)
-		(libpart
-			(lib "components")
-			(part "LMR54406DBVR")
-			(docs "https://www.lcsc.com/datasheet/C5219316.pdf")
-			(fields
-				(field
-					(name "Reference") "U13")
-				(field
-					(name "Value") "LMR54406DBVR")
-				(field
-					(name "Footprint") "4in1ESC:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR")
-				(field
-					(name "Datasheet") "https://www.lcsc.com/datasheet/C5219316.pdf")
-				(field
-					(name "Description")
-				)
-				(field
-					(name "Manufacturer") "TI(德州仪器)")
-				(field
-					(name "MPN") "LMR54406DBVR")
-				(field
-					(name "LCSC Part") "C5219316")
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "CB")
-					(type "unspecified")
-				)
-				(pin
-					(num "2")
-					(name "GND")
-					(type "unspecified")
-				)
-				(pin
-					(num "3")
-					(name "FB")
-					(type "unspecified")
-				)
-				(pin
-					(num "4")
-					(name "EN")
-					(type "unspecified")
-				)
-				(pin
-					(num "5")
-					(name "VIN")
-					(type "unspecified")
-				)
-				(pin
-					(num "6")
-					(name "SW")
-					(type "unspecified")
-				)
-			)
-		)
-		(libpart
-			(lib "components")
+			(lib "QuadEsc_components")
 			(part "NSG2065Q")
 			(docs "https://atta.szlcsc.com/upload/public/pdf/source/20230606/9108084F8D3399931DD16D047B315AD0.pdf")
 			(fields
@@ -21770,132 +21498,472 @@
 				(pin
 					(num "1")
 					(name "LIN1")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "2")
 					(name "LIN2")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "3")
 					(name "LIN3")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "4")
 					(name "VCC")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "5")
 					(name "NC")
-					(type "unspecified")
+					(type "no_connect")
 				)
 				(pin
 					(num "6")
 					(name "COM")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "7")
 					(name "NC")
-					(type "unspecified")
+					(type "no_connect")
 				)
 				(pin
 					(num "8")
 					(name "NC")
-					(type "unspecified")
+					(type "no_connect")
 				)
 				(pin
 					(num "9")
 					(name "LO3")
-					(type "unspecified")
+					(type "output")
 				)
 				(pin
 					(num "10")
 					(name "LO2")
-					(type "unspecified")
+					(type "output")
 				)
 				(pin
 					(num "11")
 					(name "LO1")
-					(type "unspecified")
+					(type "output")
 				)
 				(pin
 					(num "12")
 					(name "VS3")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "13")
 					(name "HO3")
-					(type "unspecified")
+					(type "output")
 				)
 				(pin
 					(num "14")
 					(name "VB3")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "15")
 					(name "VS2")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "16")
 					(name "HO2")
-					(type "unspecified")
+					(type "output")
 				)
 				(pin
 					(num "17")
 					(name "VB2")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "18")
 					(name "VS1")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "19")
 					(name "HO1")
-					(type "unspecified")
+					(type "output")
 				)
 				(pin
 					(num "20")
 					(name "VB1")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "21")
 					(name "NC")
-					(type "unspecified")
+					(type "no_connect")
 				)
 				(pin
 					(num "22")
 					(name "HIN1")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "23")
 					(name "HIN2")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "24")
 					(name "HIN3")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "25")
 					(name "COM")
-					(type "unspecified")
+					(type "power_in")
 				)
 			)
 		)
 		(libpart
-			(lib "components")
+			(lib "QuadRoot_ESCLibrary")
+			(part "GRM033R61C104KE84D")
+			(docs "https://item.szlcsc.com/360022.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF 16v")
+				(field
+					(name "Footprint") "ESCLibrary:C0201")
+				(field
+					(name "Datasheet") "https://item.szlcsc.com/360022.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "LCSC") "C76937")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "QuadRoot_components")
+			(part "0201_1kR")
+			(docs "https://item.szlcsc.com/239136.html")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint") "4in1ESC-30x30:R_0201_0603Metric")
+				(field
+					(name "Datasheet") "https://item.szlcsc.com/239136.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "LCSC") "C270365")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "QuadRoot_components")
+			(part "4in1ESC")
+			(fields
+				(field
+					(name "Reference") "U4")
+				(field
+					(name "Value")
+				)
+				(field
+					(name "Footprint") "4in1ESC-30x30:4in1ESC")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VBAT")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "BATGND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "VBAT+")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "CUR")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "TX")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "M1")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "M2")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "M3")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "M4")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "Hole")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "4A")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "4B")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "4C")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "3B")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "3C")
+					(type "passive")
+				)
+				(pin
+					(num "17")
+					(name "3A")
+					(type "passive")
+				)
+				(pin
+					(num "18")
+					(name "2A")
+					(type "passive")
+				)
+				(pin
+					(num "19")
+					(name "2C")
+					(type "passive")
+				)
+				(pin
+					(num "20")
+					(name "2B")
+					(type "passive")
+				)
+				(pin
+					(num "21")
+					(name "1C")
+					(type "passive")
+				)
+				(pin
+					(num "22")
+					(name "1B")
+					(type "passive")
+				)
+				(pin
+					(num "23")
+					(name "1A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "QuadRoot_components")
+			(part "GRM033R61C104KE84D")
+			(docs "https://item.szlcsc.com/360022.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF 16v")
+				(field
+					(name "Footprint") "4in1ESC-30x30:C_0201_0603Metric")
+				(field
+					(name "Datasheet") "https://item.szlcsc.com/360022.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "LCSC") "C76937")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "QuadRoot_components")
+			(part "INA186A3IDCKR")
+			(description "INA186 36V, Low-Power, Precision, Voltage-Output Current Sense Amplifier, 100V/V gain")
+			(docs "https://www.ti.com/lit/ds/symlink/ina186.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "INA186A3IDCKR")
+				(field
+					(name "Footprint") "4in1ESC-30x30:SOT-363_SC-70-6")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/ina186.pdf")
+				(field
+					(name "Description") "INA186 36V, Low-Power, Precision, Voltage-Output Current Sense Amplifier, 100V/V gain")
+				(field
+					(name "LCSC") "C2058245")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "REF")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "VS")
+					(type "power_in")
+				)
+				(pin
+					(num "4")
+					(name "+IN")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "-IN")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "OUT")
+					(type "output")
+				)
+			)
+		)
+		(libpart
+			(lib "QuadRoot_components")
+			(part "LMR54406DBVR")
+			(docs "https://www.lcsc.com/datasheet/C5219316.pdf")
+			(fields
+				(field
+					(name "Reference") "U13")
+				(field
+					(name "Value") "LMR54406DBVR")
+				(field
+					(name "Footprint") "QuadrotorReviewed:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C5219316.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "TI(德州仪器)")
+				(field
+					(name "MPN") "LMR54406DBVR")
+				(field
+					(name "LCSC Part") "C5219316")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "CB")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "FB")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "EN")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "VIN")
+					(type "power_in")
+				)
+				(pin
+					(num "6")
+					(name "SW")
+					(type "power_out")
+				)
+			)
+		)
+		(libpart
+			(lib "QuadRoot_components")
 			(part "SM08B-SRSS-TB")
 			(description "JST SH series 8-pin 1.0mm pitch SMD connector, Betaflight standard")
 			(docs "https://www.jst-mfg.com/product/pdf/eng/eSR.pdf")
@@ -21917,42 +21985,42 @@
 				(pin
 					(num "1")
 					(name "1")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "2")
 					(name "2")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "3")
 					(name "3")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "4")
 					(name "4")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "5")
 					(name "5")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "6")
 					(name "6")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "7")
 					(name "7")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "8")
 					(name "8")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "P1")
@@ -21967,7 +22035,7 @@
 			)
 		)
 		(libpart
-			(lib "components")
+			(lib "QuadRoot_components")
 			(part "TLV76733DRVR")
 			(fields
 				(field
@@ -21989,42 +22057,42 @@
 				(pin
 					(num "1")
 					(name "OUT")
-					(type "unspecified")
+					(type "power_out")
 				)
 				(pin
 					(num "2")
 					(name "FB/SNS")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "3")
 					(name "GND")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "4")
 					(name "EN")
-					(type "unspecified")
+					(type "input")
 				)
 				(pin
 					(num "5")
 					(name "GND")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "6")
 					(name "IN")
-					(type "unspecified")
+					(type "power_in")
 				)
 				(pin
 					(num "7")
 					(name "EP")
-					(type "unspecified")
+					(type "power_in")
 				)
 			)
 		)
 		(libpart
-			(lib "components")
+			(lib "QuadRoot_components")
 			(part "XRIM160808SR47MBCD")
 			(docs "https://atta.szlcsc.com/upload/public/pdf/source/20230602/8FFEDA9C0247A92A0D4B67554BFE4091.pdf")
 			(fields
@@ -22046,24 +22114,40 @@
 				(pin
 					(num "1")
 					(name "1")
-					(type "unspecified")
+					(type "passive")
 				)
 				(pin
 					(num "2")
 					(name "2")
-					(type "unspecified")
+					(type "passive")
 				)
 			)
 		)
 	)
 	(libraries
 		(library
-			(logical "ESCLibrary")
-			(uri "${KIPRJMOD}/components.kicad_sym")
+			(logical "QuadEsc_ESCLibrary")
+			(uri "${KIPRJMOD}/reviewed-symbols/QuadEsc_ESCLibrary.kicad_sym")
 		)
 		(library
-			(logical "components")
-			(uri "${KIPRJMOD}/components.kicad_sym")
+			(logical "QuadEsc_PCM_Resistor_AKL")
+			(uri "${KIPRJMOD}/reviewed-symbols/QuadEsc_PCM_Resistor_AKL.kicad_sym")
+		)
+		(library
+			(logical "QuadEsc_PCM_Transistor_MOSFET_AKL")
+			(uri "${KIPRJMOD}/reviewed-symbols/QuadEsc_PCM_Transistor_MOSFET_AKL.kicad_sym")
+		)
+		(library
+			(logical "QuadEsc_components")
+			(uri "${KIPRJMOD}/reviewed-symbols/QuadEsc_components.kicad_sym")
+		)
+		(library
+			(logical "QuadRoot_ESCLibrary")
+			(uri "${KIPRJMOD}/reviewed-symbols/QuadRoot_ESCLibrary.kicad_sym")
+		)
+		(library
+			(logical "QuadRoot_components")
+			(uri "${KIPRJMOD}/reviewed-symbols/QuadRoot_components.kicad_sym")
 		)
 	)
 	(nets
@@ -22080,7 +22164,7 @@
 				(ref "C49")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C51")
@@ -22091,55 +22175,55 @@
 				(ref "C55")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C61")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C66")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C81")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C93")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R18")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R21")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R40")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R58")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R84")
@@ -22171,37 +22255,37 @@
 				(ref "U15")
 				(pin "1")
 				(pinfunction "OUT_1")
-				(pintype "unspecified")
+				(pintype "power_out")
 			)
 			(node
 				(ref "U15")
 				(pin "2")
 				(pinfunction "FB/SNS_2")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U2")
 				(pin "17")
 				(pinfunction "VDD_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U5")
 				(pin "17")
 				(pinfunction "VDD_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U7")
 				(pin "17")
 				(pinfunction "VDD_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U9")
 				(pin "17")
 				(pinfunction "VDD_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -22217,31 +22301,31 @@
 				(ref "C57")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C58")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C63")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C68")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C76")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C86")
@@ -22257,43 +22341,43 @@
 				(ref "U10")
 				(pin "4")
 				(pinfunction "VCC_4")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U14")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U15")
 				(pin "4")
 				(pinfunction "EN_4")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U15")
 				(pin "6")
 				(pinfunction "IN_6")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U4")
 				(pin "4")
 				(pinfunction "VCC_4")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U6")
 				(pin "4")
 				(pinfunction "VCC_4")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U8")
 				(pin "4")
 				(pinfunction "VCC_4")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -22564,13 +22648,13 @@
 				(ref "C74")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "J1")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q1")
@@ -22648,7 +22732,7 @@
 				(ref "R89")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "Rsense1")
@@ -22664,19 +22748,19 @@
 				(ref "U13")
 				(pin "4")
 				(pinfunction "EN_4")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U13")
 				(pin "5")
 				(pinfunction "VIN_5")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U3")
 				(pin "3")
 				(pinfunction "VBAT+_3")
-				(pintype "power_out")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -22687,7 +22771,7 @@
 				(ref "R90")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "Rsense1")
@@ -22703,7 +22787,7 @@
 				(ref "U3")
 				(pin "1")
 				(pinfunction "VBAT_1")
-				(pintype "power_in")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -22714,25 +22798,25 @@
 				(ref "C94")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "J1")
 				(pin "3")
 				(pinfunction "3_3")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R73")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "5")
 				(pinfunction "CUR_5")
-				(pintype "output")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -22743,13 +22827,13 @@
 				(ref "U2")
 				(pin "20")
 				(pinfunction "PA10_20")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U4")
 				(pin "22")
 				(pinfunction "HIN1_22")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -22760,13 +22844,13 @@
 				(ref "U2")
 				(pin "15")
 				(pinfunction "PB1_15")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U4")
 				(pin "1")
 				(pinfunction "LIN1_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -22777,13 +22861,13 @@
 				(ref "U2")
 				(pin "19")
 				(pinfunction "PA9_19")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U4")
 				(pin "23")
 				(pinfunction "HIN2_23")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -22794,13 +22878,13 @@
 				(ref "U2")
 				(pin "14")
 				(pinfunction "PB0_14")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U4")
 				(pin "2")
 				(pinfunction "LIN2_2")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -22811,13 +22895,13 @@
 				(ref "U2")
 				(pin "18")
 				(pinfunction "PA8_18")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U4")
 				(pin "24")
 				(pinfunction "HIN3_24")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -22828,13 +22912,13 @@
 				(ref "U2")
 				(pin "13")
 				(pinfunction "PA7_13")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U4")
 				(pin "3")
 				(pinfunction "LIN3_3")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -22845,25 +22929,25 @@
 				(ref "R25")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R26")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R27")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U2")
 				(pin "6")
 				(pinfunction "PA0_6")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -22874,25 +22958,25 @@
 				(ref "R28")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R29")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R30")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U2")
 				(pin "10")
 				(pinfunction "PA4_10")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -22903,25 +22987,25 @@
 				(ref "R31")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R32")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R33")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U2")
 				(pin "11")
 				(pinfunction "PA5_11")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -22932,25 +23016,25 @@
 				(ref "R25")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R28")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R31")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U2")
 				(pin "7")
 				(pinfunction "PA1_7")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -22966,7 +23050,7 @@
 				(ref "U4")
 				(pin "19")
 				(pinfunction "HO1_19")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -22982,7 +23066,7 @@
 				(ref "U4")
 				(pin "16")
 				(pinfunction "HO2_16")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -22998,7 +23082,7 @@
 				(ref "U4")
 				(pin "13")
 				(pinfunction "HO3_13")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23014,7 +23098,7 @@
 				(ref "U4")
 				(pin "11")
 				(pinfunction "LO1_11")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23030,7 +23114,7 @@
 				(ref "U4")
 				(pin "10")
 				(pinfunction "LO2_10")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23046,7 +23130,7 @@
 				(ref "U4")
 				(pin "9")
 				(pinfunction "LO3_9")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23057,7 +23141,7 @@
 				(ref "C53")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q1")
@@ -23075,19 +23159,19 @@
 				(ref "R27")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "23")
 				(pinfunction "1A_23")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U4")
 				(pin "18")
 				(pinfunction "VS1_18")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23098,7 +23182,7 @@
 				(ref "C32")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q11")
@@ -23116,19 +23200,19 @@
 				(ref "R30")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "22")
 				(pinfunction "1B_22")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U4")
 				(pin "15")
 				(pinfunction "VS2_15")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23139,7 +23223,7 @@
 				(ref "C36")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q16")
@@ -23157,19 +23241,19 @@
 				(ref "R33")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "21")
 				(pinfunction "1C_21")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U4")
 				(pin "12")
 				(pinfunction "VS3_12")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23180,7 +23264,7 @@
 				(ref "C48")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R84")
@@ -23191,7 +23275,7 @@
 				(ref "U2")
 				(pin "5")
 				(pinfunction "VDDA_5")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23202,13 +23286,13 @@
 				(ref "U5")
 				(pin "20")
 				(pinfunction "PA10_20")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U6")
 				(pin "22")
 				(pinfunction "HIN1_22")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23219,13 +23303,13 @@
 				(ref "U5")
 				(pin "15")
 				(pinfunction "PB1_15")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U6")
 				(pin "1")
 				(pinfunction "LIN1_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23236,13 +23320,13 @@
 				(ref "U5")
 				(pin "19")
 				(pinfunction "PA9_19")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U6")
 				(pin "23")
 				(pinfunction "HIN2_23")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23253,13 +23337,13 @@
 				(ref "U5")
 				(pin "14")
 				(pinfunction "PB0_14")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U6")
 				(pin "2")
 				(pinfunction "LIN2_2")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23270,13 +23354,13 @@
 				(ref "U5")
 				(pin "18")
 				(pinfunction "PA8_18")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U6")
 				(pin "24")
 				(pinfunction "HIN3_24")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23287,13 +23371,13 @@
 				(ref "U5")
 				(pin "13")
 				(pinfunction "PA7_13")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U6")
 				(pin "3")
 				(pinfunction "LIN3_3")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23304,25 +23388,25 @@
 				(ref "R10")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R11")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R12")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U5")
 				(pin "6")
 				(pinfunction "PA0_6")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23333,25 +23417,25 @@
 				(ref "R13")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R14")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R15")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U5")
 				(pin "10")
 				(pinfunction "PA4_10")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23362,25 +23446,25 @@
 				(ref "R34")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R35")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R36")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U5")
 				(pin "11")
 				(pinfunction "PA5_11")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23391,25 +23475,25 @@
 				(ref "R10")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R13")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R34")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U5")
 				(pin "7")
 				(pinfunction "PA1_7")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23425,7 +23509,7 @@
 				(ref "U6")
 				(pin "19")
 				(pinfunction "HO1_19")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23441,7 +23525,7 @@
 				(ref "U6")
 				(pin "16")
 				(pinfunction "HO2_16")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23457,7 +23541,7 @@
 				(ref "U6")
 				(pin "13")
 				(pinfunction "HO3_13")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23473,7 +23557,7 @@
 				(ref "U6")
 				(pin "11")
 				(pinfunction "LO1_11")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23489,7 +23573,7 @@
 				(ref "U6")
 				(pin "10")
 				(pinfunction "LO2_10")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23505,7 +23589,7 @@
 				(ref "U6")
 				(pin "9")
 				(pinfunction "LO3_9")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23516,7 +23600,7 @@
 				(ref "C56")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q3")
@@ -23534,19 +23618,19 @@
 				(ref "R12")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "20")
 				(pinfunction "2B_20")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U6")
 				(pin "18")
 				(pinfunction "VS1_18")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23557,7 +23641,7 @@
 				(ref "C33")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q12")
@@ -23575,19 +23659,19 @@
 				(ref "R15")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "19")
 				(pinfunction "2C_19")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U6")
 				(pin "15")
 				(pinfunction "VS2_15")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23598,7 +23682,7 @@
 				(ref "C37")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q17")
@@ -23616,19 +23700,19 @@
 				(ref "R36")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "18")
 				(pinfunction "2A_18")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U6")
 				(pin "12")
 				(pinfunction "VS3_12")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23639,7 +23723,7 @@
 				(ref "C54")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R85")
@@ -23650,7 +23734,7 @@
 				(ref "U5")
 				(pin "5")
 				(pinfunction "VDDA_5")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -23661,13 +23745,13 @@
 				(ref "U7")
 				(pin "20")
 				(pinfunction "PA10_20")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U8")
 				(pin "22")
 				(pinfunction "HIN1_22")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23678,13 +23762,13 @@
 				(ref "U7")
 				(pin "15")
 				(pinfunction "PB1_15")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U8")
 				(pin "1")
 				(pinfunction "LIN1_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23695,13 +23779,13 @@
 				(ref "U7")
 				(pin "19")
 				(pinfunction "PA9_19")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U8")
 				(pin "23")
 				(pinfunction "HIN2_23")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23712,13 +23796,13 @@
 				(ref "U7")
 				(pin "14")
 				(pinfunction "PB0_14")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U8")
 				(pin "2")
 				(pinfunction "LIN2_2")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23729,13 +23813,13 @@
 				(ref "U7")
 				(pin "18")
 				(pinfunction "PA8_18")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U8")
 				(pin "24")
 				(pinfunction "HIN3_24")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23746,13 +23830,13 @@
 				(ref "U7")
 				(pin "13")
 				(pinfunction "PA7_13")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 			(node
 				(ref "U8")
 				(pin "3")
 				(pinfunction "LIN3_3")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -23763,25 +23847,25 @@
 				(ref "R46")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R47")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R48")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
 				(pin "6")
 				(pinfunction "PA0_6")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23792,25 +23876,25 @@
 				(ref "R49")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R50")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R51")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
 				(pin "10")
 				(pinfunction "PA4_10")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23821,25 +23905,25 @@
 				(ref "R52")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R53")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R54")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
 				(pin "11")
 				(pinfunction "PA5_11")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23850,25 +23934,25 @@
 				(ref "R46")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R49")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R52")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
 				(pin "7")
 				(pinfunction "PA1_7")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -23884,7 +23968,7 @@
 				(ref "U8")
 				(pin "19")
 				(pinfunction "HO1_19")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23900,7 +23984,7 @@
 				(ref "U8")
 				(pin "16")
 				(pinfunction "HO2_16")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23916,7 +24000,7 @@
 				(ref "U8")
 				(pin "13")
 				(pinfunction "HO3_13")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23932,7 +24016,7 @@
 				(ref "U8")
 				(pin "11")
 				(pinfunction "LO1_11")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23948,7 +24032,7 @@
 				(ref "U8")
 				(pin "10")
 				(pinfunction "LO2_10")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23964,7 +24048,7 @@
 				(ref "U8")
 				(pin "9")
 				(pinfunction "LO3_9")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -23975,7 +24059,7 @@
 				(ref "C62")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q13")
@@ -23993,19 +24077,19 @@
 				(ref "R48")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "15")
 				(pinfunction "3B_15")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U8")
 				(pin "18")
 				(pinfunction "VS1_18")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -24016,7 +24100,7 @@
 				(ref "C34")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q14")
@@ -24034,19 +24118,19 @@
 				(ref "R51")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "16")
 				(pinfunction "3C_16")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U8")
 				(pin "15")
 				(pinfunction "VS2_15")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -24057,7 +24141,7 @@
 				(ref "C38")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q18")
@@ -24075,19 +24159,19 @@
 				(ref "R54")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "17")
 				(pinfunction "3A_17")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 			(node
 				(ref "U8")
 				(pin "12")
 				(pinfunction "VS3_12")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -24098,7 +24182,7 @@
 				(ref "C60")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R86")
@@ -24109,7 +24193,7 @@
 				(ref "U7")
 				(pin "5")
 				(pinfunction "VDDA_5")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -24120,13 +24204,13 @@
 				(ref "U10")
 				(pin "22")
 				(pinfunction "HIN1_22")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U9")
 				(pin "20")
 				(pinfunction "PA10_20")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24137,13 +24221,13 @@
 				(ref "U10")
 				(pin "1")
 				(pinfunction "LIN1_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U9")
 				(pin "15")
 				(pinfunction "PB1_15")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24154,13 +24238,13 @@
 				(ref "U10")
 				(pin "23")
 				(pinfunction "HIN2_23")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U9")
 				(pin "19")
 				(pinfunction "PA9_19")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24171,13 +24255,13 @@
 				(ref "U10")
 				(pin "2")
 				(pinfunction "LIN2_2")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U9")
 				(pin "14")
 				(pinfunction "PB0_14")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24188,13 +24272,13 @@
 				(ref "U10")
 				(pin "24")
 				(pinfunction "HIN3_24")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U9")
 				(pin "18")
 				(pinfunction "PA8_18")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24205,13 +24289,13 @@
 				(ref "U10")
 				(pin "3")
 				(pinfunction "LIN3_3")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U9")
 				(pin "13")
 				(pinfunction "PA7_13")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24222,25 +24306,25 @@
 				(ref "R64")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R65")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R66")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U9")
 				(pin "6")
 				(pinfunction "PA0_6")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24251,25 +24335,25 @@
 				(ref "R67")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R68")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R69")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U9")
 				(pin "10")
 				(pinfunction "PA4_10")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24280,25 +24364,25 @@
 				(ref "R70")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R71")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R72")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U9")
 				(pin "11")
 				(pinfunction "PA5_11")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24309,25 +24393,25 @@
 				(ref "R64")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R67")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R70")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U9")
 				(pin "7")
 				(pinfunction "PA1_7")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -24343,7 +24427,7 @@
 				(ref "U10")
 				(pin "19")
 				(pinfunction "HO1_19")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -24359,7 +24443,7 @@
 				(ref "U10")
 				(pin "16")
 				(pinfunction "HO2_16")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -24375,7 +24459,7 @@
 				(ref "U10")
 				(pin "13")
 				(pinfunction "HO3_13")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -24391,7 +24475,7 @@
 				(ref "U10")
 				(pin "11")
 				(pinfunction "LO1_11")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -24407,7 +24491,7 @@
 				(ref "U10")
 				(pin "10")
 				(pinfunction "LO2_10")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -24423,7 +24507,7 @@
 				(ref "U10")
 				(pin "9")
 				(pinfunction "LO3_9")
-				(pintype "unspecified")
+				(pintype "output")
 			)
 		)
 		(net
@@ -24434,7 +24518,7 @@
 				(ref "C67")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q19")
@@ -24452,19 +24536,19 @@
 				(ref "R66")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U10")
 				(pin "18")
 				(pinfunction "VS1_18")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U3")
 				(pin "12")
 				(pinfunction "4A_12")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -24475,7 +24559,7 @@
 				(ref "C35")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q10")
@@ -24493,19 +24577,19 @@
 				(ref "R69")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U10")
 				(pin "15")
 				(pinfunction "VS2_15")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U3")
 				(pin "13")
 				(pinfunction "4B_13")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -24516,7 +24600,7 @@
 				(ref "C39")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "Q20")
@@ -24534,19 +24618,19 @@
 				(ref "R72")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U10")
 				(pin "12")
 				(pinfunction "VS3_12")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U3")
 				(pin "14")
 				(pinfunction "4C_14")
-				(pintype "bidirectional")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -24557,7 +24641,7 @@
 				(ref "C65")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R88")
@@ -24568,7 +24652,7 @@
 				(ref "U9")
 				(pin "5")
 				(pinfunction "VDDA_5")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -24579,19 +24663,19 @@
 				(ref "J1")
 				(pin "5")
 				(pinfunction "5_5")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R20")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "7")
 				(pinfunction "M1_7")
-				(pintype "input")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -24602,19 +24686,19 @@
 				(ref "J1")
 				(pin "6")
 				(pinfunction "6_6")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R39")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "8")
 				(pinfunction "M2_8")
-				(pintype "input")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -24625,19 +24709,19 @@
 				(ref "J1")
 				(pin "7")
 				(pinfunction "7_7")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R57")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "9")
 				(pinfunction "M3_9")
-				(pintype "input")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -24648,19 +24732,19 @@
 				(ref "J1")
 				(pin "8")
 				(pinfunction "8_8")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R87")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "10")
 				(pinfunction "M4_10")
-				(pintype "input")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -24686,13 +24770,13 @@
 				(ref "C40")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C41")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C47")
@@ -24703,19 +24787,19 @@
 				(ref "C48")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C49")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C50")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C501")
@@ -24821,7 +24905,7 @@
 				(ref "C52")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C520")
@@ -24927,7 +25011,7 @@
 				(ref "C54")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C540")
@@ -24983,25 +25067,25 @@
 				(ref "C55")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C57")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C58")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C59")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C6")
@@ -25012,61 +25096,61 @@
 				(ref "C60")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C61")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C63")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C64")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C65")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C66")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C68")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C74")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C76")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C81")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C86")
@@ -25077,19 +25161,19 @@
 				(ref "C93")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C94")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "J1")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "J1")
@@ -25179,7 +25263,7 @@
 				(ref "R11")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R121")
@@ -25190,109 +25274,109 @@
 				(ref "R14")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R19")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R22")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R26")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R29")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R32")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R35")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R41")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R47")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R50")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R53")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R59")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R65")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R68")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "R71")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U10")
 				(pin "25")
 				(pinfunction "COM_25")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U10")
 				(pin "6")
 				(pinfunction "COM_6")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U12")
 				(pin "1")
 				(pinfunction "REF_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 			(node
 				(ref "U12")
@@ -25304,127 +25388,127 @@
 				(ref "U13")
 				(pin "2")
 				(pinfunction "GND_2")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U15")
 				(pin "3")
 				(pinfunction "GND_3")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U15")
 				(pin "5")
 				(pinfunction "GND_5")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U15")
 				(pin "7")
 				(pinfunction "EP_7")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U2")
 				(pin "16")
 				(pinfunction "VSS_16")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U2")
 				(pin "29")
 				(pinfunction "VSS_29")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U3")
 				(pin "11")
 				(pinfunction "Hole_11")
-				(pintype "power_out")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "2")
 				(pinfunction "BATGND_2")
-				(pintype "power_in")
+				(pintype "passive")
 			)
 			(node
 				(ref "U3")
 				(pin "4")
 				(pinfunction "GND_4")
-				(pintype "power_out")
+				(pintype "passive")
 			)
 			(node
 				(ref "U4")
 				(pin "25")
 				(pinfunction "COM_25")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U4")
 				(pin "6")
 				(pinfunction "COM_6")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U5")
 				(pin "16")
 				(pinfunction "VSS_16")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U5")
 				(pin "29")
 				(pinfunction "VSS_29")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U6")
 				(pin "25")
 				(pinfunction "COM_25")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U6")
 				(pin "6")
 				(pinfunction "COM_6")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U7")
 				(pin "16")
 				(pinfunction "VSS_16")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U7")
 				(pin "29")
 				(pinfunction "VSS_29")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U8")
 				(pin "25")
 				(pinfunction "COM_25")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U8")
 				(pin "6")
 				(pinfunction "COM_6")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U9")
 				(pin "16")
 				(pinfunction "VSS_16")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U9")
 				(pin "29")
 				(pinfunction "VSS_29")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -25819,13 +25903,13 @@
 				(ref "R19")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U2")
 				(pin "1")
 				(pinfunction "BOOT0_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -25836,19 +25920,19 @@
 				(ref "C50")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R18")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U2")
 				(pin "4")
 				(pinfunction "NRST_4")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -25865,7 +25949,7 @@
 				(ref "U2")
 				(pin "21")
 				(pinfunction "PA13_21")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -25882,7 +25966,7 @@
 				(ref "U2")
 				(pin "22")
 				(pinfunction "PA14_22")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -25893,13 +25977,13 @@
 				(ref "R20")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U2")
 				(pin "25")
 				(pinfunction "PB4_25")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -25910,13 +25994,13 @@
 				(ref "C53")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U4")
 				(pin "20")
 				(pinfunction "VB1_20")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -25927,13 +26011,13 @@
 				(ref "C32")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U4")
 				(pin "17")
 				(pinfunction "VB2_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -25944,13 +26028,13 @@
 				(ref "C36")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U4")
 				(pin "14")
 				(pinfunction "VB3_14")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -25961,13 +26045,13 @@
 				(ref "R22")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U5")
 				(pin "1")
 				(pinfunction "BOOT0_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -25978,19 +26062,19 @@
 				(ref "C52")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R21")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U5")
 				(pin "4")
 				(pinfunction "NRST_4")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26007,7 +26091,7 @@
 				(ref "U5")
 				(pin "21")
 				(pinfunction "PA13_21")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26024,7 +26108,7 @@
 				(ref "U5")
 				(pin "22")
 				(pinfunction "PA14_22")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26035,13 +26119,13 @@
 				(ref "R39")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U5")
 				(pin "25")
 				(pinfunction "PB4_25")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26052,13 +26136,13 @@
 				(ref "C56")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U6")
 				(pin "20")
 				(pinfunction "VB1_20")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26069,13 +26153,13 @@
 				(ref "C33")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U6")
 				(pin "17")
 				(pinfunction "VB2_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26086,13 +26170,13 @@
 				(ref "C37")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U6")
 				(pin "14")
 				(pinfunction "VB3_14")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26103,13 +26187,13 @@
 				(ref "R41")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
 				(pin "1")
 				(pinfunction "BOOT0_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26120,19 +26204,19 @@
 				(ref "C59")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R40")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
 				(pin "4")
 				(pinfunction "NRST_4")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26149,7 +26233,7 @@
 				(ref "U7")
 				(pin "21")
 				(pinfunction "PA13_21")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26166,7 +26250,7 @@
 				(ref "U7")
 				(pin "22")
 				(pinfunction "PA14_22")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26177,13 +26261,13 @@
 				(ref "R57")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
 				(pin "25")
 				(pinfunction "PB4_25")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26194,13 +26278,13 @@
 				(ref "C62")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U8")
 				(pin "20")
 				(pinfunction "VB1_20")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26211,13 +26295,13 @@
 				(ref "C34")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U8")
 				(pin "17")
 				(pinfunction "VB2_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26228,13 +26312,13 @@
 				(ref "C38")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U8")
 				(pin "14")
 				(pinfunction "VB3_14")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26245,13 +26329,13 @@
 				(ref "R59")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U9")
 				(pin "1")
 				(pinfunction "BOOT0_1")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26262,19 +26346,19 @@
 				(ref "C64")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R58")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U9")
 				(pin "4")
 				(pinfunction "NRST_4")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26291,7 +26375,7 @@
 				(ref "U9")
 				(pin "21")
 				(pinfunction "PA13_21")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26308,7 +26392,7 @@
 				(ref "U9")
 				(pin "22")
 				(pinfunction "PA14_22")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26319,13 +26403,13 @@
 				(ref "R87")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U9")
 				(pin "25")
 				(pinfunction "PB4_25")
-				(pintype "unspecified")
+				(pintype "bidirectional")
 			)
 		)
 		(net
@@ -26336,13 +26420,13 @@
 				(ref "C67")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U10")
 				(pin "20")
 				(pinfunction "VB1_20")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26353,13 +26437,13 @@
 				(ref "C35")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U10")
 				(pin "17")
 				(pinfunction "VB2_17")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26370,13 +26454,13 @@
 				(ref "C39")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U10")
 				(pin "14")
 				(pinfunction "VB3_14")
-				(pintype "unspecified")
+				(pintype "power_in")
 			)
 		)
 		(net
@@ -26387,25 +26471,25 @@
 				(ref "C41")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C42")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R90")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U12")
 				(pin "4")
 				(pinfunction "+IN_4")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26416,25 +26500,25 @@
 				(ref "C40")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "C42")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "R89")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U12")
 				(pin "5")
 				(pinfunction "-IN_5")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26445,7 +26529,7 @@
 				(ref "R73")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 			(node
 				(ref "U12")
@@ -26462,13 +26546,13 @@
 				(ref "C75")
 				(pin "2")
 				(pinfunction "2_2")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U13")
 				(pin "1")
 				(pinfunction "CB_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -26489,7 +26573,7 @@
 				(ref "U13")
 				(pin "3")
 				(pinfunction "FB_3")
-				(pintype "unspecified")
+				(pintype "input")
 			)
 		)
 		(net
@@ -26500,19 +26584,19 @@
 				(ref "C75")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "input")
+				(pintype "passive")
 			)
 			(node
 				(ref "U13")
 				(pin "6")
 				(pinfunction "SW_6")
-				(pintype "unspecified")
+				(pintype "power_out")
 			)
 			(node
 				(ref "U14")
 				(pin "1")
 				(pinfunction "1_1")
-				(pintype "unspecified")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -26523,7 +26607,7 @@
 				(ref "J1")
 				(pin "4")
 				(pinfunction "4_4")
-				(pintype "unspecified+no_connect")
+				(pintype "passive+no_connect")
 			)
 		)
 		(net
@@ -26534,7 +26618,7 @@
 				(ref "U2")
 				(pin "8")
 				(pinfunction "PA2_8")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26545,7 +26629,7 @@
 				(ref "U2")
 				(pin "9")
 				(pinfunction "PA3_9")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26556,7 +26640,7 @@
 				(ref "U2")
 				(pin "12")
 				(pinfunction "PA6_12")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26567,7 +26651,7 @@
 				(ref "U2")
 				(pin "23")
 				(pinfunction "PA15_23")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26578,7 +26662,7 @@
 				(ref "U2")
 				(pin "24")
 				(pinfunction "PB3_24")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26589,7 +26673,7 @@
 				(ref "U2")
 				(pin "26")
 				(pinfunction "PB5_26")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26600,7 +26684,7 @@
 				(ref "U2")
 				(pin "27")
 				(pinfunction "PB6_27")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26611,7 +26695,7 @@
 				(ref "U2")
 				(pin "28")
 				(pinfunction "PB7_28")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26622,7 +26706,7 @@
 				(ref "U2")
 				(pin "2")
 				(pinfunction "PF0/OSC_IN_2")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26633,7 +26717,7 @@
 				(ref "U2")
 				(pin "3")
 				(pinfunction "PF1/OSC_OUT_3")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26644,7 +26728,7 @@
 				(ref "U3")
 				(pin "6")
 				(pinfunction "TX_6")
-				(pintype "output+no_connect")
+				(pintype "passive+no_connect")
 			)
 		)
 		(net
@@ -26655,7 +26739,7 @@
 				(ref "U4")
 				(pin "5")
 				(pinfunction "NC_5")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26666,7 +26750,7 @@
 				(ref "U4")
 				(pin "7")
 				(pinfunction "NC_7")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26677,7 +26761,7 @@
 				(ref "U4")
 				(pin "8")
 				(pinfunction "NC_8")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26688,7 +26772,7 @@
 				(ref "U4")
 				(pin "21")
 				(pinfunction "NC_21")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26699,7 +26783,7 @@
 				(ref "U5")
 				(pin "8")
 				(pinfunction "PA2_8")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26710,7 +26794,7 @@
 				(ref "U5")
 				(pin "9")
 				(pinfunction "PA3_9")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26721,7 +26805,7 @@
 				(ref "U5")
 				(pin "12")
 				(pinfunction "PA6_12")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26732,7 +26816,7 @@
 				(ref "U5")
 				(pin "23")
 				(pinfunction "PA15_23")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26743,7 +26827,7 @@
 				(ref "U5")
 				(pin "24")
 				(pinfunction "PB3_24")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26754,7 +26838,7 @@
 				(ref "U5")
 				(pin "26")
 				(pinfunction "PB5_26")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26765,7 +26849,7 @@
 				(ref "U5")
 				(pin "27")
 				(pinfunction "PB6_27")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26776,7 +26860,7 @@
 				(ref "U5")
 				(pin "28")
 				(pinfunction "PB7_28")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26787,7 +26871,7 @@
 				(ref "U5")
 				(pin "2")
 				(pinfunction "PF0/OSC_IN_2")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26798,7 +26882,7 @@
 				(ref "U5")
 				(pin "3")
 				(pinfunction "PF1/OSC_OUT_3")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26809,7 +26893,7 @@
 				(ref "U6")
 				(pin "5")
 				(pinfunction "NC_5")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26820,7 +26904,7 @@
 				(ref "U6")
 				(pin "7")
 				(pinfunction "NC_7")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26831,7 +26915,7 @@
 				(ref "U6")
 				(pin "8")
 				(pinfunction "NC_8")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26842,7 +26926,7 @@
 				(ref "U6")
 				(pin "21")
 				(pinfunction "NC_21")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26853,7 +26937,7 @@
 				(ref "U7")
 				(pin "8")
 				(pinfunction "PA2_8")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26864,7 +26948,7 @@
 				(ref "U7")
 				(pin "9")
 				(pinfunction "PA3_9")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26875,7 +26959,7 @@
 				(ref "U7")
 				(pin "12")
 				(pinfunction "PA6_12")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26886,7 +26970,7 @@
 				(ref "U7")
 				(pin "23")
 				(pinfunction "PA15_23")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26897,7 +26981,7 @@
 				(ref "U7")
 				(pin "24")
 				(pinfunction "PB3_24")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26908,7 +26992,7 @@
 				(ref "U7")
 				(pin "26")
 				(pinfunction "PB5_26")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26919,7 +27003,7 @@
 				(ref "U7")
 				(pin "27")
 				(pinfunction "PB6_27")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26930,7 +27014,7 @@
 				(ref "U7")
 				(pin "28")
 				(pinfunction "PB7_28")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26941,7 +27025,7 @@
 				(ref "U7")
 				(pin "2")
 				(pinfunction "PF0/OSC_IN_2")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26952,7 +27036,7 @@
 				(ref "U7")
 				(pin "3")
 				(pinfunction "PF1/OSC_OUT_3")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -26963,7 +27047,7 @@
 				(ref "U8")
 				(pin "5")
 				(pinfunction "NC_5")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26974,7 +27058,7 @@
 				(ref "U8")
 				(pin "7")
 				(pinfunction "NC_7")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26985,7 +27069,7 @@
 				(ref "U8")
 				(pin "8")
 				(pinfunction "NC_8")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -26996,7 +27080,7 @@
 				(ref "U8")
 				(pin "21")
 				(pinfunction "NC_21")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -27007,7 +27091,7 @@
 				(ref "U9")
 				(pin "8")
 				(pinfunction "PA2_8")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27018,7 +27102,7 @@
 				(ref "U9")
 				(pin "9")
 				(pinfunction "PA3_9")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27029,7 +27113,7 @@
 				(ref "U9")
 				(pin "12")
 				(pinfunction "PA6_12")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27040,7 +27124,7 @@
 				(ref "U9")
 				(pin "23")
 				(pinfunction "PA15_23")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27051,7 +27135,7 @@
 				(ref "U9")
 				(pin "24")
 				(pinfunction "PB3_24")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27062,7 +27146,7 @@
 				(ref "U9")
 				(pin "26")
 				(pinfunction "PB5_26")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27073,7 +27157,7 @@
 				(ref "U9")
 				(pin "27")
 				(pinfunction "PB6_27")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27084,7 +27168,7 @@
 				(ref "U9")
 				(pin "28")
 				(pinfunction "PB7_28")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27095,7 +27179,7 @@
 				(ref "U9")
 				(pin "2")
 				(pinfunction "PF0/OSC_IN_2")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27106,7 +27190,7 @@
 				(ref "U9")
 				(pin "3")
 				(pinfunction "PF1/OSC_OUT_3")
-				(pintype "unspecified+no_connect")
+				(pintype "bidirectional+no_connect")
 			)
 		)
 		(net
@@ -27117,7 +27201,7 @@
 				(ref "U10")
 				(pin "5")
 				(pinfunction "NC_5")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -27128,7 +27212,7 @@
 				(ref "U10")
 				(pin "7")
 				(pinfunction "NC_7")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -27139,7 +27223,7 @@
 				(ref "U10")
 				(pin "8")
 				(pinfunction "NC_8")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 		(net
@@ -27150,7 +27234,7 @@
 				(ref "U10")
 				(pin "21")
 				(pinfunction "NC_21")
-				(pintype "unspecified+no_connect")
+				(pintype "no_connect")
 			)
 		)
 	)

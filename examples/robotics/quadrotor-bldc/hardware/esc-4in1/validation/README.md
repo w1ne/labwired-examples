@@ -1,115 +1,51 @@
-# OpenESC manufacturing review — outstanding deviations
+# Native electrical and layout review — 2026-11-11
 
-Source board: OpenDrone OpenESC-30x30 commit
-bf306934b5decc130ab1df6b653563ea16165e8e.
-Tool: KiCad 10.0.8 native CLI, project-specific constraints,
-local/pinned symbol and footprint libraries.
+Current source: KiCad 10.0.8 ERC 0 errors / 0 warnings; DRC 0 findings;
+0 unconnected pads and 0 schematic parity findings. These are source/rule
+checks, not powered-hardware acceptance.
 
-## Board physical DRC
+## Evidence
 
-- 222 unique physical component reference numbers.
-- 0 unconnected copper items.
-- 195 original routed nets plus 13 isolated NC pin nets; 2,915 track/via items.
-- 1 footprint library mismatch (U2).
-- 3 schematic-to-board parity mismatches because MCU package pads
-  are absent from specific IC footprints.
-- No copper short or clearance violation was reported on the
-  board as checked with its original missing pads.
+- 222 footprints, 1,067 pad objects, 213 SMT placements.
+- 210 physical net memberships preserved exactly from the prior schematic.
+- 2,914 tracks/vias, 1,716 vias, 15 blind In4.Cu/B.Cu microvias.
+- `drc-final.txt`, `erc-final.txt`: current native reports.
+- `20261111/board-inventory.json`: native counts and outline bounds.
+- `20261111/netlist-equivalence.json`: unchanged physical connectivity.
+- `20261111/symbol-type-changes.json`: 119 corrected electrical pin types.
+- `20261111/power-source-declarations.json`: 31 source flags and reasons.
+- `20261111/labwired-import-coverage.json`: actual hosted import response.
+- `20261111/historical-*`: superseded Nov 10 reports and review notes.
 
-The candidate with all missing package pads restored shows
-17 shorting items, 7 clearance conflicts and 3 hole-clearance
-conflicts. It was not promoted. Nearby copper must be rerouted,
-not tied to an NC pad or bypassed with a false DRC exclusion.
+No ERC or DRC severity was disabled. Native reports preserve the inherited
+ignored categories. The drawing's connection grid is 25 mil (0.635 mm).
 
-Still omitted, not accepted:
-- U2 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3)
-- U5 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3) — restored in this revision
-- U7 AT32F421: 8 (PA2), 23 (PA15), 24 (PB3) — restored in this revision
-- U9 AT32F421: 23 (PA15), 24 (PB3) — restored in this revision
+## Electrical source review
 
-Fixed in this partial rework:
-- U6 NSG2065Q: restored 5/7 as electrically isolated NC pads; two colliding
-  GND stitching vias at (85.1249, 38.6229) and (86.1029, 39.5050) removed.
-- U10 NSG2065Q: restored 5/7/8 as electrically isolated NC pads; one B.Cu
-  GND track at (65.6801,42.0100)-(65.6801,42.6301) removed.
+Pin types use the pinned manufacturer datasheets in `KiCad-Library/datasheet`:
+`AT32F421.pdf`, `NSG2065Q.pdf` Table 7-1, `LMR54406.pdf` Table 5-1,
+`TLV76733DRVR.pdf` Table 5-1 and `INA186A3IDCKR.pdf` pin functions.
+Frozen source libraries preserve symbol drawings and pin numbers. Custom
+footprints are frozen from the actual PCB; geometry and pad nets are preserved.
 
-**KiCad native check:** 0 copper short/clearance violations, 0 unconnected
-items, 1 AT32F421 footprint mismatch, and 3 parity findings. The original
-bulk caps, net mapping, and 213 assembly components remain unchanged.
-The removed GND stitching features need EMI/thermal and return-current review.
-U9 was rerouted using a blind B.Cu–In4.Cu microvia and two through vias in
-solder pads. The new In4.Cu-to-B.Cu drill is exported separately as
-fabrication-review/gerbers/4in1-in4-back.drl. The fabricator must approve
-the six-layer lamination, laser microvia, filled/capped via-in-pad assembly
-and soldermask/paste process. See
-[u9-power-reroute-20261110.md](u9-power-reroute-20261110.md).
-The U7 revision adds six additional In4.Cu/B.Cu blind microvias to
-reroute +3V3, GND and ESC3 current feedback. A former 0.8 mm In2.Cu
-+3V3 spur is replaced by a 0.3 mm In4.Cu route, requiring power-integrity
-and current-density review. See
-[u7-power-feedback-reroute-20261110.md](u7-power-feedback-reroute-20261110.md).
-The U5 revision adds four more blind B.Cu/In4.Cu microvias to route
-+3V3, GND and the ESC2 analog current feedback around physical MCU pins.
-The new factory-process and analog-signal risks are documented in
-[u5-power-feedback-reroute-20261110.md](u5-power-feedback-reroute-20261110.md).
-This is not a production sign-off.
+Power flags identify known sources across connectors, the buck inductor,
+analog RC filters, the NSG2065Q internal bootstrap diodes and MOSFET bridge
+switch nodes. They do not prove bootstrap charge, switching deadtime, correct
+voltage, startup, sag, inrush or fault protection. All physical ref/pin net
+memberships are unchanged.
 
-The missing pins are explicitly unconnected in the exported
-schematic netlist. This does NOT permit connecting them to nearby
-+3V3, GND or current-sense copper. Those copper traces overlap
-actual package pads in the rejected geometry candidate.
+## Simulation gap
 
-## Schematic ERC
+The generic importer accepts 222 components and 210 nets with zero dropped
+pin endpoints. It maps 176 passive parts and retains 46 inert parts: 37
+unsupported functional items plus 9 connector/test-point items. It reports
+`design_only`, `twin_buildable: false`. Unsupported MOSFETs currently appear
+under `bjt` and the U14 inductor under `ic`; raw evidence preserves these
+classification limitations. No substitute MCU was added to obtain a pass.
 
-Baseline source schematic: 352 findings.
-After adding 49 correctly wired bulk capacitors: 352 findings,
-same breakdown:
-- 240 pin-to-pin warnings/errors
-- 45 library-symbol issues
-- 26 endpoints off grid
-- 24 inputs not driven
-- 6 missing library-footprint links
-- 5 symbol-definition mismatch
-- 3 power pins not driven
-- 3 multiple net names
+The separate four-channel STM32L476/24 V six-step motor demo does not run
+this AT32F421/4S AM32 circuit. Thermal, current-density, EMC, battery,
+MOSFET transient, propeller load and physical flight evidence remain absent.
+The manufacturer must approve the 15 blind microvias and via-in-pad process.
 
-Many findings reflect original vendor symbol electrical types and
-missing library aliases. These are not silently ignored or asserted safe.
-Manufacturer datasheets and electrical engineering review must
-resolve all high-severity ERC issues.
-
-## BOM/placement reconciliation
-
-- 222 physical footprints, 213 SMT assembly components.
-- 22 grouped sourcing rows, 213 individual placements.
-- All 213 placement references match a populated BOM reference.
-- 49 PCB-only bulk caps now have unique C501–C549 designators.
-- Complete 4-in-1 ESC motor output pad map is in
-  ../assembly-wiring.md.
-
-## Test evidence and control
-
-Files saved in this directory:
-- drc-final.txt: native physical DRC plus parity.
-- erc-final.txt: native ERC on the corrected top-level schematic.
-- DRC negative controls in validation/rework (local engineering test only).
-- nc-route-audit.txt: route geometry around the omitted pads.
-
-The reviewed Gerber ZIP is tagged REVIEW-ONLY. It is not a
-manufacturing acceptance or completed aircraft certification.
-Power-on, supply transients, MOSFET switching, 4-motor AM32,
-thermal, propeller thrust and flight have not been tested.
-
-## Required release gates
-
-1. Restore 3 remaining AT32F421 package pads on U2; U5/U7/U9 and both NSG2065Q driver NC sets are restored.
-2. Reroute all intersecting copper, vias and plane connections
-   while maintaining phase-current paths, via design rules and
-   6-layer stack impedance/thermal design.
-3. Resolve remaining schematic ERC and pin-map issues.
-4. KiCad 10 DRC with parity: zero shorts, unconnected items,
-   missing pads, unapproved package mismatches and high-severity
-   ERC errors.
-5. First-article assembly and powered bench validation with
-   props removed. Verify DShot, failsafe and bus current/thermal.
-6. Only then regenerate fab/assembly exports and call them ready.
+Run `bash run_native_checks.sh` to regenerate both native reports.

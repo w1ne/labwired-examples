@@ -1,0 +1,101 @@
+{
+  "title": "Quadrotor co-design engineering preview",
+  "date_utc": "2026-11-11",
+  "video": {
+    "file": "quadrotor-engineering-preview.mp4",
+    "bytes": 8208428,
+    "sha256": "0576cc20cc893e66c7d1df781165ad3a9f0d86f70f6b09a56c151fcab738d12d",
+    "duration_s": 74.933333,
+    "width": 1600,
+    "height": 900,
+    "fps": 30,
+    "codec": "H.264",
+    "audio": "none"
+  },
+  "cad": {
+    "url": "https://app.kernelcad.com/p/DyJ405zg?version=3",
+    "revision": 3,
+    "source": "../cad/drone.kcad.ts",
+    "scenes": "cad-scenes.json",
+    "capture": "capture-cad-review.cjs",
+    "edit": "CAD review and orbit scenes time-compressed; no simulated flight is shown.",
+    "original_recorder_sha256": "e05404dd8fc4ce377e91c932f860b6acdb6ce727bd178b1e97286fc3b96618ae",
+    "original_recorder": "capture-cad-original.cjs",
+    "portable_recorder_sha256": "f9ef7e37d3f4f844523c5f1dbcfe8c4c350177eb2c1b70e7daf468b4124d408a",
+    "raw_recordings": [
+      {
+        "file": "01-design.webm",
+        "retained_path": "/data/work-evidence/quadrotor-co-design-20261111/video/01-design.webm",
+        "bytes": 10083296,
+        "sha256": "fca12895f42afc79c57f1f60d4c00b29c4559cae66e7c9707dacd44b80a4dc28"
+      },
+      {
+        "file": "02-assembly.webm",
+        "retained_path": "/data/work-evidence/quadrotor-co-design-20261111/video/02-assembly.webm",
+        "bytes": 5708876,
+        "sha256": "bffff3db9c25ab8743db9137debbf5e5db51fc8b0cd1f8b2573e436c388f4cab"
+      },
+      {
+        "file": "03-hero.webm",
+        "retained_path": "/data/work-evidence/quadrotor-co-design-20261111/video/03-hero.webm",
+        "bytes": 6672665,
+        "sha256": "c234c62d53550a3aecff469e24109e5035970d51c9a3db0f93dec2cb11d86a04"
+      }
+    ]
+  },
+  "pcb": {
+    "source_commit": "619a61230add2ea3bd3e8a4f9d278a75ad396d04",
+    "native_source": "../hardware/esc-4in1/",
+    "schematic": "KiCad SVG exports rasterized by rsvg-convert",
+    "populated_image": "Native KiCad 3D model screenshot/export; not circuit-simulator output",
+    "schematic_overview_sha256": "577c2c5a318248ee9d21065f316eb0c832dc007d98376c44a706da96a9f60801",
+    "schematic_channel_sha256": "dbdfca232959d67ccfc43ef705f3e5b6b374314bdebd8e47e366fc4ca96b54fa",
+    "populated_image_sha256": "b25ff0bf1334fed3a53306a9f2d8d422ee52c93c33fa7ecbe2077a18b5965ba0"
+  },
+  "runtime": {
+    "recording": "../labwired/evidence/20261111-final/video.json",
+    "evidence": "../labwired/evidence/20261111-final/evidence.json",
+    "raw_video_sha256": "01a7def8a2b630a3513d20303fb3c6eee92869a1ddf8e4a3dbcd1b26713b69df",
+    "sender_commit": "e621975b4122ad18b691899625bd9c5b420795a1",
+    "receiver_commit": "f0977630d222d22030168371b491b397a91aba92",
+    "edit": "All runtime scenes play at real recorded speed. Event markers are aligned by visible UI; event-to-WebM offset was not measured."
+  },
+  "cuts_s": [
+    {
+      "scene": "live",
+      "source_start": 35.5,
+      "duration": 8
+    },
+    {
+      "scene": "fault input",
+      "source_start": 52,
+      "duration": 5
+    },
+    {
+      "scene": "fault result",
+      "source_start": 80,
+      "duration": 7
+    },
+    {
+      "scene": "pause",
+      "source_start": 95,
+      "duration": 7
+    },
+    {
+      "scene": "reset",
+      "source_start": 115,
+      "duration": 6
+    }
+  ],
+  "limits": [
+    "24 V STM32L476 reduced-order motor bench differs from physical 4S AT32F421/AM32 hardware.",
+    "CAD receives observed shaft pose; geometry does not feed force or torque into the plant.",
+    "Native PCB rule checks do not establish switching, power, thermal or flight performance.",
+    "Populated full-frame assembly and proposed stack lift have not passed hosted evaluation.",
+    "No physical construction, power-on, aerodynamic or flight test is shown."
+  ],
+  "validation": {
+    "full_video_decode": "PASS",
+    "visual_review": "Actual design, assembly, native schematic/PCB, live motors, fault, pause and reset scenes inspected."
+  }
+}
