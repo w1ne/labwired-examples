@@ -1,5 +1,9 @@
 # Rebuild the 18-second Brick Breaker demonstration
 
+The current delivered edit adds a short LabWired closing card to this action cut.
+See [the 20-second ending source and QA](../promo-v4/README.md). This directory
+retains the complete geometry, ROM capture, audio and action-cut rebuild inputs.
+
 This cut shows the complete handheld, its exploded assembly, the routed carrier,
 the STM32F411 controller, and a playable original Brick Breaker game. The output
 is **18 seconds, 1920 × 1080, 60 fps, 1,080 frames**, with the original synthesized

@@ -12,7 +12,7 @@ An original, playable 32 KiB Game Boy cartridge runs inside Peanut-GB on the sim
 
 The contact point on the paddle changes the ball's direction and angle. Each broken brick adds one point. Clearing all 24 bricks starts a new board. A missed ball costs a life. UP and DOWN remain electrical input targets but have no action in this game. The firmware has no autoplay.
 
-Open the saved project with Run enabled, select KernelCAD, then use the device's controls. The project remains unlisted.
+[Open the saved project directly in KernelCAD with Run enabled](https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1&view=kernelcad). Wait for the LCD to initialize, click A to launch, then hold LEFT or RIGHT to steer. The mapped buttons drive the same MCU simulation that produces the LCD updates. The project remains unlisted. Interactive CAD requires WebGL2; the promotional video's 60 fps does not measure browser or MCU wall-clock performance.
 
 ## Exact firmware
 

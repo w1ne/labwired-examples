@@ -119,7 +119,10 @@
     "browser_live_controls": "media/runtime-control-proof.json",
     "browser_live_control_observation": "media/runtime-control-observation.json",
     "promotional_video": "media/promo-provenance.json",
-    "promotional_video_qa": "media/promo-visual-qa.json"
+    "promotional_video_qa": "media/promo-visual-qa.json",
+    "promotional_video_ending": "media/promo-v4/ending-provenance.json",
+    "promotional_video_ending_qa": "media/promo-v4/ending-qa.json",
+    "promotional_video_ending_source": "media/promo-v4/source-manifest.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -137,8 +140,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 20680,
-      "sha256": "17a9e024370c21d3d770c2b7456071f106d87cb30e9086919b93d8bbc9548c09"
+      "bytes": 21186,
+      "sha256": "22488c9d8e43fd7810194b6b4aa5e754168d48a8c1de470f2302883448f49cae"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -152,8 +155,8 @@
     },
     {
       "path": "firmware/BRICK_BREAKER.md",
-      "bytes": 4681,
-      "sha256": "28a2225627ce4c94bfc9842f8676d887f0fa3fcd2516fb28305c05aa6af5b24a"
+      "bytes": 5027,
+      "sha256": "8ac529436a36921cc18feb7d6120c36c0933771bcd0f6d2952c7c979d378fef2"
     },
     {
       "path": "firmware/README.md",
@@ -163,7 +166,7 @@
     {
       "path": "firmware/brick-breaker-artifacts.json",
       "bytes": 3925,
-      "sha256": "fff6e71a2f1e2fcf0495c9c3db9c11a579981698b8e2f7b395fb0c5ff18719ae"
+      "sha256": "8a9e6c18d3ad68ec3497c26f0031763903056376e41396b29d68688501a873b6"
     },
     {
       "path": "firmware/brick-breaker-capture-provenance.json",
@@ -637,8 +640,8 @@
     },
     {
       "path": "media/promo-v3/README.md",
-      "bytes": 7254,
-      "sha256": "28479b15a610b9405ec0ebfdc498711f3cf72d5c043574c533113bfc097a818d"
+      "bytes": 7498,
+      "sha256": "5ae2baa71b72997ad885715244f8d3aaada22ad9bba0f13a87a2d5248d105e71"
     },
     {
       "path": "media/promo-v3/assets.json",
@@ -753,7 +756,52 @@
     {
       "path": "media/promo-v3/source-manifest.json",
       "bytes": 4807,
-      "sha256": "bc44df7a56dd428e9326936aa09c14bbfa8678e452ffa6879dfbf94341d3e1ad"
+      "sha256": "55991a6961c4310bf5d3e9e8f113ff257ae3fd0e9f677258c2f87185a9bd6e30"
+    },
+    {
+      "path": "media/promo-v4/.gitignore",
+      "bytes": 21,
+      "sha256": "0cf256cc9234b415f912f5b0e9f8c9364688466041611047cd3f599c35f4efa6"
+    },
+    {
+      "path": "media/promo-v4/README.md",
+      "bytes": 4464,
+      "sha256": "b71e6427128acdc4467d14b3dad76f08f798aaf84c7544c26c3b88f7fb262db2"
+    },
+    {
+      "path": "media/promo-v4/ending-provenance.json",
+      "bytes": 1550,
+      "sha256": "4b944c3d2f215207e089b90738a655bbb8b8901fcf76159351b789000fef10e2"
+    },
+    {
+      "path": "media/promo-v4/ending-qa.json",
+      "bytes": 654,
+      "sha256": "8bf6be577fec5bc9cd7bc5149ca83f7cbb30f1c993e7c958935000982986e13a"
+    },
+    {
+      "path": "media/promo-v4/ffprobe.json",
+      "bytes": 3548,
+      "sha256": "d99e92830c3e706a82566b522e1683c5e8adc817c8c2d7a95fbd0e5388c5d5ff"
+    },
+    {
+      "path": "media/promo-v4/finish_brand_ending.py",
+      "bytes": 6904,
+      "sha256": "542eafe6ca5b29e4fbc8bf54c6778b07ce4a9a2d91fd5e269a26a21b29b61fab"
+    },
+    {
+      "path": "media/promo-v4/portable-rebuild.json",
+      "bytes": 1248,
+      "sha256": "3c58e643f057ce32a087e2de0fe8d373c0750f150c106366d8baf11ee5771992"
+    },
+    {
+      "path": "media/promo-v4/promo.ass",
+      "bytes": 1762,
+      "sha256": "f1786e8e575bad24eead016aae0bf35b8c5cf15e9f032111aae2b4d8b4a2a61e"
+    },
+    {
+      "path": "media/promo-v4/source-manifest.json",
+      "bytes": 2458,
+      "sha256": "54bc82ddffa08c094e0564fd3bd6cae4656bb2bd8473d4fc7086526ee1904fdf"
     },
     {
       "path": "media/promo-visual-qa.json",

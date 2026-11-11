@@ -4,13 +4,16 @@ This example joins an STM32F411 Game Boy emulator, an original playable ROM, a r
 
 ## Open and play
 
-- [LabWired saved project](https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1)
+- [Play the handheld in LabWired + KernelCAD](https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1&view=kernelcad)
 - [Original firmware checkpoint](https://app.labwired.com/?share=aV3vKsFaQjTi&run=1)
 - [KernelCAD assembly, revision 3](https://app.kernelcad.com/p/kQAFdaQs?version=3)
-- [Current 18-second Brick Breaker promo — source and reproduction](media/promo-v3/README.md)
+- [Current 20-second Brick Breaker promo with LabWired ending — source and reproduction](media/promo-v4/README.md)
+- [18-second CAD action cut — source and reproduction](media/promo-v3/README.md)
 - [Historical 57-second Wire Runner demonstration](media/gameboy-wire-runner-promo.mp4)
 
-In the LabWired circuit, select **Preview** to operate the on-screen buttons, or operate the mapped device controls in **KernelCAD**. Let the firmware initialize the display. LEFT and RIGHT move the paddle. A launches the ball, B restarts with three lives, START pauses or resumes, and SELECT changes the palette. The project's button `key` attributes are descriptive; global keyboard mappings are not implemented by the generic button component.
+The play link selects **KernelCAD** and starts the MCU simulation. Let the firmware initialize the LCD, then click **A** to launch the ball and hold **LEFT** or **RIGHT** to move the paddle. B restarts with three lives, START pauses or resumes, and SELECT changes the palette. The CAD LCD receives actual simulated display updates, and the mapped device controls send inputs to the same simulation. In the Circuit view, select **Preview** to use the circuit buttons. The project's button `key` attributes are descriptive; global keyboard mappings are not implemented by the generic button component.
+
+The interactive CAD view requires WebGL2. Its display update rate depends on the browser and simulation. The promotional movie's 60 fps is an offline export rate, not a claim of real-time MCU or browser performance.
 
 ## Current game: Brick Breaker
 
