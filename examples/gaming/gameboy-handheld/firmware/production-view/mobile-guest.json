@@ -1,0 +1,322 @@
+{
+  "schema": "labwired.production-guest-view-observation.v1",
+  "surface": "mobile",
+  "scope": "guest rendering and runtime continuity; owner workflow tested separately",
+  "started_at": "2026-11-11T00:57:29.537Z",
+  "finished_at": "2026-11-11T00:58:00.435Z",
+  "browser_version": "149.0.7827.55",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "authentication": {
+    "normal_anonymous_access": true,
+    "local_auth_disabled": false,
+    "owner_storage_copied": false,
+    "authorization_header_supplied": false,
+    "owner_workflow_verified": false
+  },
+  "anonymous_project_readback": {
+    "httpStatus": 200,
+    "is_owner": false,
+    "role": null,
+    "id": "f44771855a18a70d418e363622de2e28",
+    "visibility": "unlisted",
+    "contentHash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "sourceSha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
+    "parts": 10,
+    "wires": 24,
+    "firmware": {
+      "board": "stm32f411ceu6-blackpill",
+      "language": "c",
+      "artifact": {
+        "ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643"
+      },
+      "source": {
+        "treeRef": "sha256:2c21ae13eeefb11edce3d0638cbce767fce3713c66088a5689ed1f2f3f6794a0",
+        "files": [
+          {
+            "path": "src/main.c",
+            "ref": "sha256:267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e"
+          }
+        ]
+      }
+    },
+    "mechanical": {
+      "provider": "kernelcad",
+      "slug": "kQAFdaQs",
+      "version": 3,
+      "meshProvenance": "9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+      "projectId": "16657620-a945-4c56-920e-b4f63ac7637a",
+      "title": "Game Boy handheld enclosure"
+    },
+    "pcbBoardId": null,
+    "pcbBoardRev": null,
+    "observedAt": "2026-11-11T00:57:30.027Z",
+    "clerkSessionPresent": false
+  },
+  "software_webgl": {
+    "launch_args": [
+      "--no-sandbox",
+      "--use-angle=swiftshader",
+      "--enable-unsafe-swiftshader"
+    ],
+    "capability": {
+      "created": true,
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "build": {
+    "httpStatus": 200,
+    "commit": "93386ad2c73f06353e84915b13b847b2c49860de",
+    "builtAt": "2026-11-11T00:51:08.110Z",
+    "mainAssets": [
+      "/assets/main-DOIPb5VZ.js"
+    ],
+    "documentModules": [
+      "/assets/main-DOIPb5VZ.js"
+    ],
+    "observedAt": "2026-11-11T00:57:39.239Z",
+    "documentUsesServedMain": true
+  },
+  "navigation": {
+    "visible_view_labels": [
+      "2D",
+      "3D",
+      "KernelCAD"
+    ],
+    "observed_button_labels": [
+      "Switch lab or board",
+      "Open Architect",
+      "Feedback",
+      "Sign in to LabWired",
+      "2D view",
+      "3D view",
+      "KernelCAD view",
+      "Move / pan",
+      "Zoom in",
+      "Zoom out",
+      "Fit to view",
+      "Pause system",
+      "Reset system",
+      "Upload firmware",
+      "Restart target",
+      "Step target",
+      "Close target properties",
+      "Info",
+      "Serial",
+      "Registers",
+      "Trace",
+      "Memory",
+      "Add component",
+      "Edit source",
+      "Edit mode",
+      "More actions",
+      "Got it",
+      "Cookie settings"
+    ],
+    "header_overlaps": [],
+    "pcb_navigation_verified": false
+  },
+  "cad": {
+    "iframe_src": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+    "ready_event": {
+      "origin": "https://app.kernelcad.com",
+      "at": 11045.300000011921,
+      "data": {
+        "source": "kernelcad-embed",
+        "type": "kernelcad.viewer-status",
+        "status": "model_displayed",
+        "revision": 3,
+        "geometryNonempty": true,
+        "cameraFitted": true,
+        "framePresented": true
+      }
+    },
+    "exact_pinned_iframe": true,
+    "same_iframe_after_return": true,
+    "same_iframe_after_reopen": true
+  },
+  "runtime": {
+    "before": {
+      "cycles": 28899633,
+      "pc": 134234254,
+      "workerId": 3
+    },
+    "cad_visible_start": {
+      "cycles": 123899633,
+      "pc": 134220902,
+      "workerId": 3
+    },
+    "cad_visible_end": {
+      "cycles": 188899633,
+      "pc": 134220874,
+      "workerId": 3
+    },
+    "after_return": {
+      "cycles": 403899633,
+      "pc": 134220884,
+      "workerId": 3
+    },
+    "after_reopen": {
+      "cycles": 418899633,
+      "pc": 134218804,
+      "workerId": 3
+    },
+    "same_worker_object": true,
+    "same_runtime_worker": true,
+    "worker_asset": "/assets/sim.worker-hboyiWJK.js",
+    "snapshot_count_at_reopen": 90,
+    "cycle_gain_while_cad_visible": 65000000,
+    "boot_and_frame_evidence": [
+      "LABWIRED DMG BOOT",
+      "DMG_ROM_OK title=WIRE_RUNNER bytes=32768",
+      "DMG_FRAME=1 x=0 y=0 score=0 hash=811c9dc5 lines=0",
+      "DMG_FRAME=2 x=0 y=0 score=0 hash=811c9dc5 lines=0",
+      "DMG_FRAME=3 x=48 y=80 score=0 hash=811c9dc5 lines=0",
+      "DMG_FRAME=4 x=48 y=80 score=0 hash=782db7fd lines=144"
+    ]
+  },
+  "functional_contract_passed": true,
+  "clean_console": false,
+  "uncaught_exception_count": 0,
+  "console_errors": [
+    {
+      "phase": "MCU running",
+      "text": "Failed to load resource: the server responded with a status of 401 ()",
+      "location": {
+        "url": "https://api.labwired.com/v1/projects/f44771855a18a70d418e363622de2e28/board",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "text": "Refused to execute script from 'https://app.kernelcad.com/fonts-unblock.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "location": {
+        "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "text": "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "location": {
+        "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196&mode=viewer&customize=false",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "location": {
+        "url": "https://telemetry.kernelcad.com/v1/events",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "location": {
+        "url": "https://mesh.kernelcad.com/anim-artifacts/kQAFdaQs/v3.json?provenance=9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "text": "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "location": {
+        "url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196&mode=viewer&customize=false",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "location": {
+        "url": "https://telemetry.kernelcad.com/v1/events",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "failed_requests": [
+    {
+      "phase": "MCU running",
+      "url": "https://api.labwired.com/v1/events",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "phase": "MCU running",
+      "url": "https://api.labwired.com/v1/events",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "phase": "MCU running",
+      "url": "https://api.labwired.com/v1/events",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "phase": "MCU running",
+      "url": "https://api.labwired.com/v1/events",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "url": "https://telemetry.kernelcad.com/v1/events",
+      "failure": {
+        "errorText": "net::ERR_FAILED"
+      }
+    },
+    {
+      "phase": "opening exact CAD3",
+      "url": "https://telemetry.kernelcad.com/v1/events",
+      "failure": {
+        "errorText": "net::ERR_FAILED"
+      }
+    }
+  ],
+  "canonical_mutation": false,
+  "native_pcb_attached": false,
+  "cad_screenshot": {
+    "path": "mobile-cad.png",
+    "bytes": 83162,
+    "sha256": "2df193b079851096cd146a00e328e6f0dc2138b382b13ee69811d5d4a72254f6",
+    "visually_reviewed": true,
+    "review": "Assembled handheld is visible inside the revision 3 CAD view; the MCU controls show Running."
+  },
+  "raw_evidence": {
+    "task_record": "frontend-live-guest-mobile-consent/guest-rendering-proof.json",
+    "bytes": 15816,
+    "sha256": "6257cabd1ed75e48a213d0786d90b22f62b89117fce314008977a0b87345f075"
+  },
+  "analytics_consent_choice": "declined through visible UI in isolated guest context"
+}

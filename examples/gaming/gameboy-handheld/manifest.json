@@ -6,15 +6,16 @@
   "proof": {
     "firmware": "model_verified",
     "rom_behavior": "host_test_passed",
-    "browser": "current_assembly_functional_contract_passed_local_production_preview",
+    "browser": "production_guest_cad3_runtime_contract_passed_owner_webgl_blocked",
     "pcb": "drc_passed",
     "mechanical": "nominal_assembly_and_access_checked",
     "physical_hardware_tested": false,
     "controls": "8_driven_stm32_cases_passed",
     "native_pcb_attached": false,
     "browser_clean_console": false,
-    "browser_production_deployed": false,
-    "native_preserve_preflight": "local_exact_source_drc_passed"
+    "browser_production_deployed": true,
+    "native_preserve_preflight": "local_exact_source_drc_passed",
+    "browser_owner_rendering_verified": false
   },
   "target": {
     "board": "stm32f411ceu6-blackpill",
@@ -88,7 +89,11 @@
     "browser_current_assembly": "firmware/browser-revision3-validation.json",
     "browser_current_diagnostics": "firmware/browser-revision3-assessment.json",
     "pcb_import": "pcb/final-import-report.json",
-    "pcb_native_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json"
+    "pcb_native_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json",
+    "browser_production": "firmware/production-view/index.json",
+    "browser_production_owner": "firmware/production-view/owner-access-webgl.json",
+    "browser_production_desktop": "firmware/production-view/desktop-guest.json",
+    "browser_production_mobile": "firmware/production-view/mobile-guest.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -106,8 +111,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15501,
-      "sha256": "6339dae4856d0a9c834c25f86613b038de4490ff5e817e8af14b82fc9516ecf3"
+      "bytes": 16981,
+      "sha256": "20f8911e756dcb581dc9a6b97739f7305714098e4f139f7f966a88430e3056a9"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -208,6 +213,46 @@
       "path": "firmware/peanut_gb.h",
       "bytes": 102999,
       "sha256": "cf7777068492474d084f7dca0b00724d4dcdeab7f9a6c91a5d3a82e60d1cf728"
+    },
+    {
+      "path": "firmware/production-view/README.md",
+      "bytes": 3282,
+      "sha256": "3fffb6b62d9c364f449bb6bfd783376613a61fd8f9ed64951d3edb9a34e74d7d"
+    },
+    {
+      "path": "firmware/production-view/desktop-cad.png",
+      "bytes": 221299,
+      "sha256": "f0cc0ead15d29ced304aed727c511725d0167c0e0c77bfae5c8c455720415c51"
+    },
+    {
+      "path": "firmware/production-view/desktop-guest.json",
+      "bytes": 11062,
+      "sha256": "23691bfc4f398e3b455df562101415a26ce14c3f17226f4b7acfd926192de3b2"
+    },
+    {
+      "path": "firmware/production-view/index.json",
+      "bytes": 5114,
+      "sha256": "ef968d0964f81c4d5657d906a52341209b305d4cd1e354e217c463994e55dbc3"
+    },
+    {
+      "path": "firmware/production-view/interrupted-attempts.json",
+      "bytes": 1683,
+      "sha256": "74cd5e6ff9ce7ba8ce5d91147650e14dd3949d1aaee18a50e97c634ea7774ed6"
+    },
+    {
+      "path": "firmware/production-view/mobile-cad.png",
+      "bytes": 83162,
+      "sha256": "2df193b079851096cd146a00e328e6f0dc2138b382b13ee69811d5d4a72254f6"
+    },
+    {
+      "path": "firmware/production-view/mobile-guest.json",
+      "bytes": 10350,
+      "sha256": "59e7d9cd96b286c094d7b847845f3d0b4d43904096e30bf3be4372ff4fba5689"
+    },
+    {
+      "path": "firmware/production-view/owner-access-webgl.json",
+      "bytes": 12805,
+      "sha256": "01cdf02f2c569a15c9e4ae147879199f23fd2495fdeec8802bd0eb05c5fd8d64"
     },
     {
       "path": "firmware/rom-manifest.json",
@@ -561,8 +606,8 @@
     },
     {
       "path": "project-binding.json",
-      "bytes": 2125,
-      "sha256": "5caaa32acc81260c7a13579a1da106fc181cbca038a17186327b02168cdf6089"
+      "bytes": 2186,
+      "sha256": "72029860d05fa79ab0fe2ac54abbb7e97ab81130a8def24c9f9d58d6bc93569c"
     },
     {
       "path": "source-provenance.json",
