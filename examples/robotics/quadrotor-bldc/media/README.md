@@ -15,7 +15,7 @@ The CAD clips are time-compressed. All runtime clips retain their recorded speed
 
 ## Reproduce the recording and edit
 
-`capture-cad-review.cjs` is the CAD recorder with portable module, Chrome and output-path defaults. Set `PLAYWRIGHT_MODULE`, `CHROME_BIN` and `CAPTURE_DIR` only when the defaults do not apply. The exact runtime recorder and its environment/proof files are in [the final trace package](../labwired/evidence/20261111-final/). Native schematic SVGs and PCB rendering come from the native KiCad source.
+`capture-cad-original.cjs` preserves the exact recorder used. `capture-cad-review.cjs` adds portable module, Chrome and output-path defaults. Set `PLAYWRIGHT_MODULE`, `CHROME_BIN` and `CAPTURE_DIR` only when the defaults do not apply. The exact runtime recorder and its environment/proof files are in [the final trace package](../labwired/evidence/20261111-final/). Native schematic SVGs and PCB rendering come from the native KiCad source.
 
 The edit uses ffmpeg and DejaVu Sans:
 
