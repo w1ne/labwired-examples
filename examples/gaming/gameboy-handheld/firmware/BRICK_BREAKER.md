@@ -16,26 +16,26 @@ The contact point on the paddle changes the ball's direction and angle. Each bro
 
 ## Exact firmware
 
-- ROM SHA-256: `708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5`.
-- Hosted C source SHA-256: `cd30bf4b2ea545786b0fcc7673dc3fd1c1e9a8cb08ed9a37b7ee96f5c649c7e4`.
-- Compiled firmware: `sha256:cfa5fd07dbaa457d7e3315d69d5076c90b70f453d490229889e440a595ea4681`.
+- ROM SHA-256: `92782644b70e39c9314c345fc991447f51937486570c177be01be6cb38ae610b`.
+- Hosted C source SHA-256: `0035482806916ad05e4446ebece8bb284103473c1bfda5318e75460d5b3fb2a0`.
+- Compiled firmware: `sha256:e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28`.
 - Board: `stm32f411ceu6-blackpill`; language: C; entry: `src/main.c`.
 
-The repository's `examples/gaming/gameboy-handheld/firmware/` contains `build_brick_breaker.py`, the cartridge, MCU integration, deterministic host harness and verification receipts. The previous Wire Runner source is retained as a separate original example.
+The exact current source is the `source` field of [the saved update request](performance/promotion-update-request.json). The [performance patch and build instructions](performance/README.md) reproduce it from the original recording source. The top-level `brick_breaker.c`, ROM, generators and capture harness retain that earlier recording baseline. The previous Wire Runner source remains a separate original example.
 
 ## Model evidence
 
-The hosted run passed six declared behavioral checks within 50,000,000 MCU steps: Brick Breaker ROM initialization; RIGHT input; A input; paddle movement from x=68 to x=86; launched-ball state; and a painted ILI9341 framebuffer containing 153,600 bytes. All four press/release stimuli were applied. The actual logged ball moved from (97,114) to (107,104).
+The original recording baseline passed six declared behavioral checks within 50,000,000 MCU steps: Brick Breaker ROM initialization; RIGHT input; A input; paddle movement from x=68 to x=86; launched-ball state; and a painted ILI9341 framebuffer containing 153,600 bytes. All four press/release stimuli were applied. The actual logged ball moved from (97,114) to (107,104).
 
-Fresh saved-project verification through MCP passed the same six clauses with `max_steps: 50000000`, without changing source, input events or the oracle. The [request and readback receipt](brick-breaker-saved-project-verification-mcp.json) bind that proof to content hash `626abc0c…60825b`. The [generic MCP recipe](../MCP_RECIPE.md) documents the exact calls and the separate movie/browser-QA boundary.
+After the speed optimization was promoted, saved-project verification through MCP passed the same six clauses with `max_steps: 50000000`. The input events and oracle are unchanged. The [promotion and readback receipt](performance/promotion-receipt.json) binds fresh proof to content hash `2d1cfec8…4781a2` and confirms the exact O3 source and pinned ELF afterward. The earlier [baseline verification](brick-breaker-saved-project-verification-mcp.json) remains historical evidence. The [generic MCP recipe](../MCP_RECIPE.md) documents the calls and the separate movie/browser-QA boundary.
 
 The same-ROM host test additionally passed left/right movement, launch, pause/resume, restart, palette, brick scoring, paddle bounces and missed-ball life loss. Scripted button play broke 47 bricks across two boards during the bounded test. These are simulation results.
 
 The promotional capture uses the exact ROM executed by Peanut-GB at the native Game Boy frame cadence, with an external scripted button track, then samples those frames for a 60 fps CAD animation. This is not a measurement of STM32 or browser simulator wall-clock frame rate. No autoplay or capture script is embedded in the device firmware.
 
-## Simulation speed candidate
+## Current simulation speed
 
-A separately verified [performance candidate](performance/README.md) completes 39 DMG frames in the same 50,000,000-step budget where this saved baseline completes 16. The candidate uses VBlank/HALT, exact dirty LCD spans and compiler optimization. Its per-frame game state and LCD output match the baseline across 2,400 test frames; this checkpoint leaves the saved project and original recording ROM unchanged pending browser comparison.
+The installed [performance revision](performance/README.md) completes 39 DMG frames in the same 50,000,000-step budget where the baseline completes 16. It uses VBlank/HALT, exact dirty LCD spans and compiler optimization. Its per-frame game state and LCD output match the baseline across 2,400 test frames. One sequential Circuit-browser comparison observed approximately 5.5 to 18.6 game frames/s. That observation does not measure raster display FPS, CAD performance, input latency or real-time 60 fps. The saved project runs the optimized revision; the original recording ROM remains intact.
 
 ## Assembly and PCB
 
@@ -43,7 +43,7 @@ KernelCAD revision 3 (`kQAFdaQs`) retains 59 parts, the LCD face binding and eig
 
 The controller is USB powered. The enclosure reserves battery and speaker volume; audio, a cartridge socket, save storage and battery charging are not implemented. The purchased module datum and cable fit require measurement.
 
-## Reproduce
+## Reproduce the recording baseline
 
 ```sh
 python3 build_brick_breaker.py
@@ -52,7 +52,7 @@ cc -std=c99 -O2 host_brick_breaker.c -o /tmp/host-brick-breaker
 /tmp/host-brick-breaker
 ```
 
-Upload `brick_breaker.c` with `labwired_put_source`, compile for `stm32f411ceu6-blackpill`, then run the declared oracle in `brick-breaker-verify-request.json` using the returned firmware reference.
+These commands rebuild the original recording baseline. To reproduce the current saved firmware, follow [performance/README.md](performance/README.md): apply the verified patch in an isolated checkout and run the same two generators. Upload the resulting `brick_breaker.c` with `labwired_put_source`, compile for `stm32f411ceu6-blackpill`, then use the returned firmware reference with the unchanged oracle in `performance/candidate-verification-request.json`.
 
 ## Deterministic promotional capture
 

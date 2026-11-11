@@ -3,9 +3,11 @@
 The circuit, firmware, input track, behavioral proof and saved CAD bindings use
 existing generic LabWired and KernelCAD tools. The saved Brick Breaker project
 passed its unchanged six-clause oracle through MCP on 2026-11-11. The exact
-[request, result and unchanged-content readback](firmware/brick-breaker-saved-project-verification-mcp.json)
+[promotion, result and readback](firmware/performance/promotion-receipt.json)
 record the 50,000,000-step budget and matching content/verified hash
-`626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b`.
+`2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2`.
+This is the installed speed revision; the earlier baseline proof remains in
+`firmware/brick-breaker-saved-project-verification-mcp.json`.
 
 This recipe uses generic tool calls and checked-in data. It adds no device tool,
 separate simulator or orchestration service.
@@ -40,12 +42,15 @@ Use `labwired_list` and `labwired_describe` to check the requested
 
 ## Compile and test changed firmware
 
-Use `labwired_put_source` with the full `firmware/brick_breaker.c` contents and
-`entryPath: "src/main.c"`. Pass its `source_tree_ref` to `labwired_compile` with
+Use `labwired_put_source` with the full current source and
+`entryPath: "src/main.c"`. The exact installed source is the `source` field of
+`firmware/performance/promotion-update-request.json`; the performance patch
+rebuilds it from the recording baseline. `firmware/brick_breaker.c` remains the
+original movie source. Pass the returned `source_tree_ref` to `labwired_compile` with
 `board: "stm32f411ceu6-blackpill"`, `language: "c"` and the same entry path.
 
 The complete precompiled verification call is stored in
-[brick-breaker-verify-request.json](firmware/brick-breaker-verify-request.json).
+[candidate-verification-request.json](firmware/performance/candidate-verification-request.json).
 For a new build, replace only its `firmware_ref` with the compile result, retain
 the diagram, all four input events and the full declared oracle, then call
 `labwired_verify`. `labwired_run` is observational; it does not mint proof.
@@ -55,8 +60,11 @@ To save a verified change, call `labwired_project_update` with `project_id`, the
 fresh `expected_content_hash`, complete source and updated `diagram`. Update
 both `diagram.firmware.artifact.ref` and its source-tree/file references so the
 browser cannot replay an older cached ELF. Preserve the mechanical object,
-PCB attachment, visibility and input track. Read back the resulting project
-before verifying its saved content.
+PCB attachment, visibility and input track. The installed update used exactly
+four arguments: `project_id`, `expected_content_hash`, `source` and `diagram`.
+The exact request and guarded rollback template are retained under
+`firmware/performance/`. Read back the resulting project before verifying its
+saved content, then read back again to confirm proof and pinned firmware refs.
 
 ## Verify the exact saved project
 

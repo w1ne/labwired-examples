@@ -14,8 +14,8 @@
   "files": [
     {
       "path": "BRICK_BREAKER.md",
-      "bytes": 5906,
-      "sha256": "984a424a98cf8103594d81829e2a88035083ed08e97b27320388adcac4052700"
+      "bytes": 6704,
+      "sha256": "cbfb6b4cd30e75ed68d9e09959f6d7fe908cdf2b2a0a520124d8a11cc6b307c7"
     },
     {
       "path": "brick-breaker-capture-provenance.json",
@@ -113,5 +113,22 @@
       "sha256": "712161485479744f59f2658f53834f0daf70f51d9a18eae75d083d8e17419a35"
     }
   ],
-  "saved_project_verification_receipt": "brick-breaker-saved-project-verification-mcp.json"
+  "saved_project_verification_receipt": "brick-breaker-saved-project-verification-mcp.json",
+  "scope": "Original recording source and artifact identities are retained below. current_saved_project identifies the installed optimized firmware.",
+  "current_saved_project": {
+    "content_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+    "verified_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+    "source_artifact": "performance/promotion-update-request.json",
+    "source_json_pointer": "/source",
+    "source_sha256": "0035482806916ad05e4446ebece8bb284103473c1bfda5318e75460d5b3fb2a0",
+    "source_tree_ref": "sha256:5cbc1cb8e76bb37a3ae892b6891a76d1dbd7a95f7da01f1ad93d03093bb9979e",
+    "firmware_ref": "sha256:e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28",
+    "rom_sha256": "92782644b70e39c9314c345fc991447f51937486570c177be01be6cb38ae610b",
+    "reproduction": "performance/README.md",
+    "proof_receipt": "performance/promotion-receipt.json",
+    "rollback_receipt": "performance/promotion-baseline-rollback.json",
+    "browser_observation": "performance/browser-circuit-comparison.json",
+    "promoted_at_utc": "2026-11-11 22:08:40 UTC",
+    "verified_readback_at_utc": "2026-11-11 22:09:01 UTC"
+  }
 }

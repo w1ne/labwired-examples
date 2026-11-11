@@ -1,11 +1,19 @@
-# Simulation speed candidate
+# Simulation speed: promoted firmware
 
 **The firmware candidate completes 39 DMG frames in the same 50,000,000-step
 hosted STM32 run where the saved baseline completes 16.** The six-clause oracle
 and four input events are unchanged. This is a 2.44× bounded instruction-budget
 result, including boot. It is not a browser wall-clock frame-rate measurement.
-The candidate is isolated in a temporary lab; this checkpoint does not replace
-the saved project or the original recording ROM.
+The optimized firmware was installed in the original saved project on
+2026-11-11 at 22:08:40 UTC and passed the same saved-project oracle. Readback
+completed at 22:09:01 UTC. The original recording ROM remains unchanged.
+
+A separate [browser observation](browser-circuit-comparison.json) measured
+approximately 5.5 game frames/s for the baseline and 18.6 for the optimized
+firmware in the same Circuit-view tab. Each result is one short sequential
+window, with different game segments and observation uncertainty. These are
+firmware game-frame counts, not raster display FPS. WebGL2 was unavailable in
+that browser, so this comparison does not measure the CAD view.
 
 ## Cause and changes
 
@@ -38,6 +46,20 @@ requests and results. [candidate-verification.json](candidate-verification.json)
 records all six oracle clauses passing and all four input events applied.
 The baseline run and both exact request objects are retained beside it.
 
+[promotion-receipt.json](promotion-receipt.json) records the guarded save,
+unchanged six-clause `labwired_project_verify` call with `max_steps: 50000000`,
+and readback. The content and verified hashes both equal
+`2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2`.
+The exact four-field [update request](promotion-update-request.json) includes
+all 126,041 bytes of optimized C and the complete original diagram with only
+its firmware artifact/source references changed. The name, unlisted visibility,
+PCB revision, input events, CAD revision and nine bindings are unchanged.
+
+The [rollback receipt](promotion-baseline-rollback.json) retains the full old
+source and diagram. Its expected-hash placeholder must be replaced by a fresh
+`labwired_project_get` hash before any deliberate rollback. No rollback was
+performed. A restored source needs its own fresh declared-oracle verification.
+
 The same input script produces identical per-frame LCD hashes and all 13 game
 state bytes across 2,400 frames for the old and new ROM. Both traces have SHA-256
 `b0f207665b1be8c3fdd9d7cd2dd6b66a0b975c764cb64be51b67d04d2111514f`.
@@ -64,6 +86,17 @@ The candidate ELF is
 `sha256:e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28`.
 The candidate source tree is
 `sha256:5cbc1cb8e76bb37a3ae892b6891a76d1dbd7a95f7da01f1ad93d03093bb9979e`.
+
+## Saved-project browser readback
+
+After promotion, the original saved project was reopened in the browser. An
+actual A press/release launched the game, the score reached 15, and the LCD and
+UART continued updating. The [browser observation](saved-project-browser.json)
+records the input action separately from the still image. The image shows a
+missed ball: UART lives change from 3 to 2 and the LCD returns to A TO LAUNCH.
+This is Circuit-view evidence; WebGL2 was unavailable in that cloud browser.
+
+![Optimized saved project running with score 15 and two lives](saved-project-browser.jpg)
 
 ## Reproduce in isolated checkouts
 
@@ -94,8 +127,10 @@ cc -std=c99 -O2 /tmp/display_test.c -o /tmp/display-test
 
 For hosted reproduction, use the existing generic `labwired_put_source`,
 `labwired_compile` and `labwired_verify` calls in the adjacent JSON receipts.
-Do not shorten or remove oracle clauses. Browser throughput and the separate
-CAD display-bridge throttle need an independent wall-clock comparison.
+Do not shorten or remove oracle clauses. The recorded Circuit observation is
+separate from the deterministic hosted instruction-budget comparison. The CAD
+display-bridge throttle still needs its own browser measurement; this firmware
+promotion does not deploy the separate application patch.
 
 ## Scope
 

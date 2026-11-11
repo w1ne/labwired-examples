@@ -123,7 +123,10 @@
     "promotional_video_ending": "media/promo-v4/ending-provenance.json",
     "promotional_video_ending_qa": "media/promo-v4/ending-qa.json",
     "promotional_video_ending_source": "media/promo-v4/source-manifest.json",
-    "browser_brick_breaker_cad": "media/promo-v4/browser-verification.json"
+    "browser_brick_breaker_cad": "media/promo-v4/browser-verification.json",
+    "brick_breaker_speed_promotion": "firmware/performance/promotion-receipt.json",
+    "brick_breaker_browser_speed": "firmware/performance/browser-circuit-comparison.json",
+    "brick_breaker_optimized_saved_browser": "firmware/performance/saved-project-browser.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -141,13 +144,13 @@
     },
     {
       "path": "MCP_RECIPE.md",
-      "bytes": 7431,
-      "sha256": "745e83da8093d4f23790f7a513724233d5ea8574d35e121d25b0a809e3cb16ae"
+      "bytes": 8042,
+      "sha256": "753384cfc2249d2a98464326c4e33c525ec05c7f097244878f0d0e9f3936ac0c"
     },
     {
       "path": "README.md",
-      "bytes": 21396,
-      "sha256": "2ae64db767eb6cf1dbd57f3b78c3ea75cd4f940d22a589764e602481454dde56"
+      "bytes": 21610,
+      "sha256": "bd85b55f381a0a70cb64dbcbfb054d9320d02aea582fc06ab5a239533dabd6e1"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -161,8 +164,8 @@
     },
     {
       "path": "firmware/BRICK_BREAKER.md",
-      "bytes": 5906,
-      "sha256": "984a424a98cf8103594d81829e2a88035083ed08e97b27320388adcac4052700"
+      "bytes": 6704,
+      "sha256": "cbfb6b4cd30e75ed68d9e09959f6d7fe908cdf2b2a0a520124d8a11cc6b307c7"
     },
     {
       "path": "firmware/README.md",
@@ -171,8 +174,8 @@
     },
     {
       "path": "firmware/brick-breaker-artifacts.json",
-      "bytes": 4216,
-      "sha256": "9df84faeb841775d7fbf2770232f0a07b0068460e571e4ba8315b088f34db3f6"
+      "bytes": 5410,
+      "sha256": "c5108def1c9779aafc0ef2751643800b15ce51f3f10ea5291e90b2c09b2fa4e4"
     },
     {
       "path": "firmware/brick-breaker-capture-provenance.json",
@@ -361,8 +364,8 @@
     },
     {
       "path": "firmware/performance/README.md",
-      "bytes": 5249,
-      "sha256": "7fc5be495fedd859df066e0391a3a3d59dac0fcdac5c326fce80cbde8b6e2581"
+      "bytes": 7436,
+      "sha256": "42c54a87f0e40a155427c7c25e2ee127432df5c2e6d43def2dafd65cde77605b"
     },
     {
       "path": "firmware/performance/baseline-run-request.json",
@@ -373,6 +376,11 @@
       "path": "firmware/performance/baseline-run.json",
       "bytes": 36584,
       "sha256": "a0c64da13eaa441433a2c9027b74918f4ffc5f10c1ff33f2b7981e5dadf90aac"
+    },
+    {
+      "path": "firmware/performance/browser-circuit-comparison.json",
+      "bytes": 3029,
+      "sha256": "fa90757a6b69643db2da78613b10c1b9c9fd4bfbd9b18841597e439823ed0322"
     },
     {
       "path": "firmware/performance/candidate-compile.json",
@@ -418,6 +426,31 @@
       "path": "firmware/performance/performance-comparison.json",
       "bytes": 3064,
       "sha256": "253965892baa96ba79596ffe0b4d58aa9d52da80650c8e34864f5f3a5ce5e26d"
+    },
+    {
+      "path": "firmware/performance/promotion-baseline-rollback.json",
+      "bytes": 152247,
+      "sha256": "2e960a7b9c44591cf8b4ed12cf9ca8769d03208cf9dadd10594518a79845496d"
+    },
+    {
+      "path": "firmware/performance/promotion-receipt.json",
+      "bytes": 6278,
+      "sha256": "ae1978231e48ecec57444a04e2d4a1863b6370a6015075cf6d11aec7d26e12a9"
+    },
+    {
+      "path": "firmware/performance/promotion-update-request.json",
+      "bytes": 147425,
+      "sha256": "18e8e80c5edb804ef13adeff334949e0eb47263f95b1a329ca939a9f5e9f9c5a"
+    },
+    {
+      "path": "firmware/performance/saved-project-browser.jpg",
+      "bytes": 122281,
+      "sha256": "1a56b2c0f2d44a4e31af1761c308b5c70f2d76a8c4734ee5078ebd8e64936302"
+    },
+    {
+      "path": "firmware/performance/saved-project-browser.json",
+      "bytes": 1672,
+      "sha256": "102bd9ddb77308a5fa8e5d572e996be5766cb7d74135af097ee6eda4516de030"
     },
     {
       "path": "firmware/production-view/README.md",
