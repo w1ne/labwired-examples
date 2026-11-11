@@ -7,7 +7,8 @@ This example joins an STM32F411 Game Boy emulator, an original playable ROM, a r
 - [LabWired saved project](https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1)
 - [Original firmware checkpoint](https://app.labwired.com/?share=aV3vKsFaQjTi&run=1)
 - [KernelCAD assembly, revision 3](https://app.kernelcad.com/p/kQAFdaQs?version=3)
-- [57-second recorded demonstration](media/gameboy-wire-runner-promo.mp4)
+- [Current 18-second Brick Breaker promo — source and reproduction](media/promo-v3/README.md)
+- [Historical 57-second Wire Runner demonstration](media/gameboy-wire-runner-promo.mp4)
 
 In the LabWired circuit, select **Preview** to operate the on-screen buttons, or operate the mapped device controls in **KernelCAD**. Let the firmware initialize the display. LEFT and RIGHT move the paddle. A launches the ball, B restarts with three lives, START pauses or resumes, and SELECT changes the palette. The project's button `key` attributes are descriptive; global keyboard mappings are not implemented by the generic button component.
 

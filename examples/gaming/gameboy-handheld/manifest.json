@@ -137,8 +137,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 20570,
-      "sha256": "2c20a0b71b5fce617f10c122f0121e10d0dfabfc731efe5f4677e30c8224957a"
+      "bytes": 20680,
+      "sha256": "17a9e024370c21d3d770c2b7456071f106d87cb30e9086919b93d8bbc9548c09"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -151,9 +151,89 @@
       "sha256": "538c35c16001219509d9a0f504cf3ba7d4d06bd59296706bc3d551184b0cee6a"
     },
     {
+      "path": "firmware/BRICK_BREAKER.md",
+      "bytes": 4681,
+      "sha256": "28a2225627ce4c94bfc9842f8676d887f0fa3fcd2516fb28305c05aa6af5b24a"
+    },
+    {
       "path": "firmware/README.md",
       "bytes": 6684,
       "sha256": "8861a7b1350e190150c85f64cc22ac33e2819b0bc70a9d6a7a8c89ceff26fdcd"
+    },
+    {
+      "path": "firmware/brick-breaker-artifacts.json",
+      "bytes": 3925,
+      "sha256": "fff6e71a2f1e2fcf0495c9c3db9c11a579981698b8e2f7b395fb0c5ff18719ae"
+    },
+    {
+      "path": "firmware/brick-breaker-capture-provenance.json",
+      "bytes": 1172,
+      "sha256": "b9c19ecc6014cf16d210a4a0ff91169f5f9dcf3caf94106820068d21b11b1850"
+    },
+    {
+      "path": "firmware/brick-breaker-compile.json",
+      "bytes": 715,
+      "sha256": "398abce3a06f0f8490db24ea690c3fa8e07560c78fda2375761249488465a4a9"
+    },
+    {
+      "path": "firmware/brick-breaker-host-verification.json",
+      "bytes": 674,
+      "sha256": "dea2e73a4914637afa656695bf5f5659041484a2bf1bb8c3de8a42a4b8682f22"
+    },
+    {
+      "path": "firmware/brick-breaker-manifest.json",
+      "bytes": 1161,
+      "sha256": "496eeb4704d6049465e31f08285f1cad4c4622e21369c93a8fca699e98f0a80b"
+    },
+    {
+      "path": "firmware/brick-breaker-project-readback.json",
+      "bytes": 1849,
+      "sha256": "4ff81632617b41ffe18ddc0c19d2c51caba43ba8acb7dfbc2c5bbaf253e9a376"
+    },
+    {
+      "path": "firmware/brick-breaker-source.json",
+      "bytes": 409,
+      "sha256": "317e98aebdb13bb2f3719a7b781238837da11845698d936fa09cf51fec1692c7"
+    },
+    {
+      "path": "firmware/brick-breaker-validation.json",
+      "bytes": 1033,
+      "sha256": "3fdb7b3af87e4fb499372eda2bca9fae1c55070380e013b0177fe4267b6bd4e0"
+    },
+    {
+      "path": "firmware/brick-breaker-verification.json",
+      "bytes": 4103,
+      "sha256": "8994ca17a4dea341996ad20ec8e82f0ee0a128171e20e33659701c4ef71a5f69"
+    },
+    {
+      "path": "firmware/brick-breaker-verify-request.json",
+      "bytes": 10797,
+      "sha256": "6c088364a3279ecfec822d8e07de5584116b74217552371f7a223d84a682188a"
+    },
+    {
+      "path": "firmware/brick_breaker.c",
+      "bytes": 125425,
+      "sha256": "cd30bf4b2ea545786b0fcc7673dc3fd1c1e9a8cb08ed9a37b7ee96f5c649c7e4"
+    },
+    {
+      "path": "firmware/brick_breaker.gb",
+      "bytes": 32768,
+      "sha256": "708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5"
+    },
+    {
+      "path": "firmware/brick_breaker_font.py",
+      "bytes": 2463,
+      "sha256": "6ac619fa55bffb1a3c75329fb007ca866063f8f0c6a94236b65260bf18a7e38b"
+    },
+    {
+      "path": "firmware/brick_breaker_main.c",
+      "bytes": 5606,
+      "sha256": "3b97fb4952c4d07086c6ffb59e14a874771c8cd5144e561612b11d413e1f87c2"
+    },
+    {
+      "path": "firmware/brick_breaker_rom.h",
+      "bytes": 16872,
+      "sha256": "124e00a350677adba7d6f0b8fa70d2b96091b13fb6c60c395767aa12427b5c70"
     },
     {
       "path": "firmware/browser-revision3-assessment.json",
@@ -181,6 +261,16 @@
       "sha256": "83c6f3f136760e795c553abd85ac647164d24abfaff3580c6ffc532d64fd3d1d"
     },
     {
+      "path": "firmware/build_brick_breaker.py",
+      "bytes": 9711,
+      "sha256": "eed3b48dc279da302e63cb7ef6382190988aced8bb7ee942b6d4fdb016734315"
+    },
+    {
+      "path": "firmware/build_brick_breaker_firmware.py",
+      "bytes": 524,
+      "sha256": "e4de6f8f2675b02a4583ee14c31cc213d1b07e446728e2d3ff48a6c9520107b3"
+    },
+    {
       "path": "firmware/build_firmware.py",
       "bytes": 496,
       "sha256": "33fbf9ca80b227ded7e2d52d0ecffea10e5cf63c29c90e16dab0a01e0e630c40"
@@ -189,6 +279,11 @@
       "path": "firmware/build_rom.py",
       "bytes": 9044,
       "sha256": "4407334ad7684dd71576e7d2d4fb53d27b7641a586b4b10c5d5354ff5cee28ef"
+    },
+    {
+      "path": "firmware/capture_brick_breaker.py",
+      "bytes": 2971,
+      "sha256": "16c19c311a98878fe847cf2b19deb21f22ebb8fd0a23a19fad257b27c776135b"
     },
     {
       "path": "firmware/circuit.json",
@@ -229,6 +324,11 @@
       "path": "firmware/host-validation.json",
       "bytes": 788,
       "sha256": "c1f1d616d12e50bb3923bb8c03d74193349796384efb921117ee456cb247f85d"
+    },
+    {
+      "path": "firmware/host_brick_breaker.c",
+      "bytes": 4365,
+      "sha256": "712161485479744f59f2658f53834f0daf70f51d9a18eae75d083d8e17419a35"
     },
     {
       "path": "firmware/host_verify.c",
@@ -492,8 +592,8 @@
     },
     {
       "path": "media/README.md",
-      "bytes": 3670,
-      "sha256": "a65f1a860de57f8855ed7dbbdf346b3fd54775532e414edf7073ba65ab9d3413"
+      "bytes": 4156,
+      "sha256": "9165d447d36dd759a2a96c763a80afb895020ace9a3caab7cf2e351ce819125b"
     },
     {
       "path": "media/edit-promo.py",
@@ -529,6 +629,131 @@
       "path": "media/promo-provenance.json",
       "bytes": 2505,
       "sha256": "789333a8e0c000fa3af888f994b97ce62cea7a0e5f71be6a7cb62243c04a4826"
+    },
+    {
+      "path": "media/promo-v3/.gitignore",
+      "bytes": 21,
+      "sha256": "0cf256cc9234b415f912f5b0e9f8c9364688466041611047cd3f599c35f4efa6"
+    },
+    {
+      "path": "media/promo-v3/README.md",
+      "bytes": 7254,
+      "sha256": "28479b15a610b9405ec0ebfdc498711f3cf72d5c043574c533113bfc097a818d"
+    },
+    {
+      "path": "media/promo-v3/assets.json",
+      "bytes": 1864,
+      "sha256": "5b3c096f846146b030a46b12dc437bfb65cb674080bda37799767ada21a4a234"
+    },
+    {
+      "path": "media/promo-v3/audio/make_soundtrack.py",
+      "bytes": 5972,
+      "sha256": "16f107fdcfb501196a1692a96a92e7393fe17e364ea3832a22000412e28c1255"
+    },
+    {
+      "path": "media/promo-v3/audio/provenance.json",
+      "bytes": 492,
+      "sha256": "1362fdc052ac1d6cfaaf4d93c2f8c75091ba31853c3dd6fe0fb05f07e70cfacc"
+    },
+    {
+      "path": "media/promo-v3/evidence/audit/final/export-receipt.json",
+      "bytes": 2616,
+      "sha256": "b480c867a3f31f00abf7e00abbbe613daceaeb8ac1770c10c80162d40a6dd9b4"
+    },
+    {
+      "path": "media/promo-v3/evidence/audit/master/decode-audit.json",
+      "bytes": 3384,
+      "sha256": "b2c65e085036c4a06aaa5012278126a6f492c646416a6677d7d68ed3b8351ad7"
+    },
+    {
+      "path": "media/promo-v3/evidence/final-video-verification.json",
+      "bytes": 997,
+      "sha256": "ad8d9e79dae871283b8905479a9d84a3f2648b5de6ea1b6d4ae92d19cd7ce309"
+    },
+    {
+      "path": "media/promo-v3/evidence/portable-rebuild.json",
+      "bytes": 1514,
+      "sha256": "699e5ea6736e7d994db1f892cf162b470bac1b498808e908e6440032f8fef01b"
+    },
+    {
+      "path": "media/promo-v3/evidence/public-ui-observation.json",
+      "bytes": 1139,
+      "sha256": "85fba194b17328197b898506b8afe347c88c5b34578a5c6f19790be54504e063"
+    },
+    {
+      "path": "media/promo-v3/evidence/render-provenance.json",
+      "bytes": 3906,
+      "sha256": "15b9e7b548a3ebc7d654b66a8a5f34eab4d5455fd9f56bfcb3947a9999b79618"
+    },
+    {
+      "path": "media/promo-v3/evidence/render-receipt.json",
+      "bytes": 3111,
+      "sha256": "2b7c24959d290f530ea38173482f42dcd4fbf020ee7e255a60f4275b3c3c3027"
+    },
+    {
+      "path": "media/promo-v3/fetch_assets.py",
+      "bytes": 2855,
+      "sha256": "2d6f9c0e0090906de7336210119b5f3c87de22bbf2f7deb49b7fc5e5c37cf00b"
+    },
+    {
+      "path": "media/promo-v3/finish_promo.py",
+      "bytes": 1709,
+      "sha256": "275fd9af581f59511ed0c2fe9f468e9e5e1a1d74f54a6b7f17226c6d2b3ae0cc"
+    },
+    {
+      "path": "media/promo-v3/motion/prepare_mesh.py",
+      "bytes": 4004,
+      "sha256": "60f637dce8b7d70246fd652f2f421c1aaa3567c1ff8e57c50f940796e09f404f"
+    },
+    {
+      "path": "media/promo-v3/motion/record.py",
+      "bytes": 1807,
+      "sha256": "aa227abaf7ebf1606cf11e3333867d81da096a12162ecda0b1e84949a5d8b87e"
+    },
+    {
+      "path": "media/promo-v3/motion/render_cpu.cpp",
+      "bytes": 10494,
+      "sha256": "da2acec2ec6e35e56d86c0b5251f371fe52b54d9099f2ac45426c510b3e5f191"
+    },
+    {
+      "path": "media/promo-v3/pcb/build_copper_mesh.py",
+      "bytes": 4392,
+      "sha256": "6e0b71a2cdd25b2251650753a0773609b6e607c6725b860013129ba2e046b52e"
+    },
+    {
+      "path": "media/promo-v3/pcb/controller-texture-provenance.json",
+      "bytes": 1939,
+      "sha256": "eb7285ecc5a23afbe00186cd1abcae311b0caf11ae527ba34c44b19ed301ec2a"
+    },
+    {
+      "path": "media/promo-v3/pcb/extract_routing.py",
+      "bytes": 4628,
+      "sha256": "17b2a48f6c80988a0e01e8a1099f59b8ba5bbd1a0e1348a0fcd4379d3c7e3cd3"
+    },
+    {
+      "path": "media/promo-v3/pcb/routing-evidence.json",
+      "bytes": 847,
+      "sha256": "cdf020c36b9ea8eb507a8c4ecf370f2362d935b7a34f8e23e50e9394eba18bce"
+    },
+    {
+      "path": "media/promo-v3/promo.ass",
+      "bytes": 1762,
+      "sha256": "e74847eb20a76b10a3a242c285d0e5af8fbc8c9c204d435904a87e3fc6629023"
+    },
+    {
+      "path": "media/promo-v3/rebuild.py",
+      "bytes": 3059,
+      "sha256": "7ebb6fa7386bdadbe8cb0bac106c478887f6b7bfe96305e8fce0b95a77b76434"
+    },
+    {
+      "path": "media/promo-v3/requirements.txt",
+      "bytes": 42,
+      "sha256": "b6fecdd0e86fbc0277badc3d6fa6e28f92f33799c4e174e70e5037dbeaa76681"
+    },
+    {
+      "path": "media/promo-v3/source-manifest.json",
+      "bytes": 4807,
+      "sha256": "bc44df7a56dd428e9326936aa09c14bbfa8678e452ffa6879dfbf94341d3e1ad"
     },
     {
       "path": "media/promo-visual-qa.json",
@@ -774,5 +999,7 @@
     "readme": "media/README.md"
   },
   "scope": "Historical Wire Runner baseline, preserved with its original proof identities. The saved project now runs the Brick Breaker variant.",
-  "current_variant_manifest": "firmware/brick-breaker-artifacts.json"
+  "current_variant_manifest": "firmware/brick-breaker-artifacts.json",
+  "current_promotional_rebuild": "media/promo-v3/README.md",
+  "current_promotional_export_receipt": "media/promo-v3/evidence/final-video-verification.json"
 }

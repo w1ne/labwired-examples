@@ -1,0 +1,18 @@
+{
+  "schema": "labwired.promo-public-ui-observation.v1",
+  "date_utc": "2026-11-11",
+  "url": "https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1",
+  "account_state": "guest; no sign-in performed",
+  "project_title_observed": "Game Boy recreation — Brick Breaker",
+  "system_status_observed": "Running",
+  "initial_display": {"game": "BRICK BREAKER", "score": 0, "lives": 3, "prompt": "A TO LAUNCH"},
+  "input_checks": [
+    {"part": "btn-a", "action": "1500ms pointer hold and release", "result": "game launched; later screen showed score15 and lives2"},
+    {"part": "btn-right", "action": "1000ms pointer hold and release", "result": "paddle and waiting ball visibly moved right"}
+  ],
+  "inspection": "Visible DOM and screenshots via supported cloud browser",
+  "graphics_limit": "This browser could not initialize the KernelCAD 3D view. The Circuit view and simulated game worked.",
+  "video_method": "Offline deterministic CAD rendering with actual ROM framebuffer output. This UI observation is independent of the promotional render.",
+  "wall_clock_fps_measured": false,
+  "physical_hardware_tested": false
+}

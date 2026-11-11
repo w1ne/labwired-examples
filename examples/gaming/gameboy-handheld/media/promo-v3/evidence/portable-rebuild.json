@@ -1,0 +1,40 @@
+{
+  "schema": "labwired.promo-portable-rebuild.v1",
+  "date_utc": "2026-11-11",
+  "command": "python3 rebuild.py --output-dir BUILD --no-network --prepare-only",
+  "result": "pass",
+  "asset_source": "Previously fetched public assets, verified against assets.json; no network used during portability check.",
+  "byte_exact_inputs": {
+    "scene.bin": {
+      "match": true,
+      "sha256": "7dbdd1da3b1a08a4b58d556a19e47355291c689fd0fcfc3957e7bca28027a9f3"
+    },
+    "controls.bin": {
+      "match": true,
+      "sha256": "0c8222e61efa0f28e9c2964f13d7873a399e34d6e4f344c4f7b14bc8ece371ae"
+    },
+    "controller.ppm": {
+      "match": true,
+      "sha256": "08f76ca648dbe6692ab457366441bf22fa3ff6b1fc38506a450480f9584984dc"
+    },
+    "lcd.rgb": {
+      "match": true,
+      "sha256": "76bda322c1c4d016f46936ac6ba3b09f826ac4b136a3ab2fe538b777d6ecddb7"
+    },
+    "original-score.wav": {
+      "match": true,
+      "sha256": "99a796c97f8086d11407a96332cd34e0411ce145b4077906f8c1e2509a37ef40"
+    }
+  },
+  "renderer_smoke_check": {
+    "frame": 480,
+    "width": 320,
+    "height": 180,
+    "subpixel_samples": 1,
+    "ppm_bytes": 172815,
+    "sha256": "789153e493961af35f036e273d4312316522b074dfd28341258be52d9e048135",
+    "exit_code": 0
+  },
+  "full_1080_frame_rerender_repeated": false,
+  "note": "The delivered final master was independently rendered in the original workspace. This check validates the portable input pipeline, source compilation and one renderer frame without repeating the entire render."
+}

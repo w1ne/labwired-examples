@@ -1,5 +1,11 @@
 # Wire Runner recorded demonstration
 
+## Current 18-second Brick Breaker cut
+
+The current demonstration uses independently rendered CAD poses, the routed native carrier, a controller close view, and actual original-ROM gameplay. Portable source and reproduction instructions are in [promo-v3/README.md](promo-v3/README.md). The final 18-second, 60 fps MP4 is delivered separately; its metadata and provenance are retained with the rebuild sources.
+
+The remaining material below records the earlier Wire Runner app capture.
+
 [Watch the 57-second MP4](gameboy-wire-runner-promo.mp4).
 
 The video is **57.367 seconds**, **1920 × 1080**, **30 fps**, H.264/YUV420P, with silent captions and fast-start MP4 metadata. Its SHA-256 is `052b5fdbe0e2f68165461f3dec552bd7dc1776df714c393d82fdadf3ecad92d1`; its size is **4,770,240 bytes**.

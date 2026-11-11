@@ -1,0 +1,138 @@
+{
+  "file": "motion/geometry-master.mp4",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1",
+        "duration": "18.000000",
+        "nb_frames": "1080"
+      }
+    ]
+  },
+  "decoded_frames": 1080,
+  "pts_frame_count": 1080,
+  "pts_first": 0.0,
+  "pts_last": 17.983333,
+  "pts_min_step": 0.016665999999997183,
+  "pts_max_step": 0.016667000000001764,
+  "adjacent_identical_at_640x360": [],
+  "distinct_frames_at_640x360": 1080,
+  "metrics_note": "Mean absolute luma difference and percent pixels >10/255 difference, whole frame scaled to640x360. Camera transform easing can intentionally make endpoint steps nearly still.",
+  "phases": {
+    "hero": {
+      "range_frames": [
+        0,
+        90
+      ],
+      "median_MAD": 0.04767717361111111,
+      "max_MAD": 0.09392787586805555,
+      "median_changed_pct": 0.09266493055555555,
+      "max_changed_pct": 0.27951388888888884,
+      "nearly_still_steps_pct": 53.48837209302325,
+      "top_change_frames": [
+        38,
+        49,
+        34,
+        22,
+        43
+      ]
+    },
+    "explode": {
+      "range_frames": [
+        90,
+        300
+      ],
+      "median_MAD": 1.1570635703124998,
+      "max_MAD": 1.846691584201389,
+      "median_changed_pct": 3.003255208333333,
+      "max_changed_pct": 4.328559027777778,
+      "nearly_still_steps_pct": 4.854368932038835,
+      "top_change_frames": [
+        180,
+        185,
+        174,
+        187,
+        183
+      ]
+    },
+    "routing_controller": {
+      "range_frames": [
+        300,
+        510
+      ],
+      "median_MAD": 3.7446954157986108,
+      "max_MAD": 9.604985077256943,
+      "median_changed_pct": 7.141710069444445,
+      "max_changed_pct": 15.912760416666666,
+      "nearly_still_steps_pct": 1.9417475728155338,
+      "top_change_frames": [
+        332,
+        335,
+        331,
+        333,
+        334
+      ]
+    },
+    "reassemble": {
+      "range_frames": [
+        510,
+        720
+      ],
+      "median_MAD": 4.076224046875,
+      "max_MAD": 8.20877643142361,
+      "median_changed_pct": 7.882595486111111,
+      "max_changed_pct": 16.124131944444446,
+      "nearly_still_steps_pct": 0.9708737864077669,
+      "top_change_frames": [
+        579,
+        580,
+        578,
+        581,
+        584
+      ]
+    },
+    "game_full_device": {
+      "range_frames": [
+        720,
+        960
+      ],
+      "median_MAD": 0.04350817230902777,
+      "max_MAD": 0.08285331857638889,
+      "median_changed_pct": 0.08463541666666666,
+      "max_changed_pct": 0.2578125,
+      "nearly_still_steps_pct": 61.440677966101696,
+      "top_change_frames": [
+        841,
+        809,
+        869,
+        825,
+        846
+      ]
+    },
+    "game_macro": {
+      "range_frames": [
+        960,
+        1080
+      ],
+      "median_MAD": 0.6712704622395833,
+      "max_MAD": 1.237061099826389,
+      "median_changed_pct": 1.7899305555555556,
+      "max_changed_pct": 2.907986111111111,
+      "nearly_still_steps_pct": 4.310344827586207,
+      "top_change_frames": [
+        1038,
+        1035,
+        1041,
+        1036,
+        1032
+      ]
+    }
+  },
+  "receipt_path_normalization": "Original absolute recording workspace prefix removed; observations and numerical results unchanged."
+}
