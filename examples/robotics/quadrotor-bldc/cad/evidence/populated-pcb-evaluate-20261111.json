@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 3716.3992797283017
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            54.822170476226,
+            -69.80000000000099,
+            -3.080000000000001
+          ],
+          "max": [
+            96.442969523774,
+            -27.29999999999999,
+            3.25
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-tCJyhq",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 3716.3992797283017,
+    "faceCount": 8272,
+    "size": [
+      41.620799047548,
+      42.500000000001,
+      6.330000000000001
+    ]
+  },
+  "featureCount": 1,
+  "diagnostics": [],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "c3f0fbf6c33545ba729e3b011aa0397c1e465f30e019afa63edb8415ee9aaef7",
+      "byteLength": 95
+    },
+    "parameters": {
+      "values": {},
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "72e5cd4fd02a3dacb5ba854eb0d3f345d6d20a19"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "aadde0e17410d75765cf195b5b989136d7219ced4358894febdb4c93cdab9e1c"
+  },
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "serverBuild": "0.1.0+72e5cd4fd02a@2026-11-11T13:09:28.200Z"
+}

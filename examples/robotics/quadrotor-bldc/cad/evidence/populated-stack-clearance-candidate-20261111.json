@@ -1,0 +1,77 @@
+{
+  "status": "PROPOSED_NOT_QUALIFIED",
+  "savedProjectUnchanged": {
+    "slug": "DyJ405zg",
+    "revision": 3
+  },
+  "sources": {
+    "nativePcbSha256": "ab2524a932f3c47e131fda7b48d14c399cc004f7f3c0415c717e580d49508ccf",
+    "nativePcbCommit": "619a61230add2ea3bd3e8a4f9d278a75ad396d04",
+    "frame": "36-solid revision-3 STEP reimport"
+  },
+  "nativePcbZ": {
+    "min": -3.08,
+    "max": 3.25
+  },
+  "frameMiddleZ": {
+    "min": 6,
+    "max": 9
+  },
+  "frameTopZ": {
+    "min": 29,
+    "max": 31.5
+  },
+  "savedRevision3": {
+    "escTranslationZ": 12.4,
+    "populatedPcbMinZ": 9.32,
+    "nominalLowerSeparationMm": 0.32,
+    "fcEnvelopeZ": {
+      "min": 20,
+      "max": 21.6
+    }
+  },
+  "proposedLiftMm": 2,
+  "candidate": {
+    "escTranslationZ": 14.4,
+    "escGrommetHeight": 5.4,
+    "populatedPcbMinZ": 11.32,
+    "nominalLowerSeparationMm": 2.32,
+    "fcGrommetBaseZ": 15.93,
+    "fcEnvelopeZ": {
+      "min": 22,
+      "max": 23.6
+    },
+    "nominalFcEnvelopeToTopFrameMm": 5.4
+  },
+  "limitations": [
+    "Only coordinate and bounding-envelope arithmetic is established.",
+    "Compressed grommet height, FC components and connector overhang remain assumptions.",
+    "No complete physical assembly path, gravity stability or populated-PCB BREP clearance pass.",
+    "Rotor part names, joint names and pivots remain unchanged."
+  ],
+  "nativeComponentMesh": {
+    "sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+    "triangleCount": 56072,
+    "componentReferenceCount": 213,
+    "substrateExcluded": true,
+    "coordinateTransform": "glTF [x,y,z] metres -> CAD [x,-z,y] millimetres",
+    "purpose": "Visual component geometry alongside the exact BREP substrate; no BREP collision claim."
+  },
+  "platformDefects": [
+    {
+      "kind": "memory-limit",
+      "limitMb": 1024,
+      "observedMb": 1028
+    },
+    {
+      "kind": "hosted-input-preprocessing",
+      "message": "meshFromSTL uploads are not staged.",
+      "patchRepository": "w1ne/kernelCAD-server",
+      "patchCommit": "39b9d6da9d56a1ce10be756c75d171b826034531",
+      "localTests": 40,
+      "typecheckExit": 0,
+      "deployed": false,
+      "pullRequest": "https://github.com/w1ne/kernelCAD-server/pull/655"
+    }
+  ]
+}

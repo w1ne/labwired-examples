@@ -1,0 +1,67 @@
+{
+  "ok": false,
+  "buildOk": false,
+  "step": {
+    "validity": {
+      "status": "invalid",
+      "checks": [
+        "build",
+        "feature-health"
+      ]
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "error": "No exportable finite geometry for the step pair."
+    }
+  },
+  "sceneSummary": {
+    "valid": null,
+    "volume": null,
+    "faceCount": null,
+    "size": null
+  },
+  "featureCount": 0,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "feature.invalid-args",
+      "severity": "error",
+      "message": "lib.meshFromSTL: cannot read file at /app/dist/vendor/kernelcad/upload:0.",
+      "hint": "invalid-args.lib.meshFromSTL.path — verify the path 'upload:0' resolves under the script's directory; absolute paths are also accepted.",
+      "nextAction": {
+        "kind": "fix-arg",
+        "field": "see-message"
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.thread",
+      "severity": "info",
+      "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+      "hint": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "M4 threaded hole tap drill"
+        }
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.hole-by-cylinder",
+      "severity": "info",
+      "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+      "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "clearance hole through plate"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "serverBuild": "0.1.0+fd6e8014e638@2026-11-11T13:47:33.109Z"
+}
