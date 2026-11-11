@@ -1,0 +1,161 @@
+{
+  "result": "baseline_complete_after_condition_blocked",
+  "performance_improvement_verified": false,
+  "baseline": {
+    "requested_wait_seconds": 5,
+    "sample_start_utc": "2026-11-11T22:56:12.554Z",
+    "sample_end_utc": "2026-11-11T22:56:20.440Z",
+    "parent_clock_ms": [
+      99144.90000003576,
+      106216.90000003576
+    ],
+    "parent_interval_seconds": 7.072,
+    "child_clock_ms": [
+      38901.69999998808,
+      46553.89999997616
+    ],
+    "child_interval_seconds": 7.652199999988079,
+    "uart_observation_clock_ms": [
+      97541,
+      106216.60000002384
+    ],
+    "uart_interval_seconds": 8.675600000023842,
+    "snapshot_age_at_parent_sample_ms": [
+      1603.9000000357628,
+      0.30000001192092896
+    ],
+    "game_frames": [
+      258,
+      294
+    ],
+    "game_frames_per_observation_second": 4.149568905885595,
+    "game_phases": [
+      1,
+      1
+    ],
+    "all_completed_request_phases": [
+      1
+    ],
+    "simulation_counter": [
+      231428971,
+      261428971
+    ],
+    "counter_units_per_observation_second": 3457974.0882379957,
+    "cad_display_bearing_messages": [
+      4,
+      7
+    ],
+    "cad_display_bearing_messages_per_child_second": 0.39204411803202655,
+    "cad_runtime_messages": [
+      28,
+      31
+    ],
+    "fully_contained_worker_requests": 5,
+    "fully_contained_request_durations_ms": [
+      1361,
+      1398.199999988079,
+      1348.5999999642372,
+      1357.1000000238419,
+      1606
+    ],
+    "worker_duration_median_ms": 1361,
+    "worker_duration_mean_ms": 1414.1799999952316,
+    "worker_duration_max_ms": 1606,
+    "replies_arriving_in_parent_window": 6,
+    "replies_arriving_median_ms": 1379.5999999940395,
+    "parent_focused": [
+      true,
+      true
+    ],
+    "parent_visibility": [
+      "visible",
+      "visible"
+    ],
+    "child_visibility": [
+      "visible",
+      "visible"
+    ],
+    "input": {
+      "native_pointer_hold_requested_ms": 1500,
+      "worker_commands": [
+        {
+          "at": 41766.80000001192,
+          "method": "setBoardIoInput",
+          "args": [
+            "btn-a",
+            true
+          ]
+        },
+        {
+          "at": 44666.700000047684,
+          "method": "setBoardIoInput",
+          "args": [
+            "btn-a",
+            false
+          ]
+        }
+      ],
+      "pressed_uart_marker_retained": true,
+      "released_uart_marker_retained": false,
+      "all_eight_inputs_released_in_both_sample_frames": true
+    },
+    "cleanup_warning": "Optional final Pause click timed out after before/after/frame records and screenshot were saved. The browser then closed.",
+    "screenshot": "baseline.png"
+  },
+  "after_condition": {
+    "sample_complete": false,
+    "stage": "loading-circuit",
+    "failure": "Native Preview click timed out after15s before A input. The locator was visible, enabled and stable; scroll completed; the trace reached performing click action without completion acknowledgement.",
+    "pointer_dispatch_verified": false,
+    "renderer_crash_recorded": false,
+    "after_firmware_init_record_retained": false,
+    "actual_wasm_response_sha256": "0ccceb8db3fe4a3a4e1f25cdfecbfb9a568c81f2ef0f2bc15a6a20198e092421"
+  },
+  "interpretation": [
+    "One instrumented Vite-development baseline in fresh headless Chromium145; not a production frame-rate guarantee.",
+    "Use each recorded context clock. Do not divide all deltas by the requested5s wait.",
+    "CAD rate counts display-bearing postMessages, not rendered or presented pixel frames.",
+    "Five worker requests began and completed inside the parent window; one additional reply began before it.",
+    "p95 is omitted with only five fully-contained requests; raw durations are retained.",
+    "The failed after setup provides no supportable improvement, regression, or causal conclusion.",
+    "The trace cannot distinguish an incomplete native dispatch from dispatch followed by an unresponsive renderer."
+  ],
+  "provenance": {
+    "ui_base": "6093f09869e99c28e079dee5c4a1d018434b9966",
+    "worker_commit": "a426ab0651f984527907ef9c4bd7543347833ceb",
+    "bridge_commit": "bcb81d250ffb254026e5cafed6d4350822e15f86",
+    "baseline_firmware_sha256": "e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28",
+    "baseline_firmware_bytes": 210992,
+    "actual_wasm_sha256": "0ccceb8db3fe4a3a4e1f25cdfecbfb9a568c81f2ef0f2bc15a6a20198e092421",
+    "actual_wasm_bytes": 12400007,
+    "packaged_glue_sha256": "d7459741ce016448364d0272b430df90c024258bd88d7f989078760ed076b862",
+    "downloaded_public_glue_sha256": "9de2fcae6152917c85c09f46517b26964235769de6b7e81c87155ac7a2ff8bd4",
+    "glue_note": "Five generated Cast intrinsic comment lines differ from the shipped public glue; all executable lines are identical.",
+    "browser": {
+      "version": "145.0.7632.6",
+      "playwright": "1.58.0",
+      "viewport": {
+        "width": 1408,
+        "height": 771
+      },
+      "headless": true,
+      "args": [
+        "--disable-dev-shm-usage"
+      ],
+      "freshContext": true
+    },
+    "source_before": {
+      "packages/ui/src/sim/SimHost.ts": "92f9431b7aa38b15e84931c70958ce834f4201b0cc32a8d80cfd5cbcbd1feea9",
+      "packages/playground/src/workerEngine.ts": "532cb85b915fc8fbd53ba11ef8628ecdf3aa1cfd0a0547c19c1ba8557b03607d",
+      "packages/playground/src/mechanical/kernelcadRuntime.ts": "e002e277b8949c12b0b87619b0a055204c8be929f4edbd620b002cb0fa0c82ba",
+      "packages/playground/src/mechanical/useKernelCadElectronics.ts": "088b28e877aa582996424b99715f0269d6cf5dd734bcd19ea7fb1263037528bd"
+    },
+    "source_after": {
+      "packages/ui/src/sim/SimHost.ts": "e2462d96c7ef827eb9ad6fb552bbc8f44f8243bc39746f53c279856ea918498f",
+      "packages/playground/src/workerEngine.ts": "0d907ec88ecb82f00f7e56ee733eb79dd7ba0914de1e0ae7d80505d547c8ebf6",
+      "packages/playground/src/mechanical/kernelcadRuntime.ts": "6444360f0b9ce2bead8885dfd083ba1a42e0f85d9cf97f1f0b34cb0b92c88b76",
+      "packages/playground/src/mechanical/useKernelCadElectronics.ts": "9f501e5380815d55cea98508d29870aa6b58ecfe56c28c99e39a8be36c5d5b08"
+    },
+    "bridge_hash_confirmation": "Independently re-fetched from exact remote PR3124 commit; both local/copy SHA256 values match."
+  }
+}

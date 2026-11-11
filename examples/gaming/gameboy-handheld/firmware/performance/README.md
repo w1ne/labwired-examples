@@ -139,3 +139,21 @@ GPIO inputs, all eight CAD controls, the LCD binding, real SPI writes, CAD
 geometry, native PCB reference and unlisted visibility are preserved.
 The hosted model retains its documented CPU-derived timing and ideal-supply
 approximations. No physical-hardware timing is measured.
+
+## Application snapshot investigation
+
+The separate [worker and CAD browser evidence](worker-browser-evidence/README.md)
+records an instrumented local application baseline using this optimized ELF.
+The baseline completed, but the proposed application condition timed out during
+Preview preparation before input or measurement. It establishes no measured
+application performance improvement or regression. The summary uses each
+context's actual observation clock and labels CAD counts as display-bearing
+messages, not render or presentation FPS.
+
+[Worker PR3126](https://github.com/w1ne/labwired/pull/3126) and
+[CAD bridge PR3124](https://github.com/w1ne/labwired/pull/3124) are separate
+application changes. This evidence save does not deploy either patch. The
+verified firmware promotion and its earlier Circuit comparison above remain
+the delivered result. Exact source/runtime receipts, observer programs, the
+baseline screenshot and the failed-after trace are retained without WASM or
+ELF binaries.

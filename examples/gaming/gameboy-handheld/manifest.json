@@ -126,7 +126,9 @@
     "browser_brick_breaker_cad": "media/promo-v4/browser-verification.json",
     "brick_breaker_speed_promotion": "firmware/performance/promotion-receipt.json",
     "brick_breaker_browser_speed": "firmware/performance/browser-circuit-comparison.json",
-    "brick_breaker_optimized_saved_browser": "firmware/performance/saved-project-browser.json"
+    "brick_breaker_optimized_saved_browser": "firmware/performance/saved-project-browser.json",
+    "worker_browser_snapshot_observation": "firmware/performance/worker-browser-evidence/summary.json",
+    "worker_browser_snapshot_manifest": "firmware/performance/worker-browser-evidence/manifest.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -364,8 +366,8 @@
     },
     {
       "path": "firmware/performance/README.md",
-      "bytes": 7436,
-      "sha256": "42c54a87f0e40a155427c7c25e2ee127432df5c2e6d43def2dafd65cde77605b"
+      "bytes": 8440,
+      "sha256": "ab7f160039a05b6dbefccd15db0a20ddf59b3df6d92d5bdb1ba221f4cdd1dd6b"
     },
     {
       "path": "firmware/performance/baseline-run-request.json",
@@ -451,6 +453,56 @@
       "path": "firmware/performance/saved-project-browser.json",
       "bytes": 1672,
       "sha256": "102bd9ddb77308a5fa8e5d572e996be5766cb7d74135af097ee6eda4516de030"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/README.md",
+      "bytes": 5196,
+      "sha256": "c8a1abf7557b4a831dc0c15852fb1d15c7937fb4cea247371f7c4be70b78a614"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/baseline-cleanup-warning.json",
+      "bytes": 2265,
+      "sha256": "d504bf5b53889ad905988e7ba10e2ad3d79de383dfb6475396bc031a1e628f26"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/baseline.json",
+      "bytes": 28310,
+      "sha256": "24bb2766bdefa45a371fca8a76e8f74024f6441517cd97d2ddbc82197c2e32c3"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/baseline.png",
+      "bytes": 78771,
+      "sha256": "7eae43d640b3d61accd2bc78dc40b8d6d7ab3b4768b3716554c38d036dc54ae7"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/failed-after.json",
+      "bytes": 2078,
+      "sha256": "06400641c6a07afbd26add7d62686bf248dcf77fe8130caba263d8d2d72d05c9"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/harness-after.mjs",
+      "bytes": 9308,
+      "sha256": "4928ed1323a5ad193c6347b32c395b1f20f3d407da118a77464d3e66973072ae"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/harness-before.mjs",
+      "bytes": 9294,
+      "sha256": "d352d609a477f94c3b94a9c9a310d2a473613f27507dceef39058d046221463c"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/runtime-receipts.json",
+      "bytes": 1369,
+      "sha256": "9affbecea6c41a7f0d7ef3d93bcc97c5f646799d39697f902b5c0d13dd276707"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/source-receipts.json",
+      "bytes": 3996,
+      "sha256": "5e5eca4741885e88a602cf6405ac4e5ab89c8beb64d0870436ae2024c5673710"
+    },
+    {
+      "path": "firmware/performance/worker-browser-evidence/summary.json",
+      "bytes": 6200,
+      "sha256": "f589a3de2fe257a2c098e6c969ded146b0cb8909f06073360a79b1d99027efec"
     },
     {
       "path": "firmware/production-view/README.md",

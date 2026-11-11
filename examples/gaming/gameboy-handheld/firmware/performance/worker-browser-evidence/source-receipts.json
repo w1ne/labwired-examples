@@ -1,0 +1,69 @@
+{
+  "baseline": {
+    "base": "6093f09869e99c28e079dee5c4a1d018434b9966",
+    "mode": "vite-development",
+    "url": "http://127.0.0.1:5189/?share=LCJ99z8RFJGi&run=1",
+    "changes": "none",
+    "sourceSha256": {
+      "packages/ui/src/sim/SimHost.ts": "92f9431b7aa38b15e84931c70958ce834f4201b0cc32a8d80cfd5cbcbd1feea9",
+      "packages/playground/src/workerEngine.ts": "532cb85b915fc8fbd53ba11ef8628ecdf3aa1cfd0a0547c19c1ba8557b03607d",
+      "packages/playground/src/mechanical/kernelcadRuntime.ts": "e002e277b8949c12b0b87619b0a055204c8be929f4edbd620b002cb0fa0c82ba",
+      "packages/playground/src/mechanical/useKernelCadElectronics.ts": "088b28e877aa582996424b99715f0269d6cf5dd734bcd19ea7fb1263037528bd"
+    },
+    "runtimeSha256": {
+      "labwired_wasm.js": "9de2fcae6152917c85c09f46517b26964235769de6b7e81c87155ac7a2ff8bd4",
+      "labwired_wasm_bg.wasm": "0ccceb8db3fe4a3a4e1f25cdfecbfb9a568c81f2ef0f2bc15a6a20198e092421"
+    },
+    "environment": {
+      "VITE_DISABLE_AUTH": "true"
+    },
+    "environmentNote": "Documented local development mode. Public shared project; remote API authorization remains enforced.",
+    "packagedGlueSha256": "d7459741ce016448364d0272b430df90c024258bd88d7f989078760ed076b862",
+    "packagedGlueDifference": "Five generated Cast intrinsic comment lines differ from the shipped public glue; all executable lines are identical.",
+    "inputMethod": "Actual Circuit A, normal Pause, KernelCAD view, normal Run command attempted",
+    "harnessSha256": "d352d609a477f94c3b94a9c9a310d2a473613f27507dceef39058d046221463c",
+    "browser": {
+      "version": "145.0.7632.6",
+      "playwright": "1.58.0",
+      "viewport": {
+        "width": 1408,
+        "height": 771
+      },
+      "headless": true,
+      "args": [
+        "--disable-dev-shm-usage"
+      ],
+      "freshContext": true
+    }
+  },
+  "after": {
+    "base": "6093f09869e99c28e079dee5c4a1d018434b9966",
+    "mode": "vite-development",
+    "url": "http://127.0.0.1:5189/?share=LCJ99z8RFJGi&run=1",
+    "changes": {
+      "packages/ui/src/sim/SimHost.ts": "a426ab0651f984527907ef9c4bd7543347833ceb",
+      "packages/playground/src/workerEngine.ts": "a426ab0651f984527907ef9c4bd7543347833ceb",
+      "packages/playground/src/mechanical/kernelcadRuntime.ts": "bcb81d250ffb254026e5cafed6d4350822e15f86",
+      "packages/playground/src/mechanical/useKernelCadElectronics.ts": "bcb81d250ffb254026e5cafed6d4350822e15f86"
+    },
+    "sourceSha256": {
+      "packages/ui/src/sim/SimHost.ts": "e2462d96c7ef827eb9ad6fb552bbc8f44f8243bc39746f53c279856ea918498f",
+      "packages/playground/src/workerEngine.ts": "0d907ec88ecb82f00f7e56ee733eb79dd7ba0914de1e0ae7d80505d547c8ebf6",
+      "packages/playground/src/mechanical/kernelcadRuntime.ts": "6444360f0b9ce2bead8885dfd083ba1a42e0f85d9cf97f1f0b34cb0b92c88b76",
+      "packages/playground/src/mechanical/useKernelCadElectronics.ts": "9f501e5380815d55cea98508d29870aa6b58ecfe56c28c99e39a8be36c5d5b08"
+    },
+    "runtimeSha256": {
+      "labwired_wasm.js": "9de2fcae6152917c85c09f46517b26964235769de6b7e81c87155ac7a2ff8bd4",
+      "labwired_wasm_bg.wasm": "0ccceb8db3fe4a3a4e1f25cdfecbfb9a568c81f2ef0f2bc15a6a20198e092421"
+    },
+    "environment": {
+      "VITE_DISABLE_AUTH": "true"
+    },
+    "environmentNote": "Documented local development mode. Public shared project; remote API authorization remains enforced.",
+    "packagedGlueSha256": "d7459741ce016448364d0272b430df90c024258bd88d7f989078760ed076b862",
+    "packagedGlueDifference": "Five generated Cast intrinsic comment lines differ from the shipped public glue; all executable lines are identical.",
+    "inputMethod": "Actual Circuit A, normal Pause, KernelCAD view, normal Run command attempted",
+    "harnessSha256": "4928ed1323a5ad193c6347b32c395b1f20f3d407da118a77464d3e66973072ae",
+    "harnessDifference": "Skip a pre-input click when Circuit is already selected; omit optional post-sample Pause. All measured input, Pause/CAD/Run, warmup, sample, camera and observers are identical."
+  }
+}
