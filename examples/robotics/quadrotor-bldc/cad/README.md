@@ -114,3 +114,10 @@ grommet height, FC component heights and connector overhang remain unverified.
 Both candidate sources, both failure receipts and the stack calculation are
 preserved in this directory. The recorded live-motion fixture remains pinned
 to saved revision 3.
+
+
+## Standalone native PCB display limit
+
+The exact populated STEP remains a valid native geometry export. A separate unlisted KernelCAD project saved its source successfully, but its interactive display mesh failed: the revision-mesh worker used 906 MB against its 896 MB limit. The preview worker separately exceeded the same limit at 903 MB. This is not a ready interactive PCB view, and it does not establish populated in-frame clearance.
+
+The [save and failure receipt](evidence/native-pcb-studio-save-20261111.json) preserves the project/version, exact STEP hash and observed errors. The [native STEP](../hardware/esc-4in1/fabrication-review/esc-board-populated.step) and native KiCad files remain available. The saved airframe project stays at revision 3.
