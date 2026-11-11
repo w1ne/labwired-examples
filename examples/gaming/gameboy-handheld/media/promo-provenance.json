@@ -1,0 +1,78 @@
+{
+  "output": {
+    "output": "gameboy-wire-runner-promo.mp4",
+    "sha256": "052b5fdbe0e2f68165461f3dec552bd7dc1776df714c393d82fdadf3ecad92d1",
+    "bytes": 4770240,
+    "duration_seconds": 57.367,
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "pixel_format": "yuv420p",
+    "audio_streams": 0,
+    "faststart": true
+  },
+  "sources": [
+    {
+      "path": "raw/circuit-and-pcb.webm",
+      "seconds": 1350.2,
+      "video": {
+        "index": 0,
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1"
+      },
+      "sha256": "edaa026c4835d1663c55c566fc54a6930d149977a775d235b8095c01a04d79eb"
+    },
+    {
+      "path": "raw/controls-and-enclosure.webm",
+      "seconds": 208.6,
+      "video": {
+        "index": 0,
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1"
+      },
+      "sha256": "fd78f9fb85965cb771263d73534e94e13d4f89df9dbf28c88c05c88ec8c49a55"
+    }
+  ],
+  "clip_manifest": "promo-clips.json",
+  "full_edit_record": "promo-edit.json",
+  "ffprobe": "promo-ffprobe.json",
+  "visual_qa": "promo-visual-qa.json",
+  "contact_sheet": "promo-contact-sheet.jpg",
+  "control_proof": "runtime-control-proof.json",
+  "editing": {
+    "method": "Hard cuts; full source frame; real-time playback; silent; no external media.",
+    "source_fps": "25/1",
+    "output_fps": "30/1",
+    "frame_rate_conversion": "Frame sampling/repetition; playback speed unchanged",
+    "intro_seconds": 2.5,
+    "outro_seconds": 4,
+    "captions": "Outside the complete recorded app frame"
+  },
+  "scope": {
+    "firmware": "Actual STM32 firmware in simulation; no physical hardware footage",
+    "pcb_2d": "Exact native KiCad routing",
+    "pcb_3d": "Selected-net highlights represent connected pads, not current",
+    "exploded": "Assembly inspection, not a validated assembly sequence",
+    "deployment": "Actual app execution through production-asset GET response proxies; public deployment verification is separate"
+  },
+  "excluded": {
+    "intermediate_failed_control_take_seconds": [
+      21,
+      34
+    ],
+    "old_dev_loading_error_bad_orbit_intervals": true
+  },
+  "locked_for_delivery_at": "2026-11-11T15:22:11.371483+00:00",
+  "raw_capture_files_in_repository": false
+}

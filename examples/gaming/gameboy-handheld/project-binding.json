@@ -18,9 +18,7 @@
     "native_source_sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df",
     "attached_board_id": "pcb_c8da1d7776dba9bc",
     "status": "native-preserved-independent-drc-passed-attached",
-    "pending_requirements": [
-      "live-production-board-cad-firmware-proof"
-    ],
+    "pending_requirements": [],
     "attached_board_rev": 0,
     "requested_import_mode": "preserve",
     "local_preserve_preflight": "pcb/native-preserve-preflight/local-preserve-drc-preflight.json",
@@ -73,5 +71,15 @@
     "max_steps": 50000000,
     "proof": "oracle",
     "oracle_source": "declared"
+  },
+  "browser_runtime_proof": {
+    "evidence": "media/runtime-control-proof.json",
+    "scope": "Actual simulated MCU, manual Right press/release and live LCD on production builds served through GET response proxies; final public deployment is a separate release check."
+  },
+  "promotional_video": {
+    "path": "media/gameboy-wire-runner-promo.mp4",
+    "sha256": "052b5fdbe0e2f68165461f3dec552bd7dc1776df714c393d82fdadf3ecad92d1",
+    "bytes": 4770240,
+    "duration_seconds": 57.367
   }
 }

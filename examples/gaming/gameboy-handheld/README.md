@@ -7,6 +7,7 @@ This example joins an STM32F411 Game Boy emulator, an original playable ROM, a r
 - [LabWired saved project](https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1)
 - [Original firmware checkpoint](https://app.labwired.com/?share=aV3vKsFaQjTi&run=1)
 - [KernelCAD assembly, revision 3](https://app.kernelcad.com/p/kQAFdaQs?version=3)
+- [57-second recorded demonstration](media/gameboy-wire-runner-promo.mp4)
 
 In the LabWired circuit, select **Preview** to operate the on-screen buttons. Let the firmware initialize the display. Hold a direction button to move the chip and collect the diamond. A increases movement speed, B resets the position and score, Start pauses, and Select changes the palette. The project's button `key` attributes are descriptive; global keyboard mappings are not implemented by the generic button component.
 
@@ -51,6 +52,8 @@ The display is the Waveshare 2.4-inch ILI9341 module with a 70.5 × 43.3 mm PCB 
 | Exact-source preservation and generated-rule DRC | Local pass: original 573,344-byte PCB retained; 0 preparation network calls; KiCad 9.0.2 reports 0 violations and 0 unconnected items with the generated rule bundle | `pcb/native-preserve-preflight/local-preserve-drc-preflight.json` and adjacent raw reports/rules |
 | Hosted native source preservation and attachment | Pass: exact 573,344-byte source and 12,524-byte rules read back; board `pcb_c8da1d7776dba9bc`, rev 0; only two PCB project fields changed | `pcb/hosted-native-integration/` |
 | Independent hosted native DRC | Pass, KiCad 9.0.2, zero warnings; exact preserved PCB/rules refs; schematic parity not checked | `pcb/hosted-native-integration/independent-drc.json` |
+| 3D controls and live display in the browser | Actual Right press/release; UART EF then FF; player x = 48 to 87; three distinct LCD hashes; all nine bindings accepted. Production-build GET proxies; deployment is separate | `media/runtime-control-proof.json`; underlying observation beside it |
+| Recorded demonstration | 57.367 s, 1080p30 H.264, silent captions; full decode and ten-chapter visual review pass | `media/README.md`, MP4, provenance and contact sheet |
 | CAD static design loop | Pass for revision 3, 59 parts, 400 features, valid geometry | `mechanical/revision-3/evaluation.json`; `design-loop.json` in the same directory |
 | Independent fixed-mate review | 59 parts, 58 solved fixed mates, 1 static pose; 0 actionable interference | `mechanical/revision-3/independent-mates.json` |
 | Nominal button and access checks | 8 single-control maximum-pretravel variants, 4 driver corridors and a 30 mm USB withdrawal sweep have no blocking collision diagnostics | `mechanical/revision-3/pose-checks.json`; `collision-regression.json` records the D-pad correction |

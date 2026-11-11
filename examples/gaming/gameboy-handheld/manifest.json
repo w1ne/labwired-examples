@@ -18,7 +18,9 @@
     "browser_owner_rendering_verified": false,
     "saved_project_verification": "declared_oracle_passed_for_current_content_hash",
     "hosted_native_pcb": "exact_source_readback_and_independent_kicad_drc_passed",
-    "generic_electronics_bindings": "saved_and_oracle_verified"
+    "generic_electronics_bindings": "saved_and_oracle_verified",
+    "generic_electronics_browser": "production_build_right_press_release_and_live_lcd_passed",
+    "promotional_video": "actual_app_capture_full_decode_and_visual_review_passed"
   },
   "target": {
     "board": "stm32f411ceu6-blackpill",
@@ -113,7 +115,11 @@
     "electronics_bindings": "mechanical/revision-3/electronics-bindings-provenance.json",
     "saved_project_verification_before_electronics": "firmware/saved-project-verification.json",
     "final_project_readback": "firmware/final-project-binding-readback.json",
-    "browser_production_snapshot_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41"
+    "browser_production_snapshot_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+    "browser_live_controls": "media/runtime-control-proof.json",
+    "browser_live_control_observation": "media/runtime-control-observation.json",
+    "promotional_video": "media/promo-provenance.json",
+    "promotional_video_qa": "media/promo-visual-qa.json"
   },
   "omitted_generated_files": [
     "ELF",
@@ -131,8 +137,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 18994,
-      "sha256": "b86dfdf01946b3784e7cd7c975052a98b559623091c7110e0785d00b2ae334da"
+      "bytes": 19536,
+      "sha256": "e5745a58ce4dfe9e84b98702bf2a07a83125913031386d65ac4d1ad30af9ac37"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -485,6 +491,61 @@
       "sha256": "03be6fae19efbf02edb30170eb56d3221e3572ab9db8ace29e205a4bc3255758"
     },
     {
+      "path": "media/README.md",
+      "bytes": 3670,
+      "sha256": "a65f1a860de57f8855ed7dbbdf346b3fd54775532e414edf7073ba65ab9d3413"
+    },
+    {
+      "path": "media/edit-promo.py",
+      "bytes": 22612,
+      "sha256": "9e3086caf94fbf9acd4d73d50ace054ec59ae264276fc9a821858b87617034a7"
+    },
+    {
+      "path": "media/gameboy-wire-runner-promo.mp4",
+      "bytes": 4770240,
+      "sha256": "052b5fdbe0e2f68165461f3dec552bd7dc1776df714c393d82fdadf3ecad92d1"
+    },
+    {
+      "path": "media/promo-clips.json",
+      "bytes": 2228,
+      "sha256": "e526b79af1a60e4df4dd2845ffbb3007524cae46af765e8ab985acab1680ba80"
+    },
+    {
+      "path": "media/promo-contact-sheet.jpg",
+      "bytes": 221680,
+      "sha256": "322a814a7eb8ea3a0346ec10b59ff6074e8e56fcf88780db96b6b1060404854a"
+    },
+    {
+      "path": "media/promo-edit.json",
+      "bytes": 24501,
+      "sha256": "ba2d405ecbe2b6976d05494d5308e362230b42f97630b337945d23f61ce9e07f"
+    },
+    {
+      "path": "media/promo-ffprobe.json",
+      "bytes": 5651,
+      "sha256": "96631cfa478d47b96694917869443960ce869d2f48244a3065a5b8f6deb46859"
+    },
+    {
+      "path": "media/promo-provenance.json",
+      "bytes": 2505,
+      "sha256": "789333a8e0c000fa3af888f994b97ce62cea7a0e5f71be6a7cb62243c04a4826"
+    },
+    {
+      "path": "media/promo-visual-qa.json",
+      "bytes": 2373,
+      "sha256": "19bafea13577123591b599de1ac036f55f9205f418c255924bfb9084ff949912"
+    },
+    {
+      "path": "media/runtime-control-observation.json",
+      "bytes": 42393,
+      "sha256": "c7ccced5c687d61ae93f2c04def7b22a6ad42473e884b092d5646ac5bba9b6e7"
+    },
+    {
+      "path": "media/runtime-control-proof.json",
+      "bytes": 5482,
+      "sha256": "08d6aeca5dcfde77f4454938c4db357984dd4741cf181ec8f166290c1733e442"
+    },
+    {
       "path": "pcb/README.md",
       "bytes": 14380,
       "sha256": "b0e357a93d3f2fef5d088cd45f29a5a97e889061d8b0fa26363b0a1b5c2bf62d"
@@ -696,8 +757,8 @@
     },
     {
       "path": "project-binding.json",
-      "bytes": 3474,
-      "sha256": "bb9882dfb2593d548faae437520d4e3ca79ec6ab257bfdb443122518751ae2bc"
+      "bytes": 3910,
+      "sha256": "c1feb48cc15cfa174adb046c3c79dd5ba310a671fdb446561ee72e493997d5d1"
     },
     {
       "path": "source-provenance.json",
@@ -706,5 +767,10 @@
     }
   ],
   "control_verification_arguments": "firmware/control-vectors.json",
-  "control_verification_evidence": "firmware/control-validation.json"
+  "control_verification_evidence": "firmware/control-validation.json",
+  "media": {
+    "video": "media/gameboy-wire-runner-promo.mp4",
+    "contact_sheet": "media/promo-contact-sheet.jpg",
+    "readme": "media/README.md"
+  }
 }
