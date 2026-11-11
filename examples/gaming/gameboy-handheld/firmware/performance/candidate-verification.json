@@ -1,0 +1,109 @@
+{
+  "ok": true,
+  "status": "model_verified",
+  "proven": true,
+  "gaps": [
+    {
+      "code": "approximation",
+      "scope": "model",
+      "detail": "device time derived from cpu_hz (100000000 Hz); PLL reconfiguration is not tracked",
+      "address": "0x0",
+      "pc": "0x0"
+    },
+    {
+      "code": "approximation",
+      "scope": "model",
+      "detail": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal 3.3 V rail, so power-on and brown-out reset are not simulated",
+      "address": "0x0",
+      "pc": "0x0"
+    }
+  ],
+  "unmodeled_faults": [
+    {
+      "access": "derived_device_time",
+      "pc": "0x0",
+      "count": 1,
+      "note": "device time derived from cpu_hz (100000000 Hz); PLL reconfiguration is not tracked",
+      "address": "0x0"
+    },
+    {
+      "access": "unpowered_rail_assumed",
+      "pc": "0x0",
+      "count": 1,
+      "note": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal 3.3 V rail, so power-on and brown-out reset are not simulated",
+      "address": "0x0"
+    }
+  ],
+  "verification": "serial contains \"DMG_ROM_OK title=BRICK_BREAKER\"; serial contains \"INPUT=000000ef\"; serial contains \"INPUT=000000fe\"; serial matches /DMG_FRAME=[0-9]+ x=([7-9][0-9]|1[0-3][0-9]) ball_x=/; serial matches /DMG_FRAME=[0-9]+ .*phase=1/; display PAINTED on framebuffer (refresh_gen=n/a, ink=153600>=10000). Model-verified deterministically while driven with btn-right/pressed=1 at cycle 22000000 (applied), btn-right/pressed=0 at cycle 35000000 (applied), btn-a/pressed=1 at cycle 36000000 (applied), btn-a/pressed=0 at cycle 42000000 (applied).",
+  "run_status": "pass",
+  "stop_reason": "max_steps",
+  "oracle_results": [
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"DMG_ROM_OK title=BRICK_BREAKER\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"INPUT=000000ef\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"INPUT=000000fe\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial matches /DMG_FRAME=[0-9]+ x=([7-9][0-9]|1[0-3][0-9]) ball_x=/"
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial matches /DMG_FRAME=[0-9]+ .*phase=1/"
+    },
+    {
+      "kind": "display",
+      "passed": true,
+      "detail": "display PAINTED on framebuffer (refresh_gen=n/a, ink=153600>=10000)"
+    }
+  ],
+  "stimuli": [
+    {
+      "channel": "pressed",
+      "value": 1,
+      "outcome": "applied",
+      "at_cycle": 22000000,
+      "component": "btn-right"
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "outcome": "applied",
+      "at_cycle": 35000000,
+      "component": "btn-right"
+    },
+    {
+      "channel": "pressed",
+      "value": 1,
+      "outcome": "applied",
+      "at_cycle": 36000000,
+      "component": "btn-a"
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "outcome": "applied",
+      "at_cycle": 42000000,
+      "component": "btn-a"
+    }
+  ],
+  "diagnosis": {
+    "faulting_pc": "0x080016a0",
+    "summary": "Ran the full 50000000-step budget without halting, having produced 40 lines of firmware serial output and 1 painted peripheral artifact. The firmware was running and reporting, so this is either a long-running program that needs a larger budget or an infinite loop / busy-wait on a status bit that never changes (e.g. polling a peripheral the twin does not model).",
+    "hint": "This run is ALREADY at the largest budget this run path accepts (50000000 steps — a max_steps past it is REFUSED with a config_error, not truncated). Raising max_steps is not an option here: the answer is elsewhere. Otherwise check for spin-loops that wait on a hardware status bit, and prefer software delay loops over peripheral-flag polls. Consult docs/firmware-scaffolds/README.md for the list of modeled peripherals."
+  },
+  "serial": "LABWIRED DMG BOOT\nDMG_ROM_OK title=BRICK_BREAKER bytes=32768\nDMG_FRAME=1 x=0 ball_x=0 ball_y=0 score=0 lives=0 phase=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 ball_x=0 ball_y=0 score=0 lives=0 phase=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=68 ball_x=77 ball_y=116 score=0 lives=3 phase=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=68 ball_x=77 ball_y=116 score=0 lives=3 phase=0 hash=c26be44a lines=144\nINPUT=000000ef\nDMG_FRAME=9 x=71 ball_x=80 ball_y=116 score=0 lives=3 phase=0 hash=c5d03452 lines=864\nDMG_FRAME=10 x=74 ball_x=83 ball_y=116 score=0 lives=3 phase=0 hash=a729176a lines=1008\nDMG_FRAME=11 x=77 ball_x=86 ball_y=116 score=0 lives=3 phase=0 hash=1e8cb9b2 lines=1152\nDMG_FRAME=12 x=80 ball_x=89 ball_y=116 score=0 lives=3 phase=0 hash=e5edeb8a lines=1296\nDMG_FRAME=13 x=83 ball_x=92 ball_y=116 score=0 lives=3 phase=0 hash=d6ba8212 lines=1440\nDMG_FRAME=14 x=86 ball_x=95 ball_y=116 score=0 lives=3 phase=0 hash=ac39a8aa lines=1584\nDMG_FRAME=15 x=89 ball_x=98 ball_y=116 score=0 lives=3 phase=0 hash=66026572 lines=1728\nDMG_FRAME=16 x=92 ball_x=101 ball_y=116 score=0 lives=3 phase=0 hash=c8a7d6ca lines=1872\nDMG_FRAME=17 x=95 ball_x=104 ball_y=116 score=0 lives=3 phase=0 hash=c979fbd2 lines=2016\nDMG_FRAME=18 x=98 ball_x=107 ball_y=116 score=0 lives=3 phase=0 hash=19623dea lines=2160\nDMG_FRAME=19 x=101 ball_x=110 ball_y=116 score=0 lives=3 phase=0 hash=d5b99d32 lines=2304\nDMG_FRAME=20 x=104 ball_x=113 ball_y=116 score=0 lives=3 phase=0 hash=9ea2e60a lines=2448\nDMG_FRAME=21 x=107 ball_x=116 ball_y=116 score=0 lives=3 phase=0 hash=db226192 lines=2592\nDMG_FRAME=22 x=110 ball_x=119 ball_y=116 score=0 lives=3 phase=0 hash=f5c6172a lines=2736\nDMG_FRAME=23 x=113 ball_x=122 ball_y=116 score=0 lives=3 phase=0 hash=99d420f2 lines=2880\nINPUT=000000ff\nINPUT=000000fe\nDMG_FRAME=25 x=113 ball_x=124 ball_y=114 score=0 lives=3 phase=1 hash=f7b7c30e lines=3168\nDMG_FRAME=26 x=113 ball_x=126 ball_y=112 score=0 lives=3 phase=1 hash=3c17b98e lines=3312\nDMG_FRAME=27 x=113 ball_x=128 ball_y=110 score=0 lives=3 phase=1 hash=bd88ac0e lines=3456\nDMG_FRAME=28 x=113 ball_x=130 ball_y=108 score=0 lives=3 phase=1 hash=61773a8e lines=3600\nDMG_FRAME=29 x=113 ball_x=132 ball_y=106 score=0 lives=3 phase=1 hash=4d37050e lines=3744\nDMG_FRAME=30 x=113 ball_x=134 ball_y=104 score=0 lives=3 phase=1 hash=a6eaab8e lines=3888\nDMG_FRAME=31 x=113 ball_x=136 ball_y=102 score=0 lives=3 phase=1 hash=aa2bce0e lines=4032\nINPUT=000000ff\nDMG_FRAME=32 x=113 ball_x=138 ball_y=100 score=0 lives=3 phase=1 hash=3a730c8e lines=4176\nDMG_FRAME=33 x=113 ball_x=140 ball_y=98 score=0 lives=3 phase=1 hash=8d40070e lines=4320\nDMG_FRAME=34 x=113 ball_x=142 ball_y=96 score=0 lives=3 phase=1 hash=76015d8e lines=4464\nDMG_FRAME=35 x=113 ball_x=144 ball_y=94 score=0 lives=3 phase=1 hash=4dbcb00e lines=4608\nDMG_FRAME=36 x=113 ball_x=146 ball_y=92 score=0 lives=3 phase=1 hash=60769e8e lines=4752\nDMG_FRAME=37 x=113 ball_x=144 ball_y=90 score=0 lives=3 phase=1 hash=594c100e lines=4896\nDMG_FRAME=38 x=113 ball_x=142 ball_y=88 score=0 lives=3 phase=1 hash=791e1d8e lines=5040\nDMG_FRAME=39 x=113 ball_x=140 ball_y=86 score=0 lives=3 phase=1 hash=b4b0270e lines=5184\n"
+}
+

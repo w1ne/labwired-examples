@@ -1,0 +1,68 @@
+{
+  "status": "measured_candidate_not_installed",
+  "changes": [
+    "DMG VBlank interrupt + HALT instead of LY busy polling",
+    "Exact RGB565 dirty horizontal spans over real STM32 SPI",
+    "GCC O3 for CPU-heavy emulator; standard integer semantics"
+  ],
+  "same_step_budget": {
+    "steps": 50000000,
+    "input_track": "baseline-run-request.json",
+    "baseline_completed_dmg_frames": 16,
+    "halt_completed_dmg_frames": 25,
+    "halt_dirty_completed_dmg_frames": 29,
+    "halt_dirty_o3_completed_dmg_frames": 39,
+    "ratio_including_boot": 2.4375,
+    "not_browser_wall_clock_rate": true
+  },
+  "native_game_equivalence": {
+    "frames": 2400,
+    "compared": "Per-frame framebuffer FNV-1a and all13 game-state bytes under the same input script",
+    "baseline_and_candidate_signature_sha256": "b0f207665b1be8c3fdd9d7cd2dd6b66a0b975c764cb64be51b67d04d2111514f",
+    "same_score": 47,
+    "same_paddle_bounces": 25,
+    "same_lives": 3
+  },
+  "lcd_equivalence": {
+    "frames": 2400,
+    "exact_rgb565_match": true,
+    "full_frame_hash_match": true,
+    "additional_checks": "One-pixel changes and erasures across all160 source columns",
+    "baseline_pixel_bytes": 19663200,
+    "candidate_pixel_bytes": 1468626,
+    "pixel_byte_reduction_percent": 92.53109361650189,
+    "window_count_each": 27315
+  },
+  "memory": {
+    "text_and_rodata_bytes": 56820,
+    "data_bytes": 104,
+    "bss_bytes": 40156,
+    "linker_heap_stack_reservation_bytes": 1540,
+    "static_ram_plus_reservation_bytes": 41800,
+    "elf_sha256": "e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28"
+  },
+  "candidate": {
+    "source_sha256": "0035482806916ad05e4446ebece8bb284103473c1bfda5318e75460d5b3fb2a0",
+    "rom_sha256": "92782644b70e39c9314c345fc991447f51937486570c177be01be6cb38ae610b",
+    "firmware_ref": "sha256:e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28",
+    "verification": "candidate-verification.json",
+    "temporary_lab_url": "https://app.labwired.com/?share=LCJ99z8RFJGi&run=1&view=kernelcad"
+  },
+  "baseline": {
+    "rom_sha256": "708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5",
+    "firmware_ref": "sha256:cfa5fd07dbaa457d7e3315d69d5076c90b70f453d490229889e440a595ea4681",
+    "temporary_lab_url": "https://app.labwired.com/?share=_fw-Bqay7d1G&run=1&view=kernelcad"
+  },
+  "scope": [
+    "No saved-project mutation during this comparison",
+    "No altered oracle, MCU, circuit, CAD geometry or bindings",
+    "Real ROM executes inside Peanut-GB on modeled STM32; display uses modeled SPI ILI9341",
+    "Native host checks isolate semantics and pixel correctness, not MCU wall-clock performance",
+    "Hosted model approximations remain CPU clock-derived time and ideal VDD",
+    "Browser throughput is being measured separately"
+  ],
+  "schema": "labwired.gameboy-performance.v1",
+  "source_patch": "candidate-source.patch",
+  "baseline_repository_commit": "e5606fb14eb88292d2064810cf4075c67e5e55c8",
+  "browser_measurement": "pending; hosted step-budget comparison is not wall-clock browser throughput"
+}

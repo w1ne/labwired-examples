@@ -33,6 +33,10 @@ The same-ROM host test additionally passed left/right movement, launch, pause/re
 
 The promotional capture uses the exact ROM executed by Peanut-GB at the native Game Boy frame cadence, with an external scripted button track, then samples those frames for a 60 fps CAD animation. This is not a measurement of STM32 or browser simulator wall-clock frame rate. No autoplay or capture script is embedded in the device firmware.
 
+## Simulation speed candidate
+
+A separately verified [performance candidate](performance/README.md) completes 39 DMG frames in the same 50,000,000-step budget where this saved baseline completes 16. The candidate uses VBlank/HALT, exact dirty LCD spans and compiler optimization. Its per-frame game state and LCD output match the baseline across 2,400 test frames; this checkpoint leaves the saved project and original recording ROM unchanged pending browser comparison.
+
 ## Assembly and PCB
 
 KernelCAD revision 3 (`kQAFdaQs`) retains 59 parts, the LCD face binding and eight button bindings. The native routed carrier remains attached as board `pcb_c8da1d7776dba9bc`, revision 0. Mechanical geometry, routing and electrical mappings are unchanged by this game update.
