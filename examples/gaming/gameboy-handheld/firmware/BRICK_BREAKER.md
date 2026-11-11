@@ -27,6 +27,8 @@ The repository's `examples/gaming/gameboy-handheld/firmware/` contains `build_br
 
 The hosted run passed six declared behavioral checks within 50,000,000 MCU steps: Brick Breaker ROM initialization; RIGHT input; A input; paddle movement from x=68 to x=86; launched-ball state; and a painted ILI9341 framebuffer containing 153,600 bytes. All four press/release stimuli were applied. The actual logged ball moved from (97,114) to (107,104).
 
+Fresh saved-project verification through MCP passed the same six clauses with `max_steps: 50000000`, without changing source, input events or the oracle. The [request and readback receipt](brick-breaker-saved-project-verification-mcp.json) bind that proof to content hash `626abc0c…60825b`. The [generic MCP recipe](../MCP_RECIPE.md) documents the exact calls and the separate movie/browser-QA boundary.
+
 The same-ROM host test additionally passed left/right movement, launch, pause/resume, restart, palette, brick scoring, paddle bounces and missed-ball life loss. Scripted button play broke 47 bricks across two boards during the bounded test. These are simulation results.
 
 The promotional capture uses the exact ROM executed by Peanut-GB at the native Game Boy frame cadence, with an external scripted button track, then samples those frames for a 60 fps CAD animation. This is not a measurement of STM32 or browser simulator wall-clock frame rate. No autoplay or capture script is embedded in the device firmware.

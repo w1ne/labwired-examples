@@ -8,14 +8,14 @@
   "rom": "brick_breaker.gb",
   "rom_sha256": "708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5",
   "verification": "model_verified; direct 50,000,000-step declared oracle",
-  "saved_project_verification": "ORACLE_NOT_REACHED under the tool default budget; full declared oracle retained",
+  "saved_project_verification": "declared oracle passed through MCP with max_steps=50000000; content and verified hashes match",
   "physical_hardware_tested": false,
   "capture": "Actual original ROM emulation plus external scripted inputs; not MCU/browser wall-clock performance",
   "files": [
     {
       "path": "BRICK_BREAKER.md",
-      "bytes": 5027,
-      "sha256": "8ac529436a36921cc18feb7d6120c36c0933771bcd0f6d2952c7c979d378fef2"
+      "bytes": 5434,
+      "sha256": "f13c33511184478031d5c31bc9b089cca2ad0db75468c5801b350ddd4c532e9a"
     },
     {
       "path": "brick-breaker-capture-provenance.json",
@@ -41,6 +41,11 @@
       "path": "brick-breaker-project-readback.json",
       "bytes": 1849,
       "sha256": "4ff81632617b41ffe18ddc0c19d2c51caba43ba8acb7dfbc2c5bbaf253e9a376"
+    },
+    {
+      "path": "brick-breaker-saved-project-verification-mcp.json",
+      "bytes": 2847,
+      "sha256": "19366c94496da6f6bfb4c9860b3212f265c118f7e4b602523f2827e39ecb9cd7"
     },
     {
       "path": "brick-breaker-source.json",
@@ -107,5 +112,6 @@
       "bytes": 4365,
       "sha256": "712161485479744f59f2658f53834f0daf70f51d9a18eae75d083d8e17419a35"
     }
-  ]
+  ],
+  "saved_project_verification_receipt": "brick-breaker-saved-project-verification-mcp.json"
 }
