@@ -1,0 +1,142 @@
+[
+  {
+    "sheet": "4in1",
+    "ref": "#FLG100",
+    "at": [
+      59.69,
+      62.23
+    ],
+    "connects_to": [
+      64.77,
+      62.23
+    ],
+    "reason": "Battery input through U3 and J1",
+    "instances": 1
+  },
+  {
+    "sheet": "4in1",
+    "ref": "#FLG101",
+    "at": [
+      59.69,
+      72.39
+    ],
+    "connects_to": [
+      64.77,
+      72.39
+    ],
+    "reason": "Battery return through U3 and J1",
+    "instances": 1
+  },
+  {
+    "sheet": "4in1",
+    "ref": "#FLG102",
+    "at": [
+      123.19,
+      127.0
+    ],
+    "connects_to": [
+      123.19,
+      132.08
+    ],
+    "reason": "LMR54406 output after the series inductor: +10V",
+    "instances": 1
+  },
+  {
+    "sheet": "ESC",
+    "ref": "#FLG200",
+    "at": [
+      71.12,
+      48.26
+    ],
+    "connects_to": [
+      71.12,
+      50.8
+    ],
+    "reason": "VDDA fed by +3V3 through the schematic filter",
+    "instances": 4
+  },
+  {
+    "sheet": "ESC",
+    "ref": "#FLG201",
+    "at": [
+      146.05,
+      62.23
+    ],
+    "connects_to": [
+      146.05,
+      63.5
+    ],
+    "reason": "VB1 charged by the documented internal bootstrap diode",
+    "instances": 4
+  },
+  {
+    "sheet": "ESC",
+    "ref": "#FLG202",
+    "at": [
+      156.21,
+      64.77
+    ],
+    "connects_to": [
+      156.21,
+      66.04
+    ],
+    "reason": "VB2 charged by the documented internal bootstrap diode",
+    "instances": 4
+  },
+  {
+    "sheet": "ESC",
+    "ref": "#FLG203",
+    "at": [
+      166.37,
+      67.31
+    ],
+    "connects_to": [
+      166.37,
+      68.58
+    ],
+    "reason": "VB3 charged by the documented internal bootstrap diode",
+    "instances": 4
+  },
+  {
+    "sheet": "ESC",
+    "ref": "#FLG204",
+    "at": [
+      146.05,
+      71.12
+    ],
+    "connects_to": [
+      146.05,
+      73.66
+    ],
+    "reason": "VS1 reference supplied by MOSFET phase A switching",
+    "instances": 4
+  },
+  {
+    "sheet": "ESC",
+    "ref": "#FLG205",
+    "at": [
+      95.25,
+      151.13
+    ],
+    "connects_to": [
+      95.25,
+      153.67
+    ],
+    "reason": "VS2 reference supplied by MOSFET phase B switching",
+    "instances": 4
+  },
+  {
+    "sheet": "ESC",
+    "ref": "#FLG206",
+    "at": [
+      264.16,
+      96.52
+    ],
+    "connects_to": [
+      264.16,
+      99.06
+    ],
+    "reason": "VS3 reference supplied by MOSFET phase C switching",
+    "instances": 4
+  }
+]

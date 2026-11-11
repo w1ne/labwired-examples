@@ -42,7 +42,7 @@
 
 (symbol "R_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
-(symbol "ESCLibrary:0201_10kR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_ESCLibrary:0201_10kR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "R" (at -0.254 2.286 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -60,13 +60,13 @@
 
 (symbol "0201_10kR_0_1" 
 
-(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin unspecified line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin unspecified line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
+(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
 
 (symbol "0201_10kR_1_1" 
 
 (text "10k" (at 0.508 -2.54 0) (effects (font (size 1.27 1.27))))) (embedded_fonts no)) 
 
-(symbol "ESCLibrary:0201_220R" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_ESCLibrary:0201_220R" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "R" (at -0.254 2.286 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -84,13 +84,13 @@
 
 (symbol "0201_220R_0_1" 
 
-(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin unspecified line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin unspecified line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
+(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
 
 (symbol "0201_220R_1_1" 
 
 (text "220R" (at 0.508 -2.54 0) (effects (font (size 1.27 1.27))))) (embedded_fonts no)) 
 
-(symbol "ESCLibrary:AT32F421G8U7" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_ESCLibrary:AT32F421G8U7" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "U4" (at -0.508 -3.302 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -108,9 +108,9 @@
 
 (symbol "AT32F421G8U7_0_1" 
 
-(rectangle (start -15.24 16.51) (end 15.24 -40.64) (stroke (width 0) (type default)) (fill (type background))) (circle (center -13.97 13.97) (radius 0.381) (stroke (width 0) (type default)) (fill (type background))) (pin unspecified line (at -17.78 8.89 0) (length 2.54) (name "BOOT0" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -36.83 0) (length 2.54) (name "PF0/OSC_IN" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -38.1 0) (length 2.54) (name "PF1/OSC_OUT" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 6.35 0) (length 2.54) (name "NRST" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin unspecified line (at 0 19.05 270) (length 2.54) (name "VDDA" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -24.13 0) (length 2.54) (name "PA0" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -26.67 0) (length 2.54) (name "PA1" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -24.13 180) (length 2.54) (name "PA2" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -25.4 180) (length 2.54) (name "PA3" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -21.59 0) (length 2.54) (name "PA4" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -19.05 0) (length 2.54) (name "PA5" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -26.67 180) (length 2.54) (name "PA6" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -5.08 180) (length 2.54) (name "PA7" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 2.54 180) (length 2.54) (name "PB0" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 10.16 180) (length 2.54) (name "PB1" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1))))) (pin unspecified line (at 2.54 -43.18 90) (length 2.54) (name "VSS" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))) (pin unspecified line (at 2.54 19.05 270) (length 2.54) (name "VDD" (effects (font (size 1 1)))) (number "17" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -2.54 180) (length 2.54) (name "PA8" (effects (font (size 1 1)))) (number "18" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 5.08 180) (length 2.54) (name "PA9" (effects (font (size 1 1)))) (number "19" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 12.7 180) (length 2.54) (name "PA10" (effects (font (size 1 1)))) (number "20" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -5.08 0) (length 2.54) (name "PA13" (effects (font (size 1 1)))) (number "21" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -6.35 0) (length 2.54) (name "PA14" (effects (font (size 1 1)))) (number "22" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -27.94 180) (length 2.54) (name "PA15" (effects (font (size 1 1)))) (number "23" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -29.21 180) (length 2.54) (name "PB3" (effects (font (size 1 1)))) (number "24" (effects (font (size 1 1))))) (pin unspecified line (at -17.78 -10.16 0) (length 2.54) (name "PB4" (effects (font (size 1 1)))) (number "25" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -30.48 180) (length 2.54) (name "PB5" (effects (font (size 1 1)))) (number "26" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -31.75 180) (length 2.54) (name "PB6" (effects (font (size 1 1)))) (number "27" (effects (font (size 1 1))))) (pin unspecified line (at 17.78 -33.02 180) (length 2.54) (name "PB7" (effects (font (size 1 1)))) (number "28" (effects (font (size 1 1))))) (pin unspecified line (at 0 -43.18 90) (length 2.54) (name "VSS" (effects (font (size 1 1)))) (number "29" (effects (font (size 1 1)))))) (embedded_fonts no)) 
+(rectangle (start -15.24 16.51) (end 15.24 -40.64) (stroke (width 0) (type default)) (fill (type background))) (circle (center -13.97 13.97) (radius 0.381) (stroke (width 0) (type default)) (fill (type background))) (pin input line (at -17.78 8.89 0) (length 2.54) (name "BOOT0" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -36.83 0) (length 2.54) (name "PF0/OSC_IN" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -38.1 0) (length 2.54) (name "PF1/OSC_OUT" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin input line (at -17.78 6.35 0) (length 2.54) (name "NRST" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin power_in line (at 0 19.05 270) (length 2.54) (name "VDDA" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -24.13 0) (length 2.54) (name "PA0" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -26.67 0) (length 2.54) (name "PA1" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -24.13 180) (length 2.54) (name "PA2" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -25.4 180) (length 2.54) (name "PA3" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -21.59 0) (length 2.54) (name "PA4" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -19.05 0) (length 2.54) (name "PA5" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -26.67 180) (length 2.54) (name "PA6" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -5.08 180) (length 2.54) (name "PA7" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 2.54 180) (length 2.54) (name "PB0" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 10.16 180) (length 2.54) (name "PB1" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1))))) (pin power_in line (at 2.54 -43.18 90) (length 2.54) (name "VSS" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))) (pin power_in line (at 2.54 19.05 270) (length 2.54) (name "VDD" (effects (font (size 1 1)))) (number "17" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -2.54 180) (length 2.54) (name "PA8" (effects (font (size 1 1)))) (number "18" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 5.08 180) (length 2.54) (name "PA9" (effects (font (size 1 1)))) (number "19" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 12.7 180) (length 2.54) (name "PA10" (effects (font (size 1 1)))) (number "20" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -5.08 0) (length 2.54) (name "PA13" (effects (font (size 1 1)))) (number "21" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -6.35 0) (length 2.54) (name "PA14" (effects (font (size 1 1)))) (number "22" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -27.94 180) (length 2.54) (name "PA15" (effects (font (size 1 1)))) (number "23" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -29.21 180) (length 2.54) (name "PB3" (effects (font (size 1 1)))) (number "24" (effects (font (size 1 1))))) (pin bidirectional line (at -17.78 -10.16 0) (length 2.54) (name "PB4" (effects (font (size 1 1)))) (number "25" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -30.48 180) (length 2.54) (name "PB5" (effects (font (size 1 1)))) (number "26" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -31.75 180) (length 2.54) (name "PB6" (effects (font (size 1 1)))) (number "27" (effects (font (size 1 1))))) (pin bidirectional line (at 17.78 -33.02 180) (length 2.54) (name "PB7" (effects (font (size 1 1)))) (number "28" (effects (font (size 1 1))))) (pin power_in line (at 0 -43.18 90) (length 2.54) (name "VSS" (effects (font (size 1 1)))) (number "29" (effects (font (size 1 1)))))) (embedded_fonts no)) 
 
-(symbol "ESCLibrary:GRM033R61C104KE84D" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_ESCLibrary:GRM033R61C104KE84D" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "C" (at 0 1.27 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -150,9 +150,9 @@
 
 (xy 0.508 0) 
 
-(xy 1.27 0)) (stroke (width 0) (type default)) (fill (type none))) (pin input line (at -3.81 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin input line (at 3.81 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) (embedded_fonts no)) 
+(xy 1.27 0)) (stroke (width 0) (type default)) (fill (type none))) (pin passive line (at -3.81 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 3.81 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) (embedded_fonts no)) 
 
-(symbol "PCM_Resistor_AKL:R_0402" (body_styles demorgan) (pin_numbers (hide yes)) (pin_names (offset 0)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_PCM_Resistor_AKL:R_0402" (body_styles demorgan) (pin_numbers (hide yes)) (pin_names (offset 0)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "R" (at 2.54 1.27 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -204,7 +204,7 @@
 
 (symbol "R_0402_1_2" (pin passive line (at 2.54 2.54 180) (length 0) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at -2.54 -2.54 0) (length 0) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
-(symbol "PCM_Transistor_MOSFET_AKL:2N6660" (pin_names (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660" (pin_names (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "Q" (at 5.08 1.27 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -288,7 +288,7 @@
 
 (symbol "2N6660_1_1" (pin passive line (at 2.54 -5.08 90) (length 2.54) (name "S" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin input line (at -3.81 -1.27 0) (length 2.54) (name "G" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 5.08 270) (length 2.54) (name "D" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
-(symbol "components:0201_10kR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_components:0201_10kR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "R" (at -0.254 2.286 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -306,13 +306,13 @@
 
 (symbol "0201_10kR_0_1" 
 
-(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin unspecified line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin unspecified line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
+(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
 
 (symbol "0201_10kR_1_1" 
 
 (text "10k" (at 0.508 -2.54 0) (effects (font (size 1.27 1.27))))) (embedded_fonts no)) 
 
-(symbol "components:0201_1kR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_components:0201_1kR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "R" (at -0.254 2.286 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -330,13 +330,13 @@
 
 (symbol "0201_1kR_0_1" 
 
-(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin unspecified line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin unspecified line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
+(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0) (type default)) (fill (type background))) (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) 
 
 (symbol "0201_1kR_1_1" 
 
 (text "1k" (at 0.508 -2.54 0) (effects (font (size 1.27 1.27))))) (embedded_fonts no)) 
 
-(symbol "components:NSG2065Q" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "QuadEsc_components:NSG2065Q" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "U" (at 0 1.27 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -354,7 +354,7 @@
 
 (symbol "NSG2065Q_0_1" 
 
-(rectangle (start -7.62 29.2101) (end 7.62 -29.2101) (stroke (width 0) (type default)) (fill (type background))) (circle (center -6.35 27.9401) (radius 0.381) (stroke (width 0) (type default)) (fill (type background))) (pin unspecified line (at -10.16 -8.89 0) (length 2.54) (name "LIN1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 -11.43 0) (length 2.54) (name "LIN2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 -13.97 0) (length 2.54) (name "LIN3" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 21.59 180) (length 2.54) (name "VCC" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 -13.97 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 26.67 0) (length 2.54) (name "COM" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 -16.51 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 -19.05 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 -26.67 0) (length 2.54) (name "LO3" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 -24.13 0) (length 2.54) (name "LO2" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 -21.59 0) (length 2.54) (name "LO1" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 -6.35 180) (length 2.54) (name "VS3" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 -1.27 0) (length 2.54) (name "HO3" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 6.35 180) (length 2.54) (name "VB3" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 -3.81 180) (length 2.54) (name "VS2" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 1.27 0) (length 2.54) (name "HO2" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 8.89 180) (length 2.54) (name "VB2" (effects (font (size 1 1)))) (number "17" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 -1.27 180) (length 2.54) (name "VS1" (effects (font (size 1 1)))) (number "18" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 3.81 0) (length 2.54) (name "HO1" (effects (font (size 1 1)))) (number "19" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 11.43 180) (length 2.54) (name "VB1" (effects (font (size 1 1)))) (number "20" (effects (font (size 1 1))))) (pin unspecified line (at 10.16 -21.59 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "21" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 16.51 0) (length 2.54) (name "HIN1" (effects (font (size 1 1)))) (number "22" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 13.97 0) (length 2.54) (name "HIN2" (effects (font (size 1 1)))) (number "23" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 11.43 0) (length 2.54) (name "HIN3" (effects (font (size 1 1)))) (number "24" (effects (font (size 1 1))))) (pin unspecified line (at -10.16 24.13 0) (length 2.54) (name "COM" (effects (font (size 1 1)))) (number "25" (effects (font (size 1 1)))))) (embedded_fonts no)) 
+(rectangle (start -7.62 29.2101) (end 7.62 -29.2101) (stroke (width 0) (type default)) (fill (type background))) (circle (center -6.35 27.9401) (radius 0.381) (stroke (width 0) (type default)) (fill (type background))) (pin input line (at -10.16 -8.89 0) (length 2.54) (name "LIN1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin input line (at -10.16 -11.43 0) (length 2.54) (name "LIN2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin input line (at -10.16 -13.97 0) (length 2.54) (name "LIN3" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin power_in line (at 10.16 21.59 180) (length 2.54) (name "VCC" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin no_connect line (at 10.16 -13.97 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin power_in line (at -10.16 26.67 0) (length 2.54) (name "COM" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin no_connect line (at 10.16 -16.51 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin no_connect line (at 10.16 -19.05 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1))))) (pin output line (at -10.16 -26.67 0) (length 2.54) (name "LO3" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1))))) (pin output line (at -10.16 -24.13 0) (length 2.54) (name "LO2" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1))))) (pin output line (at -10.16 -21.59 0) (length 2.54) (name "LO1" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1))))) (pin power_in line (at 10.16 -6.35 180) (length 2.54) (name "VS3" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1))))) (pin output line (at -10.16 -1.27 0) (length 2.54) (name "HO3" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1))))) (pin power_in line (at 10.16 6.35 180) (length 2.54) (name "VB3" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1))))) (pin power_in line (at 10.16 -3.81 180) (length 2.54) (name "VS2" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1))))) (pin output line (at -10.16 1.27 0) (length 2.54) (name "HO2" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))) (pin power_in line (at 10.16 8.89 180) (length 2.54) (name "VB2" (effects (font (size 1 1)))) (number "17" (effects (font (size 1 1))))) (pin power_in line (at 10.16 -1.27 180) (length 2.54) (name "VS1" (effects (font (size 1 1)))) (number "18" (effects (font (size 1 1))))) (pin output line (at -10.16 3.81 0) (length 2.54) (name "HO1" (effects (font (size 1 1)))) (number "19" (effects (font (size 1 1))))) (pin power_in line (at 10.16 11.43 180) (length 2.54) (name "VB1" (effects (font (size 1 1)))) (number "20" (effects (font (size 1 1))))) (pin no_connect line (at 10.16 -21.59 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "21" (effects (font (size 1 1))))) (pin input line (at -10.16 16.51 0) (length 2.54) (name "HIN1" (effects (font (size 1 1)))) (number "22" (effects (font (size 1 1))))) (pin input line (at -10.16 13.97 0) (length 2.54) (name "HIN2" (effects (font (size 1 1)))) (number "23" (effects (font (size 1 1))))) (pin input line (at -10.16 11.43 0) (length 2.54) (name "HIN3" (effects (font (size 1 1)))) (number "24" (effects (font (size 1 1))))) (pin power_in line (at -10.16 24.13 0) (length 2.54) (name "COM" (effects (font (size 1 1)))) (number "25" (effects (font (size 1 1)))))) (embedded_fonts no)) 
 
 (symbol "power:+12V" (power global) (pin_numbers (hide yes)) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -494,7 +494,123 @@
 
 (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))) 
 
-(symbol "GND_1_1" (pin power_in line (at 0 0 270) (length 0) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no))) 
+(symbol "GND_1_1" (pin power_in line (at 0 0 270) (length 0) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no))
+(symbol "power:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+) 
 
 (polyline (pts 
 
@@ -5736,15 +5852,15 @@
 
 (label "GLA" (at 121.92 96.52 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "feafd497-b02d-4f36-842c-990e78bdaf6e")) 
 
-(label "FBA" (at 205.74 102.87 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fed3428d-4cba-48b9-816d-cf8573bfbdea")) (hierarchical_label "B" (shape output) (at 123.19 153.67 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "56014427-46cc-4c3c-a846-09346d0589a0")) (hierarchical_label "C" (shape output) (at 187.96 152.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "78fe3d56-6f7e-4d67-8b85-23d4ecddfa2c")) (hierarchical_label "A" (shape output) (at 67.31 153.67 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7f40f48d-fa80-4c8f-9df2-791e412f1ea0")) (hierarchical_label "dshot" (shape input) (at 43.18 80.01 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cdc0a847-a2a5-4a41-936e-acf2389dbd47")) 
+(label "FBA" (at 205.74 102.87 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fed3428d-4cba-48b9-816d-cf8573bfbdea")) (hierarchical_label "MotorB" (shape output) (at 123.19 153.67 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "56014427-46cc-4c3c-a846-09346d0589a0")) (hierarchical_label "MotorC" (shape output) (at 187.96 152.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "78fe3d56-6f7e-4d67-8b85-23d4ecddfa2c")) (hierarchical_label "MotorA" (shape output) (at 67.31 153.67 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7f40f48d-fa80-4c8f-9df2-791e412f1ea0")) (hierarchical_label "dshot" (shape input) (at 43.18 80.01 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cdc0a847-a2a5-4a41-936e-acf2389dbd47")) 
 
-(symbol (lib_id "ESCLibrary:GRM033R61C104KE84D") (at 149.86 63.5 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "004f7f99-dca9-475b-9430-2adf8f75f92b") 
+(symbol (lib_id "QuadEsc_ESCLibrary:GRM033R61C104KE84D") (at 149.86 63.5 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "004f7f99-dca9-475b-9430-2adf8f75f92b") 
 
 (property "Reference" "C53" (at 147.574 59.436 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
 (property "Value" "100nF" (at 146.558 57.658 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
-(property "Footprint" "Capacitor_SMD:C_0402_WIDE" (at 149.86 53.34 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27) (italic yes)))) 
+(property "Footprint" "QuadrotorReviewed:C_0402_WIDE" (at 149.86 53.34 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27) (italic yes)))) 
 
 (property "Datasheet" "https://item.szlcsc.com/360022.html" (at 152.146 63.627 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -5764,7 +5880,7 @@
 
 (property "MPN" "CL05B104KB54PNC" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "4815c1c0-12e8-4a29-898c-7d0d21644490")) (pin "2" (uuid "74d9364a-ca55-4e42-8632-4aae33bddacf")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "C67") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "C56") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "C62") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "C53") (unit 1))))) 
 
-(symbol (lib_id "components:0201_10kR") (at 234.95 99.06 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "0207287f-a170-402e-9442-21b3044af211") 
+(symbol (lib_id "QuadEsc_components:0201_10kR") (at 234.95 99.06 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "0207287f-a170-402e-9442-21b3044af211") 
 
 (property "Reference" "R30" (at 234.95 93.1978 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -5790,7 +5906,7 @@
 
 (property "MPN" "RC0201FR-0710KL" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "b499fe88-fc6e-48a3-a274-9b480187f9f6")) (pin "1" (uuid "0b365f00-2520-4fbe-8043-084d979639de")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R69") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R15") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R51") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R30") (unit 1))))) 
 
-(symbol (lib_id "PCM_Transistor_MOSFET_AKL:2N6660") (at 96.52 146.05 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "033c7673-57ac-41af-8f1c-ce889c33151d") 
+(symbol (lib_id "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660") (at 96.52 146.05 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "033c7673-57ac-41af-8f1c-ce889c33151d") 
 
 (property "Reference" "Q6" (at 102.87 144.7799 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -5844,7 +5960,7 @@
 
 (property "MPN" "RC0201FR-0710RL" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "6910cd22-a107-4959-8022-d96dcec74f5e")) (pin "1" (uuid "638e424e-4b57-4f8c-8103-c9268c407b22")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R88") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R85") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R86") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R84") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:0201_220R") (at 48.26 80.01 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "1095642b-f6cf-41ff-9cc1-f98d0f5d8dfc") 
+(symbol (lib_id "QuadEsc_ESCLibrary:0201_220R") (at 48.26 80.01 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "1095642b-f6cf-41ff-9cc1-f98d0f5d8dfc") 
 
 (property "Reference" "R20" (at 48.5244 85.09 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -5870,7 +5986,7 @@
 
 (property "MPN" "AC0201FR-07220RL" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "92e83bba-bcee-44a9-953c-fcdaaf0dc82f")) (pin "1" (uuid "a33833dd-f0ea-45a7-b334-5f97fa2cad7a")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R87") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R39") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R57") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R20") (unit 1))))) 
 
-(symbol (lib_id "PCM_Resistor_AKL:R_0402") (at 149.86 161.29 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "161b600e-22e3-4e86-97fa-732c03e52d0f") 
+(symbol (lib_id "QuadEsc_PCM_Resistor_AKL:R_0402") (at 149.86 161.29 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "161b600e-22e3-4e86-97fa-732c03e52d0f") 
 
 (property "Reference" "R42" (at 149.86 156.464 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -5908,7 +6024,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 254 116.84 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "6fac3e0b-5777-4e5c-a0e8-954ebaa41ff9")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR0105") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR063") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR084") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR045") (unit 1))))) 
 
-(symbol (lib_id "PCM_Transistor_MOSFET_AKL:2N6660") (at 96.52 161.29 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "1ce56dab-164d-4d5e-bf78-e91f38df7af8") 
+(symbol (lib_id "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660") (at 96.52 161.29 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "1ce56dab-164d-4d5e-bf78-e91f38df7af8") 
 
 (property "Reference" "Q11" (at 102.87 160.0199 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -5936,13 +6052,13 @@
 
 (property "FT Position Offset" "0,-1.06" (at 96.52 161.29 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))) 
 
-(symbol (lib_id "ESCLibrary:GRM033R61C104KE84D") (at 160.02 66.04 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "20c9cd63-b83c-4ae1-bd48-55d5bbe04f22") 
+(symbol (lib_id "QuadEsc_ESCLibrary:GRM033R61C104KE84D") (at 160.02 66.04 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "20c9cd63-b83c-4ae1-bd48-55d5bbe04f22") 
 
 (property "Reference" "C32" (at 157.734 61.976 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
 (property "Value" "100nF" (at 156.718 60.198 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
-(property "Footprint" "Capacitor_SMD:C_0402_WIDE" (at 160.02 55.88 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27) (italic yes)))) 
+(property "Footprint" "QuadrotorReviewed:C_0402_WIDE" (at 160.02 55.88 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27) (italic yes)))) 
 
 (property "Datasheet" "https://item.szlcsc.com/360022.html" (at 162.306 66.167 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -5962,7 +6078,7 @@
 
 (property "MPN" "CL05B104KB54PNC" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "103e2f14-820a-459c-8a15-b1603bcb96b7")) (pin "2" (uuid "8588271f-121b-48d5-affc-ba95a9f2099c")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "C35") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "C33") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "C34") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "C32") (unit 1))))) 
 
-(symbol (lib_id "components:0201_1kR") (at 229.87 111.76 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "20ede2b2-d3bc-42b3-baca-562998e89377") 
+(symbol (lib_id "QuadEsc_components:0201_1kR") (at 229.87 111.76 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "20ede2b2-d3bc-42b3-baca-562998e89377") 
 
 (property "Reference" "R29" (at 234.95 111.7599 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6036,7 +6152,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 60.96 40.64 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "cf003d4a-7749-4c70-8087-45a74c84532d")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR085") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR049") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR065") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR026") (unit 1))))) 
 
-(symbol (lib_id "PCM_Resistor_AKL:R_0402") (at 29.21 147.32 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "2ee4ff8b-1920-4cc3-a165-f44ba1bcde07") 
+(symbol (lib_id "QuadEsc_PCM_Resistor_AKL:R_0402") (at 29.21 147.32 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "2ee4ff8b-1920-4cc3-a165-f44ba1bcde07") 
 
 (property "Reference" "R76" (at 29.21 142.494 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6062,7 +6178,7 @@
 
 (property "MPN" "0201WMF150JTEE" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "0b4fb38a-cd97-4d9e-9362-620d26ae5b0b")) (pin "2" (uuid "8a8f2dea-c1cd-4d58-8c84-d22171de70dc")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R79") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R77") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R78") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R76") (unit 1))))) 
 
-(symbol (lib_id "PCM_Resistor_AKL:R_0402") (at 149.86 146.05 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "35bfe45f-e5c1-4759-9251-bbb56aa2fad0") 
+(symbol (lib_id "QuadEsc_PCM_Resistor_AKL:R_0402") (at 149.86 146.05 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "35bfe45f-e5c1-4759-9251-bbb56aa2fad0") 
 
 (property "Reference" "R23" (at 149.86 141.224 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6100,7 +6216,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 99.06 170.18 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "76577095-20a9-4ef2-8c98-2a9d5416fbc8")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR096") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR054") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR075") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR036") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:AT32F421G8U7") (at 71.12 69.85 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "3b2fdca7-442c-43d9-bce9-fb8ebdbf68a1") 
+(symbol (lib_id "QuadEsc_ESCLibrary:AT32F421G8U7") (at 71.12 69.85 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "3b2fdca7-442c-43d9-bce9-fb8ebdbf68a1") 
 
 (property "Reference" "U2" (at 70.612 73.152 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6138,7 +6254,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 205.74 116.84 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "b0b31f8a-76d5-4516-a265-c6102b00e198")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR0103") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR061") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR082") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR043") (unit 1))))) 
 
-(symbol (lib_id "components:0201_10kR") (at 205.74 90.17 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "3d572661-719d-4838-b033-bd66f97a6615") 
+(symbol (lib_id "QuadEsc_components:0201_10kR") (at 205.74 90.17 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "3d572661-719d-4838-b033-bd66f97a6615") 
 
 (property "Reference" "R25" (at 210.82 90.1699 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6200,7 +6316,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"+3V3\"" (at 27.94 54.61 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "aa0fb542-6fed-4026-8c0c-e1381ff03613")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR073") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR034") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR059") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR027") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:0201_10kR") (at 33.02 63.5 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "44db5af0-5d95-4d04-828b-6dbbe73cea99") 
+(symbol (lib_id "QuadEsc_ESCLibrary:0201_10kR") (at 33.02 63.5 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "44db5af0-5d95-4d04-828b-6dbbe73cea99") 
 
 (property "Reference" "R18" (at 33.02 57.15 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6226,7 +6342,7 @@
 
 (property "MPN" "RC0201FR-0710KL" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "64cf62f5-b34b-4328-97f8-f898ad6ebc59")) (pin "1" (uuid "670717a0-87e1-4ad9-aa89-5d9b85638658")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R58") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R21") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R40") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R18") (unit 1))))) 
 
-(symbol (lib_id "components:0201_10kR") (at 210.82 99.06 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "45a65dcf-d4e0-4466-b87e-77261c8d9a31") 
+(symbol (lib_id "QuadEsc_components:0201_10kR") (at 210.82 99.06 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "45a65dcf-d4e0-4466-b87e-77261c8d9a31") 
 
 (property "Reference" "R27" (at 210.82 92.71 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6252,7 +6368,7 @@
 
 (property "MPN" "RC0201FR-0710KL" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "a5749d95-0f37-4d29-be23-f0375e839683")) (pin "1" (uuid "0dd9741b-87e9-4c32-a302-2058597bc5fc")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R66") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R12") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R48") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R27") (unit 1))))) 
 
-(symbol (lib_id "components:0201_10kR") (at 259.08 99.06 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "4dcb51a7-8f21-4346-bfe7-f0ca37ca8014") 
+(symbol (lib_id "QuadEsc_components:0201_10kR") (at 259.08 99.06 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "4dcb51a7-8f21-4346-bfe7-f0ca37ca8014") 
 
 (property "Reference" "R33" (at 259.08 92.71 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6278,7 +6394,7 @@
 
 (property "MPN" "RC0201FR-0710KL" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "b37674c6-8e01-4640-8458-b3c308ad2131")) (pin "1" (uuid "7993368d-dfdc-44b1-bddc-480621618751")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R72") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R36") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R54") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R33") (unit 1))))) 
 
-(symbol (lib_id "components:0201_1kR") (at 205.74 111.76 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "50c60d97-4209-47ee-a259-e385d2b100a6") 
+(symbol (lib_id "QuadEsc_components:0201_1kR") (at 205.74 111.76 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "50c60d97-4209-47ee-a259-e385d2b100a6") 
 
 (property "Reference" "R26" (at 210.82 111.7599 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6304,7 +6420,7 @@
 
 (property "MPN" "0201WMF1001TEE" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "d663e2d5-0543-4a0f-85fa-9a7e142da25d")) (pin "1" (uuid "b1f48db4-6d04-4832-8b81-007487b8b513")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R65") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R11") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R47") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R26") (unit 1))))) 
 
-(symbol (lib_id "components:0201_10kR") (at 254 90.17 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "5d777ac9-ee6a-4111-baf4-d69234a742df") 
+(symbol (lib_id "QuadEsc_components:0201_10kR") (at 254 90.17 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "5d777ac9-ee6a-4111-baf4-d69234a742df") 
 
 (property "Reference" "R31" (at 256.54 90.1699 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6342,7 +6458,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"+3V3\"" (at 91.44 33.02 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "a292bb6c-e6ca-41b2-9f9a-bbfadd11c828")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR0121") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR0119") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR0120") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR0115") (unit 1))))) 
 
-(symbol (lib_id "PCM_Resistor_AKL:R_0402") (at 29.21 162.56 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "63d3c7f3-e0a9-438a-9e20-35dabd1f2de2") 
+(symbol (lib_id "QuadEsc_PCM_Resistor_AKL:R_0402") (at 29.21 162.56 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "63d3c7f3-e0a9-438a-9e20-35dabd1f2de2") 
 
 (property "Reference" "R80" (at 29.21 157.734 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6368,7 +6484,7 @@
 
 (property "MPN" "0201WMF150JTEE" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "944bd8df-f1ed-4d93-880e-edbb52cc671b")) (pin "2" (uuid "858d19b4-3b7a-4a8e-9215-813812f37c9e")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R83") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R81") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R82") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R80") (unit 1))))) 
 
-(symbol (lib_id "components:0201_10kR") (at 229.87 90.17 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "64bce399-bf33-46c3-89eb-ab22631eb2be") 
+(symbol (lib_id "QuadEsc_components:0201_10kR") (at 229.87 90.17 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "64bce399-bf33-46c3-89eb-ab22631eb2be") 
 
 (property "Reference" "R28" (at 232.41 90.1699 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6406,7 +6522,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 121.92 50.8 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "ef5d77a9-2517-4de9-9a5c-27f52e54ac75")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR089") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR055") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR070") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR038") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:GRM033R61C104KE84D") (at 186.69 26.67 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "6f7df9bd-ace5-4d21-aed0-86e98eebfac6") 
+(symbol (lib_id "QuadEsc_ESCLibrary:GRM033R61C104KE84D") (at 186.69 26.67 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "6f7df9bd-ace5-4d21-aed0-86e98eebfac6") 
 
 (property "Reference" "C57" (at 182.626 28.956 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6444,7 +6560,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 82.55 40.64 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "e56fd327-6103-490a-a536-f62a1432a77a")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR087") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR051") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR067") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR029") (unit 1))))) 
 
-(symbol (lib_id "PCM_Transistor_MOSFET_AKL:2N6660") (at 36.83 161.29 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "852e58a5-cba3-4a56-8660-f99dda290262") 
+(symbol (lib_id "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660") (at 36.83 161.29 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "852e58a5-cba3-4a56-8660-f99dda290262") 
 
 (property "Reference" "Q2" (at 43.18 160.0199 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6472,7 +6588,7 @@
 
 (property "FT Position Offset" "0,-1.06" (at 36.83 161.29 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))) 
 
-(symbol (lib_id "PCM_Resistor_AKL:R_0402") (at 88.9 147.32 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "86eb6805-0166-4a3e-8f6d-3d0120708e95") 
+(symbol (lib_id "QuadEsc_PCM_Resistor_AKL:R_0402") (at 88.9 147.32 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "86eb6805-0166-4a3e-8f6d-3d0120708e95") 
 
 (property "Reference" "R55" (at 88.9 142.494 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6534,7 +6650,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 121.92 48.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "f74b9b81-a75c-4102-bd0a-90ff5c88d433")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR088") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR052") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR068") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR037") (unit 1))))) 
 
-(symbol (lib_id "PCM_Transistor_MOSFET_AKL:2N6660") (at 157.48 160.02 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "b24ae31e-8b6e-4686-bcdb-802df1f52a7e") 
+(symbol (lib_id "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660") (at 157.48 160.02 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "b24ae31e-8b6e-4686-bcdb-802df1f52a7e") 
 
 (property "Reference" "Q21" (at 163.83 158.7499 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6562,7 +6678,7 @@
 
 (property "FT Position Offset" "0,-1.06" (at 157.48 160.02 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))) 
 
-(symbol (lib_id "components:NSG2065Q") (at 132.08 74.93 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "b671930a-0cc9-4d70-9cac-a314a985df2c") 
+(symbol (lib_id "QuadEsc_components:NSG2065Q") (at 132.08 74.93 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "b671930a-0cc9-4d70-9cac-a314a985df2c") 
 
 (property "Reference" "U4" (at 132.08 40.64 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6588,7 +6704,7 @@
 
 (property "MPN" "NSG2065Q" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "16" (uuid "a00f758b-54c5-4ee2-81ee-6d1d0c117faa")) (pin "2" (uuid "17b89508-dc64-4c32-a6f6-68871230dbe6")) (pin "6" (uuid "130f6cad-bb0f-4c94-83c7-192536177fae")) (pin "11" (uuid "4ddef913-609e-4c7a-9477-fa2ebc549a9a")) (pin "3" (uuid "eeaf340b-8d55-4cbc-9fbe-eafa0ab1e999")) (pin "24" (uuid "f8416047-41d9-4e2e-9e0e-43420df8631b")) (pin "13" (uuid "7bfa4cc4-692c-4293-921f-792c03bbff25")) (pin "21" (uuid "d2aa0c26-17ce-493e-8938-1f2957877524")) (pin "22" (uuid "32d58aaf-62b6-4f1d-b2ef-dd264683ff5c")) (pin "10" (uuid "db1e7567-4f99-4ee5-b6dd-31159b8dd842")) (pin "23" (uuid "7a50a8da-b328-4708-b1f0-cb437b330db8")) (pin "8" (uuid "1ff8fb31-477b-46d0-bf3b-2c66e2dc37e0")) (pin "4" (uuid "ada674c2-2bf4-4a01-941b-f60fae61dc8e")) (pin "12" (uuid "7706c482-4af6-4f1a-a2e8-4839b2cad1f7")) (pin "15" (uuid "ddbfc818-406f-4b66-bd31-1e0b5aad71b1")) (pin "18" (uuid "af3b22ec-cb78-4a67-a093-59e38d84a2d9")) (pin "14" (uuid "6bbb5b6d-07fa-487b-9ab5-76ece1c3842b")) (pin "9" (uuid "d79bb60d-3998-410d-9637-23a46a36df4f")) (pin "17" (uuid "19aeabcd-e741-4f7b-8aac-a6a29d31011b")) (pin "20" (uuid "29a121b2-60f5-4db5-8cd3-b707c69e30c0")) (pin "5" (uuid "718ee4a6-1161-4d00-b81b-da8b5ee77c24")) (pin "7" (uuid "836443ca-89ee-4341-8bdd-6c0629428d53")) (pin "25" (uuid "54c78f3b-aca8-4e5e-871b-1902227f538f")) (pin "1" (uuid "34335835-ecd5-43e7-b808-86a02475f04d")) (pin "19" (uuid "d858f7f7-2d62-4395-b2a7-7a4721c7d692")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "U10") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "U6") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "U8") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "U4") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:GRM033R61C104KE84D") (at 82.55 36.83 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "b6dc479d-aef7-4585-b8b6-892329793fa8") 
+(symbol (lib_id "QuadEsc_ESCLibrary:GRM033R61C104KE84D") (at 82.55 36.83 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "b6dc479d-aef7-4585-b8b6-892329793fa8") 
 
 (property "Reference" "C49" (at 78.994 35.814 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6614,7 +6730,7 @@
 
 (property "MPN" "GRM033R6YA104KE14D" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "a48214d0-85ff-4c8f-ab6f-0bed22175c55")) (pin "2" (uuid "7ab77e73-d144-458b-8b4e-a4e0de58627d")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "C66") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "C55") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "C61") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "C49") (unit 1))))) 
 
-(symbol (lib_id "components:0201_1kR") (at 254 111.76 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "b7f2632a-37c3-45ff-83c3-f9088547e792") 
+(symbol (lib_id "QuadEsc_components:0201_1kR") (at 254 111.76 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "b7f2632a-37c3-45ff-83c3-f9088547e792") 
 
 (property "Reference" "R32" (at 259.08 111.7599 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6652,7 +6768,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 229.87 116.84 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "0468d25c-3851-4767-9930-601fad2a9051")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR0104") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR062") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR083") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR044") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:GRM033R61C104KE84D") (at 44.45 67.31 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "bf03a74e-b388-4d86-b735-703cb668edcd") 
+(symbol (lib_id "QuadEsc_ESCLibrary:GRM033R61C104KE84D") (at 44.45 67.31 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "bf03a74e-b388-4d86-b735-703cb668edcd") 
 
 (property "Reference" "C50" (at 40.386 69.596 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6690,7 +6806,7 @@
 
 (property "Description" "test point" (at 33.02 74.93 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "26fbadf7-f153-445b-8156-93254634505b")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "TP7") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "TP2") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "TP3") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "TP1") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:GRM033R61C104KE84D") (at 60.96 36.83 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "cb192598-00c9-41c8-8cd7-28ede740847c") 
+(symbol (lib_id "QuadEsc_ESCLibrary:GRM033R61C104KE84D") (at 60.96 36.83 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "cb192598-00c9-41c8-8cd7-28ede740847c") 
 
 (property "Reference" "C48" (at 56.896 39.116 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6728,7 +6844,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"+12V\"" (at 186.69 22.86 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "6814fbb0-ca1c-438d-81d1-dbe1a2db2059")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR092") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR056") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR071") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR039") (unit 1))))) 
 
-(symbol (lib_id "PCM_Transistor_MOSFET_AKL:2N6660") (at 36.83 146.05 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "e1c307e0-da1e-4199-993c-565dacc1988b") 
+(symbol (lib_id "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660") (at 36.83 146.05 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "e1c307e0-da1e-4199-993c-565dacc1988b") 
 
 (property "Reference" "Q1" (at 43.18 144.7799 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6768,7 +6884,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 44.45 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "f7fe7286-c8f2-44f0-849f-c7013bb48f9f")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR077") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR047") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR064") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR032") (unit 1))))) 
 
-(symbol (lib_id "ESCLibrary:0201_10kR") (at 48.26 60.96 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "ed925c0f-9c53-4920-ad79-4d567fd127e2") 
+(symbol (lib_id "QuadEsc_ESCLibrary:0201_10kR") (at 48.26 60.96 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "ed925c0f-9c53-4920-ad79-4d567fd127e2") 
 
 (property "Reference" "R19" (at 48.26 54.61 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6806,7 +6922,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 160.02 170.18 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "89489a1f-bcf3-494f-828d-115242611f45")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#PWR0100") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#PWR058") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#PWR079") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#PWR040") (unit 1))))) 
 
-(symbol (lib_id "PCM_Transistor_MOSFET_AKL:2N6660") (at 157.48 144.78 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "fcdb4ae8-7610-43d9-8a51-86a4cb51f793") 
+(symbol (lib_id "QuadEsc_PCM_Transistor_MOSFET_AKL:2N6660") (at 157.48 144.78 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "fcdb4ae8-7610-43d9-8a51-86a4cb51f793") 
 
 (property "Reference" "Q16" (at 163.83 143.5099 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6834,13 +6950,13 @@
 
 (property "FT Position Offset" "0,-1.06" (at 157.48 144.78 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))) 
 
-(symbol (lib_id "ESCLibrary:GRM033R61C104KE84D") (at 170.18 68.58 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "fcf377c3-8f09-48ac-9674-e814c452414f") 
+(symbol (lib_id "QuadEsc_ESCLibrary:GRM033R61C104KE84D") (at 170.18 68.58 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "fcf377c3-8f09-48ac-9674-e814c452414f") 
 
 (property "Reference" "C36" (at 167.894 64.516 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
 (property "Value" "100nF" (at 166.878 62.738 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
-(property "Footprint" "Capacitor_SMD:C_0402_WIDE" (at 170.18 58.42 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27) (italic yes)))) 
+(property "Footprint" "QuadrotorReviewed:C_0402_WIDE" (at 170.18 58.42 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27) (italic yes)))) 
 
 (property "Datasheet" "https://item.szlcsc.com/360022.html" (at 172.466 68.707 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6860,7 +6976,7 @@
 
 (property "MPN" "CL05B104KB54PNC" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "b125c1b6-6e0c-495c-adc8-1db374f76dd7")) (pin "2" (uuid "6dfea583-0fb8-4b98-bb14-d946b9beb9ac")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "C39") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "C37") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "C38") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "C36") (unit 1))))) 
 
-(symbol (lib_id "PCM_Resistor_AKL:R_0402") (at 88.9 162.56 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "fe90dd17-221e-417d-b518-5421d91242a8") 
+(symbol (lib_id "QuadEsc_PCM_Resistor_AKL:R_0402") (at 88.9 162.56 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "fe90dd17-221e-417d-b518-5421d91242a8") 
 
 (property "Reference" "R62" (at 88.9 157.734 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6884,4 +7000,54 @@
 
 (property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "MPN" "0201WMF150JTEE" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "1d7709e5-caef-484e-859b-d5a7021fa916")) (pin "2" (uuid "86d1869f-0a1e-445e-9888-00d157438541")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R75") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R63") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R74") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R62") (unit 1))))))
+(property "MPN" "0201WMF150JTEE" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "1d7709e5-caef-484e-859b-d5a7021fa916")) (pin "2" (uuid "86d1869f-0a1e-445e-9888-00d157438541")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "R75") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "R63") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "R74") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "R62") (unit 1)))))
+(symbol (lib_id "power:PWR_FLAG") (at 71.12 48.26 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "1d87992b-72cd-5413-9fdf-141326c10f09")
+    (property "Reference" "#FLG200" (at 71.12 48.26 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 71.12 44.449999999999996 0) (effects (font (size 1.0 1.0)) (hide yes)))
+    (property "Footprint" "" (at 71.12 48.26 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 71.12 48.26 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "bc52ee3a-669e-5a58-a5be-7eac1be398f6")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#FLG200") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#FLG1200") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#FLG2200") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#FLG3200") (unit 1)))))
+(wire (pts (xy 71.12 48.26) (xy 71.12 50.8)) (stroke (width 0) (type default)) (uuid "9fae61ec-1381-5b10-89e1-8d57e49e0f43"))
+(symbol (lib_id "power:PWR_FLAG") (at 146.05 62.23 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "afc4e660-9e48-5f3c-9779-484764917aee")
+    (property "Reference" "#FLG201" (at 146.05 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 146.05 58.419999999999995 0) (effects (font (size 1.0 1.0)) (hide yes)))
+    (property "Footprint" "" (at 146.05 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 146.05 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "527929a9-78a6-5f23-bc0a-3e7b604dbf83")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#FLG201") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#FLG1201") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#FLG2201") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#FLG3201") (unit 1)))))
+(wire (pts (xy 146.05 62.23) (xy 146.05 63.5)) (stroke (width 0) (type default)) (uuid "af201913-7ba2-5959-b0bf-45dcb45c7489"))
+(symbol (lib_id "power:PWR_FLAG") (at 156.21 64.77 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "94634e20-4f3c-504f-bf88-ceeb976caae3")
+    (property "Reference" "#FLG202" (at 156.21 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 156.21 60.959999999999994 0) (effects (font (size 1.0 1.0)) (hide yes)))
+    (property "Footprint" "" (at 156.21 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 156.21 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "58a312e1-9866-5923-b340-f70b65e3c23b")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#FLG202") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#FLG1202") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#FLG2202") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#FLG3202") (unit 1)))))
+(wire (pts (xy 156.21 64.77) (xy 156.21 66.04)) (stroke (width 0) (type default)) (uuid "fc261ba1-c687-5259-84b2-3b2442bbb960"))
+(symbol (lib_id "power:PWR_FLAG") (at 166.37 67.31 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "0f13d66f-369c-53df-b25c-8bd3d74e0eed")
+    (property "Reference" "#FLG203" (at 166.37 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 166.37 63.5 0) (effects (font (size 1.0 1.0)) (hide yes)))
+    (property "Footprint" "" (at 166.37 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 166.37 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "9f7db358-1b82-5e7b-9a9e-924daca4edfb")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#FLG203") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#FLG1203") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#FLG2203") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#FLG3203") (unit 1)))))
+(wire (pts (xy 166.37 67.31) (xy 166.37 68.58)) (stroke (width 0) (type default)) (uuid "b8cbaa94-b05e-5780-bc72-b6559e62bca6"))
+(symbol (lib_id "power:PWR_FLAG") (at 146.05 71.12 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "9fe28a2b-a376-5dba-abd1-636b74cbaf42")
+    (property "Reference" "#FLG204" (at 146.05 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 146.05 67.31 0) (effects (font (size 1.0 1.0)) (hide yes)))
+    (property "Footprint" "" (at 146.05 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 146.05 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "317b5e59-07e8-57db-ab61-042f8610cb6f")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#FLG204") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#FLG1204") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#FLG2204") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#FLG3204") (unit 1)))))
+(wire (pts (xy 146.05 71.12) (xy 146.05 73.66)) (stroke (width 0) (type default)) (uuid "9a785075-55f8-59c2-9c27-60b5e49c5d95"))
+(symbol (lib_id "power:PWR_FLAG") (at 95.25 151.13 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "961b7725-f67d-5999-86b2-4e71fb077cfd")
+    (property "Reference" "#FLG205" (at 95.25 151.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 95.25 147.32 0) (effects (font (size 1.0 1.0)) (hide yes)))
+    (property "Footprint" "" (at 95.25 151.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 95.25 151.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "bf7092b6-c780-5ad0-8899-159ff94770bc")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#FLG205") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#FLG1205") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#FLG2205") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#FLG3205") (unit 1)))))
+(wire (pts (xy 95.25 151.13) (xy 95.25 153.67)) (stroke (width 0) (type default)) (uuid "c6f724fa-c3cd-55b9-80f6-1aee0ef45d6d"))
+(symbol (lib_id "power:PWR_FLAG") (at 264.16 96.52 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "19a866f9-a60b-5a96-b567-d8e39bad1cbb")
+    (property "Reference" "#FLG206" (at 264.16 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 264.16 92.71 0) (effects (font (size 1.0 1.0)) (hide yes)))
+    (property "Footprint" "" (at 264.16 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 264.16 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a361f6b1-fa68-5dbf-bbd6-8b319288ac51")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3" (reference "#FLG206") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9" (reference "#FLG1206") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16" (reference "#FLG2206") (unit 1)) (path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1" (reference "#FLG3206") (unit 1)))))
+(wire (pts (xy 264.16 96.52) (xy 264.16 99.06)) (stroke (width 0) (type default)) (uuid "97004117-8d50-5e85-b073-77ab034e3a44"))
+)
