@@ -1,8 +1,8 @@
 {
   "schema": "labwired.project-assembly-binding.v1",
   "project_id": "f44771855a18a70d418e363622de2e28",
-  "content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
-  "previous_content_hash": "1458d69ac4a73b0bfcea2dd6acdff40795f80fa7d80dcc7ff2daffd5ba7bfb85",
+  "content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "previous_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
   "editable_source_preserved": true,
   "source_sha256": "267f433bca9f07a7706670b7caa1c31f0a163a2b7df835f3f48472a2654b782e",
   "firmware_ref": "sha256:569de958c176dbb434d920de218bea983d2916342b7573ffa90b2da6baf3d643",
@@ -48,22 +48,30 @@
   "physical_hardware_tested": false,
   "readback_verified": true,
   "last_owner_check": {
-    "observed_at": "2026-11-11T14:49:20.182Z",
+    "observed_at": "2026-11-11T15:00:13.139Z",
     "http_status": 200,
     "is_owner": true,
     "role": "owner",
-    "project_content_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
-    "method": "normal signed-in project GET and project-board GET after owner PUT",
-    "evidence": "pcb/hosted-native-integration/attachment-readback.json"
+    "project_content_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+    "method": "normal owner project GET after electronics save and declared-oracle verification",
+    "evidence": "firmware/final-project-binding-readback.json"
   },
-  "verified_hash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
+  "verified_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
   "visibility": "unlisted",
-  "recorded_at": "2026-11-11T14:49:20.182Z",
-  "snapshot_scope": "Saved project immediately after native PCB attachment; generic electronics binding has not yet been saved in this snapshot.",
-  "prepared_electronics_bindings": {
+  "recorded_at": "2026-11-11T15:00:13.139Z",
+  "snapshot_scope": "Saved project after generic electronics metadata save and fresh declared-oracle firmware verification. PCB attachment has its separate operation-scoped proof.",
+  "electronics_bindings": {
     "path": "mechanical/revision-3/electronics-bindings.json",
     "sha256": "13b10cfbeb705aace7fdfcc97c1ca7e493c33122a9450cc5e782d08304ddecd5",
-    "status": "prepared-not-applied",
-    "provenance": "mechanical/revision-3/electronics-bindings-provenance.json"
+    "status": "saved-and-oracle-verified",
+    "provenance": "mechanical/revision-3/electronics-bindings-provenance.json",
+    "verification": "firmware/saved-project-verification-final.json",
+    "readback": "firmware/final-project-binding-readback.json"
+  },
+  "saved_verification": {
+    "request_and_result": "firmware/saved-project-verification-final.json",
+    "max_steps": 50000000,
+    "proof": "oracle",
+    "oracle_source": "declared"
   }
 }

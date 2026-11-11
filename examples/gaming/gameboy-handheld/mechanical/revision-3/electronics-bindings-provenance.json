@@ -1,5 +1,5 @@
 {
-  "status": "prepared-not-applied",
+  "status": "saved-to-project-and-oracle-verified",
   "projectId": "f44771855a18a70d418e363622de2e28",
   "expectedBaseContentHash": "f1908846abb36142f847100cc178cf4e4bf6c88135921ae93f6e40087886af41",
   "kernelcad": {
@@ -118,5 +118,10 @@
       "sha256": "6b5411371c68cfb96ff7e4f3d6ad111d0a47c15f0a3df3abf4e80ffb6fb1a1b3"
     }
   ],
-  "scope": "Example configuration prepared for diagram.mechanical.electronics; not a CAD source mutation. Application to the saved project and its later content hash are recorded separately."
+  "scope": "The exact prepared configuration was saved at diagram.mechanical.electronics. Fresh owner readback proves all other diagram content, firmware/source, stimuli, PCB reference and unlisted visibility unchanged. Saved firmware verification passed with the unchanged declared oracle and explicit 50,000,000-step budget. This is separate from actual browser input/display interaction proof.",
+  "contentHash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "verifiedHash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "readbackAt": "2026-11-11T15:00:13.139Z",
+  "readbackEvidence": "firmware/final-project-binding-readback.json",
+  "verificationEvidence": "firmware/saved-project-verification-final.json"
 }

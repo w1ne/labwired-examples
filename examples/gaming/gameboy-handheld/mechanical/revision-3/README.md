@@ -73,7 +73,7 @@ The bounded assembly-path run returned **unknown for all 59 parts** after its wo
 
 ## Generic live electronics configuration
 
-`electronics-bindings.json` is the prepared version-1 value for `diagram.mechanical.electronics`. It maps `lcd1` to the existing `lcd1-active-glass` face and all eight circuit control IDs to the existing button/D-pad parts. It does not edit the evaluated CAD source or create another simulation. `electronics-bindings-provenance.json` records the exact CAD/source identities and coordinate checks. Application to the saved project is recorded separately from this prepared configuration.
+`electronics-bindings.json` is the exact version-1 value saved at `diagram.mechanical.electronics`. It maps `lcd1` to the existing `lcd1-active-glass` face and all eight circuit control IDs to the existing button/D-pad parts. It does not edit the evaluated CAD source or create another simulation. `electronics-bindings-provenance.json` records the exact CAD/source identities and coordinate checks. The saved configuration and fresh declared-oracle firmware verification are recorded in `../../firmware/final-project-binding-readback.json` and `../../firmware/saved-project-verification-final.json`. The later metadata save preserves the evaluated CAD revision and all firmware/circuit source identities.
 
 The bindings use the positive-Z face, with local face coordinates `u = x`, `v = y`. Four disjoint normalized arm regions select directions on the shared `dpad` mesh; the center pivot is excluded. The receiver must aggregate simultaneous pressed states for that shared part. The 0.45 mm displacement represents the nominal 0.20 mm gap plus 0.25 mm switch pretravel. It is a visual runtime displacement, not a continuous tilt or force model.
 

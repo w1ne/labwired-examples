@@ -79,13 +79,25 @@ class GameBoyExample(unittest.TestCase):
         self.assertEqual(saved['pcb']['local_preserve_preflight'], prefix + 'local-preserve-drc-preflight.json')
         self.assertEqual(read('manifest.json')['pcb']['preserve_preflight'], saved['pcb']['local_preserve_preflight'])
 
-    def test_production_view_evidence_binds_current_artifacts_and_separates_scopes(self):
+    def test_production_view_evidence_binds_pinned_artifacts_and_separates_scopes(self):
         manifest = read('manifest.json')
         prefix = 'firmware/production-view/'
         index = read(prefix + 'index.json')
         self.assertEqual(manifest['evidence']['browser_production'], prefix + 'index.json')
         self.assertEqual(index['project']['id'], manifest['project']['id'])
-        self.assertEqual(index['project']['content_hash'], manifest['project']['content_hash'])
+        self.assertEqual(index['project']['content_hash'],
+                         manifest['evidence']['browser_production_snapshot_content_hash'])
+        final_readback = read(manifest['evidence']['final_project_readback'])
+        self.assertEqual(final_readback['previous_content_hash'], index['project']['content_hash'])
+        self.assertEqual(final_readback['content_hash'], manifest['project']['content_hash'])
+        self.assertEqual(final_readback['verified_hash'], final_readback['content_hash'])
+        final_verify = read(manifest['evidence']['saved_project_verification'])
+        self.assertEqual(final_verify['response']['verified_hash'], final_readback['content_hash'])
+        self.assertTrue(final_verify['response']['verified'])
+        self.assertEqual(final_verify['response']['proof'], 'oracle')
+        self.assertEqual(final_verify['response']['oracle_source'], 'declared')
+        self.assertEqual(final_verify['request']['oracle'], read('firmware/verification.json')['oracle'])
+        self.assertEqual(final_verify['request']['max_steps'], read('firmware/verification.json')['max_steps'])
         self.assertEqual((index['project']['parts'], index['project']['wires']), (10, 24))
         self.assertEqual(index['firmware']['source_sha256'], digest(manifest['source']['path']))
         self.assertEqual(index['firmware']['source_bytes'], (GAME / manifest['source']['path']).stat().st_size)
