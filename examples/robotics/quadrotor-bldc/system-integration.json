@@ -27,7 +27,11 @@
       ]
     ],
     "propeller_sweep_diameter_mm": 129.7,
-    "minimum_nominal_sweep_gap_mm": 9.368841512000017
+    "minimum_nominal_sweep_gap_mm": 9.368841512000017,
+    "populated_board_standalone_geometry_valid": true,
+    "populated_board_cloud_display_ready": false,
+    "populated_full_frame_assembly_validated": false,
+    "populated_board_display_receipt": "cad/evidence/native-pcb-studio-save-20261111.json"
   },
   "physical_electronics": {
     "esc": "hardware/esc-4in1/4in1.kicad_pcb",
@@ -38,7 +42,10 @@
     "battery_nominal_v": 14.8,
     "battery_full_v": 16.8,
     "motor": "EMAX ECO II 2306 2400KV",
-    "netlist_simulation_equivalence": false
+    "netlist_simulation_equivalence": false,
+    "unsupported_import_entries": 37,
+    "non_simulating_connector_testpoint_entries": 9,
+    "import_coverage": "hardware/esc-4in1/validation/20261111/labwired-import-coverage.json"
   },
   "simulated_electronics": {
     "project": "7c92d38a4f2ac205aa91502291fde0d8",
