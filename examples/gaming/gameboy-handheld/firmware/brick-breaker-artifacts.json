@@ -1,0 +1,111 @@
+{
+  "schema": "labwired.brick-breaker.v1",
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "content_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+  "source": "brick_breaker.c",
+  "source_tree_ref": "sha256:629de67c0c0a65029a80ce8cc3cc7bd126e582c99621e843577964e2e967db38",
+  "firmware_ref": "sha256:cfa5fd07dbaa457d7e3315d69d5076c90b70f453d490229889e440a595ea4681",
+  "rom": "brick_breaker.gb",
+  "rom_sha256": "708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5",
+  "verification": "model_verified; direct 50,000,000-step declared oracle",
+  "saved_project_verification": "ORACLE_NOT_REACHED under the tool default budget; full declared oracle retained",
+  "physical_hardware_tested": false,
+  "capture": "Actual original ROM emulation plus external scripted inputs; not MCU/browser wall-clock performance",
+  "files": [
+    {
+      "path": "BRICK_BREAKER.md",
+      "bytes": 4681,
+      "sha256": "28a2225627ce4c94bfc9842f8676d887f0fa3fcd2516fb28305c05aa6af5b24a"
+    },
+    {
+      "path": "brick-breaker-capture-provenance.json",
+      "bytes": 1172,
+      "sha256": "b9c19ecc6014cf16d210a4a0ff91169f5f9dcf3caf94106820068d21b11b1850"
+    },
+    {
+      "path": "brick-breaker-compile.json",
+      "bytes": 715,
+      "sha256": "398abce3a06f0f8490db24ea690c3fa8e07560c78fda2375761249488465a4a9"
+    },
+    {
+      "path": "brick-breaker-host-verification.json",
+      "bytes": 674,
+      "sha256": "dea2e73a4914637afa656695bf5f5659041484a2bf1bb8c3de8a42a4b8682f22"
+    },
+    {
+      "path": "brick-breaker-manifest.json",
+      "bytes": 1161,
+      "sha256": "496eeb4704d6049465e31f08285f1cad4c4622e21369c93a8fca699e98f0a80b"
+    },
+    {
+      "path": "brick-breaker-project-readback.json",
+      "bytes": 1849,
+      "sha256": "4ff81632617b41ffe18ddc0c19d2c51caba43ba8acb7dfbc2c5bbaf253e9a376"
+    },
+    {
+      "path": "brick-breaker-source.json",
+      "bytes": 409,
+      "sha256": "317e98aebdb13bb2f3719a7b781238837da11845698d936fa09cf51fec1692c7"
+    },
+    {
+      "path": "brick-breaker-validation.json",
+      "bytes": 1033,
+      "sha256": "3fdb7b3af87e4fb499372eda2bca9fae1c55070380e013b0177fe4267b6bd4e0"
+    },
+    {
+      "path": "brick-breaker-verification.json",
+      "bytes": 4103,
+      "sha256": "8994ca17a4dea341996ad20ec8e82f0ee0a128171e20e33659701c4ef71a5f69"
+    },
+    {
+      "path": "brick-breaker-verify-request.json",
+      "bytes": 10797,
+      "sha256": "6c088364a3279ecfec822d8e07de5584116b74217552371f7a223d84a682188a"
+    },
+    {
+      "path": "brick_breaker.c",
+      "bytes": 125425,
+      "sha256": "cd30bf4b2ea545786b0fcc7673dc3fd1c1e9a8cb08ed9a37b7ee96f5c649c7e4"
+    },
+    {
+      "path": "brick_breaker.gb",
+      "bytes": 32768,
+      "sha256": "708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5"
+    },
+    {
+      "path": "brick_breaker_font.py",
+      "bytes": 2463,
+      "sha256": "6ac619fa55bffb1a3c75329fb007ca866063f8f0c6a94236b65260bf18a7e38b"
+    },
+    {
+      "path": "brick_breaker_main.c",
+      "bytes": 5606,
+      "sha256": "3b97fb4952c4d07086c6ffb59e14a874771c8cd5144e561612b11d413e1f87c2"
+    },
+    {
+      "path": "brick_breaker_rom.h",
+      "bytes": 16872,
+      "sha256": "124e00a350677adba7d6f0b8fa70d2b96091b13fb6c60c395767aa12427b5c70"
+    },
+    {
+      "path": "build_brick_breaker.py",
+      "bytes": 9711,
+      "sha256": "eed3b48dc279da302e63cb7ef6382190988aced8bb7ee942b6d4fdb016734315"
+    },
+    {
+      "path": "build_brick_breaker_firmware.py",
+      "bytes": 524,
+      "sha256": "e4de6f8f2675b02a4583ee14c31cc213d1b07e446728e2d3ff48a6c9520107b3"
+    },
+    {
+      "path": "capture_brick_breaker.py",
+      "bytes": 2971,
+      "sha256": "16c19c311a98878fe847cf2b19deb21f22ebb8fd0a23a19fad257b27c776135b"
+    },
+    {
+      "path": "host_brick_breaker.c",
+      "bytes": 4365,
+      "sha256": "712161485479744f59f2658f53834f0daf70f51d9a18eae75d083d8e17419a35"
+    }
+  ]
+}
