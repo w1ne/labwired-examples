@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.16
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.16,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -162,6 +178,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -173,6 +190,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -184,6 +202,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -526,8 +545,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -622,7 +641,7 @@
       "sort_field": "Reference"
     },
     "bus_aliases": {},
-    "connection_grid_size": 50.0,
+    "connection_grid_size": 25.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
@@ -696,16 +715,18 @@
     ]
   ],
   "text_variables": {
-    "OPENDRONE_LIB": "${KIPRJMOD}/KiCad-Library",
     "DOC_FIRMWARE": "AM32",
     "DOC_HANDLE": "openesc-30x30",
     "DOC_INPUT": "+BATT 2S-8S",
-    "DOC_MCU": "AT32F421G8U7 (QFN-28) ×4",
+    "DOC_MCU": "AT32F421G8U7 (QFN-28) \u00d74",
     "DOC_NAME": "OpenESC-30x30",
     "DOC_PROTOCOL": "DShot",
     "DOC_RATING": "2S-8S input; 60 A per channel; ~330 A current-sense full-scale",
     "DOC_TAGLINE": "AM32 4-in-1 BLDC ESC, 4x independent AT32F421 channels, DShot",
-    "DOC_VARIANT": "30×30"
+    "DOC_VARIANT": "30\u00d730",
+    "OPENDRONE_LIB": "${KIPRJMOD}/KiCad-Library",
+    "KICAD10_3DMODEL_DIR": "${KIPRJMOD}/reviewed-models",
+    "KICAD9_3DMODEL_DIR": "${KIPRJMOD}/reviewed-models"
   },
   "tuning_profiles": {
     "meta": {

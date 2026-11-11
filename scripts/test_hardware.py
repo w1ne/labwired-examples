@@ -5,6 +5,8 @@ physical DRC, circuit simulation, a first-article inspection or a flight test.
 """
 import collections
 import csv
+import hashlib
+import json
 import pathlib
 import re
 import unittest
@@ -95,13 +97,29 @@ class ESCPhysicalBoard(unittest.TestCase):
         for ref in ("C501", "C510", "C530", "C549"):
             self.assertIn('(ref "' + ref + '")', netlist)
 
-    def test_drc_report_is_not_misrepresented_as_clean(self):
-        drc = findings(E / "validation" / "drc-final.txt")
-        self.assertEqual(drc["lib_footprint_mismatch"], 1)
-        self.assertEqual(drc["net_conflict"], 3)
-        for violation in ("shorting_items", "clearance", "unconnected_items"):
-            self.assertEqual(drc[violation], 0)
-        self.assertEqual(sum(drc.values()), 4)
+    def test_native_erc_drc_reports_match_current_source(self):
+        self.assertEqual(sum(findings(E / "validation" / "drc-final.txt").values()), 0)
+        self.assertEqual(sum(findings(E / "validation" / "erc-final.txt").values()), 0)
+        report = (E / "validation" / "drc-final.txt").read_text()
+        for marker in ("Found 0 DRC violations", "Found 0 unconnected pads", "Found 0 Footprint errors"):
+            self.assertIn(marker, report)
+        evidence = json.loads((E / "validation" / "20261111" / "native-evidence.json").read_text())
+        for name, expected in evidence["source_sha256"].items():
+            self.assertEqual(hashlib.sha256((E / name).read_bytes()).hexdigest(), expected, name)
+
+    def test_u2_pad_restore_and_netlist_membership(self):
+        marker = '(property "Reference" "U2"'
+        idx = self.board.find(marker)
+        start = self.board.rfind("\n\t(footprint ", 0, idx)
+        stop = self.board.find("\n\t(footprint ", idx)
+        footprint = self.board[start:stop if stop >= 0 else None]
+        for number, name in (("8", "PA2"), ("23", "PA15"), ("24", "PB3")):
+            self.assertIn('(pad "' + number + '" smd', footprint)
+            self.assertIn(f'unconnected-(U2-{name}-Pad{number})', footprint)
+        proof = json.loads((E / "validation" / "20261111" / "netlist-equivalence.json").read_text())
+        self.assertTrue(proof["physical_net_membership_preserved"])
+        self.assertEqual(proof["before_nets"], 210)
+        self.assertEqual(proof["changed_nets"], [])
 
     def test_gate_driver_nc_pads_restored_and_isolated(self):
         # The five actual QFN pads must be physical PCB objects, each with a
@@ -172,10 +190,14 @@ class ESCPhysicalBoard(unittest.TestCase):
         evidence = (E / 'validation' / 'u5-power-feedback-reroute-20261110.md').read_text()
         self.assertIn('not ready for', evidence)
 
-    def test_inherited_erc_findings_explicit(self):
-        erc = findings(E / "validation" / "erc-final.txt")
-        self.assertEqual(sum(erc.values()), 352)
-        self.assertEqual(erc["pin_to_pin"], 240)
+    def test_historical_findings_preserved_and_simulation_gap_explicit(self):
+        history = E / "validation" / "20261111"
+        self.assertEqual(sum(findings(history / "historical-erc-final.txt").values()), 352)
+        self.assertEqual(sum(findings(history / "historical-drc-final.txt").values()), 4)
+        coverage = json.loads((history / "labwired-import-coverage.json").read_text())
+        self.assertFalse(coverage["twin_buildable"])
+        self.assertEqual(coverage["mode"], "design_only")
+        self.assertEqual(coverage["counts"]["droppedPinEndpoints"], 0)
         self.assertIn("Do not order", (E / "README.md").read_text())
 
     def test_gerber_data_is_review_only(self):
