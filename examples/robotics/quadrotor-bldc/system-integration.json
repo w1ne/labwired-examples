@@ -84,7 +84,17 @@
     "back_emf_constant": 0.04,
     "torque_constant": 0.04,
     "model_is_physical_ESC": false,
-    "public_revision_status": "CAD v5 is saved in the owner working project; fresh saved-project verification and republishing are pending."
+    "public_revision_status": "CAD v5 is saved in the owner working project. The canonical sources and circuit now include the 4 MHz clock correction and universal instruments; browser acceptance, hosted verification, deployment and republishing are pending.",
+    "simulation_clock_hz": 4000000,
+    "pwm_hz": 20000,
+    "control_tick_hz": 10000,
+    "instruments": {
+      "oscilloscope": "source-qualified numeric and digital signals",
+      "logic_analyzer": "source-qualified GPIO and published digital wires",
+      "release_pull_request": "https://github.com/w1ne/labwired/pull/3163",
+      "runtime_acceptance_status": "Clock and source identity pass; coast-down fails and complementary OCxN capture is unavailable in pinned core7ae.",
+      "candidate_evidence": "labwired/evidence/20261112-clock-candidate/timing-and-fault-review.json"
+    }
   },
   "integration": {
     "motion_binding": "cad/runtime-bindings.json",

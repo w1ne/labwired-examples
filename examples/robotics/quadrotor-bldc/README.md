@@ -28,7 +28,7 @@ target; native electrical onboarding is tracked in
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
 - [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors, one retained microSD-pad parity omission; no native boot or manufacturing acceptance.
 
-The saved LabWired project links to the versioned KernelCAD model. Its circuit contains four controllers, four motors, four independent fault inputs and 64 wires. A logic analyzer can appear as an extra editor instrument; it is not a physical component of the aircraft.
+The canonical circuit links to the versioned KernelCAD model. It contains four controllers, four motors, four independent fault inputs, 64 wires, an oscilloscope and a logic analyzer. The two instruments observe simulator signals; they are not physical aircraft components. The updated public revision is pending runtime acceptance and deployment.
 
 ## What the artifacts establish
 
@@ -64,14 +64,22 @@ The native PCB has **222 footprints, 1,067 pads and 210 nets**. KiCad 10.0.8 rep
 
 1. Load [four-channel-circuit.json](labwired/four-channel-circuit.json).
 2. Use the exact source identified for each controller in [four-channel-project.json](labwired/four-channel-project.json). Compile each as C with board `stm32l476` and entry path `src/main.c`.
-3. Run all four controllers together. Their duty commands are 600, 640, 680 and 720 per mille. Require observed rotor motion and the firmware's Hall/encoder feedback markers.
+3. Use the declared 4 MHz board clock for each controller and motor model. The firmware configures a 20 kHz PWM timer and a 10 kHz control tick. Run all four controllers together. Their duty commands are 600, 640, 680 and 720 per mille. Require observed rotor motion and the firmware's Hall/encoder feedback markers.
 4. Drive `fault1` through `fault4` independently. Require the selected controller's `FAULT DRIVER` and `INVERTER OFF` markers and its inverter-enable output low. Confirm that the other channels continue before faulting them.
 5. Use `cad/runtime-bindings.json` for the evaluated KernelCAD revision. The bridge must receive real `positionRad` and `speedRpm`; a timed visual animation is not a substitute.
 6. Pause and stop the simulation. Verify that the viewer stops advancing and does not reuse stale telemetry as a new run.
 
 The multi-MCU loader correction [LabWired PR #3094](https://github.com/w1ne/labwired/pull/3094) merged after required CI passed. Hosted deployment and model verification are separate gates. The generic live bridge is in [LabWired PR #3106](https://github.com/w1ne/labwired/pull/3106) and [KernelCAD-app PR #121](https://github.com/w1ne/kernelCAD-app/pull/121). The canonical [four-channel-circuit.json](labwired/four-channel-circuit.json) contains the four authored motor-to-CAD bindings and pins saved CAD revision 5. The earlier runtime-candidate file remains historical evidence. Repository contents alone do not prove production deployment.
 
-## Observed candidate behavior
+## Universal mixed-signal instruments
+
+The oscilloscope selects any published numeric source with its native units, or a digital source. The logic analyzer selects board GPIO and published digital wires. Both retain the selected controller identity. The saved selections show M1 current, speed, PWM and enable on the scope, and PWM, low-side drive, fault input and enable on the logic analyzer. Source changes do not require a firmware change.
+
+The shared instrument and runtime fixes are tracked in [LabWired PR #3163](https://github.com/w1ne/labwired/pull/3163). The [corrected-clock candidate](labwired/evidence/20261112-clock-candidate/) confirms four executed ELF identities, Hall feedback, the high-side carrier and source switching. Final acceptance failed at coast-down and found missing native complementary-pad output. Native corrections, hosted verification, deployment and the new short recording remain pending. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
+
+## Earlier motion-binding evidence, 11 November 2026
+
+These receipts predate the correction that aligns the L476 system and motor model at 4 MHz. They retain evidence for source identity, motion binding, fault latching and pause/reset behavior. They do not establish timing or motor-model behavior for the current corrected firmware.
 
 The [independent final audit](labwired/evidence/20261111-final/independent-audit.json) establishes:
 
@@ -97,7 +105,7 @@ Until those gates pass, use **co-design engineering preview** or **four-channel 
 
 ## Files and earlier evidence
 
-- [firmware/channels/](firmware/channels/) stores the four exact saved-project sources, with SHA-256 digests in the project manifest.
+- [firmware/channels/](firmware/channels/) stores the four canonical candidate sources, with SHA-256 digests in the project manifest. Publication status is recorded in the integration manifest.
 - [cad/drone.kcad.ts](cad/drone.kcad.ts) contains the current native FC candidate and imports immutable source CAD.
 - [cad/evidence/](cad/evidence/) contains full evaluation, motion, assembly-budget and export receipts.
 - [hardware/esc-4in1/](hardware/esc-4in1/) contains editable native electrical files, local libraries and validation reports.

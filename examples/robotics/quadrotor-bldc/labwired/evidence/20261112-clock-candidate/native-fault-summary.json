@@ -1,0 +1,2016 @@
+{
+  "recordedAt": "2026-11-12T15:14:26.751845+00:00",
+  "status": "failed_physical_coast_down_gate",
+  "source": {
+    "capturedAt": "2026-11-12T15:07:15.894126+00:00",
+    "head": "9d783a474daf3161a502f278ad0403ab0684c44a",
+    "status": "",
+    "sourceSha256": {
+      "packages/board-config/dist/index.js": "9fc783b37d5702a68339150bb6669b03db58f3020ff7ab012cfc4fe0d5cea543",
+      "packages/playground/src/install-uploaded-firmware.ts": "8c94b6647fcde95668fc9ab5736c7edfe09167f67505c622c2643e5404bb6fd1",
+      "packages/board-config/src/board-system-clock.ts": "7536fe03bbc9b49d8e3b8b5566c22daca701173ccabcfd17d7be7144a999d017"
+    },
+    "driverSha256": "8564abda9e85b334d510d8deef1c050fa59197c2f81f34d22563e00298ca433a"
+  },
+  "publicProjectIsUnchangedV4": true,
+  "exactUploadedFirmware": [
+    {
+      "chip": "ctrl1",
+      "sha256": "2a9d73c1a784dd8c94dc1b456b01aeebc2cad40c4c4c484b7db77e68e0d8705c",
+      "bytes": 83636,
+      "sourceSha256": "fec46954e4d07110d01739c4fe05b3605be291044451d88e10b764cf4505b969",
+      "sourceOrigin": "authenticated compiler candidate files",
+      "editorSourceReplaced": false,
+      "compiler": {
+        "ok": true,
+        "firmware_ref": "sha256:2a9d73c1a784dd8c94dc1b456b01aeebc2cad40c4c4c484b7db77e68e0d8705c",
+        "firmware_blob_path": "/v1/blobs/sha256/2a9d73c1a784dd8c94dc1b456b01aeebc2cad40c4c4c484b7db77e68e0d8705c",
+        "runnable": true,
+        "capability": {
+          "requested": "stm32l476",
+          "resolved_id": "stm32l476",
+          "chip": "stm32l476",
+          "mode": "compile_and_run",
+          "hosted_compile": true,
+          "hosted_run": true,
+          "toolchains": [
+            "c",
+            "cpp",
+            "arduino",
+            "rust"
+          ],
+          "preserve_requested_hardware": true,
+          "automatic_substitution": false
+        },
+        "simulation_status": "available",
+        "verification_status": "not_run",
+        "flash_image_refs": [
+          {
+            "offset": 134217728,
+            "ref": "sha256:27431dae5fa9b4d4e1714d736d02fe471b9976ceded804f11c59db53c8df9acb",
+            "blob_path": "/v1/blobs/sha256/27431dae5fa9b4d4e1714d736d02fe471b9976ceded804f11c59db53c8df9acb"
+          }
+        ],
+        "flash_chip": "stm32l476",
+        "diagnostics": []
+      }
+    },
+    {
+      "chip": "ctrl2",
+      "sha256": "12106fc25a90877b54d4b0bddddb94867db54012fab466c87f461c6700ac38cc",
+      "bytes": 83636,
+      "sourceSha256": "a4af968b96c1552f162f05ba6610d267145681960b552ae574c488f7b355a8b0",
+      "sourceOrigin": "authenticated compiler candidate files",
+      "editorSourceReplaced": false,
+      "compiler": {
+        "ok": true,
+        "firmware_ref": "sha256:12106fc25a90877b54d4b0bddddb94867db54012fab466c87f461c6700ac38cc",
+        "firmware_blob_path": "/v1/blobs/sha256/12106fc25a90877b54d4b0bddddb94867db54012fab466c87f461c6700ac38cc",
+        "runnable": true,
+        "capability": {
+          "requested": "stm32l476",
+          "resolved_id": "stm32l476",
+          "chip": "stm32l476",
+          "mode": "compile_and_run",
+          "hosted_compile": true,
+          "hosted_run": true,
+          "toolchains": [
+            "c",
+            "cpp",
+            "arduino",
+            "rust"
+          ],
+          "preserve_requested_hardware": true,
+          "automatic_substitution": false
+        },
+        "simulation_status": "available",
+        "verification_status": "not_run",
+        "flash_image_refs": [
+          {
+            "offset": 134217728,
+            "ref": "sha256:16d2c69aaa650a469bdffea02565881110ca326a3a968e3339fc8c148c363d54",
+            "blob_path": "/v1/blobs/sha256/16d2c69aaa650a469bdffea02565881110ca326a3a968e3339fc8c148c363d54"
+          }
+        ],
+        "flash_chip": "stm32l476",
+        "diagnostics": []
+      }
+    },
+    {
+      "chip": "ctrl3",
+      "sha256": "ceccaacd7ab38a61c4c8430880affcbcea6798fe2e1c474ae59bd15f972672e4",
+      "bytes": 83636,
+      "sourceSha256": "cc6b2e73be018a38baf8545df1b98b7870eb2f8b9c006128db16c395997dabf2",
+      "sourceOrigin": "authenticated compiler candidate files",
+      "editorSourceReplaced": false,
+      "compiler": {
+        "ok": true,
+        "firmware_ref": "sha256:ceccaacd7ab38a61c4c8430880affcbcea6798fe2e1c474ae59bd15f972672e4",
+        "firmware_blob_path": "/v1/blobs/sha256/ceccaacd7ab38a61c4c8430880affcbcea6798fe2e1c474ae59bd15f972672e4",
+        "runnable": true,
+        "capability": {
+          "requested": "stm32l476",
+          "resolved_id": "stm32l476",
+          "chip": "stm32l476",
+          "mode": "compile_and_run",
+          "hosted_compile": true,
+          "hosted_run": true,
+          "toolchains": [
+            "c",
+            "cpp",
+            "arduino",
+            "rust"
+          ],
+          "preserve_requested_hardware": true,
+          "automatic_substitution": false
+        },
+        "simulation_status": "available",
+        "verification_status": "not_run",
+        "flash_image_refs": [
+          {
+            "offset": 134217728,
+            "ref": "sha256:695db1dfe50271f6adecafe10c22bf05baece8f7167f6d40f7bdfb7dc31347f6",
+            "blob_path": "/v1/blobs/sha256/695db1dfe50271f6adecafe10c22bf05baece8f7167f6d40f7bdfb7dc31347f6"
+          }
+        ],
+        "flash_chip": "stm32l476",
+        "diagnostics": []
+      }
+    },
+    {
+      "chip": "ctrl4",
+      "sha256": "1160235bf73752e72bdcff1eacf25f8a19d51a64212629073e594126bd7b8481",
+      "bytes": 83636,
+      "sourceSha256": "8e694779a13435d3dccee21bf1381536d35cf80eb1cec7a186baef1159056646",
+      "sourceOrigin": "authenticated compiler candidate files",
+      "editorSourceReplaced": false,
+      "compiler": {
+        "ok": true,
+        "firmware_ref": "sha256:1160235bf73752e72bdcff1eacf25f8a19d51a64212629073e594126bd7b8481",
+        "firmware_blob_path": "/v1/blobs/sha256/1160235bf73752e72bdcff1eacf25f8a19d51a64212629073e594126bd7b8481",
+        "runnable": true,
+        "capability": {
+          "requested": "stm32l476",
+          "resolved_id": "stm32l476",
+          "chip": "stm32l476",
+          "mode": "compile_and_run",
+          "hosted_compile": true,
+          "hosted_run": true,
+          "toolchains": [
+            "c",
+            "cpp",
+            "arduino",
+            "rust"
+          ],
+          "preserve_requested_hardware": true,
+          "automatic_substitution": false
+        },
+        "simulation_status": "available",
+        "verification_status": "not_run",
+        "flash_image_refs": [
+          {
+            "offset": 134217728,
+            "ref": "sha256:4c9d65aaa026e48705e62a1c67c469c9e0791cbcf9fd0fa2da9f2c659e555df0",
+            "blob_path": "/v1/blobs/sha256/4c9d65aaa026e48705e62a1c67c469c9e0791cbcf9fd0fa2da9f2c659e555df0"
+          }
+        ],
+        "flash_chip": "stm32l476",
+        "diagnostics": []
+      }
+    }
+  ],
+  "preparedConfigs": [
+    {
+      "chip": "ctrl1",
+      "worker": 3,
+      "mode": "config",
+      "firmware": {
+        "bytes": 83636,
+        "sha256": "2a9d73c1a784dd8c94dc1b456b01aeebc2cad40c4c4c484b7db77e68e0d8705c"
+      },
+      "configs": {
+        "systemYaml": {
+          "file": "init-0-systemYaml.yaml",
+          "sha256": "79a8ae49c4ddd7256603ace9343b8c3b75fcc656e167c6208732b6680a3b2004",
+          "clockFields": [
+            {
+              "line": 3,
+              "text": "cpu_hz: 4_000_000"
+            },
+            {
+              "line": 22,
+              "text": "      simulation_clock_hz: 4000000"
+            }
+          ]
+        },
+        "chipYaml": {
+          "file": "init-0-chipYaml.yaml",
+          "sha256": "6a349eb2c902f9db72d3b3c57e83fa6ae3b43a52f9a517fc9dad3d3c798a8db0",
+          "clockFields": [
+            {
+              "line": 21,
+              "text": "cpu_hz: 80_000_000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "chip": "ctrl2",
+      "worker": 3,
+      "mode": "config",
+      "firmware": {
+        "bytes": 83636,
+        "sha256": "12106fc25a90877b54d4b0bddddb94867db54012fab466c87f461c6700ac38cc"
+      },
+      "configs": {
+        "systemYaml": {
+          "file": "init-1-systemYaml.yaml",
+          "sha256": "9f58c00bb1586335ce19469f8327d75b6e35d66d9dc093b2bd7991a49b05f623",
+          "clockFields": [
+            {
+              "line": 3,
+              "text": "cpu_hz: 4_000_000"
+            },
+            {
+              "line": 22,
+              "text": "      simulation_clock_hz: 4000000"
+            }
+          ]
+        },
+        "chipYaml": {
+          "file": "init-1-chipYaml.yaml",
+          "sha256": "6a349eb2c902f9db72d3b3c57e83fa6ae3b43a52f9a517fc9dad3d3c798a8db0",
+          "clockFields": [
+            {
+              "line": 21,
+              "text": "cpu_hz: 80_000_000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "chip": "ctrl3",
+      "worker": 3,
+      "mode": "config",
+      "firmware": {
+        "bytes": 83636,
+        "sha256": "ceccaacd7ab38a61c4c8430880affcbcea6798fe2e1c474ae59bd15f972672e4"
+      },
+      "configs": {
+        "systemYaml": {
+          "file": "init-2-systemYaml.yaml",
+          "sha256": "acff1ce7733d4d6c771e0fdf9c20d882853b0c85e18c7f46b25eb35117b0ea71",
+          "clockFields": [
+            {
+              "line": 3,
+              "text": "cpu_hz: 4_000_000"
+            },
+            {
+              "line": 22,
+              "text": "      simulation_clock_hz: 4000000"
+            }
+          ]
+        },
+        "chipYaml": {
+          "file": "init-2-chipYaml.yaml",
+          "sha256": "6a349eb2c902f9db72d3b3c57e83fa6ae3b43a52f9a517fc9dad3d3c798a8db0",
+          "clockFields": [
+            {
+              "line": 21,
+              "text": "cpu_hz: 80_000_000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "chip": "ctrl4",
+      "worker": 3,
+      "mode": "config",
+      "firmware": {
+        "bytes": 83636,
+        "sha256": "1160235bf73752e72bdcff1eacf25f8a19d51a64212629073e594126bd7b8481"
+      },
+      "configs": {
+        "systemYaml": {
+          "file": "init-3-systemYaml.yaml",
+          "sha256": "cad4ff86096c95faf0adb2b5cc54721fbad680f6ed8e620ad185055dbec8796e",
+          "clockFields": [
+            {
+              "line": 3,
+              "text": "cpu_hz: 4_000_000"
+            },
+            {
+              "line": 22,
+              "text": "      simulation_clock_hz: 4000000"
+            }
+          ]
+        },
+        "chipYaml": {
+          "file": "init-3-chipYaml.yaml",
+          "sha256": "6a349eb2c902f9db72d3b3c57e83fa6ae3b43a52f9a517fc9dad3d3c798a8db0",
+          "clockFields": [
+            {
+              "line": 21,
+              "text": "cpu_hz: 80_000_000"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "phases": {
+    "mixed-healthy": {
+      "starts": 4,
+      "compiles": 0,
+      "latest": {
+        "ctrl1": {
+          "wallMs": 1794496114768,
+          "cycles": 3400000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 3,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor1",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                3.034535939956299,
+                -0.6585198376677673,
+                -2.3760161022885318
+              ],
+              "position_rad": 198.8688274905371,
+              "speed_rpm": 2625.431661104711,
+              "torque_nm": -0.011320464485876473
+            }
+          ],
+          "uartOutput": "ROTOR 1 READY duty_permille=600\r\nROTOR 1 HALL LOCKED\r\n"
+        },
+        "ctrl2": {
+          "wallMs": 1794496114768,
+          "cycles": 3300000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 3,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor2",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                3.204651726880962,
+                -0.3923667903426955,
+                -2.8122849365382665
+              ],
+              "position_rad": 180.9290379003159,
+              "speed_rpm": 2086.2922741435787,
+              "torque_nm": -0.005375087245594321
+            }
+          ],
+          "uartOutput": "ROTOR 2 READY duty_permille=640\r\nROTOR 2 HALL LOCKED\r\n"
+        },
+        "ctrl3": {
+          "wallMs": 1794496114768,
+          "cycles": 3300000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 5,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor3",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -3.818946224765227,
+                5.1833219848711725,
+                -1.3643757601059456
+              ],
+              "position_rad": 192.87805937040804,
+              "speed_rpm": 2724.7029852136434,
+              "torque_nm": -0.01320899771170782
+            }
+          ],
+          "uartOutput": "ROTOR 3 READY duty_permille=680\r\nROTOR 3 HALL LOCKED\r\n"
+        },
+        "ctrl4": {
+          "wallMs": 1794496114768,
+          "cycles": 3300000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 5,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor4",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -3.5569076645513804,
+                4.276949936911322,
+                -0.7200422723599416
+              ],
+              "position_rad": 192.9017732821229,
+              "speed_rpm": 1892.6555479381998,
+              "torque_nm": -0.036322773399363635
+            }
+          ],
+          "uartOutput": "ROTOR 4 READY duty_permille=720\r\nROTOR 4 HALL LOCKED\r\n"
+        }
+      },
+      "queryStats": [
+        {
+          "chip": "ctrl4",
+          "wallMs": 1794496113839,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 800000000,
+          "channels": [
+            {
+              "name": "motor.rotor4.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 3123,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 3124,
+              "firstReturned": {
+                "timeNs": 800000000,
+                "value": 1506.723225908007
+              },
+              "lastReturned": {
+                "timeNs": 800000000,
+                "value": 1506.723225908007
+              }
+            },
+            {
+              "name": "motor.rotor4.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 2498,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 2499,
+              "firstReturned": {
+                "timeNs": 800000000,
+                "value": 4.531599376108264
+              },
+              "lastReturned": {
+                "timeNs": 800000000,
+                "value": 4.531599376108264
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496113838,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 800000000,
+          "channels": [
+            {
+              "name": "motor.rotor2.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 2876,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 2877,
+              "firstReturned": {
+                "timeNs": 800000000,
+                "value": 2148.6055498368337
+              },
+              "lastReturned": {
+                "timeNs": 800000000,
+                "value": 2148.6055498368337
+              }
+            },
+            {
+              "name": "motor.rotor2.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 2201,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 2202,
+              "firstReturned": {
+                "timeNs": 800000000,
+                "value": 4.631674091967013
+              },
+              "lastReturned": {
+                "timeNs": 800000000,
+                "value": 4.631674091967013
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl3",
+          "wallMs": 1794496113838,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 800000000,
+          "channels": [
+            {
+              "name": "motor.rotor3.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 3123,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 3124,
+              "firstReturned": {
+                "timeNs": 800000000,
+                "value": 2187.9259121530818
+              },
+              "lastReturned": {
+                "timeNs": 800000000,
+                "value": 2187.9259121530818
+              }
+            },
+            {
+              "name": "motor.rotor3.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 2372,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 2373,
+              "firstReturned": {
+                "timeNs": 800000000,
+                "value": 2.633374233192953
+              },
+              "lastReturned": {
+                "timeNs": 800000000,
+                "value": 2.633374233192953
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496113838,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 774912000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 3023,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 3024,
+              "firstReturned": {
+                "timeNs": 774912000,
+                "value": 2056.3202576607114
+              },
+              "lastReturned": {
+                "timeNs": 774912000,
+                "value": 2056.3202576607114
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 2056,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 2057,
+              "firstReturned": {
+                "timeNs": 774912000,
+                "value": 1.8201526548682532
+              },
+              "lastReturned": {
+                "timeNs": 774912000,
+                "value": 1.8201526548682532
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496114526,
+          "method": "engineClockHz",
+          "value": 4000000
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496114535,
+          "maxPoints": [
+            2048
+          ],
+          "endTimeNs": 824832000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 1171,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 3219,
+              "firstReturned": {
+                "timeNs": 300800000,
+                "value": 2566.7316838885945
+              },
+              "lastReturned": {
+                "timeNs": 824832000,
+                "value": 1936.2976271680602
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 140,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 2188,
+              "firstReturned": {
+                "timeNs": 53504000,
+                "value": 1.8108584532754746
+              },
+              "lastReturned": {
+                "timeNs": 824064000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496114768,
+          "method": "readLogicEdges",
+          "cursor": 370,
+          "dropped": 0,
+          "nowCycle": 3400000,
+          "returnedEdges": 370
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496114768,
+          "method": "readLogicStates",
+          "cursor": 0,
+          "dropped": 0,
+          "nowCycle": 3400000,
+          "initial": [
+            null,
+            "1",
+            null,
+            "0"
+          ],
+          "returnedEdges": 0
+        }
+      ],
+      "nativeErrors": []
+    },
+    "owner-switched": {
+      "starts": 4,
+      "compiles": 0,
+      "latest": {
+        "ctrl1": {
+          "wallMs": 1794496121195,
+          "cycles": 8100000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 3,
+              "control_state": "inverter",
+              "current_a": 2.936807474141912,
+              "faults": [],
+              "id": "rotor1",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                2.936807474141912,
+                -0.6938318218866905,
+                -2.2429756522552213
+              ],
+              "position_rad": 473.5309813345719,
+              "speed_rpm": 2605.0463196027426,
+              "torque_nm": -0.010986198614892797
+            }
+          ],
+          "uartOutput": "ROTOR 1 READY duty_permille=600\r\nROTOR 1 HALL LOCKED\r\n"
+        },
+        "ctrl2": {
+          "wallMs": 1794496121195,
+          "cycles": 8000000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 2,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor2",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                4.407927854216177,
+                -3.363336760100357,
+                -1.0445910941158196
+              ],
+              "position_rad": 438.43527618512996,
+              "speed_rpm": 1496.8721019263714,
+              "torque_nm": 0.006722936120635567
+            }
+          ],
+          "uartOutput": "ROTOR 2 READY duty_permille=640\r\nROTOR 2 HALL LOCKED\r\n"
+        },
+        "ctrl3": {
+          "wallMs": 1794496121195,
+          "cycles": 8000000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 5,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor3",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -3.9931651274643416,
+                5.297674414000112,
+                -1.3045092865357706
+              ],
+              "position_rad": 467.54460396376385,
+              "speed_rpm": 2748.738076388144,
+              "torque_nm": -0.018855306128100522
+            }
+          ],
+          "uartOutput": "ROTOR 3 READY duty_permille=680\r\nROTOR 3 HALL LOCKED\r\n"
+        },
+        "ctrl4": {
+          "wallMs": 1794496121195,
+          "cycles": 8000000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 5,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor4",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -3.511773615993371,
+                4.16302676749395,
+                -0.6512531515005788
+              ],
+              "position_rad": 467.5669749808865,
+              "speed_rpm": 1878.738454569954,
+              "torque_nm": -0.03634766661744053
+            }
+          ],
+          "uartOutput": "ROTOR 4 READY duty_permille=720\r\nROTOR 4 HALL LOCKED\r\n"
+        }
+      },
+      "queryStats": [
+        {
+          "chip": "ctrl4",
+          "wallMs": 1794496121293,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 1999872000,
+          "channels": [
+            {
+              "name": "motor.rotor4.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 7810,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 7811,
+              "firstReturned": {
+                "timeNs": 1999872000,
+                "value": 1878.738454569954
+              },
+              "lastReturned": {
+                "timeNs": 1999872000,
+                "value": 1878.738454569954
+              }
+            },
+            {
+              "name": "motor.rotor4.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 6249,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 6250,
+              "firstReturned": {
+                "timeNs": 1999872000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 1999872000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496121292,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 1999872000,
+          "channels": [
+            {
+              "name": "motor.rotor2.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 7187,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 7188,
+              "firstReturned": {
+                "timeNs": 1999872000,
+                "value": 1496.8721019263714
+              },
+              "lastReturned": {
+                "timeNs": 1999872000,
+                "value": 1496.8721019263714
+              }
+            },
+            {
+              "name": "motor.rotor2.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 5504,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 5505,
+              "firstReturned": {
+                "timeNs": 1999616000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 1999616000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl3",
+          "wallMs": 1794496121293,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 1999872000,
+          "channels": [
+            {
+              "name": "motor.rotor3.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 7810,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 7811,
+              "firstReturned": {
+                "timeNs": 1999872000,
+                "value": 2748.738076388144
+              },
+              "lastReturned": {
+                "timeNs": 1999872000,
+                "value": 2748.738076388144
+              }
+            },
+            {
+              "name": "motor.rotor3.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 5935,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 5936,
+              "firstReturned": {
+                "timeNs": 1999872000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 1999872000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496121292,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 2024960000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 7906,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 7907,
+              "firstReturned": {
+                "timeNs": 2024960000,
+                "value": 2605.0463196027426
+              },
+              "lastReturned": {
+                "timeNs": 2024960000,
+                "value": 2605.0463196027426
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 5377,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 5378,
+              "firstReturned": {
+                "timeNs": 2024960000,
+                "value": 2.936807474141912
+              },
+              "lastReturned": {
+                "timeNs": 2024960000,
+                "value": 2.936807474141912
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496114526,
+          "method": "engineClockHz",
+          "value": 4000000
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496119719,
+          "maxPoints": [
+            2048
+          ],
+          "endTimeNs": 1874944000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 5273,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 7321,
+              "firstReturned": {
+                "timeNs": 1350912000,
+                "value": 2056.3202576673034
+              },
+              "lastReturned": {
+                "timeNs": 1874944000,
+                "value": 2437.813687325985
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 2930,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 4978,
+              "firstReturned": {
+                "timeNs": 1103616000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 1874944000,
+                "value": 2.0036600490302954
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496121196,
+          "method": "readLogicEdges",
+          "cursor": 16647,
+          "dropped": 0,
+          "nowCycle": 8100000,
+          "returnedEdges": 694
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496121196,
+          "method": "readLogicStates",
+          "cursor": 0,
+          "dropped": 0,
+          "nowCycle": 8100000,
+          "initial": [
+            null,
+            "1",
+            null,
+            "0"
+          ],
+          "returnedEdges": 0
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496121293,
+          "method": "engineClockHz",
+          "value": 4000000
+        }
+      ],
+      "nativeErrors": []
+    },
+    "paused-clock-and-retention": {
+      "starts": 4,
+      "compiles": 0,
+      "latest": {
+        "ctrl1": {
+          "wallMs": 1794496130140,
+          "cycles": 14800000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 4,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor1",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                0.014199499072193875,
+                1.8251721001698382,
+                -1.839371599242032
+              ],
+              "position_rad": 865.0537232835103,
+              "speed_rpm": 2195.470542461292,
+              "torque_nm": 0.005863494138024601
+            }
+          ],
+          "uartOutput": "ROTOR 1 READY duty_permille=600\r\nROTOR 1 HALL LOCKED\r\n"
+        },
+        "ctrl2": {
+          "wallMs": 1794496130140,
+          "cycles": 14900000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 3,
+              "control_state": "inverter",
+              "current_a": -0.46102218247711346,
+              "faults": [],
+              "id": "rotor2",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                2.99370065135896,
+                -0.46102218247711346,
+                -2.532678468881847
+              ],
+              "position_rad": 816.4288562322062,
+              "speed_rpm": 2084.244733873847,
+              "torque_nm": -0.013392862787013269
+            }
+          ],
+          "uartOutput": "ROTOR 2 READY duty_permille=640\r\nROTOR 2 HALL LOCKED\r\n"
+        },
+        "ctrl3": {
+          "wallMs": 1794496130140,
+          "cycles": 14900000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 0,
+              "control_state": "inverter",
+              "current_a": 2.6333742331726357,
+              "faults": [],
+              "id": "rotor3",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -3.1994859492804455,
+                0.5661117161078095,
+                2.6333742331726357
+              ],
+              "position_rad": 870.7364507745805,
+              "speed_rpm": 2187.925912154073,
+              "torque_nm": -0.030869650341041003
+            }
+          ],
+          "uartOutput": "ROTOR 3 READY duty_permille=680\r\nROTOR 3 HALL LOCKED\r\n"
+        },
+        "ctrl4": {
+          "wallMs": 1794496130140,
+          "cycles": 14900000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 0,
+              "control_state": "inverter",
+              "current_a": 4.531599376106607,
+              "faults": [],
+              "id": "rotor4",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -3.990508344653624,
+                -0.5410910314529828,
+                4.531599376106607
+              ],
+              "position_rad": 870.7682999220316,
+              "speed_rpm": 1506.7232259109924,
+              "torque_nm": -0.012983523131115046
+            }
+          ],
+          "uartOutput": "ROTOR 4 READY duty_permille=720\r\nROTOR 4 HALL LOCKED\r\n"
+        }
+      },
+      "queryStats": [
+        {
+          "chip": "ctrl4",
+          "wallMs": 1794496131618,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 3724800000,
+          "channels": [
+            {
+              "name": "motor.rotor4.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 14548,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 14549,
+              "firstReturned": {
+                "timeNs": 3724800000,
+                "value": 1506.7232259109924
+              },
+              "lastReturned": {
+                "timeNs": 3724800000,
+                "value": 1506.7232259109924
+              }
+            },
+            {
+              "name": "motor.rotor4.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 11638,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 11639,
+              "firstReturned": {
+                "timeNs": 3724800000,
+                "value": 4.531599376106607
+              },
+              "lastReturned": {
+                "timeNs": 3724800000,
+                "value": 4.531599376106607
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496131612,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 3724800000,
+          "channels": [
+            {
+              "name": "motor.rotor2.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 13389,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 13390,
+              "firstReturned": {
+                "timeNs": 3724800000,
+                "value": 2084.244733873847
+              },
+              "lastReturned": {
+                "timeNs": 3724800000,
+                "value": 2084.244733873847
+              }
+            },
+            {
+              "name": "motor.rotor2.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 10255,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 10256,
+              "firstReturned": {
+                "timeNs": 3724800000,
+                "value": -0.46102218247711346
+              },
+              "lastReturned": {
+                "timeNs": 3724800000,
+                "value": -0.46102218247711346
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl3",
+          "wallMs": 1794496131615,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 3724800000,
+          "channels": [
+            {
+              "name": "motor.rotor3.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 14548,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 14549,
+              "firstReturned": {
+                "timeNs": 3724800000,
+                "value": 2187.925912154073
+              },
+              "lastReturned": {
+                "timeNs": 3724800000,
+                "value": 2187.925912154073
+              }
+            },
+            {
+              "name": "motor.rotor3.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 11055,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 11056,
+              "firstReturned": {
+                "timeNs": 3724800000,
+                "value": 2.6333742331726357
+              },
+              "lastReturned": {
+                "timeNs": 3724800000,
+                "value": 2.6333742331726357
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496131607,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 3699968000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 14449,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 14450,
+              "firstReturned": {
+                "timeNs": 3699968000,
+                "value": 2195.470542461292
+              },
+              "lastReturned": {
+                "timeNs": 3699968000,
+                "value": 2195.470542461292
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 9826,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 9827,
+              "firstReturned": {
+                "timeNs": 3699968000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 3699968000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496114526,
+          "method": "engineClockHz",
+          "value": 4000000
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496130148,
+          "maxPoints": [
+            2048
+          ],
+          "endTimeNs": 3699968000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 12402,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 14450,
+              "firstReturned": {
+                "timeNs": 3175936000,
+                "value": 1968.763829390131
+              },
+              "lastReturned": {
+                "timeNs": 3699968000,
+                "value": 2195.470542461292
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 7779,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 9827,
+              "firstReturned": {
+                "timeNs": 2929408000,
+                "value": 1.6406725082446798
+              },
+              "lastReturned": {
+                "timeNs": 3699968000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496130534,
+          "method": "readLogicEdges",
+          "cursor": 0,
+          "dropped": 0,
+          "nowCycle": 14800000,
+          "returnedEdges": 0
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496130534,
+          "method": "readLogicStates",
+          "cursor": 0,
+          "dropped": 0,
+          "nowCycle": 14800000,
+          "initial": [
+            null,
+            "1"
+          ],
+          "returnedEdges": 0
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496121293,
+          "method": "engineClockHz",
+          "value": 4000000
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496127122,
+          "maxPoints": [
+            2048
+          ],
+          "endTimeNs": 3024896000,
+          "channels": [
+            {
+              "name": "motor.rotor2.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 8824,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 10872,
+              "firstReturned": {
+                "timeNs": 2455296000,
+                "value": 2202.441172261902
+              },
+              "lastReturned": {
+                "timeNs": 3024896000,
+                "value": 2484.809703336796
+              }
+            },
+            {
+              "name": "motor.rotor2.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 6279,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 8327,
+              "firstReturned": {
+                "timeNs": 2280704000,
+                "value": 2.602166465260783
+              },
+              "lastReturned": {
+                "timeNs": 3024896000,
+                "value": 2.6665333841668066
+              }
+            }
+          ]
+        }
+      ],
+      "nativeErrors": []
+    },
+    "failure": {
+      "starts": 4,
+      "compiles": 0,
+      "latest": {
+        "ctrl1": {
+          "wallMs": 1794496177880,
+          "cycles": 38400000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 1,
+              "control_state": "off:external-enable",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor1",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                0.3225142276441982,
+                -2.2267448418680345,
+                1.9042306142238363
+              ],
+              "position_rad": 900.5522060500037,
+              "speed_rpm": 1966.0013075879924,
+              "torque_nm": -0.015510154691225582
+            }
+          ],
+          "uartOutput": "ROTOR 1 READY duty_permille=600\r\nROTOR 1 HALL LOCKED\r\nROTOR 1 FAULT DRIVER\r\nROTOR 1 INVERTER OFF\r\n"
+        },
+        "ctrl2": {
+          "wallMs": 1794496177880,
+          "cycles": 38600000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 0,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor2",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -1.9286219513741703,
+                -1.2599255356738108,
+                3.1885474870479813
+              ],
+              "position_rad": 2114.862134514214,
+              "speed_rpm": 2224.8608569744215,
+              "torque_nm": 0.02268949967425473
+            }
+          ],
+          "uartOutput": "ROTOR 2 READY duty_permille=640\r\nROTOR 2 HALL LOCKED\r\n"
+        },
+        "ctrl3": {
+          "wallMs": 1794496177880,
+          "cycles": 38600000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 0,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor3",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -3.2866791175886063,
+                0.4606903820979395,
+                2.8259887354906668
+              ],
+              "position_rad": 2255.7314969489394,
+              "speed_rpm": 2144.5260672926056,
+              "torque_nm": -0.02416341960744116
+            }
+          ],
+          "uartOutput": "ROTOR 3 READY duty_permille=680\r\nROTOR 3 HALL LOCKED\r\n"
+        },
+        "ctrl4": {
+          "wallMs": 1794496177880,
+          "cycles": 38600000,
+          "actuatorStates": [
+            {
+              "bus_voltage_v": 24,
+              "commutation_sector": 0,
+              "control_state": "inverter",
+              "current_a": 0,
+              "faults": [],
+              "id": "rotor4",
+              "kind": "bldc-motor",
+              "phase_currents_a": [
+                -4.183075568462012,
+                -0.9782742983614602,
+                5.161349866823472
+              ],
+              "position_rad": 2255.7647377735225,
+              "speed_rpm": 1509.4693151252716,
+              "torque_nm": 0.0054697573375060374
+            }
+          ],
+          "uartOutput": "ROTOR 4 READY duty_permille=720\r\nROTOR 4 HALL LOCKED\r\n"
+        }
+      },
+      "queryStats": [
+        {
+          "chip": "ctrl4",
+          "wallMs": 1794496177879,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 9624832000,
+          "channels": [
+            {
+              "name": "motor.rotor4.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 37595,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 37596,
+              "firstReturned": {
+                "timeNs": 9624832000,
+                "value": 1892.6555479350532
+              },
+              "lastReturned": {
+                "timeNs": 9624832000,
+                "value": 1892.6555479350532
+              }
+            },
+            {
+              "name": "motor.rotor4.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 30075,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 30076,
+              "firstReturned": {
+                "timeNs": 9624320000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 9624320000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496177023,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 9624832000,
+          "channels": [
+            {
+              "name": "motor.rotor2.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 34589,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 34590,
+              "firstReturned": {
+                "timeNs": 9624832000,
+                "value": 2052.0808346822837
+              },
+              "lastReturned": {
+                "timeNs": 9624832000,
+                "value": 2052.0808346822837
+              }
+            },
+            {
+              "name": "motor.rotor2.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 26502,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 26503,
+              "firstReturned": {
+                "timeNs": 9624320000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 9624320000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl3",
+          "wallMs": 1794496177029,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 9624832000,
+          "channels": [
+            {
+              "name": "motor.rotor3.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 37595,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 37596,
+              "firstReturned": {
+                "timeNs": 9624832000,
+                "value": 2724.7029851999837
+              },
+              "lastReturned": {
+                "timeNs": 9624832000,
+                "value": 2724.7029851999837
+              }
+            },
+            {
+              "name": "motor.rotor3.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 28570,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 28571,
+              "firstReturned": {
+                "timeNs": 9624320000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 9624320000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496176958,
+          "maxPoints": [
+            1
+          ],
+          "endTimeNs": 9574912000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 15042,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 15043,
+              "firstReturned": {
+                "timeNs": 3851776000,
+                "value": 1966.0013075879924
+              },
+              "lastReturned": {
+                "timeNs": 3851776000,
+                "value": 1966.0013075879924
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 10228,
+              "returnedPoints": 1,
+              "retainedPointCountDerived": 10229,
+              "firstReturned": {
+                "timeNs": 3851264000,
+                "value": 0
+              },
+              "lastReturned": {
+                "timeNs": 3851264000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496133812,
+          "method": "engineClockHz",
+          "value": 4000000
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496176957,
+          "maxPoints": [
+            2048
+          ],
+          "endTimeNs": 9574912000,
+          "channels": [
+            {
+              "name": "motor.rotor1.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 12995,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 15043,
+              "firstReturned": {
+                "timeNs": 3327744000,
+                "value": 2437.813687328211
+              },
+              "lastReturned": {
+                "timeNs": 3851776000,
+                "value": 1966.0013075879924
+              }
+            },
+            {
+              "name": "motor.rotor1.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 8181,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 10229,
+              "firstReturned": {
+                "timeNs": 3080704000,
+                "value": 1.8108584522664035
+              },
+              "lastReturned": {
+                "timeNs": 3851264000,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496177880,
+          "method": "readLogicEdges",
+          "cursor": 1404,
+          "dropped": 0,
+          "nowCycle": 38400000,
+          "returnedEdges": 0
+        },
+        {
+          "chip": "ctrl1",
+          "wallMs": 1794496177880,
+          "method": "readLogicStates",
+          "cursor": 3,
+          "dropped": 0,
+          "nowCycle": 38400000,
+          "initial": [
+            null,
+            "1",
+            null,
+            "0"
+          ],
+          "returnedEdges": 0
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496121293,
+          "method": "engineClockHz",
+          "value": 4000000
+        },
+        {
+          "chip": "ctrl2",
+          "wallMs": 1794496127122,
+          "maxPoints": [
+            2048
+          ],
+          "endTimeNs": 3024896000,
+          "channels": [
+            {
+              "name": "motor.rotor2.speed_rpm",
+              "unit": "rpm",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 8824,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 10872,
+              "firstReturned": {
+                "timeNs": 2455296000,
+                "value": 2202.441172261902
+              },
+              "lastReturned": {
+                "timeNs": 3024896000,
+                "value": 2484.809703336796
+              }
+            },
+            {
+              "name": "motor.rotor2.current_a",
+              "unit": "A",
+              "sampling": "hold",
+              "dropped": 0,
+              "omitted": 6279,
+              "returnedPoints": 2048,
+              "retainedPointCountDerived": 8327,
+              "firstReturned": {
+                "timeNs": 2280704000,
+                "value": 2.602166465260783
+              },
+              "lastReturned": {
+                "timeNs": 3024896000,
+                "value": 2.6665333841668066
+              }
+            }
+          ]
+        }
+      ],
+      "nativeErrors": []
+    }
+  },
+  "observedCtrl1PA8Pwm": {
+    "True": {
+      "edges": 185,
+      "periodHistogramCycles": {
+        "200": 171,
+        "82": 3,
+        "10516": 3,
+        "84": 3,
+        "10118": 2,
+        "10517": 1,
+        "83": 1
+      },
+      "firstCycles": [
+        3302678,
+        3302760,
+        3302960,
+        3303160,
+        3303360,
+        3303560,
+        3303760,
+        3303960,
+        3304160,
+        3304360
+      ]
+    },
+    "False": {
+      "edges": 185,
+      "periodHistogramCycles": {
+        "200": 171,
+        "188": 3,
+        "10412": 3,
+        "189": 2,
+        "10411": 1,
+        "187": 1,
+        "10013": 1,
+        "186": 1,
+        "10014": 1
+      },
+      "firstCycles": [
+        3302680,
+        3302880,
+        3303080,
+        3303280,
+        3303480,
+        3303680,
+        3303880,
+        3304080,
+        3304280,
+        3304480
+      ]
+    }
+  },
+  "events": [
+    {
+      "name": "actual-public-project-opened-on-branch",
+      "wallMs": 1794496046767,
+      "publicVersion": 4
+    },
+    {
+      "name": "authenticated-elf-uploaded-through-ui",
+      "wallMs": 1794496064331,
+      "chip": "ctrl1",
+      "sha256": "2a9d73c1a784dd8c94dc1b456b01aeebc2cad40c4c4c484b7db77e68e0d8705c",
+      "bytes": 83636
+    },
+    {
+      "name": "authenticated-elf-uploaded-through-ui",
+      "wallMs": 1794496074313,
+      "chip": "ctrl2",
+      "sha256": "12106fc25a90877b54d4b0bddddb94867db54012fab466c87f461c6700ac38cc",
+      "bytes": 83636
+    },
+    {
+      "name": "authenticated-elf-uploaded-through-ui",
+      "wallMs": 1794496084204,
+      "chip": "ctrl3",
+      "sha256": "ceccaacd7ab38a61c4c8430880affcbcea6798fe2e1c474ae59bd15f972672e4",
+      "bytes": 83636
+    },
+    {
+      "name": "authenticated-elf-uploaded-through-ui",
+      "wallMs": 1794496095830,
+      "chip": "ctrl4",
+      "sha256": "1160235bf73752e72bdcff1eacf25f8a19d51a64212629073e594126bd7b8481",
+      "bytes": 83636
+    },
+    {
+      "name": "four-firmware-motors-hall-locked",
+      "wallMs": 1794496105245
+    },
+    {
+      "name": "paused-for-instrument-selection",
+      "wallMs": 1794496108335
+    },
+    {
+      "name": "mixed-scope-and-logic-armed",
+      "wallMs": 1794496114790
+    },
+    {
+      "name": "source-switch-preserved-firmware-runtime",
+      "wallMs": 1794496126851,
+      "initCount": 4,
+      "compileCount": 0,
+      "beforeCycles": {
+        "ctrl1": 3400000,
+        "ctrl2": 3300000,
+        "ctrl3": 3300000,
+        "ctrl4": 3300000
+      },
+      "afterCycles": {
+        "ctrl1": 8100000,
+        "ctrl2": 8000000,
+        "ctrl3": 8000000,
+        "ctrl4": 8000000
+      }
+    },
+    {
+      "name": "fault1-pressed",
+      "wallMs": 1794496134667
+    },
+    {
+      "name": "failure",
+      "wallMs": 1794496177885,
+      "message": "page.waitForFunction: Timeout 30000ms exceeded."
+    }
+  ],
+  "faultCommands": [
+    {
+      "wallMs": 1794496134573,
+      "worker": 3,
+      "chip": "ctrl1",
+      "method": "setBoardIoInput",
+      "args": [
+        "fault1",
+        true
+      ]
+    },
+    {
+      "wallMs": 1794496147022,
+      "worker": 3,
+      "chip": "ctrl1",
+      "method": "setBoardIoInput",
+      "args": [
+        "fault1",
+        false
+      ]
+    }
+  ],
+  "receiptSha256": {
+    "result.json": "2b32fe7fd581cc7db5356800e3294664c4367d9d297695f2675a19574c8842c2",
+    "mixed-healthy.json": "4cbea4d46c8ff98b20efc3ae982fdf13cfdde2e56d224bd9233500a78db38b15",
+    "owner-switched.json": "efbf77452ee18fc507f3d82858186021787443725f9b304dc57e4dd7ed6eaed1",
+    "paused-clock-and-retention.json": "925d95c4141a6804fae33f511c5839b040ac0092da75c5d0d1f1a636f25b886d",
+    "failure.json": "575a441db8e16dce765afe68b25acd396180de1abc7afed4e360342a773a9429"
+  },
+  "interpretation": {
+    "pwmRegularPeriodCycles": 200,
+    "observedEngineClockHz": 4000000,
+    "pwmRegularPeriodNs": 50000,
+    "doNotConflate": [
+      "This is a candidate branch run, not deployed/published project acceptance",
+      "Native endTimeNs is the source clock horizon, not the last retained changing value",
+      "omitted is the older prefix excluded by query maxPoints; dropped is producer loss",
+      "This receipt fails coast-down: electrical enable off did not advance the plant"
+    ]
+  }
+}

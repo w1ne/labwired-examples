@@ -1,11 +1,11 @@
 #define CHANNEL_ID 4
 #define DUTY_PERMILLE 720
 // One independent channel of the four-node STM32L476 propulsion bench
-// LabWired C port of the validated six-step BLDC safety controller.
+// Six-step BLDC commutator for the LabWired reduced-order plant.
 // NOT ODrive firmware / NOT field-oriented control.
 // This code drives a reduced-order PWM/BLDC plant and tests commutation and shutdown.
 // Four channels receive different fixed throttle commands; Hall/encoder signals
-// prove physical-model feedback. This is not an aircraft flight controller.
+// exercise simulated feedback. This is not an aircraft flight controller.
 #include <stdint.h>
 #include <stdbool.h>
 #ifndef CHANNEL_ID
@@ -52,6 +52,13 @@
 #define SYST_RVR REG(0xE000E014)
 #define SYST_CVR REG(0xE000E018)
 #define MOE 0x8000u
+// The NUCLEO-L476RG starter runs at the reset 4 MHz MSI clock.
+// TIM1 and SysTick use that same clock; this firmware does not enable a PLL.
+#define BENCH_CPU_HZ 4000000u
+#define PWM_HZ 20000u
+#define PWM_PERIOD_TICKS (BENCH_CPU_HZ / PWM_HZ)
+#define CONTROL_TICK_HZ 10000u
+#define PWM_DEAD_TIME_TICKS 2u // 500 ns at 4 MHz, before the timer prescaler.
 static const uint16_t comm_table[8] = {
  0, (1u<<8)|(1u<<6),(1u<<4)|(1u<<2),(1u<<8)|(1u<<2),
  (1u<<0)|(1u<<10),(1u<<0)|(1u<<6),(1u<<4)|(1u<<10),0
@@ -65,8 +72,9 @@ static void fault(const char *name) {
  inverter_off(); text(CHANNEL_PREFIX); text(name); text(CHANNEL_PREFIX "INVERTER OFF\r\n");
  for (;;) { __asm__ volatile ("nop"); }
 }
-static void commutate(uint32_t hall, uint32_t duty) {
- uint32_t low=999u-duty;
+static void commutate(uint32_t hall, uint32_t duty_permille) {
+ uint32_t duty=(duty_permille*PWM_PERIOD_TICKS)/1000u;
+ uint32_t low=(PWM_PERIOD_TICKS-1u)-duty;
  uint32_t a=0,b=0,c=0;
  switch(hall) {
  case 1: b=low;c=duty;break; case 2:a=low;b=duty;break;
@@ -89,13 +97,13 @@ static void init(void) {
  GPIOB_AFRH=(GPIOB_AFRH & ~(0xfffu<<20))|(0x111u<<20);
  GPIOC_MODER &= ~0xffffu;
  GPIOB_ODR=1u;
- USART2_BRR=35u;USART2_CR1=(1u<<0)|(1u<<3);
- SYST_RVR=7999;SYST_CVR=0;SYST_CSR=(1u<<2)|1u;
- TIM1_PSC=3;TIM1_ARR=999;
- TIM1_CCR1=300;TIM1_CCR2=300;TIM1_CCR3=300;
+ USART2_BRR=(BENCH_CPU_HZ+57600u)/115200u;USART2_CR1=(1u<<0)|(1u<<3);
+ SYST_RVR=BENCH_CPU_HZ/CONTROL_TICK_HZ-1u;SYST_CVR=0;SYST_CSR=(1u<<2)|1u;
+ TIM1_PSC=0;TIM1_ARR=PWM_PERIOD_TICKS-1u;
+ TIM1_CCR1=PWM_PERIOD_TICKS*3u/10u;TIM1_CCR2=TIM1_CCR1;TIM1_CCR3=TIM1_CCR1;
  TIM1_CCMR1=(6u<<4)|(1u<<3)|(6u<<12)|(1u<<11);
  TIM1_CCMR2=(6u<<4)|(1u<<3);
- TIM1_EGR=1;TIM1_BDTR=MOE|0x30;TIM1_CR1=1;
+ TIM1_EGR=1;TIM1_BDTR=MOE|PWM_DEAD_TIME_TICKS;TIM1_CR1=1;
 }
 int main(void) {
  init();text(CHANNEL_PREFIX "READY duty_permille=" STRINGIFY(DUTY_PERMILLE) "\r\n");

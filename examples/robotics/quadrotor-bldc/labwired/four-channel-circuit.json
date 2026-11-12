@@ -145,6 +145,34 @@
       "attrs": {
         "label": "FAULT 4"
       }
+    },
+    {
+      "id": "scope_mixed",
+      "type": "oscilloscope",
+      "x": 580,
+      "y": 500,
+      "attrs": {
+        "timebaseUs": "1000",
+        "trigger": "none",
+        "triggerLevel": "0.5",
+        "triggerSource": "CH3",
+        "channels": "",
+        "signalProbes": "{\"CH1\":{\"sourceId\":\"ctrl1\",\"kind\":\"analog\",\"name\":\"motor.rotor1.current_a\"},\"CH2\":{\"sourceId\":\"ctrl1\",\"kind\":\"analog\",\"name\":\"motor.rotor1.speed_rpm\"},\"CH3\":{\"sourceId\":\"ctrl1\",\"kind\":\"digital\",\"ref\":{\"kind\":\"gpio\",\"peripheral\":\"gpioa\",\"pin\":8}},\"CH4\":{\"sourceId\":\"ctrl1\",\"kind\":\"digital\",\"ref\":{\"kind\":\"gpio\",\"peripheral\":\"gpiob\",\"pin\":0}}}"
+      }
+    },
+    {
+      "id": "logic_pwm",
+      "type": "logic-analyzer",
+      "x": 780,
+      "y": 500,
+      "attrs": {
+        "decoder": "raw",
+        "triggerMode": "off",
+        "triggerChannel": "CH0",
+        "triggerEdge": "rising",
+        "triggerPreSamples": "8",
+        "channelProbes": "{\"CH0\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpioa\\\",8]\",\"CH1\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpiob\\\",13]\",\"CH2\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpiob\\\",7]\",\"CH3\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpiob\\\",0]\"}"
+      }
     }
   ],
   "wires": [
