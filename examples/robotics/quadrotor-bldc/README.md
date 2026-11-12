@@ -13,7 +13,15 @@ cloud mesh and 12 immutable inputs. The firmware bench remains a separate
 target; native electrical onboarding is tracked in
 [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
-## Recorded engineering preview
+## Recorded universal-instrument preview, 12 November 2026
+
+[Watch the 34-second LabWired video](media/quadrotor-universal-instruments-preview-20261112.mp4). It shows the universal oscilloscope and logic analyzer, independent controller selection, PWM/high-impedance observations, and M1 shutdown while the other three modeled motors continue. Every shot comes from the accepted R4-02 browser recording at its original speed.
+
+The video is a labeled development preview of four STM32 controllers with behavioral motor models. [All 17 native acceptance checks and the separate native-to-UI readout comparison passed](labwired/evidence/20261112-universal-instruments/). Production merges, deployment, and the updated public-project revision remain pending.
+
+[Original recording and edit provenance](media/README.md) · [Acceptance evidence](labwired/evidence/20261112-universal-instruments/)
+
+### Earlier engineering preview
 
 [Watch the 75-second co-design video](media/quadrotor-engineering-preview.mp4). It uses actual KernelCAD screens, native KiCad exports and an audited candidate browser run. CAD inspection is time-compressed; runtime scenes play at recorded speed. The final scene states that physical-board simulation and flight control remain open.
 
@@ -28,7 +36,7 @@ target; native electrical onboarding is tracked in
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
 - [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors, one retained microSD-pad parity omission; no native boot or manufacturing acceptance.
 
-The canonical circuit links to the versioned KernelCAD model. It contains four controllers, four motors, four independent fault inputs, 64 wires, an oscilloscope and a logic analyzer. The two instruments observe simulator signals; they are not physical aircraft components. The updated public revision is pending runtime acceptance and deployment.
+The canonical circuit links to the versioned KernelCAD model. It contains four controllers, four motors, four independent fault inputs, 64 wires, an oscilloscope and a logic analyzer. The two instruments observe simulator signals; they are not physical aircraft components. The updated public revision is pending normal source acknowledgment, CI, deployment, hosted verification, and publication.
 
 ## What the artifacts establish
 
@@ -77,9 +85,9 @@ The oscilloscope selects any published numeric source with its native units, or 
 
 The current firmware uses immediate compare updates (`OCxPE=0`). A high-side phase receives the duty command; the selected N-only low-side phase stays on for its commutation sector (`CCR=ARR+1`). PA8 shows the carrier during active sectors; PB13 shows the low-side commutation gate. This configuration does not enable both outputs of a phase and does not establish complementary dead-time insertion. The four-lane analyzer can inspect phases A, B and C in separate capture windows.
 
-The behavioral plants consume the configured timer output stages directly. Changing GPIO mode or alternate function does not disconnect the plant. The firmware configures PA8–PA10 and PB13–PB15 as AF1, and native pad observations require a separate check. The [current source and compile receipt](labwired/evidence/20261112-gate-candidate/) identifies the exact four candidate images; runtime acceptance remains pending.
+The behavioral plants consume the configured timer output stages directly. Changing GPIO mode or alternate function does not disconnect the plant. The firmware configures PA8–PA10 and PB13–PB15 as AF1, and native pad observations require a separate check. The [current source and compile receipt](labwired/evidence/20261112-gate-candidate/) identifies the exact four images. The [R4-02 browser acceptance](labwired/evidence/20261112-universal-instruments/) now passes; hosted saved-project verification and production deployment remain separate.
 
-The shared instrument and runtime fixes are tracked in [LabWired PR #3163](https://github.com/w1ne/labwired/pull/3163). The [corrected-clock candidate](labwired/evidence/20261112-clock-candidate/) confirms four executed ELF identities, Hall feedback, the high-side carrier and source switching. Final acceptance failed at coast-down and found missing native complementary-pad output. Native corrections, hosted verification, deployment and the new short recording remain pending. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
+The shared instrument and runtime fixes are tracked in [LabWired PR #3163](https://github.com/w1ne/labwired/pull/3163). The [corrected-clock candidate](labwired/evidence/20261112-clock-candidate/) confirms four executed ELF identities, Hall feedback, the high-side carrier and source switching. That earlier candidate failed at coast-down and found missing native complementary-pad output. The [new R4-02 acceptance and 34-second recording](labwired/evidence/20261112-universal-instruments/) pass after the native and readout corrections. Normal source acknowledgment, final-head CI, hosted verification, and deployment remain pending. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
 
 ## Earlier motion-binding evidence, 11 November 2026
 

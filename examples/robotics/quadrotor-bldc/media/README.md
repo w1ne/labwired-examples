@@ -1,3 +1,21 @@
+# Current universal-instrument video, 12 November 2026
+
+[Download the 34-second MP4](quadrotor-universal-instruments-preview-20261112.mp4): 1920 x 1080, H.264, 30 fps, 4,298,950 bytes, no audio. SHA-256: 68752b545d413c4bbae80eb9645133e6569430912f3fbdc29a9bc39270dbf53f.
+
+The clip uses actual accepted LabWired footage at its original speed. It shows both universal instruments, independent controller sources, native PWM/Z observations, fault-driven inverter shutdown, and M1 stopped while M2-M4 continue. It carries a persistent development-preview label identifying the four STM32 controllers and behavioral motor models.
+
+- [Original R4-02 recording](source/quadrotor-universal-instruments-r4-02.webm)
+- [Exact edit list](quadrotor-universal-instruments-preview-20261112-edit.json)
+- [Encoding provenance](quadrotor-universal-instruments-preview-20261112.provenance.json)
+- [Editor](edit-universal-instruments-preview.py)
+- [Runtime acceptance and final-frame QA](../labwired/evidence/20261112-universal-instruments/)
+
+The optional CAD/PCB capture failed before producing accepted shots and is excluded. Production release and public-project publication remain pending.
+
+---
+
+## Historical recording documentation
+
 # Quadrotor engineering preview
 
 [Watch the 75-second MP4](quadrotor-engineering-preview.mp4). H.264, 1600 × 900, 30 fps, no audio. [Exact provenance](engineering-preview-provenance.json) identifies model revision, source commits, capture hashes, edit timing and scope.

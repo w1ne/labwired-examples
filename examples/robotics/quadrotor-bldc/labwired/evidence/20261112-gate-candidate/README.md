@@ -7,3 +7,7 @@ The firmware retains the 4 MHz simulation clock, 20 kHz PWM and 10 kHz control t
 The canonical circuit saves motor current, speed, PA8 PWM and PC0 Hall A on the universal oscilloscope. The four-lane universal logic analyzer saves PA8, PB13, PB7 fault and PB0 enable. Phase pairs can be selected in separate capture windows.
 
 Native motor integration, native complementary-pad observation, unchanged firmware execution during both instrument source changes, isolated fault coast-down, hosted verification and public deployment still require final acceptance. No public readiness or final video is established by these compile receipts.
+
+## Later runtime acceptance
+
+The exact images in this compile receipt subsequently passed the [R4-02 native and UI acceptance](../20261112-universal-instruments/). Earlier pending statements describe the compile-only candidate stage. Hosted project verification and public deployment remain pending; the compiler receipt is unchanged.
