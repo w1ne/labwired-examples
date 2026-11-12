@@ -30,10 +30,14 @@ The [original recording](../../../media/source/quadrotor-universal-instruments-r
 
 ## Corrections and remaining release gates
 
-The native correction has 219 passing tests on b708 plus R4, with formatting, Clippy, and the full host Cargo check passing; see [native-validation.tar.gz](native-validation.tar.gz). This does not claim a test run on a later base.
+The [recorded native validation](native-validation.tar.gz) contains 219 passing tests on b708 plus R4, with formatting, Clippy, and the full host Cargo check passing. That archive describes the engine used for the recording.
 
 The recorded UI fixes the LOW/0 label that incorrectly described an actual Z trace when its initial state was unknown. The correction has 47 passing focused tests, including seven new regressions and the unchanged function-size gate. The normal app type check passes; test-type and lint baselines have zero new findings. See [readout-validation.tar.gz](readout-validation.tar.gz).
 
-The normal core source gate still requires human source review for seven captured-board profiles. [The review packet](core-source-review-packet.json) identifies each exact digest; [the proposed patch](core-candidate.patch) and [current-main preparation](core-current-main-review.json) make the change reviewable. No acknowledgment was written. The prepared current-main candidate is based on 102f7fc9 and has the same 24 changed-file hashes and seven model digests. Normal final-head CI is still required.
+The historical release snapshot records a source-gate block for seven captured-board profiles without human source acknowledgments. [The historical review packet](core-source-review-packet.json) identifies each exact digest. [The recorded candidate patch](core-candidate.patch) and [the earlier preparation on core main](core-current-main-review.json) preserve that state: the prepared candidate was based on 102f7fc9, with the same 24 changed-file hashes and seven model digests. No source acknowledgment was written in that snapshot.
+
+On 12 November 2026, the project owner authorized removal of the mandatory human source acknowledgment requirement. The decision is implemented in core commit [`a0b0a91c`](https://github.com/w1ne/labwired-core/commit/a0b0a91c1868fe78e4af45e817e566807517ef1e), based on 7778d2500aa05012eb4f0dbc030d0a8f8bb57e24 and pushed in [PR #1852](https://github.com/w1ne/labwired-core/pull/1852). The committed policy uses automated source and provenance integrity checks.
+
+Current-base validation passed 219 native tests, 56 policy tests, and 102 tests through the normal pre-push gate. Formatting, Clippy, the full host Cargo check, the source check, and the drift check also passed. Final-head CI and merge are pending. This authorization records a workflow decision; hardware capture provenance and model validation status remain as recorded. The historical JSON receipts, patch, recording, and encoding provenance are unchanged.
 
 App/core/example merges, deployment, hosted saved-project verification, and public-project publication remain separate. The optional CAD/PCB recording stopped at a loading veil and contributes no footage or claim to this video.

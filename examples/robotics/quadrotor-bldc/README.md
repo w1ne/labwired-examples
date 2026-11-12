@@ -36,7 +36,7 @@ The video is a labeled development preview of four STM32 controllers with behavi
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
 - [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors, one retained microSD-pad parity omission; no native boot or manufacturing acceptance.
 
-The canonical circuit links to the versioned KernelCAD model. It contains four controllers, four motors, four independent fault inputs, 64 wires, an oscilloscope and a logic analyzer. The two instruments observe simulator signals; they are not physical aircraft components. The updated public revision is pending normal source acknowledgment, CI, deployment, hosted verification, and publication.
+The canonical circuit links to the versioned KernelCAD model. It contains four controllers, four motors, four independent fault inputs, 64 wires, an oscilloscope and a logic analyzer. The two instruments observe simulator signals; they are not physical aircraft components. The updated public revision is pending core/app merges, CI, deployment, hosted verification, and publication.
 
 ## What the artifacts establish
 
@@ -87,7 +87,9 @@ The current firmware uses immediate compare updates (`OCxPE=0`). A high-side pha
 
 The behavioral plants consume the configured timer output stages directly. Changing GPIO mode or alternate function does not disconnect the plant. The firmware configures PA8–PA10 and PB13–PB15 as AF1, and native pad observations require a separate check. The [current source and compile receipt](labwired/evidence/20261112-gate-candidate/) identifies the exact four images. The [R4-02 browser acceptance](labwired/evidence/20261112-universal-instruments/) now passes; hosted saved-project verification and production deployment remain separate.
 
-The shared instrument and runtime fixes are tracked in [LabWired PR #3163](https://github.com/w1ne/labwired/pull/3163). The [corrected-clock candidate](labwired/evidence/20261112-clock-candidate/) confirms four executed ELF identities, Hall feedback, the high-side carrier and source switching. That earlier candidate failed at coast-down and found missing native complementary-pad output. The [new R4-02 acceptance and 34-second recording](labwired/evidence/20261112-universal-instruments/) pass after the native and readout corrections. Normal source acknowledgment, final-head CI, hosted verification, and deployment remain pending. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
+The shared instrument and runtime fixes are tracked in [LabWired PR #3163](https://github.com/w1ne/labwired/pull/3163). The [corrected-clock candidate](labwired/evidence/20261112-clock-candidate/) confirms four executed ELF identities, Hall feedback, the high-side carrier and source switching. That earlier candidate failed at coast-down and found missing native complementary-pad output. The [new R4-02 acceptance and 34-second recording](labwired/evidence/20261112-universal-instruments/) pass after the native and readout corrections.
+
+The project owner's decision to remove mandatory human source acknowledgments is implemented in core commit [`a0b0a91c`](https://github.com/w1ne/labwired-core/commit/a0b0a91c1868fe78e4af45e817e566807517ef1e), published in [PR #1852](https://github.com/w1ne/labwired-core/pull/1852). That committed policy retains automated source and provenance integrity checks; it awaits final-head CI and merge. Normal app tests and CI, hosted verification, deployment, and publication remain release requirements. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
 
 ## Earlier motion-binding evidence, 11 November 2026
 
