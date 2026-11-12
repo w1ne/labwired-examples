@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "images": [
+    {
+      "name": "iso",
+      "path": "/tmp/kernelcad-preview-iiDB3G/iso.png",
+      "description": "Geometric Z-up three-quarter overview — camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+      "byte_count": 151168,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261112-WtPFkYjibSDLJsAE51hP2g/render-iso.png?exp=1794532602&sig=8AUoVa-9qdyNpI6rn4iexwtbQS6Y52rJqxFdLzb-6w4",
+      "expires_at": "2026-11-13T01:16:42.000Z",
+      "inline": true
+    },
+    {
+      "name": "front",
+      "path": "/tmp/kernelcad-preview-iiDB3G/front.png",
+      "description": "Front elevation — camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+      "byte_count": 50824,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261112-9ozQZoJy2KfXGonfA0LMyQ/render-front.png?exp=1794532602&sig=LZ53k-RC41verlsC2n5tEjjr5SqItmFRKKKv8OFzcZo",
+      "expires_at": "2026-11-13T01:16:42.000Z",
+      "inline": true
+    }
+  ],
+  "out_dir": "/tmp/kernelcad-preview-iiDB3G",
+  "bounds": {
+    "min": [
+      -124.06217956542969,
+      -125.29519653320312,
+      -3
+    ],
+    "max": [
+      153.8451385498047,
+      126.25609588623047,
+      36.29999923706055
+    ]
+  },
+  "sceneSummary": {
+    "valid": null,
+    "volume": null,
+    "faceCount": null,
+    "size": [
+      277.9073227154059,
+      251.55129268382842,
+      39.3
+    ]
+  },
+  "mechanism": "real",
+  "render_source": "static-player",
+  "render_ms": 39131,
+  "diagnostics": [],
+  "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+  "images_inline_count": 2,
+  "serverBuild": "0.1.0+319b6741af13@2026-11-12T00:17:45.673Z"
+}

@@ -11,7 +11,7 @@ This package contains a versioned **KernelCAD assembly**, a real **six-layer Ope
 ## Open the projects
 
 - [Four-channel LabWired propulsion project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit)
-- [KernelCAD OpenFrame-5F assembly, revision 3](https://app.kernelcad.com/p/DyJ405zg?version=3)
+- [KernelCAD populated OpenFrame-5F assembly, revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4)
 - [Complete system identity and model boundaries](system-integration.json)
 - [Physical wiring and system BOM](hardware/assembly-wiring.md)
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
@@ -46,7 +46,7 @@ These are two distinct electrical targets. Keep this distinction visible in reco
 
 The native PCB has **222 footprints, 1,067 pads and 210 nets**. KiCad 10.0.8 reports zero ERC errors/warnings, zero DRC violations, zero unconnected items and zero schematic/PCB parity differences within the configured checks. The importer retains all components, nets and pin endpoints. However, **37 catalog entries remain unsupported for simulation**; nine further inert entries are connectors/testpoints. The actual board remains design-only. A clean rule check does not provide motor-current, thermal, switching-transient or flight evidence.
 
-The populated PCB evaluates by itself. Its complete BREP assembly exceeded the hosted 1,024 MB memory limit. A lower-memory native component mesh then exposed a generic hosted-input defect, repaired in [KernelCAD-server PR #655](https://github.com/w1ne/kernelCAD-server/pull/655). The proposed 2 mm stack lift improves the calculated lower clearance from 0.32 mm to 2.32 mm, but the populated assembly candidate has not passed. Saved revision 3 remains unchanged. See [mechanical evidence and limits](cad/README.md).
+The populated visual assembly now passes hosted evaluation and rendering in [KernelCAD revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4): 37 parts, 213 native KiCad component references and an exact substrate. Bounded native checks cover all 35 external PCB-to-part pairs. The stack lift gives 2.32 mm lower frame separation; 6 mm OD support rings remove a measured 0.0863 mm³ component overlap. This establishes the declared geometry fit, not solder, hardware, strength or flight acceptance. See [mechanical evidence and limits](cad/README.md).
 
 ## Reproduce the four-channel bench
 
