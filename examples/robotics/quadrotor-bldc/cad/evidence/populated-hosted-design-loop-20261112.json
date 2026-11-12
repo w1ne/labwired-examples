@@ -1,0 +1,316 @@
+{
+  "ok": false,
+  "goal": "Validate the immutable DyJ405zg revision 4 populated assembly through hosted nested inline-code staging. Report geometry and retain the disconnected native component and nominal-envelope limits; do not claim complete physical assembly acceptance.",
+  "attempts": [
+    {
+      "id": "revision4-wrapper-readback",
+      "title": "Saved revision 4 source with pinned immutable import URLs",
+      "ok": false,
+      "functional": false,
+      "qualityOk": false,
+      "featureCount": 152,
+      "diagnosticCount": 88,
+      "reviewFacts": [
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.connectivity.assumed-root",
+          "severity": "warning",
+          "message": "No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still).",
+          "hint": "connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] })."
+        },
+        {
+          "code": "assembly.mechanical.part-disconnected",
+          "severity": "warning",
+          "message": "Part 'esc-population-native-mesh' contains 213 disconnected solids; the farthest component is 17.3 mm from the main body.",
+          "hint": "mechanical-plausibility.part-disconnected — remove decorative/floating solids from 'esc-population-native-mesh', or add real bridge/bracket geometry so every solid in the part shares a physical load path."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'esc-grommet-1-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'esc-grommet-2-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'esc-grommet-3-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'esc-grommet-4-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'fc-grommet-1-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'fc-grommet-2-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'fc-grommet-3-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'fc-grommet-4-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.joint-topology.unsupported-axis",
+          "severity": "warning",
+          "message": "Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry).",
+          "hint": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge."
+        },
+        {
+          "code": "assembly.connectivity.assumed-root",
+          "severity": "warning",
+          "message": "No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still).",
+          "hint": "connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] })."
+        },
+        {
+          "code": "assembly.geometry.floating-body",
+          "severity": "warning",
+          "message": "Deterministic contact graph found 2 disconnected bodies; parts float free of the main body (gap > 0.5 mm): esc-population-native-mesh.",
+          "hint": "geometry.floating-body — the named parts have no surface contact or near-contact with the main body. Move or extend them so they seat against the structure they belong to (mate-graph connectivity is not geometric contact), then rerun review_cad. Allow-list assembly.geometry.floating-body only when the design is genuinely meant to ship as separate bodies."
+        },
+        {
+          "code": "assembly.visual.review-rejected",
+          "severity": "warning",
+          "message": "Screenshot review rejected this attempt: Front and isometric geometry previews exist for this source, but the 213 disconnected component bodies have no modeled solder load paths. Flight-controller, motor, propeller and support hardware envelopes still require physical-detail review.",
+          "hint": "visual-review.rejected — redesign from the prompt or a mechanism primitive, render screenshots again, and only set accepted when the model is visually/mechanically legible."
+        }
+      ],
+      "visualReview": {
+        "accepted": false,
+        "findings": [
+          "Front and isometric geometry previews exist for this source, but the 213 disconnected component bodies have no modeled solder load paths.",
+          "Flight-controller, motor, propeller and support hardware envelopes still require physical-detail review."
+        ]
+      },
+      "repairMode": "local-fix",
+      "passedChecks": [
+        "validator-no-errors"
+      ],
+      "blockingReasons": [
+        "Part 'esc-population-native-mesh' contains 213 disconnected solids; the farthest component is 17.3 mm from the main body.",
+        "Assembly has articulated mates but no declared physical use case.",
+        "Pose-envelope sample 'current' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-rear-right:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-rear-right:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-front-right:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-front-right:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-rear-left:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-rear-left:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-front-left:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).",
+        "Pose-envelope sample 'prop-shaft-front-left:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh)."
+      ],
+      "mechanismSummary": {
+        "sampleCount": 9,
+        "interferenceCount": 0,
+        "trackedConnectorCount": 0,
+        "mechanicalPlausibilityIssueCount": 1,
+        "jointTopologyIssueCount": 5,
+        "physicalUseCaseIssueCount": 1
+      },
+      "requirements": {
+        "ok": true,
+        "status": "not-declared",
+        "entries": [],
+        "summary": {
+          "pass": 0,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "7f72651ceab6af8b332de9a47ba103f4b9056bf85b2f8872dc81fe9f83c96e3c",
+          "byteLength": 9474
+        },
+        "parameters": {
+          "values": {
+            "rotor1Angle": 0,
+            "rotor2Angle": 0,
+            "rotor3Angle": 0,
+            "rotor4Angle": 0
+          },
+          "sha256": "2840ecdb84bea879d65315e427d6cf7970b71a4524b246939d7bf6886766556b"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "a0cd90e485413e6b45f13b69a7b053403d9bd46e"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "0d656c81fc8a5fffef86c715a6df92347b34bb016d7d85e6a0bf127171cbb1f6"
+      },
+      "nextActionPrompt": "Blocking reasons:\n- assembly.mechanical.part-disconnected: Part 'esc-population-native-mesh' contains 213 disconnected solids; the farthest component is 17.3 mm from the main body.\n- assembly.physical-use-case.missing: Assembly has articulated mates but no declared physical use case.\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'current' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-right:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-right:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-right:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-right:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-left:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-left:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-left:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-left:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n\nTop diagnostics:\n- [error] assembly.physical-use-case.missing\n- [error] assembly.pose-envelope.interference-unresolved @ sampleName=current\n- [error] assembly.pose-envelope.interference-unresolved @ sampleName=prop-shaft-front-left:max\n\nRepair mode: local-fix\nDirective: Fix the reported local modeling errors while preserving the current topology, then rerun review_cad.\n\nDesign goal: Validate the immutable DyJ405zg revision 4 populated assembly through hosted nested inline-code staging. Report geometry and retain the disconnected native component and nominal-envelope limits; do not claim complete physical assembly acceptance.\n\nPreserved acceptance facts:\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.connectivity.assumed-root: No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still). Hint: connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] }).\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.connectivity.assumed-root: No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still). Hint: connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] }).\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- repair.joint-support: Revolute mate needs arm.jointSupport(...) or arm.mechanicalJoint(...). → Add arm.mechanicalJoint(name, { mate, actuator, shaft, supports, output }) for driven hinges, or arm.jointSupport(...) for passive hinges.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry). → joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry). → joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge.",
+      "revisionAssist": {
+        "mode": "hints-only",
+        "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+        "hints": [
+          {
+            "code": "repair.joint-support",
+            "summary": "Revolute mate needs arm.jointSupport(...) or arm.mechanicalJoint(...).",
+            "suggestedChange": "Add arm.mechanicalJoint(name, { mate, actuator, shaft, supports, output }) for driven hinges, or arm.jointSupport(...) for passive hinges."
+          },
+          {
+            "code": "assembly.joint-topology.unsupported-axis",
+            "summary": "Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry).",
+            "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge."
+          },
+          {
+            "code": "assembly.joint-topology.unsupported-axis",
+            "summary": "Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry).",
+            "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge."
+          },
+          {
+            "code": "assembly.joint-topology.unsupported-axis",
+            "summary": "Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry).",
+            "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge."
+          },
+          {
+            "code": "assembly.joint-topology.unsupported-axis",
+            "summary": "Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry).",
+            "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge."
+          },
+          {
+            "code": "assembly.connectivity.assumed-root",
+            "summary": "No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still).",
+            "suggestedChange": "connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] })."
+          },
+          {
+            "code": "assembly.mechanical.part-disconnected",
+            "summary": "Part 'esc-population-native-mesh' contains 213 disconnected solids; the farthest component is 17.3 mm from the main body.",
+            "suggestedChange": "mechanical-plausibility.part-disconnected — remove decorative/floating solids from 'esc-population-native-mesh', or add real bridge/bracket geometry so every solid in the part shares a physical load path."
+          },
+          {
+            "code": "assembly.pose-envelope.connector-unresolved",
+            "summary": "Tracked connector 'esc-grommet-1-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+            "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+          }
+        ]
+      }
+    }
+  ],
+  "record": {
+    "title": "kernelCAD design loop",
+    "goal": "Validate the immutable DyJ405zg revision 4 populated assembly through hosted nested inline-code staging. Report geometry and retain the disconnected native component and nominal-envelope limits; do not claim complete physical assembly acceptance.",
+    "steps": []
+  },
+  "revisionAssist": {
+    "mode": "hints-only",
+    "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+    "hints": [
+      {
+        "code": "repair.joint-support",
+        "summary": "Revolute mate needs arm.jointSupport(...) or arm.mechanicalJoint(...).",
+        "suggestedChange": "Add arm.mechanicalJoint(name, { mate, actuator, shaft, supports, output }) for driven hinges, or arm.jointSupport(...) for passive hinges."
+      },
+      {
+        "code": "assembly.joint-topology.unsupported-axis",
+        "summary": "Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry).",
+        "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge."
+      },
+      {
+        "code": "assembly.joint-topology.unsupported-axis",
+        "summary": "Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry).",
+        "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge."
+      },
+      {
+        "code": "assembly.joint-topology.unsupported-axis",
+        "summary": "Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry).",
+        "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge."
+      },
+      {
+        "code": "assembly.joint-topology.unsupported-axis",
+        "summary": "Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry).",
+        "suggestedChange": "joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge."
+      },
+      {
+        "code": "assembly.connectivity.assumed-root",
+        "summary": "No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still).",
+        "suggestedChange": "connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] })."
+      },
+      {
+        "code": "assembly.mechanical.part-disconnected",
+        "summary": "Part 'esc-population-native-mesh' contains 213 disconnected solids; the farthest component is 17.3 mm from the main body.",
+        "suggestedChange": "mechanical-plausibility.part-disconnected — remove decorative/floating solids from 'esc-population-native-mesh', or add real bridge/bracket geometry so every solid in the part shares a physical load path."
+      },
+      {
+        "code": "assembly.pose-envelope.connector-unresolved",
+        "summary": "Tracked connector 'esc-grommet-1-ENVELOPE.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+        "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved — use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+      }
+    ]
+  },
+  "nextActionPrompt": "Blocking reasons:\n- assembly.mechanical.part-disconnected: Part 'esc-population-native-mesh' contains 213 disconnected solids; the farthest component is 17.3 mm from the main body.\n- assembly.physical-use-case.missing: Assembly has articulated mates but no declared physical use case.\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'current' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-right:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-right:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-right:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-right:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-left:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-rear-left:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-left:min' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n- assembly.pose-envelope.interference-unresolved: Pose-envelope sample 'prop-shaft-front-left:max' could not complete interference verification: Interference coverage is incomplete: pair ('frame-bottom', 'esc-population-native-mesh') was unchecked (display-mesh).\n\nTop diagnostics:\n- [error] assembly.physical-use-case.missing\n- [error] assembly.pose-envelope.interference-unresolved @ sampleName=current\n- [error] assembly.pose-envelope.interference-unresolved @ sampleName=prop-shaft-front-left:max\n\nRepair mode: local-fix\nDirective: Fix the reported local modeling errors while preserving the current topology, then rerun review_cad.\n\nDesign goal: Validate the immutable DyJ405zg revision 4 populated assembly through hosted nested inline-code staging. Report geometry and retain the disconnected native component and nominal-envelope limits; do not claim complete physical assembly acceptance.\n\nPreserved acceptance facts:\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.connectivity.assumed-root: No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still). Hint: connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] }).\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-left' axis with arm.jointSupport('prop-shaft-rear-left-support', { mate: 'prop-shaft-rear-left', shaft: 'motor-base-rear-left-ENVELOPE', supports: ['motor-base-rear-left-ENVELOPE'], output: 'rotor-rear-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-left' declares no joint support intent (informational; physical support is checked from geometry). Hint: joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-left' axis with arm.jointSupport('prop-shaft-front-left-support', { mate: 'prop-shaft-front-left', shaft: 'motor-base-front-left-ENVELOPE', supports: ['motor-base-front-left-ENVELOPE'], output: 'rotor-front-left-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-left', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.connectivity.assumed-root: No stable root is declared; assuming the first part 'frame-bottom' is grounded (the mate solver holds it still). Hint: connectivity.assumed-root — if 'frame-bottom' is the fixed base this is fine; otherwise list the base first in arm.add(...) order or declare arm.physicalUseCase(..., { stableParts: ['<base part>'] }).\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- repair.joint-support: Revolute mate needs arm.jointSupport(...) or arm.mechanicalJoint(...). → Add arm.mechanicalJoint(name, { mate, actuator, shaft, supports, output }) for driven hinges, or arm.jointSupport(...) for passive hinges.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-rear-right' declares no joint support intent (informational; physical support is checked from geometry). → joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-rear-right' axis with arm.jointSupport('prop-shaft-rear-right-support', { mate: 'prop-shaft-rear-right', shaft: 'motor-base-rear-right-ENVELOPE', supports: ['motor-base-rear-right-ENVELOPE'], output: 'rotor-rear-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-rear-right', actuator, shaft, supports, output }) for a driven hinge.\n- assembly.joint-topology.unsupported-axis: Revolute mate 'prop-shaft-front-right' declares no joint support intent (informational; physical support is checked from geometry). → joint-topology.unsupported-axis — optional: record which parts carry the 'prop-shaft-front-right' axis with arm.jointSupport('prop-shaft-front-right-support', { mate: 'prop-shaft-front-right', shaft: 'motor-base-front-right-ENVELOPE', supports: ['motor-base-front-right-ENVELOPE'], output: 'rotor-front-right-ENVELOPE' }) (use the part that holds the pin/shaft as shaft and supports), or arm.mechanicalJoint(..., { mate: 'prop-shaft-front-right', actuator, shaft, supports, output }) for a driven hinge.",
+  "serverBuild": "0.1.0+a0cd90e48541@2026-11-12T02:12:35.564Z"
+}
