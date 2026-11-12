@@ -131,4 +131,3 @@ animationView({name:'Four rotor joint demonstration — visual only',fps:24,trac
   {param:'rotor4Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:1080},{atMs:3200,value:1080}]}
 ]});
 return rig.model();
-
