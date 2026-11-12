@@ -2,6 +2,16 @@
 
 This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, and a **four-channel STM32 propulsion bench**. The motor bench uses real compiled firmware and reduced-order motor models. It does not yet simulate the electronics or flight controller on the physical boards.
 
+## Native FC mechanical candidate, 12 November 2026
+
+The [current CAD source and evidence](cad/README.md) replace the FC envelope with
+the repaired native PCB and all 107 assigned component models. Hosted evaluation
+passes with 38 parts and 37 mates. Conservative geometric checks cover 31
+external pairs and 652 FC-component/support-ring pairs. This source candidate is
+not yet the saved Studio revision 4. The published firmware bench described
+below remains a separate target; native electrical onboarding is tracked in
+[LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
+
 ## Recorded engineering preview
 
 [Watch the 75-second co-design video](media/quadrotor-engineering-preview.mp4). It uses actual KernelCAD screens, native KiCad exports and an audited candidate browser run. CAD inspection is time-compressed; runtime scenes play at recorded speed. The final scene states that physical-board simulation and flight control remain open.
@@ -87,7 +97,7 @@ Until those gates pass, use **co-design engineering preview** or **four-channel 
 ## Files and earlier evidence
 
 - [firmware/channels/](firmware/channels/) stores the four exact saved-project sources, with SHA-256 digests in the project manifest.
-- [cad/drone.kcad.ts](cad/drone.kcad.ts) matches the saved revision and imports immutable source CAD.
+- [cad/drone.kcad.ts](cad/drone.kcad.ts) contains the current native FC candidate and imports immutable source CAD.
 - [cad/evidence/](cad/evidence/) contains full evaluation, motion, assembly-budget and export receipts.
 - [hardware/esc-4in1/](hardware/esc-4in1/) contains editable native electrical files, local libraries and validation reports.
 - [media/](media/) contains recordings and the scripts that produced them.

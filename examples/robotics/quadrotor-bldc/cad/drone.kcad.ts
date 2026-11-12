@@ -2,12 +2,12 @@
 // Frame: unmodified OpenDrone rev2.2 STEP, pinned by commit and SHA-256 in
 // mechanical-evidence.json. OpenFrame hardware is CERN-OHL-S-2.0.
 // This is an assembly/clearance model, not a flight or strength simulation.
-// The motor bodies, propeller blade profiles and FC are marked ENVELOPE:
-// they are not EMAX/Gemfan/OpenFC manufacturing geometry. Props retain the
+// The motor bodies, propeller blade profiles and soft mounts are ENVELOPES:
+// they are not vendor manufacturing geometry. Props retain the
 // published 129.7 mm sweep diameter, three blades, 6 mm hub and 5 mm bore.
 meta({name:'labwired-quad-openframe-5f',
-  title:'LabWired quadrotor — populated ESC assembly candidate',
-  description:'Pinned 226 mm OpenFrame-5F frame, four independently posed rotor joints, real ESC substrate plus native KiCad component mesh and nominal tri-blade envelopes. Candidate stack lifted 2 mm; imported mesh is visual geometry, not BREP clearance proof.'});
+  title:'LabWired quadrotor — populated ESC and repaired FC',
+  description:'Pinned 226 mm OpenFrame-5F frame, four independently posed rotor joints, native ESC and repaired FC substrates with populated KiCad meshes and nominal tri-blade envelopes. Exact STEP exports support separate clearance checks; meshes preserve component placement.'});
 
 const rotor1 = param('rotor1Angle',0,{min:-2160,max:2160,label:'M1 rear-right angle (deg)'});
 const rotor2 = param('rotor2Angle',0,{min:-2160,max:2160,label:'M2 front-right angle (deg)'});
@@ -84,13 +84,16 @@ for(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2
 // Moving both frames together leaves the authored component placement unchanged.
 attach('esc-population-native-mesh',(await lib.meshFromSTL("https://raw.githubusercontent.com/w1ne/labwired-examples/574470d/examples/robotics/quadrotor-bldc/cad/inputs/esc-population-native.stl")).translate(-75.63257,34.6,14.4),[0,-12.75,15.93],'paint-matte','#363b40','esc-board');
 
-// FC ENVELOPE: 40 x 40 x 1.6 mm, four 4 mm holes on 30.5 mm centres.
-// Component heights, connector overhang and soft-mount compression are unverified.
-let fc=box(40,40,1.6).translate(-20,stackY-20,22);
-for(const x of [-15.25,15.25])for(const y of [stackY-15.25,stackY+15.25]){
-  fc=fc.subtract(cylinder(3.6,2).translate(x,y,21));
-}
-attach('fc-board-ENVELOPE',fc,[-15.25,-28,22],'paint-matte','#18575e','fc-grommet-1-ENVELOPE');
+// Repaired native OpenFC-Lite board, immutable PCB SHA9794ec1a2bfd07f7.
+// Declared nominal thickness 1.0 mm. KiCad exports the substrate z0..0.9378;
+// outer copper/mask and package stand-offs retain the source export convention.
+// Four open 4 mm mounting cutouts on 30.5 mm centres, real scalloped outline.
+// Export origin is mounting-pattern centre (153.0912,87.1597) in native PCB mm.
+const fcShape=await lib.fromSTEP("https://raw.githubusercontent.com/w1ne/labwired-examples/2c9bef1efcfa6ea9ec8008565b50d32267d782ea/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-substrate.step");
+attach('fc-board-native',fcShape.translate(0,stackY,22),[-12.5,-28,22],'paint-matte','#18575e','fc-grommet-1-ENVELOPE');
+// 107 assigned component models, 47,786 STL facets. Original poses preserved.
+// L1/L2/L3 retain source package proxies; 53 bare contacts and 4 TP have no 3D body.
+attach('fc-population-native-mesh',(await lib.meshFromSTL("https://raw.githubusercontent.com/w1ne/labwired-examples/2c9bef1efcfa6ea9ec8008565b50d32267d782ea/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-components.stl")).translate(0,stackY,22),[0,stackY,22.9378],'paint-matte','#3a4044','fc-board-native');
 
 // Nominal blades for visual sweep checks only. The clipping cylinder fixes
 // the maximum radius; these straight sections are not a Gemfan airfoil.
