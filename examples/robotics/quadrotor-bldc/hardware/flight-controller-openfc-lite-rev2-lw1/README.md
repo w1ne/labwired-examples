@@ -119,6 +119,22 @@ Its fit receipt cannot qualify the moved components or changed copper in
 2-LW1. This candidate also does not establish native sensor startup,
 Betaflight arming, ESC operation, flight control or physical power-on.
 
+## Model availability at review
+
+The [model inventory](validation/model-resolution-inventory.json) records
+107 enabled source model references. Eleven references resolve to ten cached
+upstream files; each file matches its exact Git blob at the pinned upstream
+commit. The environment lacks 17 standard KiCad STEP files used by 96 other
+references. The 57 footprints without models are 53 solder contacts and four
+testpoints. The committed hardware refers to the original pinned model
+library through relative links; initialize that submodule to resolve them.
+
+All source model paths, offsets and rotations remain unchanged. The native
+inductor entries reference generic Murata/Changjiang package models. Their
+presence does not establish manufacturer-specific dimensions. Root assembly
+work must resolve and inspect the missing models and verify the newly moved
+parts before claiming a populated FC fit.
+
 ## Reproduce
 
 1. Initialize the original pinned source and its libraries:
