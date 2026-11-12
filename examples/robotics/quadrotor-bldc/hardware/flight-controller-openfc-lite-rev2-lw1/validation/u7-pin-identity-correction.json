@@ -1,0 +1,44 @@
+{
+  "source_url": "https://www.ti.com/lit/ds/symlink/lp5912.pdf",
+  "source_sha256": "56e9603fe47c816f08cfa136acc717f7901b2d526047bf949c5e6f44b6ca31ee",
+  "source_sections": [
+    "6 Pin Configuration and Functions",
+    "8.3.6 Power-Good Output (PG)"
+  ],
+  "ref": "U7",
+  "changes": [
+    {
+      "pad": "3",
+      "old_name": "GND",
+      "old_role": "power_in",
+      "new_name": "PG",
+      "new_role": "open_collector",
+      "position_mm": [
+        0,
+        -7.62,
+        90
+      ]
+    },
+    {
+      "pad": "5",
+      "old_name": "PG",
+      "old_role": "open_collector",
+      "new_name": "GND",
+      "new_role": "power_in",
+      "position_mm": [
+        10.16,
+        -2.54,
+        180
+      ]
+    }
+  ],
+  "preserved": [
+    "physical pad numbers",
+    "schematic pin positions",
+    "all wires and net names",
+    "actual GND connections of pads 3 and 5"
+  ],
+  "unused_pg_grounding": "Explicitly allowed by section 8.3.6. A generic ERC open-collector/power-output conflict against PWR_FLAG remains visible; no rule was changed or suppressed.",
+  "input_sha256": "16a70f2258046ae0d6da1b039b5e44160dd03917b305e6c9bddfd2ab39643b8e",
+  "output_sha256": "2ae7c6969411eec5eced407a42cd2720dacf11ec85bd7cc7f43b9f310b5fea08"
+}

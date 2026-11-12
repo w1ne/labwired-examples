@@ -1,0 +1,61 @@
+{
+  "tool": "kicad-skip0.2.5",
+  "changes": [
+    {
+      "file": "rp2350a.kicad_sch",
+      "ref": "U2",
+      "lib_id": "lib:RP2354B_C39843328",
+      "pin": "9",
+      "name": "GPIO11",
+      "old_role": "unspecified",
+      "new_role": "bidirectional",
+      "source": "Raspberry Pi RP2350 datasheet Release8, GPIO pin functions; exact QFN80 GPIO11 pad9",
+      "input_sha256": "3ab48835651c2fc897e1f6269f7e985a018c9226b2f6f4abc4837b747aa628db",
+      "output_sha256": "2e4883120b9ad9336a8616422a55b821cc8f26999ecf81ed73e30bf0a4bd1a63"
+    },
+    {
+      "file": "power.kicad_sch",
+      "ref": "U15",
+      "lib_id": "lib:LP5912-1.8DRVR",
+      "pin": "1",
+      "name": "OUT",
+      "old_role": "unspecified",
+      "new_role": "power_out",
+      "source": "TI LP5912 SNVSA77D section6, DRV OUT pad1",
+      "input_sha256": "3332ddb7ba6359deab763c389275bb8b7e43855a8d23cd501d0a562f5bdd6aa4",
+      "output_sha256": "d48a30b3f178bd9f3e4d67e0e926fb7217c6abd4e5bbebec75e330e6237d3113"
+    },
+    {
+      "file": "lib.kicad_sym",
+      "ref": [
+        "U2",
+        "U15"
+      ],
+      "input_sha256": "732794a904af74777b6558d2f830bd3ca7d90fd23904a067339ff246c158e7ba",
+      "output_sha256": "d8e840076bb4a2e45d670685037281207bf93a340e31b8b9ef221dd6c7739ab9"
+    },
+    {
+      "file": "rp2350a.kicad_sch",
+      "input_sha256": "2e4883120b9ad9336a8616422a55b821cc8f26999ecf81ed73e30bf0a4bd1a63",
+      "output_sha256": "f2689f4639398c0c06c5f5c8552dc085489a30a6d6c430c36d3604543c71fd67",
+      "manufacturer_annotation_only": true
+    }
+  ],
+  "manufacturer_annotations": [
+    {
+      "file": "rp2350a.kicad_sch",
+      "ref": "Q1",
+      "old": "Diodes Incorporated",
+      "new": "ALLPOWER",
+      "source": "Official ALLPOWER AP1606 V1.0 PDF SHA256 f0ceb0b3865757ae1729798de38daa512bf99b1aa55c55769c1151a3dc410610"
+    },
+    {
+      "file": "rp2350a.kicad_sch",
+      "ref": "Q2",
+      "old": "Diodes Incorporated",
+      "new": "ALLPOWER",
+      "source": "Official ALLPOWER AP1606 V1.0 PDF SHA256 f0ceb0b3865757ae1729798de38daa512bf99b1aa55c55769c1151a3dc410610"
+    }
+  ],
+  "electrical_connections_changed": false
+}

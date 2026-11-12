@@ -1,0 +1,47 @@
+{
+  "input_sha256": "69515fc35209379a7d609af67a8a2c35b90a7cccab5d830d30d622bca68e6643",
+  "output_sha256": "9794ec1a2bfd07f7c33a1332debaf3d785ecb83a07c5866d0d7432cb20ef07db",
+  "accepted_pads": [
+    [
+      "USB1",
+      "A8"
+    ],
+    [
+      "USB1",
+      "B8"
+    ],
+    [
+      "U7",
+      "2"
+    ],
+    [
+      "U15",
+      "2"
+    ]
+  ],
+  "ground_via_move": {
+    "uuid": "701b0783-fe39-4828-8823-db88d3eb6827",
+    "from_mm": [
+      163.64,
+      90.41
+    ],
+    "to_mm": [
+      163.59,
+      90.28
+    ],
+    "diameter_mm": 0.35,
+    "drill_mm": 0.2,
+    "net": "GND"
+  },
+  "remaining_omission": {
+    "ref": "Card1",
+    "pin": "8",
+    "function": "DAT1",
+    "state": "original NC pad omitted; no fabricated pad or parity exclusion",
+    "reason": "Exact library pad overlaps three through vias and approaches two more. Bounded reroute crosses USB/DVDD/IOVDD escape tracks; broader signal/power escape redesign is outside this repair candidate.",
+    "failed_candidate_report": "nc-via-trial-drc.json"
+  },
+  "all_trial_power_and_USB_signal_routing_reverted": true,
+  "rules_changed": false,
+  "intermediate_candidate_sha256": "d513d2b3a357f2571c013549046d493dd5c68950e176469e073453892c08fe34"
+}

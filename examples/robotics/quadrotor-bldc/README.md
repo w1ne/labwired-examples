@@ -15,6 +15,7 @@ This package contains a versioned **KernelCAD assembly**, a real **six-layer Ope
 - [Complete system identity and model boundaries](system-integration.json)
 - [Physical wiring and system BOM](hardware/assembly-wiring.md)
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
+- [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors, one retained microSD-pad parity omission; no native boot or manufacturing acceptance.
 
 The saved LabWired project links to the versioned KernelCAD model. Its circuit contains four controllers, four motors, four independent fault inputs and 64 wires. A logic analyzer can appear as an extra editor instrument; it is not a physical component of the aircraft.
 

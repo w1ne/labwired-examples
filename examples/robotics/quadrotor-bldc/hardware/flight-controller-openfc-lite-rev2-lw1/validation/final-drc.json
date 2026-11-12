@@ -1,0 +1,172 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-12T06:02:13",
+    "ignored_checks": [
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "key": "via_dangling"
+        },
+        {
+            "description": "Board edge clearance violation",
+            "key": "copper_edge_clearance"
+        },
+        {
+            "description": "Courtyards overlap",
+            "key": "courtyards_overlap"
+        },
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Footprint has malformed courtyard",
+            "key": "malformed_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "key": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "key": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "key": "silk_edge_clearance"
+        },
+        {
+            "description": "Text height out of range",
+            "key": "text_height"
+        },
+        {
+            "description": "Text thickness out of range",
+            "key": "text_thickness"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "key": "pth_inside_courtyard"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "key": "npth_inside_courtyard"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [
+        {
+            "description": "No pad found for pin 8 in schematic",
+            "items": [
+                {
+                    "description": "Footprint Card1",
+                    "pos": {
+                        "x": 145.16,
+                        "y": 87.67
+                    },
+                    "uuid": "17088d4b-67d9-40b9-95ff-58bc1b904a9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        }
+    ],
+    "source": "OpenFC.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Footprint 'small_pad' does not match copy in library 'lib'",
+            "items": [
+                {
+                    "description": "Footprint J52",
+                    "pos": {
+                        "x": 140.59,
+                        "y": 85.93
+                    },
+                    "uuid": "3949df48-7c50-43d1-9eb6-c0052852a446"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'small_pad' does not match copy in library 'lib'",
+            "items": [
+                {
+                    "description": "Footprint J54",
+                    "pos": {
+                        "x": 140.59,
+                        "y": 83.41
+                    },
+                    "uuid": "fd9c653e-f152-493e-9c83-c4894aa0f21d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TF-SMD_TF-PUSH' does not match copy in library 'lib'",
+            "items": [
+                {
+                    "description": "Footprint Card1",
+                    "pos": {
+                        "x": 145.16,
+                        "y": 87.67
+                    },
+                    "uuid": "17088d4b-67d9-40b9-95ff-58bc1b904a9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'USB-TYPE-C-SMD_TYPE-C-16P-QTWT' does not match copy in library 'lib'",
+            "items": [
+                {
+                    "description": "Footprint USB1",
+                    "pos": {
+                        "x": 166.7325,
+                        "y": 89.28
+                    },
+                    "uuid": "bd3b0d06-57e4-4009-99f9-159fb3c7c76b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Non-Mirrored text on back layer",
+            "items": [
+                {
+                    "description": "PCB text 'B = SIGNAL' on B.Cu",
+                    "pos": {
+                        "x": 183.02,
+                        "y": 91.76
+                    },
+                    "uuid": "faae6a14-d94d-4b98-9e4e-8c303b9810ca"
+                }
+            ],
+            "severity": "warning",
+            "type": "nonmirrored_text_on_back_layer"
+        }
+    ]
+}

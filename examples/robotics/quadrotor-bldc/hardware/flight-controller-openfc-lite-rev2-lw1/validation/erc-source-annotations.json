@@ -1,0 +1,105 @@
+{
+  "tool": "kicad-skip0.2.5",
+  "source_symbol": "KiCad10.0.8 installed power.kicad_sym:PWR_FLAG",
+  "source_library_sha256": "dfd086b4029e347d7a0041744b684ba8dda351ba8d8f7838cc0cbaeb06c87b54",
+  "flags": [
+    {
+      "ref": "#FLG9001",
+      "sheet": "rp2350a.kicad_sch",
+      "net": "+1.1V",
+      "attached_to_power_symbol": "#PWR02",
+      "position_mm": [
+        69.85,
+        118.11
+      ],
+      "verified_source_path": "U2.VREG_LX pad63 -> L1.2 -> L1.1 -> U2.DVDD/VREG_FB; intended internal buck output, runtime buck qualification remains separate",
+      "electrical_effect": "none: ERC marker only, never a simulation source"
+    },
+    {
+      "ref": "#FLG9002",
+      "sheet": "rp2350a.kicad_sch",
+      "net": "+BATT",
+      "attached_to_power_symbol": "#PWR04",
+      "position_mm": [
+        69.85,
+        156.21
+      ],
+      "verified_source_path": "External battery entry P1.1 / J29.1 -> U6.VIN and U16.VIN; no battery component is added",
+      "electrical_effect": "none: ERC marker only, never a simulation source"
+    },
+    {
+      "ref": "#FLG9003",
+      "sheet": "rp2350a.kicad_sch",
+      "net": "GND",
+      "attached_to_power_symbol": "#PWR01",
+      "position_mm": [
+        71.12,
+        273.05
+      ],
+      "verified_source_path": "External return P1.2 / USB1.A1,A12 / solder ground contacts; reference connection only",
+      "electrical_effect": "none: ERC marker only, never a simulation source"
+    },
+    {
+      "ref": "#FLG9004",
+      "sheet": "rp2350a.kicad_sch",
+      "net": "+5V_USB",
+      "attached_to_power_symbol": "#PWR015",
+      "position_mm": [
+        102.87,
+        294.64
+      ],
+      "verified_source_path": "External USB VBUS entry USB1.A4,A9 -> D10.A; no USB host/cable supply is added",
+      "electrical_effect": "none: ERC marker only, never a simulation source"
+    },
+    {
+      "ref": "#FLG9005",
+      "sheet": "power.kicad_sch",
+      "net": "+5V (+5V_BUCK source label)",
+      "attached_to_power_symbol": "#PWR061",
+      "position_mm": [
+        80.01,
+        128.27
+      ],
+      "verified_source_path": "U16.SW pad5 -> L3.1 -> L3.2 -> D6.A and 5V contacts; existing KiCad net alias retained",
+      "electrical_effect": "none: ERC marker only, never a simulation source"
+    },
+    {
+      "ref": "#FLG9006",
+      "sheet": "power.kicad_sch",
+      "net": "+4v5",
+      "attached_to_power_symbol": "#PWR067",
+      "position_mm": [
+        87.63,
+        153.67
+      ],
+      "verified_source_path": "D6.K / D10.K diode OR -> U7.IN and U15.IN; no source through a reverse-biased diode is asserted",
+      "electrical_effect": "none: ERC marker only, never a simulation source"
+    },
+    {
+      "ref": "#FLG9007",
+      "sheet": "power.kicad_sch",
+      "net": "+10V",
+      "attached_to_power_symbol": "#PWR068",
+      "position_mm": [
+        142.24,
+        36.83
+      ],
+      "verified_source_path": "U6.SW pad5 -> L2.1 -> L2.2 -> 10V contacts; conditional on U6.EN and actual battery input",
+      "electrical_effect": "none: ERC marker only, never a simulation source"
+    }
+  ],
+  "files": [
+    {
+      "file": "rp2350a.kicad_sch",
+      "input_sha256": "f2689f4639398c0c06c5f5c8552dc085489a30a6d6c430c36d3604543c71fd67",
+      "output_sha256": "332ea90164d0365453176e0e7bb5a6d3afbd256cfe8ed5d781721b9b20ea3964"
+    },
+    {
+      "file": "power.kicad_sch",
+      "input_sha256": "d48a30b3f178bd9f3e4d67e0e926fb7217c6abd4e5bbebec75e330e6237d3113",
+      "output_sha256": "16a70f2258046ae0d6da1b039b5e44160dd03917b305e6c9bddfd2ab39643b8e"
+    }
+  ],
+  "added_physical_parts": 0,
+  "passive_pin_roles_changed": false
+}
