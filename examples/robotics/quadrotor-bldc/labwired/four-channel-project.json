@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
-  "url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+  "url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit?view=kernelcad",
   "board": "stm32l476",
   "entry_path": "src/main.c",
   "language": "c",
@@ -43,8 +43,95 @@
   "mechanical": {
     "provider": "kernelcad",
     "slug": "DyJ405zg",
-    "version": 3,
-    "title": "Quadrotor \u00b7 OpenFrame-5F assembly"
+    "version": 5,
+    "title": "Quadrotor \u00b7 populated native ESC and repaired FC",
+    "electronics": {
+      "version": 1,
+      "displays": [],
+      "inputs": [],
+      "motions": [
+        {
+          "id": "M1",
+          "component": "rotor1",
+          "joint": "prop-shaft-rear-right",
+          "parts": [
+            "rotor-rear-right-ENVELOPE",
+            "prop-rear-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        },
+        {
+          "id": "M2",
+          "component": "rotor2",
+          "joint": "prop-shaft-front-right",
+          "parts": [
+            "rotor-front-right-ENVELOPE",
+            "prop-front-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M3",
+          "component": "rotor3",
+          "joint": "prop-shaft-rear-left",
+          "parts": [
+            "rotor-rear-left-ENVELOPE",
+            "prop-rear-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M4",
+          "component": "rotor4",
+          "joint": "prop-shaft-front-left",
+          "parts": [
+            "rotor-front-left-ENVELOPE",
+            "prop-front-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        }
+      ]
+    }
   },
   "simulation_scope": "Four independent STM32L476 six-step commutators with reduced-order BLDC plants. Physical AT32F421/AM32 ESC and RP2354B flight controller are separate hardware references.",
   "flight_dynamics": false,

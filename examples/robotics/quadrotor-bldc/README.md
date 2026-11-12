@@ -2,14 +2,15 @@
 
 This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, and a **four-channel STM32 propulsion bench**. The motor bench uses real compiled firmware and reduced-order motor models. It does not yet simulate the electronics or flight controller on the physical boards.
 
-## Native FC mechanical candidate, 12 November 2026
+## Saved native FC revision, 12 November 2026
 
 The [current CAD source and evidence](cad/README.md) replace the FC envelope with
 the repaired native PCB and all 107 assigned component models. Hosted evaluation
 passes with 38 parts and 37 mates. Conservative geometric checks cover 31
-external pairs and 652 FC-component/support-ring pairs. This source candidate is
-not yet the saved Studio revision 4. The published firmware bench described
-below remains a separate target; native electrical onboarding is tracked in
+external pairs and 652 FC-component/support-ring pairs. The source is saved as
+[Studio revision 5](https://app.kernelcad.com/p/DyJ405zg?version=5), with a ready
+cloud mesh and 12 immutable inputs. The firmware bench remains a separate
+target; native electrical onboarding is tracked in
 [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
 ## Recorded engineering preview
@@ -20,8 +21,8 @@ below remains a separate target; native electrical onboarding is tracked in
 
 ## Open the projects
 
-- [Four-channel LabWired propulsion project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit)
-- [KernelCAD populated OpenFrame-5F assembly, revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4)
+- [Four-channel LabWired propulsion project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit?view=kernelcad)
+- [KernelCAD populated OpenFrame-5F assembly, revision 5](https://app.kernelcad.com/p/DyJ405zg?version=5)
 - [Complete system identity and model boundaries](system-integration.json)
 - [Physical wiring and system BOM](hardware/assembly-wiring.md)
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
@@ -57,7 +58,7 @@ These are two distinct electrical targets. Keep this distinction visible in reco
 
 The native PCB has **222 footprints, 1,067 pads and 210 nets**. KiCad 10.0.8 reports zero ERC errors/warnings, zero DRC violations, zero unconnected items and zero schematic/PCB parity differences within the configured checks. The importer retains all components, nets and pin endpoints. However, **37 catalog entries remain unsupported for simulation**; nine further inert entries are connectors/testpoints. The actual board remains design-only. A clean rule check does not provide motor-current, thermal, switching-transient or flight evidence.
 
-The populated visual assembly now passes hosted evaluation and rendering in [KernelCAD revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4): 37 parts, 213 native KiCad component references and an exact substrate. Bounded native checks cover all 35 external PCB-to-part pairs. The stack lift gives 2.32 mm lower frame separation; 6 mm OD support rings remove a measured 0.0863 mm³ component overlap. This establishes the declared geometry fit, not solder, hardware, strength or flight acceptance. See [mechanical evidence and limits](cad/README.md).
+[KernelCAD revision 5](https://app.kernelcad.com/p/DyJ405zg?version=5) contains 38 parts, the exact ESC substrate and 213 component references, plus the repaired native FC substrate and all 107 assigned FC models. Hosted evaluation passes with 146 features and zero build diagnostics. The saved mesh is ready; full mechanical acceptance remains false. The FC clearance proof covers 31 external pairs and 652 component/support-ring pairs. The earlier ESC stack lift and 6 mm OD support-ring correction are preserved. See [mechanical evidence and limits](cad/README.md).
 
 ## Reproduce the four-channel bench
 
@@ -68,7 +69,7 @@ The populated visual assembly now passes hosted evaluation and rendering in [Ker
 5. Use `cad/runtime-bindings.json` for the evaluated KernelCAD revision. The bridge must receive real `positionRad` and `speedRpm`; a timed visual animation is not a substitute.
 6. Pause and stop the simulation. Verify that the viewer stops advancing and does not reuse stale telemetry as a new run.
 
-The multi-MCU loader correction [LabWired PR #3094](https://github.com/w1ne/labwired/pull/3094) merged after required CI passed. Hosted deployment and model verification are separate gates. The generic live bridge is in [LabWired PR #3106](https://github.com/w1ne/labwired/pull/3106) and [KernelCAD-app PR #121](https://github.com/w1ne/kernelCAD-app/pull/121). The candidate diagram with authored motion metadata is [four-channel-circuit.runtime-candidate.json](labwired/four-channel-circuit.runtime-candidate.json); it does not imply that production has deployed these changes.
+The multi-MCU loader correction [LabWired PR #3094](https://github.com/w1ne/labwired/pull/3094) merged after required CI passed. Hosted deployment and model verification are separate gates. The generic live bridge is in [LabWired PR #3106](https://github.com/w1ne/labwired/pull/3106) and [KernelCAD-app PR #121](https://github.com/w1ne/kernelCAD-app/pull/121). The canonical [four-channel-circuit.json](labwired/four-channel-circuit.json) contains the four authored motor-to-CAD bindings and pins saved CAD revision 5. The earlier runtime-candidate file remains historical evidence. Repository contents alone do not prove production deployment.
 
 ## Observed candidate behavior
 

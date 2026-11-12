@@ -792,7 +792,94 @@
   "mechanical": {
     "provider": "kernelcad",
     "slug": "DyJ405zg",
-    "version": 3,
-    "title": "Quadrotor \u00b7 OpenFrame-5F assembly"
+    "version": 5,
+    "title": "Quadrotor \u00b7 populated native ESC and repaired FC",
+    "electronics": {
+      "version": 1,
+      "displays": [],
+      "inputs": [],
+      "motions": [
+        {
+          "id": "M1",
+          "component": "rotor1",
+          "joint": "prop-shaft-rear-right",
+          "parts": [
+            "rotor-rear-right-ENVELOPE",
+            "prop-rear-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        },
+        {
+          "id": "M2",
+          "component": "rotor2",
+          "joint": "prop-shaft-front-right",
+          "parts": [
+            "rotor-front-right-ENVELOPE",
+            "prop-front-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M3",
+          "component": "rotor3",
+          "joint": "prop-shaft-rear-left",
+          "parts": [
+            "rotor-rear-left-ENVELOPE",
+            "prop-rear-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M4",
+          "component": "rotor4",
+          "joint": "prop-shaft-front-left",
+          "parts": [
+            "rotor-front-left-ENVELOPE",
+            "prop-front-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        }
+      ]
+    }
   }
 }
