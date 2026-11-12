@@ -1,0 +1,18 @@
+import {pathToFileURL} from 'node:url';
+if(!process.env.LABWIRED_APP_ROOT)throw new Error('LABWIRED_APP_ROOT must identify the reviewed app checkout');
+const appRoot=pathToFileURL(process.env.LABWIRED_APP_ROOT.replace(/\/$/,'')+'/');
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const {importCircuit}=await import(new URL('packages/board-config/src/import-circuit.ts',appRoot));
+const {migrateToV2}=await import(new URL('packages/board-config/src/schema.ts',appRoot));
+const {resolveNets}=await import(new URL('packages/board-config/src/normalize.ts',appRoot));
+const {lowerAnalogIslands}=await import(new URL('packages/board-config/src/compile/analog-island.ts',appRoot));
+const {compile}=await import(new URL('packages/board-config/src/compile/index.ts',appRoot));
+const {CHIP_YAMLS}=await import(new URL('packages/board-config/src/chip-yamls.ts',appRoot));
+const path=process.argv[2],out=process.argv[3];
+const raw=readFileSync(path,'utf8');const imported=await importCircuit({source_kind:'netlist',content:raw});
+const diagram=migrateToV2(imported.pack.diagram??imported.diagram);const nets=resolveNets(diagram);
+const lower=lowerAnalogIslands(diagram,nets,{board:diagram.board,chipYaml:CHIP_YAMLS[diagram.board],stepNs:100,maxUnknowns:512});
+const compiled=compile(diagram,{analogStepNs:100,analogMaxUnknowns:512});
+const result={compiled,source_sha256:createHash('sha256').update(raw).digest('hex'),board:diagram.board,mapping:imported.mapping,diagram,nets,lower};
+writeFileSync(out,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({board:diagram.board,parts:diagram.parts.length,mappingCounts:Object.fromEntries(['mapped','ignored','dropped'].map(s=>[s,imported.mapping.filter(m=>m.status===s).length])),detail:imported.detail,unmapped:imported.mapping.filter(m=>m.status!=='mapped'),errors:lower.diagnostics.filter(d=>d.severity==='error'),hasModel:!!lower.cosimModels,compileOk:compiled.ok,ercErrors:compiled.diagnostics.filter(d=>d.severity==='error')},null,2));

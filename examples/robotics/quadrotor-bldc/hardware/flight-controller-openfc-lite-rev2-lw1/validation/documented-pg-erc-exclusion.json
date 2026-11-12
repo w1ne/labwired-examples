@@ -1,0 +1,17 @@
+{
+  "input_project_sha256": "cf04556cd2ed61aa6418fc57a64d519105ca3b558f8743bce09a86cfff2394e9",
+  "output_project_sha256": "1ad2949fe79436a92685d25c8ddbddc3bda77cf13f8f03889318030023467b95",
+  "exact_marker": "pin_to_pin|2197100|1295400|49de5ef7-4c6f-47a3-a139-47ad2234d55b|227a7857-e9d7-5e89-bd06-b9bcce89fea3|/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161|/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161|/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cec45a0d-1d48-4800-9760-14c521e5fc8b",
+  "comment": "U7 LP5912-3.3DRVR unused PG pad3 is intentionally grounded. TI LP5912 Rev D section8.3.6 explicitly permits ground or floating when PG is unused; section6 maps PG3/GND5. https://www.ti.com/lit/ds/symlink/lp5912.pdf SHA25656e9603fe47c816f08cfa136acc717f7901b2d526047bf949c5e6f44b6ca31ee. Only this exact PG3-to-GND PWR_FLAG marker is excluded. Physical nets, ERC severity table and pin map are unchanged.",
+  "changed_json_path": "erc.erc_exclusions",
+  "all_other_project_values_identical": true,
+  "physical_rules_and_erc_severities_unchanged": true,
+  "serialization_source": "KiCad10.0 eeschema/sch_marker.cpp:SerializeToString and erc/erc_settings.cpp; SCH_IU_PER_MM=1e4 in include/base_units.h",
+  "serialization_source_hashes": {
+    "kicad10-erc_settings.cpp": "99c3b06799c5553adddde5718ad161cc2a37fe5bcd03d9bf6ed40b71b96fa560",
+    "kicad10-sch_marker.cpp": "78e998bc1c912a201983c76bd4925ed5ce515ba0a5d85d2df9a0b59ba5835440",
+    "kicad10-eda_units.h": "2f312d0b4d107a55eafe5cfbd5ccf4c4e70d13d8718a949f52820289b88d00c5",
+    "kicad10-erc.cpp": "5cb42f60867e4cf6f26bb1755163aaea49d4e8b2bc50f48a26e677caced87f87",
+    "kicad10-base_units.h": "eccd8253ca2512a6833b456160b60220ef0bc40ac360f8da68d74a5be3b23dc9"
+  }
+}
