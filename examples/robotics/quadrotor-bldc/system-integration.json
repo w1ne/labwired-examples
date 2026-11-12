@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "recorded_on": "2026-11-11",
+  "recorded_on": "2026-11-12",
   "name": "Quadrotor co-design engineering preview",
   "mechanics": {
     "project": "DyJ405zg",
-    "revision": 3,
+    "revision": 4,
     "source": "cad/drone.kcad.ts",
     "frame": "OpenFrame-5F rev2.2",
     "wheelbase_mm": 226,
@@ -29,9 +29,20 @@
     "propeller_sweep_diameter_mm": 129.7,
     "minimum_nominal_sweep_gap_mm": 9.368841512000017,
     "populated_board_standalone_geometry_valid": true,
-    "populated_board_cloud_display_ready": false,
+    "populated_board_cloud_display_ready": true,
     "populated_full_frame_assembly_validated": false,
-    "populated_board_display_receipt": "cad/evidence/native-pcb-studio-save-20261111.json"
+    "populated_board_display_receipt": "cad/evidence/populated-studio-readback-20261112.json",
+    "url": "https://app.kernelcad.com/p/DyJ405zg?version=4",
+    "source_sha256": "af8271de87cfe25b27bf73a0e4d4d29dc8fd0fb74f4a5836255e0c8732a1f889",
+    "interactive_viewer_paint_confirmed": false,
+    "display_scope": "Saved revision 4 has a ready cloud mesh and 10 pinned assets; this receipt does not confirm live browser WebGL paint.",
+    "populated_board_representation": {
+      "substrate": "Exact BREP",
+      "components": "213 native component references as a 56072-triangle display mesh",
+      "components_mesh_sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3"
+    },
+    "populated_clearance_receipt": "cad/evidence/populated-clearance-audit-20261112.json",
+    "physical_acceptance_scope": "27 external non-support pairs are separated by native-board bounds; eight nominal support rings have no exact BREP interference. Full assembly acceptance remains false: 214 disconnected native solids, no solder attachment, and envelope parts remain."
   },
   "physical_electronics": {
     "esc": "hardware/esc-4in1/4in1.kicad_pcb",
