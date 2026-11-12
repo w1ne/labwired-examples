@@ -6,8 +6,8 @@
 // they are not EMAX/Gemfan/OpenFC manufacturing geometry. Props retain the
 // published 129.7 mm sweep diameter, three blades, 6 mm hub and 5 mm bore.
 meta({name:'labwired-quad-openframe-5f',
-  title:'LabWired quadrotor — OpenFrame-5F integration',
-  description:'Pinned 226 mm OpenFrame-5F frame, four independently posed rotor joints, real ESC board outline and nominal tri-blade envelopes. Visual motion only; no live firmware telemetry or flight dynamics.'});
+  title:'LabWired quadrotor — populated ESC assembly candidate',
+  description:'Pinned 226 mm OpenFrame-5F frame, four independently posed rotor joints, real ESC substrate plus native KiCad component mesh and nominal tri-blade envelopes. Candidate stack lifted 2 mm; imported mesh is visual geometry, not BREP clearance proof.'});
 
 const rotor1 = param('rotor1Angle',0,{min:-2160,max:2160,label:'M1 rear-right angle (deg)'});
 const rotor2 = param('rotor2Angle',0,{min:-2160,max:2160,label:'M2 front-right angle (deg)'});
@@ -58,27 +58,39 @@ attach('frame-top',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDro
 
 // Stack support rings are nominal soft-mount ENVELOPES. Their heights are
 // assembly assumptions, not measured compressed grommet dimensions.
+// Six-millimetre OD rings clear all imported native components. The prior
+// 7 mm OD upper ring intersected a component by 0.0863 mm3. Native STEP
+// verification receipts preserve the failure and eight-ring clearance check.
 for(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2.5]]){
-  const ring=cylinder(3.4,3.5).subtract(cylinder(3.4,2)).translate(x,y,9);
+  const ring=cylinder(5.4,3).holes('top',{positions:[{u:0,v:0}],diameter:4,depth:'through'}).translate(x,y,9);
   attach('esc-grommet-'+index+'-ENVELOPE',ring,[x,y,9],'rubber','#363a3f','frame-middle');
 }
 
 // Board geometry comes from the example's native KiCad export; solid 5 is
 // the PCB substrate. Holes measured at 30.5 mm pitch, 4 mm diameter.
-// Board undersurface z=12.4 leaves 3.4 mm above the 9 mm middle plate.
+// Candidate stack raised by 2 mm: substrate bottom z14.4, native components
+// descend to z11.32, nominally 2.32 mm above the middle frame top z9.
+// This envelope separation is not a qualified clearance or assembly proof.
 const escShape = await lib.fromSTEP("https://raw.githubusercontent.com/w1ne/labwired-examples/c108ed0/examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/esc-board-preview.step",{solid:5});
-attach('esc-board',escShape.translate(-75.63257,34.6,12.4),[-15.25,-28,12.4],'paint-matte','#14735b','esc-grommet-1-ENVELOPE');
+attach('esc-board',escShape.translate(-75.63257,34.6,14.4),[-15.25,-28,14.4],'paint-matte','#14735b','esc-grommet-1-ENVELOPE');
 for(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2.5]]){
-  const ring=cylinder(6.07,3.5).subtract(cylinder(6.07,2)).translate(x,y,13.93);
-  attach('fc-grommet-'+index+'-ENVELOPE',ring,[x,y,13.93],'rubber','#363a3f','esc-board');
+  const ring=cylinder(6.07,3).holes('top',{positions:[{u:0,v:0}],diameter:4,depth:'through'}).translate(x,y,15.93);
+  attach('fc-grommet-'+index+'-ENVELOPE',ring,[x,y,15.93],'rubber','#363a3f','esc-board');
 }
+// Native KiCad GLB component geometry, with its PCB mesh excluded. Converted
+// from glTF metres/Y-up to CAD millimetres/Z-up; 213 refs, 56072 triangles.
+// Color is uniform after STL conversion. Shape source and SHA are in receipts.
+// Both mate frames use substrate top at its centre, not the empty screw bore.
+// Moving both frames together leaves the authored component placement unchanged.
+attach('esc-population-native-mesh',(await lib.meshFromSTL("https://raw.githubusercontent.com/w1ne/labwired-examples/574470d/examples/robotics/quadrotor-bldc/cad/inputs/esc-population-native.stl")).translate(-75.63257,34.6,14.4),[0,-12.75,15.93],'paint-matte','#363b40','esc-board');
+
 // FC ENVELOPE: 40 x 40 x 1.6 mm, four 4 mm holes on 30.5 mm centres.
 // Component heights, connector overhang and soft-mount compression are unverified.
-let fc=box(40,40,1.6).translate(-20,stackY-20,20);
+let fc=box(40,40,1.6).translate(-20,stackY-20,22);
 for(const x of [-15.25,15.25])for(const y of [stackY-15.25,stackY+15.25]){
-  fc=fc.subtract(cylinder(3.6,2).translate(x,y,19));
+  fc=fc.subtract(cylinder(3.6,2).translate(x,y,21));
 }
-attach('fc-board-ENVELOPE',fc,[-15.25,-28,20],'paint-matte','#18575e','fc-grommet-1-ENVELOPE');
+attach('fc-board-ENVELOPE',fc,[-15.25,-28,22],'paint-matte','#18575e','fc-grommet-1-ENVELOPE');
 
 // Nominal blades for visual sweep checks only. The clipping cylinder fixes
 // the maximum radius; these straight sections are not a Gemfan airfoil.
@@ -119,3 +131,4 @@ animationView({name:'Four rotor joint demonstration — visual only',fps:24,trac
   {param:'rotor4Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:1080},{atMs:3200,value:1080}]}
 ]});
 return rig.model();
+

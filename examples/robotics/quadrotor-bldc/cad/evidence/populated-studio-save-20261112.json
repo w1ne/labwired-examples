@@ -1,0 +1,101 @@
+{
+  "ok": true,
+  "show_electronics": true,
+  "hardwarePack": {
+    "schema": "hardware-pack/v1",
+    "kernelcad": {
+      "url": "https://app.kernelcad.com/p/DyJ405zg?version=4",
+      "slug": "DyJ405zg",
+      "version": 4
+    },
+    "labwired": {
+      "url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=DyJ405zg&kernelcad_revision=4",
+      "mcp_url": "https://api.labwired.com/mcp",
+      "tools": [
+        "labwired_hardware_pack",
+        "labwired_list",
+        "labwired_describe",
+        "labwired_project_get",
+        "labwired_export",
+        "labwired_verify"
+      ]
+    },
+    "buy_device_url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=DyJ405zg&kernelcad_revision=4&device=1",
+    "purchase_mode": "review_separate_orders",
+    "companion_access": "use_connected_plugin_or_open_link"
+  },
+  "project_id": "1b790614-b04a-4007-bcc1-0c7fc1124818",
+  "slug": "DyJ405zg",
+  "version": 4,
+  "title": "LabWired quadrotor — populated ESC integration",
+  "url": "https://app.kernelcad.com/p/DyJ405zg?version=4&show_electronics=1",
+  "embedUrl": "https://app.kernelcad.com/embed/DyJ405zg?revision=4&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FDyJ405zg%2Fv4.json&animUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fanim-artifacts%2FDyJ405zg%2Fv4.json",
+  "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/DyJ405zg/v4.json",
+  "animUrl": "https://mesh.kernelcad.com/anim-artifacts/DyJ405zg/v4.json",
+  "hasAnimation": true,
+  "updated": true,
+  "project_note": "Saved as revision 4 of project 'DyJ405zg': https://app.kernelcad.com/p/DyJ405zg?version=4&show_electronics=1 (title: LabWired quadrotor — populated ESC integration). Next save: pass project: 'DyJ405zg'. Pass new_project: true only for a separate model.\nStudio badge \"Motion checked\". Motion checked: 13 poses across 4 joints (each joint at its limits), animation within limits on 4 joints, all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+  "mechanismSummary": {
+    "verdict": "real",
+    "maxLevel": "ok",
+    "statement": "Motion checked: 13 poses across 4 joints (each joint at its limits), animation within limits on 4 joints, all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+    "checked": [
+      "13 poses across 4 joints (each joint at its limits)",
+      "animation within limits on 4 joints",
+      "all mates satisfied",
+      "no collisions",
+      "fastened parts stay rigid"
+    ],
+    "skipped": [
+      "gravity hold and drop-on-release were not checked"
+    ],
+    "failures": []
+  },
+  "previewDelivered": true,
+  "previewStatus": "included",
+  "previewView": "iso",
+  "previewWidth": 640,
+  "previewHeight": 640,
+  "previewBytes": 50331,
+  "previewCached": false,
+  "previewHint": "PNG preview is included in this tool result (image content block + previewUrl). Say the preview was delivered only when previewDelivered is true — do not require a second get_latest_render call for the happy path, and do not tell the user to open Studio just to see a still.",
+  "parameters": [
+    {
+      "name": "rotor1Angle",
+      "value": 0
+    },
+    {
+      "name": "rotor2Angle",
+      "value": 0
+    },
+    {
+      "name": "rotor3Angle",
+      "value": 0
+    },
+    {
+      "name": "rotor4Angle",
+      "value": 0
+    }
+  ],
+  "meshStatus": "building",
+  "meshSaved": false,
+  "meshHint": "meshStatus=building is TRANSIENT (OCCT/CDN still writing) — NOT a permanent failure and NOT a missing project. meshUrl is the expected CDN pin even while building; embed FunnelViewer retries 404s. Poll with get_project({ slug }) until meshStatus=ready/meshReady=true, or call open_in_studio again with the same code+slug. Do NOT tell the user the mesh is broken/404; do NOT call get_model_mesh.",
+  "projectSaved": true,
+  "meshReady": false,
+  "viewerPainted": false,
+  "paintHint": "Do NOT claim the interactive viewer painted unless the widget reports viewerPainted=true (ui/update-model-context or widgetState.modelContent) — tools/call always leaves viewerPainted=false. projectSaved≠viewerPainted. meshReady=false with meshStatus=building is OK — embed retries meshUrl. Do NOT call get_model_mesh or get_latest_render to force interactive paint; use open_in_studio only.",
+  "attachmentCount": 10,
+  "assetHashes": [
+    "47538aaa7bba939307ca73825236777609665b951f54175ebd48d3ccbad275d5",
+    "709b3642fbc3c9ace2fdcb6083f23543451abcfbbbeb1cd7baa2cbc33958c4e6",
+    "28074c26e7a674f75a5c16eab4f30821e275c0c4f9cc434ced0edcbd96dc445a",
+    "1b01cf10fb440f11400bd72386fb596af89b6235284e05fa21d0124c86725ad8",
+    "ff99e5caa605ba44f68af114b3baa02c94a01014ccbf091a401368489392b925",
+    "eaa66a41693627d9154bdaeb6282bcb17a4108f0f15fe9cfd97d4fe471597e69",
+    "a75bb2b867d196ddb3a6e04b7dac1512d3a39ada7504064446ab4870f4e27618",
+    "d11cf26c7efadbd8619560f5080e52968a60fd9ce4434a31b8cc8a0d6156e8c1",
+    "a5be2430df7569f7956a9cc378aaae639abc868d8af577f2e275dd320ff7b405",
+    "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3"
+  ],
+  "serverBuild": "0.1.0+319b6741af13@2026-11-12T00:17:45.673Z"
+}

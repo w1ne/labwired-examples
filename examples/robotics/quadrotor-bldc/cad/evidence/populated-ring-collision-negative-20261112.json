@@ -1,0 +1,70 @@
+{
+  "ok": false,
+  "status": "error",
+  "diagnostics": [
+    {
+      "code": "assembly.interference.overlap",
+      "severity": "error",
+      "message": "Parts 'populated-esc' and 'upper-grommet' overlap by 0.086 mm³ (0.062 mm thick) near (60.4, -59.2, 2.1).",
+      "hint": "invalid-args.assembly.interference — translate one part along its mating direction, or add a coupling part (washer / spacer / bracket) to clear the overlap. If the contact is intentional, pass the ignore list as the SECOND argument: assembly.solvedModel({}, { ignore: [['populated-esc', 'upper-grommet']] }). The first argument is the pose map, so solvedModel({ ignore: ... }) is read as a pose and fails with unknown-joint.",
+      "partA": "populated-esc",
+      "partB": "upper-grommet",
+      "volumeMm3": 0.08632886427253528
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "support-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'support-seat' (fastened) side 'populated-esc.support': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.support' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "support-seat",
+      "partB": "upper-grommet",
+      "message": "Mate 'support-seat' (fastened) side 'upper-grommet.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'upper-grommet.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mechanical.part-disconnected",
+      "severity": "warning",
+      "partName": "populated-esc",
+      "componentCount": 214,
+      "largestComponentTriangleCount": 4368,
+      "maxComponentGapMm": 9.075677201744266,
+      "bbox": {
+        "min": [
+          54.82232616245665,
+          -69.8,
+          -3.080000000000001
+        ],
+        "max": [
+          96.4428138375435,
+          -27.3,
+          3.25
+        ]
+      },
+      "message": "Part 'populated-esc' contains 214 disconnected solids; the farthest component is 9.1 mm from the main body.",
+      "hint": "mechanical-plausibility.part-disconnected — remove decorative/floating solids from 'populated-esc', or add real bridge/bracket geometry so every solid in the part shares a physical load path."
+    }
+  ],
+  "blocking": [
+    {
+      "code": "assembly.interference.overlap",
+      "message": "Parts 'populated-esc' and 'upper-grommet' overlap by 0.086 mm³ (0.062 mm thick) near (60.4, -59.2, 2.1).",
+      "hint": "invalid-args.assembly.interference — translate one part along its mating direction, or add a coupling part (washer / spacer / bracket) to clear the overlap. If the contact is intentional, pass the ignore list as the SECOND argument: assembly.solvedModel({}, { ignore: [['populated-esc', 'upper-grommet']] }). The first argument is the pose map, so solvedModel({ ignore: ... }) is read as a pose and fails with unknown-joint."
+    },
+    {
+      "code": "assembly.mechanical.part-disconnected",
+      "message": "Part 'populated-esc' contains 214 disconnected solids; the farthest component is 9.1 mm from the main body.",
+      "hint": "mechanical-plausibility.part-disconnected — remove decorative/floating solids from 'populated-esc', or add real bridge/bracket geometry so every solid in the part shares a physical load path."
+    }
+  ],
+  "repairMode": "local-fix",
+  "partCount": 2,
+  "jointCount": 1,
+  "scope": "Static checks (validator, default-pose interference, joint topology, mechanical plausibility/intent/transmission) with review_cad's blocking rules. review_cad additionally sweeps the declared joint ranges and runs the physics probe.",
+  "serverBuild": "0.1.0+319b6741af13@2026-11-12T00:17:45.673Z"
+}

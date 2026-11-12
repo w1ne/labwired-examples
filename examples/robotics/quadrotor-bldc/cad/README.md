@@ -1,123 +1,102 @@
 # Quadrotor mechanical model
 
-The saved [KernelCAD model, revision 3](https://app.kernelcad.com/p/DyJ405zg?version=3)
-is the 226 mm OpenFrame-5F integration model. This directory restores its source
-to the examples repository. The prior local file described the older oversized
-concept and did not match the saved model.
+The saved [KernelCAD model, revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4)
+contains the 226 mm OpenFrame-5F frame, exact native ESC substrate and the native
+KiCad component mesh. The model is ready for visual assembly inspection.
+Revision 3 remains available in project history.
 
-## Model and inputs
-
-- `drone.kcad.ts` imports the pinned OpenFrame-5F rev2.2 STEP parts and the real
-  ESC substrate from the KiCad STEP export. All source URLs are revision-pinned.
-- `revision-3-source.json` records the saved project revision and input SHA-256
-  digests. The matching source STEP files are already tracked in
-  `../hardware/frame-openframe-5f/releases/rev2.2/step/` and
-  `../hardware/esc-4in1/fabrication-review/`.
-- Parts ending in `ENVELOPE` are nominal motor, propeller, flight-controller or
-  soft-mount geometry. They are not manufacturer STEP models. The propeller
-  sweep is 129.7 mm; blade profiles are illustrative, not aerodynamic surfaces.
-- The four independent rotor joints use `rotor1Angle` through `rotor4Angle`.
-  The built-in animation is a visual joint demonstration.
-
-Use the viewer's **Exploded view** control and **Explode distance** slider to
-inspect the stack and frame assembly. The exploded layout is a presentation
-tool; it is not an accepted physical assembly procedure.
-
-## Fresh evidence — 11 November 2026
+## Verified on 12 November 2026
 
 | Check | Result |
 | --- | --- |
-| Full OpenCASCADE evaluation | Valid; 36 parts, 2,176 faces |
-| Combined solid volume | 158,451.1378 mm³ |
-| Default-pose bounds | 277.9073 × 251.5513 × 39.3 mm |
-| Rotor mechanism screen | 13 poses across four joints; all mates satisfied; no collisions |
-| STEP re-import | 36 solids; every solid reports valid BREP |
-| STEP and GLB export | Both complete; sizes and SHA-256 digests are in `evidence/` |
-| Full assembly-path and stability | Unknown: the default work budget expired before paths were established |
-| Design-loop wrapper | Returned `feature.invalid-args`; evaluation and export succeeded separately |
-| Flight, strength, fastener torque, battery and thermal behavior | Not verified by this mechanical model |
+| Full hosted evaluation | Pass; 37 named parts, no diagnostics |
+| Component geometry | 213 native KiCad reference instances; 56,072 triangles |
+| Exact native substrate | Retained once; excluded from the component mesh |
+| Rotor mechanism screen | 13 poses across four joints; mates satisfied; no reported collision |
+| Default bounds | 277.9073 × 251.5513 × 39.3 mm |
+| Studio revision | Revision 4 saved; meshReady=true; ten immutable input attachments |
+| Native PCB against frame and FC envelope | 27 pairs have strictly separated conservative BREP bounds |
+| Native PCB against support rings | All eight 6 mm OD rings have no reported exact-BREP interference |
+| Visual review | Isometric and front views show top and underside component populations |
+| Hardware acceptance | Not established |
 
-The source and JSON receipts preserve these limits. Geometry validation does
-not establish a safe physical aircraft or a finished flight-control system.
+The native STEP check first found a **0.0863 mm³** collision between a 7 mm OD
+upper support ring and a PCB component. The corrected nominal ring OD is 6 mm,
+with a 4 mm bore. Both the negative result and corrected eight-ring check are
+retained. No ignore list or enlarged tolerance was used.
 
-## Runtime binding fixture
+The complete populated PCB is 41.6208 × 42.5 × 6.33 mm. With the ESC underside at
+Z = 14.4 mm, its lowest component is Z = 11.32 mm. The middle-frame top is
+Z = 9 mm, so the conservative lower separation is **2.32 mm**. The populated PCB
+top is Z = 17.65 mm. The FC envelope begins at Z = 22 mm, giving **4.35 mm**
+separation. Its top remains 5.4 mm below the top-frame underside.
 
-`runtime-bindings.json` maps the four existing LabWired motor components to
-the evaluated model's named rotor and propeller groups:
+## Source and evidence
 
-| LabWired component | Display ID | CAD corner | Pivot, mm | Sign |
+- `drone.kcad.ts` is the revision-4 design source. It uses existing generic
+  KernelCAD imports, parts, connectors and mates.
+- `revision-3-source.json` preserves the prior substrate-only source identity.
+- `inputs/esc-population-native.provenance.json` records the native GLB hash,
+  all 213 component references, the coordinate transformation and STL digest.
+  The mesh uses native component geometry, not invented component boxes.
+- `checks/populated-esc-ring-collision-negative.kcad.ts` reproduces the old
+  ring collision. `checks/populated-esc-ring-clearance.kcad.ts` checks all
+  eight corrected rings against the exact populated STEP.
+- `checks/populated-esc-frame-bounds.kcad.ts` supplies the 36 solid-body
+  bounding boxes. `evidence/populated-clearance-audit-20261112.json` records
+  every PCB-to-part separating axis and lower distance bound.
+- `evidence/populated-display-evaluate-20261112.json`,
+  `populated-display-render-20261112.json`, `populated-studio-save-20261112.json`
+  and `populated-studio-readback-20261112.json` retain hosted receipts.
+
+The eight-ring tool returns overall `ok:false` because the populated STEP is a
+compound of 214 distinct solids and modeled solder attachment is absent.
+Its interference stage reports no overlap for the corrected rings. This result
+supports geometric fit only; it is not a complete mechanical acceptance pass.
+
+## Runtime bindings
+
+`runtime-bindings.json` retains all four rotor interfaces unchanged:
+
+| Component | Display | CAD corner | Pivot, mm | Sign |
 | --- | --- | --- | --- | --- |
 | rotor1 | M1 | rear-right | [89, 69.534420756, 9.3] | +1 |
 | rotor2 | M2 | front-right | [89, -69.534420756, 9.3] | -1 |
 | rotor3 | M3 | rear-left | [-89, 69.534420756, 9.3] | -1 |
 | rotor4 | M4 | front-left | [-89, -69.534420756, 9.3] | +1 |
 
-All axes are [0, 0, 1]. Signs express the authored motor-to-airframe orientation.
-The mapping names the rigid downstream part group explicitly. It does not infer
-the assembly graph. It must be pinned to project `DyJ405zg`, revision `3`.
+All axes are [0, 0, 1]. Revision 4 changes the stack and adds component geometry;
+it does not move the rotor pivots or rename their parts/joints. The receiver must
+use observed simulator angle and speed. The standalone CAD animation remains
+a visual joint demonstration. A live revision-4 LabWired bridge must be checked
+separately after its attachment is updated.
 
-The generic runtime bridge uses the simulator's observed `positionRad` and
-`speedRpm`. It does not infer shaft angle from a visual timer. The receiver holds
-the last observed pose on pause or missing telemetry and clears on stop.
-The bridge must pass its own browser integration test before this fixture is
-claimed as a working live connection.
+## Limits
 
-## Populated ESC candidate — not yet validated
+- Motors, propeller blades, FC board and soft mounts remain labeled
+  `ENVELOPE`. Vendor geometry, compressed grommet dimensions, FC component
+  heights and connector overhang are not established.
+- Native component STL uses one material. The source GLB retains native
+  materials. Display meshes do not carry BREP topology or solid volume.
+- The full native STEP remains the machining/geometry reference. The display
+  model does not replace that native file.
+- No complete physical assembly path, gravity stability, solder joint,
+  fastener torque, strength, thermal or flight acceptance is established.
+- The generic `inspect(of:'assembly')` path currently throws on mixed
+  display-mesh bodies. The hosted `design_loop` wrapper also fails to stage
+  imports within `attempts[].code`. Their failure receipts are retained;
+  explicit evaluation, rendering and bounded native checks succeeded.
 
-The native KiCad populated STEP evaluates by itself. Its measured bounds are
-41.6208 × 42.5 × 6.33 mm, with native Z from −3.08 to +3.25 mm. The saved
-revision-3 assembly contains the exact substrate only. It has not been replaced.
+## Earlier limits and resolution
 
-Two separate limits blocked the complete populated assembly:
+On 11 November, the complete populated STEP plus airframe exceeded the
+1,024 MB evaluator cap. Its standalone interactive display exceeded the
+896 MB worker cap. The immutable original receipts remain in `evidence/`.
 
-| Attempt | Observed result |
-| --- | --- |
-| Full populated STEP inside the 36-part assembly | The hosted evaluator exceeded its 1,024 MB limit at 1,028 MB and restarted |
-| Native component STL alongside the exact BREP substrate | Hosted input staging left `upload:0` unresolved for `lib.meshFromSTL`; geometry evaluation did not begin |
+[KernelCAD-server PR #655](https://github.com/w1ne/kernelCAD-server/pull/655)
+fixed generic hosted STL staging and merged on 11 November. Revision 4 uses
+that path: exact substrate plus native component display mesh. It evaluates,
+renders and persists under the existing caps. No memory limit was increased.
 
-The generic import repair is
-[kernelCAD-server PR #655](https://github.com/w1ne/kernelCAD-server/pull/655).
-Its 40 input tests and TypeScript check pass. It is not deployed. This repair
-does not establish that the full candidate fits the evaluator's memory budget.
-
-`candidates/drone-populated-step.kcad.ts` preserves the failed full-STEP
-attempt. Its input now uses the immutable native export URL instead of the
-per-call `upload:0` identifier. Its old stack height is not accepted for the
-populated assembly.
-
-`candidates/drone-populated-mesh-stack-lift.kcad.ts` proposes a 2 mm lift of the
-ESC and FC stack. It keeps the rotor pivots, part names and joint names unchanged.
-It imports `inputs/esc-population-native.stl`, which contains 213 native KiCad
-component reference instances and 56,072 triangles. The native PCB mesh was
-excluded, so the candidate retains one exact BREP substrate. STL stores a uniform
-component color; the original populated GLB retains its native materials.
-
-The native source GLB and STEP are pinned to examples commit
-`619a61230add2ea3bd3e8a4f9d278a75ad396d04`. The component mesh provenance records
-the source digest, units, coordinate transformation, reference names and output
-digest. It contains imported component geometry, not invented component boxes.
-
-### Stack-height finding
-
-The measured middle-frame top is Z = 9 mm. At the old ESC placement of
-Z = 12.4 mm, the lowest populated component would reach Z = 9.32 mm. That leaves
-only **0.32 mm nominal separation**.
-
-The proposed lift places the ESC at Z = 14.4 mm and the FC envelope at
-Z = 22 mm. The lowest ESC component would then reach Z = 11.32 mm, giving
-**2.32 mm nominal separation** above the frame. The FC envelope top would be
-Z = 23.6 mm, leaving **5.4 mm** below the top-frame underside at Z = 29 mm.
-
-These are coordinate and bounding-envelope calculations. They do not establish
-complete component clearance, an assembly path or gravity stability. Compressed
-grommet height, FC component heights and connector overhang remain unverified.
-Both candidate sources, both failure receipts and the stack calculation are
-preserved in this directory. The recorded live-motion fixture remains pinned
-to saved revision 3.
-
-
-## Standalone native PCB display limit
-
-The exact populated STEP remains a valid native geometry export. A separate unlisted KernelCAD project saved its source successfully, but its interactive display mesh failed: the revision-mesh worker used 906 MB against its 896 MB limit. The preview worker separately exceeded the same limit at 903 MB. This is not a ready interactive PCB view, and it does not establish populated in-frame clearance.
-
-The [save and failure receipt](evidence/native-pcb-studio-save-20261111.json) preserves the project/version, exact STEP hash and observed errors. The [native STEP](../hardware/esc-4in1/fabrication-review/esc-board-populated.step) and native KiCad files remain available. The saved airframe project stays at revision 3.
+Use Studio's exploded view to inspect the stack and frame. Exploded views are
+presentation layouts, not an accepted physical assembly sequence.

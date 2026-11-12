@@ -1,0 +1,168 @@
+{
+  "ok": false,
+  "status": "solved",
+  "diagnostics": [
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-1-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'lower-grommet-1-seat' (fastened) side 'populated-esc.lower-grommet-1': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.lower-grommet-1' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-1-seat",
+      "partB": "lower-grommet-1",
+      "message": "Mate 'lower-grommet-1-seat' (fastened) side 'lower-grommet-1.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lower-grommet-1.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-1-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'upper-grommet-1-seat' (fastened) side 'populated-esc.upper-grommet-1': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.upper-grommet-1' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-1-seat",
+      "partB": "upper-grommet-1",
+      "message": "Mate 'upper-grommet-1-seat' (fastened) side 'upper-grommet-1.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'upper-grommet-1.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-2-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'lower-grommet-2-seat' (fastened) side 'populated-esc.lower-grommet-2': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.lower-grommet-2' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-2-seat",
+      "partB": "lower-grommet-2",
+      "message": "Mate 'lower-grommet-2-seat' (fastened) side 'lower-grommet-2.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lower-grommet-2.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-2-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'upper-grommet-2-seat' (fastened) side 'populated-esc.upper-grommet-2': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.upper-grommet-2' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-2-seat",
+      "partB": "upper-grommet-2",
+      "message": "Mate 'upper-grommet-2-seat' (fastened) side 'upper-grommet-2.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'upper-grommet-2.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-3-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'lower-grommet-3-seat' (fastened) side 'populated-esc.lower-grommet-3': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.lower-grommet-3' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-3-seat",
+      "partB": "lower-grommet-3",
+      "message": "Mate 'lower-grommet-3-seat' (fastened) side 'lower-grommet-3.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lower-grommet-3.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-3-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'upper-grommet-3-seat' (fastened) side 'populated-esc.upper-grommet-3': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.upper-grommet-3' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-3-seat",
+      "partB": "upper-grommet-3",
+      "message": "Mate 'upper-grommet-3-seat' (fastened) side 'upper-grommet-3.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'upper-grommet-3.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-4-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'lower-grommet-4-seat' (fastened) side 'populated-esc.lower-grommet-4': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.lower-grommet-4' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "lower-grommet-4-seat",
+      "partB": "lower-grommet-4",
+      "message": "Mate 'lower-grommet-4-seat' (fastened) side 'lower-grommet-4.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'lower-grommet-4.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-4-seat",
+      "partA": "populated-esc",
+      "message": "Mate 'upper-grommet-4-seat' (fastened) side 'populated-esc.upper-grommet-4': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'populated-esc.upper-grommet-4' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mounting-hole.unverified",
+      "severity": "info",
+      "mateName": "upper-grommet-4-seat",
+      "partB": "upper-grommet-4",
+      "message": "Mate 'upper-grommet-4-seat' (fastened) side 'upper-grommet-4.seat': the connector origin is a vec3 point, so the hole-record gate cannot tell which face it binds (not a mismatch; the geometric hole-alignment check still covers this mate).",
+      "hint": "mounting-hole.unverified — side 'upper-grommet-4.seat' uses a vec3 connector origin, so hole diameters are not compared by feature record. This is informational. To have hole() / holes() diameters compared too, bind the connector to the drilled face: origin: { kind: 'topology', query: { kind: 'face-center', name: 'top' } }."
+    },
+    {
+      "code": "assembly.mechanical.part-disconnected",
+      "severity": "warning",
+      "partName": "populated-esc",
+      "componentCount": 214,
+      "largestComponentTriangleCount": 4368,
+      "maxComponentGapMm": 9.075677201744266,
+      "bbox": {
+        "min": [
+          54.82232616245665,
+          -69.8,
+          -3.080000000000001
+        ],
+        "max": [
+          96.4428138375435,
+          -27.3,
+          3.25
+        ]
+      },
+      "message": "Part 'populated-esc' contains 214 disconnected solids; the farthest component is 9.1 mm from the main body.",
+      "hint": "mechanical-plausibility.part-disconnected — remove decorative/floating solids from 'populated-esc', or add real bridge/bracket geometry so every solid in the part shares a physical load path."
+    }
+  ],
+  "blocking": [
+    {
+      "code": "assembly.mechanical.part-disconnected",
+      "message": "Part 'populated-esc' contains 214 disconnected solids; the farthest component is 9.1 mm from the main body.",
+      "hint": "mechanical-plausibility.part-disconnected — remove decorative/floating solids from 'populated-esc', or add real bridge/bracket geometry so every solid in the part shares a physical load path."
+    }
+  ],
+  "repairMode": "local-fix",
+  "partCount": 9,
+  "jointCount": 8,
+  "scope": "Static checks (validator, default-pose interference, joint topology, mechanical plausibility/intent/transmission) with review_cad's blocking rules. review_cad additionally sweeps the declared joint ranges and runs the physics probe.",
+  "serverBuild": "0.1.0+319b6741af13@2026-11-12T00:17:45.673Z"
+}

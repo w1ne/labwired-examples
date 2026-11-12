@@ -1,0 +1,339 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-bounds"
+      ],
+      "note": "volume not measured: 1 display-mesh part(s)"
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "error": "1 display-mesh bodies have no BRep, so no step snapshot was rendered."
+    }
+  },
+  "sceneSummary": {
+    "valid": null,
+    "volume": null,
+    "faceCount": null,
+    "size": [
+      277.9073227154059,
+      251.55129268382842,
+      39.3
+    ]
+  },
+  "featureCount": 152,
+  "diagnostics": [],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "89cfde9971a2c2f0787e14a1e742bf75d1494b3ac74784a02368d591093bfa9c",
+      "byteLength": 9474
+    },
+    "parameters": {
+      "values": {
+        "rotor1Angle": 0,
+        "rotor2Angle": 0,
+        "rotor3Angle": 0,
+        "rotor4Angle": 0
+      },
+      "sha256": "2840ecdb84bea879d65315e427d6cf7970b71a4524b246939d7bf6886766556b"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "319b6741af1382619c7ba666afbbadb6b7e74678"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "ba5a679cb92f8f741025bcda87809543c55e818629f53eca6305038e98cd1aac"
+  },
+  "selections": [
+    {
+      "consumerFeatureId": "holes_1",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_1",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            5.4
+          ]
+        }
+      ],
+      "partDiagonal": 10.057833114543117
+    },
+    {
+      "consumerFeatureId": "holes_2",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_2",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            5.4
+          ]
+        }
+      ],
+      "partDiagonal": 10.057833114543117
+    },
+    {
+      "consumerFeatureId": "holes_3",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_3",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            5.4
+          ]
+        }
+      ],
+      "partDiagonal": 10.057833114543117
+    },
+    {
+      "consumerFeatureId": "holes_4",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_4",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            5.4
+          ]
+        }
+      ],
+      "partDiagonal": 10.057833114543117
+    },
+    {
+      "consumerFeatureId": "holes_5",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_5",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            6.07
+          ]
+        }
+      ],
+      "partDiagonal": 10.432876268220577
+    },
+    {
+      "consumerFeatureId": "holes_6",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_6",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            6.07
+          ]
+        }
+      ],
+      "partDiagonal": 10.432876268220577
+    },
+    {
+      "consumerFeatureId": "holes_7",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_7",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            6.07
+          ]
+        }
+      ],
+      "partDiagonal": 10.432876268220577
+    },
+    {
+      "consumerFeatureId": "holes_8",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "producer": "cylinder_8",
+          "role": "top",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 28.274333882308145,
+          "centroid": [
+            4.440892098500626e-16,
+            2.7042426428277396e-16,
+            6.07
+          ]
+        }
+      ],
+      "partDiagonal": 10.432876268220577
+    }
+  ],
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 37,
+    "names": [
+      "frame-bottom",
+      "frame-cross",
+      "frame-middle",
+      "camera-side-left",
+      "camera-side-right",
+      "arm-rear-right",
+      "arm-front-right",
+      "arm-rear-left",
+      "arm-front-left",
+      "standoff-rear-left",
+      "standoff-rear-right",
+      "standoff-middle-left",
+      "standoff-middle-right",
+      "frame-top",
+      "esc-grommet-1-ENVELOPE",
+      "esc-grommet-2-ENVELOPE",
+      "esc-grommet-3-ENVELOPE",
+      "esc-grommet-4-ENVELOPE",
+      "esc-board",
+      "fc-grommet-1-ENVELOPE",
+      "fc-grommet-2-ENVELOPE",
+      "fc-grommet-3-ENVELOPE",
+      "fc-grommet-4-ENVELOPE",
+      "esc-population-native-mesh",
+      "fc-board-ENVELOPE",
+      "motor-base-rear-right-ENVELOPE",
+      "rotor-rear-right-ENVELOPE",
+      "prop-rear-right-ENVELOPE",
+      "motor-base-front-right-ENVELOPE",
+      "rotor-front-right-ENVELOPE",
+      "prop-front-right-ENVELOPE",
+      "motor-base-rear-left-ENVELOPE",
+      "rotor-rear-left-ENVELOPE",
+      "prop-rear-left-ENVELOPE",
+      "motor-base-front-left-ENVELOPE",
+      "rotor-front-left-ENVELOPE",
+      "prop-front-left-ENVELOPE"
+    ]
+  },
+  "mechanism": "real",
+  "mechanismSummary": {
+    "verdict": "real",
+    "maxLevel": "ok",
+    "statement": "Motion checked: 13 poses across 4 joints (each joint at its limits), animation within limits on 4 joints, all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+    "checked": [
+      "13 poses across 4 joints (each joint at its limits)",
+      "animation within limits on 4 joints",
+      "all mates satisfied",
+      "no collisions",
+      "fastened parts stay rigid"
+    ],
+    "skipped": [
+      "gravity hold and drop-on-release were not checked"
+    ],
+    "failures": []
+  },
+  "reviewHint": "This model has articulated mates, and evaluate_script's mechanism check is shallow: it does not check joint-support intents, pose-envelope overlap at declared mate limits, or gravity drop / static hold. Run review_cad for pose-envelope + gravity checks before calling the mechanism done.",
+  "serverBuild": "0.1.0+319b6741af13@2026-11-12T00:17:45.673Z"
+}
