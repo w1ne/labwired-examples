@@ -84,7 +84,7 @@
     "back_emf_constant": 0.04,
     "torque_constant": 0.04,
     "model_is_physical_ESC": false,
-    "public_revision_status": "CAD v5 is saved in the owner working project. The canonical sources and circuit now include the 4 MHz clock correction and universal instruments; browser acceptance, hosted verification, deployment and republishing are pending.",
+    "public_revision_status": "CAD v5 is saved in the owner working project. Canonical sources include the 4 MHz clock, immediate timer compare updates, N-only commutation gates and universal instruments. Final browser acceptance, hosted verification, deployment and republishing are pending.",
     "simulation_clock_hz": 4000000,
     "pwm_hz": 20000,
     "control_tick_hz": 10000,
@@ -92,8 +92,9 @@
       "oscilloscope": "source-qualified numeric and digital signals",
       "logic_analyzer": "source-qualified GPIO and published digital wires",
       "release_pull_request": "https://github.com/w1ne/labwired/pull/3163",
-      "runtime_acceptance_status": "Clock and source identity pass; coast-down fails and complementary OCxN capture is unavailable in pinned core7ae.",
-      "candidate_evidence": "labwired/evidence/20261112-clock-candidate/timing-and-fault-review.json"
+      "runtime_acceptance_status": "The earlier corrected-clock candidate passed clock and source-identity checks but failed coast-down and complementary-pad capture in pinned core 7ae. The current four firmware images compile; acceptance against the corrected native core is pending.",
+      "candidate_evidence": "labwired/evidence/20261112-clock-candidate/timing-and-fault-review.json",
+      "current_candidate_evidence": "labwired/evidence/20261112-gate-candidate/candidate-manifest.json"
     }
   },
   "integration": {

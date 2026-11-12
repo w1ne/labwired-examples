@@ -73,7 +73,11 @@ The multi-MCU loader correction [LabWired PR #3094](https://github.com/w1ne/labw
 
 ## Universal mixed-signal instruments
 
-The oscilloscope selects any published numeric source with its native units, or a digital source. The logic analyzer selects board GPIO and published digital wires. Both retain the selected controller identity. The saved selections show M1 current, speed, PWM and enable on the scope, and PWM, low-side drive, fault input and enable on the logic analyzer. Source changes do not require a firmware change.
+The oscilloscope selects any published numeric source with its native units, or a digital source. The logic analyzer selects board GPIO and published digital wires. Both retain the selected controller identity. The saved selections show M1 current, speed, PWM and Hall A on the scope, and PWM, low-side drive, fault input and enable on the logic analyzer. Source changes do not require a firmware change.
+
+The current firmware uses immediate compare updates (`OCxPE=0`). A high-side phase receives the duty command; the selected N-only low-side phase stays on for its commutation sector (`CCR=ARR+1`). PA8 shows the carrier during active sectors; PB13 shows the low-side commutation gate. This configuration does not enable both outputs of a phase and does not establish complementary dead-time insertion. The four-lane analyzer can inspect phases A, B and C in separate capture windows.
+
+The behavioral plants consume the configured timer output stages directly. Changing GPIO mode or alternate function does not disconnect the plant. The firmware configures PA8–PA10 and PB13–PB15 as AF1, and native pad observations require a separate check. The [current source and compile receipt](labwired/evidence/20261112-gate-candidate/) identifies the exact four candidate images; runtime acceptance remains pending.
 
 The shared instrument and runtime fixes are tracked in [LabWired PR #3163](https://github.com/w1ne/labwired/pull/3163). The [corrected-clock candidate](labwired/evidence/20261112-clock-candidate/) confirms four executed ELF identities, Hall feedback, the high-side carrier and source switching. Final acceptance failed at coast-down and found missing native complementary-pad output. Native corrections, hosted verification, deployment and the new short recording remain pending. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
 

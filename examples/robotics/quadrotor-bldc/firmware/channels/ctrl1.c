@@ -74,7 +74,9 @@ static void fault(const char *name) {
 }
 static void commutate(uint32_t hall, uint32_t duty_permille) {
  uint32_t duty=(duty_permille*PWM_PERIOD_TICKS)/1000u;
- uint32_t low=(PWM_PERIOD_TICKS-1u)-duty;
+ // RM0351: N-only output follows OCxREF. Keep the selected low side on
+ // for its sector; the other phase supplies the commanded high-side PWM.
+ uint32_t low=PWM_PERIOD_TICKS;
  uint32_t a=0,b=0,c=0;
  switch(hall) {
  case 1: b=low;c=duty;break; case 2:a=low;b=duty;break;
@@ -101,8 +103,9 @@ static void init(void) {
  SYST_RVR=BENCH_CPU_HZ/CONTROL_TICK_HZ-1u;SYST_CVR=0;SYST_CSR=(1u<<2)|1u;
  TIM1_PSC=0;TIM1_ARR=PWM_PERIOD_TICKS-1u;
  TIM1_CCR1=PWM_PERIOD_TICKS*3u/10u;TIM1_CCR2=TIM1_CCR1;TIM1_CCR3=TIM1_CCR1;
- TIM1_CCMR1=(6u<<4)|(1u<<3)|(6u<<12)|(1u<<11);
- TIM1_CCMR2=(6u<<4)|(1u<<3);
+ // Select immediate compare updates; OCxPE preload stays disabled.
+ TIM1_CCMR1=(6u<<4)|(6u<<12);
+ TIM1_CCMR2=(6u<<4);
  TIM1_EGR=1;TIM1_BDTR=MOE|PWM_DEAD_TIME_TICKS;TIM1_CR1=1;
 }
 int main(void) {

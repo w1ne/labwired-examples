@@ -1,0 +1,37 @@
+{
+  "status": "compiled_candidate_pending_native_gating_and_browser_acceptance",
+  "board": "stm32l476",
+  "clock_hz": 4000000,
+  "pwm_hz": 20000,
+  "control_tick_hz": 10000,
+  "gate_policy": "High-side PWM at the commanded duty; selected N-only low side continuously on during the sector. Inactive phase has both gates disabled. No dead-time-insertion claim for E xor NE.",
+  "reference": "ST RM0351, advanced timer complementary output control (CCxE=0, CCxNE=1)",
+  "sources": {
+    "ctrl1": {
+      "parent_sha256": "fec46954e4d07110d01739c4fe05b3605be291044451d88e10b764cf4505b969",
+      "candidate_sha256": "36256da7e53f31dd6d50bb914a272a53e90ddbba566a30bf915fec47f5fc6150",
+      "bytes": 6371,
+      "prior_gate_candidate_sha256": "50714cadc50ef8a9004070c93413721efb213c8b84f647f7825438ac7898c248"
+    },
+    "ctrl2": {
+      "parent_sha256": "a4af968b96c1552f162f05ba6610d267145681960b552ae574c488f7b355a8b0",
+      "candidate_sha256": "09774243e8025a667d8d8ea0c6b9b81f88fe5c1c341d60a344c18400dbff8d6e",
+      "bytes": 6371,
+      "prior_gate_candidate_sha256": "634c62d943fb906f4175c6e5f5a5a6d54e446fffa7f8c8f846c3b68e114616a0"
+    },
+    "ctrl3": {
+      "parent_sha256": "cc6b2e73be018a38baf8545df1b98b7870eb2f8b9c006128db16c395997dabf2",
+      "candidate_sha256": "12bff38565d14c14052042fb7eb3995665ebed63edcd84d3909de64399b386c5",
+      "bytes": 6371,
+      "prior_gate_candidate_sha256": "41230a621346b10424bb387c6a3687eb07042562dada57f2734727dd1d49d508"
+    },
+    "ctrl4": {
+      "parent_sha256": "8e694779a13435d3dccee21bf1381536d35cf80eb1cec7a186baef1159056646",
+      "candidate_sha256": "b97a0e22d27e7384176dafadc473688eafc2e142d985effa93bdf813807dcfdc",
+      "bytes": 6371,
+      "prior_gate_candidate_sha256": "3c5c1caa9f1aa2974703f151bf55f78ecd2ce086445241c470d8849ba78a7071"
+    }
+  },
+  "compare_mode": "Immediate compare updates (OCxPE=0), matching the selected STM32 mode and declared native capability",
+  "prior_candidate": "prior-preload-candidate"
+}
