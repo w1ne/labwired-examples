@@ -1,4 +1,8 @@
-# Readable LabWired quadrotor film — 13 November 2026
+# LabWired quadrotor video — 13 November 2026
+
+**Current public cut:** [39.5-second MP4](labwired-quadrotor-focused-demo-short.mp4). 1600 × 900 at 30 fps. Seven source-bound shots with 4.5–8-second duration. [Exact provenance](labwired-quadrotor-focused-demo-short.provenance.json). No synthetic telemetry, no unrelated instrument stills, no legacy schematic title.
+
+**Archived longer cut**
 
 [Watch the 65.3-second focused MP4](labwired-quadrotor-focused-demo.mp4).
 1600 × 900, H.264, 30 fps. SHA-256: `937664d9a25e78152e4dd78e6721274f5b0f04c1d3b2263cadfb0863da01fa9d`.

@@ -1,3 +1,7 @@
+## Current 39.5-second quadcopter film
+
+[Watch the focused 40-second LabWired quadcopter demo](labwired-quadrotor-focused-demo-short.mp4). Seven readable sequences: parametric CAD, native PCB, compiled motor firmware, live oscilloscope, logic analyzer, fault injection and observed shutdown. The shots use actual source footage, not generated motion or telemetry. [Exact timing, hashes and scope](labwired-quadrotor-focused-demo-short.provenance.json). The earlier 65-second cut remains archived.
+
 ## Current focused quadrotor film
 
 [Watch 65-second cut](labwired-quadrotor-focused-demo.mp4) | [source and screenshots](focused-video-README.md). Longer real-runtime scenes, enlarged quadrotor signals and no legacy schematic title. The native ESC source attribution remains in the repository; full flight is not shown.
