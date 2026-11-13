@@ -12,7 +12,13 @@ external pairs and 652 FC-component/support-ring pairs. The candidate is saved a
 published firmware bench remains a separate electrical target; native electrical
 onboarding is tracked in [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
-## Current video: PCB routing, 3D board and digital twin (13 November 2026)
+## Latest technical video — native routing edits and mixed-signal fault run (13 November 2026)
+
+[Watch the 32-second quadcopter review](media/labwired-quadcopter-routing-mixed-signal-32s.mp4). The sequence shows actual KiCad-native copper edits, a populated 3D ESC board, synchronized real hosted PWM/Hall/model-current/fault traces, and a separately captured motor digital twin. Five native PCB DRC stages count 12, 9, 6, 3 and 0 open connections, all with zero other configured DRC violations. The real-hosted simulation measures 20 kHz PWM at 60% duty and a 1.95225-ms modeled fault-to-inverter-disable interval.
+
+The PCB edits restored source-approved geometry, not a novel autoroute. The electrical run is a reduced-order 24-V STM32L476/BLDC test, not the physical AT32F421 ESC or flight. [Raw signals, DRC evidence and provenance](media/evidence/native-routing-mixed-signal-20261113/README.md).
+
+## Previous video: PCB routing reveal, 3D board and digital twin (13 November 2026)
 
 [Watch the 32-second LabWired quadcopter video](media/labwired-quadrotor-pcb-digital-twin-32s.mp4). Five readable scenes: parametric CAD, six-layer PCB routing, a rotating populated 3D board, the live oscilloscope and logic analyzer shown together, and the operating quadcopter digital twin. No separate safety scene, controller-count story, or unrelated instrument captures. The PCB routing animation progressively reveals the completed source geometry; it does not imply a recorded autorouter operation. [Exact source and timing record](media/labwired-quadrotor-pcb-digital-twin-32s.provenance.json).
 
