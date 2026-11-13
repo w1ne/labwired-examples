@@ -1,0 +1,147 @@
+{
+  "date": "2026-11-13",
+  "renderer": "render-focused-quadrotor-short.py",
+  "summary": "39.5-second focused cut; seven evidence shots; 5.5-second large waveform views, no black fades, no external schematic logo, no title cards.",
+  "shots": [
+    {
+      "name": "01-cad",
+      "src": "design",
+      "start": 10.0,
+      "seconds": 6.0,
+      "crop": [
+        1250,
+        703,
+        175,
+        100
+      ],
+      "title": "QUADCOPTER / PARAMETRIC CAD",
+      "sub": "Inspect the complete mechanical assembly",
+      "foot": "Actual KernelCAD design capture"
+    },
+    {
+      "name": "02-pcb",
+      "src": "design",
+      "start": 30.2,
+      "seconds": 4.5,
+      "crop": [
+        1300,
+        731,
+        150,
+        80
+      ],
+      "title": "NATIVE PCB / DESIGN REVIEW",
+      "sub": "6 layers | 222 footprints | 1,067 pads",
+      "foot": "Native ESC source and validation evidence retained"
+    },
+    {
+      "name": "03-firmware",
+      "src": "design",
+      "start": 38.0,
+      "seconds": 4.5,
+      "crop": [
+        1250,
+        703,
+        210,
+        95
+      ],
+      "title": "FOUR CONTROLLERS / ONE TWIN",
+      "sub": "Compiled STM32 firmware drives four BLDC motor models",
+      "foot": "Deterministic simulation, not aircraft flight"
+    },
+    {
+      "name": "04-analog",
+      "src": "instruments",
+      "start": 109.4,
+      "seconds": 5.5,
+      "crop": [
+        790,
+        445,
+        20,
+        250
+      ],
+      "title": "LIVE OSCILLOSCOPE",
+      "sub": "Read motor current and speed from the running simulation",
+      "foot": "Actual R4-02 captured signals - enlarged 2x"
+    },
+    {
+      "name": "05-logic",
+      "src": "instruments",
+      "start": 109.4,
+      "seconds": 5.5,
+      "crop": [
+        790,
+        445,
+        790,
+        250
+      ],
+      "title": "LIVE LOGIC ANALYZER",
+      "sub": "Inspect PWM, drive, fault and enable signals",
+      "foot": "Actual R4-02 captured signals - enlarged 2x"
+    },
+    {
+      "name": "06-fault",
+      "src": "instruments",
+      "start": 206.4,
+      "seconds": 8.0,
+      "crop": [
+        1430,
+        804,
+        85,
+        50
+      ],
+      "title": "INJECT A MOTOR-DRIVER FAULT",
+      "sub": "Watch PWM gating and inverter shutdown",
+      "foot": "Native four-channel fault test - recorded at original speed"
+    },
+    {
+      "name": "07-verify",
+      "src": "design",
+      "start": 50.0,
+      "seconds": 5.5,
+      "crop": [
+        1250,
+        703,
+        210,
+        95
+      ],
+      "title": "OBSERVE THE SAFETY RESPONSE",
+      "sub": "M1 stops; M2-M4 continue | pause and inspect",
+      "foot": "Four-channel motor bench, not flight-control validation"
+    }
+  ],
+  "inputs": {
+    "design": {
+      "path": "quadrotor-engineering-preview.mp4",
+      "sha256": "0576cc20cc893e66c7d1df781165ad3a9f0d86f70f6b09a56c151fcab738d12d"
+    },
+    "instruments": {
+      "path": "source/quadrotor-universal-instruments-r4-02.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    }
+  },
+  "output": {
+    "path": "labwired-quadrotor-focused-demo-short.mp4",
+    "sha256": "2671d1fd5ba73a5dd22ec699d1af282c3a65462d831dae43387ed0c94d06f136",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 900,
+          "avg_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "39.500000",
+        "size": "5615628"
+      }
+    }
+  },
+  "limits": [
+    "The ESC PCB is derived from OpenDrone OpenESC-30x30 under CERN-OHL-S-2.0; source attribution stays in the project.",
+    "The analog and digital instruments show accepted four-controller R4-02 bench telemetry.",
+    "The video does not show full flight, structural validation, or transistor-level power simulation.",
+    "Zoom crops and scene fades are editorial; no telemetry is synthesized."
+  ]
+}

@@ -14,7 +14,7 @@ onboarding is tracked in [LabWired PR #3148](https://github.com/w1ne/labwired/pu
 
 ## New: focused quadcopter digital-twin demonstration (13 November 2026)
 
-[Watch the readable 65-second LabWired film](media/labwired-quadrotor-focused-demo.mp4). This eight-shot cut spends more time on the 3D aircraft, native PCB review, four running motor controllers and actual quadrotor oscilloscope/logic-analyzer waveforms. It then shows the injected motor-driver fault. [Rendering evidence, frames and source attribution](media/focused-video-README.md). This is four-channel motor-bench validation, not flight validation.
+[Watch the 39.5-second LabWired film](media/labwired-quadrotor-focused-demo-short.mp4). Seven focused scenes show the 3D quadcopter, native PCB, four compiled motor controllers, actual quadrotor oscilloscope and logic-analyzer signals, and one driver-fault shutdown. Shots stay on screen for 4.5–8 seconds with no title cards or black fades. [Exact source and timing evidence](media/labwired-quadrotor-focused-demo-short.provenance.json). This is motor-bench validation, not aircraft-flight validation.
 
 ## Engineering-superintelligence demonstration
 
