@@ -1,0 +1,64 @@
+{
+  "description": "Native KiCad 10 scripted route restoration using source-approved copper geometry; not an autorouter",
+  "stages": [
+    {
+      "step": 0,
+      "board": "esc-route-stage-0.kicad_pcb",
+      "sha256": "7b1b2915868469a73d1a63c432f4352adf6ea6eaae5a6fc89c9e62f6a4abde89",
+      "segments": 1169,
+      "vias": 1716
+    },
+    {
+      "step": 1,
+      "board": "esc-route-stage-1.kicad_pcb",
+      "sha256": "1e3c39bd53a9c3d85b41c47c2451b03c66cbf8ba61c89cdbb263dbfb173f5c9a",
+      "segments": 1177,
+      "vias": 1716,
+      "nets_added": [
+        "/ESC1/AH",
+        "/ESC1/GHA",
+        "/ESC1/GLA"
+      ],
+      "segments_added": 8
+    },
+    {
+      "step": 2,
+      "board": "esc-route-stage-2.kicad_pcb",
+      "sha256": "fe41ea16d7ad9fa78bc16d8d2f02bfdb02c53fcc8c06805b0d781850e7234439",
+      "segments": 1184,
+      "vias": 1716,
+      "nets_added": [
+        "/ESC2/BH",
+        "/ESC2/GHC",
+        "/ESC2/GLC"
+      ],
+      "segments_added": 7
+    },
+    {
+      "step": 3,
+      "board": "esc-route-stage-3.kicad_pcb",
+      "sha256": "a13392832cdd8ba62d88177c90745e6e9cf5b523bcf426745effffc4591ed123",
+      "segments": 1191,
+      "vias": 1716,
+      "nets_added": [
+        "/ESC3/AH",
+        "/ESC3/GHA",
+        "/ESC3/GLA"
+      ],
+      "segments_added": 7
+    },
+    {
+      "step": 4,
+      "board": "esc-route-stage-4.kicad_pcb",
+      "sha256": "e717c004e836c93ae1acef4a6c6badaa0c7a55ebef982187429e78d9b7839422",
+      "segments": 1198,
+      "vias": 1716,
+      "nets_added": [
+        "/ESC4/BH",
+        "/ESC4/GHC",
+        "/ESC4/GLB"
+      ],
+      "segments_added": 7
+    }
+  ]
+}

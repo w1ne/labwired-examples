@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-13",
+  "video": "labwired-quadcopter-routing-mixed-signal-32s.mp4",
+  "sha256": "98dcce35bfef5b2bd30f9f444a13f21ac5c893a38d09bc307eeba4b427138d17",
+  "ffprobe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1600,
+        "height": 900,
+        "avg_frame_rate": "30/1"
+      }
+    ],
+    "format": {
+      "duration": "32.000000",
+      "size": "2128556"
+    }
+  },
+  "scenes": [
+    {
+      "name": "native_pcb_route",
+      "source": "evidence/native-routing-mixed-signal-20261113/native-pcb-route-operation-7s.mp4",
+      "source_sha256": "511636a7126bad8bdff7351de23b46808dbc6e1dffa4bb0aacfd7cac14f629c7",
+      "start_seconds": 0,
+      "duration_seconds": 7.0
+    },
+    {
+      "name": "populated_pcb",
+      "source": "pcb-3d-orbit.mp4",
+      "source_sha256": "9e62213254dfafeb0688de76c957e3e28fd6585091f610405ef20f193515d871",
+      "start_seconds": 0,
+      "duration_seconds": 4.0
+    },
+    {
+      "name": "hosted_test",
+      "source": "evidence/native-routing-mixed-signal-20261113/hosted-mixed-signal-fault-14s.mp4",
+      "source_sha256": "b43d8ff8fd04831d121acc2ed7b1bf374a0eba9784532e7b5fa96e92ef13c157",
+      "start_seconds": 0,
+      "duration_seconds": 14.0
+    },
+    {
+      "name": "motor_twin",
+      "source": "quadrotor-engineering-preview.mp4",
+      "source_sha256": "0576cc20cc893e66c7d1df781165ad3a9f0d86f70f6b09a56c151fcab738d12d",
+      "start_seconds": 37,
+      "duration_seconds": 7.0
+    }
+  ],
+  "real_routing_evidence": "Four native KiCad10 scripted segment-add stages on a disposable copy of a six-layer ESC PCB; 29 segments for 12 nets restored. DRC open connections 12,9,6,3,0; zero other violations. No autorouter succeeded.",
+  "real_simulation_evidence": "One hosted STM32L476 six-step ESC and virtual BLDC run, actual PWM GPIO edges, Hall edges, analog model current and motor speed; injected driver fault and measured inverter disable.",
+  "limits": [
+    "Not a record of a successful autorouter",
+    "Restores preapproved PCB routing, not an original route computation",
+    "Physical 4S AT32F421 ESC circuit differs from the functional 24V STM32L476 motor bench",
+    "No transistor-level MOSFET model, no validated motor power electronics or flight dynamics",
+    "Analog motor current is an executable model, not physical measurement",
+    "Mechanical twin motion is a separate prior recording, not frame-synchronized to the hosted fault trace"
+  ]
+}

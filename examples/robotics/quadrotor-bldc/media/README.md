@@ -1,4 +1,14 @@
-## Current LabWired quadcopter film — PCB routing + 3D digital twin
+## Latest quadcopter review — native PCB routing and hosted mixed signals
+
+[Watch the 32-second review](labwired-quadcopter-routing-mixed-signal-32s.mp4). The video shows 12 signal nets closed across four real KiCad 10 editing stages (0 other configured DRC violations), the populated PCB model, one hosted STM32L476 mixed-signal run with real PWM, Hall, motor current, fault and inverter-disable trace, and separately recorded motor-twin motion.
+
+The operation restores source-approved PCB tracks, not a novel autoroute. The motor model is reduced order at 24 V, not the physical AT32F421/AM32 board. No calibrated flight, PCB functional equivalence, transistor transient or manufacturing validation is claimed.
+
+[DRC checks, hosted waveform and test details](evidence/native-routing-mixed-signal-20261113/README.md) | [32-second video provenance](labwired-quadcopter-routing-mixed-signal-32s.provenance.json).
+
+## Previous PCB-layer reveal film
+
+## Archived LabWired quadcopter film — PCB routing + 3D digital twin
 
 [Watch the 32.4-second video](labwired-quadrotor-pcb-digital-twin-32s.mp4). Five scenes, 1600 × 900, 30 fps: quadcopter CAD; PCB routing; rotating populated 3D PCB; combined live oscilloscope and logic analyzer; digital twin. The video excludes the previous fault-test sequence and controller-count story. [Source-bound provenance](labwired-quadrotor-pcb-digital-twin-32s.provenance.json) · [Editor](render-quadrotor-pcb-digital-twin.py) · [Routing layer renderer](render-pcb-routing.py) · [3D board turntable renderer](render-pcb-turntable.py).
 
