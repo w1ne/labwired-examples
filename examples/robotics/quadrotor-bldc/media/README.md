@@ -1,3 +1,9 @@
+## Current LabWired quadcopter film — PCB routing + 3D digital twin
+
+[Watch the 32.4-second video](labwired-quadrotor-pcb-digital-twin-32s.mp4). Five scenes, 1600 × 900, 30 fps: quadcopter CAD; PCB routing; rotating populated 3D PCB; combined live oscilloscope and logic analyzer; digital twin. The video excludes the previous fault-test sequence and controller-count story. [Source-bound provenance](labwired-quadrotor-pcb-digital-twin-32s.provenance.json) · [Editor](render-quadrotor-pcb-digital-twin.py) · [Routing layer renderer](render-pcb-routing.py) · [3D board turntable renderer](render-pcb-turntable.py).
+
+The completed PCB source derives from OpenDrone OpenESC-30x30 under CERN-OHL-S-2.0; the attribution and full license remain in the hardware source. The route animation is a trace/layer reveal, not a video of an autorouter performing a design.
+
 ## Current 39.5-second quadcopter film
 
 [Watch the focused 40-second LabWired quadcopter demo](labwired-quadrotor-focused-demo-short.mp4). Seven readable sequences: parametric CAD, native PCB, compiled motor firmware, live oscilloscope, logic analyzer, fault injection and observed shutdown. The shots use actual source footage, not generated motion or telemetry. [Exact timing, hashes and scope](labwired-quadrotor-focused-demo-short.provenance.json). The earlier 65-second cut remains archived.
