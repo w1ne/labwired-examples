@@ -1,0 +1,227 @@
+{
+  "title": "LabWired engineering superintelligence — quadrotor demo",
+  "date_utc": "2026-11-13",
+  "positioning": "LabWired is engineering superintelligence. From an idea to a validated, manufacturable machine.",
+  "video": {
+    "file": "labwired-engineering-superintelligence-quadrotor.mp4",
+    "bytes": 5509344,
+    "sha256": "8080078ae3da358740223a3e3b76edd4ce862f0664a434d4aff4316446ac2c84",
+    "duration_s": 44.1,
+    "width": 1600,
+    "height": 900,
+    "fps": "30/1",
+    "codec": "h264",
+    "audio": "none"
+  },
+  "renderer": {
+    "file": "render-engineering-superintelligence.py",
+    "sha256": "9727be7714969235583634bbc6ca10413b62c50fdb93241138f1c2a08ce41b2c",
+    "python": "3.12.3",
+    "ffmpeg": "6.1.1-3ubuntu5",
+    "font": "DejaVu Sans / DejaVu Sans Bold",
+    "reproducibility": {
+      "test": "Two complete independent renders with single-threaded H.264 encoding.",
+      "result": "PASS",
+      "render_a_sha256": "8080078ae3da358740223a3e3b76edd4ce862f0664a434d4aff4316446ac2c84",
+      "render_b_sha256": "8080078ae3da358740223a3e3b76edd4ce862f0664a434d4aff4316446ac2c84",
+      "byte_identical": true
+    }
+  },
+  "inputs": {
+    "engineering_preview": {
+      "file": "quadrotor-engineering-preview.mp4",
+      "bytes": 8208428,
+      "sha256": "0576cc20cc893e66c7d1df781165ad3a9f0d86f70f6b09a56c151fcab738d12d",
+      "provenance": "engineering-preview-provenance.json",
+      "use": "CAD, assembly, schematic, PCB and audited four-channel runtime scenes."
+    },
+    "logic_analyzer": {
+      "file": "universal-logic-analyzer.png",
+      "bytes": 264612,
+      "sha256": "cff431012f9abd96960d7eab9cbc59362a66454f022c15181e67176468bd9a3d",
+      "dimensions": [
+        2560,
+        1216
+      ],
+      "source": "LabWired IO-Link example capture.",
+      "scope": "Universal platform instrument; not a quadrotor component."
+    },
+    "oscilloscope": {
+      "file": "universal-oscilloscope.png",
+      "bytes": 363669,
+      "sha256": "a05232e080be625ec47c17d2ab1c3a31de81a711a6820c44014bf5b68edea054",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "source": "Live LabWired capacitive-touch example capture.",
+      "scope": "Universal platform instrument; not a quadrotor component."
+    }
+  },
+  "flagship_project": {
+    "url": "https://app.labwired.com/p/34b9a67d8727b8b3a152d57ce22e5504/edit",
+    "project_id": "34b9a67d8727b8b3a152d57ce22e5504",
+    "content_hash": "87b4a8c370925a50e7e1945ef3042038999d0bc00798107d4d787123cab5c7d6",
+    "verified_hash": "87b4a8c370925a50e7e1945ef3042038999d0bc00798107d4d787123cab5c7d6",
+    "verification_status": "model_verified",
+    "parts": 12,
+    "wires": 64,
+    "controllers": 4,
+    "motor_plants": 4,
+    "fault_inputs": 4,
+    "verification_outputs": [
+      "ROTOR 1 HALL LOCKED",
+      "ROTOR 2 HALL LOCKED",
+      "ROTOR 3 HALL LOCKED",
+      "ROTOR 4 HALL LOCKED"
+    ]
+  },
+  "fault_campaign": {
+    "url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "verification_status": "model_verified",
+    "stimulus": {
+      "component": "fault1",
+      "channel": "pressed",
+      "value": 1,
+      "after_cycles": 1250000
+    },
+    "saved_project_requirements": {
+      "verified": [
+        "ROTOR 1 HALL LOCKED",
+        "ROTOR 1 FAULT DRIVER",
+        "ROTOR 1 INVERTER OFF"
+      ],
+      "not_observable_by_saved_project_requirement_evaluator": "PB0 low"
+    },
+    "direct_oracle_run": {
+      "result": "PASS",
+      "serial": [
+        "ROTOR 1 HALL LOCKED",
+        "ROTOR 1 FAULT DRIVER",
+        "ROTOR 1 INVERTER OFF"
+      ],
+      "gpio": "PB0 low"
+    },
+    "known_model_approximation": "MCU VDD is ideal 3.3 V because no explicit MCU power net drives reset or brownout behavior."
+  },
+  "mechanical": {
+    "url": "https://app.kernelcad.com/p/DyJ405zg?version=5",
+    "slug": "DyJ405zg",
+    "revision": 5,
+    "title": "Quadrotor · populated native ESC and repaired FC",
+    "motion_bindings": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "scope": "Assembly geometry and observed rotor pose binding; not structural, aerodynamic or flight proof."
+  },
+  "native_pcb": {
+    "path": "../hardware/esc-4in1/",
+    "layers": 6,
+    "footprints": 222,
+    "pads": 1067,
+    "nets": 210,
+    "scope": "Editable native schematic and PCB with retained rule-check evidence; not transistor-level, thermal or flight validation."
+  },
+  "scenes": [
+    {
+      "name": "positioning card",
+      "duration_s": 2.6
+    },
+    {
+      "name": "design the machine",
+      "source_range_s": [
+        7.0,
+        15.0
+      ],
+      "output_duration_s": 4.5
+    },
+    {
+      "name": "inspect the assembly",
+      "source_range_s": [
+        15.0,
+        22.7
+      ],
+      "output_duration_s": 4.5
+    },
+    {
+      "name": "trace the electronics",
+      "source_range_s": [
+        23.0,
+        29.6
+      ],
+      "output_duration_s": 3.5
+    },
+    {
+      "name": "review the manufacturing PCB",
+      "source_range_s": [
+        30.0,
+        36.5
+      ],
+      "output_duration_s": 4.0
+    },
+    {
+      "name": "universal logic analyzer",
+      "output_duration_s": 2.5
+    },
+    {
+      "name": "universal oscilloscope",
+      "output_duration_s": 2.5
+    },
+    {
+      "name": "run four firmware controllers",
+      "source_range_s": [
+        37.0,
+        44.5
+      ],
+      "output_duration_s": 5.5
+    },
+    {
+      "name": "inject driver fault",
+      "source_range_s": [
+        45.0,
+        50.0
+      ],
+      "output_duration_s": 3.0
+    },
+    {
+      "name": "prove selective shutdown",
+      "source_range_s": [
+        50.0,
+        56.8
+      ],
+      "output_duration_s": 4.5
+    },
+    {
+      "name": "pause, reset, repeat",
+      "source_range_s": [
+        57.0,
+        69.6
+      ],
+      "output_duration_s": 3.5
+    },
+    {
+      "name": "closing positioning card",
+      "duration_s": 3.5
+    }
+  ],
+  "limits": [
+    "The four-channel runtime is a 24 V STM32L476 reduced-order propulsion bench; it differs from the physical AT32F421/AM32 ESC and RP2354B flight controller.",
+    "The CAD viewer receives observed shaft pose. Geometry does not feed force or torque back into the motor plant.",
+    "The universal logic-analyzer and oscilloscope scenes demonstrate platform instruments on other LabWired examples; they are not aircraft components.",
+    "No calibrated thrust, battery, switching transient, thermal, EMI, frame-strength, aerodynamic, six-degree-of-freedom or physical-flight result is claimed.",
+    "A clean PCB rule check and editable manufacturing outputs do not establish production acceptance."
+  ],
+  "validation": {
+    "full_video_decode": "PASS",
+    "visual_contact_sheet_review": "PASS",
+    "two_render_checksum": "PASS",
+    "project_readback": "PASS: flagship and fault projects retain matching content_hash and verified_hash."
+  },
+  "repository_base_commit": "664a55359ce42f4f3c440e55ab04dc14b0b0e8cc"
+}
