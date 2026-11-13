@@ -7,6 +7,7 @@
       "type": "nucleo-l476rg",
       "x": 60,
       "y": 120,
+      "rotate": 0,
       "attrs": {
         "label": "ESC channel 1 (STM32L476)"
       }
@@ -16,6 +17,7 @@
       "type": "bldc-motor",
       "x": 575,
       "y": 130,
+      "rotate": 0,
       "attrs": {
         "label": "Rotor 1 (60% throttle)",
         "supply_voltage_v": "24",
@@ -34,6 +36,7 @@
       "type": "button-module",
       "x": 345,
       "y": 430,
+      "rotate": 0,
       "attrs": {
         "label": "FAULT 1"
       }
@@ -43,6 +46,7 @@
       "type": "nucleo-l476rg",
       "x": 960,
       "y": 120,
+      "rotate": 0,
       "attrs": {
         "label": "ESC channel 2 (STM32L476)"
       }
@@ -52,6 +56,7 @@
       "type": "bldc-motor",
       "x": 1475,
       "y": 130,
+      "rotate": 0,
       "attrs": {
         "label": "Rotor 2 (64% throttle)",
         "supply_voltage_v": "24",
@@ -70,6 +75,7 @@
       "type": "button-module",
       "x": 1245,
       "y": 430,
+      "rotate": 0,
       "attrs": {
         "label": "FAULT 2"
       }
@@ -79,6 +85,7 @@
       "type": "nucleo-l476rg",
       "x": 60,
       "y": 720,
+      "rotate": 0,
       "attrs": {
         "label": "ESC channel 3 (STM32L476)"
       }
@@ -88,6 +95,7 @@
       "type": "bldc-motor",
       "x": 575,
       "y": 730,
+      "rotate": 0,
       "attrs": {
         "label": "Rotor 3 (68% throttle)",
         "supply_voltage_v": "24",
@@ -106,6 +114,7 @@
       "type": "button-module",
       "x": 345,
       "y": 1030,
+      "rotate": 0,
       "attrs": {
         "label": "FAULT 3"
       }
@@ -115,6 +124,7 @@
       "type": "nucleo-l476rg",
       "x": 960,
       "y": 720,
+      "rotate": 0,
       "attrs": {
         "label": "ESC channel 4 (STM32L476)"
       }
@@ -124,6 +134,7 @@
       "type": "bldc-motor",
       "x": 1475,
       "y": 730,
+      "rotate": 0,
       "attrs": {
         "label": "Rotor 4 (72% throttle)",
         "supply_voltage_v": "24",
@@ -142,6 +153,7 @@
       "type": "button-module",
       "x": 1245,
       "y": 1030,
+      "rotate": 0,
       "attrs": {
         "label": "FAULT 4"
       }
@@ -184,7 +196,8 @@
       "to": {
         "part": "rotor1",
         "pin": "AH"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -194,7 +207,8 @@
       "to": {
         "part": "rotor1",
         "pin": "AL"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -204,7 +218,8 @@
       "to": {
         "part": "rotor1",
         "pin": "BH"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -214,7 +229,8 @@
       "to": {
         "part": "rotor1",
         "pin": "BL"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -224,7 +240,8 @@
       "to": {
         "part": "rotor1",
         "pin": "CH"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -234,7 +251,8 @@
       "to": {
         "part": "rotor1",
         "pin": "CL"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -244,7 +262,8 @@
       "to": {
         "part": "rotor1",
         "pin": "ENABLE"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -254,7 +273,8 @@
       "to": {
         "part": "rotor1",
         "pin": "HALL_A"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -264,7 +284,8 @@
       "to": {
         "part": "rotor1",
         "pin": "HALL_B"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -274,7 +295,8 @@
       "to": {
         "part": "rotor1",
         "pin": "HALL_C"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -284,7 +306,8 @@
       "to": {
         "part": "rotor1",
         "pin": "ENC_A"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -294,7 +317,8 @@
       "to": {
         "part": "rotor1",
         "pin": "ENC_B"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -304,7 +328,8 @@
       "to": {
         "part": "rotor1",
         "pin": "INDEX"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -314,7 +339,8 @@
       "to": {
         "part": "fault1",
         "pin": "SIG"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -324,7 +350,8 @@
       "to": {
         "part": "fault1",
         "pin": "VCC"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -334,7 +361,8 @@
       "to": {
         "part": "fault1",
         "pin": "GND"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -344,7 +372,8 @@
       "to": {
         "part": "rotor2",
         "pin": "AH"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -354,7 +383,8 @@
       "to": {
         "part": "rotor2",
         "pin": "AL"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -364,7 +394,8 @@
       "to": {
         "part": "rotor2",
         "pin": "BH"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -374,7 +405,8 @@
       "to": {
         "part": "rotor2",
         "pin": "BL"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -384,7 +416,8 @@
       "to": {
         "part": "rotor2",
         "pin": "CH"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -394,7 +427,8 @@
       "to": {
         "part": "rotor2",
         "pin": "CL"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -404,7 +438,8 @@
       "to": {
         "part": "rotor2",
         "pin": "ENABLE"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -414,7 +449,8 @@
       "to": {
         "part": "rotor2",
         "pin": "HALL_A"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -424,7 +460,8 @@
       "to": {
         "part": "rotor2",
         "pin": "HALL_B"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -434,7 +471,8 @@
       "to": {
         "part": "rotor2",
         "pin": "HALL_C"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -444,7 +482,8 @@
       "to": {
         "part": "rotor2",
         "pin": "ENC_A"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -454,7 +493,8 @@
       "to": {
         "part": "rotor2",
         "pin": "ENC_B"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -464,7 +504,8 @@
       "to": {
         "part": "rotor2",
         "pin": "INDEX"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -474,7 +515,8 @@
       "to": {
         "part": "fault2",
         "pin": "SIG"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -484,7 +526,8 @@
       "to": {
         "part": "fault2",
         "pin": "VCC"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -494,7 +537,8 @@
       "to": {
         "part": "fault2",
         "pin": "GND"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -504,7 +548,8 @@
       "to": {
         "part": "rotor3",
         "pin": "AH"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -514,7 +559,8 @@
       "to": {
         "part": "rotor3",
         "pin": "AL"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -524,7 +570,8 @@
       "to": {
         "part": "rotor3",
         "pin": "BH"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -534,7 +581,8 @@
       "to": {
         "part": "rotor3",
         "pin": "BL"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -544,7 +592,8 @@
       "to": {
         "part": "rotor3",
         "pin": "CH"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -554,7 +603,8 @@
       "to": {
         "part": "rotor3",
         "pin": "CL"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -564,7 +614,8 @@
       "to": {
         "part": "rotor3",
         "pin": "ENABLE"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -574,7 +625,8 @@
       "to": {
         "part": "rotor3",
         "pin": "HALL_A"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -584,7 +636,8 @@
       "to": {
         "part": "rotor3",
         "pin": "HALL_B"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -594,7 +647,8 @@
       "to": {
         "part": "rotor3",
         "pin": "HALL_C"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -604,7 +658,8 @@
       "to": {
         "part": "rotor3",
         "pin": "ENC_A"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -614,7 +669,8 @@
       "to": {
         "part": "rotor3",
         "pin": "ENC_B"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -624,7 +680,8 @@
       "to": {
         "part": "rotor3",
         "pin": "INDEX"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -634,7 +691,8 @@
       "to": {
         "part": "fault3",
         "pin": "SIG"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -644,7 +702,8 @@
       "to": {
         "part": "fault3",
         "pin": "VCC"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -654,7 +713,8 @@
       "to": {
         "part": "fault3",
         "pin": "GND"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -664,7 +724,8 @@
       "to": {
         "part": "rotor4",
         "pin": "AH"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -674,7 +735,8 @@
       "to": {
         "part": "rotor4",
         "pin": "AL"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -684,7 +746,8 @@
       "to": {
         "part": "rotor4",
         "pin": "BH"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -694,7 +757,8 @@
       "to": {
         "part": "rotor4",
         "pin": "BL"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -704,7 +768,8 @@
       "to": {
         "part": "rotor4",
         "pin": "CH"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -714,7 +779,8 @@
       "to": {
         "part": "rotor4",
         "pin": "CL"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -724,7 +790,8 @@
       "to": {
         "part": "rotor4",
         "pin": "ENABLE"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -734,7 +801,8 @@
       "to": {
         "part": "rotor4",
         "pin": "HALL_A"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -744,7 +812,8 @@
       "to": {
         "part": "rotor4",
         "pin": "HALL_B"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -754,7 +823,8 @@
       "to": {
         "part": "rotor4",
         "pin": "HALL_C"
-      }
+      },
+      "color": "#ffcc00"
     },
     {
       "from": {
@@ -764,7 +834,8 @@
       "to": {
         "part": "rotor4",
         "pin": "ENC_A"
-      }
+      },
+      "color": "#ff6633"
     },
     {
       "from": {
@@ -774,7 +845,8 @@
       "to": {
         "part": "rotor4",
         "pin": "ENC_B"
-      }
+      },
+      "color": "#00cccc"
     },
     {
       "from": {
@@ -784,7 +856,8 @@
       "to": {
         "part": "rotor4",
         "pin": "INDEX"
-      }
+      },
+      "color": "#e83e8c"
     },
     {
       "from": {
@@ -794,7 +867,8 @@
       "to": {
         "part": "fault4",
         "pin": "SIG"
-      }
+      },
+      "color": "#27c93f"
     },
     {
       "from": {
@@ -804,7 +878,8 @@
       "to": {
         "part": "fault4",
         "pin": "VCC"
-      }
+      },
+      "color": "#569cd6"
     },
     {
       "from": {
@@ -814,14 +889,11 @@
       "to": {
         "part": "fault4",
         "pin": "GND"
-      }
+      },
+      "color": "#ffcc00"
     }
   ],
   "mechanical": {
-    "provider": "kernelcad",
-    "slug": "DyJ405zg",
-    "version": 5,
-    "title": "Quadrotor \u00b7 populated native ESC and repaired FC",
     "electronics": {
       "version": 1,
       "displays": [],
@@ -908,6 +980,10 @@
           "direction": 1
         }
       ]
-    }
+    },
+    "provider": "kernelcad",
+    "slug": "DyJ405zg",
+    "version": 5,
+    "title": "Quadrotor · populated native ESC and repaired FC"
   }
 }

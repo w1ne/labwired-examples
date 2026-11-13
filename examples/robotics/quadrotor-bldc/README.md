@@ -1,6 +1,6 @@
 # Quadrotor co-design: LabWired + KernelCAD
 
-This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, and a **four-channel STM32 propulsion bench**. The motor bench uses real compiled firmware and reduced-order motor models. It does not yet simulate the electronics or flight controller on the physical boards.
+This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, an accepted **four-channel STM32 propulsion bench**, and a **five-controller flight candidate**. The simulated controllers run compiled STM32 firmware with behavioral motor and flight models. The physical OpenESC and OpenFC-Lite board designs remain design-only; this example does not run their native controllers.
 
 ## Saved native FC revision, 12 November 2026
 
@@ -13,11 +13,21 @@ cloud mesh and 12 immutable inputs. The firmware bench remains a separate
 target; native electrical onboarding is tracked in
 [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
+## Five-controller flight candidate, 13 November 2026
+
+The [flight circuit](labwired/five-controller-flight-circuit.json) connects five STM32L476 firmware instances: one flight controller, four command-driven ESCs, four BLDC motor models, four fault inputs, a BMI270 model, a universal oscilloscope, and a universal logic analyzer. Its 16 parts and 78 wires include four FC command nets and four ESC health nets. [The project manifest](labwired/five-controller-flight-project.json) binds each exact source to its controller.
+
+All five sources compiled on the hosted STM32L476 profile. The four ESCs retain the reviewed Hall-lock predicate, including the 1–20 control-tick period bound, and emit the exact existing `ROTOR n HALL LOCKED` requirements. [The compilation receipt](labwired/evidence/20261113-production/five-controller-compilation.json) identifies the sources and ELF artifacts. Compilation does not establish flight behavior.
+
+The corrected design is saved in the original project, with its original PCB attachment and CAD revision 5. The source approval gate removal is merged in core PR1852. The body/rotor receiver is merged in KernelCAD PR139. The app integration, unchanged-budget hosted verification, production browser acceptance, and final 40–45 second video remain pending. The current public revision and the older videos below are historical bench evidence.
+
+The flight runtime uses observed native motor RPM and clocks to advance a bounded body model and feed six IMU channels back to the compiled FC. Its planned acceptance includes takeoff, hover, commanded attitude changes, recovery, pause retention, and an injected fault followed by all-ESC disarm. The FC's `SAFE LANDING VERIFIED` text checks its estimated altitude; it does not establish a controlled or safe landing of physical hardware.
+
 ## Recorded universal-instrument preview, 12 November 2026
 
 [Watch the 34-second LabWired video](media/quadrotor-universal-instruments-preview-20261112.mp4). It shows the universal oscilloscope and logic analyzer, independent controller selection, PWM/high-impedance observations, and M1 shutdown while the other three modeled motors continue. Every shot comes from the accepted R4-02 browser recording at its original speed.
 
-The video is a labeled development preview of four STM32 controllers with behavioral motor models. [All 17 native acceptance checks and the separate native-to-UI readout comparison passed](labwired/evidence/20261112-universal-instruments/). Production merges, deployment, and the updated public-project revision remain pending.
+The video is a labeled development preview of four STM32 controllers with behavioral motor models. [All 17 native acceptance checks and the separate native-to-UI readout comparison passed](labwired/evidence/20261112-universal-instruments/). That recording predates the current release work. Its engine identity and four-controller scope remain fixed in the retained receipts.
 
 [Original recording and edit provenance](media/README.md) · [Acceptance evidence](labwired/evidence/20261112-universal-instruments/)
 
@@ -36,7 +46,7 @@ The video is a labeled development preview of four STM32 controllers with behavi
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
 - [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors, one retained microSD-pad parity omission; no native boot or manufacturing acceptance.
 
-The canonical circuit links to the versioned KernelCAD model. It contains four controllers, four motors, four independent fault inputs, 64 wires, an oscilloscope and a logic analyzer. The two instruments observe simulator signals; they are not physical aircraft components. The updated public revision is pending core/app merges, CI, deployment, hosted verification, and publication.
+The four-channel bench circuit links to the versioned KernelCAD model. It contains four controllers, four motors, four independent fault inputs, 64 wires, an oscilloscope and a logic analyzer. The five-controller flight candidate is a separate manifest and circuit. Both instruments observe simulator signals; they are not physical aircraft components. Publication of the new original-project revision is pending deployment and execution acceptance.
 
 ## What the artifacts establish
 
@@ -46,7 +56,7 @@ The canonical circuit links to the versioned KernelCAD model. It contains four c
 | Physical OpenESC | Four AT32F421 controllers, four gate drivers, 24 MOSFETs; six copper layers | [Native electrical/layout review](hardware/esc-4in1/validation/) |
 | Firmware bench | Four independent STM32L476 six-step commutators, Hall/encoder feedback, latched inverter shutdown | [Exact source and circuit manifest](labwired/four-channel-project.json) |
 | Motor-to-CAD binding | Observed motor position/RPM mapped to explicit rotor/propeller groups | [Revision-pinned mapping](cad/runtime-bindings.json) |
-| Aircraft flight | No connected IMU, flight-controller firmware, thrust model or six-degree-of-freedom body | Not implemented |
+| Aircraft flight candidate | Five STM32 firmware instances, connected BMI270 model and bounded body dynamics | Compiles; production flight execution acceptance pending |
 
 The CAD exploded view is an assembly illustration. The mechanism check samples rotor poses. Neither establishes a complete physical assembly path, frame strength or flight performance.
 
@@ -89,7 +99,7 @@ The behavioral plants consume the configured timer output stages directly. Chang
 
 The shared instrument and runtime fixes are tracked in [LabWired PR #3163](https://github.com/w1ne/labwired/pull/3163). The [corrected-clock candidate](labwired/evidence/20261112-clock-candidate/) confirms four executed ELF identities, Hall feedback, the high-side carrier and source switching. That earlier candidate failed at coast-down and found missing native complementary-pad output. The [new R4-02 acceptance and 34-second recording](labwired/evidence/20261112-universal-instruments/) pass after the native and readout corrections.
 
-The project owner's decision to remove mandatory human source acknowledgments is implemented in core commit [`a0b0a91c`](https://github.com/w1ne/labwired-core/commit/a0b0a91c1868fe78e4af45e817e566807517ef1e), published in [PR #1852](https://github.com/w1ne/labwired-core/pull/1852). That committed policy retains automated source and provenance integrity checks; it awaits final-head CI and merge. Normal app tests and CI, hosted verification, deployment, and publication remain release requirements. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
+Mandatory human source acknowledgments, expiry and renewal gates were removed in [core PR #1852](https://github.com/w1ne/labwired-core/pull/1852), merged on 13 November 2026 as [`cfe553f6`](https://github.com/w1ne/labwired-core/commit/cfe553f69dfa17e4c1beaaf10046712283722234). The exact tested head completed 59 CI checks successfully; six were skipped. Automated source and provenance integrity checks remain. Source-only drift is informational, and absent model digests remain unverified. [Merge and check evidence](labwired/evidence/20261113-production/core-release.json) records the exact commits. Normal app tests and CI, hosted verification, deployment, and publication remain release requirements. The instruments expose missing observations and capture limits; a retained sample is not proof of a live value.
 
 ## Earlier motion-binding evidence, 11 November 2026
 
@@ -115,7 +125,7 @@ The remaining work is concrete:
 - Connect forces and moments to the airframe dynamics, then test arming, command loss, attitude control and individual motor faults.
 - Establish copper-to-model equivalence and a physical assembly/power-on validation record.
 
-Until those gates pass, use **co-design engineering preview** or **four-channel propulsion bench** to describe this example.
+The physical-board gates above remain separate from the behavioral STM32 flight example. Describe each recording by its verified scope; the historical previews do not establish the new flight acceptance.
 
 ## Files and earlier evidence
 
