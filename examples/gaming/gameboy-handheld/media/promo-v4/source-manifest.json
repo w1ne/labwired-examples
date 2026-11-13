@@ -1,0 +1,76 @@
+{
+  "schema": "labwired.brand-ending-source.v1",
+  "output": "LabWired-KernelCAD-BrickBreaker.mp4",
+  "final_export_sha256": "b45e26fce48d73a59347ff5c8d6a4f12008eb7f025af54c57a1d2bd5b13a2731",
+  "final_export_bytes": 6662219,
+  "duration_seconds": 20,
+  "fps": 60,
+  "frames": 1200,
+  "base_source_manifest": "../promo-v3/source-manifest.json",
+  "base_source_manifest_sha256": "55991a6961c4310bf5d3e9e8f113ff257ae3fd0e9f677258c2f87185a9bd6e30",
+  "rebuild": "python3 finish_brand_ending.py --video <v3-build>/motion/geometry-master.mp4 --audio <v3-build>/audio/wire-runner-original-30s.wav --output <output>/LabWired-KernelCAD-BrickBreaker.mp4",
+  "interactive_url": "https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1&view=kernelcad",
+  "scope": "Offline actual-CAD and original-ROM footage with a two-second LabWired ending. Export cadence does not measure browser or MCU wall-clock rate. No saved-project changes.",
+  "portability": "Only input/output paths and the font-directory option differ from the original recording compositor. Card, score and captions match the approved recording byte for byte.",
+  "omitted": [
+    "MP4",
+    "PNG",
+    "WAV",
+    "raw framebuffer streams",
+    "generated render assets"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 21,
+      "sha256": "0cf256cc9234b415f912f5b0e9f8c9364688466041611047cd3f599c35f4efa6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5142,
+      "sha256": "faca175d559cc931cf03c7f66cf53eb1d0ae87ab1397b2d118878cbe1bc8baf1"
+    },
+    {
+      "path": "browser-verification.json",
+      "bytes": 6188,
+      "sha256": "93376d2b9bf2685746e60df558b13b7d101bed25637ca5edfbf4aea3160b5f01"
+    },
+    {
+      "path": "ending-provenance.json",
+      "bytes": 1550,
+      "sha256": "4b944c3d2f215207e089b90738a655bbb8b8901fcf76159351b789000fef10e2"
+    },
+    {
+      "path": "ending-qa.json",
+      "bytes": 654,
+      "sha256": "8bf6be577fec5bc9cd7bc5149ca83f7cbb30f1c993e7c958935000982986e13a"
+    },
+    {
+      "path": "ffprobe.json",
+      "bytes": 3548,
+      "sha256": "d99e92830c3e706a82566b522e1683c5e8adc817c8c2d7a95fbd0e5388c5d5ff"
+    },
+    {
+      "path": "finish_brand_ending.py",
+      "bytes": 6904,
+      "sha256": "542eafe6ca5b29e4fbc8bf54c6778b07ce4a9a2d91fd5e269a26a21b29b61fab"
+    },
+    {
+      "path": "mcp-capture-probe.json",
+      "bytes": 1349,
+      "sha256": "a2afd83459bbd81814d5ff03bba384e4d86ea5c648f44a77147fac0dddebef0e"
+    },
+    {
+      "path": "portable-rebuild.json",
+      "bytes": 1248,
+      "sha256": "3c58e643f057ce32a087e2de0fe8d373c0750f150c106366d8baf11ee5771992"
+    },
+    {
+      "path": "promo.ass",
+      "bytes": 1762,
+      "sha256": "f1786e8e575bad24eead016aae0bf35b8c5cf15e9f032111aae2b4d8b4a2a61e"
+    }
+  ],
+  "browser_verification": "browser-verification.json",
+  "mcp_capture_probe": "mcp-capture-probe.json"
+}

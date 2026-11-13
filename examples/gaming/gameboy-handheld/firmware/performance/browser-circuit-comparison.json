@@ -1,0 +1,76 @@
+{
+  "schema": "labwired.browser-performance-observation.v1",
+  "captured_date_utc": "2026-11-11",
+  "method": "Read visible Serial monitor DMG_FRAME values and observation timestamps through browser UI. Same cloud Chrome tab, Circuit view, Preview mode, MCU Serial inspector, no 3D renderer available. Start game using an actual 1500 ms A button hold.",
+  "baseline": {
+    "url": "https://app.labwired.com/?share=_fw-Bqay7d1G&run=1&view=kernelcad&board=stm32f411ceu6-blackpill",
+    "firmware_ref": "sha256:cfa5fd07dbaa457d7e3315d69d5076c90b70f453d490229889e440a595ea4681",
+    "start": {
+      "observed_at_unix_ms": 1794434806980,
+      "dmg_frame": 6067,
+      "paddle_x": 68,
+      "ball_x": 142,
+      "ball_y": 42,
+      "score": 0,
+      "lives": 3,
+      "phase": 1
+    },
+    "end": {
+      "observed_at_unix_ms": 1794434812428,
+      "dmg_frame": 6097,
+      "paddle_x": 68,
+      "ball_x": 82,
+      "ball_y": 26,
+      "score": 6,
+      "lives": 3,
+      "phase": 1
+    },
+    "elapsed_ms": 5448,
+    "frames_advanced": 30,
+    "observed_game_frames_per_second": 5.506607929515418
+  },
+  "candidate": {
+    "url": "https://app.labwired.com/?share=LCJ99z8RFJGi&run=1&view=kernelcad&board=stm32f411ceu6-blackpill",
+    "firmware_ref": "sha256:e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28",
+    "start": {
+      "observed_at_unix_ms": 1794434850447,
+      "dmg_frame": 1103,
+      "paddle_x": 68,
+      "ball_x": 134,
+      "ball_y": 46,
+      "score": 2,
+      "lives": 3,
+      "phase": 1
+    },
+    "end": {
+      "observed_at_unix_ms": 1794434860296,
+      "dmg_frame": 1286,
+      "paddle_x": 68,
+      "ball_x": 46,
+      "ball_y": 132,
+      "score": 15,
+      "lives": 3,
+      "phase": 1
+    },
+    "elapsed_ms": 9849,
+    "frames_advanced": 183,
+    "observed_game_frames_per_second": 18.5805665549802
+  },
+  "input_proof": {
+    "baseline_and_candidate": [
+      "INPUT=000000fe",
+      "INPUT=000000ff"
+    ],
+    "meaning": "Actual A press and release reached the emulated game; both samples show phase=1 and increasing score."
+  },
+  "limitations": [
+    "Single sequential observation windows, not repeated controlled benchmark.",
+    "Different segments of the same game trajectory; baseline was already warm after several idle minutes, candidate booted recently.",
+    "Timestamps were captured immediately before the visible DOM read; IPC and snapshot cadence add observation uncertainty.",
+    "This measures firmware game progression, not rasterized display FPS or input latency.",
+    "Cloud browser could not initialize WebGL2, so no 3D/CAD performance claim.",
+    "User-device performance depends on host CPU/GPU and simultaneous workload.",
+    "Workstation 3D benchmark connection failed; not substituted with these Circuit numbers."
+  ],
+  "conclusion": "Candidate improves actual browser game progression in this observed Circuit run, from approximately5.5 to18.6 game frames/s. Exact deterministic compute-budget and pixel-equivalence checks are reported separately."
+}

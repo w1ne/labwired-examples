@@ -1,0 +1,25 @@
+{
+  "schema": "labwired.brand-ending-portability.v1",
+  "command": "python3 finish_brand_ending.py --video <v3-build>/motion/geometry-master.mp4 --audio <v3-build>/audio/wire-runner-original-30s.wav --output <output>/LabWired-KernelCAD-BrickBreaker.mp4 --assets-only",
+  "result": "passed",
+  "generated_assets": {
+    "end-card.png": {
+      "matches_approved_recording": true,
+      "bytes": 64239,
+      "sha256": "a45c40fdf1db13da934428b02056d6792459289e42d7ff851f5e200bda84f9e1"
+    },
+    "ending-score.wav": {
+      "matches_approved_recording": true,
+      "bytes": 3840044,
+      "sha256": "4ac253c92541b534654599307f804c15610fd1098a21e3cfec573bd0ca047c53"
+    },
+    "promo.ass": {
+      "matches_approved_recording": true,
+      "bytes": 1762,
+      "sha256": "f1786e8e575bad24eead016aae0bf35b8c5cf15e9f032111aae2b4d8b4a2a61e"
+    }
+  },
+  "original_compositor_sha256": "0cbabdbaa4f3255673cc5947826a59c1d9f811d14b7ae46f839c4b7a5e51e560",
+  "portable_compositor_sha256": "542eafe6ca5b29e4fbc8bf54c6778b07ce4a9a2d91fd5e269a26a21b29b61fab",
+  "change_scope": "Input/output locations and font-directory argument only; generated card, score and captions remain byte-identical. No full movie re-encode performed for this portability check."
+}

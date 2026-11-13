@@ -1,0 +1,28 @@
+{
+  "schema": "labwired.saved-project-browser-observation.v1",
+  "date_utc": "2026-11-11",
+  "project_url": "https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1&view=kernelcad",
+  "project_content_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+  "firmware_ref": "sha256:e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28",
+  "view": "Circuit / Preview / MCU Serial",
+  "root_observation": "Opened the original saved project after promotion, observed firmware boot, applied an actual 1500 ms A press and release, and observed score increasing to 15 with LCD updates. Left the original project Running in Circuit view.",
+  "screenshot": {
+    "path": "saved-project-browser.jpg",
+    "bytes": 122281,
+    "sha256": "1a56b2c0f2d44a4e31af1761c308b5c70f2d76a8c4734ee5078ebd8e64936302",
+    "visible_lcd": {
+      "score": 15,
+      "lives": 2,
+      "status": "A TO LAUNCH"
+    },
+    "last_visible_uart": "DMG_FRAME=1893 x=68 ball_x=77 ball_y=116 score=15 lives=2 phase=0 hash=677daab2",
+    "preceding_visible_uart": "DMG_FRAME=1892 x=68 ball_x=42 ball_y=136 score=15 lives=3 phase=1 hash=6965ba7b",
+    "simulation_status": "Running"
+  },
+  "scope": [
+    "Actual saved-project browser observation after the optimized firmware promotion.",
+    "The screenshot captures LCD and UART after a missed ball, showing score 15 and lives decreasing from 3 to 2.",
+    "The input action was observed through the browser tool; a single still image does not independently prove the press/release sequence.",
+    "Cloud WebGL2 was unavailable. This is Circuit evidence, not CAD performance or raster-frame-rate proof."
+  ]
+}

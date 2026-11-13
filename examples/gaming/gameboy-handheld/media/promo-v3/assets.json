@@ -1,0 +1,49 @@
+{
+  "mesh": {
+    "url": "https://mesh.kernelcad.com/mesh-artifacts/kQAFdaQs/v3.json?provenance=9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+    "sha256": "5b5a7d34cc9cf000da329b97fa78bc09dd3f37889b4d74c5f88bb3329e346af1",
+    "bytes": 4161037,
+    "destination": "motion/mesh.json"
+  },
+  "controller_image": {
+    "url": "https://api.github.com/repos/WeActStudio/WeActStudio.MiniSTM32F4x1/git/blobs/d77441bc798629c000821039eb9e597cb6a9ffdf",
+    "response": "github_base64_blob",
+    "git_blob_sha": "d77441bc798629c000821039eb9e597cb6a9ffdf",
+    "sha256": "245c88133cb4ab3a8592bcc5705249535e4d2dafbdc20bd537ef876352eef063",
+    "bytes": 1976614,
+    "destination": "pcb/weact-stm32f411-top.jpg",
+    "crop_xyxy": [
+      1442,
+      993,
+      2458,
+      3578
+    ],
+    "texture_destination": "motion/controller.ppm",
+    "texture_sha256": "08f76ca648dbe6692ab457366441bf22fa3ff6b1fc38506a450480f9584984dc",
+    "source_url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/master/images/STM32F411-3D-Model-Render/top.jpg",
+    "scope": "Official vendor appearance material only; no package geometry or exact component fit established."
+  },
+  "native_board": {
+    "repo_path": "../../pcb/handheld-carrier.kicad_pcb",
+    "bytes": 573344,
+    "sha256": "e7224485efa449271fa0512791f898469b48650111884b55052957224e9cb9df"
+  },
+  "lcd": {
+    "sha256": "76bda322c1c4d016f46936ac6ba3b09f826ac4b136a3ab2fe538b777d6ecddb7",
+    "bytes": 248832000,
+    "width": 320,
+    "height": 240,
+    "frames": 1080,
+    "fps": 60,
+    "source": "../../firmware/host_brick_breaker.c and capture_brick_breaker.py"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "Pillow": "13.0.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "g++": "14.2.0",
+    "ffmpeg": "7.1.5",
+    "fonts": "DejaVu Sans (fonts-dejavu-core)"
+  }
+}

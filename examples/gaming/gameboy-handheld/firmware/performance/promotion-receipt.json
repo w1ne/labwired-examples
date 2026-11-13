@@ -1,0 +1,195 @@
+{
+  "schema": "labwired.saved-project-promotion.v1",
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "started_at_utc": "2026-11-11 22:08:40 UTC",
+  "completed_at_utc": "2026-11-11 22:09:01 UTC",
+  "operation": "Promote verified VBlank/HALT, dirty-span, GCC O3 firmware through existing generic MCP",
+  "update_request_file": "promotion-update-request.json",
+  "update_result": {
+    "ok": true,
+    "status": 200,
+    "content_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+    "verified_hash_before_fresh_run": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b"
+  },
+  "verification_call": {
+    "tool": "labwired_project_verify",
+    "arguments": {
+      "project_id": "f44771855a18a70d418e363622de2e28",
+      "max_steps": 50000000,
+      "oracle": {
+        "serial": [
+          {
+            "contains": "DMG_ROM_OK title=BRICK_BREAKER"
+          },
+          {
+            "contains": "INPUT=000000ef"
+          },
+          {
+            "contains": "INPUT=000000fe"
+          },
+          {
+            "matches": "DMG_FRAME=[0-9]+ x=([7-9][0-9]|1[0-3][0-9]) ball_x="
+          },
+          {
+            "matches": "DMG_FRAME=[0-9]+ .*phase=1"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 10000
+        }
+      }
+    }
+  },
+  "verification_result": {
+    "ok": true,
+    "status": 200,
+    "verified": true,
+    "verified_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "markers": [
+      "DMG_ROM_OK title=BRICK_BREAKER",
+      "INPUT=000000ef",
+      "INPUT=000000fe"
+    ]
+  },
+  "readback": {
+    "content_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+    "verified_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+    "source_sha256": "0035482806916ad05e4446ebece8bb284103473c1bfda5318e75460d5b3fb2a0",
+    "source_bytes": 126041,
+    "source_contains_GCC_O3_pragma": true,
+    "firmware": {
+      "board": "stm32f411ceu6-blackpill",
+      "language": "c",
+      "artifact": {
+        "ref": "sha256:e7f8031ab996136da9202409bc7ec3fef12510d262c2da7266a20247ca299f28"
+      },
+      "source": {
+        "treeRef": "sha256:5cbc1cb8e76bb37a3ae892b6891a76d1dbd7a95f7da01f1ad93d03093bb9979e",
+        "files": [
+          {
+            "path": "src/main.c",
+            "ref": "sha256:0035482806916ad05e4446ebece8bb284103473c1bfda5318e75460d5b3fb2a0"
+          }
+        ]
+      }
+    },
+    "name": "Game Boy recreation — Brick Breaker",
+    "board_id": "stm32f411ceu6-blackpill",
+    "visibility": "unlisted",
+    "pcb_board_id": "pcb_c8da1d7776dba9bc",
+    "pcb_board_rev": 0,
+    "stimuli": [
+      {
+        "channel": "pressed",
+        "value": 1,
+        "component": "btn-right",
+        "after_cycles": 22000000
+      },
+      {
+        "channel": "pressed",
+        "value": 0,
+        "component": "btn-right",
+        "after_cycles": 35000000
+      },
+      {
+        "channel": "pressed",
+        "value": 1,
+        "component": "btn-a",
+        "after_cycles": 36000000
+      },
+      {
+        "channel": "pressed",
+        "value": 0,
+        "component": "btn-a",
+        "after_cycles": 42000000
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "sim_verify",
+        "status": "model_verified",
+        "created_at": 1794434933585,
+        "content_hash": "2d1cfec8ca700fadfb944b1a4ab3e213437ab021e61ca21f6b1097bd2d4781a2",
+        "pcb_board_id": null,
+        "pcb_board_rev": null,
+        "artifact_hash": null,
+        "ref": null,
+        "fresh": true,
+        "stale_reason": null
+      }
+    ]
+  },
+  "checks": {
+    "passed": true,
+    "changed_keys": [
+      "diagram_json",
+      "source_code",
+      "content_hash",
+      "verified_hash",
+      "updated_at",
+      "evidence"
+    ],
+    "preserved_project_fields": [
+      "id",
+      "name",
+      "board_id",
+      "source_language",
+      "source_entry_path",
+      "visibility",
+      "description",
+      "readme",
+      "cover_media_id",
+      "published_at",
+      "cover_gen_status",
+      "stimuli_json",
+      "cosim_models_json",
+      "published_revision_id",
+      "created_at",
+      "pcb_board_id",
+      "pcb_board_rev",
+      "firmware",
+      "stimuli",
+      "cosim_models",
+      "requirements"
+    ],
+    "source_exact_match": true,
+    "diagram_exact_match": true,
+    "only_diagram_firmware_refs_changed": true,
+    "verified_hash_matches_content": true,
+    "pinned_artifact_preserved_after_project_verify": true,
+    "fresh_verification_evidence_recorded": true
+  },
+  "baseline": {
+    "content_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+    "verified_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+    "firmware": {
+      "board": "stm32f411ceu6-blackpill",
+      "language": "c",
+      "artifact": {
+        "ref": "sha256:cfa5fd07dbaa457d7e3315d69d5076c90b70f453d490229889e440a595ea4681"
+      },
+      "source": {
+        "treeRef": "sha256:629de67c0c0a65029a80ce8cc3cc7bd126e582c99621e843577964e2e967db38",
+        "files": [
+          {
+            "path": "src/main.c",
+            "ref": "sha256:cd30bf4b2ea545786b0fcc7673dc3fd1c1e9a8cb08ed9a37b7ee96f5c649c7e4"
+          }
+        ]
+      }
+    },
+    "source_sha256": "cd30bf4b2ea545786b0fcc7673dc3fd1c1e9a8cb08ed9a37b7ee96f5c649c7e4",
+    "rollback_receipt": "promotion-baseline-rollback.json"
+  },
+  "browser_comparison_receipt": "browser-circuit-comparison.json",
+  "limitations": [
+    "project_verify returns a matching content proof; its result does not independently return an ELF digest. The exact pinned ELF/source refs and full O3 source were read back unchanged afterward.",
+    "Model timing remains CPU-derived and the supply ideal; no physical-hardware performance claim.",
+    "The browser comparison measures game progression in one sequential Circuit observation per version. It does not establish display FPS, 3D performance, input latency or real-time 60 fps.",
+    "The recording ROM and its capture sources remain unchanged; the current saved project's exact optimized source is retained in the update request and reproducible from candidate-source.patch."
+  ]
+}
+
