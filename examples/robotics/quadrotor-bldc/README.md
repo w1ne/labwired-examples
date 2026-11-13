@@ -12,6 +12,10 @@ external pairs and 652 FC-component/support-ring pairs. The candidate is saved a
 published firmware bench remains a separate electrical target; native electrical
 onboarding is tracked in [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
+## Current video: PCB routing, 3D board and digital twin (13 November 2026)
+
+[Watch the 32-second LabWired quadcopter video](media/labwired-quadrotor-pcb-digital-twin-32s.mp4). Five readable scenes: parametric CAD, six-layer PCB routing, a rotating populated 3D board, the live oscilloscope and logic analyzer shown together, and the operating quadcopter digital twin. No separate safety scene, controller-count story, or unrelated instrument captures. The PCB routing animation progressively reveals the completed source geometry; it does not imply a recorded autorouter operation. [Exact source and timing record](media/labwired-quadrotor-pcb-digital-twin-32s.provenance.json).
+
 ## New: focused quadcopter digital-twin demonstration (13 November 2026)
 
 [Watch the 39.5-second LabWired film](media/labwired-quadrotor-focused-demo-short.mp4). Seven focused scenes show the 3D quadcopter, native PCB, four compiled motor controllers, actual quadrotor oscilloscope and logic-analyzer signals, and one driver-fault shutdown. Shots stay on screen for 4.5–8 seconds with no title cards or black fades. [Exact source and timing evidence](media/labwired-quadrotor-focused-demo-short.provenance.json). This is motor-bench validation, not aircraft-flight validation.

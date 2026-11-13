@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-13",
+  "type": "short demonstration",
+  "video": "labwired-quadrotor-pcb-digital-twin-32s.mp4",
+  "sha256": "62c5a96f0f03b96210ec1103343dbdeeb78e7bf49e2a1c27195d5ffaa24789d5",
+  "frame_info": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1600,
+        "height": 900,
+        "avg_frame_rate": "30/1"
+      }
+    ],
+    "format": {
+      "duration": "32.400000",
+      "size": "5083970"
+    }
+  },
+  "shots": [
+    {
+      "id": "01-cad",
+      "src": "cad",
+      "start": 10.0,
+      "duration": 5.5,
+      "title": "QUADCOPTER CAD",
+      "sub": "Parametric mechanical design"
+    },
+    {
+      "id": "02-routing",
+      "src": "routing",
+      "start": 0,
+      "duration": 7.0,
+      "title": "PCB ROUTING",
+      "sub": "Six copper layers; actual segment and via geometry"
+    },
+    {
+      "id": "03-pcb3d",
+      "src": "3d",
+      "start": 0,
+      "duration": 4.4,
+      "title": "3D PCB",
+      "sub": "Rotating populated board"
+    },
+    {
+      "id": "04-instruments",
+      "src": "instruments",
+      "start": 109.4,
+      "duration": 7.5,
+      "title": "LIVE OSCILLOSCOPE + LOGIC ANALYZER",
+      "sub": "Analog and digital signals from one running simulation"
+    },
+    {
+      "id": "05-twin",
+      "src": "twin",
+      "start": 37.0,
+      "duration": 8.0,
+      "title": "DIGITAL TWIN",
+      "sub": "Firmware and motor simulation with linked 3D model"
+    }
+  ],
+  "source_hashes": {
+    "cad": "0576cc20cc893e66c7d1df781165ad3a9f0d86f70f6b09a56c151fcab738d12d",
+    "routing": "1906efcb964c1d7df03ddea2e241e45249f8bea3d5bced6784d16cb2e4983066",
+    "3d": "9e62213254dfafeb0688de76c957e3e28fd6585091f610405ef20f193515d871",
+    "instruments": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35",
+    "twin": "0576cc20cc893e66c7d1df781165ad3a9f0d86f70f6b09a56c151fcab738d12d"
+  },
+  "routing": {
+    "generator": "render-pcb-routing.py",
+    "source": "../hardware/esc-4in1/4in1.kicad_pcb",
+    "exporter": "KiCad 10.0.8",
+    "copper_layers": 6,
+    "segments_rendered": 1198,
+    "vias_rendered": 1716,
+    "note": "Progressive reveal of physical routed segments; not capture of an autorouter running."
+  },
+  "board_3d": {
+    "source": "../hardware/esc-4in1/fabrication-review/esc-board-populated.glb",
+    "renderer": "render-pcb-turntable.py",
+    "mesh_count": 214,
+    "note": "The camera rotates around the actual exported board geometry. Solder-mask color was corrected for visibility."
+  },
+  "instruments": {
+    "source": "quadrotor-universal-instruments-r4-02.webm",
+    "note": "Both displayed panels are synchronized crops of the same accepted LabWired browser recording."
+  },
+  "limits": [
+    "The ESC electrical source derives from OpenDrone OpenESC-30x30 under CERN-OHL-S-2.0; attribution retained in hardware/esc-4in1/README.md.",
+    "The firmware/BLDC plant footage is a digital-twin demonstration, not calibrated flight validation.",
+    "No circuit routing was performed during the video; the animation presents completed source PCB segments and vias."
+  ]
+}
