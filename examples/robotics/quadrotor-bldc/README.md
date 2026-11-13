@@ -7,27 +7,30 @@ This package contains a versioned **KernelCAD assembly**, a real **six-layer Ope
 The [current CAD source and evidence](cad/README.md) replace the FC envelope with
 the repaired native PCB and all 107 assigned component models. Hosted evaluation
 passes with 38 parts and 37 mates. Conservative geometric checks cover 31
-external pairs and 652 FC-component/support-ring pairs. This source candidate is
-not yet the saved Studio revision 4. The published firmware bench described
-below remains a separate target; native electrical onboarding is tracked in
-[LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
+external pairs and 652 FC-component/support-ring pairs. The candidate is saved as
+[KernelCAD revision 5](https://app.kernelcad.com/p/DyJ405zg?version=5). The
+published firmware bench remains a separate electrical target; native electrical
+onboarding is tracked in [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
-## Recorded engineering preview
+## Engineering-superintelligence demonstration
 
-[Watch the 75-second co-design video](media/quadrotor-engineering-preview.mp4). It uses actual KernelCAD screens, native KiCad exports and an audited candidate browser run. CAD inspection is time-compressed; runtime scenes play at recorded speed. The final scene states that physical-board simulation and flight control remain open.
+[Watch the 44-second flagship video](media/labwired-engineering-superintelligence-quadrotor.mp4). It connects editable CAD, native PCB evidence, universal instruments, four compiled firmware controllers, deterministic motor plants, fault injection and selective shutdown in one sequence.
 
-[Video provenance and reproduction](media/README.md) · [Final runtime evidence](labwired/evidence/20261111-final/evidence.json)
+[Exact video provenance and reproduction](media/engineering-superintelligence-provenance.json) · [Media guide](media/README.md) · [Final runtime evidence](labwired/evidence/20261111-final/evidence.json)
+
+The [75-second engineering source cut](media/quadrotor-engineering-preview.mp4) remains available for detailed review.
 
 ## Open the projects
 
-- [Four-channel LabWired propulsion project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit)
-- [KernelCAD populated OpenFrame-5F assembly, revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4)
+- [Four-channel LabWired flagship project](https://app.labwired.com/p/34b9a67d8727b8b3a152d57ce22e5504/edit)
+- [Channel-1 deterministic fault campaign](https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit)
+- [KernelCAD populated OpenFrame-5F assembly, revision 5](https://app.kernelcad.com/p/DyJ405zg?version=5)
 - [Complete system identity and model boundaries](system-integration.json)
 - [Physical wiring and system BOM](hardware/assembly-wiring.md)
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
 - [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors, one retained microSD-pad parity omission; no native boot or manufacturing acceptance.
 
-The saved LabWired project links to the versioned KernelCAD model. Its circuit contains four controllers, four motors, four independent fault inputs and 64 wires. A logic analyzer can appear as an extra editor instrument; it is not a physical component of the aircraft.
+The saved flagship project links to KernelCAD revision 5. Its circuit contains four controllers, four motors, four independent fault inputs and 64 wires. Oscilloscope and logic-analyzer functions are universal Live Lab tools. They are not physical components of the aircraft.
 
 ## What the artifacts establish
 
@@ -92,7 +95,7 @@ The remaining work is concrete:
 - Connect forces and moments to the airframe dynamics, then test arming, command loss, attitude control and individual motor faults.
 - Establish copper-to-model equivalence and a physical assembly/power-on validation record.
 
-Until those gates pass, use **co-design engineering preview** or **four-channel propulsion bench** to describe this example.
+Use **engineering-superintelligence demo** for the complete LabWired workflow and **four-channel propulsion bench** for the verified simulation target. Do not describe this artifact as a flight-ready aircraft or as physical-board equivalence.
 
 ## Files and earlier evidence
 
