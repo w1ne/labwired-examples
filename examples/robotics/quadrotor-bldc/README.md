@@ -12,6 +12,10 @@ external pairs and 652 FC-component/support-ring pairs. The candidate is saved a
 published firmware bench remains a separate electrical target; native electrical
 onboarding is tracked in [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
+## New: focused quadcopter digital-twin demonstration (13 November 2026)
+
+[Watch the readable 65-second LabWired film](media/labwired-quadrotor-focused-demo.mp4). This eight-shot cut spends more time on the 3D aircraft, native PCB review, four running motor controllers and actual quadrotor oscilloscope/logic-analyzer waveforms. It then shows the injected motor-driver fault. [Rendering evidence, frames and source attribution](media/focused-video-README.md). This is four-channel motor-bench validation, not flight validation.
+
 ## Engineering-superintelligence demonstration
 
 [Watch the 44-second flagship video](media/labwired-engineering-superintelligence-quadrotor.mp4). It connects editable CAD, native PCB evidence, universal instruments, four compiled firmware controllers, deterministic motor plants, fault injection and selective shutdown in one sequence.

@@ -1,3 +1,7 @@
+## Current focused quadrotor film
+
+[Watch 65-second cut](labwired-quadrotor-focused-demo.mp4) | [source and screenshots](focused-video-README.md). Longer real-runtime scenes, enlarged quadrotor signals and no legacy schematic title. The native ESC source attribution remains in the repository; full flight is not shown.
+
 # Quadrotor engineering-superintelligence demo
 
 [Watch the 44-second flagship MP4](labwired-engineering-superintelligence-quadrotor.mp4). H.264, 1600 × 900, 30 fps, no audio. [Exact provenance](engineering-superintelligence-provenance.json) records every input checksum, live project hash, verification boundary, scene cut and rendering tool version.
