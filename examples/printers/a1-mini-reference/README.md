@@ -15,7 +15,7 @@ This promotional reference demonstrates a recognisable desktop 3D-printer workfl
 - [`a1-mini-labwired-promo-20261113.mp4`](media/a1-mini-labwired-promo-20261113.mp4)
 - [`a1-mini-labwired-promo-cover-20261113.jpg`](media/a1-mini-labwired-promo-cover-20261113.jpg)
 
-Video properties: 30 seconds, 1280×720, 24 fps, H.264 video, AAC stereo audio. The soundtrack and motion graphics are original. The machine, circuit and PCB images come from the associated LabWired/KernelCAD reference project.
+Video properties: 30 seconds, 1280×720, 24 fps, H.264 video, AAC stereo audio. The soundtrack and motion graphics are original. The mechanics section uses frame-by-frame captures of the saved KernelCAD X/Y/Z/E animation; the circuit and PCB images come from the associated LabWired project.
 
 ## Live projects
 
