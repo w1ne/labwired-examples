@@ -1,0 +1,84 @@
+{
+  "acceptance_status": "passed",
+  "context": "Development preview · Four STM32 controllers with behavioral motor models",
+  "title": "LabWired — universal instruments and motor fault",
+  "accepted_app_head": "3cc33f2c1da8d01e0d8a52053d909c114f72e280",
+  "native_wasm_sha256": "3a60b6e63146c53e2b63dbb10d6f62fcec31d83a97b0368b5adf589e1190e241",
+  "native_audit_sha256": "4faa170dd14f8373068ba078189ad204bc9061cd046564c6507e3a82414a69a1",
+  "paused_ui_audit_sha256": "37e9f368939d765e3c2ea9b81584c84ac3e4c23b1c1f432d9d10c4c502243c46",
+  "design_shots": "Excluded: encoded-share design workflow blocked by loading lab veil. No CAD/PCB footage or claim.",
+  "editing": "Original speed, straight cuts, complete actual app viewport. No frozen frames, interpolation, generated signals or audio.",
+  "frame_verification": {
+    "method": "Actual decoded frames from accepted R4-02 WebM, PTS in seconds. Wall-clock marks used only to locate candidate windows.",
+    "contact_sheet_sha256": "cbb1aa8f9041e5290766ed7681d382d9c1d89802fc7a585773e92566067cc054",
+    "gate_fault_contact_sha256": "c4277f7e03b0b6e60e5a6cb399432a0e5dac0ff3101d495e6ab78ab8a775c431",
+    "observed_pts_s": [
+      96.8,
+      99.2,
+      101.2,
+      109.4,
+      111.8,
+      134,
+      136,
+      208,
+      210,
+      214,
+      218,
+      220,
+      222,
+      252
+    ],
+    "excluded_blank_rearm_interval_pts_s": 125
+  },
+  "clips": [
+    {
+      "start_s": 96.4,
+      "duration_s": 3,
+      "caption": "Universal oscilloscope + logic analyzer",
+      "file": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/page@ee39a68573cadcb213909687ae5758b2.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    },
+    {
+      "start_s": 99.2,
+      "duration_s": 6,
+      "caption": "Switch controllers. Firmware keeps running.",
+      "file": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/page@ee39a68573cadcb213909687ae5758b2.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    },
+    {
+      "start_s": 109.4,
+      "duration_s": 6,
+      "caption": "Scope and analyzer. Independent signal sources.",
+      "file": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/page@ee39a68573cadcb213909687ae5758b2.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    },
+    {
+      "start_s": 134,
+      "duration_s": 3,
+      "caption": "Native PWM and high-impedance gate states.",
+      "file": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/page@ee39a68573cadcb213909687ae5758b2.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    },
+    {
+      "start_s": 206.4,
+      "duration_s": 8,
+      "caption": "Assert M1 fault. Watch the gates disable.",
+      "file": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/page@ee39a68573cadcb213909687ae5758b2.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    },
+    {
+      "start_s": 220,
+      "duration_s": 4,
+      "caption": "Current and speed settle after shutdown.",
+      "file": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/page@ee39a68573cadcb213909687ae5758b2.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    },
+    {
+      "start_s": 250.52,
+      "duration_s": 4,
+      "caption": "M1 stopped. M2–M4 running.",
+      "file": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/page@ee39a68573cadcb213909687ae5758b2.webm",
+      "sha256": "cbdf0a639b02d5e769be5038e97a0978de8fa7465bdd9613a81e16eba54d0a35"
+    }
+  ]
+}

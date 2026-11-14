@@ -46,6 +46,16 @@ The [75-second engineering source cut](media/quadrotor-engineering-preview.mp4) 
 
 The saved flagship project links to KernelCAD revision 5. Its circuit contains four controllers, four motors, four independent fault inputs and 64 wires. Oscilloscope and logic-analyzer functions are universal Live Lab tools. They are not physical components of the aircraft.
 
+## Five-controller flight candidate, 13 November 2026
+
+The [flight circuit](labwired/five-controller-flight-circuit.json) connects five STM32L476 firmware instances: one flight controller, four command-driven ESCs, four BLDC motor models, four fault inputs, a BMI270 model, a universal oscilloscope, and a universal logic analyzer. Its 16 parts and 78 wires include four FC command nets and four ESC health nets. [The project manifest](labwired/five-controller-flight-project.json) binds each exact source to its controller.
+
+All five sources compiled on the hosted STM32L476 profile. The four ESCs retain the reviewed Hall-lock predicate, including the 1–20 control-tick period bound, and emit the exact existing `ROTOR n HALL LOCKED` requirements. [The compilation receipt](labwired/evidence/20261113-production/five-controller-compilation.json) identifies the sources and ELF artifacts. Compilation does not establish flight behavior.
+
+The corrected design is saved in the original project, with its original PCB attachment and CAD revision 5. The source approval gate removal is merged in core PR1852. The body/rotor receiver is merged in KernelCAD PR139. The app integration, unchanged-budget hosted verification, production browser acceptance, and final 40–45 second video remain pending. The current public revision and the older videos below are historical bench evidence.
+
+The flight runtime uses observed native motor RPM and clocks to advance a bounded body model and feed six IMU channels back to the compiled FC. Its planned acceptance includes takeoff, hover, commanded attitude changes, recovery, pause retention, and an injected fault followed by all-ESC disarm. The FC's `SAFE LANDING VERIFIED` text checks its estimated altitude; it does not establish a controlled or safe landing of physical hardware.
+
 ## What the artifacts establish
 
 | Artifact | Current scope | Evidence |

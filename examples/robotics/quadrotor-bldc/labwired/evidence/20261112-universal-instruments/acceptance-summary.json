@@ -1,0 +1,802 @@
+{
+  "status": "passed_four_controller_behavioral_preview",
+  "nativeChecksPassed": 17,
+  "appHead": "3cc33f2c1da8d01e0d8a52053d909c114f72e280",
+  "nativeReportSha256": "4faa170dd14f8373068ba078189ad204bc9061cd046564c6507e3a82414a69a1",
+  "uiReportSha256": "37e9f368939d765e3c2ea9b81584c84ac3e4c23b1c1f432d9d10c4c502243c46",
+  "gateWindows": {
+    "native_gate_pair_a": {
+      "interiorPeriods": 617,
+      "periodCycles": 200,
+      "periodNs": 50000,
+      "violations": 0,
+      "overlapSpans": 0
+    },
+    "native_gate_pair_b": {
+      "interiorPeriods": 321,
+      "periodCycles": 200,
+      "periodNs": 50000,
+      "violations": 0,
+      "overlapSpans": 0
+    },
+    "native_gate_pair_c": {
+      "interiorPeriods": 464,
+      "periodCycles": 200,
+      "periodNs": 50000,
+      "violations": 0,
+      "overlapSpans": 0
+    }
+  },
+  "fault": {
+    "latchedAfterRelease": true,
+    "coastConfirmedStateObserved": true,
+    "otherControllers": [
+      {
+        "chip": "ctrl2",
+        "samples": 74,
+        "controlStateCounts": {
+          "inverter": 74
+        },
+        "remainedInverterInEveryObservation": true,
+        "continued": true
+      },
+      {
+        "chip": "ctrl3",
+        "samples": 74,
+        "controlStateCounts": {
+          "inverter": 74
+        },
+        "remainedInverterInEveryObservation": true,
+        "continued": true
+      },
+      {
+        "chip": "ctrl4",
+        "samples": 74,
+        "controlStateCounts": {
+          "inverter": 74
+        },
+        "remainedInverterInEveryObservation": true,
+        "continued": true
+      }
+    ],
+    "plant": {
+      "offSnapshots": 72,
+      "firstCycle": 29800000,
+      "lastCycle": 36800000,
+      "firstSpeedRpm": 367.2786948483152,
+      "lastSpeedRpm": 5.805788980187616e-21,
+      "uniqueSpeeds": 71,
+      "uniquePositions": 28,
+      "observationsAfterFirstOff": 72,
+      "controlStateCountsAfterFirstOff": {
+        "off:external-enable": 72
+      },
+      "latestControlState": "off:external-enable",
+      "remainedOffInEveryObservation": true
+    }
+  },
+  "pausedNativeUnitsAndHorizons": [
+    {
+      "owner": "ctrl1",
+      "channel": "motor.rotor1.current_a",
+      "unit": "A",
+      "ownKnownUntilNs": 7299953500,
+      "cpuTimeNs": 7300000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    },
+    {
+      "owner": "ctrl1",
+      "channel": "motor.rotor1.speed_rpm",
+      "unit": "rpm",
+      "ownKnownUntilNs": 7299953500,
+      "cpuTimeNs": 7300000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    },
+    {
+      "owner": "ctrl2",
+      "channel": "motor.rotor2.current_a",
+      "unit": "A",
+      "ownKnownUntilNs": 7274953500,
+      "cpuTimeNs": 7275000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    },
+    {
+      "owner": "ctrl2",
+      "channel": "motor.rotor2.speed_rpm",
+      "unit": "rpm",
+      "ownKnownUntilNs": 7274953500,
+      "cpuTimeNs": 7275000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    },
+    {
+      "owner": "ctrl3",
+      "channel": "motor.rotor3.current_a",
+      "unit": "A",
+      "ownKnownUntilNs": 7274953500,
+      "cpuTimeNs": 7275000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    },
+    {
+      "owner": "ctrl3",
+      "channel": "motor.rotor3.speed_rpm",
+      "unit": "rpm",
+      "ownKnownUntilNs": 7274953500,
+      "cpuTimeNs": 7275000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    },
+    {
+      "owner": "ctrl4",
+      "channel": "motor.rotor4.current_a",
+      "unit": "A",
+      "ownKnownUntilNs": 7274953500,
+      "cpuTimeNs": 7275000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    },
+    {
+      "owner": "ctrl4",
+      "channel": "motor.rotor4.speed_rpm",
+      "unit": "rpm",
+      "ownKnownUntilNs": 7274953500,
+      "cpuTimeNs": 7275000000,
+      "normalCatalogArgs": [
+        0,
+        1
+      ]
+    }
+  ],
+  "limits": [
+    "Four-controller behavioral bench; no physical-board or flight validation claim.",
+    "Three gate-pair windows are separate four-lane captures.",
+    "Unstamped development engine; merged/deployed/public-project status is separate."
+  ],
+  "scope": "Actual LabWired development preview: four STM32 firmware controllers with behavioral motor models",
+  "nativeAcceptanceChecks": [
+    {
+      "check": "four_exact_compile_source_witnesses",
+      "status": "pass"
+    },
+    {
+      "check": "authenticated_source_and_elf_provenance",
+      "status": "pass"
+    },
+    {
+      "check": "four_exact_runtime_images_no_restart_or_compile",
+      "status": "pass"
+    },
+    {
+      "check": "actual_browser_wasm_identity",
+      "status": "pass"
+    },
+    {
+      "check": "prepared_four_controller_clocks",
+      "status": "pass"
+    },
+    {
+      "check": "queried_effective_clock_for_instrument_owners",
+      "status": "pass"
+    },
+    {
+      "check": "four_firmware_hall_lock_markers",
+      "status": "pass"
+    },
+    {
+      "check": "native_gate_pair_a",
+      "status": "pass"
+    },
+    {
+      "check": "native_gate_pair_b",
+      "status": "pass"
+    },
+    {
+      "check": "native_gate_pair_c",
+      "status": "pass"
+    },
+    {
+      "check": "scope_owner_switch",
+      "status": "pass"
+    },
+    {
+      "check": "logic_owner_switch",
+      "status": "pass"
+    },
+    {
+      "check": "native_live_numeric_records_and_retention",
+      "status": "pass"
+    },
+    {
+      "check": "paused_native_cycle_to_ns",
+      "status": "pass"
+    },
+    {
+      "check": "native_fault_input_then_enable_low",
+      "status": "pass"
+    },
+    {
+      "check": "isolated_fault_and_coast",
+      "status": "pass"
+    },
+    {
+      "check": "completed_browser_run",
+      "status": "pass"
+    }
+  ],
+  "firmwareSourceAndImageIdentities": [
+    {
+      "chip": "ctrl1",
+      "sourceSha256": "36256da7e53f31dd6d50bb914a272a53e90ddbba566a30bf915fec47f5fc6150",
+      "sourceBytes": 6371,
+      "firmwareRef": "sha256:49297c048f21c43973aad9336d6a00eeea84c4e9643b772cf7e20baf95979620",
+      "compileSuccess": true,
+      "runnable": true,
+      "verificationStatus": "not_run",
+      "matches": true
+    },
+    {
+      "chip": "ctrl2",
+      "sourceSha256": "09774243e8025a667d8d8ea0c6b9b81f88fe5c1c341d60a344c18400dbff8d6e",
+      "sourceBytes": 6371,
+      "firmwareRef": "sha256:f5bfb5b2b622269f09867548983cc4f3a6bdc65cadb1e82c2fe102f7f1eddddd",
+      "compileSuccess": true,
+      "runnable": true,
+      "verificationStatus": "not_run",
+      "matches": true
+    },
+    {
+      "chip": "ctrl3",
+      "sourceSha256": "12bff38565d14c14052042fb7eb3995665ebed63edcd84d3909de64399b386c5",
+      "sourceBytes": 6371,
+      "firmwareRef": "sha256:cdf344fdf419bf446dd1c7d19798ca7b913d018079f447de1f96027edd118203",
+      "compileSuccess": true,
+      "runnable": true,
+      "verificationStatus": "not_run",
+      "matches": true
+    },
+    {
+      "chip": "ctrl4",
+      "sourceSha256": "b97a0e22d27e7384176dafadc473688eafc2e142d985effa93bdf813807dcfdc",
+      "sourceBytes": 6371,
+      "firmwareRef": "sha256:e045f736ccad5b821b9c1cdb031ac5b3a7648ddbdd28446e32e863d8af909154",
+      "compileSuccess": true,
+      "runnable": true,
+      "verificationStatus": "not_run",
+      "matches": true
+    }
+  ],
+  "browserEngine": {
+    "bytes": 12536920,
+    "sha256": "3a60b6e63146c53e2b63dbb10d6f62fcec31d83a97b0368b5adf589e1190e241"
+  },
+  "coreBase": "b7089ceefa4c35193657b0ea9cd8f6e84f77535a",
+  "corePatchSha256": "42fe26ec1a1abc460a3b079a085954f254efb00a6bd84a34ed51dcafe1f36dfa",
+  "frontendReceiptSha256": "450317b8b4590a275936f0e3fd029866aa3b36bf189b6373791bf47b0adabea7",
+  "preparedControllerClocks": [
+    {
+      "chip": "ctrl1",
+      "matches": true,
+      "systemCpuHz": 4000000,
+      "chipDefaultCpuHz": 80000000,
+      "motorClocksHz": [
+        4000000
+      ]
+    },
+    {
+      "chip": "ctrl2",
+      "matches": true,
+      "systemCpuHz": 4000000,
+      "chipDefaultCpuHz": 80000000,
+      "motorClocksHz": [
+        4000000
+      ]
+    },
+    {
+      "chip": "ctrl3",
+      "matches": true,
+      "systemCpuHz": 4000000,
+      "chipDefaultCpuHz": 80000000,
+      "motorClocksHz": [
+        4000000
+      ]
+    },
+    {
+      "chip": "ctrl4",
+      "matches": true,
+      "systemCpuHz": 4000000,
+      "chipDefaultCpuHz": 80000000,
+      "motorClocksHz": [
+        4000000
+      ]
+    }
+  ],
+  "queriedOwnerClocks": [
+    [
+      "ctrl1",
+      4000000
+    ],
+    [
+      "ctrl2",
+      4000000
+    ]
+  ],
+  "runtimeIdentity": [
+    {
+      "phase": "tools-added-after-upload",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "tools-reopened",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "mixed-healthy",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "owner-switched",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "logic-owner-switched",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "gate-phase-b",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "gate-phase-c",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "gate-phase-a",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "paused-clock-first",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "paused-clock-and-retention",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    },
+    {
+      "phase": "mixed-fault",
+      "initCount": 4,
+      "owners": [
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "ctrl4"
+      ],
+      "editorSourceReplaced": {
+        "ctrl1": false,
+        "ctrl2": false,
+        "ctrl3": false,
+        "ctrl4": false
+      },
+      "compileResponses": 0,
+      "compileRequests": 0,
+      "matches": true
+    }
+  ],
+  "pausedNativeToUiReadouts": [
+    {
+      "channel": "CH0",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpioa",
+        8
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": "1",
+      "nativeStateAtHorizon": "1",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": {
+        "ch": 0,
+        "cycle": 29199960,
+        "state": "1",
+        "ordinal": 27280
+      },
+      "badgeText": "1",
+      "summaryLevelText": "HIGH",
+      "renderedFourState": true,
+      "renderedHighZRegions": 0
+    },
+    {
+      "channel": "CH1",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpiob",
+        13
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": null,
+      "nativeStateAtHorizon": "z",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": {
+        "ch": 2,
+        "cycle": 29193078,
+        "state": "z",
+        "ordinal": 27232
+      },
+      "badgeText": "Z",
+      "summaryLevelText": "Z",
+      "renderedFourState": true,
+      "renderedHighZRegions": 1
+    },
+    {
+      "channel": "CH2",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpiob",
+        7
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": "0",
+      "nativeStateAtHorizon": "0",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": null,
+      "badgeText": "0",
+      "summaryLevelText": "LOW",
+      "renderedFourState": true,
+      "renderedHighZRegions": 0
+    },
+    {
+      "channel": "CH3",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpiob",
+        0
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": "1",
+      "nativeStateAtHorizon": "1",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": null,
+      "badgeText": "1",
+      "summaryLevelText": "HIGH",
+      "renderedFourState": true,
+      "renderedHighZRegions": 0
+    }
+  ],
+  "readoutRegressionValidation": {
+    "focusedPassed": 47,
+    "newRegressions": 7,
+    "normalValidationExitCodes": {
+      "focused": 0,
+      "lint": 0,
+      "type-app": 0,
+      "type-tests": 0
+    }
+  },
+  "freshFaultNumericCoverage": [
+    {
+      "phase": "mixed-fault",
+      "worker": 3,
+      "chip": "ctrl1",
+      "sentAtMs": 1794511631554,
+      "wallMs": 1794511631607,
+      "requestCursor": 749718,
+      "requestLimit": 2048,
+      "epoch": "numeric-1",
+      "oldestCursor": 730498,
+      "nextCursor": 750498,
+      "readerMissed": 0,
+      "evicted": 730498,
+      "omitted": 0,
+      "resetRequired": false,
+      "returned": 780,
+      "coldReadMissingPrehistory": false,
+      "forwardReaderLoss": false,
+      "name": "motor.rotor1.speed_rpm",
+      "unit": "rpm",
+      "valid": true,
+      "knownFromNs": 7357250750,
+      "knownUntilNs": 9099776000,
+      "invalidReason": null,
+      "numericEvidenceKind": "native_live_capture",
+      "returnedForChannel": 390,
+      "retainedHistoricalPointsInReply": 390,
+      "firstPointTimeNs": 9000192000,
+      "lastPointTimeNs": 9099776000,
+      "observedFromNsAfterBoundary": 9075200000,
+      "observedUntilNsAfterBoundary": 9099776000,
+      "observationsAfterBoundary": 97
+    },
+    {
+      "phase": "mixed-fault",
+      "worker": 3,
+      "chip": "ctrl1",
+      "sentAtMs": 1794511631554,
+      "wallMs": 1794511631607,
+      "requestCursor": 749718,
+      "requestLimit": 2048,
+      "epoch": "numeric-1",
+      "oldestCursor": 730498,
+      "nextCursor": 750498,
+      "readerMissed": 0,
+      "evicted": 730498,
+      "omitted": 0,
+      "resetRequired": false,
+      "returned": 780,
+      "coldReadMissingPrehistory": false,
+      "forwardReaderLoss": false,
+      "name": "motor.rotor1.current_a",
+      "unit": "A",
+      "valid": true,
+      "knownFromNs": 7357250750,
+      "knownUntilNs": 9099776000,
+      "invalidReason": null,
+      "numericEvidenceKind": "native_live_capture",
+      "returnedForChannel": 390,
+      "retainedHistoricalPointsInReply": 390,
+      "firstPointTimeNs": 9000192000,
+      "lastPointTimeNs": 9099776000,
+      "observedFromNsAfterBoundary": 9075200000,
+      "observedUntilNsAfterBoundary": 9099776000,
+      "observationsAfterBoundary": 97
+    },
+    {
+      "phase": "mixed-fault",
+      "worker": 3,
+      "chip": "ctrl1",
+      "sentAtMs": 1794511632239,
+      "wallMs": 1794511632447,
+      "requestCursor": 750498,
+      "requestLimit": 2048,
+      "epoch": "numeric-1",
+      "oldestCursor": 731280,
+      "nextCursor": 751280,
+      "readerMissed": 0,
+      "evicted": 731280,
+      "omitted": 0,
+      "resetRequired": false,
+      "returned": 782,
+      "coldReadMissingPrehistory": false,
+      "forwardReaderLoss": false,
+      "name": "motor.rotor1.speed_rpm",
+      "unit": "rpm",
+      "valid": true,
+      "knownFromNs": 7365166500,
+      "knownUntilNs": 9199872000,
+      "invalidReason": null,
+      "numericEvidenceKind": "native_live_capture",
+      "returnedForChannel": 391,
+      "retainedHistoricalPointsInReply": 391,
+      "firstPointTimeNs": 9100032000,
+      "lastPointTimeNs": 9199872000,
+      "observedFromNsAfterBoundary": 9100032000,
+      "observedUntilNsAfterBoundary": 9199872000,
+      "observationsAfterBoundary": 391
+    },
+    {
+      "phase": "mixed-fault",
+      "worker": 3,
+      "chip": "ctrl1",
+      "sentAtMs": 1794511632239,
+      "wallMs": 1794511632447,
+      "requestCursor": 750498,
+      "requestLimit": 2048,
+      "epoch": "numeric-1",
+      "oldestCursor": 731280,
+      "nextCursor": 751280,
+      "readerMissed": 0,
+      "evicted": 731280,
+      "omitted": 0,
+      "resetRequired": false,
+      "returned": 782,
+      "coldReadMissingPrehistory": false,
+      "forwardReaderLoss": false,
+      "name": "motor.rotor1.current_a",
+      "unit": "A",
+      "valid": true,
+      "knownFromNs": 7365166500,
+      "knownUntilNs": 9199872000,
+      "invalidReason": null,
+      "numericEvidenceKind": "native_live_capture",
+      "returnedForChannel": 391,
+      "retainedHistoricalPointsInReply": 391,
+      "firstPointTimeNs": 9100032000,
+      "lastPointTimeNs": 9199872000,
+      "observedFromNsAfterBoundary": 9100032000,
+      "observedUntilNsAfterBoundary": 9199872000,
+      "observationsAfterBoundary": 391
+    }
+  ],
+  "replay": [
+    "python3 tools/audit-native-acceptance-live.py capture --expected-wasm-sha256 3a60b6e63146c53e2b63dbb10d6f62fcec31d83a97b0368b5adf589e1190e241 --output replay-native-audit.json",
+    "python3 tools/audit-paused-logic-readouts.py capture --expected-wasm-sha256 3a60b6e63146c53e2b63dbb10d6f62fcec31d83a97b0368b5adf589e1190e241 --output replay-ui-audit.json"
+  ],
+  "replayNote": "Run from the extracted package root. Replay outputs are separate; keep the packaged original receipts and reports intact.",
+  "publicationBoundary": "This package proves the recorded development preview. It does not assert a clean merged core commit, production deployment, public project revision update, physical-board validation, or flight validation."
+}

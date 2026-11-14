@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-12T11:44:50.775924+00:00",
+  "project": "DyJ405zg",
+  "revision": 5,
+  "url": "https://app.kernelcad.com/p/DyJ405zg?version=5",
+  "source_commit": "3b2f2a69865935ab0492228521d96a06543a9385",
+  "source_path": "examples/robotics/quadrotor-bldc/cad/drone.kcad.ts",
+  "source_sha256": "3585935492e7193de4b474eb265ff3b4b89f8275eb1d56294c5b36088e775dd4",
+  "saved_source_sha256": "516b41ddad80c5068960a7701013ababfb8a084999ca29411cacbc617baf943a",
+  "server_build": "0.1.0+14afff5828c7@2026-11-12T11:39:22.972Z",
+  "project_saved": true,
+  "mesh_ready": true,
+  "viewer_painted": false,
+  "assets": {
+    "inputs/207a419c5680.stl": {
+      "format": "stl",
+      "sha256": "207a419c56805f07a88f93ede27a62328ee9709017df047634bc28df141a690d",
+      "mediaType": "model/stl",
+      "byteLength": 2389384
+    },
+    "inputs/297c5f78a471.stl": {
+      "format": "stl",
+      "sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+      "mediaType": "model/stl",
+      "byteLength": 2803684
+    },
+    "inputs/1b01cf10fb44.step": {
+      "format": "step",
+      "sha256": "1b01cf10fb440f11400bd72386fb596af89b6235284e05fa21d0124c86725ad8",
+      "mediaType": "model/step",
+      "byteLength": 92441
+    },
+    "inputs/1c458d4c9d79.step": {
+      "format": "step",
+      "sha256": "1c458d4c9d7952e0114b5b1b6516862aef2434b052549cbaa9b86518ae11cc4d",
+      "mediaType": "model/step",
+      "byteLength": 98850
+    },
+    "inputs/28074c26e7a6.step": {
+      "format": "step",
+      "sha256": "28074c26e7a674f75a5c16eab4f30821e275c0c4f9cc434ced0edcbd96dc445a",
+      "mediaType": "model/step",
+      "byteLength": 398354
+    },
+    "inputs/47538aaa7bba.step": {
+      "format": "step",
+      "sha256": "47538aaa7bba939307ca73825236777609665b951f54175ebd48d3ccbad275d5",
+      "mediaType": "model/step",
+      "byteLength": 430839
+    },
+    "inputs/709b3642fbc3.step": {
+      "format": "step",
+      "sha256": "709b3642fbc3c9ace2fdcb6083f23543451abcfbbbeb1cd7baa2cbc33958c4e6",
+      "mediaType": "model/step",
+      "byteLength": 48708
+    },
+    "inputs/a5be2430df75.step": {
+      "format": "step",
+      "sha256": "a5be2430df7569f7956a9cc378aaae639abc868d8af577f2e275dd320ff7b405",
+      "mediaType": "model/step",
+      "byteLength": 949810
+    },
+    "inputs/a75bb2b867d1.step": {
+      "format": "step",
+      "sha256": "a75bb2b867d196ddb3a6e04b7dac1512d3a39ada7504064446ab4870f4e27618",
+      "mediaType": "model/step",
+      "byteLength": 5900
+    },
+    "inputs/d11cf26c7efa.step": {
+      "format": "step",
+      "sha256": "d11cf26c7efadbd8619560f5080e52968a60fd9ce4434a31b8cc8a0d6156e8c1",
+      "mediaType": "model/step",
+      "byteLength": 396351
+    },
+    "inputs/eaa66a416936.step": {
+      "format": "step",
+      "sha256": "eaa66a41693627d9154bdaeb6282bcb17a4108f0f15fe9cfd97d4fe471597e69",
+      "mediaType": "model/step",
+      "byteLength": 168139
+    },
+    "inputs/ff99e5caa605.step": {
+      "format": "step",
+      "sha256": "ff99e5caa605ba44f68af114b3baa02c94a01014ccbf091a401368489392b925",
+      "mediaType": "model/step",
+      "byteLength": 92781
+    }
+  },
+  "build": {
+    "ok": true,
+    "feature_count": 146,
+    "part_count": 38,
+    "diagnostics": [],
+    "mechanism": {
+      "verdict": "real",
+      "maxLevel": "ok",
+      "statement": "Motion checked: 13 poses across 4 joints (each joint at its limits), animation within limits on 4 joints, all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+      "checked": [
+        "13 poses across 4 joints (each joint at its limits)",
+        "animation within limits on 4 joints",
+        "all mates satisfied",
+        "no collisions",
+        "fastened parts stay rigid"
+      ],
+      "skipped": [
+        "gravity hold and drop-on-release were not checked"
+      ],
+      "failures": []
+    }
+  },
+  "full_design_review": {
+    "ok": false,
+    "attempts": [
+      {
+        "id": "01",
+        "ok": false,
+        "functional": false,
+        "quality_ok": false,
+        "diagnostic_count": 90,
+        "review_fact_codes": {
+          "assembly.joint-topology.unsupported-axis": 8,
+          "assembly.connectivity.assumed-root": 2,
+          "assembly.mechanical.part-disconnected": 2,
+          "assembly.pose-envelope.connector-unresolved": 8,
+          "assembly.geometry.floating-body": 1,
+          "assembly.visual.review-required": 1
+        },
+        "returned_review_fact_count": 22,
+        "diagnostic_count_scope": "Total reported by the service; only returned review facts are classified below."
+      }
+    ]
+  },
+  "scope": "Saved co-design engineering preview. Full physical assembly, strength, thermal behavior, native firmware execution and flight acceptance are not established. The mesh-ready readback alone does not prove browser rendering.",
+  "raw_receipt_sha256": {
+    "studio-readback.json": "2000df4156454a4ef1d6a61228f4572236ee41bdad81ad0c225aaab45f49654d",
+    "hosted-evaluate.json": "ed9ae7ca6b3ea3dbf91f0cd9642fec8651ed1b2e03e31309fefa971ac7683938",
+    "hosted-design-loop.json": "7363e5617f2e7780bf512edd3c07fe6e06d336ae6a28ca5ecc13fc829964f2a0"
+  },
+  "source_transport": {
+    "canonical_commit": "3b2f2a69865935ab0492228521d96a06543a9385",
+    "canonical_path": "examples/robotics/quadrotor-bldc/cad/drone.kcad.ts",
+    "canonical_source_sha256": "3585935492e7193de4b474eb265ff3b4b89f8275eb1d56294c5b36088e775dd4",
+    "local_receipt_source_sha256": "3e403a0dbacc0c11686c9254b363c529e97d31888a7b8572eb4a5ee3e9e271b5",
+    "saved_studio_source_sha256": "516b41ddad80c5068960a7701013ababfb8a084999ca29411cacbc617baf943a",
+    "local_receipt_transform": "Exactly one extra trailing LF byte; no URL or geometry change. Local artifact is not byte-identical canonical source.",
+    "local_receipt_equals_canonical_plus_one_lf": true,
+    "saved_source_transform": "Only 15 literal import URLs are replaced with 12 content-addressed hosted input paths. All other source bytes are identical.",
+    "saved_import_count": 15,
+    "canonical_equals_saved_after_import_url_substitution": true,
+    "asset_hashes_source": "studio-save.json assetHashes; get_project readback confirms saved paths",
+    "immutable_inputs": [
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Base-Bot.step",
+        "saved_path": "./inputs/47538aaa7bba.step",
+        "sha256": "47538aaa7bba939307ca73825236777609665b951f54175ebd48d3ccbad275d5"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Cross.step",
+        "saved_path": "./inputs/709b3642fbc3.step",
+        "sha256": "709b3642fbc3c9ace2fdcb6083f23543451abcfbbbeb1cd7baa2cbc33958c4e6"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Base-Top.step",
+        "saved_path": "./inputs/28074c26e7a6.step",
+        "sha256": "28074c26e7a674f75a5c16eab4f30821e275c0c4f9cc434ced0edcbd96dc445a"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-L.step",
+        "saved_path": "./inputs/1b01cf10fb44.step",
+        "sha256": "1b01cf10fb440f11400bd72386fb596af89b6235284e05fa21d0124c86725ad8"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-R.step",
+        "saved_path": "./inputs/ff99e5caa605.step",
+        "sha256": "ff99e5caa605ba44f68af114b3baa02c94a01014ccbf091a401368489392b925"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step",
+        "saved_path": "./inputs/eaa66a416936.step",
+        "sha256": "eaa66a41693627d9154bdaeb6282bcb17a4108f0f15fe9cfd97d4fe471597e69"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-M3-F-F-20-OD5.step",
+        "saved_path": "./inputs/a75bb2b867d1.step",
+        "sha256": "a75bb2b867d196ddb3a6e04b7dac1512d3a39ada7504064446ab4870f4e27618"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Top.step",
+        "saved_path": "./inputs/d11cf26c7efa.step",
+        "sha256": "d11cf26c7efadbd8619560f5080e52968a60fd9ce4434a31b8cc8a0d6156e8c1"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/w1ne/labwired-examples/c108ed0/examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/esc-board-preview.step",
+        "saved_path": "./inputs/a5be2430df75.step",
+        "sha256": "a5be2430df7569f7956a9cc378aaae639abc868d8af577f2e275dd320ff7b405"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/w1ne/labwired-examples/574470d/examples/robotics/quadrotor-bldc/cad/inputs/esc-population-native.stl",
+        "saved_path": "./inputs/297c5f78a471.stl",
+        "sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/w1ne/labwired-examples/2c9bef1efcfa6ea9ec8008565b50d32267d782ea/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-substrate.step",
+        "saved_path": "./inputs/1c458d4c9d79.step",
+        "sha256": "1c458d4c9d7952e0114b5b1b6516862aef2434b052549cbaa9b86518ae11cc4d"
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/w1ne/labwired-examples/2c9bef1efcfa6ea9ec8008565b50d32267d782ea/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-components.stl",
+        "saved_path": "./inputs/207a419c5680.stl",
+        "sha256": "207a419c56805f07a88f93ede27a62328ee9709017df047634bc28df141a690d"
+      }
+    ]
+  }
+}
