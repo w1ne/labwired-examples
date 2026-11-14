@@ -12,6 +12,12 @@ external pairs and 652 FC-component/support-ring pairs. The candidate is saved a
 published firmware bench remains a separate electrical target; native electrical
 onboarding is tracked in [LabWired PR #3148](https://github.com/w1ne/labwired/pull/3148).
 
+## Five-controller flight integration candidate (14 November 2026)
+
+The [five-controller circuit](labwired/five-controller-flight-circuit.json) adds a compiled STM32L476 flight controller, four command-driven ESCs, four motor plants, individual fault inputs, a BMI270 inertial sensor, and universal mixed-signal instruments. The [source manifest](labwired/five-controller-flight-project.json) pins the five firmware images and [KernelCAD revision 5](https://app.kernelcad.com/p/DyJ405zg?version=5). This candidate is separate from the public four-channel propulsion bench.
+
+The [compilation receipt](labwired/evidence/20261113-production/five-controller-compilation.json) records five successful hosted compiles before the changes in this branch. Source hashes and compiler receipts must be regenerated after any firmware changes. The intended shared runtime consumes measured motor state, integrates bounded six-degree-of-freedom dynamics and feeds IMU values to the flight controller. **It does not establish closed-loop flight proof until a five-firmware runtime trace, behavior oracles, and browser replay pass on the deployed revision.** This candidate does not run native RP2354B or AT32F421 firmware.
+
 ## Latest technical video — native routing edits and mixed-signal fault run (13 November 2026)
 
 [Watch the 32-second quadcopter review](media/labwired-quadcopter-routing-mixed-signal-32s.mp4). The sequence shows actual KiCad-native copper edits, a populated 3D ESC board, synchronized real hosted PWM/Hall/model-current/fault traces, and a separately captured motor digital twin. Five native PCB DRC stages count 12, 9, 6, 3 and 0 open connections, all with zero other configured DRC violations. The real-hosted simulation measures 20 kHz PWM at 60% duty and a 1.95225-ms modeled fault-to-inverter-disable interval.

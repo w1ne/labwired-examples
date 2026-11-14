@@ -1,0 +1,106 @@
+{
+  "schema": "labwired-examples/flight-mcp-evidence/v1",
+  "as_of": "2026-11-14",
+  "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+  "public_revision_id": "75e77f8c09dd904045be67ebcc90348a",
+  "draft_content_hash": "b84409ca3381a22c00c5fe1bd9b493443d9f15ee07c873a055b7dfeffc3e2ab3",
+  "draft_verified_hash": "5438d3179b269f4426f4a1546f465bb14fbc0e4966b7664a206b6708036a4848",
+  "draft_verification_current": false,
+  "hosted_compiles": {
+    "fc": {
+      "firmware_ref": "sha256:24b1988f3710ee907cd5f4a1a295eef2ea63f9ad4a0a4fffa51ad43abbbd04ac",
+      "status": "compiled_runnable_not_flight_verified"
+    },
+    "esc1": {
+      "firmware_ref": "sha256:966a9e11c6b7a8f93ff3c1c69d4a36d133187b45afa4808c019bb692ca5610b4",
+      "status": "compiled_runnable"
+    },
+    "esc2": {
+      "firmware_ref": "sha256:67874768243fd4462f770bec723a948903e992ceb35ede5f37db8e098c648246",
+      "status": "compiled_runnable"
+    },
+    "esc3": {
+      "firmware_ref": "sha256:d960b6a9550850fb183f9adb22979397772c7dd52f0b224676ac6f6c6021cdb9",
+      "status": "compiled_runnable"
+    },
+    "esc4": {
+      "firmware_ref": "sha256:5b777e8e3812a0c712749009edb8f45b1c095481c4721bc724e77074eb102b7c",
+      "status": "compiled_runnable"
+    }
+  },
+  "world_run_prior_to_fc_text_fix": {
+    "saved_content_hash": "5438d3179b269f4426f4a1546f465bb14fbc0e4966b7664a206b6708036a4848",
+    "mcu_count": 5,
+    "imu_init": "FC READY BMI270 ONLINE",
+    "esc1": "FAULT STARTUP; LATCHED OFF",
+    "esc2": "FAULT STARTUP; LATCHED OFF",
+    "esc3": "FAULT STARTUP; LATCHED OFF",
+    "esc4": "FAULT STARTUP; LATCHED OFF",
+    "fc": "FAULT DETECTED - ALL ESC DISARM",
+    "four_hall_lock_requirements_passed": false,
+    "full_flight_verified": false
+  },
+  "known_mcp_bug": {
+    "issue": "https://github.com/w1ne/labwired/issues/3248",
+    "fix_pr": "https://github.com/w1ne/labwired/pull/3249",
+    "observed": "Saved-project verify returned verified:true against four failed ESCs; the returned proof cannot certify this candidate."
+  },
+  "release_gate": "BLOCKED until actual six-DOF closed-loop flight integration and browser replay pass. Motor-control startup and shutdown now pass direct MCP model verification.",
+  "verified_campaigns": [
+    {
+      "name": "five-mcu-normal-motor-startup",
+      "tool": "labwired_verify",
+      "verdict": "model_verified",
+      "mcu_count": 5,
+      "oracle_clauses": 4,
+      "passed_clauses": 4,
+      "observed": [
+        "ROTOR 1 HALL LOCKED",
+        "ROTOR 2 HALL LOCKED",
+        "ROTOR 3 HALL LOCKED",
+        "ROTOR 4 HALL LOCKED",
+        "FC READY BMI270 ONLINE",
+        "FC ARM COMMAND",
+        "FC TAKEOFF COMMAND"
+      ],
+      "not_proved": [
+        "airframe takeoff",
+        "hover",
+        "6DOF forces",
+        "physical ESCs"
+      ]
+    },
+    {
+      "name": "five-mcu-driver-fault",
+      "tool": "labwired_verify",
+      "verdict": "model_verified",
+      "mcu_count": 5,
+      "oracle_clauses": 9,
+      "passed_clauses": 9,
+      "test_diagram": "fault-injection-circuit.json",
+      "test_fc_source": "fc-driver-fault-test-only.c",
+      "injection": {
+        "output": "fc.PC12",
+        "input": "ctrl1.PB7",
+        "at_fc_tick": 15000,
+        "meaning": "ESC1 driver fault active-high"
+      },
+      "observed": [
+        "ROTOR 2 HALL LOCKED",
+        "ROTOR 3 HALL LOCKED",
+        "ROTOR 4 HALL LOCKED",
+        "ESC 1 FAULT DRIVER",
+        "ESC 1 LATCHED OFF",
+        "FC FAULT DETECTED - ALL ESC DISARM",
+        "ESC 2 DISARMED",
+        "ESC 3 DISARMED",
+        "ESC 4 DISARMED"
+      ],
+      "not_asserted": [
+        "ROTOR 1 HALL LOCKED",
+        "body contact",
+        "actual landing"
+      ]
+    }
+  ]
+}
