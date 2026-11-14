@@ -193,19 +193,21 @@ int main(void) {
     if ((SYST_CSR & (1u << 16)) == 0) continue;
     ticks++;
 
-    if (ticks == 1u * TICKS_PER_SECOND) {
-      if ((GPIOC_IDR & 0x0fu) == 0x0fu) text("FC ARM\r\n");
-      else latch_disarm(&failsafe, &failsafe_tick, ticks, "FC ESC NOT READY - ALL ESC DISARM\r\n");
-    }
-    if (ticks == 2u * TICKS_PER_SECOND) text("FC TAKEOFF\r\n");
-    if (ticks == 5u * TICKS_PER_SECOND) text("FC HOVER HOLD\r\n");
-    if (ticks == 8u * TICKS_PER_SECOND) text("FC ROLL COMMAND\r\n");
-    if (ticks == 92u * TICKS_PER_SECOND / 10u) text("FC PITCH COMMAND\r\n");
-    if (ticks == 104u * TICKS_PER_SECOND / 10u) text("FC YAW COMMAND\r\n");
-    if (ticks == 12u * TICKS_PER_SECOND) text("FC ATTITUDE RECOVERY\r\n");
-
+    // Evaluate emergency stop before publishing any arm or maneuver message.
     if ((GPIOC_IDR & (1u << 4)) != 0u)
       latch_disarm(&failsafe, &failsafe_tick, ticks, "FC OPERATOR KILL - ALL ESC DISARM\r\n");
+    if (ticks == 1u * TICKS_PER_SECOND && !failsafe) {
+      if ((GPIOC_IDR & 0x0fu) == 0x0fu) text("FC ARM COMMAND\r\n");
+      else latch_disarm(&failsafe, &failsafe_tick, ticks, "FC ESC NOT READY - ALL ESC DISARM\r\n");
+    }
+    // Command markers are not evidence that the aircraft moved. Suppress
+    // them after a latched failure; only measurement-based markers say VERIFIED.
+    if (ticks == 2u * TICKS_PER_SECOND && !failsafe) text("FC TAKEOFF COMMAND\r\n");
+    if (ticks == 5u * TICKS_PER_SECOND && !failsafe) text("FC HOVER SETPOINT\r\n");
+    if (ticks == 8u * TICKS_PER_SECOND && !failsafe) text("FC ROLL COMMAND\r\n");
+    if (ticks == 92u * TICKS_PER_SECOND / 10u && !failsafe) text("FC PITCH COMMAND\r\n");
+    if (ticks == 104u * TICKS_PER_SECOND / 10u && !failsafe) text("FC YAW COMMAND\r\n");
+    if (ticks == 12u * TICKS_PER_SECOND && !failsafe) text("FC ATTITUDE RECOVERY COMMAND\r\n");
     if (ticks > 25u * TICKS_PER_SECOND / 10u && (GPIOC_IDR & 0x0fu) != 0x0fu) {
       if (++health_bad >= 20)
         latch_disarm(&failsafe, &failsafe_tick, ticks, "FC FAULT DETECTED - ALL ESC DISARM\r\n");
@@ -282,7 +284,7 @@ int main(void) {
         } else {
           recover_good = 0;
         }
-        if (failsafe && !landing_verified && ticks > failsafe_tick + TICKS_PER_SECOND
+        if (failsafe && takeoff_verified && !landing_verified && ticks > failsafe_tick + TICKS_PER_SECOND
             && altitude_mm <= 50) {
           landing_verified = true;
           text("FC ESTIMATED GROUND CONTACT\r\n");

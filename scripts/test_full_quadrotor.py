@@ -72,6 +72,11 @@ class FullQuadrotorCandidate(unittest.TestCase):
         latch = self.fc_source.split('static void latch_disarm(', 1)[1].split('static uint8_t clamp_width', 1)[0]
         self.assertLess(latch.index('GPIOC_ODR &= ~COMMAND_MASK;'), latch.index('text(reason);'))
         self.assertIn('command_high_mask(phase, widths)', self.fc_source)
+        # A scheduled text marker is not proof of movement, and a previously
+        # grounded craft must never report an actual landing after an abort.
+        self.assertIn('if (ticks == 2u * TICKS_PER_SECOND && !failsafe) text("FC TAKEOFF COMMAND', self.fc_source)
+        self.assertIn('if (failsafe && takeoff_verified && !landing_verified', self.fc_source)
+        self.assertNotIn('text("FC TAKEOFF\\r\\n")', self.fc_source)
         self.assertIn('FC ESTIMATED GROUND CONTACT', self.fc_source)
         self.assertNotIn('SAFE LANDING VERIFIED', self.fc_source)
 

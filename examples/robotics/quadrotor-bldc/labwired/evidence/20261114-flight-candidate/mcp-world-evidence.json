@@ -1,0 +1,49 @@
+{
+  "schema": "labwired-examples/flight-mcp-evidence/v1",
+  "as_of": "2026-11-14",
+  "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+  "public_revision_id": "75e77f8c09dd904045be67ebcc90348a",
+  "draft_content_hash": "c74246fe2c9cde496629085997ce389afa3fb79bbe59f152aaa992b90ac39801",
+  "draft_verified_hash": "5438d3179b269f4426f4a1546f465bb14fbc0e4966b7664a206b6708036a4848",
+  "draft_verification_current": false,
+  "hosted_compiles": {
+    "fc": {
+      "firmware_ref": "sha256:24b1988f3710ee907cd5f4a1a295eef2ea63f9ad4a0a4fffa51ad43abbbd04ac",
+      "status": "compiled_runnable_not_flight_verified"
+    },
+    "esc1": {
+      "firmware_ref": "sha256:d58a31e897e1cfb798be214c52068ae73efeeb1f509aa816a1e4914484514505",
+      "status": "compiled_runnable_not_flight_verified"
+    },
+    "esc2": {
+      "firmware_ref": "sha256:65dcb0c9974a0da4ba67f8c2b50ef24fae7df25c3fb6b32380a72973df718485",
+      "status": "compiled_runnable_not_flight_verified"
+    },
+    "esc3": {
+      "firmware_ref": "sha256:fe44e9cd8b645102f5016f11348361c5fd20f2c69df1d47035f568228468328b",
+      "status": "compiled_runnable_not_flight_verified"
+    },
+    "esc4": {
+      "firmware_ref": "sha256:68f7a5e162cd0965b89754b9f3a78dea5b66b7a190e33c356fa833be7c9dbbe9",
+      "status": "compiled_runnable_not_flight_verified"
+    }
+  },
+  "world_run_prior_to_fc_text_fix": {
+    "saved_content_hash": "5438d3179b269f4426f4a1546f465bb14fbc0e4966b7664a206b6708036a4848",
+    "mcu_count": 5,
+    "imu_init": "FC READY BMI270 ONLINE",
+    "esc1": "FAULT STARTUP; LATCHED OFF",
+    "esc2": "FAULT STARTUP; LATCHED OFF",
+    "esc3": "FAULT STARTUP; LATCHED OFF",
+    "esc4": "FAULT STARTUP; LATCHED OFF",
+    "fc": "FAULT DETECTED - ALL ESC DISARM",
+    "four_hall_lock_requirements_passed": false,
+    "full_flight_verified": false
+  },
+  "known_mcp_bug": {
+    "issue": "https://github.com/w1ne/labwired/issues/3248",
+    "fix_pr": "https://github.com/w1ne/labwired/pull/3249",
+    "observed": "Saved-project verify returned verified:true against four failed ESCs; the returned proof cannot certify this candidate."
+  },
+  "release_gate": "BLOCKED until hosted five-controller closed-loop flight and per-MCU oracles pass after world-verifier deployment"
+}
