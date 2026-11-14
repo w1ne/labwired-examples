@@ -40,7 +40,10 @@ class FullQuadrotorCandidate(unittest.TestCase):
         self.assertEqual(parts["fc"]["type"], "nucleo-l476rg")
         self.assertEqual(parts["imu"]["type"], "bmi270")
         self.assertEqual(parts["kill"]["type"], "button-module")
-        self.assertEqual(parts["fc"]["attrs"]["internal_pullups"], ["PB6", "PB7"])
+        self.assertEqual(parts["fc"]["attrs"]["internal_pullups"], "PB6,PB7")
+        # The connected MCP diagram schema requires string-valued attrs.
+        for part in parts.values():
+            self.assertTrue(all(isinstance(value, str) for value in part.get("attrs", {}).values()))
         edges = {(w["from"]["part"], w["from"]["pin"], w["to"]["part"], w["to"]["pin"])
                  for w in self.diagram["wires"]}
         for index in range(1, 5):
