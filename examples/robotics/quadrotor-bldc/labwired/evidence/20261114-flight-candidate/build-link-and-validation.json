@@ -31,9 +31,9 @@
     },
     {
       "source": "firmware/flight/esc1.c",
-      "source_sha256": "57eb2a4f869e117712171a5ec031e67c5e94fd482b11ace6cc13d55f58f2d3e0",
-      "elf_sha256": "a3a5da38b72aa1f6d773eff1353156f5d48f1815f0e56a1b34a1f1028f870298",
-      "elf_bytes": 15768,
+      "source_sha256": "6f8678f53795b6ad71673f4cb30bf4e68fc9685e289a45c38fe90d1bbde63dae",
+      "elf_sha256": "5c0ba1a591bc89cded4a72bc4782a8b39edb3eecf5b371082ca18b1ff03e2119",
+      "elf_bytes": 16188,
       "machine": "ARM Cortex-M4",
       "startup": "LabWired stm32l476/startup.c",
       "linker": "LabWired stm32l476/stm32l476.ld",
@@ -42,9 +42,9 @@
     },
     {
       "source": "firmware/flight/esc2.c",
-      "source_sha256": "55b0dc3488d441092705d1924fe17b59f34d745e4f83ed50f22cc63840983252",
-      "elf_sha256": "034e69efd61d4334890212995b5ef0858d2c71804072d8f4eb514a6c1ae60c6e",
-      "elf_bytes": 15768,
+      "source_sha256": "2989bd639b80f39a6eff70165db3055d0b0ac7edb577cd5928c4dc7e681f35ff",
+      "elf_sha256": "bc499b80f30a3690abe8e5e9ad3de06d6938e889b400c4dc6c7193c3005f73d9",
+      "elf_bytes": 16188,
       "machine": "ARM Cortex-M4",
       "startup": "LabWired stm32l476/startup.c",
       "linker": "LabWired stm32l476/stm32l476.ld",
@@ -53,9 +53,9 @@
     },
     {
       "source": "firmware/flight/esc3.c",
-      "source_sha256": "f7400c7a04eff92076c9aa50469bdd1578545e0fef9d30378a51d11d023f92f6",
-      "elf_sha256": "e55e3b3ab662d99ea48bc8a6cfb469b34d74e984036b5ff577b45b6d0a115bb0",
-      "elf_bytes": 15768,
+      "source_sha256": "36b33f4b5dfed64e65100c5bb92ce97beb0cf4e6df7c7ca2ddab149a648335e7",
+      "elf_sha256": "ee8d412a91648e9267d0a8cd3469151df645fbde718acc91fd92e00740570671",
+      "elf_bytes": 16188,
       "machine": "ARM Cortex-M4",
       "startup": "LabWired stm32l476/startup.c",
       "linker": "LabWired stm32l476/stm32l476.ld",
@@ -64,9 +64,9 @@
     },
     {
       "source": "firmware/flight/esc4.c",
-      "source_sha256": "ed64881e77ae6efbd8af383e4bcc7d68d2fa7c1e81242dd7ea645a82dae6cd60",
-      "elf_sha256": "cb779631697ca1a66b31ebb033a3fae4073e0013f81e7c0b43a4d47aecd44122",
-      "elf_bytes": 15768,
+      "source_sha256": "414fb55f0005bc49f918681432ca2d65f1699da0877eb15f11dcdfadac0b3dfe",
+      "elf_sha256": "e34d08c6cd1e9b36937a8d23154da9bed2ade325d2c36a8772af303bcb6b6c97",
+      "elf_bytes": 16188,
       "machine": "ARM Cortex-M4",
       "startup": "LabWired stm32l476/startup.c",
       "linker": "LabWired stm32l476/stm32l476.ld",
@@ -74,7 +74,7 @@
       "hosted_artifact_ref": null
     }
   ],
-  "source_integrity_tests": 63,
+  "source_integrity_tests": 64,
   "source_integrity_result": "pass",
   "host_command_mask_test": "pass",
   "diagram_validation": {
@@ -91,5 +91,7 @@
   "notes": [
     "Rebuilt all five after the FC failsafe text correction.",
     "Local ELF hashes are independent from hosted firmware_ref hashes; no flight acceptance inferred."
-  ]
+  ],
+  "five_controller_electrical_world_mcp": "model_verified 4/4 normal motor startup, 9/9 driver fault response",
+  "five_controller_closed_loop_flight": "not verified"
 }

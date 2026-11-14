@@ -44,8 +44,8 @@
 #define SYST_CVR REG(0xE000E018)
 #define MOE 0x8000u
 #define CPU_HZ 4000000u
-#define PWM_HZ 20000u
-#define PWM_PERIOD_TICKS (CPU_HZ/PWM_HZ)
+#define PWM_HZ 1000u
+#define PWM_PERIOD_TICKS (CPU_HZ/((3u+1u)*PWM_HZ))
 #define CONTROL_HZ 10000u
 #define COMMAND_FRAME_TICKS 100u
 #define COMMAND_MIN_PERMILLE 180u
@@ -59,7 +59,7 @@ static void stop_inverter(void){TIM1_BDTR&=~MOE;TIM1_CCER=0;}
 static void start_inverter(void){TIM1_BDTR|=MOE;}
 static void fatal(const char*name){stop_inverter();GPIOB_ODR&=~1u;text(PREFIX);text(name);text(PREFIX "LATCHED OFF\r\n");for(;;){__asm__ volatile("nop");}}
 static void commutate(uint32_t hall,uint32_t duty_permille){
- uint32_t duty=(duty_permille*PWM_PERIOD_TICKS)/1000u,low=PWM_PERIOD_TICKS,a=0,b=0,c=0;
+ uint32_t duty=(duty_permille*PWM_PERIOD_TICKS)/1000u,low=PWM_PERIOD_TICKS-1u-duty,a=0,b=0,c=0;
  switch(hall){case 1:b=low;c=duty;break;case 2:a=low;b=duty;break;case 3:a=low;c=duty;break;case 4:a=duty;c=low;break;case 5:a=duty;b=low;break;case 6:b=duty;c=low;break;default:break;}
  TIM1_CCR1=a;TIM1_CCR2=b;TIM1_CCR3=c;TIM1_CCER=comm_table[hall&7u];
 }
@@ -74,15 +74,15 @@ static void init(void){
  GPIOC_MODER&=~0xffffu;GPIOB_ODR=1u;
  USART2_BRR=(CPU_HZ+57600u)/115200u;USART2_CR1=(1u<<0)|(1u<<3);
  SYST_RVR=CPU_HZ/CONTROL_HZ-1u;SYST_CVR=0;SYST_CSR=(1u<<2)|1u;
- TIM1_PSC=0;TIM1_ARR=PWM_PERIOD_TICKS-1u;TIM1_CCR1=0;TIM1_CCR2=0;TIM1_CCR3=0;
- TIM1_CCMR1=(6u<<4)|(6u<<12);TIM1_CCMR2=(6u<<4);TIM1_EGR=1;TIM1_BDTR=PWM_DEAD_TIME_TICKS;TIM1_CR1=1;
+ TIM1_PSC=3;TIM1_ARR=PWM_PERIOD_TICKS-1u;TIM1_CCR1=0;TIM1_CCR2=0;TIM1_CCR3=0;
+ TIM1_CCMR1=(6u<<4)|(1u<<3)|(6u<<12)|(1u<<11);TIM1_CCMR2=(6u<<4)|(1u<<3);TIM1_EGR=1;TIM1_BDTR=0x30;TIM1_CR1=1;
 }
 int main(void){
  init();text(PREFIX "READY command_pwm=PA0\r\n");
  uint32_t old_hall=GPIOC_IDR&7u,old_enc=(GPIOC_IDR>>3)&3u;
  uint32_t edge_t=0,startup_t=0,startup_idx=0,sequence=0,in_band=0,stall_t=0,invalid_t=0;
  uint32_t driver_t=0,overcurrent_t=0,undervoltage_t=0,enc_edges=0;
- uint32_t command_phase=0,command_high=0,command_permille=0,command_age=COMMAND_TIMEOUT_FRAMES;
+ uint32_t command_phase=0,command_high=0,command_permille=0,command_age=COMMAND_TIMEOUT_FRAMES,motor_phase=0;
  bool hall_mode=false,target=false,running=false;
  for(;;){
   if((SYST_CSR&(1u<<16))==0)continue;
@@ -98,12 +98,13 @@ int main(void){
   if(driver_t>=20)fatal("FAULT DRIVER\r\n");if(overcurrent_t>=20)fatal("FAULT OVERCURRENT\r\n");if(undervoltage_t>=20)fatal("FAULT UNDERVOLTAGE\r\n");
   if(command_permille==0){if(running){running=false;stop_inverter();text(PREFIX "DISARMED\r\n");}hall_mode=false;sequence=0;startup_t=0;stall_t=0;continue;}
   if(!running){running=true;start_inverter();text(PREFIX "ARMED\r\n");}
+  if(++motor_phase<20u)continue; motor_phase=0;
   uint32_t hall=c&7u,enc=(c>>3)&3u;if(enc!=old_enc)enc_edges++;old_enc=enc;edge_t++;startup_t++;
   if(hall==0||hall==7){if(++invalid_t>=100)fatal("FAULT HALL\r\n");continue;}invalid_t=0;
   if(hall!=old_hall){int oi=-1,ni=-1;for(int i=0;i<6;i++){if(order[i]==old_hall)oi=i;if(order[i]==hall)ni=i;}
    if(oi>=0&&ni==(oi+1)%6)sequence++;else sequence=0;old_hall=hall;uint32_t period=edge_t;edge_t=0;stall_t=0;if(sequence>=3)hall_mode=true;
    if(hall_mode){commutate(hall,command_permille);in_band=period>=1&&period<=20?in_band+1:0;if(!target&&in_band>=2&&enc_edges>0){target=true;text(PREFIX "HALL LOCKED\r\n");text("ROTOR " STR(ESC_ID) " HALL LOCKED\r\n");}}
-  }else{stall_t++;if(hall_mode&&stall_t>=30)fatal("FAULT STALL\r\n");}
+  }else{stall_t++;if(hall_mode&&stall_t>=20)fatal("FAULT STALL\r\n");}
   if(hall_mode)commutate(hall,command_permille);else{if(startup_t%5==0)commutate(order[(++startup_idx)%6],command_permille);if(startup_t>=5000)fatal("FAULT STARTUP\r\n");}
  }
 }

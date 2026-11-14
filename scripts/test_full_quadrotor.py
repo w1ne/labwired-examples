@@ -64,6 +64,27 @@ class FullQuadrotorCandidate(unittest.TestCase):
             self.assertIn(("fc", a, "imu", b), edges)
         self.assertIn(("fc", "PC4", "kill", "SIG"), edges)
 
+    def test_commanded_esc_pwm_and_hall_cadence_is_not_mislabelled(self):
+        escs = [(QUAD / f"firmware/flight/esc{i}.c").read_text() for i in range(1, 5)]
+        for i, esc in enumerate(escs, start=1):
+            self.assertTrue(esc.startswith(f"#define ESC_ID {i}\n"))
+            self.assertIn("#define CPU_HZ 4000000u", esc)
+            self.assertIn("#define PWM_HZ 1000u", esc)
+            self.assertIn("#define PWM_PERIOD_TICKS (CPU_HZ/((3u+1u)*PWM_HZ))", esc)
+            self.assertIn("TIM1_PSC=3;TIM1_ARR=PWM_PERIOD_TICKS-1u", esc)
+            self.assertIn("TIM1_BDTR=0x30;", esc)
+            self.assertIn("if(++motor_phase<20u)continue; motor_phase=0;", esc)
+            self.assertIn("if(startup_t%5==0)", esc)
+            self.assertIn("period>=1&&period<=20", esc)
+            self.assertNotIn("TIM1_BDTR=MOE|0x30;", esc)
+            self.assertIn("start_inverter()", esc)
+            self.assertIn("stop_inverter()", esc)
+        profile = self.manifest["esc_behavioral_profile"]
+        self.assertEqual(profile["cpu_hz"] // ((profile["timer_prescaler"] + 1) *
+            (profile["timer_auto_reload"] + 1)), profile["inverter_pwm_hz"])
+        self.assertEqual(profile["inverter_pwm_hz"], 1000)
+        self.assertEqual(profile["hall_control_hz"], 500)
+
     def test_failsafe_paths_are_latched_before_logging(self):
         self.assertIn('"FC OPERATOR KILL - ALL ESC DISARM', self.fc_source)
         self.assertIn('"FC IMU LOST - ALL ESC DISARM', self.fc_source)

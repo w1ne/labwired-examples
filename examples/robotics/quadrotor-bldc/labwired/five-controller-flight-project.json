@@ -17,29 +17,29 @@
       "controller": "ctrl1",
       "board": "stm32l476",
       "source": "firmware/flight/esc1.c",
-      "source_sha256": "57eb2a4f869e117712171a5ec031e67c5e94fd482b11ace6cc13d55f58f2d3e0",
-      "source_bytes": 5964
+      "source_sha256": "6f8678f53795b6ad71673f4cb30bf4e68fc9685e289a45c38fe90d1bbde63dae",
+      "source_bytes": 6053
     },
     {
       "controller": "ctrl2",
       "board": "stm32l476",
       "source": "firmware/flight/esc2.c",
-      "source_sha256": "55b0dc3488d441092705d1924fe17b59f34d745e4f83ed50f22cc63840983252",
-      "source_bytes": 5964
+      "source_sha256": "2989bd639b80f39a6eff70165db3055d0b0ac7edb577cd5928c4dc7e681f35ff",
+      "source_bytes": 6053
     },
     {
       "controller": "ctrl3",
       "board": "stm32l476",
       "source": "firmware/flight/esc3.c",
-      "source_sha256": "f7400c7a04eff92076c9aa50469bdd1578545e0fef9d30378a51d11d023f92f6",
-      "source_bytes": 5964
+      "source_sha256": "36b33f4b5dfed64e65100c5bb92ce97beb0cf4e6df7c7ca2ddab149a648335e7",
+      "source_bytes": 6053
     },
     {
       "controller": "ctrl4",
       "board": "stm32l476",
       "source": "firmware/flight/esc4.c",
-      "source_sha256": "ed64881e77ae6efbd8af383e4bcc7d68d2fa7c1e81242dd7ea645a82dae6cd60",
-      "source_bytes": 5964
+      "source_sha256": "414fb55f0005bc49f918681432ca2d65f1699da0877eb15f11dcdfadac0b3dfe",
+      "source_bytes": 6053
     }
   ],
   "diagram": "labwired/five-controller-flight-circuit.json",
@@ -272,5 +272,16 @@
       "PC10",
       "PC11"
     ]
+  },
+  "esc_behavioral_profile": {
+    "cpu_hz": 4000000,
+    "timer_prescaler": 3,
+    "timer_auto_reload": 999,
+    "inverter_pwm_hz": 1000,
+    "command_decoder_hz": 10000,
+    "hall_control_hz": 500,
+    "motor_model": "reduced-order; not a manufacturable ESC or final 20kHz silicon equivalent",
+    "inverter_enable": "off at boot; asserted only when valid commands arrive",
+    "hall_lock": "original sequence and 1-20 control-tick period rule unchanged"
   }
 }
