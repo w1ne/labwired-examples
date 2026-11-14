@@ -39,6 +39,8 @@
 #define COMMAND_FRAME_TICKS 100u
 #define COMMAND_MASK ((1u<<8)|(1u<<9)|(1u<<10)|(1u<<11))
 #define TICKS_PER_SECOND CONTROL_HZ
+#define I2C_WAIT_LIMIT 50000u
+#define UART_WAIT_LIMIT 10000u
 #define TXIS (1u<<1)
 #define RXNE (1u<<2)
 #define NACKF (1u<<4)
@@ -52,7 +54,9 @@
 
 static void text(const char *s) {
   while (*s) {
-    while (!(USART2_ISR & (1u << 7))) {}
+    uint32_t polls = UART_WAIT_LIMIT;
+    while (!(USART2_ISR & (1u << 7)) && --polls) {}
+    if (!polls) return;
     USART2_TDR = (uint8_t)*s++;
   }
 }
@@ -62,25 +66,30 @@ static int clamp_int(int value, int low, int high) {
   if (value > high) return high;
   return value;
 }
-static void wait_stop(void) {
-  while (!(I2C1_ISR & STOPF)) {}
+static bool wait_stop(void) {
+  uint32_t polls = I2C_WAIT_LIMIT;
+  while (!(I2C1_ISR & STOPF) && --polls) {}
+  if (!polls) return false;
   I2C1_ICR = STOPF;
+  return true;
 }
 static bool i2c_write(uint8_t address, const uint8_t *data, uint32_t count, bool autoend) {
   I2C1_CR2 = SADD(address) | NBYTES(count) | (autoend ? AUTOEND : 0u) | START;
   for (uint32_t index = 0; index < count; index++) {
-    uint32_t status;
-    do { status = I2C1_ISR; } while (!(status & (TXIS | NACKF)));
-    if (status & NACKF) {
-      I2C1_ICR = NACKF;
-      wait_stop();
+    uint32_t status = 0;
+    uint32_t polls = I2C_WAIT_LIMIT;
+    do { status = I2C1_ISR; } while (!(status & (TXIS | NACKF)) && --polls);
+    if (!polls || (status & NACKF)) {
+      if (status & NACKF) { I2C1_ICR = NACKF; (void)wait_stop(); }
       return false;
     }
     I2C1_TXDR = data[index];
   }
-  if (autoend) wait_stop();
-  else while (!(I2C1_ISR & TC)) {}
-  return true;
+  if (autoend) return wait_stop();
+  uint32_t polls = I2C_WAIT_LIMIT;
+  while (!(I2C1_ISR & TC) && --polls) {}
+  return polls != 0;
+
 }
 static bool i2c_reg_write(uint8_t reg, uint8_t value) {
   uint8_t data[2] = { reg, value };
@@ -90,16 +99,15 @@ static bool i2c_read(uint8_t reg, uint8_t *data, uint32_t count) {
   if (!i2c_write(0x68, &reg, 1, false)) return false;
   I2C1_CR2 = SADD(0x68) | RD_WRN | NBYTES(count) | AUTOEND | START;
   for (uint32_t index = 0; index < count; index++) {
-    while (!(I2C1_ISR & (RXNE | NACKF))) {}
-    if (I2C1_ISR & NACKF) {
-      I2C1_ICR = NACKF;
-      wait_stop();
+    uint32_t polls = I2C_WAIT_LIMIT;
+    while (!(I2C1_ISR & (RXNE | NACKF)) && --polls) {}
+    if (!polls || (I2C1_ISR & NACKF)) {
+      if (I2C1_ISR & NACKF) { I2C1_ICR = NACKF; (void)wait_stop(); }
       return false;
     }
     data[index] = (uint8_t)I2C1_RXDR;
   }
-  wait_stop();
-  return true;
+  return wait_stop();
 }
 static int16_t le16(const uint8_t *data) {
   return (int16_t)((uint16_t)data[0] | ((uint16_t)data[1] << 8));
@@ -116,14 +124,25 @@ static bool bmi270_init(void) {
   if (!i2c_reg_write(0x43, 0x03)) return false;
   return i2c_reg_write(0x7D, 0x06);
 }
-static void command_outputs(uint32_t phase, const uint8_t widths[4]) {
-  uint32_t set = 0, clear = 0;
+// Compute every command pin on every tick. A zero width clears a previously
+// high output immediately, including faults in the middle of a PWM frame.
+static uint32_t command_high_mask(uint32_t phase, const uint8_t widths[4]) {
+  uint32_t high = 0;
   for (uint32_t index = 0; index < 4; index++) {
-    const uint32_t bit = 1u << (8u + index);
-    if (phase == 0 && widths[index]) set |= bit;
-    if (phase == widths[index]) clear |= bit;
+    if (widths[index] != 0u && phase < widths[index]) high |= 1u << (8u + index);
   }
-  GPIOC_ODR = (GPIOC_ODR | set) & ~clear;
+  return high;
+}
+static void command_outputs(uint32_t phase, const uint8_t widths[4]) {
+  GPIOC_ODR = (GPIOC_ODR & ~COMMAND_MASK) | command_high_mask(phase, widths);
+}
+static void latch_disarm(bool *failsafe, uint32_t *failsafe_tick,
+                          uint32_t tick, const char *reason) {
+  if (*failsafe) return;
+  *failsafe = true;
+  *failsafe_tick = tick;
+  GPIOC_ODR &= ~COMMAND_MASK;
+  text(reason);
 }
 static uint8_t clamp_width(int value) {
   return (uint8_t)clamp_int(value, 18, 72);
@@ -139,7 +158,8 @@ static void init(void) {
   GPIOB_AFRL = (GPIOB_AFRL & ~(0xffu << 24)) | (0x44u << 24);
   GPIOC_MODER = (GPIOC_MODER & ~(0xffu | (0xffu << 16)))
     | (1u << 16) | (1u << 18) | (1u << 20) | (1u << 22);
-  GPIOC_PUPDR = (GPIOC_PUPDR & ~0xffu) | 0xaau;
+  // PC0-3 are ESC health inputs; PC4 is the operator emergency-stop input.
+  GPIOC_PUPDR = (GPIOC_PUPDR & ~0x3ffu) | 0x2aau;
   GPIOC_ODR &= ~COMMAND_MASK;
   USART2_BRR = (CPU_HZ + 57600u) / 115200u;
   USART2_CR1 = (1u << 0) | (1u << 3);
@@ -160,7 +180,7 @@ int main(void) {
   text("FC READY BMI270 ONLINE\r\n");
 
   uint32_t ticks = 0, phase = 0, health_bad = 0, hover_good = 0, recover_good = 0;
-  uint32_t failsafe_tick = 0;
+  uint32_t failsafe_tick = 0, imu_read_failures = 0;
   uint8_t widths[4] = { 0, 0, 0, 0 };
   bool failsafe = false, takeoff_verified = false, hover_verified = false;
   bool roll_verified = false, pitch_verified = false, yaw_verified = false;
@@ -173,7 +193,10 @@ int main(void) {
     if ((SYST_CSR & (1u << 16)) == 0) continue;
     ticks++;
 
-    if (ticks == 1u * TICKS_PER_SECOND) text("FC ARM\r\n");
+    if (ticks == 1u * TICKS_PER_SECOND) {
+      if ((GPIOC_IDR & 0x0fu) == 0x0fu) text("FC ARM\r\n");
+      else latch_disarm(&failsafe, &failsafe_tick, ticks, "FC ESC NOT READY - ALL ESC DISARM\r\n");
+    }
     if (ticks == 2u * TICKS_PER_SECOND) text("FC TAKEOFF\r\n");
     if (ticks == 5u * TICKS_PER_SECOND) text("FC HOVER HOLD\r\n");
     if (ticks == 8u * TICKS_PER_SECOND) text("FC ROLL COMMAND\r\n");
@@ -181,19 +204,17 @@ int main(void) {
     if (ticks == 104u * TICKS_PER_SECOND / 10u) text("FC YAW COMMAND\r\n");
     if (ticks == 12u * TICKS_PER_SECOND) text("FC ATTITUDE RECOVERY\r\n");
 
+    if ((GPIOC_IDR & (1u << 4)) != 0u)
+      latch_disarm(&failsafe, &failsafe_tick, ticks, "FC OPERATOR KILL - ALL ESC DISARM\r\n");
     if (ticks > 25u * TICKS_PER_SECOND / 10u && (GPIOC_IDR & 0x0fu) != 0x0fu) {
-      if (++health_bad >= 20 && !failsafe) {
-        failsafe = true;
-        failsafe_tick = ticks;
-        text("FC FAULT DETECTED - ALL ESC DISARM\r\n");
-      }
-    } else {
-      health_bad = 0;
-    }
+      if (++health_bad >= 20)
+        latch_disarm(&failsafe, &failsafe_tick, ticks, "FC FAULT DETECTED - ALL ESC DISARM\r\n");
+    } else health_bad = 0;
 
     if ((ticks % IMU_TICKS) == 0u) {
       uint8_t data[12];
       if (i2c_read(0x0C, data, 12)) {
+        imu_read_failures = 0;
         const int32_t ax_raw = (int32_t)le16(&data[0]);
         const int32_t ay_raw = (int32_t)le16(&data[2]);
         const int32_t az_raw = (int32_t)le16(&data[4]);
@@ -264,8 +285,10 @@ int main(void) {
         if (failsafe && !landing_verified && ticks > failsafe_tick + TICKS_PER_SECOND
             && altitude_mm <= 50) {
           landing_verified = true;
-          text("FC SAFE LANDING VERIFIED\r\n");
+          text("FC ESTIMATED GROUND CONTACT\r\n");
         }
+      } else if (++imu_read_failures >= 3u) {
+        latch_disarm(&failsafe, &failsafe_tick, ticks, "FC IMU LOST - ALL ESC DISARM\r\n");
       }
     }
 

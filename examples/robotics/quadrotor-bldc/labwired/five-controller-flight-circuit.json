@@ -152,7 +152,11 @@
       "x": 650,
       "y": -270,
       "attrs": {
-        "label": "Flight controller (STM32L476)"
+        "label": "Flight controller (STM32L476)",
+        "internal_pullups": [
+          "PB6",
+          "PB7"
+        ]
       }
     },
     {
@@ -191,6 +195,15 @@
         "triggerEdge": "rising",
         "triggerPreSamples": "8",
         "channelProbes": "{\"CH0\":\"[\\\"fc\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpioc\\\",8]\",\"CH1\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpioa\\\",8]\",\"CH2\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpiob\\\",13]\",\"CH3\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpiob\\\",0]\"}"
+      }
+    },
+    {
+      "id": "kill",
+      "type": "button-module",
+      "x": 360,
+      "y": 500,
+      "attrs": {
+        "label": "FC EMERGENCY STOP (active high)"
       }
     }
   ],
@@ -984,6 +997,37 @@
       },
       "to": {
         "part": "logic_pwm",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "PC4"
+      },
+      "to": {
+        "part": "kill",
+        "pin": "SIG"
+      },
+      "color": "#e63946"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "kill",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "kill",
         "pin": "GND"
       }
     }

@@ -10,8 +10,8 @@
       "controller": "fc",
       "board": "stm32l476",
       "source": "firmware/flight/fc.c",
-      "source_sha256": "accb6677d9a87f497d512b866fde2d6758b6717e179e100038dbaecb221fffff",
-      "source_bytes": 11923
+      "source_sha256": "ae8a133f502f02af277e89ccc3e6c3af5fda6decdbd8b00ac3a991bc1709d543",
+      "source_bytes": 13332
     },
     {
       "controller": "ctrl1",
@@ -47,7 +47,7 @@
     "provider": "kernelcad",
     "slug": "DyJ405zg",
     "version": 5,
-    "title": "Quadrotor · five-controller closed-loop flight twin",
+    "title": "Quadrotor \u00b7 five-controller closed-loop flight twin",
     "electronics": {
       "version": 1,
       "displays": [],
@@ -237,7 +237,7 @@
       ]
     }
   },
-  "simulation_scope": "Five executing STM32L476 firmware instances, BMI270 closed-loop feedback, four reduced-order BLDC/inverter plants, deterministic rigid-body flight dynamics, universal oscilloscope and logic analyzer.",
+  "simulation_scope": "Five executing STM32L476 firmware instances, BMI270 closed-loop feedback, four reduced-order BLDC/inverter plants, deterministic rigid-body flight dynamics, universal oscilloscope and logic analyzer. Emergency-stop input; bounded I2C reads and latched IMU/ESC failsafes.",
   "flight_dynamics": true,
   "physical_hardware_tested": false,
   "acceptance": [
@@ -248,6 +248,29 @@
     "universal_mixed_signal_instruments",
     "latched_motor_fault",
     "flight_controller_all_esc_disarm",
-    "safe_descent"
-  ]
+    "safe_descent",
+    "operator_kill_latches_all_commands_low",
+    "imu_read_failure_disarms_all"
+  ],
+  "safety_inputs": {
+    "emergency_stop": {
+      "component": "kill",
+      "input": "pressed",
+      "fc_pin": "PC4",
+      "active_high": true
+    },
+    "esc_health": [
+      "PC0",
+      "PC1",
+      "PC2",
+      "PC3"
+    ],
+    "imu_timeout_reads": 3,
+    "output_disarm_pins": [
+      "PC8",
+      "PC9",
+      "PC10",
+      "PC11"
+    ]
+  }
 }
