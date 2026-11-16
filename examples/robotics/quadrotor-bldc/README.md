@@ -42,7 +42,7 @@ The [75-second engineering source cut](media/quadrotor-engineering-preview.mp4) 
 - [Complete system identity and model boundaries](system-integration.json)
 - [Physical wiring and system BOM](hardware/assembly-wiring.md)
 - [Native ESC schematic, PCB and manufacturing review](hardware/esc-4in1/)
-- [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors, one retained microSD-pad parity omission; no native boot or manufacturing acceptance.
+- [Copied OpenFC-Lite repair revision 2-LW1](hardware/flight-controller-openfc-lite-rev2-lw1/) — zero active ERC/physical DRC errors and zero schematic/PCB parity differences; no native boot or manufacturing acceptance.
 
 The saved flagship project links to KernelCAD revision 5. Its circuit contains four controllers, four motors, four independent fault inputs and 64 wires. Oscilloscope and logic-analyzer functions are universal Live Lab tools. They are not physical components of the aircraft.
 

@@ -1,9 +1,9 @@
 {
   "tool": "KiCad 10.0.8",
   "source_sha256": "4bdfd53e990ffbc440237bab92c2287de614bf30f52c8f1eae64589a3160f789",
-  "corrected_sha256": "9794ec1a2bfd07f7c33a1332debaf3d785ecb83a07c5866d0d7432cb20ef07db",
+  "corrected_sha256": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
   "original_pad_objects": 579,
-  "corrected_pad_objects": 583,
+  "corrected_pad_objects": 584,
   "changed_pad_nets": [
     {
       "ref": "U9",
@@ -19,6 +19,12 @@
     }
   ],
   "added_pad_objects": [
+    {
+      "ref": "Card1",
+      "pin": "8",
+      "net": "unconnected-(Card1-DAT1-Pad8)",
+      "uuid": "4a04427b-07ed-5143-842d-6336cab2e8d6"
+    },
     {
       "ref": "U15",
       "pin": "2",
@@ -352,6 +358,11 @@
       "layer": "F.Cu",
       "net": "unconnected-(U15-NC-Pad2)",
       "copper_contacts": []
+    },
+    "Card1.8": {
+      "layer": "B.Cu",
+      "net": "unconnected-(Card1-DAT1-Pad8)",
+      "copper_contacts": []
     }
   },
   "u10_body_pose_preserved": true,
@@ -382,5 +393,5 @@
   "filled_zones": 19,
   "project_values_equal_except_one_exact_erc_exclusion": true,
   "physical_rules_and_erc_severities_identical": true,
-  "remaining_physical_omission": "Card1 DAT1 pad8; no pad added and no parity waiver"
+  "remaining_physical_omission": null
 }
