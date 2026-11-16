@@ -17,7 +17,5 @@ print(json.dumps(summary,indent=2))
 assert all(v['severity']!='error' for v in ev)
 assert all(v['severity']!='error' for v in drc['violations'])
 assert not drc['unconnected_items']
-assert len(drc['schematic_parity'])==1
-assert drc['schematic_parity'][0]['description']=='No pad found for pin 8 in schematic'
-assert drc['schematic_parity'][0]['items'][0]['description']=='Footprint Card1'
+assert not drc['schematic_parity']
 PY

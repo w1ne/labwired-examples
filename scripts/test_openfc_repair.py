@@ -41,14 +41,24 @@ class OpenFCRepair(unittest.TestCase):
         for field in ('accepted_for_manufacture', 'native_firmware_accepted', 'mechanical_fit_requalified'):
             self.assertIs(self.manifest[field], False)
 
-    def test_native_drc_and_single_unresolved_physical_omission(self):
+    def test_native_drc_and_schematic_parity_are_clean(self):
         report = read_json(VAL / 'final-drc.json')
         self.assertEqual(collections.Counter(v['severity'] for v in report['violations']), {'warning': 5})
         self.assertEqual(report['unconnected_items'], [])
-        self.assertEqual(len(report['schematic_parity']), 1)
-        item = report['schematic_parity'][0]
-        self.assertEqual(item['description'], 'No pad found for pin 8 in schematic')
-        self.assertEqual(item['items'][0]['description'], 'Footprint Card1')
+        self.assertEqual(report['schematic_parity'], [])
+
+    def test_card1_dat1_restoration_record(self):
+        record = read_json(VAL / 'card1-dat1-pad-restoration.json')
+        self.assertEqual(record['output_sha256'], hashlib.sha256((REV / 'hardware/OpenFC.kicad_pcb').read_bytes()).hexdigest())
+        self.assertFalse(record['rules_changed'])
+        self.assertFalse(record['restored_pad']['shrunk_or_modified'])
+        comparison = record['connectivity_comparison']
+        self.assertEqual(comparison['existing_pads_with_changed_net'], 0)
+        self.assertEqual(comparison['existing_pads_with_changed_geometry'], 0)
+        self.assertEqual(comparison['footprints_moved_or_changed'], 0)
+        self.assertEqual([(p['ref'], p['pin']) for p in comparison['added_pads']], [('Card1', '8')])
+        self.assertEqual(record['drc_after']['errors'], 0)
+        self.assertEqual(record['drc_after']['schematic_parity'], [])
 
     def test_erc_warning_retention_and_exact_pg_exclusion(self):
         report = read_json(VAL / 'final-erc.json')
@@ -81,8 +91,8 @@ class OpenFCRepair(unittest.TestCase):
     def test_native_shape_receipt_matches_board_and_has_no_nc_contacts(self):
         proof = read_json(VAL / 'final-pcb-connectivity-proof.json')
         self.assertEqual(proof['corrected_sha256'], hashlib.sha256((REV / 'hardware/OpenFC.kicad_pcb').read_bytes()).hexdigest())
-        self.assertEqual((proof['original_pad_objects'], proof['corrected_pad_objects']), (579, 583))
-        self.assertEqual(set(proof['isolated_nc_pads']), {'U9.2', 'U9.3', 'USB1.A8', 'USB1.B8', 'U7.2', 'U15.2'})
+        self.assertEqual((proof['original_pad_objects'], proof['corrected_pad_objects']), (579, 584))
+        self.assertEqual(set(proof['isolated_nc_pads']), {'U9.2', 'U9.3', 'USB1.A8', 'USB1.B8', 'U7.2', 'U15.2', 'Card1.8'})
         self.assertTrue(all(not value['copper_contacts'] for value in proof['isolated_nc_pads'].values()))
         self.assertTrue(all(proof['u10_same_net_track_contacts'].values()))
         self.assertTrue(proof['u10_body_pose_preserved'])

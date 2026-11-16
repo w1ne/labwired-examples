@@ -1,0 +1,327 @@
+{
+  "tool": "KiCad 10.0.8",
+  "input_sha256": "9794ec1a2bfd07f7c33a1332debaf3d785ecb83a07c5866d0d7432cb20ef07db",
+  "output_sha256": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
+  "restored_pad": {
+    "ref": "Card1",
+    "pin": "8",
+    "function": "DAT1",
+    "net": "unconnected-(Card1-DAT1-Pad8)",
+    "uuid": "4a04427b-07ed-5143-842d-6336cab2e8d6",
+    "library_pad": "(pad 8 smd rect (at -5.45 -5.30 0.00) (size 0.700 1.600) (layers F.Cu F.Paste F.Mask))",
+    "source_file": "hardware/lib.pretty/TF-SMD_TF-PUSH.kicad_mod",
+    "source_sha256": "3551b2fbab0c18a96097b1e63a4ff4fc52f35020ffa34127af627cff768256af",
+    "placed": "footprint on B.Cu at (145.16, 87.67) rot 90; pad local (-5.45, 5.3) after flip, layers B.Cu/B.Mask/B.Paste",
+    "position_mm": [
+      150.46,
+      93.12
+    ],
+    "size_mm": [
+      0.7,
+      1.6
+    ],
+    "shrunk_or_modified": false
+  },
+  "blocking_items_before": {
+    "overlapping_pad": [
+      "via 02be1735 +1.1V (150.55, 93.52)",
+      "via c22ea88e +1.1V (150.96, 93.57)",
+      "via 9b210080 +3.3V (150.58, 92.85)"
+    ],
+    "copper_clearance_below_0.09": [
+      "via 12d46f7c /RP2350A/D- (151.45, 93.54): 0.03 mm"
+    ],
+    "hole_clearance_below_0.20": [
+      "via 75716d5c GND (149.41, 93.57): 0.169 mm"
+    ],
+    "constraint": "Card1 pads 1..8/CD occupy B.Cu x 149.66..151.26 mm at a 1.1 mm pitch with 0.4 mm gaps; a 0.35 mm via needs 0.53 mm, so no through via can stay in that column"
+  },
+  "edits": [
+    {
+      "action": "move_via",
+      "uuid": "02be1735-be6a-40c7-82dd-f02d7c671e7a",
+      "net": "+1.1V",
+      "diameter_mm": 0.35,
+      "drill_mm": 0.2,
+      "from": [
+        150.55,
+        93.52
+      ],
+      "to": [
+        151.07,
+        95.54
+      ],
+      "reason": "+1.1V via overlapped Card1 pad 8 on B.Cu; moved into L1 pad 1 at the existing In3.Cu +1.1V track end (C20.1/U2.65 stay joined to L1.1 by the existing F.Cu tracks)"
+    },
+    {
+      "action": "move_via",
+      "uuid": "c22ea88e-b9a9-4657-b03b-cb7eadbb8214",
+      "net": "+1.1V",
+      "diameter_mm": 0.35,
+      "drill_mm": 0.2,
+      "from": [
+        150.96,
+        93.57
+      ],
+      "to": [
+        151.07,
+        94.95
+      ],
+      "reason": "+1.1V via overlapped Card1 pad 8 on B.Cu; moved into L1 pad 1 on In3.Cu track e89c27d7"
+    },
+    {
+      "action": "remove_track",
+      "uuid": "4d74036c-7bd9-48dd-82f4-0dbf976b214f",
+      "net": "+1.1V",
+      "reason": "F.Cu stub that only fed the old +1.1V via position",
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "start": [
+        150.55,
+        93.52
+      ],
+      "end": [
+        150.58,
+        93.55
+      ]
+    },
+    {
+      "action": "move_via",
+      "uuid": "12d46f7c-2009-4394-a682-0adcc58648a8",
+      "net": "/RP2350A/D-",
+      "diameter_mm": 0.35,
+      "drill_mm": 0.2,
+      "from": [
+        151.45,
+        93.54
+      ],
+      "to": [
+        151.57,
+        93.54
+      ],
+      "reason": "D- via was 0.03 mm from Card1 pad 8 on B.Cu; moved 0.12 mm east, still inside R10 pad 1"
+    },
+    {
+      "action": "move_track",
+      "uuid": "6032b173-7684-4e76-957b-adadea378a54",
+      "net": "/RP2350A/D-",
+      "layer": "F.Cu",
+      "width_mm": 0.3,
+      "old": {
+        "start": [
+          151.48,
+          93.57
+        ],
+        "end": [
+          151.45,
+          93.54
+        ]
+      },
+      "new": {
+        "start": [
+          151.48,
+          93.57
+        ],
+        "end": [
+          151.57,
+          93.54
+        ]
+      },
+      "reason": "follow D- via"
+    },
+    {
+      "action": "move_track",
+      "uuid": "ca29cb5b-e365-4d91-a165-5b20f2e0c896",
+      "net": "/RP2350A/D-",
+      "layer": "In2.Cu",
+      "width_mm": 0.1,
+      "old": {
+        "start": [
+          151.45,
+          93.54
+        ],
+        "end": [
+          151.77,
+          93.22
+        ]
+      },
+      "new": {
+        "start": [
+          151.57,
+          93.54
+        ],
+        "end": [
+          151.77,
+          93.22
+        ]
+      },
+      "reason": "follow D- via (In2.Cu)"
+    },
+    {
+      "action": "move_via",
+      "uuid": "75716d5c-76f4-431d-9ab8-ccb8c077b7c5",
+      "net": "GND",
+      "diameter_mm": 0.35,
+      "drill_mm": 0.2,
+      "from": [
+        149.41,
+        93.57
+      ],
+      "to": [
+        149.35,
+        93.68
+      ],
+      "reason": "GND via hole was 0.169 mm from Card1 pad 8 (hole clearance 0.20); moved 0.13 mm, still in C20 pad 2"
+    },
+    {
+      "action": "move_via",
+      "uuid": "8ecccf88-8d8f-491c-8f9e-438100e284f1",
+      "net": "GND",
+      "diameter_mm": 0.35,
+      "drill_mm": 0.2,
+      "from": [
+        148.96,
+        91.06
+      ],
+      "to": [
+        148.96,
+        91.0
+      ],
+      "reason": "GND stitch via under the U2 corner; moved 0.06 mm north for 0.20 mm hole clearance to the new IOVDD escape"
+    },
+    {
+      "action": "remove_via",
+      "uuid": "9b210080-ae83-484d-83bc-7f2f25843bf8",
+      "net": "+3.3V",
+      "reason": "+3.3V via overlapped Card1 pad 8 on B.Cu; the Card1 pad column leaves no legal via site reachable from C19.1 on F.Cu",
+      "position": [
+        150.58,
+        92.85
+      ],
+      "diameter_mm": 0.35,
+      "drill_mm": 0.2
+    },
+    {
+      "action": "add_track",
+      "uuid": "1e5095e4-d39f-447a-84d8-7dbcc279aa2c",
+      "net": "+3.3V",
+      "layer": "F.Cu",
+      "width_mm": 0.1,
+      "start": [
+        150.5,
+        91.7
+      ],
+      "end": [
+        150.5,
+        91.385
+      ],
+      "reason": "IOVDD escape: U2.64/C19.1 to U2.60 (+3.3V group with C41/R12) inside the U2 pad ring, replacing the removed via"
+    },
+    {
+      "action": "add_track",
+      "uuid": "93232003-f857-477d-b3b8-e692ac9dba4c",
+      "net": "+3.3V",
+      "layer": "F.Cu",
+      "width_mm": 0.1,
+      "start": [
+        150.5,
+        91.385
+      ],
+      "end": [
+        148.45,
+        91.385
+      ],
+      "reason": "IOVDD escape: U2.64/C19.1 to U2.60 (+3.3V group with C41/R12) inside the U2 pad ring, replacing the removed via"
+    },
+    {
+      "action": "add_track",
+      "uuid": "36fa5a94-0208-48cd-bdf7-03af7f3ac1be",
+      "net": "+3.3V",
+      "layer": "F.Cu",
+      "width_mm": 0.1,
+      "start": [
+        148.45,
+        91.385
+      ],
+      "end": [
+        148.45,
+        90.95
+      ],
+      "reason": "IOVDD escape: U2.64/C19.1 to U2.60 (+3.3V group with C41/R12) inside the U2 pad ring, replacing the removed via"
+    }
+  ],
+  "electrical_notes": [
+    "+1.1V: U2.65, C20.1 and L1.1 remain joined by the unchanged F.Cu tracks; both plane vias now sit in L1 pad 1 on the existing In3.Cu +1.1V track.",
+    "+3.3V: U2.64 and C19.1 now join U2.60 (with C41/R12) by a 0.10 mm F.Cu track inside the U2 pad ring instead of their own plane via; the decoupling loop of C19 is longer.",
+    "D- via moved 0.12 mm inside R10 pad 1; D+ untouched. No signal-integrity or power-integrity analysis was performed."
+  ],
+  "rules_changed": false,
+  "layer_stack_changed": false,
+  "footprints_moved": 0,
+  "drc_before": {
+    "errors": 0,
+    "warnings_by_type": {
+      "lib_footprint_mismatch": 4,
+      "nonmirrored_text_on_back_layer": 1
+    },
+    "unconnected": 0,
+    "schematic_parity": [
+      "No pad found for pin 8 in schematic: Footprint Card1"
+    ],
+    "report": "card1-dat1-before-drc.json"
+  },
+  "drc_after": {
+    "errors": 0,
+    "warnings_by_type": {
+      "lib_footprint_mismatch": 4,
+      "nonmirrored_text_on_back_layer": 1
+    },
+    "unconnected": 0,
+    "schematic_parity": [],
+    "report": "final-drc.json"
+  },
+  "connectivity_comparison": {
+    "tool": "KiCad 10.0.8",
+    "before_sha256": "9794ec1a2bfd07f7c33a1332debaf3d785ecb83a07c5866d0d7432cb20ef07db",
+    "after_sha256": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
+    "pad_objects_before": 583,
+    "pad_objects_after": 584,
+    "added_pads": [
+      {
+        "ref": "Card1",
+        "pin": "8",
+        "uuid": "4a04427b-07ed-5143-842d-6336cab2e8d6",
+        "net": "unconnected-(Card1-DAT1-Pad8)",
+        "layer": "B.Cu",
+        "position_mm": [
+          150.46,
+          93.12
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ]
+      }
+    ],
+    "existing_pads_with_changed_net": 0,
+    "existing_pads_with_changed_geometry": 0,
+    "footprints": 164,
+    "footprints_moved_or_changed": 0,
+    "nets_with_changed_pad_membership": {
+      "unconnected-(Card1-DAT1-Pad8)": {
+        "added": [
+          "Card1.8"
+        ],
+        "removed": []
+      }
+    },
+    "tracks_vias_before": 1752,
+    "tracks_vias_after": 1753,
+    "moved": 7,
+    "removed": 2,
+    "added": 3,
+    "track_via_changes_match_edit_record": true,
+    "board_unconnected_items": 0
+  },
+  "zones_refilled": true
+}

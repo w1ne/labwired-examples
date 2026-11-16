@@ -6,8 +6,9 @@ The original submodule remains unchanged at
 `def4ab29a5af430551aa15756b747e9ad6d4c480`.
 
 The candidate passes the configured KiCad 10.0.8 physical DRC with **zero
-errors and zero unconnected items**. One original physical omission remains:
-Card1 DAT1 pad 8 has no PCB copper. Its parity warning is retained. ERC has
+errors, zero unconnected items and zero schematic/PCB parity differences**.
+The original omission of Card1 DAT1 pad 8 is repaired with the exact library
+pad. ERC has
 zero active errors after one exact, source-backed exclusion for the unused
 LP5912 PG pin connected to ground. All design rules and ERC severities are
 unchanged.
@@ -24,6 +25,7 @@ unchanged.
 | U9 BMI270 | Disconnect ASDx/ASCx, physical pads 2/3, from GND in the schematic and PCB. Remove the single GND via that touched both pads and refill the zones. | The two existing copper pads remain; all other physical net assignments are unchanged. |
 | U10 SN74LVC1G3157DTBR | Use the separately named TI DTB0006A Rev C land-pattern example, extracted from TI's mask and paste vectors. Reroute the six local connections and move C38 by 0.30 mm to accommodate that geometry. | Body pose, physical pin identities, source 3D model, existing net names, minimum clearance and via rules remain. |
 | Original hole-clearance errors | Move J15, J28 and J54 by the recorded small offsets and update their same-net leads. | Pad shapes, contact identities and board outline remain. |
+| Card1 DAT1 pad 8 | Restore the exact 0.7 × 1.6 mm TF-PUSH library pad as an isolated NC contact. Move five through vias (two +1.1V into L1 pad 1, the D− via inside R10 pad 1, two GND vias), remove the +3.3V via under C19 and join U2.64/C19.1 to U2.60 with a 0.10 mm track inside the U2 pad ring. | No footprint moved; every other pad keeps its net and geometry; all nets remain connected. See [restoration record](validation/card1-dat1-pad-restoration.json). |
 | Four omitted pads | Restore USB1 A8/B8 and LP5912 U7/U15 pad 2 from their existing footprint-library templates. Move one GND via by 0.1393 mm to clear USB1 A8. | The new pads are isolated NC contacts. No signal or supply is added. |
 | Pin and part annotations | Correct U2 GPIO11 to bidirectional, U15 OUT to power output, U7 physical PG3/GND5 identity, Q1/Q2 manufacturer to ALLPOWER, and the U15 500 mA heading. Copy missing PCB MPN/manufacturer fields from the original schematic. | No passive component is retyped as a power source. Part numbers and existing connections remain. |
 | ERC intent | Add seven PWR_FLAG symbols only at reviewed external entries or regulator/inductor/diode source paths. Add one exact PG-to-GND exclusion with its TI reference. | The importer ignores these annotations as electrical sources. The unpowered circuit still refuses the actual battery-input net. |
@@ -72,7 +74,7 @@ yield.
 | Physical DRC errors | 5: four hole-clearance, one copper-clearance | 0 |
 | Physical DRC warnings | 11 | 5 |
 | Unconnected PCB items | 0 | 0 |
-| Schematic/PCB parity warnings | 17 | 1: Card1 DAT1 pad 8 omitted |
+| Schematic/PCB parity warnings | 17 | 0 |
 | Active ERC errors | 9: eight supply declarations, one input-driver declaration | 0 |
 | ERC warnings | 182 | 178 |
 | Exact documented ERC exclusions | 0 | 1: unused U7 PG3 grounded |
@@ -83,7 +85,7 @@ board. The 178 ERC warnings are retained; this repair does not reclassify
 unknown pin roles or change the global pin-compatibility matrix to clear them.
 The installed environment substitutes DejaVu for the unavailable Tokyo font.
 
-The final board has **164 footprints and 583 pad objects**, up from 579 pad
+The final board has **164 footprints and 584 pad objects**, up from 579 pad
 objects. Its 19 zones were refilled with the original rules. All 445
 schematic electrical endpoints remain. Only U9 pads 2/3 change their net
 assignment. The six U10 pads each retain an actual same-net track contact.
@@ -98,21 +100,31 @@ P1/J29 battery input and U6/U16 input rails. This proves that ERC annotations
 cannot create an ideal battery or regulator supply. It does **not** prove a
 powered native boot or qualify the RP2354B internal buck regulator.
 
-## Remaining physical omission
+## Card1 DAT1 pad 8 restoration
 
-Card1 DAT1 pad 8 is present in the schematic as an unused contact and in the
-source footprint library, but absent from the native PCB. The exact 0.7 ×
-1.6 mm library pad overlaps three existing power vias and approaches a USB
-D− via and a GND via. A bounded same-net reroute was tested; it intersected
-adjacent USB/DVDD/IOVDD escape routing. Those trial power and signal edits
-were completely reverted. The accepted board retains the original omission
-and its parity warning. No pad was shrunk and no rule or parity exclusion
-was added to conceal it.
+Card1 DAT1 pad 8 was present in the schematic as an unused contact and in the
+source footprint library, but absent from the native PCB. The Card1 contact
+row occupies a 1.6 mm wide column on B.Cu with 0.4 mm gaps, too narrow for a
+0.35 mm via under the 0.09 mm rule, so every through via inside the pad
+outline had to leave the column:
 
-The rejected-candidate DRC reports remain in `validation/` as evidence of this
-limit. They are **not** the final board reports. A broader connector/power/USB
-escape redesign and its signal-integrity review remain required before
-calling the copied board complete.
+- the two +1.1V plane vias moved into L1 pad 1 on the existing In3.Cu +1.1V
+  track; U2.65, C20.1 and L1.1 stay joined by the unchanged F.Cu tracks;
+- the +3.3V via under C19.1 has no legal site reachable on F.Cu. It was
+  removed and U2.64/C19.1 now join U2.60 (with C41/R12) through a 0.10 mm
+  F.Cu track inside the U2 pad ring. The C19 decoupling loop is longer;
+- the USB D− via moved 0.12 mm inside R10 pad 1; one GND via moved 0.13 mm
+  inside C20 pad 2 and one GND stitch via 0.06 mm for hole clearance.
+
+Every coordinate is in the
+[restoration record](validation/card1-dat1-pad-restoration.json), with the
+before and after DRC reports. No rule, layer or footprint changed. No
+signal-integrity or power-integrity review of the reroute was performed.
+
+The board copper changed after the mechanical-review exports, reviewed-model
+provenance and model inventory were generated; their recorded board hash is
+the previous revision. Footprints and models did not change, but those
+exports were not regenerated.
 
 The existing populated KernelCAD revision 4 uses earlier board geometry.
 Its fit receipt cannot qualify the moved components or changed copper in
