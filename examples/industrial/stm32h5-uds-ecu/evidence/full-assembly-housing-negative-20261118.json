@@ -1,0 +1,181 @@
+{
+  "ok": false,
+  "goal": "Negative control: reject a 1 mm downward shift of the CAN-J2 housing into the routed carrier. Preserve the 0.08 mm3 / 0.08 mm kinked-lead budgets; a 35.65 mm3 / 0.471 mm housing overlap must fail.",
+  "attempts": [
+    {
+      "id": "01",
+      "title": "Attempt 01",
+      "ok": false,
+      "functional": false,
+      "qualityOk": false,
+      "featureCount": 70,
+      "diagnosticCount": 29,
+      "reviewFacts": [
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'printed-base.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'printed-base.bolt-holes-2' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'printed-base.bolt-holes-3' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.pose-envelope.connector-unresolved",
+          "severity": "warning",
+          "message": "Tracked connector 'printed-base.bolt-holes-4' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+          "hint": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+        },
+        {
+          "code": "assembly.visual.review-required",
+          "severity": "warning",
+          "message": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+          "hint": "visual-review.required \u2014 render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+        }
+      ],
+      "repairMode": "local-fix",
+      "passedChecks": [],
+      "blockingReasons": [
+        "Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick), over the declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick); exceeded volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm.",
+        "Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 38.28 mm\u00b3 at the rest pose (0.91 mm thick; rule: overlap > 0.01 mm\u00b3 and thicker than 0.3 mm (thinner = face contact); shared region centred near [202.5, 45.1, 11.0] mm, 0.25 mm voxels). Seated parts share faces, not volume.",
+        "Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 35.65 mm\u00b3 (0.47 mm thick) near (202.5, 45.0, 11.1) at pose sample 'rest' \u2014 they exceed their declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick): volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm. A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J2']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended.",
+        "Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick) near (202.5, 45.0, 11.1).",
+        "Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J1' overlap by 0.066 mm\u00b3 (0.069 mm thick) near (159.5, 45.0, 10.3)."
+      ],
+      "mechanismSummary": {
+        "sampleCount": 1,
+        "interferenceCount": 2,
+        "trackedConnectorCount": 0
+      },
+      "requirements": {
+        "ok": true,
+        "status": "not-declared",
+        "entries": [],
+        "summary": {
+          "pass": 0,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "8451b68339d13dcf35868c38f8156898f2c484af7d836da953823bb8e2f1c04a",
+          "byteLength": 4373
+        },
+        "parameters": {
+          "values": {
+            "nucleoLength": 133.34,
+            "nucleoWidth": 70,
+            "nucleoPcbThickness": 1.6,
+            "nucleoEdgeClearance": 0.35
+          },
+          "sha256": "7ab2b8cc0e7eab21d992c652732c41c6d84d06e82d1a1e04b5b6ef5e0c6a2378"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "67fdae7818cb943374ba5f0baef794b35325ec50"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "e183f3cd47261cfd7ba87be7293528002ef4c6ff7d9c0087c3022498202af817"
+      },
+      "nextActionPrompt": "Blocking reasons:\n- assembly.contact.tolerance-exceeded: Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick), over the declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick); exceeded volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm.\n- mechanism.rest-interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 38.28 mm\u00b3 at the rest pose (0.91 mm thick; rule: overlap > 0.01 mm\u00b3 and thicker than 0.3 mm (thinner = face contact); shared region centred near [202.5, 45.1, 11.0] mm, 0.25 mm voxels). Seated parts share faces, not volume.\n- mechanism.interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 35.65 mm\u00b3 (0.47 mm thick) near (202.5, 45.0, 11.1) at pose sample 'rest' \u2014 they exceed their declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick): volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm. A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J2']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended.\n- assembly.pose-envelope.interference: Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick) near (202.5, 45.0, 11.1).\n- assembly.pose-envelope.interference: Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J1' overlap by 0.066 mm\u00b3 (0.069 mm thick) near (159.5, 45.0, 10.3).\n\nTop diagnostics:\n- [error] assembly.contact.tolerance-exceeded\n- [error] assembly.pose-envelope.interference @ sampleName=current\n- [error] assembly.pose-envelope.interference @ sampleName=current\n\nRepair mode: local-fix\nDirective: Fix the reported local modeling errors while preserving the current topology, then rerun review_cad.\n\nDesign goal: Negative control: reject a 1 mm downward shift of the CAN-J2 housing into the routed carrier. Preserve the 0.08 mm3 / 0.08 mm kinked-lead budgets; a 35.65 mm3 / 0.471 mm housing overlap must fail.\n\nRevision assist (structured \u2014 prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- assembly.pose-envelope.connector-unresolved: Tracked connector 'printed-base.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds. \u2192 invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector.\n- assembly.pose-envelope.connector-unresolved: Tracked connector 'printed-base.bolt-holes-2' has a topology-based origin and cannot be included in capture-time workspace bounds. \u2192 invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector.\n- assembly.pose-envelope.connector-unresolved: Tracked connector 'printed-base.bolt-holes-3' has a topology-based origin and cannot be included in capture-time workspace bounds. \u2192 invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector.",
+      "revisionAssist": {
+        "mode": "hints-only",
+        "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+        "hints": [
+          {
+            "code": "assembly.pose-envelope.connector-unresolved",
+            "summary": "Tracked connector 'printed-base.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+            "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+          },
+          {
+            "code": "assembly.pose-envelope.connector-unresolved",
+            "summary": "Tracked connector 'printed-base.bolt-holes-2' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+            "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+          },
+          {
+            "code": "assembly.pose-envelope.connector-unresolved",
+            "summary": "Tracked connector 'printed-base.bolt-holes-3' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+            "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+          },
+          {
+            "code": "assembly.pose-envelope.connector-unresolved",
+            "summary": "Tracked connector 'printed-base.bolt-holes-4' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+            "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+          },
+          {
+            "code": "assembly.visual.review-required",
+            "summary": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+            "suggestedChange": "visual-review.required \u2014 render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+          }
+        ]
+      }
+    }
+  ],
+  "record": {
+    "title": "kernelCAD design loop",
+    "goal": "Negative control: reject a 1 mm downward shift of the CAN-J2 housing into the routed carrier. Preserve the 0.08 mm3 / 0.08 mm kinked-lead budgets; a 35.65 mm3 / 0.471 mm housing overlap must fail.",
+    "steps": []
+  },
+  "revisionAssist": {
+    "mode": "hints-only",
+    "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+    "hints": [
+      {
+        "code": "assembly.pose-envelope.connector-unresolved",
+        "summary": "Tracked connector 'printed-base.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+        "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+      },
+      {
+        "code": "assembly.pose-envelope.connector-unresolved",
+        "summary": "Tracked connector 'printed-base.bolt-holes-2' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+        "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+      },
+      {
+        "code": "assembly.pose-envelope.connector-unresolved",
+        "summary": "Tracked connector 'printed-base.bolt-holes-3' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+        "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+      },
+      {
+        "code": "assembly.pose-envelope.connector-unresolved",
+        "summary": "Tracked connector 'printed-base.bolt-holes-4' has a topology-based origin and cannot be included in capture-time workspace bounds.",
+        "suggestedChange": "invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector."
+      },
+      {
+        "code": "assembly.visual.review-required",
+        "summary": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+        "suggestedChange": "visual-review.required \u2014 render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+      }
+    ]
+  },
+  "nextActionPrompt": "Blocking reasons:\n- assembly.contact.tolerance-exceeded: Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick), over the declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick); exceeded volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm.\n- mechanism.rest-interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 38.28 mm\u00b3 at the rest pose (0.91 mm thick; rule: overlap > 0.01 mm\u00b3 and thicker than 0.3 mm (thinner = face contact); shared region centred near [202.5, 45.1, 11.0] mm, 0.25 mm voxels). Seated parts share faces, not volume.\n- mechanism.interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 35.65 mm\u00b3 (0.47 mm thick) near (202.5, 45.0, 11.1) at pose sample 'rest' \u2014 they exceed their declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick): volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm. A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J2']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended.\n- assembly.pose-envelope.interference: Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick) near (202.5, 45.0, 11.1).\n- assembly.pose-envelope.interference: Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J1' overlap by 0.066 mm\u00b3 (0.069 mm thick) near (159.5, 45.0, 10.3).\n\nTop diagnostics:\n- [error] assembly.contact.tolerance-exceeded\n- [error] assembly.pose-envelope.interference @ sampleName=current\n- [error] assembly.pose-envelope.interference @ sampleName=current\n\nRepair mode: local-fix\nDirective: Fix the reported local modeling errors while preserving the current topology, then rerun review_cad.\n\nDesign goal: Negative control: reject a 1 mm downward shift of the CAN-J2 housing into the routed carrier. Preserve the 0.08 mm3 / 0.08 mm kinked-lead budgets; a 35.65 mm3 / 0.471 mm housing overlap must fail.\n\nRevision assist (structured \u2014 prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- assembly.pose-envelope.connector-unresolved: Tracked connector 'printed-base.bolt-holes-1' has a topology-based origin and cannot be included in capture-time workspace bounds. \u2192 invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector.\n- assembly.pose-envelope.connector-unresolved: Tracked connector 'printed-base.bolt-holes-2' has a topology-based origin and cannot be included in capture-time workspace bounds. \u2192 invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector.\n- assembly.pose-envelope.connector-unresolved: Tracked connector 'printed-base.bolt-holes-3' has a topology-based origin and cannot be included in capture-time workspace bounds. \u2192 invalid-args.assembly.pose-envelope-connector-unresolved \u2014 use a numeric vec3 connector origin for workspace review, or run a lowerer-backed topology resolver before requesting this connector.",
+  "serverBuild": "0.1.0+67fdae7818cb@2026-11-18T10:26:05.783Z",
+  "kernelcadError": {
+    "code": "mcp.internal.failure",
+    "category": "transport_internal_failure",
+    "stage": "transport_or_internal",
+    "message": "{\"ok\":false,\"goal\":\"Negative control: reject a 1 mm downward shift of the CAN-J2 housing into the routed carrier. Preserve the 0.08 mm3 / 0.08 mm kinked-lead budgets; a 35.65 mm3 / 0.471 mm housing overlap must fail.\",\"attempts\":[{\"id\":\"01\",\"title\":\"Attempt 01\",\"ok\":false,\"functional\":false,\"qualityOk\":false,\"featureCount\":70,\"diagnosticCount\":29,\"reviewFacts\":[{\"code\":\"assembly.pose-envelope.connector-unresolved\",\"severity\":\"warning\",\"message\":\"Tracked connector 'printed-base.bolt-holes-1' has ",
+    "recovery": "Retry or choose another supported tool; include the correlation ID if the failure recurs.",
+    "correlationId": "825b3217-c681-4866-ae1a-6f2c6cf1dcbf",
+    "serverBuild": "0.1.0+67fdae7818cb@2026-11-18T10:26:05.783Z"
+  }
+}

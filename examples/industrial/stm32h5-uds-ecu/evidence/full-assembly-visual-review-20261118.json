@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY",
+  "findings": [
+    "The 222 by 90 mm base contains one Nucleo outline envelope and one populated CAN carrier; the render is complete in both views.",
+    "The Nucleo is an unpopulated outline reference. These images do not establish fit for its connectors or components.",
+    "The carrier has four aligned support bosses, two end connector housings and one termination header; the small surface-mounted parts remain on the carrier.",
+    "The two cable-tie slots remain open alongside the carrier. Physical assembly and retention strength remain untested."
+  ],
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "One base, one Nucleo outline and one populated CAN carrier are visible.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-mV8S1jWkahSWfohQY7jqag/render-top.png?exp=1795084302&sig=u8krNOKEKFB4sSz2XyDtXOFPKWJms-URPVaq8GUA6Rg"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The Nucleo outline occupies the left cradle; the smaller 60 by 40 mm carrier occupies the right boss pattern.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-mV8S1jWkahSWfohQY7jqag/render-top.png?exp=1795084302&sig=u8krNOKEKFB4sSz2XyDtXOFPKWJms-URPVaq8GUA6Rg"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "Both carrier connector housings, the termination header, support bosses and two tie slots are visible.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "No isolated part is visible outside the two board locations and the mounting base.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "The carrier mounting holes sit on four bosses; the Nucleo outline sits between the cradle rails and corner stops.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "Both board planes face upward and the carrier connector access stays above the base.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "The full isometric and top views show the same board locations, support pattern and open tie slots without cropping.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-mV8S1jWkahSWfohQY7jqag/render-top.png?exp=1795084302&sig=u8krNOKEKFB4sSz2XyDtXOFPKWJms-URPVaq8GUA6Rg"
+    }
+  ]
+}

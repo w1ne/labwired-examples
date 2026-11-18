@@ -41,6 +41,11 @@ plate=plate.union(rail);
 const arm=assembly('h563-uds-bench');
 const base=arm.part('printed-base',plate,{material:'petg'});
 const origin=(x,y,z)=>({kind:'vec3',value:[x,y,z]});
+// Replace the four promoted hole frames with their exact authored boss-top
+// centers. This resolves workspace tracking without changing any bore geometry.
+for(const [index,x,y] of [[1,156,29],[2,208,29],[3,156,61],[4,208,61]]){
+ base.connector('bolt-holes-'+index,{type:'frame',origin:origin(x,y,10),axis:[0,0,1]});
+}
 function attach(name,shape,point,parent='printed-base',opts={}){
  const p=arm.part(name,shape,opts);
  const q=refs[parent];

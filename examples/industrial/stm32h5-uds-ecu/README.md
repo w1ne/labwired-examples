@@ -99,8 +99,14 @@ for the stock JST XH model's clinched leads: 0.08 mm³ maximum overlap and
 lead contact is 0.066 mm³ / 0.069 mm. The manufacturer's XH drawing identifies
 these retention kinks. Moving the J2 housing 1 mm down is rejected; that
 negative control is retained in evidence/housing-collision-negative.json.
-The full assembly acceptance remains pending the generic contact-check
-correction. No physical retention, print tolerance, or screw load is qualified.
+The full assembly now passes the local strict design loop against the
+reviewed generic contact-propagation fix in KernelCAD PR759: functional and
+quality verdicts are true with zero blockers. The same housing-shift negative
+remains rejected. Exact connector frames replace four unresolved topology
+references without changing geometry. See the local-strict receipts and
+scope file. Hosted strict acceptance remains pending deployment/replay; the
+local result is not a hosted or physical qualification. No physical retention,
+print tolerance, or screw load is qualified.
 
 ## Build and flash
 
