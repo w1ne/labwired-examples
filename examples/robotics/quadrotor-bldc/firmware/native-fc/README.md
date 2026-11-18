@@ -82,13 +82,22 @@ revision and source-path mappings are fixed. The script runs the upstream
 UF2 and binary goals sequentially: each goal starts recursive make, so
 parallel top-level goals would race while writing the same ELF.
 
+The pinned generic RP2350B target defaults to 8 MiB in both its MCU-size and
+pico-sdk macros. The package overrides `MCU_FLASH_SIZE=2048` and applies
+`-UPICO_FLASH_SIZE_BYTES -DPICO_FLASH_SIZE_BYTES=2097152` after those upstream
+flags. The linker, application and SDK therefore use the same 2 MiB capacity.
+The build receipt checks the actual linked `flash_range_erase` and
+`flash_range_program` bounds against 2,097,152 bytes. The config revision hashes
+`config.h` and the linker input; full build flags and source hashes are
+recorded separately in the receipt.
+
 ## Artifacts and validation
 
 | File | Bytes | SHA256 |
 | --- | ---: | --- |
-| `betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf` |752808|`8c0a2953dbb7a65e1e22d949c5fd08f68a1babdeda88d13b14b2632bbc7ce43a`|
-| `betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2` |860672|`0bdbdbe6f9f5f91b76285cef41a198bf866b400c76ee677887d93f60cb11a433`|
-| `betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin` |430128|`2cf345e0fa6f9b60b7039d568b52221059d6cdb68d6bf7c1ad9babf437f47ca5`|
+| `betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf` |752808|`cfb1f6a19225695804d79200ddc7158bc421365af9cc8b8c74ab06170980d27b`|
+| `betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2` |860672|`7eb466b5845044acd71c8984fd5eae871353127a6d7a3540740d29b2fb7c467b`|
+| `betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin` |430128|`341fb35b879b3f2946e24aca88ee57ec37f84f495b2469203d71151b1b42f062`|
 
 The artifacts include the full link map and build receipt. The link uses
 430128 bytes of its 1968 KiB application flash region, reserves 64 KiB for
@@ -96,16 +105,18 @@ configuration and 16 KiB for fonts, and uses 506832 of 524288 bytes in the main
 RAM region (96.67%). SCRATCH_X uses 4096 bytes. This is the pinned fork's
 hybrid RAM/flash layout; the high RAM allocation leaves limited headroom
 for later feature changes. The upstream linker emits one RWX LOAD-segment
-warning, retained in the build log.
+warning, retained in the build log. `validation/build.log.gz` preserves the
+exact raw output; `build.log` removes line-end whitespace for review, with
+both hashes recorded in `build-log-provenance.json`.
 
 `validation/native-pin-contract.json` verifies all 34 configured GPIO macros
 against the immutable KiCad netlist and connector/component pads. It also
 checks the LED/resistor and beeper-switch nets and rejects seven deliberately
 wrong targets. `validation/artifact-contract.json` reads the actual ELF
-reset templates to prove LED inversion1 and beeper inversion1/open-drain0;
+reset templates to prove LED inversion 1 and beeper inversion 1/open-drain 0;
 the historical compiled image fails that check. The two flags mean active-high
 outputs in the pinned driver. They do not invert the native pin assignments. `validation/reproduction.json`
-records byte identity of the ELF and UF2 across separate build directories.
+records byte identity of the ELF, UF2 and BIN across separate build directories.
 The map is retained as produced and can contain absolute build paths.
 `validation/uf2-layout.json` checks block numbering, flash extent, RP2350
 family and agreement with the raw binary. `validation/picotool-info.txt`

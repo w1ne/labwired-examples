@@ -1,0 +1,22 @@
+{
+  "status": "failed-runtime-proof",
+  "firmware_sha256": "cfb1f6a19225695804d79200ddc7158bc421365af9cc8b8c74ab06170980d27b",
+  "instructions": 550000,
+  "stop_reason": "halt",
+  "pc": "0x20041aa8",
+  "lr": "0x20041ad7",
+  "assert_function_string": {
+    "pointer": "0x20052898",
+    "value": "flash_range_erase"
+  },
+  "rom_function_pointers": {
+    "connect_internal_flash": "0x69",
+    "flash_exit_xip": "0x69",
+    "flash_flush_cache": "0x69",
+    "flash_range_erase": "0x0"
+  },
+  "source": "pico-sdk ee68c78d src/rp2_common/hardware_flash/flash.c:124 asserts that all four ROM functions exist",
+  "sdk_flash_guard_bytes": 2097152,
+  "demcr_fault_resolved": true,
+  "physical_hardware_tested": false
+}

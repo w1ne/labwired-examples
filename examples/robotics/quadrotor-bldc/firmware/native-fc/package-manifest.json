@@ -9,18 +9,21 @@
     "board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348"
   },
   "firmware_status": "reproducible physical build; complete runtime acceptance pending",
-  "runtime_status": "executed precise BusFault at DEMCR 0xE000EDFC after boot-vector repair",
+  "runtime_status": "exact 2 MiB ELF reaches SDK flash initialization and asserts missing ROM flash_range_erase after 550000 instructions; full runtime pending",
   "model_dependency": {
     "repository": "https://github.com/w1ne/labwired-core",
-    "rp2354b_source_commit": "641589dfe6aa0e6492f3b257ad510d9da2ef67d4",
-    "demcr_repair": "separate generic Cortex-M follow-up, pending"
+    "rp2354b_source_commit": "9a325465b59542320e1d13d4fd86d4f8e9a6a2e0",
+    "demcr_repair": "https://github.com/w1ne/labwired-core/pull/2043",
+    "demcr_merge_commit": "82a54f4e9514a3b74dec6c099d81f0e6da2df755",
+    "rom_xip_flash_repair": "generic implementation and tests in progress; no runtime pass claimed"
   },
   "proofs": {
     "native_gpio_bindings": 34,
     "native_negative_controls": 7,
     "compiled_default_negative_controls": 3,
     "elf_uf2_bin_reproduce": true,
-    "source_archives": 5
+    "source_archives": 5,
+    "linked_sdk_flash_bounds_bytes": 2097152
   },
   "physical_hardware_tested": false,
   "files": [
@@ -31,33 +34,38 @@
     },
     {
       "path": "firmware/native-fc/README.md",
-      "bytes": 7845,
-      "sha256": "a00ccb9050aea4acfc0054d407d428ee069d540981d70fd409ad4bb6e7b07c1b"
+      "bytes": 8585,
+      "sha256": "3a1d20d77d65a4d307d27d4ada016eac9e753641a0fb61dd0c15daae2ea70c65"
+    },
+    {
+      "path": "firmware/native-fc/artifacts/artifact-contract.json",
+      "bytes": 1340,
+      "sha256": "0e017661f85663cef07634b02bc26e54c7f6941874b4a8161e63678503863c57"
     },
     {
       "path": "firmware/native-fc/artifacts/betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin",
       "bytes": 430128,
-      "sha256": "2cf345e0fa6f9b60b7039d568b52221059d6cdb68d6bf7c1ad9babf437f47ca5"
+      "sha256": "341fb35b879b3f2946e24aca88ee57ec37f84f495b2469203d71151b1b42f062"
     },
     {
       "path": "firmware/native-fc/artifacts/betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2",
       "bytes": 860672,
-      "sha256": "0bdbdbe6f9f5f91b76285cef41a198bf866b400c76ee677887d93f60cb11a433"
+      "sha256": "7eb466b5845044acd71c8984fd5eae871353127a6d7a3540740d29b2fb7c467b"
     },
     {
       "path": "firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf",
       "bytes": 752808,
-      "sha256": "8c0a2953dbb7a65e1e22d949c5fd08f68a1babdeda88d13b14b2632bbc7ce43a"
+      "sha256": "cfb1f6a19225695804d79200ddc7158bc421365af9cc8b8c74ab06170980d27b"
     },
     {
       "path": "firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.map",
-      "bytes": 3596862,
-      "sha256": "665f27ae151dc62fc42145d83d7aa952ce586dcd8608640d005e2f60b4648b1a"
+      "bytes": 3547845,
+      "sha256": "ca255ed75fcfa2595847f6756be1a78a3e8ba5b91a091676b69900b73951e226"
     },
     {
       "path": "firmware/native-fc/artifacts/build-receipt.json",
-      "bytes": 4911,
-      "sha256": "d01172e2d67f20dbd9eca98cefe1de44f7a9d4162739c6ed246662fcbe438812"
+      "bytes": 6778,
+      "sha256": "5f51314fe6745cb07e670c1a94ab0be716ead3193a23df54e8b83b9ff84026a2"
     },
     {
       "path": "firmware/native-fc/axes.md",
@@ -66,8 +74,8 @@
     },
     {
       "path": "firmware/native-fc/build.py",
-      "bytes": 7483,
-      "sha256": "7fce14e806eb32214c01ddd4b8691a7a70f1e7cbebe4356f8a1e8a87c394bc10"
+      "bytes": 8943,
+      "sha256": "606f4f7ef7b22a086eeab1346cbfeef822d88c01c34d28a2244b430ca5fc9293"
     },
     {
       "path": "firmware/native-fc/configs/OPENFC_LITE_REV2_LW1/config.h",
@@ -78,6 +86,11 @@
       "path": "firmware/native-fc/configs/OPENFC_LITE_REV2_LW1/pico_flash_mem.ld",
       "bytes": 95,
       "sha256": "0cfb6e89f8c358b58e5f31517a4efe2360c6ce4a7bd9802d9373ad3a49120b1c"
+    },
+    {
+      "path": "firmware/native-fc/source-versions.json",
+      "bytes": 3166,
+      "sha256": "624da1e598007981d416b2bc2bcfc594731bb83e4cc6d473fb38eab918d7ee26"
     },
     {
       "path": "firmware/native-fc/source/archives.json",
@@ -110,14 +123,9 @@
       "sha256": "6fe3deb7f92b9ed04d2f05f1c5c87f29f3873278a915e14e701ae0f3d8be7c03"
     },
     {
-      "path": "firmware/native-fc/source-versions.json",
-      "bytes": 2858,
-      "sha256": "70e9a4eab24a42d88115b797ae7318a3e80c62ab6532e981ecb27478ad1b6967"
-    },
-    {
       "path": "firmware/native-fc/validation/artifact-contract.json",
       "bytes": 1563,
-      "sha256": "087dc7f45764193c7cda567969810071fc3403050eb5631940e0210949601986"
+      "sha256": "ac7a2b09fdfa35b1ef2973585c8465337e2f3bf5902ab682aedf6074cd81c0c3"
     },
     {
       "path": "firmware/native-fc/validation/bmi270-axis-page.jpg",
@@ -130,14 +138,24 @@
       "sha256": "892073e8b8b19562074d0d19645c6ae36df40e55e49364925dda942f7fbe6f09"
     },
     {
+      "path": "firmware/native-fc/validation/build-log-provenance.json",
+      "bytes": 433,
+      "sha256": "2fc2785775d28c5778ffc807739f989eff9b0658d95fb1a32706cb7f5874e61a"
+    },
+    {
       "path": "firmware/native-fc/validation/build-process.json",
-      "bytes": 1516,
-      "sha256": "c6b9081d24366b4618fee3144e3e9e8640e43d4d46c946baca8fd8eb907183ed"
+      "bytes": 1504,
+      "sha256": "5c33b325da731fbbc79923a4ca5f03c7d5f59dfe4549e156d3f3088209c92f8e"
     },
     {
       "path": "firmware/native-fc/validation/build.log",
-      "bytes": 42641,
-      "sha256": "19c9511ae86ea87c3b4a1b927a19f8e6b5118f8a894aa86977779d41047f32ea"
+      "bytes": 45823,
+      "sha256": "376138d600d2cfd8d638978f8e1162047758b08b4f57dfc5322ee39f9aeabb2c"
+    },
+    {
+      "path": "firmware/native-fc/validation/build.log.gz",
+      "bytes": 8324,
+      "sha256": "87d2988d05a773d9964f79820a244f1f69791e52e42ba0d8a213ce1c42a15c81"
     },
     {
       "path": "firmware/native-fc/validation/native-pin-contract.json",
@@ -151,13 +169,13 @@
     },
     {
       "path": "firmware/native-fc/validation/reproduction.json",
-      "bytes": 2005,
-      "sha256": "a1f6750f7fd90be3c6f5114b48d22ca5b69d1faaf096921d8e9a14e33bfca935"
+      "bytes": 1987,
+      "sha256": "f6dcec36116e9029b0ed95b9ba15e2d018295746cc8fab941f7d3e5b2870046f"
     },
     {
       "path": "firmware/native-fc/validation/uf2-layout.json",
-      "bytes": 213,
-      "sha256": "ee30d9fc3daec782aae42019d9105327695a3803cd28b08ce8f670801be8672b"
+      "bytes": 159,
+      "sha256": "4fe839e0aa63d8a728f9d0e9d2c45b8e7a11dbf9325485d7a721b5c899d5da25"
     },
     {
       "path": "firmware/native-fc/validation/upstream-nominal-config.h",
@@ -176,8 +194,8 @@
     },
     {
       "path": "runtime/native-fc/README.md",
-      "bytes": 2402,
-      "sha256": "4ae0b787bf406b55ae3e21d0c3bb753ce171b90e5929cdda684e48a259ba384a"
+      "bytes": 2766,
+      "sha256": "d2b2744583343e4954e54086b75556bc1661725ec5b04837922eea64c0528e5a"
     },
     {
       "path": "runtime/native-fc/probe.yaml",
@@ -213,6 +231,76 @@
       "path": "runtime/native-fc/validation/pre-demcr/system.yaml",
       "bytes": 356,
       "sha256": "b3971d3697f5b725742036d1f7054ececcc8b783055613f54e4fb1d51436ded7"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/diagnosis.json",
+      "bytes": 708,
+      "sha256": "c297f3fb256595e3103a44195edee7c379b6bd4cf4cf3ebafd21cbf82607afe0"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/flash-range-erase.asm",
+      "bytes": 3922,
+      "sha256": "2470e9b4945c5786b299fc333f3302b18c06f592281dbf5317fcc97e6152a017"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/halt-symbols.txt",
+      "bytes": 30,
+      "sha256": "8eaea01453bd08814932def6d894a6377ef3d9e6545c6c0924a217024ad535f1"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/probe.py",
+      "bytes": 435,
+      "sha256": "2652dffaeb601deb47512e55f989333fbad9f218dd74dfe6c02e763bf477ee84"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/receipt.json",
+      "bytes": 2270,
+      "sha256": "66ddc60e8589b4f8ac4c5c6edd817915993f126af5095e3b600346ae42b3355a"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime.log",
+      "bytes": 910,
+      "sha256": "4cb881bb0e64493dbfd67447153ac2a896144ac9977adcb65b24cf41abe9dd27"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/itm.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/junit.xml",
+      "bytes": 1475,
+      "sha256": "bb3406e7161dca856be77f40c0f781654615889c5a0d8417d00ae4fd5759ecfd"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/result.json",
+      "bytes": 173245,
+      "sha256": "939aec53e9cf7cead63adf8b8575b1e2aaf0e88f1efaec7a6b64d2a5f94bb2af"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/rtt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/run-manifest.json",
+      "bytes": 1070,
+      "sha256": "62b10bd4630d5dbc9c7f7278073caa725e945c998e74da26958f7f7a5668e646"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/snapshot.json",
+      "bytes": 1619,
+      "sha256": "74bd208aa3b3809d6a07ee232076d167788f3f11a7f7d5ef039000fe166215e6"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/spi.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-rom-flash/runtime/uart.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }
