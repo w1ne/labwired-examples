@@ -6,8 +6,8 @@
   "canonicalLab": "https://app.labwired.com/?lab=iolink-station-l476",
   "nativeBoard": {
     "path": "electronics/input-board/input-board.kicad_pcb",
-    "bytes": 97605,
-    "sha256": "3c88ac04f9de2b6e85857b29755118534f445ae61e08aecdc440831a095f4daa"
+    "bytes": 97586,
+    "sha256": "971f02e71fe54f6dd6b1d672275454e262c124854bac3afe1438db0811d1c38d"
   },
   "nativeSchematic": {
     "path": "electronics/input-board/input-board.kicad_sch",
@@ -16,8 +16,8 @@
   },
   "populatedInputStep": {
     "path": "cad/input-board-populated.step",
-    "bytes": 1507137,
-    "sha256": "7b4c89a08d55ce7d8155b0d9a10db3d6260d8788e63e8c78e3eb51f1a56141a9"
+    "bytes": 1193098,
+    "sha256": "44821a4e215a81d44e09cc96f4818d8d5e92cb5d7b0f57444b6683cd48868918"
   },
   "firmware": [
     {
@@ -69,7 +69,7 @@
     {
       "path": "evidence/input-drc.json",
       "bytes": 1068,
-      "sha256": "fb84b9ecf54a67001455ce8622b3843af5e69c26ab7aaa56f5b9e84b6dba6c45"
+      "sha256": "73620d7c7f84f7149837a2f60fb94d79397013741ea4e39649ce8486d9ff0063"
     },
     {
       "path": "evidence/input-erc.json",
@@ -78,8 +78,8 @@
     },
     {
       "path": "evidence/input-native-review.json",
-      "bytes": 3007,
-      "sha256": "064666e93e3a11ed03bbe28e4e4594e25dc9b61403eb095f41e9e618b7d49122"
+      "bytes": 3943,
+      "sha256": "83538e12cc7fb5be8887f83519b951fe51a416d636a40e70960b49ec581f94a1"
     },
     {
       "path": "evidence/iolinki-host-regressions.txt",
@@ -120,6 +120,21 @@
       "path": "evidence/master-stored-parity/receipt.json",
       "bytes": 4183,
       "sha256": "07afa99938dcf50d2c9a7eeb903db434264a09770acaa5ce71ab86bbba24caa6"
+    },
+    {
+      "path": "mechanical/references/samtec-tsw-model-provenance.json",
+      "bytes": 1735,
+      "sha256": "cd140c745c6b6bc09a0a3da3083e3004696367075965256e3ed8924052ed04e2"
+    },
+    {
+      "path": "evidence/mechanical/tsw-native-reexport.json",
+      "bytes": 1057,
+      "sha256": "73fa354ebf09db5da76e799800543048dece3fafff848c150d684ca07c90317b"
+    },
+    {
+      "path": "evidence/mechanical/tsw-populated-step-inspection.json",
+      "bytes": 849896,
+      "sha256": "552ced3e9762f52729926defe8a95b27e6735c707fd9eaac9e5c43869e255c47"
     }
   ],
   "devicePhysicalRuntime": {

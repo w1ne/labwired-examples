@@ -3,8 +3,8 @@
   "tool": "KiCad 10.0.8",
   "board": {
     "path": "electronics/input-board/input-board.kicad_pcb",
-    "bytes": 97605,
-    "sha256": "3c88ac04f9de2b6e85857b29755118534f445ae61e08aecdc440831a095f4daa"
+    "bytes": 97586,
+    "sha256": "971f02e71fe54f6dd6b1d672275454e262c124854bac3afe1438db0811d1c38d"
   },
   "schematic": {
     "path": "electronics/input-board/input-board.kicad_sch",
@@ -71,7 +71,7 @@
     "images": [
       {
         "path": "cad/input-board-iso.png",
-        "finding": "DIP16, vertical JST XH, 2x8 input header, passives and all four mounting holes are present. Mounting holes are visibly clear."
+        "finding": "Actual corrected KiCad render inspected: drawing-derived Samtec 2x8 header body/posts align with both pad rows; DIP16, JST XH, passives and all four clear mounting holes are present. Header nominal dimensions are source-qualified; no populated physical-board fit claim."
       },
       {
         "path": "manufacturing/input-board/input-board.pdf",
@@ -82,8 +82,8 @@
   "derivedAssets": [
     {
       "path": "cad/input-board-populated.step",
-      "bytes": 1507137,
-      "sha256": "7b4c89a08d55ce7d8155b0d9a10db3d6260d8788e63e8c78e3eb51f1a56141a9"
+      "bytes": 1193098,
+      "sha256": "44821a4e215a81d44e09cc96f4818d8d5e92cb5d7b0f57444b6683cd48868918"
     },
     {
       "path": "cad/input-board-substrate.step",
@@ -92,8 +92,8 @@
     },
     {
       "path": "cad/input-board-iso.png",
-      "bytes": 942961,
-      "sha256": "82646f2e6b5632a39ddbb6e5664169393aecc5127b158e16b4a403ebfb89233c"
+      "bytes": 934082,
+      "sha256": "40b81277fc612ae83f2d9e46561dda7cd090c89dff52599cb9ddd50d2fee57f4"
     },
     {
       "path": "manufacturing/input-board/input-board.pdf",
@@ -101,5 +101,31 @@
       "sha256": "9bde97a2cbe0333644d8f7a4f8785b1b4bb007c9387d8898b199b6c7ec282a0b"
     }
   ],
-  "scope": "Manufacturing data candidate; no physical-board fabrication or populated-fit verification."
+  "scope": "Manufacturing data candidate; no physical-board fabrication or populated-fit verification.",
+  "headerModel": {
+    "reference": "J2",
+    "mpn": "TSW-108-07-G-D",
+    "kind": "nominal drawing-derived conservative clearance envelope",
+    "provenance": "mechanical/references/samtec-tsw-model-provenance.json",
+    "modelSha256": "55ee4a3d1e7033e059aa622a474818f34231b3fa9e587804cbf099872e46c486",
+    "nativeSolid": 4,
+    "nativeBoundsMm": {
+      "min": [
+        38.23,
+        -30.05,
+        -0.945
+      ],
+      "max": [
+        43.31,
+        -9.73,
+        9.975
+      ]
+    },
+    "overallHeightMm": 10.92,
+    "postLengthMm": 5.84,
+    "tailLengthMm": 2.54,
+    "bodyHeightMm": 2.54,
+    "pinSquareMm": 0.635,
+    "placement": "No model offset/rotation. Native footprint, pads, nets, tracks and holes unchanged. KiCad places the source board-top datum at Z=1.595 mm."
+  }
 }

@@ -29,6 +29,15 @@ proof and reproduction command](runtime/README.md).
 | Build and checks | `evidence/` | Source/binary hashes, build logs, host tests, timing calculation, native ERC/DRC and visual review |
 | Purchased routed boards | `hardware/vendor-sources.json`, `hardware/fetch-vendor.py` | Exact official ST schematic/BOM/manufacturing archive hashes |
 
+J2 now uses a **TSW-108-07-G-D drawing-derived clearance envelope** instead
+of the taller generic KiCad pin header. Its 10.92 mm overall length comprises
+a 2.54 mm tail, 2.54 mm body and 5.84 mm post; pins are 0.635 mm square.
+The source and nominal/tolerance limits are retained under
+`mechanical/references/`. This is an explicitly labeled envelope, not a
+manufacturer solid or a measured as-built connector. The native board
+remains 14 valid solids, with substrate index 13 and header index 4.
+
+
 The ST shields are purchased populated boards. Their official manufacturing
 archives establish routed-board provenance; they do not make the shield CAD
 editable in KiCad. The input PCB is fully editable in this repository.

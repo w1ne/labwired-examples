@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "component": "Samtec TSW-108-07-G-D",
+  "representation": "drawing-derived nominal conservative component envelope; not manufacturer STEP",
+  "primarySources": [
+    {
+      "url": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf",
+      "revision": "DS",
+      "sha256": "047ecedcc921fb0aed7127f08b9ba0fc1200d92d33fb7ded1b311d0ed8f42063",
+      "bytes": 1075572
+    },
+    {
+      "url": "https://suddendocs.samtec.com/catalog_english/tsw_th.pdf",
+      "sha256": "3a5770b11668f4e5a11ba9ceeb4817a23f467b8507e3592f55fb6bd8f96e71bc",
+      "bytes": 1385386
+    }
+  ],
+  "datum": {
+    "pin1": [
+      0,
+      0,
+      0
+    ],
+    "pin2": [
+      2.54,
+      0,
+      0
+    ],
+    "pin3": [
+      0,
+      -2.54,
+      0
+    ],
+    "boardTopZ": 0,
+    "populatedSide": "+Z",
+    "footprintRotationDeg": 0
+  },
+  "dimensionsMm": {
+    "pitch": 2.54,
+    "pinSquare": 0.635,
+    "tail": 2.54,
+    "bodyHeight": 2.54,
+    "post": 5.84,
+    "totalHeight": 10.92,
+    "bodyLength": 20.32,
+    "bodyWidthReference": 5.08
+  },
+  "limitations": [
+    "Nominal envelope: pin tips, moulded scallops and mould standoffs conservatively filled.",
+    "The primary catalog nominal body width is 5.02 mm; the print uses a 5.08 mm reference envelope. This model uses 5.08 mm for clearance.",
+    "Body length tolerance ±0.38 mm and post tolerance ±0.20 mm are not built into this nominal model. Use drawing tolerance checks separately.",
+    "No fabricated, soldered or measured hardware qualification."
+  ],
+  "sourceSha256": "1e4e0ef6d5c63defda61112c9f3349e479161413b76d52045f7567bcbfdfa7ea",
+  "stepSha256": "55ee4a3d1e7033e059aa622a474818f34231b3fa9e587804cbf099872e46c486",
+  "stepBytes": 487067
+}
