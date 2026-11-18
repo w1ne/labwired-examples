@@ -4,7 +4,7 @@
   "name": "Quadrotor co-design engineering preview",
   "mechanics": {
     "project": "DyJ405zg",
-    "revision": 4,
+    "revision": 5,
     "source": "cad/drone.kcad.ts",
     "frame": "OpenFrame-5F rev2.2",
     "wheelbase_mm": 226,
@@ -31,27 +31,34 @@
     "populated_board_standalone_geometry_valid": true,
     "populated_board_cloud_display_ready": true,
     "populated_full_frame_assembly_validated": false,
-    "populated_board_display_receipt": "cad/evidence/populated-hosted-readback-20261112.json",
-    "url": "https://app.kernelcad.com/p/DyJ405zg?version=4",
-    "source_sha256": "af8271de87cfe25b27bf73a0e4d4d29dc8fd0fb74f4a5836255e0c8732a1f889",
+    "populated_board_display_receipt": "cad/evidence/studio-v5-release-20261112.json",
+    "url": "https://app.kernelcad.com/p/DyJ405zg?version=5",
+    "source_sha256": "3585935492e7193de4b474eb265ff3b4b89f8275eb1d56294c5b36088e775dd4",
     "interactive_viewer_paint_confirmed": false,
-    "display_scope": "Saved revision 4 has a ready cloud mesh and 10 pinned assets; this receipt does not confirm live browser WebGL paint.",
+    "display_scope": "Saved revision 5 has a ready cloud mesh and 12 pinned assets. The save receipt alone does not confirm browser WebGL rendering.",
     "populated_board_representation": {
       "substrate": "Exact BREP",
       "components": "213 native component references as a 56072-triangle display mesh",
-      "components_mesh_sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3"
+      "components_mesh_sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+      "flight_controller": {
+        "substrate": "Exact native substrate with scalloped outline and open mounting cutouts",
+        "assigned_component_models": 107,
+        "display_triangles": 47786,
+        "geometry_reference": "hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/"
+      }
     },
-    "populated_clearance_receipt": "cad/evidence/populated-clearance-audit-20261112.json",
-    "physical_acceptance_scope": "27 external non-support pairs are separated by native-board bounds; eight nominal support rings have no exact BREP interference. Full assembly acceptance remains false: 214 disconnected native solids, no solder attachment, and envelope parts remain.",
+    "populated_clearance_receipt": "cad/evidence/native-fc-clearance-audit-20261112.json",
+    "physical_acceptance_scope": "The existing ESC geometry and support checks remain valid. Native FC bounds separate 31 external pairs and all 652 component/support-ring pairs. Full physical assembly acceptance remains false: solder attachment, motor bearings, fasteners and complete mesh interference coverage are absent.",
     "hosted_review_receipts": {
-      "server_build": "0.1.0+a0cd90e48541@2026-11-12T02:12:35.564Z",
-      "inspection": "cad/evidence/populated-hosted-inspect-20261112.json",
-      "design_loop": "cad/evidence/populated-hosted-design-loop-20261112.json",
+      "server_build": "0.1.0+14afff5828c7@2026-11-12T11:39:22.972Z",
+      "release_readback": "cad/evidence/studio-v5-release-20261112.json",
+      "native_fc_review": "cad/evidence/native-fc-design-review-20261112.json",
       "assembly_inventory_pass": true,
       "nested_code_import_staging_pass": true,
       "complete_physical_acceptance_pass": false,
-      "scope": "37 parts and 36 mates inspect successfully. Design loop builds 152 features and passes validator-no-errors, then refuses full acceptance for 213 disconnected component solids, undeclared physical use case, and incomplete display-mesh interference coverage. Staged evaluation paths have their own source hash; the canonical CAD source identity above remains unchanged."
-    }
+      "scope": "38 parts and 37 mates. Hosted evaluation builds 146 features with zero diagnostics. The rotor screen checks 13 poses across four joints. Full design-loop acceptance remains false for separate component solids, missing physical load paths and incomplete display-mesh interference coverage."
+    },
+    "historical_esc_clearance_receipt": "cad/evidence/populated-clearance-audit-20261112.json"
   },
   "physical_electronics": {
     "esc": "hardware/esc-4in1/4in1.kicad_pcb",
@@ -76,7 +83,19 @@
     "dc_bus_v": 24,
     "back_emf_constant": 0.04,
     "torque_constant": 0.04,
-    "model_is_physical_ESC": false
+    "model_is_physical_ESC": false,
+    "public_revision_status": "CAD v5 is saved in the owner working project. Canonical sources include the 4 MHz clock, immediate timer compare updates, N-only commutation gates and universal instruments. Final browser acceptance, hosted verification, deployment and republishing are pending.",
+    "simulation_clock_hz": 4000000,
+    "pwm_hz": 20000,
+    "control_tick_hz": 10000,
+    "instruments": {
+      "oscilloscope": "source-qualified numeric and digital signals",
+      "logic_analyzer": "source-qualified GPIO and published digital wires",
+      "release_pull_request": "https://github.com/w1ne/labwired/pull/3163",
+      "runtime_acceptance_status": "The earlier corrected-clock candidate passed clock and source-identity checks but failed coast-down and complementary-pad capture in pinned core 7ae. The current four firmware images compile; acceptance against the corrected native core is pending.",
+      "candidate_evidence": "labwired/evidence/20261112-clock-candidate/timing-and-fault-review.json",
+      "current_candidate_evidence": "labwired/evidence/20261112-gate-candidate/candidate-manifest.json"
+    }
   },
   "integration": {
     "motion_binding": "cad/runtime-bindings.json",

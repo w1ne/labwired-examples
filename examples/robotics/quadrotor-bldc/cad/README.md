@@ -3,11 +3,12 @@
 The current [`drone.kcad.ts`](drone.kcad.ts) candidate contains the pinned 226 mm
 OpenFrame-5F frame, native ESC substrate and population, and the repaired native
 OpenFC-Lite substrate with all 107 assigned component models. Hosted evaluation
-passes with **38 parts and 37 mates**. The source is committed for review; the
-saved [Studio revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4) remains
-the earlier populated-ESC revision with an FC envelope.
+passes with **38 parts and 37 mates**. It is saved as
+[Studio revision 5](https://app.kernelcad.com/p/DyJ405zg?version=5), with a ready
+cloud mesh and 12 immutable inputs. The [release receipt](evidence/studio-v5-release-20261112.json)
+records the source identity, asset hashes, build result and failed full-physical-review gate.
 
-## Native FC candidate, 12 November 2026
+## Saved native FC revision, 12 November 2026
 
 | Check | Result |
 | --- | --- |
@@ -98,8 +99,8 @@ are unchanged by the native FC replacement.
 | rotor4 | M4 | front-left | [-89, -69.534420756, 9.3] | +1 |
 
 All axes are [0, 0, 1]. A runtime receiver must use observed simulator angle and
-speed. The standalone CAD animation is a visual joint demonstration. Its
-revision attachment must be updated and checked when this candidate is saved.
+speed. The standalone CAD animation is a visual joint demonstration. The canonical four-channel circuit pins revision 5 and contains these exact bindings.
+Runtime acceptance is recorded separately from the CAD save receipt.
 
 ## Remaining model limits
 

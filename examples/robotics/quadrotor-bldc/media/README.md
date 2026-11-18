@@ -69,6 +69,20 @@ python3 render-engineering-superintelligence.py \
 
 The renderer adds cuts, captions and time compression. It does not synthesize telemetry or machine behavior.
 
+## R4-02 native instrument acceptance recording — 12 November 2026
+
+[Download the 34-second MP4](quadrotor-universal-instruments-preview-20261112.mp4): 1920 x 1080, H.264, 30 fps, 4,298,950 bytes, no audio. SHA-256: 68752b545d413c4bbae80eb9645133e6569430912f3fbdc29a9bc39270dbf53f.
+
+The clip uses actual accepted LabWired footage at its original speed. It shows both universal instruments, independent controller sources, native PWM/Z observations, fault-driven inverter shutdown, and M1 stopped while M2-M4 continue. It carries a persistent development-preview label identifying the four STM32 controllers and behavioral motor models.
+
+- [Original R4-02 recording](source/quadrotor-universal-instruments-r4-02.webm)
+- [Exact edit list](quadrotor-universal-instruments-preview-20261112-edit.json)
+- [Encoding provenance](quadrotor-universal-instruments-preview-20261112.provenance.json)
+- [Editor](edit-universal-instruments-preview.py)
+- [Runtime acceptance and final-frame QA](../labwired/evidence/20261112-universal-instruments/)
+
+The optional CAD/PCB capture failed before producing accepted shots and is excluded. Production release and public-project publication remain pending.
+
 ## Long-form engineering source cut
 
 [Watch the 75-second engineering preview](quadrotor-engineering-preview.mp4). Its [original provenance](engineering-preview-provenance.json) identifies the model revision, source commits, capture hashes, edit timing and scope.

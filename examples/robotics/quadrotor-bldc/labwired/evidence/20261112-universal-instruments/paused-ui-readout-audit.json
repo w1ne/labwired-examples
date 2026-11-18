@@ -1,0 +1,113 @@
+{
+  "verdict": "pass",
+  "kind": "paused_native_to_dom_readout_comparison",
+  "sourceReceipt": "/data/work-evidence/quadrotor-public-browser-20261112/native-gates-coast-r4-02/paused-clock-and-retention.json",
+  "sourceReceiptSha256": "91546b60147a58fe4286122837db1ccf726c20a64c86ca583131490605547680",
+  "nativeAuditReportSha256": "4faa170dd14f8373068ba078189ad204bc9061cd046564c6507e3a82414a69a1",
+  "expectedWasmSha256": "3a60b6e63146c53e2b63dbb10d6f62fcec31d83a97b0368b5adf589e1190e241",
+  "auditorSha256": "25404b7c07dfabf0b2ea60a1997ad97751222aae078a1561ad9c23710453c4ce",
+  "channels": [
+    {
+      "channel": "CH0",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpioa",
+        8
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": "1",
+      "nativeStateAtHorizon": "1",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": {
+        "ch": 0,
+        "cycle": 29199960,
+        "state": "1",
+        "ordinal": 27280
+      },
+      "badgeText": "1",
+      "summaryLevelText": "HIGH",
+      "renderedFourState": true,
+      "renderedHighZRegions": 0
+    },
+    {
+      "channel": "CH1",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpiob",
+        13
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": null,
+      "nativeStateAtHorizon": "z",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": {
+        "ch": 2,
+        "cycle": 29193078,
+        "state": "z",
+        "ordinal": 27232
+      },
+      "badgeText": "Z",
+      "summaryLevelText": "Z",
+      "renderedFourState": true,
+      "renderedHighZRegions": 1
+    },
+    {
+      "channel": "CH2",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpiob",
+        7
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": "0",
+      "nativeStateAtHorizon": "0",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": null,
+      "badgeText": "0",
+      "summaryLevelText": "LOW",
+      "renderedFourState": true,
+      "renderedHighZRegions": 0
+    },
+    {
+      "channel": "CH3",
+      "sourceId": "ctrl1",
+      "signal": [
+        "gpio",
+        "gpiob",
+        0
+      ],
+      "worker": 3,
+      "watchEpoch": 18,
+      "nativeInitialState": "1",
+      "nativeStateAtHorizon": "1",
+      "nativeCommonHorizonCycles": 29200000,
+      "nativeBooleanHorizonCycles": 29200000,
+      "nativeFourStateHorizonCycles": 29200000,
+      "pausedCpuCycles": 29200000,
+      "lastNativeStateEvent": null,
+      "badgeText": "1",
+      "summaryLevelText": "HIGH",
+      "renderedFourState": true,
+      "renderedHighZRegions": 0
+    }
+  ],
+  "limits": [
+    "This compares retained native evidence to actual captured DOM. Screenshot review is separate.",
+    "Unknown-before-first behavior and X rendering require their executed regression tests; this capture does not manufacture either state."
+  ]
+}

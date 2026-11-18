@@ -1,0 +1,1185 @@
+{
+  "version": 1,
+  "board": "stm32l476",
+  "parts": [
+    {
+      "id": "ctrl1",
+      "type": "nucleo-l476rg",
+      "x": 60,
+      "y": 120,
+      "attrs": {
+        "label": "ESC channel 1 (STM32L476)"
+      }
+    },
+    {
+      "id": "rotor1",
+      "type": "bldc-motor",
+      "x": 575,
+      "y": 130,
+      "attrs": {
+        "label": "Rotor 1 (ESC command)",
+        "supply_voltage_v": "24",
+        "resistance_ohm": "0.35",
+        "inductance_h": "0.00018",
+        "torque_constant_nm_per_a": "0.04",
+        "back_emf_constant_v_per_rad_s": "0.04",
+        "rotor_inertia_kg_m2": "0.0000001",
+        "pole_pairs": "7",
+        "current_limit_a": "40",
+        "encoder_cpr": "2048"
+      }
+    },
+    {
+      "id": "fault1",
+      "type": "button-module",
+      "x": 345,
+      "y": 430,
+      "attrs": {
+        "label": "FAULT 1"
+      }
+    },
+    {
+      "id": "ctrl2",
+      "type": "nucleo-l476rg",
+      "x": 960,
+      "y": 120,
+      "attrs": {
+        "label": "ESC channel 2 (STM32L476)"
+      }
+    },
+    {
+      "id": "rotor2",
+      "type": "bldc-motor",
+      "x": 1475,
+      "y": 130,
+      "attrs": {
+        "label": "Rotor 2 (ESC command)",
+        "supply_voltage_v": "24",
+        "resistance_ohm": "0.35",
+        "inductance_h": "0.00018",
+        "torque_constant_nm_per_a": "0.04",
+        "back_emf_constant_v_per_rad_s": "0.04",
+        "rotor_inertia_kg_m2": "0.0000001",
+        "pole_pairs": "7",
+        "current_limit_a": "40",
+        "encoder_cpr": "2048"
+      }
+    },
+    {
+      "id": "fault2",
+      "type": "button-module",
+      "x": 1245,
+      "y": 430,
+      "attrs": {
+        "label": "FAULT 2"
+      }
+    },
+    {
+      "id": "ctrl3",
+      "type": "nucleo-l476rg",
+      "x": 60,
+      "y": 720,
+      "attrs": {
+        "label": "ESC channel 3 (STM32L476)"
+      }
+    },
+    {
+      "id": "rotor3",
+      "type": "bldc-motor",
+      "x": 575,
+      "y": 730,
+      "attrs": {
+        "label": "Rotor 3 (ESC command)",
+        "supply_voltage_v": "24",
+        "resistance_ohm": "0.35",
+        "inductance_h": "0.00018",
+        "torque_constant_nm_per_a": "0.04",
+        "back_emf_constant_v_per_rad_s": "0.04",
+        "rotor_inertia_kg_m2": "0.0000001",
+        "pole_pairs": "7",
+        "current_limit_a": "40",
+        "encoder_cpr": "2048"
+      }
+    },
+    {
+      "id": "fault3",
+      "type": "button-module",
+      "x": 345,
+      "y": 1030,
+      "attrs": {
+        "label": "FAULT 3"
+      }
+    },
+    {
+      "id": "ctrl4",
+      "type": "nucleo-l476rg",
+      "x": 960,
+      "y": 720,
+      "attrs": {
+        "label": "ESC channel 4 (STM32L476)"
+      }
+    },
+    {
+      "id": "rotor4",
+      "type": "bldc-motor",
+      "x": 1475,
+      "y": 730,
+      "attrs": {
+        "label": "Rotor 4 (ESC command)",
+        "supply_voltage_v": "24",
+        "resistance_ohm": "0.35",
+        "inductance_h": "0.00018",
+        "torque_constant_nm_per_a": "0.04",
+        "back_emf_constant_v_per_rad_s": "0.04",
+        "rotor_inertia_kg_m2": "0.0000001",
+        "pole_pairs": "7",
+        "current_limit_a": "40",
+        "encoder_cpr": "2048"
+      }
+    },
+    {
+      "id": "fault4",
+      "type": "button-module",
+      "x": 1245,
+      "y": 1030,
+      "attrs": {
+        "label": "FAULT 4"
+      }
+    },
+    {
+      "id": "fc",
+      "type": "nucleo-l476rg",
+      "x": 650,
+      "y": -270,
+      "attrs": {
+        "label": "Flight controller (STM32L476)"
+      }
+    },
+    {
+      "id": "imu",
+      "type": "bmi270",
+      "x": 1050,
+      "y": -210,
+      "attrs": {
+        "label": "BMI270 flight IMU",
+        "i2cAddress": "0x68"
+      }
+    },
+    {
+      "id": "scope_mixed",
+      "type": "oscilloscope",
+      "x": 580,
+      "y": 500,
+      "attrs": {
+        "timebaseUs": "1000",
+        "trigger": "none",
+        "triggerLevel": "0.5",
+        "triggerSource": "CH3",
+        "channels": "",
+        "signalProbes": "{\"CH1\":{\"sourceId\":\"ctrl1\",\"kind\":\"analog\",\"name\":\"motor.rotor1.current_a\"},\"CH2\":{\"sourceId\":\"ctrl1\",\"kind\":\"analog\",\"name\":\"motor.rotor1.speed_rpm\"},\"CH3\":{\"sourceId\":\"fc\",\"kind\":\"digital\",\"ref\":{\"kind\":\"gpio\",\"peripheral\":\"gpioc\",\"pin\":8}},\"CH4\":{\"sourceId\":\"ctrl1\",\"kind\":\"digital\",\"ref\":{\"kind\":\"gpio\",\"peripheral\":\"gpioa\",\"pin\":8}}}"
+      }
+    },
+    {
+      "id": "logic_pwm",
+      "type": "logic-analyzer",
+      "x": 780,
+      "y": 500,
+      "attrs": {
+        "decoder": "raw",
+        "triggerMode": "off",
+        "triggerChannel": "CH0",
+        "triggerEdge": "rising",
+        "triggerPreSamples": "8",
+        "channelProbes": "{\"CH0\":\"[\\\"fc\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpioc\\\",8]\",\"CH1\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpioa\\\",8]\",\"CH2\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpiob\\\",13]\",\"CH3\":\"[\\\"ctrl1\\\",\\\"digital\\\",\\\"gpio\\\",\\\"gpiob\\\",0]\"}"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PA8"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "AH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PB13"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "AL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PA9"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "BH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PB14"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "BL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PA10"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "CH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PB15"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "CL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "ENABLE"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PC0"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "HALL_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PC1"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "HALL_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PC2"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "HALL_C"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PC3"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "ENC_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PC4"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "ENC_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PC5"
+      },
+      "to": {
+        "part": "rotor1",
+        "pin": "INDEX"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PB7"
+      },
+      "to": {
+        "part": "fault1",
+        "pin": "SIG"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "fault1",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "fault1",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PA8"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "AH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PB13"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "AL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PA9"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "BH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PB14"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "BL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PA10"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "CH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PB15"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "CL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "ENABLE"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PC0"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "HALL_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PC1"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "HALL_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PC2"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "HALL_C"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PC3"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "ENC_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PC4"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "ENC_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PC5"
+      },
+      "to": {
+        "part": "rotor2",
+        "pin": "INDEX"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PB7"
+      },
+      "to": {
+        "part": "fault2",
+        "pin": "SIG"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "fault2",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "fault2",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PA8"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "AH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PB13"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "AL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PA9"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "BH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PB14"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "BL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PA10"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "CH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PB15"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "CL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "ENABLE"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PC0"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "HALL_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PC1"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "HALL_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PC2"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "HALL_C"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PC3"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "ENC_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PC4"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "ENC_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PC5"
+      },
+      "to": {
+        "part": "rotor3",
+        "pin": "INDEX"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PB7"
+      },
+      "to": {
+        "part": "fault3",
+        "pin": "SIG"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "fault3",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "fault3",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PA8"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "AH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PB13"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "AL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PA9"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "BH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PB14"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "BL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PA10"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "CH"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PB15"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "CL"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "ENABLE"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PC0"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "HALL_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PC1"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "HALL_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PC2"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "HALL_C"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PC3"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "ENC_A"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PC4"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "ENC_B"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PC5"
+      },
+      "to": {
+        "part": "rotor4",
+        "pin": "INDEX"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PB7"
+      },
+      "to": {
+        "part": "fault4",
+        "pin": "SIG"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "fault4",
+        "pin": "VCC"
+      }
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "fault4",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "PC8"
+      },
+      "to": {
+        "part": "ctrl1",
+        "pin": "PA0"
+      },
+      "color": "#9b5de5"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "PC9"
+      },
+      "to": {
+        "part": "ctrl2",
+        "pin": "PA0"
+      },
+      "color": "#9b5de5"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "PC10"
+      },
+      "to": {
+        "part": "ctrl3",
+        "pin": "PA0"
+      },
+      "color": "#9b5de5"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "PC11"
+      },
+      "to": {
+        "part": "ctrl4",
+        "pin": "PA0"
+      },
+      "color": "#9b5de5"
+    },
+    {
+      "from": {
+        "part": "ctrl1",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "fc",
+        "pin": "PC0"
+      },
+      "color": "#00b4d8"
+    },
+    {
+      "from": {
+        "part": "ctrl2",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "fc",
+        "pin": "PC1"
+      },
+      "color": "#00b4d8"
+    },
+    {
+      "from": {
+        "part": "ctrl3",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "fc",
+        "pin": "PC2"
+      },
+      "color": "#00b4d8"
+    },
+    {
+      "from": {
+        "part": "ctrl4",
+        "pin": "PB0"
+      },
+      "to": {
+        "part": "fc",
+        "pin": "PC3"
+      },
+      "color": "#00b4d8"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "PB6"
+      },
+      "to": {
+        "part": "imu",
+        "pin": "SCL"
+      },
+      "color": "#f4a261"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "PB7"
+      },
+      "to": {
+        "part": "imu",
+        "pin": "SDA"
+      },
+      "color": "#2a9d8f"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "VCC"
+      },
+      "to": {
+        "part": "imu",
+        "pin": "VCC"
+      },
+      "color": "#d62828"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "imu",
+        "pin": "GND"
+      },
+      "color": "#222222"
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "scope_mixed",
+        "pin": "GND"
+      }
+    },
+    {
+      "from": {
+        "part": "fc",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "logic_pwm",
+        "pin": "GND"
+      }
+    }
+  ],
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "DyJ405zg",
+    "version": 5,
+    "title": "Quadrotor \u00b7 five-controller closed-loop flight twin",
+    "electronics": {
+      "version": 1,
+      "displays": [],
+      "inputs": [],
+      "motions": [
+        {
+          "id": "M1",
+          "component": "rotor1",
+          "joint": "prop-shaft-rear-right",
+          "parts": [
+            "rotor-rear-right-ENVELOPE",
+            "prop-rear-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        },
+        {
+          "id": "M2",
+          "component": "rotor2",
+          "joint": "prop-shaft-front-right",
+          "parts": [
+            "rotor-front-right-ENVELOPE",
+            "prop-front-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M3",
+          "component": "rotor3",
+          "joint": "prop-shaft-rear-left",
+          "parts": [
+            "rotor-rear-left-ENVELOPE",
+            "prop-rear-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M4",
+          "component": "rotor4",
+          "joint": "prop-shaft-front-left",
+          "parts": [
+            "rotor-front-left-ENVELOPE",
+            "prop-front-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        }
+      ],
+      "bodies": [
+        {
+          "id": "airframe",
+          "controller": "fc",
+          "imu": "imu",
+          "parts": [
+            "frame-bottom",
+            "frame-cross",
+            "frame-middle",
+            "camera-side-left",
+            "camera-side-right",
+            "arm-rear-right",
+            "arm-front-right",
+            "arm-rear-left",
+            "arm-front-left",
+            "standoff-rear-left",
+            "standoff-rear-right",
+            "standoff-middle-left",
+            "standoff-middle-right",
+            "frame-top",
+            "esc-grommet-1-ENVELOPE",
+            "esc-grommet-2-ENVELOPE",
+            "esc-grommet-3-ENVELOPE",
+            "esc-grommet-4-ENVELOPE",
+            "esc-board",
+            "fc-grommet-1-ENVELOPE",
+            "fc-grommet-2-ENVELOPE",
+            "fc-grommet-3-ENVELOPE",
+            "fc-grommet-4-ENVELOPE",
+            "esc-population-native-mesh",
+            "fc-board-native",
+            "fc-population-native-mesh",
+            "motor-base-rear-right-ENVELOPE",
+            "rotor-rear-right-ENVELOPE",
+            "prop-rear-right-ENVELOPE",
+            "motor-base-front-right-ENVELOPE",
+            "rotor-front-right-ENVELOPE",
+            "prop-front-right-ENVELOPE",
+            "motor-base-rear-left-ENVELOPE",
+            "rotor-rear-left-ENVELOPE",
+            "prop-rear-left-ENVELOPE",
+            "motor-base-front-left-ENVELOPE",
+            "rotor-front-left-ENVELOPE",
+            "prop-front-left-ENVELOPE"
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "motors": [
+            {
+              "component": "rotor1",
+              "positionMm": [
+                89,
+                69.534420756,
+                9.3
+              ],
+              "spin": 1
+            },
+            {
+              "component": "rotor2",
+              "positionMm": [
+                89,
+                -69.534420756,
+                9.3
+              ],
+              "spin": -1
+            },
+            {
+              "component": "rotor3",
+              "positionMm": [
+                -89,
+                69.534420756,
+                9.3
+              ],
+              "spin": -1
+            },
+            {
+              "component": "rotor4",
+              "positionMm": [
+                -89,
+                -69.534420756,
+                9.3
+              ],
+              "spin": 1
+            }
+          ],
+          "massKg": 0.55,
+          "inertiaKgM2": [
+            0.004,
+            0.005,
+            0.008
+          ],
+          "thrustNPerRpm2": 3.37e-07,
+          "yawNmPerRpm2": 1e-08,
+          "linearDragPerS": 0.8,
+          "angularDragPerS": 6.0,
+          "groundZMm": 0
+        }
+      ]
+    }
+  }
+}

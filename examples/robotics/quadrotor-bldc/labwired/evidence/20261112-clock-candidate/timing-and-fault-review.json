@@ -1,0 +1,293 @@
+{
+  "recordedAt": "2026-11-12T15:16:27.991968+00:00",
+  "conclusion": "Corrected source clocks, four candidate ELF identities, Hall lock, carrier period and source switching are verified. Physical coast-down fails because rejected off steps leave the plant unchanged.",
+  "sourceHead": "9d783a474daf3161a502f278ad0403ab0684c44a",
+  "pinnedCore": "7ae9652f717c428db3476caa2a8b0aa45abdcb8f",
+  "initCountEveryRuntimePhase": 4,
+  "browserCompileCountEveryRuntimePhase": 0,
+  "fourHallMarkersObserved": true,
+  "regularPwm": {
+    "pin": "ctrl1 gpioa8",
+    "nativeClockHz": 4000000,
+    "samePolarityIntervalsAt200Cycles": 171,
+    "allSamePolarityIntervals": 184,
+    "risingEdges": 185,
+    "fallingEdges": 185,
+    "periodNs": 50000,
+    "frequencyHz": 20000,
+    "qualification": "Other native intervals include gaps and partial pulses; raw edges were not resampled."
+  },
+  "pausedClocks": [
+    {
+      "chip": "ctrl1",
+      "pausedCycles": 14800000,
+      "nsFromEffective4MHz": 3700000000,
+      "motorSourceEndTimeNs": 3699968000,
+      "lagNs": 32000,
+      "nativeChannels": [
+        {
+          "name": "motor.rotor1.speed_rpm",
+          "unit": "rpm",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 14449,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 14450,
+          "firstReturned": {
+            "timeNs": 3699968000,
+            "value": 2195.470542461292
+          },
+          "lastReturned": {
+            "timeNs": 3699968000,
+            "value": 2195.470542461292
+          }
+        },
+        {
+          "name": "motor.rotor1.current_a",
+          "unit": "A",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 9826,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 9827,
+          "firstReturned": {
+            "timeNs": 3699968000,
+            "value": 0
+          },
+          "lastReturned": {
+            "timeNs": 3699968000,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "chip": "ctrl2",
+      "pausedCycles": 14900000,
+      "nsFromEffective4MHz": 3725000000,
+      "motorSourceEndTimeNs": 3724800000,
+      "lagNs": 200000,
+      "nativeChannels": [
+        {
+          "name": "motor.rotor2.speed_rpm",
+          "unit": "rpm",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 13389,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 13390,
+          "firstReturned": {
+            "timeNs": 3724800000,
+            "value": 2084.244733873847
+          },
+          "lastReturned": {
+            "timeNs": 3724800000,
+            "value": 2084.244733873847
+          }
+        },
+        {
+          "name": "motor.rotor2.current_a",
+          "unit": "A",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 10255,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 10256,
+          "firstReturned": {
+            "timeNs": 3724800000,
+            "value": -0.46102218247711346
+          },
+          "lastReturned": {
+            "timeNs": 3724800000,
+            "value": -0.46102218247711346
+          }
+        }
+      ]
+    },
+    {
+      "chip": "ctrl3",
+      "pausedCycles": 14900000,
+      "nsFromEffective4MHz": 3725000000,
+      "motorSourceEndTimeNs": 3724800000,
+      "lagNs": 200000,
+      "nativeChannels": [
+        {
+          "name": "motor.rotor3.speed_rpm",
+          "unit": "rpm",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 14548,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 14549,
+          "firstReturned": {
+            "timeNs": 3724800000,
+            "value": 2187.925912154073
+          },
+          "lastReturned": {
+            "timeNs": 3724800000,
+            "value": 2187.925912154073
+          }
+        },
+        {
+          "name": "motor.rotor3.current_a",
+          "unit": "A",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 11055,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 11056,
+          "firstReturned": {
+            "timeNs": 3724800000,
+            "value": 2.6333742331726357
+          },
+          "lastReturned": {
+            "timeNs": 3724800000,
+            "value": 2.6333742331726357
+          }
+        }
+      ]
+    },
+    {
+      "chip": "ctrl4",
+      "pausedCycles": 14900000,
+      "nsFromEffective4MHz": 3725000000,
+      "motorSourceEndTimeNs": 3724800000,
+      "lagNs": 200000,
+      "nativeChannels": [
+        {
+          "name": "motor.rotor4.speed_rpm",
+          "unit": "rpm",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 14548,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 14549,
+          "firstReturned": {
+            "timeNs": 3724800000,
+            "value": 1506.7232259109924
+          },
+          "lastReturned": {
+            "timeNs": 3724800000,
+            "value": 1506.7232259109924
+          }
+        },
+        {
+          "name": "motor.rotor4.current_a",
+          "unit": "A",
+          "sampling": "hold",
+          "dropped": 0,
+          "omitted": 11638,
+          "returnedPoints": 1,
+          "retainedPointCountDerived": 11639,
+          "firstReturned": {
+            "timeNs": 3724800000,
+            "value": 4.531599376106607
+          },
+          "lastReturned": {
+            "timeNs": 3724800000,
+            "value": 4.531599376106607
+          }
+        }
+      ]
+    }
+  ],
+  "sourceSwitch": {
+    "name": "source-switch-preserved-firmware-runtime",
+    "wallMs": 1794496126851,
+    "initCount": 4,
+    "compileCount": 0,
+    "beforeCycles": {
+      "ctrl1": 3400000,
+      "ctrl2": 3300000,
+      "ctrl3": 3300000,
+      "ctrl4": 3300000
+    },
+    "afterCycles": {
+      "ctrl1": 8100000,
+      "ctrl2": 8000000,
+      "ctrl3": 8000000,
+      "ctrl4": 8000000
+    }
+  },
+  "fault": {
+    "inputCommands": [
+      {
+        "wallMs": 1794496134573,
+        "worker": 3,
+        "chip": "ctrl1",
+        "method": "setBoardIoInput",
+        "args": [
+          "fault1",
+          true
+        ]
+      },
+      {
+        "wallMs": 1794496147022,
+        "worker": 3,
+        "chip": "ctrl1",
+        "method": "setBoardIoInput",
+        "args": [
+          "fault1",
+          false
+        ]
+      }
+    ],
+    "lastRotor1Snapshot": {
+      "wallMs": 1794496177880,
+      "cycles": 38400000,
+      "actuatorStates": [
+        {
+          "bus_voltage_v": 24,
+          "commutation_sector": 1,
+          "control_state": "off:external-enable",
+          "current_a": 0,
+          "faults": [],
+          "id": "rotor1",
+          "kind": "bldc-motor",
+          "phase_currents_a": [
+            0.3225142276441982,
+            -2.2267448418680345,
+            1.9042306142238363
+          ],
+          "position_rad": 900.5522060500037,
+          "speed_rpm": 1966.0013075879924,
+          "torque_nm": -0.015510154691225582
+        }
+      ],
+      "uartOutput": "ROTOR 1 READY duty_permille=600\r\nROTOR 1 HALL LOCKED\r\nROTOR 1 FAULT DRIVER\r\nROTOR 1 INVERTER OFF\r\n"
+    },
+    "otherThreeKeptRunning": true,
+    "producerDroppedCountAllChannelsAllRetainedPhases": 0,
+    "retentionExplanation": "The source endTimeNs continued after the failed plant update. The last changing speed/current sample remained near3.851s; it is not a live changing value at9.575s."
+  },
+  "pinnedSourceDiagnosis": {
+    "caller": "crates/core/src/bus/motors.rs: disabled branch stable_substeps uses0.25*L/R and breaks silently on plant.step error",
+    "model": "crates/core/src/physics/motor/bldc.rs: step validates dt before changing state; validate_timestep bounds coupled electrical/mechanical dynamics",
+    "parameters": {
+      "R_ohm": 0.35,
+      "L_h": 0.00018,
+      "Kt_nm_per_a": 0.04,
+      "Ke_v_per_rad_s": 0.04,
+      "J_kg_m2": 1e-07,
+      "B_nm_per_rad_s": 3e-06
+    },
+    "coupledRatePerS": 18304.376062998963,
+    "maxAllowedDtExclusiveS": 5.4631744701827405e-05,
+    "callerMaxStepS": 0.00012857142857142858,
+    "actualRejectedExampleStepS": 0.000128,
+    "rejectedStepCoupledRatio": 2.342960136063867,
+    "old80MHz4096CycleStepS": 5.12e-05,
+    "oldStepCoupledRatio": 0.9371840544255469,
+    "proposedRegression": "Drive the exact low-inertia plant with valid small steps, then remove external enable and advance256us. Assert current L/R decay and finite continued shaft progression, then eventual coast-down. Preserve timestep validator and physical parameters. Exercise MOE and other off paths too."
+  },
+  "releaseState": "Local candidate branch only. No public-project update, deployment, final video, or passing coast-down claim.",
+  "sourceSwitchAnalogCaptureEvidence": {
+    "receipt": "paused-clock-and-retention.json",
+    "sourceId": "ctrl2",
+    "request": "analogSeries(2048)",
+    "responseWallMs": 1794496127122,
+    "endTimeNs": 3024896000,
+    "channel": "motor.rotor2.current_a",
+    "qualification": "The owner-switched receipt contains selection and clock continuity; the full native capture response arrives later and is preserved in the paused receipt. Earlier one-point discovery is not used as a substitute."
+  }
+}
