@@ -1,0 +1,210 @@
+{
+  "scope": "Source-qualified electrical harness and component selection. Native PCB, firmware and runtime evidence are unchanged. This is not a physical cable/EMC/strain qualification or a completed populated-mount fit claim.",
+  "sources": [
+    {
+      "manufacturer": "HellermannTyton",
+      "mpn": "111-01910 / T18R-PA66-BK",
+      "url": "https://www.hellermanntyton.com/products/cable-ties-inside-serrated/t18r/111-01910",
+      "drawings": [
+        {
+          "url": "https://www.hellermanntyton.com/shared/assets/CAD_10-0585-001-CSH.pdf",
+          "revision": "01.3, 2019-11-27",
+          "strapMm": {
+            "width": [
+              2.3,
+              2.7
+            ],
+            "thickness": [
+              0.8,
+              1.2
+            ]
+          },
+          "headMm": {
+            "length": [
+              4.3,
+              5.3
+            ],
+            "width": [
+              4.0,
+              5.0
+            ],
+            "height": [
+              3.4,
+              4.0
+            ]
+          }
+        },
+        {
+          "url": "https://www.hellermanntyton.com/shared/assets/CAD_10-0585-001-CSC.pdf",
+          "revision": "10.1, 2025-12-05",
+          "strapMm": {
+            "width": [
+              2.3,
+              2.7
+            ],
+            "thickness": [
+              0.9,
+              1.3
+            ]
+          },
+          "headMm": {
+            "length": [
+              4.6,
+              5.0
+            ],
+            "width": [
+              4.6,
+              5.0
+            ],
+            "height": [
+              3.3,
+              3.7
+            ]
+          }
+        }
+      ],
+      "clearanceUnionMaximumMm": {
+        "strap": [
+          2.7,
+          1.3
+        ],
+        "headLengthWidthHeight": [
+          5.3,
+          5.0,
+          4.0
+        ]
+      },
+      "sourceEvidence": "Manufacturer page and both rendered public drawings reviewed. Direct PDF cache request returned403; no unverified file hash recorded."
+    },
+    {
+      "manufacturer": "LAPP",
+      "mpn": "2170261",
+      "url": "https://imager.lapp.com/e/lapp/exwZlIBYDuKbhMSqz8NJsw~~/DB2170261EN.pdf",
+      "document": "DB2170261EN Version05, valid2025-11-25",
+      "retrievedBytes": 271588,
+      "sha256": "765566ef5609a92ce0ccb5501bf5e94b172305006fe033868de087d205313af9",
+      "conductor": "24AWG, seven strands,0.22mm2",
+      "nominalCoreDiameterMm": 1.4,
+      "nominalJacketDiameterMm": 7.5,
+      "minimumFixedBendRadius": "10 times actual outside diameter",
+      "impedanceOhms": {
+        "nominal": 120,
+        "tolerancePercent": 15,
+        "frequencyMinimumMHz": 1
+      },
+      "pairColors": [
+        [
+          "white",
+          "brown"
+        ],
+        [
+          "green",
+          "yellow"
+        ]
+      ],
+      "lengthMm": {
+        "roughStock": 1100,
+        "finishedBetweenConnectorRearFaces": 1000,
+        "ecusideFanoutMaximum": 50,
+        "untwistAtContactsMaximum": 10
+      }
+    },
+    {
+      "manufacturer": "Amphenol",
+      "mpn": "L177SDE09S",
+      "url": "https://www.amphenol-cs.com/product/l177sde09s.html",
+      "drawing": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/l177sdxxxs.pdf",
+      "scope": "Female9-contact solder-cup connector, shellE. Native contact-number continuity is authoritative; do not mirror the mating-face pin numbering when wiring from the solder side."
+    },
+    {
+      "manufacturer": "Amphenol",
+      "mpn": "8655MH0901BLF",
+      "url": "https://www.amphenol-cs.com/product/8655mh0901blf.html",
+      "drawing": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10085962.pdf",
+      "revision": "J, released2026-09-16",
+      "cableClampDiameterMm": [
+        5,
+        8
+      ],
+      "nominalOuterWidthLengthThicknessMm": [
+        31.14,
+        37.4,
+        15.8
+      ],
+      "lockingHardware": "UNC4-40",
+      "sourceEvidence": "Public drawing rendered and reviewed; direct PDF download returned403. Dimensions are nominal drawing values, not a substitute for tolerance review."
+    },
+    {
+      "manufacturer": "PEAK-System",
+      "mpn": "IPEK-003002-Mini",
+      "url": "https://www.peak-system.com/products/adapters/pcan-term/",
+      "terminationOhms": 120,
+      "pins": {
+        "CANH": 7,
+        "CANL": 2,
+        "GND": 3
+      },
+      "scope": "Install at remote tester; keep PCAN internal termination disabled and carrier JP1 enabled."
+    },
+    {
+      "manufacturer": "TE Connectivity",
+      "mpn": "5052942064",
+      "name": "RNF-100-3/32-0-STK",
+      "url": "https://www.te.com/en/product-5052942064.html",
+      "expandedInsideDiameterMinMm": 2.4,
+      "recoveredInsideDiameterMaxMm": 1.2,
+      "recoveredWallNominalToleranceMm": [
+        0.5,
+        0.2
+      ],
+      "stockLengthMm": 1220,
+      "scope": "Individual electrical insulation; installed solder and sleeve envelope needs fitted-assembly inspection."
+    },
+    {
+      "manufacturer": "TE Connectivity",
+      "mpn": "5053192058",
+      "name": "RNF-100-1/2-0-STK",
+      "url": "https://www.te.com/en/product-5053192058.html",
+      "expandedInsideDiameterMinMm": 12.7,
+      "recoveredInsideDiameterMaxMm": 6.4,
+      "cutLengthMm": 30,
+      "scope": "ECU-side braid-edge insulation. Jacket is restrained mechanically by the tie, not by this sleeve."
+    }
+  ],
+  "connections": [
+    {
+      "jstPin": 1,
+      "net": "CANH",
+      "color": "white",
+      "dsubContact": 7
+    },
+    {
+      "jstPin": 2,
+      "net": "CANL",
+      "color": "brown",
+      "dsubContact": 2
+    },
+    {
+      "jstPin": 3,
+      "net": "GND",
+      "color": "green",
+      "dsubContact": 3
+    }
+  ],
+  "unusedConductor": {
+    "color": "yellow",
+    "bothEnds": "individually insulated"
+  },
+  "shield": {
+    "testerEnd": "metal hood clamp/shell",
+    "ecuEnd": "trimmed and insulated; no signal contact"
+  },
+  "checksRequiredBeforePower": [
+    "Continuity and no cross-connection at each numbered contact",
+    "Measured core insulation diameter within XH1.3-1.9mm range",
+    "Measured jacket diameter within hood5-8mm range",
+    "Cable bend radius at least10 times measured OD",
+    "No exposed solder or shield strand; positive jacket restraint",
+    "Approximately60ohms between CANH/CANL with both endpoints unpowered"
+  ]
+}
