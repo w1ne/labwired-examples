@@ -3,13 +3,13 @@
   "status": "assembly-candidate",
   "acceptance": {
     "solidBuild": "pass",
-    "scriptClearances": "7/7 pass",
-    "baseFdm": "pass",
-    "lidFdm": "pass",
+    "scriptClearances": "9/9 pass",
+    "baseFdm": "pass: measured minWall 1.1261785276 mm",
+    "lidFdm": "pass: measured minWall 0.8498339486 mm",
     "stepBrep": "41/41 assembly solids valid; base and lid each1 valid solid",
     "meshExports": "binary STL closed-manifold edge counts and size pass; 3MF opens in millimetres",
-    "designLoop": "blocked: hosted staged-input ENOENT",
-    "assemblyPath": "unverified: budget exhausted; larger run timed out after300s",
+    "designLoop": "pass: functional, quality and actual screenshot review accepted",
+    "assemblyPath": "unverified: hosted 80-million budget exhausted; local indexed-containment runtime fails closed on nominal seated contacts",
     "physicalFit": "not performed",
     "printing": "not performed",
     "cableRouting": "not performed"
@@ -17,12 +17,12 @@
   "kernelcad": {
     "provider": "kernelcad",
     "slug": "t_IaE1EE",
-    "version": 1,
+    "version": 2,
     "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
     "privacy": "public_unlisted",
-    "url": "https://app.kernelcad.com/p/t_IaE1EE?version=1",
-    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v1.json?provenance=2e30f8a30c441c34fb4a7d81d1a17f82672127c961e4889f56bc15a28345f3d5",
-    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/1/mesh-artifact?download=1&provenance=2e30f8a30c441c34fb4a7d81d1a17f82672127c961e4889f56bc15a28345f3d5",
+    "url": "https://app.kernelcad.com/p/t_IaE1EE?version=2",
+    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v2.json?provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/2/mesh-artifact?download=1&provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
     "meshReady": true
   },
   "source": "esp32c3-oled-enclosure.kcad.ts",
@@ -38,8 +38,8 @@
   "exports": [
     {
       "path": "exports/esp32c3-oled-assembly.step",
-      "sha256": "e78f484183b393e103a318d8e9c53ec0b17d5a11a2cb2dbc6b8caecf02cad0f8",
-      "bytes": 1782145,
+      "sha256": "4598fbfbe9f040dd1a70b708b65cfdde39459c7d1f365f96397924067e2ff0bb",
+      "bytes": 1861898,
       "mediaType": "model/step"
     },
     {
@@ -56,50 +56,32 @@
     },
     {
       "path": "exports/esp32c3-oled-base.3mf",
-      "sha256": "39c2ab9e7f09723c396f040103e3ab0f790fe233a27caccd1a6be55cb70c0da7",
+      "sha256": "5e36c3f6cb889193d3c41898a5b3e0f12fcc19dd37c1a680359542c2a85b7e10",
       "bytes": 353578,
       "mediaType": "model/3mf"
     },
     {
       "path": "exports/esp32c3-oled-lid.step",
-      "sha256": "5bc230b0c5bd1c60239a95257cc50d68aa55a1eec6e4a48f9a14c2576fd1c16b",
-      "bytes": 156495,
+      "sha256": "d34ec62474ea4b3429e95bbb3138a13032d0a66e21cbab20f2b28a3703af94e4",
+      "bytes": 233800,
       "mediaType": "model/step"
     },
     {
       "path": "exports/esp32c3-oled-lid.stl",
-      "sha256": "8d7cc6a64614752404ca83495c2d7d44b5dad0dd8ed454834085095d74ce16b5",
-      "bytes": 711284,
+      "sha256": "ee7d438f0598a0051e8f73fba1a73b617cbd76902013eb2e167bdc1add7c82fb",
+      "bytes": 614284,
       "mediaType": "model/stl"
     },
     {
       "path": "exports/esp32c3-oled-lid.3mf",
-      "sha256": "4569986b4362217bb3b52eb71fe4796bf4427d373aa0333afbf92604aa106f1b",
-      "bytes": 181169,
+      "sha256": "802f5f4975f01bf53c08680caceb1a2d8c573a5ce816619a56a2c7385e0b405b",
+      "bytes": 160014,
       "mediaType": "model/3mf"
     }
   ],
-  "toleranceBlocker": {
-    "glassPostGapNominalMm": 0.277,
-    "holeCentreToGlassEdgeMm": 2.277,
-    "postDiameterMm": 4,
-    "boreDiameterMm": 2.3,
-    "postWallMm": 0.85,
-    "fdmMinWallMm": 0.8,
-    "diameterForHalfMmGlassGap": 3.554,
-    "wallIfHalfMmGlassGap": 0.627,
-    "action": "Measure actual glass/post gap before tightening; no contact or glass preload permitted. This nominal model does not meet a0.5 mm glass-to-post allowance."
-  },
-  "renderNote": "revision-v1-iso.png is the exact saved revision preview. Other larger views precede only the0.0635 mm controller XY correction and carrier STEP metadata refresh.",
-  "blockedGateReceipts": [
-    "verification/design-loop-error.json",
-    "verification/design-loop-data-uri-error.json",
-    "verification/assembly-path-budget.json",
-    "verification/assembly-path-timeout.json",
-    "verification/reproduction.json"
-  ],
-  "sourceSha256": "67dabf600707d07a4337e5e000e538ce5553b432e0e0c1fcb7afc8e867a9fe82",
-  "submittedSourceSha256": "39b8bf5465cd968a102963735f597c697fa8dda131a87ca3ac8b251bde5b1031",
+  "renderNote": "All v2-* renders and revision-v2-iso.png use the exact revision2 geometry. Older renders and blocked-gate receipts remain historical evidence.",
+  "sourceSha256": "67cde40ec0d6bc1113c5a71b5d3778520f7147f88190ee7d5bf2b61412707fd8",
+  "submittedSourceSha256": "0dad608ad219e5c96d79d8b913d5183ccaee22ae67236006e3cd5b1a21f3b1de",
   "assetSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
   "componentEnvelopes": [
     {
@@ -121,5 +103,54 @@
         ]
       }
     }
+  ],
+  "historicalToleranceBlocker": {
+    "glassPostGapNominalMm": 0.277,
+    "holeCentreToGlassEdgeMm": 2.277,
+    "postDiameterMm": 4,
+    "boreDiameterMm": 2.3,
+    "postWallMm": 0.85,
+    "fdmMinWallMm": 0.8,
+    "diameterForHalfMmGlassGap": 3.554,
+    "wallIfHalfMmGlassGap": 0.627,
+    "action": "Measure actual glass/post gap before tightening; no contact or glass preload permitted. This nominal model does not meet a0.5 mm glass-to-post allowance."
+  },
+  "glassSupportRevision": {
+    "geometry": "two open U supports beside the glass; two original round supports at the opposite mounts",
+    "glassPostGapNominalMm": 1.277,
+    "glassLidVerticalGapMm": 0.5,
+    "openSupportOuterMm": [
+      4,
+      3,
+      2.3
+    ],
+    "openSlotWidthMm": 2.3,
+    "armsAndBackNominalMm": 0.85,
+    "measuredPrintedPartMinWallMm": 0.8498339486088153,
+    "fdmMinWallMm": 0.8,
+    "supportEndAreaMm2": 7.055,
+    "minimumMeasuredBenchGlassPostGapTargetMm": 0.5,
+    "physicalMeasurementPerformed": false,
+    "note": "The 1.0 mm nominal CAD support gate and 0.5 mm glass/lid gate pass; manufacturing and component tolerances remain a physical acceptance item."
+  },
+  "historicalBlockedGateReceipts": [
+    "verification/design-loop-error.json",
+    "verification/design-loop-data-uri-error.json",
+    "verification/assembly-path-budget.json",
+    "verification/assembly-path-timeout.json",
+    "verification/reproduction.json"
+  ],
+  "blockedGateReceipts": [
+    "verification/assembly-path-budget-v2.json",
+    "verification/assembly-path-local-refinement-v2.json"
+  ],
+  "acceptedGateReceipts": [
+    "verification/solid-build-v2.json",
+    "verification/design-loop-v2.json",
+    "verification/base-fdm-v2.json",
+    "verification/lid-fdm-v2.json",
+    "verification/step-inspection-v2.json",
+    "verification/mesh-export-check-v2.json",
+    "verification/candidate1-negative-control.json"
   ]
 }

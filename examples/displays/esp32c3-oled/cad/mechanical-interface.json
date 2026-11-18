@@ -151,14 +151,35 @@
       "cornerRadius": 0.6
     },
     "rearKeepoutHeight": 3.2,
-    "glassPostNominalGap": 0.277,
-    "glassLidVerticalNominalGap": 0.5
+    "glassPostNominalGap": 1.277,
+    "glassLidVerticalNominalGap": 0.5,
+    "glassNearSupports": {
+      "type": "open U",
+      "outside": [
+        4,
+        3,
+        2.3
+      ],
+      "slotWidth": 2.3,
+      "armsAndBack": 0.85,
+      "glassClearance": 1.277,
+      "mountCentres": [
+        [
+          37.54,
+          9.04
+        ],
+        [
+          61.67,
+          9.04
+        ]
+      ]
+    }
   },
   "bindings": {
     "reference": {
       "provider": "kernelcad",
       "slug": "t_IaE1EE",
-      "version": 1,
+      "version": 2,
       "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099"
     },
     "pcbBindings": [
@@ -184,7 +205,7 @@
   },
   "assumptions": [
     "No physical print or hardware fit has been performed.",
-    "Nominal0.277 mm glass/post clearance is not a worst-case tolerance guarantee; measure incoming display and printed lid.",
+    "Nominal1.277 mm glass/support clearance and0.50 mm glass/lid gap are CAD values; incoming parts and prints still need measurement.",
     "OLED cable100 mm and mating plugs require bench route/fit check.",
     "Vendor XIAO STEP is an older1.0 mm board revision; nativev1.3 thickness1.6 mm and USBXY override it.",
     "Thread and electronic component bodies are clearance envelopes, not fabrication models.",

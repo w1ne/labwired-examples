@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "show_electronics": true,
+  "hardwarePack": {
+    "schema": "hardware-pack/v1",
+    "kernelcad": {
+      "url": "https://app.kernelcad.com/p/t_IaE1EE?version=2",
+      "slug": "t_IaE1EE",
+      "version": 2
+    },
+    "labwired": {
+      "url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=t_IaE1EE&kernelcad_revision=2",
+      "mcp_url": "https://api.labwired.com/mcp",
+      "tools": [
+        "labwired_hardware",
+        "labwired_list",
+        "labwired_describe",
+        "labwired_project_get",
+        "labwired_export",
+        "labwired_verify"
+      ]
+    },
+    "buy_device_url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=t_IaE1EE&kernelcad_revision=2&device=1",
+    "purchase_mode": "review_separate_orders",
+    "companion_access": "use_connected_plugin_or_open_link"
+  },
+  "project_id": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+  "slug": "t_IaE1EE",
+  "version": 2,
+  "privacy": "public_unlisted",
+  "title": "ESP32-C3 OLED device \u2014 Rev A candidate 2",
+  "url": "https://app.kernelcad.com/p/t_IaE1EE?version=2&show_electronics=1",
+  "embedUrl": "https://app.kernelcad.com/embed/t_IaE1EE?revision=2&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2Ft_IaE1EE%2Fv2.json%3Fprovenance%3D0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+  "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v2.json?provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+  "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/2/mesh-artifact?download=1&provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+  "updated": true,
+  "project_note": "Saved as revision 2 of project 't_IaE1EE': https://app.kernelcad.com/p/t_IaE1EE?version=2&show_electronics=1 (title: ESP32-C3 OLED device \u2014 Rev A candidate 2). Next save: pass project: 't_IaE1EE'. Pass new_project: true only for a separate model.",
+  "previewDelivered": true,
+  "previewStatus": "included",
+  "previewView": "iso",
+  "previewWidth": 640,
+  "previewHeight": 640,
+  "previewBytes": 34330,
+  "previewCached": false,
+  "previewHint": "PNG preview is included in this tool result (image content block + previewUrl). Say the preview was delivered only when previewDelivered is true \u2014 do not require a second get_latest_render call for the happy path, and do not tell the user to open Studio just to see a still.",
+  "previewUrl": "https://53f45abe9550f62856af4475880e0a77.r2.cloudflarestorage.com/kernelcad-review-paint/renders/t_IaE1EE/2026-11-18T09-33-10.041Z.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=2f78f398fb06be554a49798c3f9bb1b4%2F20261118%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261118T093310Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=848290b21e2301f540daf99a63da7486c7593d04c6beda4f9026d57e11520e3d",
+  "parameters": [
+    {
+      "name": "output",
+      "value": "assembly",
+      "kind": "string"
+    }
+  ],
+  "meshStatus": "ready",
+  "meshSaved": true,
+  "projectSaved": true,
+  "meshReady": true,
+  "viewerPainted": false,
+  "paintHint": "Do NOT claim the interactive viewer painted unless the widget reports viewerPainted=true (ui/update-model-context or widgetState.modelContent) \u2014 tools/call always leaves viewerPainted=false. projectSaved\u2260viewerPainted. meshReady=false with meshStatus=building is OK \u2014 embed retries meshUrl. Do NOT call get_model_mesh or get_latest_render to force interactive paint; use open_in_studio only.",
+  "attachmentCount": 1,
+  "assetHashes": [
+    "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+  ],
+  "serverBuild": "0.1.0+998c457b7810@2026-11-18T09:30:48.889Z"
+}

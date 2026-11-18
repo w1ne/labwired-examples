@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-L5NT2X0K8KR3j_bz3pGY1A/render-iso.png?exp=1795079412&sig=vCnuhx5ei41Kasx35HrvGrS7ZyNItAqcTskLQjDACio",
+  "findings": [
+    "Closed iso and right views show one base with one seated lid, eight external screw heads and one unobstructed rectangular display window.",
+    "The lid-print iso/top views show two open U supports on the glass-near side, two round supports on the far side, four unchanged outer mounting holes and three registration tabs.",
+    "Top and iso views with the removable lid/display subassembly hidden show the controller USB shell aligned to the left open-top notch and the carrier retained on four mounts.",
+    "These are rendered clearance envelopes. They do not establish printed dimensions, cable bending, fastener torque or physical assembly."
+  ],
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "The closed iso view contains a single two-piece enclosure and one display opening; no duplicate case is visible.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-L5NT2X0K8KR3j_bz3pGY1A/render-iso.png?exp=1795079412&sig=vCnuhx5ei41Kasx35HrvGrS7ZyNItAqcTskLQjDACio"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The closed case is a shallow rectangular instrument enclosure; the display occupies the intended right-hand area and the lid follows the base perimeter.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-L5NT2X0K8KR3j_bz3pGY1A/render-iso.png?exp=1795079412&sig=vCnuhx5ei41Kasx35HrvGrS7ZyNItAqcTskLQjDACio"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "The closed lid exposes the dark display face. The interior top view shows an open-top left USB notch aligned with the controller shell; the lid-print view shows all four display supports.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-4ORFca-HxdRFrd6DQtzUPQ/render-top.png?exp=1795079688&sig=BX15WRz5vSueLrgPz95WfO7WYzk6vAy8znW--WK9pVE"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "No disconnected external objects appear in the full closed views. Purchased spacers, board and fastener heads in the interior view follow their mounting stacks; the intentionally hidden lid parts are omitted only for this inspection view.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-NOF1t5RG151zftT2Scff2Q/render-iso.png?exp=1795079689&sig=J_ChX93xAT5LJ3Khh_8BGus56apJ9Jnrd-GWoeaWkoE"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "The lid-print underside shows two U sections and two round posts integral to the lid. Four corner metal spacers and four carrier fasteners appear at the intended board/case mounts.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-24SGr8ywk0lOszUwylz2TQ/render-iso.png?exp=1795079243&sig=9Nq5HpY1ztHdvNfjTbE7sYtChqPPhaScfYbSDy3YW54"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "The glass face points through the upper lid window, the controller connector points toward the left notch, and the print-lid view puts the outer flat face on the bed with supports extending upward.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-4ORFca-HxdRFrd6DQtzUPQ/render-top.png?exp=1795079688&sig=BX15WRz5vSueLrgPz95WfO7WYzk6vAy8znW--WK9pVE"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "Closed iso/right views show the same seated lid and body. Lid-print iso/top views agree on support positions, window and corner holes. The interior views expose the same carrier and left USB cutout.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-SSBJjg9uHxbHfaI8faMlUg/render-right.png?exp=1795079412&sig=hBktwYNCBDDI5cldJsWtTFXZknQzg37JaTHU_U8WBoU"
+    }
+  ]
+}

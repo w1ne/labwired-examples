@@ -1,14 +1,14 @@
-# ESP32-C3 OLED device — Rev A candidate
+# ESP32-C3 OLED device — Rev A candidate 2
 
 This package contains a USB-powered OLED counter, its routed carrier PCB, firmware, enclosure CAD, assembly instructions and verification evidence. A Seeed XIAO ESP32C3 drives an Adafruit 326 STEMMA QT display. The counter starts at **19:00:00 after every reset** and advances once per second. It has no real-time clock, time-setting control or saved time.
 
-**Status: engineering assembly candidate.** Firmware behavior and native PCB checks pass. The enclosure has valid solids and passing base/lid print checks, but the full assembly-path check timed out and `design_loop` could not read an embedded STEP input. No physical prototype has been built. These open checks prevent this package from being called a fully validated device.
+**Status: engineering assembly candidate.** Firmware behavior and native PCB checks pass. Revision 2 increases nominal glass/support clearance from 0.277 mm to 1.277 mm while retaining the 0.8 mm minimum-wall requirement. The enclosure passes nine dimensional checks, both print-orientation checks, valid STEP solids and a design-loop review with actual screenshots. Full assembly-path acceptance remains open because the verifier cannot yet resolve nominal seated contacts after its containment performance limit. No physical prototype has been built.
 
-[Open the canonical Lab](https://app.labwired.com/?lab=esp32c3-oled-lab) · [Open the pinned enclosure](https://app.kernelcad.com/p/t_IaE1EE?version=1) · [Track remaining work](https://github.com/w1ne/labwired/issues/3550)
+[Open the canonical Lab](https://app.labwired.com/?lab=esp32c3-oled-lab) · [Open the pinned enclosure](https://app.kernelcad.com/p/t_IaE1EE?version=2) · [Track remaining work](https://github.com/w1ne/labwired/issues/3550)
 
 The canonical Lab integration is delivered by the associated platform change. Until that change deploys, the public Lab can still show the previous Super Mini starter. This repository and the release files identify the candidate independently of deployment.
 
-![Actual KernelCAD render of the closed enclosure candidate](cad/renders/revision-v1-iso.png)
+![Actual KernelCAD render of the closed enclosure candidate](cad/renders/revision-v2-iso.png)
 
 ## Package contents
 
@@ -92,7 +92,7 @@ The public runtime is [firmware-demos-v19](https://github.com/w1ne/labwired-core
 
 ### Open physical-fit checks
 
-- **Glass/post clearance:** the narrowest nominal gap is **0.277 mm**. The upper hole-to-glass-edge offset is 2.277 mm and the printed post radius is 2.0 mm. Its 2.3 mm bore leaves a 0.85 mm wall. Shrinking that post enough to provide 0.5 mm clearance would violate the current 0.8 mm minimum-wall requirement. Measure the received OLED and print; revise the geometry if either touches. This is not a tolerance-qualified fit.
+- **Glass/support clearance:** the two open supports beside the glass now provide **1.277 mm nominal clearance**. They retain the original M2 screw positions and **0.85 mm arms/back**. The measured lid minimum wall is **0.8498 mm**, above the unchanged **0.8 mm** limit. The old round supports fail the new 1.0 mm nominal clearance gate at 0.277 mm; the negative-control receipt is included. Measure the received OLED and print against the proposed 0.5 mm bench clearance target. This is not a tolerance-qualified physical fit.
 - **Vertical glass clearance:** nominally 0.50 mm for the stated 1.80 mm glass/film envelope. Check the actual display and printed lid.
 - **USB cable:** the CAD access check uses a 16 × 8 mm plug overmold. The selected cable vendor does not publish overmold dimensions. Check full connector engagement with the actual cable.
 - **Cable and short spacer stack:** the flexible cable and mating plug bodies are not fit-verified. The nominal opposing screw-tip gap in the 5 mm spacers is 0.44 mm; verify clamping and absence of screw bottoming.
@@ -108,9 +108,9 @@ The public runtime is [firmware-demos-v19](https://github.com/w1ne/labwired-core
 | Package-build ROM boot | **5/5 assertions pass**, 300 million steps | Banner, both tick strings, nonblank display region and bounded stop |
 | Published runtime + packaged configuration | **5/5 assertions pass**, 300 million steps | Cold boot of exact v19 bytes with the exported Lab system |
 | Published runtime + browser WASM | Two distinct nonblank 128×64 frames; **19:00:00 → 19:00:01** | Exact v19 ELF/flash/snapshot and pinned core engine |
-| Enclosure solids and print orientations | Passed recorded checks | Nominal CAD and configured FDM geometry |
-| Full assembly-path check | **Unresolved: timed out** | No accepted assembly-path result |
-| `design_loop` review | **Unresolved: embedded STEP load error** | No green review receipt |
+| Enclosure solids and print orientations | **41/41 STEP solids valid; base/lid FDM pass; 9/9 dimensional requirements pass** | Exact revision 2 CAD and configured FDM geometry |
+| Full assembly-path check | **Unresolved: budget / seated-contact mesh ambiguity** | Hosted 80-million budget receipt and local fail-closed contact receipt; no accepted sequence |
+| `design_loop` review | **Pass: functional, quality and screenshot review** | Exact revision 2 source, native STEP and actual closed/interior/lid-print renders |
 | Printed/device prototype | **Not performed** | Electrical measurements, cable fit and physical assembly remain open |
 
 The native reports record four default ignored ERC categories and five default ignored DRC categories. There are no explicit DRC exclusions. See [manufacturing/validation.json](manufacturing/validation.json) for the complete settings and hashes.

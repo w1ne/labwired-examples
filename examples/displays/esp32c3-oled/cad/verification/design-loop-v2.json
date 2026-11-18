@@ -1,0 +1,490 @@
+{
+  "ok": true,
+  "goal": "Accept the complete 41-part ESP32-C3 OLED enclosure CAD for source release: valid manufactured base/lid and purchased component envelopes, no rigid interference, visible screen and USB access, retained 0.8 mm minimum printed wall and at least 0.5 mm glass-to-lid clearance. The two glass-near open supports must have at least 1 mm nominal glass clearance. Physical printing and hardware testing are outside this CAD review and must remain explicitly unperformed.",
+  "finalAttemptId": "01",
+  "attempts": [
+    {
+      "id": "01",
+      "title": "Attempt 01",
+      "ok": true,
+      "functional": true,
+      "qualityOk": true,
+      "featureCount": 300,
+      "diagnosticCount": 80,
+      "reviewFacts": [],
+      "visualReview": {
+        "accepted": true,
+        "findings": [
+          "Closed iso and right views show one base with one seated lid, eight external screw heads and one unobstructed rectangular display window.",
+          "The lid-print iso/top views show two open U supports on the glass-near side, two round supports on the far side, four unchanged outer mounting holes and three registration tabs.",
+          "Top and iso views with the removable lid/display subassembly hidden show the controller USB shell aligned to the left open-top notch and the carrier retained on four mounts.",
+          "These are rendered clearance envelopes. They do not establish printed dimensions, cable bending, fastener torque or physical assembly."
+        ],
+        "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-L5NT2X0K8KR3j_bz3pGY1A/render-iso.png?exp=1795079412&sig=vCnuhx5ei41Kasx35HrvGrS7ZyNItAqcTskLQjDACio",
+        "checks": [
+          {
+            "code": "main-object-count",
+            "passed": true,
+            "finding": "The closed iso view contains a single two-piece enclosure and one display opening; no duplicate case is visible.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-L5NT2X0K8KR3j_bz3pGY1A/render-iso.png?exp=1795079412&sig=vCnuhx5ei41Kasx35HrvGrS7ZyNItAqcTskLQjDACio"
+          },
+          {
+            "code": "proportions-match-reference",
+            "passed": true,
+            "finding": "The closed case is a shallow rectangular instrument enclosure; the display occupies the intended right-hand area and the lid follows the base perimeter.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-L5NT2X0K8KR3j_bz3pGY1A/render-iso.png?exp=1795079412&sig=vCnuhx5ei41Kasx35HrvGrS7ZyNItAqcTskLQjDACio"
+          },
+          {
+            "code": "required-visible-features",
+            "passed": true,
+            "finding": "The closed lid exposes the dark display face. The interior top view shows an open-top left USB notch aligned with the controller shell; the lid-print view shows all four display supports.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-4ORFca-HxdRFrd6DQtzUPQ/render-top.png?exp=1795079688&sig=BX15WRz5vSueLrgPz95WfO7WYzk6vAy8znW--WK9pVE"
+          },
+          {
+            "code": "no-stray-or-floating-geometry",
+            "passed": true,
+            "finding": "No disconnected external objects appear in the full closed views. Purchased spacers, board and fastener heads in the interior view follow their mounting stacks; the intentionally hidden lid parts are omitted only for this inspection view.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-NOF1t5RG151zftT2Scff2Q/render-iso.png?exp=1795079689&sig=J_ChX93xAT5LJ3Khh_8BGus56apJ9Jnrd-GWoeaWkoE"
+          },
+          {
+            "code": "attachment-plausibility",
+            "passed": true,
+            "finding": "The lid-print underside shows two U sections and two round posts integral to the lid. Four corner metal spacers and four carrier fasteners appear at the intended board/case mounts.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-24SGr8ywk0lOszUwylz2TQ/render-iso.png?exp=1795079243&sig=9Nq5HpY1ztHdvNfjTbE7sYtChqPPhaScfYbSDy3YW54"
+          },
+          {
+            "code": "semantic-orientation-alignment",
+            "passed": true,
+            "finding": "The glass face points through the upper lid window, the controller connector points toward the left notch, and the print-lid view puts the outer flat face on the bed with supports extending upward.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-4ORFca-HxdRFrd6DQtzUPQ/render-top.png?exp=1795079688&sig=BX15WRz5vSueLrgPz95WfO7WYzk6vAy8znW--WK9pVE"
+          },
+          {
+            "code": "canonical-views-physically-coherent",
+            "passed": true,
+            "finding": "Closed iso/right views show the same seated lid and body. Lid-print iso/top views agree on support positions, window and corner holes. The interior views expose the same carrier and left USB cutout.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-SSBJjg9uHxbHfaI8faMlUg/render-right.png?exp=1795079412&sig=hBktwYNCBDDI5cldJsWtTFXZknQzg37JaTHU_U8WBoU"
+          }
+        ]
+      },
+      "repairMode": "none",
+      "passedChecks": [
+        "validator-no-errors",
+        "pose-envelope-solved",
+        "pose-envelope-no-interference"
+      ],
+      "blockingReasons": [],
+      "mechanismSummary": {
+        "sampleCount": 1,
+        "interferenceCount": 0,
+        "trackedConnectorCount": 0
+      },
+      "requirements": {
+        "ok": true,
+        "status": "pass",
+        "entries": [
+          {
+            "name": "pcb-outside-envelope",
+            "source": "script",
+            "status": "pass",
+            "measured": [
+              70.00000298830409,
+              45.000002988304104,
+              1.6000000000000059
+            ],
+            "limit": {
+              "x": [
+                69.99,
+                70.01
+              ],
+              "y": [
+                44.99,
+                45.01
+              ],
+              "z": [
+                1.59,
+                1.61
+              ]
+            },
+            "margin": 0.009997011695894287,
+            "selections": [
+              {
+                "consumerFeatureId": "require_1",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              }
+            ],
+            "featureId": "require_1",
+            "predicate": {
+              "metric": "bbox",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "op": "within",
+              "limit": {
+                "x": [
+                  69.99,
+                  70.01
+                ],
+                "y": [
+                  44.99,
+                  45.01
+                ],
+                "z": [
+                  1.59,
+                  1.61
+                ]
+              }
+            }
+          },
+          {
+            "name": "oled-glass-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.5,
+            "limit": 0.5,
+            "margin": 0,
+            "selections": [
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_2",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "oled-glass-to-open-support-0",
+            "source": "script",
+            "status": "pass",
+            "measured": 1.277000000000001,
+            "limit": 1,
+            "margin": 0.277000000000001,
+            "selections": [
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(boolean_28)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 5.503635162326805
+              }
+            ],
+            "featureId": "require_3",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_28"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "oled-glass-to-open-support-1",
+            "source": "script",
+            "status": "pass",
+            "measured": 1.277000000000001,
+            "limit": 1,
+            "margin": 0.277000000000001,
+            "selections": [
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(boolean_31)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 5.503635162326805
+              }
+            ],
+            "featureId": "require_4",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_31"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "controller-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.3200000000000003,
+            "limit": 0.5,
+            "margin": 2.8200000000000003,
+            "selections": [
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(boolean_58)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 29.07875186884747
+              },
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_5",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_58"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "pcb-assembly-to-oled-assembly-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 8.709513476652985,
+            "limit": 0.5,
+            "margin": 8.209513476652985,
+            "selections": [
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(boolean_60)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 86.36942447277016
+              },
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(boolean_71)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 43.644548342261594
+              }
+            ],
+            "featureId": "require_6",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_60"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_71"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "pcb-assembly-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.3200000000000003,
+            "limit": 0.5,
+            "margin": 2.8200000000000003,
+            "selections": [
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(boolean_60)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 86.36942447277016
+              },
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_7",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_60"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "usb-plug-access-to-base",
+            "source": "script",
+            "status": "pass",
+            "measured": 1,
+            "limit": 0.5,
+            "margin": 0.5,
+            "selections": [
+              {
+                "consumerFeatureId": "require_8",
+                "selectorText": "body(box_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 28.354893757515654
+              },
+              {
+                "consumerFeatureId": "require_8",
+                "selectorText": "body(boolean_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 111.66579601650633
+              }
+            ],
+            "featureId": "require_8",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_18"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_18"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "usb-plug-access-to-lid",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.9250000000000007,
+            "limit": 0.5,
+            "margin": 0.4250000000000007,
+            "selections": [
+              {
+                "consumerFeatureId": "require_9",
+                "selectorText": "body(box_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 28.354893757515654
+              },
+              {
+                "consumerFeatureId": "require_9",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_9",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_18"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          }
+        ],
+        "summary": {
+          "pass": 9,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "6e6e9f62703eb0e488a607b78549c0782dec95d5af5c21e815caaccc909a808c",
+          "byteLength": 12008
+        },
+        "parameters": {
+          "values": {
+            "output": "assembly"
+          },
+          "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "7a5ca41c0d3f8224347d2ec15d9be7939af40847"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "5ba718bfbce015ba2f70da06ccd95a996667887231f31d3f120d61f4479aff71"
+      },
+      "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+    }
+  ],
+  "record": {
+    "title": "OLED revision 2 mechanical review",
+    "goal": "Accept the complete 41-part ESP32-C3 OLED enclosure CAD for source release: valid manufactured base/lid and purchased component envelopes, no rigid interference, visible screen and USB access, retained 0.8 mm minimum printed wall and at least 0.5 mm glass-to-lid clearance. The two glass-near open supports must have at least 1 mm nominal glass clearance. Physical printing and hardware testing are outside this CAD review and must remain explicitly unperformed.",
+    "steps": []
+  },
+  "serverBuild": "0.1.0+7a5ca41c0d3f@2026-11-18T09:08:15.431Z"
+}

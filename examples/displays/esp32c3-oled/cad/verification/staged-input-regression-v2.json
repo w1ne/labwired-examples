@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "goal": "Non-visual regression check for hosted STEP file staging in a nested design_loop attempt. This is a transport regression probe, not final device acceptance.",
+  "finalAttemptId": "01",
+  "attempts": [
+    {
+      "id": "01",
+      "title": "Attempt 01",
+      "ok": true,
+      "functional": true,
+      "qualityOk": true,
+      "featureCount": 1,
+      "diagnosticCount": 0,
+      "reviewFacts": [],
+      "repairMode": "none",
+      "passedChecks": [
+        "part-only-evaluate"
+      ],
+      "blockingReasons": [],
+      "mechanismSummary": {
+        "sampleCount": 0,
+        "interferenceCount": 0,
+        "trackedConnectorCount": 0
+      },
+      "requirements": {
+        "ok": true,
+        "status": "not-declared",
+        "entries": [],
+        "summary": {
+          "pass": 0,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "b7689f204481da7a9e4ed992c9d8aa507f1e12f93506d0ab2c11f01e2b983ffc",
+          "byteLength": 77
+        },
+        "parameters": {
+          "values": {},
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "cda2808dbd0d5797020aff549c8412d959b92d58"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "888138e897025a1903011ebe6f31fd80cfa629a4f03190264f3c3a1623ef414f"
+      },
+      "nextActionPrompt": "Single part (no assembly): the part-level checks (build, union guard, DFM gates, requirements) passed; mate, pose-envelope and mechanism checks do not apply. Wrap parts in assembly(...).part(...) and add mates when the design has joints."
+    }
+  ],
+  "record": {
+    "title": "OLED carrier staged-input regression",
+    "goal": "Non-visual regression check for hosted STEP file staging in a nested design_loop attempt. This is a transport regression probe, not final device acceptance.",
+    "steps": []
+  },
+  "serverBuild": "0.1.0+cda2808dbd0d@2026-11-18T08:39:34.231Z"
+}
