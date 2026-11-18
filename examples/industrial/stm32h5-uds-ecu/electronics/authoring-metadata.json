@@ -1,0 +1,244 @@
+{
+  "schematic_uuid": "53a736ec-a743-56cf-aed2-1747646407c0",
+  "components": [
+    {
+      "ref": "J1",
+      "lib": "MCU6",
+      "value": "MCU 3V3 logic / 5V power",
+      "at": [
+        40.64,
+        55.88
+      ],
+      "net": {
+        "1": "GND",
+        "2": "VDD5",
+        "3": "VIO3V3",
+        "4": "TXD",
+        "5": "RXD",
+        "6": "GND"
+      },
+      "mpn": "B6B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "uuid": "a8a5c6aa-7c33-5559-9c1d-dfe37b94e878"
+    },
+    {
+      "ref": "U1",
+      "lib": "U",
+      "value": "MCP2562FD-E/SN",
+      "at": [
+        116.84,
+        60.96
+      ],
+      "net": {
+        "1": "TXD",
+        "2": "GND",
+        "3": "VDD5",
+        "4": "RXD",
+        "5": "VIO3V3",
+        "6": "CANL",
+        "7": "CANH",
+        "8": "GND"
+      },
+      "mpn": "MCP2562FD-E/SN",
+      "manufacturer": "Microchip",
+      "uuid": "a65216ae-b8f4-5f05-9ece-3bccf7861a05"
+    },
+    {
+      "ref": "J2",
+      "lib": "CAN3",
+      "value": "CAN H / L / GND",
+      "at": [
+        231.14,
+        58.42
+      ],
+      "net": {
+        "1": "CANH",
+        "2": "CANL",
+        "3": "GND"
+      },
+      "mpn": "B3B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "uuid": "4bfa2cb5-5a75-5899-9c0c-65c2c6ac2657"
+    },
+    {
+      "ref": "D1",
+      "lib": "ESD",
+      "value": "PESD2CAN,215",
+      "at": [
+        180.34,
+        58.42
+      ],
+      "net": {
+        "1": "CANL",
+        "2": "CANH",
+        "3": "GND"
+      },
+      "mpn": "PESD2CAN,215",
+      "manufacturer": "Nexperia",
+      "uuid": "c9da37b7-8e2a-59fa-bb45-08759b86f7bb"
+    },
+    {
+      "ref": "C1",
+      "lib": "C",
+      "value": "100nF 16V X7R",
+      "at": [
+        73.66,
+        104.14
+      ],
+      "net": {
+        "1": "VDD5",
+        "2": "GND"
+      },
+      "mpn": "GRM188R71C104KA01D",
+      "manufacturer": "Murata",
+      "uuid": "2d6a520d-d413-538b-a68c-fd42f8160f47"
+    },
+    {
+      "ref": "C2",
+      "lib": "C",
+      "value": "100nF 16V X7R",
+      "at": [
+        104.14,
+        104.14
+      ],
+      "net": {
+        "1": "VIO3V3",
+        "2": "GND"
+      },
+      "mpn": "GRM188R71C104KA01D",
+      "manufacturer": "Murata",
+      "uuid": "4a1b562c-3e6b-52de-a449-e5fccac80481"
+    },
+    {
+      "ref": "C3",
+      "lib": "C",
+      "value": "1uF 16V X7R",
+      "at": [
+        134.62,
+        104.14
+      ],
+      "net": {
+        "1": "VDD5",
+        "2": "GND"
+      },
+      "mpn": "GRM188R71C105KA12D",
+      "manufacturer": "Murata",
+      "uuid": "d1a75751-4851-5703-b61d-bff9299c7476"
+    },
+    {
+      "ref": "R1",
+      "lib": "R",
+      "value": "120R 1% 0.5W",
+      "at": [
+        182.88,
+        104.14
+      ],
+      "net": {
+        "1": "CANH",
+        "2": "TERM_L"
+      },
+      "mpn": "ERJ-P08F1200V",
+      "manufacturer": "Panasonic",
+      "uuid": "cac3043f-6bc8-5eab-ae61-dd5b540e035d"
+    },
+    {
+      "ref": "JP1",
+      "lib": "TERM2",
+      "value": "TERMINATION (fit at bus end)",
+      "at": [
+        226.06,
+        109.22
+      ],
+      "net": {
+        "1": "TERM_L",
+        "2": "CANL"
+      },
+      "mpn": "TSW-102-07-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "958a65ee-d4e8-5a4f-a50f-821f334e4f28"
+    },
+    {
+      "ref": "H1",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        48.26,
+        147.32
+      ],
+      "net": {},
+      "uuid": "808ecc25-047c-59e6-9b23-4b5ab41ed178"
+    },
+    {
+      "ref": "H2",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        93.97999999999999,
+        147.32
+      ],
+      "net": {},
+      "uuid": "ea8d7848-6acf-581f-9579-b3c5ffad2a22"
+    },
+    {
+      "ref": "H3",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        139.7,
+        147.32
+      ],
+      "net": {},
+      "uuid": "cc849699-6c86-5271-a791-9c6d6540b465"
+    },
+    {
+      "ref": "H4",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        185.42,
+        147.32
+      ],
+      "net": {},
+      "uuid": "1e313077-18f6-5c6f-9b11-96dbf60ee632"
+    },
+    {
+      "ref": "#FLG01",
+      "lib": "PWR_FLAG",
+      "value": "PWR_FLAG",
+      "at": [
+        63.5,
+        129.54
+      ],
+      "net": {
+        "1": "VDD5"
+      },
+      "uuid": "e24c45a1-cedd-5a41-8c1f-1885bb31b030"
+    },
+    {
+      "ref": "#FLG02",
+      "lib": "PWR_FLAG",
+      "value": "PWR_FLAG",
+      "at": [
+        91.44,
+        129.54
+      ],
+      "net": {
+        "1": "VIO3V3"
+      },
+      "uuid": "70b27a7f-796b-5a80-9722-c41685c63eb7"
+    },
+    {
+      "ref": "#FLG03",
+      "lib": "PWR_FLAG",
+      "value": "PWR_FLAG",
+      "at": [
+        119.38,
+        129.54
+      ],
+      "net": {
+        "1": "GND"
+      },
+      "uuid": "587bdc83-80cb-5392-8f0b-73c780e38de4"
+    }
+  ]
+}
