@@ -1,0 +1,14 @@
+# Canonical Pico UART package. This declares the model time base used by the
+# hosted release oracle; it does not certify physical baud error or PLL timing.
+name: "rp2040-pico"
+chip: "rp2040"
+cpu_hz: 125000000
+debug_uart: "uart0"
+external_devices: []
+board_io:
+  - id: "led_gp25"
+    kind: "led"
+    peripheral: "sio"
+    pin: 25
+    signal: "output"
+    active_high: true
