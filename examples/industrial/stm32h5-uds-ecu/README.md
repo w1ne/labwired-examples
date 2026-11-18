@@ -5,7 +5,8 @@ This package adds a routed, protected CAN interface to the existing
 the NUCLEO-H563ZI and PD1 transmit / PD0 receive assignment.
 
 KiCad 10.0.8 reports **0 ERC violations, 0 DRC violations, 0 open connections,
-and 0 schematic parity issues**. The physical firmware compiles. No physical
+and 0 schematic parity issues**. The physical firmware compiles and passes the packaged 16-step simulator
+protocol test. No physical
 prototype has been assembled, flashed, electrically measured, or qualified.
 
 ## Firmware and evidence
@@ -13,7 +14,7 @@ prototype has been assembled, flashed, electrically measured, or qualified.
 | Target | Verified result | Limits |
 |---|---|---|
 | Existing simulator fixture, core 941a6c5caf0c53b66aa5af9290e5ecba5972ec72 | CLI 0.26.0: 16/16 diagnostic exchanges, 3/3 assertions, 603-byte response, negative response, reset and reconnect | Does not test physical clock, pin mux, transceiver, or elapsed time |
-| Physical HAL target in firmware/ | Compiles with STM32CubeH5 v1.4.0 and UDSLib v2.0.0; binary hashes in build-manifest.json | No physical bus or simulator equivalence receipt |
+| Physical HAL target in firmware/ | Same flashable ELF: CLI 0.26.0 passes 16/16 exchanges and 3/3 assertions; all 603 calibration bytes match; AIRCR reset and reconnect pass | Generic FDCAN frame model; no analog MCP2562FD, electrical wire timing, or physical board measurement |
 
 The simulator firmware advances its time callback once per loop and omits
 physical FDCAN timing and pin setup. Do not flash that image as this hardware
@@ -149,14 +150,34 @@ or physical security qualification. It is a bench demonstration.
 
 ## Repeat simulation
 
-From core commit 941a6c5caf0c53b66aa5af9290e5ecba5972ec72, use CLI 0.26.0:
+From this package directory, use the pinned LabWired CLI 0.26.0 release:
 
 ~~~sh
-labwired test --script examples/h563-uds-ecu/uds-evidence.yaml --output-dir out/uds-evidence --no-uart-stdout
+labwired test --no-key --script runtime/test.yaml --output-dir out/physical-runtime --no-uart-stdout --run-manifest
 ~~~
 
-evidence/simulator-summary.json pins the CLI and committed simulator image.
-evidence/simulator-result.json contains actual decoded traffic.
+The CLI SHA-256 is
+`0293aeb9a3bc76f1b0435d2de047ec1c55d6f4ed50dcaf3ad7bc72cd5929866c`.
+The portable system uses the release's built-in `stm32h563` descriptor,
+`cpu_hz: 250000000`, UART3 for console output, and the existing generic
+`uds-tester` on FDCAN1. Request and reply IDs are 0x7E0 and 0x7E8.
+`runtime/test.yaml` loads the unchanged `h563-uds-physical.elf` supplied for
+flashing. Its SHA-256 is
+`d78d30a8ae57835c237e21c99104b56e1fcf50fcd8872440c986132eba67275f`.
+
+`evidence/physical-runtime/` contains the actual result, decoded frame report,
+run manifest, UART output and invocation. The test checks the physical-image
+boot banner, two ready states across reset, and completion of all 16 tester
+steps. The calibration step compares all 603 reassembled bytes. Frames longer
+than eight bytes carry FD/BRS; the short responses remain classic CAN. The
+recorded CPU-cycle timestamps describe model execution, not measured bus
+serialization at 500 kbit/s / 2 Mbit/s. The model does not qualify oscillator
+accuracy, analog transceiver behavior, cable loading, or EMC.
+
+The earlier `evidence/simulator-summary.json` and `simulator-result.json`
+retain the distinct legacy fixture result at core source commit
+941a6c5caf0c53b66aa5af9290e5ecba5972ec72. That source revision is not asserted
+as the build revision of the separately pinned 0.26.0 release binary.
 
 ## Primary sources
 

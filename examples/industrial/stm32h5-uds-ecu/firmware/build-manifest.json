@@ -10,7 +10,7 @@
   "data_bytes": 92,
   "bss_bytes": 3636,
   "physical_tested": false,
-  "simulator_verified": false,
+  "simulator_verified": true,
   "source_files": {
     "Makefile": "07a84ad6253558967a4d39665b3d0c007d217c219a049de5e65968e25a7df2bf",
     "clock.c": "bf295ddd851b60bff3d758e4de45ebbb59a0c108b8ccc81d9572d775e996b23c",
@@ -19,5 +19,13 @@
     "stm32h5xx_hal_conf.h": "380da9e407d39a2e203adfb9d0c9ba6c50112e8053f9be51d9c4640ab3eb6f39",
     "uds_ecu_app.c": "bebd7c6ae8708a9234574e07d38f3449e038b10fd80d8a0ab011685a99825f24",
     "uds_ecu_app.h": "9f068b4a8a767f5de81152aec7cd362c49f278f0de4331b89e22d04e51fb7225"
+  },
+  "simulator_verification": {
+    "engine_version": "0.26.0",
+    "engine_sha256": "0293aeb9a3bc76f1b0435d2de047ec1c55d6f4ed50dcaf3ad7bc72cd5929866c",
+    "run_manifest_digest": "24ac4296405b5509f96875c4740860ca578b31c7803c7e23e87b077cef72f5cf",
+    "test": "../runtime/test.yaml",
+    "evidence": "../evidence/physical-runtime",
+    "scope": "Unchanged physical HAL image boots, uses FDCAN and completes 16 UDS exchanges including all 603 calibration bytes and AIRCR reset/reconnect. Analog transceiver and wire timing are not modeled. Physical board testing remains unperformed."
   }
 }

@@ -1,0 +1,25 @@
+{
+  "args": [
+    "/data/work-evidence/labwired-featured-implementation-20261118/pico-cli-v0.26.0/labwired",
+    "test",
+    "--no-key",
+    "--script",
+    "runtime/test.yaml",
+    "--output-dir",
+    "/data/work-evidence/labwired-industrial-packages-20261118/physical-core-probes/uds-portable",
+    "--no-uart-stdout",
+    "--run-manifest"
+  ],
+  "cwd": "/data/worktrees/labwired-examples-uds-package-20261118/examples/industrial/stm32h5-uds-ecu",
+  "exitCode": 0,
+  "elapsedSeconds": 8.626774556003511,
+  "engineVersion": "0.26.0",
+  "engineSha256": "0293aeb9a3bc76f1b0435d2de047ec1c55d6f4ed50dcaf3ad7bc72cd5929866c",
+  "firmwareSha256": "d78d30a8ae57835c237e21c99104b56e1fcf50fcd8872440c986132eba67275f",
+  "runtimeInputs": {
+    "runtime/system.yaml": "d2131b9146d3ed63c104f70c786cfb2194a0b9d1ffac19a42221c7f1c5321ad5",
+    "runtime/test.yaml": "4c348dbd279a7e4ff8572bd97b23250640bec606bc1ccd9a95f71e4daa5b8a09"
+  },
+  "chipDescriptor": "stm32h563 embedded in the pinned release CLI",
+  "scope": "Unchanged physical ST HAL image; generic STM32H563 and FDCAN/UDS tester model. No analog MCP2562FD, electrical bus timing, or physical board test."
+}
