@@ -105,6 +105,10 @@ Open a 115200-baud, 8-N-1 terminal on the same UART USB connection. The boot log
 
 The terminal sends key-down bytes and no key-up messages. Firmware releases a key after 140 ms unless auto-repeat refreshes it. Dedicated physical controls are outside this revision's hardware contract.
 
+## Complete source archive
+
+`firmware/doom-project-source.tar.gz` contains the complete reviewed application source, pinned build inputs and runtime replay instructions. `firmware/source-archive.json` binds every member to package commit `188016118ac91dae6fca7cac18ba730b7dd271bd` and records the unchanged editable main source. See `firmware/SOURCE_ARCHIVE.md` for extraction, build and replay instructions. Compiled outputs and build caches are excluded.
+
 ## Reproduce the digital firmware checks
 
 Build the LabWired CLI from core commit `31730dd16391495aed6045ffb52b1aee62d3ceab`. Use the two ESP32-S3 mask ROM assets identified by exact hashes in `runtime/provenance.json`. Run from the package directory:
