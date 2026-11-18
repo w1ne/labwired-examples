@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "package_id": "pico-uart-rev-a-candidate-1",
+  "package_id": "pico-uart-rev-b-candidate-1",
   "status": "engineering-candidate",
   "date": "2026-11-18",
   "canonical_lab_url": "https://app.labwired.com/?lab=rp2040-pico",
@@ -16,30 +16,42 @@
     "source": "mechanical/pico-uart-fixture.kcad.ts",
     "step": "mechanical/pico-uart-fixture.step",
     "print_files": [
+      "mechanical/pico-uart-base.step",
       "mechanical/pico-uart-base.stl",
-      "mechanical/pico-uart-lid.stl"
+      "mechanical/pico-uart-base.3mf",
+      "mechanical/pico-uart-lid.step",
+      "mechanical/pico-uart-lid.stl",
+      "mechanical/pico-uart-lid.3mf"
     ],
     "current_native_part_count": 50,
     "current_studio_revision_pending": true,
     "assembly_export_is_current": true,
-    "source_correction": "validation/connector-dimension-correction.json",
-    "design_loop_is_current": true
+    "source_correction": "validation/handedness/native-registration.json",
+    "design_loop_is_current": true,
+    "source_sha256": "475fc4ebd1281aa31b417bd2b72e2b1a37eeb4ad8dd6906957bff32836746526",
+    "submitted_source": "validation/handedness/submitted-source.kcad.ts",
+    "submitted_source_sha256": "b6bc07c9e9488dd039decf5822e70328927759c8903001255a74277e33491488",
+    "historical_publication_note": "Studio revision 1 and all earlier saved/handedness receipts are superseded by this source. The current source has not yet been saved to the existing project."
   },
   "physical_hardware_tested": false,
   "verification": {
     "native": "validation/native-connectivity.json",
     "firmware": "validation/firmware-model-verify.json",
     "local_build": "validation/local-build-acceptance.json",
-    "mechanical": "validation/socket-correction-design-loop.json",
-    "step": "validation/socket-correction-step-inspection.json",
+    "mechanical": "validation/handedness/design-loop.json",
+    "step": "validation/handedness/assembly-step-inspection.json",
     "native_import": "validation/native-import-validation.json",
-    "mechanical_current": "validation/socket-correction-design-loop.json",
-    "step_current": "validation/socket-correction-step-inspection.json",
+    "mechanical_current": "validation/handedness/design-loop.json",
+    "step_current": "validation/handedness/assembly-step-inspection.json",
     "mechanical_historical": "validation/design-loop.json",
-    "mechanical_evaluation_current": "validation/socket-correction-evaluation.json",
-    "visual_review_current": "validation/socket-correction-visual-review.json",
+    "mechanical_evaluation_current": "validation/handedness/evaluation.json",
+    "visual_review_current": "validation/handedness/visual-review.json",
     "step_historical": "validation/assembly-step-inspection.json",
-    "runtime": "validation/explicit-runtime-acceptance.json"
+    "runtime": "validation/explicit-runtime-acceptance.json",
+    "native_registration": "validation/handedness/native-registration.json",
+    "print_meshes": "validation/handedness/mesh-export-check.json",
+    "base_dfm": "validation/handedness/base-dfm-verification.json",
+    "lid_dfm": "validation/handedness/lid-dfm-verification.json"
   },
   "open_acceptance_items": [
     "Update the existing Studio 675KJsgq project with the final exact-body source after the generic imported-asset collaboration repair is deployed.",
@@ -65,13 +77,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12060,
-      "sha256": "943f5ebc834ab3aa09fda15ce4b5c527f562c048b3213387d443cef12b655a7c"
-    },
-    {
-      "path": "SHA256SUMS",
-      "bytes": 8835,
-      "sha256": "83aaa4e4171613ecda036654233a21879502f26a3e79be83c5474dcd63889d53"
+      "bytes": 13395,
+      "sha256": "91e6dd5472732616ab2e144573e0cbf8312157b552c2ca9c1dbfa9cb41ae52ef"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -87,11 +94,6 @@
       "path": "cad/pico-carrier.step",
       "bytes": 87754,
       "sha256": "a54e9b84f8bf87dd0f8b3ca3dcddadfd0246e01ae65ad8944cff4bda0306e27e"
-    },
-    {
-      "path": "electronics-bom.csv",
-      "bytes": 1358,
-      "sha256": "d8d20cf169a9e1660f57144b962b87562c00b44622582784841f2538ff8d76c8"
     },
     {
       "path": "electronics/fp-lib-table",
@@ -154,6 +156,11 @@
       "sha256": "5d9a293ad69bc70839c9dc3ab275a62358dc057a29e33fafaf4c3aaade9a2afd"
     },
     {
+      "path": "electronics-bom.csv",
+      "bytes": 1358,
+      "sha256": "d8d20cf169a9e1660f57144b962b87562c00b44622582784841f2538ff8d76c8"
+    },
+    {
       "path": "firmware/.gitignore",
       "bytes": 6,
       "sha256": "692b1af4436043e2e965c8d563bbf90d648cda3a6afa9bba38e1c38af1d38919"
@@ -195,8 +202,8 @@
     },
     {
       "path": "hardware-interface.json",
-      "bytes": 3650,
-      "sha256": "f8bfea4bdc831817b617c382f2cfa643918ea44227b69943714671df63a041e2"
+      "bytes": 4281,
+      "sha256": "fed2c3993266ac0e110daed689fa56866e220688f3a2df63e3e474882cfb3b0a"
     },
     {
       "path": "labwired/circuit.json",
@@ -214,11 +221,6 @@
       "sha256": "758c1dbf8beb3ae9e284413db0df33da1a3aafa3fec3fb2fa53bee827b7949c4"
     },
     {
-      "path": "manufacturing/drill-report.txt",
-      "bytes": 699,
-      "sha256": "9bcce966ce080253a30526c3e596d3c0011c49bd3e81057fe54066d4a576178c"
-    },
-    {
       "path": "manufacturing/drill/pico-carrier-NPTH.drl",
       "bytes": 414,
       "sha256": "9e003e57125fb309165c8c622430ee74b194a8add2279fef23e43ac38f98c09e"
@@ -227,6 +229,11 @@
       "path": "manufacturing/drill/pico-carrier-PTH.drl",
       "bytes": 1033,
       "sha256": "56a0368e29a8d13af83a7a426181ff31746b07b7f577d1cb9f61b45fe85e5c9b"
+    },
+    {
+      "path": "manufacturing/drill-report.txt",
+      "bytes": 699,
+      "sha256": "9bcce966ce080253a30526c3e596d3c0011c49bd3e81057fe54066d4a576178c"
     },
     {
       "path": "manufacturing/fabrication-settings.json",
@@ -309,24 +316,44 @@
       "sha256": "77bc447d3519398daa671596affc57311bc3d2045b8b41dbae4d539e6f147bdc"
     },
     {
+      "path": "mechanical/pico-uart-base.3mf",
+      "bytes": 347211,
+      "sha256": "8ee04261c174a360d430076c06db364c69fbcb3e1956508565a515f4474a1674"
+    },
+    {
+      "path": "mechanical/pico-uart-base.step",
+      "bytes": 125518,
+      "sha256": "fd6a6f6c5f0c76563629117575ce8fda7ce9387d482a5351edb94b78a63f02d1"
+    },
+    {
       "path": "mechanical/pico-uart-base.stl",
       "bytes": 1314284,
-      "sha256": "3a15b6601b598f93a5994ed6c2f53857436340cb40b8dc217a084bb4722d899c"
+      "sha256": "b5c2eea5fbbcc86a4b2843d60ad61502d4596476789d1e60183a452a3ba4cd4b"
     },
     {
       "path": "mechanical/pico-uart-fixture.kcad.ts",
-      "bytes": 9675,
-      "sha256": "fa6ab68c97c2c01a0148c95d819789c44b7155ad7012495320e51ddda375efea"
+      "bytes": 11136,
+      "sha256": "475fc4ebd1281aa31b417bd2b72e2b1a37eeb4ad8dd6906957bff32836746526"
     },
     {
       "path": "mechanical/pico-uart-fixture.step",
-      "bytes": 6055720,
-      "sha256": "e1375dc6fd400d744324e50226af61afb8647e9b01090c1412b2f3761278d5a9"
+      "bytes": 5993168,
+      "sha256": "93e7ec2db3f66de6868b66416cebc10b5c9354afac34f247fd0fa830c320a391"
+    },
+    {
+      "path": "mechanical/pico-uart-lid.3mf",
+      "bytes": 77391,
+      "sha256": "cf469420dc5b13b4d709151fab1540604a2130986b2773eee6e181ef4a13c0e0"
+    },
+    {
+      "path": "mechanical/pico-uart-lid.step",
+      "bytes": 153004,
+      "sha256": "5a34303dbbc148c396da62469cc6e0c7af04ffc96c6f52a378848a38a00cf32e"
     },
     {
       "path": "mechanical/pico-uart-lid.stl",
       "bytes": 309284,
-      "sha256": "91a891b780a31fc6fbfb186e4414addfbc8654a4bb7ff4b8bdbf51fb7536e4f4"
+      "sha256": "f2e67843a165bbd5c05a57fada7d50ebbdae1902c976a2345ee84230910c0140"
     },
     {
       "path": "mechanical/socket-corrected-assembly.png",
@@ -362,6 +389,26 @@
       "path": "references/samtec/ssw-market-drawing.pdf",
       "bytes": 491233,
       "sha256": "890f20796637b7947c7655aabf919d055b56988a01c20338b635f2daf35b051f"
+    },
+    {
+      "path": "renders/native-frame-closed-iso.png",
+      "bytes": 66286,
+      "sha256": "57a9957829dce34cd730bc0523f8faa019c5db9f56bcf06f89a1458c71207ba5"
+    },
+    {
+      "path": "renders/native-frame-closed-top.png",
+      "bytes": 28415,
+      "sha256": "948feb4f7b6fe84444c4d95738688ebed65f9b7f7398877fbe33575513ea0003"
+    },
+    {
+      "path": "renders/native-frame-interior-iso.png",
+      "bytes": 114475,
+      "sha256": "ee38307db91204f3ece4af5d334f7861147ea9a042bb1124c922d769d70957de"
+    },
+    {
+      "path": "renders/native-frame-interior-top.png",
+      "bytes": 97329,
+      "sha256": "ba445c0dbf2b01504f2df74e748886805d128a315e74f1f057acd09c72fa29a2"
     },
     {
       "path": "runtime/acceptance.yaml",
@@ -452,6 +499,156 @@
       "path": "validation/firmware-model-verify.json",
       "bytes": 2107,
       "sha256": "e197f1ce8706d2028cb74c49645ef28a0bda075e258e82a487b198b65adfdb0c"
+    },
+    {
+      "path": "validation/handedness/assembly-export.json",
+      "bytes": 1305,
+      "sha256": "3bab246b7bca363bc8c1364aa4202e0fe2d6f5a3c651689b4763a2d090ed9759"
+    },
+    {
+      "path": "validation/handedness/assembly-step-inspection.json",
+      "bytes": 912534,
+      "sha256": "9d7be89b5d30492d956aef494c291f30ebad7572c377df0f3db1059c18652fa8"
+    },
+    {
+      "path": "validation/handedness/base-3mf-export.json",
+      "bytes": 1284,
+      "sha256": "dba316d58fc80a8400da14e492d6caead69479ac937420f01401e5ab2bb8d62f"
+    },
+    {
+      "path": "validation/handedness/base-dfm-verification.json",
+      "bytes": 265987,
+      "sha256": "3d061d0911b5f3e7a82a210a61d44043650aa9c17429c8a41330008b30e55031"
+    },
+    {
+      "path": "validation/handedness/base-print-stats.json",
+      "bytes": 246,
+      "sha256": "0e63a4e9d8f4b453852dfeaf8733abc2104424ab15e5d826dec8d718f91a2a03"
+    },
+    {
+      "path": "validation/handedness/base-step-export.json",
+      "bytes": 1290,
+      "sha256": "2d39ee91151fb276547da62cde119828283e5620a4812e0d12afc99deb6f9ad1"
+    },
+    {
+      "path": "validation/handedness/base-stl-export.json",
+      "bytes": 1286,
+      "sha256": "8811d5aa6949d11ec78befa24a7b431b747ff5b13407af96fd7e8308547e0700"
+    },
+    {
+      "path": "validation/handedness/closed-render.json",
+      "bytes": 1609,
+      "sha256": "12424f1015b59b4325a5da96d4e9af1a272181e511ba94c91e15204b2f255354"
+    },
+    {
+      "path": "validation/handedness/design-loop.json",
+      "bytes": 12492,
+      "sha256": "0ec5da2a1496ef04f057e713a4caa25e7b5f04b64d9400b9c8ac1606c05be0bb"
+    },
+    {
+      "path": "validation/handedness/downloads.json",
+      "bytes": 3751,
+      "sha256": "f5d7349b33ef5b7d0fc97179663ff2678b2657d63b2e201b8ecb4ee8e722d6fe"
+    },
+    {
+      "path": "validation/handedness/evaluation.json",
+      "bytes": 13934,
+      "sha256": "c547c25ca7f28afb167ec716516192df50eea61b79df634f130626d30eba9f50"
+    },
+    {
+      "path": "validation/handedness/initial-centroid-assumption-failed.json",
+      "bytes": 23391,
+      "sha256": "707903e3019931b3a80c2c312c8ec9909eb759e4863c5b4aea3d5a484b65f8b5"
+    },
+    {
+      "path": "validation/handedness/interior-render.json",
+      "bytes": 1610,
+      "sha256": "20af594b6d3ac4fbc2a244a57adf84cb0565230ca3866eeac3be2f7e112985de"
+    },
+    {
+      "path": "validation/handedness/lid-3mf-export.json",
+      "bytes": 1293,
+      "sha256": "384305a2f2098587ca47c82f30671811918e5d5b673a90ae913bf52cf6a9bdf3"
+    },
+    {
+      "path": "validation/handedness/lid-dfm-verification.json",
+      "bytes": 3027,
+      "sha256": "9578a85de0584f26967c2d3428e0d041d90242a8531a2a12455532047c3d8208"
+    },
+    {
+      "path": "validation/handedness/lid-print-stats.json",
+      "bytes": 281,
+      "sha256": "b84841523323eab245e37227ee5f702460854882525f29d7a4ec3c96e7a8eb42"
+    },
+    {
+      "path": "validation/handedness/lid-step-export.json",
+      "bytes": 1301,
+      "sha256": "8941dbf48da3d7185d7b6a85a55ffe6cba3e9639cc5f86f4be66fe789d2350ba"
+    },
+    {
+      "path": "validation/handedness/lid-stl-export.json",
+      "bytes": 1295,
+      "sha256": "5eda0095e64daf62ab3fdb34e44e78cf7097c5fe5935ab6fe947e0be376515d7"
+    },
+    {
+      "path": "validation/handedness/mesh-export-check.json",
+      "bytes": 1648,
+      "sha256": "aabec5af4e1346f05681a05c6a819a774be3cce4ffb7d3ee65dd78596b03ee17"
+    },
+    {
+      "path": "validation/handedness/native-carrier-inspection.json",
+      "bytes": 150875,
+      "sha256": "dab72e3373f09bcb9db04d0b6d3f1e6883e2ed7e922deec10f17ab5ee50054bb"
+    },
+    {
+      "path": "validation/handedness/native-pico-inspection.json",
+      "bytes": 827115,
+      "sha256": "4d89fa713df3e512f77b549919c13a48e58570dd5d499f92c541f685bb847c0e"
+    },
+    {
+      "path": "validation/handedness/native-registration.json",
+      "bytes": 45447,
+      "sha256": "80709d4453e20933ce3143e2feeac134cdefce22f78d89ceeaaa365ab6747f45"
+    },
+    {
+      "path": "validation/handedness/registration-mirrored-negative.json",
+      "bytes": 9352,
+      "sha256": "673655eaf1d3074e3bf720ef25b90626d770da540fd9255c5d85ee19d9c7258c"
+    },
+    {
+      "path": "validation/handedness/registration-mirrored-negative.kcad.ts",
+      "bytes": 1018,
+      "sha256": "f52a1bf660e15abfaffcb992ba4a666fd409794841761e4b6651b58d36183ef2"
+    },
+    {
+      "path": "validation/handedness/registration-positive.json",
+      "bytes": 8223,
+      "sha256": "23e716bc5abc928c3a11895d00e2e0e7cfd3be41e6278ca7e705a048a75dea24"
+    },
+    {
+      "path": "validation/handedness/registration-positive.kcad.ts",
+      "bytes": 908,
+      "sha256": "380f959c0ae6bb781920d6e7d03afbf41da08ea839219f30994f398b41f5ca27"
+    },
+    {
+      "path": "validation/handedness/submitted-source.kcad.ts",
+      "bytes": 11210,
+      "sha256": "b6bc07c9e9488dd039decf5822e70328927759c8903001255a74277e33491488"
+    },
+    {
+      "path": "validation/handedness/verify_mesh_exports.py",
+      "bytes": 3713,
+      "sha256": "d04d8008cba948db8bf191401f7004425a8274b99450bb6d1c98b83ab8d605f4"
+    },
+    {
+      "path": "validation/handedness/verify_native_registration.py",
+      "bytes": 8981,
+      "sha256": "853adbd2294066feb9cafe091ae90271b77a4c2e03f3b38670f1df9b5046dedf"
+    },
+    {
+      "path": "validation/handedness/visual-review.json",
+      "bytes": 3510,
+      "sha256": "47731771e4ba93c732ec980e2c6d0eb78bc714d5df783df5e3ffa173f1804872"
     },
     {
       "path": "validation/interior-render.json",
@@ -576,7 +773,7 @@
   ],
   "native_board_id": "pcb_ce2a5c8078eaf157",
   "native_rules_ref": "sha256:3d3ee892b03a1f065286a96e12173ef6cdd5e07a55e8d9cfb5876154eea5775e",
-  "source_commit": "c687840445882f331d784054e234745b11fdf84f",
+  "source_commit": "327e5fcbc80d69f3fb06c7635664a03b3d46a20f",
   "runtime": {
     "system": "runtime/system.yaml",
     "system_sha256": "a686ebe81e24dd0165f16f04da749e04327d58fd4fd9288f903dc3fef0909531",
@@ -584,5 +781,6 @@
     "verified_firmware_sha256": "324a84cbb18276a4814bc4ecf7a20c8b7117ebe874d0df86952ea029dc84bce3",
     "cpu_hz": 125000000,
     "debug_uart": "uart0"
-  }
+  },
+  "source_commit_role": "Immutable package baseline before the native-coordinate correction; current CAD bytes are identified by mechanical.source_sha256 and the file manifest."
 }

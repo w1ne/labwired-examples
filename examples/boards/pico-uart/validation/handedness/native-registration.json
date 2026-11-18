@@ -1,0 +1,2227 @@
+{
+  "schemaVersion": 1,
+  "kind": "pico",
+  "status": "pass",
+  "scope": "Native source/STEP coordinate registration; no physical test.",
+  "pcbnewVersion": "10.0.8-10.0.8~ubuntu24.04.1",
+  "worldFrame": {
+    "x": "editor X",
+    "y": "negative editor Y",
+    "z": "up",
+    "nativeBoardPopulatedSide": "+Z",
+    "carrierUndersideZMm": 8,
+    "carrierFinishedThicknessMm": 1.6
+  },
+  "inputs": {
+    "nativePcb": {
+      "path": "electronics/pico-carrier.kicad_pcb",
+      "sha256": "1ed17407037addfbd499a815756be6cb166403cc2efec0799230d87141ef4a10"
+    },
+    "nativeStep": {
+      "path": "cad/pico-carrier.step",
+      "sha256": "a54e9b84f8bf87dd0f8b3ca3dcddadfd0246e01ae65ad8944cff4bda0306e27e"
+    },
+    "portableCadSource": {
+      "path": "mechanical/pico-uart-fixture.kcad.ts",
+      "sha256": "475fc4ebd1281aa31b417bd2b72e2b1a37eeb4ad8dd6906957bff32836746526"
+    },
+    "submittedCadSource": {
+      "path": "validation/handedness/submitted-source.kcad.ts",
+      "sha256": "b6bc07c9e9488dd039decf5822e70328927759c8903001255a74277e33491488"
+    },
+    "nativeInspectionSha256": "dab72e3373f09bcb9db04d0b6d3f1e6883e2ed7e922deec10f17ab5ee50054bb",
+    "evaluationSha256": "c547c25ca7f28afb167ec716516192df50eea61b79df634f130626d30eba9f50",
+    "evaluatedStagedSource": {
+      "sha256": "123721587f71c43d842a3562c6032a4e814d8c593c57070f0c406c4e4b9ceeac",
+      "byteLength": 11167
+    }
+  },
+  "nativePadCount": 47,
+  "maximumAxisXYErrorMm": 0.0,
+  "pads": [
+    {
+      "pad": "H1.",
+      "net": "",
+      "editorXY": [
+        4.0,
+        4.0
+      ],
+      "worldXY": [
+        4.0,
+        -4.0
+      ],
+      "drillMm": 2.9,
+      "nativeStepAxis": [
+        4,
+        -4,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "H2.",
+      "net": "",
+      "editorXY": [
+        56.0,
+        4.0
+      ],
+      "worldXY": [
+        56.0,
+        -4.0
+      ],
+      "drillMm": 2.9,
+      "nativeStepAxis": [
+        56,
+        -4,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "H3.",
+      "net": "",
+      "editorXY": [
+        4.0,
+        66.0
+      ],
+      "worldXY": [
+        4.0,
+        -66.0
+      ],
+      "drillMm": 2.9,
+      "nativeStepAxis": [
+        4,
+        -66,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "H4.",
+      "net": "",
+      "editorXY": [
+        56.0,
+        66.0
+      ],
+      "worldXY": [
+        56.0,
+        -66.0
+      ],
+      "drillMm": 2.9,
+      "nativeStepAxis": [
+        56,
+        -66,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.1",
+      "net": "/UART_TX_GP0",
+      "editorXY": [
+        21.11,
+        7.37
+      ],
+      "worldXY": [
+        21.11,
+        -7.37
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -7.37,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.10",
+      "net": "unconnected-(J1-Pin_10-Pad10)",
+      "editorXY": [
+        21.11,
+        30.23
+      ],
+      "worldXY": [
+        21.11,
+        -30.23
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -30.23,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.11",
+      "net": "unconnected-(J1-Pin_11-Pad11)",
+      "editorXY": [
+        21.11,
+        32.77
+      ],
+      "worldXY": [
+        21.11,
+        -32.77
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -32.77,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.12",
+      "net": "unconnected-(J1-Pin_12-Pad12)",
+      "editorXY": [
+        21.11,
+        35.31
+      ],
+      "worldXY": [
+        21.11,
+        -35.31
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -35.31,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.13",
+      "net": "/GND",
+      "editorXY": [
+        21.11,
+        37.85
+      ],
+      "worldXY": [
+        21.11,
+        -37.85
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -37.85,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.14",
+      "net": "unconnected-(J1-Pin_14-Pad14)",
+      "editorXY": [
+        21.11,
+        40.39
+      ],
+      "worldXY": [
+        21.11,
+        -40.39
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -40.39,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.15",
+      "net": "unconnected-(J1-Pin_15-Pad15)",
+      "editorXY": [
+        21.11,
+        42.93
+      ],
+      "worldXY": [
+        21.11,
+        -42.93
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -42.93,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.16",
+      "net": "unconnected-(J1-Pin_16-Pad16)",
+      "editorXY": [
+        21.11,
+        45.47
+      ],
+      "worldXY": [
+        21.11,
+        -45.47
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -45.47,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.17",
+      "net": "unconnected-(J1-Pin_17-Pad17)",
+      "editorXY": [
+        21.11,
+        48.01
+      ],
+      "worldXY": [
+        21.11,
+        -48.01
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -48.01,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.18",
+      "net": "/GND",
+      "editorXY": [
+        21.11,
+        50.55
+      ],
+      "worldXY": [
+        21.11,
+        -50.55
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -50.55,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.19",
+      "net": "unconnected-(J1-Pin_19-Pad19)",
+      "editorXY": [
+        21.11,
+        53.09
+      ],
+      "worldXY": [
+        21.11,
+        -53.09
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -53.09,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.2",
+      "net": "/UART_RX_GP1",
+      "editorXY": [
+        21.11,
+        9.91
+      ],
+      "worldXY": [
+        21.11,
+        -9.91
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -9.91,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.20",
+      "net": "unconnected-(J1-Pin_20-Pad20)",
+      "editorXY": [
+        21.11,
+        55.63
+      ],
+      "worldXY": [
+        21.11,
+        -55.63
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -55.63,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.3",
+      "net": "/GND",
+      "editorXY": [
+        21.11,
+        12.45
+      ],
+      "worldXY": [
+        21.11,
+        -12.45
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -12.45,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.4",
+      "net": "unconnected-(J1-Pin_4-Pad4)",
+      "editorXY": [
+        21.11,
+        14.99
+      ],
+      "worldXY": [
+        21.11,
+        -14.99
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -14.99,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.5",
+      "net": "unconnected-(J1-Pin_5-Pad5)",
+      "editorXY": [
+        21.11,
+        17.53
+      ],
+      "worldXY": [
+        21.11,
+        -17.53
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -17.53,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.6",
+      "net": "unconnected-(J1-Pin_6-Pad6)",
+      "editorXY": [
+        21.11,
+        20.07
+      ],
+      "worldXY": [
+        21.11,
+        -20.07
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -20.07,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.7",
+      "net": "unconnected-(J1-Pin_7-Pad7)",
+      "editorXY": [
+        21.11,
+        22.61
+      ],
+      "worldXY": [
+        21.11,
+        -22.61
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -22.61,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.8",
+      "net": "/GND",
+      "editorXY": [
+        21.11,
+        25.15
+      ],
+      "worldXY": [
+        21.11,
+        -25.15
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -25.15,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J1.9",
+      "net": "unconnected-(J1-Pin_9-Pad9)",
+      "editorXY": [
+        21.11,
+        27.69
+      ],
+      "worldXY": [
+        21.11,
+        -27.69
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        21.11,
+        -27.69,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.1",
+      "net": "unconnected-(J2-Pin_1-Pad1)",
+      "editorXY": [
+        38.89,
+        7.37
+      ],
+      "worldXY": [
+        38.89,
+        -7.37
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -7.37,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.10",
+      "net": "unconnected-(J2-Pin_10-Pad10)",
+      "editorXY": [
+        38.89,
+        30.23
+      ],
+      "worldXY": [
+        38.89,
+        -30.23
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -30.23,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.11",
+      "net": "unconnected-(J2-Pin_11-Pad11)",
+      "editorXY": [
+        38.89,
+        32.77
+      ],
+      "worldXY": [
+        38.89,
+        -32.77
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -32.77,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.12",
+      "net": "unconnected-(J2-Pin_12-Pad12)",
+      "editorXY": [
+        38.89,
+        35.31
+      ],
+      "worldXY": [
+        38.89,
+        -35.31
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -35.31,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.13",
+      "net": "/GND",
+      "editorXY": [
+        38.89,
+        37.85
+      ],
+      "worldXY": [
+        38.89,
+        -37.85
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -37.85,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.14",
+      "net": "unconnected-(J2-Pin_14-Pad14)",
+      "editorXY": [
+        38.89,
+        40.39
+      ],
+      "worldXY": [
+        38.89,
+        -40.39
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -40.39,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.15",
+      "net": "unconnected-(J2-Pin_15-Pad15)",
+      "editorXY": [
+        38.89,
+        42.93
+      ],
+      "worldXY": [
+        38.89,
+        -42.93
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -42.93,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.16",
+      "net": "unconnected-(J2-Pin_16-Pad16)",
+      "editorXY": [
+        38.89,
+        45.47
+      ],
+      "worldXY": [
+        38.89,
+        -45.47
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -45.47,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.17",
+      "net": "unconnected-(J2-Pin_17-Pad17)",
+      "editorXY": [
+        38.89,
+        48.01
+      ],
+      "worldXY": [
+        38.89,
+        -48.01
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -48.01,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.18",
+      "net": "/GND",
+      "editorXY": [
+        38.89,
+        50.55
+      ],
+      "worldXY": [
+        38.89,
+        -50.55
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -50.55,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.19",
+      "net": "unconnected-(J2-Pin_19-Pad19)",
+      "editorXY": [
+        38.89,
+        53.09
+      ],
+      "worldXY": [
+        38.89,
+        -53.09
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -53.09,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.2",
+      "net": "unconnected-(J2-Pin_2-Pad2)",
+      "editorXY": [
+        38.89,
+        9.91
+      ],
+      "worldXY": [
+        38.89,
+        -9.91
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -9.91,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.20",
+      "net": "unconnected-(J2-Pin_20-Pad20)",
+      "editorXY": [
+        38.89,
+        55.63
+      ],
+      "worldXY": [
+        38.89,
+        -55.63
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -55.63,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.3",
+      "net": "/GND",
+      "editorXY": [
+        38.89,
+        12.45
+      ],
+      "worldXY": [
+        38.89,
+        -12.45
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -12.45,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.4",
+      "net": "unconnected-(J2-Pin_4-Pad4)",
+      "editorXY": [
+        38.89,
+        14.99
+      ],
+      "worldXY": [
+        38.89,
+        -14.99
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -14.99,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.5",
+      "net": "unconnected-(J2-Pin_5-Pad5)",
+      "editorXY": [
+        38.89,
+        17.53
+      ],
+      "worldXY": [
+        38.89,
+        -17.53
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -17.53,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.6",
+      "net": "unconnected-(J2-Pin_6-Pad6)",
+      "editorXY": [
+        38.89,
+        20.07
+      ],
+      "worldXY": [
+        38.89,
+        -20.07
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -20.07,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.7",
+      "net": "unconnected-(J2-Pin_7-Pad7)",
+      "editorXY": [
+        38.89,
+        22.61
+      ],
+      "worldXY": [
+        38.89,
+        -22.61
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -22.61,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.8",
+      "net": "/GND",
+      "editorXY": [
+        38.89,
+        25.15
+      ],
+      "worldXY": [
+        38.89,
+        -25.15
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -25.15,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J2.9",
+      "net": "unconnected-(J2-Pin_9-Pad9)",
+      "editorXY": [
+        38.89,
+        27.69
+      ],
+      "worldXY": [
+        38.89,
+        -27.69
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        38.89,
+        -27.69,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J3.1",
+      "net": "/GND",
+      "editorXY": [
+        10.0,
+        15.0
+      ],
+      "worldXY": [
+        10.0,
+        -15.0
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        10,
+        -15,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J3.2",
+      "net": "/UART_TX_GP0",
+      "editorXY": [
+        10.0,
+        17.54
+      ],
+      "worldXY": [
+        10.0,
+        -17.54
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        10,
+        -17.54,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    },
+    {
+      "pad": "J3.3",
+      "net": "/UART_RX_GP1",
+      "editorXY": [
+        10.0,
+        20.08
+      ],
+      "worldXY": [
+        10.0,
+        -20.08
+      ],
+      "drillMm": 1.0,
+      "nativeStepAxis": [
+        10,
+        -20.08,
+        1.51
+      ],
+      "axisXYErrorMm": 0.0
+    }
+  ],
+  "orientationWitness": {
+    "orderedPads": [
+      "J1.1",
+      "J1.2",
+      "J2.1"
+    ],
+    "signedAreaTwiceMm2": 45.1612,
+    "historicalEditorPositiveYWithComponentsUp": -45.1612,
+    "conclusion": "Keeping populated side +Z requires world Y=-editorY. The historical positive-Y reconstruction reverses this signed orientation."
+  },
+  "nativeRequirements": [
+    {
+      "name": "native-carrier-registration-J1.1",
+      "source": "script",
+      "status": "pass",
+      "measured": 0.24999999999999062,
+      "limit": [
+        0.249,
+        0.251
+      ],
+      "margin": 0.0009999999999906195,
+      "selections": [
+        {
+          "consumerFeatureId": "require_1",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 92.20933129005482
+        },
+        {
+          "consumerFeatureId": "require_1",
+          "selectorText": "body(cylinder_13)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.9339079605813723
+        }
+      ],
+      "featureId": "require_1",
+      "predicate": {
+        "metric": "clearance",
+        "a": {
+          "kind": "body",
+          "ref": "importedStep_1"
+        },
+        "b": {
+          "kind": "body",
+          "ref": "cylinder_13"
+        },
+        "op": "between",
+        "limit": [
+          0.249,
+          0.251
+        ]
+      }
+    },
+    {
+      "name": "native-carrier-registration-J1.2",
+      "source": "script",
+      "status": "pass",
+      "measured": 0.24999999999999023,
+      "limit": [
+        0.249,
+        0.251
+      ],
+      "margin": 0.000999999999990231,
+      "selections": [
+        {
+          "consumerFeatureId": "require_2",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 92.20933129005482
+        },
+        {
+          "consumerFeatureId": "require_2",
+          "selectorText": "body(cylinder_14)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.9339079605813723
+        }
+      ],
+      "featureId": "require_2",
+      "predicate": {
+        "metric": "clearance",
+        "a": {
+          "kind": "body",
+          "ref": "importedStep_1"
+        },
+        "b": {
+          "kind": "body",
+          "ref": "cylinder_14"
+        },
+        "op": "between",
+        "limit": [
+          0.249,
+          0.251
+        ]
+      }
+    },
+    {
+      "name": "native-carrier-registration-J2.1",
+      "source": "script",
+      "status": "pass",
+      "measured": 0.2499999999999861,
+      "limit": [
+        0.249,
+        0.251
+      ],
+      "margin": 0.0009999999999860953,
+      "selections": [
+        {
+          "consumerFeatureId": "require_3",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 92.20933129005482
+        },
+        {
+          "consumerFeatureId": "require_3",
+          "selectorText": "body(cylinder_15)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.9339079605813723
+        }
+      ],
+      "featureId": "require_3",
+      "predicate": {
+        "metric": "clearance",
+        "a": {
+          "kind": "body",
+          "ref": "importedStep_1"
+        },
+        "b": {
+          "kind": "body",
+          "ref": "cylinder_15"
+        },
+        "op": "between",
+        "limit": [
+          0.249,
+          0.251
+        ]
+      }
+    },
+    {
+      "name": "native-pico-led-on-pin1-side",
+      "source": "script",
+      "status": "pass",
+      "measured": [
+        24.3,
+        -10.800000000000002,
+        21.915384615384575
+      ],
+      "limit": {
+        "x": [
+          24.29,
+          24.31
+        ],
+        "y": [
+          -10.81,
+          -10.79
+        ],
+        "z": [
+          21.65,
+          22.25
+        ]
+      },
+      "margin": 0.00999999999999801,
+      "selections": [
+        {
+          "consumerFeatureId": "require_4",
+          "selectorText": "body(importedStep_10)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.8867962264113263
+        }
+      ],
+      "featureId": "require_4",
+      "predicate": {
+        "metric": "centerOfMass",
+        "a": {
+          "kind": "body",
+          "ref": "importedStep_10"
+        },
+        "op": "within",
+        "limit": {
+          "x": [
+            24.29,
+            24.31
+          ],
+          "y": [
+            -10.81,
+            -10.79
+          ],
+          "z": [
+            21.65,
+            22.25
+          ]
+        }
+      }
+    },
+    {
+      "name": "native-pico-registration-pin1",
+      "source": "script",
+      "status": "pass",
+      "measured": 0.24999999999999734,
+      "limit": [
+        0.249,
+        0.251
+      ],
+      "margin": 0.0009999999999973364,
+      "selections": [
+        {
+          "consumerFeatureId": "require_5",
+          "selectorText": "body(importedStep_2)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 55.163393659201205
+        },
+        {
+          "consumerFeatureId": "require_5",
+          "selectorText": "body(cylinder_96)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.3928388277184112
+        }
+      ],
+      "featureId": "require_5",
+      "predicate": {
+        "metric": "clearance",
+        "a": {
+          "kind": "body",
+          "ref": "importedStep_2"
+        },
+        "b": {
+          "kind": "body",
+          "ref": "cylinder_96"
+        },
+        "op": "between",
+        "limit": [
+          0.249,
+          0.251
+        ]
+      }
+    },
+    {
+      "name": "native-pico-registration-pin2",
+      "source": "script",
+      "status": "pass",
+      "measured": 0.24999999999996977,
+      "limit": [
+        0.249,
+        0.251
+      ],
+      "margin": 0.000999999999969775,
+      "selections": [
+        {
+          "consumerFeatureId": "require_6",
+          "selectorText": "body(importedStep_2)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 55.163393659201205
+        },
+        {
+          "consumerFeatureId": "require_6",
+          "selectorText": "body(cylinder_97)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.3928388277184112
+        }
+      ],
+      "featureId": "require_6",
+      "predicate": {
+        "metric": "clearance",
+        "a": {
+          "kind": "body",
+          "ref": "importedStep_2"
+        },
+        "b": {
+          "kind": "body",
+          "ref": "cylinder_97"
+        },
+        "op": "between",
+        "limit": [
+          0.249,
+          0.251
+        ]
+      }
+    },
+    {
+      "name": "native-pico-registration-pin40",
+      "source": "script",
+      "status": "pass",
+      "measured": 0.24999999999999734,
+      "limit": [
+        0.249,
+        0.251
+      ],
+      "margin": 0.0009999999999973364,
+      "selections": [
+        {
+          "consumerFeatureId": "require_7",
+          "selectorText": "body(importedStep_2)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 55.163393659201205
+        },
+        {
+          "consumerFeatureId": "require_7",
+          "selectorText": "body(cylinder_98)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.3928388277184112
+        }
+      ],
+      "featureId": "require_7",
+      "predicate": {
+        "metric": "clearance",
+        "a": {
+          "kind": "body",
+          "ref": "importedStep_2"
+        },
+        "b": {
+          "kind": "body",
+          "ref": "cylinder_98"
+        },
+        "op": "between",
+        "limit": [
+          0.249,
+          0.251
+        ]
+      }
+    }
+  ],
+  "physicalHardwareTested": false,
+  "pico": {
+    "vendorStepSha256": "ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b",
+    "vendorSolids": 17,
+    "assemblySolids": 50,
+    "rotationMatrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "rotationDeterminant": 1,
+    "translationMm": [
+      19.5,
+      -57,
+      21.15
+    ],
+    "populatedNormalBefore": [
+      0,
+      1,
+      0
+    ],
+    "populatedNormalAfter": [
+      0,
+      0,
+      1
+    ],
+    "matchedHeaderAxes": [
+      {
+        "carrierPad": "J1.1",
+        "picoPhysicalPin": 1,
+        "vendorAxis": [
+          1.61,
+          -0.5,
+          -49.63
+        ],
+        "worldAxis": [
+          21.11,
+          -7.369999999999997,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -7.37,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.6645352591003757e-15,
+        "exportedAxisErrorMm": 2.6645352591003757e-15
+      },
+      {
+        "carrierPad": "J1.2",
+        "picoPhysicalPin": 2,
+        "vendorAxis": [
+          1.61000000000003,
+          -0.5,
+          -47.09
+        ],
+        "worldAxis": [
+          21.11000000000003,
+          -9.909999999999997,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -9.91,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.2171190647067566e-14,
+        "exportedAxisErrorMm": 3.2171190647067566e-14
+      },
+      {
+        "carrierPad": "J1.3",
+        "picoPhysicalPin": 3,
+        "vendorAxis": [
+          1.6100000000000503,
+          -0.5,
+          -44.55
+        ],
+        "worldAxis": [
+          21.11000000000005,
+          -12.450000000000003,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -12.45,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.986471270604724e-14,
+        "exportedAxisErrorMm": 4.986471270604724e-14
+      },
+      {
+        "carrierPad": "J1.4",
+        "picoPhysicalPin": 4,
+        "vendorAxis": [
+          1.61000000000008,
+          -0.5,
+          -42.01
+        ],
+        "worldAxis": [
+          21.11000000000008,
+          -14.990000000000002,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -14.99,
+          20.65
+        ],
+        "carrierAxisErrorMm": 8.173172055824794e-14,
+        "exportedAxisErrorMm": 8.173172055824794e-14
+      },
+      {
+        "carrierPad": "J1.5",
+        "picoPhysicalPin": 5,
+        "vendorAxis": [
+          1.6100000000001051,
+          -0.5,
+          -39.47
+        ],
+        "worldAxis": [
+          21.110000000000106,
+          -17.53,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -17.53,
+          20.65
+        ],
+        "carrierAxisErrorMm": 1.0658141036401503e-13,
+        "exportedAxisErrorMm": 1.0658141036401503e-13
+      },
+      {
+        "carrierPad": "J1.6",
+        "picoPhysicalPin": 6,
+        "vendorAxis": [
+          1.6100000000001302,
+          -0.5,
+          -36.93
+        ],
+        "worldAxis": [
+          21.11000000000013,
+          -20.07,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -20.07,
+          20.65
+        ],
+        "carrierAxisErrorMm": 1.3145040611561853e-13,
+        "exportedAxisErrorMm": 1.3145040611561853e-13
+      },
+      {
+        "carrierPad": "J1.7",
+        "picoPhysicalPin": 7,
+        "vendorAxis": [
+          1.6100000000001602,
+          -0.5,
+          -34.38999999999999
+        ],
+        "worldAxis": [
+          21.11000000000016,
+          -22.610000000000007,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -22.61,
+          20.65
+        ],
+        "carrierAxisErrorMm": 1.6002993603415246e-13,
+        "exportedAxisErrorMm": 1.6002993603415246e-13
+      },
+      {
+        "carrierPad": "J1.8",
+        "picoPhysicalPin": 8,
+        "vendorAxis": [
+          1.610000000000185,
+          -0.5,
+          -31.850000000000005
+        ],
+        "worldAxis": [
+          21.110000000000184,
+          -25.149999999999995,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -25.15,
+          20.65
+        ],
+        "carrierAxisErrorMm": 1.847752688483104e-13,
+        "exportedAxisErrorMm": 1.847752688483104e-13
+      },
+      {
+        "carrierPad": "J1.9",
+        "picoPhysicalPin": 9,
+        "vendorAxis": [
+          1.61000000000021,
+          -0.5,
+          -29.31
+        ],
+        "worldAxis": [
+          21.11000000000021,
+          -27.69,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -27.69,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.0961010704922955e-13,
+        "exportedAxisErrorMm": 2.0961010704922955e-13
+      },
+      {
+        "carrierPad": "J1.10",
+        "picoPhysicalPin": 10,
+        "vendorAxis": [
+          1.6100000000002401,
+          -0.5,
+          -26.77
+        ],
+        "worldAxis": [
+          21.11000000000024,
+          -30.23,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -30.23,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.4158453015843406e-13,
+        "exportedAxisErrorMm": 2.4158453015843406e-13
+      },
+      {
+        "carrierPad": "J1.11",
+        "picoPhysicalPin": 11,
+        "vendorAxis": [
+          1.610000000000265,
+          -0.5,
+          -24.23
+        ],
+        "worldAxis": [
+          21.110000000000266,
+          -32.769999999999996,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -32.77,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.6654824810496356e-13,
+        "exportedAxisErrorMm": 2.6654824810496356e-13
+      },
+      {
+        "carrierPad": "J1.12",
+        "picoPhysicalPin": 12,
+        "vendorAxis": [
+          1.61000000000029,
+          -0.5,
+          -21.69
+        ],
+        "worldAxis": [
+          21.11000000000029,
+          -35.31,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -35.31,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.913225216616411e-13,
+        "exportedAxisErrorMm": 2.913225216616411e-13
+      },
+      {
+        "carrierPad": "J1.13",
+        "picoPhysicalPin": 13,
+        "vendorAxis": [
+          1.6100000000003152,
+          -0.5,
+          -19.15
+        ],
+        "worldAxis": [
+          21.110000000000316,
+          -37.85,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -37.85,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.161915174132446e-13,
+        "exportedAxisErrorMm": 3.161915174132446e-13
+      },
+      {
+        "carrierPad": "J1.14",
+        "picoPhysicalPin": 14,
+        "vendorAxis": [
+          1.6100000000003452,
+          -0.5,
+          -16.61
+        ],
+        "worldAxis": [
+          21.110000000000344,
+          -40.39,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -40.39,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.446132268436486e-13,
+        "exportedAxisErrorMm": 3.446132268436486e-13
+      },
+      {
+        "carrierPad": "J1.15",
+        "picoPhysicalPin": 15,
+        "vendorAxis": [
+          1.61000000000037,
+          -0.5,
+          -14.069999999999999
+        ],
+        "worldAxis": [
+          21.11000000000037,
+          -42.93,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -42.93,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.694822225952521e-13,
+        "exportedAxisErrorMm": 3.694822225952521e-13
+      },
+      {
+        "carrierPad": "J1.16",
+        "picoPhysicalPin": 16,
+        "vendorAxis": [
+          1.6100000000003951,
+          -0.5,
+          -11.530000000000001
+        ],
+        "worldAxis": [
+          21.110000000000394,
+          -45.47,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -45.47,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.943512183468556e-13,
+        "exportedAxisErrorMm": 3.943512183468556e-13
+      },
+      {
+        "carrierPad": "J1.17",
+        "picoPhysicalPin": 17,
+        "vendorAxis": [
+          1.610000000000425,
+          -0.5,
+          -8.99
+        ],
+        "worldAxis": [
+          21.110000000000426,
+          -48.01,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -48.01,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.263256414560601e-13,
+        "exportedAxisErrorMm": 4.263256414560601e-13
+      },
+      {
+        "carrierPad": "J1.18",
+        "picoPhysicalPin": 18,
+        "vendorAxis": [
+          1.61000000000045,
+          -0.5,
+          -6.45
+        ],
+        "worldAxis": [
+          21.11000000000045,
+          -50.55,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -50.55,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.511946372076636e-13,
+        "exportedAxisErrorMm": 4.511946372076636e-13
+      },
+      {
+        "carrierPad": "J1.19",
+        "picoPhysicalPin": 19,
+        "vendorAxis": [
+          1.6100000000004753,
+          -0.5,
+          -3.91
+        ],
+        "worldAxis": [
+          21.110000000000475,
+          -53.09,
+          20.65
+        ],
+        "exportedAxis": [
+          21.11,
+          -53.09,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.760636329592671e-13,
+        "exportedAxisErrorMm": 4.760636329592671e-13
+      },
+      {
+        "carrierPad": "J1.20",
+        "picoPhysicalPin": 20,
+        "vendorAxis": [
+          1.610000000000505,
+          -0.5,
+          -1.3699999999999999
+        ],
+        "worldAxis": [
+          21.110000000000504,
+          -55.63,
+          20.65
+        ],
+        "exportedAxis": [
+          21.110000000001,
+          -55.63,
+          20.65
+        ],
+        "carrierAxisErrorMm": 5.044853423896711e-13,
+        "exportedAxisErrorMm": 4.973799150320701e-13
+      },
+      {
+        "carrierPad": "J2.1",
+        "picoPhysicalPin": 40,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -49.63
+        ],
+        "worldAxis": [
+          38.89,
+          -7.369999999999997,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -7.37,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.6645352591003757e-15,
+        "exportedAxisErrorMm": 2.6645352591003757e-15
+      },
+      {
+        "carrierPad": "J2.2",
+        "picoPhysicalPin": 39,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -47.09
+        ],
+        "worldAxis": [
+          38.89,
+          -9.909999999999997,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -9.91,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.552713678800501e-15,
+        "exportedAxisErrorMm": 3.552713678800501e-15
+      },
+      {
+        "carrierPad": "J2.3",
+        "picoPhysicalPin": 38,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -44.55
+        ],
+        "worldAxis": [
+          38.89,
+          -12.450000000000003,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -12.45,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.552713678800501e-15,
+        "exportedAxisErrorMm": 3.552713678800501e-15
+      },
+      {
+        "carrierPad": "J2.4",
+        "picoPhysicalPin": 37,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -42.01
+        ],
+        "worldAxis": [
+          38.89,
+          -14.990000000000002,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -14.99,
+          20.65
+        ],
+        "carrierAxisErrorMm": 1.7763568394002505e-15,
+        "exportedAxisErrorMm": 1.7763568394002505e-15
+      },
+      {
+        "carrierPad": "J2.5",
+        "picoPhysicalPin": 36,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -39.47
+        ],
+        "worldAxis": [
+          38.89,
+          -17.53,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -17.53,
+          20.65
+        ],
+        "carrierAxisErrorMm": 0.0,
+        "exportedAxisErrorMm": 0.0
+      },
+      {
+        "carrierPad": "J2.6",
+        "picoPhysicalPin": 35,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -36.93
+        ],
+        "worldAxis": [
+          38.89,
+          -20.07,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -20.07,
+          20.65
+        ],
+        "carrierAxisErrorMm": 0.0,
+        "exportedAxisErrorMm": 0.0
+      },
+      {
+        "carrierPad": "J2.7",
+        "picoPhysicalPin": 34,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -34.38999999999999
+        ],
+        "worldAxis": [
+          38.89,
+          -22.610000000000007,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -22.61,
+          20.65
+        ],
+        "carrierAxisErrorMm": 7.105427357601002e-15,
+        "exportedAxisErrorMm": 7.105427357601002e-15
+      },
+      {
+        "carrierPad": "J2.8",
+        "picoPhysicalPin": 33,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -31.850000000000005
+        ],
+        "worldAxis": [
+          38.89,
+          -25.149999999999995,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -25.15,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.552713678800501e-15,
+        "exportedAxisErrorMm": 3.552713678800501e-15
+      },
+      {
+        "carrierPad": "J2.9",
+        "picoPhysicalPin": 32,
+        "vendorAxis": [
+          19.39,
+          -0.5,
+          -29.31
+        ],
+        "worldAxis": [
+          38.89,
+          -27.69,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -27.69,
+          20.65
+        ],
+        "carrierAxisErrorMm": 0.0,
+        "exportedAxisErrorMm": 0.0
+      },
+      {
+        "carrierPad": "J2.10",
+        "picoPhysicalPin": 31,
+        "vendorAxis": [
+          19.389999999999752,
+          -0.5,
+          -26.77
+        ],
+        "worldAxis": [
+          38.88999999999975,
+          -30.23,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -30.23,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.4868995751603507e-13,
+        "exportedAxisErrorMm": 2.4868995751603507e-13
+      },
+      {
+        "carrierPad": "J2.11",
+        "picoPhysicalPin": 30,
+        "vendorAxis": [
+          19.389999999999752,
+          -0.5,
+          -24.23
+        ],
+        "worldAxis": [
+          38.88999999999975,
+          -32.769999999999996,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -32.77,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.48791442914063e-13,
+        "exportedAxisErrorMm": 2.48791442914063e-13
+      },
+      {
+        "carrierPad": "J2.12",
+        "picoPhysicalPin": 29,
+        "vendorAxis": [
+          19.3899999999997,
+          -0.5,
+          -21.69
+        ],
+        "worldAxis": [
+          38.8899999999997,
+          -35.31,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -35.31,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.984279490192421e-13,
+        "exportedAxisErrorMm": 2.984279490192421e-13
+      },
+      {
+        "carrierPad": "J2.13",
+        "picoPhysicalPin": 28,
+        "vendorAxis": [
+          19.3899999999997,
+          -0.5,
+          -19.15
+        ],
+        "worldAxis": [
+          38.8899999999997,
+          -37.85,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -37.85,
+          20.65
+        ],
+        "carrierAxisErrorMm": 2.984279490192421e-13,
+        "exportedAxisErrorMm": 2.984279490192421e-13
+      },
+      {
+        "carrierPad": "J2.14",
+        "picoPhysicalPin": 27,
+        "vendorAxis": [
+          19.38999999999965,
+          -0.5,
+          -16.61
+        ],
+        "worldAxis": [
+          38.889999999999645,
+          -40.39,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -40.39,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.552713678800501e-13,
+        "exportedAxisErrorMm": 3.552713678800501e-13
+      },
+      {
+        "carrierPad": "J2.15",
+        "picoPhysicalPin": 26,
+        "vendorAxis": [
+          19.38999999999965,
+          -0.5,
+          -14.069999999999999
+        ],
+        "worldAxis": [
+          38.889999999999645,
+          -42.93,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -42.93,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.552713678800501e-13,
+        "exportedAxisErrorMm": 3.552713678800501e-13
+      },
+      {
+        "carrierPad": "J2.16",
+        "picoPhysicalPin": 25,
+        "vendorAxis": [
+          19.3899999999996,
+          -0.5,
+          -11.530000000000001
+        ],
+        "worldAxis": [
+          38.8899999999996,
+          -45.47,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -45.47,
+          20.65
+        ],
+        "carrierAxisErrorMm": 3.979039320256561e-13,
+        "exportedAxisErrorMm": 3.979039320256561e-13
+      },
+      {
+        "carrierPad": "J2.17",
+        "picoPhysicalPin": 24,
+        "vendorAxis": [
+          19.38999999999955,
+          -0.5,
+          -8.99
+        ],
+        "worldAxis": [
+          38.889999999999546,
+          -48.01,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -48.01,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.547473508864641e-13,
+        "exportedAxisErrorMm": 4.547473508864641e-13
+      },
+      {
+        "carrierPad": "J2.18",
+        "picoPhysicalPin": 23,
+        "vendorAxis": [
+          19.38999999999955,
+          -0.5,
+          -6.45
+        ],
+        "worldAxis": [
+          38.889999999999546,
+          -50.55,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -50.55,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.547473508864641e-13,
+        "exportedAxisErrorMm": 4.547473508864641e-13
+      },
+      {
+        "carrierPad": "J2.19",
+        "picoPhysicalPin": 22,
+        "vendorAxis": [
+          19.3899999999995,
+          -0.5,
+          -3.91
+        ],
+        "worldAxis": [
+          38.8899999999995,
+          -53.09,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -53.09,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.973799150320701e-13,
+        "exportedAxisErrorMm": 4.973799150320701e-13
+      },
+      {
+        "carrierPad": "J2.20",
+        "picoPhysicalPin": 21,
+        "vendorAxis": [
+          19.3899999999995,
+          -0.5,
+          -1.3699999999999999
+        ],
+        "worldAxis": [
+          38.8899999999995,
+          -55.63,
+          20.65
+        ],
+        "exportedAxis": [
+          38.89,
+          -55.63,
+          20.65
+        ],
+        "carrierAxisErrorMm": 4.973799150320701e-13,
+        "exportedAxisErrorMm": 4.973799150320701e-13
+      }
+    ],
+    "headerAxisCount": 40,
+    "asymmetricNegativeControl": {
+      "receipt": "registration-mirrored-negative.json",
+      "sha256": "673655eaf1d3074e3bf720ef25b90626d770da540fd9255c5d85ee19d9c7258c",
+      "failedRequirements": [
+        {
+          "name": "native-pico-led-on-pin1-side",
+          "source": "script",
+          "status": "fail",
+          "measured": [
+            35.7,
+            -10.800000000000004,
+            21.915384615384617
+          ],
+          "limit": {
+            "x": [
+              24.29,
+              24.31
+            ],
+            "y": [
+              -10.81,
+              -10.79
+            ],
+            "z": [
+              21.65,
+              22.25
+            ]
+          },
+          "margin": -11.390000000000004,
+          "selections": [
+            {
+              "consumerFeatureId": "require_4",
+              "selectorText": "body(importedStep_2)",
+              "syntax": "lineage",
+              "fingerprints": [],
+              "partDiagonal": 1.8867962264113263
+            }
+          ],
+          "message": "native-pico-led-on-pin1-side failed: measured [35.700, -10.800, 21.915], limit {x: [24.290, 24.310], y: [-10.810, -10.790], z: [21.650, 22.250]}, margin -11.390 (importedStep_2).",
+          "featureId": "require_4",
+          "predicate": {
+            "metric": "centerOfMass",
+            "a": {
+              "kind": "body",
+              "ref": "importedStep_2"
+            },
+            "op": "within",
+            "limit": {
+              "x": [
+                24.29,
+                24.31
+              ],
+              "y": [
+                -10.81,
+                -10.79
+              ],
+              "z": [
+                21.65,
+                22.25
+              ]
+            }
+          }
+        }
+      ],
+      "finding": "The mirrored row swap passes the symmetric hole gauges but fails the native LED position."
+    },
+    "historicalPin1": {
+      "worldXY": [
+        38.89,
+        7.37
+      ],
+      "carrierJ1Pin1EditorXY": [
+        21.11,
+        7.37
+      ],
+      "rowErrorMm": 17.78
+    }
+  }
+}
