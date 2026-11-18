@@ -1,0 +1,8 @@
+references,quantity,manufacturer,manufacturer_part_number_or_sku,description,source,assembly_notes
+PCB1,1,LabWired custom fabrication,PICO-CARRIER-REV-A,60 x 70 x 1.6 mm two-layer routed carrier,manufacturing/pico-carrier-fabrication.zip,"FR-4,35um copper,ENIG; four2.9mm NPTH mounts."
+U1,1,Raspberry Pi Ltd,SC0915,"Raspberry Pi Pico, bare RP2040 board",https://pip.raspberrypi.com/categories/610,Populate the exact Samtec headers below; micro-USB is the only power input.
+U1-H1 U1-H2,2,Samtec,TSW-120-07-G-S,"20-position male header,2.54mm pitch",https://www.samtec.com/products/tsw-120-07-g-s,"5.842mm mating post,2.54mm insulator,2.54mm solder tail. Solder to Pico underside."
+J1 J2,2,Samtec,SSW-120-01-G-S,"20-position female socket,2.54mm pitch",https://www.samtec.com/products/ssw-120-01-g-s,"8.51mm body,2.64mm tails; both pin1 ends face USB edge."
+J3,1,Samtec,TSW-103-07-G-S,3-position vertical male UART header,https://www.samtec.com/products/tsw-103-07-g-s,1GND;2PicoTX/GP0;3PicoRX/GP1. No power pin.
+W1,1,Adafruit,954,"USB to TTL serial cable,3.3V logic",https://www.adafruit.com/product/954,"BlackGND,whiteRX toGP0,greenTX toGP1. Red5V stays disconnected and insulated."
+W2,1,Adafruit,592,"USB Type-A to Micro-B data cable,3ft",https://www.adafruit.com/product/592,Power/programming cable. Confirm overmold fits the16x8mm check envelope.

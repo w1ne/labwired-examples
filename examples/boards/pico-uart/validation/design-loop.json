@@ -1,0 +1,339 @@
+{
+  "ok": true,
+  "goal": "Release the Pico UART fixture with a native routed carrier, exact SC0915 manufacturer component solids and Samtec header stack, fitted case, accessible USB and UART ports, and a declared fastener assembly.",
+  "finalAttemptId": "01",
+  "attempts": [
+    {
+      "id": "01",
+      "title": "Attempt 01",
+      "ok": true,
+      "functional": true,
+      "qualityOk": true,
+      "featureCount": 500,
+      "diagnosticCount": 98,
+      "reviewFacts": [],
+      "visualReview": {
+        "accepted": true,
+        "findings": [
+          "The closed top and front views show one seated lid and base, four corner lid screws, a three-wire UART opening with two cable-tie slots, and the Pico micro-USB shell inside the front notch.",
+          "The current interior iso view shows the green native Pico board, distinct USB shell and electronic components, two black Samtec header insulators, the carrier sockets, and corner mounting hardware inside one base.",
+          "All17 exact manufacturer STEP solids are separate fixed components, with explicit fixed connections for the soldered electronics and USB shell elements. The untouched source SHA256 is ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b. The source and successful assembly STEP export preserve these solids without artificial connecting material.",
+          "These views verify nominal arrangement. Cable overmold fit, printed tolerances, screw torque and physical assembly are untested. The opaque lid covers the on-board LED; inspect the LED with the lid removed and use UART while closed.",
+          "The source's box-fragment heuristic counts the three integral lid registration tabs, two specified connector-body profiles, the square Samtec contact posts, rectangular access cutters, and a non-rendered USB plug envelope. Each has a documented mechanical/electrical role. The seven visual checks show no decorative fragments; only this non-visual source-count heuristic is acknowledged."
+        ],
+        "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-cbvjhNCtTT6B5l24gXOQcg/render-iso.png?exp=1795082220&sig=jK-rRGHdDTF56nkm-mJjpMlsf_Zc2aRPFus075SVZe8",
+        "checks": [
+          {
+            "code": "main-object-count",
+            "passed": true,
+            "finding": "Top and front views show exactly one rectangular base and one seated lid with four corner screw heads.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-s7HTi6t8X-JZfv8ikgjOiQ/render-top.png?exp=1795081538&sig=ikdYaEFxkce6AAUyryoJZ8MrsZg-c0zHtfbYBCf1PY0"
+          },
+          {
+            "code": "proportions-match-reference",
+            "passed": true,
+            "finding": "The near-square 78 by 88 mm case fits the 60 by 70 mm carrier; its front notch reaches the elevated Pico connector without opening the floor.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-lOLYZPx6cw0ZM7GqxbJGVg/render-front.png?exp=1795081538&sig=AjzUmO_g6WmAL0koa5LXl0i9mTC0sXdRkjJmItX9nFU"
+          },
+          {
+            "code": "required-visible-features",
+            "passed": true,
+            "finding": "The top view exposes the three UART contacts through the opening and shows two separate cable-tie slots. The front view exposes the micro-USB connector.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-s7HTi6t8X-JZfv8ikgjOiQ/render-top.png?exp=1795081538&sig=ikdYaEFxkce6AAUyryoJZ8MrsZg-c0zHtfbYBCf1PY0"
+          },
+          {
+            "code": "no-stray-or-floating-geometry",
+            "passed": true,
+            "finding": "The open iso view contains the carrier, Pico header stack and mounting hardware inside one base. Separate native electronic bodies occupy their board locations rather than floating outside the assembly.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-cbvjhNCtTT6B5l24gXOQcg/render-iso.png?exp=1795082220&sig=jK-rRGHdDTF56nkm-mJjpMlsf_Zc2aRPFus075SVZe8"
+          },
+          {
+            "code": "attachment-plausibility",
+            "passed": true,
+            "finding": "Parallel header rows support the Pico above the carrier. Corner standoffs and visible fastener heads follow the carrier and lid mounting positions.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-cbvjhNCtTT6B5l24gXOQcg/render-iso.png?exp=1795082220&sig=jK-rRGHdDTF56nkm-mJjpMlsf_Zc2aRPFus075SVZe8"
+          },
+          {
+            "code": "semantic-orientation-alignment",
+            "passed": true,
+            "finding": "The Pico micro-USB receptacle faces the front wall notch; the UART contacts face upward toward their separate lid opening.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-lOLYZPx6cw0ZM7GqxbJGVg/render-front.png?exp=1795081538&sig=AjzUmO_g6WmAL0koa5LXl0i9mTC0sXdRkjJmItX9nFU"
+          },
+          {
+            "code": "canonical-views-physically-coherent",
+            "passed": true,
+            "finding": "Top, front and interior iso views agree on the single module, centered front USB notch, offset UART opening, and four lid corner mounts.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-lOLYZPx6cw0ZM7GqxbJGVg/render-front.png?exp=1795081538&sig=AjzUmO_g6WmAL0koa5LXl0i9mTC0sXdRkjJmItX9nFU"
+          }
+        ]
+      },
+      "repairMode": "none",
+      "passedChecks": [
+        "validator-no-errors",
+        "pose-envelope-solved",
+        "pose-envelope-no-interference"
+      ],
+      "blockingReasons": [],
+      "mechanismSummary": {
+        "sampleCount": 1,
+        "interferenceCount": 0,
+        "trackedConnectorCount": 0
+      },
+      "requirements": {
+        "ok": true,
+        "status": "pass",
+        "entries": [
+          {
+            "name": "native-carrier-size",
+            "source": "script",
+            "status": "pass",
+            "measured": [
+              60.0000029883041,
+              70.00000298830409,
+              1.6000000000000085
+            ],
+            "limit": {
+              "x": [
+                59.99,
+                60.01
+              ],
+              "y": [
+                69.99,
+                70.01
+              ],
+              "z": [
+                1.59,
+                1.61
+              ]
+            },
+            "margin": 0.009997011695901392,
+            "selections": [
+              {
+                "consumerFeatureId": "require_1",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 92.20933129005482
+              }
+            ],
+            "featureId": "require_1",
+            "predicate": {
+              "metric": "bbox",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "op": "within",
+              "limit": {
+                "x": [
+                  59.99,
+                  60.01
+                ],
+                "y": [
+                  69.99,
+                  70.01
+                ],
+                "z": [
+                  1.59,
+                  1.61
+                ]
+              }
+            }
+          },
+          {
+            "name": "pico-to-lid",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.120000000000008,
+            "limit": 1,
+            "margin": 2.120000000000008,
+            "selections": [
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(assemblyExport_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 57.64538614668134
+              },
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(boolean_28)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 117.63604889658612
+              }
+            ],
+            "featureId": "require_2",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "assemblyExport_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_28"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "carrier-to-lid",
+            "source": "script",
+            "status": "pass",
+            "measured": 9.39,
+            "limit": 1,
+            "margin": 8.39,
+            "selections": [
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(boolean_114)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 92.86723467918641
+              },
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(boolean_28)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 117.63604889658612
+              }
+            ],
+            "featureId": "require_3",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_114"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_28"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "usb-plug-base-access",
+            "source": "script",
+            "status": "pass",
+            "measured": 1,
+            "limit": 0.5,
+            "margin": 0.5,
+            "selections": [
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(box_55)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 34.928498393145965
+              },
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(boolean_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 120.76526818584885
+              }
+            ],
+            "featureId": "require_4",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_55"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_18"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "usb-plug-lid-access",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.735000000000003,
+            "limit": 0.5,
+            "margin": 0.23500000000000298,
+            "selections": [
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(box_55)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 34.928498393145965
+              },
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(boolean_28)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 117.63604889658612
+              }
+            ],
+            "featureId": "require_5",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_55"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_28"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          }
+        ],
+        "summary": {
+          "pass": 5,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "095dc36281da6c9ed963271049d82a032af971b6e6a61839a364c30e79c35466",
+          "byteLength": 9598
+        },
+        "parameters": {
+          "values": {
+            "output": "assembly"
+          },
+          "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "998c457b7810feff9238cbefa99e1d5fbc7e1701"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "8d12f894cf17edcb54497d6e34e5ce10d1d06fb0049507c87d6cf98ed70c48f0"
+      },
+      "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+    }
+  ],
+  "record": {
+    "title": "Pico UART fixture rev A nominal CAD acceptance",
+    "goal": "Release the Pico UART fixture with a native routed carrier, exact SC0915 manufacturer component solids and Samtec header stack, fitted case, accessible USB and UART ports, and a declared fastener assembly.",
+    "steps": []
+  },
+  "serverBuild": "0.1.0+998c457b7810@2026-11-18T09:30:48.889Z"
+}

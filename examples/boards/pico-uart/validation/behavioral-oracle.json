@@ -1,0 +1,23 @@
+{
+  "serial": [
+    {
+      "contains": "RP2040_SMOKE_OK"
+    },
+    {
+      "contains": "PICO_LED=1"
+    },
+    {
+      "contains": "PICO_LED=0"
+    }
+  ],
+  "gpio_edges": [
+    {
+      "pin": "GP0",
+      "min_edges": 4
+    },
+    {
+      "pin": "GP25",
+      "min_edges": 2
+    }
+  ]
+}

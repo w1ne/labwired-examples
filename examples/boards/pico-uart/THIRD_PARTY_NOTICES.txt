@@ -1,0 +1,36 @@
+Pico UART fixture revision A
+
+LabWired-authored firmware sketch, carrier design and mechanical wrapper source:
+MIT, as in the repository LICENSE. Manufacturer assets are separately licensed.
+
+Raspberry Pi Pico R3 STEP:
+Unmodified source supplied by Raspberry Pi Ltd. See references/raspberry-pi/LICENSE.txt
+and provenance.json. Exact SHA256:
+ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b
+Official source:
+https://pip-assets.raspberrypi.com/categories/610-raspberry-pi-pico/documents/RP-008311-DS-1-Pico-R3-step.zip
+The 17 native solids are imported individually without reshaping the manufacturer geometry.
+
+KiCad symbol and footprint derivatives:
+KiCad library contributors, CC-BY-SA-4.0 with the KiCad design exception.
+See electronics/licenses/kicad-library-license.txt and electronics/provenance.json.
+
+ArduinoCore-mbed:
+Arduino core files use LGPL-2.1-or-later. Version4.6.0, upstream tag commit
+b4ad4e7218a691989acf6c4479112eae183a5a50:
+https://github.com/arduino/ArduinoCore-mbed/tree/b4ad4e7218a691989acf6c4479112eae183a5a50
+Mbed OS and bundled platform components retain their upstream licenses and notices.
+The firmware/platformio.ini dependency pins download the complete framework package.
+The full application source is included and can be rebuilt/relinked with a modified
+framework. The released ELF/UF2 includes third-party runtime code; it is not solely MIT.
+
+Samtec, Adafruit, Accu and Panduit names and part numbers identify purchased parts.
+The connector and hardware envelopes were authored from the linked dimensions.
+They are not certified supplier CAD drawings and carry no endorsement.
+
+Samtec SSW market drawing:
+references/samtec/ssw-market-drawing.pdf is an unmodified Samtec manufacturer
+drawing retained as dimensional evidence. Copyright and any manufacturer terms
+remain with Samtec; the repository MIT license does not relicense this asset.
+Source: https://suddendocs.samtec.com/prints/ssw-xxx-xx-xx-x-xx-xxx-mkt.pdf
+SHA256: 890f20796637b7947c7655aabf919d055b56988a01c20338b635f2daf35b051f
