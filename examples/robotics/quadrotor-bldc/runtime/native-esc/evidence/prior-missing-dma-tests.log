@@ -1,0 +1,35 @@
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/h735-telematics-lab/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/rc-oscilloscope-lab/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/nrf52832/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/nrf52840/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/rp2040/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+   Compiling labwired-core v0.26.0 (/data/worktrees/labwired-core-industrial-boot-20261118/crates/core)
+    Finished `test` profile [optimized] target(s) in 2.95s
+     Running tests/vendor/main.rs (/data/cargo-target/industrial-boot-20261118/debug/deps/vendor-2143f926b996dafa)
+
+running 1 test
+{"appBinSha256":"51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843","bootloaderElfSha256":"76f92c0db3423d21ce1358275c707463144bace9f9a79198840f8f15494b2894","captureProbe":{"afterCount":32,"beforeCount":32,"capture1":48886,"goodFrames":0,"samples":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"cycles":90004600,"elfSha256":"32b6ea46fdb279550d3848972961196b109777850c85c2aeeeb7a45116d61c35","error":null,"pc":134231418,"registers":{"adc_ctrl1":{"Ok":256},"adc_ctrl2":{"Ok":10354945},"adc_osq1":{"Ok":1048576},"adc_osq3":{"Ok":529},"crm_cfg":{"Ok":808763402},"crm_ctrl":{"Ok":50331779},"dma1_ch1_ctrl":{"Ok":9633},"dma1_ch4_count":{"Ok":32},"dma1_ch4_ctrl":{"Ok":2443},"gpioa_cfgr":{"Ok":22367244},"gpiob_cfgr":{"Ok":66069},"tmr17_counter":{"Ok":24086},"tmr1_brk":{"Ok":32828},"tmr1_cce":{"Ok":1365},"tmr3_cce":{"Ok":11},"tmr3_ccr1":{"Ok":48886},"tmr3_channel1":{"Ok":65},"tmr3_counter":{"Ok":48948},"tmr3_ctrl":{"Ok":1},"tmr3_dma_int":{"Ok":512}},"scope":"Exact PB4 v19 bootloader at flash base, unchanged native app BIN at 0x08001000 and explicit bench EEPROM at 0x08007c00. No motor motion or full station claim.","settingsSha256":"c74c76fa2814bdd5fdeefcc8fadee99d142a6274d3d2ba50c53047d24fabe31b","stages":[{"armed":0,"clock":0,"cycle":10000,"pc":134218124,"sensorConfigurationError":0,"steps":10000},{"armed":0,"clock":0,"cycle":100000,"pc":134218126,"sensorConfigurationError":0,"steps":100000},{"armed":0,"clock":120000000,"cycle":1000000,"pc":134223914,"sensorConfigurationError":0,"steps":1000000},{"armed":0,"clock":120000000,"cycle":2000000,"pc":134223922,"sensorConfigurationError":0,"steps":2000000},{"armed":0,"clock":120000000,"cycle":24000000,"pc":134223916,"sensorConfigurationError":0,"steps":24000000},{"armed":0,"clock":120000000,"cycle":48000000,"pc":134223922,"sensorConfigurationError":0,"steps":48000000},{"armed":0,"clock":120000000,"cycle":72000000,"pc":134223914,"sensorConfigurationError":0,"steps":72000000},{"armed":0,"clock":120000000,"cycle":90000000,"pc":134230300,"sensorConfigurationError":0,"steps":90000000}],"steps":90000000}
+
+thread 'at32_am32_native::exact_openesc30_bootloader_application_probe' (3795688) panicked at crates/core/tests/vendor/at32_am32_native.rs:152:9:
+actual input-capture edges must reach the firmware DMA buffer
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test at32_am32_native::exact_openesc30_bootloader_application_probe ... FAILED
+
+failures:
+
+failures:
+    at32_am32_native::exact_openesc30_bootloader_application_probe
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 166 filtered out; finished in 13.32s
+
+error: test failed, to rerun pass `-p labwired-core --test vendor`

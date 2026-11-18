@@ -1,0 +1,2147 @@
+{
+  "archive": {
+    "path": "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/firmware/native-esc/sources/openesc30-native-source-v1.tar.gz",
+    "bytes": 1462891,
+    "sha256": "2fa04f20e8bdf52c7f113ae525e73630511f4da6b65b74cf48b597673b274621"
+  },
+  "command": [
+    "python3",
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/source/build.py",
+    "--source-dir",
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/source",
+    "--toolchain-dir",
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3",
+    "--work-dir",
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build"
+  ],
+  "exit": 0,
+  "seconds": 35.63055672397604,
+  "build": {
+    "schema": "labwired.native-esc-build.v1",
+    "toolchain": {
+      "url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.3.1-2.3/xpack-arm-none-eabi-gcc-10.3.1-2.3-linux-x64.tar.gz",
+      "checksumUrl": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.3.1-2.3/xpack-arm-none-eabi-gcc-10.3.1-2.3-linux-x64.tar.gz.sha",
+      "sha256": "559dcf1c2dfddac513110fe23da0ef254032c09967eaa901f075515d51818719",
+      "bytes": 175646740
+    },
+    "compilerVersion": "arm-none-eabi-gcc (xPack GNU Arm Embedded GCC x86_64) 10.3.1 20210824 (release)\nCopyright (C) 2020 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "runs": [
+      {
+        "source": {
+          "name": "am32-f421",
+          "commit": "19df1ecfef4982302cacdd35bb0d921ceac83217",
+          "path": "am32-f421-19df1ecfef49.tar.gz",
+          "sha256": "2d2dac0bb11c5db8aa03c91f2503c0da6bec3a9b25c175acd534aa5d280a346f",
+          "bytes": 383331,
+          "selectedPaths": [
+            ".clang-format-ignore",
+            ".cproject",
+            ".editorconfig",
+            ".gitattributes",
+            ".gitignore",
+            ".mxproject",
+            ".project",
+            "AGENTS.md",
+            "CODE_OF_CONDUCT.md",
+            "LICENSE",
+            "Makefile",
+            "README.md",
+            "STM32F051K6TX_FLASH.ld",
+            "a153makefile.mk",
+            "e230makefile.mk",
+            "f031makefile.mk",
+            "f051_ll_bi_dir Debug.launch",
+            "f051_ll_bi_dir.ioc",
+            "f051makefile.mk",
+            "f415makefile.mk",
+            "f421makefile.mk",
+            "format.sh",
+            "g031makefile.mk",
+            "g071makefile.mk",
+            "g431makefile.mk",
+            "l431makefile.mk",
+            "v203makefile.mk",
+            "Inc",
+            "Mcu/f421",
+            "make",
+            "tools",
+            "env_setup_scripts",
+            "Src"
+          ],
+          "scope": "Complete corresponding source for the F421 build: all common source and headers, F421 vendor/startup sources, make scripts and every root makefile/license. Other MCU implementations and binary manuals are excluded."
+        },
+        "actualSourceFiles": [
+          {
+            "path": ".clang-format-ignore",
+            "sha256": "1f8c08857dcf2924c17c54e23ed24503f9865198b42958340180366e40c99b4f"
+          },
+          {
+            "path": ".cproject",
+            "sha256": "0163217e9d542dedb4d688363ad792c3e83a5a221ccdd404bd97825ff37450f3"
+          },
+          {
+            "path": ".editorconfig",
+            "sha256": "14637eb4c0523c523fc48f34ed691845ecdaf52c5343652f29cf47ef31eb370a"
+          },
+          {
+            "path": ".gitattributes",
+            "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b"
+          },
+          {
+            "path": ".gitignore",
+            "sha256": "7451ffa9cd3fe0486396a8d4e83e1d34a6cd159f9cda04c02820c028aad34ff3"
+          },
+          {
+            "path": ".mxproject",
+            "sha256": "aea5d249e9c88bbca384c4f9822d6a10400553f089d1bc67a15e41fc578e4482"
+          },
+          {
+            "path": ".project",
+            "sha256": "93d5ac5ded6d7f490cb6e33dcd0cb9b198ea818d11910ef788a307b4cf8e135f"
+          },
+          {
+            "path": "AGENTS.md",
+            "sha256": "fba057db49ee53984aea80d3514ed95ce202b1311de26cac1daa1b25afc96d8c"
+          },
+          {
+            "path": "CODE_OF_CONDUCT.md",
+            "sha256": "e20c3b8e6a7e7ea335d73b55ffb1755d142a4b0fbc3f50d000d1b49a7b3465a8"
+          },
+          {
+            "path": "Inc/common.h",
+            "sha256": "f5059ce3d63bf3512bef992f642fab428c1746536898eab0db0ab7fc6de66f8b"
+          },
+          {
+            "path": "Inc/dshot.h",
+            "sha256": "301f34b1513c45a9611a77ae7785b59c0a02cc5873736312eb99744cacb80e95"
+          },
+          {
+            "path": "Inc/eeprom.h",
+            "sha256": "007015f14a3af1091bbc7a576c6305fc9f17eaa24698a93fad48296edba6a0e7"
+          },
+          {
+            "path": "Inc/firmwareversion.h",
+            "sha256": "703e42136e9d0ad962a7dc82037e7f41df3116cf207f7873ed5d72a3cdbae42b"
+          },
+          {
+            "path": "Inc/functions.h",
+            "sha256": "e13943f3640b201528ef8d007b1edaa2eacf0d51680b6f5b953bf4e9c7f2df7d"
+          },
+          {
+            "path": "Inc/kiss_telemetry.h",
+            "sha256": "4a583a0c8f36df748ef6aed038c72f3aab5f39d3a7a8df27a219c00e9e71585a"
+          },
+          {
+            "path": "Inc/ntc_tables.h",
+            "sha256": "76621a46af85e3ffe0ab3acffa8d36bb02ab92f8c92ffcaad0992373c97efbbf"
+          },
+          {
+            "path": "Inc/signal.h",
+            "sha256": "f6bb084ee1960c1e8838959961d68ed79dbda315272f6737597f953ec88282de"
+          },
+          {
+            "path": "Inc/sounds.h",
+            "sha256": "5266b02f001e2d0c45004624185f8edd3a9be0ebef62860780c53858c8360da9"
+          },
+          {
+            "path": "Inc/target_sensors.h",
+            "sha256": "68bac0ee26adebee5456cd35b2f1ee16150c1ba45b46b8a4146d805d46a37607"
+          },
+          {
+            "path": "Inc/targets.h",
+            "sha256": "5182f3a6e0f3538705d00599c1756b829c101854524f6e19cfa9ae823e70d4b7"
+          },
+          {
+            "path": "Inc/version.h",
+            "sha256": "d51f9f5c8b37356f44f53d2baf2db5518a0b18a085c058103dc166017e49778d"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          {
+            "path": "Makefile",
+            "sha256": "d15502758dca4777ef29fd22e1ad4c97352ce67c68442cd1f9cfe504224ee58e"
+          },
+          {
+            "path": "Mcu/f421/AT32F421x6_FLASH.ld",
+            "sha256": "d42da8e7edb3db8cd182b8685d58f3a2d58f69e208a0eb68119e87a0c939c23a"
+          },
+          {
+            "path": "Mcu/f421/AT32F421xx_v2.svd",
+            "sha256": "2b3f3315b910e3f011aa16e7f789ac7bfb3af5caa710f5260ea74facb7eebe3b"
+          },
+          {
+            "path": "Mcu/f421/Am32.sct",
+            "sha256": "fb19529290e75d525646e2c272ad7141f68a3451b25a1b40321baf38305660ba"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_common_tables.h",
+            "sha256": "7ec673e2a79eb49151bc76f833a5220f2cb701127a0022e3ac700741b6bcc463"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_const_structs.h",
+            "sha256": "0499aca00fc90206a0fb9bda69a891997e01db395147758b92096ff83f7aedd7"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_helium_utils.h",
+            "sha256": "a2fa3dd4e78867a300c778681545de6a8229b8005af8943515c3a2ad1320601f"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_math.h",
+            "sha256": "d4d9b91b52b6c37179f38135d4c6514018b0d39fa98bccd3f5c9cc4495b0edce"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_mve_tables.h",
+            "sha256": "a0c7cb3e87ae7dcce055e09c559266b1a1c9dcfcbfbafa93ffc5971681a00a20"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_vec_math.h",
+            "sha256": "a767a0d1fd7f9c414960809826b7a9d3c7296cdb7715f20cf977e8afa8534860"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_armcc.h",
+            "sha256": "fb7d09b9a10fb0c37c7bade8d75d81c8ab623ed7e1a38f3c390b226d0c0bca93"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_armclang.h",
+            "sha256": "ba8b672e8ad8d049e2174f1f6c49d36ca11c696f5b0d37002337f43213793e80"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_armclang_ltm.h",
+            "sha256": "6c95d181d6bf83fb9f8e7e2e0e43bdb91121fe88a616023b1f075f9d16ebf103"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_compiler.h",
+            "sha256": "69762b3ad88dcbce6f291865b5b0b27b700689c8371cf45ecc4f881a2128325e"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_gcc.h",
+            "sha256": "c73a272a03a72447c33ac934287f3f373f4f1c364cf3b3cd76c0ce59a4db233a"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_iccarm.h",
+            "sha256": "76e965cdaef5a6195570ae206e9451a67986ac6fdbbe040e81704d22c3e04a20"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_version.h",
+            "sha256": "9050f3b257ce7e3677d5452f30c6592868bc4b20e6dd9e358d187a1ae0e97c8d"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/core_cm4.h",
+            "sha256": "d631beb45fc05a24f9dc4362ca0a77d10e52ec832d30749a3570a925ed07079c"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/mpu_armv7.h",
+            "sha256": "a64d639bc8dc0c282e2eb9ca378c236d560054c2de3e3d31b0fe7b604c48d570"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/mpu_armv8.h",
+            "sha256": "a80c78d6e6a73825b65d86396b8c7df2f793ba9264785f8318d36ecd37a79f5e"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/pmu_armv8.h",
+            "sha256": "d74fbc2def3f41bb910a41df8767657c71dfeadcd85aa510599ca517d1b4888c"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/device_support/at32f421.h",
+            "sha256": "867adb623cbd088d38158b8318823904fd348958f1d68620fb8eea1818768173"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/device_support/at32f421_conf_template.h",
+            "sha256": "50f5be816068c878ff8920ae7e70f358160e9862aa594ad0d7137acdb1067f85"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_adc.h",
+            "sha256": "8027d6608fc260979718e1ccd822d8cad2be4eb8b88b4f17c25884aa16ee1f8b"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_cmp.h",
+            "sha256": "b37f84d580bbcf78a21a547cec68ba577e560676c3d8194b775a83feb10a3acd"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_crc.h",
+            "sha256": "0523ea61249ec377288c2ebcfb4aa6b457481f0d40dcb4f4e0e2af24ee2e700c"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_crm.h",
+            "sha256": "2d120b3897c9b0d499cce0d5746e23a52f8944e8f138ac785a954d927e25dec8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_debug.h",
+            "sha256": "087b82542528927f13c3bf871c65ffc9835c42c14d47eefa90c486184f2b68c8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_def.h",
+            "sha256": "c019c5261e8150abd7657c9d4013a505895a013d470ded99c94ff1943b8641f8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_dma.h",
+            "sha256": "56a453935d6a277faeda9988990a8b7b90ebac7232bdda9e795ff5ac88a206a5"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_ertc.h",
+            "sha256": "f8b7bef93cb5e6ceba8df93b8f95ee15001212636ae612ef78ad4b586e7aceb1"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_exint.h",
+            "sha256": "2733d8aef99ad7ea2b287f89ef88281b9204c66dbcaa810a1b53674945da1976"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_flash.h",
+            "sha256": "bd3b9980f9da7b034c841e59335aab8bbc625f773cf28faeb57b2ed019404b25"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_gpio.h",
+            "sha256": "b3c28b5fab7491da691e1def6257e8e0c0f504c64f8b041bd485105ab10feac8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_i2c.h",
+            "sha256": "285400cf949847578996c6c338bfe71c8dd1b2a652d98a108a679c97cc6d0631"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_misc.h",
+            "sha256": "1fe50d608253bee8131adc0375880a2d1be39cb933a3602095c984c5732b7eee"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_pwc.h",
+            "sha256": "dd468a2dc8334a5b6da401308e478b0ca0ee8aab4147206b533141aa3b9c2192"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_scfg.h",
+            "sha256": "1c086a32f550d3e4614765f555894298863fd5ee57a9bad23993c00065a7f4b5"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_spi.h",
+            "sha256": "2c1eff4926a29f1c56975603fbbb5ba163b00bce553c770372055e3a887c2e05"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_tmr.h",
+            "sha256": "b48730a07152a9948cfbcfb7f4a531346d9809f0c11129117821ae67f1e04ad8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_usart.h",
+            "sha256": "1dbe88f5444d7dc3d7231a77343de4a73fb61c6b49d8c13c3a39465b584ca322"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_wdt.h",
+            "sha256": "ddab19e0b294c3aab9d1ce3e1ff9b5ae764dfee11ff43b8a3f81645869454461"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_wwdt.h",
+            "sha256": "073b62818328f1d3ab30b6edcc52a38392fd1d308c0348fd3e30719c601dd9cf"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_adc.c",
+            "sha256": "471ab59aa7f65f80715285aff9e4f0418d5457becf107e3830159451ed5a950e"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_cmp.c",
+            "sha256": "7c7e28fea4ed952c282ff530fd14228d44235ab7e4d9ad41ec0e034491afdfe8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_crc.c",
+            "sha256": "46b69b7d04e36712c4a08cf48f7116ba8f85847eb49efe99918abe927cebd5d4"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_crm.c",
+            "sha256": "76848405ec5f12fa9d71f4de5d697d0e21f34076dc367ed546e76f6d34426ee5"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_debug.c",
+            "sha256": "aa96bdd06e080f44aff2a84fe62abc73a49743e9351c0b935951ec2d6b93ffaf"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_dma.c",
+            "sha256": "486ee7213402f1942529c8c26ea1c6f30716a021f58ddcc1a78a5b7c74b68057"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_ertc.c",
+            "sha256": "d45b19558a0184d5886c44bdec3dca86deb9e749eba33885f247b055d189bd0f"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_exint.c",
+            "sha256": "d9247c91bbb2087981b8d490d812718e5ee87c5f005de7f74f05af2c8c0d7554"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_flash.c",
+            "sha256": "5f967085b8fc75ac674e22de9f533a30d6be876dd983f0e22388b7314f75eaf2"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_gpio.c",
+            "sha256": "da59739aff8025b188898f97c6b969d683811da1f303b726e7094857c8d3019b"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_i2c.c",
+            "sha256": "4a02e033cd2837d6fa4fb2899e7b389140019dd96cb8bcdf6216ef4986454d65"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_misc.c",
+            "sha256": "7f069c61e413c6136cb11cdab801154fb1b1619914daf5392fbe8a224d03b73f"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_pwc.c",
+            "sha256": "c714e47a9bd4dc5f6f41cbc7fb7ea68f9ddbe23ea643ce47a350c71c3147ece6"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_scfg.c",
+            "sha256": "61a6ccf516d7951c17e9e0772c0b1891d38752b398ed7dc0b7e2a463a622b840"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_spi.c",
+            "sha256": "3db8fb276bf177475e82ace71300d7082bb42aefbade365ff99fa619bf725ff8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_tmr.c",
+            "sha256": "3e7079f9bca730f07597681df5a23cb3327ef6bed65e80c01bbc878e1d0f0743"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_usart.c",
+            "sha256": "db00ce211f909cea6211c1e658d4046d211f1aa393e187231c68915658251e12"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_wdt.c",
+            "sha256": "740bacdb6f8b498b0af8b5d363ad36855f493a6e0c349a09fea92708c57c1da9"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_wwdt.c",
+            "sha256": "fb8e9c4c62bbf617bb13b492bda6f12d0683afe5df33ef4de261807a62c5302a"
+          },
+          {
+            "path": "Mcu/f421/Inc/ADC.h",
+            "sha256": "e4cbf231b80d8627313ccad5ea96c0bc100bd02acd3eb599183828b3ef5c5f99"
+          },
+          {
+            "path": "Mcu/f421/Inc/IO.h",
+            "sha256": "590c07ec271a2f65844f7dc15832c9a8ea8c3bf7e9adb63215de77c60fe379a7"
+          },
+          {
+            "path": "Mcu/f421/Inc/WS2812.h",
+            "sha256": "2db0a658d01eb8aa362f36395983b27e4545dca39b46fe42d141651183b684d4"
+          },
+          {
+            "path": "Mcu/f421/Inc/at32f421_conf.h",
+            "sha256": "c1042d789d245d68aba2ddab69c054c071811013faef43d4671bd75636e36707"
+          },
+          {
+            "path": "Mcu/f421/Inc/at32f421_it.h",
+            "sha256": "f5a03196a1ee83301d47b07d323af2aba4a14fb4145516f9e51a190d67b9750a"
+          },
+          {
+            "path": "Mcu/f421/Inc/comparator.h",
+            "sha256": "789927b6abfe6846abd5ecbc81dc8463e0e9b191f6a38541d9e2a078c0a021fe"
+          },
+          {
+            "path": "Mcu/f421/Inc/main.h",
+            "sha256": "68e85e842ee5c665a6b3afe5072b5739ada35c6e1faeb870c5fd5a667abb0bc9"
+          },
+          {
+            "path": "Mcu/f421/Inc/peripherals.h",
+            "sha256": "462cae63897dcbae3b65effce9d07e81095c6d445594049ad5d5cc1d10329432"
+          },
+          {
+            "path": "Mcu/f421/Inc/phaseouts.h",
+            "sha256": "ad85a6ee76610898888a09b77f775c4eeb05e2b1e9fdac0b2fd18e73c35a2edd"
+          },
+          {
+            "path": "Mcu/f421/Inc/serial_telemetry.h",
+            "sha256": "3be95e60e8e759ce782e7b162d94b08742fd18c40724808c707307e69caa5e23"
+          },
+          {
+            "path": "Mcu/f421/Inc/system_at32f421.h",
+            "sha256": "3d4b83860e869b6c2c8f24abcc50cc33072485a8a562df9d1cb8047af66d5f78"
+          },
+          {
+            "path": "Mcu/f421/Src/ADC.c",
+            "sha256": "0328b7691dc32efa7a672e25afd1d882662b194378a6f519dc77474048eec5ce"
+          },
+          {
+            "path": "Mcu/f421/Src/IO.c",
+            "sha256": "2a2316fd4c5de2bce0df96ae38cc78473e0877364cbcdc4db0d73f562788f59e"
+          },
+          {
+            "path": "Mcu/f421/Src/WS2812.c",
+            "sha256": "c81bdfe95d483d8d8db4ac9db41571979e532fa2be44131abd72db88d3640520"
+          },
+          {
+            "path": "Mcu/f421/Src/at32f421_it.c",
+            "sha256": "915d11b00f7da31298bd9cba02609e094fcd7271fad0ca63f374c8a2426386b5"
+          },
+          {
+            "path": "Mcu/f421/Src/comparator.c",
+            "sha256": "fc994e857713895d5ce22d734e57dae09efa06592ef8b3503a84495e8f0086b7"
+          },
+          {
+            "path": "Mcu/f421/Src/eeprom.c",
+            "sha256": "7a4e987f20e5c0a0ab2bbcbd380c6251cc9f8fef428f42078b6877b923520040"
+          },
+          {
+            "path": "Mcu/f421/Src/peripherals.c",
+            "sha256": "7022566a4d3230f8be389572ea48c040f853995758eb58d718c4e9a32ae5fe44"
+          },
+          {
+            "path": "Mcu/f421/Src/phaseouts.c",
+            "sha256": "7bb0393553c27b0d26f4f691a452dcf94058a77a700160169d81bc9b7a1e2721"
+          },
+          {
+            "path": "Mcu/f421/Src/serial_telemetry.c",
+            "sha256": "061c19a8cc5f64b6d611e922caf2f53c43eab341a26d61ebe9671f84ffea0642"
+          },
+          {
+            "path": "Mcu/f421/Src/system_at32f421.c",
+            "sha256": "5f15200f2c71fc9e2ac627599410417af30b6b769b9c254f5334ca9629a0ace1"
+          },
+          {
+            "path": "Mcu/f421/Startup/mdk/startup_at32f421.s",
+            "sha256": "5c8e9b4bf3677c3adaa66dad0c32ff26222812cb51dcd22b1af5298698799061"
+          },
+          {
+            "path": "Mcu/f421/Startup/startup_at32f421.s",
+            "sha256": "ec7c9bf70d6cf1a5fdc7255a551c2985f1cc6bd4e528e11e901c3b2603817ca7"
+          },
+          {
+            "path": "Mcu/f421/openocd.cfg",
+            "sha256": "95bb969f0e1213c35a824b97703eafb027e428e1322c6f03d5e49a152df5b469"
+          },
+          {
+            "path": "README.md",
+            "sha256": "e24970784df60cdf171b9f3ae732c4205dc1e4a79b382fc565f329d6c99bb204"
+          },
+          {
+            "path": "STM32F051K6TX_FLASH.ld",
+            "sha256": "e3752b9a2098b8503867d5be401af5dddefb20f2e7be56cad48d4da329189be5"
+          },
+          {
+            "path": "Src/DroneCAN/DroneCAN.c",
+            "sha256": "dffcc7c614d67b75f9dfcda383507ebebe32ceb70fa51be721f2798ff686fc65"
+          },
+          {
+            "path": "Src/DroneCAN/DroneCAN.h",
+            "sha256": "8eeceba87eb918e5b112256de881c12e7289ddb04a6f8bdda167b0b7f35231e4"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/dronecan_msgs.h",
+            "sha256": "7b1c88e2ddf8155cd9b0dd510de794b96d1c4ea89442e3da7bd17aee1e90e1ce"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/dronecan.protocol.FlexDebug.h",
+            "sha256": "43aec14f6f2fc636ccaf9a5eb9b6f802beaf57689d1c024dfa2300263a44e23d"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.RPMCommand.h",
+            "sha256": "2ce3e14d0b5f683ebd709e8a4040a127e9c86c7edb94b28a73280250dd0ddab2"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.RawCommand.h",
+            "sha256": "328662516fb7fa9bda82739e720e1abe807a5529436f6c3c09a214f0d1a98b1f"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.Status.h",
+            "sha256": "4ae8a4ac3ef6ab318c5680e01de6817044a5f6e0c62586a7a34c69c90b20a543"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.StatusExtended.h",
+            "sha256": "55045866227e93900ca39d2ca4399645f3146d27a5bf58691982903fb23299b6"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.equipment.safety.ArmingStatus.h",
+            "sha256": "c7a2a015c6b70d2159b5327c3fa44ce8218d2789272b2de587518f1ce67d3d8d"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.GetNodeInfo.h",
+            "sha256": "6554edad0b26f3ea49e6ee1fffbdf50cd70691a1aa565d70cbee6448fb06e55e"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.GetNodeInfo_req.h",
+            "sha256": "7f848d1094312be59a9dfb2a7631c1d4a870320e220b7f188bcaa2ba710969d4"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.GetNodeInfo_res.h",
+            "sha256": "d68e216bcc33b86bb51e85aa9f5cf9deee4d0a98f42bbe66096e4ae856ae0898"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.HardwareVersion.h",
+            "sha256": "d6a1220ad6efccf0ff0aa20b16fff48302b9c49eaf81a958b7761c546de11960"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.NodeStatus.h",
+            "sha256": "dc4df9bbf1be586d81bc0f183637aad3807d06249463f0271f4cb22f98a2ff53"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.RestartNode.h",
+            "sha256": "6b425f0ee0bb13ffe2c0a5c0aa1d008a14a559ebc84b61ec4c7fcb05bbc68de0"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.RestartNode_req.h",
+            "sha256": "50377cc4a743cfe264ad387c692b45c0a308217cabb8c356e1b989b1f230e390"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.RestartNode_res.h",
+            "sha256": "ead025740385a90d4436c727239bd691106a0be8dae65474b20114341b1c3a7a"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.SoftwareVersion.h",
+            "sha256": "8193e969b466327c7ad87495cfc68c41657ef65752e80968118a8cc7ae5d1830"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.debug.KeyValue.h",
+            "sha256": "79089e717addaeff1d697b249ebeb37a7d652784f9e6fc505ef8c49814b4389e"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.debug.LogLevel.h",
+            "sha256": "b2524ea067e88092609504e4b46e2a2267d09b677addbb5935c3522b2dbc2525"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.debug.LogMessage.h",
+            "sha256": "44ac94aa630891055655b31d54f78cd3046843463a141ebdd694f279f1940811"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.Allocation.h",
+            "sha256": "cf1a4e2c29665f72c9cc1d1e4c2df0ad777eebbd607510521fcca80f12254277"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries.h",
+            "sha256": "54e72a490a372a6040d47fce640a246b7c6a85e210cb72943950fe3b1900d041"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries_req.h",
+            "sha256": "cec388d42dd46b9c2d18ee729533152524f2983168bb3736942a5be8ac13ade5"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries_res.h",
+            "sha256": "a82ce3384d5a0eab7002284db4e33e42ecbdf16b934d82380a458711cd6d0f93"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.Discovery.h",
+            "sha256": "d666491e6ca4f5e45a7f19efdda1237015e5be4fa7c3fecca29908ffd0115d47"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.Entry.h",
+            "sha256": "19cf50d18ab6e59ea0844db2a4e7da6d05411dbfd43f29be65901643a5f91a37"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote.h",
+            "sha256": "233c991750a2e8ce2867dbc3902eebce798c39b15c4258277bf166f617fab788"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote_req.h",
+            "sha256": "b324c3be17ac4779592e1d65853247ccac5ca5dabe6e52c663f02e36643b4924"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote_res.h",
+            "sha256": "cf058c12e71d7461c79662a6e473878e04b989686483683e53a4e6cf9d08635f"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.BeginFirmwareUpdate.h",
+            "sha256": "a27d7a1d7ddbcf298153741eef92f2c77b68e097072bf0ac574f710628fd9fa6"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.BeginFirmwareUpdate_req.h",
+            "sha256": "da94a9420213bf69f1272e0675d64918f929ccbb399b94153f987c9251b64edc"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.BeginFirmwareUpdate_res.h",
+            "sha256": "9f27fcd29daabcc5412e984cd776e2c28d6e996791333cda5949136b76639d4f"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Delete.h",
+            "sha256": "25fc0458924c3ae9617af44a9dfb95221d4e67b338036d29ed97aa9289f3147d"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Delete_req.h",
+            "sha256": "bae614f74ac06aa3e9b4bfe77ca32cd1e47cd072ba863c31751cdcae0f3f550e"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Delete_res.h",
+            "sha256": "a727d1e42972ac5a8be1d62eae358fd49593f79d4cfe08c10a2ac82fcf02ea60"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.EntryType.h",
+            "sha256": "6f3c1e0099f93b85c5998fc7e5b46b853e03e470dcf1693daad85a2b2b0191f5"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Error.h",
+            "sha256": "e0817d6845739bde2166e6f85ee70443ddb6bd86b84dd4f8dfd19910d018c348"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo.h",
+            "sha256": "bead6aeddbfbc308609aabaa830cdeb1cc2465f2c0144f63dafad43f6293a15d"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo_req.h",
+            "sha256": "4f9791dbce262f2aa33de4058222aeab9404b7c5dcd5879a12209cc5b1878586"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo_res.h",
+            "sha256": "5e4e628495704d90ae7877f6463f4c938b8911a686b045d510e3555018368801"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetInfo.h",
+            "sha256": "412f576b70f2c27f6a300555b05924948215d626aeaf20d93cbfa2fc89cb7ce6"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetInfo_req.h",
+            "sha256": "63df70a562cd4a994b453745f1dc92d02c07715d9179d7641c3dfe9ca375e1f3"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetInfo_res.h",
+            "sha256": "a36d34750d6bc949708f7e56e4403e6d5dac9c1ff1a838c604346dd517a750ef"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Path.h",
+            "sha256": "a0a6116535b2b1bb3da779c6d077497a1abf88f463f5a57de5dffd16b5ff4e40"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Read.h",
+            "sha256": "1412427d36a98c51f919ef5a0f3af62ef1d5ab82be0879da8fe471bb9cb96744"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Read_req.h",
+            "sha256": "8b67876b3a1699e96ad2761eac0f3f6ef63f0c914a309daff892b25ffadd50da"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Read_res.h",
+            "sha256": "a6de886c8c8c11c757c12e1e21737fae4f047027530c2ae669bd7d622580f8d7"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Write.h",
+            "sha256": "af575f6ccf027fd7e28b290ac3c8a6a19d0f46bd7b22f7683325fdf4a17d844e"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Write_req.h",
+            "sha256": "f861450a5a02c6cbf43ebcf35713bf7eeb8d29e1a5860b5373e9aaba967ea34c"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Write_res.h",
+            "sha256": "d0ae875e1d9feefa19f5d1d4ef5c806bb8fb40159975c7aa999c079a4b04539c"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.Empty.h",
+            "sha256": "9318f3ea34a3b0e0724a67d13c0d3891a419403da6402b309ae278d963107e30"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.ExecuteOpcode.h",
+            "sha256": "5dad98c1b71aec7473fbfb21ca889e31e661d502b24b63262c714ac1cbb50e37"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.ExecuteOpcode_req.h",
+            "sha256": "6960428ccc406a3c47bab4b3af75fc7a114de7adef8cfd9d4a65f96b28be742c"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.ExecuteOpcode_res.h",
+            "sha256": "ed4ac99214860201ef569ec7c5414522204a6587ba127c53db2364db0fb4ea95"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.GetSet.h",
+            "sha256": "e695eab229d7ff89d6ddbceb1386b09caf54b0d102586f2e6feba09b65872537"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.GetSet_req.h",
+            "sha256": "f45d41260f9df15d8a51927b40afddcef98ef455822cae8037a0f3a5509bb51b"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.GetSet_res.h",
+            "sha256": "4a71485c778426d77adfcfc21fa57a12fdcb303e1a69ade75e80f6d6af6388f3"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.NumericValue.h",
+            "sha256": "75243daec09c79023866b1c3f53ea158db516e3600aa36222a0573cf5ff22ce8"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/include/uavcan.protocol.param.Value.h",
+            "sha256": "642b3123cc248e74ab069d64f571a337eb5841555447ded8bda2ce419d28b0d3"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/dronecan.protocol.FlexDebug.c",
+            "sha256": "9e331ccb175b9872599ff1c01c21bdfa218d53605cf95e70753f0f6aff9ee06f"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.RPMCommand.c",
+            "sha256": "9b5029577ae5e0980a3d8250da741b87e1288f6ae9f4493c0a308b85fe7bc306"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.RawCommand.c",
+            "sha256": "f7f9f4b5300e22ce1bd0149bbd16c671a9bceafe90799b36c66ae8a9268e9f05"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.Status.c",
+            "sha256": "a7bc96505f8ce56346fdc5cb9eb7b22ec044127ca57a02d3541379488a68f105"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.StatusExtended.c",
+            "sha256": "3900c58888ec633146f3a6aecadda08a4d5c5e0ad1278a73ce5bf6d249eaa7e0"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.equipment.safety.ArmingStatus.c",
+            "sha256": "74c8352277381323cb395ae5e9e762a43d93bae1ae48fddeab106a99457336c4"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.GetNodeInfo_req.c",
+            "sha256": "8fab1480100f5517c6c2663fe3aae0c5d98ca495272ed63f777a3e13cfcba362"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.GetNodeInfo_res.c",
+            "sha256": "eb0b49f9523ec6c1b4c8cf9cf9912cb9b100538c5f6611056c395d934618250a"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.HardwareVersion.c",
+            "sha256": "28ade5764d2636f353718c75be39bbda037e92ed9d772597085527712daf4e68"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.NodeStatus.c",
+            "sha256": "ab991bf787b949bb13829472d6bd2386df4028cf55c2a0a0e3f3b0ae40601b28"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.RestartNode_req.c",
+            "sha256": "b46e101e7c9312825c54b739eaf5c9b3517ab7044c98228b9571ce6e4662a4ad"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.RestartNode_res.c",
+            "sha256": "25060bc04390e8122c8184dcfd72a50cf611e788177162a5b8873cd0ba7744f2"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.SoftwareVersion.c",
+            "sha256": "4980c272e3dc8e6175a6703c02d81f716908f9c0957881f5fbeb44d01162156a"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.debug.KeyValue.c",
+            "sha256": "8841b41214901014efb59159a97e8266919b5abacf99d986847c35f9603e7f2e"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.debug.LogLevel.c",
+            "sha256": "f26bd760081ce8011e86153695c93326b22c8fcb0fa917ea604dfbc47564e7e0"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.debug.LogMessage.c",
+            "sha256": "f9f936654beb02517b9098b49410c2f9dd3b66f0c6794431fbe61b738455a303"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.Allocation.c",
+            "sha256": "531213e793afa099021b6bc18df47b1235ce2ec8e72c331a17f2573afe3a81ca"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.AppendEntries_req.c",
+            "sha256": "6e8eab2fd0474e7173cb31048a38e5f937ec2166b49a93ff64c6ff3a73f8423f"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.AppendEntries_res.c",
+            "sha256": "86a68bbb03284d8438a85cbf141d52356996558bcdf9eaab38bbb1dfc0ab4c51"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.Discovery.c",
+            "sha256": "885df6ccc6521b021af3b051c9f46e5aee5cdb9abb3184f3418249da605322ed"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.Entry.c",
+            "sha256": "ecf2ccf3ea612b7b1b7bdc360cdd76f031fdc213f54f40a8524d3d13bc1c06a0"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.RequestVote_req.c",
+            "sha256": "b4b5ea3b619e002b1345b9274bd427e8bbea76c12849b22d04b73826b1cb13c9"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.RequestVote_res.c",
+            "sha256": "c759028ab4b71a47787a966dc56a3ad989b78106ff992dabecdcd702fc8f93c6"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.BeginFirmwareUpdate_req.c",
+            "sha256": "27f9656917c8ee82a5e372fbfc4b5a780fa964b8be9a4714bef348dd72c41682"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.BeginFirmwareUpdate_res.c",
+            "sha256": "816ccb403d17e22545e08cf71e2d3f4e35e904e321b39dee29f8e9355f7953c7"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Delete_req.c",
+            "sha256": "7a6eb93f3fcc0897c263e292492cd3db705de373dfd39d56a19f22a951a7abeb"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Delete_res.c",
+            "sha256": "b76d37d5a8409804428d8715cbb3ae0c1ef2380740f39ec847226a62e3648955"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.EntryType.c",
+            "sha256": "0865c843d7f0e49908a6fc932c299a86e88f528c34099685e81e27075d6ad27c"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Error.c",
+            "sha256": "f858309689abb0114102601bf95b77fc5a094a225603fd5ed018f61d99348d73"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetDirectoryEntryInfo_req.c",
+            "sha256": "f371c403df6719bd88066da84add21a8a4b84451afde7e7b2a65899bd3cf173f"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetDirectoryEntryInfo_res.c",
+            "sha256": "69134a875b8da2e7b8d2a5bb2256d72028f74c65eecd8cb707978bb61d510b1f"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetInfo_req.c",
+            "sha256": "f71075128f763018e669b019c8dea26ca174a8923bf6acd39b9a8c745101107b"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetInfo_res.c",
+            "sha256": "20f2d0101f47503e81f4414d2dd04d6afc9c1ba5c9d88a573413eff949dcedf3"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Path.c",
+            "sha256": "41f778ef564ece0ce40125b3d1d56e9f75ddca29dfd2964bf01474bea9d308ee"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Read_req.c",
+            "sha256": "220850a76b74e7b3bf8cc1b8ef49b3ebe12d54c72ef76eeaf92e59e2d1c7de51"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Read_res.c",
+            "sha256": "43ba58b222aed67e30bf6bba9fd6367b12b17beec3a7d4f948f2ef0ca7025028"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Write_req.c",
+            "sha256": "4fc0f94e8479d51b2422e3b3da9d72b4971bdc21bedc4ef002cfc8290ea60259"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Write_res.c",
+            "sha256": "7c4b5506980a102159a51ac298b0369a54be4331ac75e20dfcfde05339a20a96"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.param.Empty.c",
+            "sha256": "895a869396caa6e891475c4cd6ba71ca309892019a0d836b4a132391d0d0cb43"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.param.ExecuteOpcode_req.c",
+            "sha256": "2ab208a0afe28e13b7e29c67b2754708ae9294ffc94be275d444991369588fcd"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.param.ExecuteOpcode_res.c",
+            "sha256": "24c6fd09ebb9a3c51eccbf061c10bd13b3e5b5878cea57b42d67b1328e612fea"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.param.GetSet_req.c",
+            "sha256": "6ab4288823753d7215ee367a6033ab009d240ac10c4031fa2f2ed2bc3741e6e7"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.param.GetSet_res.c",
+            "sha256": "ce1e4906fd12e7618b6b15ee284698a672c7d482c623609bde0a5b4b2a16e8e7"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.param.NumericValue.c",
+            "sha256": "3c3bef6b6410375e2153a04c6dfeaceeafd9eda7c19815a6a88a8818b57d2865"
+          },
+          {
+            "path": "Src/DroneCAN/dsdl_generated/src/uavcan.protocol.param.Value.c",
+            "sha256": "8b432a2c6a1fda654eb8d293bb5ba5bfe974cf89a67b7c95c54cd51b6f348af8"
+          },
+          {
+            "path": "Src/DroneCAN/filter.c",
+            "sha256": "c9f511706439e605b2df9279c23c03d16c5452e8dd1d5751ef80de888e6688ee"
+          },
+          {
+            "path": "Src/DroneCAN/filter.h",
+            "sha256": "96d4fb6ef8464897213791b454baebfea5d39f84d1e5d2982e5955fab793d522"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/LICENSE",
+            "sha256": "79f3f61d98683e67c13dccbe30949739fd3aacbb7afc9e6bb9cc7e42af0edd3d"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/README.md",
+            "sha256": "cbc9f095339ab63cc1d2819863eab68c2a369db090bc0e348f7dcfdc367e39c4"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/canard.c",
+            "sha256": "5fc1e768102dd53ffbb64741e7ff3888a5ea8a12736f7d302404cd7ca9ec020f"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/canard.h",
+            "sha256": "dacac3f613cbfc0d6adda6bf31b928ef6d80423ed1ce7361c94e2434ddbb391e"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/canard_internals.h",
+            "sha256": "b4f30968020adfd7c4ee227dbef0084e75b4812e09a6ca7de95516767e32af22"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/drivers/stm32/README.md",
+            "sha256": "414c7fc25f7586281551e32bf59031a8f335526c0edbe9626a8c385e586716ab"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/drivers/stm32/_internal_bxcan.h",
+            "sha256": "6fbfd19571622608ce7154cd182261abfcb5fe9980ef4c3f043597e5755681ba"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/drivers/stm32/canard_stm32.c",
+            "sha256": "575f58b22b7a76a168f5ba14317b78a79a13ee86a6790b1063b9c7d55e279c18"
+          },
+          {
+            "path": "Src/DroneCAN/libcanard/drivers/stm32/canard_stm32.h",
+            "sha256": "c90d16a5b4dfad7309ce004182d404f2bdfbe40209a938b265f3c42785161568"
+          },
+          {
+            "path": "Src/DroneCAN/regenerate.sh",
+            "sha256": "d615e3c805eb188e7808ca1cb9c0dae2107c11a4312c1284ede83bf0c8031816"
+          },
+          {
+            "path": "Src/DroneCAN/scripts/AM32_debug_log.lua",
+            "sha256": "04619341aa11bbc0d9e639ebbaa1f7b11478d3f02ea62352600633515472b4a9"
+          },
+          {
+            "path": "Src/DroneCAN/set_app_signature.py",
+            "sha256": "af82b4a8973e42ccc2ce270c16c39fe7b218a67d1b1f5decd3c7c411e60f1fae"
+          },
+          {
+            "path": "Src/DroneCAN/sys_can.h",
+            "sha256": "53fcd1df7a642bcb64d44105dd895cc6694812c9a2d88dc0e6014c288fc06370"
+          },
+          {
+            "path": "Src/DroneCAN/sys_can_at32.c",
+            "sha256": "97e3bd452d5c2f0b484ee651c6048373ba9358a7e029a4e87ace47fe1b0943cd"
+          },
+          {
+            "path": "Src/DroneCAN/sys_can_stm32.c",
+            "sha256": "8b988e104afd6e185680fbc41db2122e54f7fd26d338afc55c99041b4915a1f0"
+          },
+          {
+            "path": "Src/DroneCAN/sys_can_stm32_CANFD.c",
+            "sha256": "fa829112cb001d126bd191312acf08db8a5b99a3306f867cf9aee835618a83df"
+          },
+          {
+            "path": "Src/dshot.c",
+            "sha256": "ed36e282a64a9a2ab19799dad39bfcc14f2d1bf876e8b72ce20a47590f4ee266"
+          },
+          {
+            "path": "Src/firmwareversion.c",
+            "sha256": "9fbc7738bf2d3fb9e5c111350bcb56ed6d9580a0a2da996c6091034054f7cb9c"
+          },
+          {
+            "path": "Src/functions.c",
+            "sha256": "3eeef003abda7438ba6cfbc1201e61ea79a4e55d2eb6cca12d486cca877209c3"
+          },
+          {
+            "path": "Src/kiss_telemetry.c",
+            "sha256": "cd07cd93359f8ac04fdb445752f58f66e8aa242d502ebaccf10a105adf38ef08"
+          },
+          {
+            "path": "Src/main.c",
+            "sha256": "c92885e81412f0250434e725d4a594c7ebe759d47b746dd19c86ae2c4f08ec03"
+          },
+          {
+            "path": "Src/signal.c",
+            "sha256": "d715004e43b81dbdd7790ad103af34eed60ca89d6e09ab9a4a8bc19c50cce733"
+          },
+          {
+            "path": "Src/sounds.c",
+            "sha256": "52a738e5be300a32037eb103a522276fdeb507dde21442fd29a519173c5a193c"
+          },
+          {
+            "path": "a153makefile.mk",
+            "sha256": "7faca035c2585da6a8917ac61f6deb2b57e2e0fbbfd98d44b1eba2afa1163b48"
+          },
+          {
+            "path": "e230makefile.mk",
+            "sha256": "1a9ab9b5409c63edaf582dfb01431f62be10f4e2e123376b778915596d8600f8"
+          },
+          {
+            "path": "env_setup_scripts/gcc_setup_linux.sh",
+            "sha256": "c286fe99c3573aeb453ea0fdac4c5ed1ca2795226e6aaaccae3c64741aa1f619"
+          },
+          {
+            "path": "env_setup_scripts/gcc_setup_macos.sh",
+            "sha256": "ced93cf8e7d40d3fa320bb1c479c333d8640d7aae543937584f495c653b627e7"
+          },
+          {
+            "path": "env_setup_scripts/gcc_windows_env_setup.cmd",
+            "sha256": "0567eb8993f5e9adf2eeccdee103105d38daa48b06821e701e275bff88b43566"
+          },
+          {
+            "path": "f031makefile.mk",
+            "sha256": "670975e44afaccb3acbc1eaf3ca30d3aaa7aeb00e8f518ede2d61ed54a5d06e2"
+          },
+          {
+            "path": "f051_ll_bi_dir Debug.launch",
+            "sha256": "2c101d6c5a375c7f68e7a7e13e73390db84c1d73e86e9f597430f8896e254144"
+          },
+          {
+            "path": "f051_ll_bi_dir.ioc",
+            "sha256": "98acb83543b9c5c714ea8d200873cd814b003b41e1d6c1e0194869d8a9546fc6"
+          },
+          {
+            "path": "f051makefile.mk",
+            "sha256": "4ee79d4f10037d542d3f61063a815d9e53132a9dc98664cec4fbcbac0564f87c"
+          },
+          {
+            "path": "f415makefile.mk",
+            "sha256": "b45d07f2f39adec45edcd795172162859e9206ad8599ca4b9b76d4c3fe3f0842"
+          },
+          {
+            "path": "f421makefile.mk",
+            "sha256": "af6819ee3f87df86198806e530b3adef48f3c693f80d36fcaf666f120f8da17f"
+          },
+          {
+            "path": "format.sh",
+            "sha256": "171e0182321ffb372ace73afe225f7be19caa08a3dd8eb31e6e83cc6dba47735"
+          },
+          {
+            "path": "g031makefile.mk",
+            "sha256": "2b120664ca537cb6fcd814255b07c5f185ffad8fb0e1a63d79c30f33187fb52c"
+          },
+          {
+            "path": "g071makefile.mk",
+            "sha256": "5d1fa7acbc54fe6e8fef2339ea6029b6365e7ba36b4b20b4a8169bfd8e655223"
+          },
+          {
+            "path": "g431makefile.mk",
+            "sha256": "65a748ce010a0b12c5674e9510073d02a5775a85ed1b227a73547e0c4ca9da4a"
+          },
+          {
+            "path": "l431makefile.mk",
+            "sha256": "1c437f77da3969b69cd5645fe8ce1d9ac0ec6de2d87aaab8876219009fc9649c"
+          },
+          {
+            "path": "make/tools.mk",
+            "sha256": "0ace75fc636964473b73c761e376b489877c840be3186c3d0e5cb2cc4072f068"
+          },
+          {
+            "path": "make/tools_install.mk",
+            "sha256": "98334188bb133251bb6dbdd9aa46e4043ba2c8b131fe5b94dd1a802cceda9997"
+          },
+          {
+            "path": "tools/openocd-at32f421.cfg",
+            "sha256": "6708d7718d5aa4914ce230845f092d98128a7b8cae246f16d21e07222bbff7c1"
+          },
+          {
+            "path": "tools/scripts/flash_firmware.cfg",
+            "sha256": "b9f340388e88a1a4c3dd528d33499e5fe27971dd2afddda3d00463e6afa5931e"
+          },
+          {
+            "path": "v203makefile.mk",
+            "sha256": "cd7a0e321949a6729ffefcf353fe61ce8dd966143bd111a1b09247d89062956a"
+          }
+        ],
+        "command": [
+          "make",
+          "-j2",
+          "OPENESC_30_F421",
+          "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+          "PART=AT32F421G8U7",
+          "OBJ=obj",
+          "CFLAGS_COMMON=$(CFLAGS_BASE) -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build/am32-f421=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi -Wa,--debug-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build/am32-f421=."
+        ],
+        "cwd": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build/am32-f421",
+        "exit": 0,
+        "seconds": 19.52091770299012,
+        "log": "am32-f421-build.log",
+        "artifacts": {
+          ".elf": {
+            "path": "am32-f421/obj/AM32_OPENESC_30_F421_2.21.elf",
+            "bytes": 567480,
+            "sha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d",
+            "expectedSha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d"
+          },
+          ".bin": {
+            "path": "am32-f421/obj/AM32_OPENESC_30_F421_2.21.bin",
+            "bytes": 27648,
+            "sha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843",
+            "expectedSha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843"
+          },
+          ".hex": {
+            "path": "am32-f421/obj/AM32_OPENESC_30_F421_2.21.hex",
+            "bytes": 59024,
+            "sha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0",
+            "expectedSha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0"
+          }
+        },
+        "reproduced": true
+      },
+      {
+        "source": {
+          "name": "am32-bootloader-f421",
+          "commit": "a340e23f4fe270bf7a767156d3c24b10f22b521a",
+          "path": "am32-bootloader-f421-a340e23f4fe2.tar.gz",
+          "sha256": "42660150d9b3c69f6205aaa78997585c1490a9bda1f8b5186b472b87e937f4b2",
+          "bytes": 330691,
+          "selectedPaths": [
+            ".editorconfig",
+            ".git-blame-ignore-revs",
+            ".gitattributes",
+            ".gitignore",
+            "CODE_OF_CONDUCT.md",
+            "LICENSE",
+            "Makefile",
+            "README.md",
+            "a153makefile.mk",
+            "e230makefile.mk",
+            "f031makefile.mk",
+            "f051makefile.mk",
+            "f415makefile.mk",
+            "f421makefile.mk",
+            "g071makefile.mk",
+            "g431makefile.mk",
+            "l431makefile.mk",
+            "sitlmakefile.mk",
+            "v203makefile.mk",
+            "Inc",
+            "Mcu/f421",
+            "make",
+            "tools",
+            "env_setup_scripts",
+            "bootloader",
+            "bl_update",
+            "scripts"
+          ],
+          "scope": "Complete corresponding source for the F421 build: all common source and headers, F421 vendor/startup sources, make scripts and every root makefile/license. Other MCU implementations and binary manuals are excluded."
+        },
+        "actualSourceFiles": [
+          {
+            "path": ".editorconfig",
+            "sha256": "14637eb4c0523c523fc48f34ed691845ecdaf52c5343652f29cf47ef31eb370a"
+          },
+          {
+            "path": ".git-blame-ignore-revs",
+            "sha256": "48a9654a7481139a2c6f4b03bbf0b55c2d795c9bfbdc03b7fb85b35c1d8b2045"
+          },
+          {
+            "path": ".gitattributes",
+            "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b"
+          },
+          {
+            "path": ".gitignore",
+            "sha256": "fd4ee477dccbab8d1bb8dfb7669ec5609cc75f2e8ef5ae55126694bf98fbd323"
+          },
+          {
+            "path": "CODE_OF_CONDUCT.md",
+            "sha256": "e20c3b8e6a7e7ea335d73b55ffb1755d142a4b0fbc3f50d000d1b49a7b3465a8"
+          },
+          {
+            "path": "Inc/targets.h",
+            "sha256": "ea03e87a81e9981a3df9d2599f4d01fd5c46b9d0baaa72b4eb13c6155f2a7219"
+          },
+          {
+            "path": "Inc/version.h",
+            "sha256": "485325a6d0b8ed393ab27e16e71c79f6cbf7709343f9c44b3eb6debc532f7517"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          {
+            "path": "Makefile",
+            "sha256": "bc64709d65343d0d85d4c0e62ce030fb122b60486c2ff7fa4fbf0f41fc3523a4"
+          },
+          {
+            "path": "Mcu/f421/AT32F421xx_v2.svd",
+            "sha256": "2b3f3315b910e3f011aa16e7f789ac7bfb3af5caa710f5260ea74facb7eebe3b"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_common_tables.h",
+            "sha256": "7ec673e2a79eb49151bc76f833a5220f2cb701127a0022e3ac700741b6bcc463"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_const_structs.h",
+            "sha256": "0499aca00fc90206a0fb9bda69a891997e01db395147758b92096ff83f7aedd7"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_helium_utils.h",
+            "sha256": "a2fa3dd4e78867a300c778681545de6a8229b8005af8943515c3a2ad1320601f"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_math.h",
+            "sha256": "d4d9b91b52b6c37179f38135d4c6514018b0d39fa98bccd3f5c9cc4495b0edce"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_mve_tables.h",
+            "sha256": "a0c7cb3e87ae7dcce055e09c559266b1a1c9dcfcbfbafa93ffc5971681a00a20"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/arm_vec_math.h",
+            "sha256": "a767a0d1fd7f9c414960809826b7a9d3c7296cdb7715f20cf977e8afa8534860"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_armcc.h",
+            "sha256": "fb7d09b9a10fb0c37c7bade8d75d81c8ab623ed7e1a38f3c390b226d0c0bca93"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_armclang.h",
+            "sha256": "ba8b672e8ad8d049e2174f1f6c49d36ca11c696f5b0d37002337f43213793e80"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_armclang_ltm.h",
+            "sha256": "6c95d181d6bf83fb9f8e7e2e0e43bdb91121fe88a616023b1f075f9d16ebf103"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_compiler.h",
+            "sha256": "69762b3ad88dcbce6f291865b5b0b27b700689c8371cf45ecc4f881a2128325e"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_gcc.h",
+            "sha256": "c73a272a03a72447c33ac934287f3f373f4f1c364cf3b3cd76c0ce59a4db233a"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_iccarm.h",
+            "sha256": "76e965cdaef5a6195570ae206e9451a67986ac6fdbbe040e81704d22c3e04a20"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/cmsis_version.h",
+            "sha256": "9050f3b257ce7e3677d5452f30c6592868bc4b20e6dd9e358d187a1ae0e97c8d"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/core_cm4.h",
+            "sha256": "d631beb45fc05a24f9dc4362ca0a77d10e52ec832d30749a3570a925ed07079c"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/mpu_armv7.h",
+            "sha256": "a64d639bc8dc0c282e2eb9ca378c236d560054c2de3e3d31b0fe7b604c48d570"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/mpu_armv8.h",
+            "sha256": "a80c78d6e6a73825b65d86396b8c7df2f793ba9264785f8318d36ecd37a79f5e"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/core_support/pmu_armv8.h",
+            "sha256": "d74fbc2def3f41bb910a41df8767657c71dfeadcd85aa510599ca517d1b4888c"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/device_support/at32f421.h",
+            "sha256": "867adb623cbd088d38158b8318823904fd348958f1d68620fb8eea1818768173"
+          },
+          {
+            "path": "Mcu/f421/Drivers/CMSIS/cm4/device_support/at32f421_conf_template.h",
+            "sha256": "50f5be816068c878ff8920ae7e70f358160e9862aa594ad0d7137acdb1067f85"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_adc.h",
+            "sha256": "8027d6608fc260979718e1ccd822d8cad2be4eb8b88b4f17c25884aa16ee1f8b"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_cmp.h",
+            "sha256": "b37f84d580bbcf78a21a547cec68ba577e560676c3d8194b775a83feb10a3acd"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_crc.h",
+            "sha256": "0523ea61249ec377288c2ebcfb4aa6b457481f0d40dcb4f4e0e2af24ee2e700c"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_crm.h",
+            "sha256": "2d120b3897c9b0d499cce0d5746e23a52f8944e8f138ac785a954d927e25dec8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_debug.h",
+            "sha256": "087b82542528927f13c3bf871c65ffc9835c42c14d47eefa90c486184f2b68c8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_def.h",
+            "sha256": "c019c5261e8150abd7657c9d4013a505895a013d470ded99c94ff1943b8641f8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_dma.h",
+            "sha256": "56a453935d6a277faeda9988990a8b7b90ebac7232bdda9e795ff5ac88a206a5"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_ertc.h",
+            "sha256": "f8b7bef93cb5e6ceba8df93b8f95ee15001212636ae612ef78ad4b586e7aceb1"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_exint.h",
+            "sha256": "2733d8aef99ad7ea2b287f89ef88281b9204c66dbcaa810a1b53674945da1976"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_flash.h",
+            "sha256": "bd3b9980f9da7b034c841e59335aab8bbc625f773cf28faeb57b2ed019404b25"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_gpio.h",
+            "sha256": "b3c28b5fab7491da691e1def6257e8e0c0f504c64f8b041bd485105ab10feac8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_i2c.h",
+            "sha256": "285400cf949847578996c6c338bfe71c8dd1b2a652d98a108a679c97cc6d0631"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_misc.h",
+            "sha256": "1fe50d608253bee8131adc0375880a2d1be39cb933a3602095c984c5732b7eee"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_pwc.h",
+            "sha256": "dd468a2dc8334a5b6da401308e478b0ca0ee8aab4147206b533141aa3b9c2192"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_scfg.h",
+            "sha256": "1c086a32f550d3e4614765f555894298863fd5ee57a9bad23993c00065a7f4b5"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_spi.h",
+            "sha256": "2c1eff4926a29f1c56975603fbbb5ba163b00bce553c770372055e3a887c2e05"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_tmr.h",
+            "sha256": "b48730a07152a9948cfbcfb7f4a531346d9809f0c11129117821ae67f1e04ad8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_usart.h",
+            "sha256": "1dbe88f5444d7dc3d7231a77343de4a73fb61c6b49d8c13c3a39465b584ca322"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_wdt.h",
+            "sha256": "ddab19e0b294c3aab9d1ce3e1ff9b5ae764dfee11ff43b8a3f81645869454461"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/inc/at32f421_wwdt.h",
+            "sha256": "073b62818328f1d3ab30b6edcc52a38392fd1d308c0348fd3e30719c601dd9cf"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_adc.c",
+            "sha256": "471ab59aa7f65f80715285aff9e4f0418d5457becf107e3830159451ed5a950e"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_cmp.c",
+            "sha256": "7c7e28fea4ed952c282ff530fd14228d44235ab7e4d9ad41ec0e034491afdfe8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_crc.c",
+            "sha256": "46b69b7d04e36712c4a08cf48f7116ba8f85847eb49efe99918abe927cebd5d4"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_crm.c",
+            "sha256": "76848405ec5f12fa9d71f4de5d697d0e21f34076dc367ed546e76f6d34426ee5"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_debug.c",
+            "sha256": "aa96bdd06e080f44aff2a84fe62abc73a49743e9351c0b935951ec2d6b93ffaf"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_dma.c",
+            "sha256": "486ee7213402f1942529c8c26ea1c6f30716a021f58ddcc1a78a5b7c74b68057"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_ertc.c",
+            "sha256": "d45b19558a0184d5886c44bdec3dca86deb9e749eba33885f247b055d189bd0f"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_exint.c",
+            "sha256": "d9247c91bbb2087981b8d490d812718e5ee87c5f005de7f74f05af2c8c0d7554"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_flash.c",
+            "sha256": "5f967085b8fc75ac674e22de9f533a30d6be876dd983f0e22388b7314f75eaf2"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_gpio.c",
+            "sha256": "da59739aff8025b188898f97c6b969d683811da1f303b726e7094857c8d3019b"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_i2c.c",
+            "sha256": "4a02e033cd2837d6fa4fb2899e7b389140019dd96cb8bcdf6216ef4986454d65"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_misc.c",
+            "sha256": "7f069c61e413c6136cb11cdab801154fb1b1619914daf5392fbe8a224d03b73f"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_pwc.c",
+            "sha256": "c714e47a9bd4dc5f6f41cbc7fb7ea68f9ddbe23ea643ce47a350c71c3147ece6"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_scfg.c",
+            "sha256": "61a6ccf516d7951c17e9e0772c0b1891d38752b398ed7dc0b7e2a463a622b840"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_spi.c",
+            "sha256": "3db8fb276bf177475e82ace71300d7082bb42aefbade365ff99fa619bf725ff8"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_tmr.c",
+            "sha256": "3e7079f9bca730f07597681df5a23cb3327ef6bed65e80c01bbc878e1d0f0743"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_usart.c",
+            "sha256": "db00ce211f909cea6211c1e658d4046d211f1aa393e187231c68915658251e12"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_wdt.c",
+            "sha256": "740bacdb6f8b498b0af8b5d363ad36855f493a6e0c349a09fea92708c57c1da9"
+          },
+          {
+            "path": "Mcu/f421/Drivers/drivers/src/at32f421_wwdt.c",
+            "sha256": "fb8e9c4c62bbf617bb13b492bda6f12d0683afe5df33ef4de261807a62c5302a"
+          },
+          {
+            "path": "Mcu/f421/Inc/at32f421_conf.h",
+            "sha256": "c1042d789d245d68aba2ddab69c054c071811013faef43d4671bd75636e36707"
+          },
+          {
+            "path": "Mcu/f421/Inc/blutil.h",
+            "sha256": "eb4a443e2bf13dc123b82a50b190cb6efc33def0bb6dba671f94ec431e906e1f"
+          },
+          {
+            "path": "Mcu/f421/Inc/eeprom.h",
+            "sha256": "bf3f8006f8481763956aa7f88c97e902d146e81b71a341d5acaf8c5043220dea"
+          },
+          {
+            "path": "Mcu/f421/Inc/main.h",
+            "sha256": "68e85e842ee5c665a6b3afe5072b5739ada35c6e1faeb870c5fd5a667abb0bc9"
+          },
+          {
+            "path": "Mcu/f421/Inc/system_at32f421.h",
+            "sha256": "ec1b9654571ef6f380427b95bdaea34421ba4bdc1a46bf1214f17231aaffce49"
+          },
+          {
+            "path": "Mcu/f421/Src/eeprom.c",
+            "sha256": "539691c64d0e43a6fb621dcf4c1d05e9930a9e142126289716bb968a6e14f609"
+          },
+          {
+            "path": "Mcu/f421/Startup/startup_at32f421.s",
+            "sha256": "81c7568833586aaf827807e98018c4778c23ea7f04de04a27bc35975b5eca358"
+          },
+          {
+            "path": "Mcu/f421/openocd.cfg",
+            "sha256": "95bb969f0e1213c35a824b97703eafb027e428e1322c6f03d5e49a152df5b469"
+          },
+          {
+            "path": "README.md",
+            "sha256": "1098486f316e2898f3deea341b2d7379b574b8a9b9f41458c8d881b8b8cf8f3e"
+          },
+          {
+            "path": "a153makefile.mk",
+            "sha256": "657ab1119ecd55f13db0867c50fac54fcb69fa0946622b5b49b4acf5e653c53a"
+          },
+          {
+            "path": "bl_update/ldscript_bl.ld",
+            "sha256": "386e32ca28be652678799c0ec49c51f4270e08ce872cc585d6135937e0f56ef6"
+          },
+          {
+            "path": "bl_update/ldscript_bl_CAN.ld",
+            "sha256": "05be19ed0b102a6a7a6a95fc0cddeff7f29fbe9284b643f516eda8d01ad5e266"
+          },
+          {
+            "path": "bl_update/main.c",
+            "sha256": "226a84eb8dc0a49c6a830a4b64c66af44a1df46ad7945eb06f1a7b9e592602d6"
+          },
+          {
+            "path": "bl_update/make_amj.py",
+            "sha256": "cee3fa65038f433ae9567e7c5b53bb01fd8f64b65e4efa9b76ba57e74879ca79"
+          },
+          {
+            "path": "bl_update/make_binheader.py",
+            "sha256": "77de39283b4f93de8b639701fc5a26a2d7072c2a2dbd27a197a30c8cda3df6d9"
+          },
+          {
+            "path": "bl_update/set_app_signature.py",
+            "sha256": "af82b4a8973e42ccc2ce270c16c39fe7b218a67d1b1f5decd3c7c411e60f1fae"
+          },
+          {
+            "path": "bootloader/DroneCAN/DroneCAN.c",
+            "sha256": "393f4c6b56e67d880a5279e431568b18c64ab8eea816b764b0e2fba265d967df"
+          },
+          {
+            "path": "bootloader/DroneCAN/DroneCAN.h",
+            "sha256": "f2cd05486a3cf81177220e88fbdc4a2c62093822e151b0deab4121e3afd7bf72"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/dronecan_msgs.h",
+            "sha256": "a7c1f1ccf94f273382dd21d15f7011bdf6fef3382c0954db72b6f5b8c92ef64d"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.RPMCommand.h",
+            "sha256": "2ce3e14d0b5f683ebd709e8a4040a127e9c86c7edb94b28a73280250dd0ddab2"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.RawCommand.h",
+            "sha256": "328662516fb7fa9bda82739e720e1abe807a5529436f6c3c09a214f0d1a98b1f"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.Status.h",
+            "sha256": "4ae8a4ac3ef6ab318c5680e01de6817044a5f6e0c62586a7a34c69c90b20a543"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.equipment.esc.StatusExtended.h",
+            "sha256": "55045866227e93900ca39d2ca4399645f3146d27a5bf58691982903fb23299b6"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.equipment.safety.ArmingStatus.h",
+            "sha256": "c7a2a015c6b70d2159b5327c3fa44ce8218d2789272b2de587518f1ce67d3d8d"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.GetNodeInfo.h",
+            "sha256": "6554edad0b26f3ea49e6ee1fffbdf50cd70691a1aa565d70cbee6448fb06e55e"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.GetNodeInfo_req.h",
+            "sha256": "7f848d1094312be59a9dfb2a7631c1d4a870320e220b7f188bcaa2ba710969d4"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.GetNodeInfo_res.h",
+            "sha256": "d68e216bcc33b86bb51e85aa9f5cf9deee4d0a98f42bbe66096e4ae856ae0898"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.HardwareVersion.h",
+            "sha256": "d6a1220ad6efccf0ff0aa20b16fff48302b9c49eaf81a958b7761c546de11960"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.NodeStatus.h",
+            "sha256": "dc4df9bbf1be586d81bc0f183637aad3807d06249463f0271f4cb22f98a2ff53"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.RestartNode.h",
+            "sha256": "6b425f0ee0bb13ffe2c0a5c0aa1d008a14a559ebc84b61ec4c7fcb05bbc68de0"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.RestartNode_req.h",
+            "sha256": "50377cc4a743cfe264ad387c692b45c0a308217cabb8c356e1b989b1f230e390"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.RestartNode_res.h",
+            "sha256": "ead025740385a90d4436c727239bd691106a0be8dae65474b20114341b1c3a7a"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.SoftwareVersion.h",
+            "sha256": "8193e969b466327c7ad87495cfc68c41657ef65752e80968118a8cc7ae5d1830"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.debug.KeyValue.h",
+            "sha256": "79089e717addaeff1d697b249ebeb37a7d652784f9e6fc505ef8c49814b4389e"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.debug.LogLevel.h",
+            "sha256": "b2524ea067e88092609504e4b46e2a2267d09b677addbb5935c3522b2dbc2525"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.debug.LogMessage.h",
+            "sha256": "44ac94aa630891055655b31d54f78cd3046843463a141ebdd694f279f1940811"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.Allocation.h",
+            "sha256": "cf1a4e2c29665f72c9cc1d1e4c2df0ad777eebbd607510521fcca80f12254277"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries.h",
+            "sha256": "54e72a490a372a6040d47fce640a246b7c6a85e210cb72943950fe3b1900d041"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries_req.h",
+            "sha256": "cec388d42dd46b9c2d18ee729533152524f2983168bb3736942a5be8ac13ade5"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries_res.h",
+            "sha256": "a82ce3384d5a0eab7002284db4e33e42ecbdf16b934d82380a458711cd6d0f93"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.Discovery.h",
+            "sha256": "d666491e6ca4f5e45a7f19efdda1237015e5be4fa7c3fecca29908ffd0115d47"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.Entry.h",
+            "sha256": "19cf50d18ab6e59ea0844db2a4e7da6d05411dbfd43f29be65901643a5f91a37"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote.h",
+            "sha256": "233c991750a2e8ce2867dbc3902eebce798c39b15c4258277bf166f617fab788"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote_req.h",
+            "sha256": "b324c3be17ac4779592e1d65853247ccac5ca5dabe6e52c663f02e36643b4924"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote_res.h",
+            "sha256": "cf058c12e71d7461c79662a6e473878e04b989686483683e53a4e6cf9d08635f"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.BeginFirmwareUpdate.h",
+            "sha256": "a27d7a1d7ddbcf298153741eef92f2c77b68e097072bf0ac574f710628fd9fa6"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.BeginFirmwareUpdate_req.h",
+            "sha256": "da94a9420213bf69f1272e0675d64918f929ccbb399b94153f987c9251b64edc"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.BeginFirmwareUpdate_res.h",
+            "sha256": "9f27fcd29daabcc5412e984cd776e2c28d6e996791333cda5949136b76639d4f"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Delete.h",
+            "sha256": "25fc0458924c3ae9617af44a9dfb95221d4e67b338036d29ed97aa9289f3147d"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Delete_req.h",
+            "sha256": "bae614f74ac06aa3e9b4bfe77ca32cd1e47cd072ba863c31751cdcae0f3f550e"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Delete_res.h",
+            "sha256": "a727d1e42972ac5a8be1d62eae358fd49593f79d4cfe08c10a2ac82fcf02ea60"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.EntryType.h",
+            "sha256": "6f3c1e0099f93b85c5998fc7e5b46b853e03e470dcf1693daad85a2b2b0191f5"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Error.h",
+            "sha256": "e0817d6845739bde2166e6f85ee70443ddb6bd86b84dd4f8dfd19910d018c348"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo.h",
+            "sha256": "bead6aeddbfbc308609aabaa830cdeb1cc2465f2c0144f63dafad43f6293a15d"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo_req.h",
+            "sha256": "4f9791dbce262f2aa33de4058222aeab9404b7c5dcd5879a12209cc5b1878586"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo_res.h",
+            "sha256": "5e4e628495704d90ae7877f6463f4c938b8911a686b045d510e3555018368801"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetInfo.h",
+            "sha256": "412f576b70f2c27f6a300555b05924948215d626aeaf20d93cbfa2fc89cb7ce6"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetInfo_req.h",
+            "sha256": "63df70a562cd4a994b453745f1dc92d02c07715d9179d7641c3dfe9ca375e1f3"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.GetInfo_res.h",
+            "sha256": "a36d34750d6bc949708f7e56e4403e6d5dac9c1ff1a838c604346dd517a750ef"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Path.h",
+            "sha256": "a0a6116535b2b1bb3da779c6d077497a1abf88f463f5a57de5dffd16b5ff4e40"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Read.h",
+            "sha256": "1412427d36a98c51f919ef5a0f3af62ef1d5ab82be0879da8fe471bb9cb96744"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Read_req.h",
+            "sha256": "8b67876b3a1699e96ad2761eac0f3f6ef63f0c914a309daff892b25ffadd50da"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Read_res.h",
+            "sha256": "a6de886c8c8c11c757c12e1e21737fae4f047027530c2ae669bd7d622580f8d7"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Write.h",
+            "sha256": "af575f6ccf027fd7e28b290ac3c8a6a19d0f46bd7b22f7683325fdf4a17d844e"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Write_req.h",
+            "sha256": "f861450a5a02c6cbf43ebcf35713bf7eeb8d29e1a5860b5373e9aaba967ea34c"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.file.Write_res.h",
+            "sha256": "d0ae875e1d9feefa19f5d1d4ef5c806bb8fb40159975c7aa999c079a4b04539c"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.Empty.h",
+            "sha256": "9318f3ea34a3b0e0724a67d13c0d3891a419403da6402b309ae278d963107e30"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.ExecuteOpcode.h",
+            "sha256": "5dad98c1b71aec7473fbfb21ca889e31e661d502b24b63262c714ac1cbb50e37"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.ExecuteOpcode_req.h",
+            "sha256": "6960428ccc406a3c47bab4b3af75fc7a114de7adef8cfd9d4a65f96b28be742c"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.ExecuteOpcode_res.h",
+            "sha256": "ed4ac99214860201ef569ec7c5414522204a6587ba127c53db2364db0fb4ea95"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.GetSet.h",
+            "sha256": "e695eab229d7ff89d6ddbceb1386b09caf54b0d102586f2e6feba09b65872537"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.GetSet_req.h",
+            "sha256": "f45d41260f9df15d8a51927b40afddcef98ef455822cae8037a0f3a5509bb51b"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.GetSet_res.h",
+            "sha256": "4a71485c778426d77adfcfc21fa57a12fdcb303e1a69ade75e80f6d6af6388f3"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.NumericValue.h",
+            "sha256": "75243daec09c79023866b1c3f53ea158db516e3600aa36222a0573cf5ff22ce8"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/include/uavcan.protocol.param.Value.h",
+            "sha256": "642b3123cc248e74ab069d64f571a337eb5841555447ded8bda2ce419d28b0d3"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.RPMCommand.c",
+            "sha256": "9b5029577ae5e0980a3d8250da741b87e1288f6ae9f4493c0a308b85fe7bc306"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.RawCommand.c",
+            "sha256": "f7f9f4b5300e22ce1bd0149bbd16c671a9bceafe90799b36c66ae8a9268e9f05"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.Status.c",
+            "sha256": "a7bc96505f8ce56346fdc5cb9eb7b22ec044127ca57a02d3541379488a68f105"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.equipment.esc.StatusExtended.c",
+            "sha256": "3900c58888ec633146f3a6aecadda08a4d5c5e0ad1278a73ce5bf6d249eaa7e0"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.equipment.safety.ArmingStatus.c",
+            "sha256": "74c8352277381323cb395ae5e9e762a43d93bae1ae48fddeab106a99457336c4"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.GetNodeInfo_req.c",
+            "sha256": "8fab1480100f5517c6c2663fe3aae0c5d98ca495272ed63f777a3e13cfcba362"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.GetNodeInfo_res.c",
+            "sha256": "eb0b49f9523ec6c1b4c8cf9cf9912cb9b100538c5f6611056c395d934618250a"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.HardwareVersion.c",
+            "sha256": "28ade5764d2636f353718c75be39bbda037e92ed9d772597085527712daf4e68"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.NodeStatus.c",
+            "sha256": "ab991bf787b949bb13829472d6bd2386df4028cf55c2a0a0e3f3b0ae40601b28"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.RestartNode_req.c",
+            "sha256": "b46e101e7c9312825c54b739eaf5c9b3517ab7044c98228b9571ce6e4662a4ad"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.RestartNode_res.c",
+            "sha256": "25060bc04390e8122c8184dcfd72a50cf611e788177162a5b8873cd0ba7744f2"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.SoftwareVersion.c",
+            "sha256": "4980c272e3dc8e6175a6703c02d81f716908f9c0957881f5fbeb44d01162156a"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.debug.KeyValue.c",
+            "sha256": "8841b41214901014efb59159a97e8266919b5abacf99d986847c35f9603e7f2e"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.debug.LogLevel.c",
+            "sha256": "f26bd760081ce8011e86153695c93326b22c8fcb0fa917ea604dfbc47564e7e0"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.debug.LogMessage.c",
+            "sha256": "f9f936654beb02517b9098b49410c2f9dd3b66f0c6794431fbe61b738455a303"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.Allocation.c",
+            "sha256": "531213e793afa099021b6bc18df47b1235ce2ec8e72c331a17f2573afe3a81ca"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.AppendEntries_req.c",
+            "sha256": "6e8eab2fd0474e7173cb31048a38e5f937ec2166b49a93ff64c6ff3a73f8423f"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.AppendEntries_res.c",
+            "sha256": "86a68bbb03284d8438a85cbf141d52356996558bcdf9eaab38bbb1dfc0ab4c51"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.Discovery.c",
+            "sha256": "885df6ccc6521b021af3b051c9f46e5aee5cdb9abb3184f3418249da605322ed"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.Entry.c",
+            "sha256": "ecf2ccf3ea612b7b1b7bdc360cdd76f031fdc213f54f40a8524d3d13bc1c06a0"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.RequestVote_req.c",
+            "sha256": "b4b5ea3b619e002b1345b9274bd427e8bbea76c12849b22d04b73826b1cb13c9"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.dynamic_node_id.server.RequestVote_res.c",
+            "sha256": "c759028ab4b71a47787a966dc56a3ad989b78106ff992dabecdcd702fc8f93c6"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.BeginFirmwareUpdate_req.c",
+            "sha256": "27f9656917c8ee82a5e372fbfc4b5a780fa964b8be9a4714bef348dd72c41682"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.BeginFirmwareUpdate_res.c",
+            "sha256": "816ccb403d17e22545e08cf71e2d3f4e35e904e321b39dee29f8e9355f7953c7"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Delete_req.c",
+            "sha256": "7a6eb93f3fcc0897c263e292492cd3db705de373dfd39d56a19f22a951a7abeb"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Delete_res.c",
+            "sha256": "b76d37d5a8409804428d8715cbb3ae0c1ef2380740f39ec847226a62e3648955"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.EntryType.c",
+            "sha256": "0865c843d7f0e49908a6fc932c299a86e88f528c34099685e81e27075d6ad27c"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Error.c",
+            "sha256": "f858309689abb0114102601bf95b77fc5a094a225603fd5ed018f61d99348d73"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetDirectoryEntryInfo_req.c",
+            "sha256": "f371c403df6719bd88066da84add21a8a4b84451afde7e7b2a65899bd3cf173f"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetDirectoryEntryInfo_res.c",
+            "sha256": "69134a875b8da2e7b8d2a5bb2256d72028f74c65eecd8cb707978bb61d510b1f"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetInfo_req.c",
+            "sha256": "f71075128f763018e669b019c8dea26ca174a8923bf6acd39b9a8c745101107b"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.GetInfo_res.c",
+            "sha256": "20f2d0101f47503e81f4414d2dd04d6afc9c1ba5c9d88a573413eff949dcedf3"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Path.c",
+            "sha256": "41f778ef564ece0ce40125b3d1d56e9f75ddca29dfd2964bf01474bea9d308ee"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Read_req.c",
+            "sha256": "220850a76b74e7b3bf8cc1b8ef49b3ebe12d54c72ef76eeaf92e59e2d1c7de51"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Read_res.c",
+            "sha256": "43ba58b222aed67e30bf6bba9fd6367b12b17beec3a7d4f948f2ef0ca7025028"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Write_req.c",
+            "sha256": "4fc0f94e8479d51b2422e3b3da9d72b4971bdc21bedc4ef002cfc8290ea60259"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.file.Write_res.c",
+            "sha256": "7c4b5506980a102159a51ac298b0369a54be4331ac75e20dfcfde05339a20a96"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.param.Empty.c",
+            "sha256": "895a869396caa6e891475c4cd6ba71ca309892019a0d836b4a132391d0d0cb43"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.param.ExecuteOpcode_req.c",
+            "sha256": "2ab208a0afe28e13b7e29c67b2754708ae9294ffc94be275d444991369588fcd"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.param.ExecuteOpcode_res.c",
+            "sha256": "24c6fd09ebb9a3c51eccbf061c10bd13b3e5b5878cea57b42d67b1328e612fea"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.param.GetSet_req.c",
+            "sha256": "6ab4288823753d7215ee367a6033ab009d240ac10c4031fa2f2ed2bc3741e6e7"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.param.GetSet_res.c",
+            "sha256": "ce1e4906fd12e7618b6b15ee284698a672c7d482c623609bde0a5b4b2a16e8e7"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.param.NumericValue.c",
+            "sha256": "3c3bef6b6410375e2153a04c6dfeaceeafd9eda7c19815a6a88a8818b57d2865"
+          },
+          {
+            "path": "bootloader/DroneCAN/dsdl_generated/src/uavcan.protocol.param.Value.c",
+            "sha256": "8b432a2c6a1fda654eb8d293bb5ba5bfe974cf89a67b7c95c54cd51b6f348af8"
+          },
+          {
+            "path": "bootloader/DroneCAN/libcanard/LICENSE",
+            "sha256": "79f3f61d98683e67c13dccbe30949739fd3aacbb7afc9e6bb9cc7e42af0edd3d"
+          },
+          {
+            "path": "bootloader/DroneCAN/libcanard/README.md",
+            "sha256": "cbc9f095339ab63cc1d2819863eab68c2a369db090bc0e348f7dcfdc367e39c4"
+          },
+          {
+            "path": "bootloader/DroneCAN/libcanard/canard.c",
+            "sha256": "5fc1e768102dd53ffbb64741e7ff3888a5ea8a12736f7d302404cd7ca9ec020f"
+          },
+          {
+            "path": "bootloader/DroneCAN/libcanard/canard.h",
+            "sha256": "dacac3f613cbfc0d6adda6bf31b928ef6d80423ed1ce7361c94e2434ddbb391e"
+          },
+          {
+            "path": "bootloader/DroneCAN/libcanard/canard_internals.h",
+            "sha256": "b4f30968020adfd7c4ee227dbef0084e75b4812e09a6ca7de95516767e32af22"
+          },
+          {
+            "path": "bootloader/DroneCAN/regenerate.sh",
+            "sha256": "69779c004f180bf501542a52fd3f414908a60b27fb4d0498c1f683081ea231db"
+          },
+          {
+            "path": "bootloader/DroneCAN/sys_can.h",
+            "sha256": "ee3aeac08cd2c972462d10e2a986d21c07215db89b2b938679e248b56f40670b"
+          },
+          {
+            "path": "bootloader/DroneCAN/sys_can_at32.c",
+            "sha256": "8c3b96e4aeac0619754c3a1b373988f03402abf67eeff892192f2c32ef7e0806"
+          },
+          {
+            "path": "bootloader/DroneCAN/sys_can_stm32.c",
+            "sha256": "df9882b36b07f51a09e96efcb8bc6ddd5d2b68814ac52086aa91cce858107a82"
+          },
+          {
+            "path": "bootloader/DroneCAN/sys_can_stm32_CANFD.c",
+            "sha256": "70ce9959ec06960b271acfaef9574b18a22a039dd418b5ffa8cb9d4ed90b30ee"
+          },
+          {
+            "path": "bootloader/ldscript_bl.ld",
+            "sha256": "34a31e999dca935923e073935842b5d2dbf15dd4bf47a25d99edda2679b91f84"
+          },
+          {
+            "path": "bootloader/ldscript_bl_CAN.ld",
+            "sha256": "af5eaa5c80b66ec623f34f188211e642c11ba6181df728914df779856451db9a"
+          },
+          {
+            "path": "bootloader/main.c",
+            "sha256": "3c73429d381873871e7083e919bfa3d10e7a9e6ba5a2e8a1c7d3c20ea82fd05c"
+          },
+          {
+            "path": "e230makefile.mk",
+            "sha256": "9706ef6ef605c6f4b75d07af941cc59f7b17385438863bd698c64dd2d2d2ecdb"
+          },
+          {
+            "path": "env_setup_scripts/gcc_setup_linux.sh",
+            "sha256": "c286fe99c3573aeb453ea0fdac4c5ed1ca2795226e6aaaccae3c64741aa1f619"
+          },
+          {
+            "path": "env_setup_scripts/gcc_setup_macos.sh",
+            "sha256": "ced93cf8e7d40d3fa320bb1c479c333d8640d7aae543937584f495c653b627e7"
+          },
+          {
+            "path": "env_setup_scripts/gcc_windows_env_setup.cmd",
+            "sha256": "0567eb8993f5e9adf2eeccdee103105d38daa48b06821e701e275bff88b43566"
+          },
+          {
+            "path": "f031makefile.mk",
+            "sha256": "77f68b0420d3fc14e0283af0607b19bb393f00e2a92b227bdd358394c09b0407"
+          },
+          {
+            "path": "f051makefile.mk",
+            "sha256": "944d74071706751eda67cbe279c03c2872b897557f277eb00a7e8cf11128ddca"
+          },
+          {
+            "path": "f415makefile.mk",
+            "sha256": "df6909a4a509670eefdc9788cc0b27ba46c35c6efae4fc722708546729b5f758"
+          },
+          {
+            "path": "f421makefile.mk",
+            "sha256": "5b97e9e14cdb8ddd1427760cb7695218691a90adabed3e1453c15c2cc07ea408"
+          },
+          {
+            "path": "g071makefile.mk",
+            "sha256": "2026cf255710a448250cca83b2f41c24d7180971bca163eef02c47cbb3f6284d"
+          },
+          {
+            "path": "g431makefile.mk",
+            "sha256": "2d9053432d147e7753f2c47cdd704cc784c8231e9fef4d3098cfef6e7b865a69"
+          },
+          {
+            "path": "l431makefile.mk",
+            "sha256": "8796ff19368984e0cc506d5df9c88c78ad04f336ed79a68a03b8154076205801"
+          },
+          {
+            "path": "make/parse_targets.py",
+            "sha256": "b253a07d8b1aa355f9735b9408a0ac01fb6d93fd62ef12477326d1715605fb52"
+          },
+          {
+            "path": "make/tools.mk",
+            "sha256": "6b903edc37a51ae76f64a9af96c18198ea314156894b286e45be6deb6991d560"
+          },
+          {
+            "path": "make/tools_install.mk",
+            "sha256": "98334188bb133251bb6dbdd9aa46e4043ba2c8b131fe5b94dd1a802cceda9997"
+          },
+          {
+            "path": "scripts/release.py",
+            "sha256": "a44645d89568aac1cf49c0524b061dee88de5072a05271cd944e5c59c98d53c9"
+          },
+          {
+            "path": "sitlmakefile.mk",
+            "sha256": "5e1e730768da5a806b6541c34c7152ea7874067d7dca690e8e16a4f7539e2509"
+          },
+          {
+            "path": "tools/CodeStyle/am32-astyle.sh",
+            "sha256": "17ba3aae3a872c0c33424f607efeb944f3d4b0368fdb964d14535fd3c792e2d6"
+          },
+          {
+            "path": "tools/CodeStyle/astylerc",
+            "sha256": "64d0ab529b44b3002c367ef30e358167c198082edf863ea25834f13270fd54ef"
+          },
+          {
+            "path": "tools/gdb-openocd.init",
+            "sha256": "380efc3ae2852ffdc9e60e192a237880114d86acd478fcad36d8495c62e1a28f"
+          },
+          {
+            "path": "v203makefile.mk",
+            "sha256": "e6b328560bcfbb58a1914d3e9b4a8dc9ffc725057e69144392515af2e27bafd6"
+          }
+        ],
+        "command": [
+          "make",
+          "-j2",
+          "AM32_F421_BOOTLOADER_PB4",
+          "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+          "PART=AT32F421G8U7",
+          "OBJ=obj",
+          "CFLAGS_BASE=-fsingle-precision-constant -fomit-frame-pointer -ffast-math --specs=nosys.specs -IInc -g3 -Os -ffunction-sections -fdata-sections -funsigned-char -flto -Wall -Wextra -Wundef -Werror -Wno-unused-parameter -include Inc/targets.h -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build/am32-bootloader-f421=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi"
+        ],
+        "cwd": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build/am32-bootloader-f421",
+        "exit": 0,
+        "seconds": 14.334218996984418,
+        "log": "am32-bootloader-f421-build.log",
+        "artifacts": {
+          ".elf": {
+            "path": "am32-bootloader-f421/obj/AM32_F421_BOOTLOADER_PB4_V19.elf",
+            "bytes": 231228,
+            "sha256": "000a8fa0b63d737697fb7c09dc14865e3079325487e094cf4e42e4b3378a1a73",
+            "expectedSha256": null
+          },
+          ".bin": {
+            "path": "am32-bootloader-f421/obj/AM32_F421_BOOTLOADER_PB4_V19.bin",
+            "bytes": 4092,
+            "sha256": "0403603dac776f22c1e8d9b2a227f3fe9068e3e099893cb91243621fb49cc248",
+            "expectedSha256": "0403603dac776f22c1e8d9b2a227f3fe9068e3e099893cb91243621fb49cc248"
+          },
+          ".hex": {
+            "path": "am32-bootloader-f421/obj/AM32_F421_BOOTLOADER_PB4_V19.hex",
+            "bytes": 8222,
+            "sha256": "4e6d7fe4f0ab68493dc733c31a6dbbf7a5e098fc445b9575ada3ecefd6e2407f",
+            "expectedSha256": "4e6d7fe4f0ab68493dc733c31a6dbbf7a5e098fc445b9575ada3ecefd6e2407f"
+          }
+        },
+        "reproduced": true
+      }
+    ],
+    "scope": "Application ELF/BIN/HEX identity and bootloader BIN/HEX identity. Bootloader debug ELF paths and temporary assembler filenames are not normalized by the unchanged vendor source.",
+    "complete": {
+      "command": [
+        "python3",
+        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/source/pack-flash.py",
+        "--toolchain-dir",
+        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3",
+        "--artifacts-dir",
+        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build/artifacts",
+        "--output-dir",
+        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/complete-source-replay-v3/build/complete"
+      ],
+      "exit": 0,
+      "seconds": 0.3796038299915381,
+      "artifacts": {
+        ".elf": {
+          "path": "complete/OPENESC_30_F421_complete.elf",
+          "bytes": 111012,
+          "sha256": "c6ae7b29e1fe35dd56070435aa271b18ec9cba77ec5329f092b3296776664e2a",
+          "expectedSha256": "c6ae7b29e1fe35dd56070435aa271b18ec9cba77ec5329f092b3296776664e2a"
+        },
+        ".bin": {
+          "path": "complete/OPENESC_30_F421_complete.bin",
+          "bytes": 32768,
+          "sha256": "aa0ec2324ea7e5011a49d4ac2e722ec601599d3837de9004f06e13e80c6a07ab",
+          "expectedSha256": "aa0ec2324ea7e5011a49d4ac2e722ec601599d3837de9004f06e13e80c6a07ab"
+        },
+        ".hex": {
+          "path": "complete/OPENESC_30_F421_complete.hex",
+          "bytes": 92211,
+          "sha256": "c8a51dd0dab4fb62260ed14b5b2716e4a01dce383626f31d72ca6be820075d78",
+          "expectedSha256": "c8a51dd0dab4fb62260ed14b5b2716e4a01dce383626f31d72ca6be820075d78"
+        }
+      },
+      "reproduced": true
+    }
+  }
+}

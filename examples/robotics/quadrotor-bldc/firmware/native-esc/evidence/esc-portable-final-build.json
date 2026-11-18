@@ -1,0 +1,98 @@
+{
+  "runs": [
+    {
+      "command": [
+        "make",
+        "-j2",
+        "OPENESC_30_F421",
+        "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+        "PART=AT32F421G8U7",
+        "OBJ=obj-portable-e",
+        "CFLAGS_COMMON=$(CFLAGS_BASE) -ffile-prefix-map=/data/worktrees/quad-am32-native-20261118=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi"
+      ],
+      "cwd": "/data/worktrees/quad-am32-native-20261118",
+      "exit": 0,
+      "seconds": 33.50012877595145,
+      "before": {
+        "Inc/targets.h": "5182f3a6e0f3538705d00599c1756b829c101854524f6e19cfa9ae823e70d4b7",
+        "Inc/target_sensors.h": "68bac0ee26adebee5456cd35b2f1ee16150c1ba45b46b8a4146d805d46a37607",
+        "Src/main.c": "c92885e81412f0250434e725d4a594c7ebe759d47b746dd19c86ae2c4f08ec03",
+        "Src/dshot.c": "ed36e282a64a9a2ab19799dad39bfcc14f2d1bf876e8b72ce20a47590f4ee266",
+        "Mcu/f421/Src/ADC.c": "0328b7691dc32efa7a672e25afd1d882662b194378a6f519dc77474048eec5ce",
+        "Mcu/f421/Startup/startup_at32f421.s": "ec7c9bf70d6cf1a5fdc7255a551c2985f1cc6bd4e528e11e901c3b2603817ca7"
+      },
+      "after": {
+        "Inc/targets.h": "5182f3a6e0f3538705d00599c1756b829c101854524f6e19cfa9ae823e70d4b7",
+        "Inc/target_sensors.h": "68bac0ee26adebee5456cd35b2f1ee16150c1ba45b46b8a4146d805d46a37607",
+        "Src/main.c": "c92885e81412f0250434e725d4a594c7ebe759d47b746dd19c86ae2c4f08ec03",
+        "Src/dshot.c": "ed36e282a64a9a2ab19799dad39bfcc14f2d1bf876e8b72ce20a47590f4ee266",
+        "Mcu/f421/Src/ADC.c": "0328b7691dc32efa7a672e25afd1d882662b194378a6f519dc77474048eec5ce",
+        "Mcu/f421/Startup/startup_at32f421.s": "ec7c9bf70d6cf1a5fdc7255a551c2985f1cc6bd4e528e11e901c3b2603817ca7"
+      },
+      "artifacts": {
+        ".bin": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-portable-e/AM32_OPENESC_30_F421_2.21.bin",
+          "bytes": 27648,
+          "sha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843"
+        },
+        ".elf": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-portable-e/AM32_OPENESC_30_F421_2.21.elf",
+          "bytes": 567524,
+          "sha256": "3d17f435967fbee30986a7b3dcdde23c074c685a0ff12cb9d0636e034ee682ad"
+        },
+        ".hex": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-portable-e/AM32_OPENESC_30_F421_2.21.hex",
+          "bytes": 59024,
+          "sha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0"
+        }
+      }
+    },
+    {
+      "command": [
+        "make",
+        "-j2",
+        "OPENESC_30_F421",
+        "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+        "PART=AT32F421G8U7",
+        "OBJ=obj-portable-f",
+        "CFLAGS_COMMON=$(CFLAGS_BASE) -ffile-prefix-map=/data/worktrees/quad-am32-native-20261118=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi"
+      ],
+      "cwd": "/data/worktrees/quad-am32-native-20261118",
+      "exit": 0,
+      "seconds": 22.500733549997676,
+      "before": {
+        "Inc/targets.h": "5182f3a6e0f3538705d00599c1756b829c101854524f6e19cfa9ae823e70d4b7",
+        "Inc/target_sensors.h": "68bac0ee26adebee5456cd35b2f1ee16150c1ba45b46b8a4146d805d46a37607",
+        "Src/main.c": "c92885e81412f0250434e725d4a594c7ebe759d47b746dd19c86ae2c4f08ec03",
+        "Src/dshot.c": "ed36e282a64a9a2ab19799dad39bfcc14f2d1bf876e8b72ce20a47590f4ee266",
+        "Mcu/f421/Src/ADC.c": "0328b7691dc32efa7a672e25afd1d882662b194378a6f519dc77474048eec5ce",
+        "Mcu/f421/Startup/startup_at32f421.s": "ec7c9bf70d6cf1a5fdc7255a551c2985f1cc6bd4e528e11e901c3b2603817ca7"
+      },
+      "after": {
+        "Inc/targets.h": "5182f3a6e0f3538705d00599c1756b829c101854524f6e19cfa9ae823e70d4b7",
+        "Inc/target_sensors.h": "68bac0ee26adebee5456cd35b2f1ee16150c1ba45b46b8a4146d805d46a37607",
+        "Src/main.c": "c92885e81412f0250434e725d4a594c7ebe759d47b746dd19c86ae2c4f08ec03",
+        "Src/dshot.c": "ed36e282a64a9a2ab19799dad39bfcc14f2d1bf876e8b72ce20a47590f4ee266",
+        "Mcu/f421/Src/ADC.c": "0328b7691dc32efa7a672e25afd1d882662b194378a6f519dc77474048eec5ce",
+        "Mcu/f421/Startup/startup_at32f421.s": "ec7c9bf70d6cf1a5fdc7255a551c2985f1cc6bd4e528e11e901c3b2603817ca7"
+      },
+      "artifacts": {
+        ".bin": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-portable-f/AM32_OPENESC_30_F421_2.21.bin",
+          "bytes": 27648,
+          "sha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843"
+        },
+        ".elf": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-portable-f/AM32_OPENESC_30_F421_2.21.elf",
+          "bytes": 567524,
+          "sha256": "3d17f435967fbee30986a7b3dcdde23c074c685a0ff12cb9d0636e034ee682ad"
+        },
+        ".hex": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-portable-f/AM32_OPENESC_30_F421_2.21.hex",
+          "bytes": 59024,
+          "sha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0"
+        }
+      }
+    }
+  ]
+}

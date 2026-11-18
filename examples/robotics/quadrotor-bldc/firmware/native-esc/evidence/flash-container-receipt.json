@@ -1,0 +1,82 @@
+{
+  "schema": "labwired.native-flash-container.v1",
+  "sources": [
+    {
+      "path": "artifacts/AM32_F421_BOOTLOADER_PB4_V19.bin",
+      "address": 134217728,
+      "bytes": 4092,
+      "sha256": "0403603dac776f22c1e8d9b2a227f3fe9068e3e099893cb91243621fb49cc248"
+    },
+    {
+      "path": "artifacts/AM32_OPENESC_30_F421_2.21.bin",
+      "address": 134221824,
+      "bytes": 27648,
+      "sha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843"
+    },
+    {
+      "path": "artifacts/openesc30-bench-eeprom.bin",
+      "address": 134249472,
+      "bytes": 192,
+      "sha256": "c74c76fa2814bdd5fdeefcc8fadee99d142a6274d3d2ba50c53047d24fabe31b"
+    }
+  ],
+  "applicationSymbolElf": {
+    "path": "artifacts/AM32_OPENESC_30_F421_2.21.elf",
+    "sha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d"
+  },
+  "commands": [
+    [
+      "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-objcopy",
+      "-I",
+      "binary",
+      "-O",
+      "elf32-littlearm",
+      "-B",
+      "arm",
+      "--rename-section",
+      ".data=.flash_image,alloc,load,readonly,data,contents",
+      "OPENESC_30_F421_complete.bin",
+      "flash-image.o"
+    ],
+    [
+      "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-ld",
+      "-T",
+      "flash-container.ld",
+      "--just-symbols=/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/firmware/native-esc/artifacts/AM32_OPENESC_30_F421_2.21.elf",
+      "-o",
+      "OPENESC_30_F421_complete.elf",
+      "flash-image.o"
+    ],
+    [
+      "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-objcopy",
+      "-O",
+      "ihex",
+      "OPENESC_30_F421_complete.elf",
+      "OPENESC_30_F421_complete.hex"
+    ]
+  ],
+  "initialStack": 536875008,
+  "bootEntry": 134217997,
+  "flashStart": 134217728,
+  "flashBytes": 32768,
+  "fillByte": 255,
+  "loadBytesEqualSourceComposition": true,
+  "artifacts": [
+    {
+      "path": "OPENESC_30_F421_complete.bin",
+      "bytes": 32768,
+      "sha256": "aa0ec2324ea7e5011a49d4ac2e722ec601599d3837de9004f06e13e80c6a07ab"
+    },
+    {
+      "path": "OPENESC_30_F421_complete.elf",
+      "bytes": 111012,
+      "sha256": "c6ae7b29e1fe35dd56070435aa271b18ec9cba77ec5329f092b3296776664e2a"
+    },
+    {
+      "path": "OPENESC_30_F421_complete.hex",
+      "bytes": 92211,
+      "sha256": "c8a51dd0dab4fb62260ed14b5b2716e4a01dce383626f31d72ca6be820075d78"
+    }
+  ],
+  "scope": "Standard loadable ELF container of unchanged vendor bootloader, native application and explicit EEPROM fixture. No instruction patch or simulated firmware replacement. Application symbols are retained as absolute symbols for inspection; complete-image DWARF is not provided."
+}
