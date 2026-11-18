@@ -43,8 +43,9 @@ if(output==="lid-print"){
 const carrier=(await lib.fromSTEP("../cad/pico-carrier.step")).scale([1,1,1.6/1.51]).rotateX(180).translate(0,0,boardZ+boardT);
 let pcba=carrier;
 for(const x of[21.11,38.89]){
- // Samtec SSW-120-01-G-S socket: body8.51, tail2.64.
- let socket=box(2.54,50.8,8.51).translate(x-1.27,6.1,pcbTop);
+ // Samtec SSW-120-01-G-S drawing-derived nominal envelope, not vendor STEP.
+ // Width 2.41 REF; length (20*2.54)+0.51 = 51.31 +/-0.25; height8.51, tail2.64.
+ let socket=box(2.41,51.31,8.51).translate(x-1.205,5.845,pcbTop);
  for(let i=0;i<20;i++){
   const y=7.37+2.54*i;
   socket=socket.subtract(bore(1,6.3,x,y,pcbTop+2.31));

@@ -20,7 +20,9 @@
       "mechanical/pico-uart-lid.stl"
     ],
     "current_native_part_count": 50,
-    "current_studio_revision_pending": true
+    "current_studio_revision_pending": true,
+    "assembly_export_is_current": false,
+    "source_correction": "validation/connector-dimension-correction.json"
   },
   "physical_hardware_tested": false,
   "verification": {
@@ -32,6 +34,7 @@
     "native_import": "validation/native-import-validation.json"
   },
   "open_acceptance_items": [
+    "Refresh assembly STEP and mechanical verification after the documented Samtec socket body dimension correction.",
     "Update the existing Studio675KJsgq project with the final exact-body source; its collaboration path currently refuses imported assets.",
     "Finish full assembly-path verification; the first full-scene pass exhausted its work budget and is inconclusive.",
     "Bind and verify the exact package in the canonical featured Lab.",
@@ -55,8 +58,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 10727,
-      "sha256": "fb79e7885d3eee75f9e76963de3cb8598e6a0275b085eafb569e86f63f6a2f90"
+      "bytes": 10994,
+      "sha256": "8b0ee35c309fe235ec8ad4bbf8601c51125eb10f7d6afe5c217109a4faaca94c"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 8835,
+      "sha256": "83aaa4e4171613ecda036654233a21879502f26a3e79be83c5474dcd63889d53"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -87,6 +95,11 @@
       "path": "electronics/pico-carrier.kicad_pcb",
       "bytes": 137657,
       "sha256": "1ed17407037addfbd499a815756be6cb166403cc2efec0799230d87141ef4a10"
+    },
+    {
+      "path": "electronics/pico-carrier.kicad_prl",
+      "bytes": 2299,
+      "sha256": "caa6ab93eed8a0ccac322f39be6caab32d4b32d05ca8604c7cf462a279b1babb"
     },
     {
       "path": "electronics/pico-carrier.kicad_pro",
@@ -142,6 +155,206 @@
       "path": "firmware/.gitignore",
       "bytes": 6,
       "sha256": "692b1af4436043e2e965c8d563bbf90d648cda3a6afa9bba38e1c38af1d38919"
+    },
+    {
+      "path": "firmware/.pio/build/pico/.sconsign312.dblite",
+      "bytes": 63176,
+      "sha256": "64bd7758d6c6b0158d55554056dd6461df6dc91097956f3392da148ee19b5259"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/Interrupts.cpp.o",
+      "bytes": 7480,
+      "sha256": "388ecc899c4b7079561732b244ea5930b61d6db58269cd7cf43d031033797b5a"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/Serial.cpp.o",
+      "bytes": 16664,
+      "sha256": "b351b4c592d53a9c5bf7a24e93321ff1f3b1fdc713c7745974294d1251da0faa"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/Tone.cpp.o",
+      "bytes": 8620,
+      "sha256": "f41650a96b39ea09dfb79e0c03f372682c2fbdddd910a9dd910a37c12ca79e53"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/USB/PluggableUSBDevice.cpp.o",
+      "bytes": 15472,
+      "sha256": "37ebf30d1fb0afa4e46885a94c9d1dc8d430bdb818d9c331e1813c793eb7517f"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/USB/USBCDC.cpp.o",
+      "bytes": 23144,
+      "sha256": "02299ef704af884cf5bf4b86a4f2e72b2fa6ef1ed45c471cb69fa6185af612e4"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/USB/USBSerial.cpp.o",
+      "bytes": 27588,
+      "sha256": "f27e60f342daeddedaf1356debba4207ac4eb8c77297e2d669167ffb93af632c"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/WMath.cpp.o",
+      "bytes": 1412,
+      "sha256": "5e584a05dd49a69365e42b65116e788a1fb413c3da54bf9d15fb3b51ea0475b6"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/abi.cpp.o",
+      "bytes": 1180,
+      "sha256": "82e534b236292c0e625c7412c29ac4fcc98bc4940ac486f05ea31c3392d439b5"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/CanMsg.cpp.o",
+      "bytes": 1424,
+      "sha256": "f9357efafeb6cd1578739445f0cafa4174bc5f4ceadbb588ebbfe54a51181eab"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/CanMsgRingbuffer.cpp.o",
+      "bytes": 3744,
+      "sha256": "f4d1edd7ea68744c1c97a7ccf6061f90c911fa6fad76df5eece2b60eef93f4e7"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/Common.cpp.o",
+      "bytes": 1232,
+      "sha256": "5389cd303259012e7913029b5a9d1a6b8b0171bd85c8f9c95005701ec1e9315a"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/IPAddress.cpp.o",
+      "bytes": 9004,
+      "sha256": "ad1720f3d002c71b4ec430b01ffbf23aded6315096517c451f561118c7b25f84"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/PluggableUSB.cpp.o",
+      "bytes": 2736,
+      "sha256": "65b9b3323542bfcfb58598108894360daeab708fb669f9371734b54004b99031"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/Print.cpp.o",
+      "bytes": 10484,
+      "sha256": "eea59d5b3cab7764452f43c62b1153208a0458215fd5a51ddf6af7d1bdb92692"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/Stream.cpp.o",
+      "bytes": 5756,
+      "sha256": "85e45fc3f9f2c96f0a4b4fa3caa9429971f7596979d9f1778dcd8537b159db38"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/api/String.cpp.o",
+      "bytes": 22564,
+      "sha256": "23dfdafa947d3fec50c9e0d37918efd37e09deacdce3f7fafddcb5386ff66f47"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/arm_hal_random.c.o",
+      "bytes": 1264,
+      "sha256": "9e81183e48f5558521566aa40a265f05420201413c7bc595842f6657da341444"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/as_mbed_library/variant.cpp.o",
+      "bytes": 764,
+      "sha256": "6733a7246150c4bb5c6a8443ce5e9aed0d045c3771ea121f69c55d557fead283"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/itoa.c.o",
+      "bytes": 2040,
+      "sha256": "c9afa97a82f6b95f7c00940825efdbda7c9154d7fba1e6f5b212aa8e750557c2"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/main.cpp.o",
+      "bytes": 1696,
+      "sha256": "38fb480f3b2c8ef815a7e637d8ea17a7e5cde82c1c46f7f8380398d03737d4ea"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/mbed/platform/cxxsupport/mstd_mutex.cpp.o",
+      "bytes": 768,
+      "sha256": "564a8ebee408646783978c90f566a51ea6959ab923fa4fca3ddb2ce9e14adf12"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/pinToIndex.cpp.o",
+      "bytes": 1344,
+      "sha256": "6fff5742e1a62c6a4c45b8945bd4cb55d8f398780f1d03bf1049218c37261c09"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/random_seed.cpp.o",
+      "bytes": 1100,
+      "sha256": "dd35f9583613b092b99d110689b62dd1e69717947dfea5f826d1260d2d221b6a"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/timer.cpp.o",
+      "bytes": 2160,
+      "sha256": "d4447b378c09d14831994f735febdedc4b1436025e33ffa257d7b7f6348ed072"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/wiring.cpp.o",
+      "bytes": 3500,
+      "sha256": "551808282128aad9d190d760b5ad6063d8e91190d4ce1e42c87e4842caa642a6"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/wiring_analog.cpp.o",
+      "bytes": 3780,
+      "sha256": "bdfacf196883a30d8fa30945e951c4be45dcb766fbda1d446db147545f4d5b8d"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/wiring_digital.cpp.o",
+      "bytes": 3252,
+      "sha256": "1b9e207d5dd77ec8f24566bcf0a1da8f963e2c39970a922cc9b962d0fe2a138b"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/wiring_pulse.cpp.o",
+      "bytes": 1784,
+      "sha256": "ac56b3d998470b6775f75502c7b2a44a8e3b4af07b6de5373eb3a0f293990286"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduino/wiring_shift.cpp.o",
+      "bytes": 1324,
+      "sha256": "e3a166a51639b2ee6cf3935bb936dc99032a2341de31647553be59209c3ad36c"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduinoVariant/double_tap_usb_boot.cpp.o",
+      "bytes": 1556,
+      "sha256": "d938a12a1a458d0a09fea8846f8678d37828619a6aa5bcf6e3975e610c0731a3"
+    },
+    {
+      "path": "firmware/.pio/build/pico/FrameworkArduinoVariant/variant.cpp.o",
+      "bytes": 2560,
+      "sha256": "b095d44e574a5f2da61c25fb5e7baa799738fe8e2d0b24009b97c2c072dcb14e"
+    },
+    {
+      "path": "firmware/.pio/build/pico/cpp.linker_script.ld",
+      "bytes": 4487,
+      "sha256": "76f8c21bbcf1350e984d863cf54e2d6c32871a0b47bb40736ce4b296cbbbe657"
+    },
+    {
+      "path": "firmware/.pio/build/pico/firmware.bin",
+      "bytes": 74628,
+      "sha256": "9cb28925c87cdcb2ab4b4281fe4955b4232289a0568859ad6e2fcc1b586fb960"
+    },
+    {
+      "path": "firmware/.pio/build/pico/firmware.elf",
+      "bytes": 474764,
+      "sha256": "a5980d26a4239db9779c079c9bcba3f9e0601509f26e163a23f4a0c208eb136e"
+    },
+    {
+      "path": "firmware/.pio/build/pico/firmware.uf2",
+      "bytes": 149504,
+      "sha256": "18d876244445d2a4a63fc676ab4383aa73a5a008998560be64c4a9b7ba2d0a0f"
+    },
+    {
+      "path": "firmware/.pio/build/pico/libFrameworkArduino.a",
+      "bytes": 207980,
+      "sha256": "5cf440c7210e118c826ee9118aebe82c98b8a14e2f3a2aaedfa0c83ad41a0e27"
+    },
+    {
+      "path": "firmware/.pio/build/pico/libFrameworkArduinoVariant.a",
+      "bytes": 4544,
+      "sha256": "d24230cd5f1ff45ccd97a665639af08a2d1cfcef737826c75f1f99cb2fd35f69"
+    },
+    {
+      "path": "firmware/.pio/build/pico/src/main.ino.cpp.o",
+      "bytes": 1720,
+      "sha256": "d311b32dee3b542eb131976c27a4cd2543022118f03cafc3a285d8624916b8f2"
+    },
+    {
+      "path": "firmware/.pio/build/project.checksum",
+      "bytes": 40,
+      "sha256": "1720c2802077065c302d4aed3cbe7cff64e2b8446a3c837a2fd3e695d6f50834"
     },
     {
       "path": "firmware/artifacts/pico-uart.elf",
@@ -300,8 +513,8 @@
     },
     {
       "path": "mechanical/pico-uart-fixture.kcad.ts",
-      "bytes": 9567,
-      "sha256": "35a9794d80eb76ffa45a90f94bfd8c43d4ab19b94a8fc8c6951095856334d67f"
+      "bytes": 9675,
+      "sha256": "fa6ab68c97c2c01a0148c95d819789c44b7155ad7012495320e51ddda375efea"
     },
     {
       "path": "mechanical/pico-uart-fixture.step",
@@ -327,6 +540,11 @@
       "path": "references/raspberry-pi/provenance.json",
       "bytes": 642,
       "sha256": "6393b8cf3cbabfcc4e711b320b1cf0b7b3608fdba3ae7d3c5cf962ae41f32816"
+    },
+    {
+      "path": "references/samtec/ssw-market-drawing.pdf",
+      "bytes": 491233,
+      "sha256": "890f20796637b7947c7655aabf919d055b56988a01c20338b635f2daf35b051f"
     },
     {
       "path": "validation/assembly-path-budget.json",
@@ -362,6 +580,11 @@
       "path": "validation/closed-renders.json",
       "bytes": 1874,
       "sha256": "3405467512d1a1bccf59114f7d824a98f56d525105845d389c89b350a6dd126e"
+    },
+    {
+      "path": "validation/connector-dimension-correction.json",
+      "bytes": 702,
+      "sha256": "0c47e3fcb73161dd7f9c303e4a779fcada41ed64968318898c1ca7d792a92192"
     },
     {
       "path": "validation/design-loop.json",
@@ -470,8 +693,8 @@
     },
     {
       "path": "validation/submitted-fixture.kcad.ts",
-      "bytes": 9809,
-      "sha256": "70b2172037838793ae818730c6f25b4121cf240c7a29c663c3be98eee778e2f3"
+      "bytes": 9917,
+      "sha256": "5d46f5f8d63c1952cded7818bcc599c3169a0bbae5c2dad78ab72ad95c7eb743"
     },
     {
       "path": "validation/visual-review.json",
