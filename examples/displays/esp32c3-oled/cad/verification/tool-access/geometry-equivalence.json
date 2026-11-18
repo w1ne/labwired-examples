@@ -1,0 +1,3186 @@
+{
+  "sourceSha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253",
+  "previousCommit": "371f42957e4af52bc1968a4dd26b602d410b8fec",
+  "basis": "Exact per-part volume, world bounds and mesh vertex/normal/index buffers at tolerance0.05mm,angular0.1. Face-group start/count remain included; process-local OCCT face.hashCode is intentionally excluded because it is a handle identity, not geometry.",
+  "current": {
+    "evaluation": {
+      "exitCode": 0,
+      "featureCount": 314,
+      "diagnostics": [],
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253",
+          "byteLength": 13434
+        },
+        "parameters": {
+          "values": {
+            "output": "assembly"
+          },
+          "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.2",
+          "revision": null
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "3b43ee0f78a17f9ca8676f34248a606c176748dd6eccdd8b377b1a814302c817"
+      },
+      "featureHealth": [],
+      "selections": [
+        {
+          "consumerFeatureId": "require_1",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_1",
+          "selectorText": "body(cylinder_19)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.8867962264113212
+        },
+        {
+          "consumerFeatureId": "require_2",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_2",
+          "selectorText": "body(cylinder_20)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.8867962264113212
+        },
+        {
+          "consumerFeatureId": "require_3",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_3",
+          "selectorText": "body(cylinder_21)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.8867962264113212
+        },
+        {
+          "consumerFeatureId": "require_4",
+          "selectorText": "body(cylinder_45)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 60.53907828832548
+        },
+        {
+          "consumerFeatureId": "require_4",
+          "selectorText": "body(boolean_71)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 43.64454834226154
+        },
+        {
+          "consumerFeatureId": "require_5",
+          "selectorText": "body(cylinder_46)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 60.53907828832546
+        },
+        {
+          "consumerFeatureId": "require_5",
+          "selectorText": "body(boolean_71)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 43.64454834226154
+        },
+        {
+          "consumerFeatureId": "require_6",
+          "selectorText": "body(cylinder_47)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 60.53907828832546
+        },
+        {
+          "consumerFeatureId": "require_6",
+          "selectorText": "body(boolean_71)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 43.64454834226154
+        },
+        {
+          "consumerFeatureId": "require_7",
+          "selectorText": "body(cylinder_48)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 60.53907828832546
+        },
+        {
+          "consumerFeatureId": "require_7",
+          "selectorText": "body(boolean_71)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 43.64454834226154
+        },
+        {
+          "consumerFeatureId": "require_8",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_9",
+          "selectorText": "body(box_14)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 32.97085986139883
+        },
+        {
+          "consumerFeatureId": "require_9",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        },
+        {
+          "consumerFeatureId": "require_10",
+          "selectorText": "body(box_14)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 32.97085986139883
+        },
+        {
+          "consumerFeatureId": "require_10",
+          "selectorText": "body(boolean_28)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 5.503635162326805
+        },
+        {
+          "consumerFeatureId": "require_11",
+          "selectorText": "body(box_14)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 32.97085986139883
+        },
+        {
+          "consumerFeatureId": "require_11",
+          "selectorText": "body(boolean_31)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 5.503635162326805
+        },
+        {
+          "consumerFeatureId": "require_12",
+          "selectorText": "body(boolean_58)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 29.07875186884747
+        },
+        {
+          "consumerFeatureId": "require_12",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        },
+        {
+          "consumerFeatureId": "require_13",
+          "selectorText": "body(boolean_60)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 86.36942447277016
+        },
+        {
+          "consumerFeatureId": "require_13",
+          "selectorText": "body(boolean_71)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 43.64454834226154
+        },
+        {
+          "consumerFeatureId": "require_14",
+          "selectorText": "body(boolean_60)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 86.36942447277016
+        },
+        {
+          "consumerFeatureId": "require_14",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        },
+        {
+          "consumerFeatureId": "require_15",
+          "selectorText": "body(box_18)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 28.354893757515654
+        },
+        {
+          "consumerFeatureId": "require_15",
+          "selectorText": "body(boolean_18)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 111.66579601650633
+        },
+        {
+          "consumerFeatureId": "require_16",
+          "selectorText": "body(box_18)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 28.354893757515654
+        },
+        {
+          "consumerFeatureId": "require_16",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        }
+      ],
+      "requirements": {
+        "ok": true,
+        "status": "pass",
+        "entries": [
+          {
+            "name": "native-carrier-registration-J2.1",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.19999999999999302,
+            "limit": [
+              0.199,
+              0.201
+            ],
+            "margin": 0.0009999999999930065,
+            "selections": [
+              {
+                "consumerFeatureId": "require_1",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              },
+              {
+                "consumerFeatureId": "require_1",
+                "selectorText": "body(cylinder_19)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 1.8867962264113212
+              }
+            ],
+            "featureId": "require_1",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "cylinder_19"
+              },
+              "op": "between",
+              "limit": [
+                0.199,
+                0.201
+              ]
+            }
+          },
+          {
+            "name": "native-carrier-registration-J2.2",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.19999999999999232,
+            "limit": [
+              0.199,
+              0.201
+            ],
+            "margin": 0.0009999999999923126,
+            "selections": [
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              },
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(cylinder_20)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 1.8867962264113212
+              }
+            ],
+            "featureId": "require_2",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "cylinder_20"
+              },
+              "op": "between",
+              "limit": [
+                0.199,
+                0.201
+              ]
+            }
+          },
+          {
+            "name": "native-carrier-registration-J3.7",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.1999999999999958,
+            "limit": [
+              0.199,
+              0.201
+            ],
+            "margin": 0.000999999999995782,
+            "selections": [
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              },
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(cylinder_21)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 1.8867962264113212
+              }
+            ],
+            "featureId": "require_3",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "cylinder_21"
+              },
+              "op": "between",
+              "limit": [
+                0.199,
+                0.201
+              ]
+            }
+          },
+          {
+            "name": "M2-driver-rear-clearance-0",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.14999999999992092,
+            "limit": 0.1,
+            "margin": 0.04999999999992091,
+            "selections": [
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(cylinder_45)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 60.53907828832548
+              },
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(boolean_71)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 43.64454834226154
+              }
+            ],
+            "featureId": "require_4",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "cylinder_45"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_71"
+              },
+              "op": "gte",
+              "limit": 0.1
+            }
+          },
+          {
+            "name": "M2-driver-rear-clearance-1",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.1499999999999955,
+            "limit": 0.1,
+            "margin": 0.04999999999999549,
+            "selections": [
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(cylinder_46)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 60.53907828832546
+              },
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(boolean_71)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 43.64454834226154
+              }
+            ],
+            "featureId": "require_5",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "cylinder_46"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_71"
+              },
+              "op": "gte",
+              "limit": 0.1
+            }
+          },
+          {
+            "name": "M2-driver-rear-clearance-2",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.14999999999994237,
+            "limit": 0.1,
+            "margin": 0.04999999999994237,
+            "selections": [
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(cylinder_47)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 60.53907828832546
+              },
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(boolean_71)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 43.64454834226154
+              }
+            ],
+            "featureId": "require_6",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "cylinder_47"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_71"
+              },
+              "op": "gte",
+              "limit": 0.1
+            }
+          },
+          {
+            "name": "M2-driver-rear-clearance-3",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.1499999999999955,
+            "limit": 0.1,
+            "margin": 0.04999999999999549,
+            "selections": [
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(cylinder_48)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 60.53907828832546
+              },
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(boolean_71)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 43.64454834226154
+              }
+            ],
+            "featureId": "require_7",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "cylinder_48"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_71"
+              },
+              "op": "gte",
+              "limit": 0.1
+            }
+          },
+          {
+            "name": "pcb-outside-envelope",
+            "source": "script",
+            "status": "pass",
+            "measured": [
+              70.00000298830409,
+              45.000002988304104,
+              1.5999999999999996
+            ],
+            "limit": {
+              "x": [
+                69.99,
+                70.01
+              ],
+              "y": [
+                44.99,
+                45.01
+              ],
+              "z": [
+                1.59,
+                1.61
+              ]
+            },
+            "margin": 0.009997011695894287,
+            "selections": [
+              {
+                "consumerFeatureId": "require_8",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              }
+            ],
+            "featureId": "require_8",
+            "predicate": {
+              "metric": "bbox",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "op": "within",
+              "limit": {
+                "x": [
+                  69.99,
+                  70.01
+                ],
+                "y": [
+                  44.99,
+                  45.01
+                ],
+                "z": [
+                  1.59,
+                  1.61
+                ]
+              }
+            }
+          },
+          {
+            "name": "oled-glass-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.5,
+            "limit": 0.5,
+            "margin": 0,
+            "selections": [
+              {
+                "consumerFeatureId": "require_9",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_9",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_9",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "oled-glass-to-open-support-0",
+            "source": "script",
+            "status": "pass",
+            "measured": 1.277000000000001,
+            "limit": 1,
+            "margin": 0.277000000000001,
+            "selections": [
+              {
+                "consumerFeatureId": "require_10",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_10",
+                "selectorText": "body(boolean_28)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 5.503635162326805
+              }
+            ],
+            "featureId": "require_10",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_28"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "oled-glass-to-open-support-1",
+            "source": "script",
+            "status": "pass",
+            "measured": 1.277000000000001,
+            "limit": 1,
+            "margin": 0.277000000000001,
+            "selections": [
+              {
+                "consumerFeatureId": "require_11",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_11",
+                "selectorText": "body(boolean_31)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 5.503635162326805
+              }
+            ],
+            "featureId": "require_11",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_31"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "controller-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.3200000000000003,
+            "limit": 0.5,
+            "margin": 2.8200000000000003,
+            "selections": [
+              {
+                "consumerFeatureId": "require_12",
+                "selectorText": "body(boolean_58)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 29.07875186884747
+              },
+              {
+                "consumerFeatureId": "require_12",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_12",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_58"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "pcb-assembly-to-oled-assembly-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 8.709513476652985,
+            "limit": 0.5,
+            "margin": 8.209513476652985,
+            "selections": [
+              {
+                "consumerFeatureId": "require_13",
+                "selectorText": "body(boolean_60)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 86.36942447277016
+              },
+              {
+                "consumerFeatureId": "require_13",
+                "selectorText": "body(boolean_71)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 43.64454834226154
+              }
+            ],
+            "featureId": "require_13",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_60"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_71"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "pcb-assembly-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.3200000000000003,
+            "limit": 0.5,
+            "margin": 2.8200000000000003,
+            "selections": [
+              {
+                "consumerFeatureId": "require_14",
+                "selectorText": "body(boolean_60)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 86.36942447277016
+              },
+              {
+                "consumerFeatureId": "require_14",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_14",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_60"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "usb-plug-access-to-base",
+            "source": "script",
+            "status": "pass",
+            "measured": 1,
+            "limit": 0.5,
+            "margin": 0.5,
+            "selections": [
+              {
+                "consumerFeatureId": "require_15",
+                "selectorText": "body(box_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 28.354893757515654
+              },
+              {
+                "consumerFeatureId": "require_15",
+                "selectorText": "body(boolean_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 111.66579601650633
+              }
+            ],
+            "featureId": "require_15",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_18"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_18"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "usb-plug-access-to-lid",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.9250000000000007,
+            "limit": 0.5,
+            "margin": 0.4250000000000007,
+            "selections": [
+              {
+                "consumerFeatureId": "require_16",
+                "selectorText": "body(box_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 28.354893757515654
+              },
+              {
+                "consumerFeatureId": "require_16",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_16",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_18"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          }
+        ],
+        "summary": {
+          "pass": 16,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      }
+    },
+    "parts": [
+      {
+        "name": "base",
+        "volumeMm3": 30892.433620807577,
+        "bounds": {
+          "min": [
+            -9,
+            -54,
+            0
+          ],
+          "max": [
+            79,
+            9,
+            27.5
+          ]
+        },
+        "meshSha256": "5be84a01ba37af7957376762f9b63539878c53f0fe0e03bc06b891b49ca22f17",
+        "vertices": 9500,
+        "triangles": 11436
+      },
+      {
+        "name": "lid",
+        "volumeMm3": 10577.494841178479,
+        "bounds": {
+          "min": [
+            -9,
+            -54,
+            25.2
+          ],
+          "max": [
+            79,
+            9,
+            29.5
+          ]
+        },
+        "meshSha256": "a5b74190635358e3b6252d88a03b76099c8ec8b27cca853777d4d1ea58c85287",
+        "vertices": 6356,
+        "triangles": 6256
+      },
+      {
+        "name": "carrier-pcba-envelope",
+        "volumeMm3": 6925.217453820707,
+        "bounds": {
+          "min": [
+            -1.549000000000001,
+            -45,
+            6.42
+          ],
+          "max": [
+            70,
+            0,
+            24.18
+          ]
+        },
+        "meshSha256": "8a4b64dc37c68118fb369a19c4bf7faeb8e7df63cd26349c9320d99217eaf2e6",
+        "vertices": 23500,
+        "triangles": 23344
+      },
+      {
+        "name": "oled-pcba-envelope",
+        "volumeMm3": 4366.846377976801,
+        "bounds": {
+          "min": [
+            35,
+            -38.25,
+            20.4
+          ],
+          "max": [
+            64.21000000000001,
+            -6.5,
+            27
+          ]
+        },
+        "meshSha256": "92b5d101bbd9127bfafc6e6eea92f839ada5f059cb464c0b4a53e9b8567d9c1b",
+        "vertices": 3616,
+        "triangles": 3556
+      },
+      {
+        "name": "oled-display-surface",
+        "volumeMm3": 4.724536319999967,
+        "bounds": {
+          "min": [
+            38.733,
+            -24.281,
+            26.98
+          ],
+          "max": [
+            60.477,
+            -13.416999999999998,
+            27
+          ]
+        },
+        "meshSha256": "fa6799a62f19135456f743478af4f6ab6c842c754e66b62b988e3ac5a079426c",
+        "vertices": 24,
+        "triangles": 12
+      },
+      {
+        "name": "carrier-washer-0",
+        "volumeMm3": 13.728759896187396,
+        "bounds": {
+          "min": [
+            0.75,
+            -7.248989841502654,
+            2.5
+          ],
+          "max": [
+            7.25,
+            -0.7510101584973472,
+            3
+          ]
+        },
+        "meshSha256": "56d787f3608d951bbb2590ad506518c191a08b2fdec012a9b634de74a2779a46",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-0",
+        "volumeMm3": 83.70948286688461,
+        "bounds": {
+          "min": [
+            1.4999999999999991,
+            -6.886751345948129,
+            3
+          ],
+          "max": [
+            6.5,
+            -1.113248654051871,
+            8
+          ]
+        },
+        "meshSha256": "3a82c37be33a8d575f24d516ea4a44b92fefd84066eb7dbd71a65630d0b082a2",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-0",
+        "volumeMm3": 59.39573610693202,
+        "bounds": {
+          "min": [
+            1.75,
+            -6.249300659501837,
+            5.6
+          ],
+          "max": [
+            6.25,
+            -1.7506993404981634,
+            12.1
+          ]
+        },
+        "meshSha256": "39314d9699b134ffc43522a1412577c6d79c886b00940424442c4028021c08b6",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-0",
+        "volumeMm3": 38.86758504210476,
+        "bounds": {
+          "min": [
+            1.06,
+            -6.9390861950824005,
+            0.16
+          ],
+          "max": [
+            6.9399999999999995,
+            -1.0609138049176003,
+            5.16
+          ]
+        },
+        "meshSha256": "c599a26b9c49bb2f1c1b0cbefcd629475d9384050e41f2fcdac40e841ef58d4b",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "carrier-washer-1",
+        "volumeMm3": 13.728759896187404,
+        "bounds": {
+          "min": [
+            62.75,
+            -7.248989841502654,
+            2.5
+          ],
+          "max": [
+            69.25,
+            -0.7510101584973472,
+            3
+          ]
+        },
+        "meshSha256": "28be44c47bc42d7a5fae1a730c81fe3bbad44b8fe3f113080554bc4ace94fecd",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-1",
+        "volumeMm3": 83.70948286688458,
+        "bounds": {
+          "min": [
+            63.5,
+            -6.886751345948129,
+            3
+          ],
+          "max": [
+            68.5,
+            -1.113248654051871,
+            8
+          ]
+        },
+        "meshSha256": "bd9119d9ec5b005d404fba456044e090450c516edaeba797c561d55a9c6fa45b",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-1",
+        "volumeMm3": 59.39573610693203,
+        "bounds": {
+          "min": [
+            63.75,
+            -6.249300659501837,
+            5.6
+          ],
+          "max": [
+            68.25,
+            -1.7506993404981634,
+            12.1
+          ]
+        },
+        "meshSha256": "cb3a8b0ea8a23553191427699da7f7faa6295cc9a723297e2addd5a839d3ec35",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-1",
+        "volumeMm3": 38.86758504210474,
+        "bounds": {
+          "min": [
+            63.06,
+            -6.9390861950824005,
+            0.16
+          ],
+          "max": [
+            68.94,
+            -1.0609138049176003,
+            5.16
+          ]
+        },
+        "meshSha256": "ec8b47a772699aa5160581d34c48c3046c1b613d2837de272341fb1d751aaa73",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "carrier-washer-2",
+        "volumeMm3": 13.728759896187393,
+        "bounds": {
+          "min": [
+            0.75,
+            -44.248989841502656,
+            2.5
+          ],
+          "max": [
+            7.25,
+            -37.751010158497344,
+            3
+          ]
+        },
+        "meshSha256": "92ce57172fb6fd7fee3d94e4eadb7864f3748155e75f28b5c136a1d1bed69885",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-2",
+        "volumeMm3": 83.70948286688454,
+        "bounds": {
+          "min": [
+            1.4999999999999991,
+            -43.88675134594813,
+            3
+          ],
+          "max": [
+            6.5,
+            -38.11324865405187,
+            7.999999999999999
+          ]
+        },
+        "meshSha256": "b39abc395893471ebbc80e2109f3f8a17e215652a3800fcfe0b8f01c7bb5b9ce",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-2",
+        "volumeMm3": 59.39573610693202,
+        "bounds": {
+          "min": [
+            1.75,
+            -43.249300659501834,
+            5.6
+          ],
+          "max": [
+            6.25,
+            -38.750699340498166,
+            12.1
+          ]
+        },
+        "meshSha256": "d61c459e75910fa32bb892a2199f599dcf174277d9c67d589b316e4a8b76a138",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-2",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            1.06,
+            -43.9390861950824,
+            0.16
+          ],
+          "max": [
+            6.9399999999999995,
+            -38.060913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "88d02156f534085a95e2b379dc1998538a66efee182f5bb6b35040afa72226f6",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "carrier-washer-3",
+        "volumeMm3": 13.728759896187402,
+        "bounds": {
+          "min": [
+            62.75,
+            -44.248989841502656,
+            2.5
+          ],
+          "max": [
+            69.25,
+            -37.751010158497344,
+            3
+          ]
+        },
+        "meshSha256": "4ea9c3b987f4439ab6b05fdfb52848ce61dcf1c6600a5750806ec2e8f02346bc",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-3",
+        "volumeMm3": 83.70948286688453,
+        "bounds": {
+          "min": [
+            63.5,
+            -43.88675134594813,
+            3
+          ],
+          "max": [
+            68.5,
+            -38.11324865405187,
+            8
+          ]
+        },
+        "meshSha256": "9f8766798fa79bb8ce68a07bcc4e8de3a79abf2eff2b8443d8b234a3f0a0435a",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-3",
+        "volumeMm3": 59.395736106932006,
+        "bounds": {
+          "min": [
+            63.75,
+            -43.249300659501834,
+            5.6
+          ],
+          "max": [
+            68.25,
+            -38.750699340498166,
+            12.1
+          ]
+        },
+        "meshSha256": "1db13173e6f4e239b05abf73db5cfbff79d37ab51438bdb4cb35340f509830a1",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-3",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            63.06,
+            -43.9390861950824,
+            0.16
+          ],
+          "max": [
+            68.94,
+            -38.060913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "7719903d07e97c697208a46e6ed1d8362882c7db43080a2598f2565ffed396f8",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-0",
+        "volumeMm3": 462.7260610255295,
+        "bounds": {
+          "min": [
+            -6.000000000000001,
+            0.6132486540518709,
+            2.5
+          ],
+          "max": [
+            -0.9999999999999996,
+            6.386751345948129,
+            27.5
+          ]
+        },
+        "meshSha256": "34c85dd84f47c502e2372375dd8615b9c9b2307aff52f7304725e46196788b8c",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-0",
+        "volumeMm3": 79.03069019186822,
+        "bounds": {
+          "min": [
+            -5.75,
+            1.250699340498163,
+            21.5
+          ],
+          "max": [
+            -1.25,
+            5.749300659501836,
+            32
+          ]
+        },
+        "meshSha256": "c26cc86b6e5a6800227fbca73e22325596c6d0cc1db475e2680e26189978cd0b",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-0",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            -6.4399999999999995,
+            0.5609138049175995,
+            0.16
+          ],
+          "max": [
+            -0.56,
+            6.4390861950824,
+            5.16
+          ]
+        },
+        "meshSha256": "435dbba267d36201bc84c495744d2eff687ac99e667f9e96f70c423691324e38",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-1",
+        "volumeMm3": 462.7260610255294,
+        "bounds": {
+          "min": [
+            71,
+            0.6132486540518709,
+            2.5
+          ],
+          "max": [
+            76,
+            6.386751345948129,
+            27.5
+          ]
+        },
+        "meshSha256": "8310dd9b5f39ae17c11afca8a5c869593dee5b874b71e3430b85b53897e2beb5",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-1",
+        "volumeMm3": 79.03069019186823,
+        "bounds": {
+          "min": [
+            71.25,
+            1.250699340498163,
+            21.5
+          ],
+          "max": [
+            75.75,
+            5.749300659501836,
+            32
+          ]
+        },
+        "meshSha256": "56cfeb16495f5751f8b59631c264d616ba92b26e9c7babf8a4628a9f021e7b1d",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-1",
+        "volumeMm3": 38.867585042104736,
+        "bounds": {
+          "min": [
+            70.56,
+            0.5609138049175995,
+            0.16
+          ],
+          "max": [
+            76.44,
+            6.4390861950824,
+            5.16
+          ]
+        },
+        "meshSha256": "bbe30bcf8d59463a0df7c61f83e8363ada0e395a4d02042ee990fe1d6ef9e9e2",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-2",
+        "volumeMm3": 462.72606102552913,
+        "bounds": {
+          "min": [
+            71,
+            -51.38675134594813,
+            2.5
+          ],
+          "max": [
+            76,
+            -45.61324865405187,
+            27.5
+          ]
+        },
+        "meshSha256": "ac207af95b102c2326e2df7598262025aa8f3f2c52201b769e66e200a433d7d0",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-2",
+        "volumeMm3": 79.03069019186822,
+        "bounds": {
+          "min": [
+            71.25,
+            -50.749300659501834,
+            21.5
+          ],
+          "max": [
+            75.75,
+            -46.250699340498166,
+            32
+          ]
+        },
+        "meshSha256": "411d6a6a23b99883ab7b38431d5049c219d7d8e2487f1597d4fab63a5098d5be",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-2",
+        "volumeMm3": 38.86758504210474,
+        "bounds": {
+          "min": [
+            70.56,
+            -51.4390861950824,
+            0.16
+          ],
+          "max": [
+            76.44,
+            -45.560913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "6692ecffe90acbb63073117300b8e72c38ab9b1eb7c20efccd734cb2f9fdfb9a",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-3",
+        "volumeMm3": 462.72606102552913,
+        "bounds": {
+          "min": [
+            -6.000000000000001,
+            -51.38675134594813,
+            2.5
+          ],
+          "max": [
+            -0.9999999999999996,
+            -45.61324865405187,
+            27.5
+          ]
+        },
+        "meshSha256": "802505ac950db2ff22df422e1202ded36a1900b10286c6639bafdec64e9c5dfe",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-3",
+        "volumeMm3": 79.03069019186823,
+        "bounds": {
+          "min": [
+            -5.75,
+            -50.749300659501834,
+            21.5
+          ],
+          "max": [
+            -1.25,
+            -46.250699340498166,
+            31.999999999999996
+          ]
+        },
+        "meshSha256": "39d16df0e40e50ed5d3525e5137c52955d3b01b86c9f9c44dddf23c02ffd7d0b",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-3",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            -6.4399999999999995,
+            -51.4390861950824,
+            0.16
+          ],
+          "max": [
+            -0.56,
+            -45.560913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "9bfb45a990df2e639f1c01f3976ebaf215e966ab2abba4c4237a0e7719e668a6",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "display-screw-0",
+        "volumeMm3": 47.81504018763661,
+        "bounds": {
+          "min": [
+            35.64,
+            -37.60940944580155,
+            21.5
+          ],
+          "max": [
+            39.44,
+            -33.81059055419845,
+            31.5
+          ]
+        },
+        "meshSha256": "791477639571003df8121b7e00f33a0711ef4aaf48bc32259a1cd4a30f6bf721",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-0",
+        "volumeMm3": 17.14370209113799,
+        "bounds": {
+          "min": [
+            35.54,
+            -38.019401076758506,
+            21.999999999999996
+          ],
+          "max": [
+            39.54,
+            -33.400598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "817d688cfc9f6ec7d7de4a747e6bbc8d2f19bf4f784840e49833b95ecb63a982",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "display-screw-1",
+        "volumeMm3": 47.81504018763663,
+        "bounds": {
+          "min": [
+            59.77,
+            -37.60940944580155,
+            21.5
+          ],
+          "max": [
+            63.57,
+            -33.81059055419845,
+            31.5
+          ]
+        },
+        "meshSha256": "3084a70055e446a2f7e293f70c6ba46c2f841293efc6523147b8d91313c35250",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-1",
+        "volumeMm3": 17.143702091137985,
+        "bounds": {
+          "min": [
+            59.67,
+            -38.019401076758506,
+            21.999999999999996
+          ],
+          "max": [
+            63.67,
+            -33.400598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "9a90ef3a2c1daa59b3add5ac826d80a0400638d00dc9ab696d608dd03c5a3b46",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "display-screw-2",
+        "volumeMm3": 47.81504018763663,
+        "bounds": {
+          "min": [
+            35.64,
+            -10.93940944580155,
+            21.5
+          ],
+          "max": [
+            39.44,
+            -7.1405905541984485,
+            31.5
+          ]
+        },
+        "meshSha256": "a030f1b7e7f30846520ba3ae0762f67fb9f835ac08212c456d6a607c56b62245",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-2",
+        "volumeMm3": 17.143702091137968,
+        "bounds": {
+          "min": [
+            35.54,
+            -11.349401076758502,
+            21.999999999999996
+          ],
+          "max": [
+            39.54,
+            -6.730598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "3057921c5989bceee2c2920ffffc572f0cc6bfad653bd6b8f8b036f48f3fc718",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "display-screw-3",
+        "volumeMm3": 47.81504018763665,
+        "bounds": {
+          "min": [
+            59.77,
+            -10.93940944580155,
+            21.5
+          ],
+          "max": [
+            63.57,
+            -7.1405905541984485,
+            31.5
+          ]
+        },
+        "meshSha256": "de505683b154670bd8dfda84000d633b32168e03152b6712dd575746a4d6886b",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-3",
+        "volumeMm3": 17.143702091137968,
+        "bounds": {
+          "min": [
+            59.67,
+            -11.349401076758502,
+            21.999999999999996
+          ],
+          "max": [
+            63.67,
+            -6.730598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "955b4168055a26b93003a1f6f28891f9fb15e9743ca0b6974f20c718644ebbf3",
+        "vertices": 542,
+        "triangles": 528
+      }
+    ]
+  },
+  "previousSourceSha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+  "previous": {
+    "evaluation": {
+      "exitCode": 0,
+      "featureCount": 306,
+      "diagnostics": [],
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+          "byteLength": 12796
+        },
+        "parameters": {
+          "values": {
+            "output": "assembly"
+          },
+          "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.2",
+          "revision": null
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+        "identitySha256": "583fc5f9094bca2ec752051886a32a07d5ac565ef42bc4ee032591b481536ae3"
+      },
+      "featureHealth": [],
+      "selections": [
+        {
+          "consumerFeatureId": "require_1",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_1",
+          "selectorText": "body(cylinder_19)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.8867962264113212
+        },
+        {
+          "consumerFeatureId": "require_2",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_2",
+          "selectorText": "body(cylinder_20)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.8867962264113212
+        },
+        {
+          "consumerFeatureId": "require_3",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_3",
+          "selectorText": "body(cylinder_21)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 1.8867962264113212
+        },
+        {
+          "consumerFeatureId": "require_4",
+          "selectorText": "body(importedStep_1)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 83.23196914233112
+        },
+        {
+          "consumerFeatureId": "require_5",
+          "selectorText": "body(box_14)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 32.97085986139883
+        },
+        {
+          "consumerFeatureId": "require_5",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        },
+        {
+          "consumerFeatureId": "require_6",
+          "selectorText": "body(box_14)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 32.97085986139883
+        },
+        {
+          "consumerFeatureId": "require_6",
+          "selectorText": "body(boolean_28)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 5.503635162326805
+        },
+        {
+          "consumerFeatureId": "require_7",
+          "selectorText": "body(box_14)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 32.97085986139883
+        },
+        {
+          "consumerFeatureId": "require_7",
+          "selectorText": "body(boolean_31)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 5.503635162326805
+        },
+        {
+          "consumerFeatureId": "require_8",
+          "selectorText": "body(boolean_58)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 29.07875186884747
+        },
+        {
+          "consumerFeatureId": "require_8",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        },
+        {
+          "consumerFeatureId": "require_9",
+          "selectorText": "body(boolean_60)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 86.36942447277016
+        },
+        {
+          "consumerFeatureId": "require_9",
+          "selectorText": "body(boolean_71)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 43.64454834226154
+        },
+        {
+          "consumerFeatureId": "require_10",
+          "selectorText": "body(boolean_60)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 86.36942447277016
+        },
+        {
+          "consumerFeatureId": "require_10",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        },
+        {
+          "consumerFeatureId": "require_11",
+          "selectorText": "body(box_18)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 28.354893757515654
+        },
+        {
+          "consumerFeatureId": "require_11",
+          "selectorText": "body(boolean_18)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 111.66579601650633
+        },
+        {
+          "consumerFeatureId": "require_12",
+          "selectorText": "body(box_18)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 28.354893757515654
+        },
+        {
+          "consumerFeatureId": "require_12",
+          "selectorText": "body(boolean_36)",
+          "syntax": "lineage",
+          "fingerprints": [],
+          "partDiagonal": 108.3120030282886
+        }
+      ],
+      "requirements": {
+        "ok": true,
+        "status": "pass",
+        "entries": [
+          {
+            "name": "native-carrier-registration-J2.1",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.19999999999999302,
+            "limit": [
+              0.199,
+              0.201
+            ],
+            "margin": 0.0009999999999930065,
+            "selections": [
+              {
+                "consumerFeatureId": "require_1",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              },
+              {
+                "consumerFeatureId": "require_1",
+                "selectorText": "body(cylinder_19)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 1.8867962264113212
+              }
+            ],
+            "featureId": "require_1",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "cylinder_19"
+              },
+              "op": "between",
+              "limit": [
+                0.199,
+                0.201
+              ]
+            }
+          },
+          {
+            "name": "native-carrier-registration-J2.2",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.19999999999999232,
+            "limit": [
+              0.199,
+              0.201
+            ],
+            "margin": 0.0009999999999923126,
+            "selections": [
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              },
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(cylinder_20)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 1.8867962264113212
+              }
+            ],
+            "featureId": "require_2",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "cylinder_20"
+              },
+              "op": "between",
+              "limit": [
+                0.199,
+                0.201
+              ]
+            }
+          },
+          {
+            "name": "native-carrier-registration-J3.7",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.1999999999999958,
+            "limit": [
+              0.199,
+              0.201
+            ],
+            "margin": 0.000999999999995782,
+            "selections": [
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              },
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(cylinder_21)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 1.8867962264113212
+              }
+            ],
+            "featureId": "require_3",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "cylinder_21"
+              },
+              "op": "between",
+              "limit": [
+                0.199,
+                0.201
+              ]
+            }
+          },
+          {
+            "name": "pcb-outside-envelope",
+            "source": "script",
+            "status": "pass",
+            "measured": [
+              70.00000298830409,
+              45.000002988304104,
+              1.5999999999999996
+            ],
+            "limit": {
+              "x": [
+                69.99,
+                70.01
+              ],
+              "y": [
+                44.99,
+                45.01
+              ],
+              "z": [
+                1.59,
+                1.61
+              ]
+            },
+            "margin": 0.009997011695894287,
+            "selections": [
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 83.23196914233112
+              }
+            ],
+            "featureId": "require_4",
+            "predicate": {
+              "metric": "bbox",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "op": "within",
+              "limit": {
+                "x": [
+                  69.99,
+                  70.01
+                ],
+                "y": [
+                  44.99,
+                  45.01
+                ],
+                "z": [
+                  1.59,
+                  1.61
+                ]
+              }
+            }
+          },
+          {
+            "name": "oled-glass-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.5,
+            "limit": 0.5,
+            "margin": 0,
+            "selections": [
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_5",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "oled-glass-to-open-support-0",
+            "source": "script",
+            "status": "pass",
+            "measured": 1.277000000000001,
+            "limit": 1,
+            "margin": 0.277000000000001,
+            "selections": [
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(boolean_28)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 5.503635162326805
+              }
+            ],
+            "featureId": "require_6",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_28"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "oled-glass-to-open-support-1",
+            "source": "script",
+            "status": "pass",
+            "measured": 1.277000000000001,
+            "limit": 1,
+            "margin": 0.277000000000001,
+            "selections": [
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(box_14)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 32.97085986139883
+              },
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(boolean_31)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 5.503635162326805
+              }
+            ],
+            "featureId": "require_7",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_14"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_31"
+              },
+              "op": "gte",
+              "limit": 1
+            }
+          },
+          {
+            "name": "controller-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.3200000000000003,
+            "limit": 0.5,
+            "margin": 2.8200000000000003,
+            "selections": [
+              {
+                "consumerFeatureId": "require_8",
+                "selectorText": "body(boolean_58)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 29.07875186884747
+              },
+              {
+                "consumerFeatureId": "require_8",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_8",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_58"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "pcb-assembly-to-oled-assembly-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 8.709513476652985,
+            "limit": 0.5,
+            "margin": 8.209513476652985,
+            "selections": [
+              {
+                "consumerFeatureId": "require_9",
+                "selectorText": "body(boolean_60)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 86.36942447277016
+              },
+              {
+                "consumerFeatureId": "require_9",
+                "selectorText": "body(boolean_71)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 43.64454834226154
+              }
+            ],
+            "featureId": "require_9",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_60"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_71"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "pcb-assembly-to-lid-gap",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.3200000000000003,
+            "limit": 0.5,
+            "margin": 2.8200000000000003,
+            "selections": [
+              {
+                "consumerFeatureId": "require_10",
+                "selectorText": "body(boolean_60)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 86.36942447277016
+              },
+              {
+                "consumerFeatureId": "require_10",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_10",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_60"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "usb-plug-access-to-base",
+            "source": "script",
+            "status": "pass",
+            "measured": 1,
+            "limit": 0.5,
+            "margin": 0.5,
+            "selections": [
+              {
+                "consumerFeatureId": "require_11",
+                "selectorText": "body(box_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 28.354893757515654
+              },
+              {
+                "consumerFeatureId": "require_11",
+                "selectorText": "body(boolean_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 111.66579601650633
+              }
+            ],
+            "featureId": "require_11",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_18"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_18"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          },
+          {
+            "name": "usb-plug-access-to-lid",
+            "source": "script",
+            "status": "pass",
+            "measured": 0.9250000000000007,
+            "limit": 0.5,
+            "margin": 0.4250000000000007,
+            "selections": [
+              {
+                "consumerFeatureId": "require_12",
+                "selectorText": "body(box_18)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 28.354893757515654
+              },
+              {
+                "consumerFeatureId": "require_12",
+                "selectorText": "body(boolean_36)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.3120030282886
+              }
+            ],
+            "featureId": "require_12",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_18"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_36"
+              },
+              "op": "gte",
+              "limit": 0.5
+            }
+          }
+        ],
+        "summary": {
+          "pass": 12,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      }
+    },
+    "parts": [
+      {
+        "name": "base",
+        "volumeMm3": 30892.433620807577,
+        "bounds": {
+          "min": [
+            -9,
+            -54,
+            0
+          ],
+          "max": [
+            79,
+            9,
+            27.5
+          ]
+        },
+        "meshSha256": "5be84a01ba37af7957376762f9b63539878c53f0fe0e03bc06b891b49ca22f17",
+        "vertices": 9500,
+        "triangles": 11436
+      },
+      {
+        "name": "lid",
+        "volumeMm3": 10577.494841178479,
+        "bounds": {
+          "min": [
+            -9,
+            -54,
+            25.2
+          ],
+          "max": [
+            79,
+            9,
+            29.5
+          ]
+        },
+        "meshSha256": "a5b74190635358e3b6252d88a03b76099c8ec8b27cca853777d4d1ea58c85287",
+        "vertices": 6356,
+        "triangles": 6256
+      },
+      {
+        "name": "carrier-pcba-envelope",
+        "volumeMm3": 6925.217453820707,
+        "bounds": {
+          "min": [
+            -1.549000000000001,
+            -45,
+            6.42
+          ],
+          "max": [
+            70,
+            0,
+            24.18
+          ]
+        },
+        "meshSha256": "8a4b64dc37c68118fb369a19c4bf7faeb8e7df63cd26349c9320d99217eaf2e6",
+        "vertices": 23500,
+        "triangles": 23344
+      },
+      {
+        "name": "oled-pcba-envelope",
+        "volumeMm3": 4366.846377976801,
+        "bounds": {
+          "min": [
+            35,
+            -38.25,
+            20.4
+          ],
+          "max": [
+            64.21000000000001,
+            -6.5,
+            27
+          ]
+        },
+        "meshSha256": "92b5d101bbd9127bfafc6e6eea92f839ada5f059cb464c0b4a53e9b8567d9c1b",
+        "vertices": 3616,
+        "triangles": 3556
+      },
+      {
+        "name": "oled-display-surface",
+        "volumeMm3": 4.724536319999967,
+        "bounds": {
+          "min": [
+            38.733,
+            -24.281,
+            26.98
+          ],
+          "max": [
+            60.477,
+            -13.416999999999998,
+            27
+          ]
+        },
+        "meshSha256": "fa6799a62f19135456f743478af4f6ab6c842c754e66b62b988e3ac5a079426c",
+        "vertices": 24,
+        "triangles": 12
+      },
+      {
+        "name": "carrier-washer-0",
+        "volumeMm3": 13.728759896187396,
+        "bounds": {
+          "min": [
+            0.75,
+            -7.248989841502654,
+            2.5
+          ],
+          "max": [
+            7.25,
+            -0.7510101584973472,
+            3
+          ]
+        },
+        "meshSha256": "56d787f3608d951bbb2590ad506518c191a08b2fdec012a9b634de74a2779a46",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-0",
+        "volumeMm3": 83.70948286688461,
+        "bounds": {
+          "min": [
+            1.4999999999999991,
+            -6.886751345948129,
+            3
+          ],
+          "max": [
+            6.5,
+            -1.113248654051871,
+            8
+          ]
+        },
+        "meshSha256": "3a82c37be33a8d575f24d516ea4a44b92fefd84066eb7dbd71a65630d0b082a2",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-0",
+        "volumeMm3": 59.39573610693202,
+        "bounds": {
+          "min": [
+            1.75,
+            -6.249300659501837,
+            5.6
+          ],
+          "max": [
+            6.25,
+            -1.7506993404981634,
+            12.1
+          ]
+        },
+        "meshSha256": "39314d9699b134ffc43522a1412577c6d79c886b00940424442c4028021c08b6",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-0",
+        "volumeMm3": 38.86758504210476,
+        "bounds": {
+          "min": [
+            1.06,
+            -6.9390861950824005,
+            0.16
+          ],
+          "max": [
+            6.9399999999999995,
+            -1.0609138049176003,
+            5.16
+          ]
+        },
+        "meshSha256": "c599a26b9c49bb2f1c1b0cbefcd629475d9384050e41f2fcdac40e841ef58d4b",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "carrier-washer-1",
+        "volumeMm3": 13.728759896187404,
+        "bounds": {
+          "min": [
+            62.75,
+            -7.248989841502654,
+            2.5
+          ],
+          "max": [
+            69.25,
+            -0.7510101584973472,
+            3
+          ]
+        },
+        "meshSha256": "28be44c47bc42d7a5fae1a730c81fe3bbad44b8fe3f113080554bc4ace94fecd",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-1",
+        "volumeMm3": 83.70948286688458,
+        "bounds": {
+          "min": [
+            63.5,
+            -6.886751345948129,
+            3
+          ],
+          "max": [
+            68.5,
+            -1.113248654051871,
+            8
+          ]
+        },
+        "meshSha256": "bd9119d9ec5b005d404fba456044e090450c516edaeba797c561d55a9c6fa45b",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-1",
+        "volumeMm3": 59.39573610693203,
+        "bounds": {
+          "min": [
+            63.75,
+            -6.249300659501837,
+            5.6
+          ],
+          "max": [
+            68.25,
+            -1.7506993404981634,
+            12.1
+          ]
+        },
+        "meshSha256": "cb3a8b0ea8a23553191427699da7f7faa6295cc9a723297e2addd5a839d3ec35",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-1",
+        "volumeMm3": 38.86758504210474,
+        "bounds": {
+          "min": [
+            63.06,
+            -6.9390861950824005,
+            0.16
+          ],
+          "max": [
+            68.94,
+            -1.0609138049176003,
+            5.16
+          ]
+        },
+        "meshSha256": "ec8b47a772699aa5160581d34c48c3046c1b613d2837de272341fb1d751aaa73",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "carrier-washer-2",
+        "volumeMm3": 13.728759896187393,
+        "bounds": {
+          "min": [
+            0.75,
+            -44.248989841502656,
+            2.5
+          ],
+          "max": [
+            7.25,
+            -37.751010158497344,
+            3
+          ]
+        },
+        "meshSha256": "92ce57172fb6fd7fee3d94e4eadb7864f3748155e75f28b5c136a1d1bed69885",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-2",
+        "volumeMm3": 83.70948286688454,
+        "bounds": {
+          "min": [
+            1.4999999999999991,
+            -43.88675134594813,
+            3
+          ],
+          "max": [
+            6.5,
+            -38.11324865405187,
+            7.999999999999999
+          ]
+        },
+        "meshSha256": "b39abc395893471ebbc80e2109f3f8a17e215652a3800fcfe0b8f01c7bb5b9ce",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-2",
+        "volumeMm3": 59.39573610693202,
+        "bounds": {
+          "min": [
+            1.75,
+            -43.249300659501834,
+            5.6
+          ],
+          "max": [
+            6.25,
+            -38.750699340498166,
+            12.1
+          ]
+        },
+        "meshSha256": "d61c459e75910fa32bb892a2199f599dcf174277d9c67d589b316e4a8b76a138",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-2",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            1.06,
+            -43.9390861950824,
+            0.16
+          ],
+          "max": [
+            6.9399999999999995,
+            -38.060913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "88d02156f534085a95e2b379dc1998538a66efee182f5bb6b35040afa72226f6",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "carrier-washer-3",
+        "volumeMm3": 13.728759896187402,
+        "bounds": {
+          "min": [
+            62.75,
+            -44.248989841502656,
+            2.5
+          ],
+          "max": [
+            69.25,
+            -37.751010158497344,
+            3
+          ]
+        },
+        "meshSha256": "4ea9c3b987f4439ab6b05fdfb52848ce61dcf1c6600a5750806ec2e8f02346bc",
+        "vertices": 1012,
+        "triangles": 1008
+      },
+      {
+        "name": "carrier-standoff-3",
+        "volumeMm3": 83.70948286688453,
+        "bounds": {
+          "min": [
+            63.5,
+            -43.88675134594813,
+            3
+          ],
+          "max": [
+            68.5,
+            -38.11324865405187,
+            8
+          ]
+        },
+        "meshSha256": "9f8766798fa79bb8ce68a07bcc4e8de3a79abf2eff2b8443d8b234a3f0a0435a",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "carrier-screw-3",
+        "volumeMm3": 59.395736106932006,
+        "bounds": {
+          "min": [
+            63.75,
+            -43.249300659501834,
+            5.6
+          ],
+          "max": [
+            68.25,
+            -38.750699340498166,
+            12.1
+          ]
+        },
+        "meshSha256": "1db13173e6f4e239b05abf73db5cfbff79d37ab51438bdb4cb35340f509830a1",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "carrier-lower-screw-3",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            63.06,
+            -43.9390861950824,
+            0.16
+          ],
+          "max": [
+            68.94,
+            -38.060913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "7719903d07e97c697208a46e6ed1d8362882c7db43080a2598f2565ffed396f8",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-0",
+        "volumeMm3": 462.7260610255295,
+        "bounds": {
+          "min": [
+            -6.000000000000001,
+            0.6132486540518709,
+            2.5
+          ],
+          "max": [
+            -0.9999999999999996,
+            6.386751345948129,
+            27.5
+          ]
+        },
+        "meshSha256": "34c85dd84f47c502e2372375dd8615b9c9b2307aff52f7304725e46196788b8c",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-0",
+        "volumeMm3": 79.03069019186822,
+        "bounds": {
+          "min": [
+            -5.75,
+            1.250699340498163,
+            21.5
+          ],
+          "max": [
+            -1.25,
+            5.749300659501836,
+            32
+          ]
+        },
+        "meshSha256": "c26cc86b6e5a6800227fbca73e22325596c6d0cc1db475e2680e26189978cd0b",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-0",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            -6.4399999999999995,
+            0.5609138049175995,
+            0.16
+          ],
+          "max": [
+            -0.56,
+            6.4390861950824,
+            5.16
+          ]
+        },
+        "meshSha256": "435dbba267d36201bc84c495744d2eff687ac99e667f9e96f70c423691324e38",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-1",
+        "volumeMm3": 462.7260610255294,
+        "bounds": {
+          "min": [
+            71,
+            0.6132486540518709,
+            2.5
+          ],
+          "max": [
+            76,
+            6.386751345948129,
+            27.5
+          ]
+        },
+        "meshSha256": "8310dd9b5f39ae17c11afca8a5c869593dee5b874b71e3430b85b53897e2beb5",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-1",
+        "volumeMm3": 79.03069019186823,
+        "bounds": {
+          "min": [
+            71.25,
+            1.250699340498163,
+            21.5
+          ],
+          "max": [
+            75.75,
+            5.749300659501836,
+            32
+          ]
+        },
+        "meshSha256": "56cfeb16495f5751f8b59631c264d616ba92b26e9c7babf8a4628a9f021e7b1d",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-1",
+        "volumeMm3": 38.867585042104736,
+        "bounds": {
+          "min": [
+            70.56,
+            0.5609138049175995,
+            0.16
+          ],
+          "max": [
+            76.44,
+            6.4390861950824,
+            5.16
+          ]
+        },
+        "meshSha256": "bbe30bcf8d59463a0df7c61f83e8363ada0e395a4d02042ee990fe1d6ef9e9e2",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-2",
+        "volumeMm3": 462.72606102552913,
+        "bounds": {
+          "min": [
+            71,
+            -51.38675134594813,
+            2.5
+          ],
+          "max": [
+            76,
+            -45.61324865405187,
+            27.5
+          ]
+        },
+        "meshSha256": "ac207af95b102c2326e2df7598262025aa8f3f2c52201b769e66e200a433d7d0",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-2",
+        "volumeMm3": 79.03069019186822,
+        "bounds": {
+          "min": [
+            71.25,
+            -50.749300659501834,
+            21.5
+          ],
+          "max": [
+            75.75,
+            -46.250699340498166,
+            32
+          ]
+        },
+        "meshSha256": "411d6a6a23b99883ab7b38431d5049c219d7d8e2487f1597d4fab63a5098d5be",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-2",
+        "volumeMm3": 38.86758504210474,
+        "bounds": {
+          "min": [
+            70.56,
+            -51.4390861950824,
+            0.16
+          ],
+          "max": [
+            76.44,
+            -45.560913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "6692ecffe90acbb63073117300b8e72c38ab9b1eb7c20efccd734cb2f9fdfb9a",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "lid-standoff-3",
+        "volumeMm3": 462.72606102552913,
+        "bounds": {
+          "min": [
+            -6.000000000000001,
+            -51.38675134594813,
+            2.5
+          ],
+          "max": [
+            -0.9999999999999996,
+            -45.61324865405187,
+            27.5
+          ]
+        },
+        "meshSha256": "802505ac950db2ff22df422e1202ded36a1900b10286c6639bafdec64e9c5dfe",
+        "vertices": 1048,
+        "triangles": 1028
+      },
+      {
+        "name": "lid-screw-3",
+        "volumeMm3": 79.03069019186823,
+        "bounds": {
+          "min": [
+            -5.75,
+            -50.749300659501834,
+            21.5
+          ],
+          "max": [
+            -1.25,
+            -46.250699340498166,
+            31.999999999999996
+          ]
+        },
+        "meshSha256": "39d16df0e40e50ed5d3525e5137c52955d3b01b86c9f9c44dddf23c02ffd7d0b",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "lid-lower-screw-3",
+        "volumeMm3": 38.86758504210475,
+        "bounds": {
+          "min": [
+            -6.4399999999999995,
+            -51.4390861950824,
+            0.16
+          ],
+          "max": [
+            -0.56,
+            -45.560913804917604,
+            5.16
+          ]
+        },
+        "meshSha256": "9bfb45a990df2e639f1c01f3976ebaf215e966ab2abba4c4237a0e7719e668a6",
+        "vertices": 1052,
+        "triangles": 1280
+      },
+      {
+        "name": "display-screw-0",
+        "volumeMm3": 47.81504018763661,
+        "bounds": {
+          "min": [
+            35.64,
+            -37.60940944580155,
+            21.5
+          ],
+          "max": [
+            39.44,
+            -33.81059055419845,
+            31.5
+          ]
+        },
+        "meshSha256": "791477639571003df8121b7e00f33a0711ef4aaf48bc32259a1cd4a30f6bf721",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-0",
+        "volumeMm3": 17.14370209113799,
+        "bounds": {
+          "min": [
+            35.54,
+            -38.019401076758506,
+            21.999999999999996
+          ],
+          "max": [
+            39.54,
+            -33.400598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "817d688cfc9f6ec7d7de4a747e6bbc8d2f19bf4f784840e49833b95ecb63a982",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "display-screw-1",
+        "volumeMm3": 47.81504018763663,
+        "bounds": {
+          "min": [
+            59.77,
+            -37.60940944580155,
+            21.5
+          ],
+          "max": [
+            63.57,
+            -33.81059055419845,
+            31.5
+          ]
+        },
+        "meshSha256": "3084a70055e446a2f7e293f70c6ba46c2f841293efc6523147b8d91313c35250",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-1",
+        "volumeMm3": 17.143702091137985,
+        "bounds": {
+          "min": [
+            59.67,
+            -38.019401076758506,
+            21.999999999999996
+          ],
+          "max": [
+            63.67,
+            -33.400598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "9a90ef3a2c1daa59b3add5ac826d80a0400638d00dc9ab696d608dd03c5a3b46",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "display-screw-2",
+        "volumeMm3": 47.81504018763663,
+        "bounds": {
+          "min": [
+            35.64,
+            -10.93940944580155,
+            21.5
+          ],
+          "max": [
+            39.44,
+            -7.1405905541984485,
+            31.5
+          ]
+        },
+        "meshSha256": "a030f1b7e7f30846520ba3ae0762f67fb9f835ac08212c456d6a607c56b62245",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-2",
+        "volumeMm3": 17.143702091137968,
+        "bounds": {
+          "min": [
+            35.54,
+            -11.349401076758502,
+            21.999999999999996
+          ],
+          "max": [
+            39.54,
+            -6.730598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "3057921c5989bceee2c2920ffffc572f0cc6bfad653bd6b8f8b036f48f3fc718",
+        "vertices": 542,
+        "triangles": 528
+      },
+      {
+        "name": "display-screw-3",
+        "volumeMm3": 47.81504018763665,
+        "bounds": {
+          "min": [
+            59.77,
+            -10.93940944580155,
+            21.5
+          ],
+          "max": [
+            63.57,
+            -7.1405905541984485,
+            31.5
+          ]
+        },
+        "meshSha256": "de505683b154670bd8dfda84000d633b32168e03152b6712dd575746a4d6886b",
+        "vertices": 1012,
+        "triangles": 1004
+      },
+      {
+        "name": "display-nut-3",
+        "volumeMm3": 17.143702091137968,
+        "bounds": {
+          "min": [
+            59.67,
+            -11.349401076758502,
+            21.999999999999996
+          ],
+          "max": [
+            63.67,
+            -6.730598923241496,
+            23.599999999999998
+          ]
+        },
+        "meshSha256": "955b4168055a26b93003a1f6f28891f9fb15e9743ca0b6974f20c718644ebbf3",
+        "vertices": 542,
+        "triangles": 528
+      }
+    ]
+  },
+  "exactAll41PartsEqual": true,
+  "sourceUnchanged": true,
+  "ok": true,
+  "elapsedMs": 79754
+}

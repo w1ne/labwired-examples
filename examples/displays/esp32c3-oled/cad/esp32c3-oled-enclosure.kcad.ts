@@ -14,6 +14,7 @@ const displayBack = displayFront - 1.6;
 const mounts = [[4,4],[66,4],[4,41],[66,41]];
 const lidMounts = [[-3.5,-3.5],[73.5,-3.5],[73.5,48.5],[-3.5,48.5]];
 const oledMounts = [[37.54,35.71],[61.67,35.71],[37.54,9.04],[61.67,9.04]];
+const nutDriverDiameter=5.7,nutDriverLength=60;
 // Dimensions below retain the electrical editor coordinates. These constructors
 // convert each primitive once into native world X=editorX, Y=-editorY, Z up.
 // Boolean inputs are mutable feature references; never reflect their shared roots later.
@@ -130,6 +131,14 @@ oled=oled.union(glass).subtract(brick(21.744,10.864,0.021,38.733,13.417,displayF
 let rear=brick(29.21,24,3.2,35,10.5,displayBack-3.2);
 for(const [x,y]of oledMounts)rear=rear.subtract(bore(6,5,x,y,displayBack-4));
 oled=oled.union(rear).color("#15282a");
+// With the lid removed, use Wera 2069 05118120001 (4 mm hex, Ø5.7 x 60 mm blade).
+// The socket engages 1.4 mm of the 1.6 mm nut, leaving 0.2 mm to the PCB.
+// The Ø6 electronics reservation is not a fabricated case bore. Check a
+// positive 0.10 mm minimum tool clearance; nominal radial margin is 0.15 mm.
+for(let i=0;i<oledMounts.length;i++){
+ const [x,y]=oledMounts[i];const tool=bore(nutDriverDiameter,nutDriverLength,x,y,displayBack-0.2-nutDriverLength);
+ require("M2-driver-rear-clearance-"+i,clearance(tool,oled).gte(0.10));
+}
 require("pcb-outside-envelope",bbox(carrier).within({x:[69.99,70.01],y:[44.99,45.01],z:[1.59,1.61]}));
 require("oled-glass-to-lid-gap",clearance(glass,lid).gte(0.5));
 for(let i=0;i<glassNearSupports.length;i++)
@@ -168,7 +177,7 @@ function fastener(name,shape,parent,pitch,at,length=8,axis=[0,0,1],standard="ISO
 }
 function nut(name,shape,parent,at){
  const part=arm.part(name,shape);frame(parent,name,at);frame(part,"seat",at);
- arm.mate(name+"-mate",parent.name+"."+name,name+".seat","fastened",{fastener:{part:name,axis:[0,0,-1],pitchMm:0.4,threadLengthMm:2.1,standard:"DIN934",tool:{kind:"cylinder",lengthMm:25,diameterMm:6,label:"M2 nut driver envelope"}}});return part;
+ arm.mate(name+"-mate",parent.name+"."+name,name+".seat","fastened",{fastener:{part:name,axis:[0,0,-1],pitchMm:0.4,threadLengthMm:2.1,standard:"DIN934",tool:{kind:"cylinder",lengthMm:nutDriverLength,diameterMm:nutDriverDiameter,label:"Wera 2069 05118120001, 4 mm hex, 5.7 mm blade"}}});return part;
 }
 function spacer(name,height,x,y,z,parent){
  // Accu HHTPS female/female metal spacer. Major-diameter clearance envelope:
