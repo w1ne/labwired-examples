@@ -1,0 +1,51 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-q7amPcmOJHfup4FUYtigwQ/render-iso.png?exp=1795083158&sig=EPua6De9e0Q8XjTWjnG38WU-PTHqxccy6DVq7wknv4g",
+  "findings": [
+    "Visual identity and gross placement are coherent. These observations do not establish native solder, motor support, fastener, wiring, vibration or flight qualification."
+  ],
+  "checks": [
+    {
+      "code": "main-object-count",
+      "finding": "One quadrotor assembly contains four rotor groups and one central electronics stack.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-q7amPcmOJHfup4FUYtigwQ/render-iso.png?exp=1795083158&sig=EPua6De9e0Q8XjTWjnG38WU-PTHqxccy6DVq7wknv4g",
+      "passed": true
+    },
+    {
+      "code": "proportions-match-reference",
+      "finding": "The long narrow native OpenFrame body and four diagonal arms retain the original 226 mm frame proportions.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-DgzC-NL8s6phI5H-nMffJg/render-top.png?exp=1795083249&sig=ykBxnLj_1hddM_w8KmG7OQwuPNj78WwNysgEY6kibOI",
+      "passed": true
+    },
+    {
+      "code": "required-visible-features",
+      "finding": "Four tri-blade envelopes, both gold camera side plates and the green native board stack are visible.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-q7amPcmOJHfup4FUYtigwQ/render-iso.png?exp=1795083158&sig=EPua6De9e0Q8XjTWjnG38WU-PTHqxccy6DVq7wknv4g",
+      "passed": true
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "finding": "No detached duplicate board or spare motor body appears outside the assembled frame.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-q7amPcmOJHfup4FUYtigwQ/render-iso.png?exp=1795083158&sig=EPua6De9e0Q8XjTWjnG38WU-PTHqxccy6DVq7wknv4g",
+      "passed": true
+    },
+    {
+      "code": "attachment-plausibility",
+      "finding": "Motor envelopes align with all four arm ends and both boards align with the central support rings; actual fastener and solder load paths remain unqualified.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-q7amPcmOJHfup4FUYtigwQ/render-iso.png?exp=1795083158&sig=EPua6De9e0Q8XjTWjnG38WU-PTHqxccy6DVq7wknv4g",
+      "passed": true
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "finding": "Two blue rotors occupy the left corners and two orange rotors the right corners in the top view; the camera plates sit at the front end.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-DgzC-NL8s6phI5H-nMffJg/render-top.png?exp=1795083249&sig=ykBxnLj_1hddM_w8KmG7OQwuPNj78WwNysgEY6kibOI",
+      "passed": true
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "finding": "The square top view and isometric view show the same four arms, stacked plates and board positions without clipping.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-DgzC-NL8s6phI5H-nMffJg/render-top.png?exp=1795083249&sig=ykBxnLj_1hddM_w8KmG7OQwuPNj78WwNysgEY6kibOI",
+      "passed": true
+    }
+  ]
+}

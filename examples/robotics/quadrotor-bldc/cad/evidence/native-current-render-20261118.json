@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "images": [
+    {
+      "name": "iso",
+      "path": "/tmp/kernelcad-preview-CUbcUi/iso.png",
+      "description": "Geometric Z-up three-quarter overview — camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+      "byte_count": 164721,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-q7amPcmOJHfup4FUYtigwQ/render-iso.png?exp=1795083158&sig=EPua6De9e0Q8XjTWjnG38WU-PTHqxccy6DVq7wknv4g",
+      "expires_at": "2026-11-19T10:12:38.000Z",
+      "inline": true
+    },
+    {
+      "name": "top",
+      "path": "/tmp/kernelcad-preview-CUbcUi/top.png",
+      "description": "Geometric +Z top-down plan — camera on +Z looking down; screen right = +X, screen up = +Y. For imported parts, this is not necessarily the product exterior.",
+      "byte_count": 181585,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-yaYDMyzYp3V2l_ywiewr5w/render-top.png?exp=1795083159&sig=7CrOKsw-D71m2RtEbOShIrmvBjSe-YsND4oozVu1RTE",
+      "expires_at": "2026-11-19T10:12:39.000Z",
+      "inline": true
+    }
+  ],
+  "out_dir": "/tmp/kernelcad-preview-CUbcUi",
+  "bounds": {
+    "min": [
+      -124.06217956542969,
+      -125.29519653320312,
+      -3
+    ],
+    "max": [
+      153.8451385498047,
+      126.25609588623047,
+      36.29999923706055
+    ]
+  },
+  "sceneSummary": {
+    "valid": null,
+    "volume": null,
+    "faceCount": null,
+    "size": [
+      277.9073227154059,
+      251.55129268382842,
+      39.3
+    ]
+  },
+  "mechanism": "real",
+  "render_source": "static-player",
+  "render_ms": 39216,
+  "diagnostics": [],
+  "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+  "images_inline_count": 2,
+  "serverBuild": "0.1.0+998c457b7810@2026-11-18T09:30:48.889Z"
+}

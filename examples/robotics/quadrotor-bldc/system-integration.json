@@ -1,8 +1,102 @@
 {
   "schema_version": 1,
-  "recorded_on": "2026-11-12",
+  "recorded_on": "2026-11-18",
   "name": "Quadrotor co-design engineering preview",
   "mechanics": {
+    "project": "DyJ405zg",
+    "revision": 6,
+    "source": "cad/drone.kcad.ts",
+    "frame": "OpenFrame-5F rev2.2",
+    "wheelbase_mm": 226,
+    "motor_centers_mm": [
+      [
+        89,
+        69.534420756
+      ],
+      [
+        89,
+        -69.534420756
+      ],
+      [
+        -89,
+        69.534420756
+      ],
+      [
+        -89,
+        -69.534420756
+      ]
+    ],
+    "propeller_sweep_diameter_mm": 129.7,
+    "minimum_nominal_sweep_gap_mm": 9.368841512000017,
+    "populated_board_standalone_geometry_valid": true,
+    "populated_board_cloud_display_ready": true,
+    "populated_full_frame_assembly_validated": false,
+    "populated_board_display_receipt": "cad/evidence/native-current-studio-readback-20261118.json",
+    "url": "https://app.kernelcad.com/p/DyJ405zg?version=6",
+    "source_sha256": "55f7db9cd7bba90ae9ad7b2677793f3fdb04ea1761e04748128516857d2d38d9",
+    "interactive_viewer_paint_confirmed": false,
+    "display_scope": "Revision 6 has a ready cloud mesh and12 exact source assets. No interactive browser paint acknowledgement or complete physical acceptance is inferred.",
+    "populated_board_representation": {
+      "substrate": "Exact BREP",
+      "components": "213 native component references as a 56072-triangle display mesh",
+      "components_mesh_sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3"
+    },
+    "populated_clearance_receipt": "cad/evidence/populated-clearance-audit-20261112.json",
+    "physical_acceptance_scope": "Current full build and shallow rotor motion pass. Strict full physical acceptance fails for disconnected imported population bodies, absent physical use-case declaration and unchecked display-mesh interference pairs. Historical separate conservative bounds do not establish current full assembly acceptance.",
+    "hosted_review_receipts": {
+      "server_build": "0.1.0+998c457b7810@2026-11-18T09:30:48.889Z",
+      "evaluation": "cad/evidence/native-current-evaluate-20261118.json",
+      "design_loop": "cad/evidence/native-current-design-loop-20261118.json",
+      "visual_review": "cad/evidence/native-current-visual-review-20261118.json",
+      "complete_physical_acceptance_pass": false,
+      "scope": "146 features and38 parts build;13 shallow motion poses pass. Strict review retains its actual failures."
+    },
+    "native_fc": {
+      "pcb_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
+      "asset_commit": "f741c8ca2ed11c9b55c84bcdae6cc6dec888a676",
+      "substrate_step_sha256": "72ff181beca23a666c59a678b9d62bc17e3f8d01375cd88060d41535af1725cc",
+      "population_mesh_sha256": "70a02a51dfa161cb3eca7974f200a58232c7db43c317ea6d5c2837f216e45a0e",
+      "enabled_models": 107,
+      "mesh_triangles": 47778
+    }
+  },
+  "physical_electronics": {
+    "esc": "hardware/esc-4in1/4in1.kicad_pcb",
+    "schematic": "hardware/esc-4in1/4in1.kicad_sch",
+    "esc_mcu": "4 x AT32F421G8U7",
+    "esc_firmware": "AM32 / DShot",
+    "flight_controller": "OpenFC-Lite RP2354B / Betaflight",
+    "battery_nominal_v": 14.8,
+    "battery_full_v": 16.8,
+    "motor": "EMAX ECO II 2306 2400KV",
+    "netlist_simulation_equivalence": false,
+    "unsupported_import_entries": 37,
+    "non_simulating_connector_testpoint_entries": 9,
+    "import_coverage": "hardware/esc-4in1/validation/20261111/labwired-import-coverage.json"
+  },
+  "simulated_electronics": {
+    "project": "7c92d38a4f2ac205aa91502291fde0d8",
+    "manifest": "labwired/four-channel-project.json",
+    "mcu": "4 x STM32L476",
+    "firmware": "Six-step commutation with Hall/encoder feedback and fault latch",
+    "motor_model": "Reduced-order BLDC plant",
+    "dc_bus_v": 24,
+    "back_emf_constant": 0.04,
+    "torque_constant": 0.04,
+    "model_is_physical_ESC": false
+  },
+  "integration": {
+    "motion_binding": "cad/runtime-bindings.json",
+    "source_quantity": "Observed simulator positionRad, speedRpm, controlState and fault flags",
+    "mechanical_feedback_into_motor_load": false,
+    "propeller_thrust_model": false,
+    "six_dof_airframe": false,
+    "closed_loop_flight_controller": false,
+    "physical_tests": false,
+    "pcb_identity_binding": "cad/evidence/native-current-lab-binding-20261118.json",
+    "pcb_identity_is_fit_proof": false
+  },
+  "historical_mechanics_20261112": {
     "project": "DyJ405zg",
     "revision": 4,
     "source": "cad/drone.kcad.ts",
@@ -53,38 +147,15 @@
       "scope": "37 parts and 36 mates inspect successfully. Design loop builds 152 features and passes validator-no-errors, then refuses full acceptance for 213 disconnected component solids, undeclared physical use case, and incomplete display-mesh interference coverage. Staged evaluation paths have their own source hash; the canonical CAD source identity above remains unchanged."
     }
   },
-  "physical_electronics": {
-    "esc": "hardware/esc-4in1/4in1.kicad_pcb",
-    "schematic": "hardware/esc-4in1/4in1.kicad_sch",
-    "esc_mcu": "4 x AT32F421G8U7",
-    "esc_firmware": "AM32 / DShot",
-    "flight_controller": "OpenFC-Lite RP2354B / Betaflight",
-    "battery_nominal_v": 14.8,
-    "battery_full_v": 16.8,
-    "motor": "EMAX ECO II 2306 2400KV",
-    "netlist_simulation_equivalence": false,
-    "unsupported_import_entries": 37,
-    "non_simulating_connector_testpoint_entries": 9,
-    "import_coverage": "hardware/esc-4in1/validation/20261111/labwired-import-coverage.json"
-  },
-  "simulated_electronics": {
+  "owner_draft": {
     "project": "7c92d38a4f2ac205aa91502291fde0d8",
-    "manifest": "labwired/four-channel-project.json",
-    "mcu": "4 x STM32L476",
-    "firmware": "Six-step commutation with Hall/encoder feedback and fault latch",
-    "motor_model": "Reduced-order BLDC plant",
-    "dc_bus_v": 24,
-    "back_emf_constant": 0.04,
-    "torque_constant": 0.04,
-    "model_is_physical_ESC": false
-  },
-  "integration": {
-    "motion_binding": "cad/runtime-bindings.json",
-    "source_quantity": "Observed simulator positionRad, speedRpm, controlState and fault flags",
-    "mechanical_feedback_into_motor_load": false,
-    "propeller_thrust_model": false,
-    "six_dof_airframe": false,
-    "closed_loop_flight_controller": false,
-    "physical_tests": false
+    "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "published_revision_id_unchanged": "75e77f8c09dd904045be67ebcc90348a",
+    "has_unpublished_changes": true,
+    "mcu": "5 x STM32L476",
+    "authoring_scope": "Four commutation controllers plus a flight controller, BMI270 and an authored airframe body binding. All source, firmware, stimuli and flight-body parameters were preserved.",
+    "runtime_acceptance": "No new flight-control runtime acceptance is claimed by this package update.",
+    "cad_revision": 6,
+    "identity_binding_receipt": "cad/evidence/native-current-lab-binding-20261118.json"
   }
 }

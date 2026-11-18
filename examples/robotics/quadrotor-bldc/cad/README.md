@@ -1,11 +1,43 @@
 # Quadrotor mechanical model
 
-The current [`drone.kcad.ts`](drone.kcad.ts) candidate contains the pinned 226 mm
-OpenFrame-5F frame, native ESC substrate and population, and the repaired native
-OpenFC-Lite substrate with all 107 assigned component models. Hosted evaluation
-passes with **38 parts and 37 mates**. The source is committed for review; the
-saved [Studio revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4) remains
-the earlier populated-ESC revision with an FC envelope.
+The current editable drone.kcad.ts uses the pinned 226 mm OpenFrame-5F frame,
+the native ESC substrate and population, and the current repaired OpenFC-Lite
+board. [Studio revision 6](https://app.kernelcad.com/p/DyJ405zg?version=6)
+is saved with 12 exact imported assets and a ready cloud display mesh.
+
+## Current native source checkpoint — 18 November 2026
+
+The FC input now binds to PCB SHA-256
+5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9 and
+asset commit f741c8ca2ed11c9b55c84bcdae6cc6dec888a676. All 107 assigned
+component models resolve. The current display mesh has 47,778 facets.
+
+The full build passes with 146 features, 38 parts and 37 mates. The shallow
+mechanism screen checks 13 poses across the four rotor joints. The actual
+[strict review](evidence/native-current-design-loop-20261118.json) remains
+**false**: the two population meshes contain 213 and 146 disconnected bodies,
+the articulated assembly lacks a physical-use-case declaration, and exact
+interference coverage is incomplete for the display-mesh pairs. These are
+active package defects, not accepted waivers. Native solid relationships and
+physical-support qualification are the next CAD repair.
+
+The [source binding receipt](evidence/native-current-lab-binding-20261118.json)
+records only native board and model identity. The existing Lab retains its
+unpublished five-controller flight draft, unchanged source/firmware/stimuli,
+and unchanged airframe parameters. Its public revision was not replaced.
+Neither identity metadata nor the shallow motion badge is a full fit result.
+
+Current evidence:
+
+- [Native evaluation](evidence/native-current-evaluate-20261118.json)
+- [Strict physical review](evidence/native-current-design-loop-20261118.json)
+- [Observed visual review](evidence/native-current-visual-review-20261118.json)
+- [Saved revision and ready-mesh readback](evidence/native-current-studio-readback-20261118.json)
+- [Isometric view](evidence/native-current-iso-20261118.png) and [top view](evidence/native-current-top-20261118.png)
+
+The measurements below remain historical source-bound evidence. The legacy
+clearance checker refuses the newer source hash; it must not be presented as
+current full-assembly acceptance.
 
 ## Native FC candidate, 12 November 2026
 
@@ -40,9 +72,9 @@ the source bodies cannot overlap. A 0.00001 mm allowance is subtracted from the
 reported bounds. This is a geometric proof; it does not qualify manufacturing,
 mount compression, solder, wiring or vibration tolerances.
 
-## Reproduce and inspect
+## Historical clearance check and inputs
 
-Run from any working directory:
+The following archived check applies to the earlier source and export hashes:
 
 ```sh
 python3 examples/robotics/quadrotor-bldc/cad/checks/check-native-fc-clearance.py
