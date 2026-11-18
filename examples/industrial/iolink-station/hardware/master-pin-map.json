@@ -225,7 +225,7 @@
   },
   "outIQ": "Unused. Do not fit optional OUTIQ resistors for this package.",
   "scope": "Manufacturer-qualified pin/address source binding and buildable physical BSP. No physical assembly, bus waveform, power or IO-Link conformity claim.",
-  "simulatorDifference": "The existing simulator PHY uses USART2 PA2/PA3 and a byte wakeup fixture. Physical shield default port 1 is USART1 PA9/PA10; use an independent hardware BSP and preserve simulator regressions.",
+  "simulatorDifference": "The historical byte-wake simulator fixture uses USART2 PA2/PA3. The packaged physical three-node World now executes these exact USART1/UART4 shield routes with the unchanged physical HAL images; see runtime/physical-station and evidence/physical-runtime-station/manifest.json. Preserve the legacy fixture only as regression provenance.",
   "clockRequirement": {
     "board": "NUCLEO-L476RG with ST-LINK section retained and USB powered",
     "source": "UM1724 Rev 17 section 7.9.1; DS10198 Rev 11 section 3.11; IO-Link v1.1.4 Table 9",
@@ -241,5 +241,18 @@
     },
     "firmware": "8 MHz ST-LINK MCO -> HSE bypass /2 *40 /2 -> 80 MHz SYSCLK; missing MCO fails initialization",
     "qualification": "Crystal-derived source selected; UART/CQ frequency remains unmeasured. MSI trim is not used because its +/-0.25% specification exceeds the Master +/-0.1% requirement."
+  },
+  "console": {
+    "boardRoute": "SB13/SB14 retain the ST-LINK virtual COM connection to USART2 PA2/PA3",
+    "firmware": "No USART2 initialization or text console in this physical release",
+    "runtimeOracles": [
+      "g_master_state[2]",
+      "g_master_pd[2]",
+      "g_startup_error",
+      "g_uart_errors[2]",
+      "g_rx_overflows[2]",
+      "g_phy_error[2]",
+      "World UART network report"
+    ]
   }
 }
