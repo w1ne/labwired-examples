@@ -1,0 +1,378 @@
+{
+  "status": "pass",
+  "native_board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+  "native_netlist_sha256": "95348ddeb855a944bc3b0bc13586bc8a7d0638cc81c594c7937e183742b1e52c",
+  "config_sha256": "c8b926b6bd15a8f69c391916bb01ef89153cf1b042f02ce998ea5be28144e1e0",
+  "pin_checks": [
+    {
+      "macro": "MOTOR1_PIN",
+      "gpio": 31,
+      "mcu_pad": "39",
+      "endpoint": [
+        "P1",
+        "5"
+      ],
+      "net": "/PADS/M1"
+    },
+    {
+      "macro": "MOTOR2_PIN",
+      "gpio": 30,
+      "mcu_pad": "38",
+      "endpoint": [
+        "P1",
+        "6"
+      ],
+      "net": "/PADS/M2"
+    },
+    {
+      "macro": "MOTOR3_PIN",
+      "gpio": 29,
+      "mcu_pad": "37",
+      "endpoint": [
+        "P1",
+        "7"
+      ],
+      "net": "/PADS/M3"
+    },
+    {
+      "macro": "MOTOR4_PIN",
+      "gpio": 28,
+      "mcu_pad": "36",
+      "endpoint": [
+        "P1",
+        "8"
+      ],
+      "net": "/PADS/M4"
+    },
+    {
+      "macro": "UART0_TX_PIN",
+      "gpio": 0,
+      "mcu_pad": "77",
+      "endpoint": [
+        "U8",
+        "3"
+      ],
+      "net": "/PADS/UART0_TX"
+    },
+    {
+      "macro": "UART0_RX_PIN",
+      "gpio": 1,
+      "mcu_pad": "78",
+      "endpoint": [
+        "U8",
+        "4"
+      ],
+      "net": "/PADS/UART0_RX"
+    },
+    {
+      "macro": "PIOUART0_TX_PIN",
+      "gpio": 2,
+      "mcu_pad": "79",
+      "endpoint": [
+        "CN1",
+        "4"
+      ],
+      "net": "/PADS/PIOUART0_TX"
+    },
+    {
+      "macro": "PIOUART0_RX_PIN",
+      "gpio": 3,
+      "mcu_pad": "80",
+      "endpoint": [
+        "CN1",
+        "3"
+      ],
+      "net": "/PADS/PIOUART0_RX"
+    },
+    {
+      "macro": "I2C0_SDA_PIN",
+      "gpio": 16,
+      "mcu_pad": "16",
+      "endpoint": [
+        "U14",
+        "5"
+      ],
+      "net": "/PADS/I2C0.SDA"
+    },
+    {
+      "macro": "I2C0_SCL_PIN",
+      "gpio": 17,
+      "mcu_pad": "17",
+      "endpoint": [
+        "U14",
+        "6"
+      ],
+      "net": "/PADS/I2C0.SCL"
+    },
+    {
+      "macro": "GYRO_1_CS_PIN",
+      "gpio": 14,
+      "mcu_pad": "13",
+      "endpoint": [
+        "U9",
+        "12"
+      ],
+      "net": "/IMU/CS"
+    },
+    {
+      "macro": "GYRO_1_EXTI_PIN",
+      "gpio": 13,
+      "mcu_pad": "12",
+      "endpoint": [
+        "U9",
+        "4"
+      ],
+      "net": "/IMU/GYRO_INT"
+    },
+    {
+      "macro": "SPI0_SCK_PIN",
+      "gpio": 18,
+      "mcu_pad": "18",
+      "endpoint": [
+        "U9",
+        "13"
+      ],
+      "net": "/IMU/SPI0.SCK"
+    },
+    {
+      "macro": "SPI0_SDO_PIN",
+      "gpio": 19,
+      "mcu_pad": "19",
+      "endpoint": [
+        "U9",
+        "14"
+      ],
+      "net": "/IMU/SPI0.MOSI"
+    },
+    {
+      "macro": "SPI0_SDI_PIN",
+      "gpio": 20,
+      "mcu_pad": "20",
+      "endpoint": [
+        "U9",
+        "1"
+      ],
+      "net": "/IMU/SPI0.MISO"
+    },
+    {
+      "macro": "SPI1_SCK_PIN",
+      "gpio": 42,
+      "mcu_pad": "53",
+      "endpoint": [
+        "Card1",
+        "5"
+      ],
+      "net": "/BLACKBOX/SPI1.SCK"
+    },
+    {
+      "macro": "SPI1_SDO_PIN",
+      "gpio": 43,
+      "mcu_pad": "54",
+      "endpoint": [
+        "Card1",
+        "3"
+      ],
+      "net": "/BLACKBOX/SPI1.MOSI"
+    },
+    {
+      "macro": "SPI1_SDI_PIN",
+      "gpio": 44,
+      "mcu_pad": "55",
+      "endpoint": [
+        "Card1",
+        "7"
+      ],
+      "net": "/BLACKBOX/SPI1.MISO"
+    },
+    {
+      "macro": "SDCARD_SPI_CS_PIN",
+      "gpio": 46,
+      "mcu_pad": "57",
+      "endpoint": [
+        "Card1",
+        "2"
+      ],
+      "net": "/BLACKBOX/FLASH_CS"
+    },
+    {
+      "macro": "ADC_CURR_PIN",
+      "gpio": 40,
+      "mcu_pad": "49",
+      "endpoint": [
+        "R6",
+        "1"
+      ],
+      "net": "Net-(U2-GPIO40_ADC0)"
+    },
+    {
+      "macro": "ADC_VBAT_PIN",
+      "gpio": 41,
+      "mcu_pad": "52",
+      "endpoint": [
+        "R1",
+        "1"
+      ],
+      "net": "/RP2350A/ADC_VBAT"
+    },
+    {
+      "macro": "ADC_RSSI_PIN",
+      "gpio": 45,
+      "mcu_pad": "56",
+      "endpoint": [
+        "R7",
+        "1"
+      ],
+      "net": "Net-(U2-GPIO45_ADC5)"
+    },
+    {
+      "macro": "ADC_EXTERNAL1_PIN",
+      "gpio": 47,
+      "mcu_pad": "58",
+      "endpoint": [
+        "R8",
+        "1"
+      ],
+      "net": "Net-(U2-GPIO47_ADC7)"
+    },
+    {
+      "macro": "UART1_TX_PIN",
+      "gpio": 22,
+      "mcu_pad": "22",
+      "endpoint": [
+        "J13",
+        "1"
+      ],
+      "net": "/PADS/UART1_TX"
+    },
+    {
+      "macro": "UART1_RX_PIN",
+      "gpio": 21,
+      "mcu_pad": "21",
+      "endpoint": [
+        "U8",
+        "6"
+      ],
+      "net": "/PADS/U1RX"
+    },
+    {
+      "macro": "PIOUART1_TX_PIN",
+      "gpio": 26,
+      "mcu_pad": "27",
+      "endpoint": [
+        "U14",
+        "4"
+      ],
+      "net": "/PADS/PU1TX"
+    },
+    {
+      "macro": "PIOUART1_RX_PIN",
+      "gpio": 27,
+      "mcu_pad": "28",
+      "endpoint": [
+        "P1",
+        "4"
+      ],
+      "net": "/PADS/PU1RX"
+    },
+    {
+      "macro": "OSD_W_PIN",
+      "gpio": 4,
+      "mcu_pad": "1",
+      "endpoint": [
+        "R32",
+        "1"
+      ],
+      "net": "/OSD/OSD_W"
+    },
+    {
+      "macro": "OSD_EN_PIN",
+      "gpio": 5,
+      "mcu_pad": "2",
+      "endpoint": [
+        "U10",
+        "6"
+      ],
+      "net": "/OSD/OSD_EN"
+    },
+    {
+      "macro": "OSD_SYNC_PIN",
+      "gpio": 6,
+      "mcu_pad": "3",
+      "endpoint": [
+        "U12",
+        "1"
+      ],
+      "net": "/OSD/OSD_SYNC"
+    },
+    {
+      "macro": "BEEPER_PIN",
+      "gpio": 7,
+      "mcu_pad": "4",
+      "endpoint": [
+        "Q1",
+        "1"
+      ],
+      "net": "/RP2350A/BEEPER"
+    },
+    {
+      "macro": "PINIO1_PIN",
+      "gpio": 11,
+      "mcu_pad": "9",
+      "endpoint": [
+        "U6",
+        "2"
+      ],
+      "net": "/POWER/10V_ENABLE"
+    },
+    {
+      "macro": "LED0_PIN",
+      "gpio": 12,
+      "mcu_pad": "11",
+      "endpoint": [
+        "R15",
+        "1"
+      ],
+      "net": "/RP2350A/LED0"
+    },
+    {
+      "macro": "LED_STRIP_PIN",
+      "gpio": 23,
+      "mcu_pad": "23",
+      "endpoint": [
+        "Q2",
+        "2"
+      ],
+      "net": "/RP2350A/LED_STRIP_L"
+    }
+  ],
+  "negative_controls": {
+    "wrong_led_polarity": {
+      "rejected": true,
+      "reason": "D1 is active high"
+    },
+    "wrong_beeper_polarity": {
+      "rejected": true,
+      "reason": "Q1 needs active-high push-pull"
+    },
+    "historical_motor_rework": {
+      "rejected": true,
+      "reason": "('MOTOR1_PIN', 'PA21', 31)"
+    },
+    "historical_uart_rework": {
+      "rejected": true,
+      "reason": "('UART0_TX_PIN', 'PA16', 0)"
+    },
+    "wrong_receiver_connector": {
+      "rejected": true,
+      "reason": "SERIALRX_UART"
+    },
+    "invented_serial_esc_telemetry": {
+      "rejected": true,
+      "reason": "Forbidden serial ESC telemetry definition"
+    },
+    "swapped_gyro_bus_direction": {
+      "rejected": true,
+      "reason": "('SPI0_SDO_PIN', 'PA20', 19)"
+    }
+  }
+}

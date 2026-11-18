@@ -1,0 +1,20 @@
+# Physical OpenFC-Lite rev2-LW1 controller: keep exact RP2354B identity.
+# CPU time base follows the pinned pico-sdk default. No physical clock or
+# complete flight-runtime parity is claimed by this descriptor.
+name: openfc-lite-rev2-lw1
+chip: rp2354b
+cpu_hz: 150000000
+external_devices:
+  - id: U9
+    type: bmi270_spi
+    connection: spi0
+    config:
+      cs_pin: GP14
+      int1_pin: GP13
+board_io:
+  - id: D1_status_led
+    kind: led
+    peripheral: sio
+    pin: 12
+    signal: output
+    active_high: true
