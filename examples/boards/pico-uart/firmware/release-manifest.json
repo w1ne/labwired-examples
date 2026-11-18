@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "target": {
+    "board": "rpi-pico",
+    "chip": "RP2040",
+    "module": "SC0915",
+    "language": "arduino",
+    "entry_path": "src/main.ino"
+  },
+  "source": {
+    "path": "firmware/src/main.ino",
+    "bytes": 603,
+    "sha256": "b602876cefc5ab8b59c22bdd182b8cd2a47515b20e04c13da3721f2be703ec6c"
+  },
+  "release_producer": "Existing LabWired hosted compile profile:rpi-pico/Arduino",
+  "firmware_ref": "sha256:324a84cbb18276a4814bc4ecf7a20c8b7117ebe874d0df86952ea029dc84bce3",
+  "release_artifacts": [
+    {
+      "path": "firmware/artifacts/pico-uart.elf",
+      "bytes": 1276068,
+      "sha256": "324a84cbb18276a4814bc4ecf7a20c8b7117ebe874d0df86952ea029dc84bce3"
+    },
+    {
+      "path": "firmware/artifacts/pico-uart.uf2",
+      "bytes": 149504,
+      "sha256": "0ef8af9b3e9543a6a034c5b3ce5f69c9b02242ca03993301a29c59a0f772f8fc"
+    }
+  ],
+  "uf2_conversion": "picotool uf2 convert pico-uart.elf pico-uart.uf2 --family rp2040",
+  "boot_layout": {
+    "boot2_address": "0x10000000",
+    "boot2_size": 256,
+    "application_after": "0x10000100"
+  },
+  "local_build": {
+    "platformio_core": "6.2.0",
+    "platform": "platformio/raspberrypi@1.20.0",
+    "framework": "platformio/framework-arduino-mbed@4.6.0",
+    "toolchain": "platformio/toolchain-gccarmnoneeabi@1.90201.191206",
+    "rp2040_tools": "platformio/tool-rp2040tools@1.0.2",
+    "framework_source_tag_commit": "b4ad4e7218a691989acf6c4479112eae183a5a50",
+    "elf_sha256": "a5980d26a4239db9779c079c9bcba3f9e0601509f26e163a23f4a0c208eb136e",
+    "uf2_sha256": "18d876244445d2a4a63fc676ab4383aa73a5a008998560be64c4a9b7ba2d0a0f",
+    "behavior": "All5 assertions passed at50,000,000 interpreted steps",
+    "bit_identical_to_hosted": false
+  },
+  "model_verification": "../validation/firmware-model-verify.json",
+  "physical_hardware_tested": false,
+  "runtime_system": "../runtime/system.yaml",
+  "runtime_system_sha256": "a686ebe81e24dd0165f16f04da749e04327d58fd4fd9288f903dc3fef0909531",
+  "runtime_acceptance": "../validation/explicit-runtime-acceptance.json"
+}

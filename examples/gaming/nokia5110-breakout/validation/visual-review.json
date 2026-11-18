@@ -1,0 +1,56 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-Npe3PeSfxMIslzVZyD_VOg/render-iso.png?exp=1795096355&sig=-DLG3ZzWlbIZbGvzSaV_I-zG_frjJKVbap7PcZl3k8o",
+  "findings": [
+    "The corrected closed isometric and top views show one assembled case with the LCD on the left and two sonar faces on the right; there are no detached or duplicate objects.",
+    "Four corner screws retain the lid and four separate screws retain the clear display window. The window and both sensor openings remain unobstructed.",
+    "The native STEP input has its populated side at +Z. Independent source-pad checks match all 26 carrier/Nucleo contacts and all seven native mounting axes; case geometry uses the same native Y direction.",
+    "The rear inspection uses a proper whole-model 180-degree Z rotation of the same 85 parts and connector frames. It shows the recessed Mini-B receptacle inside the rectangular cable opening.",
+    "The sole non-visual box-fragment style warning is justified by named connector insulators/pins, SMD bodies, module envelopes, edge clamps, end stops and cable-tie bridges. Every part is attached; no physical or path gate is waived."
+  ],
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "The canonical isometric view contains one closed device, with one lid seam and no detached second enclosure.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-Npe3PeSfxMIslzVZyD_VOg/render-iso.png?exp=1795096355&sig=-DLG3ZzWlbIZbGvzSaV_I-zG_frjJKVbap7PcZl3k8o"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The top view shows the declared 45 mm square LCD beside the 45.5 by 20 mm sensor face inside the 122 by 104 mm case.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-es3yM121YaURDdlpxZO6WQ/render-top.png?exp=1795096355&sig=bNibyR8Uw706xE6fpGh4YBtSCQW9zyrmrYn4Kplu6QE"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "The closed views show the display window and paired sonar faces; the rotated rear view also shows the recessed USB opening.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-TKLpEnN8UAXbtOFizWzzsg/render-iso.png?exp=1795097213&sig=oaIIEKX3vsPm5SV5UxqiXS3g8vDFqGpF9ex8MO_p2uk"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "All visible screws sit on the lid or window, and both module faces sit within their apertures with no stray outside solid.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-Npe3PeSfxMIslzVZyD_VOg/render-iso.png?exp=1795096355&sig=-DLG3ZzWlbIZbGvzSaV_I-zG_frjJKVbap7PcZl3k8o"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "Four corner screws retain the lid, four window screws retain the clear sheet, and the visible module lips and end stops support the PCB edges.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-es3yM121YaURDdlpxZO6WQ/render-top.png?exp=1795096355&sig=bNibyR8Uw706xE6fpGh4YBtSCQW9zyrmrYn4Kplu6QE"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "Both sensor faces and the display plane point upward; the Mini-B receptacle faces the positive-Y rear opening of the native-coordinate assembly.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-NqnqgDvJinrZOMbn-YACvQ/render-front.png?exp=1795097214&sig=Ux_bHBsY4C8-e2-8-zpUbyVWqpKJ0OAaRiaLlOLOnLg"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "The canonical top, isometric and front views and the properly rotated rear view agree on one lid seam, the same two top openings and one USB port.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-TKLpEnN8UAXbtOFizWzzsg/render-iso.png?exp=1795097213&sig=oaIIEKX3vsPm5SV5UxqiXS3g8vDFqGpF9ex8MO_p2uk"
+    }
+  ],
+  "submitted_source_sha256": "2760625f61d5820e5a3dd74b56710b74215217f8f02599857c67facc5cf45308"
+}

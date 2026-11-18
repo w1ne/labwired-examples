@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "firmware": {
+    "h563-uds-physical.elf": {
+      "sha256": "d78d30a8ae57835c237e21c99104b56e1fcf50fcd8872440c986132eba67275f",
+      "bytes": 1896400
+    },
+    "h563-uds-physical.bin": {
+      "sha256": "28578bc7fd4a5bd4790cee3860a37d8dd9da6201b511a6c682c43ee79a9950df",
+      "bytes": 34656
+    }
+  },
+  "buildManifest": "../../firmware/build-manifest.json",
+  "runtimeTest": "../../runtime/test.yaml",
+  "runtimeSystem": "../../runtime/system.yaml",
+  "engineVersion": "0.26.0",
+  "engineSha256": "0293aeb9a3bc76f1b0435d2de047ec1c55d6f4ed50dcaf3ad7bc72cd5929866c",
+  "chipDescriptor": "stm32h563 embedded in this release engine",
+  "runManifestDigest": "24ac4296405b5509f96875c4740860ca578b31c7803c7e23e87b077cef72f5cf",
+  "steps": 4000000,
+  "assertionsPassed": 3,
+  "assertionsTotal": 3,
+  "exchangesPassed": 16,
+  "exchangesTotal": 16,
+  "calibrationReplyBytes": 603,
+  "calibrationReplyFrames": 10,
+  "calibrationAllBytesCompared": true,
+  "readyBoots": 2,
+  "cpuHz": 250000000,
+  "traceEvicted": 0,
+  "scope": "Same physical ST HAL ELF supplied for flashing. Firmware clock/GPIO/FDCAN initialization and protocol flow execute in the generic MCU model. Bus serialization, oscillator tolerance, analog MCP2562FD behavior, wiring and physical hardware are not qualified.",
+  "physicalTested": false
+}

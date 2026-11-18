@@ -1,0 +1,209 @@
+{
+  "schema": 1,
+  "board": "ESP32-S3-DevKitC-1-N16R8 PCB v1.0",
+  "board_pin_source": "https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html",
+  "display": "MRB3205; R16 fitted, R8 open, J1 closed",
+  "display_pin_source": "https://www.lcdwiki.com/3.2inch_16BIT_Module_ILI9341_SKU:MRB3205",
+  "signals": [
+    {
+      "signal": "D0",
+      "gpio": 1,
+      "carrier_header": "J2",
+      "carrier_pin": 4,
+      "resistor": "R1",
+      "display_pin": 6
+    },
+    {
+      "signal": "D1",
+      "gpio": 2,
+      "carrier_header": "J2",
+      "carrier_pin": 5,
+      "resistor": "R2",
+      "display_pin": 7
+    },
+    {
+      "signal": "D2",
+      "gpio": 3,
+      "carrier_header": "J1",
+      "carrier_pin": 13,
+      "resistor": "R3",
+      "display_pin": 8
+    },
+    {
+      "signal": "D3",
+      "gpio": 4,
+      "carrier_header": "J1",
+      "carrier_pin": 4,
+      "resistor": "R4",
+      "display_pin": 9
+    },
+    {
+      "signal": "D4",
+      "gpio": 5,
+      "carrier_header": "J1",
+      "carrier_pin": 5,
+      "resistor": "R5",
+      "display_pin": 10
+    },
+    {
+      "signal": "D5",
+      "gpio": 6,
+      "carrier_header": "J1",
+      "carrier_pin": 6,
+      "resistor": "R6",
+      "display_pin": 11
+    },
+    {
+      "signal": "D6",
+      "gpio": 7,
+      "carrier_header": "J1",
+      "carrier_pin": 7,
+      "resistor": "R7",
+      "display_pin": 12
+    },
+    {
+      "signal": "D7",
+      "gpio": 8,
+      "carrier_header": "J1",
+      "carrier_pin": 12,
+      "resistor": "R8",
+      "display_pin": 13
+    },
+    {
+      "signal": "D8",
+      "gpio": 9,
+      "carrier_header": "J1",
+      "carrier_pin": 15,
+      "resistor": "R9",
+      "display_pin": 14
+    },
+    {
+      "signal": "D9",
+      "gpio": 10,
+      "carrier_header": "J1",
+      "carrier_pin": 16,
+      "resistor": "R10",
+      "display_pin": 15
+    },
+    {
+      "signal": "D10",
+      "gpio": 11,
+      "carrier_header": "J1",
+      "carrier_pin": 17,
+      "resistor": "R11",
+      "display_pin": 16
+    },
+    {
+      "signal": "D11",
+      "gpio": 12,
+      "carrier_header": "J1",
+      "carrier_pin": 18,
+      "resistor": "R12",
+      "display_pin": 17
+    },
+    {
+      "signal": "D12",
+      "gpio": 13,
+      "carrier_header": "J1",
+      "carrier_pin": 19,
+      "resistor": "R13",
+      "display_pin": 18
+    },
+    {
+      "signal": "D13",
+      "gpio": 14,
+      "carrier_header": "J1",
+      "carrier_pin": 20,
+      "resistor": "R14",
+      "display_pin": 19
+    },
+    {
+      "signal": "D14",
+      "gpio": 15,
+      "carrier_header": "J1",
+      "carrier_pin": 8,
+      "resistor": "R15",
+      "display_pin": 20
+    },
+    {
+      "signal": "D15",
+      "gpio": 16,
+      "carrier_header": "J1",
+      "carrier_pin": 9,
+      "resistor": "R16",
+      "display_pin": 21
+    },
+    {
+      "signal": "WR",
+      "gpio": 17,
+      "carrier_header": "J1",
+      "carrier_pin": 10,
+      "resistor": "R17",
+      "display_pin": 3,
+      "testpoints": [
+        "TP3"
+      ]
+    },
+    {
+      "signal": "DC",
+      "gpio": 18,
+      "carrier_header": "J1",
+      "carrier_pin": 11,
+      "resistor": "R18",
+      "display_pin": 2
+    },
+    {
+      "signal": "CS",
+      "gpio": 21,
+      "carrier_header": "J2",
+      "carrier_pin": 18,
+      "resistor": "R19",
+      "display_pin": 1,
+      "testpoints": [
+        "TP4"
+      ]
+    },
+    {
+      "signal": "RST",
+      "gpio": 38,
+      "carrier_header": "J2",
+      "carrier_pin": 10,
+      "resistor": "R20",
+      "display_pin": 5
+    },
+    {
+      "signal": "BL",
+      "gpio": 39,
+      "carrier_header": "J2",
+      "carrier_pin": 9,
+      "resistor": "R21",
+      "display_pin": 23
+    }
+  ],
+  "pullups": [
+    {
+      "signal": "RD",
+      "display_pin": 4,
+      "resistor": "R22"
+    },
+    {
+      "signal": "SD_CS",
+      "display_pin": 22,
+      "resistor": "R23"
+    },
+    {
+      "signal": "FLASH_CS",
+      "display_pin": 32,
+      "resistor": "R24"
+    },
+    {
+      "signal": "TOUCH_CS",
+      "display_pin": 33,
+      "resistor": "R25"
+    }
+  ],
+  "rd_mode": "pulled_high",
+  "supply_volts": 3.3,
+  "data_clock_hz": 10000000,
+  "console": "UART0 through PCB v1.0 CP2102 bridge"
+}

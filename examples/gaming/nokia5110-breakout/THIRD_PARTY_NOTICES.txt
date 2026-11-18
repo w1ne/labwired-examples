@@ -1,0 +1,31 @@
+Nokia 5110 Breakout carrier revision A
+
+LabWired-authored carrier and wrapper source use the repository MIT license.
+Manufacturer source files retain their original terms and attribution.
+
+STMicroelectronics MB1136C native reference design:
+The unmodified mb1136_bdp.zip is supplied by STMicroelectronics at
+https://www.st.com/resource/en/board_manufacturing_specification/mb1136_bdp.zip
+See references/st/provenance.json and open-platform-license-agreement.pdf.
+The derived KiCad file uses the original Mechanical 1 finished contour, removes
+one zero-length contour edge and corrects one 0.030 mm endpoint overlap so STEP
+export can close the board perimeter. It is a purchased-module fit reference.
+The original board is not relabelled as LabWired hardware or licensed under MIT.
+
+KiCad symbol and footprint derivatives:
+KiCad library contributors, CC-BY-SA-4.0 with the KiCad design exception.
+See electronics/licenses/kicad-library-license.txt and electronics/provenance.json.
+
+Joy-IT, Adafruit, Samtec, TDK, Yageo and ST names identify the selected products.
+Their specification links do not imply endorsement. Native vendor CAD and
+drawing-derived fit envelopes are identified separately in the mechanical package.
+
+Rust firmware dependencies:
+Cargo.lock pins cortex-m 0.7.7, cortex-m-rt 0.7.5 and panic-halt 0.2.0 plus their transitive
+dependencies. Each dependency retains its upstream copyright and license. Cargo
+fetches the corresponding source and license files for relinking. The package
+firmware source is inherited from LabWired core under its MIT license.
+
+Accu, Würth Elektronik and Panduit names identify purchased mechanical parts.
+Their links in bom.csv are dimensional/source references, not endorsements.
+The modeled hardware bodies are drawing-derived or declared fit envelopes.

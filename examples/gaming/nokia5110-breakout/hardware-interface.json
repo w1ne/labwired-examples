@@ -1,0 +1,193 @@
+{
+  "schema": "labwired.hardware-interface.v1",
+  "product": "Nokia Breakout revision A",
+  "canonical_lab_id": "nokia5110-invaders-lab",
+  "mcu_board": {
+    "manufacturer": "STMicroelectronics",
+    "mpn": "NUCLEO-L476RG",
+    "chip": "stm32l476",
+    "clock_hz": 4000000,
+    "power_input": "Integrated ST-LINK USB Mini-B; intact board"
+  },
+  "lcd": {
+    "manufacturer": "Joy-IT",
+    "mpn": "SBC-LCD84x48",
+    "revision": "2",
+    "controller": "PCD8544",
+    "supply_v": 3.3,
+    "backlight": "LIGHT tied to GND, as REV2 requires",
+    "pad_order_front_left_to_right": [
+      "GND",
+      "LIGHT",
+      "VCC",
+      "CLK",
+      "DIN",
+      "DC",
+      "CE",
+      "RST"
+    ],
+    "square_pad_label": "RST",
+    "manufacturer_pad_numbers": "Not specified; J4 numbering is the carrier contract."
+  },
+  "sonar": {
+    "manufacturer": "Adafruit",
+    "mpn": "3942",
+    "type": "HC-SR04",
+    "supply_v": 5,
+    "raw_echo_voltage_v": 5
+  },
+  "pin_contract": [
+    {
+      "carrier": "J1.1",
+      "nucleo": "CN5.1",
+      "arduino": "D8",
+      "mcu": "PA9",
+      "signal": "LCD_RST"
+    },
+    {
+      "carrier": "J1.2",
+      "nucleo": "CN5.2",
+      "arduino": "D9",
+      "mcu": "PC7",
+      "signal": "LCD_DC"
+    },
+    {
+      "carrier": "J1.3",
+      "nucleo": "CN5.3",
+      "arduino": "D10",
+      "mcu": "PB6",
+      "signal": "LCD_CE"
+    },
+    {
+      "carrier": "J1.4",
+      "nucleo": "CN5.4",
+      "arduino": "D11",
+      "mcu": "PA7",
+      "signal": "LCD_DIN"
+    },
+    {
+      "carrier": "J1.6",
+      "nucleo": "CN5.6",
+      "arduino": "D13",
+      "mcu": "PA5",
+      "signal": "LCD_CLK"
+    },
+    {
+      "carrier": "J1.7",
+      "nucleo": "CN5.7",
+      "signal": "GND"
+    },
+    {
+      "carrier": "J2.4",
+      "nucleo": "CN6.4",
+      "signal": "+3V3"
+    },
+    {
+      "carrier": "J2.5",
+      "nucleo": "CN6.5",
+      "signal": "+5V"
+    },
+    {
+      "carrier": "J2.6,J2.7",
+      "nucleo": "CN6.6,CN6.7",
+      "signal": "GND"
+    },
+    {
+      "carrier": "J3.7",
+      "nucleo": "CN9.7",
+      "arduino": "D6",
+      "mcu": "PB10",
+      "signal": "ECHO_DIVIDED"
+    },
+    {
+      "carrier": "J3.8",
+      "nucleo": "CN9.8",
+      "arduino": "D7",
+      "mcu": "PA8",
+      "signal": "TRIG"
+    }
+  ],
+  "echo_divider": {
+    "series_mpn": "RC0603FR-0710KL",
+    "series_ohms": 10000,
+    "shunt_mpn": "RC0603FR-0718KL",
+    "shunt_ohms": 18000,
+    "tolerance_percent": 1,
+    "nominal_output_at_5v": 3.2142857142857144,
+    "calculated_upper_output_v": 3.3990384615384617,
+    "upper_case": "5.25 V source, R1\u22121%, R2+1%; verify actual signal before qualification"
+  },
+  "test_points": {
+    "TP1": "GND",
+    "TP2": "+3V3",
+    "TP3": "+5V",
+    "TP4": "ECHO_RAW",
+    "TP5": "ECHO_DIVIDED"
+  },
+  "unconnected_nucleo_contacts": "All contacts absent from pin_contract are intentionally not connected on the carrier; CN8 has no mating header.",
+  "physical_hardware_tested": false,
+  "lcd_harness": [
+    {
+      "carrier": "J4.1",
+      "module_pad": "GND",
+      "signal": "GND"
+    },
+    {
+      "carrier": "J4.2",
+      "module_pad": "LIGHT",
+      "signal": "GND"
+    },
+    {
+      "carrier": "J4.3",
+      "module_pad": "VCC",
+      "signal": "+3V3"
+    },
+    {
+      "carrier": "J4.4",
+      "module_pad": "CLK",
+      "signal": "PA5"
+    },
+    {
+      "carrier": "J4.5",
+      "module_pad": "DIN",
+      "signal": "PA7"
+    },
+    {
+      "carrier": "J4.6",
+      "module_pad": "DC",
+      "signal": "PC7"
+    },
+    {
+      "carrier": "J4.7",
+      "module_pad": "CE",
+      "signal": "PB6"
+    },
+    {
+      "carrier": "J4.8",
+      "module_pad": "RST",
+      "signal": "PA9"
+    }
+  ],
+  "sonar_harness": [
+    {
+      "carrier": "J5.1",
+      "module_pad": "VCC",
+      "signal": "+5V"
+    },
+    {
+      "carrier": "J5.2",
+      "module_pad": "TRIG",
+      "signal": "PA8"
+    },
+    {
+      "carrier": "J5.3",
+      "module_pad": "ECHO",
+      "signal": "ECHO_RAW"
+    },
+    {
+      "carrier": "J5.4",
+      "module_pad": "GND",
+      "signal": "GND"
+    }
+  ]
+}

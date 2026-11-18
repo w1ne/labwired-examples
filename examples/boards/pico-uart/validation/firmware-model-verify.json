@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "status": "model_verified",
+  "proven": true,
+  "gaps": [
+    {
+      "code": "approximation",
+      "scope": "model",
+      "detail": "device time derived from cpu_hz (125000000 Hz); PLL reconfiguration is not tracked",
+      "address": "0x0",
+      "pc": "0x0"
+    },
+    {
+      "code": "approximation",
+      "scope": "model",
+      "detail": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal rail, so power-on and brown-out reset are not simulated",
+      "address": "0x0",
+      "pc": "0x0"
+    }
+  ],
+  "unmodeled_faults": [
+    {
+      "access": "derived_device_time",
+      "pc": "0x0",
+      "count": 1,
+      "note": "device time derived from cpu_hz (125000000 Hz); PLL reconfiguration is not tracked",
+      "address": "0x0"
+    },
+    {
+      "access": "unpowered_rail_assumed",
+      "pc": "0x0",
+      "count": 1,
+      "note": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal rail, so power-on and brown-out reset are not simulated",
+      "address": "0x0"
+    }
+  ],
+  "verification": "serial contains \"RP2040_SMOKE_OK\"; serial contains \"PICO_LED=1\"; serial contains \"PICO_LED=0\"; GP0 transitioned 181 time(s) (>= 4); GP25 transitioned 2 time(s) (>= 2). Model-verified deterministically.",
+  "run_status": "pass",
+  "stop_reason": "assertions_passed",
+  "oracle_results": [
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"RP2040_SMOKE_OK\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"PICO_LED=1\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"PICO_LED=0\""
+    },
+    {
+      "kind": "gpio_edges",
+      "passed": true,
+      "detail": "GP0 transitioned 181 time(s) (>= 4)"
+    },
+    {
+      "kind": "gpio_edges",
+      "passed": true,
+      "detail": "GP25 transitioned 2 time(s) (>= 2)"
+    }
+  ],
+  "diagnosis": {
+    "summary": "Ran and satisfied the UART acceptance assertions."
+  },
+  "serial": "RP2040_SMOKE_OK\nPICO_LED=1\nPICO_LED=0\n"
+}

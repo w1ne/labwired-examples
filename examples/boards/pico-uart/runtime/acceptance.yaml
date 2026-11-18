@@ -1,0 +1,16 @@
+schema_version: "1.2"
+inputs:
+  firmware: "../firmware/artifacts/pico-uart.elf"
+  system: "./system.yaml"
+limits:
+  max_steps: 50000000
+assertions:
+  - uart_contains: "RP2040_SMOKE_OK\n"
+  - uart_contains: "PICO_LED=1\n"
+  - uart_contains: "PICO_LED=0\n"
+  - gpio_edges:
+      pin: "sio:0"
+      min_edges: 4
+  - gpio_edges:
+      pin: "sio:25"
+      min_edges: 2

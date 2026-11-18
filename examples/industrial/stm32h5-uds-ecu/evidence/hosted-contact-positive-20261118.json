@@ -1,0 +1,128 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 87035.26421796075
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -4.440892098500626e-16,
+            -4.440892098500626e-16,
+            0
+          ],
+          "max": [
+            222,
+            90,
+            20.134999999999998
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-dHVEfe",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 87035.26421796075,
+    "faceCount": 815,
+    "size": [
+      222,
+      90,
+      20.134999999999998
+    ]
+  },
+  "featureCount": 70,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.fdm-clearance",
+      "severity": "info",
+      "message": "Print clearance is typed but never checked: declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) (cookbook fdm-fit-clearance-by-fit-type).",
+      "hint": "Declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) so the print clearance is checked, not only typed. Recipe: fdm-fit-clearance-by-fit-type.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "print clearance for a snap fit lid"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "28ee7113df4c1c8ea2ac581258d68652edd8352ee40d136d3252fef23f653e95",
+      "byteLength": 4365
+    },
+    "parameters": {
+      "values": {
+        "nucleoLength": 133.34,
+        "nucleoWidth": 70,
+        "nucleoPcbThickness": 1.6,
+        "nucleoEdgeClearance": 0.35
+      },
+      "sha256": "7ab2b8cc0e7eab21d992c652732c41c6d84d06e82d1a1e04b5b6ef5e0c6a2378"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "67fdae7818cb943374ba5f0baef794b35325ec50"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "bead2cf5abb6b5b184d623a336eb571fba1d28824d307185ab14a366ad20c280"
+  },
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 12,
+    "names": [
+      "printed-base",
+      "NUCLEO-H563ZI-PCB-ENVELOPE",
+      "CAN-interface-PCB",
+      "CAN-J2",
+      "CAN-J1",
+      "CAN-C3",
+      "CAN-R1",
+      "CAN-C1",
+      "CAN-JP1",
+      "CAN-D1",
+      "CAN-U1",
+      "CAN-C2"
+    ]
+  },
+  "mechanism": "real",
+  "serverBuild": "0.1.0+67fdae7818cb@2026-11-18T10:26:05.783Z"
+}

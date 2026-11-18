@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "kicad_version": "10.0.8",
+  "library_license": "CC-BY-SA-4.0 with KiCad design exception",
+  "attribution": "KiCad library contributors",
+  "license_source": "https://www.kicad.org/libraries/license/",
+  "footprints": [
+    {
+      "local": "pico-carrier.pretty/Socket20.kicad_mod",
+      "upstream": "Connector_PinSocket_2.54mm.pretty/PinSocket_1x20_P2.54mm_Vertical.kicad_mod",
+      "upstream_sha256": "1ab7fddd90c390249404b190fb65df781c9d7870023ea69d99a9bcc14f03e83c"
+    },
+    {
+      "local": "pico-carrier.pretty/Console3.kicad_mod",
+      "upstream": "Connector_PinHeader_2.54mm.pretty/PinHeader_1x03_P2.54mm_Vertical.kicad_mod",
+      "upstream_sha256": "e5f24b6fea852f86171042806da48490229c9c8025b6d266b8cad6485b26e79f"
+    },
+    {
+      "local": "pico-carrier.pretty/MountingHole.kicad_mod",
+      "upstream": "MountingHole.pretty/MountingHole_2.7mm_M2.5.kicad_mod",
+      "upstream_sha256": "d28d0215a45e6dd7c7ea0a27ffc55c41e75cd87ce37ab43b84c6cbe6abfe67d8"
+    },
+    {
+      "local": "pico-carrier.pretty/TestPoint.kicad_mod",
+      "upstream": "TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "upstream_sha256": "d7ae230b69d8c3dad5082515a51aac9e4840360c8f4324a00673353676d43042"
+    }
+  ],
+  "symbols": [
+    "Connector_Generic:Conn_01x20",
+    "Connector_Generic:Conn_01x03",
+    "Connector:TestPoint",
+    "Mechanical:MountingHole"
+  ],
+  "changes": "Project-local names and metadata; mounting hole enlarged to2.9mm with3.5mm hardware/copper exclusion. Obsolete generic3D models removed. Pin numbers/electrical roles retained."
+}

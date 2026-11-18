@@ -1,0 +1,112 @@
+{
+  "originalSourceSha256": "adaa1adf3e0aa626f055d17e11f3e024da98e49ec8ba8e6033e9e5bff87ba0d1",
+  "stagedSourceSha256": "ebddf6e2e4c80052c15ea41c3beee32d79860dab8d9e5a71cc3fe84721f7a8a4",
+  "nativeStepSha256": "cc7f0a7e6d479f67d8161da6a73d84818381e10076d1d5bfd58bada2f5b5aadc",
+  "staging": "Only the exact native STEP location was resolved locally. Geometry and review gates are unchanged. Positive visual review is from the prior unchanged-geometry hosted review.",
+  "result": {
+    "ok": false,
+    "goal": "Check the UDS bench fixture: a printable base supporting the exact native CAN carrier and an explicitly scoped Nucleo board outline envelope. Require full interference coverage while retaining only the two measured kinked-lead contact budgets. No claim of populated Nucleo fit, fastener strength or physical prototype testing.",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Attempt 01",
+        "ok": false,
+        "functional": false,
+        "qualityOk": false,
+        "featureCount": 70,
+        "diagnosticCount": 24,
+        "reviewFacts": [
+          {
+            "code": "assembly.visual.review-required",
+            "severity": "warning",
+            "message": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+            "hint": "visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+          }
+        ],
+        "repairMode": "local-fix",
+        "passedChecks": [],
+        "blockingReasons": [
+          "Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm³ (0.47 mm thick), over the declared contact budget (max 0.08 mm³ / max 0.08 mm thick); exceeded volume 35.6 mm³ > 0.08 mm³, thickness 0.471 mm > 0.08 mm.",
+          "Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 38.28 mm³ at the rest pose (0.91 mm thick; rule: overlap > 0.01 mm³ and thicker than 0.3 mm (thinner = face contact); shared region centred near [202.5, 45.1, 11.0] mm, 0.25 mm voxels). Seated parts share faces, not volume.",
+          "Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 35.65 mm³ (0.47 mm thick) near (202.5, 45.0, 11.1) at pose sample 'rest' — they exceed their declared contact budget (max 0.08 mm³ / max 0.08 mm thick): volume 35.6 mm³ > 0.08 mm³, thickness 0.471 mm > 0.08 mm. A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J2']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended.",
+          "Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm³ (0.47 mm thick) near (202.5, 45.0, 11.1)."
+        ],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 1,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": true,
+          "status": "not-declared",
+          "entries": [],
+          "summary": {
+            "pass": 0,
+            "fail": 0,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "ebddf6e2e4c80052c15ea41c3beee32d79860dab8d9e5a71cc3fe84721f7a8a4",
+            "byteLength": 4603
+          },
+          "parameters": {
+            "values": {
+              "nucleoLength": 133.34,
+              "nucleoWidth": 70,
+              "nucleoPcbThickness": 1.6,
+              "nucleoEdgeClearance": 0.35
+            },
+            "sha256": "7ab2b8cc0e7eab21d992c652732c41c6d84d06e82d1a1e04b5b6ef5e0c6a2378"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.2",
+            "revision": null
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+          "identitySha256": "3ab86252a400c290c26154c50660e0f7f7f07a160092bbd83f32c81aaf4af006"
+        },
+        "nextActionPrompt": "Blocking reasons:\n- assembly.contact.tolerance-exceeded: Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm³ (0.47 mm thick), over the declared contact budget (max 0.08 mm³ / max 0.08 mm thick); exceeded volume 35.6 mm³ > 0.08 mm³, thickness 0.471 mm > 0.08 mm.\n- mechanism.rest-interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 38.28 mm³ at the rest pose (0.91 mm thick; rule: overlap > 0.01 mm³ and thicker than 0.3 mm (thinner = face contact); shared region centred near [202.5, 45.1, 11.0] mm, 0.25 mm voxels). Seated parts share faces, not volume.\n- mechanism.interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 35.65 mm³ (0.47 mm thick) near (202.5, 45.0, 11.1) at pose sample 'rest' — they exceed their declared contact budget (max 0.08 mm³ / max 0.08 mm thick): volume 35.6 mm³ > 0.08 mm³, thickness 0.471 mm > 0.08 mm. A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J2']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended.\n- assembly.pose-envelope.interference: Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm³ (0.47 mm thick) near (202.5, 45.0, 11.1).\n\nTop diagnostics:\n- [error] assembly.contact.tolerance-exceeded\n- [error] assembly.pose-envelope.interference @ sampleName=current\n- [info] assembly.mounting-hole.unverified @ mate=NUCLEO-H563ZI-PCB-ENVELOPE-fixed\n\nRepair mode: local-fix\nDirective: Fix the reported local modeling errors while preserving the current topology, then rerun review_cad.\n\nDesign goal: Check the UDS bench fixture: a printable base supporting the exact native CAN carrier and an explicitly scoped Nucleo board outline envelope. Require full interference coverage while retaining only the two measured kinked-lead contact budgets. No claim of populated Nucleo fit, fastener strength or physical prototype testing.\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- assembly.visual.review-required: This design-loop run requires screenshot review, but the attempt has no visualReview result. → visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted.",
+        "revisionAssist": {
+          "mode": "hints-only",
+          "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+          "hints": [
+            {
+              "code": "assembly.visual.review-required",
+              "summary": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+              "suggestedChange": "visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+            }
+          ]
+        }
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Check the UDS bench fixture: a printable base supporting the exact native CAN carrier and an explicitly scoped Nucleo board outline envelope. Require full interference coverage while retaining only the two measured kinked-lead contact budgets. No claim of populated Nucleo fit, fastener strength or physical prototype testing.",
+      "steps": []
+    },
+    "revisionAssist": {
+      "mode": "hints-only",
+      "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+      "hints": [
+        {
+          "code": "assembly.visual.review-required",
+          "summary": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+          "suggestedChange": "visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+        }
+      ]
+    },
+    "nextActionPrompt": "Blocking reasons:\n- assembly.contact.tolerance-exceeded: Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm³ (0.47 mm thick), over the declared contact budget (max 0.08 mm³ / max 0.08 mm thick); exceeded volume 35.6 mm³ > 0.08 mm³, thickness 0.471 mm > 0.08 mm.\n- mechanism.rest-interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 38.28 mm³ at the rest pose (0.91 mm thick; rule: overlap > 0.01 mm³ and thicker than 0.3 mm (thinner = face contact); shared region centred near [202.5, 45.1, 11.0] mm, 0.25 mm voxels). Seated parts share faces, not volume.\n- mechanism.interpenetration: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 35.65 mm³ (0.47 mm thick) near (202.5, 45.0, 11.1) at pose sample 'rest' — they exceed their declared contact budget (max 0.08 mm³ / max 0.08 mm thick): volume 35.6 mm³ > 0.08 mm³, thickness 0.471 mm > 0.08 mm. A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J2']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended.\n- assembly.pose-envelope.interference: Pose-envelope sample 'current' makes parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm³ (0.47 mm thick) near (202.5, 45.0, 11.1).\n\nTop diagnostics:\n- [error] assembly.contact.tolerance-exceeded\n- [error] assembly.pose-envelope.interference @ sampleName=current\n- [info] assembly.mounting-hole.unverified @ mate=NUCLEO-H563ZI-PCB-ENVELOPE-fixed\n\nRepair mode: local-fix\nDirective: Fix the reported local modeling errors while preserving the current topology, then rerun review_cad.\n\nDesign goal: Check the UDS bench fixture: a printable base supporting the exact native CAN carrier and an explicitly scoped Nucleo board outline envelope. Require full interference coverage while retaining only the two measured kinked-lead contact budgets. No claim of populated Nucleo fit, fastener strength or physical prototype testing.\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- assembly.visual.review-required: This design-loop run requires screenshot review, but the attempt has no visualReview result. → visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+  }
+}

@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/electronics/doom-carrier.kicad_sch</source>
+    <date>2026-11-18T10:25:21</date>
+    <tool>Eeschema 10.0.8-10.0.8~ubuntu24.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ESP32-S3 I80 Doom carrier</title>
+        <company>LabWired</company>
+        <rev>A</rev>
+        <date>2026-11-18</date>
+        <source>doom-carrier.kicad_sch</source>
+        <comment number="1" value="DevKitC-1-N16R8 Rev1.0 / MRB3205 / 16-bit I80 / 3V3 only"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>10u 10V X7R</value>
+      <footprint>doom-carrier:C</footprint>
+      <fields>
+        <field name="MPN">C2012X7R1A106K125AC</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Footprint">doom-carrier:C</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1A106K125AC"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b361593f-6921-5497-8a3c-2c89a8830ddc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100n 50V X8R</value>
+      <footprint>doom-carrier:C</footprint>
+      <fields>
+        <field name="MPN">C2012X8R1H104K125AA</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Footprint">doom-carrier:C</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X8R1H104K125AA"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>81516b0b-1a77-504d-a52a-113622949256</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H1">
+      <value>M2.5 / 2.9 mm NPTH</value>
+      <footprint>doom-carrier:MountingHole</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:MountingHole</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01d49442-9a98-5aea-971c-39c0d137fa7f</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H2">
+      <value>M2.5 / 2.9 mm NPTH</value>
+      <footprint>doom-carrier:MountingHole</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:MountingHole</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd0ecb8e-940a-58ee-ae11-13452a504f98</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H3">
+      <value>M2.5 / 2.9 mm NPTH</value>
+      <footprint>doom-carrier:MountingHole</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:MountingHole</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>71a4463b-f42b-5097-a571-aab7fc2c9217</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H4">
+      <value>M2.5 / 2.9 mm NPTH</value>
+      <footprint>doom-carrier:MountingHole</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:MountingHole</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4048333-1099-5b2b-b786-a07abc5ab529</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>SSW-122-01-G-S</value>
+      <footprint>doom-carrier:Socket22</footprint>
+      <fields>
+        <field name="MPN">SSW-122-01-G-S</field>
+        <field name="Manufacturer">Samtec</field>
+        <field name="Footprint">doom-carrier:Socket22</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="Socket22" description="Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="SSW-122-01-G-S"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3bad250a-2aef-5d75-81e6-9595c6a21b8b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>SSW-122-01-G-S</value>
+      <footprint>doom-carrier:Socket22</footprint>
+      <fields>
+        <field name="MPN">SSW-122-01-G-S</field>
+        <field name="Manufacturer">Samtec</field>
+        <field name="Footprint">doom-carrier:Socket22</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="Socket22" description="Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="SSW-122-01-G-S"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>74d3f970-43b4-5c7b-aa93-46ad3e048a96</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>TSW-117-07-G-D</value>
+      <footprint>doom-carrier:Display34</footprint>
+      <fields>
+        <field name="MPN">TSW-117-07-G-D</field>
+        <field name="Manufacturer">Samtec</field>
+        <field name="Footprint">doom-carrier:Display34</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="Display34" description="Generic connector, double row, 02x17, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="TSW-117-07-G-D"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4663488f-62db-55c4-b39e-2cf2b51a1f1d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="17"/>
+            <pin num="19"/>
+            <pin num="21"/>
+            <pin num="23"/>
+            <pin num="25"/>
+            <pin num="27"/>
+            <pin num="29"/>
+            <pin num="31"/>
+            <pin num="33"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="16"/>
+            <pin num="18"/>
+            <pin num="20"/>
+            <pin num="22"/>
+            <pin num="24"/>
+            <pin num="26"/>
+            <pin num="28"/>
+            <pin num="30"/>
+            <pin num="32"/>
+            <pin num="34"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ec8105b-7b93-5387-ae16-25c9e816e979</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b3d81134-e2aa-5b06-8243-56cd9d4d46c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1dba1725-f644-56c4-b755-4eb5133b71ff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4f7d8d8c-76a0-53a4-8f10-725bacbe9eb1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b62900b1-6760-55a1-86fc-f1a3901c4947</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e2f21ff-d08b-5341-b106-7b8ce2770df7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9fa325f-3b2b-58d7-9264-8d591dd2ba98</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd20505b-668b-52ed-aab3-9eb34c4de621</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fea8f3cb-fa31-512b-9b33-f9ba4a878d75</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10c19f3e-fad0-53ba-a0bb-4a44feb3314b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>438fb012-411b-580a-b9e0-014bfc0acc6f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a25152f-bc4e-57af-ba50-fdd997da689d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>36982899-e161-559d-906c-3de995e328a9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a510b728-1315-540c-9a41-f0a448a1d324</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e60c5915-d4e5-5310-b184-fbfb1075fed9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>77cca44d-f437-5654-a8c1-c1891bf26dc0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a84e99b6-5027-5f31-be22-ec4764c0e855</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0068a1db-3f33-5fe1-9eef-8d0f7715f79b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2b9142ce-ea07-5ca5-81f9-8010cdbcd99a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ddfa1f5a-b3ba-5b16-a79f-5464e68ab506</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>33R 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f41ae182-64e6-5aab-882c-9553f86b4eab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>10k 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>205d0bc4-1523-5fea-b5ba-c21516f0fe43</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R23">
+      <value>10k 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ceedd2a-9b81-5ede-808f-05ac21f3b070</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R24">
+      <value>10k 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63777863-c25c-5a56-b3ff-fb0b82b28685</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R25">
+      <value>10k 1%</value>
+      <footprint>doom-carrier:R</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">doom-carrier:R</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bad29062-630e-5c9a-828f-2954caca0aa1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>3V3</value>
+      <footprint>doom-carrier:TestPoint</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:TestPoint</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>caee62e4-37fe-5477-908a-78217ab4032d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>GND</value>
+      <footprint>doom-carrier:TestPoint</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:TestPoint</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>88cebd1a-c2b7-544e-a400-f6d02677efe2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>LCD_WR</value>
+      <footprint>doom-carrier:TestPoint</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:TestPoint</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59adbe64-c59f-5760-90e9-7236f6c11c61</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>LCD_CS</value>
+      <footprint>doom-carrier:TestPoint</footprint>
+      <fields>
+        <field name="Footprint">doom-carrier:TestPoint</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="doom-carrier" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="doom-carrier"/>
+      <property name="Sheetfile" value="doom-carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e8173a5-9903-5c8a-bc4b-fc325230006d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="doom-carrier" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="doom-carrier" part="Display34">
+      <description>Generic connector, double row, 02x17, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x17_Odd_Even</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, double row, 02x17, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+        <pin num="17" name="Pin_17" type="passive"/>
+        <pin num="18" name="Pin_18" type="passive"/>
+        <pin num="19" name="Pin_19" type="passive"/>
+        <pin num="20" name="Pin_20" type="passive"/>
+        <pin num="21" name="Pin_21" type="passive"/>
+        <pin num="22" name="Pin_22" type="passive"/>
+        <pin num="23" name="Pin_23" type="passive"/>
+        <pin num="24" name="Pin_24" type="passive"/>
+        <pin num="25" name="Pin_25" type="passive"/>
+        <pin num="26" name="Pin_26" type="passive"/>
+        <pin num="27" name="Pin_27" type="passive"/>
+        <pin num="28" name="Pin_28" type="passive"/>
+        <pin num="29" name="Pin_29" type="passive"/>
+        <pin num="30" name="Pin_30" type="passive"/>
+        <pin num="31" name="Pin_31" type="passive"/>
+        <pin num="32" name="Pin_32" type="passive"/>
+        <pin num="33" name="Pin_33" type="passive"/>
+        <pin num="34" name="Pin_34" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="doom-carrier" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+    </libpart>
+    <libpart lib="doom-carrier" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="doom-carrier" part="Socket22">
+      <description>Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x22</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+        <pin num="17" name="Pin_17" type="passive"/>
+        <pin num="18" name="Pin_18" type="passive"/>
+        <pin num="19" name="Pin_19" type="passive"/>
+        <pin num="20" name="Pin_20" type="passive"/>
+        <pin num="21" name="Pin_21" type="passive"/>
+        <pin num="22" name="Pin_22" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="doom-carrier" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="doom-carrier">
+      <uri>${KIPRJMOD}/doom-carrier.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/3V3" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J3" pin="24" pinfunction="Pin_24_24" pintype="passive"/>
+      <node ref="J3" pin="25" pinfunction="Pin_25_25" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="2" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="J1" pin="22" pinfunction="Pin_22_22" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J2" pin="21" pinfunction="Pin_21_21" pintype="passive"/>
+      <node ref="J2" pin="22" pinfunction="Pin_22_22" pintype="passive"/>
+      <node ref="J3" pin="26" pinfunction="Pin_26_26" pintype="passive"/>
+      <node ref="J3" pin="27" pinfunction="Pin_27_27" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="3" name="/LCD_BL" class="Default">
+      <node ref="J3" pin="23" pinfunction="Pin_23_23" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="/LCD_CS" class="Default">
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="5" name="/LCD_D0" class="Default">
+      <node ref="J3" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="6" name="/LCD_D1" class="Default">
+      <node ref="J3" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/LCD_D2" class="Default">
+      <node ref="J3" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="/LCD_D3" class="Default">
+      <node ref="J3" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="/LCD_D4" class="Default">
+      <node ref="J3" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="/LCD_D5" class="Default">
+      <node ref="J3" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="/LCD_D6" class="Default">
+      <node ref="J3" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="/LCD_D7" class="Default">
+      <node ref="J3" pin="13" pinfunction="Pin_13_13" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="13" name="/LCD_D8" class="Default">
+      <node ref="J3" pin="14" pinfunction="Pin_14_14" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="/LCD_D9" class="Default">
+      <node ref="J3" pin="15" pinfunction="Pin_15_15" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="/LCD_D10" class="Default">
+      <node ref="J3" pin="16" pinfunction="Pin_16_16" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="/LCD_D11" class="Default">
+      <node ref="J3" pin="17" pinfunction="Pin_17_17" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="17" name="/LCD_D12" class="Default">
+      <node ref="J3" pin="18" pinfunction="Pin_18_18" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="18" name="/LCD_D13" class="Default">
+      <node ref="J3" pin="19" pinfunction="Pin_19_19" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="/LCD_D14" class="Default">
+      <node ref="J3" pin="20" pinfunction="Pin_20_20" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="/LCD_D15" class="Default">
+      <node ref="J3" pin="21" pinfunction="Pin_21_21" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="/LCD_DC" class="Default">
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="/LCD_FLASH_CS" class="Default">
+      <node ref="J3" pin="32" pinfunction="Pin_32_32" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+    </net>
+    <net code="23" name="/LCD_RD" class="Default">
+      <node ref="J3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="/LCD_RST" class="Default">
+      <node ref="J3" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+    </net>
+    <net code="25" name="/LCD_SD_CS" class="Default">
+      <node ref="J3" pin="22" pinfunction="Pin_22_22" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="/LCD_TOUCH_CS" class="Default">
+      <node ref="J3" pin="33" pinfunction="Pin_33_33" pintype="passive"/>
+      <node ref="R25" pin="2" pintype="passive"/>
+    </net>
+    <net code="27" name="/LCD_WR" class="Default">
+      <node ref="J3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="28" name="/MCU_BL" class="Default">
+      <node ref="J2" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="/MCU_CS" class="Default">
+      <node ref="J2" pin="18" pinfunction="Pin_18_18" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="/MCU_D0" class="Default">
+      <node ref="J2" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="31" name="/MCU_D1" class="Default">
+      <node ref="J2" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="32" name="/MCU_D2" class="Default">
+      <node ref="J1" pin="13" pinfunction="Pin_13_13" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="33" name="/MCU_D3" class="Default">
+      <node ref="J1" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="34" name="/MCU_D4" class="Default">
+      <node ref="J1" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="35" name="/MCU_D5" class="Default">
+      <node ref="J1" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="36" name="/MCU_D6" class="Default">
+      <node ref="J1" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="37" name="/MCU_D7" class="Default">
+      <node ref="J1" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="38" name="/MCU_D8" class="Default">
+      <node ref="J1" pin="15" pinfunction="Pin_15_15" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="39" name="/MCU_D9" class="Default">
+      <node ref="J1" pin="16" pinfunction="Pin_16_16" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+    </net>
+    <net code="40" name="/MCU_D10" class="Default">
+      <node ref="J1" pin="17" pinfunction="Pin_17_17" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="41" name="/MCU_D11" class="Default">
+      <node ref="J1" pin="18" pinfunction="Pin_18_18" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+    </net>
+    <net code="42" name="/MCU_D12" class="Default">
+      <node ref="J1" pin="19" pinfunction="Pin_19_19" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="43" name="/MCU_D13" class="Default">
+      <node ref="J1" pin="20" pinfunction="Pin_20_20" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="44" name="/MCU_D14" class="Default">
+      <node ref="J1" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+    </net>
+    <net code="45" name="/MCU_D15" class="Default">
+      <node ref="J1" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+    </net>
+    <net code="46" name="/MCU_DC" class="Default">
+      <node ref="J1" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+    </net>
+    <net code="47" name="/MCU_RST" class="Default">
+      <node ref="J2" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+    </net>
+    <net code="48" name="/MCU_WR" class="Default">
+      <node ref="J1" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+    </net>
+    <net code="49" name="unconnected-(J1-Pin_3-Pad3)" class="Default">
+      <node ref="J1" pin="3" pinfunction="Pin_3_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(J1-Pin_14-Pad14)" class="Default">
+      <node ref="J1" pin="14" pinfunction="Pin_14_14" pintype="passive+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(J1-Pin_21-Pad21)" class="Default">
+      <node ref="J1" pin="21" pinfunction="Pin_21_21" pintype="passive+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(J2-Pin_2-Pad2)" class="Default">
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(J2-Pin_3-Pad3)" class="Default">
+      <node ref="J2" pin="3" pinfunction="Pin_3_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(J2-Pin_6-Pad6)" class="Default">
+      <node ref="J2" pin="6" pinfunction="Pin_6_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(J2-Pin_7-Pad7)" class="Default">
+      <node ref="J2" pin="7" pinfunction="Pin_7_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(J2-Pin_8-Pad8)" class="Default">
+      <node ref="J2" pin="8" pinfunction="Pin_8_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(J2-Pin_11-Pad11)" class="Default">
+      <node ref="J2" pin="11" pinfunction="Pin_11_11" pintype="passive+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(J2-Pin_12-Pad12)" class="Default">
+      <node ref="J2" pin="12" pinfunction="Pin_12_12" pintype="passive+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(J2-Pin_13-Pad13)" class="Default">
+      <node ref="J2" pin="13" pinfunction="Pin_13_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(J2-Pin_14-Pad14)" class="Default">
+      <node ref="J2" pin="14" pinfunction="Pin_14_14" pintype="passive+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(J2-Pin_15-Pad15)" class="Default">
+      <node ref="J2" pin="15" pinfunction="Pin_15_15" pintype="passive+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(J2-Pin_16-Pad16)" class="Default">
+      <node ref="J2" pin="16" pinfunction="Pin_16_16" pintype="passive+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(J2-Pin_17-Pad17)" class="Default">
+      <node ref="J2" pin="17" pinfunction="Pin_17_17" pintype="passive+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(J2-Pin_19-Pad19)" class="Default">
+      <node ref="J2" pin="19" pinfunction="Pin_19_19" pintype="passive+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(J2-Pin_20-Pad20)" class="Default">
+      <node ref="J2" pin="20" pinfunction="Pin_20_20" pintype="passive+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(J3-Pin_28-Pad28)" class="Default">
+      <node ref="J3" pin="28" pinfunction="Pin_28_28" pintype="passive+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(J3-Pin_29-Pad29)" class="Default">
+      <node ref="J3" pin="29" pinfunction="Pin_29_29" pintype="passive+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(J3-Pin_30-Pad30)" class="Default">
+      <node ref="J3" pin="30" pinfunction="Pin_30_30" pintype="passive+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(J3-Pin_31-Pad31)" class="Default">
+      <node ref="J3" pin="31" pinfunction="Pin_31_31" pintype="passive+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(J3-Pin_34-Pad34)" class="Default">
+      <node ref="J3" pin="34" pinfunction="Pin_34_34" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

@@ -1,0 +1,19 @@
+{
+  "application": {
+    "repo": "https://github.com/w1ne/labwired-core",
+    "commit": "941a6c5caf0c53b66aa5af9290e5ecba5972ec72",
+    "path": "examples/common/uds_ecu_app.c",
+    "change": "Use CMSIS NVIC_SystemReset instead of open-coded AIRCR."
+  },
+  "stm32cube": {
+    "repo": "https://github.com/STMicroelectronics/STM32CubeH5",
+    "tag": "v1.4.0",
+    "commit": "0d526a4930310cf8fa6dce7538ab891cc37eb250",
+    "example": "Projects/NUCLEO-H563ZI/Examples/FDCAN/FDCAN_Com_Polling"
+  },
+  "udslib": {
+    "repo": "https://github.com/w1ne/udslib",
+    "tag": "v2.0.0"
+  },
+  "physical_tested": false
+}

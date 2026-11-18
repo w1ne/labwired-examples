@@ -1,0 +1,61 @@
+{
+  "type": "standard",
+  "cpu": {
+    "type": "xtensa_lx7",
+    "registers": [
+      2181055985,
+      1070247664,
+      0,
+      0,
+      266016,
+      1070216860,
+      33554431,
+      1,
+      2151142724,
+      1070247632,
+      1070246208,
+      0,
+      1070216688,
+      0,
+      266016,
+      1070216940
+    ],
+    "pc": 1077383182,
+    "ps": 266016,
+    "window_base": 1,
+    "window_start": 40962,
+    "vecbase": 1077362688
+  },
+  "steps_executed": 900000000,
+  "cycles": 900000000,
+  "instructions": 900000000,
+  "stop_reason": "max_steps",
+  "stop_reason_details": {
+    "triggered_stop_condition": "max_steps",
+    "triggered_limit": {
+      "name": "max_steps",
+      "value": 900000000
+    },
+    "observed": {
+      "name": "steps_executed",
+      "value": 900000000
+    }
+  },
+  "limits": {
+    "max_steps": 900000000,
+    "max_cycles": null,
+    "max_uart_bytes": 131072,
+    "no_progress_steps": null,
+    "wall_time_ms": 300000,
+    "max_vcd_bytes": null,
+    "stop_when_assertions_pass": false,
+    "stop_when_assertions_pass_settle_steps": 100000,
+    "stop_when_assertions_pass_min_steps": 0
+  },
+  "firmware_hash": "09e6dcf243659236ffffa103063c183e4c22ff940dba11f09ea4fd0f3418cc7d",
+  "config": {
+    "firmware": "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/doom-s3.elf",
+    "system": "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/system-physical.yaml",
+    "script": "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/menu-input.yaml"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "ok": false,
+  "buildOk": false,
+  "step": {
+    "validity": {
+      "status": "invalid",
+      "checks": [
+        "build",
+        "feature-health"
+      ]
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "error": "No exportable finite geometry for the step pair."
+    }
+  },
+  "sceneSummary": {
+    "valid": null,
+    "volume": null,
+    "faceCount": null,
+    "size": null
+  },
+  "featureCount": 0,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "feature.invalid-args",
+      "severity": "error",
+      "message": "Overlapping bodies: Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick), over the declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick); exceeded volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm. If you recently patched connectors, check for leftover duplicate parts before tweaking geometry.",
+      "hint": "Bodies overlap. If you just edited connectors/mates and still see collisions: remove stale duplicate/orphaned parts (keep one connected mechanism graph), then re-check. Otherwise translate along the mate, add clearance, or narrow limitsDeg/limitsMm. Intentional contact: declare a mate or ignore the pair.",
+      "nextAction": {
+        "kind": "fix-arg",
+        "field": "see-message"
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.fdm-clearance",
+      "severity": "info",
+      "message": "Print clearance is typed but never checked: declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) (cookbook fdm-fit-clearance-by-fit-type).",
+      "hint": "Declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) so the print clearance is checked, not only typed. Recipe: fdm-fit-clearance-by-fit-type.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "print clearance for a snap fit lid"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "serverBuild": "0.1.0+7a5ca41c0d3f@2026-11-18T09:08:15.431Z",
+  "kernelcadError": {
+    "code": "feature.invalid-args",
+    "category": "invalid_tool_input",
+    "stage": "input_validation",
+    "message": "Overlapping bodies: Parts 'CAN-interface-PCB' and 'CAN-J2' overlap by 35.65 mm\u00b3 (0.47 mm thick), over the declared contact budget (max 0.08 mm\u00b3 / max 0.08 mm thick); exceeded volume 35.6 mm\u00b3 > 0.08 mm\u00b3, thickness 0.471 mm > 0.08 mm. If you recently patched connectors, check for leftover duplicate parts before tweaking geometry.",
+    "recovery": "Bodies overlap. If you just edited connectors/mates and still see collisions: remove stale duplicate/orphaned parts (keep one connected mechanism graph), then re-check. Otherwise translate along the mate, add clearance, or narrow limitsDeg/limitsMm. Intentional contact: declare a mate or ignore the pair.",
+    "correlationId": "a822255b-4f4b-440b-9819-07422ada0179",
+    "serverBuild": "0.1.0+7a5ca41c0d3f@2026-11-18T09:08:15.431Z"
+  }
+}

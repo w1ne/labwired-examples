@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "images": [
+    {
+      "name": "iso",
+      "path": "/tmp/kernelcad-preview-SUGJmI/iso.png",
+      "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+      "byte_count": 101687,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-TKLpEnN8UAXbtOFizWzzsg/render-iso.png?exp=1795097213&sig=oaIIEKX3vsPm5SV5UxqiXS3g8vDFqGpF9ex8MO_p2uk",
+      "expires_at": "2026-11-19T14:06:53.000Z",
+      "inline": true
+    },
+    {
+      "name": "front",
+      "path": "/tmp/kernelcad-preview-SUGJmI/front.png",
+      "description": "Front elevation \u2014 camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+      "byte_count": 64949,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-NqnqgDvJinrZOMbn-YACvQ/render-front.png?exp=1795097214&sig=Ux_bHBsY4C8-e2-8-zpUbyVWqpKJ0OAaRiaLlOLOnLg",
+      "expires_at": "2026-11-19T14:06:54.000Z",
+      "inline": true
+    }
+  ],
+  "out_dir": "/tmp/kernelcad-preview-SUGJmI",
+  "bounds": {
+    "min": [
+      -106,
+      -31.5,
+      0
+    ],
+    "max": [
+      16,
+      72.5,
+      70.5
+    ]
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 186002.27699220242,
+    "faceCount": 2779,
+    "size": [
+      122,
+      104.00000000000001,
+      70.5
+    ]
+  },
+  "mechanism": "real",
+  "render_source": "static-player",
+  "render_ms": 140083,
+  "diagnostics": [],
+  "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+  "images_inline_count": 2,
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z",
+  "submitted_source_sha256": "981824d1fd4b9370d1d15907ab31b6fd6b00327a2bf09d21f9b956394aa2635e"
+}

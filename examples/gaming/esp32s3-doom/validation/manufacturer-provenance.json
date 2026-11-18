@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "checked_at": "2026-11-18",
+  "downloaded_references": [
+    {
+      "name": "mrb3205-size.pdf",
+      "url": "https://www.lcdwiki.com/res/MRB3205/3.2inch_MRB3205_Size.pdf",
+      "bytes": 115972,
+      "sha256": "089040ecfa9696e780c08a85432ad019d624362943a5a085c230a6b00b2cdcc1",
+      "use": "superseded dimension reference; geometry uses the 2025 drawing below"
+    },
+    {
+      "name": "mrb3205-schematic.pdf",
+      "url": "https://www.lcdwiki.com/res/MRB3205/3.2inch_MRB3205_Schematic.pdf",
+      "bytes": 385452,
+      "sha256": "f6e998af93be4d8d8622b23da4f7ddf8a1fa2877ddbee072c9d62c15a446ca16",
+      "use": "reference"
+    },
+    {
+      "name": "mrb3205-manual.pdf",
+      "url": "https://www.lcdwiki.com/res/MRB3205/3.2inch_16BIT_Module_MRB3205_User_Manual_EN.pdf",
+      "bytes": 1215415,
+      "sha256": "bd80b30e126ce6b421648393a7f6016d740e71f34e72636a71a1a091b3595b8c",
+      "use": "reference"
+    },
+    {
+      "name": "mrb3205-altium-library.zip",
+      "url": "https://www.lcdwiki.com/res/MRB3205/Altium_Package_Library.zip",
+      "bytes": 9348,
+      "sha256": "4f923a8400e0de27646f92a2e68911073571a8bf4abaf81ec605db9977c909f9",
+      "use": "rejected: library is the bare 37-pin LCD, not the 34-pin MRB3205 module"
+    },
+    {
+      "name": "esp32s3-devkit-v1-guide.html",
+      "url": "https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html",
+      "bytes": 25363,
+      "sha256": "086fc25c977dc36796731f783a8fe3d47a4c3d7a4eb7c9dfcb676cf78abff744",
+      "use": "reference"
+    },
+    {
+      "name": "devkit-v1-schematic.pdf",
+      "url": "https://dl.espressif.com/dl/SCH_ESP32-S3-DEVKITC-1_V1_20210312C.pdf",
+      "bytes": 410526,
+      "sha256": "a878f5a4c5c52acb649390fcdad181a5776e795d3473e9ef504d222ec8660bd1",
+      "use": "reference"
+    },
+    {
+      "name": "devkit-v1-layout.pdf",
+      "url": "https://dl.espressif.com/dl/PCB_ESP32-S3-DevKitC-1_V1_20210312CB.pdf",
+      "bytes": 1337906,
+      "sha256": "1e9f54915673dc0a9abf39c8b68eaba48cee6481ffea57c9787fc8b74e9795b7",
+      "use": "reference"
+    },
+    {
+      "name": "devkit-v1-dimensions.pdf",
+      "url": "https://dl.espressif.com/dl/DXF_ESP32-S3-DevKitC-1_V1_20210312CB.pdf",
+      "bytes": 251632,
+      "sha256": "5cae10183739d8221ad51a12332585b94b3079ad3fe2231a48c07aa1f51eeef3",
+      "use": "reference"
+    },
+    {
+      "name": "devkit-v1-dimensions.dxf",
+      "url": "https://dl.espressif.com/dl/DXF_ESP32-S3-DevKitC-1_V1_20210312CB.dxf",
+      "bytes": 787349,
+      "sha256": "0a700d9d1cd4a8f3d98a434b120d685524a9962916320b3bb98d74486789fda1",
+      "use": "reference"
+    },
+    {
+      "name": "mrb3205-dimensions-2025.pdf",
+      "url": "https://www.lcdwiki.com/res/MRB3205/MRB3205_Size.pdf",
+      "bytes": 261056,
+      "sha256": "aa55f54e8f04c00b5ff5fae93d1148d2666bf6e2a3e96ae53b76a7965bd8bc3c",
+      "use": "reference"
+    },
+    {
+      "name": "samtec-ssw.pdf",
+      "url": "https://suddendocs.samtec.com/prints/ssw-1xx-xx-xxx-x-xx-xxx-xx-mkt.pdf",
+      "bytes": 491233,
+      "sha256": "890f20796637b7947c7655aabf919d055b56988a01c20338b635f2daf35b051f",
+      "use": "manufacturer mechanical dimensions; vendor PDF is not redistributed"
+    },
+    {
+      "name": "samtec-tsw.pdf",
+      "url": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf",
+      "bytes": 1075572,
+      "sha256": "047ecedcc921fb0aed7127f08b9ba0fc1200d92d33fb7ded1b311d0ed8f42063",
+      "use": "manufacturer mechanical dimensions; vendor PDF is not redistributed"
+    },
+    {
+      "name": "samtec-idsd.pdf",
+      "url": "https://suddendocs.samtec.com/catalog_english/idsd.pdf",
+      "bytes": 1001239,
+      "sha256": "232b84f32c6bcf29545e9fdcac277a5c6833fe7adc7515c882cd4912b104e519",
+      "use": "manufacturer mechanical dimensions; vendor PDF is not redistributed"
+    }
+  ],
+  "geometry_decisions": [
+    {
+      "part": "ESP32-S3-DevKitC-1-N16R8 PCB v1.0",
+      "source": "devkit-v1-dimensions.dxf",
+      "decision": "Use 25.4 x 62.865 mm DXF outline and factory header centres. The PDF rounds the length to 62.74 mm. Populated component STEP is unavailable; reserve a stated 12 mm component-height volume."
+    },
+    {
+      "part": "MRB3205",
+      "source": "mrb3205-dimensions-2025.pdf",
+      "decision": "Use 57.6 x 90.73 x 1.6 mm PCB, drawing mount positions, glass and rear envelopes. Schematic controls pin assignments. Factory component envelopes remain explicit."
+    },
+    {
+      "part": "SSW-122-01-G-S",
+      "source": "samtec-ssw.pdf",
+      "decision": "Single-row 22-way body 2.41 x 56.39 mm, length tolerance +/-0.25 mm; 8.51 mm height and 2.64 mm tails."
+    },
+    {
+      "part": "TSW-117-07-G-D",
+      "source": "samtec-tsw.pdf",
+      "decision": "Two-row 17-way header; 5.842 mm exposed mating post and 2.54 mm insulator."
+    },
+    {
+      "part": "IDSD-17-D-04.00-G",
+      "source": "samtec-idsd.pdf",
+      "decision": "Double-row body length 17*2.54+1.50 = 44.68 mm. Required post insertion is 5.59..6.22 mm. MRB3205 7 mm posts need a nominal 1.1 mm printed stop. Flexible cable and spring contacts are outside rigid CAD proof."
+    }
+  ],
+  "component_status": {
+    "checked_at": "2026-11-18",
+    "replacement_reason": "Replaced two obsolete draft capacitor MPNs with current production parts, retaining electrical ratings and the 0805 land pattern. C2 now specifies X8R.",
+    "parts": [
+      {
+        "reference": "C1",
+        "manufacturer": "TDK",
+        "mpn": "C2012X7R1A106K125AC",
+        "status": "Production",
+        "value": "10uF +/-10%, 10V, X7R",
+        "dimensions_mm": [
+          2,
+          1.25,
+          1.25
+        ],
+        "dimension_tolerance_mm": 0.2,
+        "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC"
+      },
+      {
+        "reference": "C2",
+        "manufacturer": "TDK",
+        "mpn": "C2012X8R1H104K125AA",
+        "status": "Production",
+        "value": "100nF +/-10%, 50V, X8R",
+        "dimensions_mm": [
+          2,
+          1.25,
+          1.25
+        ],
+        "dimension_tolerance_mm": 0.2,
+        "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X8R1H104K125AA"
+      }
+    ],
+    "edited_files": [
+      "authoring/author_schematic.py",
+      "electronics/doom-carrier.kicad_sch",
+      "electronics/doom-carrier-unrouted.kicad_pcb",
+      "electronics/doom-carrier.kicad_pcb",
+      "manufacturing/positions.csv",
+      "manufacturing/doom-carrier.net.xml"
+    ]
+  },
+  "purchased_part_references": [
+    {
+      "Reference": "MCU1",
+      "Manufacturer": "Espressif",
+      "MPN": "ESP32-S3-DevKitC-1-N16R8, PCB v1.0",
+      "Source": "https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html"
+    },
+    {
+      "Reference": "LCD1",
+      "Manufacturer": "LCDWiki / QDtech",
+      "MPN": "MRB3205",
+      "Source": "https://www.lcdwiki.com/3.2inch_16BIT_Module_ILI9341_SKU:MRB3205"
+    },
+    {
+      "Reference": "J1,J2",
+      "Manufacturer": "Samtec",
+      "MPN": "SSW-122-01-G-S",
+      "Source": "https://www.samtec.com/products/ssw-122-01-g-s"
+    },
+    {
+      "Reference": "J3",
+      "Manufacturer": "Samtec",
+      "MPN": "TSW-117-07-G-D",
+      "Source": "https://www.samtec.com/products/tsw-117-07-g-d"
+    },
+    {
+      "Reference": "CABLE1",
+      "Manufacturer": "Samtec",
+      "MPN": "IDSD-17-D-04.00-G",
+      "Source": "https://www.samtec.com/products/idsd-17-d-04.00-g"
+    },
+    {
+      "Reference": "R1..R21",
+      "Manufacturer": "Yageo",
+      "MPN": "RC0603FR-0733RL",
+      "Source": "https://www.yageo.com/en/Chart/Download/pdf/RC"
+    },
+    {
+      "Reference": "R22..R25",
+      "Manufacturer": "Yageo",
+      "MPN": "RC0603FR-0710KL",
+      "Source": "https://www.yageo.com/en/Chart/Download/pdf/RC"
+    },
+    {
+      "Reference": "C1",
+      "Manufacturer": "TDK",
+      "MPN": "C2012X7R1A106K125AC",
+      "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC"
+    },
+    {
+      "Reference": "C2",
+      "Manufacturer": "TDK",
+      "MPN": "C2012X8R1H104K125AA",
+      "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X8R1H104K125AA"
+    },
+    {
+      "Reference": "USB1",
+      "Manufacturer": "Adafruit",
+      "MPN": "592",
+      "Source": "https://www.adafruit.com/product/592"
+    },
+    {
+      "Reference": "M1..M4",
+      "Manufacturer": "Harwin",
+      "MPN": "R25-1000702",
+      "Source": "https://www.harwin.com/products/R25-1000702"
+    },
+    {
+      "Reference": "M5..M12",
+      "Manufacturer": "Accu",
+      "MPN": "HPW-2.7-6.5-0.5-N",
+      "Source": "https://www.accu.co.uk/metric-flat-washers/465680-HPW-2-7-6-5-0-5-N"
+    },
+    {
+      "Reference": "M13..M16",
+      "Manufacturer": "Accu",
+      "MPN": "SSK-M2.5-5-A2",
+      "Source": "https://www.accu.co.uk/countersunk-socket-head-screws/5413-SSK-M2-5-5-A2"
+    },
+    {
+      "Reference": "M17..M20",
+      "Manufacturer": "Accu",
+      "MPN": "SSCF-M2.5-5-A2",
+      "Source": "https://www.accu.co.uk/metric-cap-head-screws/3803-SSCF-M2-5-5-A2"
+    },
+    {
+      "Reference": "M21..M24",
+      "Manufacturer": "Wurth Elektronik",
+      "MPN": "960040021",
+      "Source": "https://www.we-online.com/components/products/datasheet/960040021.pdf"
+    },
+    {
+      "Reference": "M25..M28",
+      "Manufacturer": "Accu",
+      "MPN": "SSCF-M2.5-12-A2",
+      "Source": "https://www.accu.co.uk/metric-cap-head-screws/3807-SSCF-M2-5-12-A2"
+    },
+    {
+      "Reference": "M29..M32",
+      "Manufacturer": "Accu",
+      "MPN": "HPN-M2.5-A2",
+      "Source": "https://www.accu.co.uk/hexagon-nuts/7886-HPN-M2-5-A2"
+    },
+    {
+      "Reference": "M33..M36",
+      "Manufacturer": "Accu",
+      "MPN": "SSCF-M3-10-A2",
+      "Source": "https://www.accu.co.uk/metric-cap-head-screws/3819-SSCF-M3-10-A2"
+    },
+    {
+      "Reference": "M37..M40",
+      "Manufacturer": "Accu",
+      "MPN": "HPN-M3-A2",
+      "Source": "https://www.accu.co.uk/hexagon-nuts/7888-HPN-M3-A2"
+    }
+  ],
+  "limitations": [
+    "Reference hashes identify reviewed vendor files; the vendor retains its copyright.",
+    "Nominal drawings and envelopes are not metrology of the purchased assembly.",
+    "No physical current, temperature, print-fit or powered-board qualification is recorded."
+  ]
+}

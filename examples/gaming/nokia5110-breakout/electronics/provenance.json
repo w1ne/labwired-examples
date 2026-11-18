@@ -1,0 +1,87 @@
+{
+  "kicad_version": "10.0.8",
+  "footprints": [
+    {
+      "local": "Header10",
+      "upstream": "Connector_PinHeader_2.54mm.pretty/PinHeader_1x10_P2.54mm_Vertical.kicad_mod",
+      "upstream_sha256": "d4cb0ccd4489d257fb4c8656c7534f4295ee8a304d6e323a7b8ff77d6155ad23"
+    },
+    {
+      "local": "Header8",
+      "upstream": "Connector_PinHeader_2.54mm.pretty/PinHeader_1x08_P2.54mm_Vertical.kicad_mod",
+      "upstream_sha256": "a3487a12dc87702385d7c9d219d8e1dff23f5bd4d263be9d8ce0507ebf77b0df"
+    },
+    {
+      "local": "Header4",
+      "upstream": "Connector_PinHeader_2.54mm.pretty/PinHeader_1x04_P2.54mm_Vertical.kicad_mod",
+      "upstream_sha256": "571d2d16b49795f8f9a91f96cc83fd2adf49890cd66c377189c44204ebd03c29"
+    },
+    {
+      "local": "R",
+      "upstream": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "upstream_sha256": "7190ac4a00125b807e54129ef0d87d87f2a658eeb74d025a7028203419b09f23"
+    },
+    {
+      "local": "C",
+      "upstream": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "upstream_sha256": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405"
+    },
+    {
+      "local": "C0805",
+      "upstream": "Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+      "upstream_sha256": "62775a51fe74ba7f1b572de327bdbd3fc92582721b2abcaa47787865590d89cb"
+    },
+    {
+      "local": "TestPoint",
+      "upstream": "TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "upstream_sha256": "d7ae230b69d8c3dad5082515a51aac9e4840360c8f4324a00673353676d43042"
+    },
+    {
+      "local": "MountingHole",
+      "upstream": "MountingHole.pretty/MountingHole_2.7mm_M2.5.kicad_mod",
+      "upstream_sha256": "d28d0215a45e6dd7c7ea0a27ffc55c41e75cd87ce37ab43b84c6cbe6abfe67d8"
+    },
+    {
+      "local": "AccessHole",
+      "upstream": "MountingHole.pretty/MountingHole_2.7mm_M2.5.kicad_mod",
+      "upstream_sha256": "d28d0215a45e6dd7c7ea0a27ffc55c41e75cd87ce37ab43b84c6cbe6abfe67d8"
+    }
+  ],
+  "symbols": {
+    "Header10": [
+      "Connector_Generic",
+      "Conn_01x10"
+    ],
+    "Header8": [
+      "Connector_Generic",
+      "Conn_01x08"
+    ],
+    "Header4": [
+      "Connector_Generic",
+      "Conn_01x04"
+    ],
+    "R": [
+      "Device",
+      "R"
+    ],
+    "C": [
+      "Device",
+      "C"
+    ],
+    "TestPoint": [
+      "Connector",
+      "TestPoint"
+    ],
+    "MountingHole": [
+      "Mechanical",
+      "MountingHole"
+    ],
+    "AccessHole": [
+      "Mechanical",
+      "MountingHole"
+    ]
+  },
+  "license": "CC-BY-SA-4.0 with KiCad design exception",
+  "source": "https://www.kicad.org/libraries/license/",
+  "changes": "Local names; 2.9 mm mount drills; 10 mm button access holes with 5.6 mm courtyard radius; explicit board rule areas for hardware; generic 3D models removed."
+}

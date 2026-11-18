@@ -1,0 +1,26 @@
+{
+  "schema": "labwired.mechanical-correction.v1",
+  "revision": "B",
+  "supersedes": {
+    "source_commit": "2ecf41ab1a935231eea4602498034a9dc08802e5",
+    "studio_slug": "YhZimWlS",
+    "studio_version": 1,
+    "reason": "The previous bare-board X turnover changed the top-face normal while constructed components kept pointing up, creating a mirrored physical layout."
+  },
+  "source": "mechanical/nokia-breakout-enclosure.kcad.ts",
+  "source_sha256": "9a739f7efc25d4ff66046c3b4dc5ba1fb32826bbafb2d6d50fb77ce4b9010326",
+  "submitted_source_sha256": "2760625f61d5820e5a3dd74b56710b74215217f8f02599857c67facc5cf45308",
+  "registration": "validation/board-registration.json",
+  "native_inputs_unchanged": true,
+  "native_board_top_normal": [
+    0,
+    0,
+    1
+  ],
+  "constructed_point_map": "[x,-y,z] from editor to native world",
+  "standard_screws": "Right-hand thread contract retained; only proper rotations/translations of symmetric fit envelopes.",
+  "native_step_sha256": "db40dd01df2611938d8b6e306f56516b638350815d26bd2efeba2902958f3782",
+  "native_step_valid_solids": 85,
+  "updated_studio_revision_pending": true,
+  "physical_prototype_tested": false
+}

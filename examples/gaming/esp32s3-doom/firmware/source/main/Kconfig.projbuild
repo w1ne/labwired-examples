@@ -1,0 +1,12 @@
+menu "Doom lab options"
+
+config DOOM_LCD_BUS_SPI
+    bool "Drive the panel over SPI instead of the i80 parallel bus"
+    default n
+    help
+        The physical board uses a 34-pin 8080 parallel panel through LCD_CAM.
+        The packaged LabWired twin models the same I80 path. Leave this
+        alternative SPI option disabled for the MRB3205 carrier.
+        Same controller and init sequence either way.
+
+endmenu

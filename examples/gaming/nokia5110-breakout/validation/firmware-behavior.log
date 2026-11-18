@@ -1,0 +1,37 @@
+
+running 7 tests
+NOKIA_WALK_DERIVATION derived_max_safe_tick_interval=32
+3c3c3c00 3c3c3c3c 3c3c3c3c 3c00003c 3c3c3c3c 3c3c3c3c 003c3c3c 3c3c3c00 
+3c3c3c3c 3c3c3c3c 3c00003c 3c3c3c3c 3c3c3c3c 003c3c3c 3c3c3c00 3c3c3c3c 
+3c3c3c3c 3c00003c 3c3c3c3c 3c3c3c3c 003c3c3c cfcfcf00 cfcfcfcf cfcfcfcf 
+cf0000cf cfcfcfcf cfcfcfcf 00cfcfcf cfcfcf00 cfcfcfcf cfcfcfcf cf0000cf 
+cfcfcfcf cfcfcfcf 00cfcfcf cfcfcf00 cfcfcfcf cfcfcfcf cf0000cf cfcfcfcf 
+cfcfcfcf 00cfcfcf 03030300 03030303 03030303 03000003 03030303 03030303 
+00030303 03030300 03030303 03030303 03000003 03030303 03030303 00030303 
+03030300 03030303 03030303 03000003 03030303 03030303 00030303 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 18180000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 e0e00000 e0e0e0e0 e0e0e0e0 e0e0e0e0 0000e0e0 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 
+test dump_splash_framebuffer ... ok
+test splash_framebuffer_matches_across_tick_intervals ... ok
+NOKIA_BATCHED requested=1024 effective=32 distance_cm=2 paddle_x=67
+NOKIA_TIMEOUT echo_high=false paddle_x=34 game_progressed=true
+NOKIA_BATCHED requested=1024 effective=32 distance_cm=200 paddle_x=0
+NOKIA_TIMEOUT echo_high=true paddle_x=34 game_progressed=true
+test missing_or_stuck_sensor_keeps_game_running_and_paddle_centered ... ok
+NOKIA_BATCHED requested=1024 effective=32 distance_cm=30 paddle_x=34
+NOKIA_DISTANCE near_cm=8 near_x=63 far_cm=300 far_x=1
+test firmware_draws_and_ship_tracks_distance ... ok
+NOKIA_BATCHED requested=1024 effective=32 distance_cm=8 paddle_x=67
+test distance_tracking_at_shipping_tick_interval ... ok
+NOKIA_MINIMUM near_cm=2 near_x=63 far_cm=200 far_x=1
+test firmware_tracks_minimum_hcsr04_distance ... ok
+test derived_and_explicit_walk_flag_are_output_identical ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 23.82s
+

@@ -1,0 +1,814 @@
+{
+  "sourceSha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+  "scope": "Local private KernelCAD runtime, unmodified acceptance gates. Physical hardware and cable dress not qualified.",
+  "render": {
+    "ok": true,
+    "images": [
+      {
+        "name": "sheet",
+        "path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png",
+        "description": "Inspection sheet — every rendered view tiled in one image, each labelled with its view name (see the per-view images for axis orientation). Check every tile, not just the overview."
+      },
+      {
+        "name": "iso",
+        "path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/iso.png",
+        "description": "Geometric Z-up three-quarter overview — camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation."
+      },
+      {
+        "name": "top",
+        "path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/top.png",
+        "description": "Geometric +Z top-down plan — camera on +Z looking down; screen right = +X, screen up = +Y. For imported parts, this is not necessarily the product exterior."
+      },
+      {
+        "name": "front",
+        "path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/front.png",
+        "description": "Front elevation — camera on -Y looking at the model; screen right = +X, screen up = +Z."
+      }
+    ],
+    "out_dir": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure",
+    "bounds": {
+      "min": [
+        -10,
+        -110,
+        0
+      ],
+      "max": [
+        90,
+        10,
+        68.5
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 178169.47714988946,
+      "faceCount": 2371,
+      "size": [
+        100,
+        120,
+        68.5
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 110064,
+    "diagnostics": []
+  },
+  "interior": {
+    "ok": true,
+    "images": [
+      {
+        "name": "iso",
+        "path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure-open/iso.png",
+        "description": "Geometric Z-up three-quarter overview — camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation."
+      }
+    ],
+    "out_dir": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure-open",
+    "bounds": {
+      "min": [
+        -10,
+        -110,
+        0
+      ],
+      "max": [
+        90,
+        10,
+        68.5
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 178169.47714988946,
+      "faceCount": 2371,
+      "size": [
+        100,
+        120,
+        68.5
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 58303,
+    "diagnostics": []
+  },
+  "assemblyStep": {
+    "ok": true,
+    "sceneSummary": {
+      "valid": true,
+      "volume": 178169.47714988946,
+      "faceCount": 2371,
+      "size": [
+        100,
+        120,
+        68.5
+      ]
+    },
+    "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-desktop-assembly.step",
+    "byte_count": 7593514,
+    "feature_count": 631,
+    "format": "step",
+    "diagnostics": []
+  },
+  "base-print": {
+    "sourceSha256": "53b14cabc6b45d68f018ee6de33796848ce5c2819132ba1220bfd93cb213dbec",
+    "step": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 110205.7384771488,
+        "faceCount": 127,
+        "size": [
+          100,
+          120,
+          63.5
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-base-print.step",
+      "byte_count": 440816,
+      "feature_count": 91,
+      "format": "step",
+      "diagnostics": []
+    },
+    "stl": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 110205.7384771488,
+        "faceCount": 127,
+        "size": [
+          100,
+          120,
+          63.5
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-base-print.stl",
+      "byte_count": 1331884,
+      "feature_count": 91,
+      "format": "stl",
+      "diagnostics": []
+    },
+    "3mf": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 110205.7384771488,
+        "faceCount": 127,
+        "size": [
+          100,
+          120,
+          63.5
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-base-print.3mf",
+      "byte_count": 336352,
+      "feature_count": 91,
+      "format": "3mf",
+      "diagnostics": []
+    }
+  },
+  "lid-print": {
+    "sourceSha256": "9de56f8a182d848229d4c246ee26f9ca444d8d0d83157bdd92dd246fc69aa557",
+    "step": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 16372.94302393172,
+        "faceCount": 46,
+        "size": [
+          100,
+          120.00000000000001,
+          3.200000000000015
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-lid-print.step",
+      "byte_count": 166555,
+      "feature_count": 91,
+      "format": "step",
+      "diagnostics": []
+    },
+    "stl": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 16372.94302393172,
+        "faceCount": 46,
+        "size": [
+          100,
+          120.00000000000001,
+          3.200000000000015
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-lid-print.stl",
+      "byte_count": 510484,
+      "feature_count": 91,
+      "format": "stl",
+      "diagnostics": []
+    },
+    "3mf": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 16372.94302393172,
+        "faceCount": 46,
+        "size": [
+          100,
+          120.00000000000001,
+          3.200000000000015
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-lid-print.3mf",
+      "byte_count": 133621,
+      "feature_count": 91,
+      "format": "3mf",
+      "diagnostics": []
+    }
+  },
+  "ribbon-spacer-print": {
+    "sourceSha256": "2d05cef92258fcdb53a5be3fa68bc8223cc2b1ec9c38376a09163106994564da",
+    "step": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 130.68000000000006,
+        "faceCount": 10,
+        "size": [
+          45,
+          6,
+          1.1000000000000014
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-ribbon-spacer-print.step",
+      "byte_count": 29875,
+      "feature_count": 91,
+      "format": "step",
+      "diagnostics": []
+    },
+    "stl": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 130.68000000000006,
+        "faceCount": 10,
+        "size": [
+          45,
+          6,
+          1.1000000000000014
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-ribbon-spacer-print.stl",
+      "byte_count": 1684,
+      "feature_count": 91,
+      "format": "stl",
+      "diagnostics": []
+    },
+    "3mf": {
+      "ok": true,
+      "sceneSummary": {
+        "valid": true,
+        "volume": 130.68000000000006,
+        "faceCount": 10,
+        "size": [
+          45,
+          6,
+          1.1000000000000014
+        ]
+      },
+      "output_path": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-ribbon-spacer-print.3mf",
+      "byte_count": 1428,
+      "feature_count": 91,
+      "format": "3mf",
+      "diagnostics": []
+    }
+  },
+  "review": {
+    "ok": false,
+    "goal": "Fitted desktop enclosure for the exact routed 80x100 mm Doom carrier, ESP32-S3-DevKitC-1 PCBv1.0 and MRB3205 display. Removable screw lid, accessible USB, supported display, no part collisions. Cable dress and physical qualification remain explicit external acceptance items.",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Attempt 01",
+        "ok": false,
+        "functional": true,
+        "qualityOk": false,
+        "script": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-desktop.kcad.ts",
+        "featureCount": 631,
+        "diagnosticCount": 94,
+        "reviewFacts": [
+          {
+            "code": "assembly.visual.review-required",
+            "severity": "warning",
+            "message": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+            "hint": "visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+          }
+        ],
+        "repairMode": "none",
+        "passedChecks": [
+          "validator-no-errors",
+          "pose-envelope-solved",
+          "pose-envelope-no-interference"
+        ],
+        "blockingReasons": [],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 0,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": true,
+          "status": "pass",
+          "entries": [
+            {
+              "name": "ribbon-depth-stop-height",
+              "source": "script",
+              "status": "pass",
+              "measured": [
+                45,
+                6,
+                1.1000000000000014
+              ],
+              "limit": {
+                "z": [
+                  0.78,
+                  1.41
+                ]
+              },
+              "margin": 0.3099999999999985,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_1",
+                  "selectorText": "body(boolean_40)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.41156240430404
+                }
+              ],
+              "featureId": "require_1",
+              "predicate": {
+                "metric": "bbox",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_40"
+                },
+                "op": "within",
+                "limit": {
+                  "z": [
+                    0.78,
+                    1.41
+                  ]
+                }
+              }
+            },
+            {
+              "name": "lower-ribbon-connector-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 11.64,
+              "limit": 0.5,
+              "margin": 11.14,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_2",
+                  "selectorText": "body(boolean_62)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_2",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_2",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_62"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "upper-ribbon-connector-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 12.265,
+              "limit": 0.5,
+              "margin": 11.765,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_3",
+                  "selectorText": "body(boolean_63)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_3",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_3",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_63"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "ribbon-connectors-to-devkit-reserve",
+              "source": "script",
+              "status": "pass",
+              "measured": 28.617304205672482,
+              "limit": 2,
+              "margin": 26.617304205672482,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_4",
+                  "selectorText": "body(boolean_63)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_4",
+                  "selectorText": "body(box_121)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.8561415198383
+                }
+              ],
+              "featureId": "require_4",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_63"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "box_121"
+                },
+                "op": "gte",
+                "limit": 2
+              }
+            },
+            {
+              "name": "carrier-to-lid",
+              "source": "script",
+              "status": "pass",
+              "measured": 43.39,
+              "limit": 1,
+              "margin": 42.39,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_5",
+                  "selectorText": "body(boolean_46)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 128.5469703096479
+                },
+                {
+                  "consumerFeatureId": "require_5",
+                  "selectorText": "body(boolean_39)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 156.23776752117269
+                }
+              ],
+              "featureId": "require_5",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_46"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_39"
+                },
+                "op": "gte",
+                "limit": 1
+              }
+            },
+            {
+              "name": "devkit-height-reserve-to-display",
+              "source": "script",
+              "status": "pass",
+              "measured": 12.11,
+              "limit": 2,
+              "margin": 10.11,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_6",
+                  "selectorText": "body(box_121)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.8561415198383
+                },
+                {
+                  "consumerFeatureId": "require_6",
+                  "selectorText": "body(boolean_61)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 107.89209655947958
+                }
+              ],
+              "featureId": "require_6",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "box_121"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_61"
+                },
+                "op": "gte",
+                "limit": 2
+              }
+            },
+            {
+              "name": "devkit-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 8.013612629195654,
+              "limit": 0.5,
+              "margin": 7.513612629195654,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_7",
+                  "selectorText": "body(boolean_50)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.67647565942796
+                },
+                {
+                  "consumerFeatureId": "require_7",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_7",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_50"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "display-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 11.122444758782702,
+              "limit": 0.5,
+              "margin": 10.622444758782702,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_8",
+                  "selectorText": "body(boolean_57)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 108.54469355984199
+                },
+                {
+                  "consumerFeatureId": "require_8",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_8",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_57"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "usb-plug-access",
+              "source": "script",
+              "status": "pass",
+              "measured": 0.5,
+              "limit": 0.5,
+              "margin": 0,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_9",
+                  "selectorText": "body(box_230)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 44.04543109109048
+                },
+                {
+                  "consumerFeatureId": "require_9",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_9",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "box_230"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "touch-glass-to-lid",
+              "source": "script",
+              "status": "pass",
+              "measured": 0.29999999999999893,
+              "limit": 0.3,
+              "margin": -1.0547118733938987e-15,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_10",
+                  "selectorText": "body(boolean_57)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 108.54469355984199
+                },
+                {
+                  "consumerFeatureId": "require_10",
+                  "selectorText": "body(boolean_39)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 156.23776752117269
+                }
+              ],
+              "featureId": "require_10",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_57"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_39"
+                },
+                "op": "gte",
+                "limit": 0.3
+              }
+            }
+          ],
+          "summary": {
+            "pass": 10,
+            "fail": 0,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+            "byteLength": 13887
+          },
+          "parameters": {
+            "values": {
+              "output": "assembly"
+            },
+            "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.2",
+            "revision": null
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+          "identitySha256": "7cedda4af7d11303940639025f6bac21c159fbb2ffaee6422e104f05d6149138"
+        },
+        "nextActionPrompt": "Functional CAD is not enough. The model still has unresolved review facts that an agent must explain or repair before accepting it as a physical object.\n- assembly.visual.review-required: This design-loop run requires screenshot review, but the attempt has no visualReview result. Hint: visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted.\nEither redesign the geometry so these facts disappear, or explicitly justify and allow the non-visual warning code only when the disconnected/extra geometry has a real physical role. Visual review gates cannot be allow-listed; use requireVisualReview: false only for explicit non-visual batch checks.\nRender screenshots, inspect them as the vision-capable agent, and attach visualReview.screenshotPath plus concrete findings before accepting the attempt.\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- assembly.visual.review-required: This design-loop run requires screenshot review, but the attempt has no visualReview result. → visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted.",
+        "revisionAssist": {
+          "mode": "hints-only",
+          "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+          "hints": [
+            {
+              "code": "assembly.visual.review-required",
+              "summary": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+              "suggestedChange": "visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+            }
+          ]
+        }
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Fitted desktop enclosure for the exact routed 80x100 mm Doom carrier, ESP32-S3-DevKitC-1 PCBv1.0 and MRB3205 display. Removable screw lid, accessible USB, supported display, no part collisions. Cable dress and physical qualification remain explicit external acceptance items.",
+      "steps": [
+        {
+          "id": "01",
+          "title": "Attempt 01",
+          "status": "failed",
+          "script": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-desktop.kcad.ts",
+          "review": {
+            "ok": false,
+            "functional": true,
+            "qualityOk": false,
+            "evaluationEvidence": {
+              "schema": "kernelcad.evaluation-evidence.v1",
+              "mode": "build",
+              "source": {
+                "sha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+                "byteLength": 13887
+              },
+              "parameters": {
+                "values": {
+                  "output": "assembly"
+                },
+                "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+              },
+              "engine": {
+                "kernel": "occt",
+                "version": "0.17.2",
+                "revision": null
+              },
+              "dependencies": {
+                "status": "untracked"
+              },
+              "reuse": {
+                "eligible": false,
+                "reason": "dependencies-untracked"
+              },
+              "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+              "identitySha256": "7cedda4af7d11303940639025f6bac21c159fbb2ffaee6422e104f05d6149138"
+            },
+            "summary": "functional but rejected by quality gate after 1 review facts",
+            "blockingReasons": [],
+            "reviewFacts": [
+              "assembly.visual.review-required: This design-loop run requires screenshot review, but the attempt has no visualReview result."
+            ]
+          }
+        }
+      ]
+    },
+    "revisionAssist": {
+      "mode": "hints-only",
+      "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+      "hints": [
+        {
+          "code": "assembly.visual.review-required",
+          "summary": "This design-loop run requires screenshot review, but the attempt has no visualReview result.",
+          "suggestedChange": "visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+        }
+      ]
+    },
+    "nextActionPrompt": "Functional CAD is not enough. The model still has unresolved review facts that an agent must explain or repair before accepting it as a physical object.\n- assembly.visual.review-required: This design-loop run requires screenshot review, but the attempt has no visualReview result. Hint: visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted.\nEither redesign the geometry so these facts disappear, or explicitly justify and allow the non-visual warning code only when the disconnected/extra geometry has a real physical role. Visual review gates cannot be allow-listed; use requireVisualReview: false only for explicit non-visual batch checks.\nRender screenshots, inspect them as the vision-capable agent, and attach visualReview.screenshotPath plus concrete findings before accepting the attempt.\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- assembly.visual.review-required: This design-loop run requires screenshot review, but the attempt has no visualReview result. → visual-review.required — render screenshots from Studio/demo-player, inspect whether the model visually matches the requested physical mechanism, then attach visualReview with screenshotPath, findings, checks, and accepted."
+  }
+}

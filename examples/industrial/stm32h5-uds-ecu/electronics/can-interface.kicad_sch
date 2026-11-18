@@ -1,0 +1,1767 @@
+(kicad_sch (version 20260101) (generator "eeschema") (uuid "53a736ec-a743-56cf-aed2-1747646407c0") (paper "A4") (title_block (title "STM32H563 CAN interface") (date "2026-11-18") (rev "A") (company "LabWired"))
+(lib_symbols
+(symbol "can-interface:MCU6"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x06"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MCU6_1_1"
+			(rectangle
+				(start -1.27 6.35)
+				(end 1.27 -8.89)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:CAN3"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "CAN3_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:TERM2"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TERM2_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:U"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -10.16 8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP2562-E-SN"
+			(at 2.54 8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "High-Speed CAN Transceiver, 1Mbps, 5V supply, Vio pin, -40C to +125C, SOIC-8"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "High-Speed CAN Transceiver"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "U_0_1"
+			(rectangle
+				(start -10.16 7.62)
+				(end 10.16 -7.62)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "U_1_1"
+			(pin input line
+				(at -12.7 5.08 0)
+				(length 2.54)
+				(name "TXD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 10.16 270)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -12.7 2.54 0)
+				(length 2.54)
+				(name "RXD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -12.7 -2.54 0)
+				(length 2.54)
+				(name "Vio"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 12.7 -2.54 180)
+				(length 2.54)
+				(name "CANL"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 12.7 2.54 180)
+				(length 2.54)
+				(name "CANH"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -5.08 0)
+				(length 2.54)
+				(name "STBY"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:ESD"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "ESD_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:MountingHole"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MountingHole_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "can-interface:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(symbol (lib_id "can-interface:MCU6") (at 40.64 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a8a5c6aa-7c33-5559-9c1d-dfe37b94e878")
+(property "Reference" "J1" (at 43.18 43.18 0) (effects (font (size 1.27 1.27))))
+(property "Value" "MCU 3V3 logic / 5V power" (at 43.18 71.12 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:MCU6" (at 40.64 55.88 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "B6B-XH-A(LF)(SN)" (at 40.64 55.88 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "JST" (at 40.64 55.88 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "65e00e3f-c2ff-57b6-8348-92cf9e6e1532"))
+(pin "2" (uuid "9e040db4-fac1-5947-b585-6ff96f49c749"))
+(pin "3" (uuid "4d9574fb-e388-5fda-adb4-978d3641e5c8"))
+(pin "4" (uuid "04048076-705f-5ec1-babe-f21aba2b6fe1"))
+(pin "5" (uuid "077798bf-8cb3-58d6-826f-0c76aa74fd3d"))
+(pin "6" (uuid "1ed66afa-7fe4-56d9-8e88-00ea9dc9cb61"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "J1") (unit 1)))))
+(wire (pts (xy 35.56 50.8) (xy 27.94 50.8)) (stroke (width 0) (type default)) (uuid "6b3d2f2a-ae24-5456-9c5c-8cf635b8c246"))
+(label "GND" (at 27.94 50.8 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a5e084b6-1a44-56c5-b93a-73c0f8fbbd8a"))
+(wire (pts (xy 35.56 53.34) (xy 27.94 53.34)) (stroke (width 0) (type default)) (uuid "e0da2c95-3470-5e2f-96d0-97445f6ddc7b"))
+(label "VDD5" (at 27.94 53.34 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cb9077a5-3558-560f-b764-91f860c3cd8f"))
+(wire (pts (xy 35.56 55.88) (xy 27.94 55.88)) (stroke (width 0) (type default)) (uuid "f1cb8038-2a40-5ea8-857c-139567744fc0"))
+(label "VIO3V3" (at 27.94 55.88 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fc5fb674-288a-56be-99c2-7e712696ce81"))
+(wire (pts (xy 35.56 58.42) (xy 27.94 58.42)) (stroke (width 0) (type default)) (uuid "684efffd-13d7-5b76-909a-a4d97cd1fece"))
+(label "TXD" (at 27.94 58.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6feb1a09-c1c1-5268-bf42-39d8b6954423"))
+(wire (pts (xy 35.56 60.96) (xy 27.94 60.96)) (stroke (width 0) (type default)) (uuid "f3009501-eb11-5f18-8c8b-977ad8444d65"))
+(label "RXD" (at 27.94 60.96 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e8b9e372-fee3-5bb6-b9dc-1ea189cf1d18"))
+(wire (pts (xy 35.56 63.5) (xy 27.94 63.5)) (stroke (width 0) (type default)) (uuid "aeb330fc-c363-5c52-b35a-9c369de29d50"))
+(label "GND" (at 27.94 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "440e769a-f20b-55a5-8787-649c5080babf"))
+(symbol (lib_id "can-interface:U") (at 116.84 60.96 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a65216ae-b8f4-5f05-9ece-3bccf7861a05")
+(property "Reference" "U1" (at 119.38 48.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "MCP2562FD-E/SN" (at 119.38 76.2 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:U" (at 116.84 60.96 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "MCP2562FD-E/SN" (at 116.84 60.96 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Microchip" (at 116.84 60.96 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "2f5417ab-2d19-5e64-8d3b-423b0c81f4f9"))
+(pin "2" (uuid "2191c45b-297e-52b6-8525-9f29891f8469"))
+(pin "3" (uuid "429d8a29-5edb-5a06-aae2-eaeab266488a"))
+(pin "4" (uuid "21b44df1-3a21-59d9-8e77-f11d94fb2ef1"))
+(pin "5" (uuid "f2ffb45b-513c-5f55-b836-5e25e88be245"))
+(pin "6" (uuid "59ec313d-f25a-5a17-8e8a-8870c58cc760"))
+(pin "7" (uuid "377fe893-25a2-55af-a1ae-49b538d2b629"))
+(pin "8" (uuid "fd1ff5f3-13c2-5489-85c2-a8adbefc0308"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "U1") (unit 1)))))
+(wire (pts (xy 104.14 55.88) (xy 96.52 55.88)) (stroke (width 0) (type default)) (uuid "dc0a5d22-634c-5e4f-a841-8c43e28caa98"))
+(label "TXD" (at 96.52 55.88 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "85b799b6-dfc2-5ab2-8b99-65be4d6f6ab6"))
+(wire (pts (xy 116.84 71.12) (xy 116.84 76.2)) (stroke (width 0) (type default)) (uuid "301f337f-33b3-5ab8-ac05-cf25e996cc86"))
+(label "GND" (at 116.84 76.2 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "46bc0e61-5130-59cb-97a6-94d223ca52e0"))
+(wire (pts (xy 116.84 50.8) (xy 116.84 45.72)) (stroke (width 0) (type default)) (uuid "82d700f8-5510-5327-b453-56f4eda59243"))
+(label "VDD5" (at 116.84 45.72 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2608bc78-5ec3-53d4-9f04-03c150c6b8ee"))
+(wire (pts (xy 104.14 58.42) (xy 96.52 58.42)) (stroke (width 0) (type default)) (uuid "df155da9-97f3-523e-bca5-348ec1cf5d6e"))
+(label "RXD" (at 96.52 58.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6f537014-178c-5a7a-bbfb-bbd238e21b80"))
+(wire (pts (xy 104.14 63.5) (xy 96.52 63.5)) (stroke (width 0) (type default)) (uuid "a9c65a86-6274-5713-8bca-83d45e863e3e"))
+(label "VIO3V3" (at 96.52 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cf61e90d-1acd-5cc6-9305-0c8e2f8ea86b"))
+(wire (pts (xy 129.54 63.5) (xy 137.16 63.5)) (stroke (width 0) (type default)) (uuid "183ea343-4f19-57d7-8e18-02b1359566e9"))
+(label "CANL" (at 137.16 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d316d424-a5b6-55dc-87d3-c8a48160cd5b"))
+(wire (pts (xy 129.54 58.42) (xy 137.16 58.42)) (stroke (width 0) (type default)) (uuid "0770dc0c-eb28-5b30-a77c-f74b6639205a"))
+(label "CANH" (at 137.16 58.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "10999290-9927-5a83-b378-65da682a19e2"))
+(wire (pts (xy 104.14 66.04) (xy 96.52 66.04)) (stroke (width 0) (type default)) (uuid "9abff3c7-21dc-5d9b-bc40-5be813f4e234"))
+(label "GND" (at 96.52 66.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2378494b-51a2-532e-9edc-14e21813aca8"))
+(symbol (lib_id "can-interface:CAN3") (at 231.14 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4bfa2cb5-5a75-5899-9c0c-65c2c6ac2657")
+(property "Reference" "J2" (at 233.68 45.72 0) (effects (font (size 1.27 1.27))))
+(property "Value" "CAN H / L / GND" (at 233.68 73.66 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:CAN3" (at 231.14 58.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "B3B-XH-A(LF)(SN)" (at 231.14 58.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "JST" (at 231.14 58.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "1b335355-105f-54e2-b059-ef0e7f2f6a75"))
+(pin "2" (uuid "16e4398f-1613-5144-b4db-0c019304390b"))
+(pin "3" (uuid "6404459b-40c9-51af-91a5-ab1a3c9dacec"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "J2") (unit 1)))))
+(wire (pts (xy 226.06 55.88) (xy 218.44 55.88)) (stroke (width 0) (type default)) (uuid "767a6044-918d-540c-beee-6b063dbe0ee1"))
+(label "CANH" (at 218.44 55.88 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d4e3194a-3685-5b7c-b105-b1906e113780"))
+(wire (pts (xy 226.06 58.42) (xy 218.44 58.42)) (stroke (width 0) (type default)) (uuid "d88652c7-0240-5027-a5d2-95ea355ce93d"))
+(label "CANL" (at 218.44 58.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ec57b1ef-47a9-564b-bc04-91cac38cffba"))
+(wire (pts (xy 226.06 60.96) (xy 218.44 60.96)) (stroke (width 0) (type default)) (uuid "39d1086d-b48d-55ca-a1e2-a443d9e7ce40"))
+(label "GND" (at 218.44 60.96 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1536aba2-2f68-5ccf-97d4-245a502c2975"))
+(symbol (lib_id "can-interface:ESD") (at 180.34 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c9da37b7-8e2a-59fa-bb45-08759b86f7bb")
+(property "Reference" "D1" (at 182.88 45.72 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PESD2CAN,215" (at 182.88 73.66 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:ESD" (at 180.34 58.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "PESD2CAN,215" (at 180.34 58.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Nexperia" (at 180.34 58.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "de94a50f-6806-509d-98c3-fd1e6bf0f3c4"))
+(pin "2" (uuid "192c3396-b37a-5ef8-a873-2f6c296ea6f4"))
+(pin "3" (uuid "52eb6869-6146-5b51-8a4e-2655ceb81c4a"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "D1") (unit 1)))))
+(wire (pts (xy 175.26 55.88) (xy 167.64 55.88)) (stroke (width 0) (type default)) (uuid "d9060f5f-4958-50cf-b896-944f7394f865"))
+(label "CANL" (at 167.64 55.88 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f6621a03-0825-5166-9281-7955ed08f074"))
+(wire (pts (xy 175.26 58.42) (xy 167.64 58.42)) (stroke (width 0) (type default)) (uuid "6f7f428f-af6b-5c4e-a0a8-9497faf7ebb9"))
+(label "CANH" (at 167.64 58.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "63c1ebdf-d636-59af-9f8b-8a57940868dd"))
+(wire (pts (xy 175.26 60.96) (xy 167.64 60.96)) (stroke (width 0) (type default)) (uuid "e4534976-e1f0-5541-9b61-b37051924a95"))
+(label "GND" (at 167.64 60.96 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "abee34ca-1cc6-51df-b9d1-eed69ac1de93"))
+(symbol (lib_id "can-interface:C") (at 73.66 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2d6a520d-d413-538b-a68c-fd42f8160f47")
+(property "Reference" "C1" (at 76.2 91.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V X7R" (at 76.2 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:C" (at 73.66 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "GRM188R71C104KA01D" (at 73.66 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Murata" (at 73.66 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "1e064cf0-4bdc-5b93-b589-5dad02eddf22"))
+(pin "2" (uuid "77d35242-8b7f-5e74-b734-dbb3b70c0022"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "C1") (unit 1)))))
+(wire (pts (xy 73.66 100.33) (xy 73.66 95.25)) (stroke (width 0) (type default)) (uuid "35eb6b49-c981-5872-b938-ddb25be87db5"))
+(label "VDD5" (at 73.66 95.25 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fcba305d-d00d-54ee-ba37-9dbfabbfc62c"))
+(wire (pts (xy 73.66 107.95) (xy 73.66 113.03)) (stroke (width 0) (type default)) (uuid "5eb88c35-0c17-54be-9567-77d49901afb9"))
+(label "GND" (at 73.66 113.03 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6481cfba-379f-5120-9798-d045bc20408e"))
+(symbol (lib_id "can-interface:C") (at 104.14 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4a1b562c-3e6b-52de-a449-e5fccac80481")
+(property "Reference" "C2" (at 106.68 91.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V X7R" (at 106.68 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:C" (at 104.14 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "GRM188R71C104KA01D" (at 104.14 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Murata" (at 104.14 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "446ca5ec-f412-56c5-99a6-efe4a2cb9cc5"))
+(pin "2" (uuid "1e090d32-dfea-5a99-9e11-10659af66fc7"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "C2") (unit 1)))))
+(wire (pts (xy 104.14 100.33) (xy 104.14 95.25)) (stroke (width 0) (type default)) (uuid "4d9c29ad-913e-5d2b-a4f7-2054fc95611d"))
+(label "VIO3V3" (at 104.14 95.25 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3f5a2a59-2fbe-5514-a6c7-b4c7a2af5d7d"))
+(wire (pts (xy 104.14 107.95) (xy 104.14 113.03)) (stroke (width 0) (type default)) (uuid "42e44f1f-f51b-55cd-9d4f-a073d78b5046"))
+(label "GND" (at 104.14 113.03 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "845e4799-a993-5495-aeae-d8af3bcef9a6"))
+(symbol (lib_id "can-interface:C") (at 134.62 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d1a75751-4851-5703-b61d-bff9299c7476")
+(property "Reference" "C3" (at 137.16 91.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1uF 16V X7R" (at 137.16 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:C" (at 134.62 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "GRM188R71C105KA12D" (at 134.62 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Murata" (at 134.62 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "b1d3ee5a-127b-519a-8838-3d0a6d7a8425"))
+(pin "2" (uuid "06b1b3c8-7729-59e3-8c67-79410eeca496"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "C3") (unit 1)))))
+(wire (pts (xy 134.62 100.33) (xy 134.62 95.25)) (stroke (width 0) (type default)) (uuid "8192c933-0768-5c64-8311-e376dc0008b0"))
+(label "VDD5" (at 134.62 95.25 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a527bac8-7183-5023-a46a-144061ac0848"))
+(wire (pts (xy 134.62 107.95) (xy 134.62 113.03)) (stroke (width 0) (type default)) (uuid "c5c8b63d-3161-5c57-9d72-c14c75f9b38e"))
+(label "GND" (at 134.62 113.03 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "56167b4d-d6c5-5472-99d0-7ce0b8705e28"))
+(symbol (lib_id "can-interface:R") (at 182.88 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cac3043f-6bc8-5eab-ae61-dd5b540e035d")
+(property "Reference" "R1" (at 185.42 91.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "120R 1% 0.5W" (at 185.42 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:R" (at 182.88 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "ERJ-P08F1200V" (at 182.88 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Panasonic" (at 182.88 104.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "cde7130b-17b7-5fcb-80f8-caeea512a259"))
+(pin "2" (uuid "8cc877b0-ca72-5438-82e2-ab2a93aa9769"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "R1") (unit 1)))))
+(wire (pts (xy 182.88 100.33) (xy 182.88 95.25)) (stroke (width 0) (type default)) (uuid "7a58060d-e74e-53c9-b994-39a34e36b3ea"))
+(label "CANH" (at 182.88 95.25 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4d8cbdac-591c-58db-825b-dfe0c5e4149d"))
+(wire (pts (xy 182.88 107.95) (xy 182.88 113.03)) (stroke (width 0) (type default)) (uuid "8c4d7243-8aa7-5085-a99a-5b567b02b05d"))
+(label "TERM_L" (at 182.88 113.03 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e860d675-cf88-5f4e-aca9-6a0ab1787901"))
+(symbol (lib_id "can-interface:TERM2") (at 226.06 109.22 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "958a65ee-d4e8-5a4f-a50f-821f334e4f28")
+(property "Reference" "JP1" (at 228.6 96.52 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TERMINATION (fit at bus end)" (at 228.6 124.46 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:TERM2" (at 226.06 109.22 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "TSW-102-07-G-S" (at 226.06 109.22 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 226.06 109.22 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "24b300c6-09b3-5c62-9381-0f191384184d"))
+(pin "2" (uuid "d3c1a2a7-288b-5f74-aeb2-476c3daaa4c0"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "JP1") (unit 1)))))
+(wire (pts (xy 220.98 109.22) (xy 213.36 109.22)) (stroke (width 0) (type default)) (uuid "6134d2d1-8c12-5be9-96e1-d07009347207"))
+(label "TERM_L" (at 213.36 109.22 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "26480301-2f77-557e-aeb3-18204d98c0b1"))
+(wire (pts (xy 220.98 111.76) (xy 213.36 111.76)) (stroke (width 0) (type default)) (uuid "73b245ef-26c6-5e73-be75-84f2ba92c104"))
+(label "CANL" (at 213.36 111.76 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6805f5ef-8f6a-5d68-b8f7-1d1444409190"))
+(symbol (lib_id "can-interface:MountingHole") (at 48.26 147.32 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "808ecc25-047c-59e6-9b23-4b5ab41ed178")
+(property "Reference" "H1" (at 50.8 134.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M3 / 3.2 mm NPTH" (at 50.8 162.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:MountingHole" (at 48.26 147.32 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "H1") (unit 1)))))
+(symbol (lib_id "can-interface:MountingHole") (at 93.98 147.32 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "ea8d7848-6acf-581f-9579-b3c5ffad2a22")
+(property "Reference" "H2" (at 96.52 134.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M3 / 3.2 mm NPTH" (at 96.52 162.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:MountingHole" (at 93.98 147.32 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "H2") (unit 1)))))
+(symbol (lib_id "can-interface:MountingHole") (at 139.7 147.32 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "cc849699-6c86-5271-a791-9c6d6540b465")
+(property "Reference" "H3" (at 142.24 134.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M3 / 3.2 mm NPTH" (at 142.24 162.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:MountingHole" (at 139.7 147.32 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "H3") (unit 1)))))
+(symbol (lib_id "can-interface:MountingHole") (at 185.42 147.32 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "1e313077-18f6-5c6f-9b11-96dbf60ee632")
+(property "Reference" "H4" (at 187.96 134.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M3 / 3.2 mm NPTH" (at 187.96 162.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "can-interface:MountingHole" (at 185.42 147.32 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "H4") (unit 1)))))
+(symbol (lib_id "can-interface:PWR_FLAG") (at 63.5 129.54 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "e24c45a1-cedd-5a41-8c1f-1885bb31b030")
+(property "Reference" "#FLG01" (at 66.04 116.84 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Value" "PWR_FLAG" (at 66.04 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "08aa3521-0f90-50fc-86df-3e3cb843955c"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "#FLG01") (unit 1)))))
+(wire (pts (xy 63.5 129.54) (xy 63.5 134.62)) (stroke (width 0) (type default)) (uuid "f6cc2a6b-097e-500d-aa78-593773376109"))
+(label "VDD5" (at 63.5 134.62 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "79e64800-fb52-550c-a02a-ff8ddea17238"))
+(symbol (lib_id "can-interface:PWR_FLAG") (at 91.44 129.54 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "70b27a7f-796b-5a80-9722-c41685c63eb7")
+(property "Reference" "#FLG02" (at 93.98 116.84 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Value" "PWR_FLAG" (at 93.98 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "b7fbf4df-507b-5f39-85c0-0c8a39d0eedc"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "#FLG02") (unit 1)))))
+(wire (pts (xy 91.44 129.54) (xy 91.44 134.62)) (stroke (width 0) (type default)) (uuid "d9af63ce-1331-5866-8fb7-f747696962a8"))
+(label "VIO3V3" (at 91.44 134.62 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a9a4bc37-713b-5312-85d5-d836181c6aef"))
+(symbol (lib_id "can-interface:PWR_FLAG") (at 119.38 129.54 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "587bdc83-80cb-5392-8f0b-73c780e38de4")
+(property "Reference" "#FLG03" (at 121.92 116.84 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Value" "PWR_FLAG" (at 121.92 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "69131cb3-9c73-57cf-ad84-1d4ce6d5cd6a"))
+(instances (project "can-interface" (path "/53a736ec-a743-56cf-aed2-1747646407c0" (reference "#FLG03") (unit 1)))))
+(wire (pts (xy 119.38 129.54) (xy 119.38 134.62)) (stroke (width 0) (type default)) (uuid "c7316763-4948-56af-8021-898cc64a9de1"))
+(label "GND" (at 119.38 134.62 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "de9edd3f-bd26-5524-ad6e-86c1064ed186"))
+(text "NUCLEO-H563ZI CAN interface - revision A" (at 20.32 15.24 0) (effects (font (size 2.54 2.54)) (justify left top)) (uuid "9f0e0e94-9d72-52ab-8724-5057c3656941"))
+(text "Bench interface: MCP2562FD-E/SN, 5V VDD, 3V3 VIO; STBY tied low.\nJ1 cable: 1/6 GND, 2 +5V, 3 +3V3, 4 MCU TX (PD1), 5 MCU RX (PD0).\nST UM3115: CN8.9=5V, CN8.7=3V3, CN8.11=GND; CN9.27=PD1, CN9.25=PD0." (at 20.32 22.86 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "eba5c81f-fe1b-5fc3-9872-b26238526aa0"))
+(text "D1 terminal mapping: 1 CANL, 2 CANH, 3 GND.\nPESD2CAN symbol is a functional pin block.\nPlace beside J2; ground return must be short." (at 162.56 79.756 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "cb0392b8-466b-59fa-b60d-00f0b021d9ed"))
+(text "JP1 closed: 120 ohm H-L termination.\nFit at each physical bus end only.\nBench uses one remote tester with its own\n120 ohm termination; unpowered H-L ~60 ohm." (at 205.74 127 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "c8f0e2bf-498a-5fdc-9fab-823bd908ad54"))
+(text "60 x 40 x 1.6 mm PCB, two layers; M3 mounting pattern 52 x 32 mm.\nJST XH keyed removable harnesses. No galvanic isolation. USB CN1 is the only system power source.\nUse CAN-FD 500 kbit/s nominal / 2 Mbit/s data after physical firmware bring-up; no physical measurements recorded." (at 20.32 167.64 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "0fe69a4e-5c31-5a7a-8c8e-a3ae48aab7b8"))
+(embedded_fonts no)
+)

@@ -1,0 +1,159 @@
+{
+  "ok": false,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "invalid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 86655.10421796073
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -4.440892098500626e-16,
+            -4.440892098500626e-16,
+            0
+          ],
+          "max": [
+            222,
+            90,
+            20.134999999999998
+          ]
+        }
+      },
+      "out_dir": "[server path]",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 86655.10421796073,
+    "faceCount": 795,
+    "size": [
+      222,
+      90,
+      20.134999999999998
+    ]
+  },
+  "featureCount": 62,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.fdm-clearance",
+      "severity": "info",
+      "message": "Print clearance is typed but never checked: declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) (cookbook fdm-fit-clearance-by-fit-type).",
+      "hint": "Declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) so the print clearance is checked, not only typed. Recipe: fdm-fit-clearance-by-fit-type.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "print clearance for a snap fit lid"
+        }
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "mechanism.interpenetration",
+      "severity": "error",
+      "message": "Overlapping bodies: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 0.066 mm\u00b3 (0.069 mm thick) near (203.5, 45.0, 10.3) at pose sample 'rest' \u2014 they overlap far more than the fastened joint's clearance-fit contact (rule: overlap > 0.01 mm\u00b3 and thicker than 0.01 mm (thinner = face contact) \u2014 a drilled clearance bore has ~0 overlap). A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J2']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended. If you recently patched connectors, check for leftover duplicate parts before tweaking geometry.",
+      "hint": "Bodies overlap. If you just edited connectors/mates and still see collisions: remove stale duplicate/orphaned parts (keep one connected mechanism graph), then re-check. Otherwise translate along the mate, add clearance, or narrow limitsDeg/limitsMm. Intentional contact: declare a mate or ignore the pair.",
+      "nextAction": {
+        "kind": "fix-arg",
+        "field": "partGeometry"
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "mechanism.interpenetration",
+      "severity": "error",
+      "message": "Overlapping bodies: Parts 'CAN-interface-PCB' and 'CAN-J1' interpenetrate by 0.066 mm\u00b3 (0.069 mm thick) near (159.5, 45.0, 10.3) at pose sample 'rest' \u2014 they overlap far more than the fastened joint's clearance-fit contact (rule: overlap > 0.01 mm\u00b3 and thicker than 0.01 mm (thinner = face contact) \u2014 a drilled clearance bore has ~0 overlap). A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose stays collision-free, or pass { ignore: [['CAN-interface-PCB', 'CAN-J1']] } as the SECOND argument to solvedModel({}, { ignore: ... }) if this overlap is genuinely intended. If you recently patched connectors, check for leftover duplicate parts before tweaking geometry.",
+      "hint": "Bodies overlap. If you just edited connectors/mates and still see collisions: remove stale duplicate/orphaned parts (keep one connected mechanism graph), then re-check. Otherwise translate along the mate, add clearance, or narrow limitsDeg/limitsMm. Intentional contact: declare a mate or ignore the pair.",
+      "nextAction": {
+        "kind": "fix-arg",
+        "field": "partGeometry"
+      }
+    }
+  ],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "310e7522e782e9c31f83c82fcc1cc4c298620e301a4cf0a94b596fda2141dd09",
+      "byteLength": 4061
+    },
+    "parameters": {
+      "values": {
+        "nucleoLength": 133.34,
+        "nucleoWidth": 70,
+        "nucleoPcbThickness": 1.6,
+        "nucleoEdgeClearance": 0.35
+      },
+      "sha256": "7ab2b8cc0e7eab21d992c652732c41c6d84d06e82d1a1e04b5b6ef5e0c6a2378"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "7a5ca41c0d3f8224347d2ec15d9be7939af40847"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "3cbce10e7e2e74b847971674ebeafdf1fa61f532a22aea76690f1b3d656eb298"
+  },
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 12,
+    "names": [
+      "printed-base",
+      "NUCLEO-H563ZI-PCB-ENVELOPE",
+      "CAN-interface-PCB",
+      "CAN-J2",
+      "CAN-J1",
+      "CAN-C3",
+      "CAN-R1",
+      "CAN-C1",
+      "CAN-JP1",
+      "CAN-D1",
+      "CAN-U1",
+      "CAN-C2"
+    ]
+  },
+  "mechanism": "broken",
+  "serverBuild": "0.1.0+7a5ca41c0d3f@2026-11-18T09:08:15.431Z",
+  "kernelcadError": {
+    "code": "mechanism.interpenetration",
+    "category": "model_validation",
+    "stage": "model_validation",
+    "message": "Overlapping bodies: Parts 'CAN-interface-PCB' and 'CAN-J2' interpenetrate by 0.066 mm\u00b3 (0.069 mm thick) near (203.5, 45.0, 10.3) at pose sample 'rest' \u2014 they overlap far more than the fastened joint's clearance-fit contact (rule: overlap > 0.01 mm\u00b3 and thicker than 0.01 mm (thinner = face contact) \u2014 a drilled clearance bore has ~0 overlap). A correctly-modeled joint is a clearance fit (ISO 286) with ~0 shared solid volume. Add clearance, reduce mate travel, move the geometry so the swept pose st",
+    "recovery": "Bodies overlap. If you just edited connectors/mates and still see collisions: remove stale duplicate/orphaned parts (keep one connected mechanism graph), then re-check. Otherwise translate along the mate, add clearance, or narrow limitsDeg/limitsMm. Intentional contact: declare a mate or ignore the pair.",
+    "correlationId": "9997324a-3321-4e14-8de9-bfccd55f7df8",
+    "serverBuild": "0.1.0+7a5ca41c0d3f@2026-11-18T09:08:15.431Z"
+  }
+}

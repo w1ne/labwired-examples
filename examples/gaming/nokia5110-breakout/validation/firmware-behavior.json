@@ -1,0 +1,34 @@
+{
+  "schema": "labwired.firmware-behavior.v1",
+  "passed": true,
+  "test_count": 7,
+  "test_names": [
+    "dump_splash_framebuffer",
+    "splash_framebuffer_matches_across_tick_intervals",
+    "missing_or_stuck_sensor_keeps_game_running_and_paddle_centered",
+    "firmware_draws_and_ship_tracks_distance",
+    "distance_tracking_at_shipping_tick_interval",
+    "firmware_tracks_minimum_hcsr04_distance",
+    "derived_and_explicit_walk_flag_are_output_identical"
+  ],
+  "firmware_elf_sha256": "1960f7a95a23d32647c363f58116490e5d9012e0fb201fc85630afa7ba105e5c",
+  "firmware_bin_sha256": "68eb1d161e2b3b361609a09510e1bfe48fc4e043d4a6669ad9f8abd1df099280",
+  "harness_source_commit": "261e5969f790deaf00506002de55e76e9b6d81f4",
+  "harness_sha256": "2c4621a08195e905564980e491ec9af7d5dc6338929b82c8d019cdf241c6517c",
+  "core_pr": "https://github.com/w1ne/labwired-core/pull/2035",
+  "invocation": "CARGO_TARGET_DIR=<package>/firmware/target e2e-nokia-261e5969f --ignored --nocapture (CARGO_TARGET_TMPDIR unset)",
+  "observations": [
+    "NOKIA_WALK_DERIVATION derived_max_safe_tick_interval=32",
+    "NOKIA_BATCHED requested=1024 effective=32 distance_cm=2 paddle_x=67",
+    "NOKIA_TIMEOUT echo_high=false paddle_x=34 game_progressed=true",
+    "NOKIA_BATCHED requested=1024 effective=32 distance_cm=200 paddle_x=0",
+    "NOKIA_TIMEOUT echo_high=true paddle_x=34 game_progressed=true",
+    "NOKIA_BATCHED requested=1024 effective=32 distance_cm=30 paddle_x=34",
+    "NOKIA_DISTANCE near_cm=8 near_x=63 far_cm=300 far_x=1",
+    "NOKIA_BATCHED requested=1024 effective=32 distance_cm=8 paddle_x=67",
+    "NOKIA_MINIMUM near_cm=2 near_x=63 far_cm=200 far_x=1"
+  ],
+  "physical_tested": false,
+  "log": "firmware-behavior.log",
+  "note": "The unchanged existing core test executable loaded the exact standalone package ELF. All seven assertions ran; this was not a zero-test filter or stop-only smoke."
+}

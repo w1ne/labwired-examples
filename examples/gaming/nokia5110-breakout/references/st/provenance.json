@@ -1,0 +1,64 @@
+{
+  "manufacturer": "STMicroelectronics",
+  "purchased_product": "NUCLEO-L476RG",
+  "source_url": "https://www.st.com/resource/en/board_manufacturing_specification/mb1136_bdp.zip",
+  "source_sha256": "66e2aa6a1ca58e787ea1717c0736a1853777f93a20a95e4d2e0273dc234eb52d",
+  "source_pcb": "MB1136C/Altium_Designer/MB1136.PcbDoc",
+  "original_import_error_count": 0,
+  "original_import_warning_count": 0,
+  "finished_outline_layer": "Mechanical 1",
+  "finished_outline_bounds_mm": {
+    "xmin": 113.5011,
+    "xmax": 183.5011,
+    "ymin": 64.0036,
+    "ymax": 146.5036
+  },
+  "thickness_mm": 1.59112,
+  "derived_outline_repairs": [
+    {
+      "reason": "remove zero-length source contour segment",
+      "point_mm": [
+        160.0011,
+        146.5036
+      ]
+    },
+    {
+      "reason": "close source contour at existing adjoining diagonal",
+      "from_mm": [
+        161.9711,
+        144.5036
+      ],
+      "to_mm": [
+        162.0011,
+        144.5036
+      ]
+    }
+  ],
+  "derived_board_sha256": "2e3ee4a1ffdc0039f5ab0d0cced0514c6fe6fb378201151dfdcaf8ddac6cdcbc",
+  "use": "Purchased-module mechanical reference only. Do not fabricate this ST board from the derivative. Preserve ST OPLA and original attribution.",
+  "step_export_origin_mm": [
+    113.5011,
+    64.0036
+  ],
+  "mounting_holes_mm": [
+    [
+      10.87,
+      27.93,
+      3.2
+    ],
+    [
+      59.13,
+      29.2,
+      3.2
+    ],
+    [
+      43.89,
+      80,
+      3.2
+    ]
+  ],
+  "unknowns": [
+    "The original native board contains no component STEP models. Connector and device envelopes must be documented separately.",
+    "The original CAD export does not identify the populated Arduino female socket manufacturer or height."
+  ]
+}

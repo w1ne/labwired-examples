@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "cli_commit": "31730dd16391495aed6045ffb52b1aee62d3ceab",
+  "cli_sha256": "6d304587aecc72d012db81b90caa6c29f088e2a49a306e6e7150cd8e94081e44",
+  "command": [
+    "/data/work-evidence/labwired-featured-implementation-20261118/pico-nokia-doom/nokia/labwired-uart-31730dd16391495aed6045ffb52b1aee62d3ceab",
+    "test",
+    "--script",
+    "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/no-input.yaml",
+    "--rom-boot",
+    "--no-uart-stdout",
+    "--output-dir",
+    "/data/work-evidence/labwired-featured-implementation-20261118/doom/final-control-no-input",
+    "--inspect-bytes-max",
+    "1048576",
+    "--run-manifest",
+    "--heartbeat-file",
+    "/data/work-evidence/labwired-featured-implementation-20261118/doom/final-no-input-heartbeat.json"
+  ],
+  "environment": {
+    "LABWIRED_ESP32S3_FLASH": "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/doom-s3-flash.bin",
+    "LABWIRED_ESP32S3_ROM": "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/esp32s3_rom.bin",
+    "LABWIRED_ESP32S3_DROM": "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/esp32s3_drom.bin"
+  },
+  "fastboot": false,
+  "inputs": {
+    "doom-s3.elf": {
+      "sha256": "09e6dcf243659236ffffa103063c183e4c22ff940dba11f09ea4fd0f3418cc7d",
+      "bytes": 6371888
+    },
+    "doom-s3-flash.bin": {
+      "sha256": "38dd230a754ef167e07ae6350c52b0000bb7dc003c0795330119867dc1f1f2cb",
+      "bytes": 8455860
+    },
+    "esp32s3_rom.bin": {
+      "sha256": "9f2ba6ac2b66ced6e3b31a333d7a299aca1fa4b88bbe56f71d4856bd16e8bc51",
+      "bytes": 393216
+    },
+    "esp32s3_drom.bin": {
+      "sha256": "cc7abaafec6589b801d9f5df098197f264dda9d979e5885900015e332eae616d",
+      "bytes": 131072
+    },
+    "chip.yaml": {
+      "sha256": "64e513983592375093e9bf28327a09a4ab404aebecbe1d44a89d23be4081e0f6",
+      "bytes": 3870
+    },
+    "system-physical.yaml": {
+      "sha256": "b2577783a86b3b7f26358faa4b4b19804890d09a08ad12cea55db8fdd609f1c9",
+      "bytes": 797
+    },
+    "no-input.yaml": {
+      "sha256": "68763fc08bf9c7cf7272b9f544f0265369ef0a520685dcf09176ba7a7d690179",
+      "bytes": 511
+    }
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 165.178
+}

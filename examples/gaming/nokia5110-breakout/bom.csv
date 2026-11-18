@@ -1,0 +1,28 @@
+reference,quantity,unit,manufacturer,mpn,description,source,assembly_notes
+PCB1,1,pc,LabWired,LW-NOKIA-CARRIER-A,90 × 66 × 1.6 mm two-layer bare carrier,manufacturing/nokia-carrier-fabrication.zip,Bare PCB; components below are additional.
+U1,1,pc,STMicroelectronics,NUCLEO-L476RG,"Nucleo-64 development board, intact ST-LINK section",https://www.st.com/en/evaluation-tools/nucleo-l476rg.html,Factory Arduino sockets and Morpho headers are included with the board.
+LCD1,1,pc,Joy-IT,SBC-LCD84x48,"84 × 48 PCD8544 LCD, REVISION 2",https://www.joy-it.net/en/products/SBC-LCD84x48,"REV2 is mandatory; match labelled pads, not an assumed numbering scheme."
+SENSOR1,1,pc,Adafruit,3942,HC-SR04 ultrasonic distance module,https://www.adafruit.com/product/3942,5 V supply; use its labelled VCC/TRIG/ECHO/GND contacts.
+J1,1,pc,Samtec,TSW-110-07-G-S,10-position 2.54 mm through-hole terminal strip,https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf,Carrier underside; CN5.
+"J2,J3,J4,LCD-HDR",4,pc,Samtec,TSW-108-07-G-S,8-position 2.54 mm through-hole terminal strip,https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf,Three carrier strips plus one LCD rear strip. Replace an incompatible preinstalled LCD strip.
+J5,1,pc,Samtec,TSW-104-07-G-S,4-position 2.54 mm through-hole terminal strip,https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf,Carrier top; sonar harness.
+R1,1,pc,Yageo,RC0603FR-0710KL,10 kilohm 1% 0603 resistor,https://www.yageo.com/en/Product/Resistor/Chip-Resistor,Series leg from ECHO_5V to PB10.
+R2,1,pc,Yageo,RC0603FR-0718KL,18 kilohm 1% 0603 resistor,https://www.yageo.com/en/Product/Resistor/Chip-Resistor,PB10 to ground.
+"C1,C2",2,pc,TDK,C1608X7R1H104K080AA,100 nF 50 V X7R 0603 MLCC,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA,LCD and sonar local decoupling.
+C3,1,pc,TDK,C2012X5R1E106K125AB,10 microfarad 25 V X5R 0805 MLCC,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1E106K125AB,5 V bulk decoupling.
+HARNESS,1,20-wire set,Adafruit,1950,150 mm female-to-female jumper wires,https://www.adafruit.com/product/1950,Use 12 wires: 8 LCD and 4 sonar. Retain the remaining 8 as spares. Product 1951 is not the specified length.
+USB,1,pc,Adafruit,260,"USB-A to Mini-B cable, 3 ft",https://www.adafruit.com/product/260,Power/program through Nucleo ST-LINK; measure actual overmold against the port.
+TIES,2,pc,Panduit,PLT1M-C,Miniature nylon cable tie,https://www.panduit.com/en/products/wire-routing-management-protection/cable-wire-ties-mounts-straps/cable-ties/plt1m-c.html,Two used; commercial pack quantity 100. Do not crush the jumper housings.
+SP1-SP4,4,pc,Würth Elektronik,970200144,"M2.5 female/female 20 mm brass standoff, AF4",https://www.we-online.com/components/products/datasheet/970200144.pdf,Drawing-derived model; vendor STEP was unavailable.
+BASE-BOLTS,4,pc,Accu,SSK-M2.5-6-A2,M2.5 × 6 countersunk socket screw,https://www.accu.co.uk/countersunk-socket-head-screws/5414-SSK-M2-5-6-A2,From base underside into the four standoffs.
+CARRIER-BOLTS,4,pc,Accu,SSCF-M2.5-5-A2,M2.5 × 5 socket cap screw,https://www.accu.co.uk/metric-cap-head-screws/3803-SSCF-M2-5-5-A2,Through carrier into standoff top.
+LID-WINDOW-BOLTS,8,pc,Accu,SSCF-M2.5-8-A2,M2.5 × 8 socket cap screw,https://www.accu.co.uk/metric-cap-head-screws/3805-SSCF-M2-5-8-A2,Four lid screws plus four window screws.
+NUCLEO-BOLTS,3,pc,Accu,SSCF-M2-10-A2,M2 × 10 socket cap screw,https://www.accu.co.uk/metric-cap-head-screws/3794-SSCF-M2-10-A2,Small heads avoid the adjacent Nucleo socket pads.
+CLAMP-BOLTS,8,pc,Accu,SSCF-M2-8-A2,M2 × 8 socket cap screw,https://www.accu.co.uk/metric-cap-head-screws/3793-SSCF-M2-8-A2,Two screws for each of four rear edge clamps.
+M2-NUTS,11,pc,Accu,HPN-M2-A2,M2 hexagon nut,https://www.accu.co.uk/hexagon-nuts/7884-HPN-M2-A2,Three Nucleo retainers plus eight module-clamp retainers.
+M2.5-NUTS,8,pc,Accu,HPN-M2.5-A2,M2.5 hexagon nut,https://www.accu.co.uk/hexagon-nuts/7886-HPN-M2-5-A2,Four lid retainers plus four window retainers.
+BASE,1,pc,LabWired,LW-NOKIA-BASE-A,PETG printed base,mechanical/nokia-base.stl,Print open side up; support the USB opening roof locally.
+LID,1,pc,LabWired,LW-NOKIA-LID-A,PETG printed lid,mechanical/nokia-lid.stl,Export is oriented with the outside face on the print bed.
+LCD-CLAMPS,2,pc,LabWired,LW-NOKIA-LCD-CLAMP-A,PETG LCD rear edge clamp,mechanical/nokia-lcd-clamp.stl,Use two copies; rotate the second 180 degrees in the lid plane.
+SENSOR-CLAMPS,2,pc,LabWired,LW-NOKIA-HCSR04-CLAMP-A,PETG sonar rear edge clamp,mechanical/nokia-sensor-clamp.stl,Use two copies; rotate the second 180 degrees in the lid plane.
+WINDOW,1,pc,LabWired,LW-NOKIA-WINDOW-A,"Clear cast PMMA window, 58 × 58 × 2 mm, R2",mechanical/nokia-window.dxf,Four diameter 2.9 holes at local X/Y 4 and 54 mm. Target stock thickness 2.0 ±0.1 mm.

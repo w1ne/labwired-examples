@@ -1,0 +1,330 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 1005.8728196901897
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -0.0000014941520409816889,
+            -57,
+            7.999999999999994
+          ],
+          "max": [
+            70.00000149415204,
+            45.000001494152045,
+            21.65
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-cD7iVJ",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 1005.8728196901897,
+    "faceCount": 450,
+    "size": [
+      21.000000000000014,
+      51,
+      1.000000000000007
+    ]
+  },
+  "featureCount": 9,
+  "diagnostics": [],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "b03dc40ea6b3568e6c71967b3b59f2e9789fdd5512f57bb0ebf3479bcf9275db",
+      "byteLength": 682
+    },
+    "parameters": {
+      "values": {},
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "66e8b0c6bd908941f4fddc2a41454ff79fa82eff"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "718dbd9f3f58ab587407f1b30c2bb5b2b735e3f81e80669243f24a1ba80671e5"
+  },
+  "selections": [
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 55.163393659201205
+    },
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(cylinder_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.3928388277184112
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 55.163393659201205
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(cylinder_2)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.3928388277184112
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 55.163393659201205
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(cylinder_3)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.3928388277184112
+    },
+    {
+      "consumerFeatureId": "require_4",
+      "selectorText": "body(importedStep_2)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.8867962264113263
+    }
+  ],
+  "requirements": {
+    "ok": true,
+    "status": "pass",
+    "entries": [
+      {
+        "name": "native-pico-registration-pin1",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999999642,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.0009999999999964204,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 55.163393659201205
+          },
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(cylinder_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.3928388277184112
+          }
+        ],
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_1"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-pico-registration-pin2",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999996694,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.000999999999966944,
+        "selections": [
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 55.163393659201205
+          },
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(cylinder_2)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.3928388277184112
+          }
+        ],
+        "featureId": "require_2",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_2"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-pico-registration-pin40",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999999734,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.0009999999999973364,
+        "selections": [
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 55.163393659201205
+          },
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(cylinder_3)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.3928388277184112
+          }
+        ],
+        "featureId": "require_3",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_3"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-pico-led-on-pin1-side",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          24.3,
+          -10.800000000000002,
+          21.915384615384575
+        ],
+        "limit": {
+          "x": [
+            24.29,
+            24.31
+          ],
+          "y": [
+            -10.81,
+            -10.79
+          ],
+          "z": [
+            21.65,
+            22.25
+          ]
+        },
+        "margin": 0.00999999999999801,
+        "selections": [
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(importedStep_2)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.8867962264113263
+          }
+        ],
+        "featureId": "require_4",
+        "predicate": {
+          "metric": "centerOfMass",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_2"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              24.29,
+              24.31
+            ],
+            "y": [
+              -10.81,
+              -10.79
+            ],
+            "z": [
+              21.65,
+              22.25
+            ]
+          }
+        }
+      }
+    ],
+    "summary": {
+      "pass": 4,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z"
+}

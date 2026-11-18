@@ -1,0 +1,292 @@
+ESP-ROM:esp32s3-20210327
+ESP-ROM:1
+esp32s3-20210327
+Build:Mar 0x3fce2820,len:0x18f0
+27 2021
+rst:0xc (RTC_SW_0x403c8700,len:0x4
+CPU_RST),boot:0x8 (SPI_FAST0x403c8704,len:0xe44
+_FLASH_BOOT)
+SPIWP:0xee
+mo0x403cb700,len:0x303c
+de:DIO, clock div:entry 0x403c8938
+1
+load:0x3fce2820,len:0x18f0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe44
+load:0x403cb700,len:0x303c
+entry 0x403c8938
+[0;32mI (137) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32m[0;32mI (137) boot: Multicore bootloader[0m
+I (137) boot: ESP-I[0;32mI (138) boot: chip revision: v0.0[0m
+DF v5.3.1 2nd stage bootloader[0m
+[0;32mI (137) boot: Multi[0;32mI (141) qio_mode: Enabling default flash chip QIO[0m
+core bootloader[0m
+[0;32mI (138) boot: chip revision: [0;32mI (149) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+v0.0[0m
+[0;32mI (141) qio_mode: Enabling default fla[0;32mI (156) boot.esp32s3: SPI Mode       : QIO[0m
+sh chip QIO[0m
+[0;32mI (149) boot.esp32s3: Boot SPI S[0;32mI (164) boot.esp32s3: SPI Flash Size : 16MB[0m
+peed : 80MHz[0m
+[0;32mI (156) boot.esp32s3: SPI Mode       :[0;32mI (171) boot: Enabling RNG early entropy source...[0m
+ QIO[0m
+[0;32mI (164) boot.esp32s3: SPI [0;32mI (179) boot: Partition Table:[0m
+Flash Size : 16MB[0m
+[0;32mI (171) boot: Enabling RNG early entropy source...[0m[0;32mI (185) boot: ## Label            Usage          Type ST Offset   Length[0m
+
+[0;32mI (179) boot: Partition Table:[0m
+[0;32mI (185) boot: ## Label            Us[0;32mI (196) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+age          Type ST Offset   Length[0m
+[0;32mI (196) boot:  0 nvs              WiFi[0;32mI (207) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+ data        01 02 00009000 00006000[0m
+[0;32mI (207) boot:  1 phy_init         RF d[0;32mI (218) boot:  2 factory          factory app      00 00 00010000 00400000[0m
+ata          01 01 0000f000 00001000[0m
+[0;32mI (218) boot:  2 factory          fact[0;32mI (230) boot:  3 wad              Unknown data     01 40 00410000 00500000[0m
+ory app      00 00 00010000 00400000[0m
+[0;32m[0;32mI (241) boot: End of partition table[0m
+I (230) boot:  3 wad              Unknown data     01 40 00410000 00500000[0m
+[0;32mI (241) bo[0;32mI (247) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=25ec0h (155328) map[0m
+ot: End of partition table[0m
+[0;32mI (247) esp_image: segment 0: paddr=00010020 vaddr=3c050020[0;32mI (271) esp_image: segment 1: paddr=00035ee8 vaddr=3fc94600 size=0a130h ( 41264) load[0m
+ size=25ec0h (155328) map[0m
+[0;32mI (271) esp_image: segment 1: paddr=00035ee8 vaddr=3fc94600[0;32mI (276) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=4797ch (293244) map[0m
+ size=0a130h ( 41264) load[0m
+[0;32mI (276) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=4797ch (293244) map[0m
+[0;32mI (306) esp_image: segment 3: paddr=000879a4 vaddr=3fc9e730 size=0790ch ( 30988) load[0m
+[0;32mI (306) esp_image: segment 3: paddr=000879a4 vaddr=3fc9e730 [0;32mI (309) esp_image: segment 4: paddr=0008f2b8 vaddr=40374000 size=105f0h ( 67056) load[0m
+size=0790ch ( 30988) load[0m
+[0;32mI (309) esp_image: segment 4: paddr=0008f2b8 [0;32mI (325) boot: Loaded app from partition at offset 0x10000[0m
+vaddr=40374000 size=105f0h ( 67056) load[0m
+[0;3[0;32mI (325) boot: Disabling RNG early entropy source...[0m
+2mI (325) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (325) boot: Disabling RNG early entropy source...[0m
+[0;32mI (349) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32m[0;32mI (349) octal_psram: dev id       : 0x02 (generation 3)[0m
+I (349) octal_psram: vendor id    : 0x0d (AP)[0m
+[[0;32mI (350) octal_psram: density      : 0x03 (64 Mbit)[0m
+0;32mI (349) octal_psram: dev id       : 0x02 (generation 3)[0;32mI (357) octal_psram: good-die     : 0x01 (Pass)[0m
+[0m
+[0;32mI (350) octal_psram: density      : 0x03 (64 Mbi[0;32mI (365) octal_psram: Latency      : 0x01 (Fixed)[0m
+t)[0m
+[0;32mI (357) octal_psram: good-die     : 0x01 (P[0;32mI (373) octal_psram: VCC          : 0x01 (3V)[0m
+ass)[0m
+[0;32mI (365) octal_psram: Latency      : 0x01 (Fixed)[0[0;32mI (380) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+m
+[0;32mI (373) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32[0;32mI (389) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+mI (380) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (398) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (389) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;3[0;32mI (406) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+2mI (398) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (415) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (406) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (415[0;33mW (423) MSPI Timing: tuning fail, best point is fallen back to index 5[0m
+) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;33mW (423) M[0;32mI (434) MSPI Timing: PSRAM timing tuning index: 5[0m
+SPI Timing: tuning fail, best point is fallen back to [0;32mI (442) esp_psram: Found 8MB PSRAM device[0m
+index 5[0m
+[0;32mI (434) MSPI Timing: PSR[0;32mI (449) esp_psram: Speed: 80MHz[0m
+AM timing tuning index: 5[0m
+[0;32mI (442)[0;32mI (454) cpu_start: Multicore app[0m
+ esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (449) esp_psram: Speed: 80MHz[0m
+[0;32mI (454) cpu_start: Multicore app[0m
+[0;32mI (500) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (500) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (509) cpu_start: Pro cpu start user code[0m
+[0;32mI[0;32mI (509) cpu_start: cpu freq: 240000000 Hz[0m
+ (509) cpu_start: Pro cpu s[0;32mI (509) app_init: Application information:[0m
+tart user code[0m
+[0;32mI (509) cpu_start: cpu freq: [0;32mI (511) app_init: Project name:     doom-s3[0m
+240000000 Hz[0m
+[0;32mI (509) app_init: Application information:[0;32mI (513) app_init: App version:      labwired-doom-rev-a[0m
+[0m
+[0;32mI (511) app_init: Project name:     doom-s3[0m
+[0;32mI (516) app_init: ELF file SHA256:  09e6dcf24...[0m
+[0;32mI (513) app_init: App version:      labwired-doo[0;32mI (519) app_init: ESP-IDF:          v5.3.1[0m
+m-rev-a[0m
+[0;32mI (516) app_init: ELF file SHA256: [0;32mI (521) efuse_init: Min chip rev:     v0.0[0m
+ 09e6dcf24...[0m
+[0;32mI (519) app_init: ESP-IDF:     [0;32mI (523) efuse_init: Max chip rev:     v0.99 [0m
+     v5.3.1[0m
+[0;32mI (521) efuse_init: Min chip re[0;32mI (526) efuse_init: Chip rev:         v0.0[0m
+v:     v0.0[0m
+[0;32mI (523) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI [0;32mI (528) heap_init: Initializing. RAM available for dynamic allocation:[0m
+(526) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (528) heap_init:[0;32mI (532) heap_init: At 3FCA6CD8 len 00042A38 (266 KiB): RAM[0m
+ Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (53[0;32mI (535) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+2) heap_init: At 3FCA6CD8 len 00042A38 (266 KiB): RAM[0m
+[0;32mI (53[0;32mI (538) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+5) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (538)[0;32mI (541) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+ heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (541) heap_init: At [0;32mI (544) esp_psram: Adding pool of 7957K of PSRAM memory to heap allocator[0m
+600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (5[0;32mI (548) spi_flash: detected chip: generic[0m
+44) esp_psram: Adding pool of 7957K of PSRAM [0;32mI (550) spi_flash: flash io: qio[0m
+memory to heap allocator[0m
+[0;32mI (548) spi_flash: detected chip: generi[0;32mI (552) sleep: Configure to isolate all GPIO pins in sleep state[0m
+c[0m
+[0;32mI (550) spi_flash: flash io: qio[0m
+[0;32mI (552) sleep: Configur[0;32mI (556) sleep: Enable automatic switching of GPIO sleep configuration[0m
+e to isolate all GPIO pins in sleep state[0m
+[[0;32mI (559) main_task: Started on CPU0[0m
+0;32mI (556) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (559) main[0;32mI (561) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+_task: Started on CPU0[0m
+[0;32mI (561) esp_psram[0;32mI (565) main_task: Calling app_main()[0m
+: Reserving pool of 32K of internal memory for DMA/internal allocati[0;32mI (567) doom: ESP32-S3 rev v0.0, 2 core(s), 16 MB flash[0m
+ons[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (56[0;32mI (570) doom: internal free 313439 B, PSRAM free 8145924 B[0m
+7) doom: ESP32-S3 rev v0.0, 2 core(s), 16 MB flash[0m
+[0;32mI (570) doom: internal free 313439 B, PSRAM [0;32mI (574) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+free 8145924 B[0m
+[0;32mI (574) gpio: GPIO[48]| InputE[0;32mI (578) board_led: RGB LED on GPIO48 cleared[0m
+n: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (578) board_led: RGB LED on [0;32mI (581) gpio: GPIO[48]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+GPIO48 cleared[0m
+[0;32mI (581) gpio: GPIO[48]| InputEn: 0| OutputEn: 0| Ope[0;32mI (585) doom: IWAD mapped at 0x3c880000: 1264 lumps, 4196020 bytes[0m
+nDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (585) doom: IWAD mapped at 0x3c880000: 1264 lumps,[0;32mI (589) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+ 4196020 bytes[0m
+[0;32mI (589) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldo[0;32mI (593) gpio: GPIO[39]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+wn: 0| Intr:0 [0m
+[0;32mI (593) gpio: GPIO[39]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1108) doom_video: panel up: 320x240 i80 16-bit at 10000000 Hz[0m
+[[0;[0;32mI (1108) doom_input: serial keys: WASD move, Q/E strafe, F fire, SPACE use, ENTER select, ESC menu, M map, 1-7 weapons[0m
+32mI (1108) doom_input: serial keys: WASD move, Q/E straf[0;32mI (1108) main_task: Returned from app_main()[0m
+e, F fire, SPACE use, ENTER select, ESC menu, M map, 1-7 weapons[0m[0;32mI (1108) doom: starting doomgeneric with /doom/doom1.wad[0m
+
+[0;32mI (1108) main_task: Returned from app_main[0;32mI (1119) doom_video: DG_Init: 320x200[0m
+()[0m
+[0;32mI (1108) doom: starting doomge                           Doom Generic 0.1
+neric with /doom/doom1.wad[0m
+[0;32mI (1119Z_Init: Init zone memory allocation daemon. 
+) doom_video: DG_Init: 320x200[0m
+                zone memory: 0x3c119888, 400000 allocated for zone
+           Doom Generic 0.1
+Z_Init: Using . for configuration and saves
+Init zone memory allocationV_Init: allocate screens.
+ daemon. 
+zone memory: 0x3c119888, 400M_LoadDefaults: Load system defaults.
+000 allocated for zone
+Using .saving config in .default.cfg
+ for configuration and sW_Init: Init WADfiles.
+aves
+V_Init: allocate sc adding /doom/doom1.wad
+reens.
+M_LoadDefaults: Load systeUsing ./.savegame/ for savegames
+m defaults.
+saving config in .default.cfg
+W_Init: Init WADfiles.
+ adding /===========================================================================
+doom/doom1.wad
+Using ./.savegame/ for saveg                            DOOM Shareware
+ames
+==================================================================================================================================================
+====
+                            DOOM Shareware
+================= Doom Generic is free software, covered by the GNU General Public
+==========================================================
+ Doom Generic  License.  There is NO warranty; not even for MERCHANTABILITY or FITNESS
+is free software, covered by the GNU General Public
+ License.  There FOR A PARTICULAR PURPOSE. You are welcome to change and distribute
+ is NO warranty; not even for MERCHANTABILITY or FITNESS
+ FOR A PARTICU copies under certain conditions. See the source for more information.
+LAR PURPOSE. You are welcome to change and distribute
+ copies under certain ===========================================================================
+conditions. See the source for moreI_Init: Setting up machine state.
+ information.
+===============================================M_Init: Init miscellaneous info.
+============================
+I_Init: Setting up mR_Init: Init DOOM refresh daemon - ...................
+achine sP_Init: Init Playloop state.
+tate.
+M_Init: Init miscellaneous info.
+R_Init: Init DOOM refresh daemon - ...................
+P_Init: Init Playloop state.
+S_Init: Setting up sound.
+S_ID_CheckNetGame: Checking network game status.
+nitstartskill 2  deathmatch: 0  startmap: 1  startepisode: 1
+: Setting up sound.
+D_Chplayer 1 of 1 (1 nodes)
+eckNetGame: Checking network game status.
+startskill Emulating the behavior of the 'Doom 1.9' executable.
+2  deathmatch: 0  startmap: 1  startepiHU_Init: Setting up heads up display.
+sode: 1
+player 1 of 1 (1 nST_Init: Init status bar.
+odes)
+Emulating the behavior of the 'Doom 1.9' executable.
+HU_Init: Setting up heads up display.
+ST_Init: Init status bar.
+[0;32mI (1271) doom_video: title: DOOM Shareware[0m
+[0;32mI (1271) doom_vI_InitGraphics: framebuffer: x_res: 320, y_res: 200, x_virtual: 320, y_virtual: 200, bpp: 32
+ideo: title: DOOM Shareware[0m
+I_InitGraphics: framebuffer: x_res: 320, y_res: 200, x_virtual: I_InitGraphics: framebuffer: RGBA: 8888, red_off: 16, green_off: 8, blue_off: 0, transp_off: 24
+320, y_virtual: 200, bpp: 32
+I_InitGraphics: framebI_InitGraphics: DOOM screen size: w x h: 320 x 200
+uffer: RGBA: 8888, red_off: 16, green_ofI_InitGraphics: Auto-scaling factor: 1
+f: 8, blue_off: 0, transp_off: 24
+I_InitGraphics: DOOM screen size: w x h: 320 x 200
+I_InitGraphics: Auto-scaling factor: 1
+[0;32mI (1320) doom_video: frame 1  312.909 fps  hash 0xec236c72  ink 100.0%[0m
+[0[0;32mI (1320) doom_video: frame 1:[0m
+;32mI (1320) doom_video: frame 1  312.909 fps  hash 0xec236c72  ink 100.0%[0m
+[0;32mI (1320)[0;32mI (1320) doom_video: |.:*::..-..............::..::::::::::::::::.....................:|[0m
+ doom_video: frame 1:[0m
+[0;32mI (1320) doom_video: |.:*::..-..............::..::::::::::::::::..[0;32mI (1328) doom_video: |..::..:...........:..:       .::::       :%-.    ..     ... ...:|[0m
+...................:|[0m
+[0;32mI (1328) doom_video: |..::..:...........:..:       .::::       :%-[0;32mI (1337) doom_video: |:=::.::::         -.:         - :         ::.    - -    :......:|[0m
+.    ..     ... ...:|[0m
+[0;32mI (1337) doom_video: |:=::.::::         -.:         - :         ::[0;32mI (1346) doom_video: |..:-=:.=.   :.    -.:   :.:-  - :   -:-   :::     =     :.......|[0m
+.    - -    :......:|[0m
+[0;32mI (1346) doom_video: |..:-=:.=.   :.    -.:   :.:-  - :   -:-   ::[0;32mI (1354) doom_video: |..     .:   -.    ---   -- -  - -   -.:   -:-  .        -.......|[0m
+:     =     :.......|[0m
+[0;32mI (1354) doom_video: |..     .:   -.    ---   -- -  - -   -.:   -:[0;32mI (1363) doom_video: |-:.=..-.-   -:.  .-.=.  -= -  -.-   -:-  .-=-: :        -.......|[0m
+-  .        -.......|[0m
+[0;32mI (1363) doom_video: |-:.=..-.-   -:.  .-.=.  -= -  -.-   -:-  .-=[0;32mI (1372) doom_video: |=.......+   +=. :.+++:::++:+  --+ . -.=.-:+-+=:--    -  +:.:::::|[0m
+-: :        -.......|[0m
+[0;32mI (1372) doom_video: |=.......+   +=. :.+++:::++:+  --+ . -.=.-:+-[0;32mI (1380) doom_video: |      ..+   +=: -.+#+-:-+= +  --+.  -*+=-:*-*+:-+=-: #  +.:::::.|[0m
++=:--    -  +:.:::::|[0m
+[0;32mI (1380) doom_video: |      ..+   +=: -.+#+-:-+= +  --+.  -*+=-:*-[0;32mI (1389) doom_video: |...:...:#..:#:%:.-%:%=---%.#:.--%-===.*-*+%=%+-- +-=%%- #.::.:..|[0m
+*+:-+=-: #  +.:::::.|[0m
+[0;32mI (1389) doom_video: |...:...:#..:#:%:.-%:%=---%.#:.--%-===.*-*+%=[0;32mI (1398) doom_video: |........%:.:-:::==. :.- +**+*+%=%--==+**+%%:%*--.#.::%-:%.......|[0m
+%+-- +-=%%- #.::.:..|[0m
+[0;32mI (1398) doom_video: |........%:.:-:::==. :.- +**+*+%=%--==+**+%%:[0;32mI (1407) doom_video: |........%-:+=====..:.:-+=*%+%==-*#%==%#=%-::+-+-::=%-%:=%.......|[0m
+%*--.#.::%-:%.......|[0m
+[0;32mI (1407) doom_video: |........%-:+=====..:.:-+=*%+%==-*#%==%#=%-::[0;32mI (1415) doom_video: |.......:%:=-++-::..:-:--*=. :-+..+:--%......-==...%:+%+:%.:.....|[0m
++-+-::=%-%:=%.......|[0m
+[0;32mI (1415) doom_video: |.......:%:=-++-::..:-:--*=. :-+..+:--%......[0;32mI (1424) doom_video: |........%##*%.+-.. - --=...:.*.-=...-.....::. : :: :+%=*%..:.. .|[0m
+-==...%:+%+:%.:.....|[0m
+[0;32mI (1424) doom_video: |........%##*%.+-.. - --=...:.*.-=...-.....::[0;32mI (1433) doom_video: |.... ...%**=:-- .  . .. .:-=+..=# .........        **:*=: -.. ..|[0m
+. : :: :+%=*%..:.. .|[0m
+[0;32mI (1433) doom_video: |.... ...%**=:-- .  . .. .:-=+..=# ......... [0;32mI (1441) doom_video: |...   ....-==  : ......:..-::+-+*#-.......    .      :@. ...::::|[0m
+       **:*=: -.. ..|[0m
+[0;32mI (1441) doom_video: |...   ....-==  : ......:..-::+-+*#-.......  [0;32mI (1450) doom_video: |..     ..:.- ..--.* .-:-+....:-::-+=#.:          ......    ...::|[0m
+  .      :@. ...::::|[0m
+[0;32mI (1450) doom_video: |..     ..:.- ..--.* .-:-+....:-::-+=#.:     [0;32mI (1459) doom_video: |.. ..   .  : .  :.=. .  ..- -.:* .:=+*#       ...:.             |[0m
+     ......    ...::|[0m
+[0;32mI (1459) doom_video: |.. ..   .  : .  :.=. .  ..- -.:* .:=+*#     [0;32mI (1467) doom_video: |.......      .::+-=*# .:+==+--  . -:-=+=*..   .       ....      |[0m
+  ...:.             |[0m
+[0;32mI (1467) doom_video: |.......      .::+-=*# .:+==+--  . -:-=+=*.. [0;32mI (1476) doom_video: | :....:.:    .--..-+**.--:::. # -     ... ++..     ....         |[0m
+  .       ....      |[0m
+[0;32mI (1476) doom_video: | :....:.:    .--..-+**.--:::. # -     ... ++[0;32mI (1485) doom_video: |: .::......     .:.-++#+-:#.- :=.:- : . :..:::  ..:::.. #:   ## |[0m
+..     ....         |[0m
+[0;32mI (1485) doom_video: |: .::......     .:.-++#+-:#.- :=.:- : . :..:[0;32mI (1493) doom_video: |...:   . :.    :.::.:-==. : =- . ..:  ::..:..:  : ::. . #:#: ## |[0m
+::  ..:::.. #:   ## |[0m
+[0;32mI (1493) doom_video: |...:   . :.    :.::.:-==. : =- . ..:  ::..:.[0;32mI (1502) doom_video: |..:::::.::.   . -:. ::  .+. #-=#..-==.......... . .::   # #  ## |[0m
+.:  : ::. . #:#: ## |[0m
+[0;32mI (1502) doom_video: |..:::::.::.   . -:. ::  .+. #-=#..-==.......[0;32mI (1511) doom_video: |:  .... ..   :-...-:-:. .. * =:--=:#%+==:. .... .   . :         |[0m
+... . .::   # #  ## |[0m
+[0;32mI (1511) doom_video: |:  .... ..   :-...-:-:. .. * =:--=:#%+==:. .[0;32mI (1519) doom_video: |                                                                |[0m
+... .   . :         |[0m
+[0;32mI (1519) doom_video: |        [0;32mI (1528) doom: doom initialised, entering tick loop[0m
+                                                        |[0m
+[0;32mI (1528) doom: doom initialised, entering tick loop[0m
+[0;32mI (2388) doom_video: frame 60  56.174 fps  hash 0xec236c72  ink 100.0%[0m
+[0;32mI (2388) doom_video: frame 60  56.174 fps  hash 0xec236c72  ink 100.0%[0m
+[0;32mI (3261) doom_video: frame 120  68.733 fps  hash 0x2de24a4d  ink 100.0%[0m
+[0;32mI (3261) doom_video: frame 120  68.733 fps  hash 0x2de24a4d  ink 100.0%[0m

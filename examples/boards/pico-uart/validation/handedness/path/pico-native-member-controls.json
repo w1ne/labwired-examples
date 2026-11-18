@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "helperSha256": "106f930b352b98d3c8995d9b1a9262e5d21dd78327895fec7786b9b751aa50b3",
+  "linearHelperSha256": "96810e629c89af0a5713c3c6eeb935460dffccc1ed6607c13f16714197db76f1",
+  "allControlsPassed": true,
+  "results": [
+    {
+      "case": "moving-away-from-exact-face-contact",
+      "expected": "clear",
+      "passed": true,
+      "result": {
+        "clear": true,
+        "basis": "zero-conservative-bounding-envelope-intersection",
+        "boundingEnvelopeIntersectionMm3": 0
+      }
+    },
+    {
+      "case": "later-collision-above-start",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "componentVolumesMm3": [
+          0.9999999999999998
+        ],
+        "basis": "conservative-axial-slab-refinement",
+        "boundingEnvelopeIntersectionMm3": 0.9999999999999998,
+        "refinement": {
+          "basis": "conservative-native-BREP-axial-slab-envelope",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "distanceMm": 100,
+          "sourceOutsideEnvelopeVolumeMm3": 0,
+          "slabs": [
+            {
+              "min": 0,
+              "max": 1,
+              "component": 0,
+              "sourceVolumeMm3": 0.9999999999999998,
+              "candidateBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "sweptBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  101
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "real-initial-penetration",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "componentVolumesMm3": [
+          0.24999999999999994
+        ],
+        "basis": "conservative-axial-slab-refinement",
+        "boundingEnvelopeIntersectionMm3": 0.24999999999999994,
+        "refinement": {
+          "basis": "conservative-native-BREP-axial-slab-envelope",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "distanceMm": 100,
+          "sourceOutsideEnvelopeVolumeMm3": 0,
+          "slabs": [
+            {
+              "min": 0,
+              "max": 1,
+              "component": 0,
+              "sourceVolumeMm3": 0.9999999999999998,
+              "candidateBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "sweptBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  101
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "fully-enclosed-obstacle",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "componentVolumesMm3": [
+          0.008
+        ],
+        "basis": "conservative-axial-slab-refinement",
+        "boundingEnvelopeIntersectionMm3": 0.008,
+        "refinement": {
+          "basis": "conservative-native-BREP-axial-slab-envelope",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "distanceMm": 100,
+          "sourceOutsideEnvelopeVolumeMm3": 0,
+          "slabs": [
+            {
+              "min": 0,
+              "max": 1,
+              "component": 0,
+              "sourceVolumeMm3": 0.9999999999999998,
+              "candidateBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "sweptBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  101
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "unknown-native-measurement",
+      "expected": "closed-failure",
+      "passed": true,
+      "message": "unknown native bounding sweep intersection"
+    },
+    {
+      "case": "two-original-solids-refine-empty-space",
+      "expected": "clear",
+      "passed": true,
+      "result": {
+        "clear": true,
+        "componentVolumesMm3": [
+          0,
+          0
+        ],
+        "basis": "conservative-axial-slab-refinement",
+        "boundingEnvelopeIntersectionMm3": 0.9999999999999998,
+        "refinement": {
+          "basis": "conservative-native-BREP-axial-slab-envelope",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "distanceMm": 100,
+          "sourceOutsideEnvelopeVolumeMm3": 0,
+          "slabs": [
+            {
+              "min": 0,
+              "max": 1,
+              "component": 0,
+              "sourceVolumeMm3": 0.9999999999999998,
+              "candidateBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "sweptBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  101
+                ]
+              }
+            },
+            {
+              "min": 0,
+              "max": 1,
+              "component": 1,
+              "sourceVolumeMm3": 0.9999999999999998,
+              "candidateBounds": {
+                "min": [
+                  3,
+                  0,
+                  0
+                ],
+                "max": [
+                  4,
+                  1,
+                  1
+                ]
+              },
+              "sweptBounds": {
+                "min": [
+                  3,
+                  0,
+                  0
+                ],
+                "max": [
+                  4,
+                  1,
+                  101
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "second-original-solid-later-collision",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "componentVolumesMm3": [
+          0,
+          0.9999999999999998
+        ],
+        "basis": "conservative-axial-slab-refinement",
+        "boundingEnvelopeIntersectionMm3": 0.9999999999999998,
+        "refinement": {
+          "basis": "conservative-native-BREP-axial-slab-envelope",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "distanceMm": 100,
+          "sourceOutsideEnvelopeVolumeMm3": 0,
+          "slabs": [
+            {
+              "min": 0,
+              "max": 1,
+              "component": 0,
+              "sourceVolumeMm3": 0.9999999999999998,
+              "candidateBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "sweptBounds": {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  1,
+                  1,
+                  101
+                ]
+              }
+            },
+            {
+              "min": 0,
+              "max": 1,
+              "component": 1,
+              "sourceVolumeMm3": 0.9999999999999998,
+              "candidateBounds": {
+                "min": [
+                  3,
+                  0,
+                  0
+                ],
+                "max": [
+                  4,
+                  1,
+                  1
+                ]
+              },
+              "sweptBounds": {
+                "min": [
+                  3,
+                  0,
+                  0
+                ],
+                "max": [
+                  4,
+                  1,
+                  101
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

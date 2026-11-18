@@ -1,0 +1,136 @@
+{
+  "originalSourceSha256": "2c4fd1e6c424a810a707f4236cbeefb0c43d55034e1178c09c7b99884ad6deb1",
+  "stagedSourceSha256": "0633b9756a5e26580b09fd2f607227ac2ca07b987926cc69df9a3b563565c1ba",
+  "nativeStepSha256": "cc7f0a7e6d479f67d8161da6a73d84818381e10076d1d5bfd58bada2f5b5aadc",
+  "staging": "Only the exact native STEP location was resolved locally. Geometry and review gates are unchanged. Positive visual review is from the prior unchanged-geometry hosted review.",
+  "result": {
+    "ok": true,
+    "goal": "Check the UDS bench fixture: a printable base supporting the exact native CAN carrier and an explicitly scoped Nucleo board outline envelope. Require full interference coverage while retaining only the two measured kinked-lead contact budgets. No claim of populated Nucleo fit, fastener strength or physical prototype testing.",
+    "finalAttemptId": "01",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Attempt 01",
+        "ok": true,
+        "functional": true,
+        "qualityOk": true,
+        "featureCount": 70,
+        "diagnosticCount": 22,
+        "reviewFacts": [],
+        "visualReview": {
+          "accepted": true,
+          "findings": [
+            "The 222 by 90 mm base contains one Nucleo outline envelope and one populated CAN carrier; the render is complete in both views.",
+            "The Nucleo is an unpopulated outline reference. These images do not establish fit for its connectors or components.",
+            "The carrier has four aligned support bosses, two end connector housings and one termination header; the small surface-mounted parts remain on the carrier.",
+            "The two cable-tie slots remain open alongside the carrier. Physical assembly and retention strength remain untested."
+          ],
+          "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY",
+          "checks": [
+            {
+              "code": "main-object-count",
+              "passed": true,
+              "finding": "One base, one Nucleo outline and one populated CAN carrier are visible.",
+              "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-mV8S1jWkahSWfohQY7jqag/render-top.png?exp=1795084302&sig=u8krNOKEKFB4sSz2XyDtXOFPKWJms-URPVaq8GUA6Rg"
+            },
+            {
+              "code": "proportions-match-reference",
+              "passed": true,
+              "finding": "The Nucleo outline occupies the left cradle; the smaller 60 by 40 mm carrier occupies the right boss pattern.",
+              "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-mV8S1jWkahSWfohQY7jqag/render-top.png?exp=1795084302&sig=u8krNOKEKFB4sSz2XyDtXOFPKWJms-URPVaq8GUA6Rg"
+            },
+            {
+              "code": "required-visible-features",
+              "passed": true,
+              "finding": "Both carrier connector housings, the termination header, support bosses and two tie slots are visible.",
+              "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+            },
+            {
+              "code": "no-stray-or-floating-geometry",
+              "passed": true,
+              "finding": "No isolated part is visible outside the two board locations and the mounting base.",
+              "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+            },
+            {
+              "code": "attachment-plausibility",
+              "passed": true,
+              "finding": "The carrier mounting holes sit on four bosses; the Nucleo outline sits between the cradle rails and corner stops.",
+              "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+            },
+            {
+              "code": "semantic-orientation-alignment",
+              "passed": true,
+              "finding": "Both board planes face upward and the carrier connector access stays above the base.",
+              "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY"
+            },
+            {
+              "code": "canonical-views-physically-coherent",
+              "passed": true,
+              "finding": "The full isometric and top views show the same board locations, support pattern and open tie slots without cropping.",
+              "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-mV8S1jWkahSWfohQY7jqag/render-top.png?exp=1795084302&sig=u8krNOKEKFB4sSz2XyDtXOFPKWJms-URPVaq8GUA6Rg"
+            }
+          ]
+        },
+        "repairMode": "none",
+        "passedChecks": [
+          "validator-no-errors",
+          "pose-envelope-solved",
+          "pose-envelope-no-interference"
+        ],
+        "blockingReasons": [],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 0,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": true,
+          "status": "not-declared",
+          "entries": [],
+          "summary": {
+            "pass": 0,
+            "fail": 0,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "0633b9756a5e26580b09fd2f607227ac2ca07b987926cc69df9a3b563565c1ba",
+            "byteLength": 4595
+          },
+          "parameters": {
+            "values": {
+              "nucleoLength": 133.34,
+              "nucleoWidth": 70,
+              "nucleoPcbThickness": 1.6,
+              "nucleoEdgeClearance": 0.35
+            },
+            "sha256": "7ab2b8cc0e7eab21d992c652732c41c6d84d06e82d1a1e04b5b6ef5e0c6a2378"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.2",
+            "revision": null
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+          "identitySha256": "ed53e7df04e9688f77a05f89fb76afa89a2895b0083ff7a9bc08b7d33bc29f7f"
+        },
+        "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Check the UDS bench fixture: a printable base supporting the exact native CAN carrier and an explicitly scoped Nucleo board outline envelope. Require full interference coverage while retaining only the two measured kinked-lead contact budgets. No claim of populated Nucleo fit, fastener strength or physical prototype testing.",
+      "steps": []
+    }
+  }
+}

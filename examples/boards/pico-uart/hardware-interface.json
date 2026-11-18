@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "coordinate_system": "Electrical and native PCB editor top view: X right, Y down from the USB edge. Interface XY values retain that editor frame. CAD world X=editorX, Y=-editorY, Z up from the enclosure underside.",
+  "carrier": {
+    "size": [
+      60,
+      70,
+      1.6
+    ],
+    "corner_radius": 2,
+    "underside_z_in_case": 8,
+    "mounts": [
+      {
+        "x": 4,
+        "y": 4,
+        "diameter": 2.9,
+        "copper_keepout_radius": 3.5
+      },
+      {
+        "x": 56,
+        "y": 4,
+        "diameter": 2.9,
+        "copper_keepout_radius": 3.5
+      },
+      {
+        "x": 4,
+        "y": 66,
+        "diameter": 2.9,
+        "copper_keepout_radius": 3.5
+      },
+      {
+        "x": 56,
+        "y": 66,
+        "diameter": 2.9,
+        "copper_keepout_radius": 3.5
+      }
+    ]
+  },
+  "controller": {
+    "manufacturer": "Raspberry Pi Ltd",
+    "mpn": "SC0915",
+    "chip": "RP2040",
+    "body_size": [
+      21,
+      51,
+      1
+    ],
+    "body_min_xy": [
+      19.5,
+      6
+    ],
+    "usb_front_y": 4.7,
+    "pcb_bottom_z": 20.65,
+    "row_spacing": 17.78,
+    "header_pitch": 2.54,
+    "socket_part": "SSW-120-01-G-S",
+    "male_header_part": "TSW-120-07-G-S",
+    "nominal_board_gap": 11.05,
+    "vendor_step_sha256": "ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b",
+    "vendor_solids": 17
+  },
+  "connectors": {
+    "J1": {
+      "pin1_xy": [
+        21.11,
+        7.37
+      ],
+      "pin20_xy": [
+        21.11,
+        55.63
+      ],
+      "maps": "J1.n maps Pico physical pin n"
+    },
+    "J2": {
+      "pin1_xy": [
+        38.89,
+        7.37
+      ],
+      "pin20_xy": [
+        38.89,
+        55.63
+      ],
+      "maps": "J2.n maps Pico physical pin41-n"
+    },
+    "J3": {
+      "pitch": 2.54,
+      "pins": [
+        {
+          "pin": 1,
+          "xy": [
+            10,
+            15
+          ],
+          "net": "GND",
+          "adapter_color": "black"
+        },
+        {
+          "pin": 2,
+          "xy": [
+            10,
+            17.54
+          ],
+          "net": "UART_TX_GP0",
+          "pico_pin": 1,
+          "adapter_color": "white"
+        },
+        {
+          "pin": 3,
+          "xy": [
+            10,
+            20.08
+          ],
+          "net": "UART_RX_GP1",
+          "pico_pin": 2,
+          "adapter_color": "green"
+        }
+      ]
+    }
+  },
+  "power": {
+    "input": "Pico micro-USB via Adafruit592",
+    "carrier_power_rails": [],
+    "adapter_red_wire": "Disconnected and insulated",
+    "logic_voltage": 3.3
+  },
+  "enclosure": {
+    "size_with_screw_heads": [
+      78,
+      88,
+      32
+    ],
+    "base_size": [
+      78,
+      88,
+      27.5
+    ],
+    "lid_plate_thickness": 2,
+    "carrier_to_lid_min": 9.39,
+    "pico_to_lid_min": 3.12,
+    "usb_plug_check_envelope": [
+      16,
+      30,
+      8
+    ],
+    "usb_plug_base_min": 1,
+    "usb_plug_lid_min": 0.735,
+    "lid_mounts": [
+      [
+        -3.5,
+        -3.5
+      ],
+      [
+        63.5,
+        -3.5
+      ],
+      [
+        63.5,
+        73.5
+      ],
+      [
+        -3.5,
+        73.5
+      ]
+    ],
+    "uart_opening": [
+      10,
+      14
+    ],
+    "cable_tie_slots": [
+      3.2,
+      7
+    ]
+  },
+  "physical_hardware_tested": false,
+  "qualification_limits": [
+    "Cable overmold dimensions not supplied by vendor; measure actual cable.",
+    "Header mating contacts and solder joints are dimensional envelopes, not contact mechanics.",
+    "Printed tolerances and screw torque untested.",
+    "The opaque lid covers GP25 LED; inspect it with the lid removed.",
+    "The released firmware transmits on GP0; GP1 receive behavior has not been exercised."
+  ],
+  "cad_world_frame": {
+    "x": "editorX",
+    "y": "-editorY",
+    "z": "up",
+    "carrier_transform": {
+      "positive_scale": [
+        1,
+        1,
+        1.0596026490066226
+      ],
+      "translation": [
+        0,
+        0,
+        8
+      ]
+    },
+    "pico_vendor_transform": {
+      "rotate_x_degrees": 90,
+      "translation": [
+        19.5,
+        -57,
+        21.15
+      ],
+      "determinant": 1,
+      "populated_normal_after": [
+        0,
+        0,
+        1
+      ]
+    },
+    "registration_receipt": "validation/handedness/native-registration.json"
+  }
+}

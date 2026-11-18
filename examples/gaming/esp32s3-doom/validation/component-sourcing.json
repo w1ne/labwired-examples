@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-11-18",
+  "replacement_reason": "Replaced two obsolete draft capacitor MPNs with current production parts, retaining electrical ratings and the 0805 land pattern. C2 now specifies X8R.",
+  "parts": [
+    {
+      "reference": "C1",
+      "manufacturer": "TDK",
+      "mpn": "C2012X7R1A106K125AC",
+      "status": "Production",
+      "value": "10uF +/-10%, 10V, X7R",
+      "dimensions_mm": [
+        2,
+        1.25,
+        1.25
+      ],
+      "dimension_tolerance_mm": 0.2,
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC"
+    },
+    {
+      "reference": "C2",
+      "manufacturer": "TDK",
+      "mpn": "C2012X8R1H104K125AA",
+      "status": "Production",
+      "value": "100nF +/-10%, 50V, X8R",
+      "dimensions_mm": [
+        2,
+        1.25,
+        1.25
+      ],
+      "dimension_tolerance_mm": 0.2,
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X8R1H104K125AA"
+    }
+  ],
+  "edited_files": [
+    "authoring/author_schematic.py",
+    "electronics/doom-carrier.kicad_sch",
+    "electronics/doom-carrier-unrouted.kicad_pcb",
+    "electronics/doom-carrier.kicad_pcb",
+    "manufacturing/positions.csv",
+    "manufacturing/doom-carrier.net.xml"
+  ]
+}
