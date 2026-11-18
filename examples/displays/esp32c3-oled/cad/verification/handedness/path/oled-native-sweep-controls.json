@@ -1,0 +1,452 @@
+{
+  "sourceSha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+  "helperSha256": "fe665761fdabd30e8f64ea14161f1a228758595b48642da89353003f3705fbb6",
+  "allControlsPassed": true,
+  "results": [
+    {
+      "case": "actual-upper-lid-screw-positive",
+      "expected": "clear",
+      "passed": true,
+      "proof": {
+        "basis": "conservative-axisymmetric-BREP-envelope",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "distanceMm": 100,
+        "sourceOutsideEnvelopeVolumeMm3": 0,
+        "segments": [
+          {
+            "z0": 29.5,
+            "z1": 32,
+            "r0": 2.25,
+            "r1": 2.25,
+            "surface": "CYLINDRE"
+          },
+          {
+            "z0": 21.5,
+            "z1": 29.5,
+            "r0": 1.25,
+            "r1": 1.25,
+            "surface": "CYLINDRE"
+          }
+        ],
+        "localFrameWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "restEnvelopeVolumeMm3": 79.03069019186822,
+        "sweptComponentCount": 2
+      },
+      "pairs": [
+        {
+          "part": "base",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-pcba-envelope",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "oled-pcba-envelope",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "oled-display-surface",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-washer-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-standoff-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-screw-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-lower-screw-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-washer-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-standoff-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-screw-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-lower-screw-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-washer-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-standoff-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-screw-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-lower-screw-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-washer-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-standoff-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-screw-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "carrier-lower-screw-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-standoff-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-lower-screw-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-standoff-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-screw-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-lower-screw-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-standoff-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-screw-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-lower-screw-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-standoff-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-screw-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "lid-lower-screw-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-screw-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-nut-0",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-screw-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-nut-1",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-screw-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-nut-2",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-screw-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        },
+        {
+          "part": "display-nut-3",
+          "clear": true,
+          "componentVolumesMm3": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "case": "later-cap-eight-mm-beyond-initial-screw",
+      "expected": "blocked",
+      "initialBounds": {
+        "min": [
+          -5.75,
+          1.25,
+          21.5
+        ],
+        "max": [
+          -1.25,
+          5.75,
+          32
+        ]
+      },
+      "obstacleBounds": {
+        "min": [
+          -4.5,
+          2.5,
+          40
+        ],
+        "max": [
+          -2.5,
+          4.5,
+          41
+        ]
+      },
+      "passed": true,
+      "result": {
+        "clear": false,
+        "componentVolumesMm3": [
+          3.999999999999999,
+          3.8868565912760253
+        ]
+      }
+    },
+    {
+      "case": "unknown-native-measurement",
+      "expected": "closed-failure",
+      "passed": true,
+      "message": "unknown swept intersection"
+    },
+    {
+      "case": "source-screw-through-lid-wrong-direction",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "componentVolumesMm3": [
+          18.598228509251573,
+          0
+        ]
+      }
+    },
+    {
+      "case": "source-screw-shifted-0.2-mm-into-spacer",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "componentVolumesMm3": [
+          0,
+          2.9967969209563616
+        ]
+      }
+    },
+    {
+      "case": "source-protrusion-outside-analytic-envelope",
+      "expected": "closed-failure",
+      "passed": true,
+      "message": "source outside conservative envelope: 0.0805932969140901"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "units": "mm",
-  "status": "dimensional-candidate",
+  "status": "native-coordinate-candidate",
   "physicalValidation": "not-performed",
   "coordinateFrame": {
-    "origin": "carrier top-left, carrier underside",
-    "x": "right",
-    "y": "down",
-    "z": "up",
+    "origin": "KiCad native XY origin at carrier top-left; enclosure underside is Z=0",
+    "x": "editor X, right",
+    "y": "negative editor Y, up in a +Z top view",
+    "z": "up; native populated side retained",
     "carrierAssemblyTranslation": [
       0,
       0,
@@ -21,7 +21,7 @@
     ],
     "minXY": [
       -9,
-      -9
+      -54
     ],
     "bodyHeight": 27.5,
     "lidThickness": 2,
@@ -34,7 +34,7 @@
     "nativePcbBoardId": "pcb_3b1f96ad7f25f4f0",
     "nativePcbRevision": 0,
     "nativeStepSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
-    "hardwareInterfaceSha256": "238ab4ab67aecb90d90e87e2469c3d30fdaef9cebd8e229e3ac9e05e55ee2e42",
+    "hardwareInterfaceSha256": "ac46bfd30fdc5efa3c39765713208e52bdb738226d99d388685d6d1b85e7fe9a",
     "cadPart": "carrier-pcba-envelope",
     "transform": {
       "sourceFrame": "KiCad STEP X-right Y-up Z-up substrate",
@@ -45,32 +45,32 @@
         1,
         1.0596026490066226
       ],
-      "rotateXDegrees": 180,
+      "rotateXDegrees": 0,
       "translation": [
         0,
         0,
-        9.6
+        8
       ],
-      "note": "Bare substrate only; top/bottom geometry symmetric. Exact XY and holes are unchanged."
+      "note": "Preserve native X/Y and +Z. Apply only positive Z thickness scale and upward translation. All authored features use world Y=-editorY."
     },
     "mountHoles": {
       "diameter": 2.9,
       "centres": [
         [
           4,
-          4
+          -4
         ],
         [
           66,
-          4
+          -4
         ],
         [
           4,
-          41
+          -41
         ],
         [
           66,
-          41
+          -41
         ]
       ]
     }
@@ -94,11 +94,11 @@
       "outerXY": [
         [
           -1.549,
-          18
+          -27
         ],
         [
           5.801,
-          27
+          -18
         ]
       ],
       "heightAboveBoardTop": 3.21,
@@ -108,14 +108,14 @@
   "oled": {
     "part": "Adafruit326 STEMMA QT",
     "eagleCommit": "51ef8e242dcf460d5effc298d8565110624e6b23",
-    "nativeTransform": "(x,y) -> (35+x,38.25-y)",
+    "nativeTransform": "(x,y) -> (35+x,y-38.25)",
     "boardThickness": 1.6,
     "boardBackAssemblyZ": 23.6,
     "boardFrontAssemblyZ": 25.2,
     "glass": {
       "min": [
         36.255,
-        11.317,
+        -30.577,
         25.2
       ],
       "size": [
@@ -128,7 +128,7 @@
       "part": "oled-display-surface",
       "min": [
         38.733,
-        13.417,
+        -24.281,
         26.98
       ],
       "size": [
@@ -142,7 +142,7 @@
     "lidWindow": {
       "centre": [
         49.605,
-        18.849
+        -18.849
       ],
       "size": [
         22.744,
@@ -166,11 +166,11 @@
       "mountCentres": [
         [
           37.54,
-          9.04
+          -9.04
         ],
         [
           61.67,
-          9.04
+          -9.04
         ]
       ]
     }
@@ -201,6 +201,14 @@
         }
       ],
       "inputs": []
+    },
+    "referenceStatus": "Historical revision 2; corrected source is not yet saved in Studio.",
+    "displayWorldOrientation": {
+      "part": "oled-display-surface",
+      "face": "+z",
+      "imageTopEdgeY": -13.417,
+      "imageRowsDirection": "-Y",
+      "browserUvValidation": "pending against corrected saved revision"
     }
   },
   "assumptions": [
@@ -210,5 +218,6 @@
     "Vendor XIAO STEP is an older1.0 mm board revision; nativev1.3 thickness1.6 mm and USBXY override it.",
     "Thread and electronic component bodies are clearance envelopes, not fabrication models.",
     "No RF antenna, battery, waterproofing or environmental qualification."
-  ]
+  ],
+  "registrationEvidence": "verification/handedness/native-registration.json"
 }

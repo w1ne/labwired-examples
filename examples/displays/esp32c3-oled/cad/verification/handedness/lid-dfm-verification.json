@@ -1,0 +1,270 @@
+{
+  "ok": true,
+  "clearance": [],
+  "walls": [
+    {
+      "part": "lid",
+      "result": {
+        "violations": [],
+        "truncated": false,
+        "sampleCount": 12284,
+        "thinnestMm": 0.8498339486088142
+      }
+    }
+  ],
+  "voids": [
+    {
+      "part": "lid",
+      "result": {
+        "sealedVoids": [],
+        "detectedSealedVoidCount": 0,
+        "voxelMm": 0.4555660734227201,
+        "crackedColumns": 0,
+        "phases": {
+          "sealedVoids": true,
+          "mouthCount": false
+        }
+      }
+    }
+  ],
+  "fdm": [
+    {
+      "part": "lid",
+      "result": {
+        "settings": {
+          "buildDirection": [
+            0,
+            0,
+            1
+          ],
+          "nozzleMm": 0.4,
+          "maxOverhangDeg": 45,
+          "maxBridgeMm": 10,
+          "printer": "generic-fdm"
+        },
+        "orientation": {
+          "buildDirection": [
+            0,
+            0,
+            1
+          ],
+          "label": "+z",
+          "rotation": {
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "deg": 0,
+            "apply": ""
+          },
+          "sizeMm": {
+            "x": 88,
+            "y": 63,
+            "z": 4.300000000000008
+          },
+          "fitsBed": true,
+          "unsupportedAreaMm2": 0,
+          "overhangs": [],
+          "bedContact": {
+            "areaMm2": 5209.970646719439,
+            "footprintMm2": 5522.531678974931,
+            "ratio": 0.9434025822893046,
+            "minBaseMm": 63,
+            "heightMm": 4.300000000000008,
+            "tipRatio": 0.06825396825396837
+          },
+          "bedContactLow": false,
+          "tipRisk": false
+        },
+        "ranking": [
+          {
+            "label": "+z",
+            "buildDirection": [
+              0,
+              0,
+              1
+            ],
+            "rotation": {
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "deg": 0,
+              "apply": ""
+            },
+            "sizeMm": {
+              "x": 88,
+              "y": 63,
+              "z": 4.300000000000008
+            },
+            "fitsBed": true,
+            "unsupportedAreaMm2": 0,
+            "bedContactAreaMm2": 5209.970646719439,
+            "bedContactRatio": 0.9434025822893046,
+            "heightMm": 4.300000000000008,
+            "tipRisk": false
+          },
+          {
+            "label": "+x",
+            "buildDirection": [
+              1,
+              0,
+              0
+            ],
+            "rotation": {
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "deg": -90,
+              "apply": ".rotateY(-90)"
+            },
+            "sizeMm": {
+              "x": 4.300000000000008,
+              "y": 63,
+              "z": 88
+            },
+            "fitsBed": true,
+            "unsupportedAreaMm2": 99.35278940056195,
+            "bedContactAreaMm2": 106,
+            "bedContactRatio": 0.4297118225173432,
+            "heightMm": 88,
+            "tipRisk": true
+          },
+          {
+            "label": "-x",
+            "buildDirection": [
+              -1,
+              0,
+              0
+            ],
+            "rotation": {
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "deg": 90,
+              "apply": ".rotateY(90)"
+            },
+            "sizeMm": {
+              "x": 4.300000000000008,
+              "y": 63,
+              "z": 88
+            },
+            "fitsBed": true,
+            "unsupportedAreaMm2": 99.35278940056169,
+            "bedContactAreaMm2": 106,
+            "bedContactRatio": 0.4343620912073967,
+            "heightMm": 88,
+            "tipRisk": true
+          },
+          {
+            "label": "-y",
+            "buildDirection": [
+              0,
+              -1,
+              0
+            ],
+            "rotation": {
+              "axis": [
+                1,
+                0,
+                0
+              ],
+              "deg": -90,
+              "apply": ".rotateX(-90)"
+            },
+            "sizeMm": {
+              "x": 88,
+              "y": 4.300000000000008,
+              "z": 63
+            },
+            "fitsBed": true,
+            "unsupportedAreaMm2": 122.6427894005619,
+            "bedContactAreaMm2": 156,
+            "bedContactRatio": 0.4944101544239409,
+            "heightMm": 63,
+            "tipRisk": true
+          },
+          {
+            "label": "+y",
+            "buildDirection": [
+              0,
+              1,
+              0
+            ],
+            "rotation": {
+              "axis": [
+                1,
+                0,
+                0
+              ],
+              "deg": 90,
+              "apply": ".rotateX(90)"
+            },
+            "sizeMm": {
+              "x": 88,
+              "y": 4.300000000000008,
+              "z": 63
+            },
+            "fitsBed": true,
+            "unsupportedAreaMm2": 133.22278940056188,
+            "bedContactAreaMm2": 156,
+            "bedContactRatio": 0.49441015442394065,
+            "heightMm": 63,
+            "tipRisk": true
+          },
+          {
+            "label": "-z",
+            "buildDirection": [
+              0,
+              0,
+              -1
+            ],
+            "rotation": {
+              "axis": [
+                1,
+                0,
+                0
+              ],
+              "deg": 180,
+              "apply": ".rotateX(180)"
+            },
+            "sizeMm": {
+              "x": 88,
+              "y": 63,
+              "z": 4.300000000000008
+            },
+            "fitsBed": true,
+            "unsupportedAreaMm2": 5177.903486900762,
+            "bedContactAreaMm2": 30.93148563642994,
+            "bedContactRatio": 0.005600961195784625,
+            "heightMm": 4.300000000000008,
+            "tipRisk": false
+          }
+        ],
+        "walls": {
+          "violations": [],
+          "truncated": false,
+          "sampleCount": 12284,
+          "thinnestMm": 0.8498339486088142
+        },
+        "smallFeatures": [],
+        "verdict": "pass"
+      }
+    }
+  ],
+  "timings": {
+    "mesh": 492.87309399999504,
+    "voids": 96.69508100001258,
+    "walls": 66.16649600000528,
+    "fdm": 306.5218989999994,
+    "total": 962.3994470000034
+  },
+  "diagnostics": [],
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z"
+}

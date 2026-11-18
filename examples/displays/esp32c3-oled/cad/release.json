@@ -3,17 +3,18 @@
   "status": "assembly-candidate",
   "acceptance": {
     "solidBuild": "pass",
-    "scriptClearances": "9/9 pass",
+    "scriptClearances": "12/12 pass: 9 physical dimensions and 3 native carrier registration gauges",
     "baseFdm": "pass: measured minWall 1.1261785276 mm",
     "lidFdm": "pass: measured minWall 0.8498339486 mm",
-    "stepBrep": "41/41 assembly solids valid; base and lid each1 valid solid",
-    "meshExports": "binary STL closed-manifold edge counts and size pass; 3MF opens in millimetres",
+    "stepBrep": "41/41 assembly solids valid",
+    "meshExports": "pass: both binary STLs and 3MF meshes have zero non-two-manifold edges; dimensions and millimetre units verified",
     "designLoop": "pass: functional, quality and actual screenshot review accepted",
     "assemblyPath": "hosted acceptance open: independent ordered follow-up passes 39 stages for all 41 source parts; earlier hosted budget/contact receipts retained",
     "physicalFit": "not performed",
     "printing": "not performed",
     "cableRouting": "not performed",
-    "independentOrderedPath": "pass: 39/39 nominal geometric stages; required holds, zero-margin driver fit and physical qualification remain open"
+    "independentOrderedPath": "pass: 39/39 nominal geometric stages; required holds, zero-margin driver fit and physical qualification remain open",
+    "nativeRegistration": "18/18 native drilled pads match exact STEP axes; historical rotation fails all 3 source gauges"
   },
   "kernelcad": {
     "provider": "kernelcad",
@@ -24,65 +25,68 @@
     "url": "https://app.kernelcad.com/p/t_IaE1EE?version=2",
     "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v2.json?provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
     "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/2/mesh-artifact?download=1&provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
-    "meshReady": true
+    "meshReady": true,
+    "isCurrentSource": false,
+    "currentRevisionPending": true,
+    "historicalReason": "Revision 2 used an incorrect populated coordinate reconstruction; source and exports here supersede it."
   },
   "source": "esp32c3-oled-enclosure.kcad.ts",
-  "submittedSource": "verification/submitted-source.kcad.ts",
+  "submittedSource": "verification/handedness/submitted-source.kcad.ts",
   "asset": "inputs/47111971a61f.step",
   "hardware": {
     "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
     "boardId": "pcb_3b1f96ad7f25f4f0",
     "revision": 0,
     "pcbCommit": "61a802de810b705e9a3155ce8a03357dc2442cd7",
-    "hardwareInterfaceSha256": "238ab4ab67aecb90d90e87e2469c3d30fdaef9cebd8e229e3ac9e05e55ee2e42"
+    "hardwareInterfaceSha256": "ac46bfd30fdc5efa3c39765713208e52bdb738226d99d388685d6d1b85e7fe9a"
   },
   "exports": [
     {
       "path": "exports/esp32c3-oled-assembly.step",
-      "sha256": "4598fbfbe9f040dd1a70b708b65cfdde39459c7d1f365f96397924067e2ff0bb",
-      "bytes": 1861898,
+      "sha256": "48dfd28315a9581cc3bd5d15757f37ee524b9cde6ebfa69d7c18841053fbe9d2",
+      "bytes": 1871615,
       "mediaType": "model/step"
     },
     {
       "path": "exports/esp32c3-oled-base.step",
-      "sha256": "ab3ce8b5ac3e75c4a36398a9fd8605235cc62127c284547fc9c26e8fa29bc506",
-      "bytes": 136050,
+      "sha256": "545184b08361e91b78a8e427c28fffb061c582b997892679a2229120d7925b6d",
+      "bytes": 136127,
       "mediaType": "model/step"
     },
     {
       "path": "exports/esp32c3-oled-base.stl",
-      "sha256": "7119a00f542612a85f9c598a50522ea2b31243efc036224239f05868b5c8364d",
+      "sha256": "acb42deec21246f877332627aec294fef37ea1c5602a0b02871b193d5446306f",
       "bytes": 1339484,
       "mediaType": "model/stl"
     },
     {
       "path": "exports/esp32c3-oled-base.3mf",
-      "sha256": "5e36c3f6cb889193d3c41898a5b3e0f12fcc19dd37c1a680359542c2a85b7e10",
-      "bytes": 353578,
+      "sha256": "8f9d43d0394feb1f32345487065df6507b2cb187496a9884566a5aae4a722315",
+      "bytes": 354705,
       "mediaType": "model/3mf"
     },
     {
       "path": "exports/esp32c3-oled-lid.step",
-      "sha256": "d34ec62474ea4b3429e95bbb3138a13032d0a66e21cbab20f2b28a3703af94e4",
-      "bytes": 233800,
+      "sha256": "3f1f01e09a194d6e1370c3a59d424d6603cebd8f3b170531f7e12c71925fca73",
+      "bytes": 233729,
       "mediaType": "model/step"
     },
     {
       "path": "exports/esp32c3-oled-lid.stl",
-      "sha256": "ee7d438f0598a0051e8f73fba1a73b617cbd76902013eb2e167bdc1add7c82fb",
+      "sha256": "3ef7b8fe900a9aca79d462bf8913e7e9bfe6399e1f7c9886dfcee7cd5cfcdbd8",
       "bytes": 614284,
       "mediaType": "model/stl"
     },
     {
       "path": "exports/esp32c3-oled-lid.3mf",
-      "sha256": "802f5f4975f01bf53c08680caceb1a2d8c573a5ce816619a56a2c7385e0b405b",
-      "bytes": 160014,
+      "sha256": "c34d76165ed02acfea8b6bcc429d5d8d035fb9cd4d650747afb84d710a3ca17a",
+      "bytes": 157104,
       "mediaType": "model/3mf"
     }
   ],
-  "renderNote": "All v2-* renders and revision-v2-iso.png use the exact revision2 geometry. Older renders and blocked-gate receipts remain historical evidence.",
-  "sourceSha256": "67cde40ec0d6bc1113c5a71b5d3778520f7147f88190ee7d5bf2b61412707fd8",
-  "submittedSourceSha256": "0dad608ad219e5c96d79d8b913d5183ccaee22ae67236006e3cd5b1a21f3b1de",
+  "renderNote": "native-frame-* renders use the corrected source recorded in verification/handedness. Revision 1/2 renders and their receipts remain historical.",
+  "sourceSha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+  "submittedSourceSha256": "aed3dd9698250717d267b9f774656ce4b8e6417aab235447c7dc63e8b3159fef",
   "assetSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
   "componentEnvelopes": [
     {
@@ -146,6 +150,18 @@
     "verification/assembly-path-local-refinement-v2.json"
   ],
   "acceptedGateReceipts": [
+    "verification/handedness/evaluation.json",
+    "verification/handedness/design-loop.json",
+    "verification/handedness/visual-review.json",
+    "verification/handedness/native-registration.json",
+    "verification/handedness/base-dfm-verification.json",
+    "verification/handedness/lid-dfm-verification.json",
+    "verification/handedness/assembly-step-inspection.json",
+    "verification/handedness/mesh-export-check.json",
+    "verification/handedness/negative-old-carrier.json"
+  ],
+  "independentOrderedPathEvidence": "verification/handedness/path/provenance.json",
+  "historicalAcceptedGateReceipts": [
     "verification/solid-build-v2.json",
     "verification/design-loop-v2.json",
     "verification/base-fdm-v2.json",
@@ -154,5 +170,5 @@
     "verification/mesh-export-check-v2.json",
     "verification/candidate1-negative-control.json"
   ],
-  "independentOrderedPathEvidence": "verification/ordered-path-followup/provenance.json"
+  "historicalOrderedPathEvidence": "verification/ordered-path-followup/provenance.json"
 }

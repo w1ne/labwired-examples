@@ -1,14 +1,16 @@
-# ESP32-C3 OLED device — Rev A candidate 2
+# ESP32-C3 OLED device — Rev A candidate 3
 
 This package contains a USB-powered OLED counter, its routed carrier PCB, firmware, enclosure CAD, assembly instructions and verification evidence. A Seeed XIAO ESP32C3 drives an Adafruit 326 STEMMA QT display. The counter starts at **19:00:00 after every reset** and advances once per second. It has no real-time clock, time-setting control or saved time.
 
-**Status: engineering assembly candidate.** Firmware behavior and native PCB checks pass. Revision 2 increases nominal glass/support clearance from 0.277 mm to 1.277 mm while retaining the 0.8 mm minimum-wall requirement. The enclosure passes nine dimensional checks, both print-orientation checks, valid STEP solids and a design-loop review with actual screenshots. A subsequent independent check passes 39 ordered geometric stages for all 41 source parts; the complete [path evidence](cad/verification/ordered-path-followup/) records required holds and tool limits. Hosted assembly-path acceptance remains open. No physical prototype has been built.
+**Status: engineering assembly candidate.** The corrected model retains the native PCB populated side at +Z and uses world Y = −editor Y. All **12/12** fit and registration checks pass. All **18 native drilled pads** match their STEP axes with zero XY error. The glass/support clearance remains **1.277 mm**, with **0.85 mm** support arms and the unchanged **0.8 mm** minimum-wall gate. Both printed parts pass DFM and closed-mesh checks; all **41/41** assembly STEP solids are valid. A fresh independent check passes **39 ordered geometric stages** for all 41 source parts and all 13 helper controls. Hosted assembly-path acceptance and physical qualification remain open. No physical prototype has been built.
 
-[Open the canonical Lab](https://app.labwired.com/?lab=esp32c3-oled-lab) · [Open the pinned enclosure](https://app.kernelcad.com/p/t_IaE1EE?version=2) · [Track remaining work](https://github.com/w1ne/labwired/issues/3550)
+The previous source reconstructed the populated assembly in the PCB editor's downward-Y frame. Rotating only the bare substrate hid that reflection. Candidate 3 corrects the primitive geometry, connector frames, print orientations and exported files. The earlier candidate releases remain immutable. Studio revision 2 is historical; saving the corrected source in that same project is pending.
+
+[Open the canonical Lab](https://app.labwired.com/?lab=esp32c3-oled-lab) · [Historical Studio revision 2](https://app.kernelcad.com/p/t_IaE1EE?version=2) · [Track remaining work](https://github.com/w1ne/labwired/issues/3550)
 
 The canonical Lab integration is delivered by the associated platform change. Until that change deploys, the public Lab can still show the previous Super Mini starter. This repository and the release files identify the candidate independently of deployment.
 
-![Actual KernelCAD render of the closed enclosure candidate](cad/renders/revision-v2-iso.png)
+![Actual KernelCAD render of the corrected native-coordinate enclosure](cad/renders/native-frame-closed-iso.png)
 
 ## Package contents
 
@@ -108,10 +110,10 @@ The public runtime is [firmware-demos-v19](https://github.com/w1ne/labwired-core
 | Package-build ROM boot | **5/5 assertions pass**, 300 million steps | Banner, both tick strings, nonblank display region and bounded stop |
 | Published runtime + packaged configuration | **5/5 assertions pass**, 300 million steps | Cold boot of exact v19 bytes with the exported Lab system |
 | Published runtime + browser WASM | Two distinct nonblank 128×64 frames; **19:00:00 → 19:00:01** | Exact v19 ELF/flash/snapshot and pinned core engine |
-| Enclosure solids and print orientations | **41/41 STEP solids valid; base/lid FDM pass; 9/9 dimensional requirements pass** | Exact revision 2 CAD and configured FDM geometry |
-| Independent ordered path check | **39/39 stages pass; all 41 source parts covered** | Continuous mesh/native swept-envelope evidence; 13 helper controls and a shifted-screw negative; holds and zero-margin driver fit remain documented |
+| Enclosure solids and print orientations | **41/41 STEP solids valid; base/lid FDM pass; 12/12 fit and registration requirements pass** | Corrected native-coordinate CAD and configured FDM geometry |
+| Independent ordered path check | **39/39 stages pass; all 41 source parts covered** | Fresh continuous mesh/native swept-envelope evidence in [handedness/path](cad/verification/handedness/path/provenance.json); 13 helper controls and a shifted-screw negative; holds and zero-margin driver fit remain documented |
 | Hosted assembly-path acceptance | **Open** | Earlier budget/contact receipts remain; independent follow-up does not change the hosted result |
-| `design_loop` review | **Pass: functional, quality and screenshot review** | Exact revision 2 source, native STEP and actual closed/interior/lid-print renders |
+| `design_loop` review | **Pass: functional, quality and screenshot review** | Corrected source, exact native STEP and actual closed/interior/lid-print renders |
 | Printed/device prototype | **Not performed** | Electrical measurements, cable fit and physical assembly remain open |
 
 The native reports record four default ignored ERC categories and five default ignored DRC categories. There are no explicit DRC exclusions. See [manufacturing/validation.json](manufacturing/validation.json) for the complete settings and hashes.
@@ -121,3 +123,11 @@ The two frame hashes are identical between the separate package-build CLI run an
 ## Sources and licensing
 
 Manufacturer geometry, datasheets and component attributions are recorded in [electronics/provenance.json](electronics/provenance.json), [hardware-interface.json](hardware-interface.json) and the CAD receipts. The editable carrier and example scripts carry the included [MIT notice](LICENSE). The mirrored firmware carries its original [MIT notice](firmware/LICENSE). KiCad-library and imported manufacturer assets retain their individual notices. Espressif ROM images remain Espressif copyright and are linked from the pinned core source; the example MIT license does not apply to them.
+
+## Native coordinate registration
+
+The electrical interface tables retain KiCad editor coordinates. The CAD uses (X, Y, Z) = (editorX, −editorY, Z up) and keeps the native substrate's +Z side. The imported substrate receives only a positive thickness scale and Z=8 mm translation. Authored primitives enter this frame before boolean construction; purchased fasteners retain rigid transforms.
+
+[Native registration](cad/verification/handedness/native-registration.json) binds the exact PCB, STEP, portable source, submitted source and staged evaluation. It checks all 18 drilled pad centres and an ordered three-pad orientation witness. Three real clearance gauges pass at 0.200 mm; restoring the historical 180° substrate rotation fails all three. The current [design loop](cad/verification/handedness/design-loop.json), [print mesh check](cad/verification/handedness/mesh-export-check.json) and [ordered path proof](cad/verification/handedness/path/provenance.json) identify the same corrected source.
+
+Run `python3 cad/verification/handedness/verify_native_registration.py --kind oled --package .` with the KiCad 10 Python module available. Run `python3 cad/verification/handedness/verify_mesh_exports.py --kind oled --package .` to check the actual STL and 3MF files. These checks establish source and geometric consistency; manufactured tolerances and physical operation remain unqualified.

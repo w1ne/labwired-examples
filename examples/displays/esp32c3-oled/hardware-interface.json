@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "status": "Source-derived geometry fixed; enclosure interference checks and physical assembly measurement pending.",
+  "status": "Native coordinate registration and nominal enclosure checks pass. Physical assembly and tolerance qualification remain open.",
   "units": "mm",
-  "coordinate_system": "Carrier top view: origin at the top-left corner of the rectangular envelope; x increases right, y increases down. Local z=0 is the carrier underside. The enclosure applies its own base translation.",
+  "coordinate_system": "Electrical and PCB editor top view: origin at the top-left envelope corner, X right and Y down. These interface XY coordinates remain in the editor frame. The CAD world uses X=editorX, Y=-editorY, Z up; carrier underside is at Z=8 mm.",
   "carrier": {
     "width": 70,
     "height": 45,
@@ -206,5 +206,12 @@
     "https://suddendocs.samtec.com/catalog_english/bbs.pdf",
     "https://suddendocs.samtec.com/catalog_english/ss.pdf",
     "https://suddendocs.samtec.com/catalog_english/sockets.pdf"
-  ]
+  ],
+  "cad_coordinate_system": {
+    "x": "editorX",
+    "y": "-editorY",
+    "z": "up",
+    "carrier_underside_z": 8,
+    "registration": "cad/verification/handedness/native-registration.json"
+  }
 }
