@@ -1,0 +1,69 @@
+{
+  "scope": "Only the JP1 3D model URI changed; every other native PCB byte is identical.",
+  "kicadVersion": "10.0.8",
+  "beforePcbSha256": "bf9cbb006c7d56ad4dc6efe4ea6ad9119ac4925921be773cf57c75e4b729e1cb",
+  "afterPcbSha256": "f8b6afb3d38436b4628cf90e9e07505e9fe0733554ff68717320b116f5fdc132",
+  "oldModel": "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step",
+  "newModel": "${KIPRJMOD}/../cad/references/samtec/TSW-102-07-G-S-drawing-envelope.step",
+  "modelOffset": [
+    0,
+    0,
+    0
+  ],
+  "modelRotation": [
+    0,
+    0,
+    0
+  ],
+  "modelScale": [
+    1,
+    1,
+    1
+  ],
+  "modelSha256": "bbed94800fe9e4126eb93144fd5e3874adbcd4ffc244670199b619a64541cfbc",
+  "commands": [
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--exit-code-violations",
+        "--output",
+        "/data/worktrees/labwired-examples-uds-jp1-model-20261118/examples/industrial/stm32h5-uds-ecu/evidence/jp1-model/drc.json",
+        "/data/worktrees/labwired-examples-uds-jp1-model-20261118/examples/industrial/stm32h5-uds-ecu/electronics/can-interface.kicad_pcb"
+      ],
+      "exit": 0,
+      "seconds": 8.802788071974646,
+      "log": "command-0.log"
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "step",
+        "--force",
+        "--subst-models",
+        "--output",
+        "/data/worktrees/labwired-examples-uds-jp1-model-20261118/examples/industrial/stm32h5-uds-ecu/cad/can-interface.step",
+        "/data/worktrees/labwired-examples-uds-jp1-model-20261118/examples/industrial/stm32h5-uds-ecu/electronics/can-interface.kicad_pcb"
+      ],
+      "exit": 0,
+      "seconds": 2.020428632036783,
+      "log": "command-1.log"
+    }
+  ],
+  "nativeStep": {
+    "path": "cad/can-interface.step",
+    "bytes": 1070546,
+    "sha256": "ecdce341a1b83e6a8ee4564a0492fcdcc9743c45eea3d375a1607efcfc88edf8"
+  },
+  "drc": {
+    "violations": 0,
+    "unconnected": 0,
+    "schematicParity": 0
+  }
+}

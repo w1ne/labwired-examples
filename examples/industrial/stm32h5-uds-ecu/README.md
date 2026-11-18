@@ -30,7 +30,13 @@ Open electronics/can-interface.kicad_pro in KiCad 10. The board is
 source. Order one bare carrier from these manufacturing files; PCB1 in the
 assembly BOM is separate from its populated components. Manufacturing includes
 Gerber, drill, netlist, and schematic PDF.
-cad/can-interface.step is the populated native export.
+cad/can-interface.step is the populated native export. JP1 uses the source-dimensioned
+Samtec TSW-102-07-G-S envelope from cad/references/samtec, with zero model
+offset and rotation. Its nominal 2.54 mm tail and 5.84 mm post replace the
+previous generic header model. The model record separates nominal dimensions
+and tolerances; native copper and all other PCB bytes are unchanged.
+The replacement passes DRC, open-connection and schematic-parity checks;
+see evidence/jp1-model/native-model-replacement.json.
 
 - **MCP2562FD-E/SN**, SOIC-8: pin 3 gets 5 V, pin 5 gets 3.3 V, pin 8 STBY
   is grounded. C1/C2 decouple each supply; C3 is local bulk capacitance.
