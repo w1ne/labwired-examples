@@ -1,3 +1,24 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    FDCAN/FDCAN_Com_Polling/Src/main.c
+  * @author  MCD Application Team
+  * @brief   This sample code shows how to achieve Polling Process Communication
+  *          between two FDCAN units.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2023 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
 /* Clock setup from STM32CubeH5 v1.4.0 FDCAN_Com_Polling. ST license applies. */
 #include "stm32h5xx_hal.h"
 void Error_Handler(void);

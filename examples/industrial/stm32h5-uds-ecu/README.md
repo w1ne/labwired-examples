@@ -70,6 +70,38 @@ With PEAK PCAN-USB FD IPEH-004022, connect J2.1 to D-sub pin 7, J2.2 to
 pin 2, J2.3 to pin 3. Leave optional tester power pins disconnected. Fit
 the tester's documented termination or an external 120 Ω termination.
 
+## Mechanical mounting
+
+The editable bench assembly is cad/bench-assembly.kcad.ts. The printable part
+is cad/bench-mount-print.kcad.ts, with matching STEP and STL exports. It is a
+**222 × 90 mm open bench mount**, with a 3 mm base, four 7 mm carrier bosses,
+a holeless Nucleo cradle, and two harness tie slots.
+
+Print the flat base on the bed in PETG. Check the 0.35 mm nominal edge
+clearance against the purchased Nucleo board before pressing its edge under
+the catches. The carrier sits 7 mm above the base. Ream the four modeled
+2.459 mm pilot bores to 2.5 mm and tap M3 × 0.5 to the 7 mm boss depth with
+a bottoming tap; the supplied STL has pilot bores, not helical printed threads.
+Fit four ISO 4762 M3 × 8 screws through the PCB. Nominal engagement is 6.4 mm.
+Do not force a screw against the blind-hole floor or distort the PCB. Retain
+the harness with two HellermannTyton T18R ties through the slots.
+
+The carrier uses its exact populated KiCad STEP. The Nucleo reference is the
+**133.34 × 70 mm board outline**, with an 8 mm under-board gap; its populated
+connector and component geometry is not present. Verify purchased-board fit,
+USB and Ethernet access, edge retention, harness routing, and underside
+clearance on the physical assembly. The cradle is an editable fit candidate.
+
+The print-only model passed the hosted geometry and visual review
+(evidence/mount-review.json). The full assembly records two bounded contacts
+for the stock JST XH model's clinched leads: 0.08 mm³ maximum overlap and
+0.08 mm maximum thickness at each header/PCB pair. The original measured
+lead contact is 0.066 mm³ / 0.069 mm. The manufacturer's XH drawing identifies
+these retention kinks. Moving the J2 housing 1 mm down is rejected; that
+negative control is retained in evidence/housing-collision-negative.json.
+The full assembly acceptance remains pending the generic contact-check
+correction. No physical retention, print tolerance, or screw load is qualified.
+
 ## Build and flash
 
 From firmware/:
@@ -127,6 +159,7 @@ evidence/simulator-result.json contains actual decoded traffic.
 - [ST HAL FDCAN example, exact source revision](https://github.com/STMicroelectronics/STM32CubeH5/tree/0d526a4930310cf8fa6dce7538ab891cc37eb250/Projects/NUCLEO-H563ZI/Examples/FDCAN/FDCAN_Com_Polling)
 - [MCP2562FD datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/20005284A.pdf)
 - [PESD2CAN datasheet](https://assets.nexperia.com/documents/data-sheet/PESD2CAN.pdf)
+- [JST XH clinched-lead dimensions](https://www.jst.com/wp-content/uploads/2025/06/eXH.pdf)
 - [JST XH family](https://www.jst-mfg.com/product/index.php?lang=en&series=277)
 - [PCAN-USB FD](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb-fd/?L=1)
 - [Tracking issue #3554](https://github.com/w1ne/labwired/issues/3554)

@@ -1,0 +1,132 @@
+{
+  "ok": true,
+  "goal": "Review only the printable UDS bench mount geometry; populated assembly and real Nucleo fit are separate gates.",
+  "finalAttemptId": "01",
+  "attempts": [
+    {
+      "id": "01",
+      "title": "Attempt 01",
+      "ok": true,
+      "functional": true,
+      "qualityOk": true,
+      "featureCount": 46,
+      "diagnosticCount": 0,
+      "reviewFacts": [],
+      "visualReview": {
+        "accepted": true,
+        "findings": [
+          "One continuous printable base occupies the entire image; no separate loose parts are present.",
+          "The long Nucleo cradle occupies the left two thirds; the 60 x 40 mm carrier pattern occupies the right third of the 222 x 90 mm plate.",
+          "Four carrier bosses, two tie slots, four catches, and four corner end stops are visible in the top and isometric views.",
+          "Every rail, boss and catch connects to the base or its supporting rail; no floating material is visible.",
+          "The catches sit above the rail support surfaces and the four bored bosses stand on the base; board fit is a separate physical check.",
+          "The plate lies on XY with rail and boss features upward along +Z; the open connector ends align with the long axis of the cradle.",
+          "The same four boss bores and two tie slots appear in both top and isometric views without changed dimensions or detached features."
+        ],
+        "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png",
+        "checks": [
+          {
+            "code": "main-object-count",
+            "passed": true,
+            "finding": "One continuous printable base occupies the entire image; no separate loose parts are present.",
+            "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png"
+          },
+          {
+            "code": "proportions-match-reference",
+            "passed": true,
+            "finding": "The long Nucleo cradle occupies the left two thirds; the 60 x 40 mm carrier pattern occupies the right third of the 222 x 90 mm plate.",
+            "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png"
+          },
+          {
+            "code": "required-visible-features",
+            "passed": true,
+            "finding": "Four carrier bosses, two tie slots, four catches, and four corner end stops are visible in the top and isometric views.",
+            "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png"
+          },
+          {
+            "code": "no-stray-or-floating-geometry",
+            "passed": true,
+            "finding": "Every rail, boss and catch connects to the base or its supporting rail; no floating material is visible.",
+            "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png"
+          },
+          {
+            "code": "attachment-plausibility",
+            "passed": true,
+            "finding": "The catches sit above the rail support surfaces and the four bored bosses stand on the base; board fit is a separate physical check.",
+            "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png"
+          },
+          {
+            "code": "semantic-orientation-alignment",
+            "passed": true,
+            "finding": "The plate lies on XY with rail and boss features upward along +Z; the open connector ends align with the long axis of the cradle.",
+            "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png"
+          },
+          {
+            "code": "canonical-views-physically-coherent",
+            "passed": true,
+            "finding": "The same four boss bores and two tie slots appear in both top and isometric views without changed dimensions or detached features.",
+            "screenshotPath": "/tmp/kernelcad-preview-LhH8Ub/iso.png"
+          }
+        ]
+      },
+      "repairMode": "none",
+      "passedChecks": [
+        "part-only-evaluate"
+      ],
+      "blockingReasons": [],
+      "mechanismSummary": {
+        "sampleCount": 0,
+        "interferenceCount": 0,
+        "trackedConnectorCount": 0
+      },
+      "requirements": {
+        "ok": true,
+        "status": "not-declared",
+        "entries": [],
+        "summary": {
+          "pass": 0,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "04fa3f640d0649f60b0e54ce286a327b0a09df98c3f94bde0398d48c7c769f08",
+          "byteLength": 2235
+        },
+        "parameters": {
+          "values": {
+            "nucleoLength": 133.34,
+            "nucleoWidth": 70,
+            "nucleoPcbThickness": 1.6,
+            "nucleoEdgeClearance": 0.35
+          },
+          "sha256": "7ab2b8cc0e7eab21d992c652732c41c6d84d06e82d1a1e04b5b6ef5e0c6a2378"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "7a5ca41c0d3f8224347d2ec15d9be7939af40847"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "75a1a6947bb1d7d10aa2ced0ecae2ae13b9417e6c915d74f16a8f03785d38108"
+      },
+      "nextActionPrompt": "Single part (no assembly): the part-level checks (build, union guard, DFM gates, requirements) passed; mate, pose-envelope and mechanism checks do not apply. Wrap parts in assembly(...).part(...) and add mates when the design has joints."
+    }
+  ],
+  "record": {
+    "title": "kernelCAD design loop",
+    "goal": "Review only the printable UDS bench mount geometry; populated assembly and real Nucleo fit are separate gates.",
+    "steps": []
+  },
+  "serverBuild": "0.1.0+7a5ca41c0d3f@2026-11-18T09:08:15.431Z"
+}
