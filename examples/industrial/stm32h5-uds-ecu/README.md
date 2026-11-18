@@ -72,10 +72,47 @@ Nucleo connections are **not keyed**. Label the pins and check continuity.
 Each header occupies one odd-numbered row: CN8 pins 7/9/11 and CN9 pins
 23/25/27. Do not bridge adjacent odd/even rows. Morpho CN11/CN12 is unused.
 
-J2 mates with XHP-3: **1 CANH, 2 CANL, 3 GND**. Twist H/L together.
-With PEAK PCAN-USB FD IPEH-004022, connect J2.1 to D-sub pin 7, J2.2 to
-pin 2, J2.3 to pin 3. Leave optional tester power pins disconnected. Fit
-the tester's documented termination or an external 120 Ω termination.
+J2 mates with XHP-3: **1 CANH, 2 CANL, 3 GND**. Build the CAN lead from
+LAPP **2170261**, a 120 Ω nominal, 2-pair 24 AWG cable. Use 1.1 m rough
+stock and trim to **1.0 m between the connector rear faces**. Retain the
+white/brown pair twist to within 10 mm of the contact terminations.
+
+| XHP-3 pin | Cable conductor | Amphenol L177SDE09S contact |
+|---|---|---|
+| 1, CANH | White | 7 |
+| 2, CANL | Brown | 2 |
+| 3, signal ground | Green | 3 |
+| No connection | Yellow | Insulate separately at both ends |
+
+Fit the **8655MH0901BLF** metal hood and its supplied UNC 4-40 hardware to
+the D-sub. Its cable clamp accepts 5–8 mm cable; measure the purchased
+cable before assembly. The cable datasheet gives approximately 7.5 mm jacket
+and 1.4 mm core diameters. Confirm that each core lies within the XH
+contact's 1.3–1.9 mm insulation range before crimping. Preserve the braid
+under the hood's metal clamp; keep it separate from the signal contacts.
+At the ECU end, trim and insulate the braid edge under a 30 mm piece of
+TE **5053192058** tubing. Keep the JST fanout at most 50 mm. Restrain the
+jacket at the mount before that fanout. The heat-shrink sleeve is insulation,
+not the cable restraint. Route the external cable with a bend radius of at
+least **10 times its measured outside diameter**; reserve 80 mm for the
+selected clamp-compatible cable. This fixed-installation cable is not a
+continuous-flex lead.
+
+Use TE **5052942064** tubing on the six Nucleo header solder tails, the
+three D-sub solder cups and both unused yellow ends. Install sleeves before
+soldering, cover all exposed metal, and keep the mating header posts clear.
+Check the dressed sleeve envelopes in the fitted assembly; the tubing's
+fully recovered wall is 0.5 ±0.2 mm, so nominal wire diameter alone does
+not prove adjacent-sleeve clearance.
+
+At the tester, insert **PEAK IPEK-003002-Mini** between the cable and the
+PCAN-USB FD. It provides the exact remote 120 Ω termination. Keep the
+carrier JP1 shunt installed and the tester's optional internal termination
+disabled. Leave all optional tester power contacts disconnected. The
+result is two bus-end terminations; confirm approximately 60 Ω across H/L
+with both nodes unpowered before applying power. See
+[evidence/harness-components.json](evidence/harness-components.json) for
+manufacturer drawings, revisions, cable limits and connector provenance.
 
 ## Mechanical mounting
 
@@ -91,7 +128,7 @@ the catches. The carrier sits 7 mm above the base. Ream the four modeled
 a bottoming tap; the supplied STL has pilot bores, not helical printed threads.
 Fit four ISO 4762 M3 × 8 screws through the PCB. Nominal engagement is 6.4 mm.
 Do not force a screw against the blind-hole floor or distort the PCB. Retain
-the harness with two HellermannTyton T18R ties through the slots.
+the harness with two HellermannTyton **111-01910 / T18R-PA66-BK** ties through the slots.
 
 The carrier uses its exact populated KiCad STEP. The Nucleo reference is the
 **133.34 × 70 mm board outline**, with an 8 mm under-board gap; its populated
