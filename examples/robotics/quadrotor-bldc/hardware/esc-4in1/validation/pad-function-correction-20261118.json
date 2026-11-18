@@ -1,0 +1,116 @@
+{
+  "checkedAtUtc": "2026-11-18T17:20:12.565194+00:00",
+  "beforeSha256": "77763cb169469585c30f954fff17747ac7324374c9da8e68b6e00a774647a2ab",
+  "afterSha256": "13a9b74e8a0afc65c016302d155bd7b4e10d3edd8cc331822bfb9ccc9e182249",
+  "edits": [
+    {
+      "reference": "U7",
+      "pad": "8",
+      "before": "PA3_9",
+      "after": "PA2_8"
+    },
+    {
+      "reference": "U7",
+      "pad": "23",
+      "before": "PA14_22",
+      "after": "PA15_23"
+    },
+    {
+      "reference": "U7",
+      "pad": "24",
+      "before": "PB4_25",
+      "after": "PB3_24"
+    },
+    {
+      "reference": "U6",
+      "pad": "5",
+      "before": "COM_6",
+      "after": "NC_5"
+    },
+    {
+      "reference": "U6",
+      "pad": "7",
+      "before": "NC_8",
+      "after": "NC_7"
+    },
+    {
+      "reference": "U10",
+      "pad": "5",
+      "before": "COM_6",
+      "after": "NC_5"
+    },
+    {
+      "reference": "U10",
+      "pad": "7",
+      "before": "LO3_9",
+      "after": "NC_7"
+    },
+    {
+      "reference": "U10",
+      "pad": "8",
+      "before": "LO3_9",
+      "after": "NC_8"
+    },
+    {
+      "reference": "U5",
+      "pad": "8",
+      "before": "PA3_9",
+      "after": "PA2_8"
+    },
+    {
+      "reference": "U5",
+      "pad": "23",
+      "before": "PA14_22",
+      "after": "PA15_23"
+    },
+    {
+      "reference": "U5",
+      "pad": "24",
+      "before": "PB4_25",
+      "after": "PB3_24"
+    },
+    {
+      "reference": "U9",
+      "pad": "23",
+      "before": "PA14_22",
+      "after": "PA15_23"
+    },
+    {
+      "reference": "U9",
+      "pad": "24",
+      "before": "PB4_25",
+      "after": "PB3_24"
+    },
+    {
+      "reference": "U2",
+      "pad": "8",
+      "before": "PA3_9",
+      "after": "PA2_8"
+    },
+    {
+      "reference": "U2",
+      "pad": "23",
+      "before": "PA14_22",
+      "after": "PA15_23"
+    },
+    {
+      "reference": "U2",
+      "pad": "24",
+      "before": "PB4_25",
+      "after": "PB3_24"
+    }
+  ],
+  "nonPinFunctionBytesUnchanged": true,
+  "scope": "Correct copied pad-function text on the 16 pads restored by the earlier package-pad repair. Geometry, copper, net names, pad numbers, pin types, manufacturer identities and all other PCB bytes are unchanged. No repaired physical short or new routing claim.",
+  "sources": [
+    {
+      "url": "https://www.arterychip.com/download/DS/DS_AT32F421_V2.03_EN.pdf",
+      "sha256": "953409957662e1fe4fada766411913ca832382551500f20fad474dec0739c0de",
+      "reference": "Figure 5 QFN28 pinout and physical pin tables"
+    },
+    {
+      "path": "hardware/esc-4in1/reviewed-symbols/QuadEsc_ESCLibrary.kicad_sym",
+      "reference": "Existing source-qualified AT32F421 and NSG2065Q symbol pin names; NSG2065Q pads 5,7,8 are NC."
+    }
+  ]
+}

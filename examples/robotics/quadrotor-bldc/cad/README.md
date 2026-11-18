@@ -43,7 +43,7 @@ same corrections.
 The corrected FC PCB SHA-256 is
 `3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348`;
 the corrected ESC PCB is
-`77763cb169469585c30f954fff17747ac7324374c9da8e68b6e00a774647a2ab`.
+`13a9b74e8a0afc65c016302d155bd7b4e10d3edd8cc331822bfb9ccc9e182249`.
 KiCad 10.0.8 DRC and schematic parity report zero violations and zero
 unconnected items for both boards under their existing project rules.
 
@@ -205,3 +205,9 @@ The earlier mixed-mesh inventory and hosted attempt-staging tool failures have
 been repaired in the generic CAD service. The current candidate evaluates and
 its assembly inventory succeeds under the existing resource limits; historical
 failure receipts remain intact.
+
+The ESC PCB metadata follow-up corrects 16 copied pin-function labels. The
+[byte-level correction receipt](../hardware/esc-4in1/validation/pad-function-correction-20261118.json)
+proves all non-label PCB bytes are unchanged. The existing native STEP
+geometry and its original export receipt therefore remain unchanged; the
+new PCB hash does not imply a mechanical redesign.

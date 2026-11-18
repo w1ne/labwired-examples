@@ -14,6 +14,7 @@ from zipfile import ZipFile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 H = ROOT / "examples" / "robotics" / "quadrotor-bldc" / "hardware"
+Q = ROOT / "examples/robotics/quadrotor-bldc"
 E = H / "esc-4in1"
 R = E / "fabrication-review"
 
@@ -104,8 +105,28 @@ class ESCPhysicalBoard(unittest.TestCase):
         for marker in ("Found 0 DRC violations", "Found 0 unconnected pads", "Found 0 Footprint errors"):
             self.assertIn(marker, report)
         evidence = json.loads((E / "validation" / "20261111" / "native-evidence.json").read_text())
+        # The historical ERC/DRC receipt precedes the source-documented 3D
+        # datum correction and the later pad-function text correction. Keep
+        # that receipt immutable and prove the complete chain to this PCB.
+        datum = json.loads((Q / "cad/evidence/model-datum-correction-20261118/source-transform-proof.json").read_text())
+        board_datum = next(item for item in datum["files"] if item["file"] == "hardware/esc-4in1/4in1.kicad_pcb")
+        labels = json.loads((E / "validation/pad-function-correction-20261118.json").read_text())
         for name, expected in evidence["source_sha256"].items():
-            self.assertEqual(hashlib.sha256((E / name).read_bytes()).hexdigest(), expected, name)
+            if name == "4in1.kicad_pcb":
+                self.assertEqual(board_datum["beforeSha256"], expected)
+                self.assertTrue(board_datum["onlyModelTransformTokensChanged"])
+                self.assertEqual(labels["beforeSha256"], board_datum["afterSha256"])
+                self.assertTrue(labels["nonPinFunctionBytesUnchanged"])
+                self.assertEqual(len(labels["edits"]), 16)
+                self.assertEqual(hashlib.sha256((E / name).read_bytes()).hexdigest(), labels["afterSha256"])
+            else:
+                self.assertEqual(hashlib.sha256((E / name).read_bytes()).hexdigest(), expected, name)
+        current = json.loads((E / "validation/pad-function-correction-drc.json").read_text())
+        for key in ("violations", "unconnected_items", "schematic_parity"):
+            self.assertEqual(current[key], [], key)
+        invocation = json.loads((E / "validation/pad-function-correction-native-check.json").read_text())
+        self.assertEqual(invocation["exit"], 0)
+        self.assertIn("--schematic-parity", invocation["command"])
 
     def test_u2_pad_restore_and_netlist_membership(self):
         marker = '(property "Reference" "U2"'
