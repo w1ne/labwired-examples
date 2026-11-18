@@ -1,0 +1,14 @@
+schema_version: "1.2"
+inputs:
+  firmware: "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/doom-s3.elf"
+  system: "/data/work-evidence/labwired-featured-implementation-20261118/doom/runtime-physical-inputs/system-physical.yaml"
+limits:
+  max_steps: 900000000
+  wall_time_ms: 300000
+  max_uart_bytes: 131072
+assertions:
+  - expected_stop_reason: max_steps
+  - uart_contains: "doom initialised, entering tick loop"
+  - display_region:
+      id: "tft"
+      min_ink: 0.2

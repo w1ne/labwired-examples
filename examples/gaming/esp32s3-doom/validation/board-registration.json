@@ -1,0 +1,692 @@
+{
+  "schema": "labwired.native-board-registration.v1",
+  "ok": true,
+  "scope": "Native pads and STEP holes; evaluated carrier transform chain; exported socket, DevKit bore and mounting geometry.",
+  "cad_source_sha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+  "capture_sha256": "10668ea4c008f03c18311d08cc8a3fd06e58cc9daa8d613df13259efbfba94f4",
+  "sources": [
+    {
+      "path": "electronics/doom-carrier.kicad_pcb",
+      "sha256": "fa43ee7100c84228d8a0e3a2eb226d119faffb2c4c61fcd83c27fc6e85d7c234"
+    },
+    {
+      "path": "mechanical/inputs/doom-carrier-board.step",
+      "sha256": "3f3acd019eecbdb4a12c02664f13205d03566391ca2e52298401a7d16b9a89c9"
+    },
+    {
+      "path": "mechanical/doom-desktop-assembly.step",
+      "sha256": "6a0e0030ecdadbdc3ea411081fcb99288fe9dcf35512baae88b293ae7373bdd2"
+    }
+  ],
+  "native_header_contacts": 78,
+  "exported_socket_and_devkit_axes": 44,
+  "header_contacts": [
+    {
+      "pad": "J1.1",
+      "net": "/3V3",
+      "native_world_xy_mm": [
+        25.4,
+        -38.66
+      ]
+    },
+    {
+      "pad": "J1.2",
+      "net": "/3V3",
+      "native_world_xy_mm": [
+        25.4,
+        -41.2
+      ]
+    },
+    {
+      "pad": "J1.3",
+      "net": "unconnected-(J1-Pin_3-Pad3)",
+      "native_world_xy_mm": [
+        25.4,
+        -43.74
+      ]
+    },
+    {
+      "pad": "J1.4",
+      "net": "/MCU_D3",
+      "native_world_xy_mm": [
+        25.4,
+        -46.28
+      ]
+    },
+    {
+      "pad": "J1.5",
+      "net": "/MCU_D4",
+      "native_world_xy_mm": [
+        25.4,
+        -48.82
+      ]
+    },
+    {
+      "pad": "J1.6",
+      "net": "/MCU_D5",
+      "native_world_xy_mm": [
+        25.4,
+        -51.36
+      ]
+    },
+    {
+      "pad": "J1.7",
+      "net": "/MCU_D6",
+      "native_world_xy_mm": [
+        25.4,
+        -53.9
+      ]
+    },
+    {
+      "pad": "J1.8",
+      "net": "/MCU_D14",
+      "native_world_xy_mm": [
+        25.4,
+        -56.44
+      ]
+    },
+    {
+      "pad": "J1.9",
+      "net": "/MCU_D15",
+      "native_world_xy_mm": [
+        25.4,
+        -58.98
+      ]
+    },
+    {
+      "pad": "J1.10",
+      "net": "/MCU_WR",
+      "native_world_xy_mm": [
+        25.4,
+        -61.52
+      ]
+    },
+    {
+      "pad": "J1.11",
+      "net": "/MCU_DC",
+      "native_world_xy_mm": [
+        25.4,
+        -64.06
+      ]
+    },
+    {
+      "pad": "J1.12",
+      "net": "/MCU_D7",
+      "native_world_xy_mm": [
+        25.4,
+        -66.6
+      ]
+    },
+    {
+      "pad": "J1.13",
+      "net": "/MCU_D2",
+      "native_world_xy_mm": [
+        25.4,
+        -69.14
+      ]
+    },
+    {
+      "pad": "J1.14",
+      "net": "unconnected-(J1-Pin_14-Pad14)",
+      "native_world_xy_mm": [
+        25.4,
+        -71.68
+      ]
+    },
+    {
+      "pad": "J1.15",
+      "net": "/MCU_D8",
+      "native_world_xy_mm": [
+        25.4,
+        -74.22
+      ]
+    },
+    {
+      "pad": "J1.16",
+      "net": "/MCU_D9",
+      "native_world_xy_mm": [
+        25.4,
+        -76.76
+      ]
+    },
+    {
+      "pad": "J1.17",
+      "net": "/MCU_D10",
+      "native_world_xy_mm": [
+        25.4,
+        -79.3
+      ]
+    },
+    {
+      "pad": "J1.18",
+      "net": "/MCU_D11",
+      "native_world_xy_mm": [
+        25.4,
+        -81.84
+      ]
+    },
+    {
+      "pad": "J1.19",
+      "net": "/MCU_D12",
+      "native_world_xy_mm": [
+        25.4,
+        -84.38
+      ]
+    },
+    {
+      "pad": "J1.20",
+      "net": "/MCU_D13",
+      "native_world_xy_mm": [
+        25.4,
+        -86.92
+      ]
+    },
+    {
+      "pad": "J1.21",
+      "net": "unconnected-(J1-Pin_21-Pad21)",
+      "native_world_xy_mm": [
+        25.4,
+        -89.46
+      ]
+    },
+    {
+      "pad": "J1.22",
+      "net": "/GND",
+      "native_world_xy_mm": [
+        25.4,
+        -92.0
+      ]
+    },
+    {
+      "pad": "J2.1",
+      "net": "/GND",
+      "native_world_xy_mm": [
+        48.26,
+        -38.66
+      ]
+    },
+    {
+      "pad": "J2.2",
+      "net": "unconnected-(J2-Pin_2-Pad2)",
+      "native_world_xy_mm": [
+        48.26,
+        -41.2
+      ]
+    },
+    {
+      "pad": "J2.3",
+      "net": "unconnected-(J2-Pin_3-Pad3)",
+      "native_world_xy_mm": [
+        48.26,
+        -43.74
+      ]
+    },
+    {
+      "pad": "J2.4",
+      "net": "/MCU_D0",
+      "native_world_xy_mm": [
+        48.26,
+        -46.28
+      ]
+    },
+    {
+      "pad": "J2.5",
+      "net": "/MCU_D1",
+      "native_world_xy_mm": [
+        48.26,
+        -48.82
+      ]
+    },
+    {
+      "pad": "J2.6",
+      "net": "unconnected-(J2-Pin_6-Pad6)",
+      "native_world_xy_mm": [
+        48.26,
+        -51.36
+      ]
+    },
+    {
+      "pad": "J2.7",
+      "net": "unconnected-(J2-Pin_7-Pad7)",
+      "native_world_xy_mm": [
+        48.26,
+        -53.9
+      ]
+    },
+    {
+      "pad": "J2.8",
+      "net": "unconnected-(J2-Pin_8-Pad8)",
+      "native_world_xy_mm": [
+        48.26,
+        -56.44
+      ]
+    },
+    {
+      "pad": "J2.9",
+      "net": "/MCU_BL",
+      "native_world_xy_mm": [
+        48.26,
+        -58.98
+      ]
+    },
+    {
+      "pad": "J2.10",
+      "net": "/MCU_RST",
+      "native_world_xy_mm": [
+        48.26,
+        -61.52
+      ]
+    },
+    {
+      "pad": "J2.11",
+      "net": "unconnected-(J2-Pin_11-Pad11)",
+      "native_world_xy_mm": [
+        48.26,
+        -64.06
+      ]
+    },
+    {
+      "pad": "J2.12",
+      "net": "unconnected-(J2-Pin_12-Pad12)",
+      "native_world_xy_mm": [
+        48.26,
+        -66.6
+      ]
+    },
+    {
+      "pad": "J2.13",
+      "net": "unconnected-(J2-Pin_13-Pad13)",
+      "native_world_xy_mm": [
+        48.26,
+        -69.14
+      ]
+    },
+    {
+      "pad": "J2.14",
+      "net": "unconnected-(J2-Pin_14-Pad14)",
+      "native_world_xy_mm": [
+        48.26,
+        -71.68
+      ]
+    },
+    {
+      "pad": "J2.15",
+      "net": "unconnected-(J2-Pin_15-Pad15)",
+      "native_world_xy_mm": [
+        48.26,
+        -74.22
+      ]
+    },
+    {
+      "pad": "J2.16",
+      "net": "unconnected-(J2-Pin_16-Pad16)",
+      "native_world_xy_mm": [
+        48.26,
+        -76.76
+      ]
+    },
+    {
+      "pad": "J2.17",
+      "net": "unconnected-(J2-Pin_17-Pad17)",
+      "native_world_xy_mm": [
+        48.26,
+        -79.3
+      ]
+    },
+    {
+      "pad": "J2.18",
+      "net": "/MCU_CS",
+      "native_world_xy_mm": [
+        48.26,
+        -81.84
+      ]
+    },
+    {
+      "pad": "J2.19",
+      "net": "unconnected-(J2-Pin_19-Pad19)",
+      "native_world_xy_mm": [
+        48.26,
+        -84.38
+      ]
+    },
+    {
+      "pad": "J2.20",
+      "net": "unconnected-(J2-Pin_20-Pad20)",
+      "native_world_xy_mm": [
+        48.26,
+        -86.92
+      ]
+    },
+    {
+      "pad": "J2.21",
+      "net": "/GND",
+      "native_world_xy_mm": [
+        48.26,
+        -89.46
+      ]
+    },
+    {
+      "pad": "J2.22",
+      "net": "/GND",
+      "native_world_xy_mm": [
+        48.26,
+        -92.0
+      ]
+    },
+    {
+      "pad": "J3.1",
+      "net": "/LCD_CS",
+      "native_world_xy_mm": [
+        19.68,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.2",
+      "net": "/LCD_DC",
+      "native_world_xy_mm": [
+        19.68,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.3",
+      "net": "/LCD_WR",
+      "native_world_xy_mm": [
+        22.22,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.4",
+      "net": "/LCD_RD",
+      "native_world_xy_mm": [
+        22.22,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.5",
+      "net": "/LCD_RST",
+      "native_world_xy_mm": [
+        24.76,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.6",
+      "net": "/LCD_D0",
+      "native_world_xy_mm": [
+        24.76,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.7",
+      "net": "/LCD_D1",
+      "native_world_xy_mm": [
+        27.3,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.8",
+      "net": "/LCD_D2",
+      "native_world_xy_mm": [
+        27.3,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.9",
+      "net": "/LCD_D3",
+      "native_world_xy_mm": [
+        29.84,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.10",
+      "net": "/LCD_D4",
+      "native_world_xy_mm": [
+        29.84,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.11",
+      "net": "/LCD_D5",
+      "native_world_xy_mm": [
+        32.38,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.12",
+      "net": "/LCD_D6",
+      "native_world_xy_mm": [
+        32.38,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.13",
+      "net": "/LCD_D7",
+      "native_world_xy_mm": [
+        34.92,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.14",
+      "net": "/LCD_D8",
+      "native_world_xy_mm": [
+        34.92,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.15",
+      "net": "/LCD_D9",
+      "native_world_xy_mm": [
+        37.46,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.16",
+      "net": "/LCD_D10",
+      "native_world_xy_mm": [
+        37.46,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.17",
+      "net": "/LCD_D11",
+      "native_world_xy_mm": [
+        40.0,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.18",
+      "net": "/LCD_D12",
+      "native_world_xy_mm": [
+        40.0,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.19",
+      "net": "/LCD_D13",
+      "native_world_xy_mm": [
+        42.54,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.20",
+      "net": "/LCD_D14",
+      "native_world_xy_mm": [
+        42.54,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.21",
+      "net": "/LCD_D15",
+      "native_world_xy_mm": [
+        45.08,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.22",
+      "net": "/LCD_SD_CS",
+      "native_world_xy_mm": [
+        45.08,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.23",
+      "net": "/LCD_BL",
+      "native_world_xy_mm": [
+        47.62,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.24",
+      "net": "/3V3",
+      "native_world_xy_mm": [
+        47.62,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.25",
+      "net": "/3V3",
+      "native_world_xy_mm": [
+        50.16,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.26",
+      "net": "/GND",
+      "native_world_xy_mm": [
+        50.16,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.27",
+      "net": "/GND",
+      "native_world_xy_mm": [
+        52.7,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.28",
+      "net": "unconnected-(J3-Pin_28-Pad28)",
+      "native_world_xy_mm": [
+        52.7,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.29",
+      "net": "unconnected-(J3-Pin_29-Pad29)",
+      "native_world_xy_mm": [
+        55.24,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.30",
+      "net": "unconnected-(J3-Pin_30-Pad30)",
+      "native_world_xy_mm": [
+        55.24,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.31",
+      "net": "unconnected-(J3-Pin_31-Pad31)",
+      "native_world_xy_mm": [
+        57.78,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.32",
+      "net": "/LCD_FLASH_CS",
+      "native_world_xy_mm": [
+        57.78,
+        -9.46
+      ]
+    },
+    {
+      "pad": "J3.33",
+      "net": "/LCD_TOUCH_CS",
+      "native_world_xy_mm": [
+        60.32,
+        -12.0
+      ]
+    },
+    {
+      "pad": "J3.34",
+      "net": "unconnected-(J3-Pin_34-Pad34)",
+      "native_world_xy_mm": [
+        60.32,
+        -9.46
+      ]
+    }
+  ],
+  "mounting_axes": [
+    {
+      "pad": "H1",
+      "world_xy_mm": [
+        4.0,
+        -4.0
+      ],
+      "native_hole_diameter_mm": 2.9
+    },
+    {
+      "pad": "H2",
+      "world_xy_mm": [
+        76.0,
+        -4.0
+      ],
+      "native_hole_diameter_mm": 2.9
+    },
+    {
+      "pad": "H3",
+      "world_xy_mm": [
+        4.0,
+        -96.0
+      ],
+      "native_hole_diameter_mm": 2.9
+    },
+    {
+      "pad": "H4",
+      "world_xy_mm": [
+        76.0,
+        -96.0
+      ],
+      "native_hole_diameter_mm": 2.9
+    }
+  ],
+  "native_transform_determinant": 1.0596026490066226,
+  "native_top_normal": [
+    0,
+    0,
+    1
+  ],
+  "signed_triple_product_mm2": -58.06440000000014,
+  "rejected_mirrored_layout_mm2": 58.06440000000014,
+  "physical_prototype_tested": false
+}

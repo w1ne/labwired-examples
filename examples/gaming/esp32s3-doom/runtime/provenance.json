@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "required_core_commit": "31730dd16391495aed6045ffb52b1aee62d3ceab",
+  "chip_source_url": "https://raw.githubusercontent.com/w1ne/labwired-core/9f242558a66dd75a0eb69aa3cfcb01b88a68b3fd/configs/chips/esp32s3.yaml",
+  "chip_sha256": "64e513983592375093e9bf28327a09a4ab404aebecbe1d44a89d23be4081e0f6",
+  "roms": {
+    "esp32s3_rom.bin": {
+      "sha256": "9f2ba6ac2b66ced6e3b31a333d7a299aca1fa4b88bbe56f71d4856bd16e8bc51",
+      "bytes": 393216
+    },
+    "esp32s3_drom.bin": {
+      "sha256": "cc7abaafec6589b801d9f5df098197f264dda9d979e5885900015e332eae616d",
+      "bytes": 131072
+    }
+  },
+  "rom_release_url": "https://github.com/w1ne/labwired-core/releases/tag/firmware-demos-v19",
+  "recorded_cli_sha256": "6d304587aecc72d012db81b90caa6c29f088e2a49a306e6e7150cd8e94081e44",
+  "scope": "The source pin includes bounded UART aliases and requires timed input delivery. ROMs are external immutable assets; the package does not replace ROM instructions with fastboot thunks."
+}

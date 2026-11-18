@@ -1,0 +1,263 @@
+{
+  "status": "routed",
+  "mode": "route",
+  "routed_nets": [
+    "/3V3",
+    "/GND",
+    "/LCD_BL",
+    "/LCD_CS",
+    "/LCD_D0",
+    "/LCD_D1",
+    "/LCD_D10",
+    "/LCD_D11",
+    "/LCD_D12",
+    "/LCD_D13",
+    "/LCD_D14",
+    "/LCD_D15",
+    "/LCD_D2",
+    "/LCD_D3",
+    "/LCD_D4",
+    "/LCD_D5",
+    "/LCD_D6",
+    "/LCD_D7",
+    "/LCD_D8",
+    "/LCD_D9",
+    "/LCD_DC",
+    "/LCD_FLASH_CS",
+    "/LCD_RD",
+    "/LCD_RST",
+    "/LCD_SD_CS",
+    "/LCD_TOUCH_CS",
+    "/LCD_WR",
+    "/MCU_BL",
+    "/MCU_CS",
+    "/MCU_D0",
+    "/MCU_D1",
+    "/MCU_D10",
+    "/MCU_D11",
+    "/MCU_D12",
+    "/MCU_D13",
+    "/MCU_D14",
+    "/MCU_D15",
+    "/MCU_D2",
+    "/MCU_D3",
+    "/MCU_D4",
+    "/MCU_D5",
+    "/MCU_D6",
+    "/MCU_D7",
+    "/MCU_D8",
+    "/MCU_D9",
+    "/MCU_DC",
+    "/MCU_RST",
+    "/MCU_WR"
+  ],
+  "unrouted": 0,
+  "violations": 0,
+  "added_tracks": 319,
+  "added_vias": 37,
+  "seconds": 12.1,
+  "engine": "freerouting",
+  "job_id": "99d3f9ff-738e-4adf-98b3-2afad3d81d43",
+  "board_id": "pcb_47ae3543a2af1065",
+  "rev": 0,
+  "pcb_ref": "sha256:f67ace8a8f6dc8839b870d50db1a26dcb4d78e566459f5e71a1c54e2894e7570",
+  "rules_ref": "sha256:903104c10e13d3831f5a891001e8bd2cf9c1724ac217a5f432a9872d025b703b",
+  "rules_digest": "e3500da1cd7c0df6eea241575bf42852da6beb3feaf0c09ae8e80a59af35f1f4",
+  "coverage_ref": "sha256:ec016ba96d5f9c304cd856a5774b1832adf816442772eb1bd9f84c0228d87356",
+  "twin_buildable": false,
+  "capabilities": {
+    "route": "supported",
+    "view": "supported",
+    "simulation": "model_gaps"
+  },
+  "model": {
+    "mapped": 0,
+    "dropped": 27,
+    "ignored": 11
+  },
+  "simulation_blockers": [],
+  "applied_rules": {
+    "version": 1,
+    "defaults": {
+      "track_width_mm": 0.25,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 0.8,
+      "via_drill_mm": 0.4
+    },
+    "fabrication": {
+      "reference": "Rev A conservative prototype design rules for a 1.6 mm two-layer FR-4 carrier; fabricator acceptance is not asserted.",
+      "min_track_width_mm": 0.25,
+      "min_clearance_mm": 0.2,
+      "min_drill_mm": 0.3,
+      "min_annular_ring_mm": 0.15,
+      "min_hole_to_hole_mm": 0.25,
+      "min_edge_clearance_mm": 0.5,
+      "min_hole_clearance_mm": 0.25
+    },
+    "sources": [
+      {
+        "kind": "datasheet",
+        "reference": "https://dl.espressif.com/dl/SCH_ESP32-S3-DEVKITC-1_V1_20210312C.pdf",
+        "rationale": "Exact DevKitC-1 v1.0 header pin identity and 3.3 V logic/power; USB is the only power input."
+      },
+      {
+        "kind": "datasheet",
+        "reference": "https://www.lcdwiki.com/res/MRB3205/3.2inch_MRB3205_Schematic.pdf",
+        "rationale": "MRB3205 34-pin I80 interface, 3.3 V operation with J1 closed, RD and unused chip selects biased high."
+      },
+      {
+        "kind": "assumption",
+        "reference": "LabWired ESP32-S3 I80 Doom carrier rev A engineering choices",
+        "rationale": "0.25 mm signal tracks, 0.2 mm clearance and 0.8/0.4 mm vias for a low-cost two-layer prototype. Source33 ohm resistors are fitted on all21 driven signals. 10MHz I80 signal integrity is not proven by routing."
+      }
+    ],
+    "net_classes": [
+      {
+        "name": "Default",
+        "track_width_mm": 0.25,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 0.8,
+        "via_drill_mm": 0.4,
+        "nets": [
+          "/LCD_BL",
+          "/LCD_CS",
+          "/LCD_D0",
+          "/LCD_D1",
+          "/LCD_D10",
+          "/LCD_D11",
+          "/LCD_D12",
+          "/LCD_D13",
+          "/LCD_D14",
+          "/LCD_D15",
+          "/LCD_D2",
+          "/LCD_D3",
+          "/LCD_D4",
+          "/LCD_D5",
+          "/LCD_D6",
+          "/LCD_D7",
+          "/LCD_D8",
+          "/LCD_D9",
+          "/LCD_DC",
+          "/LCD_FLASH_CS",
+          "/LCD_RD",
+          "/LCD_RST",
+          "/LCD_SD_CS",
+          "/LCD_TOUCH_CS",
+          "/LCD_WR",
+          "/MCU_BL",
+          "/MCU_CS",
+          "/MCU_D0",
+          "/MCU_D1",
+          "/MCU_D10",
+          "/MCU_D11",
+          "/MCU_D12",
+          "/MCU_D13",
+          "/MCU_D14",
+          "/MCU_D15",
+          "/MCU_D2",
+          "/MCU_D3",
+          "/MCU_D4",
+          "/MCU_D5",
+          "/MCU_D6",
+          "/MCU_D7",
+          "/MCU_D8",
+          "/MCU_D9",
+          "/MCU_DC",
+          "/MCU_RST",
+          "/MCU_WR",
+          "unconnected-(J1-Pin_14-Pad14)",
+          "unconnected-(J1-Pin_21-Pad21)",
+          "unconnected-(J1-Pin_3-Pad3)",
+          "unconnected-(J2-Pin_11-Pad11)",
+          "unconnected-(J2-Pin_12-Pad12)",
+          "unconnected-(J2-Pin_13-Pad13)",
+          "unconnected-(J2-Pin_14-Pad14)",
+          "unconnected-(J2-Pin_15-Pad15)",
+          "unconnected-(J2-Pin_16-Pad16)",
+          "unconnected-(J2-Pin_17-Pad17)",
+          "unconnected-(J2-Pin_19-Pad19)",
+          "unconnected-(J2-Pin_2-Pad2)",
+          "unconnected-(J2-Pin_20-Pad20)",
+          "unconnected-(J2-Pin_3-Pad3)",
+          "unconnected-(J2-Pin_6-Pad6)",
+          "unconnected-(J2-Pin_7-Pad7)",
+          "unconnected-(J2-Pin_8-Pad8)",
+          "unconnected-(J3-Pin_28-Pad28)",
+          "unconnected-(J3-Pin_29-Pad29)",
+          "unconnected-(J3-Pin_30-Pad30)",
+          "unconnected-(J3-Pin_31-Pad31)",
+          "unconnected-(J3-Pin_34-Pad34)"
+        ],
+        "parts": [],
+        "sources": [
+          {
+            "kind": "datasheet",
+            "reference": "https://dl.espressif.com/dl/SCH_ESP32-S3-DEVKITC-1_V1_20210312C.pdf",
+            "rationale": "Exact DevKitC-1 v1.0 header pin identity and 3.3 V logic/power; USB is the only power input."
+          },
+          {
+            "kind": "datasheet",
+            "reference": "https://www.lcdwiki.com/res/MRB3205/3.2inch_MRB3205_Schematic.pdf",
+            "rationale": "MRB3205 34-pin I80 interface, 3.3 V operation with J1 closed, RD and unused chip selects biased high."
+          },
+          {
+            "kind": "assumption",
+            "reference": "LabWired ESP32-S3 I80 Doom carrier rev A engineering choices",
+            "rationale": "0.25 mm signal tracks, 0.2 mm clearance and 0.8/0.4 mm vias for a low-cost two-layer prototype. Source33 ohm resistors are fitted on all21 driven signals. 10MHz I80 signal integrity is not proven by routing."
+          }
+        ]
+      },
+      {
+        "name": "Power",
+        "track_width_mm": 0.6,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 0.8,
+        "via_drill_mm": 0.4,
+        "nets": [
+          "/3V3",
+          "/GND"
+        ],
+        "parts": [],
+        "sources": [
+          {
+            "kind": "assumption",
+            "reference": "LabWired ESP32-S3 I80 Doom carrier rev A",
+            "rationale": "Short USB-powered 3.3 V rail to the display. 0.6 mm routing is a design choice; module current and thermal rise remain unmeasured."
+          }
+        ]
+      }
+    ]
+  },
+  "blob_path": "/v1/blobs/sha256/f67ace8a8f6dc8839b870d50db1a26dcb4d78e566459f5e71a1c54e2894e7570",
+  "layer_count": 2,
+  "backend": "kicad9-native",
+  "kicad_versions": [
+    "10.0.8-10.0.8~ubuntu24.04.1",
+    "10.0.8-10.0.8~ubuntu24.04.1"
+  ],
+  "warnings": [
+    "Native KiCad DSN/SES conversion preserves library padstacks and inner copper",
+    "Rules selected by the agent; sources and fabrication limits are retained, not independently qualified",
+    "Independent KiCad DRC and schematic parity still required",
+    "Memory controller, LPDDR4 PHY/eye, impedance and PDN are not simulated",
+    "The unrouted and violations counts come from Freerouting. Run labwired_pcb_validate_imported with pcb_ref and rules_ref for independent design-rule checks on the returned board."
+  ],
+  "log": [
+    "2026-11-18 11:11:40.721 WARN   Couldn't get screen resolution. If you are running in a headless environment, disable the GUI by setting gui.enabled to false.",
+    "2026-11-18 11:11:41.050 WARN   Analytics tracking: first delivery failure in this window - /v1/analytics/identify - IOException: Server returned HTTP response code: 403 for URL: https://api.freerouting.app/v1/analytics/identify | Server response: <!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"\u2026. Further failures will be aggregated and reported every 60 minutes.",
+    "2026-11-18 11:11:43.174 INFO   [809521\\0B9931] Fanout stage completed: started with 58 total SMD pins, completed in 0.90 seconds, escaped pins: 57/58 (98.3%), using 0.85 total CPU seconds, 1.82 GB total allocated, and 219.9 MB peak heap usage.",
+    "2026-11-18 11:11:43.192 INFO   [809521\\0B9931] Auto-routing stage started on board '7847e0f1e642a864101e54e7b381660a' for 38 unrouted items.",
+    "2026-11-18 11:11:46.237 INFO   [809521\\0B9931] Auto-routing pass #1 on board '7847e0f1e642a864101e54e7b381660a' was completed in 2.99 seconds with the score of 803.02 (13 unrouted and 0 violations), using 3.85 CPU seconds and the job allocated 15.62 GB of memory so far.",
+    "2026-11-18 11:11:48.102 INFO   [809521\\0B9931] Auto-routing pass #2 on board '1438f425096ec0fce3e379da22f5623c' was completed in 1.83 seconds with the score of 878.77 (8 unrouted and 0 violations), using 4.82 CPU seconds and the job allocated 20.72 GB of memory so far.",
+    "2026-11-18 11:11:50.053 INFO   [809521\\0B9931] Auto-routing pass #3 on board '74c2c046f891fe8d7ffa2ef4a42b8e36' was completed in 1.91 seconds with the score of 954.53 (3 unrouted and 0 violations), using 6.76 CPU seconds and the job allocated 31.00 GB of memory so far.",
+    "2026-11-18 11:11:50.843 INFO   [809521\\0B9931] Auto-routing pass #4 on board '218e3ab6c3f949ab6d24d33db2e3aa52' was completed in 0.75 seconds with the score of 984.83 (1 unrouted and 0 violations), using 7.71 CPU seconds and the job allocated 36.01 GB of memory so far.",
+    "2026-11-18 11:11:51.240 INFO   [809521\\0B9931] Auto-routing pass #5 on board '85dcb0b0344c7872cf9a32a9077538b9' was completed in 0.36 seconds with the score of 999.98 (0 unrouted and 0 violations), using 8.69 CPU seconds and the job allocated 41.15 GB of memory so far.",
+    "2026-11-18 11:11:51.291 INFO   [809521\\0B9931] Auto-routing pass #6 on board 'be2d71b286afdfada7ca356b95d9e10e' was completed in 0.01 seconds with the score of 999.98 (0 unrouted and 0 violations), using 8.69 CPU seconds and the job allocated 41.15 GB of memory so far.",
+    "2026-11-18 11:11:51.336 INFO   [809521\\0B9931] Auto-routing stage completed: started with 44 unrouted nets, completed in 9.08 seconds, final score: 999.98 (0 unrouted and 0 violations), using 8.69 total CPU seconds, 41.15 GB total allocated, and 239.0 MB peak heap usage.",
+    "2026-11-18 11:11:51.355 INFO   [809521\\0B9931] Optimization stage started on board '51e20bfbcd95220b9455f9371d0c5745' with score 999.98 (0 unrouted and 0 violations).",
+    "2026-11-18 11:11:51.385 INFO   [809521\\0B9931] Optimization stage completed: started with score 999.98 (0 unrouted and 0 violations), completed in 0.02 seconds, final score: 999.98 (0 unrouted and 0 violations), using 0.02 total CPU seconds, 0.12 GB total allocated, and 189.0 MB peak heap usage."
+  ],
+  "manufacturing_verified": false,
+  "lpddr4_si_verified": false,
+  "functional_simulation_verified": false
+}

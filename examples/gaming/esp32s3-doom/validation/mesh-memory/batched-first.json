@@ -1,0 +1,2227 @@
+{
+  "sourceSha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+  "runtimeSourceHash": "4fea362b85aeedaa006fc91df21079903a3930798d4fc42d5cfe96ce1b3beaf4",
+  "status": "passed",
+  "elapsedMs": 37324,
+  "error": null,
+  "mesh": {
+    "features": 58,
+    "records": 631,
+    "bounds": {
+      "min": [
+        -10,
+        -110,
+        0
+      ],
+      "max": [
+        90,
+        10,
+        68.5
+      ]
+    },
+    "failedFeatureIds": [],
+    "rootFeatureIds": [
+      "solvedAssembly_1"
+    ]
+  },
+  "finalPool": {
+    "workers": 2,
+    "busy": 0,
+    "busyExports": 0,
+    "queueDepth": 0,
+    "queuedExports": 0,
+    "busyByClass": {
+      "interactive": 0,
+      "export": 0,
+      "agent": 0
+    },
+    "queuedByClass": {
+      "interactive": 0,
+      "export": 0,
+      "agent": 0
+    },
+    "queuedByProject": {},
+    "respawns": 0,
+    "kills": {
+      "memory": 0,
+      "time": 0,
+      "crash": 0,
+      "oom": 0,
+      "cancelled": 0
+    },
+    "budgetStops": {
+      "memory": 0,
+      "time": 0,
+      "timeKilled": 0,
+      "retried": 0
+    },
+    "recycles": 0,
+    "idleRecycles": 0,
+    "freshStarts": 0,
+    "backingOff": 0,
+    "rssMb": [
+      723,
+      159
+    ],
+    "limits": {
+      "maxRssMb": 896,
+      "heapMb": 768,
+      "jobMaxMs": 300000,
+      "memoryBudgetMb": 864,
+      "timeBudgetMs": 270000,
+      "budgetGraceMs": 2000,
+      "interactiveReserved": 1,
+      "exportSlots": 1,
+      "agentSlots": 1
+    },
+    "lastError": null,
+    "warm": false
+  },
+  "case": "batched-first",
+  "phaseReadings": [
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "build.before",
+      "pid": 3169119,
+      "at": 1795011630184,
+      "memory": {
+        "rss": 201646080,
+        "heapTotal": 90099712,
+        "heapUsed": 66301368,
+        "external": 19536278,
+        "arrayBuffers": 233673
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "capture.before-runner",
+      "pid": 3169119,
+      "at": 1795011630284,
+      "memory": {
+        "rss": 210558976,
+        "heapTotal": 93708288,
+        "heapUsed": 70216936,
+        "external": 28548526,
+        "arrayBuffers": 2738366
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "capture.after-script-return",
+      "pid": 3169119,
+      "at": 1795011658476,
+      "memory": {
+        "rss": 686284800,
+        "heapTotal": 113135616,
+        "heapUsed": 79274064,
+        "external": 113828679,
+        "arrayBuffers": 270413
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "capture.after-resource-cleanup",
+      "pid": 3169119,
+      "at": 1795011658477,
+      "memory": {
+        "rss": 686415872,
+        "heapTotal": 113135616,
+        "heapUsed": 79302272,
+        "external": 113828679,
+        "arrayBuffers": 270413
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "lower.before-engine",
+      "pid": 3169119,
+      "at": 1795011658478,
+      "memory": {
+        "rss": 686415872,
+        "heapTotal": 113135616,
+        "heapUsed": 79459176,
+        "external": 113828679,
+        "arrayBuffers": 270413
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "lower.after-engine",
+      "pid": 3169119,
+      "at": 1795011658481,
+      "memory": {
+        "rss": 686415872,
+        "heapTotal": 113135616,
+        "heapUsed": 82437936,
+        "external": 113828679,
+        "arrayBuffers": 270413
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "lower.after-cache-and-fingerprints",
+      "pid": 3169119,
+      "at": 1795011658495,
+      "memory": {
+        "rss": 686678016,
+        "heapTotal": 113717248,
+        "heapUsed": 79161152,
+        "external": 113828679,
+        "arrayBuffers": 264269
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "build.after",
+      "pid": 3169119,
+      "at": 1795011658496,
+      "memory": {
+        "rss": 686678016,
+        "heapTotal": 113717248,
+        "heapUsed": 79368136,
+        "external": 113828679,
+        "arrayBuffers": 264269
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "mesh.before-features",
+      "pid": 3169119,
+      "at": 1795011658496,
+      "memory": {
+        "rss": 686678016,
+        "heapTotal": 113717248,
+        "heapUsed": 79380056,
+        "external": 113828679,
+        "arrayBuffers": 264269
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "mesh.after-features",
+      "pid": 3169119,
+      "at": 1795011661725,
+      "memory": {
+        "rss": 738283520,
+        "heapTotal": 150867968,
+        "heapUsed": 103595032,
+        "external": 138161183,
+        "arrayBuffers": 3696933
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "mesh.after-dimensions",
+      "pid": 3169119,
+      "at": 1795011665038,
+      "memory": {
+        "rss": 757215232,
+        "heapTotal": 133427200,
+        "heapUsed": 88161160,
+        "external": 138073103,
+        "arrayBuffers": 3608853
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "mesh.after-bridge-serialization",
+      "pid": 3169119,
+      "at": 1795011665079,
+      "memory": {
+        "rss": 757039104,
+        "heapTotal": 133468160,
+        "heapUsed": 104693544,
+        "external": 138073103,
+        "arrayBuffers": 3608853
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "worker.before-ipc",
+      "pid": 3169119,
+      "at": 1795011665080,
+      "memory": {
+        "rss": 757170176,
+        "heapTotal": 133468160,
+        "heapUsed": 104704984,
+        "external": 138073103,
+        "arrayBuffers": 3608853
+      }
+    },
+    {
+      "tag": "kernelcad-memory-phase",
+      "phase": "worker.after-ipc-call",
+      "pid": 3169119,
+      "at": 1795011665090,
+      "memory": {
+        "rss": 757170176,
+        "heapTotal": 133468160,
+        "heapUsed": 104789904,
+        "external": 146055368,
+        "arrayBuffers": 3608853
+      }
+    }
+  ],
+  "poolSamples": [
+    {
+      "elapsedMs": 1001,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          93,
+          94
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 2003,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          176,
+          174
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 3003,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          361,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 4004,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          439,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 5010,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          464,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 6015,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          517,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 7016,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          500,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 8016,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          531,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 9016,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          547,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 10016,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          640,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 11017,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          666,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 12016,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          556,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 13019,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          562,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 14020,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          570,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 15021,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          569,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 16023,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          570,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 17023,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          573,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 18025,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          575,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 19025,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          611,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 20025,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          611,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 21026,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          614,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 22404,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          635,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 23408,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          652,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 24427,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          654,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 25429,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          655,
+          192
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 26430,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          655,
+          165
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 27430,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          655,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 28430,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          655,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 29431,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          655,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 30431,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          656,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 31432,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          681,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 32755,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          707,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 33754,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          705,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 34755,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          712,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    },
+    {
+      "elapsedMs": 36462,
+      "pool": {
+        "workers": 2,
+        "busy": 1,
+        "busyExports": 0,
+        "queueDepth": 0,
+        "queuedExports": 0,
+        "busyByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 1
+        },
+        "queuedByClass": {
+          "interactive": 0,
+          "export": 0,
+          "agent": 0
+        },
+        "queuedByProject": {},
+        "respawns": 0,
+        "kills": {
+          "memory": 0,
+          "time": 0,
+          "crash": 0,
+          "oom": 0,
+          "cancelled": 0
+        },
+        "budgetStops": {
+          "memory": 0,
+          "time": 0,
+          "timeKilled": 0,
+          "retried": 0
+        },
+        "recycles": 0,
+        "idleRecycles": 0,
+        "freshStarts": 0,
+        "backingOff": 0,
+        "rssMb": [
+          766,
+          159
+        ],
+        "limits": {
+          "maxRssMb": 896,
+          "heapMb": 768,
+          "jobMaxMs": 300000,
+          "memoryBudgetMb": 864,
+          "timeBudgetMs": 270000,
+          "budgetGraceMs": 2000,
+          "interactiveReserved": 1,
+          "exportSlots": 1,
+          "agentSlots": 1
+        },
+        "lastError": null,
+        "warm": false
+      }
+    }
+  ]
+}

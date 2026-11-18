@@ -1,0 +1,121 @@
+{
+  "sourceSha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+  "partAt": {
+    "x": {
+      "expression": "0",
+      "unit": "mm",
+      "evaluated": 0
+    },
+    "y": {
+      "expression": "0",
+      "unit": "mm",
+      "evaluated": 0
+    },
+    "z": {
+      "expression": "0",
+      "unit": "mm",
+      "evaluated": 0
+    }
+  },
+  "witnesses": [
+    {
+      "name": "native-J1-1",
+      "type": "frame",
+      "origin": {
+        "kind": "vec3",
+        "value": [
+          25.4,
+          -38.66,
+          11.6
+        ]
+      },
+      "normal": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "native-J1-2",
+      "type": "frame",
+      "origin": {
+        "kind": "vec3",
+        "value": [
+          25.4,
+          -41.2,
+          11.6
+        ]
+      },
+      "normal": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "native-J2-1",
+      "type": "frame",
+      "origin": {
+        "kind": "vec3",
+        "value": [
+          48.26,
+          -38.66,
+          11.6
+        ]
+      },
+      "normal": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "nativePath": [
+    {
+      "id": "importedStep_1",
+      "kind": "importedStep",
+      "transforms": [
+        {
+          "op": "scale",
+          "sx": 1,
+          "sy": 1,
+          "sz": 1.0596026490066226
+        },
+        {
+          "op": "translate",
+          "vec": {
+            "x": {
+              "expression": "0",
+              "unit": "mm",
+              "evaluated": 0
+            },
+            "y": {
+              "expression": "0",
+              "unit": "mm",
+              "evaluated": 0
+            },
+            "z": {
+              "expression": "10",
+              "unit": "mm",
+              "evaluated": 10
+            }
+          }
+        },
+        {
+          "op": "reflect",
+          "plane": "xz"
+        }
+      ]
+    },
+    {
+      "id": "boolean_46",
+      "kind": "boolean",
+      "transforms": [
+        {
+          "op": "reflect",
+          "plane": "xz"
+        }
+      ]
+    }
+  ]
+}

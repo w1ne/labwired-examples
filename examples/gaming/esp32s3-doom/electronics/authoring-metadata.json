@@ -1,0 +1,657 @@
+{
+  "schematic_uuid": "090b4d13-5ff8-54b6-a90b-20e95fe2dc40",
+  "components": [
+    {
+      "ref": "J1",
+      "lib": "Socket22",
+      "value": "SSW-122-01-G-S",
+      "at": [
+        58.42,
+        83.82
+      ],
+      "net": {
+        "1": "3V3",
+        "2": "3V3",
+        "4": "MCU_D3",
+        "5": "MCU_D4",
+        "6": "MCU_D5",
+        "7": "MCU_D6",
+        "8": "MCU_D14",
+        "9": "MCU_D15",
+        "10": "MCU_WR",
+        "11": "MCU_DC",
+        "12": "MCU_D7",
+        "13": "MCU_D2",
+        "15": "MCU_D8",
+        "16": "MCU_D9",
+        "17": "MCU_D10",
+        "18": "MCU_D11",
+        "19": "MCU_D12",
+        "20": "MCU_D13",
+        "22": "GND"
+      },
+      "mpn": "SSW-122-01-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "3bad250a-2aef-5d75-81e6-9595c6a21b8b"
+    },
+    {
+      "ref": "J2",
+      "lib": "Socket22",
+      "value": "SSW-122-01-G-S",
+      "at": [
+        124.46,
+        83.82
+      ],
+      "net": {
+        "1": "GND",
+        "4": "MCU_D0",
+        "5": "MCU_D1",
+        "9": "MCU_BL",
+        "10": "MCU_RST",
+        "18": "MCU_CS",
+        "21": "GND",
+        "22": "GND"
+      },
+      "mpn": "SSW-122-01-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "74d3f970-43b4-5c7b-aa93-46ad3e048a96"
+    },
+    {
+      "ref": "J3",
+      "lib": "Display34",
+      "value": "TSW-117-07-G-D",
+      "at": [
+        279.4,
+        81.28
+      ],
+      "net": {
+        "1": "LCD_CS",
+        "2": "LCD_DC",
+        "3": "LCD_WR",
+        "4": "LCD_RD",
+        "5": "LCD_RST",
+        "22": "LCD_SD_CS",
+        "23": "LCD_BL",
+        "24": "3V3",
+        "25": "3V3",
+        "26": "GND",
+        "27": "GND",
+        "32": "LCD_FLASH_CS",
+        "33": "LCD_TOUCH_CS",
+        "6": "LCD_D0",
+        "7": "LCD_D1",
+        "8": "LCD_D2",
+        "9": "LCD_D3",
+        "10": "LCD_D4",
+        "11": "LCD_D5",
+        "12": "LCD_D6",
+        "13": "LCD_D7",
+        "14": "LCD_D8",
+        "15": "LCD_D9",
+        "16": "LCD_D10",
+        "17": "LCD_D11",
+        "18": "LCD_D12",
+        "19": "LCD_D13",
+        "20": "LCD_D14",
+        "21": "LCD_D15"
+      },
+      "mpn": "TSW-117-07-G-D",
+      "manufacturer": "Samtec",
+      "uuid": "4663488f-62db-55c4-b39e-2cf2b51a1f1d"
+    },
+    {
+      "ref": "R1",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        172.72,
+        45.72
+      ],
+      "net": {
+        "1": "MCU_D0",
+        "2": "LCD_D0"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "4ec8105b-7b93-5387-ae16-25c9e816e979"
+    },
+    {
+      "ref": "R2",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        203.2,
+        45.72
+      ],
+      "net": {
+        "1": "MCU_D1",
+        "2": "LCD_D1"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "b3d81134-e2aa-5b06-8243-56cd9d4d46c6"
+    },
+    {
+      "ref": "R3",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        233.68,
+        45.72
+      ],
+      "net": {
+        "1": "MCU_D2",
+        "2": "LCD_D2"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "1dba1725-f644-56c4-b755-4eb5133b71ff"
+    },
+    {
+      "ref": "R4",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        172.72,
+        68.58
+      ],
+      "net": {
+        "1": "MCU_D3",
+        "2": "LCD_D3"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "4f7d8d8c-76a0-53a4-8f10-725bacbe9eb1"
+    },
+    {
+      "ref": "R5",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        203.2,
+        68.58
+      ],
+      "net": {
+        "1": "MCU_D4",
+        "2": "LCD_D4"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "b62900b1-6760-55a1-86fc-f1a3901c4947"
+    },
+    {
+      "ref": "R6",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        233.68,
+        68.58
+      ],
+      "net": {
+        "1": "MCU_D5",
+        "2": "LCD_D5"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "0e2f21ff-d08b-5341-b106-7b8ce2770df7"
+    },
+    {
+      "ref": "R7",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        172.72,
+        91.44
+      ],
+      "net": {
+        "1": "MCU_D6",
+        "2": "LCD_D6"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "e9fa325f-3b2b-58d7-9264-8d591dd2ba98"
+    },
+    {
+      "ref": "R8",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        203.2,
+        91.44
+      ],
+      "net": {
+        "1": "MCU_D7",
+        "2": "LCD_D7"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "fd20505b-668b-52ed-aab3-9eb34c4de621"
+    },
+    {
+      "ref": "R9",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        233.68,
+        91.44
+      ],
+      "net": {
+        "1": "MCU_D8",
+        "2": "LCD_D8"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "fea8f3cb-fa31-512b-9b33-f9ba4a878d75"
+    },
+    {
+      "ref": "R10",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        172.72,
+        114.3
+      ],
+      "net": {
+        "1": "MCU_D9",
+        "2": "LCD_D9"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "10c19f3e-fad0-53ba-a0bb-4a44feb3314b"
+    },
+    {
+      "ref": "R11",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        203.2,
+        114.3
+      ],
+      "net": {
+        "1": "MCU_D10",
+        "2": "LCD_D10"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "438fb012-411b-580a-b9e0-014bfc0acc6f"
+    },
+    {
+      "ref": "R12",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        233.68,
+        114.3
+      ],
+      "net": {
+        "1": "MCU_D11",
+        "2": "LCD_D11"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "9a25152f-bc4e-57af-ba50-fdd997da689d"
+    },
+    {
+      "ref": "R13",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        172.72,
+        137.16
+      ],
+      "net": {
+        "1": "MCU_D12",
+        "2": "LCD_D12"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "36982899-e161-559d-906c-3de995e328a9"
+    },
+    {
+      "ref": "R14",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        203.2,
+        137.16
+      ],
+      "net": {
+        "1": "MCU_D13",
+        "2": "LCD_D13"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "a510b728-1315-540c-9a41-f0a448a1d324"
+    },
+    {
+      "ref": "R15",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        233.68,
+        137.16
+      ],
+      "net": {
+        "1": "MCU_D14",
+        "2": "LCD_D14"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "e60c5915-d4e5-5310-b184-fbfb1075fed9"
+    },
+    {
+      "ref": "R16",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        172.72,
+        160.01999999999998
+      ],
+      "net": {
+        "1": "MCU_D15",
+        "2": "LCD_D15"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "77cca44d-f437-5654-a8c1-c1891bf26dc0"
+    },
+    {
+      "ref": "R17",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        203.2,
+        160.01999999999998
+      ],
+      "net": {
+        "1": "MCU_WR",
+        "2": "LCD_WR"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "a84e99b6-5027-5f31-be22-ec4764c0e855"
+    },
+    {
+      "ref": "R18",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        233.68,
+        160.01999999999998
+      ],
+      "net": {
+        "1": "MCU_DC",
+        "2": "LCD_DC"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "0068a1db-3f33-5fe1-9eef-8d0f7715f79b"
+    },
+    {
+      "ref": "R19",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        172.72,
+        182.88
+      ],
+      "net": {
+        "1": "MCU_CS",
+        "2": "LCD_CS"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "2b9142ce-ea07-5ca5-81f9-8010cdbcd99a"
+    },
+    {
+      "ref": "R20",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        203.2,
+        182.88
+      ],
+      "net": {
+        "1": "MCU_RST",
+        "2": "LCD_RST"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "ddfa1f5a-b3ba-5b16-a79f-5464e68ab506"
+    },
+    {
+      "ref": "R21",
+      "lib": "R",
+      "value": "33R 1%",
+      "at": [
+        233.68,
+        182.88
+      ],
+      "net": {
+        "1": "MCU_BL",
+        "2": "LCD_BL"
+      },
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "Yageo",
+      "uuid": "f41ae182-64e6-5aab-882c-9553f86b4eab"
+    },
+    {
+      "ref": "R22",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        269.24,
+        142.24
+      ],
+      "net": {
+        "1": "3V3",
+        "2": "LCD_RD"
+      },
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "uuid": "205d0bc4-1523-5fea-b5ba-c21516f0fe43"
+    },
+    {
+      "ref": "R23",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        294.64,
+        142.24
+      ],
+      "net": {
+        "1": "3V3",
+        "2": "LCD_SD_CS"
+      },
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "uuid": "9ceedd2a-9b81-5ede-808f-05ac21f3b070"
+    },
+    {
+      "ref": "R24",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        320.04,
+        142.24
+      ],
+      "net": {
+        "1": "3V3",
+        "2": "LCD_FLASH_CS"
+      },
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "uuid": "63777863-c25c-5a56-b3ff-fb0b82b28685"
+    },
+    {
+      "ref": "R25",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        345.44,
+        142.24
+      ],
+      "net": {
+        "1": "3V3",
+        "2": "LCD_TOUCH_CS"
+      },
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "uuid": "bad29062-630e-5c9a-828f-2954caca0aa1"
+    },
+    {
+      "ref": "C1",
+      "lib": "C",
+      "value": "10u 10V X7R",
+      "at": [
+        96.52,
+        165.1
+      ],
+      "net": {
+        "1": "3V3",
+        "2": "GND"
+      },
+      "mpn": "C2012X7R1A106K125AC",
+      "manufacturer": "TDK",
+      "uuid": "b361593f-6921-5497-8a3c-2c89a8830ddc"
+    },
+    {
+      "ref": "C2",
+      "lib": "C",
+      "value": "100n 50V X8R",
+      "at": [
+        127.0,
+        165.1
+      ],
+      "net": {
+        "1": "3V3",
+        "2": "GND"
+      },
+      "mpn": "C2012X8R1H104K125AA",
+      "manufacturer": "TDK",
+      "uuid": "81516b0b-1a77-504d-a52a-113622949256"
+    },
+    {
+      "ref": "TP1",
+      "lib": "TestPoint",
+      "value": "3V3",
+      "at": [
+        172.72,
+        215.9
+      ],
+      "net": {
+        "1": "3V3"
+      },
+      "uuid": "caee62e4-37fe-5477-908a-78217ab4032d"
+    },
+    {
+      "ref": "TP2",
+      "lib": "TestPoint",
+      "value": "GND",
+      "at": [
+        203.2,
+        215.9
+      ],
+      "net": {
+        "1": "GND"
+      },
+      "uuid": "88cebd1a-c2b7-544e-a400-f6d02677efe2"
+    },
+    {
+      "ref": "TP3",
+      "lib": "TestPoint",
+      "value": "LCD_WR",
+      "at": [
+        233.68,
+        215.9
+      ],
+      "net": {
+        "1": "LCD_WR"
+      },
+      "uuid": "59adbe64-c59f-5760-90e9-7236f6c11c61"
+    },
+    {
+      "ref": "TP4",
+      "lib": "TestPoint",
+      "value": "LCD_CS",
+      "at": [
+        264.15999999999997,
+        215.9
+      ],
+      "net": {
+        "1": "LCD_CS"
+      },
+      "uuid": "1e8173a5-9903-5c8a-bc4b-fc325230006d"
+    },
+    {
+      "ref": "H1",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9 mm NPTH",
+      "at": [
+        48.26,
+        210.82
+      ],
+      "net": {},
+      "uuid": "01d49442-9a98-5aea-971c-39c0d137fa7f"
+    },
+    {
+      "ref": "H2",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9 mm NPTH",
+      "at": [
+        78.74,
+        210.82
+      ],
+      "net": {},
+      "uuid": "cd0ecb8e-940a-58ee-ae11-13452a504f98"
+    },
+    {
+      "ref": "H3",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9 mm NPTH",
+      "at": [
+        109.22,
+        210.82
+      ],
+      "net": {},
+      "uuid": "71a4463b-f42b-5097-a571-aab7fc2c9217"
+    },
+    {
+      "ref": "H4",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9 mm NPTH",
+      "at": [
+        139.7,
+        210.82
+      ],
+      "net": {},
+      "uuid": "b4048333-1099-5b2b-b786-a07abc5ab529"
+    },
+    {
+      "ref": "#FLG01",
+      "lib": "PWR_FLAG",
+      "value": "PWR_FLAG",
+      "at": [
+        48.26,
+        165.1
+      ],
+      "net": {
+        "1": "3V3"
+      },
+      "uuid": "e78db562-2c9a-5e9a-8fad-8307b3b285d3"
+    },
+    {
+      "ref": "#FLG02",
+      "lib": "PWR_FLAG",
+      "value": "PWR_FLAG",
+      "at": [
+        73.66,
+        165.1
+      ],
+      "net": {
+        "1": "GND"
+      },
+      "uuid": "a4d285e1-9681-5155-ae1f-ff327bd8bb52"
+    }
+  ]
+}
