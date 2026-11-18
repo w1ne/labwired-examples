@@ -1,0 +1,311 @@
+{
+  "schematic_uuid": "a77a66ad-9eaa-5b79-a66f-c79c9b88e158",
+  "components": [
+    {
+      "ref": "J1",
+      "lib": "Header10",
+      "value": "CN5 / TSW-110-07-G-S",
+      "at": [
+        66.04,
+        67.31
+      ],
+      "net": {
+        "1": "LCD_RST_PA9",
+        "2": "LCD_DC_PC7",
+        "3": "LCD_CE_PB6",
+        "4": "LCD_DIN_PA7",
+        "6": "LCD_CLK_PA5",
+        "7": "GND"
+      },
+      "mpn": "TSW-110-07-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "f56914fc-0b98-542c-9ae0-646f58329fa0"
+    },
+    {
+      "ref": "J2",
+      "lib": "Header8",
+      "value": "CN6 / TSW-108-07-G-S",
+      "at": [
+        66.04,
+        119.38
+      ],
+      "net": {
+        "4": "+3V3",
+        "5": "+5V",
+        "6": "GND",
+        "7": "GND"
+      },
+      "mpn": "TSW-108-07-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "366c91f4-22a4-52e5-b758-99e5f6fb6ff6"
+    },
+    {
+      "ref": "J3",
+      "lib": "Header8",
+      "value": "CN9 / TSW-108-07-G-S",
+      "at": [
+        66.04,
+        172.72
+      ],
+      "net": {
+        "7": "ECHO_3V3_PB10",
+        "8": "TRIG_PA8"
+      },
+      "mpn": "TSW-108-07-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "cd22caea-3aeb-5797-9bbd-e2ea55466f67"
+    },
+    {
+      "ref": "J4",
+      "lib": "Header8",
+      "value": "JOY-IT LCD REV2",
+      "at": [
+        182.88,
+        67.31
+      ],
+      "net": {
+        "1": "GND",
+        "2": "GND",
+        "3": "+3V3",
+        "4": "LCD_CLK_PA5",
+        "5": "LCD_DIN_PA7",
+        "6": "LCD_DC_PC7",
+        "7": "LCD_CE_PB6",
+        "8": "LCD_RST_PA9"
+      },
+      "mpn": "TSW-108-07-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "0e48b8ee-e997-55a7-8359-107d0eddb819"
+    },
+    {
+      "ref": "J5",
+      "lib": "Header4",
+      "value": "ADAFRUIT 3942 / HC-SR04",
+      "at": [
+        299.72,
+        67.31
+      ],
+      "net": {
+        "1": "+5V",
+        "2": "TRIG_PA8",
+        "3": "ECHO_5V",
+        "4": "GND"
+      },
+      "mpn": "TSW-104-07-G-S",
+      "manufacturer": "Samtec",
+      "uuid": "eb851634-a60f-5df5-8462-a30a83de5561"
+    },
+    {
+      "ref": "R1",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        264.16,
+        119.38
+      ],
+      "net": {
+        "1": "ECHO_5V",
+        "2": "ECHO_3V3_PB10"
+      },
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "uuid": "9d7313b8-5cac-5062-8ef3-cb81bd273849"
+    },
+    {
+      "ref": "R2",
+      "lib": "R",
+      "value": "18k 1%",
+      "at": [
+        312.42,
+        119.38
+      ],
+      "net": {
+        "1": "ECHO_3V3_PB10",
+        "2": "GND"
+      },
+      "mpn": "RC0603FR-0718KL",
+      "manufacturer": "Yageo",
+      "uuid": "f60f69c6-3e37-5e22-831f-b9ed2873e39c"
+    },
+    {
+      "ref": "C1",
+      "lib": "C",
+      "value": "100nF 50V X7R",
+      "at": [
+        139.7,
+        127
+      ],
+      "net": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "mpn": "C1608X7R1H104K080AA",
+      "manufacturer": "TDK",
+      "uuid": "8032185e-049b-56e5-a7d9-a1eab2043ac0"
+    },
+    {
+      "ref": "C2",
+      "lib": "C",
+      "value": "100nF 50V X7R",
+      "at": [
+        180.34,
+        127
+      ],
+      "net": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "mpn": "C1608X7R1H104K080AA",
+      "manufacturer": "TDK",
+      "uuid": "1e0682ec-a858-5c5d-8673-a59fa74f9cb5"
+    },
+    {
+      "ref": "C3",
+      "lib": "C",
+      "footprint": "C0805",
+      "value": "10uF 25V X5R",
+      "at": [
+        220.98,
+        127
+      ],
+      "net": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "mpn": "C2012X5R1E106K125AB",
+      "manufacturer": "TDK",
+      "uuid": "08ed8ca3-e329-5d73-bd59-13379f3047d0"
+    },
+    {
+      "ref": "TP1",
+      "lib": "TestPoint",
+      "value": "GND",
+      "at": [
+        139.7,
+        180.34
+      ],
+      "net": {
+        "1": "GND"
+      },
+      "uuid": "fe09e2b5-27fd-58ff-8b08-532260fb8643"
+    },
+    {
+      "ref": "TP2",
+      "lib": "TestPoint",
+      "value": "+3V3",
+      "at": [
+        177.79999999999998,
+        180.34
+      ],
+      "net": {
+        "1": "+3V3"
+      },
+      "uuid": "27bea6da-73f5-569c-ba23-b570bcd9c547"
+    },
+    {
+      "ref": "TP3",
+      "lib": "TestPoint",
+      "value": "+5V",
+      "at": [
+        215.89999999999998,
+        180.34
+      ],
+      "net": {
+        "1": "+5V"
+      },
+      "uuid": "55cbd583-8299-5676-9803-b6fe49cd480e"
+    },
+    {
+      "ref": "TP4",
+      "lib": "TestPoint",
+      "value": "ECHO_5V",
+      "at": [
+        254.0,
+        180.34
+      ],
+      "net": {
+        "1": "ECHO_5V"
+      },
+      "uuid": "0675b624-6c4e-50c9-ac61-69f3a2d39a23"
+    },
+    {
+      "ref": "TP5",
+      "lib": "TestPoint",
+      "value": "ECHO_3V3_PB10",
+      "at": [
+        292.1,
+        180.34
+      ],
+      "net": {
+        "1": "ECHO_3V3_PB10"
+      },
+      "uuid": "7a2c71d0-6a18-581a-b655-8c334aaddd41"
+    },
+    {
+      "ref": "H1",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9mm NPTH",
+      "at": [
+        48.26,
+        231.14
+      ],
+      "net": {},
+      "uuid": "ae4e149f-37ff-57f5-9ad8-215c9716b6e9"
+    },
+    {
+      "ref": "H2",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9mm NPTH",
+      "at": [
+        109.22,
+        231.14
+      ],
+      "net": {},
+      "uuid": "9968ac91-45b7-5f3c-af1b-f8093dc7ddb6"
+    },
+    {
+      "ref": "H3",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9mm NPTH",
+      "at": [
+        170.18,
+        231.14
+      ],
+      "net": {},
+      "uuid": "feff8d3a-8967-51c1-89cb-1bf3059453af"
+    },
+    {
+      "ref": "H4",
+      "lib": "MountingHole",
+      "value": "M2.5 / 2.9mm NPTH",
+      "at": [
+        231.14,
+        231.14
+      ],
+      "net": {},
+      "uuid": "b3f93e76-159b-5668-92c5-10acf6d76c1a"
+    },
+    {
+      "ref": "H5",
+      "lib": "AccessHole",
+      "value": "NUCLEO BUTTON ACCESS / 10mm NPTH",
+      "at": [
+        292.1,
+        231.14
+      ],
+      "net": {},
+      "uuid": "d95bf6c5-d4f5-5945-bae3-8d98197f6d71"
+    },
+    {
+      "ref": "H6",
+      "lib": "AccessHole",
+      "value": "NUCLEO BUTTON ACCESS / 10mm NPTH",
+      "at": [
+        353.06,
+        231.14
+      ],
+      "net": {},
+      "uuid": "fce1ede6-795a-5cb4-9fb1-e9d4e4808c7d"
+    }
+  ]
+}
