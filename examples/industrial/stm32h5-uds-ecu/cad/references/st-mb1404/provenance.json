@@ -1,0 +1,106 @@
+{
+  "schema": "labwired.vendor-reference-provenance.v1",
+  "retrievedAt": "2026-11-18",
+  "productPage": "https://www.st.com/en/evaluation-tools/nucleo-h563zi.html",
+  "board": "MB1404-H563ZI-C01",
+  "scope": "Unmodified ST published populated assembly reference and exact H563ZI fitted BOM. These are inputs to the pending fitted-mount revision, not a fit or hardware-qualification receipt.",
+  "archives": [
+    {
+      "url": "https://www.st.com/resource/en/board_manufacturing_specification/mb1404-bdp.zip",
+      "bytes": 12701407,
+      "sha256": "d3c29f6eb18147cbfa7fd62f9ade6fa10d92e66b77b016198178db96fa7d2e74",
+      "members": [
+        "MB1404C/",
+        "MB1404C/Board_power.SchDoc",
+        "MB1404C/Connectors.SchDoc",
+        "MB1404C/Ethernet.SchDoc",
+        "MB1404C/MB1404.OutJob",
+        "MB1404C/MB1404.PcbDoc",
+        "MB1404C/MB1404.PrjPcb",
+        "MB1404C/Project_overview.SchDoc",
+        "MB1404C/STLINK-V3EC.SchDoc",
+        "MB1404C/STM32_microcontroller_IOs.SchDoc",
+        "MB1404C/STM32_microcontroller_power.SchDoc",
+        "MB1404C/Top.SchDoc",
+        "MB1404C/USB.SchDoc",
+        "readme.txt"
+      ]
+    },
+    {
+      "url": "https://www.st.com/resource/en/board_manufacturing_specification/mb1404-manufacturing.zip",
+      "bytes": 51757275,
+      "sha256": "4f7e81a4bdc957ee25c457a962dee5d16fa908608dd697dab44ef5e7c67eab94",
+      "members": [
+        "MB1404C/",
+        "MB1404C/Assembly/",
+        "MB1404C/Assembly/MB1404-C01-macro.APR_LIB",
+        "MB1404C/Assembly/MB1404-C01.apr",
+        "MB1404C/Assembly/MB1404-C01.GBP",
+        "MB1404C/Assembly/MB1404-C01.GTP",
+        "MB1404C/Assembly/MB1404-C01.REP",
+        "MB1404C/Assembly/MB1404-C01_Assembly.PDF",
+        "MB1404C/Assembly/MB1404-C01_PickandPlace.txt",
+        "MB1404C/Gerber/",
+        "MB1404C/Gerber/MB1404C-macro.APR_LIB",
+        "MB1404C/Gerber/MB1404C-RoundHoles-NonPlated.TXT",
+        "MB1404C/Gerber/MB1404C-RoundHoles-Plated.TXT",
+        "MB1404C/Gerber/MB1404C-SlotHoles-Plated.TXT",
+        "MB1404C/Gerber/MB1404C.apr",
+        "MB1404C/Gerber/MB1404C.DRR",
+        "MB1404C/Gerber/MB1404C.G1",
+        "MB1404C/Gerber/MB1404C.G2",
+        "MB1404C/Gerber/MB1404C.G3",
+        "MB1404C/Gerber/MB1404C.G4",
+        "MB1404C/Gerber/MB1404C.GBL",
+        "MB1404C/Gerber/MB1404C.GBO",
+        "MB1404C/Gerber/MB1404C.GBS",
+        "MB1404C/Gerber/MB1404C.GD1",
+        "MB1404C/Gerber/MB1404C.GG1",
+        "MB1404C/Gerber/MB1404C.GTL",
+        "MB1404C/Gerber/MB1404C.GTO",
+        "MB1404C/Gerber/MB1404C.GTS",
+        "MB1404C/Gerber/MB1404C.LDP",
+        "MB1404C/Gerber/MB1404C_Gerber.PDF",
+        "MB1404C/Mechanical/",
+        "MB1404C/Mechanical/MB1404-H563ZI-C01.step",
+        "MB1404C/Mechanical/MB1404-H563ZI-C01_3D.PDF",
+        "MB1404C/ODB++/",
+        "MB1404C/ODB++/MB1404C.tgz",
+        "readme.txt"
+      ]
+    },
+    {
+      "url": "https://www.st.com/resource/en/bill_of_materials/mb1404-bom.zip",
+      "bytes": 33488,
+      "sha256": "eed6670451b20869dec7b6e171c68501d14c67b6c92e0deb0ac9265606ba0945",
+      "members": [
+        "MB1404-H563ZI-C01_BOM.xlsx",
+        "readme.txt"
+      ]
+    }
+  ],
+  "includedFiles": [
+    {
+      "file": "MB1404-H563ZI-C01.step",
+      "bytes": 19817583,
+      "sha256": "43dd0d0146f5b982b54d488846f8e770ac1bc45c86012356e928c4af25dd2993"
+    },
+    {
+      "file": "MB1404-H563ZI-C01_BOM.xlsx",
+      "bytes": 38066,
+      "sha256": "df5a943e4e0ac34bb84a85a24e9440b0adb00d40ae7dab76230392ef3d2cab2d"
+    },
+    {
+      "file": "ST-manufacturing-readme.txt",
+      "bytes": 1667,
+      "sha256": "5236c98a161a0b9a6239c1dc9c8d6c53fb529619a89a49fbdd7d2e530d6f07e9"
+    },
+    {
+      "file": "ST-bom-readme.txt",
+      "bytes": 1727,
+      "sha256": "0f928c2f66695334af8d7305e5ac418086cdf7afd7bbd36632f3a42defad5b64"
+    }
+  ],
+  "license": "ST Open Platform License Agreement. Original copyright and readme notices retained. Not relicensed as MIT.",
+  "knownBomQualification": "CN11/CN12 Morpho TSW-135-07-G-D are not fitted in the exact H563ZI BOM; do not add them as stock populated geometry."
+}
