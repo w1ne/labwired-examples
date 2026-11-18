@@ -1,0 +1,172 @@
+{
+  "schema": "labwired.physical-station-runtime.v1",
+  "state": "verified digital three-node run; committed source passed normal hooks",
+  "coreRepository": "https://github.com/w1ne/labwired-core",
+  "coreCommit": "0916c184059ad4a83b6dbe13a027ad6d36d98f0d",
+  "coreBaseCommit": "23c29e5715c11c31c2fd68b3dabddfa52ab271ef",
+  "features": [
+    "event-scheduler"
+  ],
+  "executionApi": "World::from_resolved / existing timed UART network",
+  "coreSourceHashes": {
+    "crates/core/src/peripherals/components/l6360.rs": "e6c4c36a49a587b870aeac355425f9f54cfc60d6ec1bd32bda508cfdd1320332",
+    "crates/core/src/peripherals/uart.rs": "1f8bf9096ed9c043b7d5c57bc3fe855f7b9ca4b9299116199821d8fa2e65dfaa",
+    "crates/core/src/peripherals/uart/timed.rs": "8caec432e42d5544d923447509623e4921e79e130b50ad4049211ef720a48295",
+    "crates/core/src/peripherals/uart_transceiver.rs": "278b108efbcc657694f8342a4dd02a9b1fbd12a62c2e457d1b0cfdd8095422fa",
+    "crates/core/tests/stm32/l6360_digital.rs": "df6c9f6956ef99bf1fe1e5f742561211d71bbbd58ed93cea3232ddb38253e3c5",
+    "crates/core/tests/stm32/l6362a_digital.rs": "15520785d6138be5a6b123b981dd25224c3c19f9cd27028169133a3084cc2867",
+    "crates/core/tests/world/world_iolink_physical.rs": "0e14a193dc6d3cef29c84a80d23c832c9a1f717b1f5effcd07d01600e3977938",
+    "crates/core/src/bus/from_config.rs": "a962c998d08d2c953ae738dbaa3bfd67065e3100ae3d99a363bc5b32be4fec55",
+    "crates/core/tests/stm32l476_uid.rs": "9fe7f8ae2662e8b0065cd407792839cb829d65b3523d7ee90c00c092f4d369f7",
+    "configs/peripherals/stm32l476/uid.yaml": "2b0757b9cbbe0d7539e700f3ffb41e999b6f0d2c092652fa84c9bfe504a1c0c8"
+  },
+  "sourceFrozenDuringRun": true,
+  "topology": {
+    "controllers": 3,
+    "master": "NUCLEO-L476RG with two STEVAL-IOM001V1 shields below the Nucleo",
+    "devices": "Two NUCLEO-L476RG boards, each with one STEVAL-IOD003V1 above and one DI8 carrier",
+    "masterUarts": [
+      "uart1",
+      "uart4"
+    ],
+    "deviceUart": "uart1",
+    "quantumUs": 1,
+    "peripheralTickCycles": 1
+  },
+  "firmware": [
+    {
+      "path": "firmware/release/iolink-master.elf",
+      "bytes": 1625936,
+      "sha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9"
+    },
+    {
+      "path": "firmware/release/iolink-master.bin",
+      "bytes": 23452,
+      "sha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7"
+    },
+    {
+      "path": "firmware/release/iolink-device.elf",
+      "bytes": 1547352,
+      "sha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508"
+    },
+    {
+      "path": "firmware/release/iolink-device.bin",
+      "bytes": 22324,
+      "sha256": "78f502bc6d249b389275b24481c20d81d018a7fa28c1b7f33258f5f0cadfdae0"
+    }
+  ],
+  "protocol": {
+    "mode": "COM2",
+    "nominalBaud": 38400,
+    "cpuHz": 80000000,
+    "brr": 2083,
+    "dataBits": 8,
+    "parity": "even",
+    "stopBits": 1,
+    "mSequence": "TYPE_2_1",
+    "inputBytesPerDevice": 1,
+    "cycleMs": 10
+  },
+  "uidFixtures": {
+    "input1": [
+      4097,
+      8193,
+      12289
+    ],
+    "input2": [
+      4098,
+      8194,
+      12290
+    ]
+  },
+  "acceptedInputs": {
+    "at650ms": {
+      "input1": 165,
+      "input2": 60
+    },
+    "at680ms": {
+      "input1": 90,
+      "input2": 195
+    }
+  },
+  "observed": {
+    "masterState": [
+      3,
+      3
+    ],
+    "deviceState": 4,
+    "wakeEventsPerDevice": 1,
+    "overloadEdgesPerDevice": 1,
+    "wireErrors": 0,
+    "eventsDropped": 0
+  },
+  "environmentPathRelocation": "The executed World::from_resolved fixture supplies exact ELF bytes explicitly. The package environment changes only the firmware path strings to ../../firmware/release/; all three system YAML files are byte-identical to the executed fixture. It introduces no custom declarative descriptor file.",
+  "scope": "The unchanged ST HAL images execute real clock/GPIO/I2C/UART/EXTI and input-scan paths in the digital core. PHY supplies are explicitly valid scenarios. No physical board, analog waveform, rail, thermal, EMC or browser acceptance is claimed by this receipt.",
+  "artifacts": [
+    {
+      "path": "evidence/physical-runtime-station/environment-executed.yaml",
+      "bytes": 718,
+      "sha256": "9f7f2f6a358e020a8ebffc403b81441a4c7857f1b8378fbef291dc3d187c1645"
+    },
+    {
+      "path": "evidence/physical-runtime-station/invocation.json",
+      "bytes": 2701,
+      "sha256": "12412cc885d7557e592e20457960dd2678b3e3098b4cf89e9d5675fbdb0c0569"
+    },
+    {
+      "path": "evidence/physical-runtime-station/reset-fixtures-invocation.json",
+      "bytes": 2664,
+      "sha256": "26b595c0d24b33f956fb9aa5176d160cdc72c0fc767434e7f6c30889ba7f755a"
+    },
+    {
+      "path": "evidence/physical-runtime-station/result.json",
+      "bytes": 149972,
+      "sha256": "49f390a6599aa36d329356f2ba22d11e8ab486a489b6c4ed67d4c2aa6eff9cd4"
+    },
+    {
+      "path": "evidence/physical-runtime-station/tests.log",
+      "bytes": 8836,
+      "sha256": "fbb8cb6c4122b126d373c6a44b467385789ebda6c3162d77c483b4b530b5e198"
+    },
+    {
+      "path": "evidence/physical-runtime-station/uid-fixtures-invocation.json",
+      "bytes": 2661,
+      "sha256": "919fccba156a876ba9188e364533f9cc8a2234d66106f279d333cd050a5dd6ca"
+    },
+    {
+      "path": "evidence/physical-runtime-station/world_iolink_physical.rs",
+      "bytes": 11317,
+      "sha256": "0e14a193dc6d3cef29c84a80d23c832c9a1f717b1f5effcd07d01600e3977938"
+    },
+    {
+      "path": "runtime/physical-station/environment.yaml",
+      "bytes": 787,
+      "sha256": "6550ce9aa238ecc8774e94bf580309ef13ffd307f2412e2e61fb47c5177e2908"
+    },
+    {
+      "path": "runtime/physical-station/input1.yaml",
+      "bytes": 544,
+      "sha256": "f8e3f6329f63052a1eb1f0cd990b9c5098cce250726ccef9249a1b2fe4c0b59f"
+    },
+    {
+      "path": "runtime/physical-station/input2.yaml",
+      "bytes": 543,
+      "sha256": "6e9b415234ab70becf7508bd9140428e91714a8313ffa0602e0c4a1aff95f428"
+    },
+    {
+      "path": "runtime/physical-station/master.yaml",
+      "bytes": 403,
+      "sha256": "d6f0de655a892269ab891c696a45149bc16f7b3590885d848c00d3a9c1c5e685"
+    },
+    {
+      "path": "runtime/verify-station-proof.py",
+      "bytes": 4226,
+      "sha256": "d455b09e7402f9c4b1e371085aa5ae6b7b01f4b708c6cecc5d6a113c2abe2bed"
+    },
+    {
+      "path": "evidence/physical-runtime-station/core-commit-gate.json",
+      "bytes": 103,
+      "sha256": "d3bb2082bc00cbecdb72e566afb1e15f3c2f664a378da9a61c8f2e83108e2e12"
+    }
+  ]
+}

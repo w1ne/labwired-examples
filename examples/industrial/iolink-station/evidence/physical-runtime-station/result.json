@@ -1,0 +1,6831 @@
+{
+  "cpuHz": 80000000,
+  "deviceSha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508",
+  "masterSha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9",
+  "network": {
+    "events": [
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 0,
+        "t_ps": 108962500,
+        "value": 1
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 1,
+        "t_ps": 108962500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 2,
+        "t_ps": 533556487500,
+        "value": 1
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 3,
+        "t_ps": 533564500000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 4,
+        "t_ps": 533638012500,
+        "value": 0
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 5,
+        "t_ps": 535885737500,
+        "value": 1
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 6,
+        "t_ps": 535894000000,
+        "value": 0
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 7,
+        "t_ps": 535967287500,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 8,
+        "t_ps": 537093912500,
+        "value": 1
+      },
+      {
+        "char_id": 0,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 9,
+        "t_ps": 537095000000,
+        "uart": "uart1",
+        "value": 162
+      },
+      {
+        "char_id": 0,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 10,
+        "t_ps": 537368753750,
+        "uart": "uart1",
+        "value": 418
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 11,
+        "t_ps": 537368762500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 12,
+        "t_ps": 537381412500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 1,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 13,
+        "t_ps": 537655166250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 14,
+        "t_ps": 537655175000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 15,
+        "t_ps": 537665975000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 16,
+        "t_ps": 537669475000,
+        "value": 0
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 17,
+        "t_ps": 537675950000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255552,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 18,
+        "t_ps": 537677037500,
+        "uart": "uart4",
+        "value": 162
+      },
+      {
+        "char_id": 1099511627776,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 19,
+        "t_ps": 537698125000,
+        "uart": "uart1",
+        "value": 73
+      },
+      {
+        "char_id": 2199023255552,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 20,
+        "t_ps": 537950791250,
+        "uart": "uart1",
+        "value": 418
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 21,
+        "t_ps": 537950800000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255553,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 22,
+        "t_ps": 537963450000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627776,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 23,
+        "t_ps": 537971888750,
+        "uart": "uart1",
+        "value": 329
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 24,
+        "t_ps": 537971900000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627777,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 25,
+        "t_ps": 537984537500,
+        "uart": "uart1",
+        "value": 6
+      },
+      {
+        "char_id": 2199023255553,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 26,
+        "t_ps": 538237203750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 27,
+        "t_ps": 538237212500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 28,
+        "t_ps": 538248487500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 29,
+        "t_ps": 538251787500,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627777,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 30,
+        "t_ps": 538258301250,
+        "uart": "uart1",
+        "value": 6
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 31,
+        "t_ps": 538258312500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 32,
+        "t_ps": 538271475000,
+        "value": 1
+      },
+      {
+        "char_id": 2,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 33,
+        "t_ps": 538272562500,
+        "uart": "uart1",
+        "value": 32
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 34,
+        "t_ps": 538273362500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883328,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 35,
+        "t_ps": 538280087500,
+        "uart": "uart1",
+        "value": 73
+      },
+      {
+        "char_id": 2,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 36,
+        "t_ps": 538546316250,
+        "uart": "uart1",
+        "value": 288
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 37,
+        "t_ps": 538546325000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 3298534883328,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 38,
+        "t_ps": 538553851250,
+        "uart": "uart4",
+        "value": 329
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 39,
+        "t_ps": 538553862500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 40,
+        "t_ps": 538558975000,
+        "uart": "uart1",
+        "value": 6
+      },
+      {
+        "char_id": 3298534883329,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 41,
+        "t_ps": 538566500000,
+        "uart": "uart1",
+        "value": 6
+      },
+      {
+        "char_id": 3,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 42,
+        "t_ps": 538832728750,
+        "uart": "uart1",
+        "value": 6
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 43,
+        "t_ps": 538832737500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 3298534883329,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 44,
+        "t_ps": 538840263750,
+        "uart": "uart4",
+        "value": 6
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 45,
+        "t_ps": 538840275000,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 4,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 46,
+        "t_ps": 538845387500,
+        "uart": "uart1",
+        "value": 153
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 47,
+        "t_ps": 538855212500,
+        "value": 0
+      },
+      {
+        "char_id": 4,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 48,
+        "t_ps": 539119141250,
+        "uart": "uart1",
+        "value": 153
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 49,
+        "t_ps": 539119150000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 50,
+        "t_ps": 539128775000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 51,
+        "t_ps": 539133550000,
+        "value": 0
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 52,
+        "t_ps": 539143912500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255554,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 53,
+        "t_ps": 539145000000,
+        "uart": "uart4",
+        "value": 32
+      },
+      {
+        "char_id": 1099511627778,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 54,
+        "t_ps": 539162025000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 2199023255554,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 55,
+        "t_ps": 539418753750,
+        "uart": "uart1",
+        "value": 288
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 56,
+        "t_ps": 539418762500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255555,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 57,
+        "t_ps": 539431412500,
+        "uart": "uart4",
+        "value": 6
+      },
+      {
+        "char_id": 1099511627778,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 58,
+        "t_ps": 539435788750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 59,
+        "t_ps": 539435800000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 60,
+        "t_ps": 539450775000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255555,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 61,
+        "t_ps": 539705166250,
+        "uart": "uart1",
+        "value": 6
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 62,
+        "t_ps": 539705175000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255556,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 63,
+        "t_ps": 539717825000,
+        "uart": "uart4",
+        "value": 153
+      },
+      {
+        "char_id": 2199023255556,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 64,
+        "t_ps": 539991578750,
+        "uart": "uart1",
+        "value": 153
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 65,
+        "t_ps": 539991587500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 66,
+        "t_ps": 540001325000,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 67,
+        "t_ps": 540006112500,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 68,
+        "t_ps": 540016475000,
+        "value": 1
+      },
+      {
+        "char_id": 5,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 69,
+        "t_ps": 540017562500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 3298534883330,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 70,
+        "t_ps": 540034025000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 5,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 71,
+        "t_ps": 540291316250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 72,
+        "t_ps": 540291325000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 6,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 73,
+        "t_ps": 540303975000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883330,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 74,
+        "t_ps": 540307788750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 75,
+        "t_ps": 540307800000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 76,
+        "t_ps": 540322887500,
+        "value": 0
+      },
+      {
+        "char_id": 6,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 77,
+        "t_ps": 540577728750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 78,
+        "t_ps": 540577737500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 7,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 79,
+        "t_ps": 540590387500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 7,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 80,
+        "t_ps": 540864141250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 81,
+        "t_ps": 540864150000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 82,
+        "t_ps": 540877587500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 83,
+        "t_ps": 540878500000,
+        "value": 0
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 84,
+        "t_ps": 540889950000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255557,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 85,
+        "t_ps": 540891037500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627779,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 86,
+        "t_ps": 540906987500,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "char_id": 2199023255557,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 87,
+        "t_ps": 541164791250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 88,
+        "t_ps": 541164800000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255558,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 89,
+        "t_ps": 541177450000,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627779,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 90,
+        "t_ps": 541180751250,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 91,
+        "t_ps": 541180762500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627780,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 92,
+        "t_ps": 541193400000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255558,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 93,
+        "t_ps": 541451203750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 94,
+        "t_ps": 541451212500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255559,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 95,
+        "t_ps": 541463862500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627780,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 96,
+        "t_ps": 541467163750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 97,
+        "t_ps": 541467175000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 98,
+        "t_ps": 541482225000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255559,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 99,
+        "t_ps": 541737616250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 100,
+        "t_ps": 541737625000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 101,
+        "t_ps": 541748612500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 102,
+        "t_ps": 541752087500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883331,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 103,
+        "t_ps": 541780212500,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883331,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 104,
+        "t_ps": 542053976250,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 105,
+        "t_ps": 542053987500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883332,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 106,
+        "t_ps": 542066625000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883332,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 107,
+        "t_ps": 542340388750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 108,
+        "t_ps": 542340400000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 109,
+        "t_ps": 542355450000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 110,
+        "t_ps": 549967037500,
+        "value": 1
+      },
+      {
+        "char_id": 8,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 111,
+        "t_ps": 549968125000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 8,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 112,
+        "t_ps": 550241878750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 113,
+        "t_ps": 550241887500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 9,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 114,
+        "t_ps": 550254537500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 9,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 115,
+        "t_ps": 550528291250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 116,
+        "t_ps": 550528300000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 10,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 117,
+        "t_ps": 550540950000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 10,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 118,
+        "t_ps": 550814703750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 119,
+        "t_ps": 550814712500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 120,
+        "t_ps": 550827212500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 121,
+        "t_ps": 550829187500,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627781,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 122,
+        "t_ps": 550857162500,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 123,
+        "t_ps": 550866787500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255560,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 124,
+        "t_ps": 550867875000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627781,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 125,
+        "t_ps": 551130926250,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 126,
+        "t_ps": 551130937500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255560,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 127,
+        "t_ps": 551141628750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 128,
+        "t_ps": 551141637500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627782,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 129,
+        "t_ps": 551143575000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255561,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 130,
+        "t_ps": 551154287500,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627782,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 131,
+        "t_ps": 551417338750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 132,
+        "t_ps": 551417350000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255561,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 133,
+        "t_ps": 551428041250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 134,
+        "t_ps": 551428050000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 135,
+        "t_ps": 551432400000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255562,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 136,
+        "t_ps": 551440700000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255562,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 137,
+        "t_ps": 551714453750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 138,
+        "t_ps": 551714462500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 139,
+        "t_ps": 551726537500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 140,
+        "t_ps": 551728762500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883333,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 141,
+        "t_ps": 551757037500,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883333,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 142,
+        "t_ps": 552030801250,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 143,
+        "t_ps": 552030812500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883334,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 144,
+        "t_ps": 552043450000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883334,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 145,
+        "t_ps": 552317213750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 146,
+        "t_ps": 552317225000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 147,
+        "t_ps": 552332275000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 148,
+        "t_ps": 559967825000,
+        "value": 1
+      },
+      {
+        "char_id": 11,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 149,
+        "t_ps": 559968912500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 11,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 150,
+        "t_ps": 560242666250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 151,
+        "t_ps": 560242675000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 12,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 152,
+        "t_ps": 560255325000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 12,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 153,
+        "t_ps": 560529078750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 154,
+        "t_ps": 560529087500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 13,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 155,
+        "t_ps": 560541737500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 13,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 156,
+        "t_ps": 560815491250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 157,
+        "t_ps": 560815500000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 158,
+        "t_ps": 560826337500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 159,
+        "t_ps": 560829975000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627783,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 160,
+        "t_ps": 560858212500,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 161,
+        "t_ps": 560867575000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255563,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 162,
+        "t_ps": 560868662500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627783,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 163,
+        "t_ps": 561131976250,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 164,
+        "t_ps": 561131987500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255563,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 165,
+        "t_ps": 561142416250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 166,
+        "t_ps": 561142425000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627784,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 167,
+        "t_ps": 561144625000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255564,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 168,
+        "t_ps": 561155075000,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627784,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 169,
+        "t_ps": 561418388750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 170,
+        "t_ps": 561418400000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255564,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 171,
+        "t_ps": 561428828750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 172,
+        "t_ps": 561428837500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 173,
+        "t_ps": 561433450000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255565,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 174,
+        "t_ps": 561441487500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255565,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 175,
+        "t_ps": 561715241250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 176,
+        "t_ps": 561715250000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 177,
+        "t_ps": 561726462500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 178,
+        "t_ps": 561729550000,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883335,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 179,
+        "t_ps": 561758062500,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883335,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 180,
+        "t_ps": 562031826250,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 181,
+        "t_ps": 562031837500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883336,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 182,
+        "t_ps": 562044475000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883336,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 183,
+        "t_ps": 562318238750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 184,
+        "t_ps": 562318250000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 185,
+        "t_ps": 562333300000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 186,
+        "t_ps": 569966225000,
+        "value": 1
+      },
+      {
+        "char_id": 14,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 187,
+        "t_ps": 569967312500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 14,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 188,
+        "t_ps": 570241066250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 189,
+        "t_ps": 570241075000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 15,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 190,
+        "t_ps": 570253725000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 15,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 191,
+        "t_ps": 570527478750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 192,
+        "t_ps": 570527487500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 16,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 193,
+        "t_ps": 570540137500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 16,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 194,
+        "t_ps": 570813891250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 195,
+        "t_ps": 570813900000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 196,
+        "t_ps": 570828337500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 197,
+        "t_ps": 570828375000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627785,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 198,
+        "t_ps": 570857187500,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 199,
+        "t_ps": 570872787500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255566,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 200,
+        "t_ps": 570873875000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627785,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 201,
+        "t_ps": 571130951250,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 202,
+        "t_ps": 571130962500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627786,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 203,
+        "t_ps": 571143600000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255566,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 204,
+        "t_ps": 571147628750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 205,
+        "t_ps": 571147637500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255567,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 206,
+        "t_ps": 571160287500,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627786,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 207,
+        "t_ps": 571417363750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 208,
+        "t_ps": 571417375000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 209,
+        "t_ps": 571432425000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255567,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 210,
+        "t_ps": 571434041250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 211,
+        "t_ps": 571434050000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255568,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 212,
+        "t_ps": 571446700000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255568,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 213,
+        "t_ps": 571720453750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 214,
+        "t_ps": 571720462500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 215,
+        "t_ps": 571731025000,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 216,
+        "t_ps": 571734762500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883337,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 217,
+        "t_ps": 571763175000,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883337,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 218,
+        "t_ps": 572036938750,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 219,
+        "t_ps": 572036950000,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883338,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 220,
+        "t_ps": 572049587500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883338,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 221,
+        "t_ps": 572323351250,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 222,
+        "t_ps": 572323362500,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 223,
+        "t_ps": 572338412500,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 224,
+        "t_ps": 579967012500,
+        "value": 1
+      },
+      {
+        "char_id": 17,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 225,
+        "t_ps": 579968100000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 17,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 226,
+        "t_ps": 580241853750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 227,
+        "t_ps": 580241862500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 18,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 228,
+        "t_ps": 580254512500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 18,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 229,
+        "t_ps": 580528266250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 230,
+        "t_ps": 580528275000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 19,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 231,
+        "t_ps": 580540925000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 19,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 232,
+        "t_ps": 580814678750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 233,
+        "t_ps": 580814687500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 234,
+        "t_ps": 580827350000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 235,
+        "t_ps": 580829162500,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627787,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 236,
+        "t_ps": 580857025000,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 237,
+        "t_ps": 580866762500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255569,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 238,
+        "t_ps": 580867850000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627787,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 239,
+        "t_ps": 581130788750,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 240,
+        "t_ps": 581130800000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255569,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 241,
+        "t_ps": 581141603750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 242,
+        "t_ps": 581141612500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627788,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 243,
+        "t_ps": 581143437500,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255570,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 244,
+        "t_ps": 581154262500,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627788,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 245,
+        "t_ps": 581417201250,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 246,
+        "t_ps": 581417212500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255570,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 247,
+        "t_ps": 581428016250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 248,
+        "t_ps": 581428025000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 249,
+        "t_ps": 581432262500,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255571,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 250,
+        "t_ps": 581440675000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255571,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 251,
+        "t_ps": 581714428750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 252,
+        "t_ps": 581714437500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 253,
+        "t_ps": 581725962500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 254,
+        "t_ps": 581728737500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883339,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 255,
+        "t_ps": 581757012500,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883339,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 256,
+        "t_ps": 582030776250,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 257,
+        "t_ps": 582030787500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883340,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 258,
+        "t_ps": 582043425000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883340,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 259,
+        "t_ps": 582317188750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 260,
+        "t_ps": 582317200000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 261,
+        "t_ps": 582332250000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 262,
+        "t_ps": 589972425000,
+        "value": 1
+      },
+      {
+        "char_id": 20,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 263,
+        "t_ps": 589973512500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 20,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 264,
+        "t_ps": 590247266250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 265,
+        "t_ps": 590247275000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 21,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 266,
+        "t_ps": 590259925000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 21,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 267,
+        "t_ps": 590533678750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 268,
+        "t_ps": 590533687500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 22,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 269,
+        "t_ps": 590546337500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 22,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 270,
+        "t_ps": 590820091250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 271,
+        "t_ps": 590820100000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 272,
+        "t_ps": 590830475000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 273,
+        "t_ps": 590834575000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627789,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 274,
+        "t_ps": 590863175000,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 275,
+        "t_ps": 590872175000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255572,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 276,
+        "t_ps": 590873262500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627789,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 277,
+        "t_ps": 591136938750,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 278,
+        "t_ps": 591136950000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255572,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 279,
+        "t_ps": 591147016250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 280,
+        "t_ps": 591147025000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627790,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 281,
+        "t_ps": 591149587500,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255573,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 282,
+        "t_ps": 591159675000,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627790,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 283,
+        "t_ps": 591423351250,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 284,
+        "t_ps": 591423362500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255573,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 285,
+        "t_ps": 591433428750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 286,
+        "t_ps": 591433437500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 287,
+        "t_ps": 591438412500,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255574,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 288,
+        "t_ps": 591446087500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255574,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 289,
+        "t_ps": 591719841250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 290,
+        "t_ps": 591719850000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 291,
+        "t_ps": 591730175000,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 292,
+        "t_ps": 591734150000,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883341,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 293,
+        "t_ps": 591763150000,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883341,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 294,
+        "t_ps": 592036913750,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 295,
+        "t_ps": 592036925000,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883342,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 296,
+        "t_ps": 592049562500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883342,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 297,
+        "t_ps": 592323326250,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 298,
+        "t_ps": 592323337500,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 299,
+        "t_ps": 592338387500,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 300,
+        "t_ps": 599966300000,
+        "value": 1
+      },
+      {
+        "char_id": 23,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 301,
+        "t_ps": 599967387500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 23,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 302,
+        "t_ps": 600241141250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 303,
+        "t_ps": 600241150000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 24,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 304,
+        "t_ps": 600253800000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 24,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 305,
+        "t_ps": 600527553750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 306,
+        "t_ps": 600527562500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 25,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 307,
+        "t_ps": 600540212500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 25,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 308,
+        "t_ps": 600813966250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 309,
+        "t_ps": 600813975000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 310,
+        "t_ps": 600826837500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 311,
+        "t_ps": 600828450000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627791,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 312,
+        "t_ps": 600857062500,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 313,
+        "t_ps": 600872862500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255575,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 314,
+        "t_ps": 600873950000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627791,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 315,
+        "t_ps": 601130826250,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 316,
+        "t_ps": 601130837500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627792,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 317,
+        "t_ps": 601143475000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255575,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 318,
+        "t_ps": 601147703750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 319,
+        "t_ps": 601147712500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255576,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 320,
+        "t_ps": 601160362500,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627792,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 321,
+        "t_ps": 601417238750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 322,
+        "t_ps": 601417250000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 323,
+        "t_ps": 601432300000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255576,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 324,
+        "t_ps": 601434116250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 325,
+        "t_ps": 601434125000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255577,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 326,
+        "t_ps": 601446775000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255577,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 327,
+        "t_ps": 601720528750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 328,
+        "t_ps": 601720537500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 329,
+        "t_ps": 601732162500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 330,
+        "t_ps": 601734837500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883343,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 331,
+        "t_ps": 601763212500,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883343,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 332,
+        "t_ps": 602036976250,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 333,
+        "t_ps": 602036987500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883344,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 334,
+        "t_ps": 602049625000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883344,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 335,
+        "t_ps": 602323388750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 336,
+        "t_ps": 602323400000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 337,
+        "t_ps": 602338450000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 338,
+        "t_ps": 609971512500,
+        "value": 1
+      },
+      {
+        "char_id": 26,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 339,
+        "t_ps": 609972600000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 26,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 340,
+        "t_ps": 610246353750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 341,
+        "t_ps": 610246362500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 27,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 342,
+        "t_ps": 610259012500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 27,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 343,
+        "t_ps": 610532766250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 344,
+        "t_ps": 610532775000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 28,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 345,
+        "t_ps": 610545425000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 28,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 346,
+        "t_ps": 610819178750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 347,
+        "t_ps": 610819187500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 348,
+        "t_ps": 610829962500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 349,
+        "t_ps": 610833662500,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627793,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 350,
+        "t_ps": 610862112500,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 351,
+        "t_ps": 610871262500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255578,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 352,
+        "t_ps": 610872350000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627793,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 353,
+        "t_ps": 611135876250,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 354,
+        "t_ps": 611135887500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255578,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 355,
+        "t_ps": 611146103750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 356,
+        "t_ps": 611146112500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627794,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 357,
+        "t_ps": 611148525000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255579,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 358,
+        "t_ps": 611158762500,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627794,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 359,
+        "t_ps": 611422288750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 360,
+        "t_ps": 611422300000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255579,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 361,
+        "t_ps": 611432516250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 362,
+        "t_ps": 611432525000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 363,
+        "t_ps": 611437350000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255580,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 364,
+        "t_ps": 611445175000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255580,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 365,
+        "t_ps": 611718928750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 366,
+        "t_ps": 611718937500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 367,
+        "t_ps": 611729012500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 368,
+        "t_ps": 611733237500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883345,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 369,
+        "t_ps": 611761987500,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883345,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 370,
+        "t_ps": 612035751250,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 371,
+        "t_ps": 612035762500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883346,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 372,
+        "t_ps": 612048400000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883346,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 373,
+        "t_ps": 612322163750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 374,
+        "t_ps": 612322175000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 375,
+        "t_ps": 612337225000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 376,
+        "t_ps": 619972200000,
+        "value": 1
+      },
+      {
+        "char_id": 29,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 377,
+        "t_ps": 619973287500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 29,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 378,
+        "t_ps": 620247041250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 379,
+        "t_ps": 620247050000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 30,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 380,
+        "t_ps": 620259700000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 30,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 381,
+        "t_ps": 620533453750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 382,
+        "t_ps": 620533462500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 31,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 383,
+        "t_ps": 620546112500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 31,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 384,
+        "t_ps": 620819866250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 385,
+        "t_ps": 620819875000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 386,
+        "t_ps": 620831325000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 387,
+        "t_ps": 620834350000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627795,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 388,
+        "t_ps": 620863200000,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 389,
+        "t_ps": 620871950000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255581,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 390,
+        "t_ps": 620873037500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627795,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 391,
+        "t_ps": 621136963750,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 392,
+        "t_ps": 621136975000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255581,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 393,
+        "t_ps": 621146791250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 394,
+        "t_ps": 621146800000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627796,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 395,
+        "t_ps": 621149612500,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255582,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 396,
+        "t_ps": 621159450000,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627796,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 397,
+        "t_ps": 621423376250,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 398,
+        "t_ps": 621423387500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255582,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 399,
+        "t_ps": 621433203750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 400,
+        "t_ps": 621433212500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 401,
+        "t_ps": 621438437500,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255583,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 402,
+        "t_ps": 621445862500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255583,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 403,
+        "t_ps": 621719616250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 404,
+        "t_ps": 621719625000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 405,
+        "t_ps": 621728950000,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 406,
+        "t_ps": 621733925000,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883347,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 407,
+        "t_ps": 621762200000,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883347,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 408,
+        "t_ps": 622035963750,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 409,
+        "t_ps": 622035975000,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883348,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 410,
+        "t_ps": 622048612500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883348,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 411,
+        "t_ps": 622322376250,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 412,
+        "t_ps": 622322387500,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 413,
+        "t_ps": 622337437500,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 414,
+        "t_ps": 629970700000,
+        "value": 1
+      },
+      {
+        "char_id": 32,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 415,
+        "t_ps": 629971787500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 32,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 416,
+        "t_ps": 630245541250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 417,
+        "t_ps": 630245550000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 33,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 418,
+        "t_ps": 630258200000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 33,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 419,
+        "t_ps": 630531953750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 420,
+        "t_ps": 630531962500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 34,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 421,
+        "t_ps": 630544612500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 34,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 422,
+        "t_ps": 630818366250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 423,
+        "t_ps": 630818375000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 424,
+        "t_ps": 630829250000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 425,
+        "t_ps": 630832850000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627797,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 426,
+        "t_ps": 630861125000,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 427,
+        "t_ps": 630870450000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255584,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 428,
+        "t_ps": 630871537500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627797,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 429,
+        "t_ps": 631134888750,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 430,
+        "t_ps": 631134900000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255584,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 431,
+        "t_ps": 631145291250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 432,
+        "t_ps": 631145300000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627798,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 433,
+        "t_ps": 631147537500,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255585,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 434,
+        "t_ps": 631157950000,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627798,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 435,
+        "t_ps": 631421301250,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 436,
+        "t_ps": 631421312500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255585,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 437,
+        "t_ps": 631431703750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 438,
+        "t_ps": 631431712500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 439,
+        "t_ps": 631436362500,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255586,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 440,
+        "t_ps": 631444362500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255586,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 441,
+        "t_ps": 631718116250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 442,
+        "t_ps": 631718125000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 443,
+        "t_ps": 631728900000,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 444,
+        "t_ps": 631732425000,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883349,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 445,
+        "t_ps": 631761050000,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883349,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 446,
+        "t_ps": 632034813750,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 447,
+        "t_ps": 632034825000,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883350,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 448,
+        "t_ps": 632047462500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883350,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 449,
+        "t_ps": 632321226250,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 450,
+        "t_ps": 632321237500,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 451,
+        "t_ps": 632336287500,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 452,
+        "t_ps": 639971287500,
+        "value": 1
+      },
+      {
+        "char_id": 35,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 453,
+        "t_ps": 639972375000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 35,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 454,
+        "t_ps": 640246128750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 455,
+        "t_ps": 640246137500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 36,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 456,
+        "t_ps": 640258787500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 36,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 457,
+        "t_ps": 640532541250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 458,
+        "t_ps": 640532550000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 37,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 459,
+        "t_ps": 640545200000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 37,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 460,
+        "t_ps": 640818953750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 461,
+        "t_ps": 640818962500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 462,
+        "t_ps": 640831237500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 463,
+        "t_ps": 640833437500,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627799,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 464,
+        "t_ps": 640862012500,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 465,
+        "t_ps": 640871037500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255587,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 466,
+        "t_ps": 640872125000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627799,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 467,
+        "t_ps": 641135776250,
+        "uart": "uart1",
+        "value": 165
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 468,
+        "t_ps": 641135787500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255587,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 469,
+        "t_ps": 641145878750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 470,
+        "t_ps": 641145887500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627800,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 471,
+        "t_ps": 641148425000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255588,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 472,
+        "t_ps": 641158537500,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627800,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 473,
+        "t_ps": 641422188750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 474,
+        "t_ps": 641422200000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255588,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 475,
+        "t_ps": 641432291250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 476,
+        "t_ps": 641432300000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 477,
+        "t_ps": 641437250000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255589,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 478,
+        "t_ps": 641444950000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255589,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 479,
+        "t_ps": 641718703750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 480,
+        "t_ps": 641718712500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 481,
+        "t_ps": 641730262500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 482,
+        "t_ps": 641733012500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883351,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 483,
+        "t_ps": 641761037500,
+        "uart": "uart1",
+        "value": 60
+      },
+      {
+        "char_id": 3298534883351,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 484,
+        "t_ps": 642034801250,
+        "uart": "uart4",
+        "value": 60
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 485,
+        "t_ps": 642034812500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883352,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 486,
+        "t_ps": 642047450000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883352,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 487,
+        "t_ps": 642321213750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 488,
+        "t_ps": 642321225000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 489,
+        "t_ps": 642336275000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 490,
+        "t_ps": 649969787500,
+        "value": 1
+      },
+      {
+        "char_id": 38,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 491,
+        "t_ps": 649970875000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 38,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 492,
+        "t_ps": 650244628750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 493,
+        "t_ps": 650244637500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 39,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 494,
+        "t_ps": 650257287500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 39,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 495,
+        "t_ps": 650531041250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 496,
+        "t_ps": 650531050000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 40,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 497,
+        "t_ps": 650543700000,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 40,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 498,
+        "t_ps": 650817453750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 499,
+        "t_ps": 650817462500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 500,
+        "t_ps": 650829150000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 501,
+        "t_ps": 650831937500,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627801,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 502,
+        "t_ps": 650860200000,
+        "uart": "uart1",
+        "value": 90
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 503,
+        "t_ps": 650869537500,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255590,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 504,
+        "t_ps": 650870625000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627801,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 505,
+        "t_ps": 651133963750,
+        "uart": "uart1",
+        "value": 90
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 506,
+        "t_ps": 651133975000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255590,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 507,
+        "t_ps": 651144378750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 508,
+        "t_ps": 651144387500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627802,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 509,
+        "t_ps": 651146612500,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255591,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 510,
+        "t_ps": 651157037500,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627802,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 511,
+        "t_ps": 651420376250,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 512,
+        "t_ps": 651420387500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255591,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 513,
+        "t_ps": 651430791250,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 514,
+        "t_ps": 651430800000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 515,
+        "t_ps": 651435437500,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255592,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 516,
+        "t_ps": 651443450000,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255592,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 517,
+        "t_ps": 651717203750,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 518,
+        "t_ps": 651717212500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 519,
+        "t_ps": 651727150000,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 520,
+        "t_ps": 651731512500,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883353,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 521,
+        "t_ps": 651760125000,
+        "uart": "uart1",
+        "value": 195
+      },
+      {
+        "char_id": 3298534883353,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 522,
+        "t_ps": 652033888750,
+        "uart": "uart4",
+        "value": 195
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 523,
+        "t_ps": 652033900000,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883354,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 524,
+        "t_ps": 652046537500,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883354,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 525,
+        "t_ps": 652320301250,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 526,
+        "t_ps": 652320312500,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 527,
+        "t_ps": 652335362500,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 528,
+        "t_ps": 659970275000,
+        "value": 1
+      },
+      {
+        "char_id": 41,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 529,
+        "t_ps": 659971362500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 41,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 530,
+        "t_ps": 660245116250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 531,
+        "t_ps": 660245125000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 42,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 532,
+        "t_ps": 660257775000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 42,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 533,
+        "t_ps": 660531528750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 534,
+        "t_ps": 660531537500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 43,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 535,
+        "t_ps": 660544187500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 43,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 536,
+        "t_ps": 660817941250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 537,
+        "t_ps": 660817950000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 538,
+        "t_ps": 660826062500,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 539,
+        "t_ps": 660832425000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627803,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 540,
+        "t_ps": 660861237500,
+        "uart": "uart1",
+        "value": 90
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 541,
+        "t_ps": 660870025000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255593,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 542,
+        "t_ps": 660871112500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627803,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 543,
+        "t_ps": 661135001250,
+        "uart": "uart1",
+        "value": 90
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 544,
+        "t_ps": 661135012500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255593,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 545,
+        "t_ps": 661144866250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 546,
+        "t_ps": 661144875000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627804,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 547,
+        "t_ps": 661147650000,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255594,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 548,
+        "t_ps": 661157525000,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627804,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 549,
+        "t_ps": 661421413750,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 550,
+        "t_ps": 661421425000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255594,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 551,
+        "t_ps": 661431278750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 552,
+        "t_ps": 661431287500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 553,
+        "t_ps": 661436475000,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255595,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 554,
+        "t_ps": 661443937500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255595,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 555,
+        "t_ps": 661717691250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 556,
+        "t_ps": 661717700000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 557,
+        "t_ps": 661729137500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 558,
+        "t_ps": 661732000000,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883355,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 559,
+        "t_ps": 661760187500,
+        "uart": "uart1",
+        "value": 195
+      },
+      {
+        "char_id": 3298534883355,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 560,
+        "t_ps": 662033951250,
+        "uart": "uart4",
+        "value": 195
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 561,
+        "t_ps": 662033962500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883356,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 562,
+        "t_ps": 662046600000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883356,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 563,
+        "t_ps": 662320363750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 564,
+        "t_ps": 662320375000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 565,
+        "t_ps": 662335425000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 566,
+        "t_ps": 669968775000,
+        "value": 1
+      },
+      {
+        "char_id": 44,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 567,
+        "t_ps": 669969862500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 44,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 568,
+        "t_ps": 670243616250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 569,
+        "t_ps": 670243625000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 45,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 570,
+        "t_ps": 670256275000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 45,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 571,
+        "t_ps": 670530028750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 572,
+        "t_ps": 670530037500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 46,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 573,
+        "t_ps": 670542687500,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "char_id": 46,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "input1",
+        "seq": 574,
+        "t_ps": 670816441250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "input1",
+        "seq": 575,
+        "t_ps": 670816450000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 576,
+        "t_ps": 670828025000,
+        "value": 1
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 577,
+        "t_ps": 670830925000,
+        "value": 0
+      },
+      {
+        "char_id": 1099511627805,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 578,
+        "t_ps": 670859075000,
+        "uart": "uart1",
+        "value": 90
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 579,
+        "t_ps": 670868525000,
+        "value": 1
+      },
+      {
+        "char_id": 2199023255596,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 580,
+        "t_ps": 670869612500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 1099511627805,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 581,
+        "t_ps": 671132838750,
+        "uart": "uart1",
+        "value": 90
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 582,
+        "t_ps": 671132850000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255596,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 583,
+        "t_ps": 671143366250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 584,
+        "t_ps": 671143375000,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 1099511627806,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "input1",
+        "seq": 585,
+        "t_ps": 671145487500,
+        "uart": "uart1",
+        "value": 138
+      },
+      {
+        "char_id": 2199023255597,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 586,
+        "t_ps": 671156025000,
+        "uart": "uart4",
+        "value": 133
+      },
+      {
+        "char_id": 1099511627806,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 0,
+        "node": "master",
+        "seq": 587,
+        "t_ps": 671419251250,
+        "uart": "uart1",
+        "value": 394
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 0,
+        "node": "master",
+        "seq": 588,
+        "t_ps": 671419262500,
+        "uart": "uart1"
+      },
+      {
+        "char_id": 2199023255597,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 589,
+        "t_ps": 671429778750,
+        "uart": "uart1",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 590,
+        "t_ps": 671429787500,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input1-EN",
+        "kind": "marker",
+        "node": "input1",
+        "seq": 591,
+        "t_ps": 671434312500,
+        "value": 0
+      },
+      {
+        "char_id": 2199023255598,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "master",
+        "seq": 592,
+        "t_ps": 671442437500,
+        "uart": "uart4",
+        "value": 0
+      },
+      {
+        "char_id": 2199023255598,
+        "detail": "latency_ps=273753750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "input2",
+        "seq": 593,
+        "t_ps": 671716191250,
+        "uart": "uart1",
+        "value": 0
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "input2",
+        "seq": 594,
+        "t_ps": 671716200000,
+        "uart": "uart1"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 595,
+        "t_ps": 671727037500,
+        "value": 1
+      },
+      {
+        "detail": "port2-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 596,
+        "t_ps": 671730500000,
+        "value": 0
+      },
+      {
+        "char_id": 3298534883357,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 597,
+        "t_ps": 671759187500,
+        "uart": "uart1",
+        "value": 195
+      },
+      {
+        "char_id": 3298534883357,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 598,
+        "t_ps": 672032951250,
+        "uart": "uart4",
+        "value": 195
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 599,
+        "t_ps": 672032962500,
+        "uart": "uart4"
+      },
+      {
+        "char_id": 3298534883358,
+        "kind": "tx_start",
+        "link": 1,
+        "node": "input2",
+        "seq": 600,
+        "t_ps": 672045600000,
+        "uart": "uart1",
+        "value": 133
+      },
+      {
+        "char_id": 3298534883358,
+        "detail": "latency_ps=273763750",
+        "kind": "deliver",
+        "link": 1,
+        "node": "master",
+        "seq": 601,
+        "t_ps": 672319363750,
+        "uart": "uart4",
+        "value": 389
+      },
+      {
+        "detail": "rxne",
+        "kind": "rx_irq",
+        "link": 1,
+        "node": "master",
+        "seq": 602,
+        "t_ps": 672319375000,
+        "uart": "uart4"
+      },
+      {
+        "detail": "input2-EN",
+        "kind": "marker",
+        "node": "input2",
+        "seq": 603,
+        "t_ps": 672334425000,
+        "value": 0
+      },
+      {
+        "detail": "port1-ENCQ",
+        "kind": "marker",
+        "node": "master",
+        "seq": 604,
+        "t_ps": 679969162500,
+        "value": 1
+      },
+      {
+        "char_id": 47,
+        "kind": "tx_start",
+        "link": 0,
+        "node": "master",
+        "seq": 605,
+        "t_ps": 679970250000,
+        "uart": "uart1",
+        "value": 0
+      }
+    ],
+    "events_dropped": 0,
+    "links": [
+      {
+        "a_format": {
+          "bit_ps": 26037500,
+          "data_bits": 8,
+          "parity": "even",
+          "rx_enabled": true,
+          "rx_inverted": true,
+          "stop_half_bits": 2,
+          "tx_enabled": true,
+          "tx_inverted": true
+        },
+        "a_node": "master",
+        "a_uart": "uart1",
+        "b_format": {
+          "bit_ps": 26037500,
+          "data_bits": 8,
+          "parity": "even",
+          "rx_enabled": true,
+          "rx_inverted": true,
+          "stop_half_bits": 2,
+          "tx_enabled": true,
+          "tx_inverted": true
+        },
+        "b_node": "input1",
+        "b_uart": "uart1",
+        "connected": true,
+        "delay_ps": 0,
+        "directions": [
+          {
+            "busy_ps": 13747800000,
+            "chars_delivered": 47,
+            "chars_sent": 48,
+            "dropped_link_cut": 0,
+            "dropped_rx_disabled": 0,
+            "false_starts": 0,
+            "first_tx_ps": 537095000000,
+            "framing_errors": 0,
+            "from_node": "master",
+            "from_uart": "uart1",
+            "last_delivery_ps": 670816441250,
+            "late": 0,
+            "latency_max_ps": 273753750,
+            "latency_mean_ps": 273753750.0,
+            "latency_min_ps": 273753750,
+            "latency_sum_ps": 12866426250,
+            "max_in_flight": 2,
+            "misframed": 0,
+            "overruns": 0,
+            "parity_errors": 0,
+            "throughput_chars_per_s": 351.47691769288343,
+            "to_node": "input1",
+            "to_uart": "uart1",
+            "truncated": 0,
+            "utilization": 0.02021735294117647
+          },
+          {
+            "busy_ps": 8878787500,
+            "chars_delivered": 31,
+            "chars_sent": 31,
+            "dropped_link_cut": 0,
+            "dropped_rx_disabled": 0,
+            "false_starts": 0,
+            "first_tx_ps": 537698125000,
+            "framing_errors": 0,
+            "from_node": "input1",
+            "from_uart": "uart1",
+            "last_delivery_ps": 671419251250,
+            "late": 0,
+            "latency_max_ps": 273763750,
+            "latency_mean_ps": 273763750.0,
+            "latency_min_ps": 273763750,
+            "latency_sum_ps": 8486676250,
+            "max_in_flight": 2,
+            "misframed": 0,
+            "overruns": 0,
+            "parity_errors": 0,
+            "throughput_chars_per_s": 231.82574713021458,
+            "to_node": "master",
+            "to_uart": "uart1",
+            "truncated": 0,
+            "utilization": 0.013057040441176471
+          }
+        ],
+        "id": 0,
+        "jitter_ps": 0
+      },
+      {
+        "a_format": {
+          "bit_ps": 26037500,
+          "data_bits": 8,
+          "parity": "even",
+          "rx_enabled": true,
+          "rx_inverted": true,
+          "stop_half_bits": 2,
+          "tx_enabled": true,
+          "tx_inverted": true
+        },
+        "a_node": "master",
+        "a_uart": "uart4",
+        "b_format": {
+          "bit_ps": 26037500,
+          "data_bits": 8,
+          "parity": "even",
+          "rx_enabled": true,
+          "rx_inverted": true,
+          "stop_half_bits": 2,
+          "tx_enabled": true,
+          "tx_inverted": true
+        },
+        "b_node": "input2",
+        "b_uart": "uart1",
+        "connected": true,
+        "delay_ps": 0,
+        "directions": [
+          {
+            "busy_ps": 13461387500,
+            "chars_delivered": 47,
+            "chars_sent": 47,
+            "dropped_link_cut": 0,
+            "dropped_rx_disabled": 0,
+            "false_starts": 0,
+            "first_tx_ps": 537677037500,
+            "framing_errors": 0,
+            "from_node": "master",
+            "from_uart": "uart4",
+            "last_delivery_ps": 671716191250,
+            "late": 0,
+            "latency_max_ps": 273753750,
+            "latency_mean_ps": 273753750.0,
+            "latency_min_ps": 273753750,
+            "latency_sum_ps": 12866426250,
+            "max_in_flight": 2,
+            "misframed": 0,
+            "overruns": 0,
+            "parity_errors": 0,
+            "throughput_chars_per_s": 350.6438132820575,
+            "to_node": "input2",
+            "to_uart": "uart1",
+            "truncated": 0,
+            "utilization": 0.019796158088235295
+          },
+          {
+            "busy_ps": 8878787500,
+            "chars_delivered": 31,
+            "chars_sent": 31,
+            "dropped_link_cut": 0,
+            "dropped_rx_disabled": 0,
+            "false_starts": 0,
+            "first_tx_ps": 538280087500,
+            "framing_errors": 0,
+            "from_node": "input2",
+            "from_uart": "uart1",
+            "last_delivery_ps": 672319363750,
+            "late": 0,
+            "latency_max_ps": 273763750,
+            "latency_mean_ps": 273763750.0,
+            "latency_min_ps": 273763750,
+            "latency_sum_ps": 8486676250,
+            "max_in_flight": 2,
+            "misframed": 0,
+            "overruns": 0,
+            "parity_errors": 0,
+            "throughput_chars_per_s": 231.27549526738062,
+            "to_node": "master",
+            "to_uart": "uart4",
+            "truncated": 0,
+            "utilization": 0.013057040441176471
+          }
+        ],
+        "id": 1,
+        "jitter_ps": 0
+      }
+    ],
+    "messages": [],
+    "next_cursor": 606,
+    "node_resets": {},
+    "now_ps": 680000000000
+  },
+  "scope": "Exact physical HAL images in the existing digital World, with explicit synthetic UID fixtures and valid PHY supplies. Not physical hardware or analog qualification.",
+  "stages": [
+    {
+      "nodes": {
+        "input1": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 165,
+          "g_device_state": 0,
+          "g_overload_edges": 0,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 0,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            192
+          ],
+          "pc": 134232840,
+          "serial": "AAAQAQAAIAEAADAB",
+          "uart1_brr": [
+            0
+          ],
+          "uid_fixture": [
+            4097,
+            8193,
+            12289
+          ]
+        },
+        "input2": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 60,
+          "g_device_state": 0,
+          "g_overload_edges": 0,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 0,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            192
+          ],
+          "pc": 134232840,
+          "serial": "AAAQAgAAIAIAADAC",
+          "uart1_brr": [
+            0
+          ],
+          "uid_fixture": [
+            4098,
+            8194,
+            12290
+          ]
+        },
+        "master": {
+          "SystemCoreClock": 80000000,
+          "g_master_pd": [
+            255,
+            255
+          ],
+          "g_master_state": [
+            255,
+            255
+          ],
+          "g_master_tick_result": [
+            0,
+            0
+          ],
+          "g_phy_error": [
+            0,
+            0
+          ],
+          "g_phy_faults": [
+            0,
+            0
+          ],
+          "g_rx_overflows": [
+            0,
+            0
+          ],
+          "g_startup_error": 0,
+          "g_uart_errors": [
+            0,
+            0
+          ],
+          "g_wake_count": [
+            0,
+            0
+          ],
+          "gpioa_odr": [
+            64
+          ],
+          "gpiob_odr": [
+            32
+          ],
+          "gpioc_odr": [
+            2
+          ],
+          "i2c1_isr": [
+            32768
+          ],
+          "pc": 134225866,
+          "uart1_brr": [
+            2083
+          ],
+          "uart4_brr": [
+            0
+          ]
+        }
+      },
+      "time_ps": 20000000000
+    },
+    {
+      "nodes": {
+        "input1": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 165,
+          "g_device_state": 0,
+          "g_overload_edges": 0,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 0,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            192
+          ],
+          "pc": 134220202,
+          "serial": "AAAQAQAAIAEAADAB",
+          "uart1_brr": [
+            0
+          ],
+          "uid_fixture": [
+            4097,
+            8193,
+            12289
+          ]
+        },
+        "input2": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 60,
+          "g_device_state": 0,
+          "g_overload_edges": 0,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 0,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            192
+          ],
+          "pc": 134220202,
+          "serial": "AAAQAgAAIAIAADAC",
+          "uart1_brr": [
+            0
+          ],
+          "uid_fixture": [
+            4098,
+            8194,
+            12290
+          ]
+        },
+        "master": {
+          "SystemCoreClock": 80000000,
+          "g_master_pd": [
+            255,
+            255
+          ],
+          "g_master_state": [
+            255,
+            255
+          ],
+          "g_master_tick_result": [
+            0,
+            0
+          ],
+          "g_phy_error": [
+            0,
+            0
+          ],
+          "g_phy_faults": [
+            0,
+            0
+          ],
+          "g_rx_overflows": [
+            0,
+            0
+          ],
+          "g_startup_error": 0,
+          "g_uart_errors": [
+            0,
+            0
+          ],
+          "g_wake_count": [
+            0,
+            0
+          ],
+          "gpioa_odr": [
+            320
+          ],
+          "gpiob_odr": [
+            32
+          ],
+          "gpioc_odr": [
+            2
+          ],
+          "i2c1_isr": [
+            65
+          ],
+          "pc": 134224446,
+          "uart1_brr": [
+            2083
+          ],
+          "uart4_brr": [
+            2083
+          ]
+        }
+      },
+      "time_ps": 100000000000
+    },
+    {
+      "nodes": {
+        "input1": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 165,
+          "g_device_state": 0,
+          "g_overload_edges": 0,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 0,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            192
+          ],
+          "pc": 134220204,
+          "serial": "AAAQAQAAIAEAADAB",
+          "uart1_brr": [
+            0
+          ],
+          "uid_fixture": [
+            4097,
+            8193,
+            12289
+          ]
+        },
+        "input2": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 60,
+          "g_device_state": 0,
+          "g_overload_edges": 0,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 0,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            192
+          ],
+          "pc": 134220204,
+          "serial": "AAAQAgAAIAIAADAC",
+          "uart1_brr": [
+            0
+          ],
+          "uid_fixture": [
+            4098,
+            8194,
+            12290
+          ]
+        },
+        "master": {
+          "SystemCoreClock": 80000000,
+          "g_master_pd": [
+            255,
+            255
+          ],
+          "g_master_state": [
+            255,
+            255
+          ],
+          "g_master_tick_result": [
+            0,
+            0
+          ],
+          "g_phy_error": [
+            0,
+            0
+          ],
+          "g_phy_faults": [
+            0,
+            0
+          ],
+          "g_rx_overflows": [
+            0,
+            0
+          ],
+          "g_startup_error": 0,
+          "g_uart_errors": [
+            0,
+            0
+          ],
+          "g_wake_count": [
+            0,
+            0
+          ],
+          "gpioa_odr": [
+            320
+          ],
+          "gpiob_odr": [
+            32
+          ],
+          "gpioc_odr": [
+            2
+          ],
+          "i2c1_isr": [
+            65
+          ],
+          "pc": 134224482,
+          "uart1_brr": [
+            2083
+          ],
+          "uart4_brr": [
+            2083
+          ]
+        }
+      },
+      "time_ps": 500000000000
+    },
+    {
+      "nodes": {
+        "input1": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 165,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134233132,
+          "serial": "AAAQAQAAIAEAADAB",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4097,
+            8193,
+            12289
+          ]
+        },
+        "input2": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 60,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134234268,
+          "serial": "AAAQAgAAIAIAADAC",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4098,
+            8194,
+            12290
+          ]
+        },
+        "master": {
+          "SystemCoreClock": 80000000,
+          "g_master_pd": [
+            165,
+            60
+          ],
+          "g_master_state": [
+            3,
+            3
+          ],
+          "g_master_tick_result": [
+            0,
+            0
+          ],
+          "g_phy_error": [
+            0,
+            0
+          ],
+          "g_phy_faults": [
+            0,
+            0
+          ],
+          "g_rx_overflows": [
+            0,
+            0
+          ],
+          "g_startup_error": 0,
+          "g_uart_errors": [
+            0,
+            0
+          ],
+          "g_wake_count": [
+            1,
+            1
+          ],
+          "gpioa_odr": [
+            320
+          ],
+          "gpiob_odr": [
+            32
+          ],
+          "gpioc_odr": [
+            3
+          ],
+          "i2c1_isr": [
+            65
+          ],
+          "pc": 134234520,
+          "uart1_brr": [
+            2083
+          ],
+          "uart4_brr": [
+            2083
+          ]
+        }
+      },
+      "time_ps": 550000000000
+    },
+    {
+      "nodes": {
+        "input1": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 165,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134220270,
+          "serial": "AAAQAQAAIAEAADAB",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4097,
+            8193,
+            12289
+          ]
+        },
+        "input2": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 60,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134232536,
+          "serial": "AAAQAgAAIAIAADAC",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4098,
+            8194,
+            12290
+          ]
+        },
+        "master": {
+          "SystemCoreClock": 80000000,
+          "g_master_pd": [
+            165,
+            60
+          ],
+          "g_master_state": [
+            3,
+            3
+          ],
+          "g_master_tick_result": [
+            0,
+            0
+          ],
+          "g_phy_error": [
+            0,
+            0
+          ],
+          "g_phy_faults": [
+            0,
+            0
+          ],
+          "g_rx_overflows": [
+            0,
+            0
+          ],
+          "g_startup_error": 0,
+          "g_uart_errors": [
+            0,
+            0
+          ],
+          "g_wake_count": [
+            1,
+            1
+          ],
+          "gpioa_odr": [
+            320
+          ],
+          "gpiob_odr": [
+            32
+          ],
+          "gpioc_odr": [
+            3
+          ],
+          "i2c1_isr": [
+            65
+          ],
+          "pc": 134234538,
+          "uart1_brr": [
+            2083
+          ],
+          "uart4_brr": [
+            2083
+          ]
+        }
+      },
+      "time_ps": 600000000000
+    },
+    {
+      "nodes": {
+        "input1": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 165,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134232654,
+          "serial": "AAAQAQAAIAEAADAB",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4097,
+            8193,
+            12289
+          ]
+        },
+        "input2": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 60,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134220022,
+          "serial": "AAAQAgAAIAIAADAC",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4098,
+            8194,
+            12290
+          ]
+        },
+        "master": {
+          "SystemCoreClock": 80000000,
+          "g_master_pd": [
+            165,
+            60
+          ],
+          "g_master_state": [
+            3,
+            3
+          ],
+          "g_master_tick_result": [
+            0,
+            0
+          ],
+          "g_phy_error": [
+            0,
+            0
+          ],
+          "g_phy_faults": [
+            0,
+            0
+          ],
+          "g_rx_overflows": [
+            0,
+            0
+          ],
+          "g_startup_error": 0,
+          "g_uart_errors": [
+            0,
+            0
+          ],
+          "g_wake_count": [
+            1,
+            1
+          ],
+          "gpioa_odr": [
+            320
+          ],
+          "gpiob_odr": [
+            32
+          ],
+          "gpioc_odr": [
+            3
+          ],
+          "i2c1_isr": [
+            65
+          ],
+          "pc": 134234528,
+          "uart1_brr": [
+            2083
+          ],
+          "uart4_brr": [
+            2083
+          ]
+        }
+      },
+      "time_ps": 650000000000
+    },
+    {
+      "nodes": {
+        "input1": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 90,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134218268,
+          "serial": "AAAQAQAAIAEAADAB",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4097,
+            8193,
+            12289
+          ]
+        },
+        "input2": {
+          "SystemCoreClock": 80000000,
+          "g_device_pd": 195,
+          "g_device_state": 4,
+          "g_overload_edges": 1,
+          "g_phy_error": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_tx_deadline_errors": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1,
+          "gpioa_odr": [
+            0
+          ],
+          "gpiob_odr": [
+            0
+          ],
+          "gpioc_odr": [
+            64
+          ],
+          "pc": 134232642,
+          "serial": "AAAQAgAAIAIAADAC",
+          "uart1_brr": [
+            2083
+          ],
+          "uid_fixture": [
+            4098,
+            8194,
+            12290
+          ]
+        },
+        "master": {
+          "SystemCoreClock": 80000000,
+          "g_master_pd": [
+            90,
+            195
+          ],
+          "g_master_state": [
+            3,
+            3
+          ],
+          "g_master_tick_result": [
+            0,
+            0
+          ],
+          "g_phy_error": [
+            0,
+            0
+          ],
+          "g_phy_faults": [
+            0,
+            0
+          ],
+          "g_rx_overflows": [
+            0,
+            0
+          ],
+          "g_startup_error": 0,
+          "g_uart_errors": [
+            0,
+            0
+          ],
+          "g_wake_count": [
+            1,
+            1
+          ],
+          "gpioa_odr": [
+            320
+          ],
+          "gpiob_odr": [
+            32
+          ],
+          "gpioc_odr": [
+            3
+          ],
+          "i2c1_isr": [
+            65
+          ],
+          "pc": 134234528,
+          "uart1_brr": [
+            2083
+          ],
+          "uart4_brr": [
+            2083
+          ]
+        }
+      },
+      "time_ps": 680000000000
+    }
+  ]
+}

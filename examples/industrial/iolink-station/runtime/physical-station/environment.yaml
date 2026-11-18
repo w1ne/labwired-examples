@@ -1,0 +1,20 @@
+schema_version: '1.0'
+name: physical-iolink-station
+nodes:
+- {id: master, system: master.yaml, firmware: ../../firmware/release/iolink-master.elf}
+- {id: input1, system: input1.yaml, firmware: ../../firmware/release/iolink-device.elf}
+- {id: input2, system: input2.yaml, firmware: ../../firmware/release/iolink-device.elf}
+interconnects:
+- type: uart_network
+  nodes: [master, input1, input2]
+  config:
+    topology: star
+    hub: master
+    hub_uarts: [uart1, uart4]
+    spoke_uart: uart1
+    max_quantum_us: 1
+    markers:
+    - {node: master, peripheral: gpioc, pin: 0, name: port1-ENCQ}
+    - {node: master, peripheral: gpioa, pin: 5, name: port2-ENCQ}
+    - {node: input1, peripheral: gpioc, pin: 7, name: input1-EN}
+    - {node: input2, peripheral: gpioc, pin: 7, name: input2-EN}

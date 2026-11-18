@@ -2,7 +2,7 @@
   "schema": "labwired.example-package-candidate.v1",
   "project": "iolink-station-l476",
   "trackingIssue": "https://github.com/w1ne/labwired/issues/3555",
-  "state": "electrical/firmware build candidate; fitted full station and hardware acceptance pending",
+  "state": "electrical/firmware and digital three-node runtime candidate; fitted mount and physical acceptance pending",
   "canonicalLab": "https://app.labwired.com/?lab=iolink-station-l476",
   "nativeBoard": {
     "path": "electronics/input-board/input-board.kicad_pcb",
@@ -42,10 +42,9 @@
     }
   ],
   "mechanicalDesignBinding": null,
-  "simulationContract": "Existing byte-wake fixture is separate from these physical HAL images; do not replace its ELF without a matching core/model run.",
+  "simulationContract": "The unchanged physical master and both physical device images pass together at core 0916c184059ad4a83b6dbe13a027ad6d36d98f0d with runtime/physical-station/environment.yaml; the legacy byte-wake fixture remains historical.",
   "remaining": [
     "Full fitted mount and hardware BOM",
-    "Matching corrected physical-master/two-device runtime proof",
     "Physical two-port acceptance and measurements",
     "Region-specific AC lead selection",
     "Current IODD business-rule check and conformity where applicable"
@@ -135,6 +134,11 @@
       "path": "evidence/mechanical/tsw-populated-step-inspection.json",
       "bytes": 849896,
       "sha256": "552ced3e9762f52729926defe8a95b27e6735c707fd9eaac9e5c43869e255c47"
+    },
+    {
+      "path": "evidence/physical-runtime-station/manifest.json",
+      "bytes": 6450,
+      "sha256": "8e346da2601de43f6e31e7a64fab01ed66becddeba252acfdd94ed1558dceea9"
     }
   ],
   "devicePhysicalRuntime": {
@@ -142,5 +146,10 @@
     "coreCommit": "e2908774da4d254e1244dfdf9e5fb7bf6cdf4cf1",
     "scope": "One unchanged physical device image plus a controlled digital master line; complete station pending"
   },
-  "masterStoredParityRepair": "evidence/master-stored-parity/receipt.json"
+  "masterStoredParityRepair": "evidence/master-stored-parity/receipt.json",
+  "physicalStationRuntime": {
+    "manifest": "evidence/physical-runtime-station/manifest.json",
+    "coreCommit": "0916c184059ad4a83b6dbe13a027ad6d36d98f0d",
+    "scope": "Three physical HAL images; two independent COM2 process-data inputs change during OPERATE; digital model only"
+  }
 }

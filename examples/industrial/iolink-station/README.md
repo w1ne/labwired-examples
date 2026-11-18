@@ -7,14 +7,15 @@ eight-input PCB for each device. The physical firmware supports **COM2,
 38,400 bit/s, 8 data bits, even parity, one stop bit**, with one input process
 byte per device, TYPE_2_1 M-sequences and a 10 ms configured cycle.
 
-**Release state:** electrical and firmware build candidate. Both physical
-images build, the unchanged device image passes a digital boot/wake/protocol
-probe, and the native input PCB has zero ERC,
-DRC, unconnected-net and schematic-parity findings. A complete fitted station
-mount, physical power/waveform measurements and a two-port hardware acceptance
-run are still required. The L6360 stored-parity startup defect is fixed and passes 18 host tests;
-the full three-node physical-image runtime proof remains pending. See [the exact device runtime
-proof and reproduction command](runtime/README.md).
+**Release state:** electrical and firmware runtime candidate. Both physical
+images build, and the unchanged master plus both unchanged device images
+pass a complete digital station run: two OPERATE ports, independent input
+patterns and input changes, with zero PHY/UART/overflow/wire errors. The
+native input PCB has zero ERC, DRC, unconnected-net and schematic-parity
+findings. A complete fitted station mount, physical power/waveform
+measurements and a two-port hardware acceptance run remain required. The
+L6360 stored-parity startup repair passes 18 host tests. See the
+[exact three-node runtime proof and reproduction command](runtime/README.md).
 
 ## Contents and evidence
 

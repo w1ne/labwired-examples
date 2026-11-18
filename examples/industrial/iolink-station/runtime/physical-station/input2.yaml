@@ -1,0 +1,21 @@
+name: physical-input2
+chip: stm32l476
+cpu_hz: 80000000
+max_peripheral_tick_interval: 1
+peripherals:
+- id: uid
+  type: declarative
+  base_address: 536835472
+  size: 12B
+  config:
+    path: configs/peripherals/stm32l476/uid.yaml
+    reset_values: {UID0: 4098, UID1: 8194, UID2: 12290}
+external_devices:
+- id: phy
+  type: l6362a
+  connection: uart1
+  config: {en: PC7, in1: low, in2: PA9, outiq: PA10, diag: PA4, ol: PA6}
+- id: di8
+  type: sn74hc165_gpio
+  connection: gpio
+  config: {clock_pin: PB13, data_pin: PB14, latch_pin: PC6, inputs: 60}
