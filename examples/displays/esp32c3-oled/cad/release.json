@@ -18,18 +18,20 @@
     "nutDriver": "pass: specified Wera 5.7 mm blade has0.150 mm nominal minimum clearance at all four nuts,1.4 mm engagement and0.2 mm PCB tip gap; larger/over-inserted tools fail controls"
   },
   "kernelcad": {
-    "provider": "kernelcad",
     "slug": "t_IaE1EE",
-    "version": 2,
-    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "version": 3,
     "privacy": "public_unlisted",
-    "url": "https://app.kernelcad.com/p/t_IaE1EE?version=2",
-    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v2.json?provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
-    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/2/mesh-artifact?download=1&provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+    "url": "https://app.kernelcad.com/p/t_IaE1EE?version=3",
+    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v3.json?provenance=168b3057a0dd59b0ada8066b3e41e5b3eda0217ef4cd81671c1206a4c19a0ac0",
+    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/3/mesh-artifact?download=1&provenance=168b3057a0dd59b0ada8066b3e41e5b3eda0217ef4cd81671c1206a4c19a0ac0",
     "meshReady": true,
-    "isCurrentSource": false,
-    "currentRevisionPending": true,
-    "historicalReason": "Revision 2 used an incorrect populated coordinate reconstruction; source and exports here supersede it."
+    "provider": "kernelcad",
+    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "isCurrentSource": true,
+    "currentRevisionPending": false,
+    "meshProvenance": "168b3057a0dd59b0ada8066b3e41e5b3eda0217ef4cd81671c1206a4c19a0ac0",
+    "sourceSha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253",
+    "savedRevisionReceipt": "verification/studio-current/revision.json"
   },
   "source": "esp32c3-oled-enclosure.kcad.ts",
   "submittedSource": "verification/tool-access/submitted-source.kcad.ts",
@@ -176,5 +178,19 @@
   ],
   "historicalOrderedPathEvidence": "verification/ordered-path-followup/provenance.json",
   "toolAccessEvidence": "verification/tool-access/provenance.json",
-  "geometryEquivalenceEvidence": "verification/tool-access/geometry-equivalence.json"
+  "geometryEquivalenceEvidence": "verification/tool-access/geometry-equivalence.json",
+  "historicalKernelcadPublication": {
+    "provider": "kernelcad",
+    "slug": "t_IaE1EE",
+    "version": 2,
+    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "privacy": "public_unlisted",
+    "url": "https://app.kernelcad.com/p/t_IaE1EE?version=2",
+    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v2.json?provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/2/mesh-artifact?download=1&provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+    "meshReady": true,
+    "isCurrentSource": false,
+    "currentRevisionPending": true,
+    "historicalReason": "Revision 2 used an incorrect populated coordinate reconstruction; source and exports here supersede it."
+  }
 }

@@ -12,7 +12,7 @@
     "provider": "kernelcad",
     "slug": "t_IaE1EE",
     "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
-    "version": 2,
+    "version": 3,
     "title": "OLED Rev A enclosure candidate 3, native coordinates",
     "pcbBindings": [
       {
@@ -34,15 +34,23 @@
       ],
       "inputs": []
     },
-    "meshProvenance": "0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
-    "published_version_is_current": false,
-    "current_studio_revision_pending": true,
+    "meshProvenance": "168b3057a0dd59b0ada8066b3e41e5b3eda0217ef4cd81671c1206a4c19a0ac0",
+    "published_version_is_current": true,
+    "current_studio_revision_pending": false,
     "source_sha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253",
-    "historical_publication_note": "The revision-2 reference and provenance identify the earlier saved publication. This package source and exports supersede it; a corrected existing-project revision is pending."
+    "historical_publication_note": "Earlier Studio revisions and immutable candidate releases remain historical. Revision 3 contains this exact corrected source and native asset.",
+    "saved_source": "cad/verification/studio-current/saved-source.kcad.ts",
+    "saved_source_sha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253",
+    "saved_revision_receipt": "cad/verification/studio-current/revision.json",
+    "mesh_url": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v3.json?provenance=168b3057a0dd59b0ada8066b3e41e5b3eda0217ef4cd81671c1206a4c19a0ac0",
+    "mesh_download_url": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/3/mesh-artifact?download=1&provenance=168b3057a0dd59b0ada8066b3e41e5b3eda0217ef4cd81671c1206a4c19a0ac0",
+    "mesh_artifact_sha256": "892b1c7a4227ff2f8f1e1676186b28b251b69b37a83a4405d0024b9c4db46af5",
+    "mesh_artifact_bytes": 1939833,
+    "mesh_producer_provenance": "168b3057a0dd59b0ada8066b3e41e5b3eda0217ef4cd81671c1206a4c19a0ac0"
   },
   "physical_hardware_tested": false,
   "open_acceptance_items": [
-    "Save the corrected source into the existing Studio project, then verify the Lab model binding and OLED framebuffer orientation. Revision 2 remains historical.",
+    "Bind revision 3 in the canonical Lab and verify the OLED framebuffer orientation.",
     "Integrate and rerun full hosted assembly-path verification. Independent current-source evidence passes 39 ordered nominal geometric stages for all 41 parts; hosted acceptance remains open.",
     "Build and measure a physical prototype:1.277 mm nominal glass/support gap,0.50 mm vertical glass/lid gap, USB overmold, cable routing, short-spacer screw clearance and module revision.",
     "Check actual tool dimensions, counterholding and required external holds. Specified Wera 05118120001 now has0.150 mm nominal CAD clearance; physical assembly and torque remain unperformed."
@@ -56,7 +64,9 @@
     "released_rom_boot": "verification/released-rom-boot-manifest.json",
     "independent_ordered_path": "cad/verification/tool-access/ordered-path-summary.json",
     "native_registration": "cad/verification/handedness/native-registration.json",
-    "nut_driver_access": "cad/verification/tool-access/provenance.json"
+    "nut_driver_access": "cad/verification/tool-access/provenance.json",
+    "studio_current": "cad/verification/studio-current/revision.json",
+    "mesh_current": "cad/verification/studio-current/mesh-download.json"
   },
   "files": [
     {
@@ -71,8 +81,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15410,
-      "sha256": "7e7ded3a8d178f05165b5436d571e0e5372757e74bbddd520adf2a0cc5b63a6b"
+      "bytes": 15562,
+      "sha256": "0b2cbd0268ecf4a90e28d0d0eb020173bc768f2832965413b45bbad5b4795313"
     },
     {
       "path": "bom.csv",
@@ -161,8 +171,8 @@
     },
     {
       "path": "cad/release.json",
-      "bytes": 8160,
-      "sha256": "b77a450cf986c6279ec8ff03cf48a474e174623da80ffe412eb0731f10858db0"
+      "bytes": 9108,
+      "sha256": "2f7978d9d1d896445b172e4bb5d1474d97f9d5427055920365ec5492a04ca47b"
     },
     {
       "path": "cad/renders/closed-front.png",
@@ -695,6 +705,31 @@
       "sha256": "f863897eb51f34cfcddf67d9c2dc7af15db39b75157f851bdb99b8bc80b86735"
     },
     {
+      "path": "cad/verification/studio-current/immutable-source-read.json",
+      "bytes": 607,
+      "sha256": "35e08e5b21f9b1969047dea802ed5e3746ac2723dba6521fd07aab0441185cbc"
+    },
+    {
+      "path": "cad/verification/studio-current/mesh-download.json",
+      "bytes": 1340,
+      "sha256": "d76178446fbab1bcb8fcbf28f8d5654eb92fb8e6de50e716e0e85d434464cb41"
+    },
+    {
+      "path": "cad/verification/studio-current/project-read.json",
+      "bytes": 13485,
+      "sha256": "d2cb76ce3880d0952fb4cc3f4c413e9a0053ccd5599e6d5e3c24e50a05667380"
+    },
+    {
+      "path": "cad/verification/studio-current/revision.json",
+      "bytes": 3169,
+      "sha256": "9bbe3cf4fee46fca1e0025020d16346f6772b052d92c17ffafb3b98cadab03aa"
+    },
+    {
+      "path": "cad/verification/studio-current/saved-source.kcad.ts",
+      "bytes": 13434,
+      "sha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253"
+    },
+    {
       "path": "cad/verification/submitted-source.kcad.ts",
       "bytes": 82686,
       "sha256": "0dad608ad219e5c96d79d8b913d5183ccaee22ae67236006e3cd5b1a21f3b1de"
@@ -911,8 +946,8 @@
     },
     {
       "path": "labwired/circuit.json",
-      "bytes": 8227,
-      "sha256": "096188e1e949dc3fa8688beaaf304abec729cc0939e39313839d5fa2717dec1e"
+      "bytes": 8247,
+      "sha256": "62428760fbb53312b438358bae71d0131c8b6b30826124de9e9df925d88b326a"
     },
     {
       "path": "labwired/esp32c3.yaml",
@@ -921,8 +956,8 @@
     },
     {
       "path": "labwired/mechanical.json",
-      "bytes": 691,
-      "sha256": "33eed7e213ae92395edd84dbdc48f9a3d99b43078300a5c7b0e128840ef6c8ca"
+      "bytes": 711,
+      "sha256": "08f76c701f19b0d2f6dd568fdb2e407817d2918e96d90cb0740e1a6cd27bf70e"
     },
     {
       "path": "labwired/native-sources.json",

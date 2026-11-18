@@ -1,0 +1,88 @@
+{
+  "schema": "labwired.saved-cad-revision.v1",
+  "verifiedAt": "2026-11-18T21:08:27.928466+00:00",
+  "slug": "675KJsgq",
+  "projectId": "8edf3f05-a7b1-415d-b680-e9114beff33e",
+  "version": 2,
+  "url": "https://app.kernelcad.com/p/675KJsgq?version=2",
+  "embedUrl": "https://app.kernelcad.com/embed/675KJsgq?revision=2&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2F675KJsgq%2Fv2.json%3Fprovenance%3Dc1cd85ad3dfc9a48e421c0416ce85965aca2109cd80f10927618cbc9a6679d5b",
+  "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/675KJsgq/v2.json?provenance=c1cd85ad3dfc9a48e421c0416ce85965aca2109cd80f10927618cbc9a6679d5b",
+  "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/675KJsgq/revisions/2/mesh-artifact?download=1&provenance=c1cd85ad3dfc9a48e421c0416ce85965aca2109cd80f10927618cbc9a6679d5b",
+  "meshReady": true,
+  "sourceSha256": "1d7b9f89d6cca52a76cfe5d48df35d5fbe0db1161a43d3772595b81ed4be3e7a",
+  "sourceBytes": 11125,
+  "portableSource": "mechanical/pico-uart-fixture.kcad.ts",
+  "portableSourceSha256": "475fc4ebd1281aa31b417bd2b72e2b1a37eeb4ad8dd6906957bff32836746526",
+  "savedSource": "saved-source.kcad.ts",
+  "assetManifest": {
+    "inputs/a54e9b84f8bf.step": {
+      "format": "step",
+      "sha256": "a54e9b84f8bf87dd0f8b3ca3dcddadfd0246e01ae65ad8944cff4bda0306e27e",
+      "mediaType": "model/step",
+      "byteLength": 87754
+    },
+    "inputs/ea5c693afee3.step": {
+      "format": "step",
+      "sha256": "ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b",
+      "mediaType": "model/step",
+      "byteLength": 1721174
+    }
+  },
+  "assetsSha256": "380f9aaa6e7f099d8118cf7c54b99d204d9d6c346b08e21e3ec3b2dfd054921a",
+  "importRefSubstitutions": [
+    {
+      "sourceRef": "../cad/pico-carrier.step",
+      "savedRef": "./inputs/a54e9b84f8bf.step",
+      "sha256": "a54e9b84f8bf87dd0f8b3ca3dcddadfd0246e01ae65ad8944cff4bda0306e27e"
+    },
+    {
+      "sourceRef": "../references/raspberry-pi/Pico-R3.step",
+      "savedRef": "./inputs/ea5c693afee3.step",
+      "sha256": "ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b"
+    }
+  ],
+  "meshProvenance": "c1cd85ad3dfc9a48e421c0416ce85965aca2109cd80f10927618cbc9a6679d5b",
+  "mesh": {
+    "sha256": "cd12eaf2749231d9e48f7afe58e115ae9918220df35a8cd8674f8c00618d7a2e",
+    "bytes": 4672642,
+    "physicalPartCount": 50,
+    "featureCount": 62,
+    "bounds": {
+      "min": [
+        -9,
+        -79,
+        0
+      ],
+      "max": [
+        69,
+        9,
+        32
+      ]
+    },
+    "provenance": {
+      "schema": "kernelcad.revision-mesh-provenance.v1",
+      "source": {
+        "sha256": "1d7b9f89d6cca52a76cfe5d48df35d5fbe0db1161a43d3772595b81ed4be3e7a",
+        "byteLength": 11125
+      },
+      "assetsSha256": "380f9aaa6e7f099d8118cf7c54b99d204d9d6c346b08e21e3ec3b2dfd054921a",
+      "geometryHash": "cb45231d5e734918c29fae915e611dfbba0d7728047f38881dc4d68173dfe11c",
+      "producer": {
+        "serverBuild": "0.1.0+b5855b759d29@2026-11-18T20:58:46.448Z",
+        "serverCommit": "b5855b759d29a23f6565705755866aa53922efdd",
+        "runtimeSourceHash": "acf5fe2d3fb92fde48249a4c82da3362f8618eb998ffd3ef9bc4ab8607349438",
+        "sessionArtifactSha256": "eb2eb42c177cd16caa57234aecaa2c352ab42d0a169dc6a71aef3013ccb02776"
+      }
+    }
+  },
+  "verification": {
+    "latestAndImmutableSourceEqual": true,
+    "nativeAssetSnapshotUnchanged": true,
+    "downloadSourceIdentityMatches": true,
+    "downloadAssetIdentityMatches": true,
+    "downloadProvenanceMatchesPinnedUrl": true,
+    "expectedPhysicalPartCount": true
+  },
+  "physicalHardwareTested": false,
+  "note": "This receipt proves the immutable saved source, native asset identity and ready mesh. Existing package fit, path and physical qualification records retain their separate scope."
+}
