@@ -12,6 +12,7 @@ The firmware prints the boot banner and toggles the Pico's actual GP25 LED. The 
 | --- | --- | --- |
 | Native KiCad 10.0.8 schematic | 0 ERC violations | [ERC report](validation/erc.json) |
 | Routed two-layer board | 0 DRC violations, 0 unconnected items, 0 schematic-parity issues | [DRC report](validation/drc.json) |
+| Independent hosted native validation | Exact bytes preserved; KiCad10.0.8 reports0 errors and0 warnings | [Hosted DRC](validation/native-import-validation.json) |
 | Released hosted firmware | All 5 oracle clauses passed; GP0 made 181 transitions and GP25 made 2 transitions before the gate stopped | [Model-verification receipt](validation/firmware-model-verify.json) |
 | Local pinned SDK build | Build succeeded; the same 5 behavior assertions passed over 50,000,000 interpreted steps | [Local build acceptance](validation/local-build-acceptance.json) |
 | Nominal case fit | All 5 dimensional requirements passed | [CAD evaluation](validation/cad-evaluation.json) |

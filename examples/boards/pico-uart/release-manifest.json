@@ -28,7 +28,8 @@
     "firmware": "validation/firmware-model-verify.json",
     "local_build": "validation/local-build-acceptance.json",
     "mechanical": "validation/design-loop.json",
-    "step": "validation/assembly-step-inspection.json"
+    "step": "validation/assembly-step-inspection.json",
+    "native_import": "validation/native-import-validation.json"
   },
   "open_acceptance_items": [
     "Update the existing Studio675KJsgq project with the final exact-body source; its collaboration path currently refuses imported assets.",
@@ -54,8 +55,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10562,
-      "sha256": "02d12b0a69dd26dd5560e3be068def58bfe5b0c77a97385b058e58bbb51d6082"
+      "bytes": 10727,
+      "sha256": "fb79e7885d3eee75f9e76963de3cb8598e6a0275b085eafb569e86f63f6a2f90"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -168,6 +169,11 @@
       "sha256": "17d24d526434f1c3cf5daff49c9512a499a52f4ab606185c6f0aed79fe6e97b4"
     },
     {
+      "path": "firmware/release-manifest.json",
+      "bytes": 1842,
+      "sha256": "3a78f1124b120f9fde4e0f9e9a3f6de429d11daa31de3ca37503b64bf95085dd"
+    },
+    {
       "path": "firmware/src/main.ino",
       "bytes": 603,
       "sha256": "b602876cefc5ab8b59c22bdd182b8cd2a47515b20e04c13da3721f2be703ec6c"
@@ -181,6 +187,16 @@
       "path": "labwired/circuit.json",
       "bytes": 143,
       "sha256": "d7737eaa00e49602b3d44811c06a9405c9debaa092938b6623d0854568196527"
+    },
+    {
+      "path": "labwired/native-design.json",
+      "bytes": 559,
+      "sha256": "d42bba6ee8ccc4101471b77c9365d00c191fe62aea9c304cdc2df04ad0432aac"
+    },
+    {
+      "path": "labwired/native-sources.json",
+      "bytes": 1030,
+      "sha256": "758c1dbf8beb3ae9e284413db0df33da1a3aafa3fec3fb2fa53bee827b7949c4"
     },
     {
       "path": "manufacturing/drill/pico-carrier-NPTH.drl",
@@ -393,7 +409,7 @@
       "sha256": "dd5a588e7e0c7be56bdb95c4809dbf4e38ec63c515a8884384ee29af4a156469"
     },
     {
-      "path": "validation/local-build-uart.log",
+      "path": "validation/local-build-uart.txt",
       "bytes": 60,
       "sha256": "b0e4643fbe1a39d6204fd889ebad6b70d0f2083375c35433f2c0563153073e38"
     },
@@ -406,6 +422,16 @@
       "path": "validation/native-connectivity.json",
       "bytes": 2701,
       "sha256": "354d489e04d5df55f2e5be0f656ac38e1dc418225b9ef8b727febe1aa3b72c4e"
+    },
+    {
+      "path": "validation/native-import-validation.json",
+      "bytes": 6050,
+      "sha256": "5aa3c5090c21c45959ed4ebca4f7b7627d721b8e114b75e16dc5325f68684a0d"
+    },
+    {
+      "path": "validation/native-import.json",
+      "bytes": 5231,
+      "sha256": "554ce56e44d939dd54a4675ef4ccfcb0cc46fd5ec6d23c408f06c96121a7d5a1"
     },
     {
       "path": "validation/native-pico-solids.json",
@@ -423,7 +449,7 @@
       "sha256": "47d7fe9da5e378d4ee30092d03c52bc4c732e15b12ee1a8a120d9899e40412a5"
     },
     {
-      "path": "validation/production-smoke-uart.log",
+      "path": "validation/production-smoke-uart.txt",
       "bytes": 800,
       "sha256": "25cd30b3c93e80d97d60ab4b2a24b4c21569dbdbea37f30b8d2f6bf39bd799c5"
     },
@@ -452,5 +478,8 @@
       "bytes": 4605,
       "sha256": "aa2005db7af12baac048cbedb9b607f3849d786aeaacf61c42fdee4501f72024"
     }
-  ]
+  ],
+  "native_board_id": "pcb_ce2a5c8078eaf157",
+  "native_rules_ref": "sha256:3d3ee892b03a1f065286a96e12173ef6cdd5e07a55e8d9cfb5876154eea5775e",
+  "source_commit": "0e6d5bec42744cc908f01dbf6ba64f12ef244ccd"
 }
