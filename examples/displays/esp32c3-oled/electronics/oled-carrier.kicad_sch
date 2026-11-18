@@ -1,0 +1,1165 @@
+(kicad_sch (version 20260101) (generator "eeschema") (uuid "d6489bd9-4c0c-5967-99d7-eadc50e10c7d") (paper "A4") (title_block (title "XIAO ESP32C3 USB OLED carrier") (date "2026-11-18") (rev "A") (company "LabWired") (comment 1 "Adafruit 326 STEMMA QT / GPIO4 SDA / GPIO5 SCL / 0x3C"))
+(lib_symbols
+(symbol "oled-carrier:Socket7"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x07"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Socket7_1_1"
+			(rectangle
+				(start -1.27 8.89)
+				(end 1.27 -8.89)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 7.747)
+				(end 0 7.493)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 7.62 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "oled-carrier:Display4"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Display4_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "oled-carrier:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "oled-carrier:TestPoint"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TP"
+			(at 0 6.858 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "test point tp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Pin* Test*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TestPoint_0_1"
+			(circle
+				(center 0 3.302)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TestPoint_1_1"
+			(pin passive line
+				(at 0 0 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "oled-carrier:MountingHole"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MountingHole_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "oled-carrier:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(symbol (lib_id "oled-carrier:Socket7") (at 66.04 48.26 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "31a720cd-2e54-5ac7-b0e4-51d9ec254656")
+(property "Reference" "J2" (at 69.85 38.1 0) (effects (font (size 1.27 1.27))))
+(property "Value" "HSS-107-G-2" (at 69.85 60.96 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:Socket7" (at 66.04 48.26 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "HSS-107-G-2" (at 66.04 48.26 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 66.04 48.26 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f2ecb89f-fea9-5a0b-9f75-becc73124b14"))
+(pin "2" (uuid "9a6da0d6-cd90-5317-99e1-8a77ecc6fb1a"))
+(pin "3" (uuid "53c8b70b-6e5a-5e40-8c3c-78da8452446c"))
+(pin "4" (uuid "7dbd25fa-92a9-5fa7-badd-0b5b656044f1"))
+(pin "5" (uuid "f9386ec7-ed31-5362-93e9-c8e6babb650d"))
+(pin "6" (uuid "55813438-2149-577a-8406-1dc21ca62425"))
+(pin "7" (uuid "540207c4-8927-5189-b0ab-f2f0e36b674a"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "J2") (unit 1)))))
+(no_connect (at 60.96 40.64) (uuid "32d0695d-548a-5a98-8df6-1d73613bd9a5"))
+(no_connect (at 60.96 43.18) (uuid "5ca38317-bb04-5106-8474-aefdb61e68f7"))
+(wire (pts (xy 60.96 45.72) (xy 53.34 45.72)) (stroke (width 0) (type default)) (uuid "5650e03f-5e90-5037-84db-e4ba735a4cdb"))
+(label "SDA" (at 53.34 45.72 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "81299e32-8f29-51bc-96aa-7af245db6183"))
+(wire (pts (xy 60.96 48.26) (xy 53.34 48.26)) (stroke (width 0) (type default)) (uuid "37f81a52-98a4-525f-a1ba-2ad174a7c2e9"))
+(label "SCL" (at 53.34 48.26 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b77775bf-8b17-5c91-ac93-279e835387c8"))
+(no_connect (at 60.96 50.8) (uuid "62aa13f0-94f2-5474-b812-182205fd947c"))
+(no_connect (at 60.96 53.34) (uuid "20ada682-6a01-5805-961d-cf4b45596b64"))
+(no_connect (at 60.96 55.88) (uuid "bbe9e830-6689-53d3-8c86-337027c49d2e"))
+(symbol (lib_id "oled-carrier:Socket7") (at 66.04 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8d0d04b9-6a45-53b8-b1f6-5f6177f9e7dc")
+(property "Reference" "J3" (at 69.85 81.28 0) (effects (font (size 1.27 1.27))))
+(property "Value" "HSS-107-G-2" (at 69.85 104.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:Socket7" (at 66.04 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "HSS-107-G-2" (at 66.04 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 66.04 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "163053e7-cdb9-5eab-be54-17a4059404f5"))
+(pin "2" (uuid "c2555cc5-043b-5ab5-9744-dd03f26a6d74"))
+(pin "3" (uuid "0d4bd86e-3087-5f35-8b11-47c91b0563c9"))
+(pin "4" (uuid "eb60167a-9aae-5f91-aec0-13cd2c511512"))
+(pin "5" (uuid "c90b7db0-1e44-5fe4-81a5-abbc89020d12"))
+(pin "6" (uuid "0e312b18-8e5b-56e2-bd4f-26e441670871"))
+(pin "7" (uuid "309ed74f-2584-5b99-b30e-716e380f3101"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "J3") (unit 1)))))
+(no_connect (at 60.96 83.82) (uuid "7dfa1a97-8502-5f20-b9f0-c05239973464"))
+(no_connect (at 60.96 86.36) (uuid "1eb95026-abb5-578b-a8a8-1a200300c706"))
+(no_connect (at 60.96 88.9) (uuid "55501bc4-4d68-57b5-8d6e-57662745281a"))
+(no_connect (at 60.96 91.44) (uuid "6181edc6-8fbf-566a-8453-92b73d5922cf"))
+(wire (pts (xy 60.96 93.98) (xy 53.34 93.98)) (stroke (width 0) (type default)) (uuid "6fbe64f8-2ae5-52fc-9cd3-f4f820883e31"))
+(label "3V3" (at 53.34 93.98 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "33742a9a-023e-5136-bc49-dfed0f459bcb"))
+(wire (pts (xy 60.96 96.52) (xy 53.34 96.52)) (stroke (width 0) (type default)) (uuid "c24c34e5-0cc1-59ce-aa86-95eb6e93436e"))
+(label "GND" (at 53.34 96.52 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ed609065-b510-5b8d-a7c7-9c4de99225d8"))
+(no_connect (at 60.96 99.06) (uuid "32d8205e-5e6a-5fdb-afa3-c8406fd92b17"))
+(symbol (lib_id "oled-carrier:Display4") (at 210.82 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "52cf4d21-09d6-5e18-a6aa-0a067d8c9e32")
+(property "Reference" "J1" (at 214.63 55.88 0) (effects (font (size 1.27 1.27))))
+(property "Value" "STEMMA QT 3V3" (at 214.63 76.2 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:Display4" (at 210.82 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "SM04B-SRSS-TB(LF)(SN)" (at 210.82 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "JST" (at 210.82 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "11bb52b8-f855-566e-af33-88597c055503"))
+(pin "2" (uuid "ca2dff37-7f54-5ba8-b466-475f37f2a341"))
+(pin "3" (uuid "ca651035-a965-56b7-88b6-abb044e64a11"))
+(pin "4" (uuid "d80c9789-b871-5823-b302-8686f657e20c"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "J1") (unit 1)))))
+(wire (pts (xy 205.74 63.5) (xy 198.12 63.5)) (stroke (width 0) (type default)) (uuid "42a9f9e1-6466-59e5-8cf8-c17231fe3967"))
+(label "GND" (at 198.12 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a119cc38-87a3-5f56-b4ec-7c301c1cccb2"))
+(wire (pts (xy 205.74 66.04) (xy 198.12 66.04)) (stroke (width 0) (type default)) (uuid "77a49ec2-8377-5a6b-9dc1-2adf39646120"))
+(label "3V3" (at 198.12 66.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c266c720-cab4-5b3f-b40d-1fd323b23253"))
+(wire (pts (xy 205.74 68.58) (xy 198.12 68.58)) (stroke (width 0) (type default)) (uuid "b245ccf3-0879-5d83-9ae4-355dd6f36b2e"))
+(label "SDA" (at 198.12 68.58 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1af6025a-1313-5308-bcf4-0b31a175fd26"))
+(wire (pts (xy 205.74 71.12) (xy 198.12 71.12)) (stroke (width 0) (type default)) (uuid "cd27822e-04e2-59ab-8b6e-d265ba218956"))
+(label "SCL" (at 198.12 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3fe65a0d-f0ca-5164-bb43-a177c03c3eb5"))
+(symbol (lib_id "oled-carrier:R") (at 116.84 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c4bf2904-e76d-5ff3-8791-8f5617c0faa3")
+(property "Reference" "R1" (at 120.65 58.42 0) (effects (font (size 1.27 1.27))))
+(property "Value" "4.7k 1%" (at 120.65 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:R" (at 116.84 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "RC0603FR-074K7L" (at 116.84 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Yageo" (at 116.84 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "26161d95-3b93-564b-a3d8-99027c4fd3ae"))
+(pin "2" (uuid "dff982f8-5771-5091-b291-89b44d048c41"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "R1") (unit 1)))))
+(wire (pts (xy 116.84 59.69) (xy 116.84 54.61)) (stroke (width 0) (type default)) (uuid "465689e3-5f83-582e-bffe-9e4faea0ca84"))
+(label "3V3" (at 116.84 54.61 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ebb9d7e6-d672-54a5-bf91-b162e4ce7af1"))
+(wire (pts (xy 116.84 67.31) (xy 116.84 72.39)) (stroke (width 0) (type default)) (uuid "c3d6563e-a4c5-537e-847d-d2a909478bac"))
+(label "SDA" (at 116.84 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "519f76e6-9161-5482-87a2-bfbe0c843c58"))
+(symbol (lib_id "oled-carrier:R") (at 142.24 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6847bdff-5521-55fd-abf6-1193299f9228")
+(property "Reference" "R2" (at 146.05 58.42 0) (effects (font (size 1.27 1.27))))
+(property "Value" "4.7k 1%" (at 146.05 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:R" (at 142.24 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "RC0603FR-074K7L" (at 142.24 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Yageo" (at 142.24 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "c58f21a5-f15b-5917-a8ca-404d3517e0ac"))
+(pin "2" (uuid "9f433ee6-5db0-5925-80a9-91249d028e76"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "R2") (unit 1)))))
+(wire (pts (xy 142.24 59.69) (xy 142.24 54.61)) (stroke (width 0) (type default)) (uuid "826eeb36-7ff9-5c50-8bea-bc57f3a70aa5"))
+(label "3V3" (at 142.24 54.61 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "02277ec8-cd60-5871-82c3-7179c01d4caa"))
+(wire (pts (xy 142.24 67.31) (xy 142.24 72.39)) (stroke (width 0) (type default)) (uuid "aefdc060-e660-5be6-8a66-78ffa7d357a5"))
+(label "SCL" (at 142.24 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "da14c0e3-7128-5a70-a542-4b1aa3e02fbe"))
+(symbol (lib_id "oled-carrier:TestPoint") (at 111.76 101.6 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "6a674e74-8bc8-5764-8b29-c0d888a77882")
+(property "Reference" "TP1" (at 115.57 96.52 0) (effects (font (size 1.27 1.27))))
+(property "Value" "3V3" (at 115.57 106.68 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:TestPoint" (at 111.76 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "eff2d92a-1df3-53aa-9ef1-3a1110849788"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "TP1") (unit 1)))))
+(wire (pts (xy 111.76 101.6) (xy 111.76 106.68)) (stroke (width 0) (type default)) (uuid "45d7c6a1-5a0c-5a78-9f93-314dd31d53d7"))
+(label "3V3" (at 111.76 106.68 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fd5c1b41-eb16-5481-a9a6-ad00350a4d4f"))
+(symbol (lib_id "oled-carrier:TestPoint") (at 137.16 101.6 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "6ee11b9d-06c2-5b2e-a77b-3b98f89031ef")
+(property "Reference" "TP2" (at 140.97 96.52 0) (effects (font (size 1.27 1.27))))
+(property "Value" "GND" (at 140.97 106.68 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:TestPoint" (at 137.16 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f373fd9b-c55e-52d0-8977-cef4d4f10209"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "TP2") (unit 1)))))
+(wire (pts (xy 137.16 101.6) (xy 137.16 106.68)) (stroke (width 0) (type default)) (uuid "3ed69576-d697-513f-aecc-77c7f39d129d"))
+(label "GND" (at 137.16 106.68 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e5bb78bf-3e15-5950-acbf-07450c149a4d"))
+(symbol (lib_id "oled-carrier:TestPoint") (at 162.56 101.6 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "7a52c003-a7aa-5994-ae71-0a54f85a8e56")
+(property "Reference" "TP3" (at 166.37 96.52 0) (effects (font (size 1.27 1.27))))
+(property "Value" "SDA" (at 166.37 106.68 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:TestPoint" (at 162.56 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "6673b5cc-76f7-55a1-b494-5baf33b326da"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "TP3") (unit 1)))))
+(wire (pts (xy 162.56 101.6) (xy 162.56 106.68)) (stroke (width 0) (type default)) (uuid "05bb4202-d711-58e3-8dac-ae4ea46cf7dd"))
+(label "SDA" (at 162.56 106.68 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e6085957-ee42-5837-b489-baab4f4b900d"))
+(symbol (lib_id "oled-carrier:TestPoint") (at 187.96 101.6 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "fe4a43e6-5e49-50dc-b4af-e69dcc41cccf")
+(property "Reference" "TP4" (at 191.77 96.52 0) (effects (font (size 1.27 1.27))))
+(property "Value" "SCL" (at 191.77 106.68 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:TestPoint" (at 187.96 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "9550fe9e-1709-55e5-a733-acd56cf5937a"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "TP4") (unit 1)))))
+(wire (pts (xy 187.96 101.6) (xy 187.96 106.68)) (stroke (width 0) (type default)) (uuid "b59fa7da-a4b7-5b0a-88d3-2656c2387d3d"))
+(label "SCL" (at 187.96 106.68 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "79b6abb7-060a-53ac-8317-a6db3e31b984"))
+(symbol (lib_id "oled-carrier:MountingHole") (at 48.26 142.24 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "5dcff7d4-211b-5dd1-8365-d149e4cb6bdc")
+(property "Reference" "H1" (at 52.07 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9 mm NPTH" (at 52.07 147.32 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:MountingHole" (at 48.26 142.24 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "H1") (unit 1)))))
+(symbol (lib_id "oled-carrier:MountingHole") (at 93.98 142.24 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "8b50b55f-17c2-5ee8-aeb8-a20bd4d540bc")
+(property "Reference" "H2" (at 97.79 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9 mm NPTH" (at 97.79 147.32 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:MountingHole" (at 93.98 142.24 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "H2") (unit 1)))))
+(symbol (lib_id "oled-carrier:MountingHole") (at 139.7 142.24 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "77151688-d305-5de4-a166-78007eeb6d9d")
+(property "Reference" "H3" (at 143.51 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9 mm NPTH" (at 143.51 147.32 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:MountingHole" (at 139.7 142.24 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "H3") (unit 1)))))
+(symbol (lib_id "oled-carrier:MountingHole") (at 185.42 142.24 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "893101ae-6465-5089-b732-750bcbaf6d4b")
+(property "Reference" "H4" (at 189.23 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9 mm NPTH" (at 189.23 147.32 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "oled-carrier:MountingHole" (at 185.42 142.24 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "H4") (unit 1)))))
+(symbol (lib_id "oled-carrier:PWR_FLAG") (at 157.48 78.74 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "c3395255-2ce1-598b-948c-7fbbfd3e13e2")
+(property "Reference" "#FLG01" (at 161.29 73.66 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Value" "PWR_FLAG" (at 161.29 83.82 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "296be26e-fbcb-596c-acc0-01b4a0394d97"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "#FLG01") (unit 1)))))
+(wire (pts (xy 157.48 78.74) (xy 157.48 83.82)) (stroke (width 0) (type default)) (uuid "1d494793-9f28-5851-aee4-f17aee05a8c1"))
+(label "3V3" (at 157.48 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3761d544-b827-5fa9-adfb-a4fc67d57c24"))
+(symbol (lib_id "oled-carrier:PWR_FLAG") (at 175.26 78.74 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "91dc7fb5-2909-587b-b245-2fa4698c7ca6")
+(property "Reference" "#FLG02" (at 179.07 73.66 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Value" "PWR_FLAG" (at 179.07 83.82 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f2c44707-b1eb-5e91-a238-3e53caad7075"))
+(instances (project "oled-carrier" (path "/d6489bd9-4c0c-5967-99d7-eadc50e10c7d" (reference "#FLG02") (unit 1)))))
+(wire (pts (xy 175.26 78.74) (xy 175.26 83.82)) (stroke (width 0) (type default)) (uuid "7c5a9674-a82d-5e18-8f31-18162d45f5a4"))
+(label "GND" (at 175.26 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "290ef1cf-f445-51c7-af0b-fcc25792097f"))
+(text "USB OLED carrier - rev A" (at 25.4 15.24 0) (effects (font (size 2.54 2.54)) (justify left top)) (uuid "d12ec892-111c-531a-8c95-791b92fc9746"))
+(text "U1: Seeed Studio XIAO ESP32C3, SKU 113991054, mounted in J2/J3.\nUSB-C is the only power input and programming/debug port.\nLeave battery pads and VBUS unconnected. BOOT/RESET require lid removal." (at 25.4 22.86 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "4896046e-6e5a-55ec-b510-dbfc826eb7a5"))
+(text "J2 mates XIAO pins 1..7 in order.\n1=D0/GPIO2   2=D1/GPIO3\n3=D2/GPIO4 (SDA)   4=D3/GPIO5 (SCL)\n5=D4/GPIO6   6=D5/GPIO7   7=D6/GPIO21" (at 78.74 38.1 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "03f3c247-e8d3-52cf-bec3-3acd83f0c6c7"))
+(text "J3 mates XIAO pins 8..14 in order.\n1=D7/GPIO20   2=D8/GPIO8   3=D9/GPIO9\n4=D10/GPIO10   5=3V3   6=GND   7=VBUS\nUnused socket contacts are intentionally unconnected." (at 78.74 81.28 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "c37bd959-83f3-5e0e-865c-c946fdb030bb"))
+(text "DISP1: Adafruit 326, STEMMA QT revision\n100 mm Adafruit 4210 cable: pin 1 GND, 2 3V3, 3 SDA, 4 SCL.\nClose SJ3 (SA0 to GND) for address 0x3C.\nKeep factory I2C jumpers SJ1/SJ2 closed. Do not populate JP2.\nCarrier 4.7k pull-ups parallel the module 10k pull-ups (~3.20k).\nFirmware uses GPIO4/GPIO5 and 100 kHz I2C." (at 185.42 81.28 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "f817833b-ffa7-5196-a0d6-30513474d6c6"))
+(text "Test pads: probe after removing the lid.\nCheck 3V3 to GND before inserting U1 or the display cable.\nNo hardware measurements have been recorded for this revision." (at 96.52 116.84 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "019016a9-0fe1-5277-a54c-04986d429d1f"))
+(text "Mounting: four 2.9 mm non-plated holes, M2.5 screws.\n70 x 45 x 1.6 mm, two copper layers.\nKeep copper and non-mounting components outside the 3.5 mm mounting radius." (at 25.4 157.48 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "c4a8ed62-53d3-5893-86a1-784d702a0014"))
+(embedded_fonts no)
+)

@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-18T00:58:15.702995+00:00",
+  "kicad_version": "10.0.8",
+  "source_files": [
+    {
+      "path": "electronics/oled-carrier.kicad_pcb",
+      "bytes": 98441,
+      "sha256": "3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_sch",
+      "bytes": 33263,
+      "sha256": "ccbb910a03ae74da0abe2c5e28c1275ef92e16400162aa46553b640aea68d99f"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_pro",
+      "bytes": 908,
+      "sha256": "e9f5be08584ecb105fc9f3dcd9a000939d09becba83554a62ae282b5952cc92c"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_dru",
+      "bytes": 173,
+      "sha256": "c7f0bf1ac25518967c08b1483de8b06257d821b5bbbd735ba219b213d16de9d1"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_sym",
+      "bytes": 14760,
+      "sha256": "e42a74a48e9cedcd31041c144a9c174accd8491b56e4e31bf3a76b45436b0984"
+    },
+    {
+      "path": "electronics/fp-lib-table",
+      "bytes": 166,
+      "sha256": "c768450112af6e21af6983662a51008077dff582185fbec4a2b550d8a9d29907"
+    },
+    {
+      "path": "electronics/sym-lib-table",
+      "bytes": 174,
+      "sha256": "c12fab3921269cbac23a7ce032494d921fd524bc32b2b67b1f3dbeecc115057d"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/Display4.kicad_mod",
+      "bytes": 5175,
+      "sha256": "efade989a0a6d7a5d5b07183b66521498ba9b6f4129d8fe1bbd04247d62f352f"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/MountingHole.kicad_mod",
+      "bytes": 1283,
+      "sha256": "5338e639154e928d89c918a14751f74b94c6fc36d8865219bcd905f409f446a1"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/R.kicad_mod",
+      "bytes": 1927,
+      "sha256": "6815a2b35d141fe7a05c3c16d461b6a08abc38f5cfca4aa50a0fdd7a2f1290ac"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/Socket7.kicad_mod",
+      "bytes": 3781,
+      "sha256": "0617bac5d7e74f2bb3e7a5073ae7c856d2faac49474b371ee09d5ac73a46e2d4"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/TestPoint.kicad_mod",
+      "bytes": 1745,
+      "sha256": "85191310ec9441ccfc23a1b699133b7468f39be889683b83f50bec9ac0a3762f"
+    },
+    {
+      "path": "hardware-interface.json",
+      "bytes": 6725,
+      "sha256": "238ab4ab67aecb90d90e87e2469c3d30fdaef9cebd8e229e3ac9e05e55ee2e42"
+    },
+    {
+      "path": "electronics-bom.csv",
+      "bytes": 2171,
+      "sha256": "f95862d298108dc76cad9d23bc72f58b3f455db77ada2a6cb398eb954641eb51"
+    },
+    {
+      "path": "electronics/provenance.json",
+      "bytes": 5898,
+      "sha256": "63698fae85d4c20df48832dfc7b37b24be4115ed9554262c414d0f399e0d0893"
+    }
+  ],
+  "erc": {
+    "errors": 0,
+    "warnings": 0,
+    "ignored_default_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ],
+    "receipt": "erc.json",
+    "report_date": "2026-11-18T00:54:21"
+  },
+  "drc": {
+    "errors": 0,
+    "warnings": 0,
+    "unconnected_items": 0,
+    "schematic_parity_issues": 0,
+    "explicit_exclusions": [],
+    "ignored_default_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ],
+    "receipt": "drc.json",
+    "report_date": "2026-11-18T00:54:46"
+  },
+  "physical_pin_contract": {
+    "J2.3": "/SDA",
+    "J2.4": "/SCL",
+    "J3.5": "/3V3",
+    "J3.6": "/GND",
+    "J1.1": "/GND",
+    "J1.2": "/3V3",
+    "J1.3": "/SDA",
+    "J1.4": "/SCL"
+  },
+  "carrier_component_count": 5,
+  "footprint_count": 13,
+  "functional_nets": 4,
+  "intentionally_unconnected_socket_contacts": 10,
+  "track_segments": 39,
+  "vias": 7,
+  "drill_counts": {
+    "plated_socket_0_8_mm": 14,
+    "plated_via_0_3_mm": 7,
+    "non_plated_mount_2_9_mm": 4
+  },
+  "physical_hardware_tested": false,
+  "simulation_scope": "Firmware and peripheral model verification is separate. Native copper verification does not prove firmware behavior or a manufactured assembly.",
+  "hardware_data_limitations": [
+    "No physical prototype or USB cable overmold measurement.",
+    "Native v1.3 XIAO thickness of 1.6 mm differs from the older official STEP thickness of 1.0 mm; the enclosure uses a conservative envelope.",
+    "Adafruit 326 must be the STEMMA QT revision. Close SJ3 and verify 0x3C during bring-up."
+  ],
+  "bare_step": {
+    "path": "oled-carrier-bare.step",
+    "source": "KiCad 10.0.8 board-only export",
+    "bounding_box_mm": [
+      [
+        0,
+        -45,
+        0
+      ],
+      [
+        70,
+        0,
+        1.51
+      ]
+    ],
+    "scope": "1.51 mm substrate; nominal finished copper/mask stack is 1.6 mm. This is not a populated board assembly.",
+    "enclosure_use": "Keep XY and holes. Scale Z by 1.6/1.51 only for conservative finished-board clearance; CAD records the explicit transform.",
+    "sha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+  },
+  "output_files": [
+    {
+      "path": "manufacturing/drc.json",
+      "bytes": 1069,
+      "sha256": "acf71801b2a284f3cff9cfd84951016ad08258b21655b09078dc6526fda02290"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-NPTH-drl_map.pdf",
+      "bytes": 12447,
+      "sha256": "d7564a6e3546556f46e1ece34db2250ae91a94bfcb520153f7af7867b0d609e8"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-NPTH.drl",
+      "bytes": 414,
+      "sha256": "c66c90d2d9b66c0043ba2c169599fe8f54376d3ba237ffbe745c83ace0f6164a"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-PTH-drl_map.pdf",
+      "bytes": 13111,
+      "sha256": "a67d61cc0b859ac58f80cee2129986574ba66decc7081baaf1e1835afd2cec63"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-PTH.drl",
+      "bytes": 688,
+      "sha256": "6b669162533134998ab7d1a5a0bd422485cdd2263b3ea9aab878a2dcea311ee7"
+    },
+    {
+      "path": "manufacturing/drill-report.txt",
+      "bytes": 699,
+      "sha256": "a59f4fb2fec6583da94426e0f3f300a135e1610602125fcf0a6cf526b6619988"
+    },
+    {
+      "path": "manufacturing/erc.json",
+      "bytes": 985,
+      "sha256": "aa3698b7e2828f6bd04172dcc6c94db0c7499b3746995640a90f81f6155cf128"
+    },
+    {
+      "path": "manufacturing/fabrication-settings.json",
+      "bytes": 1106,
+      "sha256": "855624d97e4d0ac9b3e10c7eaa91a9543ec8cfcd99eb6469632558c8588882a2"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Cu.gbl",
+      "bytes": 35371,
+      "sha256": "d1d49b60234224a8f4d28eef20c43a11d931af912b8881fdc60a8f2841764ef1"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Mask.gbs",
+      "bytes": 1124,
+      "sha256": "5969b6ca4a634f629553267f96c0ba2755572bdc19f3ccebb7e69d25259e0ced"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Silkscreen.gbo",
+      "bytes": 500,
+      "sha256": "53f8b4ef0651faba269ffc7ed193d64bbb5d9269ebefa6528ed748e5dd061c0e"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-Edge_Cuts.gm1",
+      "bytes": 947,
+      "sha256": "0c6537c7b59a87575227c3d7373fa6b180631cbe4b62fd9bc432615936a2838c"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Cu.gtl",
+      "bytes": 4859,
+      "sha256": "26b9ac44741241ffc575e47d5c02cc1d84a8b2272f623874f455c33deefeba1d"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Mask.gts",
+      "bytes": 2497,
+      "sha256": "f62ca8e128ec836332347a705a4f238dfa7191a86c69fdea42cf7fa597d81591"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Paste.gtp",
+      "bytes": 1670,
+      "sha256": "d8f11ba8e080dce1d33b604fbbff2ea6aed1990439db0d02c8a0780116dcd12a"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Silkscreen.gto",
+      "bytes": 43868,
+      "sha256": "7861d794760ce2045628d3b35787f62142473d2331349f2944f7a19fd0fd1191"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-job.gbrjob",
+      "bytes": 2622,
+      "sha256": "8f537831d35cf88a1457dc4d83dff9a900a5e44329d3ca05366fe8e47b060d57"
+    },
+    {
+      "path": "manufacturing/oled-carrier-bare.step",
+      "bytes": 53022,
+      "sha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+    },
+    {
+      "path": "manufacturing/oled-carrier-bottom.svg",
+      "bytes": 27487,
+      "sha256": "77a984dbbe9a0fde24580ff7a2e543fbb8c260881292b89896306868d542edba"
+    },
+    {
+      "path": "manufacturing/oled-carrier-fabrication.zip",
+      "bytes": 39247,
+      "sha256": "12be533f71c17badf8b102da76c3692a712b67caa7f705e19e4ef8799a19b1bb"
+    },
+    {
+      "path": "manufacturing/oled-carrier-positions.csv",
+      "bytes": 336,
+      "sha256": "1ba82c60db1128fba19b0eb5e05d041cb0e59ea93ba82621edc3c1998b93774a"
+    },
+    {
+      "path": "manufacturing/oled-carrier-schematic.pdf",
+      "bytes": 83955,
+      "sha256": "752598606692b33f3ebcb304cbc9bc8d6feab0fec2dfc4a536d9dbbf36ae4496"
+    },
+    {
+      "path": "manufacturing/oled-carrier-top.svg",
+      "bytes": 58067,
+      "sha256": "0bde306e6ba06df4d293e7ec63fb6f7b2f79a74b7141ec09a4142836f4e9386f"
+    },
+    {
+      "path": "manufacturing/oled-carrier.net.xml",
+      "bytes": 20272,
+      "sha256": "7e7255237256419e6417a3a6481ab03d192fd6a97d020d61bc6b1130c89c58c7"
+    },
+    {
+      "path": "manufacturing/reproduce.txt",
+      "bytes": 3374,
+      "sha256": "978bab1ac09c2a0062928e256453368db78af0f301d107fdc569229e4ebb086f"
+    }
+  ]
+}
