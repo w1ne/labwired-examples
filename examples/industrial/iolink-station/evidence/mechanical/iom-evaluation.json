@@ -1,0 +1,277 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 8453.50093332023
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            0,
+            -3,
+            0
+          ],
+          "max": [
+            73.1,
+            73.75,
+            1.67
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-NvNlEd",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 8453.50093332023,
+    "faceCount": 274,
+    "size": [
+      73.1,
+      76.75,
+      1.67
+    ]
+  },
+  "featureCount": 7,
+  "diagnostics": [],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "ae0fa3bb3fb24df3514aeeae7ad88b4340970c0040b236a97a541626f78de042",
+      "byteLength": 7238
+    },
+    "parameters": {
+      "values": {},
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "66e8b0c6bd908941f4fddc2a41454ff79fa82eff"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "2d962c16787d4aa41d31b0299da872302d738a4c61a2c6fe6319c0f094bea797"
+  },
+  "selections": [
+    {
+      "consumerFeatureId": "holes_1",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 5193.3314,
+          "centroid": [
+            36.55,
+            32.708999896097524,
+            1.67
+          ]
+        }
+      ],
+      "partDiagonal": 106.00453509453261
+    },
+    {
+      "consumerFeatureId": "holes_2",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 5184.94032414619,
+          "centroid": [
+            36.55042932715508,
+            32.713641547483896,
+            1.6700000000000002
+          ]
+        }
+      ],
+      "partDiagonal": 106.00453509453261
+    },
+    {
+      "consumerFeatureId": "holes_3",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 5083.207650152859,
+          "centroid": [
+            36.53594142825101,
+            32.43962363676392,
+            1.67
+          ]
+        }
+      ],
+      "partDiagonal": 106.00453509453261
+    },
+    {
+      "consumerFeatureId": "holes_4",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 5078.302721755195,
+          "centroid": [
+            36.54177130136811,
+            32.469931953543515,
+            1.6700000000000002
+          ]
+        }
+      ],
+      "partDiagonal": 106.00453509453261
+    },
+    {
+      "consumerFeatureId": "holes_5",
+      "selectorText": "top",
+      "syntax": "lineage",
+      "fingerprints": [
+        {
+          "entityKind": "face",
+          "geomType": "PLANE",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "size": 5072.706137648562,
+          "centroid": [
+            36.54843702974338,
+            32.501783395067605,
+            1.67
+          ]
+        }
+      ],
+      "partDiagonal": 106.00453509453261
+    },
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(holes_5)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 106.00453480865808
+    }
+  ],
+  "requirements": {
+    "ok": true,
+    "status": "pass",
+    "entries": [
+      {
+        "name": "factory-outline-and-thickness",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          73.1,
+          76.75,
+          1.67
+        ],
+        "limit": {
+          "x": [
+            73.09899999999999,
+            73.101
+          ],
+          "y": [
+            76.749,
+            76.751
+          ],
+          "z": [
+            1.669,
+            1.671
+          ]
+        },
+        "margin": 0.0009999999999998899,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(holes_5)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 106.00453480865808
+          }
+        ],
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "bbox",
+          "a": {
+            "kind": "body",
+            "ref": "holes_5"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              73.09899999999999,
+              73.101
+            ],
+            "y": [
+              76.749,
+              76.751
+            ],
+            "z": [
+              1.669,
+              1.671
+            ]
+          }
+        }
+      }
+    ],
+    "summary": {
+      "pass": 1,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "saved_project": {
+    "slug": "GkjHukjb",
+    "url": "https://app.kernelcad.com/p/GkjHukjb",
+    "version": 1,
+    "created": true
+  },
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z"
+}

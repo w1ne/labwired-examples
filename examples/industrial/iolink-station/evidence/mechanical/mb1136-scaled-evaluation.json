@@ -1,0 +1,156 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 8757.236530052976
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -0.00000856526684644976,
+            -82.5,
+            0
+          ],
+          "max": [
+            70.00000149415206,
+            0.0000014941520569689004,
+            1.59112
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-vUQTYh",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 8757.236530052976,
+    "faceCount": 174,
+    "size": [
+      70.00001005941891,
+      82.50000149415206,
+      1.59112
+    ]
+  },
+  "featureCount": 2,
+  "diagnostics": [],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "98c922bbb015d15d9e67bc05482a247b3ce2462a5e091f4c5a2e3667497a7c4a",
+      "byteLength": 403
+    },
+    "parameters": {
+      "values": {},
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "bf671690568f207dbf52471b5756de6645bf04d3"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "ab0b056c340ad4d54d7477962785c51f2427d9686a8212cd195a4941bbf7d606"
+  },
+  "selections": [
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 108.20713154736262
+    }
+  ],
+  "requirements": {
+    "ok": true,
+    "status": "pass",
+    "entries": [
+      {
+        "name": "factory-milled-board-and-source-stack",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          70.00001005941891,
+          82.50000149415206,
+          1.59112
+        ],
+        "limit": {
+          "x": [
+            69.9999,
+            70.0001
+          ],
+          "y": [
+            82.4999,
+            82.5001
+          ],
+          "z": [
+            1.59102,
+            1.59122
+          ]
+        },
+        "margin": 0.00008994058109124126,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 108.20713154736262
+          }
+        ],
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "bbox",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              69.9999,
+              70.0001
+            ],
+            "y": [
+              82.4999,
+              82.5001
+            ],
+            "z": [
+              1.59102,
+              1.59122
+            ]
+          }
+        }
+      }
+    ],
+    "summary": {
+      "pass": 1,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "serverBuild": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z"
+}

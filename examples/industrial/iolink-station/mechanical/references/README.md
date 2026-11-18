@@ -12,6 +12,11 @@ bounding rectangle on Edge.Cuts. The real milling geometry remains on
 Mechanical 1: 70 x 82.5 mm, with rounded corners, lower tab and ST-LINK
 breakaway slots. This matches UM1724 Rev 17, Figure 5. The conversion retains
 the three existing 3.2 mm mounting holes and the native 1.59112 mm stack.
+The board-only STEP contains the 1.50000 mm substrate. The fitted assembly
+uses an explicit positive Z scale of 1.59112/1.5 for the finished-stack
+mechanical envelope; it retains native X/Y and the populated-side +Z normal.
+The independent native inspection and scaled evaluation are in the evidence
+directory. The scale is not a fabricated copper or component model.
 
 `../tools/prepare-mb1136-reference.py` moves those factory milling entities to
 Edge.Cuts. It drops one zero-length marker and trims a 0.030 mm line overrun at
@@ -43,3 +48,19 @@ ST's original notice is retained in `ST-MB1136-NOTICE.txt`. The ST-derived
 reference files remain under their source terms and are not relicensed as MIT.
 The authored conversion script uses the repository license. Purchased-board
 variant, connector-height and as-built tolerances require their own evidence.
+
+## IO-Link shield references
+
+`iom-factory-board` and `iod-factory-board` retain the eight factory outline
+segments and all 264/185 drill centres from the paired ST fabrication archives.
+Every plated drill centre is cross-checked against its factory TOP copper
+flash. The adjacent geometry JSON records the member hashes, coordinate
+format, counts, thickness source and calculated volume. Both drawings specify
+a 1.67 mm reference full stack. `../tools/extract-shield-geometry.py` generates
+the editable KernelCAD sources from the verified extracted Gerbers.
+
+These are purchased-board mechanical references. They do not claim a
+reconstructed routed PCB or a manufacturer-supplied populated 3D model. Their
+KernelCAD exports re-import as valid single solids; measured volume matches
+the factory polygon area minus all drill bores. The final station must add
+source-qualified connector bodies and preserve native coordinate handedness.
