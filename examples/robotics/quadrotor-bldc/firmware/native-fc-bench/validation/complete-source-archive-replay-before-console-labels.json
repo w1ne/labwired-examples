@@ -1,0 +1,34 @@
+{
+  "source_archive_sha256": "9d12a8715a162bd4e6cc98cf8bf961c11ee209e5003d73a62b3dab7e5f987cf3",
+  "status": "pass",
+  "argv": [
+    "python3",
+    "-u",
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-archive-replay-6/source/openfc-native-motor-bench/build.py",
+    "--work-dir",
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-archive-replay-6/work",
+    "--toolchain",
+    "/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi",
+    "--jobs",
+    "2"
+  ],
+  "exit": 0,
+  "seconds": 96.3772075176239,
+  "artifacts": {
+    "openfc_motor_bench.elf": {
+      "bytes": 432448,
+      "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b",
+      "byte_identical": true
+    },
+    "openfc_motor_bench.bin": {
+      "bytes": 21884,
+      "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780",
+      "byte_identical": true
+    },
+    "openfc_motor_bench.uf2": {
+      "bytes": 44032,
+      "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502",
+      "byte_identical": true
+    }
+  }
+}

@@ -12,8 +12,8 @@ The native PCB/netlist, not a historical reworked board target, defines these ro
 | Motor2 bidirectional DShot600 |30|P1.6|
 | Motor3 bidirectional DShot600 |29|P1.7|
 | Motor4 bidirectional DShot600 |28|P1.8|
-| Host UART0 transmit |0|Native UART0 net|
-| Host UART0 receive |1|Native UART0 net|
+| Host UART0 transmit |0|U8.3; test pad J49.1|
+| Host UART0 receive |1|U8.4; test pad J48.1|
 | Active-high status LED |12|D1|
 
 The processor is the QFN80 / 48 GPIO RP2354B with 2 MiB stacked flash. The SDK configures 150 MHz. PIO0 state machines 0–3 run at 75 MHz, and eight real DMA channels feed four transmit FIFOs and drain four receive FIFOs. Each output bit takes 125 PIO clocks. A zero uses 41 clocks low and 84 high; a one uses 84 low and 41 high. The wire is inverted and each request carries an inverted DShot checksum.
@@ -24,7 +24,22 @@ The receive program releases output-enable, waits for an actual falling edge and
 
 ## Host commands
 
-Use a 3.3 V UART adapter, 115200 baud, 8 data bits, no parity, 1 stop bit, common ground. Commands are ASCII lines terminated by LF. CR before LF is accepted. Commission the motor bench with propellers removed.
+Use the packaged FTDI `TTL-232R-3V3-WE` solder harness. Set 115200 baud, 8 data bits, no parity and 1 stop bit. Disable RTS/CTS and XON/XOFF flow control. The board's USB port is for ROM BOOTSEL flashing; this application does not implement a USB console.
+
+| FTDI conductor | Connection on the FC | Signal |
+| --- | --- | --- |
+| Orange TXD | J48.1 | GPIO1, UART0 receive |
+| Yellow RXD | J49.1 | GPIO0, UART0 transmit |
+| Black GND | J51.1 | Common ground |
+| Red +5 V | Individually insulated, unconnected | Cable power output |
+| Brown CTS# | Individually insulated, unconnected | Unused handshake input |
+| Green RTS# | Individually insulated, unconnected | Unused handshake output |
+
+The adapter uses 3.3 V signals, but its red power lead is +5 V. Use the assembly's documented power input and leave that lead insulated. The three solder connections, restraint and unused-conductor parking are specified by `source/host-console-harness.json` and the main package's assembly instructions. Verify the native pad reference and signal before soldering; the label correction changed hidden values only and preserved every copper connection.
+
+For electrical tracing, the existing U8 connector is JST `SM06B-SRSS-TB(LF)(SN)`: pin 1 is +10 V, pin 2 GND, pin 3 GPIO0/UART0 TX, pin 4 GPIO1/UART0 RX, pin 5 GND and pin 6 UART1 RX. U8 is an electrical reference here; the packaged console uses the three solder pads in the table.
+
+Commands are ASCII lines terminated by LF. CR before LF is accepted. Commission the motor bench with propellers removed.
 
 | Command | Result |
 | --- | --- |

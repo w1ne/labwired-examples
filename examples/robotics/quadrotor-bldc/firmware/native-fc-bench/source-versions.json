@@ -5,9 +5,9 @@
   "gcc_archive_url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz",
   "gcc_version": "13.3.1",
   "source_date_epoch": 1787049419,
-  "native_board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+  "native_board_sha256": "0dd6d998387854d45afd1a9649bfd59e6818aea89bdd68ece065a30a8be3b4b7",
   "native_schematic_sha256": "36dba5ebd75912f935bc4d5f2e8f00a7d07f7f4628c6047bb0be40bbb745c0fc",
-  "native_export_uncompressed_sha256": "95348ddeb855a944bc3b0bc13586bc8a7d0638cc81c594c7937e183742b1e52c",
+  "native_export_uncompressed_sha256": "c4a9d739a2271606b218d39a24a216e8eaa116d5e542e3aba95fb765bb183615",
   "identity": "openfc-native-motor-bench",
   "target": "rp2354b",
   "flash_bytes": 2097152,
@@ -26,5 +26,18 @@
   "source_archives": {
     "picotool-de8ae5ac334e.tar.gz": "8a327353116dfd950a1610e3379a407b3cf22321e931a9c2bef68752a7f9b816",
     "pico-sdk-ee68c78d0afa.tar.gz": "debc9a0dda356b97c546ce90cbc6ad9f02f343c3c5960f4ead557250e6a081c1"
+  },
+  "native_schematic_sheet_sha256": {
+    "pads.kicad_sch": "185f16b9941818ca236396469589f97350548c11eafcf484c00ecc888bb3395a"
+  },
+  "native_console_label_revision": {
+    "commit": "6991f688dcb532d42e9732191bba6ed9a3f30497",
+    "scope": "Hidden J48/J49/J51 values only; all 113 native net partitions are preserved.",
+    "netlist_bytes": 277377
+  },
+  "host_console_harness": {
+    "path": "source/host-console-harness.json",
+    "sha256": "18eb70e56876c9e865d80a54dd6df609c0171702df64b4a83ad04c65ebc53199",
+    "mpn": "TTL-232R-3V3-WE"
   }
 }
