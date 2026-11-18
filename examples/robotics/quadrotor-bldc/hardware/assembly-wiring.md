@@ -17,8 +17,9 @@ in [system-bom.csv](system-bom.csv).
   tolerances, ripple current and impedance. Support the body and insulate the leads.
 - OpenESC is a real four-channel design. Four AT32F421G8U7 MCUs implement AM32/DShot,
   with four NSG2065Q gate drivers and 24 SP40N01GHNK MOSFETs.
-- OpenFC-Lite uses an RP2354B and Betaflight, 30.5 mm stack spacing. It drives four
-  DShot signal lines, with the ESC power stage providing high current.
+- OpenFC-Lite uses an RP2354B with 30.5 mm stack spacing. The native motor-bench
+  image drives GPIO31/30/29/28 through PIO/DMA bidirectional DShot600. The separate
+  Betaflight image is the optional flight-stack track, with its own acceptance record.
 - Four EMAX ECO II 2306 2400KV motors have three independent phase wires each,
   and are installed on the frame's 16×16 mm M3 motor mounts.
 
@@ -45,6 +46,42 @@ the loop clear of board edges and propeller sweeps. The exact pad centres
 and native-to-assembly XY transforms are in
 [native-harness-endpoints.json](native-harness-endpoints.json). Pad centres
 are not connector mating-face datums.
+
+### Native motor-bench host console
+
+Use the **FTDI TTL-232R-3V3-WE** cable in the BOM. The controller runs UART0
+at **115200 baud, 8 data bits, no parity, one stop bit, no flow control**.
+Solder its three used conductors to these top-side pads:
+
+| FTDI conductor | Direction at the cable | Native FC landing | MCU connection |
+|---|---|---|---|
+| Orange TXD | Host to FC | J48.1, UART0_RX | U2.78 / GPIO1 |
+| Yellow RXD | FC to host | J49.1, UART0_TX | U2.77 / GPIO0 |
+| Black GND | Common reference | J51.1, GND | Native board ground |
+
+The cable's UART signals are 3.3 V. Its **red conductor is a +5 V output**;
+leave red, brown CTS# and green RTS# unconnected and individually insulated.
+Keep all exposed metal inside the insulation. Trim the used tinned ends to
+the actual pad length, preserve insulation up to the solder joint, and
+check all three connections against the native netlist before connecting USB.
+
+The cable has a nominal 30 +/-2 mm wire breakout. Restrain its 5 mm jacket
+before that breakout and secure the three parked conductors separately so
+pull cannot reach the PCB pads. The selected sleeves and two ties are in
+the BOM. Installed sleeve, joint and support clearances remain part of the
+fitted assembly review; no cable-core insulation diameter is invented.
+
+This is the single packaged console hookup. U8 carries the same UART nets
+on pins 3/4 and ground on 2/5, but it has no console harness installed here.
+U8.1 is +10 V and U8.6 is UART1_RX; both remain unused by this console.
+The native J48/J49/J51 hidden values have been corrected from the copied
+5V template without changing any copper or net partition.
+
+The bench firmware accepts status, arm, set, all and stop commands through
+this UART. Its onboard USB connector is used for the separate ROM BOOTSEL
+flashing workflow. This application does not implement a USB serial console.
+See [the cable source and pin record](host-console-harness.json) and
+[the physical firmware contract](../firmware/native-fc-bench/README.md).
 
 ### Battery connection and retention
 

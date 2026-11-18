@@ -861,7 +861,7 @@
   },
   "fc": {
     "path": "hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb",
-    "sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+    "sha256": "0dd6d998387854d45afd1a9649bfd59e6818aea89bdd68ece065a30a8be3b4b7",
     "footprints": [
       {
         "reference": "CN1",
@@ -1163,6 +1163,90 @@
         "assemblyXYMm": [
           -1.1212,
           1.8397
+        ]
+      },
+      {
+        "reference": "J48",
+        "value": "UART0_RX",
+        "orientationDeg": -90.0,
+        "xyMm": [
+          148.06,
+          103.42
+        ],
+        "pads": [
+          {
+            "number": "1",
+            "net": "/PADS/UART0_RX",
+            "xyMm": [
+              148.06,
+              103.42
+            ],
+            "layer": "F.Cu",
+            "sizeMm": [
+              2.2,
+              1.6
+            ],
+            "assemblyXYMm": [
+              -5.0312,
+              -29.0103
+            ]
+          }
+        ]
+      },
+      {
+        "reference": "J49",
+        "value": "UART0_TX",
+        "orientationDeg": -90.0,
+        "xyMm": [
+          150.56,
+          103.42
+        ],
+        "pads": [
+          {
+            "number": "1",
+            "net": "/PADS/UART0_TX",
+            "xyMm": [
+              150.56,
+              103.42
+            ],
+            "layer": "F.Cu",
+            "sizeMm": [
+              2.2,
+              1.6
+            ],
+            "assemblyXYMm": [
+              -2.5312,
+              -29.0103
+            ]
+          }
+        ]
+      },
+      {
+        "reference": "J51",
+        "value": "GND",
+        "orientationDeg": -90.0,
+        "xyMm": [
+          155.5,
+          103.4
+        ],
+        "pads": [
+          {
+            "number": "1",
+            "net": "GND",
+            "xyMm": [
+              155.5,
+              103.4
+            ],
+            "layer": "F.Cu",
+            "sizeMm": [
+              2.2,
+              1.6
+            ],
+            "assemblyXYMm": [
+              2.4088,
+              -28.9903
+            ]
+          }
         ]
       }
     ],

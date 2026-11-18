@@ -1,0 +1,118 @@
+{
+  "scope": "Correct hidden template Value properties only. Native copper, pads, routing, placed component geometry, visible drawing text, and net partitions must remain identical.",
+  "values": {
+    "J48": "UART0_RX",
+    "J49": "UART0_TX",
+    "J51": "GND"
+  },
+  "commands": [
+    {
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/validation/20261118-console-labels/before.net.xml",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_sch"
+      ],
+      "exit": 0,
+      "seconds": 5.27102460002061,
+      "log": "before-netlist.log"
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/validation/20261118-console-labels/after.net.xml",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_sch"
+      ],
+      "exit": 0,
+      "seconds": 1.0979628560016863,
+      "log": "after-netlist.log"
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--output",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/validation/20261118-console-labels/drc.json",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb"
+      ],
+      "exit": 0,
+      "seconds": 4.7894110339693725,
+      "log": "drc.log"
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--output",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/validation/20261118-console-labels/erc.json",
+        "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_sch"
+      ],
+      "exit": 0,
+      "seconds": 5.681398260989226,
+      "log": "erc.log"
+    }
+  ],
+  "files": [
+    {
+      "path": "hardware/OpenFC.kicad_pcb",
+      "beforeSha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+      "afterSha256": "0dd6d998387854d45afd1a9649bfd59e6818aea89bdd68ece065a30a8be3b4b7",
+      "onlyKnownValuePropertiesChanged": true
+    },
+    {
+      "path": "hardware/pads.kicad_sch",
+      "beforeSha256": "47e31e7e8c903454c8c6f9f05289d50c979327ec30e4a49c0747e8e635e36f18",
+      "afterSha256": "185f16b9941818ca236396469589f97350548c11eafcf484c00ecc888bb3395a",
+      "onlyKnownValuePropertiesChanged": true
+    }
+  ],
+  "netPartitionCount": 113,
+  "netPartitionsPreserved": true,
+  "exportedValues": {
+    "J48": "UART0_RX",
+    "J49": "UART0_TX",
+    "J51": "GND"
+  },
+  "before.net.xml": {
+    "sha256": "81dc68839e27d00026f62776ad8ba42e40cef4e873bf8edab51bff69d3bc2ae5",
+    "bytes": 277364
+  },
+  "after.net.xml": {
+    "sha256": "c4a9d739a2271606b218d39a24a216e8eaa116d5e542e3aba95fb765bb183615",
+    "bytes": 277377
+  },
+  "diagnostics": {
+    "drc": {
+      "violations": 0,
+      "errors": 0,
+      "warnings": 0,
+      "unconnected": 0,
+      "schematicParity": 0
+    },
+    "erc": {
+      "violations": 0,
+      "errors": 0,
+      "warnings": 0,
+      "unconnected": 0,
+      "schematicParity": 0
+    }
+  }
+}

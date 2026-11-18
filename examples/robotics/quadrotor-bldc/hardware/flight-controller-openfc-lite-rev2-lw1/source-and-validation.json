@@ -14,7 +14,7 @@
   },
   "hardware_files_sha256": {
     "hardware/OpenFC.kicad_dru": "86275a61a5c8cd29d4a6315bb026524cecdf5eb6d01deaa60be3b1c6af365f0d",
-    "hardware/OpenFC.kicad_pcb": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+    "hardware/OpenFC.kicad_pcb": "0dd6d998387854d45afd1a9649bfd59e6818aea89bdd68ece065a30a8be3b4b7",
     "hardware/OpenFC.kicad_prl": "e68674173bb9a233745080fd7218c8591ab9a9bcc401bf7df2ceb9445bc560eb",
     "hardware/OpenFC.kicad_pro": "1ad2949fe79436a92685d25c8ddbddc3bda77cf13f8f03889318030023467b95",
     "hardware/OpenFC.kicad_sch": "36dba5ebd75912f935bc4d5f2e8f00a7d07f7f4628c6047bb0be40bbb745c0fc",
@@ -113,7 +113,7 @@
     "hardware/lib.pretty/X3-DFN0603-2_L0.6-W0.3-RD.kicad_mod": "befe87382ddb696ef01f35c3356de2ceead42d2ce0b156385a2ca91ea17c3bd8",
     "hardware/lib.pretty/small_pad.kicad_mod": "a781a58adb78b45496389103879fc742f932e0d8a353d9d3003f0ca3920cfa5c",
     "hardware/osd.kicad_sch": "486ecf9d039a1b27f078d24f0121b005645ea4c7a019b5eb97e04f3161f6bae0",
-    "hardware/pads.kicad_sch": "47e31e7e8c903454c8c6f9f05289d50c979327ec30e4a49c0747e8e635e36f18",
+    "hardware/pads.kicad_sch": "185f16b9941818ca236396469589f97350548c11eafcf484c00ecc888bb3395a",
     "hardware/power.kicad_sch": "9da39fde1995929e147f370f95fc6eeb14f257904f8bd8e5d15809256c1fad38",
     "hardware/rp2350a.kicad_sch": "6c259305027e5f0ee1ce1e55e5842fc4ed88b873574f7d69093e20f706d26277",
     "hardware/sym-lib-table": "396e1573f6e4e1361938da088e54365f6bce628282c75992250c4ef8127c04b6"
@@ -312,5 +312,10 @@
   "local_model_assets": {
     "directory": "hardware/lib.3dshapes",
     "scope": "Real checked-in source model assets replace the earlier submodule-relative symlink. This records availability, not exact manufacturer geometry or assembly acceptance."
+  },
+  "consoleValueCorrection": {
+    "receipt": "validation/20261118-console-labels/receipt.json",
+    "scope": "Correct hidden template Value properties only. Native copper, pads, routing, placed component geometry, visible drawing text, and net partitions must remain identical.",
+    "nativeModelGeometryUnchanged": true
   }
 }
