@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "units": "mm",
+  "status": "dimensional-candidate",
+  "physicalValidation": "not-performed",
+  "coordinateFrame": {
+    "origin": "carrier top-left, carrier underside",
+    "x": "right",
+    "y": "down",
+    "z": "up",
+    "carrierAssemblyTranslation": [
+      0,
+      0,
+      8
+    ]
+  },
+  "enclosure": {
+    "outerXY": [
+      88,
+      63
+    ],
+    "minXY": [
+      -9,
+      -9
+    ],
+    "bodyHeight": 27.5,
+    "lidThickness": 2,
+    "wall": 2.5,
+    "floor": 2.5,
+    "totalWithCapHeads": 32
+  },
+  "carrier": {
+    "nativePcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+    "nativePcbBoardId": "pcb_3b1f96ad7f25f4f0",
+    "nativePcbRevision": 0,
+    "nativeStepSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
+    "hardwareInterfaceSha256": "238ab4ab67aecb90d90e87e2469c3d30fdaef9cebd8e229e3ac9e05e55ee2e42",
+    "cadPart": "carrier-pcba-envelope",
+    "transform": {
+      "sourceFrame": "KiCad STEP X-right Y-up Z-up substrate",
+      "sourceSubstrateThickness": 1.51,
+      "finishedBoardThickness": 1.6,
+      "scale": [
+        1,
+        1,
+        1.0596026490066226
+      ],
+      "rotateXDegrees": 180,
+      "translation": [
+        0,
+        0,
+        9.6
+      ],
+      "note": "Bare substrate only; top/bottom geometry symmetric. Exact XY and holes are unchanged."
+    },
+    "mountHoles": {
+      "diameter": 2.9,
+      "centres": [
+        [
+          4,
+          4
+        ],
+        [
+          66,
+          4
+        ],
+        [
+          4,
+          41
+        ],
+        [
+          66,
+          41
+        ]
+      ]
+    }
+  },
+  "controller": {
+    "part": "Seeed XIAO ESP32C3 SKU113991054",
+    "boardUndersideAssemblyZ": 19.37,
+    "boardTopAssemblyZ": 20.97,
+    "interboardGap": 9.77,
+    "headers": {
+      "male": "Samtec BHS-107-G-A",
+      "female": "Samtec HSS-107-G-2",
+      "insertion": 3.18,
+      "roundMalePinDiameter": 0.46,
+      "femaleTopAboveCarrier": 4.44,
+      "maleStandoff": 5.33
+    },
+    "usb": {
+      "facing": "-X",
+      "frontX": -1.549,
+      "outerXY": [
+        [
+          -1.549,
+          18
+        ],
+        [
+          5.801,
+          27
+        ]
+      ],
+      "heightAboveBoardTop": 3.21,
+      "heightStatus": "conservative envelope derived from older vendor STEP"
+    }
+  },
+  "oled": {
+    "part": "Adafruit326 STEMMA QT",
+    "eagleCommit": "51ef8e242dcf460d5effc298d8565110624e6b23",
+    "nativeTransform": "(x,y) -> (35+x,38.25-y)",
+    "boardThickness": 1.6,
+    "boardBackAssemblyZ": 23.6,
+    "boardFrontAssemblyZ": 25.2,
+    "glass": {
+      "min": [
+        36.255,
+        11.317,
+        25.2
+      ],
+      "size": [
+        26.7,
+        19.26,
+        1.8
+      ]
+    },
+    "activeSurface": {
+      "part": "oled-display-surface",
+      "min": [
+        38.733,
+        13.417,
+        26.98
+      ],
+      "size": [
+        21.744,
+        10.864,
+        0.02
+      ],
+      "face": "+z",
+      "topZ": 27
+    },
+    "lidWindow": {
+      "centre": [
+        49.605,
+        18.849
+      ],
+      "size": [
+        22.744,
+        11.864
+      ],
+      "cornerRadius": 0.6
+    },
+    "rearKeepoutHeight": 3.2,
+    "glassPostNominalGap": 0.277,
+    "glassLidVerticalNominalGap": 0.5
+  },
+  "bindings": {
+    "reference": {
+      "provider": "kernelcad",
+      "slug": "t_IaE1EE",
+      "version": 1,
+      "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099"
+    },
+    "pcbBindings": [
+      {
+        "id": "carrier",
+        "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+        "cadPart": "carrier-pcba-envelope"
+      }
+    ],
+    "electronics": {
+      "version": 1,
+      "displays": [
+        {
+          "id": "oled-screen",
+          "component": "oled",
+          "part": "oled-display-surface",
+          "face": "+z",
+          "rotation": 0
+        }
+      ],
+      "inputs": []
+    }
+  },
+  "assumptions": [
+    "No physical print or hardware fit has been performed.",
+    "Nominal0.277 mm glass/post clearance is not a worst-case tolerance guarantee; measure incoming display and printed lid.",
+    "OLED cable100 mm and mating plugs require bench route/fit check.",
+    "Vendor XIAO STEP is an older1.0 mm board revision; nativev1.3 thickness1.6 mm and USBXY override it.",
+    "Thread and electronic component bodies are clearance envelopes, not fabrication models.",
+    "No RF antenna, battery, waterproofing or environmental qualification."
+  ]
+}

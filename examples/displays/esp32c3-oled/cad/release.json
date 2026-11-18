@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "status": "assembly-candidate",
+  "acceptance": {
+    "solidBuild": "pass",
+    "scriptClearances": "7/7 pass",
+    "baseFdm": "pass",
+    "lidFdm": "pass",
+    "stepBrep": "41/41 assembly solids valid; base and lid each1 valid solid",
+    "meshExports": "binary STL closed-manifold edge counts and size pass; 3MF opens in millimetres",
+    "designLoop": "blocked: hosted staged-input ENOENT",
+    "assemblyPath": "unverified: budget exhausted; larger run timed out after300s",
+    "physicalFit": "not performed",
+    "printing": "not performed",
+    "cableRouting": "not performed"
+  },
+  "kernelcad": {
+    "provider": "kernelcad",
+    "slug": "t_IaE1EE",
+    "version": 1,
+    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "privacy": "public_unlisted",
+    "url": "https://app.kernelcad.com/p/t_IaE1EE?version=1",
+    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v1.json?provenance=2e30f8a30c441c34fb4a7d81d1a17f82672127c961e4889f56bc15a28345f3d5",
+    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/1/mesh-artifact?download=1&provenance=2e30f8a30c441c34fb4a7d81d1a17f82672127c961e4889f56bc15a28345f3d5",
+    "meshReady": true
+  },
+  "source": "esp32c3-oled-enclosure.kcad.ts",
+  "submittedSource": "verification/submitted-source.kcad.ts",
+  "asset": "inputs/47111971a61f.step",
+  "hardware": {
+    "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+    "boardId": "pcb_3b1f96ad7f25f4f0",
+    "revision": 0,
+    "pcbCommit": "61a802de810b705e9a3155ce8a03357dc2442cd7",
+    "hardwareInterfaceSha256": "238ab4ab67aecb90d90e87e2469c3d30fdaef9cebd8e229e3ac9e05e55ee2e42"
+  },
+  "exports": [
+    {
+      "path": "exports/esp32c3-oled-assembly.step",
+      "sha256": "e78f484183b393e103a318d8e9c53ec0b17d5a11a2cb2dbc6b8caecf02cad0f8",
+      "bytes": 1782145,
+      "mediaType": "model/step"
+    },
+    {
+      "path": "exports/esp32c3-oled-base.step",
+      "sha256": "ab3ce8b5ac3e75c4a36398a9fd8605235cc62127c284547fc9c26e8fa29bc506",
+      "bytes": 136050,
+      "mediaType": "model/step"
+    },
+    {
+      "path": "exports/esp32c3-oled-base.stl",
+      "sha256": "7119a00f542612a85f9c598a50522ea2b31243efc036224239f05868b5c8364d",
+      "bytes": 1339484,
+      "mediaType": "model/stl"
+    },
+    {
+      "path": "exports/esp32c3-oled-base.3mf",
+      "sha256": "39c2ab9e7f09723c396f040103e3ab0f790fe233a27caccd1a6be55cb70c0da7",
+      "bytes": 353578,
+      "mediaType": "model/3mf"
+    },
+    {
+      "path": "exports/esp32c3-oled-lid.step",
+      "sha256": "5bc230b0c5bd1c60239a95257cc50d68aa55a1eec6e4a48f9a14c2576fd1c16b",
+      "bytes": 156495,
+      "mediaType": "model/step"
+    },
+    {
+      "path": "exports/esp32c3-oled-lid.stl",
+      "sha256": "8d7cc6a64614752404ca83495c2d7d44b5dad0dd8ed454834085095d74ce16b5",
+      "bytes": 711284,
+      "mediaType": "model/stl"
+    },
+    {
+      "path": "exports/esp32c3-oled-lid.3mf",
+      "sha256": "4569986b4362217bb3b52eb71fe4796bf4427d373aa0333afbf92604aa106f1b",
+      "bytes": 181169,
+      "mediaType": "model/3mf"
+    }
+  ],
+  "toleranceBlocker": {
+    "glassPostGapNominalMm": 0.277,
+    "holeCentreToGlassEdgeMm": 2.277,
+    "postDiameterMm": 4,
+    "boreDiameterMm": 2.3,
+    "postWallMm": 0.85,
+    "fdmMinWallMm": 0.8,
+    "diameterForHalfMmGlassGap": 3.554,
+    "wallIfHalfMmGlassGap": 0.627,
+    "action": "Measure actual glass/post gap before tightening; no contact or glass preload permitted. This nominal model does not meet a0.5 mm glass-to-post allowance."
+  },
+  "renderNote": "revision-v1-iso.png is the exact saved revision preview. Other larger views precede only the0.0635 mm controller XY correction and carrier STEP metadata refresh.",
+  "blockedGateReceipts": [
+    "verification/design-loop-error.json",
+    "verification/design-loop-data-uri-error.json",
+    "verification/assembly-path-budget.json",
+    "verification/assembly-path-timeout.json",
+    "verification/reproduction.json"
+  ],
+  "sourceSha256": "67dabf600707d07a4337e5e000e538ce5553b432e0e0c1fcb7afc8e867a9fe82",
+  "submittedSourceSha256": "39b8bf5465cd968a102963735f597c697fa8dda131a87ca3ac8b251bde5b1031",
+  "assetSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
+  "componentEnvelopes": [
+    {
+      "source": "components/hss-107-g-2.kcad.ts",
+      "sourceSha256": "48cb013149def78bee21d66b0c5d399f534d2045e53b8f49cf10279af27d225c",
+      "step": "components/hss-107-g-2.step",
+      "stepSha256": "8b6bf8491de08bac85d6a7f6eccf983de21ab46906a36d5c23f5e7a2cbaac82e",
+      "representation": "source-dimensioned envelope; not manufacturer STEP",
+      "bbox": {
+        "min": [
+          -1.27,
+          -1.27,
+          -3.18
+        ],
+        "max": [
+          1.27,
+          16.51,
+          4.44
+        ]
+      }
+    }
+  ]
+}
