@@ -1,0 +1,55 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-cbvjhNCtTT6B5l24gXOQcg/render-iso.png?exp=1795082220&sig=jK-rRGHdDTF56nkm-mJjpMlsf_Zc2aRPFus075SVZe8",
+  "findings": [
+    "The closed top and front views show one seated lid and base, four corner lid screws, a three-wire UART opening with two cable-tie slots, and the Pico micro-USB shell inside the front notch.",
+    "The current interior iso view shows the green native Pico board, distinct USB shell and electronic components, two black Samtec header insulators, the carrier sockets, and corner mounting hardware inside one base.",
+    "All17 exact manufacturer STEP solids are separate fixed components, with explicit fixed connections for the soldered electronics and USB shell elements. The untouched source SHA256 is ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b. The source and successful assembly STEP export preserve these solids without artificial connecting material.",
+    "These views verify nominal arrangement. Cable overmold fit, printed tolerances, screw torque and physical assembly are untested. The opaque lid covers the on-board LED; inspect the LED with the lid removed and use UART while closed.",
+    "The source's box-fragment heuristic counts the three integral lid registration tabs, two specified connector-body profiles, the square Samtec contact posts, rectangular access cutters, and a non-rendered USB plug envelope. Each has a documented mechanical/electrical role. The seven visual checks show no decorative fragments; only this non-visual source-count heuristic is acknowledged."
+  ],
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "Top and front views show exactly one rectangular base and one seated lid with four corner screw heads.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-s7HTi6t8X-JZfv8ikgjOiQ/render-top.png?exp=1795081538&sig=ikdYaEFxkce6AAUyryoJZ8MrsZg-c0zHtfbYBCf1PY0"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The near-square 78 by 88 mm case fits the 60 by 70 mm carrier; its front notch reaches the elevated Pico connector without opening the floor.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-lOLYZPx6cw0ZM7GqxbJGVg/render-front.png?exp=1795081538&sig=AjzUmO_g6WmAL0koa5LXl0i9mTC0sXdRkjJmItX9nFU"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "The top view exposes the three UART contacts through the opening and shows two separate cable-tie slots. The front view exposes the micro-USB connector.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-s7HTi6t8X-JZfv8ikgjOiQ/render-top.png?exp=1795081538&sig=ikdYaEFxkce6AAUyryoJZ8MrsZg-c0zHtfbYBCf1PY0"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "The open iso view contains the carrier, Pico header stack and mounting hardware inside one base. Separate native electronic bodies occupy their board locations rather than floating outside the assembly.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-cbvjhNCtTT6B5l24gXOQcg/render-iso.png?exp=1795082220&sig=jK-rRGHdDTF56nkm-mJjpMlsf_Zc2aRPFus075SVZe8"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "Parallel header rows support the Pico above the carrier. Corner standoffs and visible fastener heads follow the carrier and lid mounting positions.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-cbvjhNCtTT6B5l24gXOQcg/render-iso.png?exp=1795082220&sig=jK-rRGHdDTF56nkm-mJjpMlsf_Zc2aRPFus075SVZe8"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "The Pico micro-USB receptacle faces the front wall notch; the UART contacts face upward toward their separate lid opening.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-lOLYZPx6cw0ZM7GqxbJGVg/render-front.png?exp=1795081538&sig=AjzUmO_g6WmAL0koa5LXl0i9mTC0sXdRkjJmItX9nFU"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "Top, front and interior iso views agree on the single module, centered front USB notch, offset UART opening, and four lid corner mounts.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-lOLYZPx6cw0ZM7GqxbJGVg/render-front.png?exp=1795081538&sig=AjzUmO_g6WmAL0koa5LXl0i9mTC0sXdRkjJmItX9nFU"
+    }
+  ]
+}

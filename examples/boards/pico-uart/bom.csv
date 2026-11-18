@@ -1,0 +1,17 @@
+references,quantity,manufacturer,manufacturer_part_number_or_sku,description,source,assembly_notes
+PCB1,1,LabWired custom fabrication,PICO-CARRIER-REV-A,60 x 70 x 1.6 mm two-layer routed carrier,manufacturing/pico-carrier-fabrication.zip,"FR-4,35um copper,ENIG; four2.9mm NPTH mounts."
+U1,1,Raspberry Pi Ltd,SC0915,"Raspberry Pi Pico, bare RP2040 board",https://pip.raspberrypi.com/categories/610,Populate the exact Samtec headers below; micro-USB is the only power input.
+U1-H1 U1-H2,2,Samtec,TSW-120-07-G-S,"20-position male header,2.54mm pitch",https://www.samtec.com/products/tsw-120-07-g-s,"5.842mm mating post,2.54mm insulator,2.54mm solder tail. Solder to Pico underside."
+J1 J2,2,Samtec,SSW-120-01-G-S,"20-position female socket,2.54mm pitch",https://www.samtec.com/products/ssw-120-01-g-s,"8.51mm body,2.64mm tails; both pin1 ends face USB edge."
+J3,1,Samtec,TSW-103-07-G-S,3-position vertical male UART header,https://www.samtec.com/products/tsw-103-07-g-s,1GND;2PicoTX/GP0;3PicoRX/GP1. No power pin.
+W1,1,Adafruit,954,"USB to TTL serial cable,3.3V logic",https://www.adafruit.com/product/954,"BlackGND,whiteRX toGP0,greenTX toGP1. Red5V stays disconnected and insulated."
+W2,1,Adafruit,592,"USB Type-A to Micro-B data cable,3ft",https://www.adafruit.com/product/592,Power/programming cable. Confirm overmold fits the16x8mm check envelope.
+CASE1,1,LabWired custom print,PICO-UART-BASE-REV-A,PETG enclosure base,mechanical/pico-uart-base.stl,"78x88x27.5mm, floor down."
+CASE2,1,LabWired custom print,PICO-UART-LID-REV-A,PETG enclosure lid,mechanical/pico-uart-lid.stl,"78x88mm,2mm plate+1.2mm tabs; supplied orientation has outer face down."
+M1..M4,4,Accu,HHTPS-M2.5-5-5-BR-NI,"M2.5 female/female hex standoff,5mm long,5mm AF",https://www.accu.co.uk/threaded-standoffs/464667-HHTPS-M2-5-5-5-BR-NI,"Carrier supports, each sits on0.5mm nylon washer."
+M5..M8,4,Accu,HHTPS-M2.5-5-25-BR-NI,"M2.5 female/female hex standoff,25mm long,5mm AF",https://www.accu.co.uk/threaded-standoffs/464662-HHTPS-M2-5-5-25-BR-NI,Lid supports. Check blind thread depth accepts6mm upper engagement.
+M9..M12,4,Accu,HPW-2.7-6.5-0.5-N,Nylon washer2.7ID x6.5OD x0.5mm,https://www.accu.co.uk/metric-flat-washers/465680-HPW-2-7-6-5-0-5-N,Below the four short carrier standoffs.
+M13..M20,8,Accu,SSK-M2.5-5-A2,"M2.5x5mm countersunk socket screw,A2",https://www.accu.co.uk/countersunk-socket-head-screws/5413-SSK-M2-5-5-A2,Install from underside to retain all eight standoffs.
+M21..M24,4,Accu,SSCF-M2.5-4-A2,"M2.5x4mm cap-head socket screw,A2",https://www.accu.co.uk/metric-cap-head-screws/3802-SSCF-M2-5-4-A2,Carrier upper retention.
+M25..M28,4,Accu,SSCF-M2.5-8-A2,"M2.5x8mm cap-head socket screw,A2",https://www.accu.co.uk/metric-cap-head-screws/3805-SSCF-M2-5-8-A2,Lid retention.
+M29,1,Panduit,PLT1M-C,"Nylon6.6 cable tie,99x2.5mm,natural",https://www.panduit.com/content/dam/panduit/en/products/media/0/60/460/0460/30460.pdf,One tie through both lid slots around the three insulated UART wires;100pack SKU.

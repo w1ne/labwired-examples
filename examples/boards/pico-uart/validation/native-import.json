@@ -1,0 +1,126 @@
+{
+  "status": "imported",
+  "mode": "preserve",
+  "routing_status": "not_run",
+  "drc_status": "not_run",
+  "job_id": "50a9eb4d-5c4e-457e-9fca-2807efb76b1b",
+  "board_id": "pcb_ce2a5c8078eaf157",
+  "rev": 0,
+  "pcb_ref": "sha256:1ed17407037addfbd499a815756be6cb166403cc2efec0799230d87141ef4a10",
+  "rules_ref": "sha256:3d3ee892b03a1f065286a96e12173ef6cdd5e07a55e8d9cfb5876154eea5775e",
+  "rules_digest": "b04ea465d50c3303d61da41b0017d891da09e532d5bd15bd084c18e8433aa95c",
+  "coverage_ref": "sha256:1205a83f7ec1f3adb0eabccf70c29541a86d560f73bc129c0341bf22bb474026",
+  "twin_buildable": false,
+  "capabilities": {
+    "route": "supported",
+    "view": "supported",
+    "simulation": "model_gaps"
+  },
+  "model": {
+    "mapped": 0,
+    "dropped": 0,
+    "ignored": 10
+  },
+  "simulation_blockers": [],
+  "applied_rules": {
+    "version": 1,
+    "defaults": {
+      "track_width_mm": 0.3,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 0.6,
+      "via_drill_mm": 0.3
+    },
+    "fabrication": {
+      "reference": "PICO-CARRIER-REV-A fabrication-settings.json: conservative two-layer FR-4 design limits; no fabricator order or process qualification claimed.",
+      "min_track_width_mm": 0.25,
+      "min_clearance_mm": 0.2,
+      "min_drill_mm": 0.3,
+      "min_annular_ring_mm": 0.15,
+      "min_hole_to_hole_mm": 0.25,
+      "min_edge_clearance_mm": 0.5,
+      "min_hole_clearance_mm": 0.25
+    },
+    "sources": [
+      {
+        "kind": "assumption",
+        "reference": "https://github.com/w1ne/labwired-examples/blob/0e6d5bec42744cc908f01dbf6ba64f12ef244ccd/examples/boards/pico-uart/manufacturing/fabrication-settings.json",
+        "rationale": "Preserve the reviewed native 60x70mm two-layer carrier and its declared design constraints; no rerouting or reconstruction."
+      },
+      {
+        "kind": "datasheet",
+        "reference": "https://www.samtec.com/products/ssw-120-01-g-s",
+        "rationale": "2.54mm socket pitch and 1.0mm finished holes support the specified connector tails; source-derived carrier socket geometry is already routed."
+      }
+    ],
+    "net_classes": [
+      {
+        "name": "Default",
+        "track_width_mm": 0.3,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 0.6,
+        "via_drill_mm": 0.3,
+        "nets": [
+          "/GND",
+          "/UART_RX_GP1",
+          "/UART_TX_GP0",
+          "unconnected-(J1-Pin_10-Pad10)",
+          "unconnected-(J1-Pin_11-Pad11)",
+          "unconnected-(J1-Pin_12-Pad12)",
+          "unconnected-(J1-Pin_14-Pad14)",
+          "unconnected-(J1-Pin_15-Pad15)",
+          "unconnected-(J1-Pin_16-Pad16)",
+          "unconnected-(J1-Pin_17-Pad17)",
+          "unconnected-(J1-Pin_19-Pad19)",
+          "unconnected-(J1-Pin_20-Pad20)",
+          "unconnected-(J1-Pin_4-Pad4)",
+          "unconnected-(J1-Pin_5-Pad5)",
+          "unconnected-(J1-Pin_6-Pad6)",
+          "unconnected-(J1-Pin_7-Pad7)",
+          "unconnected-(J1-Pin_9-Pad9)",
+          "unconnected-(J2-Pin_1-Pad1)",
+          "unconnected-(J2-Pin_10-Pad10)",
+          "unconnected-(J2-Pin_11-Pad11)",
+          "unconnected-(J2-Pin_12-Pad12)",
+          "unconnected-(J2-Pin_14-Pad14)",
+          "unconnected-(J2-Pin_15-Pad15)",
+          "unconnected-(J2-Pin_16-Pad16)",
+          "unconnected-(J2-Pin_17-Pad17)",
+          "unconnected-(J2-Pin_19-Pad19)",
+          "unconnected-(J2-Pin_2-Pad2)",
+          "unconnected-(J2-Pin_20-Pad20)",
+          "unconnected-(J2-Pin_4-Pad4)",
+          "unconnected-(J2-Pin_5-Pad5)",
+          "unconnected-(J2-Pin_6-Pad6)",
+          "unconnected-(J2-Pin_7-Pad7)",
+          "unconnected-(J2-Pin_9-Pad9)"
+        ],
+        "parts": [],
+        "sources": [
+          {
+            "kind": "assumption",
+            "reference": "https://github.com/w1ne/labwired-examples/blob/0e6d5bec42744cc908f01dbf6ba64f12ef244ccd/examples/boards/pico-uart/manufacturing/fabrication-settings.json",
+            "rationale": "Preserve the reviewed native 60x70mm two-layer carrier and its declared design constraints; no rerouting or reconstruction."
+          },
+          {
+            "kind": "datasheet",
+            "reference": "https://www.samtec.com/products/ssw-120-01-g-s",
+            "rationale": "2.54mm socket pitch and 1.0mm finished holes support the specified connector tails; source-derived carrier socket geometry is already routed."
+          }
+        ]
+      }
+    ]
+  },
+  "blob_path": "/v1/blobs/sha256/1ed17407037addfbd499a815756be6cb166403cc2efec0799230d87141ef4a10",
+  "layer_count": 2,
+  "backend": "native-kicad-preserved",
+  "source_url": "https://raw.githubusercontent.com/w1ne/labwired-examples/0e6d5bec42744cc908f01dbf6ba64f12ef244ccd/examples/boards/pico-uart/electronics/pico-carrier.kicad_pcb",
+  "warnings": [
+    "Original native PCB bytes preserved; routing and independent KiCad DRC were not run",
+    "Run validate_imported with the returned PCB and rules references before fabrication",
+    "The unrouted and violations counts come from Freerouting. Run labwired_pcb_validate_imported with pcb_ref and rules_ref for independent design-rule checks on the returned board."
+  ],
+  "log": [],
+  "manufacturing_verified": false,
+  "lpddr4_si_verified": false,
+  "functional_simulation_verified": false
+}

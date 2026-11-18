@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-0Io8GgseVcQKqYMddx1saA/render-iso.png?exp=1795088473&sig=xcX0Nsk9HnExjQRYgojFv1z7K8X23nxcw3ipTSxWKyU",
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "The top and front renders show one base, one seated lid and four corner lid fasteners.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-UMjUvDc9KahSROzHxY1Jqg/render-top.png?exp=1795090563&sig=6I9FQfnwhiAVStCf7TTLwSYo75jYI7gu3QOdi5bUshE"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The 78 by 88 mm enclosure contains the 60 by 70 mm carrier. Its front notch reaches the elevated Pico USB connector without opening the floor.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-EAt8j_G3eitYzuSwT6v91w/render-front.png?exp=1795090564&sig=aWdZ6rv46bqkc638G-mmMr7-LTJi0gLsB11kgQk6sYs"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "The top view shows the three UART pins through their opening and two separate cable-tie slots. The front view exposes the native micro-USB receptacle.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-UMjUvDc9KahSROzHxY1Jqg/render-top.png?exp=1795090563&sig=6I9FQfnwhiAVStCf7TTLwSYo75jYI7gu3QOdi5bUshE"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "The corrected interior iso view shows the carrier, native Pico board and electronics, two header rows and mounting hardware inside one base; no detached geometry is visible outside it.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-0Io8GgseVcQKqYMddx1saA/render-iso.png?exp=1795088473&sig=xcX0Nsk9HnExjQRYgojFv1z7K8X23nxcw3ipTSxWKyU"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "Two parallel Samtec socket/header rows support the Pico over the carrier. The corner supports and fastener positions match the board and lid mounts.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-0Io8GgseVcQKqYMddx1saA/render-iso.png?exp=1795088473&sig=xcX0Nsk9HnExjQRYgojFv1z7K8X23nxcw3ipTSxWKyU"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "The Pico micro-USB receptacle faces the front wall notch and the separate UART pin row points upward through its lid opening.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-EAt8j_G3eitYzuSwT6v91w/render-front.png?exp=1795090564&sig=aWdZ6rv46bqkc638G-mmMr7-LTJi0gLsB11kgQk6sYs"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "The top, front and current interior iso views agree on the single Pico module, front USB opening, offset UART opening and corner mounts.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-EAt8j_G3eitYzuSwT6v91w/render-front.png?exp=1795090564&sig=aWdZ6rv46bqkc638G-mmMr7-LTJi0gLsB11kgQk6sYs"
+    }
+  ],
+  "findings": [
+    "The corrected Samtec SSW-120-01-G-S socket bodies use the drawing-derived 2.41 mm width and 51.31 mm length; the exact native Pico STEP retains all 17 manufacturer bodies.",
+    "All three reviewed renders evaluate corrected source SHA256 5d46f5f8d63c1952cded7818bcc599c3169a0bbae5c2dad78ab72ad95c7eb743. Closed top/front and open interior views have been visually inspected.",
+    "The source box-fragment heuristic counts functional lid registration tabs, connector insulators, square contact posts, rectangular access cutters and the unrendered USB-plug clearance envelope. These are documented mechanical/electrical features; only this non-visual source-style warning is acknowledged.",
+    "These checks establish nominal CAD arrangement and clearance. Printed tolerances, cable overmolds, screw torque, physical assembly and full assembly-path qualification remain open."
+  ]
+}

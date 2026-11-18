@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "show_electronics": true,
+  "hardwarePack": {
+    "schema": "hardware-pack/v1",
+    "kernelcad": {
+      "url": "https://app.kernelcad.com/p/675KJsgq?version=1",
+      "slug": "675KJsgq",
+      "version": 1
+    },
+    "labwired": {
+      "url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=675KJsgq&kernelcad_revision=1",
+      "mcp_url": "https://api.labwired.com/mcp",
+      "tools": [
+        "labwired_hardware",
+        "labwired_list",
+        "labwired_describe",
+        "labwired_project_get",
+        "labwired_export",
+        "labwired_verify"
+      ]
+    },
+    "buy_device_url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=675KJsgq&kernelcad_revision=1&device=1",
+    "purchase_mode": "review_separate_orders",
+    "companion_access": "use_connected_plugin_or_open_link"
+  },
+  "project_id": "8edf3f05-a7b1-415d-b680-e9114beff33e",
+  "slug": "675KJsgq",
+  "version": 1,
+  "privacy": "public_unlisted",
+  "title": "Raspberry Pi Pico UART Fixture \u2014 Rev A",
+  "url": "https://app.kernelcad.com/p/675KJsgq?version=1&show_electronics=1",
+  "embedUrl": "https://app.kernelcad.com/embed/675KJsgq?revision=1&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2F675KJsgq%2Fv1.json",
+  "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/675KJsgq/v1.json",
+  "updated": false,
+  "project_note": "Created project '675KJsgq': https://app.kernelcad.com/p/675KJsgq?version=1&show_electronics=1 (title: Raspberry Pi Pico UART Fixture \u2014 Rev A). Next save: pass project: '675KJsgq' \u2014 that adds a revision instead of a new project.",
+  "previewDelivered": true,
+  "previewStatus": "included",
+  "previewView": "iso",
+  "previewWidth": 640,
+  "previewHeight": 640,
+  "previewBytes": 27499,
+  "previewCached": false,
+  "previewHint": "PNG preview is included in this tool result (image content block + previewUrl). Say the preview was delivered only when previewDelivered is true \u2014 do not require a second get_latest_render call for the happy path, and do not tell the user to open Studio just to see a still.",
+  "previewUrl": "https://53f45abe9550f62856af4475880e0a77.r2.cloudflarestorage.com/kernelcad-review-paint/renders/675KJsgq/2026-11-18T09-29-28.969Z.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=2f78f398fb06be554a49798c3f9bb1b4%2F20261118%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261118T092929Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=82978a9720c59074bee1c4fa4ea2be04a3c72eac58c85bfea2f859a4300f3140",
+  "parameters": [
+    {
+      "name": "output",
+      "value": "assembly",
+      "kind": "string"
+    }
+  ],
+  "meshStatus": "building",
+  "meshSaved": false,
+  "meshHint": "meshStatus=building is TRANSIENT (OCCT/CDN still writing) \u2014 NOT a permanent failure and NOT a missing project. meshUrl is the expected CDN pin even while building; embed FunnelViewer retries 404s. Poll with get_project({ slug }) until meshStatus=ready/meshReady=true, or call open_in_studio again with the same code+slug. Do NOT tell the user the mesh is broken/404; do NOT call get_model_mesh.",
+  "projectSaved": true,
+  "meshReady": false,
+  "viewerPainted": false,
+  "paintHint": "Do NOT claim the interactive viewer painted unless the widget reports viewerPainted=true (ui/update-model-context or widgetState.modelContent) \u2014 tools/call always leaves viewerPainted=false. projectSaved\u2260viewerPainted. meshReady=false with meshStatus=building is OK \u2014 embed retries meshUrl. Do NOT call get_model_mesh or get_latest_render to force interactive paint; use open_in_studio only.",
+  "attachmentCount": 2,
+  "assetHashes": [
+    "a54e9b84f8bf87dd0f8b3ca3dcddadfd0246e01ae65ad8944cff4bda0306e27e",
+    "ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b"
+  ],
+  "serverBuild": "0.1.0+7a5ca41c0d3f@2026-11-18T09:08:15.431Z"
+}

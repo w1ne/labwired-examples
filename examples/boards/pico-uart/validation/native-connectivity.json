@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-18T10:09:57.574917+00:00",
+  "kicad_version": "10.0.8",
+  "source_files": [
+    {
+      "path": "electronics/pico-carrier.kicad_sch",
+      "bytes": 34887,
+      "sha256": "1cd750bbd56746b68b462742c0282b17e6540d32b7c0910d57e953a84ffa1ae6"
+    },
+    {
+      "path": "electronics/pico-carrier.kicad_pcb",
+      "bytes": 137657,
+      "sha256": "1ed17407037addfbd499a815756be6cb166403cc2efec0799230d87141ef4a10"
+    },
+    {
+      "path": "electronics/pico-carrier.kicad_pro",
+      "bytes": 908,
+      "sha256": "77048b2c3bb0b5ae532a8e0b2db99fcbf1f6e12b142c855bb3426eb657b4573d"
+    }
+  ],
+  "erc": {
+    "violations": 0,
+    "ignored_default_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ]
+  },
+  "drc": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity_issues": 0,
+    "explicit_exclusions": [],
+    "ignored_default_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ]
+  },
+  "physical_pin_contract": {
+    "J1.1": "/UART_TX_GP0",
+    "J1.2": "/UART_RX_GP1",
+    "J3.1": "/GND",
+    "J3.2": "/UART_TX_GP0",
+    "J3.3": "/UART_RX_GP1",
+    "TP1.1": "/GND",
+    "TP2.1": "/UART_TX_GP0",
+    "TP3.1": "/UART_RX_GP1",
+    "J1.3": "/GND",
+    "J1.8": "/GND",
+    "J1.13": "/GND",
+    "J1.18": "/GND",
+    "J2.3": "/GND",
+    "J2.8": "/GND",
+    "J2.13": "/GND",
+    "J2.18": "/GND"
+  },
+  "populated_carrier_parts": 3,
+  "footprint_count": 10,
+  "functional_nets": 3,
+  "intentionally_isolated_socket_contacts": 30,
+  "track_segments": 29,
+  "vias": 2,
+  "drill_counts": {
+    "plated_1_mm": 43,
+    "plated_0_3_mm": 2,
+    "non_plated_2_9_mm": 4
+  },
+  "physical_hardware_tested": false
+}
