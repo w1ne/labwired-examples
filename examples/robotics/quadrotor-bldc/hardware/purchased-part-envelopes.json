@@ -1,0 +1,234 @@
+{
+  "schema": "labwired.purchased-part-envelopes.v1",
+  "checkedAtUtc": "2026-11-18",
+  "scope": "Manufacturer nominal or tolerance-bounded geometry for the selected engineering package. No fitted assembly or physical load acceptance is implied.",
+  "nativeCadSource": "cad/drone-native-solids.kcad.ts",
+  "coordinateConvention": {
+    "up": [
+      0,
+      0,
+      1
+    ],
+    "forward": [
+      0,
+      -1,
+      0
+    ],
+    "right": [
+      -1,
+      0,
+      0
+    ]
+  },
+  "sources": [
+    {
+      "id": "battery",
+      "url": "https://www.grepow.com/fpv/5-inch-fpv-drone.html",
+      "section": "5-inch freestyle table; TA-RL3-120C-1550-4S1P"
+    },
+    {
+      "id": "capacitor",
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1259.pdf",
+      "sha256": "47cf18461482e03270f72e475f855080e11e2154e3f343f735e5cb0e61e27df7",
+      "bytes": 855742,
+      "section": "FR dimensions and EEUFR1H471 row"
+    },
+    {
+      "id": "jst-sh",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf",
+      "sha256": "ea3071ca5ee5a6069eba534fa39a10f34c9fb742ee42135a69ab4156bfa0f5de",
+      "bytes": 84427,
+      "section": "page2 housing with protrusions; page1 current rating"
+    },
+    {
+      "id": "jst-wire",
+      "url": "https://gam-gec.com/wp-content/uploads/2018/10/GAM-304.pdf",
+      "section": "GAM-304 rev1 2018-06-29; dimensionB is inside length; dimensionA is overall"
+    },
+    {
+      "id": "xt60-spec",
+      "url": "https://www.china-amass.com/public/upload/20240608/d64f202d7bbc62ab5ced2c87cd917d2e.pdf",
+      "section": "XT60H-M.G.Y and98032.PG; electrical current/temperature-rise conditions"
+    },
+    {
+      "id": "xt60-dimensions",
+      "url": "https://www.china-amass.com/public/upload/20260104/74e6647439105e99603a15c87f51b59e.pdf",
+      "sha256": "a3819d41bc5ab91a2459e98210ffee91f137e1d8b6455129170ff3852d4ce24d",
+      "bytes": 5046709,
+      "section": "catalogue printed page15 XT60H"
+    },
+    {
+      "id": "power-wire",
+      "url": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=55A0111&DocType=Customer+Drawing&PartCntxt=2161163002",
+      "sha256": "b9e6b6766e7c854ceda0b1ec474ef566d4dae3fdbc36d47ec1ffd80c1619afb6",
+      "bytes": 60245,
+      "section": "55A0111 revisionR 2011-03-24;12AWG row"
+    },
+    {
+      "id": "strap",
+      "url": "https://radiomasterrc.com/collections/accessories/products/radiomaster-ultra-battery-strap",
+      "section": "dimensions and HP0157.0103 SKU"
+    },
+    {
+      "id": "frame-hardware",
+      "url": "https://github.com/OpenDrone-hw/OpenFrame-5F/blob/71aacb91c09e2970edd459390a4b79e5c61dfd39/bom.csv",
+      "gitBlob": "ab446c6ddd4fbc7eb12b1547e2babfd5136dd3dd"
+    }
+  ],
+  "parts": [
+    {
+      "id": "BAT1",
+      "mpn": "TA-RL3-120C-1550-4S1P",
+      "nominalBodyMm": [
+        76,
+        38,
+        33
+      ],
+      "massG": 176,
+      "nominalVoltageV": 14.8,
+      "fullChargeVoltageV": 16.8,
+      "capacityMah": 1550,
+      "tolerances": "not published in cited table",
+      "source": "battery"
+    },
+    {
+      "id": "C_BULK",
+      "mpn": "EEUFR1H471",
+      "bodyDiameterMm": {
+        "nominal": 12.5,
+        "tolerance": 0.5,
+        "maximum": 13
+      },
+      "bodyLengthMm": {
+        "nominal": 20,
+        "tolerance": 2,
+        "maximum": 22
+      },
+      "leadPitchMm": {
+        "nominal": 5,
+        "tolerance": 0.5
+      },
+      "leadDiameterMm": {
+        "nominal": 0.6,
+        "tolerance": 0.05
+      },
+      "capacitanceUf": 470,
+      "voltageV": 50,
+      "rippleAt100KHzMaRms": 2260,
+      "impedanceAt100KHzOhm": 0.022,
+      "source": "capacitor",
+      "routing": {
+        "positive": "ESC U3.1 /CSA+",
+        "negative": "ESC U3.2 GND",
+        "bodySupport": "fitted support required; no lead-only retention",
+        "vent": "keep pressure-relief end unobstructed"
+      }
+    },
+    {
+      "id": "HARNESS_ESC",
+      "designPart": "LW-QUAD-SH8-102",
+      "shellMpn": "SHR-08V-S-B",
+      "shellQuantity": 2,
+      "shellNominalMm": [
+        11,
+        5,
+        2.8
+      ],
+      "withProtrusions": true,
+      "leadMpn": "ASSHSSH28K102",
+      "leadQuantity": 7,
+      "insideLengthMm": {
+        "nominal": 101.6,
+        "tolerance": 5
+      },
+      "overallLengthMm": {
+        "nominal": 109.4,
+        "tolerance": 5
+      },
+      "pinMapping": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "emptyPins": [
+        4
+      ],
+      "source": [
+        "jst-sh",
+        "jst-wire"
+      ],
+      "currentLimitPerContactA": 1
+    },
+    {
+      "id": "HARNESS_PWR",
+      "designPart": "LW-QUAD-XT60-150",
+      "connectorMpn": "XT60H-M.G.Y",
+      "coverMpn": "98032.PG",
+      "connectorNominalWithCoverMm": [
+        23.85,
+        16.4,
+        9.2
+      ],
+      "wireMpns": [
+        "55A0111-12-2",
+        "55A0111-12-0"
+      ],
+      "wireCutLengthMm": 150,
+      "wireOdMm": {
+        "nominal": 2.6162,
+        "tolerance": 0.0762,
+        "maximum": 2.6924
+      },
+      "wireLengthScope": "design cut length before strip; not a manufacturer harness assembly",
+      "source": [
+        "xt60-spec",
+        "xt60-dimensions",
+        "power-wire"
+      ],
+      "currentScope": "30 A at the manufacturer stated <=30 K rise with12AWG; no package/system continuous-current qualification",
+      "bendScope": "TE mandrel dimensions are test conditions, not a published minimum installation bend radius"
+    },
+    {
+      "id": "STRAP_BAT",
+      "mpn": "HP0157.0103",
+      "quantity": 2,
+      "nominalLengthMm": 260,
+      "nominalWidthMm": 20,
+      "catalogueMassG": 9.26,
+      "thicknessAndRingDrawing": "not numerically specified by cited text; retain measured/reviewed image limitation",
+      "source": "strap"
+    }
+  ],
+  "remainingMechanicalAcceptance": [
+    "Actual purchased connector mating faces from native STEP plus source drawings; pad centres do not establish the mating transform",
+    "Full installed pigtail, capacitor, battery, straps and signal-harness geometry with support and propeller sweep clearance",
+    "Exact M3 grommet product/compression and stack-bolt engagement; manufacturer BOM alone gives no compressed-height proof",
+    "Battery dimensional tolerance and physical retention/load qualification",
+    "Optional CRSF receiver/antenna mount is a flight extension under3190; does not qualify the native motor bench"
+  ]
+}

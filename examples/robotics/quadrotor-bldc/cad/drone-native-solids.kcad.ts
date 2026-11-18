@@ -15,7 +15,9 @@ const rotor3 = param('rotor3Angle',0,{min:-2160,max:2160,label:'M3 rear-left ang
 const rotor4 = param('rotor4Angle',0,{min:-2160,max:2160,label:'M4 front-left angle (deg)'});
 
 // Onshape part exports already share the assembly frame. +Z is up, -Y is
-// forward (camera). Actual motor centres are NOT a square-X arrangement.
+// forward (camera). Body right = forward cross up = -X; left = +X.
+// Standard Quad-X M1/M2 are rear/front right, M3/M4 rear/front left.
+// Actual motor centres are NOT a square-X arrangement.
 const motorX = 89;
 const motorY = 69.534420756;
 const propRadius = 64.85;
@@ -43,18 +45,18 @@ attach('camera-side-left',await lib.fromSTEP("https://raw.githubusercontent.com/
 attach('camera-side-right',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-R.step"),[-13.75,-58,0],'anodized','#d6a528');
 
 // A fresh imported handle for each instance avoids shared-handle transforms.
-attach('arm-rear-right',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step"),[23,17.96956941,0]);
-attach('arm-front-right',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateX(180).translate(0,0,6),[23,-17.96956941,0]);
-attach('arm-rear-left',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateY(180).translate(0,0,6),[-23,17.96956941,0]);
-attach('arm-front-left',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateZ(180),[-23,-17.96956941,0]);
+attach('arm-rear-left',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step"),[23,17.96956941,0]);
+attach('arm-front-left',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateX(180).translate(0,0,6),[23,-17.96956941,0]);
+attach('arm-rear-right',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateY(180).translate(0,0,6),[-23,17.96956941,0]);
+attach('arm-front-right',(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step")).rotateZ(180),[-23,-17.96956941,0]);
 for(const [name,dx,dy,x,y] of [
-  ['rear-left',0,0,-10.25,69.5],['rear-right',20.5,0,10.25,69.5],
-  ['middle-left',-2.5,-45.5,-12.75,24],['middle-right',23,-45.5,12.75,24]
+  ['rear-right',0,0,-10.25,69.5],['rear-left',20.5,0,10.25,69.5],
+  ['middle-right',-2.5,-45.5,-12.75,24],['middle-left',23,-45.5,12.75,24]
 ] as [string,number,number,number,number][]){
   attach('standoff-'+name,(await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-M3-F-F-20-OD5.step")).translate(dx,dy,0),[x,y,9],'anodized-black','#24282c','frame-middle');
 }
 
-attach('frame-top',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Top.step"),[-10.25,69.5,29],'paint-matte','#24282c','standoff-rear-left');
+attach('frame-top',await lib.fromSTEP("https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Top.step"),[-10.25,69.5,29],'paint-matte','#24282c','standoff-rear-right');
 
 // Stack support rings are nominal soft-mount ENVELOPES. Their heights are
 // assembly assumptions, not measured compressed grommet dimensions.
@@ -124,10 +126,10 @@ function nominalProp(){
   return p.intersect(cylinder(6,propRadius)).subtract(cylinder(8,2.5).translate(0,0,-1));
 }
 const motorRows:[string,number,number,any,string][]=[
-  ['rear-right',motorX,motorY,rotor1,'#e66f35'],
-  ['front-right',motorX,-motorY,rotor2,'#e66f35'],
-  ['rear-left',-motorX,motorY,rotor3,'#427daf'],
-  ['front-left',-motorX,-motorY,rotor4,'#427daf']
+  ['rear-right',-motorX,motorY,rotor1,'#e66f35'],
+  ['front-right',-motorX,-motorY,rotor2,'#e66f35'],
+  ['rear-left',motorX,motorY,rotor3,'#427daf'],
+  ['front-left',motorX,-motorY,rotor4,'#427daf']
 ];
 for(const [name,x,y,angle,color] of motorRows){
   // Motor ENVELOPE: 28 mm OD, 3 mm mounting foot and 15 mm bell.

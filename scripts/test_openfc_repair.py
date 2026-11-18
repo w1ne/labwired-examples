@@ -104,7 +104,15 @@ class OpenFCRepair(unittest.TestCase):
     def test_native_cleanup_chain_and_export_identity(self):
         proof = read_json(CLEANUP / 'pcb-repair.json')
         board_hash = hashlib.sha256((REV / 'hardware/OpenFC.kicad_pcb').read_bytes()).hexdigest()
-        self.assertEqual(proof['output_board_sha256'], board_hash)
+        datum_dir = REV.parents[1] / 'cad/evidence/model-datum-correction-20261118'
+        datum = read_json(datum_dir / 'source-transform-proof.json')
+        board_datum = next(item for item in datum['files'] if item['file'] == 'hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb')
+        self.assertEqual(proof['output_board_sha256'], board_datum['beforeSha256'])
+        self.assertTrue(board_datum['onlyModelTransformTokensChanged'])
+        self.assertEqual(board_datum['afterSha256'], board_hash)
+        current_drc = read_json(datum_dir / 'fc-drc.json')
+        for key in ('violations', 'unconnected_items', 'schematic_parity'):
+            self.assertEqual(current_drc[key], [], key)
         self.assertTrue(proof['project_rule_policy_unchanged'])
         self.assertEqual(proof['project_sha256'], hashlib.sha256((REV / 'hardware/OpenFC.kicad_pro').read_bytes()).hexdigest())
         for item in proof['physical_geometry_comparison'].values():
@@ -113,10 +121,25 @@ class OpenFCRepair(unittest.TestCase):
         self.assertEqual(proof['net_partition_proof']['before'], 113)
         self.assertEqual(proof['net_partition_proof']['after'], 113)
         models = read_json(REV / 'mechanical-review/model-resolution-review.json')
-        self.assertEqual(models['board_sha256'], board_hash)
+        self.assertEqual(models['board_sha256'], board_datum['beforeSha256'])
         self.assertEqual(models['resolved_enabled_entries'], 107)
-        for name, asset in models['exports'].items():
-            self.assertEqual(asset['sha256'], hashlib.sha256((REV / 'mechanical-review' / name).read_bytes()).hexdigest())
+        # The newer export receipt owns the current bytes. The earlier model
+        # inventory remains an honest record of its original source/export.
+        exports = read_json(datum_dir / 'native-exports.json')
+        current_exports = [item for item in exports if item['sourceBoard'] == board_datum['file']]
+        self.assertEqual(len(current_exports), 3)
+        self.assertEqual({Path(item['artifact']).name for item in current_exports}, set(models['exports']))
+        for asset in current_exports:
+            path = REV.parents[1] / asset['artifact']
+            self.assertEqual(asset['sourceBoardSha256'], board_hash)
+            self.assertEqual(asset['exit'], 0)
+            self.assertEqual(asset['bytes'], path.stat().st_size)
+            self.assertEqual(asset['sha256'], hashlib.sha256(path.read_bytes()).hexdigest())
+        bodies = next(item for item in read_json(datum_dir / 'native-solid-comparison.json')['boards'] if item['board'] == 'fc')
+        self.assertEqual(bodies['beforeStepSha256'], models['exports']['fc-populated.step']['sha256'])
+        self.assertEqual(bodies['afterStepSha256'], hashlib.sha256((REV / 'mechanical-review/fc-populated.step').read_bytes()).hexdigest())
+        self.assertEqual((bodies['solidCount'], bodies['validCount']), (164, 164))
+        self.assertEqual(len(bodies['samePoseIndices']) + len(bodies['changedSolids']), 164)
 
     def test_erc_annotations_are_not_simulated_sources(self):
         before = json.loads(gzip.decompress((VAL / 'before-erc-intent-audit.json.gz').read_bytes()))
