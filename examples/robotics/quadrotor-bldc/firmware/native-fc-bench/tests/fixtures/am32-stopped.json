@@ -1,0 +1,128 @@
+{
+  "source_receipt": "at32-native-bidir-final-2.json",
+  "source_receipt_sha256": "015cd452d4fb5bb9215f5436a209f55ccefd82112cc96fb6c6b8be5ae1375bd3",
+  "application_elf_sha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d",
+  "complete_elf_sha256": "c6ae7b29e1fe35dd56070435aa271b18ec9cba77ec5329f092b3296776664e2a",
+  "source_probe_sha256": "6a6c58a388c2e98566748146beb3f24bf5c3972d873ce091cec27834d953a649",
+  "channel": "PB4 chip driver / ch0",
+  "esc_hz": 120000000,
+  "pio_hz": 75000000,
+  "pio_sample_period_clocks": 18,
+  "first_sample_pio_clocks": 18,
+  "phase_pio_quarters": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "expected_payload": 4095,
+  "edges": [
+    {
+      "ch": 0,
+      "cycle": 104045747,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104046055,
+      "state": "1"
+    },
+    {
+      "ch": 0,
+      "cycle": 104046209,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104046363,
+      "state": "1"
+    },
+    {
+      "ch": 0,
+      "cycle": 104046517,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104046825,
+      "state": "1"
+    },
+    {
+      "ch": 0,
+      "cycle": 104046979,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104047133,
+      "state": "1"
+    },
+    {
+      "ch": 0,
+      "cycle": 104047287,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104047595,
+      "state": "1"
+    },
+    {
+      "ch": 0,
+      "cycle": 104047749,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104047903,
+      "state": "1"
+    },
+    {
+      "ch": 0,
+      "cycle": 104048057,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104048211,
+      "state": "1"
+    },
+    {
+      "ch": 0,
+      "cycle": 104048365,
+      "state": "0"
+    },
+    {
+      "ch": 0,
+      "cycle": 104048827,
+      "state": "1"
+    }
+  ],
+  "words": [
+    [
+      4130752,
+      130086912,
+      4164880320,
+      4194303
+    ],
+    [
+      4130752,
+      130086912,
+      4164880320,
+      4194303
+    ],
+    [
+      4130752,
+      130086912,
+      4164880320,
+      4194303
+    ],
+    [
+      4065216,
+      130086912,
+      4164880320,
+      4194303
+    ]
+  ],
+  "scope": "Native simulation of unchanged AM32 bytes, not a physical capture; no generated edges or altered timing."
+}

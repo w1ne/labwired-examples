@@ -1,0 +1,78 @@
+{
+  "status": "built-not-runtime-qualified",
+  "source": {
+    "pico_sdk_commit": "ee68c78d0afae2b69c03ae1a72bf5cc267a2d94c",
+    "picotool_commit": "de8ae5ac334e1126993f72a5c67949712fd1e1a4",
+    "gcc_archive_sha256": "95c011cee430e64dd6087c75c800f04b9c49832cc1000127a92a97f9c8d83af4",
+    "gcc_archive_url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz",
+    "gcc_version": "13.3.1",
+    "source_date_epoch": 1787049419,
+    "native_board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+    "native_schematic_sha256": "36dba5ebd75912f935bc4d5f2e8f00a7d07f7f4628c6047bb0be40bbb745c0fc",
+    "native_export_uncompressed_sha256": "95348ddeb855a944bc3b0bc13586bc8a7d0638cc81c594c7937e183742b1e52c",
+    "identity": "openfc-native-motor-bench",
+    "target": "rp2354b",
+    "flash_bytes": 2097152,
+    "system_clock_hz": 150000000,
+    "physical_hardware_tested": false,
+    "pio_source": {
+      "repo": "https://github.com/OpenDrone-hw/betaflight",
+      "commit": "31066c0f3789d2dbc34b394cf383b04394d43724",
+      "path": "src/platform/PICO/dshot.pio",
+      "sha256": "b6e65ce2214673ae19a150dee8cafb58c8f1cae7adaaeec29ff402d43eb4e028",
+      "local_source_sha256": "581b5d2c103caf7e0b93ab55ea81c269ad61043aa59ed91dcd064fdeb16caa4b",
+      "local_patch": "source/dshot-bench.patch",
+      "local_patch_sha256": "2c1796220e9ef5ff5fdd9a5acad41b02474682bdaf7982f899b2d96da2868954",
+      "local_changes": "Correct the11-clock nop comment; use the intended five-iteration2us turnaround tail. Transmit/receive timings and real PIO/DMA path remain source-derived."
+    },
+    "source_archives": {
+      "picotool-de8ae5ac334e.tar.gz": "8a327353116dfd950a1610e3379a407b3cf22321e931a9c2bef68752a7f9b816",
+      "pico-sdk-ee68c78d0afa.tar.gz": "debc9a0dda356b97c546ce90cbc6ad9f02f343c3c5960f4ead557250e6a081c1"
+    }
+  },
+  "source_files": {
+    "CMakeLists.txt": "d1e6d868505d297ab4b6fb0307b5610feb36906d166d9d595b0e51a110599446",
+    "boards/openfc_lite_rp2354b_bench.h": "d731bbccb6e6a6dcd1889ecca38b5111352b9cbfa0b211bdb639be17dcd6e9b3",
+    "build.py": "deb82708f5b53fef36fe0b01e53135a28e8beaa34773d2be40df5228b34af300",
+    "src/dshot.pio": "581b5d2c103caf7e0b93ab55ea81c269ad61043aa59ed91dcd064fdeb16caa4b",
+    "src/main.c": "089654018b94eb2a543517dbd4ced9d04a5f1c29c58a9f90488c504684d52a5e",
+    "src/protocol.c": "4a2ef3fa5a59a949f5f85fa518e01fe17636e977cf80b0fa4d5ee7da00a0ccb0",
+    "src/protocol.h": "b1ed4c67577e745f7010cef43d3d7ef49ac5a74bc6362e652a00857ddcca1489",
+    "verify_artifacts.py": "16d7a7e3bca249b0b2a6ef91cdb69e34f52d731286e64a1a39e9c7b58fe1a5e9"
+  },
+  "configure": [
+    "cmake",
+    "-S",
+    "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc-bench",
+    "-B",
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-build-5/work/obj",
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-DBENCH_REPRO_ROOT=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-build-5/work",
+    "-Dpicotool_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-build-5/work/picotool-install/picotool",
+    "-DPICO_PLATFORM=rp2350-arm-s",
+    "-DPICO_BOARD=openfc_lite_rp2354b_bench"
+  ],
+  "seconds": 12.757775222009514,
+  "gcc": "arm-none-eabi-gcc (Arm GNU Toolchain 13.3.Rel1 (Build arm-13.24)) 13.3.1 20240614",
+  "picotool": "picotool v2.1.1 (Linux, GNU-13.3.0, Release)",
+  "picotool_executable_sha256": "7bbb5f1a8a70033ee33f33871fb071a70319af8a620e37834769742495a22f6a",
+  "artifacts": {
+    "openfc_motor_bench.elf": {
+      "bytes": 432448,
+      "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b"
+    },
+    "openfc_motor_bench.uf2": {
+      "bytes": 44032,
+      "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502"
+    },
+    "openfc_motor_bench.bin": {
+      "bytes": 21884,
+      "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780"
+    },
+    "openfc_motor_bench.elf.map": {
+      "bytes": 577287,
+      "sha256": "e6c6478ee298b53aa834611bab872b34ba79466ecd5b8e6d83fb927450b2e7b5"
+    }
+  },
+  "physical_hardware_tested": false
+}

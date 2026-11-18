@@ -1,0 +1,33 @@
+{
+  "compile": {
+    "argv": [
+      "cc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Isrc",
+      "src/protocol.c",
+      "tests/protocol_test.c",
+      "-o",
+      "/tmp/openfc-bench-protocol-test"
+    ],
+    "exit": 0
+  },
+  "test": {
+    "argv": [
+      "/tmp/openfc-bench-protocol-test"
+    ],
+    "exit": 0
+  },
+  "source_files": {
+    "src/protocol.c": "4a2ef3fa5a59a949f5f85fa518e01fe17636e977cf80b0fa4d5ee7da00a0ccb0",
+    "src/protocol.h": "b1ed4c67577e745f7010cef43d3d7ef49ac5a74bc6362e652a00857ddcca1489",
+    "tests/protocol_test.c": "84d789ee4c3455a15151938b1d3fd600660edfa395c769f3198dc32caea13d9f",
+    "tests/fixtures/am32-stopped.h": "d3dc9751825c9cdfa0731906dfc477ec63791d5de270ef10aaef0a33deaef86c",
+    "tests/fixtures/am32-stopped.json": "48323fcc82b87aa75e38ab66dd4b4b191b1357274430334a3faa17dd3e626ffd"
+  },
+  "cases": 16406,
+  "physical_hardware_tested": false
+}
