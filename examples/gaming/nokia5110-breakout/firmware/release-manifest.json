@@ -1,0 +1,75 @@
+{
+  "schema": "labwired.firmware-release.v1",
+  "status": "engineering-candidate",
+  "target": "thumbv7em-none-eabihf",
+  "board": "NUCLEO-L476RG",
+  "core_source_commit": "9d5a33f4dec9c7794a11d805e18c94073f6e7d91",
+  "core_pr": "https://github.com/w1ne/labwired-core/pull/2035",
+  "build_command": "./build.sh",
+  "rustc": "rustc 1.95.0 (59807616e 2026-04-14)\nbinary: rustc\ncommit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860\ncommit-date: 2026-04-14\nhost: x86_64-unknown-linux-gnu\nrelease: 1.95.0\nLLVM version: 22.1.2",
+  "cargo": "cargo 1.95.0 (f2d3ce0bd 2026-03-21)",
+  "objcopy": "GNU objcopy (2.42-1ubuntu1+23) 2.42",
+  "entry_point": "0x8000401",
+  "binary_load_address": "0x08000000",
+  "initial_stack_pointer": "0x20018000",
+  "sources": [
+    {
+      "path": "Cargo.toml",
+      "sha256": "f1faf369a5de90f32db23c3cba49eaac7e70b3332f20ff39fa7a429e1b6d709b"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "3dbe96a75af1518dd5cf1dba531768402cac1417ac5ad1ad743fdf7ded2e13fa"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "c5e772cb0daddc24628fe1b82a37dd71971bd15874d6b8b4dab216aa2fe4cc1f"
+    },
+    {
+      "path": "build.rs",
+      "sha256": "55c9ddd42735349ea96a05a74a8934d1d3ef8106d3d8b254637d1e2ee1d20539"
+    },
+    {
+      "path": "memory.x",
+      "sha256": "21cb7bb47c24672106cc2af1f1249b7314841aafd5c59d9d47baa29b2028925d"
+    },
+    {
+      "path": "src/main.rs",
+      "sha256": "8a265f8757ddf0a9ef69d1dedec73d27915d0e3e8577b7d14e44bf55242ed184"
+    },
+    {
+      "path": "build.sh",
+      "sha256": "bdd02b4fc1db57cdc5b1060f525def3cd5e9c9ad9b9a4c4ed8a3f5821210a94a"
+    },
+    {
+      "path": "system.yaml",
+      "sha256": "1cbbe7626fa798581dc31f7a353366ecc5602a3eff9665ee53ea21f3e6b99f3c"
+    },
+    {
+      "path": "io-smoke.yaml",
+      "sha256": "80c73cf2a4f9a70818b21a31be1437fdcce98440bb0d054d7a8b2a2bdf40dabe"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/nokia-breakout.elf",
+      "bytes": 203844,
+      "sha256": "1960f7a95a23d32647c363f58116490e5d9012e0fb201fc85630afa7ba105e5c"
+    },
+    {
+      "path": "artifacts/nokia-breakout.bin",
+      "bytes": 10184,
+      "sha256": "68eb1d161e2b3b361609a09510e1bfe48fc4e043d4a6669ad9f8abd1df099280"
+    }
+  ],
+  "behavior_evidence": "../validation/firmware-behavior.json",
+  "smoke_evidence": "../validation/firmware-smoke.json",
+  "physical_hardware_tested": false,
+  "reproducibility_note": "Source and toolchain are pinned. Cross-directory ELF byte identity is not asserted because debug information can retain build paths.",
+  "independent_target_directory_rebuild": {
+    "first_elf_sha256": "1960f7a95a23d32647c363f58116490e5d9012e0fb201fc85630afa7ba105e5c",
+    "second_elf_sha256": "1960f7a95a23d32647c363f58116490e5d9012e0fb201fc85630afa7ba105e5c",
+    "binary_sha256": "68eb1d161e2b3b361609a09510e1bfe48fc4e043d4a6669ad9f8abd1df099280",
+    "binary_matches": true
+  }
+}

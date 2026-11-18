@@ -1,0 +1,722 @@
+{
+  "schema_version": 1,
+  "package_id": "nokia-breakout-rev-a-candidate-2",
+  "status": "engineering-candidate",
+  "date": "2026-11-18",
+  "canonical_lab_url": "https://app.labwired.com/?lab=nokia5110-invaders-lab",
+  "tracker": "https://github.com/w1ne/labwired/issues/3551",
+  "firmware_manifest": "firmware/release-manifest.json",
+  "native_board_id": "pcb_99d3797e40188285",
+  "native_pcb_ref": "sha256:9ef455b320b5ff9ddaeacaa8bcac17c575e2fd2986e3fbf4df69afcb7b61913e",
+  "native_rules_ref": "sha256:069a2d06dd7ac3273e7540c62daddbafedce7c1715f5b665fe6d1a3d66b50163",
+  "native_files": [
+    {
+      "path": "electronics/nokia-carrier.kicad_sch",
+      "bytes": 53239,
+      "sha256": "4bdd0d40967fada110d930ebd66d3f682b6db7ef762de6520bc5617c4a7897d1"
+    },
+    {
+      "path": "electronics/nokia-carrier.kicad_pcb",
+      "bytes": 182078,
+      "sha256": "9ef455b320b5ff9ddaeacaa8bcac17c575e2fd2986e3fbf4df69afcb7b61913e"
+    },
+    {
+      "path": "electronics/nokia-carrier.kicad_pro",
+      "bytes": 909,
+      "sha256": "922dc19319c99f71c680021d2394037576fd6bd09bce97bf7083baf915f612c6"
+    }
+  ],
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "YhZimWlS",
+    "projectId": "860443af-e8d3-44b9-a009-098108e5d444",
+    "published_version": 1,
+    "published_version_is_current": false,
+    "mesh_producer_provenance": "19171a5f8aaeda2e43aec706c1ce0b001c65750332cf91777b96c47a8245ab20",
+    "source": "mechanical/nokia-breakout-enclosure.kcad.ts",
+    "submitted_source": "validation/submitted-enclosure.kcad.ts",
+    "step": "mechanical/nokia-breakout-assembly.step",
+    "print_files": [
+      "mechanical/nokia-base.stl",
+      "mechanical/nokia-lid.stl",
+      "mechanical/nokia-lcd-clamp.stl",
+      "mechanical/nokia-sensor-clamp.stl"
+    ],
+    "cut_file": "mechanical/nokia-window.dxf",
+    "part_count": 85,
+    "assembly_export_is_current": true,
+    "design_loop_is_current": true,
+    "named_parts": [
+      "base",
+      "lid",
+      "lcd-window",
+      "nucleo-native-pcb",
+      "carrier-native-pcb",
+      "joy-it-rev2-module-envelope",
+      "lcd-glass-view-envelope",
+      "adafruit3942-pcb-envelope",
+      "sonar-transducer-0",
+      "sonar-transducer-1"
+    ],
+    "revision": "B",
+    "current_studio_revision_pending": true,
+    "coordinate_correction": "validation/native-coordinate-correction.json",
+    "assembly_path_status": "inconclusive-memory-budget"
+  },
+  "physical_hardware_tested": false,
+  "verification": {
+    "erc": "validation/erc.json",
+    "drc": "validation/drc.json",
+    "native_import": "validation/native-import-validation.json",
+    "firmware": "validation/firmware-behavior.json",
+    "smoke": "validation/firmware-smoke.json",
+    "mechanical": "validation/design-loop.json",
+    "visual": "validation/visual-review.json",
+    "step": "validation/assembly-step-inspection.json",
+    "print_and_cut_files": "validation/export-file-checks.json",
+    "studio": "validation/studio-revision.json",
+    "mesh": "validation/mesh-provenance.json",
+    "assembly_path": "validation/assembly-path-revision-b.json",
+    "native_registration": "validation/board-registration.json",
+    "assembly_path_historical": "validation/assembly-path.json"
+  },
+  "open_acceptance_items": [
+    "Save the corrected revision B source to existing Studio project YhZimWlS after the generic imported-asset collaboration repair is deployed; revision 1 is superseded.",
+    "Complete full assembly-path verification; the corrected 85-part scene exceeded the hosted 1000 MB per-job memory budget and is inconclusive.",
+    "Bind and verify this exact package in the existing canonical Lab using the physical 4 MHz time base and 32-cycle peripheral cap.",
+    "Measure the purchased Nucleo socket stack, LCD/sonar revision details, USB overmold, printed fits, hardware engagement and wire routing.",
+    "Fabricate, assemble and power a prototype; record supply currents, ECHO levels/timing and closed-case behavior."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 104,
+      "sha256": "82ecf6243ba0b73f449bb99924be2933aca8661963d23f64e899da02305e30ca"
+    },
+    {
+      "path": "ASSEMBLY.md",
+      "bytes": 11447,
+      "sha256": "5d1715d3c03e23d3387c1820533710d520629c6b23d3fdc2302b3db8fb67392c"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1098,
+      "sha256": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13564,
+      "sha256": "07a46c5a543249cd6ab662f0320f619591c929ab18e670b272f5e79ad4fc0093"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 1803,
+      "sha256": "842e910e0858c542b1d689acd83da9ca2b888d5be5705f09791c85afe4fb96b2"
+    },
+    {
+      "path": "bom.csv",
+      "bytes": 4896,
+      "sha256": "9fa6b901ed24d8a1a5a7fdf4e2df6f26bd7678ab9c844539127d53bc125f0221"
+    },
+    {
+      "path": "electronics-bom.csv",
+      "bytes": 871,
+      "sha256": "37b8fad58757b7c0768b6e8b837c1e2760b860d20b006d0acf847c462d53c594"
+    },
+    {
+      "path": "electronics/authoring-metadata.json",
+      "bytes": 6265,
+      "sha256": "5b2e38a905c60c3f74588ccacc543931c0a173ab21a53eb634f217423ca36654"
+    },
+    {
+      "path": "electronics/fp-lib-table",
+      "bytes": 166,
+      "sha256": "63bbef75229541b019a8f6919e689b8b0d4689f56cb6d7f94950eeb9f8d6f4d9"
+    },
+    {
+      "path": "electronics/licenses/kicad-library-license.txt",
+      "bytes": 2105,
+      "sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef"
+    },
+    {
+      "path": "electronics/nokia-carrier.kicad_pcb",
+      "bytes": 182078,
+      "sha256": "9ef455b320b5ff9ddaeacaa8bcac17c575e2fd2986e3fbf4df69afcb7b61913e"
+    },
+    {
+      "path": "electronics/nokia-carrier.kicad_pro",
+      "bytes": 909,
+      "sha256": "922dc19319c99f71c680021d2394037576fd6bd09bce97bf7083baf915f612c6"
+    },
+    {
+      "path": "electronics/nokia-carrier.kicad_sch",
+      "bytes": 53239,
+      "sha256": "4bdd0d40967fada110d930ebd66d3f682b6db7ef762de6520bc5617c4a7897d1"
+    },
+    {
+      "path": "electronics/nokia-carrier.kicad_sym",
+      "bytes": 22752,
+      "sha256": "193f07913004c8d734f2f0acf2b34626af403176dd14875a0883d3bbcb1e3b99"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/AccessHole.kicad_mod",
+      "bytes": 1243,
+      "sha256": "2baedd9f8db357090a0bcde2c0a173ac6905d5d9acceb448c1581221b05b27e8"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/C.kicad_mod",
+      "bytes": 1746,
+      "sha256": "76085db3ed0e8beb10f29c70ef943e5ff7dcfc5b00251165acf81f46e5ec1ee9"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/C0805.kicad_mod",
+      "bytes": 1852,
+      "sha256": "1807e6c96afb590f1d8c6bc0804b1394627a025145a3649887628982f940e38c"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/Header10.kicad_mod",
+      "bytes": 3634,
+      "sha256": "2f8adbaf7bcbf9def3ae1bc7dfd44697eedb544caf1bc56597853e734c778ba6"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/Header4.kicad_mod",
+      "bytes": 2834,
+      "sha256": "5f665adf7e0d967c46eac4829f4a9c71827fc168f90e9df64e93dd95e6782f68"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/Header8.kicad_mod",
+      "bytes": 3373,
+      "sha256": "acb0d1e4786c07cd6560516a74cafd8409480ff5f24ce6a876dca6687ee69edd"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/MountingHole.kicad_mod",
+      "bytes": 1284,
+      "sha256": "40e6ddd712725ea2576498103d20945835c42c1201e7218a1e0697a9945866bc"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/R.kicad_mod",
+      "bytes": 1762,
+      "sha256": "b3ec53ecde39f967f82ad6477740ba5b193ff1a4a6adf2ca768c02522783bce8"
+    },
+    {
+      "path": "electronics/nokia-carrier.pretty/TestPoint.kicad_mod",
+      "bytes": 1745,
+      "sha256": "85191310ec9441ccfc23a1b699133b7468f39be889683b83f50bec9ac0a3762f"
+    },
+    {
+      "path": "electronics/provenance.json",
+      "bytes": 2754,
+      "sha256": "936e35c0a5a531159d8729c3c02d1c317ef12ffe178aa3472c720d94215fae9f"
+    },
+    {
+      "path": "electronics/sym-lib-table",
+      "bytes": 167,
+      "sha256": "3d0cfc6378611786a7bf9bc3d594c04ca95df70952edfb32c5e936dbdeefec7e"
+    },
+    {
+      "path": "firmware/Cargo.lock",
+      "bytes": 4425,
+      "sha256": "3dbe96a75af1518dd5cf1dba531768402cac1417ac5ad1ad743fdf7ded2e13fa"
+    },
+    {
+      "path": "firmware/Cargo.toml",
+      "bytes": 391,
+      "sha256": "f1faf369a5de90f32db23c3cba49eaac7e70b3332f20ff39fa7a429e1b6d709b"
+    },
+    {
+      "path": "firmware/README.md",
+      "bytes": 3394,
+      "sha256": "89d5ca590d3ce751afd33ad1fee2aea8dbd70f6d6e3cbc827db7bf11a54a23de"
+    },
+    {
+      "path": "firmware/artifacts/nokia-breakout.bin",
+      "bytes": 10184,
+      "sha256": "68eb1d161e2b3b361609a09510e1bfe48fc4e043d4a6669ad9f8abd1df099280"
+    },
+    {
+      "path": "firmware/artifacts/nokia-breakout.elf",
+      "bytes": 203844,
+      "sha256": "1960f7a95a23d32647c363f58116490e5d9012e0fb201fc85630afa7ba105e5c"
+    },
+    {
+      "path": "firmware/build.rs",
+      "bytes": 349,
+      "sha256": "55c9ddd42735349ea96a05a74a8934d1d3ef8106d3d8b254637d1e2ee1d20539"
+    },
+    {
+      "path": "firmware/build.sh",
+      "bytes": 386,
+      "sha256": "bdd02b4fc1db57cdc5b1060f525def3cd5e9c9ad9b9a4c4ed8a3f5821210a94a"
+    },
+    {
+      "path": "firmware/io-smoke.yaml",
+      "bytes": 438,
+      "sha256": "80c73cf2a4f9a70818b21a31be1437fdcce98440bb0d054d7a8b2a2bdf40dabe"
+    },
+    {
+      "path": "firmware/memory.x",
+      "bytes": 99,
+      "sha256": "21cb7bb47c24672106cc2af1f1249b7314841aafd5c59d9d47baa29b2028925d"
+    },
+    {
+      "path": "firmware/release-manifest.json",
+      "bytes": 2904,
+      "sha256": "aa2fefe6380f06fca939d2e0f0941c12960f1be980e6677dd665606c14a4703e"
+    },
+    {
+      "path": "firmware/rust-toolchain.toml",
+      "bytes": 87,
+      "sha256": "c5e772cb0daddc24628fe1b82a37dd71971bd15874d6b8b4dab216aa2fe4cc1f"
+    },
+    {
+      "path": "firmware/src/main.rs",
+      "bytes": 18096,
+      "sha256": "8a265f8757ddf0a9ef69d1dedec73d27915d0e3e8577b7d14e44bf55242ed184"
+    },
+    {
+      "path": "firmware/system.yaml",
+      "bytes": 1206,
+      "sha256": "1cbbe7626fa798581dc31f7a353366ecc5602a3eff9665ee53ea21f3e6b99f3c"
+    },
+    {
+      "path": "hardware-interface.json",
+      "bytes": 4043,
+      "sha256": "bac199469882d9b5b2bad5638d8b0630cd6b13fb82528ca51054f665b107c393"
+    },
+    {
+      "path": "manufacturing/board-authoring-summary.json",
+      "bytes": 3727,
+      "sha256": "acb166280318d0c02c1a44ce0c4939203c9859bde54ee7fcd65c51eab0c3b572"
+    },
+    {
+      "path": "manufacturing/drill/drill-report.txt",
+      "bytes": 740,
+      "sha256": "b2027593bf5e547008e98d0508972f4eee78166deb609ce427c1698a193127d1"
+    },
+    {
+      "path": "manufacturing/drill/nokia-carrier-NPTH-drl_map.pdf",
+      "bytes": 13269,
+      "sha256": "bb84176d3265dae4a77e91365e0baf489c62dd7e75a896ca25e395a00bf65819"
+    },
+    {
+      "path": "manufacturing/drill/nokia-carrier-NPTH.drl",
+      "bytes": 505,
+      "sha256": "35146ca5249aa9e7e4631f9598766583b7e4569c0812377ba51f57d6de5d3f69"
+    },
+    {
+      "path": "manufacturing/drill/nokia-carrier-PTH-drl_map.pdf",
+      "bytes": 14390,
+      "sha256": "5363d4c2ee16d77ea7a6ca2e1a7f084c7b0f3a532a19d99521514160f1f2d580"
+    },
+    {
+      "path": "manufacturing/drill/nokia-carrier-PTH.drl",
+      "bytes": 1000,
+      "sha256": "49fbb849252e73de0c38d22bbdb417f8bcf292e2c3ffaf02e718146a02389b65"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-B_Cu.gbl",
+      "bytes": 83235,
+      "sha256": "5d747cdab888e0d6061025f6a2b2e5206253168c9d4086f9788bf85073700199"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-B_Mask.gbs",
+      "bytes": 1897,
+      "sha256": "5a90743ce559ccf87118e23c16dcf18310521ec007156a31e55c98a10cab3c18"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-B_Silkscreen.gbo",
+      "bytes": 3488,
+      "sha256": "bfaf0da49698a8d368109d31023f76b84910ca4091d41e3e07eb186af38f9a23"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-Edge_Cuts.gm1",
+      "bytes": 948,
+      "sha256": "2a00214d291b2af53cbce2ce6b66e73028812aeb5d75bb0747668190d464c9f1"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-F_Cu.gtl",
+      "bytes": 8148,
+      "sha256": "4857910b45e7894c90df0990a26f217e02b3f2c3f7f6c63d63cf1f513f4c5696"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-F_Mask.gts",
+      "bytes": 3361,
+      "sha256": "0cfced375f5de539de421ae0e9d451f3fedd608dee467910f0b5cb7c6829cf91"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-F_Silkscreen.gto",
+      "bytes": 46201,
+      "sha256": "671a2cac1d0848e5284cb116dd56fb7877164dc8815f9520733623e6eac4bbfb"
+    },
+    {
+      "path": "manufacturing/gerbers/nokia-carrier-job.gbrjob",
+      "bytes": 2501,
+      "sha256": "683a80b5932d25939184e56226b3cf3050933599c16d2452c0c1fd019c8c9a8c"
+    },
+    {
+      "path": "manufacturing/nokia-carrier-fabrication.zip",
+      "bytes": 33321,
+      "sha256": "72914f343b069d16877fa48b855500b2904a4cda76e24696fe6186b69afb6435"
+    },
+    {
+      "path": "manufacturing/nokia-carrier-schematic.pdf",
+      "bytes": 104748,
+      "sha256": "deeb76afbec7cbb017e85032bff5e8e69da9ff95583ec5b07906c7f5470745f5"
+    },
+    {
+      "path": "manufacturing/nokia-carrier.net.xml",
+      "bytes": 33800,
+      "sha256": "297187c53b9e9afcf3177d357473fac9cee0ad0a603b874ef3cee8992c1f9f8b"
+    },
+    {
+      "path": "manufacturing/preview/carrier-back.png",
+      "bytes": 76100,
+      "sha256": "93a0bc71126457a5aba7a76b92a5a54a7d7d519faaf50bf8a9d917eaa91235a9"
+    },
+    {
+      "path": "manufacturing/preview/carrier-back.svg",
+      "bytes": 66360,
+      "sha256": "680d0fdad3a9ce056bb20a3d85af955185a526f752ca77a9b08f0d64b04c9f1f"
+    },
+    {
+      "path": "manufacturing/preview/carrier-front.png",
+      "bytes": 80385,
+      "sha256": "f3cc0881f4c3e865c82f6fbb126934b7168c18330b12f8cf57b30b1e957b31c2"
+    },
+    {
+      "path": "manufacturing/preview/carrier-front.svg",
+      "bytes": 67681,
+      "sha256": "063abde1c1ca78049c889eff4a6ac69f8363ffb3c4290deed0a72cb727822cf4"
+    },
+    {
+      "path": "mechanical-interface.json",
+      "bytes": 6537,
+      "sha256": "dbe53c453052e296f8d7d09b8b02453bd77c6feabaef158304a273ac7a40a3b1"
+    },
+    {
+      "path": "mechanical/assembly-front.png",
+      "bytes": 58874,
+      "sha256": "29a94f9e8f0c961471c2ea5f95947a4d5724f13a587177aca57685631677d383"
+    },
+    {
+      "path": "mechanical/assembly-iso.png",
+      "bytes": 97037,
+      "sha256": "d67bb7914608a8008b652d98027c077563e3dfba1e08b3c02791bd1a7341f2d9"
+    },
+    {
+      "path": "mechanical/assembly-rear-front.png",
+      "bytes": 64949,
+      "sha256": "447b3cf601760efa5733210c18d19d2d8d1804111b132abcf85a858a3a0c3aab"
+    },
+    {
+      "path": "mechanical/assembly-rear-iso.png",
+      "bytes": 101687,
+      "sha256": "0522ff38ae009310a9d0e16fdbe30828d10f4f100f37a882db91900f8345274f"
+    },
+    {
+      "path": "mechanical/assembly-top.png",
+      "bytes": 87061,
+      "sha256": "afa5c7cfcbda5fded7991ce066e8db6151b8ac23a5021bafe339f91e50fc4276"
+    },
+    {
+      "path": "mechanical/inputs/nokia-carrier.step",
+      "bytes": 82929,
+      "sha256": "9a7142507be4cf31f1532c3ce2204a916cf45432d3d465f4bdf4441d249b0739"
+    },
+    {
+      "path": "mechanical/inputs/nucleo-mb1136-reference.step",
+      "bytes": 274359,
+      "sha256": "23632172f33c522937803ef918369a82e208bde78545da85edfe106e52884cf9"
+    },
+    {
+      "path": "mechanical/nokia-base.stl",
+      "bytes": 1598284,
+      "sha256": "696cc3bad227c10a97c192c5c550166093c3a1ce570bffbf1f8b10945eb826d6"
+    },
+    {
+      "path": "mechanical/nokia-breakout-assembly.step",
+      "bytes": 10067645,
+      "sha256": "db40dd01df2611938d8b6e306f56516b638350815d26bd2efeba2902958f3782"
+    },
+    {
+      "path": "mechanical/nokia-breakout-enclosure.kcad.ts",
+      "bytes": 16025,
+      "sha256": "9a739f7efc25d4ff66046c3b4dc5ba1fb32826bbafb2d6d50fb77ce4b9010326"
+    },
+    {
+      "path": "mechanical/nokia-lcd-clamp.stl",
+      "bytes": 102284,
+      "sha256": "6db090f8b56bd65064365c56c39d974dd2a809fca4c7e2601c30d2b8a53ed628"
+    },
+    {
+      "path": "mechanical/nokia-lid.stl",
+      "bytes": 1191484,
+      "sha256": "2fbe0fee9d54feffac1e2aff95b80e012bc50c1e01de1f7b0ea8dedfc938249c"
+    },
+    {
+      "path": "mechanical/nokia-sensor-clamp.stl",
+      "bytes": 102284,
+      "sha256": "3b37988a2a0dbee285616ef08f1abb59fc9b71d158236655293d13a30f361e2d"
+    },
+    {
+      "path": "mechanical/nokia-window-drawing.png",
+      "bytes": 59306,
+      "sha256": "00505cd3ec17b0a32acc923a24a66064b160ff629619ada0b203381f6297ac7b"
+    },
+    {
+      "path": "mechanical/nokia-window-drawing.svg",
+      "bytes": 2120,
+      "sha256": "19e4575d8a67788ab7b7c8029a961d46571f362098c7556a2f2b0ae8151897d5"
+    },
+    {
+      "path": "mechanical/nokia-window.dxf",
+      "bytes": 1123,
+      "sha256": "410c6e7d79b86e6314c5d780bff03327ddbd815355417bd9ae52b38893720e7a"
+    },
+    {
+      "path": "references/st/MB1136-mechanical-reference.kicad_pcb",
+      "bytes": 1954329,
+      "sha256": "2e3ee4a1ffdc0039f5ab0d0cced0514c6fe6fb378201151dfdcaf8ddac6cdcbc"
+    },
+    {
+      "path": "references/st/MB1136-mechanical-reference.kicad_pro",
+      "bytes": 9710,
+      "sha256": "3ab116dac70b7b006e954458bb95bf6344290467dabba99ad0273041f90a1cb6"
+    },
+    {
+      "path": "references/st/mb1136_bdp.zip",
+      "bytes": 492338,
+      "sha256": "66e2aa6a1ca58e787ea1717c0736a1853777f93a20a95e4d2e0273dc234eb52d"
+    },
+    {
+      "path": "references/st/open-platform-license-agreement.pdf",
+      "bytes": 43549,
+      "sha256": "0809c990f7a3b971bc9517e20d93c3da880b46d30505409c47f61b371703d2a0"
+    },
+    {
+      "path": "references/st/provenance.json",
+      "bytes": 1711,
+      "sha256": "3f50d641932a3964b234e7f846b761774aed62b3a5fae921e3d88ffe11a3a88e"
+    },
+    {
+      "path": "tools/check_board_registration.py",
+      "bytes": 5778,
+      "sha256": "2dc39a822382d2971a6fc620a89f06ce3f33923b9cee81166516419469b4ce3c"
+    },
+    {
+      "path": "tools/check_exports.py",
+      "bytes": 5583,
+      "sha256": "a4e56fe703d5af117580de526ee4fadbe3da6a6de215c2cee0b0139890a19408"
+    },
+    {
+      "path": "tools/derive_nucleo_reference.py",
+      "bytes": 4156,
+      "sha256": "0a302a679b442a70809484a241a77bc8e2caedbdf80cebb74f140177966417ab"
+    },
+    {
+      "path": "tools/generate_board.py",
+      "bytes": 8633,
+      "sha256": "18c2019703ae8249cc8dea9f35a7740ef55e9f34b2d882c06af530831bfb2c11"
+    },
+    {
+      "path": "tools/generate_schematic.py",
+      "bytes": 11367,
+      "sha256": "d252da6a2bc7aff8f16c399dbb3f6a8afbab3035758ac11856809c8340a2803a"
+    },
+    {
+      "path": "validation/assembly-path-revision-b.json",
+      "bytes": 3414,
+      "sha256": "c2c457a15acf68bbaddfdb180a44ab006323b02b5b9eb18e108ed8e60c656d54"
+    },
+    {
+      "path": "validation/assembly-path.json",
+      "bytes": 3134,
+      "sha256": "6a23c07509c542204678a7b93de267cd7cb7f60620d93033c01aa7fd8651f58e"
+    },
+    {
+      "path": "validation/assembly-step-export.json",
+      "bytes": 1676,
+      "sha256": "86d1e8c3f08d2c4d5ac027976bd4af63453d17620e8174d241ac2796a9d852a7"
+    },
+    {
+      "path": "validation/assembly-step-inspection.json",
+      "bytes": 30070,
+      "sha256": "13551057b79e6a4ef901ac9c5c087c72358ee03a5874efd2a836d9d6c592e517"
+    },
+    {
+      "path": "validation/board-registration.json",
+      "bytes": 7787,
+      "sha256": "7272fdd7a4a589805f57161dfe5007f6dc7f1b7f8c13a76e47840ebeb047ace9"
+    },
+    {
+      "path": "validation/cad-bbox-conservative-diagnostic.json",
+      "bytes": 15737,
+      "sha256": "dd1093fcc9124669902840f6a0f7f5dd385926bfc5183baa40cee0bfef929cac"
+    },
+    {
+      "path": "validation/cad-evaluation.json",
+      "bytes": 11418,
+      "sha256": "0a7fec0ec0c0360223aeeaf18d084ffba9ff5264e6e1d42f2d16dc58232e0d17"
+    },
+    {
+      "path": "validation/carrier-exact-dimensions.json",
+      "bytes": 892,
+      "sha256": "0924c7a417235a2cc90a4e9a305832024480905af9791da63727dc03d49c77b0"
+    },
+    {
+      "path": "validation/carrier-finished-export.json",
+      "bytes": 1530,
+      "sha256": "3a56cff951d2c82ddb8851b07b6949d0b7de1b474c83a018dbf736c47988ad76"
+    },
+    {
+      "path": "validation/closed-renders.json",
+      "bytes": 2506,
+      "sha256": "69cae960a2f027ff8202100111e4072fcee188c0565da6e7db1e257d1ae4e2a1"
+    },
+    {
+      "path": "validation/design-loop.json",
+      "bytes": 15351,
+      "sha256": "bf968f4e3eabc4c6c73060fd5a7bf9a6bb2695eb672b63516ca61e3579410bc7"
+    },
+    {
+      "path": "validation/drc.json",
+      "bytes": 1070,
+      "sha256": "8926a1bbb15dc3c581c37e26d71a68bd310760b30a65598d258e4f0ead5e99af"
+    },
+    {
+      "path": "validation/erc.json",
+      "bytes": 986,
+      "sha256": "67d56c6d78a985bd060d39083f0d0948e06aa3201db2fceafc90dabe098f9267"
+    },
+    {
+      "path": "validation/export-base.json",
+      "bytes": 1609,
+      "sha256": "90fef9df2f35c7be6b6857db19f282117b7696c9f6965cc459394065c6b41ba0"
+    },
+    {
+      "path": "validation/export-file-checks.json",
+      "bytes": 3357,
+      "sha256": "e8885047778f86f9865f44cdfc05106764131b15660cb828094e08da807d3e69"
+    },
+    {
+      "path": "validation/export-lcd-clamp.json",
+      "bytes": 1659,
+      "sha256": "c526a8cd5d4ecda3071590070d8125c34ffa7f3c1e5ef66e32a5604596c1544e"
+    },
+    {
+      "path": "validation/export-lid.json",
+      "bytes": 1619,
+      "sha256": "69a7967afb95cc43ab992b55084c78daff595ffc9c7f91046c9056d33ba7b8e8"
+    },
+    {
+      "path": "validation/export-sensor-clamp.json",
+      "bytes": 1661,
+      "sha256": "56ecb7758fd9e5b63f43d4bebb0636b4fe4a633d272ede376c7688095845daf8"
+    },
+    {
+      "path": "validation/export-window.json",
+      "bytes": 1628,
+      "sha256": "df94fce6b54275e30d4ea62bf5fbab448c86002dfd6c60e620aabea50269b6b2"
+    },
+    {
+      "path": "validation/firmware-behavior.json",
+      "bytes": 1896,
+      "sha256": "03d9cfda2f84c5a3fbcdba8adf52d090c719e44df6bdd550e0ec01ad163efa77"
+    },
+    {
+      "path": "validation/firmware-behavior.log",
+      "bytes": 2222,
+      "sha256": "d2b5d81db90634d48e17aef901e0047ca3111e7bf9f7f1a81abcfea17f9c43ca"
+    },
+    {
+      "path": "validation/firmware-build.log",
+      "bytes": 980,
+      "sha256": "e7d106756b747fd4723a4344635fce64468f606a04fc1208fd131e2070e28e53"
+    },
+    {
+      "path": "validation/firmware-smoke.json",
+      "bytes": 353307,
+      "sha256": "76c37987f6b535a1373a4196ce619ba7e685cbb6b26b00d6e7c14f882f889b9c"
+    },
+    {
+      "path": "validation/firmware-smoke.log",
+      "bytes": 419,
+      "sha256": "9e1d25ac2ca5cd4f795269d70673e5b7b5eb539c56f5fef437b0d36e7fc27632"
+    },
+    {
+      "path": "validation/mesh-provenance.json",
+      "bytes": 1713,
+      "sha256": "db1ea54a08ae1beec965c80d98906b6bb0092456d68b56795d7e3c115dff3933"
+    },
+    {
+      "path": "validation/native-coordinate-correction.json",
+      "bytes": 1166,
+      "sha256": "75e491c7318ed3995d2cba09425ad5462690e9c2d79cbe46be05412fdf655bfa"
+    },
+    {
+      "path": "validation/native-import-validation.json",
+      "bytes": 6051,
+      "sha256": "26a677c298fafdb28de4d7e1713690a5a4cef920bcd9afed6680f4a20d572831"
+    },
+    {
+      "path": "validation/native-import.json",
+      "bytes": 5339,
+      "sha256": "667007841775a75c603252db0391a4f27f65f2ab40868765ea02df799c8a4628"
+    },
+    {
+      "path": "validation/nucleo-derivation-replay.json",
+      "bytes": 1000,
+      "sha256": "385d92a1ed0a8d585a97f7e79909bb94532895c709851ba9ca2d68ee42014499"
+    },
+    {
+      "path": "validation/nucleo-native-import-replay.json",
+      "bytes": 2477,
+      "sha256": "2d4acf777cc55cda6143aed019e8517fa55dedad91548b76da99021f8b2c5e0e"
+    },
+    {
+      "path": "validation/part-stats-base.json",
+      "bytes": 433,
+      "sha256": "ebcc6f1dc71b4544d80b1bb68d5d4895c9424b789a5a5d17f96a306551987750"
+    },
+    {
+      "path": "validation/part-stats-lcd-clamp.json",
+      "bytes": 440,
+      "sha256": "3d4970ea5b5c550b4eeab390ff6901c7ffce5acd3d539ba7cf05ed8cf1713ac8"
+    },
+    {
+      "path": "validation/part-stats-lid.json",
+      "bytes": 453,
+      "sha256": "311280e94727b8e93fbdeb7db22d222607d40105bd35291b1b3f30616cdc077e"
+    },
+    {
+      "path": "validation/part-stats-sensor-clamp.json",
+      "bytes": 446,
+      "sha256": "26283ed9a242669d793373be226edfb3a0aac34feb17b72e5625e58622c83072"
+    },
+    {
+      "path": "validation/rear-renders.json",
+      "bytes": 1984,
+      "sha256": "762b683c68c41133897664b514680059ffbcff2527563ecfd4967a81a5db6150"
+    },
+    {
+      "path": "validation/rear-review-source.kcad.ts",
+      "bytes": 16468,
+      "sha256": "981824d1fd4b9370d1d15907ab31b6fd6b00327a2bf09d21f9b956394aa2635e"
+    },
+    {
+      "path": "validation/studio-revision.json",
+      "bytes": 16717,
+      "sha256": "5a0e8f81d03df2a93bac8b011369168182fec7ed09c77b405198c0b20c18f505"
+    },
+    {
+      "path": "validation/submitted-enclosure.kcad.ts",
+      "bytes": 16309,
+      "sha256": "2760625f61d5820e5a3dd74b56710b74215217f8f02599857c67facc5cf45308"
+    },
+    {
+      "path": "validation/visual-review.json",
+      "bytes": 4158,
+      "sha256": "64bfa5a4c77905cab94b54ac058b62fef02ba137a8e2d4c311c0a32436c2eea6"
+    }
+  ]
+}

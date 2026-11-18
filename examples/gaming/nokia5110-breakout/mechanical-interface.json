@@ -1,0 +1,321 @@
+{
+  "schema": "labwired.mechanical-interface.v1",
+  "units": "mm",
+  "coordinate_system": {
+    "x": "native STEP X; same as PCB editor X",
+    "y": "native STEP Y; opposite PCB editor Y; positive Y is the USB rear",
+    "z": "up from the case floor underside; both native board top faces remain +Z",
+    "carrier_xy_origin": [
+      0,
+      0
+    ],
+    "editor_to_world": {
+      "point": "[x,-y,z]",
+      "normal": "[nx,-ny,nz]"
+    },
+    "native_board_placement": "Positive Z scale plus translation only; no reflection or 180-degree turnover."
+  },
+  "outer_bounds_mm": {
+    "min": [
+      -16,
+      -72.5,
+      0
+    ],
+    "max": [
+      106,
+      31.5,
+      70.5
+    ]
+  },
+  "case_body_mm": {
+    "width": 122,
+    "depth": 104,
+    "base_height": 64,
+    "lid_top": 66,
+    "floor": 3,
+    "wall": 2.5,
+    "lid_thickness": 2
+  },
+  "carrier": {
+    "size": [
+      90,
+      66,
+      1.6
+    ],
+    "bottom_z": 23,
+    "mounts": [
+      [
+        5,
+        -5,
+        2.9
+      ],
+      [
+        85,
+        -5,
+        2.9
+      ],
+      [
+        5,
+        -61,
+        2.9
+      ],
+      [
+        85,
+        -61,
+        2.9
+      ]
+    ],
+    "button_access_holes": [
+      [
+        36.745,
+        -6.2,
+        10
+      ],
+      [
+        53.255,
+        -6.2,
+        10
+      ]
+    ],
+    "geometry_source": "Native routed KiCad board; exact re-imported finished-board bounds are recorded separately."
+  },
+  "nucleo": {
+    "mpn": "NUCLEO-L476RG",
+    "source_revision": "MB1136C",
+    "size": [
+      70,
+      82.5,
+      1.59112
+    ],
+    "xy_offset": [
+      10,
+      23
+    ],
+    "bottom_z": 10,
+    "mounts": [
+      [
+        20.87,
+        -4.93,
+        3.2
+      ],
+      [
+        69.13,
+        -6.2,
+        3.2
+      ],
+      [
+        53.89,
+        -57,
+        3.2
+      ]
+    ],
+    "arduino_socket_height_assumption": 8.51,
+    "geometry_source": "Unmodified ST PcbDoc in the pinned archive; derived bare-board contour. Factory sockets and other parts are separate documented envelopes."
+  },
+  "stack": {
+    "standoff_mpn": "970200144",
+    "standoff_length": 20,
+    "nucleo_pcb_top": 11.59112,
+    "assumed_socket_top": 20.10112,
+    "carrier_male_insulator_bottom": 20.46,
+    "nominal_insulator_clearance": 0.35888,
+    "male_post_length": 5.842,
+    "nominal_contact_insertion": 5.48312
+  },
+  "lcd": {
+    "manufacturer": "Joy-IT",
+    "mpn": "SBC-LCD84x48",
+    "revision": "2",
+    "published_envelope": [
+      45,
+      45,
+      14
+    ],
+    "pcb_xy_min": [
+      -4.5,
+      -47.5
+    ],
+    "pcb_bottom_z": 57,
+    "pcb_thickness_assumption": 1.6,
+    "front_glass_top_assumption": 62.618,
+    "rear_header_low_z_assumption": 48.618,
+    "mounting": "Two removable rear edge clamps, front edge lips and end stops; no assumed supplier hole pitch.",
+    "edge_side_clearance": 0.3,
+    "edge_end_clearance": 0.3,
+    "nominal_lip_capture": 0.6,
+    "aperture": [
+      47,
+      47
+    ]
+  },
+  "sensor": {
+    "manufacturer": "Adafruit",
+    "mpn": "3942",
+    "published_body_excluding_header": [
+      45.5,
+      20,
+      15.5
+    ],
+    "pcb_xy_min": [
+      51.25,
+      -35
+    ],
+    "pcb_bottom_z": 51,
+    "pcb_thickness_assumption": 1.6,
+    "front_face_z_assumption": 66.5,
+    "mounting": "Two removable rear edge clamps, front edge lips and end stops.",
+    "aperture": [
+      46.5,
+      21
+    ],
+    "transducer_geometry": "Illustrative positions; the full rectangular aperture clears the published module face rather than assuming a can-center tolerance."
+  },
+  "window": {
+    "material": "clear cast PMMA",
+    "size": [
+      58,
+      58,
+      2
+    ],
+    "thickness_requirement": [
+      1.9,
+      2.1
+    ],
+    "outer_corner_radius": 2,
+    "local_hole_centers": [
+      [
+        4,
+        4
+      ],
+      [
+        54,
+        4
+      ],
+      [
+        4,
+        54
+      ],
+      [
+        54,
+        54
+      ]
+    ],
+    "hole_diameter": 2.9,
+    "assembly_xy_min": [
+      -11,
+      -54
+    ],
+    "bottom_z": 66
+  },
+  "fasteners": {
+    "lid_axes": [
+      [
+        -11.5,
+        26.5
+      ],
+      [
+        101.5,
+        26.5
+      ],
+      [
+        101.5,
+        -67.5
+      ],
+      [
+        -11.5,
+        -67.5
+      ]
+    ],
+    "window_axes": [
+      [
+        -7,
+        0
+      ],
+      [
+        43,
+        0
+      ],
+      [
+        -7,
+        -50
+      ],
+      [
+        43,
+        -50
+      ]
+    ],
+    "lcd_clamp_axes": [
+      [
+        -7.3,
+        -15
+      ],
+      [
+        -7.3,
+        -35
+      ],
+      [
+        43.3,
+        -15
+      ],
+      [
+        43.3,
+        -35
+      ]
+    ],
+    "sensor_clamp_axes": [
+      [
+        48.45,
+        -19
+      ],
+      [
+        48.45,
+        -31
+      ],
+      [
+        99.55,
+        -19
+      ],
+      [
+        99.55,
+        -31
+      ]
+    ]
+  },
+  "usb": {
+    "opening_width": 18,
+    "opening_height": 10,
+    "x_interval": [
+      48.065,
+      66.065
+    ],
+    "z_interval": [
+      9,
+      19
+    ],
+    "checked_plug_envelope": [
+      16,
+      8
+    ],
+    "minimum_base_clearance": 1,
+    "cable_mpn": "Adafruit260",
+    "measurement_required": "The exact cable overmold and bend radius are not published in the selected product dimensions."
+  },
+  "wire_harness": {
+    "mpn": "Adafruit1950",
+    "length": 150,
+    "lcd_wire_count": 8,
+    "sensor_wire_count": 4,
+    "cable_ties_used": 2,
+    "qualification": "Route a service loop; full wire shape, bend radius and connector retention are not modeled."
+  },
+  "required_measurements": [
+    "Identify the purchased Nucleo board revision and measure factory Arduino socket height. The modeled 8.51 mm value is a declared assumption; a height above 8.86888 mm would consume the nominal insulator clearance.",
+    "Measure LCD PCB thickness, installed header orientation/height and glass projection; confirm both 0.6 mm edge-capture strips are free of glass, pads and components.",
+    "Measure HC-SR04 PCB thickness, rear components/header reach and clear edge strips before installing clamps.",
+    "Measure the actual USB cable overmold against the 18 \u00d710 mm opening and 16 \u00d78 mm checked plug envelope.",
+    "Check printed nut pockets, 0.3 mm module/tab clearances, screw engagement and local USB-bridge support removal.",
+    "Measure the completed wire routing, supply currents, ECHO levels and acoustic behavior with the closed case."
+  ],
+  "physical_prototype_qualified": false,
+  "registration_evidence": "validation/board-registration.json"
+}

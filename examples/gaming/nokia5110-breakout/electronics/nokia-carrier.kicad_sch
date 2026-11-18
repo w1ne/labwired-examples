@@ -1,0 +1,1836 @@
+(kicad_sch (version 20260101) (generator "eeschema") (uuid "a77a66ad-9eaa-5b79-a66f-c79c9b88e158") (paper "A3") (title_block (title "Nokia Breakout Nucleo carrier") (date "2026-11-18") (rev "A") (company "LabWired") (comment 1 "NUCLEO-L476RG / JOY-IT LCD REV2 / HC-SR04 5V"))
+(lib_symbols
+(symbol "nokia-carrier:Header10"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x10"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Header10_1_1"
+			(rectangle
+				(start -1.27 11.43)
+				(end 1.27 -13.97)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 10.287)
+				(end 0 10.033)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 7.747)
+				(end 0 7.493)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -10.033)
+				(end 0 -10.287)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -12.573)
+				(end 0 -12.827)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 10.16 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 7.62 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -10.16 0)
+				(length 3.81)
+				(name "Pin_9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -12.7 0)
+				(length 3.81)
+				(name "Pin_10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "nokia-carrier:Header8"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x08"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Header8_1_1"
+			(rectangle
+				(start -1.27 8.89)
+				(end 1.27 -11.43)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 7.747)
+				(end 0 7.493)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -10.033)
+				(end 0 -10.287)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 7.62 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -10.16 0)
+				(length 3.81)
+				(name "Pin_8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "nokia-carrier:Header4"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Header4_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "nokia-carrier:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "nokia-carrier:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "nokia-carrier:TestPoint"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TP"
+			(at 0 6.858 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "test point tp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Pin* Test*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TestPoint_0_1"
+			(circle
+				(center 0 3.302)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TestPoint_1_1"
+			(pin passive line
+				(at 0 0 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "nokia-carrier:MountingHole"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MountingHole_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "nokia-carrier:AccessHole"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "AccessHole_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(symbol (lib_id "nokia-carrier:Header10") (at 66.04 67.31 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f56914fc-0b98-542c-9ae0-646f58329fa0")
+(property "Reference" "J1" (at 71.12 48.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "CN5 / TSW-110-07-G-S" (at 71.12 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:Header10" (at 66.04 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "TSW-110-07-G-S" (at 66.04 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 66.04 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "bfb701cd-42bc-54e5-a77e-66c79d952fc4"))
+(pin "2" (uuid "8dd4e148-9716-59c3-abf7-f2a7fa01abbd"))
+(pin "3" (uuid "287bced2-4212-5d86-b613-741c26799fda"))
+(pin "4" (uuid "bc70b939-02d7-55f1-ad79-bd756b214571"))
+(pin "5" (uuid "50b56068-8529-5335-8026-9b56a051725f"))
+(pin "6" (uuid "ed50b147-122a-52f3-a090-536cf3c97d0f"))
+(pin "7" (uuid "9d5771a1-a41d-5586-a4d7-30d89383fe41"))
+(pin "8" (uuid "72e8ab0e-4c4b-52f5-8dca-2a783f0444f4"))
+(pin "9" (uuid "7cf00103-d371-574d-9510-a1061e597b66"))
+(pin "10" (uuid "7b6dbce7-c2c7-521f-b8bb-ec600b1b3d30"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "J1") (unit 1)))))
+(wire (pts (xy 60.96 57.15) (xy 50.8 57.15)) (stroke (width 0) (type default)) (uuid "3b2aacbb-8624-50b5-b363-3decfa1730d9"))
+(label "LCD_RST_PA9" (at 50.8 57.15 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "dc7ee2f3-dd85-56c8-8769-34f734356455"))
+(wire (pts (xy 60.96 59.69) (xy 50.8 59.69)) (stroke (width 0) (type default)) (uuid "51ab5a83-e27d-5878-acb1-c58cd3390f47"))
+(label "LCD_DC_PC7" (at 50.8 59.69 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3518828f-96d5-5924-a843-84bc5f43c584"))
+(wire (pts (xy 60.96 62.23) (xy 50.8 62.23)) (stroke (width 0) (type default)) (uuid "6490a65c-845d-51f9-91f5-9e2d308145bd"))
+(label "LCD_CE_PB6" (at 50.8 62.23 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f5d9dc06-e8c3-5d7b-8f94-1efd59abe572"))
+(wire (pts (xy 60.96 64.77) (xy 50.8 64.77)) (stroke (width 0) (type default)) (uuid "678aefe3-ce0f-5728-92fc-d35553c10262"))
+(label "LCD_DIN_PA7" (at 50.8 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "289a911f-c08c-52e8-9221-edb0d1a20c31"))
+(no_connect (at 60.96 67.31) (uuid "88e36a3a-9c60-5145-ae90-b2a84239728e"))
+(wire (pts (xy 60.96 69.85) (xy 50.8 69.85)) (stroke (width 0) (type default)) (uuid "fc99cb66-44f3-5e31-b65c-4b2ad453d0a9"))
+(label "LCD_CLK_PA5" (at 50.8 69.85 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "93aded26-3484-5b65-bb7e-2143096770ff"))
+(wire (pts (xy 60.96 72.39) (xy 50.8 72.39)) (stroke (width 0) (type default)) (uuid "e5ebfa31-19f1-594b-8393-94035451d37f"))
+(label "GND" (at 50.8 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ba46cf1e-5b26-55ca-8cad-728c23eb0f26"))
+(no_connect (at 60.96 74.93) (uuid "20002b44-89b2-5e53-9c1e-2cb68159228c"))
+(no_connect (at 60.96 77.47) (uuid "ccf8902b-81d6-504e-8522-e8bb316a7869"))
+(no_connect (at 60.96 80.01) (uuid "460f56e5-3639-593f-8881-27bd3bbb4e66"))
+(symbol (lib_id "nokia-carrier:Header8") (at 66.04 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "366c91f4-22a4-52e5-b758-99e5f6fb6ff6")
+(property "Reference" "J2" (at 71.12 104.14 0) (effects (font (size 1.27 1.27))))
+(property "Value" "CN6 / TSW-108-07-G-S" (at 71.12 134.62 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:Header8" (at 66.04 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "TSW-108-07-G-S" (at 66.04 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 66.04 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f5e43712-286b-5823-bde1-c299dd215f25"))
+(pin "2" (uuid "ba78ad1e-f21b-5c2d-917a-abd147fb98c0"))
+(pin "3" (uuid "40e98759-938e-50fe-896b-6a27dce9697e"))
+(pin "4" (uuid "a9aae375-f30f-5113-87d5-53604c61132b"))
+(pin "5" (uuid "dd25d7ec-0dd6-5411-ae70-a390be0b013b"))
+(pin "6" (uuid "998d3edb-a506-5229-89cb-7eb7ac564bba"))
+(pin "7" (uuid "c5df784d-808f-50bb-921e-6d8b665338dd"))
+(pin "8" (uuid "908508dc-29e3-58c1-9065-2ab3c1100a2e"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "J2") (unit 1)))))
+(no_connect (at 60.96 111.76) (uuid "1685b8f7-0b84-5ded-94e0-02b7a8c88d61"))
+(no_connect (at 60.96 114.3) (uuid "efd06a3e-8945-5420-addd-5aee27b6f05b"))
+(no_connect (at 60.96 116.84) (uuid "8586e7c0-655d-5416-9e32-6e4ee747b3be"))
+(wire (pts (xy 60.96 119.38) (xy 50.8 119.38)) (stroke (width 0) (type default)) (uuid "9d28ba10-412a-5e27-ad79-000d1bac4194"))
+(label "+3V3" (at 50.8 119.38 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "99de8b1a-696b-5669-8736-c3e5f73af8f5"))
+(wire (pts (xy 60.96 121.92) (xy 50.8 121.92)) (stroke (width 0) (type default)) (uuid "afd57dd0-60b3-5cbb-aafe-3ad19a495be9"))
+(label "+5V" (at 50.8 121.92 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "18a49582-9b79-5e41-8e00-8f78c33f0f02"))
+(wire (pts (xy 60.96 124.46) (xy 50.8 124.46)) (stroke (width 0) (type default)) (uuid "74c65998-0e5f-5bfd-ae94-6072a98c0313"))
+(label "GND" (at 50.8 124.46 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "10b04fbe-57a8-5829-aab5-12d7ad5871a9"))
+(wire (pts (xy 60.96 127) (xy 50.8 127)) (stroke (width 0) (type default)) (uuid "148c08d0-9e74-5f77-a7f1-0f52a1fbe0b3"))
+(label "GND" (at 50.8 127 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2da8a671-9405-5eda-8a67-6e80f563e357"))
+(no_connect (at 60.96 129.54) (uuid "49831f02-e3d8-5f86-99ae-780ec3de83c7"))
+(symbol (lib_id "nokia-carrier:Header8") (at 66.04 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cd22caea-3aeb-5797-9bbd-e2ea55466f67")
+(property "Reference" "J3" (at 71.12 157.48 0) (effects (font (size 1.27 1.27))))
+(property "Value" "CN9 / TSW-108-07-G-S" (at 71.12 187.96 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:Header8" (at 66.04 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "TSW-108-07-G-S" (at 66.04 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 66.04 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "c036df86-ba22-5f52-8053-5e4e900a7ce2"))
+(pin "2" (uuid "99213f27-07d6-5629-a67d-f392b9b0940b"))
+(pin "3" (uuid "57e679ff-9c0b-54c2-8e57-d58c36497209"))
+(pin "4" (uuid "7772084a-7ed6-57a4-8dfd-bdc36c484226"))
+(pin "5" (uuid "13cae2c1-0de3-5793-bf5c-6a007fa98b72"))
+(pin "6" (uuid "fc08af87-77c4-5f64-acc8-a58ef72a7dbf"))
+(pin "7" (uuid "274382a9-c385-5d20-b4e7-f3d7b43710ac"))
+(pin "8" (uuid "4b685c90-02f6-5277-a702-0ec803d95f9e"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "J3") (unit 1)))))
+(no_connect (at 60.96 165.1) (uuid "91fa610f-8b2d-5f01-8ea3-81c4a6dcbbf8"))
+(no_connect (at 60.96 167.64) (uuid "bb6759d0-686f-5c32-a4a8-663da082b62f"))
+(no_connect (at 60.96 170.18) (uuid "fd02539f-756c-50cb-8986-3f1cb9a2e7b9"))
+(no_connect (at 60.96 172.72) (uuid "c4f1d938-80cb-588c-8c20-320e1a931cd7"))
+(no_connect (at 60.96 175.26) (uuid "54260f9a-542e-5ef0-b7e3-353451e52e38"))
+(no_connect (at 60.96 177.8) (uuid "81cffa9f-e0ec-585d-9301-f524c87f503e"))
+(wire (pts (xy 60.96 180.34) (xy 50.8 180.34)) (stroke (width 0) (type default)) (uuid "d49bbc1a-be40-543f-9185-4198099abaff"))
+(label "ECHO_3V3_PB10" (at 50.8 180.34 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d0c14f69-55fb-5af6-a8c1-eb79721c0e7f"))
+(wire (pts (xy 60.96 182.88) (xy 50.8 182.88)) (stroke (width 0) (type default)) (uuid "242da049-8afe-55b7-9414-d9de70779e60"))
+(label "TRIG_PA8" (at 50.8 182.88 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e7fd2686-1605-5648-886c-91d0438233de"))
+(symbol (lib_id "nokia-carrier:Header8") (at 182.88 67.31 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0e48b8ee-e997-55a7-8359-107d0eddb819")
+(property "Reference" "J4" (at 187.96 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "JOY-IT LCD REV2" (at 187.96 82.55 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:Header8" (at 182.88 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "TSW-108-07-G-S" (at 182.88 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 182.88 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "6003634a-a45e-5ab8-9a11-690286990f16"))
+(pin "2" (uuid "2465af13-9072-5a0c-afe3-9008c5ca1105"))
+(pin "3" (uuid "699c9061-7a91-50b8-a39f-1ad0066f42d1"))
+(pin "4" (uuid "5c13b9cf-5b23-529b-a457-47a38e5b7cb6"))
+(pin "5" (uuid "afd4875d-5378-59f9-9152-533cb0ee091d"))
+(pin "6" (uuid "d560d2d4-206a-5a49-b0e8-c3d84336f55f"))
+(pin "7" (uuid "f9a5edd9-6cdd-5dd2-81e0-abf48dc7c2ab"))
+(pin "8" (uuid "bdc32273-3a36-51a7-83d1-f675cbfbf3bd"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "J4") (unit 1)))))
+(wire (pts (xy 177.8 59.69) (xy 167.64 59.69)) (stroke (width 0) (type default)) (uuid "a5c09750-695a-5849-a163-aa68f23f44f8"))
+(label "GND" (at 167.64 59.69 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a83a2791-1892-57ff-8410-57ba267c3065"))
+(wire (pts (xy 177.8 62.23) (xy 167.64 62.23)) (stroke (width 0) (type default)) (uuid "4cf200ba-ed6c-5900-937c-17a1ccae15ca"))
+(label "GND" (at 167.64 62.23 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ca3d8bc6-b18b-5f30-af80-9e93d6b51116"))
+(wire (pts (xy 177.8 64.77) (xy 167.64 64.77)) (stroke (width 0) (type default)) (uuid "d011681e-ec6d-500a-ba30-e216c166ce31"))
+(label "+3V3" (at 167.64 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e8245027-18d8-5845-b885-5fb6814b5e52"))
+(wire (pts (xy 177.8 67.31) (xy 167.64 67.31)) (stroke (width 0) (type default)) (uuid "99a3bbe4-97e1-5406-873d-ca93b06579f9"))
+(label "LCD_CLK_PA5" (at 167.64 67.31 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2eab714b-2b4d-596e-9eb2-60d3e3064c22"))
+(wire (pts (xy 177.8 69.85) (xy 167.64 69.85)) (stroke (width 0) (type default)) (uuid "c9968d7e-3c91-5280-b18e-c4475c5dc3aa"))
+(label "LCD_DIN_PA7" (at 167.64 69.85 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e2eb7b18-b571-5a8d-9008-28c088cc5bd5"))
+(wire (pts (xy 177.8 72.39) (xy 167.64 72.39)) (stroke (width 0) (type default)) (uuid "b4e29e10-6b58-5c17-836e-cdc6462eedce"))
+(label "LCD_DC_PC7" (at 167.64 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cf792318-19f2-54f8-8115-27757738f570"))
+(wire (pts (xy 177.8 74.93) (xy 167.64 74.93)) (stroke (width 0) (type default)) (uuid "146053b4-2437-5e9f-a2ef-6cf00ed76c01"))
+(label "LCD_CE_PB6" (at 167.64 74.93 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c0cbbaa3-34b8-58c5-9912-92248e66825b"))
+(wire (pts (xy 177.8 77.47) (xy 167.64 77.47)) (stroke (width 0) (type default)) (uuid "f079133a-a18a-509a-9508-6a14c0bb799f"))
+(label "LCD_RST_PA9" (at 167.64 77.47 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b398a986-1a83-55a1-9cd3-02ef247755cb"))
+(symbol (lib_id "nokia-carrier:Header4") (at 299.72 67.31 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "eb851634-a60f-5df5-8462-a30a83de5561")
+(property "Reference" "J5" (at 304.8 57.15 0) (effects (font (size 1.27 1.27))))
+(property "Value" "ADAFRUIT 3942 / HC-SR04" (at 304.8 77.47 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:Header4" (at 299.72 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "TSW-104-07-G-S" (at 299.72 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Samtec" (at 299.72 67.31 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "05055839-fda9-52e1-a074-ad44258289ab"))
+(pin "2" (uuid "32ac68e0-a64f-58e9-a363-8fe564f650ee"))
+(pin "3" (uuid "2658410c-1cf0-5004-8ec8-ae8abaa3f374"))
+(pin "4" (uuid "ef662b60-b739-5955-85ea-90dd4f9ea694"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "J5") (unit 1)))))
+(wire (pts (xy 294.64 64.77) (xy 284.48 64.77)) (stroke (width 0) (type default)) (uuid "bf0d4fe4-7f8a-5947-aa5b-d1e0dbef4cef"))
+(label "+5V" (at 284.48 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "11b6ebd0-852f-5f73-8095-69ac3ee8872c"))
+(wire (pts (xy 294.64 67.31) (xy 284.48 67.31)) (stroke (width 0) (type default)) (uuid "dc340978-71bf-513a-8414-574f7e78d321"))
+(label "TRIG_PA8" (at 284.48 67.31 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "768c2dfb-c173-5c48-993f-c001a1f9ad92"))
+(wire (pts (xy 294.64 69.85) (xy 284.48 69.85)) (stroke (width 0) (type default)) (uuid "3841f940-5df7-56b6-af23-f77c921b5dde"))
+(label "ECHO_5V" (at 284.48 69.85 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f74ddf71-467e-56e0-89a3-19a5707440e5"))
+(wire (pts (xy 294.64 72.39) (xy 284.48 72.39)) (stroke (width 0) (type default)) (uuid "9076ecbb-1a93-585d-8b76-6815d50c9b76"))
+(label "GND" (at 284.48 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c457749e-b780-5354-a4e2-1fd4497c2735"))
+(symbol (lib_id "nokia-carrier:R") (at 264.16 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9d7313b8-5cac-5062-8ef3-cb81bd273849")
+(property "Reference" "R1" (at 269.24 114.3 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10k 1%" (at 269.24 124.46 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:R" (at 264.16 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "RC0603FR-0710KL" (at 264.16 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Yageo" (at 264.16 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "8dda1036-8d52-5a20-b243-7b1ead1549e4"))
+(pin "2" (uuid "79294a66-c112-55b0-a626-f5e27a893c7f"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "R1") (unit 1)))))
+(wire (pts (xy 264.16 115.57) (xy 264.16 110.49)) (stroke (width 0) (type default)) (uuid "ca2a0de1-0271-5af9-b019-3da71740cbc5"))
+(label "ECHO_5V" (at 264.16 110.49 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e3acc888-adc3-5da7-b1c7-806fa2abe0d3"))
+(wire (pts (xy 264.16 123.19) (xy 264.16 128.27)) (stroke (width 0) (type default)) (uuid "0e4bda06-55ae-5532-978c-206866736b0d"))
+(label "ECHO_3V3_PB10" (at 264.16 128.27 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7b6fc372-ea12-574a-b423-a60cac8e160c"))
+(symbol (lib_id "nokia-carrier:R") (at 312.42 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f60f69c6-3e37-5e22-831f-b9ed2873e39c")
+(property "Reference" "R2" (at 317.5 114.3 0) (effects (font (size 1.27 1.27))))
+(property "Value" "18k 1%" (at 317.5 124.46 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:R" (at 312.42 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "RC0603FR-0718KL" (at 312.42 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "Yageo" (at 312.42 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "446e3321-3df1-5958-9d43-0d304feb2570"))
+(pin "2" (uuid "b9e61c45-af90-5ba1-8c4a-94c619a1d610"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "R2") (unit 1)))))
+(wire (pts (xy 312.42 115.57) (xy 312.42 110.49)) (stroke (width 0) (type default)) (uuid "b6d31aff-568b-50d0-b9df-544ef79364ae"))
+(label "ECHO_3V3_PB10" (at 312.42 110.49 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ea279562-2b55-52fa-aba4-8cb01dcd8c23"))
+(wire (pts (xy 312.42 123.19) (xy 312.42 128.27)) (stroke (width 0) (type default)) (uuid "178ddd55-0d9f-5b47-9cea-20ee8abccb94"))
+(label "GND" (at 312.42 128.27 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "acb61bde-7f80-5b6a-b879-c7fb0a2e4e42"))
+(symbol (lib_id "nokia-carrier:C") (at 139.7 127 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8032185e-049b-56e5-a7d9-a1eab2043ac0")
+(property "Reference" "C1" (at 144.78 121.92 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 50V X7R" (at 144.78 132.08 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:C" (at 139.7 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "C1608X7R1H104K080AA" (at 139.7 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "TDK" (at 139.7 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "87c32e55-3087-5099-826d-f88c9d58d849"))
+(pin "2" (uuid "00a8a2b4-8598-517f-ae30-f245cfef9f5c"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "C1") (unit 1)))))
+(wire (pts (xy 139.7 123.19) (xy 139.7 118.11)) (stroke (width 0) (type default)) (uuid "fe69cba8-006a-5a58-ad23-1d5937c28dc6"))
+(label "+3V3" (at 139.7 118.11 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3dc2ad40-723e-51bd-aef8-4fe6caeda5c3"))
+(wire (pts (xy 139.7 130.81) (xy 139.7 135.89)) (stroke (width 0) (type default)) (uuid "249a294e-116d-5d93-a4e9-4f91491fd0db"))
+(label "GND" (at 139.7 135.89 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "77f4a586-81fc-5b33-8dc2-97f3d3ea3acb"))
+(symbol (lib_id "nokia-carrier:C") (at 180.34 127 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1e0682ec-a858-5c5d-8673-a59fa74f9cb5")
+(property "Reference" "C2" (at 185.42 121.92 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 50V X7R" (at 185.42 132.08 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:C" (at 180.34 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "C1608X7R1H104K080AA" (at 180.34 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "TDK" (at 180.34 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "bcaabcf4-65e8-5833-8509-cd60c0ac56ea"))
+(pin "2" (uuid "1b3edefb-cee7-5f3b-b995-3a071a49ac32"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "C2") (unit 1)))))
+(wire (pts (xy 180.34 123.19) (xy 180.34 118.11)) (stroke (width 0) (type default)) (uuid "9487ae3c-e99b-5fb3-8d08-a4bb897e2412"))
+(label "+5V" (at 180.34 118.11 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c0b5fbde-acf7-53dd-8d24-c2fb52dc143b"))
+(wire (pts (xy 180.34 130.81) (xy 180.34 135.89)) (stroke (width 0) (type default)) (uuid "122e5763-444b-5f89-9d0e-8d233b3bbec7"))
+(label "GND" (at 180.34 135.89 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5a1b5695-f149-5ed4-9656-957655ea6e32"))
+(symbol (lib_id "nokia-carrier:C") (at 220.98 127 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "08ed8ca3-e329-5d73-bd59-13379f3047d0")
+(property "Reference" "C3" (at 226.06 121.92 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 25V X5R" (at 226.06 132.08 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:C0805" (at 220.98 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "MPN" "C2012X5R1E106K125AB" (at 220.98 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Manufacturer" "TDK" (at 220.98 127 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "a7ab0435-ee3f-5edc-ac40-3eb0ddae6848"))
+(pin "2" (uuid "9127da7b-2f25-520e-92db-eb9e97f8aed1"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "C3") (unit 1)))))
+(wire (pts (xy 220.98 123.19) (xy 220.98 118.11)) (stroke (width 0) (type default)) (uuid "ce15c378-5ce0-5415-9a3a-da9c6e927df9"))
+(label "+5V" (at 220.98 118.11 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3730c013-fb15-5888-a227-70659217c76c"))
+(wire (pts (xy 220.98 130.81) (xy 220.98 135.89)) (stroke (width 0) (type default)) (uuid "7d5e2c71-f46a-5359-b0cc-250d7481ed29"))
+(label "GND" (at 220.98 135.89 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3a8aae2f-4b82-520a-830c-d2696eb70171"))
+(symbol (lib_id "nokia-carrier:TestPoint") (at 139.7 180.34 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "fe09e2b5-27fd-58ff-8b08-532260fb8643")
+(property "Reference" "TP1" (at 144.78 175.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "GND" (at 144.78 185.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:TestPoint" (at 139.7 180.34 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "52898d0c-15cc-5fa5-9792-546c9b231718"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "TP1") (unit 1)))))
+(wire (pts (xy 139.7 180.34) (xy 139.7 185.42)) (stroke (width 0) (type default)) (uuid "30477391-c777-5b61-b75c-d72527a56777"))
+(label "GND" (at 139.7 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "10a67049-1d6a-5079-9ea5-dc7bc9170339"))
+(symbol (lib_id "nokia-carrier:TestPoint") (at 177.8 180.34 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "27bea6da-73f5-569c-ba23-b570bcd9c547")
+(property "Reference" "TP2" (at 182.88 175.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "+3V3" (at 182.88 185.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:TestPoint" (at 177.8 180.34 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f0f2f41a-0a3a-5788-a3f0-b8767fc04710"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "TP2") (unit 1)))))
+(wire (pts (xy 177.8 180.34) (xy 177.8 185.42)) (stroke (width 0) (type default)) (uuid "325b5eac-e45c-5263-871e-91974c862a99"))
+(label "+3V3" (at 177.8 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "702e8760-c5d5-500a-b71d-bc81fab5c987"))
+(symbol (lib_id "nokia-carrier:TestPoint") (at 215.9 180.34 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "55cbd583-8299-5676-9803-b6fe49cd480e")
+(property "Reference" "TP3" (at 220.98 175.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "+5V" (at 220.98 185.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:TestPoint" (at 215.9 180.34 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "aeb92444-c3ea-5aba-8ac2-d74283446a43"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "TP3") (unit 1)))))
+(wire (pts (xy 215.9 180.34) (xy 215.9 185.42)) (stroke (width 0) (type default)) (uuid "86c24cfa-db82-57d9-be39-2e1ac4ee9531"))
+(label "+5V" (at 215.9 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9af47187-ea06-5806-81df-421f9cc1fb97"))
+(symbol (lib_id "nokia-carrier:TestPoint") (at 254 180.34 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "0675b624-6c4e-50c9-ac61-69f3a2d39a23")
+(property "Reference" "TP4" (at 259.08 175.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "ECHO_5V" (at 259.08 185.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:TestPoint" (at 254 180.34 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "79e87f67-923e-5af1-84f2-b67081edb4e0"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "TP4") (unit 1)))))
+(wire (pts (xy 254 180.34) (xy 254 185.42)) (stroke (width 0) (type default)) (uuid "c6bb8a35-945f-5b90-9ac3-59b1424656b6"))
+(label "ECHO_5V" (at 254 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b55c21a3-fa12-54dc-9cac-a7fccae98056"))
+(symbol (lib_id "nokia-carrier:TestPoint") (at 292.1 180.34 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "7a2c71d0-6a18-581a-b655-8c334aaddd41")
+(property "Reference" "TP5" (at 297.18 175.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "ECHO_3V3_PB10" (at 297.18 185.42 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:TestPoint" (at 292.1 180.34 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "b35357bd-2cac-5685-be9e-812f04b66e5b"))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "TP5") (unit 1)))))
+(wire (pts (xy 292.1 180.34) (xy 292.1 185.42)) (stroke (width 0) (type default)) (uuid "4c68d312-b7f4-58a5-a289-94948e3b6f47"))
+(label "ECHO_3V3_PB10" (at 292.1 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "07954bff-ed1f-5508-b338-e56a59796d06"))
+(symbol (lib_id "nokia-carrier:MountingHole") (at 48.26 231.14 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "ae4e149f-37ff-57f5-9ad8-215c9716b6e9")
+(property "Reference" "H1" (at 53.34 226.06 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9mm NPTH" (at 53.34 236.22 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:MountingHole" (at 48.26 231.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "H1") (unit 1)))))
+(symbol (lib_id "nokia-carrier:MountingHole") (at 109.22 231.14 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "9968ac91-45b7-5f3c-af1b-f8093dc7ddb6")
+(property "Reference" "H2" (at 114.3 226.06 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9mm NPTH" (at 114.3 236.22 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:MountingHole" (at 109.22 231.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "H2") (unit 1)))))
+(symbol (lib_id "nokia-carrier:MountingHole") (at 170.18 231.14 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "feff8d3a-8967-51c1-89cb-1bf3059453af")
+(property "Reference" "H3" (at 175.26 226.06 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9mm NPTH" (at 175.26 236.22 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:MountingHole" (at 170.18 231.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "H3") (unit 1)))))
+(symbol (lib_id "nokia-carrier:MountingHole") (at 231.14 231.14 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "b3f93e76-159b-5668-92c5-10acf6d76c1a")
+(property "Reference" "H4" (at 236.22 226.06 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2.5 / 2.9mm NPTH" (at 236.22 236.22 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:MountingHole" (at 231.14 231.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "H4") (unit 1)))))
+(symbol (lib_id "nokia-carrier:AccessHole") (at 292.1 231.14 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "d95bf6c5-d4f5-5945-bae3-8d98197f6d71")
+(property "Reference" "H5" (at 297.18 226.06 0) (effects (font (size 1.27 1.27))))
+(property "Value" "NUCLEO BUTTON ACCESS / 10mm NPTH" (at 297.18 236.22 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:AccessHole" (at 292.1 231.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "H5") (unit 1)))))
+(symbol (lib_id "nokia-carrier:AccessHole") (at 353.06 231.14 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "fce1ede6-795a-5cb4-9fb1-e9d4e4808c7d")
+(property "Reference" "H6" (at 358.14 226.06 0) (effects (font (size 1.27 1.27))))
+(property "Value" "NUCLEO BUTTON ACCESS / 10mm NPTH" (at 358.14 236.22 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "nokia-carrier:AccessHole" (at 353.06 231.14 0) (hide yes) (effects (font (size 1.27 1.27))))
+(instances (project "nokia-carrier" (path "/a77a66ad-9eaa-5b79-a66f-c79c9b88e158" (reference "H6") (unit 1)))))
+(text "NUCLEO-L476RG / Nokia 5110 Breakout carrier - rev A" (at 25.4 15.24 0) (effects (font (size 2.54 2.54)) (justify left top)) (uuid "c8148f8a-9eaa-5bdc-a2b4-87db645a9169"))
+(text "USB power via Nucleo ST-LINK. CN6 supplies separate +5V and +3V3 rails.\nJ1/J2/J3 fit on BOTTOM and plug into Nucleo CN5/CN6/CN9.\nKeep ST-LINK, target and Arduino connectors at manufacturer default settings." (at 25.4 24.13 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "6884e37d-2fb4-56aa-9a3d-ff6dfeb6cc86"))
+(text "DISPLAY: JOY-IT SBC-LCD84x48 REV2 ONLY\n1 GND, 2 LIGHT (active low), 3 VCC, 4 CLK,\n5 DIN, 6 DC, 7 CE, 8 RST.\nSupply and all logic 3.3V. REV1 differs." (at 137.16 87.63 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "fc368a5f-f2b3-5fb9-bdcd-6c072819acd4"))
+(text "SENSOR: ADAFRUIT 3942 / HC-SR04\n1 VCC (+5V), 2 TRIG (3.3V accepted),\n3 ECHO (5V output), 4 GND.\nDo not connect 5V ECHO to the LCD rail." (at 264.16 87.63 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "6ba12961-59cd-5e39-be53-d56757fc1d34"))
+(text "ECHO divider: 10k upper / 18k lower, both 1%.\n5.0V input -> 3.214V at PB10 nominal.\nAt 5.25V and resistor corners: <=3.399V.\nR2 holds PB10 low with a disconnected sensor." (at 264.16 142.24 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "21ae71eb-b3d6-5ba8-9e72-bf8172c9d99e"))
+(text "CN5: 1 D8/PA9, 2 D9/PC7, 3 D10/PB6,\n4 D11/PA7, 6 D13/PA5, 7 GND.\nCN6: 4 +3V3, 5 +5V, 6/7 GND.\nCN9: 7 D6/PB10, 8 D7/PA8.\nAll other contacts intentionally isolated." (at 25.4 196.85 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "6567cda1-eec6-5a84-9b36-41b04e7723ea"))
+(text "90 x 66 x 1.6mm, two copper layers, four M2.5 mounts.\nJ4/J5 and passives on TOP. C1 close to J4; C2/C3 close to J5.\nPurchased Nucleo, display, sensor, cables and hardware: assembly BOM.\nEngineering candidate: physical assembly and bench qualification pending." (at 137.16 249 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "d0951a5a-52df-581a-a943-87b78a5723e8"))
+(embedded_fonts no)
+)
