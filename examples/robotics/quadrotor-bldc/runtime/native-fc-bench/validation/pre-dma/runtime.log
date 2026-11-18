@@ -1,0 +1,29 @@
+[2m2026-11-18T19:29:02.660506Z[0m [32m INFO[0m [2mlabwired_core::system::builder[0m[2m:[0m Loading chip descriptor: rp2354b
+[2m2026-11-18T19:29:03.718926Z[0m [32m INFO[0m [2mlabwired_loader[0m[2m:[0m ELF Entry Point: 0x1000014d
+labwired-cli test: idle_ff=on (event_scheduler=on)
+labwired-cli test: hosted fast path (exact windows up to 1024 cycles)
+[2m2026-11-18T19:29:04.034781Z[0m [33m WARN[0m [2mlabwired_core::cpu::cortex_m::exec::misc[0m[2m:[0m Unknown 32-bit instruction at 0x100010be: 0xec43 0x44
+OPENFC_NATIVE_MOTOR_BENCH v1 RP2354B release=750ms DShot600-bidir UART0=0/1
+BENCH zero-qualification
+BENCH phase=2 armed=0 zero=148 missed=145
+M1 pin=31 value=0 submitted=148 valid=0 timeout=0 invalid=147 raw=000 period_us=0 erpm=0
+M2 pin=30 value=0 submitted=148 valid=0 timeout=0 invalid=147 raw=000 period_us=0 erpm=0
+M3 pin=29 value=0 submitted=148 valid=0 timeout=0 invalid=147 raw=000 period_us=0 erpm=0
+M4 pin=28 value=0 submitted=148 valid=0 timeout=0 invalid=147 raw=000 period_us=0 erpm=0
+BENCH phase=2 armed=0 zero=307 missed=290
+M1 pin=31 value=0 submitted=307 valid=0 timeout=0 invalid=306 raw=000 period_us=0 erpm=0
+M2 pin=30 value=0 submitted=307 valid=0 timeout=0 invalid=306 raw=000 period_us=0 erpm=0
+M3 pin=29 value=0 submitted=307 valid=0 timeout=0 invalid=306 raw=000 period_us=0 erpm=0
+M4 pin=28 value=0 submitted=307 valid=0 timeout=0 invalid=306 raw=000 period_us=0 erpm=0
+BENCH phase=2 armed=0 zero=467 missed=436
+M1 pin=31 value=0 submitted=467 valid=0 timeout=0 invalid=466 raw=000 period_us=0 erpm=0
+M2 pin=30 value=0 submitted=467 valid=0 timeout=0 invalid=466 raw=000 period_us=0 erpm=0
+M3 pin=29 value=0 submitted=467 valid=0 timeout=0 invalid=466 raw=000 period_us=0 erpm=0
+M4 pin=28 value=0 submitted=467 valid=0 timeout=0 invalid=466 raw=000 period_us=0 erpm=0
+BENCH phase=2 armed=0 zero=621 missed=580
+M1 pin=31 value=0 submitted=621 valid=0 timeout=0 invalid=620 raw=000 period_us=0 erpm=0
+M2 pin=30 value=0 submitted=621 valid=0 timeout=0 invalid=620 raw=000 period_us=0 erpm=0
+M3 pin=29 value=0 submitted=621 valid=0 timeout=0 invalid=620 raw=00
+thread 'main' (848918) panicked at crates/core/src/sched/event_scheduler.rs:516:17:
+peripheral 21 holds 9 live events (ceiling 8): it re-arms without superseding prior wakes — see the cancellation contract in this module's docs
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
