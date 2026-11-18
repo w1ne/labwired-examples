@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "images": [
+    {
+      "name": "top",
+      "path": "/tmp/kernelcad-preview-uhKT9G/top.png",
+      "description": "Geometric +Z top-down plan \u2014 camera on +Z looking down; screen right = +X, screen up = +Y. For imported parts, this is not necessarily the product exterior.",
+      "byte_count": 24210,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-s7HTi6t8X-JZfv8ikgjOiQ/render-top.png?exp=1795081538&sig=ikdYaEFxkce6AAUyryoJZ8MrsZg-c0zHtfbYBCf1PY0",
+      "expires_at": "2026-11-19T09:45:38.000Z",
+      "inline": true
+    },
+    {
+      "name": "front",
+      "path": "/tmp/kernelcad-preview-uhKT9G/front.png",
+      "description": "Front elevation \u2014 camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+      "byte_count": 43236,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-lOLYZPx6cw0ZM7GqxbJGVg/render-front.png?exp=1795081538&sig=AjzUmO_g6WmAL0koa5LXl0i9mTC0sXdRkjJmItX9nFU",
+      "expires_at": "2026-11-19T09:45:38.000Z",
+      "inline": true
+    }
+  ],
+  "out_dir": "/tmp/kernelcad-preview-uhKT9G",
+  "bounds": {
+    "min": [
+      -9,
+      -9,
+      0
+    ],
+    "max": [
+      69,
+      79,
+      32
+    ]
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 63213.93788839564,
+    "faceCount": 1632,
+    "size": [
+      78,
+      88,
+      32
+    ]
+  },
+  "mechanism": "real",
+  "render_source": "static-player",
+  "render_ms": 55145,
+  "diagnostics": [],
+  "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+  "images_inline_count": 2,
+  "serverBuild": "0.1.0+998c457b7810@2026-11-18T09:30:48.889Z"
+}

@@ -1,0 +1,32 @@
+Pico UART package verification
+
+Hosted gate:
+labwired_verify firmware_ref=sha256:324a84cbb18276a4814bc4ecf7a20c8b7117ebe874d0df86952ea029dc84bce3
+target=rp2040 board=rpi-pico max_steps=50000000
+diagram=../labwired/circuit.json oracle=behavioral-oracle.json
+Use the JSON objects as structured arguments. Model status was model_verified.
+
+Native CLI:
+Use labwired-cli v0.26.0 and w1ne/labwired-core revision2dd08a894.
+The system is configs/systems/rp2040-pico.yaml in that repository.
+Run from this package root:
+labwired test --script validation/native-acceptance.yaml --firmware firmware/artifacts/pico-uart.elf --system /path/to/labwired-core/configs/systems/rp2040-pico.yaml --output-dir /tmp/pico-package-acceptance --run-manifest
+For a local build, replace --firmware with firmware/.pio/build/pico/firmware.elf.
+
+The local rebuild was tested with all5 assertions at50,000,000 interpreted steps.
+The initial published Rust smoke ELF was separately tested at250,000 steps:
+banner, GP0>=4edges and expected max_steps stop. That fixture is a simulator
+regression baseline; use the SDK ELF/UF2 for this physical package.
+
+The model assumes an ideal supply. Its derived125MHz time does not track PLL
+changes. The declared oracle checks content and transitions, not physical
+frequency or USB, flash-ROM power-on timing, power integrity or brown-out behavior.
+
+CAD:
+Evaluate mechanical/pico-uart-fixture.kcad.ts with native BREP execution.
+Use output=assembly, base-print or lid-print. The local source resolves its
+two STEP imports relative to the script. validation/submitted-fixture.kcad.ts
+contains the same design with immutable public HTTPS input references.
+Inspect the STEP after export and retain print verification. Imported Pico
+bodies remain separate fixed parts; do not union the USB lip solids to make
+the parts list shorter.

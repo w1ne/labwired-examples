@@ -1,0 +1,53 @@
+{
+  "manifest_schema_version": "1.0",
+  "engine_version": "0.26.0",
+  "seed": 0,
+  "nondeterminism": "none",
+  "firmware": {
+    "path": "firmware.elf",
+    "sha256": "a5980d26a4239db9779c079c9bcba3f9e0601509f26e163a23f4a0c208eb136e"
+  },
+  "configs": [
+    {
+      "path": "local-sdk-acceptance.yaml",
+      "sha256": "383b546340d8452b5a5cd5144976415ea09c8a8f9b3d8216334d2c3812a6c7e5"
+    },
+    {
+      "path": "rp2040-pico.yaml",
+      "sha256": "465a74d244ef236928ea40638a29c3466358a5884ee3c9da1693647d7fa4149b"
+    }
+  ],
+  "results": {
+    "status": "pass",
+    "stop_reason": "MaxSteps",
+    "steps_executed": 50000000,
+    "cycles": 62490276,
+    "instructions": 50000000,
+    "assertions": [
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"RP2040_SMOKE_OK\\n\" })",
+        "passed": true
+      },
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"PICO_LED=1\\n\" })",
+        "passed": true
+      },
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"PICO_LED=0\\n\" })",
+        "passed": true
+      },
+      {
+        "assertion": "GpioEdges(GpioEdgesAssertion { gpio_edges: GpioEdgesClause { pin: \"sio:0\", min_edges: 4 } })",
+        "passed": true
+      },
+      {
+        "assertion": "GpioEdges(GpioEdgesAssertion { gpio_edges: GpioEdgesClause { pin: \"sio:25\", min_edges: 2 } })",
+        "passed": true
+      }
+    ],
+    "cpu_state_digest": "d5bc61474bd3f2905fdee44be368c0f8e17c66e4550ce248512b1929a2a2d968"
+  },
+  "coverage": null,
+  "fault_injections": [],
+  "digest": "10226196a483b9c47b9437f57cddfa95ed7b86dc9ddbf75dd8bf3f54cae1bd12"
+}

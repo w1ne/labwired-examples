@@ -1,0 +1,20 @@
+PICO-CARRIER-REV-A manufacturing reproduction
+Tool: KiCad10.0.8. Run from the example package directory.
+
+kicad-cli sch erc --format json --exit-code-violations -o validation/erc.json electronics/pico-carrier.kicad_sch
+kicad-cli sch export netlist --format kicadxml -o manufacturing/pico-carrier.net.xml electronics/pico-carrier.kicad_sch
+kicad-cli sch export pdf -o manufacturing/pico-carrier-schematic.pdf electronics/pico-carrier.kicad_sch
+kicad-cli pcb drc --format json --schematic-parity --exit-code-violations -o validation/drc.json electronics/pico-carrier.kicad_pcb
+kicad-cli pcb export gerbers --layers F.Cu,B.Cu,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts -o manufacturing/gerbers/ electronics/pico-carrier.kicad_pcb
+kicad-cli pcb export drill --excellon-separate-th --generate-report --report-path manufacturing/drill-report.txt -o manufacturing/drill/ electronics/pico-carrier.kicad_pcb
+
+The package is all through-hole hand assembly. No paste stencil or automated
+placement file is required. TP1/TP2/TP3 and H1..H4 are PCB features, not purchased
+components. The populated carrier BOM has J1, J2 and J3; the Pico and its headers
+are assembled afterward.
+
+The board-only STEP was exported before the SC0917-to-SC0915 silkscreen correction.
+Its outline, holes and substrate geometry are unchanged by that text-only correction.
+The immutable STEP source hash stays pinned for mechanical reproducibility.
+KiCad's substrate-only STEP is1.51mm high; the enclosure source explicitly scales
+that substrate to the1.6mm finished fabrication thickness.

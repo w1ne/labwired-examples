@@ -1,0 +1,347 @@
+{
+  "ok": true,
+  "sceneSummary": {
+    "valid": true,
+    "volume": 63213.93788839563,
+    "faceCount": 1632,
+    "size": [
+      78,
+      88,
+      32
+    ]
+  },
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.thread",
+      "severity": "info",
+      "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+      "hint": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "M4 threaded hole tap drill"
+        }
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.hole-by-cylinder",
+      "severity": "info",
+      "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+      "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "clearance hole through plate"
+        }
+      }
+    }
+  ],
+  "requirements": {
+    "ok": true,
+    "status": "pass",
+    "entries": [
+      {
+        "name": "native-carrier-size",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          60.0000029883041,
+          70.00000298830409,
+          1.6000000000000085
+        ],
+        "limit": {
+          "x": [
+            59.99,
+            60.01
+          ],
+          "y": [
+            69.99,
+            70.01
+          ],
+          "z": [
+            1.59,
+            1.61
+          ]
+        },
+        "margin": 0.009997011695901392,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 92.20933129005482
+          }
+        ],
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "bbox",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              59.99,
+              60.01
+            ],
+            "y": [
+              69.99,
+              70.01
+            ],
+            "z": [
+              1.59,
+              1.61
+            ]
+          }
+        }
+      },
+      {
+        "name": "pico-to-lid",
+        "source": "script",
+        "status": "pass",
+        "measured": 3.120000000000008,
+        "limit": 1,
+        "margin": 2.120000000000008,
+        "selections": [
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(assemblyExport_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 57.64538614668134
+          },
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(boolean_28)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 117.63604889658612
+          }
+        ],
+        "featureId": "require_2",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "assemblyExport_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_28"
+          },
+          "op": "gte",
+          "limit": 1
+        }
+      },
+      {
+        "name": "carrier-to-lid",
+        "source": "script",
+        "status": "pass",
+        "measured": 9.39,
+        "limit": 1,
+        "margin": 8.39,
+        "selections": [
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(boolean_114)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 92.86723467918641
+          },
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(boolean_28)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 117.63604889658612
+          }
+        ],
+        "featureId": "require_3",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_114"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_28"
+          },
+          "op": "gte",
+          "limit": 1
+        }
+      },
+      {
+        "name": "usb-plug-base-access",
+        "source": "script",
+        "status": "pass",
+        "measured": 1,
+        "limit": 0.5,
+        "margin": 0.5,
+        "selections": [
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(box_55)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 34.928498393145965
+          },
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(boolean_18)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 120.76526818584885
+          }
+        ],
+        "featureId": "require_4",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_55"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_18"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      },
+      {
+        "name": "usb-plug-lid-access",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.735000000000003,
+        "limit": 0.5,
+        "margin": 0.23500000000000298,
+        "selections": [
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(box_55)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 34.928498393145965
+          },
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(boolean_28)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 117.63604889658612
+          }
+        ],
+        "featureId": "require_5",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_55"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_28"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      }
+    ],
+    "summary": {
+      "pass": 5,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "parts": {
+    "count": 50,
+    "names": [
+      "base",
+      "lid",
+      "carrier-pcba",
+      "pico-board",
+      "pico-component-1",
+      "pico-component-2",
+      "pico-component-3",
+      "pico-component-4",
+      "pico-component-5",
+      "pico-component-6",
+      "pico-component-7",
+      "pico-component-8",
+      "pico-component-9",
+      "pico-component-10",
+      "pico-component-11",
+      "pico-component-12",
+      "pico-component-13",
+      "pico-component-14",
+      "pico-component-15",
+      "pico-component-16",
+      "pico-header-2111",
+      "pico-header-3889",
+      "carrier-washer-0",
+      "carrier-standoff-0",
+      "carrier-screw-0",
+      "carrier-lower-screw-0",
+      "carrier-washer-1",
+      "carrier-standoff-1",
+      "carrier-screw-1",
+      "carrier-lower-screw-1",
+      "carrier-washer-2",
+      "carrier-standoff-2",
+      "carrier-screw-2",
+      "carrier-lower-screw-2",
+      "carrier-washer-3",
+      "carrier-standoff-3",
+      "carrier-screw-3",
+      "carrier-lower-screw-3",
+      "lid-standoff-0",
+      "lid-screw-0",
+      "lid-lower-screw-0",
+      "lid-standoff-1",
+      "lid-screw-1",
+      "lid-lower-screw-1",
+      "lid-standoff-2",
+      "lid-screw-2",
+      "lid-lower-screw-2",
+      "lid-standoff-3",
+      "lid-screw-3",
+      "lid-lower-screw-3"
+    ]
+  },
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "07113d30c3f38fb8f369f8b52d2b1f8cad6dabe67061a244f3614d35a8fc5a51",
+      "byteLength": 9598
+    },
+    "parameters": {
+      "values": {
+        "output": "assembly"
+      },
+      "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "998c457b7810feff9238cbefa99e1d5fbc7e1701"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "aa2e69d05316c018d3e9c5a28c7934d3c8a0c6d304e2135aef491a443d4806d6"
+  },
+  "serverBuild": "0.1.0+998c457b7810@2026-11-18T09:30:48.889Z"
+}
