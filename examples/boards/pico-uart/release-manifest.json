@@ -21,7 +21,7 @@
     ],
     "current_native_part_count": 50,
     "current_studio_revision_pending": true,
-    "assembly_export_is_current": false,
+    "assembly_export_is_current": true,
     "source_correction": "validation/connector-dimension-correction.json"
   },
   "physical_hardware_tested": false,
@@ -31,10 +31,11 @@
     "local_build": "validation/local-build-acceptance.json",
     "mechanical": "validation/design-loop.json",
     "step": "validation/assembly-step-inspection.json",
-    "native_import": "validation/native-import-validation.json"
+    "native_import": "validation/native-import-validation.json",
+    "mechanical_current": "validation/socket-correction-evaluation.json",
+    "step_current": "validation/socket-correction-step-inspection.json"
   },
   "open_acceptance_items": [
-    "Refresh assembly STEP and mechanical verification after the documented Samtec socket body dimension correction.",
     "Update the existing Studio675KJsgq project with the final exact-body source; its collaboration path currently refuses imported assets.",
     "Finish full assembly-path verification; the first full-scene pass exhausted its work budget and is inconclusive.",
     "Bind and verify the exact package in the canonical featured Lab.",
@@ -58,8 +59,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10994,
-      "sha256": "8b0ee35c309fe235ec8ad4bbf8601c51125eb10f7d6afe5c217109a4faaca94c"
+      "bytes": 11072,
+      "sha256": "c10476eb667c442cfedf8c29aa6c8ec048159c0f08c0fe3a33ce3a7f975bd33e"
     },
     {
       "path": "SHA256SUMS",
@@ -518,13 +519,18 @@
     },
     {
       "path": "mechanical/pico-uart-fixture.step",
-      "bytes": 6055484,
-      "sha256": "16a31f4f8d1150bff6e8ea0ae83e4c0eff3d3c0eac3d742bcdc95c923161c7bc"
+      "bytes": 6055720,
+      "sha256": "e1375dc6fd400d744324e50226af61afb8647e9b01090c1412b2f3761278d5a9"
     },
     {
       "path": "mechanical/pico-uart-lid.stl",
       "bytes": 309284,
       "sha256": "91a891b780a31fc6fbfb186e4414addfbc8654a4bb7ff4b8bdbf51fb7536e4f4"
+    },
+    {
+      "path": "mechanical/socket-corrected-assembly.png",
+      "bytes": 100491,
+      "sha256": "73375f1412c28cbbb9e1423abdf9947575ea5d841f05ca1a85244c73432aa192"
     },
     {
       "path": "references/raspberry-pi/LICENSE.txt",
@@ -583,8 +589,8 @@
     },
     {
       "path": "validation/connector-dimension-correction.json",
-      "bytes": 702,
-      "sha256": "0c47e3fcb73161dd7f9c303e4a779fcada41ed64968318898c1ca7d792a92192"
+      "bytes": 911,
+      "sha256": "64b5cc1e5d5efbb45ba504cda607bfb5e81d1c0836b6776d32a15bfdb90a4e13"
     },
     {
       "path": "validation/design-loop.json",
@@ -680,6 +686,21 @@
       "path": "validation/reproduce.txt",
       "bytes": 1836,
       "sha256": "3f66b0635c5a0514dfe85f0aab88bea5e3c91459eaa8038868c19902805dccb7"
+    },
+    {
+      "path": "validation/socket-correction-evaluation.json",
+      "bytes": 12931,
+      "sha256": "1460510b3b29689704cb8181e439b29fb29001c4ed6fbcc6ffb1849f3e4ef816"
+    },
+    {
+      "path": "validation/socket-correction-render.json",
+      "bytes": 1382,
+      "sha256": "ad9a93dfad82a84a0368a2e06923ad4343bc58f358b2870beebaed451650ed44"
+    },
+    {
+      "path": "validation/socket-correction-step-inspection.json",
+      "bytes": 924128,
+      "sha256": "7b3dba3ccaf0bdaca2847e4ed6c42ffdc9185547e87b73928f7ec6c91befa8d5"
     },
     {
       "path": "validation/studio-revision-1.json",
