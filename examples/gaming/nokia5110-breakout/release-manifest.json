@@ -30,9 +30,9 @@
     "provider": "kernelcad",
     "slug": "YhZimWlS",
     "projectId": "860443af-e8d3-44b9-a009-098108e5d444",
-    "published_version": 1,
-    "published_version_is_current": false,
-    "mesh_producer_provenance": "19171a5f8aaeda2e43aec706c1ce0b001c65750332cf91777b96c47a8245ab20",
+    "published_version": 2,
+    "published_version_is_current": true,
+    "mesh_producer_provenance": "d989e4f25f9ffd834e69181e3f050dd9e88ed269ff77eb036f9e31b2c27f233f",
     "source": "mechanical/nokia-breakout-enclosure.kcad.ts",
     "submitted_source": "validation/submitted-enclosure.kcad.ts",
     "step": "mechanical/nokia-breakout-assembly.step",
@@ -59,9 +59,17 @@
       "sonar-transducer-1"
     ],
     "revision": "B",
-    "current_studio_revision_pending": true,
+    "current_studio_revision_pending": false,
     "coordinate_correction": "validation/native-coordinate-correction.json",
-    "assembly_path_status": "inconclusive-memory-budget"
+    "assembly_path_status": "inconclusive-memory-budget",
+    "saved_source": "validation/studio-current/saved-source.kcad.ts",
+    "saved_source_sha256": "49aeee9083953f290ab16dc10abb788da5661352c741a145048017ea36aad513",
+    "saved_revision_receipt": "validation/studio-current/revision.json",
+    "mesh_url": "https://mesh.kernelcad.com/mesh-artifacts/YhZimWlS/v2.json?provenance=d989e4f25f9ffd834e69181e3f050dd9e88ed269ff77eb036f9e31b2c27f233f",
+    "mesh_download_url": "https://api.kernelcad.com/api/v1/projects/YhZimWlS/revisions/2/mesh-artifact?download=1&provenance=d989e4f25f9ffd834e69181e3f050dd9e88ed269ff77eb036f9e31b2c27f233f",
+    "mesh_artifact_sha256": "5f0c416f90d476b25079e61dcc93dd863abc7d28c37a50f78d38965bb17ff594",
+    "mesh_artifact_bytes": 6754646,
+    "historical_publication_note": "Studio revision 1 remains historical. Revision 2 contains this exact corrected source; saved import references preserve the same native bytes."
   },
   "physical_hardware_tested": false,
   "verification": {
@@ -74,14 +82,17 @@
     "visual": "validation/visual-review.json",
     "step": "validation/assembly-step-inspection.json",
     "print_and_cut_files": "validation/export-file-checks.json",
-    "studio": "validation/studio-revision.json",
-    "mesh": "validation/mesh-provenance.json",
+    "studio": "validation/studio-current/revision.json",
+    "mesh": "validation/studio-current/mesh-download.json",
     "assembly_path": "validation/assembly-path-revision-b.json",
     "native_registration": "validation/board-registration.json",
-    "assembly_path_historical": "validation/assembly-path.json"
+    "assembly_path_historical": "validation/assembly-path.json",
+    "studio_current": "validation/studio-current/revision.json",
+    "mesh_current": "validation/studio-current/mesh-download.json",
+    "studio_historical": "validation/studio-revision.json",
+    "mesh_historical": "validation/mesh-provenance.json"
   },
   "open_acceptance_items": [
-    "Save the corrected revision B source to existing Studio project YhZimWlS after the generic imported-asset collaboration repair is deployed; revision 1 is superseded.",
     "Complete full assembly-path verification; the corrected 85-part scene exceeded the hosted 1000 MB per-job memory budget and is inconclusive.",
     "Bind and verify this exact package in the existing canonical Lab using the physical 4 MHz time base and 32-cycle peripheral cap.",
     "Measure the purchased Nucleo socket stack, LCD/sonar revision details, USB overmold, printed fits, hardware engagement and wire routing.",
@@ -105,8 +116,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13564,
-      "sha256": "07a46c5a543249cd6ab662f0320f619591c929ab18e670b272f5e79ad4fc0093"
+      "bytes": 13650,
+      "sha256": "8aaa6716796ffd82e2a031d7000b81a7203a4c5962006658ca4850b9960ad4ad"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -117,11 +128,6 @@
       "path": "bom.csv",
       "bytes": 4896,
       "sha256": "9fa6b901ed24d8a1a5a7fdf4e2df6f26bd7678ab9c844539127d53bc125f0221"
-    },
-    {
-      "path": "electronics-bom.csv",
-      "bytes": 871,
-      "sha256": "37b8fad58757b7c0768b6e8b837c1e2760b860d20b006d0acf847c462d53c594"
     },
     {
       "path": "electronics/authoring-metadata.json",
@@ -212,6 +218,11 @@
       "path": "electronics/sym-lib-table",
       "bytes": 167,
       "sha256": "3d0cfc6378611786a7bf9bc3d594c04ca95df70952edfb32c5e936dbdeefec7e"
+    },
+    {
+      "path": "electronics-bom.csv",
+      "bytes": 871,
+      "sha256": "37b8fad58757b7c0768b6e8b837c1e2760b860d20b006d0acf847c462d53c594"
     },
     {
       "path": "firmware/Cargo.lock",
@@ -389,11 +400,6 @@
       "sha256": "063abde1c1ca78049c889eff4a6ac69f8363ffb3c4290deed0a72cb727822cf4"
     },
     {
-      "path": "mechanical-interface.json",
-      "bytes": 6537,
-      "sha256": "dbe53c453052e296f8d7d09b8b02453bd77c6feabaef158304a273ac7a40a3b1"
-    },
-    {
       "path": "mechanical/assembly-front.png",
       "bytes": 58874,
       "sha256": "29a94f9e8f0c961471c2ea5f95947a4d5724f13a587177aca57685631677d383"
@@ -472,6 +478,11 @@
       "path": "mechanical/nokia-window.dxf",
       "bytes": 1123,
       "sha256": "410c6e7d79b86e6314c5d780bff03327ddbd815355417bd9ae52b38893720e7a"
+    },
+    {
+      "path": "mechanical-interface.json",
+      "bytes": 6537,
+      "sha256": "dbe53c453052e296f8d7d09b8b02453bd77c6feabaef158304a273ac7a40a3b1"
     },
     {
       "path": "references/st/MB1136-mechanical-reference.kicad_pcb",
@@ -702,6 +713,31 @@
       "path": "validation/rear-review-source.kcad.ts",
       "bytes": 16468,
       "sha256": "981824d1fd4b9370d1d15907ab31b6fd6b00327a2bf09d21f9b956394aa2635e"
+    },
+    {
+      "path": "validation/studio-current/immutable-source-read.json",
+      "bytes": 828,
+      "sha256": "eaca388da3aaaab57958ef143f2a131d2fa176bafff371104de1c8fc1e44959d"
+    },
+    {
+      "path": "validation/studio-current/mesh-download.json",
+      "bytes": 1292,
+      "sha256": "069b1ed0de14149714badadbec123d4c21761df1b2ce35edff2911dde718c6d7"
+    },
+    {
+      "path": "validation/studio-current/project-read.json",
+      "bytes": 30268,
+      "sha256": "65a973a65b05275ba3cb353ea38d482e7ea52578033a4d7411cd6d73c78139ef"
+    },
+    {
+      "path": "validation/studio-current/revision.json",
+      "bytes": 3796,
+      "sha256": "a680f434238621d0db7d0ea77ddb47cc5cb32807fb733de54547a339cdcd93ba"
+    },
+    {
+      "path": "validation/studio-current/saved-source.kcad.ts",
+      "bytes": 16013,
+      "sha256": "49aeee9083953f290ab16dc10abb788da5661352c741a145048017ea36aad513"
     },
     {
       "path": "validation/studio-revision.json",

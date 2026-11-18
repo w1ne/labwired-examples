@@ -1,0 +1,88 @@
+{
+  "schema": "labwired.saved-cad-revision.v1",
+  "verifiedAt": "2026-11-18T21:08:28.850054+00:00",
+  "slug": "YhZimWlS",
+  "projectId": "860443af-e8d3-44b9-a009-098108e5d444",
+  "version": 2,
+  "url": "https://app.kernelcad.com/p/YhZimWlS?version=2",
+  "embedUrl": "https://app.kernelcad.com/embed/YhZimWlS?revision=2&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FYhZimWlS%2Fv2.json%3Fprovenance%3Dd989e4f25f9ffd834e69181e3f050dd9e88ed269ff77eb036f9e31b2c27f233f",
+  "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/YhZimWlS/v2.json?provenance=d989e4f25f9ffd834e69181e3f050dd9e88ed269ff77eb036f9e31b2c27f233f",
+  "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/YhZimWlS/revisions/2/mesh-artifact?download=1&provenance=d989e4f25f9ffd834e69181e3f050dd9e88ed269ff77eb036f9e31b2c27f233f",
+  "meshReady": true,
+  "sourceSha256": "49aeee9083953f290ab16dc10abb788da5661352c741a145048017ea36aad513",
+  "sourceBytes": 16013,
+  "portableSource": "mechanical/nokia-breakout-enclosure.kcad.ts",
+  "portableSourceSha256": "9a739f7efc25d4ff66046c3b4dc5ba1fb32826bbafb2d6d50fb77ce4b9010326",
+  "savedSource": "saved-source.kcad.ts",
+  "assetManifest": {
+    "inputs/23632172f33c.step": {
+      "format": "step",
+      "sha256": "23632172f33c522937803ef918369a82e208bde78545da85edfe106e52884cf9",
+      "mediaType": "model/step",
+      "byteLength": 274359
+    },
+    "inputs/9a7142507be4.step": {
+      "format": "step",
+      "sha256": "9a7142507be4cf31f1532c3ce2204a916cf45432d3d465f4bdf4441d249b0739",
+      "mediaType": "model/step",
+      "byteLength": 82929
+    }
+  },
+  "assetsSha256": "212e01e10d5b945c9cc89ed341dde45fc0b7d77ff9a0292f970b382ff57a3673",
+  "importRefSubstitutions": [
+    {
+      "sourceRef": "./inputs/nokia-carrier.step",
+      "savedRef": "./inputs/9a7142507be4.step",
+      "sha256": "9a7142507be4cf31f1532c3ce2204a916cf45432d3d465f4bdf4441d249b0739"
+    },
+    {
+      "sourceRef": "./inputs/nucleo-mb1136-reference.step",
+      "savedRef": "./inputs/23632172f33c.step",
+      "sha256": "23632172f33c522937803ef918369a82e208bde78545da85edfe106e52884cf9"
+    }
+  ],
+  "meshProvenance": "d989e4f25f9ffd834e69181e3f050dd9e88ed269ff77eb036f9e31b2c27f233f",
+  "mesh": {
+    "sha256": "5f0c416f90d476b25079e61dcc93dd863abc7d28c37a50f78d38965bb17ff594",
+    "bytes": 6754646,
+    "physicalPartCount": 85,
+    "featureCount": 92,
+    "bounds": {
+      "min": [
+        -16,
+        -72.5,
+        0
+      ],
+      "max": [
+        106,
+        31.5,
+        70.5
+      ]
+    },
+    "provenance": {
+      "schema": "kernelcad.revision-mesh-provenance.v1",
+      "source": {
+        "sha256": "49aeee9083953f290ab16dc10abb788da5661352c741a145048017ea36aad513",
+        "byteLength": 16013
+      },
+      "assetsSha256": "212e01e10d5b945c9cc89ed341dde45fc0b7d77ff9a0292f970b382ff57a3673",
+      "geometryHash": "74d4a657986099ce338c0533b70051135ab3c82eee2bb0b623f672aa62373f65",
+      "producer": {
+        "serverBuild": "0.1.0+b5855b759d29@2026-11-18T20:58:46.448Z",
+        "serverCommit": "b5855b759d29a23f6565705755866aa53922efdd",
+        "runtimeSourceHash": "acf5fe2d3fb92fde48249a4c82da3362f8618eb998ffd3ef9bc4ab8607349438",
+        "sessionArtifactSha256": "eb2eb42c177cd16caa57234aecaa2c352ab42d0a169dc6a71aef3013ccb02776"
+      }
+    }
+  },
+  "verification": {
+    "latestAndImmutableSourceEqual": true,
+    "nativeAssetSnapshotUnchanged": true,
+    "downloadSourceIdentityMatches": true,
+    "downloadAssetIdentityMatches": true,
+    "downloadProvenanceMatchesPinnedUrl": true,
+    "expectedPhysicalPartCount": true
+  },
+  "physicalHardwareTested": false,
+  "note": "This receipt proves the immutable saved source, native asset identity and ready mesh. Existing package fit, path and physical qualification records retain their separate scope."
+}

@@ -6,7 +6,7 @@ Canonical Lab: [Nokia 5110 Breakout](https://app.labwired.com/?lab=nokia5110-inv
 
 ## Package status and entry points
 
-This is an **engineering candidate with enclosure revision B**: routed native PCB, the exact firmware source and programming files, a purchase BOM, an editable enclosure, print/cutting files and an assembly procedure. Physical prototype qualification remains open. Assembly-path qualification remains open. The corrected full-scene attempt exceeded the hosted 1000 MB memory budget; its exact source and response are retained. Studio revision 1 contains the superseded geometry and is not the fabrication reference.
+This is an **engineering candidate with enclosure revision B**: routed native PCB, the exact firmware source and programming files, a purchase BOM, an editable enclosure, print/cutting files and an assembly procedure. Physical prototype qualification remains open. Assembly-path qualification remains open. The corrected full-scene attempt exceeded the hosted 1000 MB memory budget; its exact source and response are retained. Studio revision 2 now contains the corrected geometry and a ready mesh; revision 1 remains historical. The [saved-revision receipt](validation/studio-current/revision.json) identifies the exact source, both native assets and the deployed mesh producer.
 
 ![Nokia Breakout enclosure](mechanical/assembly-iso.png)
 
@@ -16,7 +16,7 @@ This is an **engineering candidate with enclosure revision B**: routed native PC
 | Edit the routed PCB and schematic | [KiCad project](electronics/nokia-carrier.kicad_pro) |
 | Buy all parts | [Complete BOM](bom.csv), with [carrier placement BOM](electronics-bom.csv) |
 | Build or program firmware | [Firmware instructions](firmware/README.md), [ELF](firmware/artifacts/nokia-breakout.elf), [BIN](firmware/artifacts/nokia-breakout.bin) |
-| Edit the enclosure | [Portable source](mechanical/nokia-breakout-enclosure.kcad.ts), [historical Studio revision 1](https://app.kernelcad.com/p/YhZimWlS?version=1); corrected saved revision pending |
+| Edit the enclosure | [Portable source](mechanical/nokia-breakout-enclosure.kcad.ts), [current Studio revision 2](https://app.kernelcad.com/p/YhZimWlS?version=2) |
 | Import the complete geometry | [85-solid assembly STEP](mechanical/nokia-breakout-assembly.step) |
 | Print the case | [Base](mechanical/nokia-base.stl), [lid](mechanical/nokia-lid.stl), [LCD clamp](mechanical/nokia-lcd-clamp.stl) ×2, [sonar clamp](mechanical/nokia-sensor-clamp.stl) ×2 |
 | Cut the clear window | [DXF](mechanical/nokia-window.dxf), [dimensioned drawing](mechanical/nokia-window-drawing.svg) |
@@ -34,7 +34,7 @@ This is an **engineering candidate with enclosure revision B**: routed native PC
 | Native board registration | All 26 carrier/Nucleo contacts and seven mounting axes agree with native pad numbers and STEP geometry | [Registration receipt](validation/board-registration.json) |
 | Native assembly export | 85 of 85 BREP solids are valid after STEP re-import | [STEP inspection](validation/assembly-step-inspection.json) |
 | Print and cutting files | Four closed, single-component print meshes; correct DXF units and five closed cutting loops | [Output-file checks](validation/export-file-checks.json) |
-| Editable saved model | Corrected source and exports are supplied; Studio revision 1 is historical until its existing project is updated | [Historical saved revision](validation/studio-revision.json) |
+| Editable saved model | Corrected source, exports and ready Studio revision 2 are verified | [Current saved revision](validation/studio-current/revision.json) |
 | Complete assembly path | Inconclusive: the corrected full 84-moving-part scene exceeded the hosted 1000 MB memory budget | [Current path receipt](validation/assembly-path-revision-b.json) |
 | Physical device | Not fabricated, printed, assembled or powered in this work | [Qualification procedure](ASSEMBLY.md) |
 
