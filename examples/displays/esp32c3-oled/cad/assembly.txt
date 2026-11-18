@@ -42,3 +42,12 @@ The Seeed vendor STEP is an older1.0 mm board revision. Current native v1.3 boar
 The OLED rear components use a conservative3.2 mm keepout envelope. The cable and connector plug shapes are not included.
 Purchased screws and female threads use smooth clearance envelopes. The model is not a thread-manufacturing drawing. Engagement lengths come from the BOM dimensions.
 Do not use the PCB assembly-envelope STEP to fabricate electronics. Use the native KiCad and manufacturing files in the hardware package.
+
+ORDERED PATH FOLLOW-UP (2026-11-18)
+The unchanged revision 2 geometry passes 39 nominal removal stages with every
+remaining source part retained as an obstacle. See verification/ordered-path-followup.
+Hold the base and lid for their respective phases. Hold the OLED and loose M2
+hardware until the fasteners engage; the support assessment requires these holds.
+The specified 6 mm nut-driver envelope has zero nominal clearance margin. Verify
+the actual tool, counterholding, cable and printed dimensions before assembly.
+This evidence does not establish physical assembly, torque or tolerance acceptance.

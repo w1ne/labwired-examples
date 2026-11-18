@@ -38,8 +38,9 @@
   },
   "physical_hardware_tested": false,
   "open_acceptance_items": [
-    "Complete full assembly-path verification with bounded BREP-backed refinement of ambiguous nominal seated contacts; current receipts do not establish a sequence.",
-    "Build and measure a physical prototype:1.277 mm nominal glass/support gap,0.50 mm vertical glass/lid gap, USB overmold, cable routing, short-spacer screw clearance and module revision."
+    "Integrate and rerun full hosted assembly-path verification. Independent post-release evidence passes 39 ordered nominal geometric stages for all 41 source parts; hosted acceptance remains open.",
+    "Build and measure a physical prototype:1.277 mm nominal glass/support gap,0.50 mm vertical glass/lid gap, USB overmold, cable routing, short-spacer screw clearance and module revision.",
+    "Qualify real nut-driver clearance, counterholding and the external holds identified by support analysis; the modeled 6 mm driver has zero nominal dimensional margin."
   ],
   "verification": {
     "native_pcb": "manufacturing/validation.json",
@@ -47,7 +48,8 @@
     "package_rom_boot": "verification/package-rom-boot-manifest.json",
     "released_browser_wasm": "verification/released-wasm-acceptance.json",
     "mechanical": "cad/release.json",
-    "released_rom_boot": "verification/released-rom-boot-manifest.json"
+    "released_rom_boot": "verification/released-rom-boot-manifest.json",
+    "independent_ordered_path": "cad/verification/ordered-path-followup/provenance.json"
   },
   "files": [
     {
@@ -62,8 +64,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12613,
-      "sha256": "b89823c4792077894368c9f87b1243e87ecd2b58dcefa9037fa1c888537133e3"
+      "bytes": 12914,
+      "sha256": "fedda20f6a026b3a72af5b8fd6da223cab2650de9204f1a22d23121aee74a583"
     },
     {
       "path": "bom.csv",
@@ -72,8 +74,8 @@
     },
     {
       "path": "cad/assembly.txt",
-      "bytes": 6603,
-      "sha256": "a43c10c55b2b4e51de69f1f00399b4b234e22ef62a84b3a6b81c11b0ebc6ddcf"
+      "bytes": 7209,
+      "sha256": "81f6b18b57134e82169635d8e9343d2814650f89de3929851353da2ec28b7bbb"
     },
     {
       "path": "cad/components/hss-107-g-2.kcad.ts",
@@ -147,8 +149,8 @@
     },
     {
       "path": "cad/release.json",
-      "bytes": 6163,
-      "sha256": "253e677ace487027c8704e96c42776fa0610eb833e1526195d6b8513b37112f4"
+      "bytes": 6424,
+      "sha256": "ddef68541bd112acadadb90094bb840d6a8a106362bb4b83a3d63003b67dbbd1"
     },
     {
       "path": "cad/renders/closed-front.png",
@@ -326,6 +328,36 @@
       "sha256": "94e5e0aa23a90ce658b7822abc04ea18ea6236d1b20879c6f667c545f3b0e5a2"
     },
     {
+      "path": "cad/verification/ordered-path-followup/README.md",
+      "bytes": 3420,
+      "sha256": "9ed817b1d43e98b92301d9e1884693f6519f39013a5a93df1da6a1631fe20621"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-native-linear-controls.json",
+      "bytes": 45358,
+      "sha256": "4cd5a6e90a3b4f5611f920865c2125dfbc1356b7d49d9d358a86350a24c26dda"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-native-sweep-controls.json",
+      "bytes": 9148,
+      "sha256": "d1da2dd4e070ffbda81d7c6b596991649ce0347ff344b179381f6f9ee0f63789"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-native-tool-controls.json",
+      "bytes": 1278,
+      "sha256": "fb4c6df5839c381ed18b742bb8738c72dfc923fff265907591c102b30cbf4ebb"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-ordered-complete-native-path.json",
+      "bytes": 506655,
+      "sha256": "5003123dbcd1b09a59fa267447b956d81c80feb772f049ea913997f237194b1b"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/provenance.json",
+      "bytes": 1752,
+      "sha256": "e8f41312576593e315edd32b110eeb38a6648d1950082d5512fbf31324944d4e"
+    },
+    {
       "path": "cad/verification/print-dfm.json",
       "bytes": 2962,
       "sha256": "f872eec788be63f978c54af2476339caa9d67bb8d4f0332d1decdfb767172d88"
@@ -374,11 +406,6 @@
       "path": "cad/verification/visual-review-v2.json",
       "bytes": 4097,
       "sha256": "e6a36ac4fb4b0d59e9e108e55a1b073df1e805d2967dd3cc5190b7e9d66e5bbd"
-    },
-    {
-      "path": "electronics-bom.csv",
-      "bytes": 2171,
-      "sha256": "f95862d298108dc76cad9d23bc72f58b3f455db77ada2a6cb398eb954641eb51"
     },
     {
       "path": "electronics/assembly-notes.txt",
@@ -456,6 +483,11 @@
       "sha256": "c12fab3921269cbac23a7ce032494d921fd524bc32b2b67b1f3dbeecc115057d"
     },
     {
+      "path": "electronics-bom.csv",
+      "bytes": 2171,
+      "sha256": "f95862d298108dc76cad9d23bc72f58b3f455db77ada2a6cb398eb954641eb51"
+    },
+    {
       "path": "firmware/LICENSE",
       "bytes": 1072,
       "sha256": "cee2a5445168030357d6f8d3b51e7e3dd244dfa052687b9dbe558f30a864454b"
@@ -531,11 +563,6 @@
       "sha256": "acf71801b2a284f3cff9cfd84951016ad08258b21655b09078dc6526fda02290"
     },
     {
-      "path": "manufacturing/drill-report.txt",
-      "bytes": 699,
-      "sha256": "a59f4fb2fec6583da94426e0f3f300a135e1610602125fcf0a6cf526b6619988"
-    },
-    {
       "path": "manufacturing/drill/oled-carrier-NPTH-drl_map.pdf",
       "bytes": 12447,
       "sha256": "d7564a6e3546556f46e1ece34db2250ae91a94bfcb520153f7af7867b0d609e8"
@@ -554,6 +581,11 @@
       "path": "manufacturing/drill/oled-carrier-PTH.drl",
       "bytes": 688,
       "sha256": "6b669162533134998ab7d1a5a0bd422485cdd2263b3ea9aab878a2dcea311ee7"
+    },
+    {
+      "path": "manufacturing/drill-report.txt",
+      "bytes": 699,
+      "sha256": "a59f4fb2fec6583da94426e0f3f300a135e1610602125fcf0a6cf526b6619988"
     },
     {
       "path": "manufacturing/erc.json",
