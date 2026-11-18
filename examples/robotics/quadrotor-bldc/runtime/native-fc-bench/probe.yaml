@@ -1,0 +1,11 @@
+schema_version: '1.2'
+inputs:
+  firmware: ../../firmware/native-fc-bench/artifacts/openfc_motor_bench.elf
+  system: system.yaml
+limits:
+  max_steps: 10000000
+  wall_time_ms: 120000
+  max_uart_bytes: 65536
+assertions:
+  - expected_stop_reason: max_steps
+  - uart_contains: OPENFC_NATIVE_MOTOR_BENCH v1 RP2354B

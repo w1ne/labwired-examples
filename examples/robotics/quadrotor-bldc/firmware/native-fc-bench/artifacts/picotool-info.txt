@@ -1,0 +1,36 @@
+File /data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-build-4/work/artifacts/openfc_motor_bench.elf:
+
+Program Information
+ name:                openfc-native-motor-bench
+ version:             1.0.0
+ binary start:        0x10000000
+ binary end:          0x1000557c
+ target chip:         RP2350
+ image type:          ARM Secure
+
+Fixed Pin Information
+ 0:                   Host UART0 TX /115200 baud
+ 1:                   Host UART0 RX /115200 baud
+ 28:                  Motor4 bidirectional DShot600 / P1.8
+ 29:                  Motor3 bidirectional DShot600 / P1.7
+ 30:                  Motor2 bidirectional DShot600 / P1.6
+ 31:                  Motor1 bidirectional DShot600 / P1.5
+
+Build Information
+ sdk version:         2.1.1
+ pico_board:          openfc_lite_rp2354b_bench
+ boot2_name:          boot2_w25q080
+ build date:          Aug 18 2026
+ build attributes:    RelWithDebInfo
+
+Metadata Block 1
+ address:             0x10000138
+ next block address:  0x10005568
+ block type:          image def
+ target chip:         RP2350
+ image type:          ARM Secure
+
+Metadata Block 2
+ address:             0x10005568
+ next block address:  0x10000138
+ block type:          ignored

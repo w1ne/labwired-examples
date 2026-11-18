@@ -1,0 +1,13 @@
+# Exact native OpenFC-Lite rev2-LW1 FC for the physical motor-bench image.
+# The four motor nets are ordinary gpio_net links in the five-node station.
+name: openfc-native-motor-bench
+chip: rp2354b
+cpu_hz: 150000000
+debug_uart: uart0
+board_io:
+  - id: D1_status_led
+    kind: led
+    peripheral: sio
+    pin: 12
+    signal: output
+    active_high: true

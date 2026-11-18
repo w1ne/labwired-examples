@@ -1,0 +1,11 @@
+{
+  "status": "failed-diagnostic",
+  "firmware_sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b",
+  "engine_sha256": "9885c9546cfc48a7cfca551ccb194bcd50af41a8f0d14eb422f8771304dd7c4d",
+  "findings": [
+    "Real UART banner and zero-qualification reached.",
+    "Engine lacks new native DMA profile, so invalid reply counts are not FC/ESC acceptance evidence.",
+    "RP timer0 duplicates scheduled wakes; scheduler ceiling8 correctly aborts at9 live events."
+  ],
+  "physical_hardware_tested": false
+}

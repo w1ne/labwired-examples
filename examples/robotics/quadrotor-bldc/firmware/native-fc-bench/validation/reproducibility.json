@@ -1,0 +1,90 @@
+{
+  "status": "pass",
+  "scope": "Independent fresh local source-archive cross-builds; ELF/BIN/UF2 exact bytes. Linker maps retain build-directory paths.",
+  "builds": [
+    {
+      "work_directory": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-build-4/work",
+      "receipt_sha256": "246ae88545dfe20bea0fa114d36cb46052fbf4de32ef07500036f18376d8aaea",
+      "artifact_hashes": {
+        "openfc_motor_bench.elf": {
+          "bytes": 432448,
+          "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b"
+        },
+        "openfc_motor_bench.uf2": {
+          "bytes": 44032,
+          "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502"
+        },
+        "openfc_motor_bench.bin": {
+          "bytes": 21884,
+          "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780"
+        },
+        "openfc_motor_bench.elf.map": {
+          "bytes": 577287,
+          "sha256": "eda4856bac586284532737ab450832f2323a62384e1dd21f323018829d6f9f17"
+        }
+      }
+    },
+    {
+      "work_directory": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/bench-build-5/work",
+      "receipt_sha256": "a8abb57f1bcba0adac08f86b8b5220cca1320f2267744316383fe53a933835db",
+      "artifact_hashes": {
+        "openfc_motor_bench.elf": {
+          "bytes": 432448,
+          "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b"
+        },
+        "openfc_motor_bench.uf2": {
+          "bytes": 44032,
+          "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502"
+        },
+        "openfc_motor_bench.bin": {
+          "bytes": 21884,
+          "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780"
+        },
+        "openfc_motor_bench.elf.map": {
+          "bytes": 577287,
+          "sha256": "e6c6478ee298b53aa834611bab872b34ba79466ecd5b8e6d83fb927450b2e7b5"
+        }
+      }
+    }
+  ],
+  "artifacts": {
+    "openfc_motor_bench.elf": {
+      "byte_identical": true,
+      "bytes": 432448,
+      "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b"
+    },
+    "openfc_motor_bench.bin": {
+      "byte_identical": true,
+      "bytes": 21884,
+      "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780"
+    },
+    "openfc_motor_bench.uf2": {
+      "byte_identical": true,
+      "bytes": 44032,
+      "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502"
+    }
+  },
+  "physical_hardware_tested": false,
+  "complete_source_archive_replay": {
+    "receipt": "complete-source-archive-replay.json",
+    "source_archive_sha256": "9d12a8715a162bd4e6cc98cf8bf961c11ee209e5003d73a62b3dab7e5f987cf3",
+    "status": "pass",
+    "artifacts": {
+      "openfc_motor_bench.elf": {
+        "bytes": 432448,
+        "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b",
+        "byte_identical": true
+      },
+      "openfc_motor_bench.bin": {
+        "bytes": 21884,
+        "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780",
+        "byte_identical": true
+      },
+      "openfc_motor_bench.uf2": {
+        "bytes": 44032,
+        "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502",
+        "byte_identical": true
+      }
+    }
+  }
+}
