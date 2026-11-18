@@ -5,9 +5,45 @@ the native ESC substrate and population, and the current repaired OpenFC-Lite
 board. [Studio revision 6](https://app.kernelcad.com/p/DyJ405zg?version=6)
 is saved with 12 exact imported assets and a ready cloud display mesh.
 
-## Current native source checkpoint — 18 November 2026
+## Corrected native model datums — 18 November 2026
 
-The FC input now binds to PCB SHA-256
+The native boards now contain two source-qualified **3D model transform**
+corrections. The routed copper, drill centres, component placements and
+project rules remain unchanged. The matching library footprints carry the
+same corrections.
+
+| Component | Correction | Source/geometry check |
+| --- | --- | --- |
+| FC Card1, Shouhan TF PUSH | Model offset Y = -2.45 mm | Both 0.8 mm locating pegs align with the existing 1.2 mm native holes on 8 mm centres; all nine contact rows align |
+| ESC U12, INA186A3IDCKR | Model offset Z = +0.5 mm; rotation Z = +90 degrees | All six lead soles align with the existing lands; the pin 1 marker faces pad 1; 0.95 mm model height and 0.05 mm standoff agree with TI DCK0006A ranges |
+
+The corrected FC PCB SHA-256 is
+`3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348`;
+the corrected ESC PCB is
+`77763cb169469585c30f954fff17747ac7324374c9da8e68b6e00a774647a2ab`.
+KiCad 10.0.8 DRC and schematic parity report zero violations and zero
+unconnected items for both boards under their existing project rules.
+
+The new native STEP files retain **164 valid FC solids and 214 valid ESC
+solids**. Only Card1's eleven solids and ESC U12 move. All other body bounds
+are unchanged within the inspection API's 0.00001 mm comparison tolerance;
+all solid volumes are unchanged within 0.000001 mm3. This is a native datum
+proof. Full assembly acceptance still requires the corrected assembly replay.
+
+- [Manufacturer drawing identity, exact datum calculations and limits](evidence/model-datum-correction-20261118/component-datums.json)
+- [Four native-source transform-only checks](evidence/model-datum-correction-20261118/source-transform-proof.json)
+- [All-solid before/after comparison](evidence/model-datum-correction-20261118/native-solid-comparison.json)
+- [Exact KiCad export commands and hashes](evidence/model-datum-correction-20261118/native-exports.json)
+
+Rebuild these outputs from the package's checked-in model directories:
+
+```sh
+python3 examples/robotics/quadrotor-bldc/cad/rebuild-native-models.py
+```
+
+## Published native source checkpoint before datum correction — 18 November 2026
+
+The currently saved revision 6 FC input binds to the earlier PCB SHA-256
 5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9 and
 asset commit f741c8ca2ed11c9b55c84bcdae6cc6dec888a676. All 107 assigned
 component models resolve. The current display mesh has 47,778 facets.

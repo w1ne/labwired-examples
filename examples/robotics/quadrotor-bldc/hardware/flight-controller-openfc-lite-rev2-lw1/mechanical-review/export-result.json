@@ -1,86 +1,86 @@
 [
   {
-    "name": "fc-substrate",
-    "command": [
-      "kicad-cli",
-      "pcb",
-      "export",
-      "step",
-      "--force",
-      "--user-origin",
-      "153.0912x87.1597mm",
-      "--output",
-      "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-substrate.step",
-      "--board-only",
-      "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb"
-    ],
-    "environment": {
-      "KICAD10_3DMODEL_DIR": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
-      "KICAD9_3DMODEL_DIR": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
-      "KISYS3DMOD": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models"
-    },
-    "exit": 0,
-    "seconds": 3.899567283981014,
-    "source_board_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
+    "artifact": "hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-substrate.step",
     "bytes": 98850,
-    "sha256": "72ff181beca23a666c59a678b9d62bc17e3f8d01375cd88060d41535af1725cc",
-    "kicad_version": "10.0.8"
-  },
-  {
-    "name": "fc-populated",
+    "sha256": "239616253172af5ba66785bb28eefbfe76e9555c76d9c0be38c37422c1633ea2",
+    "sourceBoard": "hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb",
+    "sourceBoardSha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+    "modelDirectory": "hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
+    "kicadVersion": "10.0.8",
     "command": [
       "kicad-cli",
       "pcb",
       "export",
       "step",
       "--force",
-      "--user-origin",
-      "153.0912x87.1597mm",
-      "--output",
-      "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-populated.step",
       "--subst-models",
       "--no-dnp",
-      "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb"
+      "--user-origin",
+      "153.0912x87.1597mm",
+      "--board-only",
+      "--output",
+      "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-substrate.step",
+      "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb"
     ],
-    "environment": {
-      "KICAD10_3DMODEL_DIR": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
-      "KICAD9_3DMODEL_DIR": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
-      "KISYS3DMOD": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models"
-    },
     "exit": 0,
-    "seconds": 12.519902870000806,
-    "source_board_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
-    "bytes": 10089422,
-    "sha256": "be7ff7652ef5c4dca72ce465d78675e0b5c961fed4d24f427f57aa3ed85f56f5",
-    "kicad_version": "10.0.8"
+    "seconds": 5.02836303395452
   },
   {
-    "name": "fc-components",
+    "artifact": "hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-populated.step",
+    "bytes": 10089423,
+    "sha256": "2dd54c18285a50d89ca85a3d5a2345aa6f29f7100e1c078eaba7fa83537a3592",
+    "sourceBoard": "hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb",
+    "sourceBoardSha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+    "modelDirectory": "hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
+    "kicadVersion": "10.0.8",
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "export",
+      "step",
+      "--force",
+      "--subst-models",
+      "--no-dnp",
+      "--user-origin",
+      "153.0912x87.1597mm",
+      "--output",
+      "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-populated.step",
+      "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb"
+    ],
+    "exit": 0,
+    "seconds": 24.434588563046418
+  },
+  {
+    "artifact": "hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-components.stl",
+    "bytes": 2388984,
+    "sha256": "0e5d2c97a61831c1909f572c19f881b130bd0d569c146b17e1932175ea08a2ca",
+    "sourceBoard": "hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb",
+    "sourceBoardSha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+    "modelDirectory": "hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
+    "kicadVersion": "10.0.8",
     "command": [
       "kicad-cli",
       "pcb",
       "export",
       "stl",
       "--force",
-      "--user-origin",
-      "153.0912x87.1597mm",
-      "--output",
-      "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-components.stl",
       "--subst-models",
       "--no-dnp",
+      "--user-origin",
+      "153.0912x87.1597mm",
       "--no-board-body",
-      "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb"
+      "--output",
+      "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-components.stl",
+      "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb"
     ],
-    "environment": {
-      "KICAD10_3DMODEL_DIR": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
-      "KICAD9_3DMODEL_DIR": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models",
-      "KISYS3DMOD": "/data/worktrees/labwired-examples-industrial-packages-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/reviewed-models"
-    },
     "exit": 0,
-    "seconds": 12.421291248989291,
-    "source_board_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
-    "bytes": 12087850,
-    "sha256": "88b51032681e2d4dc909947021e7bafe9f5322dfd58ee9efb1447503d774c9ad",
-    "kicad_version": "10.0.8"
+    "seconds": 24.445440431009047,
+    "conversion": {
+      "method": "ASCII-to-binary STL; same triangle order and coordinates rounded to IEEE754 float32",
+      "sourceBytes": 12087850,
+      "sourceSha256": "46e2246532d126567495a6b099be719877b8aae60194cdcbce0d8f7e57878629",
+      "triangles": 47778,
+      "maximumCoordinateRoundingMm": 9.521484365393462e-07
+    }
   }
 ]

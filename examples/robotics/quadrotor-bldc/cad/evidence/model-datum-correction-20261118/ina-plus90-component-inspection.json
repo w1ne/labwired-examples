@@ -1,0 +1,4319 @@
+{
+  "sourceSha256": "1f794c4a55d2c9d6dd14b9383287ef32706f125264dbddc575359dbb93f4b848",
+  "api": "kernelCAD inspectStepBuffer",
+  "engineSource": "/data/worktrees/kernelcad-assembly-contact-budgets-20261118/product-web/src/kernel/import/inspectStep.ts",
+  "engineSourceSha256": "1c570ed31a0f794593f638da2a66a62e4fad7beb12e7b866121eca66cfecc4a1",
+  "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-model-datum-probes/ina-plus90.step",
+  "solidCount": 1,
+  "solids": [
+    {
+      "index": 0,
+      "name": null,
+      "bboxExact": {
+        "min": [
+          70.27999877929688,
+          -58.119998931884766,
+          -1.0700000524520874
+        ],
+        "max": [
+          72.37999725341797,
+          -56.119998931884766,
+          -0.11999999731779099
+        ]
+      },
+      "volumeMm3": 2.2269041082075103,
+      "faceCount": 150,
+      "brepCheck": "valid",
+      "holes": [
+        {
+          "axisOrigin": [
+            71.661744666415,
+            -56.354079879741,
+            -1.0699999999999998
+          ],
+          "axisDirection": [
+            -1.499759782662e-32,
+            -1.224646799147e-16,
+            1
+          ],
+          "diameterMm": 0.15820308192512,
+          "depthMm": 0.0009999999999998899,
+          "kind": "blind",
+          "faceCount": 2,
+          "status": "recognized",
+          "confidence": {
+            "level": "high",
+            "basis": "co-axial concave cylinder cluster and axial end probes identify a full blind or through bore"
+          }
+        }
+      ],
+      "holeDetection": "exact",
+      "recognition": {
+        "faces": [
+          {
+            "faceIndex": 0,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.00024850481997561077,
+            "centerMm": [
+              71.71210227141651,
+              -56.35407987974099,
+              -1.0695
+            ],
+            "normal": [
+              1,
+              -4.9789962505197014e-17,
+              8.900086005456133e-33
+            ],
+            "axisOrigin": [
+              71.661744666415,
+              -56.354079879741,
+              -1.069
+            ],
+            "axisDirection": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "diameterMm": 0.15820308192512,
+            "angularCoverageDeg": 180,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 1,
+            "surfaceType": "planar",
+            "areaMm2": 2.0351923519978485,
+            "centerMm": [
+              71.33113513515418,
+              -57.12311729347907,
+              -0.16999999999999998
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 2,
+            "surfaceType": "planar",
+            "areaMm2": 0.786797540551864,
+            "centerMm": [
+              70.73882006734864,
+              -57.11999999999999,
+              -0.8606422832218005
+            ],
+            "normal": [
+              -0.9902680687415877,
+              2.482584923768655e-16,
+              -0.13917310095994204
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 3,
+            "surfaceType": "planar",
+            "areaMm2": 0.7867975405516551,
+            "centerMm": [
+              71.92117993265134,
+              -57.12,
+              -0.8606422832218046
+            ],
+            "normal": [
+              0.9902680687415877,
+              -2.1417091385327444e-16,
+              -0.13917310095994204
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 4,
+            "surfaceType": "planar",
+            "areaMm2": 0.5392888025275281,
+            "centerMm": [
+              71.32999999999998,
+              -58.08894002867723,
+              -0.3989968204716623
+            ],
+            "normal": [
+              -2.3121470311506997e-16,
+              -0.9902680687415877,
+              0.13917310095994193
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 5,
+            "surfaceType": "planar",
+            "areaMm2": 0.8801056082525567,
+            "centerMm": [
+              71.9237225065794,
+              -57.11999999999998,
+              -0.39744907032277665
+            ],
+            "normal": [
+              0.9902680687415877,
+              -2.482584923768655e-16,
+              0.13917310095994204
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 6,
+            "surfaceType": "planar",
+            "areaMm2": 0.5392888025273189,
+            "centerMm": [
+              71.33,
+              -56.151059971322766,
+              -0.3989968204716636
+            ],
+            "normal": [
+              4.0299882975059847e-16,
+              0.9902680687415877,
+              0.13917310095994215
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 7,
+            "surfaceType": "planar",
+            "areaMm2": 0.8801056082523416,
+            "centerMm": [
+              70.7362774934206,
+              -57.12,
+              -0.3974490703227772
+            ],
+            "normal": [
+              -0.9902680687415877,
+              2.1417091385327444e-16,
+              0.13917310095994204
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 8,
+            "surfaceType": "planar",
+            "areaMm2": 0.5392888025273163,
+            "centerMm": [
+              71.32999999999998,
+              -58.08894002867723,
+              -0.8410031795283364
+            ],
+            "normal": [
+              -2.3121470311506997e-16,
+              -0.9902680687415877,
+              -0.13917310095994215
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 9,
+            "surfaceType": "planar",
+            "areaMm2": 0.5392888025275308,
+            "centerMm": [
+              71.33,
+              -56.151059971322766,
+              -0.8410031795283377
+            ],
+            "normal": [
+              4.0299882975059847e-16,
+              0.9902680687415877,
+              -0.13917310095994193
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 10,
+            "surfaceType": "planar",
+            "areaMm2": 2.0852598425365314,
+            "centerMm": [
+              71.32687274331053,
+              -57.12722009744894,
+              -1.07
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 11,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.00024850481997561077,
+            "centerMm": [
+              71.61138706141348,
+              -56.35407987974099,
+              -1.0695
+            ],
+            "normal": [
+              -1,
+              1.7225464241993236e-16,
+              6.09751182115812e-33
+            ],
+            "axisOrigin": [
+              71.661744666415,
+              -56.354079879741,
+              -1.069
+            ],
+            "axisDirection": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "diameterMm": 0.15820308192512,
+            "angularCoverageDeg": 180,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 12,
+            "surfaceType": "planar",
+            "areaMm2": 0.01965711419669433,
+            "centerMm": [
+              71.66174466641499,
+              -56.354079879741,
+              -1.069
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 13,
+            "surfaceType": "planar",
+            "areaMm2": 0.009541955178140011,
+            "centerMm": [
+              71.97668626176849,
+              -57.769999999999996,
+              -0.62
+            ],
+            "normal": [
+              -1.20492164184e-16,
+              -1.2246467991469997e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 14,
+            "surfaceType": "planar",
+            "areaMm2": 0.0138706128869,
+            "centerMm": [
+              71.9668484033395,
+              -57.769999999999996,
+              -0.76
+            ],
+            "normal": [
+              -1.20492164184e-16,
+              -1.2246467991469997e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 15,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934181,
+            "centerMm": [
+              72.12895847017549,
+              -57.879999999999995,
+              -0.3986545479698489
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 16,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934177,
+            "centerMm": [
+              72.12895847017549,
+              -57.66,
+              -0.39865454796984884
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 17,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              72.28,
+              -57.769999999999996,
+              -0.26000000000000006
+            ],
+            "normal": [
+              5.421010862428e-16,
+              -1.2246467991470012e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 18,
+            "surfaceType": "planar",
+            "areaMm2": 0.030799999999999998,
+            "centerMm": [
+              72.38,
+              -57.769999999999996,
+              -0.19000000000000006
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 19,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              72.28,
+              -57.769999999999996,
+              -0.12000000000000016
+            ],
+            "normal": [
+              5.421010862428e-16,
+              -1.2246467991470012e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 20,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05068436147799885,
+            "centerMm": [
+              72.0857451381052,
+              -57.769999999999996,
+              -0.17239623328603337
+            ],
+            "normal": [
+              -0.6946583704599076,
+              7.409996830354694e-17,
+              0.719339800337772
+            ],
+            "axisOrigin": [
+              72.17999999999999,
+              -57.879999999999995,
+              -0.27000000000000013
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.3,
+            "angularCoverageDeg": 88.00000000014501,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 21,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969500463,
+            "centerMm": [
+              72.0242258580119,
+              -57.769999999999996,
+              -0.4327315327145219
+            ],
+            "normal": [
+              -0.9993908270190957,
+              2.2907079272338667e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 22,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.006757914863719116,
+            "centerMm": [
+              72.0109398384563,
+              -57.769999999999996,
+              -0.6130138355618879
+            ],
+            "normal": [
+              0.694658370458758,
+              -7.409996830314256e-17,
+              -0.7193398003388822
+            ],
+            "axisOrigin": [
+              71.998372523537,
+              -57.879999999999995,
+              -0.6000000000000001
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.04,
+            "angularCoverageDeg": 87.99999999996184,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 23,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05406331890977594,
+            "centerMm": [
+              72.09891104289136,
+              -57.769999999999996,
+              -0.7041106844950609
+            ],
+            "normal": [
+              0.6946583704589937,
+              -7.409996830322546e-17,
+              -0.7193398003386545
+            ],
+            "axisOrigin": [
+              71.998372523537,
+              -57.879999999999995,
+              -0.6000000000000001
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.32,
+            "angularCoverageDeg": 87.99999999999936,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 24,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969508158,
+            "centerMm": [
+              72.16414057379491,
+              -57.769999999999996,
+              -0.43761746225269715
+            ],
+            "normal": [
+              -0.9993908270190957,
+              2.2907079272338667e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 25,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.003378957431865048,
+            "centerMm": [
+              72.17371634254035,
+              -57.769999999999996,
+              -0.2634930822190662
+            ],
+            "normal": [
+              -0.694658370459646,
+              7.409996830345489e-17,
+              0.7193398003380247
+            ],
+            "axisOrigin": [
+              72.17999999999999,
+              -57.879999999999995,
+              -0.27000000000000013
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.02,
+            "angularCoverageDeg": 88.00000000010674,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 26,
+            "surfaceType": "planar",
+            "areaMm2": 0.00954195517814002,
+            "centerMm": [
+              71.97668626176849,
+              -57.12,
+              -0.6199999999999999
+            ],
+            "normal": [
+              -1.20492164184e-16,
+              -1.2246467991469997e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 27,
+            "surfaceType": "planar",
+            "areaMm2": 0.013870612886900014,
+            "centerMm": [
+              71.9668484033395,
+              -57.12,
+              -0.76
+            ],
+            "normal": [
+              -1.20492164184e-16,
+              -1.2246467991469997e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 28,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934181,
+            "centerMm": [
+              72.12895847017549,
+              -57.23,
+              -0.3986545479698488
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 29,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000002,
+            "centerMm": [
+              72.28,
+              -57.12,
+              -0.26000000000000006
+            ],
+            "normal": [
+              5.421010862428e-16,
+              -1.2246467991470012e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 30,
+            "surfaceType": "planar",
+            "areaMm2": 0.030800000000000004,
+            "centerMm": [
+              72.38,
+              -57.12,
+              -0.19
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 31,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000002,
+            "centerMm": [
+              72.28,
+              -57.12,
+              -0.12000000000000005
+            ],
+            "normal": [
+              5.421010862428e-16,
+              -1.2246467991470012e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 32,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05068436147799886,
+            "centerMm": [
+              72.0857451381052,
+              -57.12,
+              -0.17239623328603332
+            ],
+            "normal": [
+              -0.6946583704599076,
+              7.409996830354694e-17,
+              0.719339800337772
+            ],
+            "axisOrigin": [
+              72.17999999999999,
+              -57.23,
+              -0.27
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.3,
+            "angularCoverageDeg": 88.00000000014501,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 33,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969500463,
+            "centerMm": [
+              72.0242258580119,
+              -57.12,
+              -0.4327315327145218
+            ],
+            "normal": [
+              -0.9993908270190957,
+              2.2907079272338667e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 34,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.0067579148637191165,
+            "centerMm": [
+              72.0109398384563,
+              -57.12,
+              -0.6130138355618878
+            ],
+            "normal": [
+              0.694658370458758,
+              -7.409996830314256e-17,
+              -0.7193398003388822
+            ],
+            "axisOrigin": [
+              71.998372523537,
+              -57.23,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.04,
+            "angularCoverageDeg": 87.99999999996184,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 35,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934177,
+            "centerMm": [
+              72.12895847017549,
+              -57.01,
+              -0.3986545479698487
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 36,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05406331890977595,
+            "centerMm": [
+              72.09891104289136,
+              -57.12,
+              -0.7041106844950609
+            ],
+            "normal": [
+              0.6946583704589937,
+              -7.409996830322546e-17,
+              -0.7193398003386545
+            ],
+            "axisOrigin": [
+              71.998372523537,
+              -57.23,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.32,
+            "angularCoverageDeg": 87.99999999999936,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 37,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969508159,
+            "centerMm": [
+              72.16414057379491,
+              -57.12,
+              -0.43761746225269704
+            ],
+            "normal": [
+              -0.9993908270190957,
+              2.2907079272338667e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 38,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.0033789574318650486,
+            "centerMm": [
+              72.17371634254035,
+              -57.12,
+              -0.2634930822190661
+            ],
+            "normal": [
+              -0.694658370459646,
+              7.409996830345489e-17,
+              0.7193398003380247
+            ],
+            "axisOrigin": [
+              72.17999999999999,
+              -57.23,
+              -0.27
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.02,
+            "angularCoverageDeg": 88.00000000010674,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 39,
+            "surfaceType": "planar",
+            "areaMm2": 0.009541955178140011,
+            "centerMm": [
+              71.97668626176849,
+              -56.47,
+              -0.6199999999999999
+            ],
+            "normal": [
+              -1.20492164184e-16,
+              -1.2246467991469997e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 40,
+            "surfaceType": "planar",
+            "areaMm2": 0.0138706128869,
+            "centerMm": [
+              71.9668484033395,
+              -56.47,
+              -0.7599999999999999
+            ],
+            "normal": [
+              -1.20492164184e-16,
+              -1.2246467991469997e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 41,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934181,
+            "centerMm": [
+              72.12895847017549,
+              -56.58,
+              -0.39865454796984867
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 42,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              72.28,
+              -56.47,
+              -0.26
+            ],
+            "normal": [
+              5.421010862428e-16,
+              -1.2246467991470012e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 43,
+            "surfaceType": "planar",
+            "areaMm2": 0.030799999999999998,
+            "centerMm": [
+              72.38,
+              -56.47,
+              -0.18999999999999995
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 44,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              72.28,
+              -56.47,
+              -0.12
+            ],
+            "normal": [
+              5.421010862428e-16,
+              -1.2246467991470012e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 45,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05068436147799885,
+            "centerMm": [
+              72.0857451381052,
+              -56.47,
+              -0.17239623328603326
+            ],
+            "normal": [
+              -0.6946583704599076,
+              7.409996830354694e-17,
+              0.719339800337772
+            ],
+            "axisOrigin": [
+              72.17999999999999,
+              -56.58,
+              -0.26999999999999996
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.3,
+            "angularCoverageDeg": 88.00000000014501,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 46,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969500463,
+            "centerMm": [
+              72.0242258580119,
+              -56.47,
+              -0.4327315327145218
+            ],
+            "normal": [
+              -0.9993908270190957,
+              2.2907079272338667e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 47,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.006757914863719116,
+            "centerMm": [
+              72.0109398384563,
+              -56.47,
+              -0.6130138355618878
+            ],
+            "normal": [
+              0.694658370458758,
+              -7.409996830314256e-17,
+              -0.7193398003388822
+            ],
+            "axisOrigin": [
+              71.998372523537,
+              -56.58,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.04,
+            "angularCoverageDeg": 87.99999999996184,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 48,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934177,
+            "centerMm": [
+              72.12895847017549,
+              -56.36,
+              -0.39865454796984867
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 49,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05406331890977594,
+            "centerMm": [
+              72.09891104289136,
+              -56.47,
+              -0.7041106844950608
+            ],
+            "normal": [
+              0.6946583704589937,
+              -7.409996830322546e-17,
+              -0.7193398003386545
+            ],
+            "axisOrigin": [
+              71.998372523537,
+              -56.58,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.32,
+            "angularCoverageDeg": 87.99999999999936,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 50,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969508158,
+            "centerMm": [
+              72.16414057379491,
+              -56.47,
+              -0.43761746225269693
+            ],
+            "normal": [
+              -0.9993908270190957,
+              2.2907079272338667e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 51,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.003378957431865048,
+            "centerMm": [
+              72.17371634254035,
+              -56.47,
+              -0.26349308221906603
+            ],
+            "normal": [
+              -0.694658370459646,
+              7.409996830345489e-17,
+              0.7193398003380247
+            ],
+            "axisOrigin": [
+              72.17999999999999,
+              -56.58,
+              -0.26999999999999996
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.02,
+            "angularCoverageDeg": 88.00000000010674,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 52,
+            "surfaceType": "planar",
+            "areaMm2": 0.009541955178140011,
+            "centerMm": [
+              70.6833137382315,
+              -57.769999999999996,
+              -0.62
+            ],
+            "normal": [
+              1.20492164184e-16,
+              -1.2246467991470002e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 53,
+            "surfaceType": "planar",
+            "areaMm2": 0.0138706128869,
+            "centerMm": [
+              70.6931515966605,
+              -57.769999999999996,
+              -0.76
+            ],
+            "normal": [
+              1.20492164184e-16,
+              -1.2246467991470002e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 54,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934182,
+            "centerMm": [
+              70.5310415298245,
+              -57.879999999999995,
+              -0.3986545479698489
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 55,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              70.38,
+              -57.769999999999996,
+              -0.26000000000000006
+            ],
+            "normal": [
+              -5.421010862428e-16,
+              -1.2246467991469987e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 56,
+            "surfaceType": "planar",
+            "areaMm2": 0.030799999999999998,
+            "centerMm": [
+              70.28,
+              -57.769999999999996,
+              -0.19000000000000006
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 57,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              70.38,
+              -57.769999999999996,
+              -0.12000000000000016
+            ],
+            "normal": [
+              -5.421010862428e-16,
+              -1.2246467991469987e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 58,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05068436147799885,
+            "centerMm": [
+              70.5742548618948,
+              -57.769999999999996,
+              -0.17239623328603337
+            ],
+            "normal": [
+              0.6946583704599074,
+              -2.5028740510008583e-16,
+              0.7193398003377722
+            ],
+            "axisOrigin": [
+              70.48,
+              -57.879999999999995,
+              -0.27000000000000013
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.3,
+            "angularCoverageDeg": 88.00000000014501,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 59,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969500463,
+            "centerMm": [
+              70.6357741419881,
+              -57.769999999999996,
+              -0.4327315327145219
+            ],
+            "normal": [
+              0.9993908270190957,
+              -2.3761870410909904e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 60,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.006757914863719116,
+            "centerMm": [
+              70.6490601615437,
+              -57.769999999999996,
+              -0.6130138355618879
+            ],
+            "normal": [
+              -0.6946583704587579,
+              2.5028740509995335e-16,
+              -0.7193398003388823
+            ],
+            "axisOrigin": [
+              70.661627476463,
+              -57.879999999999995,
+              -0.6000000000000001
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.04,
+            "angularCoverageDeg": 87.99999999996187,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 61,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934185,
+            "centerMm": [
+              70.5310415298245,
+              -57.66,
+              -0.39865454796984884
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 62,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05406331890977594,
+            "centerMm": [
+              70.56108895710864,
+              -57.769999999999996,
+              -0.704110684495061
+            ],
+            "normal": [
+              -0.6946583704589933,
+              2.5028740509998047e-16,
+              -0.7193398003386551
+            ],
+            "axisOrigin": [
+              70.661627476463,
+              -57.879999999999995,
+              -0.6000000000000001
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.32,
+            "angularCoverageDeg": 87.99999999999936,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 63,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969508158,
+            "centerMm": [
+              70.49585942620509,
+              -57.769999999999996,
+              -0.43761746225269715
+            ],
+            "normal": [
+              0.9993908270190957,
+              -2.3761870410909904e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 64,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.0033789574318650478,
+            "centerMm": [
+              70.48628365745965,
+              -57.769999999999996,
+              -0.26349308221906614
+            ],
+            "normal": [
+              0.6946583704596467,
+              -2.5028740510005576e-16,
+              0.7193398003380239
+            ],
+            "axisOrigin": [
+              70.48,
+              -57.879999999999995,
+              -0.27000000000000013
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.02,
+            "angularCoverageDeg": 88.00000000010674,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 65,
+            "surfaceType": "planar",
+            "areaMm2": 0.00954195517814002,
+            "centerMm": [
+              70.6833137382315,
+              -57.12,
+              -0.6199999999999999
+            ],
+            "normal": [
+              1.20492164184e-16,
+              -1.2246467991470002e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 66,
+            "surfaceType": "planar",
+            "areaMm2": 0.013870612886900014,
+            "centerMm": [
+              70.6931515966605,
+              -57.12,
+              -0.76
+            ],
+            "normal": [
+              1.20492164184e-16,
+              -1.2246467991470002e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 67,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934184,
+            "centerMm": [
+              70.5310415298245,
+              -57.23,
+              -0.3986545479698488
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 68,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000002,
+            "centerMm": [
+              70.38,
+              -57.12,
+              -0.26000000000000006
+            ],
+            "normal": [
+              -5.421010862428e-16,
+              -1.2246467991469987e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 69,
+            "surfaceType": "planar",
+            "areaMm2": 0.030800000000000004,
+            "centerMm": [
+              70.28,
+              -57.12,
+              -0.19
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 70,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000002,
+            "centerMm": [
+              70.38,
+              -57.12,
+              -0.12000000000000005
+            ],
+            "normal": [
+              -5.421010862428e-16,
+              -1.2246467991469987e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 71,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05068436147799886,
+            "centerMm": [
+              70.5742548618948,
+              -57.12,
+              -0.1723962332860332
+            ],
+            "normal": [
+              0.6946583704599074,
+              -2.5028740510008583e-16,
+              0.7193398003377722
+            ],
+            "axisOrigin": [
+              70.48,
+              -57.23,
+              -0.27
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.3,
+            "angularCoverageDeg": 88.00000000014501,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 72,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969500463,
+            "centerMm": [
+              70.6357741419881,
+              -57.12,
+              -0.4327315327145218
+            ],
+            "normal": [
+              0.9993908270190957,
+              -2.3761870410909904e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 73,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.0067579148637191165,
+            "centerMm": [
+              70.6490601615437,
+              -57.12,
+              -0.6130138355618878
+            ],
+            "normal": [
+              -0.6946583704587579,
+              2.5028740509995335e-16,
+              -0.7193398003388823
+            ],
+            "axisOrigin": [
+              70.661627476463,
+              -57.23,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.04,
+            "angularCoverageDeg": 87.99999999996187,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 74,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934182,
+            "centerMm": [
+              70.5310415298245,
+              -57.01,
+              -0.3986545479698488
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 75,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05406331890977595,
+            "centerMm": [
+              70.56108895710864,
+              -57.12,
+              -0.7041106844950609
+            ],
+            "normal": [
+              -0.6946583704589933,
+              2.5028740509998047e-16,
+              -0.7193398003386551
+            ],
+            "axisOrigin": [
+              70.661627476463,
+              -57.23,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.32,
+            "angularCoverageDeg": 87.99999999999936,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 76,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969508159,
+            "centerMm": [
+              70.49585942620509,
+              -57.12,
+              -0.43761746225269704
+            ],
+            "normal": [
+              0.9993908270190957,
+              -2.3761870410909904e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 77,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.003378957431865048,
+            "centerMm": [
+              70.48628365745965,
+              -57.12,
+              -0.2634930822190661
+            ],
+            "normal": [
+              0.6946583704596467,
+              -2.5028740510005576e-16,
+              0.7193398003380239
+            ],
+            "axisOrigin": [
+              70.48,
+              -57.23,
+              -0.27
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.02,
+            "angularCoverageDeg": 88.00000000010674,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 78,
+            "surfaceType": "planar",
+            "areaMm2": 0.009541955178140011,
+            "centerMm": [
+              70.6833137382315,
+              -56.47,
+              -0.6199999999999999
+            ],
+            "normal": [
+              1.20492164184e-16,
+              -1.2246467991470002e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 79,
+            "surfaceType": "planar",
+            "areaMm2": 0.0138706128869,
+            "centerMm": [
+              70.6931515966605,
+              -56.47,
+              -0.7599999999999999
+            ],
+            "normal": [
+              1.20492164184e-16,
+              -1.2246467991470002e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 80,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934184,
+            "centerMm": [
+              70.5310415298245,
+              -56.58,
+              -0.39865454796984867
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 81,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              70.38,
+              -56.47,
+              -0.26
+            ],
+            "normal": [
+              -5.421010862428e-16,
+              -1.2246467991469987e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 82,
+            "surfaceType": "planar",
+            "areaMm2": 0.030799999999999998,
+            "centerMm": [
+              70.28,
+              -56.47,
+              -0.18999999999999995
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 83,
+            "surfaceType": "planar",
+            "areaMm2": 0.04400000000000001,
+            "centerMm": [
+              70.38,
+              -56.47,
+              -0.12
+            ],
+            "normal": [
+              -5.421010862428e-16,
+              -1.2246467991469987e-16,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 84,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05068436147799885,
+            "centerMm": [
+              70.5742548618948,
+              -56.47,
+              -0.17239623328603326
+            ],
+            "normal": [
+              0.6946583704599074,
+              -2.5028740510008583e-16,
+              0.7193398003377722
+            ],
+            "axisOrigin": [
+              70.48,
+              -56.58,
+              -0.26999999999999996
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.3,
+            "angularCoverageDeg": 88.00000000014501,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 85,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969500463,
+            "centerMm": [
+              70.6357741419881,
+              -56.47,
+              -0.4327315327145218
+            ],
+            "normal": [
+              0.9993908270190957,
+              -2.3761870410909904e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 86,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.006757914863719116,
+            "centerMm": [
+              70.6490601615437,
+              -56.47,
+              -0.6130138355618878
+            ],
+            "normal": [
+              -0.6946583704587579,
+              2.5028740509995335e-16,
+              -0.7193398003388823
+            ],
+            "axisOrigin": [
+              70.661627476463,
+              -56.58,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.04,
+            "angularCoverageDeg": 87.99999999996187,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 87,
+            "surfaceType": "planar",
+            "areaMm2": 0.11906290458934182,
+            "centerMm": [
+              70.5310415298245,
+              -56.36,
+              -0.39865454796984867
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 88,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.05406331890977594,
+            "centerMm": [
+              70.56108895710864,
+              -56.47,
+              -0.7041106844950609
+            ],
+            "normal": [
+              -0.6946583704589933,
+              2.5028740509998047e-16,
+              -0.7193398003386551
+            ],
+            "axisOrigin": [
+              70.661627476463,
+              -56.58,
+              -0.6
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.32,
+            "angularCoverageDeg": 87.99999999999936,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 89,
+            "surfaceType": "planar",
+            "areaMm2": 0.07395028969508158,
+            "centerMm": [
+              70.49585942620509,
+              -56.47,
+              -0.437617462252697
+            ],
+            "normal": [
+              0.9993908270190957,
+              -2.3761870410909904e-16,
+              0.03489949670250334
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 90,
+            "surfaceType": "cylindrical",
+            "areaMm2": 0.0033789574318650478,
+            "centerMm": [
+              70.48628365745965,
+              -56.47,
+              -0.26349308221906603
+            ],
+            "normal": [
+              0.6946583704596467,
+              -2.5028740510005576e-16,
+              0.7193398003380239
+            ],
+            "axisOrigin": [
+              70.48,
+              -56.58,
+              -0.26999999999999996
+            ],
+            "axisDirection": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "diameterMm": 0.02,
+            "angularCoverageDeg": 88.00000000010674,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 91,
+            "surfaceType": "planar",
+            "areaMm2": 0.00021468957155802446,
+            "centerMm": [
+              71.29333431116314,
+              -56.70244489137001,
+              -0.17049999999999998
+            ],
+            "normal": [
+              0.3635424856529815,
+              -0.9315776194849531,
+              -1.1408535498592297e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 92,
+            "surfaceType": "planar",
+            "areaMm2": 2.9268292683000044e-05,
+            "centerMm": [
+              71.39333431116326,
+              -56.6780546474675,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 93,
+            "surfaceType": "planar",
+            "areaMm2": 5.963592369873084e-05,
+            "centerMm": [
+              71.36528553067542,
+              -56.70280693405291,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -0.33933037727483906,
+              0.9406672605435545,
+              1.1519851496870411e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 94,
+            "surfaceType": "planar",
+            "areaMm2": 8.262195121900009e-05,
+            "centerMm": [
+              71.33723675018766,
+              -56.754236049906496,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 95,
+            "surfaceType": "planar",
+            "areaMm2": 5.925772971295573e-05,
+            "centerMm": [
+              71.36528553067548,
+              -56.80509351941844,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -0.3222024856060893,
+              -0.9466707760722615,
+              -1.1593373357629013e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 96,
+            "surfaceType": "planar",
+            "areaMm2": 2.9268292683000044e-05,
+            "centerMm": [
+              71.39333431116326,
+              -56.829274159662496,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 97,
+            "surfaceType": "planar",
+            "areaMm2": 0.00021381495555106318,
+            "centerMm": [
+              71.29333431116308,
+              -56.80610342795515,
+              -0.17049999999999993
+            ],
+            "normal": [
+              0.3536223923290545,
+              0.9353882635801436,
+              1.145520242953093e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 98,
+            "surfaceType": "planar",
+            "areaMm2": 2.682926829200002e-05,
+            "centerMm": [
+              71.193334311163,
+              -56.75488391576,
+              -0.17049999999999987
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 99,
+            "surfaceType": "planar",
+            "areaMm2": 0.011862716375215302,
+            "centerMm": [
+              71.30331811241717,
+              -56.753876775198215,
+              -0.17099999999999993
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 100,
+            "surfaceType": "planar",
+            "areaMm2": 6.688262195100009e-05,
+            "centerMm": [
+              71.31528553067545,
+              -56.7553602877115,
+              -0.17049999999999993
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 101,
+            "surfaceType": "planar",
+            "areaMm2": 8.870616131668642e-05,
+            "centerMm": [
+              71.27351723799248,
+              -56.77388162917515,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -0.3363908276650965,
+              -0.9417224702972694,
+              -1.1532774089343566e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 102,
+            "surfaceType": "bspline",
+            "areaMm2": 1.4406010562209709e-05,
+            "centerMm": [
+              71.22478737133085,
+              -56.75714865995724,
+              -0.17049999999999993
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 103,
+            "surfaceType": "planar",
+            "areaMm2": 6.478658529999743e-07,
+            "centerMm": [
+              71.217724555066,
+              -56.7554365072235,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 104,
+            "surfaceType": "bspline",
+            "areaMm2": 1.4373178896079668e-05,
+            "centerMm": [
+              71.2247741984366,
+              -56.753728519695755,
+              -0.17049999999999993
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 105,
+            "surfaceType": "planar",
+            "areaMm2": 8.879625510153829e-05,
+            "centerMm": [
+              71.27351723799254,
+              -56.736972330394515,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -0.33905379548504183,
+              0.9407669869671169,
+              1.1521072793324472e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 106,
+            "surfaceType": "planar",
+            "areaMm2": 5.438262195200005e-05,
+            "centerMm": [
+              71.39333431116326,
+              -56.992326751126,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 107,
+            "surfaceType": "planar",
+            "areaMm2": 0.00020000000000026016,
+            "centerMm": [
+              71.29333431116312,
+              -57.019518062101994,
+              -0.17049999999999998
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 108,
+            "surfaceType": "planar",
+            "areaMm2": 5.644054878100004e-05,
+            "centerMm": [
+              71.193334311163,
+              -56.991297787711495,
+              -0.17049999999999998
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 109,
+            "surfaceType": "bspline",
+            "areaMm2": 0.0001606555681060871,
+            "centerMm": [
+              71.22723314504177,
+              -56.896406263587785,
+              -0.17049999999999993
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 110,
+            "surfaceType": "bspline",
+            "areaMm2": 0.000166482425274887,
+            "centerMm": [
+              71.35746145485483,
+              -56.89671808020658,
+              -0.17049999999999993
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 111,
+            "surfaceType": "planar",
+            "areaMm2": 0.013533322786390259,
+            "centerMm": [
+              71.29305189079926,
+              -56.9505205280723,
+              -0.17099999999996662
+            ],
+            "normal": [
+              -4.315609183154e-13,
+              2.42501991174854e-14,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 112,
+            "surfaceType": "planar",
+            "areaMm2": 2.949695122000001e-05,
+            "centerMm": [
+              71.215285530675,
+              -56.977940318198996,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 113,
+            "surfaceType": "bspline",
+            "areaMm2": 0.0001237413815956429,
+            "centerMm": [
+              71.24159737067185,
+              -56.91256894764507,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 114,
+            "surfaceType": "bspline",
+            "areaMm2": 0.00012766433664293409,
+            "centerMm": [
+              71.34341877717482,
+              -56.9127150776074,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 115,
+            "surfaceType": "planar",
+            "areaMm2": 2.8391768293000024e-05,
+            "centerMm": [
+              71.37138309165107,
+              -56.9784929096625,
+              -0.17049999999999998
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 116,
+            "surfaceType": "planar",
+            "areaMm2": 0.00015609756097607013,
+            "centerMm": [
+              71.29333431116304,
+              -56.992688793808995,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 117,
+            "surfaceType": "planar",
+            "areaMm2": 2.195121951219001e-05,
+            "centerMm": [
+              71.38235870140716,
+              -57.058542452345435,
+              -0.17050000000000004
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 118,
+            "surfaceType": "planar",
+            "areaMm2": 0.0001073170731707301,
+            "centerMm": [
+              71.39333431116326,
+              -57.1122009889308,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 119,
+            "surfaceType": "planar",
+            "areaMm2": 0.00020000000000026016,
+            "centerMm": [
+              71.29333431116312,
+              -57.16585952551617,
+              -0.17049999999999998
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 120,
+            "surfaceType": "planar",
+            "areaMm2": 0.00010243902439024008,
+            "centerMm": [
+              71.193334311163,
+              -57.11464001332105,
+              -0.17049999999999998
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 121,
+            "surfaceType": "planar",
+            "areaMm2": 2.1951219512000025e-05,
+            "centerMm": [
+              71.204309920919,
+              -57.063420501125925,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 122,
+            "surfaceType": "planar",
+            "areaMm2": 7.560975609756006e-05,
+            "centerMm": [
+              71.215285530675,
+              -57.10122537917471,
+              -0.17049999999999993
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 123,
+            "surfaceType": "planar",
+            "areaMm2": 6.585365853704007e-05,
+            "centerMm": [
+              71.24821235994352,
+              -57.13903025722349,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 124,
+            "surfaceType": "planar",
+            "areaMm2": 7.073170731708007e-05,
+            "centerMm": [
+              71.28113918921204,
+              -57.10366440356495,
+              -0.17049999999999998
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 125,
+            "surfaceType": "planar",
+            "areaMm2": 2.195121951220002e-05,
+            "centerMm": [
+              71.29211479896814,
+              -57.06829854990641,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 126,
+            "surfaceType": "planar",
+            "areaMm2": 7.073170731708007e-05,
+            "centerMm": [
+              71.30309040872424,
+              -57.10366440356495,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 127,
+            "surfaceType": "planar",
+            "areaMm2": 6.829268292683005e-05,
+            "centerMm": [
+              71.33723675018766,
+              -57.13903025722349,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 128,
+            "surfaceType": "planar",
+            "areaMm2": 8.048780487805006e-05,
+            "centerMm": [
+              71.37138309165107,
+              -57.098786354784465,
+              -0.17049999999999993
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 129,
+            "surfaceType": "planar",
+            "areaMm2": 0.010345032718611594,
+            "centerMm": [
+              71.29407275069256,
+              -57.12774188010745,
+              -0.17100000000000004
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 130,
+            "surfaceType": "planar",
+            "areaMm2": 2.195121951220002e-05,
+            "centerMm": [
+              71.37199284774863,
+              -57.20488391576007,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 131,
+            "surfaceType": "bspline",
+            "areaMm2": 5.7165521673038506e-05,
+            "centerMm": [
+              71.39178725197932,
+              -57.23180028732513,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 132,
+            "surfaceType": "bspline",
+            "areaMm2": 0.00015355981737541556,
+            "centerMm": [
+              71.36044224479072,
+              -57.32115099379995,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 133,
+            "surfaceType": "bspline",
+            "areaMm2": 0.00016526680313220526,
+            "centerMm": [
+              71.2291464039908,
+              -57.31804735825629,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 134,
+            "surfaceType": "bspline",
+            "areaMm2": 4.804632124032264e-05,
+            "centerMm": [
+              71.19330857634621,
+              -57.228133293490316,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 135,
+            "surfaceType": "planar",
+            "areaMm2": 2.682926829300004e-05,
+            "centerMm": [
+              71.2122367501875,
+              -57.204883915760064,
+              -0.17049999999999998
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 136,
+            "surfaceType": "bspline",
+            "areaMm2": 4.9173965008963965e-05,
+            "centerMm": [
+              71.2170918597747,
+              -57.22770845423563,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 137,
+            "surfaceType": "bspline",
+            "areaMm2": 0.00012580908460467225,
+            "centerMm": [
+              71.2429076036092,
+              -57.30112818931506,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 138,
+            "surfaceType": "bspline",
+            "areaMm2": 0.00011892967723698386,
+            "centerMm": [
+              71.34528542478387,
+              -57.30277432098293,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 139,
+            "surfaceType": "bspline",
+            "areaMm2": 5.3546713659783056e-05,
+            "centerMm": [
+              71.36971561777058,
+              -57.229956811516,
+              -0.17049999999999998
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 140,
+            "surfaceType": "planar",
+            "areaMm2": 0.009282816543608432,
+            "centerMm": [
+              71.2943232997826,
+              -57.292537755186466,
+              -0.1709999999999905
+            ],
+            "normal": [
+              7.111473729080002e-14,
+              3.9129974920025286e-14,
+              1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 141,
+            "surfaceType": "planar",
+            "areaMm2": 2.195121951219001e-05,
+            "centerMm": [
+              71.38235870140716,
+              -57.370737574296996,
+              -0.17050000000000004
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 142,
+            "surfaceType": "planar",
+            "areaMm2": 0.00010243902439000011,
+            "centerMm": [
+              71.39333431116326,
+              -57.421957086492,
+              -0.17050000000000004
+            ],
+            "normal": [
+              -1,
+              2.334869823773e-16,
+              1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 143,
+            "surfaceType": "planar",
+            "areaMm2": 0.00020000000000026016,
+            "centerMm": [
+              71.29333431116312,
+              -57.473176598687,
+              -0.17050000000000004
+            ],
+            "normal": [
+              2.334869823773e-16,
+              1,
+              1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 144,
+            "surfaceType": "planar",
+            "areaMm2": 2.6829268293000053e-05,
+            "centerMm": [
+              71.193334311163,
+              -57.4597619645405,
+              -0.17050000000000004
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 145,
+            "surfaceType": "planar",
+            "areaMm2": 0.00017804878048807016,
+            "centerMm": [
+              71.28235870140703,
+              -57.446347330394,
+              -0.17050000000000004
+            ],
+            "normal": [
+              -2.334869823773e-16,
+              -1,
+              -1.224646799147e-16
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 146,
+            "surfaceType": "planar",
+            "areaMm2": 7.560975609700006e-05,
+            "centerMm": [
+              71.37138309165107,
+              -57.4085424523455,
+              -0.1705000000000001
+            ],
+            "normal": [
+              1,
+              -2.334869823773e-16,
+              -1.3596310734465246e-32
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 147,
+            "surfaceType": "planar",
+            "areaMm2": 0.007025580011955376,
+            "centerMm": [
+              71.31436547532714,
+              -57.44766184269276,
+              -0.17100000000000004
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 148,
+            "surfaceType": "planar",
+            "areaMm2": 0.0031309625391788957,
+            "centerMm": [
+              71.28394044150537,
+              -56.75540952377284,
+              -0.16999999999999993
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          },
+          {
+            "faceIndex": 149,
+            "surfaceType": "planar",
+            "areaMm2": 0.014544126293549788,
+            "centerMm": [
+              71.2930879623021,
+              -56.94469740740141,
+              -0.16999999999999993
+            ],
+            "normal": [
+              1.499759782662e-32,
+              1.224646799147e-16,
+              -1
+            ],
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "surface class read directly from OCCT BRepAdaptor_Surface"
+            }
+          }
+        ],
+        "features": [
+          {
+            "type": "hole",
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "co-axial concave cylinder cluster and axial end probes identify a full blind or through bore"
+            },
+            "evidence": [
+              "blind cylindrical bore",
+              "0.15820308192512 mm diameter",
+              "0.0009999999999998899 mm cylindrical depth",
+              "2 source face(s)"
+            ],
+            "axisOrigin": [
+              71.661744666415,
+              -56.354079879741,
+              -1.0699999999999998
+            ],
+            "axisDirection": [
+              -1.499759782662e-32,
+              -1.224646799147e-16,
+              1
+            ],
+            "diameterMm": 0.15820308192512,
+            "depthMm": 0.0009999999999998899,
+            "holeKind": "blind",
+            "faceIndices": [
+              0,
+              11
+            ]
+          },
+          {
+            "type": "boss",
+            "status": "refused",
+            "confidence": {
+              "level": "low",
+              "basis": "no candidate met the minimum geometric evidence threshold"
+            },
+            "evidence": [
+              "No convex full-circle cylindrical face cluster was found."
+            ]
+          },
+          {
+            "type": "slot",
+            "status": "refused",
+            "confidence": {
+              "level": "low",
+              "basis": "no candidate met the minimum geometric evidence threshold"
+            },
+            "evidence": [
+              "No partial concave cylindrical region had enough angular coverage to be a slot-end candidate."
+            ]
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01965711 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              12
+            ],
+            "areaMm2": 0.01965711419669433
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.009541955 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              13
+            ],
+            "areaMm2": 0.009541955178140011
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01387061 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              14
+            ],
+            "areaMm2": 0.0138706128869
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              17
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              19
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.009541955 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              26
+            ],
+            "areaMm2": 0.00954195517814002
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01387061 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              27
+            ],
+            "areaMm2": 0.013870612886900014
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              29
+            ],
+            "areaMm2": 0.04400000000000002
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              31
+            ],
+            "areaMm2": 0.04400000000000002
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.009541955 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              39
+            ],
+            "areaMm2": 0.009541955178140011
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01387061 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              40
+            ],
+            "areaMm2": 0.0138706128869
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              42
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              44
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.009541955 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              52
+            ],
+            "areaMm2": 0.009541955178140011
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01387061 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              53
+            ],
+            "areaMm2": 0.0138706128869
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              55
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              57
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.009541955 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              65
+            ],
+            "areaMm2": 0.00954195517814002
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01387061 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              66
+            ],
+            "areaMm2": 0.013870612886900014
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              68
+            ],
+            "areaMm2": 0.04400000000000002
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              70
+            ],
+            "areaMm2": 0.04400000000000002
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.009541955 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              78
+            ],
+            "areaMm2": 0.009541955178140011
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01387061 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              79
+            ],
+            "areaMm2": 0.0138706128869
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              81
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.04400000 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              83
+            ],
+            "areaMm2": 0.04400000000000001
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01186272 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              99
+            ],
+            "areaMm2": 0.011862716375215302
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01353332 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              111
+            ],
+            "areaMm2": 0.013533322786390259
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01034503 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              129
+            ],
+            "areaMm2": 0.010345032718611594
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.009282817 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              140
+            ],
+            "areaMm2": 0.009282816543608432
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.007025580 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              147
+            ],
+            "areaMm2": 0.007025580011955376
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.003130963 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              148
+            ],
+            "areaMm2": 0.0031309625391788957
+          },
+          {
+            "type": "pocket",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "smaller parallel planar face is a possible floor; adjacency and material-removal intent are not proven"
+            },
+            "evidence": [
+              "0.01454413 mm\u00b2 planar face",
+              "parallel to a larger planar face"
+            ],
+            "faceIndices": [
+              149
+            ],
+            "areaMm2": 0.014544126293549788
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "180.00\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              0
+            ],
+            "diameterMm": 0.15820308192512
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "180.00\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              11
+            ],
+            "diameterMm": 0.15820308192512
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              20
+            ],
+            "diameterMm": 0.3
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              22
+            ],
+            "diameterMm": 0.04
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              23
+            ],
+            "diameterMm": 0.32
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              25
+            ],
+            "diameterMm": 0.02
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              32
+            ],
+            "diameterMm": 0.3
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              34
+            ],
+            "diameterMm": 0.04
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              36
+            ],
+            "diameterMm": 0.32
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              38
+            ],
+            "diameterMm": 0.02
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              45
+            ],
+            "diameterMm": 0.3
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              47
+            ],
+            "diameterMm": 0.04
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              49
+            ],
+            "diameterMm": 0.32
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              51
+            ],
+            "diameterMm": 0.02
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              58
+            ],
+            "diameterMm": 0.3
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              60
+            ],
+            "diameterMm": 0.04
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              62
+            ],
+            "diameterMm": 0.32
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              64
+            ],
+            "diameterMm": 0.02
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              71
+            ],
+            "diameterMm": 0.3
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              73
+            ],
+            "diameterMm": 0.04
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              75
+            ],
+            "diameterMm": 0.32
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              77
+            ],
+            "diameterMm": 0.02
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              84
+            ],
+            "diameterMm": 0.3
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              86
+            ],
+            "diameterMm": 0.04
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              88
+            ],
+            "diameterMm": 0.32
+          },
+          {
+            "type": "filletRound",
+            "status": "uncertain",
+            "confidence": {
+              "level": "low",
+              "basis": "toroidal or partial cylindrical surface may be a round, but the design intent is not stored in imported topology"
+            },
+            "evidence": [
+              "88.000\u00b0 partial cylindrical face"
+            ],
+            "faceIndices": [
+              90
+            ],
+            "diameterMm": 0.02
+          }
+        ],
+        "counts": {
+          "hole": {
+            "recognized": 1,
+            "uncertain": 0,
+            "refused": 0
+          },
+          "pocket": {
+            "recognized": 0,
+            "uncertain": 32,
+            "refused": 0
+          },
+          "boss": {
+            "recognized": 0,
+            "uncertain": 0,
+            "refused": 1
+          },
+          "slot": {
+            "recognized": 0,
+            "uncertain": 0,
+            "refused": 1
+          },
+          "filletRound": {
+            "recognized": 0,
+            "uncertain": 26,
+            "refused": 0
+          },
+          "planarFace": {
+            "recognized": 110,
+            "uncertain": 0,
+            "refused": 0
+          },
+          "cylindricalFace": {
+            "recognized": 26,
+            "uncertain": 0,
+            "refused": 0
+          }
+        },
+        "holeDetection": "exact",
+        "holes": [
+          {
+            "axisOrigin": [
+              71.661744666415,
+              -56.354079879741,
+              -1.0699999999999998
+            ],
+            "axisDirection": [
+              -1.499759782662e-32,
+              -1.224646799147e-16,
+              1
+            ],
+            "diameterMm": 0.15820308192512,
+            "depthMm": 0.0009999999999998899,
+            "kind": "blind",
+            "faceCount": 2,
+            "status": "recognized",
+            "confidence": {
+              "level": "high",
+              "basis": "co-axial concave cylinder cluster and axial end probes identify a full blind or through bore"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "holeDetection": "exact",
+  "scope": "Read-only isolated component export used to prove its native model transform. Accepted datum/orientation calculation; full assembly review remains separate."
+}

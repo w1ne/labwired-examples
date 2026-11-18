@@ -14,7 +14,7 @@
   },
   "hardware_files_sha256": {
     "hardware/OpenFC.kicad_dru": "86275a61a5c8cd29d4a6315bb026524cecdf5eb6d01deaa60be3b1c6af365f0d",
-    "hardware/OpenFC.kicad_pcb": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
+    "hardware/OpenFC.kicad_pcb": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
     "hardware/OpenFC.kicad_prl": "e68674173bb9a233745080fd7218c8591ab9a9bcc401bf7df2ceb9445bc560eb",
     "hardware/OpenFC.kicad_pro": "1ad2949fe79436a92685d25c8ddbddc3bda77cf13f8f03889318030023467b95",
     "hardware/OpenFC.kicad_sch": "36dba5ebd75912f935bc4d5f2e8f00a7d07f7f4628c6047bb0be40bbb745c0fc",
@@ -88,7 +88,7 @@
     "hardware/lib.pretty/TDFN-6_L1.0-W1.0-P0.35-BL.kicad_mod": "520f67da0153a5a290cc51377df733cc81a34e96ac545a1cee35c5e6b7ff8a5f",
     "hardware/lib.pretty/TF-SMD_TF-01A.kicad_mod": "fcb7693b7f03d6149addb244be0ee7c043f24dd00f36488a3f867c13e8793ec2",
     "hardware/lib.pretty/TF-SMD_TF-021B-H265.kicad_mod": "b984f093c83e67d3292e84fdf6cec8b0d35b7eb9f2f56570e617bf1d72c6b55e",
-    "hardware/lib.pretty/TF-SMD_TF-PUSH.kicad_mod": "06176b79ec0937b212d41bec835d299f2ebd567a02fa48f10d605dc174fc1918",
+    "hardware/lib.pretty/TF-SMD_TF-PUSH.kicad_mod": "031d565c4a5a4858ba224e115466f88db8aa8599dcbd76e776f0fc0036b15ce1",
     "hardware/lib.pretty/TI_DPW0005A_X2SON-5_0.8x0.8mm.kicad_mod": "d907fe7724cea3ffd7586ecea5ab60425d408987412849635d4ca30b012a3a04",
     "hardware/lib.pretty/TI_DTB0006A_RevC_SMD.kicad_mod": "36759b78b584eedca34f0ba846d7ba07528e3f3a0bd100c1ed15116be3640ca7",
     "hardware/lib.pretty/TSOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL.kicad_mod": "e44b5040e8013b8a94c8771c903bd5de9527fb89c262012c963e451fc6f6bcd7",
@@ -119,8 +119,7 @@
     "hardware/sym-lib-table": "396e1573f6e4e1361938da088e54365f6bce628282c75992250c4ef8127c04b6"
   },
   "external_dependencies": {
-    "hardware/KiCad-Library": "../../flight-controller-openfc-lite/hardware/KiCad-Library",
-    "hardware/lib.3dshapes": "../../flight-controller-openfc-lite/hardware/lib.3dshapes"
+    "hardware/KiCad-Library": "../../flight-controller-openfc-lite/hardware/KiCad-Library"
   },
   "primary_sources": [
     {
@@ -208,7 +207,18 @@
       "input_board_sha256": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
       "current_board_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9"
     },
-    "app_import_source_proof_scope": "Historical initial 2-LW1 importer proof. Native runtime acceptance is not established by the current library cleanup."
+    "app_import_source_proof_scope": "Historical initial 2-LW1 importer proof. Native runtime acceptance is not established by the current library cleanup.",
+    "model_datum_correction": {
+      "receipt": "../../cad/evidence/model-datum-correction-20261118/component-datums.json",
+      "sourceTransformProof": "../../cad/evidence/model-datum-correction-20261118/source-transform-proof.json",
+      "solidComparison": "../../cad/evidence/model-datum-correction-20261118/native-solid-comparison.json",
+      "drc": "../../cad/evidence/model-datum-correction-20261118/fc-drc.json",
+      "boardSha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+      "drcViolations": 0,
+      "unconnected": 0,
+      "parityFindings": 0,
+      "projectRulesChanged": false
+    }
   },
   "remaining_limits": [
     "Card1 DAT1 pad 8 is restored from the exact library pad as an isolated NC contact. Clearing it moved or removed six through vias and rerouted the U2.64/C19.1 IOVDD connection inside the U2 pad ring (validation/card1-dat1-pad-restoration.json); no signal- or power-integrity review of that reroute was performed.",
@@ -295,5 +305,12 @@
     "missing": 0,
     "model_less_footprints": 57,
     "current_review": "mechanical-review/model-resolution-review.json"
+  },
+  "initial_external_dependencies": {
+    "hardware/KiCad-Library": "../../flight-controller-openfc-lite/hardware/KiCad-Library"
+  },
+  "local_model_assets": {
+    "directory": "hardware/lib.3dshapes",
+    "scope": "Real checked-in source model assets replace the earlier submodule-relative symlink. This records availability, not exact manufacturer geometry or assembly acceptance."
   }
 }
