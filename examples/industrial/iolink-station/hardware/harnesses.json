@@ -92,10 +92,45 @@
       "contactCount": 6
     },
     "nucleoEnd": {
-      "shell": "Harwin M20-1060100",
       "contact": "Harwin M20-1180042",
-      "quantityEach": 6,
-      "housingHeightMm": 14
+      "housingHeightMm": 14,
+      "housingsPerDevice": [
+        {
+          "mpn": "M20-1060100",
+          "quantity": 4,
+          "pins": [
+            "CN7.20",
+            "CN7.16",
+            "CN10.4",
+            "CN10.20"
+          ]
+        },
+        {
+          "mpn": "M20-1060200",
+          "quantity": 1,
+          "positions": [
+            {
+              "position": 1,
+              "nucleo": "CN10.28",
+              "signal": "QH",
+              "colour": "white"
+            },
+            {
+              "position": 2,
+              "nucleo": "CN10.30",
+              "signal": "CLK",
+              "colour": "blue"
+            }
+          ]
+        }
+      ],
+      "contactQuantityPerDevice": 6,
+      "matingPinLengthMm": {
+        "min": 5.5,
+        "max": 6.3,
+        "source": "Harwin M20-106 drawing, note 5"
+      },
+      "assemblyRequirement": "Controlled mating depth. Do not push housing flush onto a longer Nucleo underside tail; validate actual pin length and mechanical stop."
     },
     "connections": [
       {
