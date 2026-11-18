@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "design": "OLED-CARRIER-REV-A",
+  "units": "mm",
+  "outline": [
+    70,
+    45
+  ],
+  "corner_radius": 2,
+  "material": "FR-4",
+  "layer_count": 2,
+  "finished_thickness": 1.6,
+  "copper_thickness_um": 35,
+  "surface_finish": "ENIG",
+  "soldermask": "Green, both sides",
+  "silkscreen": "White, front",
+  "min_clearance": 0.2,
+  "min_track_width": 0.25,
+  "actual_signal_track_width": 0.3,
+  "actual_power_track_width": [
+    0.4,
+    0.6
+  ],
+  "via_diameter": 0.6,
+  "via_drill": 0.3,
+  "socket_finished_hole": 0.8,
+  "mount_holes": {
+    "count": 4,
+    "diameter": 2.9,
+    "plated": false
+  },
+  "copper_to_board_edge": 0.5,
+  "mounting_keepout_radius": 3.5,
+  "assembly": "Hand assembly of five carrier components; sockets are through-hole, J1/R1/R2 are surface mount. Purchased modules and cables are assembled afterwards.",
+  "position_file_coordinates": "KiCad fabrication frame: origin (0, 0) at carrier top-left; exported PosY is negative downward. All five populated carrier parts are on top.",
+  "order_status": "No fabrication or assembly order has been placed."
+}

@@ -1,0 +1,10 @@
+references,quantity,manufacturer,manufacturer_part_number_or_sku,description,source,assembly_notes
+PCB1,1,Custom fabrication,OLED-CARRIER-REV-A,"70 x 45 x 1.6 mm, two-layer carrier",manufacturing/gerbers,"Internal design ID. Fabricate from this package; FR-4, 35 um copper, ENIG, green mask, white silkscreen."
+U1,1,Seeed Studio,113991054,XIAO ESP32C3,https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html,Buy the unheadered module. v1.3 design reference. USB power only. Supplied RF antenna remains separate; firmware does not enable RF.
+J2 J3,2,Samtec,HSS-107-G-2,"7-position machined socket, 2.54 mm pitch",https://www.samtec.com/products/hss-107-g-2,Carrier mounted. Accepts 0.38..0.56 mm round mating pins. Do not substitute a square-pin socket/header pair.
+U1-H1 U1-H2,2,Samtec,BHS-107-G-A,"7-position round-pin stacking header, 2.54 mm pitch",https://www.samtec.com/products/bhs-107-g-a,Solder 0.46 mm round tails into XIAO. The 3.18 mm mating posts enter J2/J3. The XIAO native holes are 0.85 mm.
+J1,1,JST,SM04B-SRSS-TB(LF)(SN),"4-pin horizontal SH connector, 1.00 mm pitch",https://www.jst-mfg.com/product/index.php?series=231&lang=en,"STEMMA QT assignment: 1 GND, 2 VCC=3V3, 3 SDA, 4 SCL."
+R1 R2,2,Yageo,RC0603FR-074K7L,"4.7 kohm, 1%, 0603 pull-up resistor",https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L,SDA/SCL pull-ups to 3V3. Parallel with display 10 kohm pull-ups gives 3.20 kohm nominal.
+DISP1,1,Adafruit,326,"0.96 inch 128x64 SSD1306 OLED, STEMMA QT revision",https://www.adafruit.com/product/326,Native source commit 51ef8e242dcf460d5effc298d8565110624e6b23. Bridge SJ3 for 0x3C; keep I2C SJ1/SJ2 closed. Leave JP2 unpopulated.
+W1,1,Adafruit,4210,"STEMMA QT / Qwiic JST SH 4-pin cable, 100 mm",https://www.adafruit.com/product/4210,Connect carrier J1 to either display QT port. Route with a service loop for lid removal.
+W2,1,Adafruit,4474,"USB Type A to Type C data cable, approximately 1 m",https://www.adafruit.com/product/4474,Host USB supplies 5 V and programming data. Vendor does not publish overmold dimensions; check actual cable against the enclosure access envelope during physical assembly.

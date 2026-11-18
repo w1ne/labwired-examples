@@ -1,0 +1,50 @@
+OLED CARRIER REV A — ELECTRONICS ASSEMBLY
+
+The native project is oled-carrier.kicad_pro. Open it with KiCad 10.
+This package contains a routed two-layer carrier, not a placed schematic export.
+The Seeed XIAO and Adafruit display are purchased modules. Their internal PCBs
+are not manufactured from the carrier Gerbers.
+
+1. Fabricate the carrier using manufacturing/fabrication-settings.json and the
+   Gerber/Excellon files. The four 2.9 mm mounting holes are non-plated.
+2. Populate R1/R2 and J1 on the top side. Use the J1 pin-1 mark. Its cable faces
+   toward the display (+X in hardware-interface.json).
+3. Solder the two HSS-107-G-2 sockets at J2/J3. Use the module headers as an
+   alignment fixture only while unpowered; keep all fourteen contacts parallel.
+4. Solder the two BHS-107-G-A round-pin headers into the XIAO from its underside.
+   The 0.46 mm tails fit the module's 0.85 mm native holes. The source-derived
+   mated board-to-board gap is 9.77 mm. Do not replace these headers with 0.635 mm
+   square posts: their 0.898 mm diagonal exceeds the native hole diameter.
+5. Insert the XIAO with its USB-C connector facing the carrier left edge. J2 pin 1
+   mates D0; J2 pins 3/4 mate D2/GPIO4 and D3/GPIO5. J3 pins 5/6 mate 3V3/GND.
+   J3 pin 7 (VBUS) is intentionally not connected. Do not connect a battery.
+6. Use the Adafruit 326 STEMMA QT revision. Close SJ3/ADDR to connect SA0 to GND
+   for 0x3C. Keep the factory I2C-mode bridges SJ1/SJ2. Do not populate JP2.
+   Connect either QT port to J1 using the Adafruit 4210 100 mm cable.
+7. Keep the supplied RF antenna separate. This firmware does not enable Wi-Fi or
+   Bluetooth. Native USB provides power, programming and debug. BOOT/RESET are
+   accessible with the lid removed. The external antenna must be installed before
+   using firmware that enables RF.
+
+Unpowered checks before USB connection:
+- Inspect J1 and both socket rows for solder bridges.
+- Check that 3V3 and GND are not shorted. Check J1 pin order against the schematic.
+- Check continuity: J2.3 -> J1.3; J2.4 -> J1.4; J3.5 -> J1.2; J3.6 -> J1.1.
+- Check the mated header height, USB plug clearance, lid cable loop and screw
+  clearance. Do not load the OLED glass with a screw or the lid.
+
+Initial powered checks:
+- Confirm a 3.3 V rail at TP1 relative to TP2 with the display connected.
+- Confirm the I2C scan finds 0x3C on GPIO4/GPIO5 at 100 kHz.
+- Run the package firmware and verify visible display updates and USB programming.
+- Follow the top-level Build/Run/Assemble instructions for firmware and enclosure.
+
+TP1=3V3, TP2=GND, TP3=SDA, TP4=SCL. These are bare copper pads, not BOM parts.
+The display's 10 kohm external pull-ups parallel the carrier's 4.7 kohm resistors
+(3.20 kohm nominal). Nominal LOW sink current is about 1.03 mA at 3.3 V, assuming a zero-volt LOW.
+
+Validation scope: KiCad ERC, native routed DRC and schematic parity pass for the
+committed sources. No prototype, electrical measurement, USB cable fit test,
+thermal test or physical assembly test has been recorded. The native v1.3 XIAO
+thickness field is 1.6 mm; its older official STEP uses 1.0 mm. The enclosure uses
+the thicker board and conservative USB envelope. Confirm the received module.

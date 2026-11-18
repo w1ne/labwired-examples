@@ -1,0 +1,40 @@
+REPRODUCE NATIVE CHECKS AND FABRICATION OUTPUTS
+
+Use KiCad 10.0.8 with its matching footprint, symbol and 3D libraries.
+Run from examples/displays/esp32c3-oled. The native project is editable.
+On a headless host, unset DISPLAY, WAYLAND_DISPLAY and DBUS_SESSION_BUS_ADDRESS
+for the CLI process if the desktop session stalls CLI startup. This changes no
+project data or validation rules.
+
+kicad-cli sch erc --format json --exit-code-violations --output manufacturing/erc.json electronics/oled-carrier.kicad_sch
+kicad-cli pcb drc --schematic-parity --format json --exit-code-violations --output manufacturing/drc.json electronics/oled-carrier.kicad_pcb
+kicad-cli sch export pdf --output manufacturing/oled-carrier-schematic.pdf electronics/oled-carrier.kicad_sch
+kicad-cli sch export netlist --format kicadxml --output manufacturing/oled-carrier.net.xml electronics/oled-carrier.kicad_sch
+kicad-cli pcb export gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --output manufacturing/gerbers/ electronics/oled-carrier.kicad_pcb
+kicad-cli pcb export drill --format excellon --excellon-units mm --excellon-separate-th --generate-map --map-format pdf --generate-report --report-path manufacturing/drill-report.txt --output manufacturing/drill/ electronics/oled-carrier.kicad_pcb
+kicad-cli pcb export pos --format csv --units mm --side front --exclude-dnp --output manufacturing/oled-carrier-positions.csv electronics/oled-carrier.kicad_pcb
+kicad-cli pcb export step --board-only --cut-vias-in-body --force --output manufacturing/oled-carrier-bare.step electronics/oled-carrier.kicad_pcb
+kicad-cli pcb export svg --mode-single --layers F.Cu,F.Silkscreen,Edge.Cuts --fit-page-to-board --exclude-drawing-sheet --output manufacturing/oled-carrier-top.svg electronics/oled-carrier.kicad_pcb
+kicad-cli pcb export svg --mode-single --layers B.Cu,B.Silkscreen,Edge.Cuts --fit-page-to-board --exclude-drawing-sheet --mirror --output manufacturing/oled-carrier-bottom.svg electronics/oled-carrier.kicad_pcb
+
+Expected checks: 0 ERC violations, 0 DRC violations, 0 unconnected items and
+0 schematic parity issues. validation.json records the default ignored check
+categories; there are no explicit exclusions. Inspect the native reports.
+The position file contains J1, J2, J3, R1 and R2. NPTH mounts and bare test pads
+are excluded from position/BOM exports through native footprint attributes.
+The drill report must contain 14 plated 0.8 mm socket holes, 7 plated 0.3 mm via
+holes and 4 non-plated 2.9 mm mount holes.
+
+Package gerbers/, drill/, fabrication-settings.json and drill-report.txt into
+oled-carrier-fabrication.zip. The files were generated from the PCB whose hash
+is recorded in validation.json. KiCad embeds generation dates, so regenerated
+exports can differ in bytes while retaining the same geometry and connectivity.
+
+The bare STEP contains substrate and holes only. Its Z thickness is 1.51 mm;
+the specified finished copper/mask stack is 1.6 mm. It is not a populated board
+assembly. The enclosure records its explicit 1.6/1.51 clearance-envelope scale.
+The project HSS socket model is a source-derived dimensional envelope under
+../cad/components/, supplied by the same complete device package.
+
+Native checks do not prove manufactured hardware, firmware operation or fit.
+Use electronics/assembly-notes.txt for physical bring-up checks.
