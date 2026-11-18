@@ -1,0 +1,312 @@
+{
+  "cpuHz": 80000000,
+  "firmwareSha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508",
+  "reply": [
+    73,
+    6
+  ],
+  "scope": "Unchanged physical device ELF and controlled digital master line; not physical master firmware or the complete station",
+  "stages": [
+    {
+      "stage": "boot",
+      "state": {
+        "cycle": 2000000,
+        "device_state": 0,
+        "exti_ftsr": 64,
+        "exti_imr": 64,
+        "exti_pr": 0,
+        "gpioa_idr": 80,
+        "gpioc_odr": 192,
+        "pc": 134218234,
+        "symbols": {
+          "SystemCoreClock": 80000000,
+          "g_overload_edges": 0,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 0
+        },
+        "uart_brr": 0,
+        "uart_cr1": 0,
+        "uart_cr2": 0
+      }
+    },
+    {
+      "cycle": 2160000,
+      "requested": 0,
+      "sampled": 0,
+      "stage": "di8-gpio-scan"
+    },
+    {
+      "cycle": 2320000,
+      "requested": 255,
+      "sampled": 255,
+      "stage": "di8-gpio-scan"
+    },
+    {
+      "cycle": 2480000,
+      "requested": 165,
+      "sampled": 165,
+      "stage": "di8-gpio-scan"
+    },
+    {
+      "cycle": 2640000,
+      "requested": 60,
+      "sampled": 60,
+      "stage": "di8-gpio-scan"
+    },
+    {
+      "pulseCycles": 6400,
+      "stage": "wake-release-and-guard",
+      "state": {
+        "cycle": 2800001,
+        "device_state": 1,
+        "exti_ftsr": 64,
+        "exti_imr": 64,
+        "exti_pr": 0,
+        "gpioa_idr": 576,
+        "gpioc_odr": 64,
+        "pc": 134234266,
+        "symbols": {
+          "SystemCoreClock": 80000000,
+          "g_overload_edges": 1,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1
+        },
+        "uart_brr": 2083,
+        "uart_cr1": 5421,
+        "uart_cr2": 196608
+      },
+      "wakeStartCycle": 2640001
+    },
+    {
+      "network": {
+        "events": [
+          {
+            "char_id": 1099511627776,
+            "kind": "tx_start",
+            "link": 0,
+            "node": "controlled-peer",
+            "seq": 0,
+            "t_ps": 35000025000,
+            "uart": "cq",
+            "value": 162
+          },
+          {
+            "char_id": 1099511627776,
+            "detail": "latency_ps=273593750",
+            "kind": "deliver",
+            "link": 0,
+            "node": "physical-device",
+            "seq": 2,
+            "t_ps": 35273618750,
+            "uart": "uart1",
+            "value": 418
+          },
+          {
+            "detail": "rxne",
+            "kind": "rx_irq",
+            "link": 0,
+            "node": "physical-device",
+            "seq": 3,
+            "t_ps": 35273625000,
+            "uart": "uart1"
+          },
+          {
+            "char_id": 1099511627777,
+            "kind": "tx_start",
+            "link": 0,
+            "node": "controlled-peer",
+            "seq": 1,
+            "t_ps": 35286437500,
+            "uart": "cq",
+            "value": 0
+          },
+          {
+            "char_id": 1099511627777,
+            "detail": "latency_ps=273593750",
+            "kind": "deliver",
+            "link": 0,
+            "node": "physical-device",
+            "seq": 4,
+            "t_ps": 35560031250,
+            "uart": "uart1",
+            "value": 0
+          },
+          {
+            "detail": "rxne",
+            "kind": "rx_irq",
+            "link": 0,
+            "node": "physical-device",
+            "seq": 5,
+            "t_ps": 35560037500,
+            "uart": "uart1"
+          },
+          {
+            "char_id": 0,
+            "kind": "tx_start",
+            "link": 0,
+            "node": "physical-device",
+            "seq": 6,
+            "t_ps": 35603037500,
+            "uart": "uart1",
+            "value": 73
+          },
+          {
+            "char_id": 0,
+            "detail": "latency_ps=273663750",
+            "kind": "deliver",
+            "link": 0,
+            "node": "controlled-peer",
+            "seq": 7,
+            "t_ps": 35876701250,
+            "uart": "cq",
+            "value": 329
+          },
+          {
+            "char_id": 1,
+            "kind": "tx_start",
+            "link": 0,
+            "node": "physical-device",
+            "seq": 8,
+            "t_ps": 35889450000,
+            "uart": "uart1",
+            "value": 6
+          },
+          {
+            "char_id": 1,
+            "detail": "latency_ps=273663750",
+            "kind": "deliver",
+            "link": 0,
+            "node": "controlled-peer",
+            "seq": 9,
+            "t_ps": 36163113750,
+            "uart": "cq",
+            "value": 6
+          }
+        ],
+        "events_dropped": 0,
+        "links": [
+          {
+            "a_format": {
+              "bit_ps": 26037500,
+              "data_bits": 8,
+              "parity": "even",
+              "rx_enabled": true,
+              "rx_inverted": true,
+              "stop_half_bits": 2,
+              "tx_enabled": true,
+              "tx_inverted": true
+            },
+            "a_node": "physical-device",
+            "a_uart": "uart1",
+            "b_format": {
+              "bit_ps": 26037500,
+              "data_bits": 8,
+              "parity": "even",
+              "rx_enabled": true,
+              "rx_inverted": true,
+              "stop_half_bits": 2,
+              "tx_enabled": true,
+              "tx_inverted": true
+            },
+            "b_node": "controlled-peer",
+            "b_uart": "cq",
+            "connected": true,
+            "delay_ps": 0,
+            "directions": [
+              {
+                "busy_ps": 572825000,
+                "chars_delivered": 2,
+                "chars_sent": 2,
+                "dropped_link_cut": 0,
+                "dropped_rx_disabled": 0,
+                "false_starts": 0,
+                "first_tx_ps": 35603037500,
+                "framing_errors": 0,
+                "from_node": "physical-device",
+                "from_uart": "uart1",
+                "last_delivery_ps": 36163113750,
+                "late": 0,
+                "latency_max_ps": 273663750,
+                "latency_mean_ps": 273663750.0,
+                "latency_min_ps": 273663750,
+                "latency_sum_ps": 547327500,
+                "max_in_flight": 2,
+                "misframed": 0,
+                "overruns": 0,
+                "parity_errors": 0,
+                "throughput_chars_per_s": 3570.9423493676086,
+                "to_node": "controlled-peer",
+                "to_uart": "cq",
+                "truncated": 0,
+                "utilization": 0.014687811097556989
+              },
+              {
+                "busy_ps": 572825000,
+                "chars_delivered": 2,
+                "chars_sent": 2,
+                "dropped_link_cut": 0,
+                "dropped_rx_disabled": 0,
+                "false_starts": 0,
+                "first_tx_ps": 35000025000,
+                "framing_errors": 0,
+                "from_node": "controlled-peer",
+                "from_uart": "cq",
+                "last_delivery_ps": 35560031250,
+                "late": 0,
+                "latency_max_ps": 273593750,
+                "latency_mean_ps": 273593750.0,
+                "latency_min_ps": 273593750,
+                "latency_sum_ps": 547187500,
+                "max_in_flight": 2,
+                "misframed": 0,
+                "overruns": 0,
+                "parity_errors": 0,
+                "throughput_chars_per_s": 3571.3887121795515,
+                "to_node": "physical-device",
+                "to_uart": "uart1",
+                "truncated": 0,
+                "utilization": 0.014687811097556989
+              }
+            ],
+            "id": 0,
+            "jitter_ps": 0
+          }
+        ],
+        "messages": [],
+        "next_cursor": 10,
+        "node_resets": {},
+        "now_ps": 39000025000
+      },
+      "request": [
+        162,
+        0
+      ],
+      "stage": "type0-min-cycle-response",
+      "state": {
+        "cycle": 3120002,
+        "device_state": 2,
+        "exti_ftsr": 64,
+        "exti_imr": 64,
+        "exti_pr": 0,
+        "gpioa_idr": 576,
+        "gpioc_odr": 64,
+        "pc": 134220060,
+        "symbols": {
+          "SystemCoreClock": 80000000,
+          "g_overload_edges": 1,
+          "g_rx_overflows": 0,
+          "g_startup_error": 0,
+          "g_uart_errors": 0,
+          "g_wake_events": 1
+        },
+        "uart_brr": 2083,
+        "uart_cr1": 5421,
+        "uart_cr2": 196608
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "labwired.l6360-stored-parity-repair.v1",
+  "source": "https://www.st.com/resource/en/datasheet/l6360.pdf",
+  "revision": "DS8900 Rev9, September2023",
+  "sections": [
+    "6.9 PARITY register (p24)",
+    "6.10 reset registers (pp25-26)",
+    "7.2 sequential write/read (pp33-38)"
+  ],
+  "cause": "Old initial full read compared parity recomputed from reset readback. PARITY resets zero and stores parity of received write data; CONFIG/CONTROL2 unused bits are unspecified. The old fixture recomputed all parity during read and concealed the defect.",
+  "correction": "Check live current-status parity; send sequential TRI/CONTROL1/CONTROL2/zeroLED data and parity atomically with outputs disabled; verify stored transmitted-byte parity and defined register readback; then select push-pull through a checked current write. Retain expected data for all initialized registers.",
+  "initialSequentialWrite": [
+    128,
+    160,
+    32,
+    0,
+    0,
+    0,
+    0,
+    80
+  ],
+  "tests": {
+    "oldDriverWithCorrectedFixture": "FAIL at initialization (retained red receipt)",
+    "correctedDriver": "PASS 18/18 under AddressSanitizer and UndefinedBehaviorSanitizer",
+    "casesAdded": [
+      "Documented zero reset parity independent of CONFIG0x80",
+      "Unknown reserved CONFIG/CONTROL2 read bits",
+      "Initial current-status parity failure",
+      "Rejected sequential write is atomic and faults",
+      "Changed register with unchanged stored parity",
+      "Corrupt stored parity with unchanged register"
+    ]
+  },
+  "sourceFiles": [
+    {
+      "path": "firmware/master/l6360.c",
+      "bytes": 9827,
+      "sha256": "1edb77aa2f54ecf988cd228f1a8b5ec52e64fde95de36cd079d2544d20394e21"
+    },
+    {
+      "path": "firmware/master/l6360.h",
+      "bytes": 2808,
+      "sha256": "4e3611b21567823088de899deeb6df63bf7de100d77988c026db2a0163017c8d"
+    },
+    {
+      "path": "firmware/master/tests/test_l6360.c",
+      "bytes": 11033,
+      "sha256": "d961b1572e89906897ef871e5136d0e231be91059e1718b41c3d5dacda6e7c41"
+    }
+  ],
+  "firmware": [
+    {
+      "path": "firmware/release/iolink-master.elf",
+      "bytes": 1625936,
+      "sha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9"
+    },
+    {
+      "path": "firmware/release/iolink-master.bin",
+      "bytes": 23452,
+      "sha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7"
+    }
+  ],
+  "deviceFirmwareUnchanged": true,
+  "runtimeScope": "Cross-build and host driver tests. Master digital PHY/full station integration and physical execution are not yet established.",
+  "receipts": [
+    {
+      "path": "evidence/master-stored-parity/l6360-stored-parity-green.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/master-stored-parity/l6360-stored-parity-green.txt",
+      "bytes": 1114,
+      "sha256": "54561584b1ee1b6f4f0554a2e1f01d999f5f22ee364d42f3e21abbcb32f1c4b4"
+    },
+    {
+      "path": "evidence/master-stored-parity/l6360-stored-parity-master-build-invocation.json",
+      "bytes": 551,
+      "sha256": "d574e075e02fc487f6846be22852a8e22dfaf491b977418881f0af13bd119f5d"
+    },
+    {
+      "path": "evidence/master-stored-parity/l6360-stored-parity-master-build.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/master-stored-parity/l6360-stored-parity-master-build.txt",
+      "bytes": 3366,
+      "sha256": "d153657c8448c3c5f7ceb25b3846676239e72427bb46fbba12aba290f2289679"
+    },
+    {
+      "path": "evidence/master-stored-parity/l6360-stored-parity-red.exit",
+      "bytes": 2,
+      "sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+    },
+    {
+      "path": "evidence/master-stored-parity/l6360-stored-parity-red.txt",
+      "bytes": 556,
+      "sha256": "6a9732a79e88ae4cec572c1955446ccf67e71d2c8b4acc68cc1f6ea517b3d58b"
+    },
+    {
+      "path": "evidence/master-stored-parity/previous-physical-build.json",
+      "bytes": 7020,
+      "sha256": "08ade3ba3c3e2dab986748d6fa8f710aa4b124bcca4cca1ec3839827431c9078"
+    }
+  ]
+}

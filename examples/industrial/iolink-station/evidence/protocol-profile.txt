@@ -1,0 +1,11 @@
+[==========] tests: Running 1 test(s).
+[ RUN      ] test_physical_profile_bytes
+TYPE_2_1 / COM2 / input=00 / output=none
+TYPE_2_1 / COM2 / input=ff / output=none
+TYPE_2_1 / COM2 / input=a5 / output=none
+TYPE_2_1 / COM2 / input=3c / output=none
+[       OK ] test_physical_profile_bytes
+[==========] tests: 1 test(s) run.
+[  PASSED  ] 1 test(s).
+PASS: four TYPE_2_1 one-byte input profiles through real master/device stacks
+Scope: host byte protocol only; fixture timing enforcement disabled; no physical HAL/PHY or concurrent three-MCU run

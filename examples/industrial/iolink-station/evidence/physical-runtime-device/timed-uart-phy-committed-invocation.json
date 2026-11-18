@@ -1,0 +1,19 @@
+{
+  "command": [
+    "cargo",
+    "test",
+    "--locked",
+    "--offline",
+    "-p",
+    "labwired-core",
+    "--features",
+    "event-scheduler",
+    "--lib",
+    "network::timed_uart::",
+    "--",
+    "--nocapture"
+  ],
+  "cwd": "/data/worktrees/labwired-core-industrial-boot-20261118",
+  "startedAt": 1795011515.2028441,
+  "head": "e2908774da4d254e1244dfdf9e5fb7bf6cdf4cf1"
+}

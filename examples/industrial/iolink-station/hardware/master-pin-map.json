@@ -1,0 +1,258 @@
+{
+  "schema": "labwired.iolink-station.master-pinmap.v1",
+  "verifiedOn": "2026-11-18",
+  "sources": [
+    {
+      "id": "um2414",
+      "title": "UM2414, Rev 2, April 2021",
+      "url": "https://www.st.com/resource/en/user_manual/dm00505670-getting-started-with-the-iolink-phy-master-evaluation-board-with-stm32-nucleo-stmicroelectronics.pdf",
+      "sections": [
+        "Tables 1-3: default digital routing",
+        "Table 4: SA2/SA1/SA0 selection",
+        "Table 6: logic voltage and enable switches",
+        "Table 7: port 2 resistor changes"
+      ]
+    },
+    {
+      "id": "um1724",
+      "title": "UM1724, Rev 17",
+      "url": "https://www.st.com/resource/en/user_manual/dm00105823-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf",
+      "sections": [
+        "Table 10: A4/A5 and ST-LINK solder bridges",
+        "Tables 23 and 32: NUCLEO-L476RG Arduino and Morpho pins",
+        "Section 7.9.1: 8 MHz ST-LINK MCO configuration"
+      ]
+    },
+    {
+      "id": "ds10198",
+      "title": "STM32L476xx DS10198, Rev 11, July 2024",
+      "url": "https://www.st.com/resource/en/datasheet/stm32l476rg.pdf",
+      "sections": [
+        "Table 17: USART1 AF7, I2C1 AF4",
+        "Table 18: UART4 AF8"
+      ]
+    },
+    {
+      "id": "ds8900",
+      "title": "L6360 DS8900, Rev 9, September 2023",
+      "url": "https://www.st.com/resource/en/datasheet/l6360.pdf",
+      "sections": [
+        "Section 6.8: seven-bit I2C address prefix 1100 plus SA2/SA1/SA0"
+      ]
+    }
+  ],
+  "ports": [
+    {
+      "port": 1,
+      "board": "STEVAL-IOM001V1",
+      "mcuBoard": "NUCLEO-L476RG",
+      "address7bit": "0x60",
+      "stm32HalAddress": "0xC0",
+      "SA2_SA1_SA0": [
+        0,
+        0,
+        0
+      ],
+      "signals": {
+        "INCQ": {
+          "mcuPin": "PA9",
+          "function": "USART1_TX",
+          "alternateFunction": 7,
+          "connector": "CN10.21",
+          "fittedResistor": "R5"
+        },
+        "OUTCQ": {
+          "mcuPin": "PA10",
+          "function": "USART1_RX",
+          "alternateFunction": 7,
+          "connector": "CN10.33",
+          "fittedResistor": "R9"
+        },
+        "ENCQ": {
+          "mcuPin": "PC0",
+          "function": "GPIO output",
+          "alternateFunction": null,
+          "connector": "CN7.38",
+          "fittedResistor": "R3"
+        },
+        "ENL+": {
+          "mcuPin": "PA6",
+          "function": "GPIO output",
+          "alternateFunction": null,
+          "connector": "CN10.13",
+          "fittedResistor": "R4"
+        },
+        "RST": {
+          "mcuPin": "PB5",
+          "function": "GPIO output, active low",
+          "alternateFunction": null,
+          "connector": "CN10.29",
+          "fittedResistor": "R8"
+        },
+        "IRQ": {
+          "mcuPin": "PA4",
+          "function": "GPIO input, active low",
+          "alternateFunction": null,
+          "connector": "CN7.32",
+          "fittedResistor": "R7"
+        },
+        "L+ON": {
+          "mcuPin": "PB4",
+          "function": "GPIO output to IPS161H",
+          "alternateFunction": null,
+          "connector": "CN10.27",
+          "fittedResistor": "R162"
+        }
+      },
+      "removeFromDefault": [],
+      "fitForThisPort": []
+    },
+    {
+      "port": 2,
+      "board": "STEVAL-IOM001V1",
+      "mcuBoard": "NUCLEO-L476RG",
+      "address7bit": "0x61",
+      "stm32HalAddress": "0xC2",
+      "SA2_SA1_SA0": [
+        0,
+        0,
+        1
+      ],
+      "signals": {
+        "INCQ": {
+          "mcuPin": "PA0",
+          "function": "UART4_TX",
+          "alternateFunction": 8,
+          "connector": "CN8.1 / CN7.28",
+          "fittedResistor": "R115"
+        },
+        "OUTCQ": {
+          "mcuPin": "PA1",
+          "function": "UART4_RX",
+          "alternateFunction": 8,
+          "connector": "CN8.2 / CN7.30",
+          "fittedResistor": "R119"
+        },
+        "ENCQ": {
+          "mcuPin": "PA5",
+          "function": "GPIO output",
+          "alternateFunction": null,
+          "connector": "CN5.6 / CN10.11",
+          "fittedResistor": "R143"
+        },
+        "ENL+": {
+          "mcuPin": "PA8",
+          "function": "GPIO output",
+          "alternateFunction": null,
+          "connector": "CN9.8 / CN10.23",
+          "fittedResistor": "R114"
+        },
+        "RST": {
+          "mcuPin": "PC1",
+          "function": "GPIO output, active low",
+          "alternateFunction": null,
+          "connector": "CN8.5 / CN7.36",
+          "fittedResistor": "R108"
+        },
+        "IRQ": {
+          "mcuPin": "PB0",
+          "function": "GPIO input, active low",
+          "alternateFunction": null,
+          "connector": "CN8.4 / CN7.34",
+          "fittedResistor": "R117"
+        },
+        "L+ON": {
+          "mcuPin": "PA7",
+          "function": "GPIO output to IPS161H",
+          "alternateFunction": null,
+          "connector": "CN5.4 / CN10.15",
+          "fittedResistor": "R163"
+        }
+      },
+      "removeFromDefault": [
+        "R5",
+        "R9",
+        "R3",
+        "R4",
+        "R8",
+        "R7",
+        "R162"
+      ],
+      "fitForThisPort": [
+        "R115",
+        "R119",
+        "R143",
+        "R114",
+        "R108",
+        "R117",
+        "R163"
+      ]
+    }
+  ],
+  "sharedI2C": {
+    "instance": "I2C1",
+    "SCL": {
+      "pin": "PB8",
+      "af": 4,
+      "connector": "CN10.3",
+      "resistor": "R1"
+    },
+    "SDA": {
+      "pin": "PB9",
+      "af": 4,
+      "connector": "CN10.5",
+      "resistor": "R2"
+    }
+  },
+  "nucleoBridgeState": {
+    "SB56": "ON: PC1 to A4 / port 2 reset",
+    "SB51": "ON: PC0 to A5 / port 1 ENCQ",
+    "SB46": "OFF: prevent SDA from sharing port 2 reset",
+    "SB52": "OFF: prevent SCL from sharing port 1 ENCQ",
+    "SB13": "ON: USART2 ST-LINK console",
+    "SB14": "ON: USART2 ST-LINK console",
+    "SB62": "OFF",
+    "SB63": "OFF"
+  },
+  "shieldSwitchState": {
+    "SW3": "2-3 closed: 3.3 V logic",
+    "SW4": "1-2 closed: MCU controls ENCQ",
+    "SW5": "1-2 closed: MCU controls ENL+",
+    "SW6": "2-3 closed: VH from CN1.3 supply",
+    "SW7": "1-2 closed: Type A field port",
+    "JP2_JP3": "Factory I2C pull-up connections retained",
+    "J1_J2": "Factory supply/output routing retained; firmware holds IPS161H L+_ON low"
+  },
+  "outIQ": "Unused. Do not fit optional OUTIQ resistors for this package.",
+  "scope": "Manufacturer-qualified pin/address source binding and buildable physical BSP. No physical assembly, bus waveform, power or IO-Link conformity claim.",
+  "simulatorDifference": "The historical byte-wake simulator fixture uses USART2 PA2/PA3. The packaged physical three-node World now executes these exact USART1/UART4 shield routes with the unchanged physical HAL images; see runtime/physical-station and evidence/physical-runtime-station/manifest.json. Preserve the legacy fixture only as regression provenance.",
+  "clockRequirement": {
+    "board": "NUCLEO-L476RG with ST-LINK section retained and USB powered",
+    "source": "UM1724 Rev 17 section 7.9.1; DS10198 Rev 11 section 3.11; IO-Link v1.1.4 Table 9",
+    "solderBridges": {
+      "SB16": "ON",
+      "SB50": "ON",
+      "SB54": "ON",
+      "SB55": "OFF"
+    },
+    "resistors": {
+      "R35": "NOT FITTED",
+      "R37": "NOT FITTED"
+    },
+    "firmware": "8 MHz ST-LINK MCO -> HSE bypass /2 *40 /2 -> 80 MHz SYSCLK; missing MCO fails initialization",
+    "qualification": "Crystal-derived source selected; UART/CQ frequency remains unmeasured. MSI trim is not used because its +/-0.25% specification exceeds the Master +/-0.1% requirement."
+  },
+  "console": {
+    "boardRoute": "SB13/SB14 retain the ST-LINK virtual COM connection to USART2 PA2/PA3",
+    "firmware": "No USART2 initialization or text console in this physical release",
+    "runtimeOracles": [
+      "g_master_state[2]",
+      "g_master_pd[2]",
+      "g_startup_error",
+      "g_uart_errors[2]",
+      "g_rx_overflows[2]",
+      "g_phy_error[2]",
+      "World UART network report"
+    ]
+  }
+}

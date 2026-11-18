@@ -1,0 +1,314 @@
+{
+  "schematic_uuid": "30a3857b-f89f-58b1-bb92-ab0a62d2894d",
+  "components": [
+    {
+      "ref": "J1",
+      "lib": "MCU6",
+      "value": "3V3 / GPIO harness",
+      "at": [
+        40.64,
+        58.42
+      ],
+      "net": {
+        "1": "GND",
+        "2": "V3V3",
+        "3": "CLK",
+        "4": "SH_LD_N",
+        "5": "QH",
+        "6": "GND"
+      },
+      "mpn": "B6B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "uuid": "2198fb25-fecc-57a0-bb66-90134b7db6fc"
+    },
+    {
+      "ref": "U1",
+      "lib": "U",
+      "value": "SN74HC165N",
+      "at": [
+        116.84,
+        66.04
+      ],
+      "net": {
+        "1": "SH_LD_N",
+        "2": "CLK",
+        "3": "IN_E",
+        "4": "IN_F",
+        "5": "IN_G",
+        "6": "IN_H",
+        "8": "GND",
+        "9": "QH",
+        "10": "GND",
+        "11": "IN_A",
+        "12": "IN_B",
+        "13": "IN_C",
+        "14": "IN_D",
+        "15": "GND",
+        "16": "V3V3"
+      },
+      "mpn": "SN74HC165N",
+      "manufacturer": "Texas Instruments",
+      "uuid": "c9c1ce7b-2eea-5d64-88e3-6dcedd0d156f"
+    },
+    {
+      "ref": "J2",
+      "lib": "INPUT16",
+      "value": "A..H input shunts: closed=0 / open=1",
+      "at": [
+        226.06,
+        55.88
+      ],
+      "net": {
+        "1": "IN_A",
+        "3": "IN_B",
+        "5": "IN_C",
+        "7": "IN_D",
+        "9": "IN_E",
+        "11": "IN_F",
+        "13": "IN_G",
+        "15": "IN_H",
+        "2": "GND",
+        "4": "GND",
+        "6": "GND",
+        "8": "GND",
+        "10": "GND",
+        "12": "GND",
+        "14": "GND",
+        "16": "GND"
+      },
+      "mpn": "TSW-108-07-G-D",
+      "manufacturer": "Samtec",
+      "uuid": "11682328-b92f-5624-a186-470e2da25aa0"
+    },
+    {
+      "ref": "C1",
+      "lib": "C",
+      "value": "100nF 16V X7R",
+      "at": [
+        63.5,
+        104.14
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "mpn": "GRM188R71C104KA01D",
+      "manufacturer": "Murata",
+      "uuid": "9006aa00-48b0-523f-9d3a-9cc311fe5f18"
+    },
+    {
+      "ref": "C2",
+      "lib": "C",
+      "value": "1uF 16V X7R",
+      "at": [
+        106.68,
+        104.14
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "mpn": "GRM188R71C105KA12D",
+      "manufacturer": "Murata",
+      "uuid": "b167900e-db25-5128-8219-62f562ac564d"
+    },
+    {
+      "ref": "R1",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        63.5,
+        129.54
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_A"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "4cf34e5f-5cd2-5d0a-9571-20767baff8c5"
+    },
+    {
+      "ref": "R2",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        104.14,
+        129.54
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_B"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "313fa627-9e6b-594e-b29a-db2f03406d6f"
+    },
+    {
+      "ref": "R3",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        144.78,
+        129.54
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_C"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "c14bd06f-eeb4-5fb9-9522-aa0052efe50b"
+    },
+    {
+      "ref": "R4",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        185.42000000000002,
+        129.54
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_D"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "f901931e-324a-594b-8b92-e4946a0e0431"
+    },
+    {
+      "ref": "R5",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        63.5,
+        154.94
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_E"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "cfb9eda6-155f-5336-b5a0-a93a042bd463"
+    },
+    {
+      "ref": "R6",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        104.14,
+        154.94
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_F"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "92f6b953-f936-52be-aa74-a83651b8a04d"
+    },
+    {
+      "ref": "R7",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        144.78,
+        154.94
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_G"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "3a00e39d-0521-57fd-8090-f40f100eb770"
+    },
+    {
+      "ref": "R8",
+      "lib": "R",
+      "value": "10k 1%",
+      "at": [
+        185.42000000000002,
+        154.94
+      ],
+      "net": {
+        "1": "V3V3",
+        "2": "IN_H"
+      },
+      "mpn": "ERJ-6ENF1002V",
+      "manufacturer": "Panasonic",
+      "uuid": "c12fcc1e-d442-5234-8961-5ef0f0de649b"
+    },
+    {
+      "ref": "H1",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        218.44,
+        124.46
+      ],
+      "net": {},
+      "uuid": "ba0b2f1b-7f68-560b-92a3-31fdbb1f3c93"
+    },
+    {
+      "ref": "H2",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        254.0,
+        124.46
+      ],
+      "net": {},
+      "uuid": "71d887a1-ae5a-51d4-b27b-28f7223e5c5e"
+    },
+    {
+      "ref": "H3",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        218.44,
+        152.4
+      ],
+      "net": {},
+      "uuid": "5194c183-b9d9-572e-8cb1-a3c19e231148"
+    },
+    {
+      "ref": "H4",
+      "lib": "MountingHole",
+      "value": "M3 / 3.2 mm NPTH",
+      "at": [
+        254.0,
+        152.4
+      ],
+      "net": {},
+      "uuid": "f8e7708f-e2fb-536e-8720-7dc75c0945af"
+    },
+    {
+      "ref": "#FLG01",
+      "lib": "PWR_FLAG",
+      "value": "PWR_FLAG",
+      "at": [
+        25.4,
+        165.1
+      ],
+      "net": {
+        "1": "V3V3"
+      },
+      "uuid": "cf461ae6-6d9c-505b-b1f5-8b160aa1f089"
+    },
+    {
+      "ref": "#FLG02",
+      "lib": "PWR_FLAG",
+      "value": "PWR_FLAG",
+      "at": [
+        50.8,
+        165.1
+      ],
+      "net": {
+        "1": "GND"
+      },
+      "uuid": "60586e7d-9957-5311-9c51-6dab64880e67"
+    }
+  ]
+}

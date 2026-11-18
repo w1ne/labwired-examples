@@ -1,0 +1,187 @@
+{
+  "schema": "labwired.iolink-station.harnesses.v1",
+  "scope": "Bench cable fabrication specification; not a measured or assembled harness.",
+  "fieldCable": {
+    "quantity": 2,
+    "wire": {
+      "manufacturer": "Belden",
+      "mpn": "9533",
+      "lengthMmEach": 500,
+      "conductors": 3,
+      "gaugeAWG": 24,
+      "source": "https://catalog.belden.com/techdata/EN/9533_techdata.pdf"
+    },
+    "ends": {
+      "master": "STEVAL-IOM001V1 CN3",
+      "device": "STEVAL-IOD003V1 CN1"
+    },
+    "connections": [
+      {
+        "colour": "red",
+        "fromPin": 1,
+        "toPin": 1,
+        "signal": "L+"
+      },
+      {
+        "colour": "black",
+        "fromPin": 3,
+        "toPin": 3,
+        "signal": "GND"
+      },
+      {
+        "colour": "white",
+        "fromPin": 4,
+        "toPin": 4,
+        "signal": "C/Q"
+      }
+    ],
+    "shield": "Insulate foil and drain separately at both ends; no EMC claim.",
+    "unusedPins": [
+      2,
+      5
+    ],
+    "terminalStripLengthMm": 4.5,
+    "terminalMaxTorqueNm": 0.1491,
+    "terminalSource": "https://www.deca-switchlab.com/pdf/EUROPE_PDF/MB312-254500.pdf"
+  },
+  "supplyCable": {
+    "wire": "Belden 9533, three cuts of 200 mm; red +24 V, black return; insulate unused white, foil and drain",
+    "adapter": {
+      "manufacturer": "Adafruit",
+      "mpn": "368",
+      "socket": "2.1 mm female DC; selected supply centre positive"
+    },
+    "distribution": [
+      {
+        "part": "WAGO 221-413",
+        "quantity": 1,
+        "signal": "+24V",
+        "connections": [
+          "adapter +",
+          "master port1 CN1.3",
+          "master port2 CN1.3"
+        ]
+      },
+      {
+        "part": "WAGO 221-413",
+        "quantity": 1,
+        "signal": "GND",
+        "connections": [
+          "adapter -",
+          "master port1 CN1.1",
+          "master port2 CN1.1"
+        ]
+      }
+    ],
+    "wagoStripLengthMm": 11,
+    "rule": "One conductor per clamp. No unqualified double-wire termination. Cut terminal ends to the connector drawing; do not tin screw-clamped stranded ends."
+  },
+  "inputHarness": {
+    "quantity": 2,
+    "lengthMmEach": 250,
+    "wire": {
+      "manufacturer": "Alpha Wire",
+      "mpn": "3050",
+      "gaugeAWG": 24,
+      "source": "https://www.alphawire.com/products/wire/hook-up-wire/premium/3050?popup=pdf",
+      "totalCutLengthM": 3
+    },
+    "inputEnd": {
+      "shell": "JST XHP-6",
+      "contact": "JST SXH-001T-P0.6",
+      "contactCount": 6
+    },
+    "nucleoEnd": {
+      "contact": "Harwin M20-1180042",
+      "housingHeightMm": 14,
+      "housingsPerDevice": [
+        {
+          "mpn": "M20-1060100",
+          "quantity": 4,
+          "pins": [
+            "CN7.20",
+            "CN7.16",
+            "CN10.4",
+            "CN10.20"
+          ]
+        },
+        {
+          "mpn": "M20-1060200",
+          "quantity": 1,
+          "positions": [
+            {
+              "position": 1,
+              "nucleo": "CN10.28",
+              "signal": "QH",
+              "colour": "white"
+            },
+            {
+              "position": 2,
+              "nucleo": "CN10.30",
+              "signal": "CLK",
+              "colour": "blue"
+            }
+          ]
+        }
+      ],
+      "contactQuantityPerDevice": 6,
+      "matingPinLengthMm": {
+        "min": 5.5,
+        "max": 6.3,
+        "source": "Harwin M20-106 drawing, note 5"
+      },
+      "assemblyRequirement": "Controlled mating depth. Do not push housing flush onto a longer Nucleo underside tail; validate actual pin length and mechanical stop."
+    },
+    "connections": [
+      {
+        "pin": 1,
+        "colour": "black",
+        "nucleo": "CN7.20",
+        "signal": "GND"
+      },
+      {
+        "pin": 2,
+        "colour": "red",
+        "nucleo": "CN7.16",
+        "signal": "3V3"
+      },
+      {
+        "pin": 3,
+        "colour": "blue",
+        "nucleo": "CN10.30",
+        "signal": "PB13 CLK"
+      },
+      {
+        "pin": 4,
+        "colour": "yellow",
+        "nucleo": "CN10.4",
+        "signal": "PC6 SH_LD_N"
+      },
+      {
+        "pin": 5,
+        "colour": "white",
+        "nucleo": "CN10.28",
+        "signal": "PB14 QH"
+      },
+      {
+        "pin": 6,
+        "colour": "black",
+        "nucleo": "CN10.20",
+        "signal": "GND"
+      }
+    ],
+    "terminationSources": [
+      "https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf",
+      "https://cdn.harwin.com/pdfs/IS-15.pdf"
+    ],
+    "acceptance": "Check pin-to-pin continuity, adjacent-pin isolation and crimp retention before connection."
+  },
+  "usb": {
+    "quantity": 3,
+    "manufacturer": "StarTech",
+    "mpn": "USB2HABM1M",
+    "lengthM": 1,
+    "connectors": "USB-A to Mini-B",
+    "destination": "Each Nucleo ST-LINK CN1; retain ST-LINK section"
+  }
+}

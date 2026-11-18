@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<IODevice xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD1.1.xsd">
+  <DocumentInfo copyright="LabWired contributors" releaseDate="2026-11-18" version="V1.0" />
+  <ProfileHeader>
+    <ProfileIdentification>IO Device Profile</ProfileIdentification>
+    <ProfileRevision>1.1</ProfileRevision>
+    <ProfileName>Device Profile for IO Devices</ProfileName>
+    <ProfileSource>IO-Link Consortium</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>1</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>IODD</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity vendorId="65535" deviceId="1" vendorName="LabWired">
+      <VendorText textId="T_VendorText" />
+      <VendorUrl textId="T_VendorUrl" />
+      <DeviceName textId="T_DeviceName" />
+      <DeviceFamily textId="T_DeviceFamily" />
+      <DeviceVariantCollection>
+        <DeviceVariant productId="L476-L6362A-DI8">
+          <Name textId="T_ProductName" />
+          <Description textId="T_Description" />
+        </DeviceVariant>
+      </DeviceVariantCollection>
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Features blockParameter="false" dataStorage="false" />
+      <VariableCollection>
+        <StdVariableRef id="V_DirectParameters_1" />
+        <StdVariableRef id="V_DirectParameters_2" />
+        <StdVariableRef id="V_ProductName" />
+        <StdVariableRef id="V_ApplicationSpecificTag" />
+        <StdVariableRef id="V_ProductID" defaultValue="L476-L6362A-DI8" />
+      </VariableCollection>
+      <ProcessDataCollection>
+        <ProcessData id="PD_DI8">
+          <ProcessDataIn id="PD_IN" bitLength="8">
+            <Datatype xsi:type="RecordT" bitLength="8">
+              <RecordItem subindex="1" bitOffset="0">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_1" />
+              </RecordItem>
+              <RecordItem subindex="2" bitOffset="1">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_2" />
+              </RecordItem>
+              <RecordItem subindex="3" bitOffset="2">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_3" />
+              </RecordItem>
+              <RecordItem subindex="4" bitOffset="3">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_4" />
+              </RecordItem>
+              <RecordItem subindex="5" bitOffset="4">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_5" />
+              </RecordItem>
+              <RecordItem subindex="6" bitOffset="5">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_6" />
+              </RecordItem>
+              <RecordItem subindex="7" bitOffset="6">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_7" />
+              </RecordItem>
+              <RecordItem subindex="8" bitOffset="7">
+                <SimpleDatatype xsi:type="BooleanT" />
+                <Name textId="T_PD_IN_8" />
+              </RecordItem>
+            </Datatype>
+            <Name textId="T_PD_IN" />
+          </ProcessDataIn>
+        </ProcessData>
+      </ProcessDataCollection>
+      <UserInterface>
+        <MenuCollection>
+          <Menu id="M_Identification">
+            <Name textId="T_Menu_Identification" />
+            <VariableRef variableId="V_DirectParameters_1" />
+            <VariableRef variableId="V_ApplicationSpecificTag" />
+          </Menu>
+          <Menu id="M_Parameter">
+            <Name textId="T_Menu_Parameter" />
+            <VariableRef variableId="V_DirectParameters_1" />
+          </Menu>
+        </MenuCollection>
+        <ObserverRoleMenuSet>
+          <IdentificationMenu menuId="M_Identification" />
+          <ParameterMenu menuId="M_Parameter" />
+        </ObserverRoleMenuSet>
+        <MaintenanceRoleMenuSet>
+          <IdentificationMenu menuId="M_Identification" />
+          <ParameterMenu menuId="M_Parameter" />
+        </MaintenanceRoleMenuSet>
+        <SpecialistRoleMenuSet>
+          <IdentificationMenu menuId="M_Identification" />
+          <ParameterMenu menuId="M_Parameter" />
+        </SpecialistRoleMenuSet>
+      </UserInterface>
+    </DeviceFunction>
+  </ProfileBody>
+  <CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.1">
+    <TransportLayers>
+      <PhysicalLayer bitrate="COM2" minCycleTime="10000" sioSupported="false" mSequenceCapability="1">
+        <Connection xsi:type="OtherConnectionT">
+          <ProductRef productId="L476-L6362A-DI8" />
+          <Description textId="T_TerminalConnection" />
+          <Wire1 function="L+" color="RD">
+            <Name textId="T_Terminal1" />
+          </Wire1>
+          <Wire3 function="L-" color="BK">
+            <Name textId="T_Terminal3" />
+          </Wire3>
+          <Wire4 function="C/Q" color="WH">
+            <Name textId="T_Terminal4" />
+          </Wire4>
+        </Connection>
+      </PhysicalLayer>
+    </TransportLayers>
+    <Test />
+  </CommNetworkProfile>
+  <ExternalTextCollection>
+    <PrimaryLanguage xml:lang="en">
+      <Text id="T_VendorText" value="LabWired" />
+      <Text id="T_VendorUrl" value="https://labwired.com" />
+      <Text id="T_DeviceName" value="Eight-bit input station" />
+      <Text id="T_DeviceFamily" value="LabWired educational bench examples" />
+      <Text id="T_ProductName" value="Eight-bit input station" />
+      <Text id="T_Description" value="Unassigned bench identity 0xFFFF/0x000001. STM32L476 plus L6362A and SN74HC165; eight 3.3 V shunt inputs. Not a registered or certified product identity." />
+      <Text id="T_PD_IN_1" value="Input A (open=1, shunt=0)" />
+      <Text id="T_PD_IN_2" value="Input B (open=1, shunt=0)" />
+      <Text id="T_PD_IN_3" value="Input C (open=1, shunt=0)" />
+      <Text id="T_PD_IN_4" value="Input D (open=1, shunt=0)" />
+      <Text id="T_PD_IN_5" value="Input E (open=1, shunt=0)" />
+      <Text id="T_PD_IN_6" value="Input F (open=1, shunt=0)" />
+      <Text id="T_PD_IN_7" value="Input G (open=1, shunt=0)" />
+      <Text id="T_PD_IN_8" value="Input H (open=1, shunt=0)" />
+      <Text id="T_PD_IN" value="Process data in" />
+      <Text id="T_Menu_Identification" value="Identification" />
+      <Text id="T_Menu_Parameter" value="Parameter" />
+      <Text id="T_TerminalConnection" value="STEVAL-IOD003V1 CN1 five-position screw terminal. Pins 2 and 5 are unused. Nucleo logic is separately USB powered; field L+ feeds the PHY. No M12 connector is fitted." />
+      <Text id="T_Terminal1" value="CN1 terminal 1" />
+      <Text id="T_Terminal3" value="CN1 terminal 3" />
+      <Text id="T_Terminal4" value="CN1 terminal 4" />
+    </PrimaryLanguage>
+  </ExternalTextCollection>
+  <Stamp crc="3675833702">
+    <Checker name="iolinki-iodd-cli" version="V1.0" />
+  </Stamp>
+</IODevice>

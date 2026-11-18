@@ -1,0 +1,13 @@
+name: physical-iom
+chip: stm32l476
+cpu_hz: 80000000
+max_peripheral_tick_interval: 1
+external_devices:
+- id: port1
+  type: l6360
+  connection: i2c1
+  config: {address: 96, uart: uart1, encq: PC0, enl: PA6, reset_n: PB5, incq: PA9, outcq: PA10, irq: PA4}
+- id: port2
+  type: l6360
+  connection: i2c1
+  config: {address: 97, uart: uart4, encq: PA5, enl: PA8, reset_n: PC1, incq: PA0, outcq: PA1, irq: PB0}

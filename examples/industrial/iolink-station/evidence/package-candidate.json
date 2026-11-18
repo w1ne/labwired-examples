@@ -1,0 +1,155 @@
+{
+  "schema": "labwired.example-package-candidate.v1",
+  "project": "iolink-station-l476",
+  "trackingIssue": "https://github.com/w1ne/labwired/issues/3555",
+  "state": "electrical/firmware and digital three-node runtime candidate; fitted mount and physical acceptance pending",
+  "canonicalLab": "https://app.labwired.com/?lab=iolink-station-l476",
+  "nativeBoard": {
+    "path": "electronics/input-board/input-board.kicad_pcb",
+    "bytes": 97586,
+    "sha256": "971f02e71fe54f6dd6b1d672275454e262c124854bac3afe1438db0811d1c38d"
+  },
+  "nativeSchematic": {
+    "path": "electronics/input-board/input-board.kicad_sch",
+    "bytes": 58241,
+    "sha256": "e3a9cc97a4f6a55c41e4f1678cd8389b26518b44274bf80bf0432986f91df04d"
+  },
+  "populatedInputStep": {
+    "path": "cad/input-board-populated.step",
+    "bytes": 1193098,
+    "sha256": "44821a4e215a81d44e09cc96f4818d8d5e92cb5d7b0f57444b6683cd48868918"
+  },
+  "firmware": [
+    {
+      "path": "firmware/release/iolink-device.bin",
+      "bytes": 22324,
+      "sha256": "78f502bc6d249b389275b24481c20d81d018a7fa28c1b7f33258f5f0cadfdae0"
+    },
+    {
+      "path": "firmware/release/iolink-device.elf",
+      "bytes": 1547352,
+      "sha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508"
+    },
+    {
+      "path": "firmware/release/iolink-master.bin",
+      "bytes": 23452,
+      "sha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7"
+    },
+    {
+      "path": "firmware/release/iolink-master.elf",
+      "bytes": 1625936,
+      "sha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9"
+    }
+  ],
+  "mechanicalDesignBinding": null,
+  "simulationContract": "The unchanged physical master and both physical device images pass together at core 0916c184059ad4a83b6dbe13a027ad6d36d98f0d with runtime/physical-station/environment.yaml; the legacy byte-wake fixture remains historical.",
+  "remaining": [
+    "Full fitted mount and hardware BOM",
+    "Physical two-port acceptance and measurements",
+    "Region-specific AC lead selection",
+    "Current IODD business-rule check and conformity where applicable"
+  ],
+  "evidence": [
+    {
+      "path": "evidence/device-description-validation.txt",
+      "bytes": 93,
+      "sha256": "f347ea67a61948dabb09839e6cecd63f6f13a717e0acda148488859a91226812"
+    },
+    {
+      "path": "evidence/device-description.json",
+      "bytes": 1325,
+      "sha256": "217134378e8ee3f4dfd89b92ce8cdefe3f0479974a1a8b287db67dd82a6139c7"
+    },
+    {
+      "path": "evidence/device-physical-build.txt",
+      "bytes": 2650,
+      "sha256": "dc9dd7d91fcd263557d201667d1d8dad63c9f5262a0863aa6fdd09283e88ae23"
+    },
+    {
+      "path": "evidence/input-drc.json",
+      "bytes": 1068,
+      "sha256": "73620d7c7f84f7149837a2f60fb94d79397013741ea4e39649ce8486d9ff0063"
+    },
+    {
+      "path": "evidence/input-erc.json",
+      "bytes": 984,
+      "sha256": "0606373051e934cdabc09ec44564ce4588f2624455bcf36e100fb68f422aae4a"
+    },
+    {
+      "path": "evidence/input-native-review.json",
+      "bytes": 3943,
+      "sha256": "83538e12cc7fb5be8887f83519b951fe51a416d636a40e70960b49ec581f94a1"
+    },
+    {
+      "path": "evidence/iolinki-host-regressions.txt",
+      "bytes": 4253,
+      "sha256": "7772bfe4d00765cc3a6ad3d25dee961cf68bfbb3f5e630be24ab27793e1d066d"
+    },
+    {
+      "path": "evidence/master-driver-host-tests.txt",
+      "bytes": 1114,
+      "sha256": "54561584b1ee1b6f4f0554a2e1f01d999f5f22ee364d42f3e21abbcb32f1c4b4"
+    },
+    {
+      "path": "evidence/master-physical-build.txt",
+      "bytes": 3366,
+      "sha256": "d153657c8448c3c5f7ceb25b3846676239e72427bb46fbba12aba290f2289679"
+    },
+    {
+      "path": "evidence/master-timing-analysis.json",
+      "bytes": 554,
+      "sha256": "72922ba9ee0a8c652195994a90c6c258c39893f36305401d995956721c7e47e1"
+    },
+    {
+      "path": "evidence/physical-build.json",
+      "bytes": 7359,
+      "sha256": "204879aeaac4745bfe81b5b6d74d25a4825e77972a26b101e7370701e6675c8e"
+    },
+    {
+      "path": "evidence/protocol-profile.txt",
+      "bytes": 539,
+      "sha256": "d3389d1da22d528d58b9787c58fe4d794bacc82fd4a89842f2ca963c4294c4f9"
+    },
+    {
+      "path": "evidence/physical-runtime-device/manifest.json",
+      "bytes": 4211,
+      "sha256": "793fec9f05880470e16cb709ad0e300a7bc74a76a400e122a7510eb8e791a838"
+    },
+    {
+      "path": "evidence/master-stored-parity/receipt.json",
+      "bytes": 4183,
+      "sha256": "07afa99938dcf50d2c9a7eeb903db434264a09770acaa5ce71ab86bbba24caa6"
+    },
+    {
+      "path": "mechanical/references/samtec-tsw-model-provenance.json",
+      "bytes": 1735,
+      "sha256": "cd140c745c6b6bc09a0a3da3083e3004696367075965256e3ed8924052ed04e2"
+    },
+    {
+      "path": "evidence/mechanical/tsw-native-reexport.json",
+      "bytes": 1057,
+      "sha256": "73fa354ebf09db5da76e799800543048dece3fafff848c150d684ca07c90317b"
+    },
+    {
+      "path": "evidence/mechanical/tsw-populated-step-inspection.json",
+      "bytes": 849896,
+      "sha256": "552ced3e9762f52729926defe8a95b27e6735c707fd9eaac9e5c43869e255c47"
+    },
+    {
+      "path": "evidence/physical-runtime-station/manifest.json",
+      "bytes": 6450,
+      "sha256": "8e346da2601de43f6e31e7a64fab01ed66becddeba252acfdd94ed1558dceea9"
+    }
+  ],
+  "devicePhysicalRuntime": {
+    "manifest": "evidence/physical-runtime-device/manifest.json",
+    "coreCommit": "e2908774da4d254e1244dfdf9e5fb7bf6cdf4cf1",
+    "scope": "One unchanged physical device image plus a controlled digital master line; complete station pending"
+  },
+  "masterStoredParityRepair": "evidence/master-stored-parity/receipt.json",
+  "physicalStationRuntime": {
+    "manifest": "evidence/physical-runtime-station/manifest.json",
+    "coreCommit": "0916c184059ad4a83b6dbe13a027ad6d36d98f0d",
+    "scope": "Three physical HAL images; two independent COM2 process-data inputs change during OPERATE; digital model only"
+  }
+}

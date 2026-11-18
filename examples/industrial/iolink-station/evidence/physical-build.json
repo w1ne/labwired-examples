@@ -1,0 +1,199 @@
+{
+  "schema": "labwired.physical-firmware-build.v1",
+  "builtOn": "2026-11-18",
+  "target": "NUCLEO-L476RG, retained ST-LINK 8 MHz MCO -> HSE bypass /2*40/2 -> 80 MHz",
+  "firmwareRole": "Real ST HAL/L6360 and ST HAL/L6362A hardware BSP; separate from simulator fixture",
+  "compiler": "arm-none-eabi-gcc (15:13.2.rel1-2) 13.2.1 20231009",
+  "dependencies": {
+    "STM32CubeL4": {
+      "url": "https://github.com/STMicroelectronics/STM32CubeL4.git",
+      "revision": "703570fd63f1e8623e89df99285ead68f1665f83",
+      "tag": "v1.18.2"
+    },
+    "STM32L4xx_HAL_Driver": {
+      "url": "https://github.com/STMicroelectronics/stm32l4xx_hal_driver.git",
+      "revision": "047a8610c7dc0dcfdb4cd63b86cd3a2cbd3e5899"
+    },
+    "CMSIS_Device_STM32L4": {
+      "url": "https://github.com/STMicroelectronics/cmsis_device_l4.git",
+      "revision": "dc04e41afbd7c204cd09f2fa5dd29658efbaff6c"
+    },
+    "iolinki": {
+      "url": "https://github.com/w1ne/iolinki.git",
+      "revision": "9c8938793243f3dda4945ec93ba0214195cb8878",
+      "review": [
+        "https://github.com/w1ne/iolinki/pull/55",
+        "https://github.com/w1ne/iolinki/pull/56"
+      ]
+    },
+    "iolinki-master": {
+      "url": "https://github.com/w1ne/labwired-core.git",
+      "revision": "941a6c5caf0c53b66aa5af9290e5ecba5972ec72",
+      "path": "third_party/iolinki-master",
+      "tree": "c247c3fa50f7ed16d7085e2fd675c2748103f252"
+    }
+  },
+  "flags": "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -std=c11 -Os -g3 -Wall -Wextra -ffunction-sections -fdata-sections",
+  "sourceFiles": [
+    {
+      "path": "firmware/common/station_clock.c",
+      "bytes": 2842,
+      "sha256": "8a37b02553e31646b652dfe039429845ec231ed2ee8c79b913c0cda4dd5812d6"
+    },
+    {
+      "path": "firmware/common/station_clock.h",
+      "bytes": 298,
+      "sha256": "b4ee9dd0ee9bc1acac9869b057b1740c6636e1a1ac88d130c1ccc3784aa42a07"
+    },
+    {
+      "path": "firmware/common/station_profile.h",
+      "bytes": 582,
+      "sha256": "4a171688d3c1dc5b69a643ba8626313512f2bfc8b2cba875f949400fb5598e7d"
+    },
+    {
+      "path": "firmware/device/Makefile",
+      "bytes": 2279,
+      "sha256": "eaaee09f0c4add4ae54a74c5f8d58a916b6f0b23084be33d607ddd773a56664f"
+    },
+    {
+      "path": "firmware/device/board_hal.c",
+      "bytes": 11420,
+      "sha256": "3d146dcf10e79ad01af4e9c1d271c1c951bf6f2c8b121459cd22c9caddee9066"
+    },
+    {
+      "path": "firmware/device/board_hal.h",
+      "bytes": 399,
+      "sha256": "e5adf570976f5ecc229ed4801fb7750e55a05dd798a9521cd3ee49b541d9435b"
+    },
+    {
+      "path": "firmware/device/main.c",
+      "bytes": 3402,
+      "sha256": "16c44e9ef1fca99ad0d6438a418294d8f9dafbabc99bc50ba0df6f665bae4bcc"
+    },
+    {
+      "path": "firmware/master/Makefile",
+      "bytes": 2351,
+      "sha256": "56869ebf6a59bf5d33cb909893f7d58964bc38b2df1f7fef30ec650a14b1df08"
+    },
+    {
+      "path": "firmware/master/board_hal.c",
+      "bytes": 17065,
+      "sha256": "3d5d25f89e445f2085a2ba12ba7559a587e1a1c00a26ad1724ee010d04b4218f"
+    },
+    {
+      "path": "firmware/master/board_hal.h",
+      "bytes": 689,
+      "sha256": "edc8cca7e0fb3a37c12ae9693e6f94d1dc45c0c82bd906e7ce39b47c3b5e1140"
+    },
+    {
+      "path": "firmware/master/board_pinmap.h",
+      "bytes": 1563,
+      "sha256": "139e047e45b8ebef977596845a839f3c55b22e3616b21158c244c35de3f9b93d"
+    },
+    {
+      "path": "firmware/master/dependencies.json",
+      "bytes": 998,
+      "sha256": "90e58231fbb5d74d655354ae2216f803ca33594c439f815733c7f0d4bf01c75e"
+    },
+    {
+      "path": "firmware/master/fetch-deps.py",
+      "bytes": 1480,
+      "sha256": "8ecf5142ab25d981f504e89f1e22317c8ab0b909f9bdd15cae2e84191b841349"
+    },
+    {
+      "path": "firmware/master/l6360.c",
+      "bytes": 9827,
+      "sha256": "1edb77aa2f54ecf988cd228f1a8b5ec52e64fde95de36cd079d2544d20394e21"
+    },
+    {
+      "path": "firmware/master/l6360.h",
+      "bytes": 2808,
+      "sha256": "4e3611b21567823088de899deeb6df63bf7de100d77988c026db2a0163017c8d"
+    },
+    {
+      "path": "firmware/master/main.c",
+      "bytes": 2226,
+      "sha256": "88b26e4295505fa132a523109612e3b17fb02b65f0c23c7fbc3ba69d559a7718"
+    },
+    {
+      "path": "firmware/master/stm32l4xx_hal_conf.h",
+      "bytes": 11865,
+      "sha256": "9b8b243932a77cd076c849e3c1e2e6e8867896532a58c7a3a370f02c1018f823"
+    },
+    {
+      "path": "firmware/master/tests/check_timing.py",
+      "bytes": 1907,
+      "sha256": "d7f4b7656c6fcb11a4238a23dd8576f46c99773237c3144bea3e92ae070d76fa"
+    },
+    {
+      "path": "firmware/master/tests/test_l6360.c",
+      "bytes": 11033,
+      "sha256": "d961b1572e89906897ef871e5136d0e231be91059e1718b41c3d5dacda6e7c41"
+    },
+    {
+      "path": "firmware/master/verify-deps.py",
+      "bytes": 1187,
+      "sha256": "279f291ad35738db99bc30f83d2353e633aed810145efdea8b82f4f9642fe7e6"
+    },
+    {
+      "path": "firmware/tests/protocol_profile.c",
+      "bytes": 1400,
+      "sha256": "fad690b4d8c640011cf21f9b087747f1eae362a2e252989366a4add60990d38c"
+    },
+    {
+      "path": "firmware/tests/run-protocol-profile.py",
+      "bytes": 1812,
+      "sha256": "89011db97d11fcbc64f59e92f9d99688af91d623043eccf66ec1a44038d1d7de"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "firmware/release/iolink-device.bin",
+      "bytes": 22324,
+      "sha256": "78f502bc6d249b389275b24481c20d81d018a7fa28c1b7f33258f5f0cadfdae0"
+    },
+    {
+      "path": "firmware/release/iolink-device.elf",
+      "bytes": 1547352,
+      "sha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508"
+    },
+    {
+      "path": "firmware/release/iolink-master.bin",
+      "bytes": 23452,
+      "sha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7"
+    },
+    {
+      "path": "firmware/release/iolink-master.elf",
+      "bytes": 1625936,
+      "sha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9"
+    }
+  ],
+  "sizeOutput": "   text\t   data\t    bss\t    dec\t    hex\tfilename\n  23436\t     16\t   5520\t  28972\t   712c\texamples/industrial/iolink-station/firmware/release/iolink-master.elf\n  22196\t     72\t   4976\t  27244\t   6a6c\texamples/industrial/iolink-station/firmware/release/iolink-device.elf\n",
+  "buildResult": "PASS",
+  "hostL6360Tests": {
+    "passed": 18,
+    "failed": 0,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ]
+  },
+  "physicalExecution": "NOT RUN",
+  "physicalMeasurements": "NOT RECORDED",
+  "scope": "Cross-compiled on recorded source. No simulator execution or physical hardware performance is implied.",
+  "recordedAt": "2026-11-18T14:40:28.830558+00:00",
+  "wireProfile": {
+    "baudrate": 38400,
+    "dataBits": 8,
+    "parity": "even",
+    "stopBits": 1,
+    "mSequence": "TYPE_2_1",
+    "processInputBytes": 1,
+    "processOutputBytes": 0,
+    "cycleMs": 10
+  },
+  "hostProtocolScope": "Four input patterns through the pinned real master/device byte fixture; synthetic PHY and timing enforcement disabled only in that fixture. Physical firmware keeps timing enforcement enabled.",
+  "sourceCorrection": "Master L6360 stored-parity startup repair; device source/image unchanged.",
+  "masterBuildInvocation": "evidence/master-stored-parity/l6360-stored-parity-master-build-invocation.json",
+  "digitalRuntimeEvidence": "evidence/physical-runtime-device/manifest.json (device only; physical master/full station pending)"
+}

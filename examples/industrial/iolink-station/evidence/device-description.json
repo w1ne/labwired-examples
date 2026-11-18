@@ -1,0 +1,31 @@
+{
+  "schema": "labwired.iodd-validation.v1",
+  "scope": "Semantic subset, CRC and official IODD 1.1 XSD validation. No IODD business-rule checker or IO-Link conformity/registered Vendor ID claim.",
+  "generatorRevision": "9c8938793243f3dda4945ec93ba0214195cb8878",
+  "generator": "iolinki tools/iodd_gen.py and tools/iodd_cli.py; package adapter changes only terminal connection description",
+  "schemaArchive": {
+    "url": "https://io-link.com/fileadmin/user_upload/Downloads/Package_2025/IO-Device-Description_Specification_10.012_V1.1.5_Oct2025.zip",
+    "bytes": 3699261,
+    "sha256": "d4b3f53bfc777e45938cf7b7d14fe9b65aa4dccea6875745b3912e1cc59d4dd2"
+  },
+  "validator": "xmllint / libxml2-utils 2.9.14+dfsg-1.3ubuntu3.10",
+  "sources": [
+    {
+      "path": "description/device.json",
+      "bytes": 2943,
+      "sha256": "b2e62398e729ff3f04fde5f6c2835bb007657e09b723bf15c65c55bdd6f6bcb4"
+    },
+    {
+      "path": "description/generate.py",
+      "bytes": 2909,
+      "sha256": "720fbc0b6edbf8427dcdb37c3ccd1031631f9ea37e51f769239bb2dfc52fcb5a"
+    },
+    {
+      "path": "description/LabWired-L476-L6362A-DI8-20261118-IODD1.1.xml",
+      "bytes": 7133,
+      "sha256": "44c0fd94d6cac42556dc0ec8e7f9bf2c1d8cf521ad3167ed21381246d58b0da2"
+    }
+  ],
+  "result": "PASS",
+  "log": "device-description-validation.txt"
+}

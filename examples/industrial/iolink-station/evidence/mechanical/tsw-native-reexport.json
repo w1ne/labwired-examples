@@ -1,0 +1,57 @@
+[
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "drc",
+      "--schematic-parity",
+      "--format",
+      "json",
+      "--exit-code-violations",
+      "--output",
+      "evidence/input-drc.json",
+      "electronics/input-board/input-board.kicad_pcb"
+    ],
+    "exit": 0,
+    "seconds": 1.2231412869878113
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "export",
+      "step",
+      "--subst-models",
+      "--force",
+      "--output",
+      "cad/input-board-populated.step",
+      "electronics/input-board/input-board.kicad_pcb"
+    ],
+    "exit": 0,
+    "seconds": 0.9869181299582124
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "render",
+      "--width",
+      "1400",
+      "--height",
+      "1100",
+      "--side",
+      "top",
+      "--rotate",
+      "325,0,35",
+      "--background",
+      "opaque",
+      "--quality",
+      "high",
+      "--output",
+      "cad/input-board-iso.png",
+      "electronics/input-board/input-board.kicad_pcb"
+    ],
+    "exit": 0,
+    "seconds": 7.894056327990256
+  }
+]

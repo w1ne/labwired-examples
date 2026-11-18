@@ -1,0 +1,12 @@
+name: physical-iod-probe
+chip: stm32l476
+cpu_hz: 80000000
+external_devices:
+  - id: phy
+    type: l6362a
+    connection: uart1
+    config: {en: PC7, in1: low, in2: PA9, outiq: PA10, diag: PA4, ol: PA6}
+  - id: di8
+    type: sn74hc165_gpio
+    connection: gpio
+    config: {clock_pin: PB13, data_pin: PB14, latch_pin: PC6, inputs: 165}

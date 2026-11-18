@@ -1,0 +1,13 @@
+/* SPDX-License-Identifier: MIT */
+#ifndef LABWIRED_IOLINK_STATION_PROFILE_H
+#define LABWIRED_IOLINK_STATION_PROFILE_H
+/* IO-Link v1.1.4 Table A.10: TYPE_2_1 carries 1 PD-in octet, no PD-out,
+ * and 1 on-request octet. TYPE_1_1 interleaving is a different wire contract. */
+#define STATION_MASTER_MSEQ_TYPE IOLINK_MASTER_M_SEQ_TYPE_2_1
+#define STATION_DEVICE_MSEQ_TYPE IOLINK_M_SEQ_TYPE_2_1
+#define STATION_BAUDRATE IOLINK_BAUDRATE_COM2
+#define STATION_PD_INPUT_BYTES 1U
+#define STATION_PD_OUTPUT_BYTES 0U
+#define STATION_CYCLE_100US 100U
+#define STATION_MIN_CYCLE_RAW 0x49U
+#endif

@@ -1,0 +1,41 @@
+{
+  "command": [
+    "cargo",
+    "test",
+    "-p",
+    "labwired-core",
+    "--features",
+    "event-scheduler",
+    "--test",
+    "stm32l476_uid",
+    "--",
+    "--nocapture"
+  ],
+  "cwd": "/data/worktrees/labwired-core-industrial-boot-20261118",
+  "exit": 0,
+  "seconds": 100.56746778299566,
+  "before": {
+    "crates/core/src/peripherals/components/l6360.rs": "e6c4c36a49a587b870aeac355425f9f54cfc60d6ec1bd32bda508cfdd1320332",
+    "crates/core/src/peripherals/uart.rs": "1f8bf9096ed9c043b7d5c57bc3fe855f7b9ca4b9299116199821d8fa2e65dfaa",
+    "crates/core/src/peripherals/uart/timed.rs": "8caec432e42d5544d923447509623e4921e79e130b50ad4049211ef720a48295",
+    "crates/core/src/peripherals/uart_transceiver.rs": "278b108efbcc657694f8342a4dd02a9b1fbd12a62c2e457d1b0cfdd8095422fa",
+    "crates/core/tests/stm32/l6360_digital.rs": "df6c9f6956ef99bf1fe1e5f742561211d71bbbd58ed93cea3232ddb38253e3c5",
+    "crates/core/tests/stm32/l6362a_digital.rs": "15520785d6138be5a6b123b981dd25224c3c19f9cd27028169133a3084cc2867",
+    "crates/core/tests/world/world_iolink_physical.rs": "0e14a193dc6d3cef29c84a80d23c832c9a1f717b1f5effcd07d01600e3977938",
+    "crates/core/src/bus/from_config.rs": "a962c998d08d2c953ae738dbaa3bfd67065e3100ae3d99a363bc5b32be4fec55",
+    "crates/core/tests/stm32l476_uid.rs": "9fe7f8ae2662e8b0065cd407792839cb829d65b3523d7ee90c00c092f4d369f7",
+    "configs/peripherals/stm32l476/uid.yaml": "2b0757b9cbbe0d7539e700f3ffb41e999b6f0d2c092652fa84c9bfe504a1c0c8"
+  },
+  "after": {
+    "crates/core/src/peripherals/components/l6360.rs": "e6c4c36a49a587b870aeac355425f9f54cfc60d6ec1bd32bda508cfdd1320332",
+    "crates/core/src/peripherals/uart.rs": "1f8bf9096ed9c043b7d5c57bc3fe855f7b9ca4b9299116199821d8fa2e65dfaa",
+    "crates/core/src/peripherals/uart/timed.rs": "8caec432e42d5544d923447509623e4921e79e130b50ad4049211ef720a48295",
+    "crates/core/src/peripherals/uart_transceiver.rs": "278b108efbcc657694f8342a4dd02a9b1fbd12a62c2e457d1b0cfdd8095422fa",
+    "crates/core/tests/stm32/l6360_digital.rs": "df6c9f6956ef99bf1fe1e5f742561211d71bbbd58ed93cea3232ddb38253e3c5",
+    "crates/core/tests/stm32/l6362a_digital.rs": "15520785d6138be5a6b123b981dd25224c3c19f9cd27028169133a3084cc2867",
+    "crates/core/tests/world/world_iolink_physical.rs": "0e14a193dc6d3cef29c84a80d23c832c9a1f717b1f5effcd07d01600e3977938",
+    "crates/core/src/bus/from_config.rs": "a962c998d08d2c953ae738dbaa3bfd67065e3100ae3d99a363bc5b32be4fec55",
+    "crates/core/tests/stm32l476_uid.rs": "9fe7f8ae2662e8b0065cd407792839cb829d65b3523d7ee90c00c092f4d369f7",
+    "configs/peripherals/stm32l476/uid.yaml": "2b0757b9cbbe0d7539e700f3ffb41e999b6f0d2c092652fa84c9bfe504a1c0c8"
+  }
+}

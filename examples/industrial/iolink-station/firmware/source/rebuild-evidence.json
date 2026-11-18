@@ -1,0 +1,325 @@
+{
+  "name": "iolink",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "source/package.py",
+        "--cube",
+        "/data/work-evidence/labwired-industrial-packages-20261118/iolink-deps/STM32CubeL4",
+        "--iolinki",
+        "/data/worktrees/iolinki-fixed-baud-recovery-20261118",
+        "--master",
+        "/data/worktrees/labwired-industrial-packages-20261118/core/third_party/iolinki-master"
+      ],
+      "exit": 0,
+      "seconds": 2.8118163209874183,
+      "log": "package.log"
+    },
+    {
+      "command": [
+        "python3",
+        "master/verify-deps.py",
+        "/data/work-evidence/labwired-industrial-packages-20261118/iolink-deps/STM32CubeL4",
+        "/data/worktrees/iolinki-fixed-baud-recovery-20261118",
+        "/data/worktrees/labwired-industrial-packages-20261118/core/third_party/iolinki-master"
+      ],
+      "exit": 0,
+      "seconds": 1.4500845710281283,
+      "log": "git-dependencies.log"
+    },
+    {
+      "command": [
+        "python3",
+        "source/build.py",
+        "--output-dir",
+        "/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/build",
+        "--verify-release"
+      ],
+      "exit": 0,
+      "seconds": 13.771345256012864,
+      "log": "build.log"
+    }
+  ],
+  "archive": {
+    "archive": "iolink-station-complete-source.tar.gz",
+    "bytes": 1420487,
+    "sha256": "7f4996a460be82e329c9e5564ce4a9092c3f2e218efee6572d4b6c8c85679d25",
+    "entries": [
+      {
+        "target": "master",
+        "path": "master/main.c",
+        "board": "nucleo-l476rg",
+        "language": "c",
+        "bytes": 2226,
+        "sha256": "88b26e4295505fa132a523109612e3b17fb02b65f0c23c7fbc3ba69d559a7718"
+      },
+      {
+        "target": "device",
+        "path": "device/main.c",
+        "board": "nucleo-l476rg",
+        "language": "c",
+        "bytes": 3402,
+        "sha256": "16c44e9ef1fca99ad0d6438a418294d8f9dafbabc99bc50ba0df6f665bae4bcc"
+      }
+    ]
+  },
+  "archiveFilesVerified": 253,
+  "alteredVendorRejected": "Dependency byte mismatch: deps/STM32CubeL4/Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h",
+  "extraVendorRejected": "Dependency inventory differs: ['deps/STM32CubeL4/unexpected-source.h']",
+  "build": {
+    "schema": "labwired.complete-source-rebuild.v1",
+    "compiler": "arm-none-eabi-gcc (15:13.2.rel1-2) 13.2.1 20231009",
+    "sourceBefore": {
+      "master/.gitignore": "07973732a1b026be0f8bccef6fcba5b542d72cc3b0c4b7f7c507a090067fa9cc",
+      "master/Makefile": "56869ebf6a59bf5d33cb909893f7d58964bc38b2df1f7fef30ec650a14b1df08",
+      "master/board_hal.c": "3d5d25f89e445f2085a2ba12ba7559a587e1a1c00a26ad1724ee010d04b4218f",
+      "master/board_hal.h": "edc8cca7e0fb3a37c12ae9693e6f94d1dc45c0c82bd906e7ce39b47c3b5e1140",
+      "master/board_pinmap.h": "139e047e45b8ebef977596845a839f3c55b22e3616b21158c244c35de3f9b93d",
+      "master/dependencies.json": "90e58231fbb5d74d655354ae2216f803ca33594c439f815733c7f0d4bf01c75e",
+      "master/fetch-deps.py": "8ecf5142ab25d981f504e89f1e22317c8ab0b909f9bdd15cae2e84191b841349",
+      "master/l6360.c": "1edb77aa2f54ecf988cd228f1a8b5ec52e64fde95de36cd079d2544d20394e21",
+      "master/l6360.h": "4e3611b21567823088de899deeb6df63bf7de100d77988c026db2a0163017c8d",
+      "master/main.c": "88b26e4295505fa132a523109612e3b17fb02b65f0c23c7fbc3ba69d559a7718",
+      "master/stm32l4xx_hal_conf.h": "9b8b243932a77cd076c849e3c1e2e6e8867896532a58c7a3a370f02c1018f823",
+      "master/tests/check_timing.py": "d7f4b7656c6fcb11a4238a23dd8576f46c99773237c3144bea3e92ae070d76fa",
+      "master/tests/test_l6360.c": "d961b1572e89906897ef871e5136d0e231be91059e1718b41c3d5dacda6e7c41",
+      "master/verify-deps.py": "384ae696cae9f382890e47b121d03da26084857fa0e9cd1bfc13f61c6eb0806f",
+      "common/station_clock.c": "8a37b02553e31646b652dfe039429845ec231ed2ee8c79b913c0cda4dd5812d6",
+      "common/station_clock.h": "b4ee9dd0ee9bc1acac9869b057b1740c6636e1a1ac88d130c1ccc3784aa42a07",
+      "common/station_profile.h": "4a171688d3c1dc5b69a643ba8626313512f2bfc8b2cba875f949400fb5598e7d",
+      "device/.gitignore": "020c2606e8ed484089c2083e0be438b9d0736bee1558a6b76af0d58bd23f69cf",
+      "device/Makefile": "eaaee09f0c4add4ae54a74c5f8d58a916b6f0b23084be33d607ddd773a56664f",
+      "device/board_hal.c": "3d146dcf10e79ad01af4e9c1d271c1c951bf6f2c8b121459cd22c9caddee9066",
+      "device/board_hal.h": "e5adf570976f5ecc229ed4801fb7750e55a05dd798a9521cd3ee49b541d9435b",
+      "device/main.c": "16c44e9ef1fca99ad0d6438a418294d8f9dafbabc99bc50ba0df6f665bae4bcc",
+      "tests/protocol_profile.c": "fad690b4d8c640011cf21f9b087747f1eae362a2e252989366a4add60990d38c",
+      "tests/run-protocol-profile.py": "89011db97d11fcbc64f59e92f9d99688af91d623043eccf66ec1a44038d1d7de",
+      "source/config.json": "6dcda315de53b95e4e9c634691ad33f2f1a381b7e7fe7f266c57b4d5de2212c7",
+      "source/toolchain.json": "3b1639912285683d1187ee91b3b1ac11eb93b5deaf4c31d6a6ebb16e34b4537f",
+      "source/vendor-manifest.json": "bf87db0654975f92ce178d6ca9d8d0863413d5d462838eac9c0fbc128c30b424",
+      "source/verify_export.py": "33b1353475812a565acb16ca6b146d4f807082636e18b8351e95a2c0570120cd",
+      "source/build.py": "392d0f6ef2daaf459c4eafd86ca1c486025f8c1c664ccbcb042749a191c06320",
+      "source/package.py": "c550ca95f8e03f6a997f2632e14ce4f7fb58edc960846d41b0c0de3b781296ba",
+      "source/BUILD.md": "3cfed2fdf2b052937aa4990588167741474fbc78e9019b71c6e26776e951185f",
+      "source/LICENSE-labwired-MIT": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    "targets": [
+      {
+        "target": "master",
+        "command": [
+          "make",
+          "-j2",
+          "all",
+          "CUBE=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/deps/STM32CubeL4",
+          "IOLINKI=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/deps/iolinki",
+          "MASTER=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/deps/iolinki-master",
+          "BUILD=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/build/master"
+        ],
+        "directory": "/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/master",
+        "exit": 0,
+        "seconds": 7.511829077033326,
+        "log": "master-build.log",
+        "artifacts": {
+          "elf": {
+            "path": "master/iolink-master.elf",
+            "bytes": 1629268,
+            "sha256": "6f23704aadd52f222c8f913b079b989e77471b42f13746d461c23e89fa007903",
+            "acceptedSha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9",
+            "matchesAccepted": false
+          },
+          "bin": {
+            "path": "master/iolink-master.bin",
+            "bytes": 23452,
+            "sha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7",
+            "acceptedSha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7",
+            "matchesAccepted": true
+          }
+        },
+        "flashImageMatchesAccepted": true,
+        "loadableImage": {
+          "entry": 134240861,
+          "machine": 40,
+          "flags": 83887104,
+          "segments": [
+            {
+              "virtualAddress": 134217728,
+              "physicalAddress": 134217728,
+              "fileBytes": 23436,
+              "memoryBytes": 23436,
+              "flags": 5,
+              "alignment": 4096,
+              "sha256": "647b660ca3f5055919cb2b37ef57685c732c86945b03a98874dea93dd0718401"
+            },
+            {
+              "virtualAddress": 536870912,
+              "physicalAddress": 134241164,
+              "fileBytes": 16,
+              "memoryBytes": 16,
+              "flags": 6,
+              "alignment": 4096,
+              "sha256": "1ffdfb0007e5eef0a6136bac50d062191044cf1eda10897cfd12fdb61fb03da6"
+            },
+            {
+              "virtualAddress": 536870928,
+              "physicalAddress": 536870928,
+              "fileBytes": 0,
+              "memoryBytes": 5520,
+              "flags": 6,
+              "alignment": 4096,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ]
+        },
+        "loadableImageMatchesAccepted": true
+      },
+      {
+        "target": "device",
+        "command": [
+          "make",
+          "-j2",
+          "all",
+          "CUBE=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/deps/STM32CubeL4",
+          "IOLINKI=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/deps/iolinki",
+          "MASTER=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/deps/iolinki-master",
+          "BUILD=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/build/device"
+        ],
+        "directory": "/data/work-evidence/labwired-industrial-packages-20261118/complete-source-iolink-v3/source/device",
+        "exit": 0,
+        "seconds": 5.8812776710256,
+        "log": "device-build.log",
+        "artifacts": {
+          "elf": {
+            "path": "device/iolink-device.elf",
+            "bytes": 1551044,
+            "sha256": "02a3c1d96171eef7b0129d2507babae3cb921ea0d4f0ab51e1cd34f5894b0693",
+            "acceptedSha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508",
+            "matchesAccepted": false
+          },
+          "bin": {
+            "path": "device/iolink-device.bin",
+            "bytes": 22324,
+            "sha256": "78f502bc6d249b389275b24481c20d81d018a7fa28c1b7f33258f5f0cadfdae0",
+            "acceptedSha256": "78f502bc6d249b389275b24481c20d81d018a7fa28c1b7f33258f5f0cadfdae0",
+            "matchesAccepted": true
+          }
+        },
+        "flashImageMatchesAccepted": true,
+        "loadableImage": {
+          "entry": 134239381,
+          "machine": 40,
+          "flags": 83887104,
+          "segments": [
+            {
+              "virtualAddress": 134217728,
+              "physicalAddress": 134217728,
+              "fileBytes": 22252,
+              "memoryBytes": 22252,
+              "flags": 5,
+              "alignment": 4096,
+              "sha256": "2ce2dfa5256f8f6ca1f02bd2b07bee5ae9ebc458f4b84da3da21cabe109b7bc2"
+            },
+            {
+              "virtualAddress": 536870912,
+              "physicalAddress": 134239980,
+              "fileBytes": 72,
+              "memoryBytes": 72,
+              "flags": 6,
+              "alignment": 4096,
+              "sha256": "bf8bfa5064c23c77d9436c37ca07868821388bbf0a4b1d472785e36020495498"
+            },
+            {
+              "virtualAddress": 536870984,
+              "physicalAddress": 536870984,
+              "fileBytes": 0,
+              "memoryBytes": 4976,
+              "flags": 6,
+              "alignment": 4096,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ]
+        },
+        "loadableImageMatchesAccepted": true
+      }
+    ],
+    "physicalHardwareTested": false,
+    "sourceAfter": {
+      "master/.gitignore": "07973732a1b026be0f8bccef6fcba5b542d72cc3b0c4b7f7c507a090067fa9cc",
+      "master/Makefile": "56869ebf6a59bf5d33cb909893f7d58964bc38b2df1f7fef30ec650a14b1df08",
+      "master/board_hal.c": "3d5d25f89e445f2085a2ba12ba7559a587e1a1c00a26ad1724ee010d04b4218f",
+      "master/board_hal.h": "edc8cca7e0fb3a37c12ae9693e6f94d1dc45c0c82bd906e7ce39b47c3b5e1140",
+      "master/board_pinmap.h": "139e047e45b8ebef977596845a839f3c55b22e3616b21158c244c35de3f9b93d",
+      "master/dependencies.json": "90e58231fbb5d74d655354ae2216f803ca33594c439f815733c7f0d4bf01c75e",
+      "master/fetch-deps.py": "8ecf5142ab25d981f504e89f1e22317c8ab0b909f9bdd15cae2e84191b841349",
+      "master/l6360.c": "1edb77aa2f54ecf988cd228f1a8b5ec52e64fde95de36cd079d2544d20394e21",
+      "master/l6360.h": "4e3611b21567823088de899deeb6df63bf7de100d77988c026db2a0163017c8d",
+      "master/main.c": "88b26e4295505fa132a523109612e3b17fb02b65f0c23c7fbc3ba69d559a7718",
+      "master/stm32l4xx_hal_conf.h": "9b8b243932a77cd076c849e3c1e2e6e8867896532a58c7a3a370f02c1018f823",
+      "master/tests/check_timing.py": "d7f4b7656c6fcb11a4238a23dd8576f46c99773237c3144bea3e92ae070d76fa",
+      "master/tests/test_l6360.c": "d961b1572e89906897ef871e5136d0e231be91059e1718b41c3d5dacda6e7c41",
+      "master/verify-deps.py": "384ae696cae9f382890e47b121d03da26084857fa0e9cd1bfc13f61c6eb0806f",
+      "common/station_clock.c": "8a37b02553e31646b652dfe039429845ec231ed2ee8c79b913c0cda4dd5812d6",
+      "common/station_clock.h": "b4ee9dd0ee9bc1acac9869b057b1740c6636e1a1ac88d130c1ccc3784aa42a07",
+      "common/station_profile.h": "4a171688d3c1dc5b69a643ba8626313512f2bfc8b2cba875f949400fb5598e7d",
+      "device/.gitignore": "020c2606e8ed484089c2083e0be438b9d0736bee1558a6b76af0d58bd23f69cf",
+      "device/Makefile": "eaaee09f0c4add4ae54a74c5f8d58a916b6f0b23084be33d607ddd773a56664f",
+      "device/board_hal.c": "3d146dcf10e79ad01af4e9c1d271c1c951bf6f2c8b121459cd22c9caddee9066",
+      "device/board_hal.h": "e5adf570976f5ecc229ed4801fb7750e55a05dd798a9521cd3ee49b541d9435b",
+      "device/main.c": "16c44e9ef1fca99ad0d6438a418294d8f9dafbabc99bc50ba0df6f665bae4bcc",
+      "tests/protocol_profile.c": "fad690b4d8c640011cf21f9b087747f1eae362a2e252989366a4add60990d38c",
+      "tests/run-protocol-profile.py": "89011db97d11fcbc64f59e92f9d99688af91d623043eccf66ec1a44038d1d7de",
+      "source/config.json": "6dcda315de53b95e4e9c634691ad33f2f1a381b7e7fe7f266c57b4d5de2212c7",
+      "source/toolchain.json": "3b1639912285683d1187ee91b3b1ac11eb93b5deaf4c31d6a6ebb16e34b4537f",
+      "source/vendor-manifest.json": "bf87db0654975f92ce178d6ca9d8d0863413d5d462838eac9c0fbc128c30b424",
+      "source/verify_export.py": "33b1353475812a565acb16ca6b146d4f807082636e18b8351e95a2c0570120cd",
+      "source/build.py": "392d0f6ef2daaf459c4eafd86ca1c486025f8c1c664ccbcb042749a191c06320",
+      "source/package.py": "c550ca95f8e03f6a997f2632e14ce4f7fb58edc960846d41b0c0de3b781296ba",
+      "source/BUILD.md": "3cfed2fdf2b052937aa4990588167741474fbc78e9019b71c6e26776e951185f",
+      "source/LICENSE-labwired-MIT": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    "sourceUnchanged": true,
+    "scope": "Exact flash bytes and ELF PT_LOAD addresses, bytes, memory extents, flags and entry comparison against the accepted image. ELF debug paths can differ after relocation; each ELF digest and equality result is explicit. No physical execution is implied."
+  },
+  "packagedLogs": [
+    {
+      "originalPath": "build.log",
+      "storedPath": "source/evidence/build.log.gz",
+      "originalBytes": 4039,
+      "originalSha256": "587159b2e8116b3a26e31484a88502cd6fd1a06c2c7586897875394dbebcd9cd",
+      "storedBytes": 1062,
+      "storedSha256": "09511f0e59d8d828b1257e86602b6d05ef5316519ed470e91c38edb999ef7151"
+    },
+    {
+      "originalPath": "git-dependencies.log",
+      "storedPath": "source/evidence/git-dependencies.log.gz",
+      "originalBytes": 70,
+      "originalSha256": "a5e9a3ef5ba5560ffe870b577a982a99749b617cb6e130ce648fbf3601ec5ecc",
+      "storedBytes": 89,
+      "storedSha256": "ee60e790678c1c93a7be40b470f14e09b54cce3a6ebe7d49180d14a71b983775"
+    },
+    {
+      "originalPath": "package.log",
+      "storedPath": "source/evidence/package.log.gz",
+      "originalBytes": 686,
+      "originalSha256": "991d3d4bc7d87c77691dc70f11e6d53910657dfb11b2c3ed24d70fda1d52f271",
+      "storedBytes": 365,
+      "storedSha256": "28dc1b4c2e9ef4d223e22a57095d47a8b7b6b22d68b0c0427f0d9fcf3098943f"
+    },
+    {
+      "originalPath": "build/device-build.log",
+      "storedPath": "source/evidence/device-build.log.gz",
+      "originalBytes": 40544,
+      "originalSha256": "06008471f0c5ca0893d65cd2ee4818e9df46cc8fa1c007149dcd40aa8e4dc1cd",
+      "storedBytes": 1322,
+      "storedSha256": "de79f39954482e78dc488b1e71492e59bacaa793f7264c8c73f10cfb61a5a83c"
+    },
+    {
+      "originalPath": "build/master-build.log",
+      "storedPath": "source/evidence/master-build.log.gz",
+      "originalBytes": 37768,
+      "originalSha256": "cb2d4193f3d93209b7eb1bb1e4fd303971157c4c749f13bd3f937f04e52e72f8",
+      "storedBytes": 1247,
+      "storedSha256": "4ae9715e69a290fda0ee86d472b03c34cc1f0a240b2cadb23f7aebdc88a91204"
+    }
+  ]
+}
