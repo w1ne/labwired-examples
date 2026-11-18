@@ -137,7 +137,12 @@ It does not replace wake-up with a UART 0x55 byte.
 
 The six-pin input PCB connector **J1** connects to the Nucleo Morpho
 underside. Fit the mating XHP-6 shell with SXH-001T-P0.6 contacts; terminate
-the Nucleo ends with M20-1060100 shells and M20-1180042 contacts.
+the Nucleo ends with four M20-1060100 single shells, one M20-1060200
+two-position shell, and six M20-1180042 contacts per device. Put CN10.28
+(QH, white) and CN10.30 (CLK, blue) in the shared two-position shell; this
+avoids interference between adjacent single housings. Harwin specifies
+5.50–6.30 mm mating pin length. Use the mount's controlled insertion stop;
+do not force a housing flush against a longer underside header tail.
 
 | Input PCB J1 | Signal | NUCLEO-L476RG |
 |---|---|---|
