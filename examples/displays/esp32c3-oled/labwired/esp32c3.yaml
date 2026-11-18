@@ -1,0 +1,385 @@
+# LabWired - Firmware Simulation Platform
+# Copyright (C) 2026 Andrii Shylenko
+#
+# This software is released under the MIT License.
+# See the LICENSE file in the project root for full license information.
+
+name: "esp32c3"
+arch: "riscv"
+registers_count: 50
+# Simulated core clock, Hz — see ChipDescriptor::cpu_hz. Self-timed devices
+# scale their datasheet microseconds by it; a slower board overrides it.
+# Matches the engine's C3 constants (esp32c3/uart.rs CPU_CLOCK_HZ,
+# esp32c3/i2c.rs CPU_CLK_HZ, esp32c3/rtc_timer.rs CPU_HZ) and the
+# `cpu_hz: 160_000_000` every in-tree C3 system manifest declares.
+cpu_hz: 160_000_000
+
+flash:
+  base: 0x42000000
+  # 4 MiB (the DevKitM-1's module), spelled in KB because `parse_size` reads MB
+  # as 10^6 — "4MB" would be 4_000_000, 194_304 bytes short of the part, which
+  # is invisible until an image uses the top of flash. Gated by
+  # crates/core/src/tests/chip_memory_sizes.rs.
+  size: "4096KB"
+ram:
+  base: 0x3FC80000
+  size: "400KB"
+# Additional CPU-visible memory windows real IDF apps link into. On silicon the
+# C3's 400KB SRAM is reachable via both the data bus (the `ram` window above,
+# 0x3FC80000) and the instruction bus (IRAM, 0x4037C000); flash is cached at
+# both the IROM window (`flash`, 0x42000000, code) and the DROM window
+# (0x3C000000, rodata). Without these, an IDF app's entry (IRAM) and rodata
+# (DROM) segments fall outside the memory map and never load.
+memory_regions:
+  - name: "iram"
+    base: 0x4037C000
+    size: "384KB"
+  # DROM: the cache window flash rodata is mapped into. This is an ADDRESS
+  # WINDOW, not the flash behind it — the C3 TRM's external-memory data region
+  # is 0x3C00_0000..0x3C7F_FFFF, i.e. 8 MiB, on a part that carries 4 MiB of
+  # flash. So it is 8 MiB exactly, ending at 0x3C800000, and spelled in KB for
+  # the same reason as `flash` above: "8MB" was 8_000_000, which put the top of
+  # the window at 0x3C7A1200 — an address no C3 boundary sits on.
+  - name: "drom"
+    base: 0x3C000000
+    size: "8192KB"
+  # RTC FAST memory (8KB): CPU-visible retention RAM the IDF uses for boot-time
+  # timekeeping (esp_rtc_get_time_us reads s_boot_time here) and deep-sleep
+  # stubs. Unmapped, esp_rtc_get_time_us faults during cpu_start.
+  - name: "rtc_fast"
+    base: 0x50000000
+    size: "8KB"
+  # Mask ROM (the C3 calls ROM routines during early boot). The dump is the
+  # chip's copyrighted mask ROM, so it's loaded from a path in
+  # LABWIRED_ESP32C3_ROM rather than committed; region stays zero if unset.
+  # Dump it from live silicon: openocd dump_image rom.bin 0x40000000 0x60000.
+  - name: "rom"
+    base: 0x40000000
+    size: "384KB"
+    image_env: "LABWIRED_ESP32C3_ROM"
+  # ROM constant data (jump tables, function-pointer tables the ROM code reads).
+  # Without it, ROM jump tables read zeros and the ROM jumps to garbage.
+  # Dump: openocd dump_image rom_data.bin 0x3FF00000 0x20000.
+  - name: "rom_data"
+    base: 0x3FF00000
+    size: "128KB"
+    image_env: "LABWIRED_ESP32C3_ROM_DATA"
+peripherals:
+  # The Espressif UART IP (crates/core/src/peripherals/esp32c3/uart.rs), NOT the
+  # vendor-neutral `uart` type — that resolves to the STM32 register map, on
+  # which the C3's FIFO writes hit a status register, STATUS reads back 0 (so
+  # the driver believes the 128-byte TX FIFO is always empty) and nothing ever
+  # asserts the UART interrupt. ESP-IDF's blocking `uart_tx_all()` then waits
+  # forever on `tx_fifo_sem` for any write longer than the FIFO, wedging the
+  # sketch on its first `Serial.print` over 128 bytes.
+  - id: "uart0"
+    type: "esp32c3_uart"
+    irq: 21 # ETS_UART0_INTR_SOURCE
+    base_address: 0x60000000
+    size: "512B"
+    config:
+      debug_schema: "../peripherals/esp32c3/uart0.yaml"
+  - id: "gpio"
+    type: "esp32c3_gpio"
+    base_address: 0x60004000
+    size: "4KB"
+    config:
+      debug_schema: "../peripherals/esp32c3/gpio.yaml"
+  - id: "timg0"
+    type: "esp32_timg"
+    base_address: 0x6001F000
+    config:
+      debug_schema: "../peripherals/esp32c3/timg0.yaml"
+  - id: "interrupt_core0"
+    type: "declarative"
+    base_address: 0x600C2000
+    config:
+      path: "../peripherals/esp32c3/interrupt_core0.yaml"
+  # --- Blocks onboarded 2026-06-11: descriptors silicon-corroborated against a
+  # --- live ESP32-C3 (rev v0.4) reset-state capture (366/423 reg reset values
+  # --- matched; the rest are ROM-touched/dynamic). See examples/esp32c3/VALIDATION.md.
+  - id: "uart1"
+    type: "esp32c3_uart"
+    irq: 22 # ETS_UART1_INTR_SOURCE
+    base_address: 0x60010000
+    size: "512B"
+    config:
+      debug_schema: "../peripherals/esp32c3/uart1.yaml"
+  - id: "timg1"
+    type: "esp32_timg"
+    base_address: 0x60020000
+    config:
+      debug_schema: "../peripherals/esp32c3/timg1.yaml"
+  - id: "system"
+    type: "declarative"
+    base_address: 0x600C0000
+    config:
+      path: "../peripherals/esp32c3/system.yaml"
+  - id: "rtc_cntl"
+    type: "declarative"
+    base_address: 0x60008000
+    config:
+      path: "../peripherals/esp32c3/rtc_cntl.yaml"
+  - id: "apb_ctrl"
+    type: "declarative"
+    base_address: 0x60026000
+    config:
+      path: "../peripherals/esp32c3/apb_ctrl.yaml"
+  # The NATIVE `peripherals::esp32s3::systimer::Systimer` (the C3 and S3
+  # SYSTIMER are the same IP: all 30 C3 registers agree offset-for-offset with
+  # the S3 SVD, which adds 6 REAL_TARGETn_* the C3 does not have), built by the
+  # C3 factory with the C3's matrix sources (TARGET0..2 = 37..39). Every path
+  # gets the live 16 MHz counter -- bare-ELF fast boot and world nodes as well
+  # as ROM boot -- so esp-hal's `Delay` sees time pass. The native model
+  # advertises no registers, so name them from the C3 descriptor -- the part
+  # we are actually simulating.
+  - id: "systimer"
+    type: "esp32c3_systimer"
+    base_address: 0x60023000
+    config:
+      path: "../peripherals/esp32c3/systimer.yaml"
+      debug_schema: "../peripherals/esp32c3/systimer.yaml"
+  - id: "io_mux"
+    type: "esp32c3_io_mux"
+    base_address: 0x60009000
+    config:
+      debug_schema: "../peripherals/esp32c3/io_mux.yaml"
+      path: "../peripherals/esp32c3/io_mux.yaml"
+  # Behavioral I²C0 controller (command-list engine). The C3 I²C is the same
+  # Espressif IP family as the S3, so this drives attached I2cDevice slaves
+  # declared in a system.yaml `external_devices` (connection: "i2c0") — the
+  # foundation for running real I²C sensors (e.g. MLX90640) on a C3 in sim.
+  # The register layout still matches ../peripherals/esp32c3/i2c0.yaml (the SVD
+  # descriptor that this model was diffed against); the behavioral model adds
+  # the transaction engine the declarative descriptor lacks.
+  - id: "i2c0"
+    type: "esp32c3_i2c"
+    base_address: 0x60013000
+    size: "4KB"
+    config:
+      debug_schema: "../peripherals/esp32c3/i2c0.yaml"
+  # GP-SPI2 (FSPI) behavioral master: the CPU/W-buffer transaction engine
+  # (crates/core/src/peripherals/esp32c3/spi.rs). Same Espressif GP-SPI IP
+  # family as the S3 SPI2; the register layout still matches
+  # ../peripherals/esp32c3/spi2.yaml (the SVD descriptor it was diffed against),
+  # and the behavioral model adds the CMD.USR launch handshake + TRANS_DONE
+  # latching the declarative descriptor lacks.
+  - id: "spi2"
+    type: "esp32c3_spi"
+    base_address: 0x60024000
+    size: "4KB"
+    config:
+      debug_schema: "../peripherals/esp32c3/spi2.yaml"
+  # Behavioral LEDC (LED PWM) controller
+  # (crates/core/src/peripherals/esp32c3/ledc.rs): the four low-speed timers
+  # run as live up-counters clocked by elapsed cycles, each wrapping at its
+  # programmed 2^DUTY_RES period and latching LSTIMERx_OVF — a real timer the
+  # declarative descriptor lacks. The register layout still matches
+  # ../peripherals/esp32c3/ledc.yaml (the SVD descriptor it was diffed against).
+  - id: "ledc"
+    type: "esp32c3_ledc"
+    base_address: 0x60019000
+    size: "1KB"
+    config:
+      debug_schema: "../peripherals/esp32c3/ledc.yaml"
+  # Behavioral RMT (instant TX_END + TX_START count / LogicTap edges).
+  # Arduino LED_BUILTIN / pin 30 → rgbLedWrite → RMT TX. Declarative SVD
+  # stub never completed TX → digitalWrite hung; dual-stack add in test left
+  # led_watch on the stub while MMIO hit the twin (edges=0, rmt count green).
+  - id: "rmt"
+    type: "esp32c3_rmt"
+    base_address: 0x60016000
+    size: "2KB"
+    config:
+      debug_schema: "../peripherals/esp32c3/rmt.yaml"
+  # --- Estate completion 2026-06-11: the remaining SVD-documented blocks the
+  # --- ESP32-C3 silicon exposes. Bases are authoritative from the ESP32-C3 SVD
+  # --- (tests/fixtures/real_world/esp32c3.svd). Reset values silicon-validated
+  # --- against the live C3 (rev v0.4, MAC 38:44:be:42:f5:58); see
+  # --- examples/esp32c3/VALIDATION.md and the reset-conformance test.
+  # Flash/PSRAM SPI controllers
+  - id: "spi1"
+    type: "declarative"
+    base_address: 0x60002000
+    config:
+      path: "../peripherals/esp32c3/spi1.yaml"
+  - id: "spi0"
+    type: "declarative"
+    base_address: 0x60003000
+    config:
+      path: "../peripherals/esp32c3/spi0.yaml"
+  # GPIO sigma-delta (narrow window inside the GPIO range)
+  - id: "gpio_sd"
+    type: "declarative"
+    base_address: 0x60004F00
+    config:
+      path: "../peripherals/esp32c3/gpio_sd.yaml"
+  # eFuse controller
+  - id: "efuse"
+    type: "declarative"
+    base_address: 0x60008800
+    config:
+      path: "../peripherals/esp32c3/efuse.yaml"
+  # UART DMA bridges
+  - id: "uhci1"
+    type: "declarative"
+    base_address: 0x6000C000
+    config:
+      path: "../peripherals/esp32c3/uhci1.yaml"
+  - id: "uhci0"
+    type: "declarative"
+    base_address: 0x60014000
+    config:
+      path: "../peripherals/esp32c3/uhci0.yaml"
+  # Radio baseband control block (documented control path; WiFi/BT MAC remains
+  # thunk-backed — Espressif does not publish those registers).
+  - id: "bb"
+    type: "declarative"
+    base_address: 0x6001D000
+    config:
+      path: "../peripherals/esp32c3/bb.yaml"
+  # TWAI / CAN controller — the S3 SJA1000-style TWAI behavioural model.
+  # esp-idf release/v4.4 soc/esp32c3/twai_struct.h is byte-identical to the
+  # S3's apart from comments (same 0x00..0x7C word map, MODE/CMD/STATUS/INT/
+  # BUS_TIMING bits), so this is a true reuse, not "offset-identical".
+  # irq 25 = ETS_TWAI_INTR_SOURCE (soc/esp32c3 periph_defs.h). Not modelled:
+  # the SYSTEM_PERIP_CLK_EN0/RST_EN0 bit 19 gate (ungated, like the S3 row);
+  # the silicon reset oracle asserts no TWAI register (the post-ROM capture
+  # reads the gated-off window as bus junk 0x0008fe10).
+  - id: "twai0"
+    type: "esp32s3_twai"
+    base_address: 0x6002B000
+    size: "4KB"
+    irq: 25 # ETS_TWAI_INTR_SOURCE
+    config:
+      debug_schema: "../peripherals/esp32c3/twai0.yaml"
+  # I2S
+  - id: "i2s0"
+    type: "declarative"
+    base_address: 0x6002D000
+    config:
+      path: "../peripherals/esp32c3/i2s0.yaml"
+  # Bluetooth LE link-layer / baseband (0x6003_1000, 4 KiB). Behavioral model
+  # (crates/core/src/peripherals/esp32c3/bt.rs): a register-backed window plus
+  # the Bluetooth native clock (CLKN, 312.5 us) + sub-tick fine counter that the
+  # BT ROM's event scheduler reads and re-reads around arming its next-event
+  # comparator. Espressif publishes nothing for this window, so the whole thing
+  # was reverse-engineered from a live ESP32-C3 running Arduino BLEDevice::init()
+  # over OpenOCD watchpoints (silicon capture 2026-08-02) -- provenance and the
+  # explicit list of what is NOT modelled are in the module docs. Before this
+  # entry the window was unmapped and BLE init died on the first store
+  # (`unmapped_mmio` @ 0x60031204).
+  # It also raises real interrupts: the three RW-BLE timer comparators
+  # (+0x0E4 / +0x0E8 / +0x0EC) latch INTRAWSTAT, INTSTAT = raw & INTCNTL drives
+  # interrupt-matrix source 8 (RWBLE_IRQ), and the ROM ISR's IRQ FIFO (+0x2D8)
+  # is modelled so r_rwble_isr can actually dispatch. No `irq:` key here on
+  # purpose -- the level is exported through matrix_irq_sources, like wifi_mac.
+  # Radio-event interrupts (sch_prog tx/rx/end/skip) are NOT raised: there is
+  # no RF in this model, and that is where an advertising run now parks.
+  - id: "bt"
+    type: "esp32c3_bt"
+    base_address: 0x60031000
+    size: "4KB"
+  # (Hardware RNG is not a separate window: RNG_DATA lives at APB_CTRL+0xB0,
+  # already modeled as apb_ctrl's RND_DATA register.)
+  # Crypto accelerator estate
+  - id: "aes"
+    type: "declarative"
+    base_address: 0x6003A000
+    config:
+      path: "../peripherals/esp32c3/aes.yaml"
+  - id: "sha"
+    type: "declarative"
+    base_address: 0x6003B000
+    config:
+      path: "../peripherals/esp32c3/sha.yaml"
+  - id: "rsa"
+    type: "declarative"
+    base_address: 0x6003C000
+    config:
+      path: "../peripherals/esp32c3/rsa.yaml"
+  - id: "ds"
+    type: "declarative"
+    base_address: 0x6003D000
+    config:
+      path: "../peripherals/esp32c3/ds.yaml"
+  - id: "hmac"
+    type: "declarative"
+    base_address: 0x6003E000
+    config:
+      path: "../peripherals/esp32c3/hmac.yaml"
+  # GDMA (general DMA): three IN/OUT channel pairs walking descriptor lists
+  # (crates/core/src/peripherals/esp32c3/gdma.rs). A channel bound to the
+  # GP-SPI2 (PERI_SEL = 0) moves the SPI's DMA data (SPI_DMA_CONF.DMA_TX_ENA /
+  # DMA_RX_ENA), MEM_TRANS_EN copies memory to memory; channel n raises
+  # interrupt-matrix source 44 + n. Register map: ../peripherals/esp32c3/dma.yaml.
+  - id: "dma"
+    type: "esp32c3_gdma"
+    base_address: 0x6003F000
+    size: "4KB"
+    config:
+      debug_schema: "../peripherals/esp32c3/dma.yaml"
+  # SAR ADC behavioral one-shot engine
+  # (crates/core/src/peripherals/esp32c3/apb_saradc.rs): a ONETIME_SAMPLE
+  # conversion produces a channel-dependent result + DONE handshake. The
+  # register layout matches ../peripherals/esp32c3/apb_saradc.yaml (the SVD
+  # descriptor it was built against).
+  - id: "apb_saradc"
+    type: "esp32c3_apb_saradc"
+    base_address: 0x60040000
+    size: "4KB"
+    config:
+      debug_schema: "../peripherals/esp32c3/apb_saradc.yaml"
+  # USB Serial/JTAG (the on-chip debug/console port)
+  - id: "usb_device"
+    type: "declarative"
+    base_address: 0x60043000
+    config:
+      path: "../peripherals/esp32c3/usb_device.yaml"
+  # Security / permission control
+  - id: "sensitive"
+    type: "declarative"
+    base_address: 0x600C1000
+    config:
+      path: "../peripherals/esp32c3/sensitive.yaml"
+  # External memory / cache controller
+  - id: "extmem"
+    type: "declarative"
+    base_address: 0x600C4000
+    config:
+      path: "../peripherals/esp32c3/extmem.yaml"
+  # Flash XTS-AES encryption
+  - id: "xts_aes"
+    type: "declarative"
+    base_address: 0x600CC000
+    config:
+      path: "../peripherals/esp32c3/xts_aes.yaml"
+  # Debug assist
+  - id: "assist_debug"
+    type: "declarative"
+    base_address: 0x600CE000
+    config:
+      path: "../peripherals/esp32c3/assist_debug.yaml"
+  # --- Radio (WiFi/BT) register-backed model, REVERSE-ENGINEERED from live
+  # --- silicon (not SVD/TRM). See docs/esp32c3_radio_reverse_engineering.md.
+  # --- Layer 1: config windows are register-backed so driver writes succeed
+  # --- instead of faulting. reset_value = cold (pre-phy_enable) silicon read.
+  # --- (Behavioral MAC status/DMA = layer 2, separate.)
+  - id: "radio_fe"
+    type: "declarative"
+    base_address: 0x60006000
+    config:
+      path: "../peripherals/esp32c3/radio_fe.yaml"
+  - id: "radio_nrx"
+    type: "declarative"
+    base_address: 0x6001CC00
+    config:
+      path: "../peripherals/esp32c3/radio_nrx.yaml"
+  - id: "wifi_mac"
+    type: "declarative"
+    base_address: 0x60033000
+    size: "12KB"
+    config:
+      path: "../peripherals/esp32c3/wifi_mac.yaml"
+  # (ROM is now a real memory_region above, loaded from LABWIRED_ESP32C3_ROM,
+  # so the C3's actual mask-ROM routines execute during boot.)

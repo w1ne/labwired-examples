@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "board": "esp32c3-oled-lab",
+  "parts": [
+    {
+      "id": "note",
+      "type": "note",
+      "x": 100,
+      "y": 260,
+      "rotate": 0,
+      "attrs": {
+        "text": "XIAO ESP32C3 + Adafruit 326 OLED. SDA=D2/GPIO4, SCL=D3/GPIO5; close SJ3 for address 0x3C.\nTry: Run and watch the counter advance from 19:00:00.\nThis diagram shows the functional connections. The native PCB and package BOM include the carrier sockets, connector and pull-ups."
+      }
+    },
+    {
+      "id": "mcu",
+      "type": "seeed-xiao-esp32c3",
+      "x": 100,
+      "y": 100,
+      "rotate": 0,
+      "attrs": {
+        "simulationSpeed": "turbo"
+      },
+      "manufacturerPart": "seeed-113991054"
+    },
+    {
+      "id": "oled",
+      "type": "oled-ssd1306",
+      "manufacturerPart": "adafruit-326",
+      "x": 290,
+      "y": 120,
+      "rotate": 0,
+      "attrs": {
+        "i2c_address": "0x3C"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "from": {
+        "part": "mcu",
+        "pin": "3V3"
+      },
+      "to": {
+        "part": "oled",
+        "pin": "VCC"
+      },
+      "color": "#FF6B6B"
+    },
+    {
+      "from": {
+        "part": "mcu",
+        "pin": "GND"
+      },
+      "to": {
+        "part": "oled",
+        "pin": "GND"
+      },
+      "color": "#888888"
+    },
+    {
+      "from": {
+        "part": "mcu",
+        "pin": "D3"
+      },
+      "to": {
+        "part": "oled",
+        "pin": "SCL"
+      },
+      "color": "#5BD8FF"
+    },
+    {
+      "from": {
+        "part": "mcu",
+        "pin": "D2"
+      },
+      "to": {
+        "part": "oled",
+        "pin": "SDA"
+      },
+      "color": "#B07BFF"
+    }
+  ],
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "t_IaE1EE",
+    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "version": 1,
+    "title": "OLED Rev A enclosure candidate",
+    "pcbBindings": [
+      {
+        "id": "carrier",
+        "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+        "cadPart": "carrier-pcba-envelope"
+      }
+    ],
+    "electronics": {
+      "version": 1,
+      "displays": [
+        {
+          "id": "oled-screen",
+          "component": "oled",
+          "part": "oled-display-surface",
+          "face": "+z",
+          "rotation": 0
+        }
+      ],
+      "inputs": []
+    },
+    "meshProvenance": "2e30f8a30c441c34fb4a7d81d1a17f82672127c961e4889f56bc15a28345f3d5"
+  },
+  "assembly": {
+    "version": 1,
+    "source": "curated",
+    "intro": "Rev A assembly candidate: the routed carrier and firmware pass their checks. Enclosure path review and physical fit remain open. The display is a clock demonstration: every reset starts at 19:00:00. Use the full package BOM and native files for this revision.",
+    "resources": [
+      {
+        "title": "Device package and build instructions",
+        "url": "https://github.com/w1ne/labwired-examples/tree/esp32c3-oled-rev-a-candidate-1/examples/displays/esp32c3-oled"
+      },
+      {
+        "title": "Complete package download",
+        "url": "https://github.com/w1ne/labwired-examples/releases/tag/esp32c3-oled-rev-a-candidate-1"
+      },
+      {
+        "title": "Verified firmware release v19",
+        "url": "https://github.com/w1ne/labwired-core/releases/tag/firmware-demos-v19"
+      }
+    ],
+    "steps": [
+      {
+        "id": "carrier",
+        "n": 1,
+        "kind": "place",
+        "title": "Assemble the routed carrier",
+        "description": "Order the 70 \u00d7 45 mm, 1.6 mm carrier from the package Gerbers. Fit its listed sockets, two pull-ups and JST SH connector. Use the specified round-pin module headers; square pins do not fit the XIAO holes. Inspect the solder joints before inserting the controller.",
+        "partIds": [
+          "mcu"
+        ],
+        "extras": [
+          "Carrier PCB and electronics BOM",
+          "Soldering tools"
+        ]
+      },
+      {
+        "id": "address",
+        "n": 2,
+        "kind": "configure",
+        "title": "Set the OLED address to 0x3C",
+        "description": "Use the Adafruit 326 STEMMA QT revision. Close SJ3 / ADDR to connect SA0 to GND, and keep SJ1 / SJ2 in their factory I2C position. Leave the optional eight-pin header unpopulated so it fits the enclosure.",
+        "partIds": [
+          "oled"
+        ]
+      },
+      {
+        "id": "power",
+        "n": 3,
+        "kind": "power",
+        "title": "Check the power path",
+        "description": "With USB disconnected, check the carrier for a 3V3-to-GND short. Fit the XIAO with its USB-C connector facing the enclosure opening. The carrier feeds 3V3 and GND through the STEMMA QT cable; battery pads and the 5 V header remain unused.",
+        "partIds": [
+          "mcu",
+          "oled"
+        ],
+        "wires": [
+          {
+            "from": {
+              "part": "mcu",
+              "pin": "3V3"
+            },
+            "to": {
+              "part": "oled",
+              "pin": "VCC"
+            }
+          },
+          {
+            "from": {
+              "part": "mcu",
+              "pin": "GND"
+            },
+            "to": {
+              "part": "oled",
+              "pin": "GND"
+            }
+          }
+        ]
+      },
+      {
+        "id": "i2c",
+        "n": 4,
+        "kind": "wire",
+        "title": "Connect the display cable",
+        "description": "Plug the 100 mm STEMMA QT cable into the carrier and OLED. Carrier SDA is XIAO D2 / GPIO4; SCL is D3 / GPIO5. These are explicit firmware assignments, not the XIAO default I2C D4 / D5 pins.",
+        "partIds": [
+          "mcu",
+          "oled"
+        ],
+        "wires": [
+          {
+            "from": {
+              "part": "mcu",
+              "pin": "D3"
+            },
+            "to": {
+              "part": "oled",
+              "pin": "SCL"
+            }
+          },
+          {
+            "from": {
+              "part": "mcu",
+              "pin": "D2"
+            },
+            "to": {
+              "part": "oled",
+              "pin": "SDA"
+            }
+          }
+        ],
+        "extras": [
+          "Adafruit 4210 STEMMA QT cable, 100 mm"
+        ]
+      },
+      {
+        "id": "verify-sim",
+        "n": 5,
+        "kind": "verify",
+        "title": "Run the packaged firmware",
+        "description": "Press Run. Confirm the display changes from 19:00:00 to 19:00:01 and Serial reports the corresponding WORKSHOP_TICK lines. This checks the simulated MCU and display; inspect the physical wiring separately.",
+        "partIds": [
+          "mcu",
+          "oled"
+        ]
+      },
+      {
+        "id": "flash",
+        "n": 6,
+        "kind": "deploy",
+        "title": "Flash and check the open assembly",
+        "description": "Connect a USB-C data cable and build for Seeed XIAO ESP32C3. Flash from LabWired or use the package PlatformIO command. Keep BOOT and RESET accessible. Confirm address 0x3C, visible second changes and matching serial ticks before fitting the lid.",
+        "partIds": [
+          "mcu",
+          "oled"
+        ],
+        "extras": [
+          "USB-C data cable"
+        ]
+      },
+      {
+        "id": "case",
+        "n": 7,
+        "kind": "place",
+        "title": "Fit the carrier and display",
+        "description": "Print the base and lid in the documented orientation. Attach the carrier with the specified M2.5 hardware and the OLED to the lid with M2 hardware. Route the display cable through the service space. Keep the glass, USB shell and components clear of the case.",
+        "partIds": [
+          "mcu",
+          "oled"
+        ],
+        "extras": [
+          "Printed base and lid",
+          "Mechanical BOM hardware"
+        ]
+      },
+      {
+        "id": "final-check",
+        "n": 8,
+        "kind": "verify",
+        "title": "Close and check the device",
+        "description": "Close the lid without compressing the cable or display. Check that the USB plug seats fully, the display is visible through the window and the lid can be removed for service. Power-cycle: the display must restart at 19:00:00 and continue counting. Record actual fit and bring-up results against the package checklist.",
+        "partIds": [
+          "mcu",
+          "oled"
+        ]
+      }
+    ]
+  }
+}

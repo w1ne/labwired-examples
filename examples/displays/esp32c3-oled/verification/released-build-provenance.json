@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-11-18T00:47:30Z",
+  "coreCommit": "941a6c5caf0c53b66aa5af9290e5ecba5972ec72",
+  "host": "Linux 6.8.0-149-generic x86_64",
+  "artifacts": [
+    {"filename":"demo-esp32c3-display-workshop.elf","sha256":"f96445d5169e1ee70d4c96da095f5498854fdedcf1c23d706ba2e75ed07f1776","sizeBytes":6307072,"source":"core/examples/esp32c3-display-workshop-arduino (via packages/playground/firmware/esp32c3-oled)","command":"pio run -e xiao_oled_128x64","toolchain":"PlatformIO Core, version 6.2.0"},
+    {"filename":"demo-esp32c3-display-workshop-flash.bin","sha256":"7e78e313a44ea591ad44c2fdd33072ff383975e1b23877c0ed6d258bde818cde","sizeBytes":350928,"source":"core/examples/esp32c3-display-workshop-arduino (via packages/playground/firmware/esp32c3-oled)","command":"pio run -e xiao_oled_128x64 && esptool.py merge_bin && validate-c3-flash-image.mjs","toolchain":"PlatformIO Core, version 6.2.0"},
+    {"filename":"demo-esp32c3-oled-lab.lwrs","sha256":"595f25f7de3f008d6c7c80ddf032b2bcf013f3f410f3520a968b18398d936861","sizeBytes":1339632,"source":"packages/playground/firmware/esp32c3-oled xiao_oled_128x64; unchanged core workshop sketch","command":"labwired test --rom-boot --capture-app-entry (10M step limit); elf=f96445d5169e1ee70d4c96da095f5498854fdedcf1c23d706ba2e75ed07f1776 flash=7e78e313a44ea591ad44c2fdd33072ff383975e1b23877c0ed6d258bde818cde rom=b62bce949b045d3b911eb4a2cc80ca0d5645fc2f66055286532641a0b8b7d000 drom=bb66c9b542697ef2f5fcb2646ec2cf56af3577e11569501513aaabd7830e5c4c","toolchain":"PlatformIO Core, version 6.2.0; labwired-cli 0.26.0"}
+  ]
+}

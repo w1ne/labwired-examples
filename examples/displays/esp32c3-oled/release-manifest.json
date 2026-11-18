@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "package_id": "esp32c3-oled-rev-a-candidate-1",
+  "status": "engineering-candidate",
+  "date": "2026-11-18",
+  "canonical_lab_url": "https://app.labwired.com/?lab=esp32c3-oled-lab",
+  "tracker": "https://github.com/w1ne/labwired/issues/3550",
+  "firmware_release": "firmware-demos-v19",
+  "firmware_manifest": "firmware/release-manifest.json",
+  "native_pcb_ref": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "t_IaE1EE",
+    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "version": 1,
+    "title": "OLED Rev A enclosure candidate",
+    "pcbBindings": [
+      {
+        "id": "carrier",
+        "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+        "cadPart": "carrier-pcba-envelope"
+      }
+    ],
+    "electronics": {
+      "version": 1,
+      "displays": [
+        {
+          "id": "oled-screen",
+          "component": "oled",
+          "part": "oled-display-surface",
+          "face": "+z",
+          "rotation": 0
+        }
+      ],
+      "inputs": []
+    },
+    "meshProvenance": "2e30f8a30c441c34fb4a7d81d1a17f82672127c961e4889f56bc15a28345f3d5"
+  },
+  "physical_hardware_tested": false,
+  "open_acceptance_items": [
+    "Resolve the KernelCAD design_loop embedded STEP staging error and obtain a green receipt.",
+    "Complete full assembly-path verification; existing bounded attempts returned unknown or timed out.",
+    "Build and measure a physical prototype, including 0.277 mm nominal glass/post gap, USB overmold, cable routing, short-spacer screw clearance and module revision."
+  ],
+  "verification": {
+    "native_pcb": "manufacturing/validation.json",
+    "native_import": "manufacturing/native-import.json",
+    "package_rom_boot": "verification/package-rom-boot-manifest.json",
+    "released_browser_wasm": "verification/released-wasm-acceptance.json",
+    "mechanical": "cad/release.json",
+    "released_rom_boot": "verification/released-rom-boot-manifest.json"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 54,
+      "sha256": "a0ce6ed9391d374633a9956e8a3e4aac04e33a84e11efee30d3d3efb55dd5cde"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1098,
+      "sha256": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12107,
+      "sha256": "5482cc55646091a86d3416da279534aee3b9afff324eb0082bb70f700f27ffac"
+    },
+    {
+      "path": "bom.csv",
+      "bytes": 3918,
+      "sha256": "3dce94167f2abfa649b5d4f3be40a0d31025fd9cead18d95c792433d03c5d089"
+    },
+    {
+      "path": "cad/assembly.txt",
+      "bytes": 6364,
+      "sha256": "08092e98e8b6a185b66dec57a13fba0883ac39f323291a8ba15b260897d24b82"
+    },
+    {
+      "path": "cad/components/hss-107-g-2.kcad.ts",
+      "bytes": 500,
+      "sha256": "48cb013149def78bee21d66b0c5d399f534d2045e53b8f49cf10279af27d225c"
+    },
+    {
+      "path": "cad/components/hss-107-g-2.step",
+      "bytes": 118706,
+      "sha256": "8b6bf8491de08bac85d6a7f6eccf983de21ab46906a36d5c23f5e7a2cbaac82e"
+    },
+    {
+      "path": "cad/esp32c3-oled-enclosure.kcad.ts",
+      "bytes": 82218,
+      "sha256": "67dabf600707d07a4337e5e000e538ce5553b432e0e0c1fcb7afc8e867a9fe82"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-assembly.step",
+      "bytes": 1782145,
+      "sha256": "e78f484183b393e103a318d8e9c53ec0b17d5a11a2cb2dbc6b8caecf02cad0f8"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-base.3mf",
+      "bytes": 353578,
+      "sha256": "39c2ab9e7f09723c396f040103e3ab0f790fe233a27caccd1a6be55cb70c0da7"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-base.step",
+      "bytes": 136050,
+      "sha256": "ab3ce8b5ac3e75c4a36398a9fd8605235cc62127c284547fc9c26e8fa29bc506"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-base.stl",
+      "bytes": 1339484,
+      "sha256": "7119a00f542612a85f9c598a50522ea2b31243efc036224239f05868b5c8364d"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-lid.3mf",
+      "bytes": 181169,
+      "sha256": "4569986b4362217bb3b52eb71fe4796bf4427d373aa0333afbf92604aa106f1b"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-lid.step",
+      "bytes": 156495,
+      "sha256": "5bc230b0c5bd1c60239a95257cc50d68aa55a1eec6e4a48f9a14c2576fd1c16b"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-lid.stl",
+      "bytes": 711284,
+      "sha256": "8d7cc6a64614752404ca83495c2d7d44b5dad0dd8ed454834085095d74ce16b5"
+    },
+    {
+      "path": "cad/inputs/47111971a61f.step",
+      "bytes": 53022,
+      "sha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+    },
+    {
+      "path": "cad/mechanical-bom.csv",
+      "bytes": 1610,
+      "sha256": "d42a13d78699fc9bde9da1bc9d744ce2621cb60b1b8147a752b72bcb5a5b6bf2"
+    },
+    {
+      "path": "cad/mechanical-interface.json",
+      "bytes": 4500,
+      "sha256": "c1451adc81f86aaf77d52dc067342960a2c73f4e5189405ec2947ca6960e0479"
+    },
+    {
+      "path": "cad/provenance.json",
+      "bytes": 2675,
+      "sha256": "16dede78ed859c188a3c8eae0742fe526421d21c2e87b88f718254846f8d29a1"
+    },
+    {
+      "path": "cad/release.json",
+      "bytes": 4837,
+      "sha256": "7667cc05b800101617c1f9dc39a09aacc64e58dba8690916de25826e6c5cb873"
+    },
+    {
+      "path": "cad/renders/closed-front.png",
+      "bytes": 40935,
+      "sha256": "dc7300f83207579eb3714eb836eb5c5136926a03683dbb4353095585ce70cc3c"
+    },
+    {
+      "path": "cad/renders/closed-iso.png",
+      "bytes": 72836,
+      "sha256": "ec9b6e13c2d9a9ad794fc0528d54a60824eec42b0907c2686273b8b1a4cf2f83"
+    },
+    {
+      "path": "cad/renders/closed-top.png",
+      "bytes": 38556,
+      "sha256": "8f93684ad5f0389d189f700ffed7612ccd762dcf24494ab905d9b62a42e67ffd"
+    },
+    {
+      "path": "cad/renders/interior-iso.png",
+      "bytes": 87872,
+      "sha256": "1f7e7b1ea6bf5b4f67be9fb4659160cd53ea9a8436699cbf9be7743d72acf18b"
+    },
+    {
+      "path": "cad/renders/interior-top.png",
+      "bytes": 100211,
+      "sha256": "2da42742faf5091c4b50f54235b6bea1432962bb1d91524aae429c91e17b7b9f"
+    },
+    {
+      "path": "cad/renders/revision-v1-iso.png",
+      "bytes": 34330,
+      "sha256": "9f68c6787c4b1cf2ca54d070d79964edc213b543fed63ef2eee75b4a875cad4e"
+    },
+    {
+      "path": "cad/third-party-notices.txt",
+      "bytes": 987,
+      "sha256": "1a7770e368c1f06a6f8aacfb33a40d8e12411d8db6e6f6974c8e665a8ca56f4b"
+    },
+    {
+      "path": "cad/verification/assembly-path-budget.json",
+      "bytes": 14908,
+      "sha256": "827bfc9dd2858a33d4e13794a93d79a2690193690bf4054fcfd2141adb8b8c50"
+    },
+    {
+      "path": "cad/verification/assembly-path-source.kcad.ts",
+      "bytes": 81932,
+      "sha256": "17289e57330ab4c9071dd2aa31473fe0ba8c1002941858a35e2a53539aff5e94"
+    },
+    {
+      "path": "cad/verification/assembly-path-timeout.json",
+      "bytes": 1093,
+      "sha256": "c322169e9227275c57155c1eff127fa03122e3d6d008e1275894b9af86049802"
+    },
+    {
+      "path": "cad/verification/carrier-import.json",
+      "bytes": 973,
+      "sha256": "db08e7a699bb4fa9859e95dd4a976faec3ddc26920e2291050f147ed4b039aaf"
+    },
+    {
+      "path": "cad/verification/design-loop-data-uri-error.json",
+      "bytes": 754,
+      "sha256": "67d45f1a659f87e4987bb0fe7e6cd751bf5059356b0bb63f4ec4bd2cebc6dfd4"
+    },
+    {
+      "path": "cad/verification/design-loop-error.json",
+      "bytes": 754,
+      "sha256": "e90098c7bdef96981a4f0f6b581fd7afa953ff3faa2a668b98bde082adcd0b24"
+    },
+    {
+      "path": "cad/verification/design-loop-source.kcad.ts",
+      "bytes": 11530,
+      "sha256": "283d6537ff1115fdb00ce036f491efb431916fabbddc559bf6d555188510b3cc"
+    },
+    {
+      "path": "cad/verification/kernelcad-revision.json",
+      "bytes": 1699,
+      "sha256": "a4be90a86471ae6b93d527f6a2725dfd26a0c68d84e3120f88a5a67d5ee880e3"
+    },
+    {
+      "path": "cad/verification/mesh-export-check.json",
+      "bytes": 961,
+      "sha256": "94e5e0aa23a90ce658b7822abc04ea18ea6236d1b20879c6f667c545f3b0e5a2"
+    },
+    {
+      "path": "cad/verification/print-dfm.json",
+      "bytes": 2962,
+      "sha256": "f872eec788be63f978c54af2476339caa9d67bb8d4f0332d1decdfb767172d88"
+    },
+    {
+      "path": "cad/verification/reproduction.json",
+      "bytes": 5637,
+      "sha256": "ea5970ea3ed11fc84a1107126c8ead28b8dd7f0ac3aba631fda03e41a0ce9a4e"
+    },
+    {
+      "path": "cad/verification/solid-build.json",
+      "bytes": 14476,
+      "sha256": "9e66ff7cb0854ff8d5da1676729d4dbce8203ae14767494c29c36609bd98aed6"
+    },
+    {
+      "path": "cad/verification/step-inspection.json",
+      "bytes": 19388,
+      "sha256": "f863897eb51f34cfcddf67d9c2dc7af15db39b75157f851bdb99b8bc80b86735"
+    },
+    {
+      "path": "cad/verification/submitted-source.kcad.ts",
+      "bytes": 82203,
+      "sha256": "39b8bf5465cd968a102963735f597c697fa8dda131a87ca3ac8b251bde5b1031"
+    },
+    {
+      "path": "electronics-bom.csv",
+      "bytes": 2171,
+      "sha256": "f95862d298108dc76cad9d23bc72f58b3f455db77ada2a6cb398eb954641eb51"
+    },
+    {
+      "path": "electronics/assembly-notes.txt",
+      "bytes": 3214,
+      "sha256": "0191725a555980faad65c5155bad310f2e0cd8582d1be5f45cfc9dcbb2dfb988"
+    },
+    {
+      "path": "electronics/fp-lib-table",
+      "bytes": 166,
+      "sha256": "c768450112af6e21af6983662a51008077dff582185fbec4a2b550d8a9d29907"
+    },
+    {
+      "path": "electronics/licenses/kicad-library-license.txt",
+      "bytes": 2105,
+      "sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_dru",
+      "bytes": 173,
+      "sha256": "c7f0bf1ac25518967c08b1483de8b06257d821b5bbbd735ba219b213d16de9d1"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_pcb",
+      "bytes": 98441,
+      "sha256": "3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_pro",
+      "bytes": 908,
+      "sha256": "e9f5be08584ecb105fc9f3dcd9a000939d09becba83554a62ae282b5952cc92c"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_sch",
+      "bytes": 33263,
+      "sha256": "ccbb910a03ae74da0abe2c5e28c1275ef92e16400162aa46553b640aea68d99f"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_sym",
+      "bytes": 14760,
+      "sha256": "e42a74a48e9cedcd31041c144a9c174accd8491b56e4e31bf3a76b45436b0984"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/Display4.kicad_mod",
+      "bytes": 5175,
+      "sha256": "efade989a0a6d7a5d5b07183b66521498ba9b6f4129d8fe1bbd04247d62f352f"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/MountingHole.kicad_mod",
+      "bytes": 1283,
+      "sha256": "5338e639154e928d89c918a14751f74b94c6fc36d8865219bcd905f409f446a1"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/R.kicad_mod",
+      "bytes": 1927,
+      "sha256": "6815a2b35d141fe7a05c3c16d461b6a08abc38f5cfca4aa50a0fdd7a2f1290ac"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/Socket7.kicad_mod",
+      "bytes": 3781,
+      "sha256": "0617bac5d7e74f2bb3e7a5073ae7c856d2faac49474b371ee09d5ac73a46e2d4"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/TestPoint.kicad_mod",
+      "bytes": 1745,
+      "sha256": "85191310ec9441ccfc23a1b699133b7468f39be889683b83f50bec9ac0a3762f"
+    },
+    {
+      "path": "electronics/provenance.json",
+      "bytes": 5898,
+      "sha256": "63698fae85d4c20df48832dfc7b37b24be4115ed9554262c414d0f399e0d0893"
+    },
+    {
+      "path": "electronics/sym-lib-table",
+      "bytes": 174,
+      "sha256": "c12fab3921269cbac23a7ce032494d921fd524bc32b2b67b1f3dbeecc115057d"
+    },
+    {
+      "path": "firmware/LICENSE",
+      "bytes": 1072,
+      "sha256": "cee2a5445168030357d6f8d3b51e7e3dd244dfa052687b9dbe558f30a864454b"
+    },
+    {
+      "path": "firmware/SHA256SUMS",
+      "bytes": 464,
+      "sha256": "6e97785431688f972d31dd718d24a8ec95ee6d967c9612d436581dd6b87b4890"
+    },
+    {
+      "path": "firmware/platformio.ini",
+      "bytes": 285,
+      "sha256": "969b375038bca5981d81defed4cb71164408c7459da5552a063183a98db65f70"
+    },
+    {
+      "path": "firmware/release-manifest.json",
+      "bytes": 2128,
+      "sha256": "7e493abb42bb9b89f53b579fe9e39bccaf60fa2b252507641fffe103768c8fb1"
+    },
+    {
+      "path": "firmware/source-provenance.json",
+      "bytes": 732,
+      "sha256": "6420526f7f4a554a47cae7f13984163d8584c9bb62fd1a76b711e243335be8db"
+    },
+    {
+      "path": "firmware/src/i2c-scan.cpp",
+      "bytes": 543,
+      "sha256": "65903ddfc26e799e55153b5015060708576234012556fb7d0be0260fad793fcc"
+    },
+    {
+      "path": "firmware/src/main.cpp",
+      "bytes": 89,
+      "sha256": "824a2a996574407988d2afab367443ea6fad61f09bf838cfb37e9c236aa969f3"
+    },
+    {
+      "path": "firmware/vendor/esp32c3-display-workshop.ino",
+      "bytes": 6053,
+      "sha256": "35fdccdd16f37952564ba1cddda4d5b529f27bb856a1eb70c2702cecbf6d28e1"
+    },
+    {
+      "path": "hardware-interface.json",
+      "bytes": 6725,
+      "sha256": "238ab4ab67aecb90d90e87e2469c3d30fdaef9cebd8e229e3ac9e05e55ee2e42"
+    },
+    {
+      "path": "labwired/circuit.json",
+      "bytes": 8218,
+      "sha256": "143a9533f477d736464e942f2d40cd4448a6c21c8ecdf31b4e233ec0f739e7c7"
+    },
+    {
+      "path": "labwired/esp32c3.yaml",
+      "bytes": 15777,
+      "sha256": "5e1bfc6de3542d912b66ace0f1d2b1c131ab729c6909c071e43a6a609107687c"
+    },
+    {
+      "path": "labwired/mechanical.json",
+      "bytes": 689,
+      "sha256": "c87133c85287ffb2d8468b07c1dfc2caf6f4d65d280bf39ccb035f0b7a397948"
+    },
+    {
+      "path": "labwired/native-sources.json",
+      "bytes": 1044,
+      "sha256": "be6d35be852dc73f8a2324e5978dab583cdd17ce21d07b7dee244fbb4506e9d3"
+    },
+    {
+      "path": "labwired/system.yaml",
+      "bytes": 277,
+      "sha256": "502151e927cb747cc050898df071b1e22a89da2ec74dce9900216b8379d6039e"
+    },
+    {
+      "path": "manufacturing/drc.json",
+      "bytes": 1069,
+      "sha256": "acf71801b2a284f3cff9cfd84951016ad08258b21655b09078dc6526fda02290"
+    },
+    {
+      "path": "manufacturing/drill-report.txt",
+      "bytes": 699,
+      "sha256": "a59f4fb2fec6583da94426e0f3f300a135e1610602125fcf0a6cf526b6619988"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-NPTH-drl_map.pdf",
+      "bytes": 12447,
+      "sha256": "d7564a6e3546556f46e1ece34db2250ae91a94bfcb520153f7af7867b0d609e8"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-NPTH.drl",
+      "bytes": 414,
+      "sha256": "c66c90d2d9b66c0043ba2c169599fe8f54376d3ba237ffbe745c83ace0f6164a"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-PTH-drl_map.pdf",
+      "bytes": 13111,
+      "sha256": "a67d61cc0b859ac58f80cee2129986574ba66decc7081baaf1e1835afd2cec63"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-PTH.drl",
+      "bytes": 688,
+      "sha256": "6b669162533134998ab7d1a5a0bd422485cdd2263b3ea9aab878a2dcea311ee7"
+    },
+    {
+      "path": "manufacturing/erc.json",
+      "bytes": 985,
+      "sha256": "aa3698b7e2828f6bd04172dcc6c94db0c7499b3746995640a90f81f6155cf128"
+    },
+    {
+      "path": "manufacturing/fabrication-settings.json",
+      "bytes": 1106,
+      "sha256": "855624d97e4d0ac9b3e10c7eaa91a9543ec8cfcd99eb6469632558c8588882a2"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Cu.gbl",
+      "bytes": 35371,
+      "sha256": "d1d49b60234224a8f4d28eef20c43a11d931af912b8881fdc60a8f2841764ef1"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Mask.gbs",
+      "bytes": 1124,
+      "sha256": "5969b6ca4a634f629553267f96c0ba2755572bdc19f3ccebb7e69d25259e0ced"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Silkscreen.gbo",
+      "bytes": 500,
+      "sha256": "53f8b4ef0651faba269ffc7ed193d64bbb5d9269ebefa6528ed748e5dd061c0e"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-Edge_Cuts.gm1",
+      "bytes": 947,
+      "sha256": "0c6537c7b59a87575227c3d7373fa6b180631cbe4b62fd9bc432615936a2838c"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Cu.gtl",
+      "bytes": 4859,
+      "sha256": "26b9ac44741241ffc575e47d5c02cc1d84a8b2272f623874f455c33deefeba1d"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Mask.gts",
+      "bytes": 2497,
+      "sha256": "f62ca8e128ec836332347a705a4f238dfa7191a86c69fdea42cf7fa597d81591"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Paste.gtp",
+      "bytes": 1670,
+      "sha256": "d8f11ba8e080dce1d33b604fbbff2ea6aed1990439db0d02c8a0780116dcd12a"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Silkscreen.gto",
+      "bytes": 43868,
+      "sha256": "7861d794760ce2045628d3b35787f62142473d2331349f2944f7a19fd0fd1191"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-job.gbrjob",
+      "bytes": 2622,
+      "sha256": "8f537831d35cf88a1457dc4d83dff9a900a5e44329d3ca05366fe8e47b060d57"
+    },
+    {
+      "path": "manufacturing/native-import.json",
+      "bytes": 5732,
+      "sha256": "161a40be75d19a8b1cfcec6435fc6523683a2ba8e01c1c311d41573dc009dcfe"
+    },
+    {
+      "path": "manufacturing/oled-carrier-bare.step",
+      "bytes": 53022,
+      "sha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+    },
+    {
+      "path": "manufacturing/oled-carrier-bottom.svg",
+      "bytes": 27487,
+      "sha256": "77a984dbbe9a0fde24580ff7a2e543fbb8c260881292b89896306868d542edba"
+    },
+    {
+      "path": "manufacturing/oled-carrier-fabrication.zip",
+      "bytes": 39247,
+      "sha256": "12be533f71c17badf8b102da76c3692a712b67caa7f705e19e4ef8799a19b1bb"
+    },
+    {
+      "path": "manufacturing/oled-carrier-positions.csv",
+      "bytes": 336,
+      "sha256": "1ba82c60db1128fba19b0eb5e05d041cb0e59ea93ba82621edc3c1998b93774a"
+    },
+    {
+      "path": "manufacturing/oled-carrier-schematic.pdf",
+      "bytes": 83955,
+      "sha256": "752598606692b33f3ebcb304cbc9bc8d6feab0fec2dfc4a536d9dbbf36ae4496"
+    },
+    {
+      "path": "manufacturing/oled-carrier-top.svg",
+      "bytes": 58067,
+      "sha256": "0bde306e6ba06df4d293e7ec63fb6f7b2f79a74b7141ec09a4142836f4e9386f"
+    },
+    {
+      "path": "manufacturing/oled-carrier.net.xml",
+      "bytes": 20272,
+      "sha256": "7e7255237256419e6417a3a6481ab03d192fd6a97d020d61bc6b1130c89c58c7"
+    },
+    {
+      "path": "manufacturing/reproduce.txt",
+      "bytes": 3374,
+      "sha256": "978bab1ac09c2a0062928e256453368db78af0f301d107fdc569229e4ebb086f"
+    },
+    {
+      "path": "manufacturing/validation.json",
+      "bytes": 10396,
+      "sha256": "fd1527ebb7bfa6dd9ca9f2cc977ee16bc433e0a5ee056e0d30f19b4264c6b007"
+    },
+    {
+      "path": "verification/native-public-downloads.json",
+      "bytes": 915,
+      "sha256": "c86b9f29ca9303d22c9b52bf8767cf5109b5e5a3372343b9acab84f3c14d5cc4"
+    },
+    {
+      "path": "verification/package-rom-boot-manifest.json",
+      "bytes": 1815,
+      "sha256": "b2e9138af0add1bd80423733e24bd6e9f4db818a55596ac86ca0b59ac6ea3924"
+    },
+    {
+      "path": "verification/package-rom-boot-observations.json",
+      "bytes": 22306,
+      "sha256": "230f5881970f004b000d4a8759d95da44225334f71a9e4ebbd2984b0f828f293"
+    },
+    {
+      "path": "verification/package-rom-boot-result.json.gz",
+      "bytes": 48841,
+      "sha256": "2f82bc27a4405627136790ca6ad105a83e1314ef093de1304599a095a4277b3f"
+    },
+    {
+      "path": "verification/package-rom-boot-uart.txt",
+      "bytes": 310,
+      "sha256": "2d1a4c313d461838d4e685260a49dc8b71f622282550406c11dd41c922284a12"
+    },
+    {
+      "path": "verification/released-build-provenance.json",
+      "bytes": 1576,
+      "sha256": "40e79a0d1cd59085f44665ae457af1b0402a57057498846542c71a56f17bb4ef"
+    },
+    {
+      "path": "verification/released-rom-boot-manifest.json",
+      "bytes": 1825,
+      "sha256": "8c91abcacf9c26bf69b6623e02d7ef5dc1540423642dd7ad4a03711fc65ca571"
+    },
+    {
+      "path": "verification/released-rom-boot-observations.json",
+      "bytes": 22306,
+      "sha256": "948b7faad02fb4770232b5723b9192d87624f89d8a95e12d73e23cb56ae071ac"
+    },
+    {
+      "path": "verification/released-rom-boot-result.json.gz",
+      "bytes": 48819,
+      "sha256": "9d48d6f2d245a74b288998397679f72e5166a7202a08bd131110b4d443ce9ba9"
+    },
+    {
+      "path": "verification/released-rom-boot-uart.txt",
+      "bytes": 310,
+      "sha256": "2d1a4c313d461838d4e685260a49dc8b71f622282550406c11dd41c922284a12"
+    },
+    {
+      "path": "verification/released-wasm-acceptance.json",
+      "bytes": 1003,
+      "sha256": "8f5504bcb57a0f9e107460b9356887f0e344cff1bcd5fd24b5d1904e81cdc44f"
+    },
+    {
+      "path": "verification/reproduce.txt",
+      "bytes": 3111,
+      "sha256": "fb10629a48df7beff81a3fadca68809bbcd3ec07908bb51332b83582843644dc"
+    },
+    {
+      "path": "verification/rom-boot.yaml",
+      "bytes": 509,
+      "sha256": "7815c58d158a0f3ed1d9424d9b12341504ba7895f29a93c06baa97a7eb0f957d"
+    },
+    {
+      "path": "verification/verify-display.py",
+      "bytes": 1032,
+      "sha256": "53448b4c932840c21f1888ec84c2a58d9ba3835a62cb0c61810a962ba55aec29"
+    }
+  ]
+}

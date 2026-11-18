@@ -1,0 +1,53 @@
+{
+  "manifest_schema_version": "1.0",
+  "engine_version": "0.26.0",
+  "seed": 0,
+  "nondeterminism": "none",
+  "firmware": {
+    "path": "firmware.elf",
+    "sha256": "78f573347c3cdc92acfc453fd0c76b761a46ce59dc08fec86bb7e9491b38d609"
+  },
+  "configs": [
+    {
+      "path": "io-smoke.yaml",
+      "sha256": "1255e202fcf8e10649db57a33a5e9bf052d9f80252a1e0e4da98adb32a6e5bbc"
+    },
+    {
+      "path": "esp32c3-oled-demo.yaml",
+      "sha256": "94ced6ce37a1f838fa371f035443e2776dc4a660018bfbff42aab63203fcea91"
+    }
+  ],
+  "results": {
+    "status": "pass",
+    "stop_reason": "MaxSteps",
+    "steps_executed": 300000000,
+    "cycles": 341980622,
+    "instructions": 300000000,
+    "assertions": [
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"ESP32-C3 Display Workshop\" })",
+        "passed": true
+      },
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"WORKSHOP_TICK 19:00:00\" })",
+        "passed": true
+      },
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"WORKSHOP_TICK 19:00:01\" })",
+        "passed": true
+      },
+      {
+        "assertion": "DisplayRegion(DisplayRegionAssertion { display_region: DisplayRegionDetails { id: \"oled\", x: 0, y: 0, w: Some(128), h: Some(64), min_ink: 0.05, max_ink: Some(0.6), lit: None, colour: None, min_colour_pixels: None, max_colour_pixels: None } })",
+        "passed": true
+      },
+      {
+        "assertion": "ExpectedStopReason(StopReasonAssertion { expected_stop_reason: MaxSteps })",
+        "passed": true
+      }
+    ],
+    "cpu_state_digest": "b7138a00e78fb64260eabc739e81a33f21991176f988ba8f50cce9139db03f72"
+  },
+  "coverage": null,
+  "fault_injections": [],
+  "digest": "6d4dbcf730fbf3ac6207e4816d4e8fce8f17975462e90df5427e6b46640a2c14"
+}
