@@ -10,6 +10,7 @@ import argparse
 import csv
 import fnmatch
 import hashlib
+import gzip
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -198,6 +199,29 @@ def verify_firmware(root):
 
 def verify_mechanical(root):
     digest = identity(root / "mechanical/doom-desktop.kcad.ts")["sha256"]
+    registration = load(root, "validation/board-registration.json")
+    require(registration["ok"] and registration["cad_source_sha256"] == digest,
+            "Native registration evidence differs from the CAD source")
+    require(registration["capture_sha256"] == identity(root / "validation/native-frame-capture.json")["sha256"],
+            "Evaluated native transform capture changed")
+    for source in registration["sources"]:
+        require(identity(root / source["path"])["sha256"] == source["sha256"],
+                f"Native registration input or STEP export changed: {source['path']}")
+    require(registration["native_header_contacts"] == 78
+            and registration["exported_socket_and_devkit_axes"] == 44
+            and len(registration["mounting_axes"]) == 4
+            and registration["native_top_normal"] == [0, 0, 1]
+            and registration["native_transform_determinant"] > 0
+            and abs(registration["signed_triple_product_mm2"] + 58.0644) < 0.000001,
+            "Native pad, case axis or populated-side registration failed")
+    mirrored = load(root, "validation/board-registration-negative.json")
+    require(mirrored["sourceSha256"] == digest and mirrored["rejected"]
+            and mirrored["exitCode"] != 0,
+            "Mirrored-layout registration negative control must fail")
+    comparison = load(root, "validation/batch-geometry-comparison.json")
+    require(comparison["new_source_sha256"] == digest
+            and comparison["identical_scene_summary"] and comparison["identical_named_parts"],
+            "Batched construction changed the previously reviewed physical geometry")
     record = load(root, "validation/mechanical-review.json")
     require(record["sourceSha256"] == digest, "CAD source differs from the strict review")
     require(record["result"]["ok"] is True, "Strict mechanical review did not pass")
@@ -238,12 +262,62 @@ def verify_mechanical(root):
     return {"requirements": len(requirements), "visual_checks": len(visual["checks"]),
             "exports": len(records)}
 
+def verify_runtime_evidence(root):
+    pair = load(root, "validation/runtime/paired-acceptance.json")
+    provenance = load(root, "runtime/provenance.json")
+    require(pair["status"] == "pass" and pair["rd_tied_high"]
+            and pair["core_commit"] == provenance["required_core_commit"],
+            "Runtime source or physical RD contract differs")
+    require(identity(root / "runtime/chip.yaml")["sha256"] == provenance["chip_sha256"],
+            "Runtime chip differs from the pinned core descriptor")
+    firmware = identity(root / "firmware/artifacts/doom-s3.elf")["sha256"]
+    frames = {}
+    for name in ["no-input", "menu-input"]:
+        directory = root / "validation/runtime" / name
+        receipt = pair["runs"][name]
+        data = gzip.decompress((directory / "result.json.gz").read_bytes())
+        require(hashlib.sha256(data).hexdigest() == receipt["result_sha256"],
+                f"The original {name} runtime result changed")
+        result = json.loads(data)
+        require(result["status"] == "pass" and result["steps_executed"] == 900000000
+                and result["firmware_hash"] == firmware
+                and len(result["assertions"]) == 3
+                and all(row["passed"] for row in result["assertions"]),
+                f"The {name} runtime assertions or firmware differ")
+        device = next(d for d in result["inspect"]["devices"] if d["id"] == "tft")
+        frame = next(a for a in device["artifacts"] if a["kind"] == "framebuffer")
+        frames[name] = bytes(frame["bytes"])
+        require(frame["meta"]["format"] == "rgb565_be"
+                and [frame["meta"]["w"], frame["meta"]["h"]] == [320, 240]
+                and frames[name] == (directory / "framebuffer.rgb565be").read_bytes()
+                and hashlib.sha256(frames[name]).hexdigest() == receipt["framebuffer_sha256"]
+                and identity(directory / "framebuffer.png")["sha256"] == receipt["png_sha256"],
+                f"The reviewed {name} frame differs from the actual runtime buffer")
+        invocation = json.loads((directory / "invocation.json").read_text())
+        require(invocation["exit_code"] == 0 and invocation["fastboot"] is False
+                and invocation["cli_sha256"] == provenance["recorded_cli_sha256"]
+                and invocation["inputs"]["doom-s3.elf"]["sha256"] == firmware
+                and invocation["inputs"]["doom-s3-flash.bin"] == identity(root / "firmware/artifacts/doom-s3-flash.bin"),
+                f"The {name} invocation differs from the packaged binaries")
+    log = (root / "validation/runtime/menu-input/execution.log").read_text()
+    require("1 byte(s) delivered to 'uart0'" in log and "ERROR" not in log,
+            "The canonical UART input was not confirmed")
+    changed = sum(a != b for a, b in zip(frames["no-input"], frames["menu-input"]))
+    require(changed == 23079 and changed == pair["input"]["framebuffer_changed_bytes"],
+            "Escape did not produce the reviewed menu")
+    previous = load(root, "validation/runtime/pre-fix-canonical-uart.json")
+    require(previous["status"] == "rejected" and previous["matches_no_input"],
+            "The false-pass regression must remain explicit")
+    return {"runs": 2, "assertions_per_run": 3, "steps_per_run": 900000000,
+            "changed_framebuffer_bytes": changed}
+
 def verify_package(root=ROOT):
     result = {"manifest_files": verify_manifest(root),
               "electrical_contract": verify_electrical_contract(root)}
     check_native_reports(load(root, "validation/erc.json"), load(root, "validation/drc.json"))
     result["firmware"] = verify_firmware(root)
     result["mechanical"] = verify_mechanical(root)
+    result["runtime"] = verify_runtime_evidence(root)
     require(load(root, "validation/acceptance.json")["hardware_tested"] is False,
             "No physical qualification was performed for this package")
     return result

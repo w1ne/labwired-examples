@@ -2,10 +2,11 @@
   "accepted": true,
   "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png",
   "findings": [
-    "Closed iso, top and back views show one fitted desktop shell, a flush lid, aligned display window, eight seated fastener heads and one roofed USB opening.",
+    "Corrected closed iso, top and USB-side views show one fitted desktop shell, a flush lid, aligned display window, eight seated fastener heads and one roofed USB opening.",
     "The separate base-subassembly view shows the native carrier on four corner mounts, the DevKit outline and header stack facing the USB opening, and the carrier ribbon connector. Removed lid components are excluded together, so no unsupported floating parts appear.",
     "Rectangular geometry represents actual PCB, resistor, capacitor, socket and module envelopes. The box-fragment heuristic is acknowledged only for this exact assembly; no collision or physical acceptance gate is relaxed.",
-    "The DevKit component-height volume, display rear volume and USB cable plug are declared design allowances. Screenshots do not establish physical component metrology, cable dress or print fit."
+    "The DevKit component-height volume, display rear volume and USB cable plug are declared design allowances. Screenshots do not establish physical component metrology, cable dress or print fit.",
+    "Batch boolean construction retains exactly the reviewed 2371 faces, full volume and bounds; both actual review sheets are byte-identical to the inspected native-orientation correction."
   ],
   "checks": [
     {
@@ -23,7 +24,7 @@
     {
       "code": "required-visible-features",
       "passed": true,
-      "finding": "Top view shows four case screws and four display screws; back view shows the roofed USB opening below the display lid.",
+      "finding": "Top view shows four case screws and four display screws; USB-side view shows the roofed USB opening below the display lid.",
       "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
     },
     {
@@ -47,8 +48,19 @@
     {
       "code": "canonical-views-physically-coherent",
       "passed": true,
-      "finding": "Top, rear and isometric views agree on the lid seam, window position, corner fasteners and rear USB aperture. The base view exposes the matching internal board orientation.",
+      "finding": "Top, USB-side and isometric views agree on the lid seam, window position, corner fasteners and USB aperture on the native negative-Y end. The base view exposes the matching internal board orientation.",
       "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+    }
+  ],
+  "sourceSha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+  "renderHashes": [
+    {
+      "path": "validation/renders/enclosure/sheet.png",
+      "sha256": "45eb8db0afd0dd8fe264119e3fe36b01f58a9b9c08481614ac1fe662e2b2d4d1"
+    },
+    {
+      "path": "validation/renders/enclosure-open/sheet.png",
+      "sha256": "0de5bbfbdbfe869ee1ada5d59449c3f2369a40ee890361cab58c9c69410b6d0e"
     }
   ]
 }

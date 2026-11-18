@@ -9,18 +9,24 @@
     "parity_errors": 0
   },
   "simulation": {
-    "initial_existing_model_rom_boot": true,
+    "rom_boot": true,
     "panel_dimensions": [
       320,
       240
     ],
-    "unique_rgb_colors": 236,
-    "steps": 600000000,
-    "scope": "Initial run still has legacyGPIO47 RD model declaration. Final tied-high RD replay and UART controls pending."
+    "steps_per_run": 900000000,
+    "assertions_passed_per_run": 3,
+    "rd_tied_high": true,
+    "uart": "uart0",
+    "escape_after_cycles": 650000000,
+    "framebuffer_changed_bytes": 23079,
+    "core_commit": "31730dd16391495aed6045ffb52b1aee62d3ceab",
+    "receipt": "validation/runtime/paired-acceptance.json",
+    "scope": "Matching packaged physical firmware and complete flash image pass two digital ROM runs. Actual framebuffers show the title and Escape menu. Supply rails are ideal; brown-out, thermal, cable and physical timing behavior are not qualified."
   },
   "mechanical": {
     "status": "local strict design-loop passed",
-    "source_sha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
+    "source_sha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
     "named_parts": 48,
     "requirements_passed": 10,
     "requirements_failed": 0,
@@ -49,12 +55,27 @@
       "version": 1,
       "mesh_status": "failed",
       "error": "revision-mesh-artifact exceeded the 896 MB worker memory limit (932 MB)",
-      "server_build": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z"
+      "server_build": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z",
+      "superseded": true,
+      "reason": "The saved v1 populated layout has reversed handedness; corrected source is in this package."
+    },
+    "native_registration": {
+      "native_pads": 78,
+      "exported_socket_and_devkit_axes": 44,
+      "mounting_axes": 4,
+      "populated_side_preserved": true,
+      "mirrored_negative_rejected": true
+    },
+    "captured_features": 631,
+    "local_saved_mesh_replay": {
+      "unchanged_limit_mib": 896,
+      "fresh_worker_passes": 2,
+      "failed_features": 0,
+      "receipt": "validation/mesh-memory/summary.json"
     }
   },
   "remaining_acceptance": [
-    "Final matching RD model replay and keyboard stimulus",
-    "Saved Studio mesh must pass the existing worker memory limit",
+    "Save corrected source as the next revision of the existing Studio project; its mesh must pass the existing worker memory limit",
     "Closed-case current and regulator temperature",
     "Fabricated native carrier inspection and powered bring-up",
     "Measured ribbon insertion depth and strain-free cable dress",

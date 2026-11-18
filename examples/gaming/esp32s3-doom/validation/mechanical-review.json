@@ -1,5 +1,5 @@
 {
-  "sourceSha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
+  "sourceSha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
   "warningJustification": "Rectangular geometry represents actual PCB, resistor, capacitor, socket and module envelopes. The box-fragment heuristic is acknowledged only for this exact assembly; no collision or physical acceptance gate is relaxed.",
   "result": {
     "ok": true,
@@ -13,16 +13,17 @@
         "functional": true,
         "qualityOk": true,
         "script": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-desktop.kcad.ts",
-        "featureCount": 962,
+        "featureCount": 631,
         "diagnosticCount": 94,
         "reviewFacts": [],
         "visualReview": {
           "accepted": true,
           "findings": [
-            "Closed iso, top and back views show one fitted desktop shell, a flush lid, aligned display window, eight seated fastener heads and one roofed USB opening.",
+            "Corrected closed iso, top and USB-side views show one fitted desktop shell, a flush lid, aligned display window, eight seated fastener heads and one roofed USB opening.",
             "The separate base-subassembly view shows the native carrier on four corner mounts, the DevKit outline and header stack facing the USB opening, and the carrier ribbon connector. Removed lid components are excluded together, so no unsupported floating parts appear.",
             "Rectangular geometry represents actual PCB, resistor, capacitor, socket and module envelopes. The box-fragment heuristic is acknowledged only for this exact assembly; no collision or physical acceptance gate is relaxed.",
-            "The DevKit component-height volume, display rear volume and USB cable plug are declared design allowances. Screenshots do not establish physical component metrology, cable dress or print fit."
+            "The DevKit component-height volume, display rear volume and USB cable plug are declared design allowances. Screenshots do not establish physical component metrology, cable dress or print fit.",
+            "Batch boolean construction retains exactly the reviewed 2371 faces, full volume and bounds; both actual review sheets are byte-identical to the inspected native-orientation correction."
           ],
           "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png",
           "checks": [
@@ -41,7 +42,7 @@
             {
               "code": "required-visible-features",
               "passed": true,
-              "finding": "Top view shows four case screws and four display screws; back view shows the roofed USB opening below the display lid.",
+              "finding": "Top view shows four case screws and four display screws; USB-side view shows the roofed USB opening below the display lid.",
               "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
             },
             {
@@ -65,7 +66,7 @@
             {
               "code": "canonical-views-physically-coherent",
               "passed": true,
-              "finding": "Top, rear and isometric views agree on the lid seam, window position, corner fasteners and rear USB aperture. The base view exposes the matching internal board orientation.",
+              "finding": "Top, USB-side and isometric views agree on the lid seam, window position, corner fasteners and USB aperture on the native negative-Y end. The base view exposes the matching internal board orientation.",
               "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
             }
           ]
@@ -137,7 +138,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_2",
-                  "selectorText": "body(boolean_360)",
+                  "selectorText": "body(boolean_62)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 45.913415250882835
@@ -155,7 +156,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_360"
+                  "ref": "boolean_62"
                 },
                 "b": {
                   "kind": "body",
@@ -175,7 +176,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_3",
-                  "selectorText": "body(boolean_394)",
+                  "selectorText": "body(boolean_63)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 45.913415250882835
@@ -193,7 +194,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_394"
+                  "ref": "boolean_63"
                 },
                 "b": {
                   "kind": "body",
@@ -213,7 +214,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_4",
-                  "selectorText": "body(boolean_394)",
+                  "selectorText": "body(boolean_63)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 45.913415250882835
@@ -231,7 +232,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_394"
+                  "ref": "boolean_63"
                 },
                 "b": {
                   "kind": "body",
@@ -251,7 +252,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_5",
-                  "selectorText": "body(boolean_192)",
+                  "selectorText": "body(boolean_46)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 128.5469703096479
@@ -269,7 +270,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_192"
+                  "ref": "boolean_46"
                 },
                 "b": {
                   "kind": "body",
@@ -296,7 +297,7 @@
                 },
                 {
                   "consumerFeatureId": "require_6",
-                  "selectorText": "body(boolean_326)",
+                  "selectorText": "body(boolean_61)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 107.89209655947958
@@ -311,7 +312,7 @@
                 },
                 "b": {
                   "kind": "body",
-                  "ref": "boolean_326"
+                  "ref": "boolean_61"
                 },
                 "op": "gte",
                 "limit": 2
@@ -327,7 +328,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_7",
-                  "selectorText": "body(boolean_282)",
+                  "selectorText": "body(boolean_50)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 68.67647565942796
@@ -345,7 +346,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_282"
+                  "ref": "boolean_50"
                 },
                 "b": {
                   "kind": "body",
@@ -365,7 +366,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_8",
-                  "selectorText": "body(boolean_322)",
+                  "selectorText": "body(boolean_57)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 108.54469355984199
@@ -383,7 +384,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_322"
+                  "ref": "boolean_57"
                 },
                 "b": {
                   "kind": "body",
@@ -441,7 +442,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_10",
-                  "selectorText": "body(boolean_322)",
+                  "selectorText": "body(boolean_57)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 108.54469355984199
@@ -459,7 +460,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_322"
+                  "ref": "boolean_57"
                 },
                 "b": {
                   "kind": "body",
@@ -480,8 +481,8 @@
           "schema": "kernelcad.evaluation-evidence.v1",
           "mode": "build",
           "source": {
-            "sha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
-            "byteLength": 12251
+            "sha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+            "byteLength": 13887
           },
           "parameters": {
             "values": {
@@ -502,7 +503,7 @@
             "reason": "dependencies-untracked"
           },
           "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
-          "identitySha256": "04c5f45a0e8d034af29fcaba2d039cc789f0cd1b3ee81e803af67039c0c80b10"
+          "identitySha256": "7cedda4af7d11303940639025f6bac21c159fbb2ffaee6422e104f05d6149138"
         },
         "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
       }
@@ -524,8 +525,8 @@
               "schema": "kernelcad.evaluation-evidence.v1",
               "mode": "build",
               "source": {
-                "sha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
-                "byteLength": 12251
+                "sha256": "07e7d36944b03a7af474436df5b88a92ccdf2af1d02dee783300073e65c7d0bb",
+                "byteLength": 13887
               },
               "parameters": {
                 "values": {
@@ -546,7 +547,7 @@
                 "reason": "dependencies-untracked"
               },
               "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
-              "identitySha256": "04c5f45a0e8d034af29fcaba2d039cc789f0cd1b3ee81e803af67039c0c80b10"
+              "identitySha256": "7cedda4af7d11303940639025f6bac21c159fbb2ffaee6422e104f05d6149138"
             },
             "summary": "validator clean, pose envelope solved, no interferences",
             "blockingReasons": [],

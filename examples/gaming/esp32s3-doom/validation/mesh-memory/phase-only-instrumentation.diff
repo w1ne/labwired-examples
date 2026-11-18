@@ -1,0 +1,122 @@
+diff --git a/product-web/src/modeling/builtModelFromRun.ts b/product-web/src/modeling/builtModelFromRun.ts
+index 27c77fcd..2ac1df85 100644
+--- a/product-web/src/modeling/builtModelFromRun.ts
++++ b/product-web/src/modeling/builtModelFromRun.ts
+@@ -74,6 +74,7 @@ export async function builtModelFromRun(
+   const seedShapes = session.reusableLoweredPrefix(session.cleanScriptLower);
+   session.cleanScriptLower = undefined;
+   try {
++    (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("lower.before-engine");
+     const result = await engine.run(run.records, {
+       ...(seedShapes.size > 0 ? { seedShapes } : {}),
+       paramTable: session.paramTable,
+@@ -81,10 +82,13 @@ export async function builtModelFromRun(
+       warningPhase: 'build',
+       gatedFeatureNames: session.gatedFeatureNames,
+     });
++    (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("lower.after-engine");
+     // Later `Shape.lower()` calls (review passes lower each part) reuse this.
+     session.lastFullLower = { ...pending, shapes: result.shapes };
+ 
+-    return assembleBuiltModel(session, run, result, warningsBefore, code);
++    const built = assembleBuiltModel(session, run, result, warningsBefore, code);
++    (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("lower.after-cache-and-fingerprints");
++    return built;
+   } finally {
+     // Capture-time lowers can own solids before cachedShapes is populated.
+     // Release only replaced owners, retaining reused scene children, imports
+diff --git a/product-web/src/modeling/runtime/runScriptCore.ts b/product-web/src/modeling/runtime/runScriptCore.ts
+index 12f5abe5..cd655d19 100644
+--- a/product-web/src/modeling/runtime/runScriptCore.ts
++++ b/product-web/src/modeling/runtime/runScriptCore.ts
+@@ -147,6 +147,7 @@ export async function runScriptCore(input: RunScriptCoreInput): Promise<RunScrip
+ 
+   let returnValue: unknown;
+   session.capturing = true;
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("capture.before-runner");
+   try {
+     const result = runner(transpiled.code, fileName, apiGlobals, { wrapReturn: true });
+     // The script body is wrapped in an async IIFE — returnValue may be a Promise.
+@@ -154,11 +155,13 @@ export async function runScriptCore(input: RunScriptCoreInput): Promise<RunScrip
+     if (returnValue && typeof (returnValue as { then?: unknown }).then === 'function') {
+       returnValue = await (returnValue as Promise<unknown>);
+     }
++    (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("capture.after-script-return");
+   } catch (e) {
+     throw withShapeMethodHint(e);
+   } finally {
+     session.capturing = false;
+     await session.__finishCaptureResources();
++    (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("capture.after-resource-cleanup");
+   }
+   // All declarations and host overrides now exist. Cross-control constraints
+   // must not reject a valid pair merely because its declarations were ordered.
+diff --git a/src/mesh/occtWorkerJob.ts b/src/mesh/occtWorkerJob.ts
+index f50cc209..07dab57e 100644
+--- a/src/mesh/occtWorkerJob.ts
++++ b/src/mesh/occtWorkerJob.ts
+@@ -213,7 +213,9 @@ export function createWorkerJobHandler(
+       deps.exit(OCCT_HEAP_POISON_EXIT);
+       return;
+     }
++    if (process.env.KERNELCAD_MEMORY_PHASE_PROBE === '1') console.error(JSON.stringify({tag:'kernelcad-memory-phase',phase:'worker.before-ipc',pid:process.pid,at:Date.now(),memory:process.memoryUsage()}));
+     send({ id: msg.id, ok: true, result });
++    if (process.env.KERNELCAD_MEMORY_PHASE_PROBE === '1') console.error(JSON.stringify({tag:'kernelcad-memory-phase',phase:'worker.after-ipc-call',pid:process.pid,at:Date.now(),memory:process.memoryUsage()}));
+     collectAfterJob();
+   };
+ }
+diff --git a/src/mesh/sessionServerEntry.ts b/src/mesh/sessionServerEntry.ts
+index 6d984225..7eb57c82 100644
+--- a/src/mesh/sessionServerEntry.ts
++++ b/src/mesh/sessionServerEntry.ts
+@@ -76,6 +76,13 @@ import { withNextActions } from '../../product-web/src/shared/diagnostics/diagno
+ import type { Assembly } from '../../product-web/src/modeling/capture/assembly';
+ import { createHash } from 'node:crypto';
+ import { dirname, isAbsolute } from 'node:path';
++// Bounded probe-only logging. No collection, geometry or budget changes.
++if (process.env.KERNELCAD_MEMORY_PHASE_PROBE === '1') {
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe = (phase) => {
++    console.error(JSON.stringify({ tag: 'kernelcad-memory-phase', phase, pid: process.pid, at: Date.now(), memory: process.memoryUsage() }));
++  };
++}
++
+ import { readParamInfos, editsToTarget, type MeshParamValue } from './paramDiff.js';
+ import { selectChangedFeatures } from './changedFeatures.js';
+ 
+@@ -186,19 +193,18 @@ async function meshBuiltModel(
+   relowered?: readonly string[],
+ ): Promise<MeshBridgeResult> {
+   const paramTable = (model.session as unknown as { paramTable: { serialize: () => unknown } }).paramTable;
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("mesh.before-features");
+   const meshing = await meshFeaturesPerFeature(
+     model.records,
+     paramTable as unknown as Parameters<typeof meshFeaturesPerFeature>[1],
+     model.session as unknown as Parameters<typeof meshFeaturesPerFeature>[2],
+   );
+-  return bridgeResult(
+-    meshing,
+-    model.records,
+-    paramTable,
+-    model.rootId,
+-    dimensionsFor(model, dimensionsBudgetMs),
+-    relowered,
+-  );
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("mesh.after-features");
++  const dimensions = dimensionsFor(model, dimensionsBudgetMs);
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("mesh.after-dimensions");
++  const result = bridgeResult(meshing, model.records, paramTable, model.rootId, dimensions, relowered);
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("mesh.after-bridge-serialization");
++  return result;
+ }
+ 
+ /** Mesh a model this process already holds. Guarded so a pool-on server
+@@ -367,7 +373,9 @@ async function meshSourceRaw(
+   }
+ 
+   // Full build (also seeds the cache for subsequent param-only requests).
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("build.before");
+   const model = await buildModel(input);
++  (globalThis as { __kernelcadMemoryPhaseProbe?: (phase: string) => void }).__kernelcadMemoryPhaseProbe?.("build.after");
+   const defaults = authoredParamDefaults(model);
+ 
+   let built = model;

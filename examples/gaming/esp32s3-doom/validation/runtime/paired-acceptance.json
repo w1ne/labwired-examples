@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "scope": "Digital execution of the complete physical firmware and flash image through the real ESP32-S3 ROM; no physical hardware qualification.",
+  "core_commit": "31730dd16391495aed6045ffb52b1aee62d3ceab",
+  "rd_tied_high": true,
+  "declared_uart": "uart0",
+  "runs": {
+    "no-input": {
+      "status": "pass",
+      "steps": 900000000,
+      "assertions_passed": 3,
+      "result_sha256": "93bb56a024668921e93a6b032431e7282cbd267f942608689190361ebd6d5856",
+      "firmware_sha256": "09e6dcf243659236ffffa103063c183e4c22ff940dba11f09ea4fd0f3418cc7d",
+      "framebuffer_sha256": "ae7f691f8d8bbf6946dec4dcd5d642ec442262cc77501ffc260a34d561f4e1a4",
+      "framebuffer_bytes": 153600,
+      "unique_rgb_colors": 236,
+      "framebuffer_meta": {
+        "bus": "8080-16bit",
+        "display_on": true,
+        "format": "rgb565_be",
+        "generation": 5939066462461447423,
+        "h": 240,
+        "painted_bytes": 92431,
+        "powered": true,
+        "top_colour": "0x4000",
+        "top_colour_pixels": 2816,
+        "total_bytes": 153600,
+        "w": 320
+      },
+      "png_sha256": "48b5617fc4b01850b3e8d3653de2eb013a92ba897122c66441c04049ee45f94a",
+      "fidelity": [
+        {
+          "kind": "unpowered_rail_assumed",
+          "address": "0x0",
+          "first_pc": "0x0",
+          "count": 1,
+          "detail": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal rail, so power-on and brown-out reset are not simulated"
+        }
+      ],
+      "elapsed_seconds": 165.178
+    },
+    "menu-input": {
+      "status": "pass",
+      "steps": 900000000,
+      "assertions_passed": 3,
+      "result_sha256": "6bf63a54e5116ca4bd55b7e836f40d933ff12beff69fefba77183e779a4c13c2",
+      "firmware_sha256": "09e6dcf243659236ffffa103063c183e4c22ff940dba11f09ea4fd0f3418cc7d",
+      "framebuffer_sha256": "5b0e573285068b0f67b1d119cbaa71d5517be1d583a4fe844005eac756e483fe",
+      "framebuffer_bytes": 153600,
+      "unique_rgb_colors": 232,
+      "framebuffer_meta": {
+        "bus": "8080-16bit",
+        "display_on": true,
+        "format": "rgb565_be",
+        "generation": 9492730232032718116,
+        "h": 240,
+        "painted_bytes": 88574,
+        "powered": true,
+        "top_colour": "0x4000",
+        "top_colour_pixels": 5209,
+        "total_bytes": 153600,
+        "w": 320
+      },
+      "png_sha256": "dfc1434a2a06713498b8593efc92609c8266094b7b9a733004e3e248eb1ba2a6",
+      "fidelity": [
+        {
+          "kind": "unpowered_rail_assumed",
+          "address": "0x0",
+          "first_pc": "0x0",
+          "count": 1,
+          "detail": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal rail, so power-on and brown-out reset are not simulated"
+        }
+      ],
+      "elapsed_seconds": 170.469
+    }
+  },
+  "input": {
+    "uart": "uart0",
+    "bytes": [
+      27
+    ],
+    "after_cycles": 650000000,
+    "confirmed_delivery": true,
+    "framebuffer_changed_bytes": 23079
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "manifest_schema_version": "1.0",
+  "engine_version": "0.26.0",
+  "seed": 0,
+  "nondeterminism": "none",
+  "firmware": {
+    "path": "doom-s3.elf",
+    "sha256": "09e6dcf243659236ffffa103063c183e4c22ff940dba11f09ea4fd0f3418cc7d"
+  },
+  "configs": [
+    {
+      "path": "no-input.yaml",
+      "sha256": "68763fc08bf9c7cf7272b9f544f0265369ef0a520685dcf09176ba7a7d690179"
+    },
+    {
+      "path": "system-physical.yaml",
+      "sha256": "b2577783a86b3b7f26358faa4b4b19804890d09a08ad12cea55db8fdd609f1c9"
+    }
+  ],
+  "results": {
+    "status": "pass",
+    "stop_reason": "MaxSteps",
+    "steps_executed": 900000000,
+    "cycles": 900000000,
+    "instructions": 900000000,
+    "assertions": [
+      {
+        "assertion": "ExpectedStopReason(StopReasonAssertion { expected_stop_reason: MaxSteps })",
+        "passed": true
+      },
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"doom initialised, entering tick loop\" })",
+        "passed": true
+      },
+      {
+        "assertion": "DisplayRegion(DisplayRegionAssertion { display_region: DisplayRegionDetails { id: \"tft\", x: 0, y: 0, w: None, h: None, min_ink: 0.2, max_ink: None, lit: None, colour: None, min_colour_pixels: None, max_colour_pixels: None } })",
+        "passed": true
+      }
+    ],
+    "cpu_state_digest": "aa38b742a1d7f7ed558f1a10f6956dba264695ee82ea5447073e8a8db98228b2"
+  },
+  "coverage": null,
+  "fault_injections": [],
+  "digest": "0971f604e9010716b37dfcadcc1086a4e22f9bb4246c6332ccfebc62c2cff7ae"
+}

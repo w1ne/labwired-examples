@@ -75,7 +75,7 @@ Run `python3 authoring/verify_package.py` after downloading the complete package
 
 Run `bash authoring/verify_native.sh` with KiCad 10 installed to rerun ERC, DRC, zone fill and schematic parity without modifying the accepted board. Reports go to `validation/recheck/`. Run `bash authoring/export_native.sh` to regenerate the manufacturing files and engineering views.
 
-Open [the immutable Rev A CAD model](https://app.kernelcad.com/p/sZrRpIhi?version=1) or edit `mechanical/doom-desktop.kcad.ts` locally with its `inputs/` folder. The source's `output` choice selects the assembly, base, lid or connector spacer. Use the existing KernelCAD evaluate, design-loop and export commands. The retained review passes all 10 declared fit requirements and all seven visual checks. Its negative control closes the USB opening and fails the 0.5 mm plug-clearance requirement. Native drawings and stated vendor-envelope limits still control the physical acceptance scope. The saved revision currently reports a mesh worker memory failure; its source and asset are saved, but the interactive model is not yet ready. The tracked generic runtime repair keeps the existing memory limit.
+The [previous saved CAD candidate v1](https://app.kernelcad.com/p/sZrRpIhi?version=1) is superseded because its populated layout had reversed handedness. Use the corrected package source: edit `mechanical/doom-desktop.kcad.ts` locally with its `inputs/` folder. Run `/usr/bin/python3 authoring/check_registration.py` with KiCad installed to verify 78 native header pads, 44 exported socket/DevKit axes and four mounting axes. The three asymmetric native pad witnesses retain component-side +Z and reject the former mirrored layout. The source's `output` choice selects the assembly, base, lid or connector spacer. Use the existing KernelCAD evaluate, design-loop and export commands. The retained review passes all 10 declared fit requirements and all seven visual checks. Its negative control closes the USB opening and fails the 0.5 mm plug-clearance requirement. Native drawings and stated vendor-envelope limits still control the physical acceptance scope. The existing saved v1 revision reports a mesh worker memory failure and is not the corrected package source. Its replacement is pending the normal imported-asset update path. The corrected batch construction passes full hosted evaluation under the unchanged 1024 MB limit; two fresh-worker mesh replays also pass the unchanged 896 MB limit, with no failed mesh features. The deployed saved revision remains a separate pending check.
 
 ## Build, program and run
 
@@ -105,11 +105,25 @@ Open a 115200-baud, 8-N-1 terminal on the same UART USB connection. The boot log
 
 The terminal sends key-down bytes and no key-up messages. Firmware releases a key after 140 ms unless auto-repeat refreshes it. Dedicated physical controls are outside this revision's hardware contract.
 
+## Reproduce the digital firmware checks
+
+Build the LabWired CLI from core commit `31730dd16391495aed6045ffb52b1aee62d3ceab`. Use the two ESP32-S3 mask ROM assets identified by exact hashes in `runtime/provenance.json`. Run from the package directory:
+
+```bash
+python3 authoring/verify_runtime.py --labwired /path/to/labwired \
+  --rom /path/to/esp32s3_rom.bin --drom /path/to/esp32s3_drom.bin \
+  --output /path/to/new-doom-runtime-recheck
+```
+
+The runner verifies the ROM hashes, disables the optional fastboot path, and runs the packaged ELF with the complete packaged flash image. Both runs execute 900 million steps. The second injects Escape through the declared `uart0` at cycle 650 million. Acceptance requires three runtime assertions per run, confirmed UART delivery, the exact reviewed title/menu framebuffers, and 23,079 changed framebuffer bytes. An undelivered input cannot pass by displaying the unchanged title. `validation/runtime/` retains the original reports, logs, invocation hashes, raw pixels and actual PNG frames. The recorded title and menu contain 236 and 232 distinct RGB colors respectively.
+
+These checks exercise the same physical firmware through the declared digital model. The model assumes ideal MCU supply voltage. Its generic static SRAM percentage excludes the external PSRAM capacity; it is not a physical heap or power measurement.
+
 ## Evidence and limits
 
 Native KiCad ERC and final PCB DRC report zero findings, zero unrouted connections and zero schematic/PCB parity errors. The untouched autorouter input and the precise cleanup records are retained; cleanup removed only reported dangling vias/track stubs and added connected ground pours. No rule or clearance limit was disabled to obtain the result.
 
-The CAD imports the routed carrier's native STEP. It uses the factory DevKit v1.0 DXF outline and the MRB3205 mechanical drawing, with manufacturer dimensions for purchased sockets and fasteners. Espressif's PDF rounds the length to 62.74 mm while its DXF outline is 62.865 mm; the model follows the DXF and preserves the factory header coordinates. KiCad's board-only STEP represents a 1.51 mm laminate core; the CAD scales only that thickness to the specified 1.6 mm finished board.
+The CAD imports the routed carrier's native STEP. It uses the factory DevKit v1.0 DXF outline and the MRB3205 mechanical drawing, with manufacturer dimensions for purchased sockets and fasteners. Espressif's PDF rounds the length to 62.74 mm while its DXF outline is 62.865 mm; the model follows the DXF and preserves the factory header coordinates. KiCad's board-only STEP represents a 1.51 mm laminate core; the CAD scales only that thickness to the specified 1.6 mm finished board. The final native transform retains X, native Y and component-side +Z. Batch boolean operations reduce capture features from 962 to 631 while retaining all 48 named parts, 2,371 faces, identical volume and bounds; both review sheets remain byte-identical.
 
 The DevKit's populated components are not represented by an unavailable vendor STEP. A 12 mm component-height allowance is checked against the display rear allowance. The USB plug is a bounded design envelope. These are stated fit assumptions, not measured manufacturer component geometry. Ribbon contact springs and flexible cable dress are also outside the rigid-body proof. The assembly remains a candidate until the outstanding physical checks are recorded.
 

@@ -1,5 +1,5 @@
 {
-  "sourceSha256": "7508205bfc63e484da47379187a3e033e114b7cd2ecadee6ce49cec905b34221",
+  "sourceSha256": "728f3568757c6c1526fa17246c883f343730d01498c0aa809e45f0cbaabacd1d",
   "mutation": "Remove only the USB opening subtraction; retain all assembly geometry and requirements.",
   "result": {
     "ok": false,
@@ -11,7 +11,7 @@
         "ok": false,
         "functional": false,
         "qualityOk": false,
-        "featureCount": 961,
+        "featureCount": 630,
         "diagnosticCount": 94,
         "reviewFacts": [
           {
@@ -88,7 +88,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_2",
-                  "selectorText": "body(boolean_359)",
+                  "selectorText": "body(boolean_61)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 45.913415250882835
@@ -106,7 +106,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_359"
+                  "ref": "boolean_61"
                 },
                 "b": {
                   "kind": "body",
@@ -126,7 +126,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_3",
-                  "selectorText": "body(boolean_393)",
+                  "selectorText": "body(boolean_62)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 45.913415250882835
@@ -144,7 +144,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_393"
+                  "ref": "boolean_62"
                 },
                 "b": {
                   "kind": "body",
@@ -164,7 +164,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_4",
-                  "selectorText": "body(boolean_393)",
+                  "selectorText": "body(boolean_62)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 45.913415250882835
@@ -182,7 +182,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_393"
+                  "ref": "boolean_62"
                 },
                 "b": {
                   "kind": "body",
@@ -202,7 +202,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_5",
-                  "selectorText": "body(boolean_191)",
+                  "selectorText": "body(boolean_45)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 128.5469703096479
@@ -220,7 +220,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_191"
+                  "ref": "boolean_45"
                 },
                 "b": {
                   "kind": "body",
@@ -247,7 +247,7 @@
                 },
                 {
                   "consumerFeatureId": "require_6",
-                  "selectorText": "body(boolean_325)",
+                  "selectorText": "body(boolean_60)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 107.89209655947958
@@ -262,7 +262,7 @@
                 },
                 "b": {
                   "kind": "body",
-                  "ref": "boolean_325"
+                  "ref": "boolean_60"
                 },
                 "op": "gte",
                 "limit": 2
@@ -278,7 +278,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_7",
-                  "selectorText": "body(boolean_281)",
+                  "selectorText": "body(boolean_49)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 68.67647565942796
@@ -296,7 +296,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_281"
+                  "ref": "boolean_49"
                 },
                 "b": {
                   "kind": "body",
@@ -316,7 +316,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_8",
-                  "selectorText": "body(boolean_321)",
+                  "selectorText": "body(boolean_56)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 108.54469355984199
@@ -334,7 +334,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_321"
+                  "ref": "boolean_56"
                 },
                 "b": {
                   "kind": "body",
@@ -393,7 +393,7 @@
               "selections": [
                 {
                   "consumerFeatureId": "require_10",
-                  "selectorText": "body(boolean_321)",
+                  "selectorText": "body(boolean_56)",
                   "syntax": "lineage",
                   "fingerprints": [],
                   "partDiagonal": 108.54469355984199
@@ -411,7 +411,7 @@
                 "metric": "clearance",
                 "a": {
                   "kind": "body",
-                  "ref": "boolean_321"
+                  "ref": "boolean_56"
                 },
                 "b": {
                   "kind": "body",
@@ -432,8 +432,8 @@
           "schema": "kernelcad.evaluation-evidence.v1",
           "mode": "build",
           "source": {
-            "sha256": "7508205bfc63e484da47379187a3e033e114b7cd2ecadee6ce49cec905b34221",
-            "byteLength": 12324
+            "sha256": "728f3568757c6c1526fa17246c883f343730d01498c0aa809e45f0cbaabacd1d",
+            "byteLength": 13960
           },
           "parameters": {
             "values": {
@@ -454,7 +454,7 @@
             "reason": "dependencies-untracked"
           },
           "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
-          "identitySha256": "dd04b5546ef5a09deb8ef92f95d74a067e60ad3ddb475c541fc03814d3ba6da6"
+          "identitySha256": "c334272146b7134d2f2e2fe8991286ed6d54181cc4800be3f25e67d574ba46e7"
         },
         "nextActionPrompt": "Top diagnostics:\n- [info] assembly.mounting-hole.unverified @ mate=lid-seat\n- [info] assembly.mounting-hole.unverified @ mate=lid-seat\n- [info] assembly.mounting-hole.unverified @ mate=ribbon-carrier-seat\n\nRepair mode: none\nDirective: No repair needed. Preserve the current topology and keep validating with review_cad after changes.\n\nDesign goal: Fitted desktop enclosure for the routed 80x100 mm carrier, exact DevKitC-1 PCBv1.0 drawing/header geometry and MRB3205. Four carrier mounts, removable display lid and accessible USB. Physical component metrology, cable dress and printed fit remain explicit acceptance items.\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- requirement.failed: usb-plug-access failed: measured 0, limit 0.500, margin -0.500 (box_230 vs boolean_25). → requirement.fail — repair the selection or geometry named in the message; measured value, limit and margin are in the requirements ledger (selections carry S1 fingerprints for highlighting).",
         "revisionAssist": {
