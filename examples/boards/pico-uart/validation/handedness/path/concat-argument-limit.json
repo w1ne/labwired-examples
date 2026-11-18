@@ -1,0 +1,5449 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "475fc4ebd1281aa31b417bd2b72e2b1a37eeb4ad8dd6906957bff32836746526",
+  "stepAssetSha256": "a54e9b84f8bf87dd0f8b3ca3dcddadfd0246e01ae65ad8944cff4bda0306e27e",
+  "vendorStepSha256": "ea5c693afee3de73e9fcaab1892a5ed44bf789438b9b1e5906e9c4f9859cab8b",
+  "sourceFile": "/data/worktrees/labwired-examples-pico-handedness-20261118/examples/boards/pico-uart/mechanical/pico-uart-fixture.kcad.ts",
+  "packageCommit": "16c5cfb54c3054ca21eb9a23649b240bf3576686",
+  "runtimeCommit": "78333e78d4a282b275bf100e1aacafcd62d50bbc",
+  "runtimeDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "harnessSha256": "b4e71665cc91b1c07a38d0fbd0f9edadabd4db0fe9da6447219f66200fc6f3fd",
+  "nativeSweepHelperSha256": "fe665761fdabd30e8f64ea14161f1a228758595b48642da89353003f3705fbb6",
+  "nativeLinearHelperSha256": "96810e629c89af0a5713c3c6eeb935460dffccc1ed6607c13f16714197db76f1",
+  "nativeToolHelperSha256": "ae9291012a3845cc9f35e160206e86bde68cd00b970cbb3f9cce185e343c1bc2",
+  "basis": "Exact source solids and original world-space triangle meshes. Continuous triangle translation for rigid modules. Independently validated conservative axisymmetric BREP swept envelopes for declared fasteners, with original driver-envelope checks preserved.",
+  "limitations": [
+    "This receipt does not change the hosted assembly-path tool result.",
+    "Native BREP volume checks establish nominal geometric clearance. They do not model friction, thread deformation, torque, cable flex, or hands.",
+    "The 17 manufacturer Pico solids and two specified soldered header rows form one rigid module. Their fabrication and solder joints are preconditions, not new user-removal steps.",
+    "The base is held for the documented device assembly phase. Approximate support checks record any additional holds.",
+    "Physical print, fit, cable and repeated-assembly qualification is unperformed."
+  ],
+  "sourceParts": [
+    {
+      "name": "base",
+      "worldMeshSha256": "3179145acb1cc3f5cea97c01420b4d51ecfe55cc84ce0da9b5e2ba6a681ffd03",
+      "vertices": 13128,
+      "triangles": 26284,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid",
+      "worldMeshSha256": "7be3e9458f60a78a33fecdeca869e532f30295348de95d0ba8659b34475fa641",
+      "vertices": 3080,
+      "triangles": 6184,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-pcba",
+      "worldMeshSha256": "fe7d28ee4921394c942dfbd5b638e0c1de6b2222f960b5ba6187057198cc8515",
+      "vertices": 70602,
+      "triangles": 141216,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-board",
+      "worldMeshSha256": "31fcf399c02d7cce213f780b25a8755c227d09d29812370fa5047d3b70075111",
+      "vertices": 49146,
+      "triangles": 98476,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-1",
+      "worldMeshSha256": "acc7d118353d1a5169c49ca72879570be79457eefae6408226894bce82343e01",
+      "vertices": 1040,
+      "triangles": 2076,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-2",
+      "worldMeshSha256": "25268347e4bf9fefa6683a7ff042d4ba0817cb8c617008caa348dcaf3dd72869",
+      "vertices": 120,
+      "triangles": 236,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-3",
+      "worldMeshSha256": "e35e9e851cf5fb10780015637f008c89822c9982fdf8a88f9a904b02e9fe5a40",
+      "vertices": 120,
+      "triangles": 236,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-4",
+      "worldMeshSha256": "621d5bc4522024dbdac499ea61b6bc0895c62f29a72beace28a24a16d9820b62",
+      "vertices": 120,
+      "triangles": 236,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-5",
+      "worldMeshSha256": "38a68380a8dd4d72d6b9e9e57ac75b093eb487d6d7f92cb2b657ba4ebdf0f1d5",
+      "vertices": 120,
+      "triangles": 236,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-6",
+      "worldMeshSha256": "9c56d243e936ba9953a4f0b4215d3538d2011d2717df3e34dad8eecbba0ee9fb",
+      "vertices": 16518,
+      "triangles": 33032,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-7",
+      "worldMeshSha256": "8241a36588237e41f8d81ce6c6bec34c530d41d0a6bc937b454379227fd98c71",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-8",
+      "worldMeshSha256": "fd5d8643c314a9f3217470b7d38dca5d9e99d5718d734a1969572d0f57c4b04f",
+      "vertices": 16,
+      "triangles": 28,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-9",
+      "worldMeshSha256": "8c3d287a7b0adac4c57e7094629db6393cc49675398dd1a44aed91e151d037c6",
+      "vertices": 24,
+      "triangles": 44,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-10",
+      "worldMeshSha256": "25220f95ad7a104fbd0e4a582cfbdda3f245f1f18a4b0ea91be927d63cee93e7",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-11",
+      "worldMeshSha256": "fba014e50994dbd6858cb797a0acba26ba8f8029043d6c8f658edbf526c75ce5",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-12",
+      "worldMeshSha256": "409021e36b1c00db7e29a8aa5761977f14c0f76830724d58c13378d9ff1e3ecc",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-13",
+      "worldMeshSha256": "48294b2e9ae6e9420f0d2a77c8069490c4ee4e98f770b04b84e6bf1ff0b4c7d8",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-14",
+      "worldMeshSha256": "2d78a53af6179e6e67809d8740501ad512640c46b4624bdf68e33010ad20afe8",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-15",
+      "worldMeshSha256": "dc768194ee551ecd91641a417ef43f37e6d3f6fb2be90d803b24ea75b6c418a9",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-component-16",
+      "worldMeshSha256": "43ed8247a3dc013ecc35b97737db90ae08de05b627c485b99e44a551faba3c37",
+      "vertices": 8,
+      "triangles": 12,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-header-2111",
+      "worldMeshSha256": "9e1d08c9b3a597c98d9ea6fac862dc93a72c17b80c8c1b82b6dbbed28373ca0f",
+      "vertices": 328,
+      "triangles": 652,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pico-header-3889",
+      "worldMeshSha256": "42b8178d3fac977adc7cc40faca57596d715acb9be88fe6455e7d95c1b4f2817",
+      "vertices": 328,
+      "triangles": 652,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-washer-0",
+      "worldMeshSha256": "24146e988da306496860cb6c3227d5f74052bd6e59854ca6dbc48f68a5ae5ecb",
+      "vertices": 1008,
+      "triangles": 2016,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-standoff-0",
+      "worldMeshSha256": "2c800c5414dda6e64d17797497685e65c0500c5ed25e52b569d41f30164c43e3",
+      "vertices": 516,
+      "triangles": 1032,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-screw-0",
+      "worldMeshSha256": "e0b5c85b31a537a1ccd3117f3d4a300ad3596dfefc059cf21bf634a66bb3c9d6",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-lower-screw-0",
+      "worldMeshSha256": "c03d37103578c6c8c7fd68abcffb9a364eceaccc3e2ac8593daa125a7f436c54",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-washer-1",
+      "worldMeshSha256": "681ead9729591dfcefd27d538d72d92c296b144a2d9427b265cd626e48927c8f",
+      "vertices": 1008,
+      "triangles": 2016,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-standoff-1",
+      "worldMeshSha256": "8ce6a00a2cf162791d8c2be3668d11d6cc7d1fb854b746750cd9bc6e020822e3",
+      "vertices": 516,
+      "triangles": 1032,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-screw-1",
+      "worldMeshSha256": "5b2c38991fc5b4fbbcf9281fcd657bd98b147a5727fe2169800ec78e79b06e0e",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-lower-screw-1",
+      "worldMeshSha256": "69f7b1f1f1a0d157cf09ac38aceaeeed6402729bc7f03c026726f140d4aab202",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-washer-2",
+      "worldMeshSha256": "4e7ce30942134b8351807126a4f1c6213f5deeaabd08caaddf0ba435dc4257b9",
+      "vertices": 1008,
+      "triangles": 2016,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-standoff-2",
+      "worldMeshSha256": "b4537da4bf17f637d3a4d21519cda99eed2e13a810b6a50f5f46b416b43f6a4c",
+      "vertices": 516,
+      "triangles": 1032,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-screw-2",
+      "worldMeshSha256": "b4a0a6891c84d069a58274726c0cc17a72ca332df1343ef488a5dc58afa43c0a",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-lower-screw-2",
+      "worldMeshSha256": "f33d9bc472d45a26b26f8a1ba8b7d3c04ae221ad9e197b4cebcf1ab1544d7910",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-washer-3",
+      "worldMeshSha256": "2afd7b17aeb59d5da5336f9c5ac42ee04890c8376460d6a329757d94c0356cc5",
+      "vertices": 1008,
+      "triangles": 2016,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-standoff-3",
+      "worldMeshSha256": "474ef2fd7271069e52fa606a4d2f2a7160027fa6ef116130be604c1b1e52b11a",
+      "vertices": 516,
+      "triangles": 1032,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-screw-3",
+      "worldMeshSha256": "bde9489efa9c4a4a50bde33f0637931864e45de00cff21761c46b2f1fea43173",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "carrier-lower-screw-3",
+      "worldMeshSha256": "bdce8890e01b639f39cb9568d67ba486053fd18f3b43ce8148c043eb240baabd",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-standoff-0",
+      "worldMeshSha256": "241677eb733da69b7f51a7353d223c41a0f8f5e8ccdf418b74e60ec8fa0d71e9",
+      "vertices": 1020,
+      "triangles": 2036,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-screw-0",
+      "worldMeshSha256": "601f302cb1b8520531a14d9e2d8714e4b53e58d91184c63e3069b337a0cf8eed",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-lower-screw-0",
+      "worldMeshSha256": "d65b70921a694c4dd3e002905d7959e7546b27a5f94bf1fe9165cd2a289f4677",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-standoff-1",
+      "worldMeshSha256": "4ba29b458174b8d32b40b038469b76bf2dde3d6de1a804460659aae5550d4b3b",
+      "vertices": 1020,
+      "triangles": 2036,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-screw-1",
+      "worldMeshSha256": "1bdcb39aa74fc87a561cdf7331ecb72a8a3dbfe4e87a097e2694be3f431eef33",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-lower-screw-1",
+      "worldMeshSha256": "163b43b414f32a39289b148d46b3e44e989ce4bc5c3184f6d616db402b280ce3",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-standoff-2",
+      "worldMeshSha256": "f1288815254d0e246f342af2a74c751ad499d202bcdaae8d6684e53318bcde9e",
+      "vertices": 1020,
+      "triangles": 2036,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-screw-2",
+      "worldMeshSha256": "faa03c54f6053b722a51d562a7289ee859ded5c352aa20b2837f6e5fba32808f",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-lower-screw-2",
+      "worldMeshSha256": "b69d2b3f92b90d59ad4335769471f2fb4959dc12d9575fc9768da79195b237fd",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-standoff-3",
+      "worldMeshSha256": "3113019d3e5ce89a639e8285d1ac3d91336cc18eb1ca4e15fece5e0fa1a9da37",
+      "vertices": 1020,
+      "triangles": 2036,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-screw-3",
+      "worldMeshSha256": "ecfbbe8085834be0f85d1907743ac9ac30ebf5d49c1282802347b5fd6fe39b61",
+      "vertices": 1008,
+      "triangles": 2012,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "lid-lower-screw-3",
+      "worldMeshSha256": "ddba26051a0821f25cdc05cb1f09fbfb362ca24be5275d26ce532527d91850e9",
+      "vertices": 1524,
+      "triangles": 3044,
+      "worldTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "derivedFasteners": {
+    "carrier-screw-0": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 4,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "carrier-lower-screw-0": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "carrier-screw-1": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 4,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "carrier-lower-screw-1": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "carrier-screw-2": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 4,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "carrier-lower-screw-2": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "carrier-screw-3": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 4,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "carrier-lower-screw-3": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-screw-0": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 8,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-lower-screw-0": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-screw-1": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 8,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-lower-screw-1": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-screw-2": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 8,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-lower-screw-2": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-screw-3": {
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 8,
+      "standard": "ISO4762",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    },
+    "lid-lower-screw-3": {
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "pitchMm": 0.45,
+      "threadLengthMm": 5,
+      "standard": "ISO10642",
+      "tool": {
+        "kind": "cylinder",
+        "lengthMm": 40,
+        "diameterMm": 4,
+        "label": "straight hex driver"
+      }
+    }
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "phase": "device",
+      "label": "remove-lid-screw-0",
+      "movingOriginalParts": [
+        "lid-screw-0"
+      ],
+      "allRemainingOriginalParts": [
+        "base",
+        "lid",
+        "carrier-pcba",
+        "pico-board",
+        "pico-component-1",
+        "pico-component-2",
+        "pico-component-3",
+        "pico-component-4",
+        "pico-component-5",
+        "pico-component-6",
+        "pico-component-7",
+        "pico-component-8",
+        "pico-component-9",
+        "pico-component-10",
+        "pico-component-11",
+        "pico-component-12",
+        "pico-component-13",
+        "pico-component-14",
+        "pico-component-15",
+        "pico-component-16",
+        "pico-header-2111",
+        "pico-header-3889",
+        "carrier-washer-0",
+        "carrier-standoff-0",
+        "carrier-screw-0",
+        "carrier-lower-screw-0",
+        "carrier-washer-1",
+        "carrier-standoff-1",
+        "carrier-screw-1",
+        "carrier-lower-screw-1",
+        "carrier-washer-2",
+        "carrier-standoff-2",
+        "carrier-screw-2",
+        "carrier-lower-screw-2",
+        "carrier-washer-3",
+        "carrier-standoff-3",
+        "carrier-screw-3",
+        "carrier-lower-screw-3",
+        "lid-standoff-0",
+        "lid-screw-0",
+        "lid-lower-screw-0",
+        "lid-standoff-1",
+        "lid-screw-1",
+        "lid-lower-screw-1",
+        "lid-standoff-2",
+        "lid-screw-2",
+        "lid-lower-screw-2",
+        "lid-standoff-3",
+        "lid-screw-3",
+        "lid-lower-screw-3"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "kind": "fastener",
+      "passed": true,
+      "meshReport": {
+        "ok": false,
+        "source": "local",
+        "basis": "continuous-triangle-mesh",
+        "limitations": [
+          "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+        ],
+        "model": {
+          "rigidParts": true,
+          "motion": "straight-line-translation",
+          "motionModels": [
+            "straight-line-translation"
+          ],
+          "testedDirections": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "gravity": "not-modelled",
+          "basis": "continuous-triangle-mesh",
+          "tessellation": {
+            "linearMm": 0.01,
+            "relative": true,
+            "angularRad": 0.05,
+            "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+          },
+          "clearanceMm": 0,
+          "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+          "toolReach": "swept-envelope"
+        },
+        "parts": [
+          {
+            "part": "lid-screw-0",
+            "removable": false,
+            "validDirections": [],
+            "directions": [
+              {
+                "direction": [
+                  0,
+                  0,
+                  1
+                ],
+                "distanceMm": 10.95,
+                "clear": false,
+                "blockingParts": [
+                  "lid-standoff-0"
+                ]
+              }
+            ],
+            "state": {
+              "kind": "blocked",
+              "blockersByDirection": [
+                {
+                  "direction": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blockers": [
+                    "lid-standoff-0"
+                  ]
+                }
+              ]
+            },
+            "fastener": {
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "pitchMm": 0.45,
+              "handedness": "right",
+              "threadLengthMm": 8,
+              "turns": 17.77777777777778,
+              "standard": "ISO4762"
+            },
+            "toolReach": {
+              "fastener": "lid-screw-0",
+              "status": "clear",
+              "blockers": [],
+              "tool": {
+                "kind": "cylinder",
+                "lengthMm": 40,
+                "diameterMm": 4,
+                "label": "straight hex driver"
+              },
+              "basis": "assembled-parts"
+            }
+          }
+        ],
+        "blockingGraph": {
+          "parts": [
+            "lid-screw-0"
+          ],
+          "directions": [
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "edges": [
+            {
+              "part": "lid-screw-0",
+              "blocker": "lid-standoff-0",
+              "direction": [
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "toolReach": [
+          {
+            "fastener": "lid-screw-0",
+            "status": "clear",
+            "blockers": [],
+            "tool": {
+              "kind": "cylinder",
+              "lengthMm": 40,
+              "diameterMm": 4,
+              "label": "straight hex driver"
+            },
+            "basis": "assembled-parts"
+          }
+        ],
+        "scope": {
+          "movingParts": [
+            "lid-screw-0"
+          ],
+          "stationaryParts": [
+            "base",
+            "lid",
+            "carrier-pcba",
+            "pico-board",
+            "pico-component-1",
+            "pico-component-2",
+            "pico-component-3",
+            "pico-component-4",
+            "pico-component-5",
+            "pico-component-6",
+            "pico-component-7",
+            "pico-component-8",
+            "pico-component-9",
+            "pico-component-10",
+            "pico-component-11",
+            "pico-component-12",
+            "pico-component-13",
+            "pico-component-14",
+            "pico-component-15",
+            "pico-component-16",
+            "pico-header-2111",
+            "pico-header-3889",
+            "carrier-washer-0",
+            "carrier-standoff-0",
+            "carrier-screw-0",
+            "carrier-lower-screw-0",
+            "carrier-washer-1",
+            "carrier-standoff-1",
+            "carrier-screw-1",
+            "carrier-lower-screw-1",
+            "carrier-washer-2",
+            "carrier-standoff-2",
+            "carrier-screw-2",
+            "carrier-lower-screw-2",
+            "carrier-washer-3",
+            "carrier-standoff-3",
+            "carrier-screw-3",
+            "carrier-lower-screw-3",
+            "lid-standoff-0",
+            "lid-lower-screw-0",
+            "lid-standoff-1",
+            "lid-screw-1",
+            "lid-lower-screw-1",
+            "lid-standoff-2",
+            "lid-screw-2",
+            "lid-lower-screw-2",
+            "lid-standoff-3",
+            "lid-screw-3",
+            "lid-lower-screw-3"
+          ]
+        }
+      },
+      "toolReachPassed": true,
+      "nativeContinuousSweep": {
+        "basis": "conservative-axisymmetric-BREP-envelope",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "distanceMm": 100,
+        "sourceOutsideEnvelopeVolumeMm3": 0,
+        "segments": [
+          {
+            "z0": 29.5,
+            "z1": 32,
+            "r0": 2.25,
+            "r1": 2.25,
+            "surface": "CYLINDRE"
+          },
+          {
+            "z0": 21.5,
+            "z1": 29.5,
+            "r0": 1.25,
+            "r1": 1.25,
+            "surface": "CYLINDRE"
+          }
+        ],
+        "localFrameWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "restEnvelopeVolumeMm3": 79.03069019186822,
+        "sweptComponentCount": 2,
+        "obstacles": [
+          {
+            "part": "base",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-pcba",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-board",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-4",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-5",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-6",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-7",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-8",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-9",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-10",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-11",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-12",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-13",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-14",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-15",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-16",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-2111",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-3889",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "finalBounds": {
+        "min": [
+          -5.75,
+          1.25,
+          121.5
+        ],
+        "max": [
+          -1.25,
+          5.75,
+          132
+        ]
+      },
+      "completelyOutsideRemainingBounds": true,
+      "elapsedMs": 2443
+    },
+    {
+      "stage": 2,
+      "phase": "device",
+      "label": "remove-lid-screw-1",
+      "movingOriginalParts": [
+        "lid-screw-1"
+      ],
+      "allRemainingOriginalParts": [
+        "base",
+        "lid",
+        "carrier-pcba",
+        "pico-board",
+        "pico-component-1",
+        "pico-component-2",
+        "pico-component-3",
+        "pico-component-4",
+        "pico-component-5",
+        "pico-component-6",
+        "pico-component-7",
+        "pico-component-8",
+        "pico-component-9",
+        "pico-component-10",
+        "pico-component-11",
+        "pico-component-12",
+        "pico-component-13",
+        "pico-component-14",
+        "pico-component-15",
+        "pico-component-16",
+        "pico-header-2111",
+        "pico-header-3889",
+        "carrier-washer-0",
+        "carrier-standoff-0",
+        "carrier-screw-0",
+        "carrier-lower-screw-0",
+        "carrier-washer-1",
+        "carrier-standoff-1",
+        "carrier-screw-1",
+        "carrier-lower-screw-1",
+        "carrier-washer-2",
+        "carrier-standoff-2",
+        "carrier-screw-2",
+        "carrier-lower-screw-2",
+        "carrier-washer-3",
+        "carrier-standoff-3",
+        "carrier-screw-3",
+        "carrier-lower-screw-3",
+        "lid-standoff-0",
+        "lid-lower-screw-0",
+        "lid-standoff-1",
+        "lid-screw-1",
+        "lid-lower-screw-1",
+        "lid-standoff-2",
+        "lid-screw-2",
+        "lid-lower-screw-2",
+        "lid-standoff-3",
+        "lid-screw-3",
+        "lid-lower-screw-3"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "kind": "fastener",
+      "passed": true,
+      "meshReport": {
+        "ok": false,
+        "source": "local",
+        "basis": "continuous-triangle-mesh",
+        "limitations": [
+          "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+        ],
+        "model": {
+          "rigidParts": true,
+          "motion": "straight-line-translation",
+          "motionModels": [
+            "straight-line-translation"
+          ],
+          "testedDirections": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "gravity": "not-modelled",
+          "basis": "continuous-triangle-mesh",
+          "tessellation": {
+            "linearMm": 0.01,
+            "relative": true,
+            "angularRad": 0.05,
+            "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+          },
+          "clearanceMm": 0,
+          "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+          "toolReach": "swept-envelope"
+        },
+        "parts": [
+          {
+            "part": "lid-screw-1",
+            "removable": false,
+            "validDirections": [],
+            "directions": [
+              {
+                "direction": [
+                  0,
+                  0,
+                  1
+                ],
+                "distanceMm": 10.95,
+                "clear": false,
+                "blockingParts": [
+                  "lid-standoff-1"
+                ]
+              }
+            ],
+            "state": {
+              "kind": "blocked",
+              "blockersByDirection": [
+                {
+                  "direction": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blockers": [
+                    "lid-standoff-1"
+                  ]
+                }
+              ]
+            },
+            "fastener": {
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "pitchMm": 0.45,
+              "handedness": "right",
+              "threadLengthMm": 8,
+              "turns": 17.77777777777778,
+              "standard": "ISO4762"
+            },
+            "toolReach": {
+              "fastener": "lid-screw-1",
+              "status": "clear",
+              "blockers": [],
+              "tool": {
+                "kind": "cylinder",
+                "lengthMm": 40,
+                "diameterMm": 4,
+                "label": "straight hex driver"
+              },
+              "basis": "assembled-parts"
+            }
+          }
+        ],
+        "blockingGraph": {
+          "parts": [
+            "lid-screw-1"
+          ],
+          "directions": [
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "edges": [
+            {
+              "part": "lid-screw-1",
+              "blocker": "lid-standoff-1",
+              "direction": [
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "toolReach": [
+          {
+            "fastener": "lid-screw-1",
+            "status": "clear",
+            "blockers": [],
+            "tool": {
+              "kind": "cylinder",
+              "lengthMm": 40,
+              "diameterMm": 4,
+              "label": "straight hex driver"
+            },
+            "basis": "assembled-parts"
+          }
+        ],
+        "scope": {
+          "movingParts": [
+            "lid-screw-1"
+          ],
+          "stationaryParts": [
+            "base",
+            "lid",
+            "carrier-pcba",
+            "pico-board",
+            "pico-component-1",
+            "pico-component-2",
+            "pico-component-3",
+            "pico-component-4",
+            "pico-component-5",
+            "pico-component-6",
+            "pico-component-7",
+            "pico-component-8",
+            "pico-component-9",
+            "pico-component-10",
+            "pico-component-11",
+            "pico-component-12",
+            "pico-component-13",
+            "pico-component-14",
+            "pico-component-15",
+            "pico-component-16",
+            "pico-header-2111",
+            "pico-header-3889",
+            "carrier-washer-0",
+            "carrier-standoff-0",
+            "carrier-screw-0",
+            "carrier-lower-screw-0",
+            "carrier-washer-1",
+            "carrier-standoff-1",
+            "carrier-screw-1",
+            "carrier-lower-screw-1",
+            "carrier-washer-2",
+            "carrier-standoff-2",
+            "carrier-screw-2",
+            "carrier-lower-screw-2",
+            "carrier-washer-3",
+            "carrier-standoff-3",
+            "carrier-screw-3",
+            "carrier-lower-screw-3",
+            "lid-standoff-0",
+            "lid-lower-screw-0",
+            "lid-standoff-1",
+            "lid-lower-screw-1",
+            "lid-standoff-2",
+            "lid-screw-2",
+            "lid-lower-screw-2",
+            "lid-standoff-3",
+            "lid-screw-3",
+            "lid-lower-screw-3"
+          ]
+        }
+      },
+      "toolReachPassed": true,
+      "nativeContinuousSweep": {
+        "basis": "conservative-axisymmetric-BREP-envelope",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "distanceMm": 100,
+        "sourceOutsideEnvelopeVolumeMm3": 0,
+        "segments": [
+          {
+            "z0": 29.5,
+            "z1": 32,
+            "r0": 2.25,
+            "r1": 2.25,
+            "surface": "CYLINDRE"
+          },
+          {
+            "z0": 21.5,
+            "z1": 29.5,
+            "r0": 1.25,
+            "r1": 1.25,
+            "surface": "CYLINDRE"
+          }
+        ],
+        "localFrameWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "restEnvelopeVolumeMm3": 79.03069019186819,
+        "sweptComponentCount": 2,
+        "obstacles": [
+          {
+            "part": "base",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-pcba",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-board",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-4",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-5",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-6",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-7",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-8",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-9",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-10",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-11",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-12",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-13",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-14",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-15",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-16",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-2111",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-3889",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "finalBounds": {
+        "min": [
+          61.25,
+          1.25,
+          121.5
+        ],
+        "max": [
+          65.75,
+          5.75,
+          132
+        ]
+      },
+      "completelyOutsideRemainingBounds": true,
+      "elapsedMs": 1566
+    },
+    {
+      "stage": 3,
+      "phase": "device",
+      "label": "remove-lid-screw-2",
+      "movingOriginalParts": [
+        "lid-screw-2"
+      ],
+      "allRemainingOriginalParts": [
+        "base",
+        "lid",
+        "carrier-pcba",
+        "pico-board",
+        "pico-component-1",
+        "pico-component-2",
+        "pico-component-3",
+        "pico-component-4",
+        "pico-component-5",
+        "pico-component-6",
+        "pico-component-7",
+        "pico-component-8",
+        "pico-component-9",
+        "pico-component-10",
+        "pico-component-11",
+        "pico-component-12",
+        "pico-component-13",
+        "pico-component-14",
+        "pico-component-15",
+        "pico-component-16",
+        "pico-header-2111",
+        "pico-header-3889",
+        "carrier-washer-0",
+        "carrier-standoff-0",
+        "carrier-screw-0",
+        "carrier-lower-screw-0",
+        "carrier-washer-1",
+        "carrier-standoff-1",
+        "carrier-screw-1",
+        "carrier-lower-screw-1",
+        "carrier-washer-2",
+        "carrier-standoff-2",
+        "carrier-screw-2",
+        "carrier-lower-screw-2",
+        "carrier-washer-3",
+        "carrier-standoff-3",
+        "carrier-screw-3",
+        "carrier-lower-screw-3",
+        "lid-standoff-0",
+        "lid-lower-screw-0",
+        "lid-standoff-1",
+        "lid-lower-screw-1",
+        "lid-standoff-2",
+        "lid-screw-2",
+        "lid-lower-screw-2",
+        "lid-standoff-3",
+        "lid-screw-3",
+        "lid-lower-screw-3"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "kind": "fastener",
+      "passed": true,
+      "meshReport": {
+        "ok": false,
+        "source": "local",
+        "basis": "continuous-triangle-mesh",
+        "limitations": [
+          "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+        ],
+        "model": {
+          "rigidParts": true,
+          "motion": "straight-line-translation",
+          "motionModels": [
+            "straight-line-translation"
+          ],
+          "testedDirections": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "gravity": "not-modelled",
+          "basis": "continuous-triangle-mesh",
+          "tessellation": {
+            "linearMm": 0.01,
+            "relative": true,
+            "angularRad": 0.05,
+            "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+          },
+          "clearanceMm": 0,
+          "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+          "toolReach": "swept-envelope"
+        },
+        "parts": [
+          {
+            "part": "lid-screw-2",
+            "removable": false,
+            "validDirections": [],
+            "directions": [
+              {
+                "direction": [
+                  0,
+                  0,
+                  1
+                ],
+                "distanceMm": 10.95,
+                "clear": false,
+                "blockingParts": [
+                  "lid-standoff-2"
+                ]
+              }
+            ],
+            "state": {
+              "kind": "blocked",
+              "blockersByDirection": [
+                {
+                  "direction": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blockers": [
+                    "lid-standoff-2"
+                  ]
+                }
+              ]
+            },
+            "fastener": {
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "pitchMm": 0.45,
+              "handedness": "right",
+              "threadLengthMm": 8,
+              "turns": 17.77777777777778,
+              "standard": "ISO4762"
+            },
+            "toolReach": {
+              "fastener": "lid-screw-2",
+              "status": "clear",
+              "blockers": [],
+              "tool": {
+                "kind": "cylinder",
+                "lengthMm": 40,
+                "diameterMm": 4,
+                "label": "straight hex driver"
+              },
+              "basis": "assembled-parts"
+            }
+          }
+        ],
+        "blockingGraph": {
+          "parts": [
+            "lid-screw-2"
+          ],
+          "directions": [
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "edges": [
+            {
+              "part": "lid-screw-2",
+              "blocker": "lid-standoff-2",
+              "direction": [
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "toolReach": [
+          {
+            "fastener": "lid-screw-2",
+            "status": "clear",
+            "blockers": [],
+            "tool": {
+              "kind": "cylinder",
+              "lengthMm": 40,
+              "diameterMm": 4,
+              "label": "straight hex driver"
+            },
+            "basis": "assembled-parts"
+          }
+        ],
+        "scope": {
+          "movingParts": [
+            "lid-screw-2"
+          ],
+          "stationaryParts": [
+            "base",
+            "lid",
+            "carrier-pcba",
+            "pico-board",
+            "pico-component-1",
+            "pico-component-2",
+            "pico-component-3",
+            "pico-component-4",
+            "pico-component-5",
+            "pico-component-6",
+            "pico-component-7",
+            "pico-component-8",
+            "pico-component-9",
+            "pico-component-10",
+            "pico-component-11",
+            "pico-component-12",
+            "pico-component-13",
+            "pico-component-14",
+            "pico-component-15",
+            "pico-component-16",
+            "pico-header-2111",
+            "pico-header-3889",
+            "carrier-washer-0",
+            "carrier-standoff-0",
+            "carrier-screw-0",
+            "carrier-lower-screw-0",
+            "carrier-washer-1",
+            "carrier-standoff-1",
+            "carrier-screw-1",
+            "carrier-lower-screw-1",
+            "carrier-washer-2",
+            "carrier-standoff-2",
+            "carrier-screw-2",
+            "carrier-lower-screw-2",
+            "carrier-washer-3",
+            "carrier-standoff-3",
+            "carrier-screw-3",
+            "carrier-lower-screw-3",
+            "lid-standoff-0",
+            "lid-lower-screw-0",
+            "lid-standoff-1",
+            "lid-lower-screw-1",
+            "lid-standoff-2",
+            "lid-lower-screw-2",
+            "lid-standoff-3",
+            "lid-screw-3",
+            "lid-lower-screw-3"
+          ]
+        }
+      },
+      "toolReachPassed": true,
+      "nativeContinuousSweep": {
+        "basis": "conservative-axisymmetric-BREP-envelope",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "distanceMm": 100,
+        "sourceOutsideEnvelopeVolumeMm3": 0,
+        "segments": [
+          {
+            "z0": 29.5,
+            "z1": 32,
+            "r0": 2.25,
+            "r1": 2.25,
+            "surface": "CYLINDRE"
+          },
+          {
+            "z0": 21.5,
+            "z1": 29.5,
+            "r0": 1.25,
+            "r1": 1.25,
+            "surface": "CYLINDRE"
+          }
+        ],
+        "localFrameWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "restEnvelopeVolumeMm3": 79.03069019186819,
+        "sweptComponentCount": 2,
+        "obstacles": [
+          {
+            "part": "base",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-pcba",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-board",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-4",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-5",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-6",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-7",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-8",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-9",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-10",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-11",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-12",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-13",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-14",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-15",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-16",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-2111",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-3889",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "finalBounds": {
+        "min": [
+          61.25,
+          -75.75,
+          121.5
+        ],
+        "max": [
+          65.75,
+          -71.25,
+          132
+        ]
+      },
+      "completelyOutsideRemainingBounds": true,
+      "elapsedMs": 1448
+    },
+    {
+      "stage": 4,
+      "phase": "device",
+      "label": "remove-lid-screw-3",
+      "movingOriginalParts": [
+        "lid-screw-3"
+      ],
+      "allRemainingOriginalParts": [
+        "base",
+        "lid",
+        "carrier-pcba",
+        "pico-board",
+        "pico-component-1",
+        "pico-component-2",
+        "pico-component-3",
+        "pico-component-4",
+        "pico-component-5",
+        "pico-component-6",
+        "pico-component-7",
+        "pico-component-8",
+        "pico-component-9",
+        "pico-component-10",
+        "pico-component-11",
+        "pico-component-12",
+        "pico-component-13",
+        "pico-component-14",
+        "pico-component-15",
+        "pico-component-16",
+        "pico-header-2111",
+        "pico-header-3889",
+        "carrier-washer-0",
+        "carrier-standoff-0",
+        "carrier-screw-0",
+        "carrier-lower-screw-0",
+        "carrier-washer-1",
+        "carrier-standoff-1",
+        "carrier-screw-1",
+        "carrier-lower-screw-1",
+        "carrier-washer-2",
+        "carrier-standoff-2",
+        "carrier-screw-2",
+        "carrier-lower-screw-2",
+        "carrier-washer-3",
+        "carrier-standoff-3",
+        "carrier-screw-3",
+        "carrier-lower-screw-3",
+        "lid-standoff-0",
+        "lid-lower-screw-0",
+        "lid-standoff-1",
+        "lid-lower-screw-1",
+        "lid-standoff-2",
+        "lid-lower-screw-2",
+        "lid-standoff-3",
+        "lid-screw-3",
+        "lid-lower-screw-3"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "kind": "fastener",
+      "passed": true,
+      "meshReport": {
+        "ok": false,
+        "source": "local",
+        "basis": "continuous-triangle-mesh",
+        "limitations": [
+          "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+        ],
+        "model": {
+          "rigidParts": true,
+          "motion": "straight-line-translation",
+          "motionModels": [
+            "straight-line-translation"
+          ],
+          "testedDirections": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "gravity": "not-modelled",
+          "basis": "continuous-triangle-mesh",
+          "tessellation": {
+            "linearMm": 0.01,
+            "relative": true,
+            "angularRad": 0.05,
+            "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+          },
+          "clearanceMm": 0,
+          "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+          "toolReach": "swept-envelope"
+        },
+        "parts": [
+          {
+            "part": "lid-screw-3",
+            "removable": false,
+            "validDirections": [],
+            "directions": [
+              {
+                "direction": [
+                  0,
+                  0,
+                  1
+                ],
+                "distanceMm": 10.95,
+                "clear": false,
+                "blockingParts": [
+                  "lid-standoff-3"
+                ]
+              }
+            ],
+            "state": {
+              "kind": "blocked",
+              "blockersByDirection": [
+                {
+                  "direction": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blockers": [
+                    "lid-standoff-3"
+                  ]
+                }
+              ]
+            },
+            "fastener": {
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "pitchMm": 0.45,
+              "handedness": "right",
+              "threadLengthMm": 8,
+              "turns": 17.77777777777778,
+              "standard": "ISO4762"
+            },
+            "toolReach": {
+              "fastener": "lid-screw-3",
+              "status": "clear",
+              "blockers": [],
+              "tool": {
+                "kind": "cylinder",
+                "lengthMm": 40,
+                "diameterMm": 4,
+                "label": "straight hex driver"
+              },
+              "basis": "assembled-parts"
+            }
+          }
+        ],
+        "blockingGraph": {
+          "parts": [
+            "lid-screw-3"
+          ],
+          "directions": [
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "edges": [
+            {
+              "part": "lid-screw-3",
+              "blocker": "lid-standoff-3",
+              "direction": [
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "toolReach": [
+          {
+            "fastener": "lid-screw-3",
+            "status": "clear",
+            "blockers": [],
+            "tool": {
+              "kind": "cylinder",
+              "lengthMm": 40,
+              "diameterMm": 4,
+              "label": "straight hex driver"
+            },
+            "basis": "assembled-parts"
+          }
+        ],
+        "scope": {
+          "movingParts": [
+            "lid-screw-3"
+          ],
+          "stationaryParts": [
+            "base",
+            "lid",
+            "carrier-pcba",
+            "pico-board",
+            "pico-component-1",
+            "pico-component-2",
+            "pico-component-3",
+            "pico-component-4",
+            "pico-component-5",
+            "pico-component-6",
+            "pico-component-7",
+            "pico-component-8",
+            "pico-component-9",
+            "pico-component-10",
+            "pico-component-11",
+            "pico-component-12",
+            "pico-component-13",
+            "pico-component-14",
+            "pico-component-15",
+            "pico-component-16",
+            "pico-header-2111",
+            "pico-header-3889",
+            "carrier-washer-0",
+            "carrier-standoff-0",
+            "carrier-screw-0",
+            "carrier-lower-screw-0",
+            "carrier-washer-1",
+            "carrier-standoff-1",
+            "carrier-screw-1",
+            "carrier-lower-screw-1",
+            "carrier-washer-2",
+            "carrier-standoff-2",
+            "carrier-screw-2",
+            "carrier-lower-screw-2",
+            "carrier-washer-3",
+            "carrier-standoff-3",
+            "carrier-screw-3",
+            "carrier-lower-screw-3",
+            "lid-standoff-0",
+            "lid-lower-screw-0",
+            "lid-standoff-1",
+            "lid-lower-screw-1",
+            "lid-standoff-2",
+            "lid-lower-screw-2",
+            "lid-standoff-3",
+            "lid-lower-screw-3"
+          ]
+        }
+      },
+      "toolReachPassed": true,
+      "nativeContinuousSweep": {
+        "basis": "conservative-axisymmetric-BREP-envelope",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "distanceMm": 100,
+        "sourceOutsideEnvelopeVolumeMm3": 0,
+        "segments": [
+          {
+            "z0": 29.5,
+            "z1": 32,
+            "r0": 2.25,
+            "r1": 2.25,
+            "surface": "CYLINDRE"
+          },
+          {
+            "z0": 21.5,
+            "z1": 29.5,
+            "r0": 1.25,
+            "r1": 1.25,
+            "surface": "CYLINDRE"
+          }
+        ],
+        "localFrameWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "restEnvelopeVolumeMm3": 79.03069019186822,
+        "sweptComponentCount": 2,
+        "obstacles": [
+          {
+            "part": "base",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-pcba",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-board",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-4",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-5",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-6",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-7",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-8",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-9",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-10",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-11",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-12",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-13",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-14",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-15",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-component-16",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-2111",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "pico-header-3889",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-washer-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "carrier-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-0",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-1",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-2",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-standoff-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          },
+          {
+            "part": "lid-lower-screw-3",
+            "clear": true,
+            "componentVolumesMm3": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "finalBounds": {
+        "min": [
+          -5.75,
+          -75.75,
+          121.5
+        ],
+        "max": [
+          -1.25,
+          -71.25,
+          132
+        ]
+      },
+      "completelyOutsideRemainingBounds": true,
+      "elapsedMs": 1567
+    },
+    {
+      "stage": 5,
+      "phase": "device",
+      "label": "remove-lid",
+      "movingOriginalParts": [
+        "lid"
+      ],
+      "allRemainingOriginalParts": [
+        "base",
+        "lid",
+        "carrier-pcba",
+        "pico-board",
+        "pico-component-1",
+        "pico-component-2",
+        "pico-component-3",
+        "pico-component-4",
+        "pico-component-5",
+        "pico-component-6",
+        "pico-component-7",
+        "pico-component-8",
+        "pico-component-9",
+        "pico-component-10",
+        "pico-component-11",
+        "pico-component-12",
+        "pico-component-13",
+        "pico-component-14",
+        "pico-component-15",
+        "pico-component-16",
+        "pico-header-2111",
+        "pico-header-3889",
+        "carrier-washer-0",
+        "carrier-standoff-0",
+        "carrier-screw-0",
+        "carrier-lower-screw-0",
+        "carrier-washer-1",
+        "carrier-standoff-1",
+        "carrier-screw-1",
+        "carrier-lower-screw-1",
+        "carrier-washer-2",
+        "carrier-standoff-2",
+        "carrier-screw-2",
+        "carrier-lower-screw-2",
+        "carrier-washer-3",
+        "carrier-standoff-3",
+        "carrier-screw-3",
+        "carrier-lower-screw-3",
+        "lid-standoff-0",
+        "lid-lower-screw-0",
+        "lid-standoff-1",
+        "lid-lower-screw-1",
+        "lid-standoff-2",
+        "lid-lower-screw-2",
+        "lid-standoff-3",
+        "lid-lower-screw-3"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "kind": "straight",
+      "passed": true,
+      "meshReport": {
+        "ok": true,
+        "source": "local",
+        "basis": "continuous-triangle-mesh",
+        "limitations": [
+          "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+        ],
+        "model": {
+          "rigidParts": true,
+          "motion": "straight-line-translation",
+          "motionModels": [
+            "straight-line-translation"
+          ],
+          "testedDirections": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "gravity": "not-modelled",
+          "basis": "continuous-triangle-mesh",
+          "tessellation": {
+            "linearMm": 0.01,
+            "relative": true,
+            "angularRad": 0.05,
+            "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+          },
+          "clearanceMm": 0,
+          "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+          "toolReach": "not-modelled"
+        },
+        "parts": [
+          {
+            "part": "lid",
+            "removable": true,
+            "validDirections": [
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "directions": [
+              {
+                "direction": [
+                  1,
+                  0,
+                  0
+                ],
+                "distanceMm": 78.000001,
+                "clear": false,
+                "blockingParts": [
+                  "base",
+                  "lid-standoff-0",
+                  "lid-standoff-1",
+                  "lid-standoff-2",
+                  "lid-standoff-3"
+                ]
+              },
+              {
+                "direction": [
+                  -1,
+                  0,
+                  0
+                ],
+                "distanceMm": 78.000001,
+                "clear": false,
+                "blockingParts": [
+                  "base",
+                  "lid-standoff-0",
+                  "lid-standoff-1",
+                  "lid-standoff-2",
+                  "lid-standoff-3"
+                ]
+              },
+              {
+                "direction": [
+                  0,
+                  1,
+                  0
+                ],
+                "distanceMm": 88.000001,
+                "clear": false,
+                "blockingParts": [
+                  "base",
+                  "lid-standoff-0",
+                  "lid-standoff-1",
+                  "lid-standoff-2",
+                  "lid-standoff-3"
+                ]
+              },
+              {
+                "direction": [
+                  0,
+                  -1,
+                  0
+                ],
+                "distanceMm": 88.000001,
+                "clear": false,
+                "blockingParts": [
+                  "base",
+                  "lid-standoff-0",
+                  "lid-standoff-1",
+                  "lid-standoff-2",
+                  "lid-standoff-3"
+                ]
+              },
+              {
+                "direction": [
+                  0,
+                  0,
+                  1
+                ],
+                "distanceMm": 3.2000009999999994,
+                "clear": true,
+                "blockingParts": []
+              },
+              {
+                "direction": [
+                  0,
+                  0,
+                  -1
+                ],
+                "distanceMm": 29.500001,
+                "clear": false,
+                "blockingParts": [
+                  "base",
+                  "carrier-pcba",
+                  "pico-board",
+                  "pico-component-1",
+                  "pico-component-2",
+                  "pico-component-3",
+                  "pico-component-4",
+                  "pico-component-5",
+                  "pico-component-6",
+                  "pico-component-7",
+                  "pico-component-8",
+                  "pico-component-9",
+                  "pico-component-10",
+                  "pico-component-11",
+                  "pico-component-12",
+                  "pico-component-13",
+                  "pico-component-14",
+                  "pico-component-15",
+                  "pico-component-16",
+                  "pico-header-2111",
+                  "pico-header-3889",
+                  "carrier-washer-0",
+                  "carrier-standoff-0",
+                  "carrier-screw-0",
+                  "carrier-lower-screw-0",
+                  "carrier-washer-1",
+                  "carrier-standoff-1",
+                  "carrier-screw-1",
+                  "carrier-lower-screw-1",
+                  "carrier-washer-2",
+                  "carrier-standoff-2",
+                  "carrier-screw-2",
+                  "carrier-lower-screw-2",
+                  "carrier-washer-3",
+                  "carrier-standoff-3",
+                  "carrier-screw-3",
+                  "carrier-lower-screw-3",
+                  "lid-standoff-0",
+                  "lid-lower-screw-0",
+                  "lid-standoff-1",
+                  "lid-lower-screw-1",
+                  "lid-standoff-2",
+                  "lid-lower-screw-2",
+                  "lid-standoff-3",
+                  "lid-lower-screw-3"
+                ]
+              }
+            ],
+            "state": {
+              "kind": "removable",
+              "direction": [
+                0,
+                0,
+                1
+              ],
+              "testedDirections": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  -1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  -1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  -1
+                ]
+              ]
+            }
+          }
+        ],
+        "blockingGraph": {
+          "parts": [
+            "lid"
+          ],
+          "directions": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "edges": [
+            {
+              "part": "lid",
+              "blocker": "base",
+              "direction": [
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-0",
+              "direction": [
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-1",
+              "direction": [
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-2",
+              "direction": [
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-3",
+              "direction": [
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "base",
+              "direction": [
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-0",
+              "direction": [
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-1",
+              "direction": [
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-2",
+              "direction": [
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-3",
+              "direction": [
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "base",
+              "direction": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-0",
+              "direction": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-1",
+              "direction": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-2",
+              "direction": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-3",
+              "direction": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "base",
+              "direction": [
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-0",
+              "direction": [
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-1",
+              "direction": [
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-2",
+              "direction": [
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-3",
+              "direction": [
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "base",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-pcba",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-board",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-1",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-2",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-3",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-4",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-5",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-6",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-7",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-8",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-9",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-10",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-11",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-12",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-13",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-14",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-15",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-component-16",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-header-2111",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "pico-header-3889",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-washer-0",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-standoff-0",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-screw-0",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-lower-screw-0",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-washer-1",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-standoff-1",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-screw-1",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-lower-screw-1",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-washer-2",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-standoff-2",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-screw-2",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-lower-screw-2",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-washer-3",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-standoff-3",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-screw-3",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "carrier-lower-screw-3",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-0",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-lower-screw-0",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-1",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-lower-screw-1",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-2",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-lower-screw-2",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-standoff-3",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            },
+            {
+              "part": "lid",
+              "blocker": "lid-lower-screw-3",
+              "direction": [
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "scope": {
+          "movingParts": [
+            "lid"
+          ],
+          "stationaryParts": [
+            "base",
+            "carrier-pcba",
+            "pico-board",
+            "pico-component-1",
+            "pico-component-2",
+            "pico-component-3",
+            "pico-component-4",
+            "pico-component-5",
+            "pico-component-6",
+            "pico-component-7",
+            "pico-component-8",
+            "pico-component-9",
+            "pico-component-10",
+            "pico-component-11",
+            "pico-component-12",
+            "pico-component-13",
+            "pico-component-14",
+            "pico-component-15",
+            "pico-component-16",
+            "pico-header-2111",
+            "pico-header-3889",
+            "carrier-washer-0",
+            "carrier-standoff-0",
+            "carrier-screw-0",
+            "carrier-lower-screw-0",
+            "carrier-washer-1",
+            "carrier-standoff-1",
+            "carrier-screw-1",
+            "carrier-lower-screw-1",
+            "carrier-washer-2",
+            "carrier-standoff-2",
+            "carrier-screw-2",
+            "carrier-lower-screw-2",
+            "carrier-washer-3",
+            "carrier-standoff-3",
+            "carrier-screw-3",
+            "carrier-lower-screw-3",
+            "lid-standoff-0",
+            "lid-lower-screw-0",
+            "lid-standoff-1",
+            "lid-lower-screw-1",
+            "lid-standoff-2",
+            "lid-lower-screw-2",
+            "lid-standoff-3",
+            "lid-lower-screw-3"
+          ]
+        }
+      },
+      "elapsedMs": 4624
+    },
+    {
+      "stage": 6,
+      "phase": "device",
+      "label": "lift-complete-Pico-module",
+      "movingOriginalParts": [
+        "pico-board",
+        "pico-component-1",
+        "pico-component-2",
+        "pico-component-3",
+        "pico-component-4",
+        "pico-component-5",
+        "pico-component-6",
+        "pico-component-7",
+        "pico-component-8",
+        "pico-component-9",
+        "pico-component-10",
+        "pico-component-11",
+        "pico-component-12",
+        "pico-component-13",
+        "pico-component-14",
+        "pico-component-15",
+        "pico-component-16",
+        "pico-header-2111",
+        "pico-header-3889"
+      ],
+      "allRemainingOriginalParts": [
+        "base",
+        "carrier-pcba",
+        "pico-board",
+        "pico-component-1",
+        "pico-component-2",
+        "pico-component-3",
+        "pico-component-4",
+        "pico-component-5",
+        "pico-component-6",
+        "pico-component-7",
+        "pico-component-8",
+        "pico-component-9",
+        "pico-component-10",
+        "pico-component-11",
+        "pico-component-12",
+        "pico-component-13",
+        "pico-component-14",
+        "pico-component-15",
+        "pico-component-16",
+        "pico-header-2111",
+        "pico-header-3889",
+        "carrier-washer-0",
+        "carrier-standoff-0",
+        "carrier-screw-0",
+        "carrier-lower-screw-0",
+        "carrier-washer-1",
+        "carrier-standoff-1",
+        "carrier-screw-1",
+        "carrier-lower-screw-1",
+        "carrier-washer-2",
+        "carrier-standoff-2",
+        "carrier-screw-2",
+        "carrier-lower-screw-2",
+        "carrier-washer-3",
+        "carrier-standoff-3",
+        "carrier-screw-3",
+        "carrier-lower-screw-3",
+        "lid-standoff-0",
+        "lid-lower-screw-0",
+        "lid-standoff-1",
+        "lid-lower-screw-1",
+        "lid-standoff-2",
+        "lid-lower-screw-2",
+        "lid-standoff-3",
+        "lid-lower-screw-3"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "kind": "straight",
+      "passed": false,
+      "error": "Maximum call stack size exceeded",
+      "elapsedMs": 28
+    }
+  ],
+  "status": "blocked",
+  "rigidModule": {
+    "name": "purchased-Pico-with-soldered-specified-headers",
+    "members": [
+      "pico-board",
+      "pico-component-1",
+      "pico-component-2",
+      "pico-component-3",
+      "pico-component-4",
+      "pico-component-5",
+      "pico-component-6",
+      "pico-component-7",
+      "pico-component-8",
+      "pico-component-9",
+      "pico-component-10",
+      "pico-component-11",
+      "pico-component-12",
+      "pico-component-13",
+      "pico-component-14",
+      "pico-component-15",
+      "pico-component-16",
+      "pico-header-2111",
+      "pico-header-3889"
+    ],
+    "physicalPrecondition": "The original manufacturer PCBA and the two exact specified header rows are soldered as described in ASSEMBLY.md; internal solder-joint fabrication is not modeled."
+  },
+  "error": "Maximum call stack size exceeded",
+  "elapsedMs": 81472
+}

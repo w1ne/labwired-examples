@@ -34,7 +34,9 @@ The module is a purchased, populated PCB. Do not desolder its small components t
 
 Nominal thread engagement is about 2.16 mm for the lower carrier screws, 2.4 mm for the upper carrier screws, 2.66 mm for the lower lid-post screws and 6 mm for the lid screws. The model leaves 0.44 mm between opposing carrier screw tips. Check received screw lengths and spacer thread depth before assembly.
 
-Support the case while operating underside fasteners. Support the carrier and Pico while inserting or removing the module. The current full-scene assembly-path run was computation-budget limited; it is not evidence that every tool reach or hold has been proven.
+Support the case while operating underside fasteners. Support the carrier and Pico while inserting or removing the module. The source-bound ordered geometric proof covers all 50 original parts in 31 stages, including native fastener sweeps and driver reach. It removes the intact Pico PCBA and its two soldered header rows as one 19-part module. Seven native-sweep controls and the shifted-fastener collision negative pass.
+
+The original hosted complete-scene path and the ordered module mesh search remain computation-budget limited. The independent native proof does not change those tool results. The raw-solid support calculation flags five bodies inside the purchased Pico PCBA because solder joints are absent from the vendor STEP. Preserve the factory PCBA and inspect the two added header rows; do not treat those findings as instructions to remove individual components. Cable flexibility, contact force, screw torque and physical fit still require the first-unit checks below.
 
 ## Electrical bring-up
 
