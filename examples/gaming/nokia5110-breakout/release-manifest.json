@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "package_id": "nokia-breakout-rev-a-candidate-1",
+  "package_id": "nokia-breakout-rev-a-candidate-2",
   "status": "engineering-candidate",
   "date": "2026-11-18",
   "canonical_lab_url": "https://app.labwired.com/?lab=nokia5110-invaders-lab",
@@ -31,7 +31,7 @@
     "slug": "YhZimWlS",
     "projectId": "860443af-e8d3-44b9-a009-098108e5d444",
     "published_version": 1,
-    "published_version_is_current": true,
+    "published_version_is_current": false,
     "mesh_producer_provenance": "19171a5f8aaeda2e43aec706c1ce0b001c65750332cf91777b96c47a8245ab20",
     "source": "mechanical/nokia-breakout-enclosure.kcad.ts",
     "submitted_source": "validation/submitted-enclosure.kcad.ts",
@@ -47,35 +47,21 @@
     "assembly_export_is_current": true,
     "design_loop_is_current": true,
     "named_parts": [
+      "base",
+      "lid",
       "lcd-window",
       "nucleo-native-pcb",
       "carrier-native-pcb",
-      "window-nut-0",
-      "window-screw-0",
-      "window-nut-1",
-      "window-screw-1",
-      "window-nut-2",
-      "window-screw-2",
-      "window-nut-3",
-      "window-screw-3",
-      "lcd-clamp-0",
-      "lcd-clamp-1",
-      "lcd-clamp-nut-0",
-      "lcd-clamp-screw-0",
-      "lcd-clamp-nut-1",
-      "lcd-clamp-screw-1",
-      "lcd-clamp-nut-2",
-      "lcd-clamp-screw-2",
-      "lcd-clamp-nut-3",
-      "lcd-clamp-screw-3",
-      "J5-sonar-header",
+      "joy-it-rev2-module-envelope",
       "lcd-glass-view-envelope",
       "adafruit3942-pcb-envelope",
       "sonar-transducer-0",
-      "sonar-face-0",
-      "sonar-transducer-1",
-      "sonar-face-1"
-    ]
+      "sonar-transducer-1"
+    ],
+    "revision": "B",
+    "current_studio_revision_pending": true,
+    "coordinate_correction": "validation/native-coordinate-correction.json",
+    "assembly_path_status": "inconclusive-memory-budget"
   },
   "physical_hardware_tested": false,
   "verification": {
@@ -90,10 +76,13 @@
     "print_and_cut_files": "validation/export-file-checks.json",
     "studio": "validation/studio-revision.json",
     "mesh": "validation/mesh-provenance.json",
-    "assembly_path": "validation/assembly-path.json"
+    "assembly_path": "validation/assembly-path-revision-b.json",
+    "native_registration": "validation/board-registration.json",
+    "assembly_path_historical": "validation/assembly-path.json"
   },
   "open_acceptance_items": [
-    "Complete full assembly-path verification; the full-scene 85-part attempt reached the hosted 300-second evaluation limit and is inconclusive.",
+    "Save the corrected revision B source to existing Studio project YhZimWlS after the generic imported-asset collaboration repair is deployed; revision 1 is superseded.",
+    "Complete full assembly-path verification; the corrected 85-part scene exceeded the hosted 1000 MB per-job memory budget and is inconclusive.",
     "Bind and verify this exact package in the existing canonical Lab using the physical 4 MHz time base and 32-cycle peripheral cap.",
     "Measure the purchased Nucleo socket stack, LCD/sonar revision details, USB overmold, printed fits, hardware engagement and wire routing.",
     "Fabricate, assemble and power a prototype; record supply currents, ECHO levels/timing and closed-case behavior."
@@ -106,8 +95,8 @@
     },
     {
       "path": "ASSEMBLY.md",
-      "bytes": 11021,
-      "sha256": "42441444736751cc29e6857556ae639251b0e13ac61477ce8cd97c34e1e8b168"
+      "bytes": 11447,
+      "sha256": "5d1715d3c03e23d3387c1820533710d520629c6b23d3fdc2302b3db8fb67392c"
     },
     {
       "path": "LICENSE",
@@ -116,8 +105,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12606,
-      "sha256": "e3bb881ad60915686d5f12a28245a3e974b7255464747095d3cddd46f3357f0b"
+      "bytes": 13564,
+      "sha256": "07a46c5a543249cd6ab662f0320f619591c929ab18e670b272f5e79ad4fc0093"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -401,23 +390,33 @@
     },
     {
       "path": "mechanical-interface.json",
-      "bytes": 6182,
-      "sha256": "b595e1c93b5bdc3bb3bb169d5f14f116a0814fec13f85cb7ae50339374f69247"
+      "bytes": 6537,
+      "sha256": "dbe53c453052e296f8d7d09b8b02453bd77c6feabaef158304a273ac7a40a3b1"
     },
     {
       "path": "mechanical/assembly-front.png",
-      "bytes": 64698,
-      "sha256": "9c1d50b9f552edade0fcb5fc455d11135854e83e7b1c1a2c6b99074b9cf7e2ab"
+      "bytes": 58874,
+      "sha256": "29a94f9e8f0c961471c2ea5f95947a4d5724f13a587177aca57685631677d383"
     },
     {
       "path": "mechanical/assembly-iso.png",
-      "bytes": 114424,
-      "sha256": "544ee2244a911648d104d54243867468f56eb0e7b52dcd0e5ad9de826f59b14e"
+      "bytes": 97037,
+      "sha256": "d67bb7914608a8008b652d98027c077563e3dfba1e08b3c02791bd1a7341f2d9"
+    },
+    {
+      "path": "mechanical/assembly-rear-front.png",
+      "bytes": 64949,
+      "sha256": "447b3cf601760efa5733210c18d19d2d8d1804111b132abcf85a858a3a0c3aab"
+    },
+    {
+      "path": "mechanical/assembly-rear-iso.png",
+      "bytes": 101687,
+      "sha256": "0522ff38ae009310a9d0e16fdbe30828d10f4f100f37a882db91900f8345274f"
     },
     {
       "path": "mechanical/assembly-top.png",
-      "bytes": 96232,
-      "sha256": "c601e8a10e1685aeaeee37dbd2bda21405a976e6ccdf40c8bffd88758ab983b2"
+      "bytes": 87061,
+      "sha256": "afa5c7cfcbda5fded7991ce066e8db6151b8ac23a5021bafe339f91e50fc4276"
     },
     {
       "path": "mechanical/inputs/nokia-carrier.step",
@@ -432,32 +431,32 @@
     {
       "path": "mechanical/nokia-base.stl",
       "bytes": 1598284,
-      "sha256": "8de12b31a99a664d6c73e4e7ff987d9220c6bd716126745d40694cf460b2c93c"
+      "sha256": "696cc3bad227c10a97c192c5c550166093c3a1ce570bffbf1f8b10945eb826d6"
     },
     {
       "path": "mechanical/nokia-breakout-assembly.step",
-      "bytes": 9915641,
-      "sha256": "e039b90e9ad51536001299f6eed824149bf1a155460a1376d4638cda35f6fa18"
+      "bytes": 10067645,
+      "sha256": "db40dd01df2611938d8b6e306f56516b638350815d26bd2efeba2902958f3782"
     },
     {
       "path": "mechanical/nokia-breakout-enclosure.kcad.ts",
-      "bytes": 15307,
-      "sha256": "de1ab40e93ccbe548b2ece3c997b1296b5deff1ff67bd16edfa3e91a5296f57e"
+      "bytes": 16025,
+      "sha256": "9a739f7efc25d4ff66046c3b4dc5ba1fb32826bbafb2d6d50fb77ce4b9010326"
     },
     {
       "path": "mechanical/nokia-lcd-clamp.stl",
       "bytes": 102284,
-      "sha256": "0e9be2bfcbc2d02fa03f706ad05511b385ed7359a095dd3a1d236ec5182a12e0"
+      "sha256": "6db090f8b56bd65064365c56c39d974dd2a809fca4c7e2601c30d2b8a53ed628"
     },
     {
       "path": "mechanical/nokia-lid.stl",
       "bytes": 1191484,
-      "sha256": "c85822ed861499cdecd7a72e76be8bb58d5036ac0b367a4c57b53f0deb2d789a"
+      "sha256": "2fbe0fee9d54feffac1e2aff95b80e012bc50c1e01de1f7b0ea8dedfc938249c"
     },
     {
       "path": "mechanical/nokia-sensor-clamp.stl",
       "bytes": 102284,
-      "sha256": "ed383c76933b3dca338d6146fcb984d5366a839eab8c2d063fe433ac97d6f15a"
+      "sha256": "3b37988a2a0dbee285616ef08f1abb59fc9b71d158236655293d13a30f361e2d"
     },
     {
       "path": "mechanical/nokia-window-drawing.png",
@@ -471,8 +470,8 @@
     },
     {
       "path": "mechanical/nokia-window.dxf",
-      "bytes": 1111,
-      "sha256": "83b595ab9636e665bcd6e8147e01de255dd53f65ddd6ce2008e2e9f69d2e4c9e"
+      "bytes": 1123,
+      "sha256": "410c6e7d79b86e6314c5d780bff03327ddbd815355417bd9ae52b38893720e7a"
     },
     {
       "path": "references/st/MB1136-mechanical-reference.kicad_pcb",
@@ -500,9 +499,14 @@
       "sha256": "3f50d641932a3964b234e7f846b761774aed62b3a5fae921e3d88ffe11a3a88e"
     },
     {
+      "path": "tools/check_board_registration.py",
+      "bytes": 5778,
+      "sha256": "2dc39a822382d2971a6fc620a89f06ce3f33923b9cee81166516419469b4ce3c"
+    },
+    {
       "path": "tools/check_exports.py",
-      "bytes": 5071,
-      "sha256": "a8cd1473874beb064df6c4b90442e711200d5f69911d395510d65af97c064aa5"
+      "bytes": 5583,
+      "sha256": "a4e56fe703d5af117580de526ee4fadbe3da6a6de215c2cee0b0139890a19408"
     },
     {
       "path": "tools/derive_nucleo_reference.py",
@@ -520,19 +524,29 @@
       "sha256": "d252da6a2bc7aff8f16c399dbb3f6a8afbab3035758ac11856809c8340a2803a"
     },
     {
+      "path": "validation/assembly-path-revision-b.json",
+      "bytes": 3414,
+      "sha256": "c2c457a15acf68bbaddfdb180a44ab006323b02b5b9eb18e108ed8e60c656d54"
+    },
+    {
       "path": "validation/assembly-path.json",
       "bytes": 3134,
       "sha256": "6a23c07509c542204678a7b93de267cd7cb7f60620d93033c01aa7fd8651f58e"
     },
     {
       "path": "validation/assembly-step-export.json",
-      "bytes": 1461,
-      "sha256": "70cd0c7e8b63895c59c66219b953be233526088767110584fa333429792cc44e"
+      "bytes": 1676,
+      "sha256": "86d1e8c3f08d2c4d5ac027976bd4af63453d17620e8174d241ac2796a9d852a7"
     },
     {
       "path": "validation/assembly-step-inspection.json",
-      "bytes": 29956,
-      "sha256": "76866c56361dc0a5fecc45c255ca993e8eb12952fca3c04304adabf7085259ed"
+      "bytes": 30070,
+      "sha256": "13551057b79e6a4ef901ac9c5c087c72358ee03a5874efd2a836d9d6c592e517"
+    },
+    {
+      "path": "validation/board-registration.json",
+      "bytes": 7787,
+      "sha256": "7272fdd7a4a589805f57161dfe5007f6dc7f1b7f8c13a76e47840ebeb047ace9"
     },
     {
       "path": "validation/cad-bbox-conservative-diagnostic.json",
@@ -541,13 +555,13 @@
     },
     {
       "path": "validation/cad-evaluation.json",
-      "bytes": 11090,
-      "sha256": "2c9192a99984fafffacbea726ff06d1471c94011b47e80cf45ced45dee8a09f0"
+      "bytes": 11418,
+      "sha256": "0a7fec0ec0c0360223aeeaf18d084ffba9ff5264e6e1d42f2d16dc58232e0d17"
     },
     {
       "path": "validation/carrier-exact-dimensions.json",
-      "bytes": 821,
-      "sha256": "713e517ff4840fb36379f27222af78c56c16ccb12d4589b2a8bc1b35cfe14bd6"
+      "bytes": 892,
+      "sha256": "0924c7a417235a2cc90a4e9a305832024480905af9791da63727dc03d49c77b0"
     },
     {
       "path": "validation/carrier-finished-export.json",
@@ -556,13 +570,13 @@
     },
     {
       "path": "validation/closed-renders.json",
-      "bytes": 2415,
-      "sha256": "824daa613a74bb37e62f72fecfb158a9086a93b7e411aa16ac2b6a5b089d69cc"
+      "bytes": 2506,
+      "sha256": "69cae960a2f027ff8202100111e4072fcee188c0565da6e7db1e257d1ae4e2a1"
     },
     {
       "path": "validation/design-loop.json",
-      "bytes": 15257,
-      "sha256": "2b2e60e67d72eb68bb69d24518c88662e3d2b6762c663f73ceb490e2fe3d98b3"
+      "bytes": 15351,
+      "sha256": "bf968f4e3eabc4c6c73060fd5a7bf9a6bb2695eb672b63516ca61e3579410bc7"
     },
     {
       "path": "validation/drc.json",
@@ -576,33 +590,33 @@
     },
     {
       "path": "validation/export-base.json",
-      "bytes": 1400,
-      "sha256": "a6ff0792a91f8d689ffd9537fa8962a03b2a595f59f5259e77884614f58d4248"
+      "bytes": 1609,
+      "sha256": "90fef9df2f35c7be6b6857db19f282117b7696c9f6965cc459394065c6b41ba0"
     },
     {
       "path": "validation/export-file-checks.json",
-      "bytes": 3342,
-      "sha256": "5980a8e0f9b675b75f6cf823d4de9151c0b383aae2689c1ab002a1329f370624"
+      "bytes": 3357,
+      "sha256": "e8885047778f86f9865f44cdfc05106764131b15660cb828094e08da807d3e69"
     },
     {
       "path": "validation/export-lcd-clamp.json",
-      "bytes": 1445,
-      "sha256": "ff3955c65115e780dcfcb3b07f9e7bdf13b8754b82d0af1d0e9ee5cfcd30c61f"
+      "bytes": 1659,
+      "sha256": "c526a8cd5d4ecda3071590070d8125c34ffa7f3c1e5ef66e32a5604596c1544e"
     },
     {
       "path": "validation/export-lid.json",
-      "bytes": 1427,
-      "sha256": "628ff1a8befea46ab9c4a9e32cce72d6ee8426af3019a9994fbc6014db27235e"
+      "bytes": 1619,
+      "sha256": "69a7967afb95cc43ab992b55084c78daff595ffc9c7f91046c9056d33ba7b8e8"
     },
     {
       "path": "validation/export-sensor-clamp.json",
-      "bytes": 1444,
-      "sha256": "b84d9602feb9aa5a907b0f8212cd473dfdec0f76573a9bbe96b26989fc0a00e6"
+      "bytes": 1661,
+      "sha256": "56ecb7758fd9e5b63f43d4bebb0636b4fe4a633d272ede376c7688095845daf8"
     },
     {
       "path": "validation/export-window.json",
-      "bytes": 1417,
-      "sha256": "b0a74df9a54bca832cbffe113670cc5edc117b68638ad20ca7e9bd45501f2a9f"
+      "bytes": 1628,
+      "sha256": "df94fce6b54275e30d4ea62bf5fbab448c86002dfd6c60e620aabea50269b6b2"
     },
     {
       "path": "validation/firmware-behavior.json",
@@ -635,6 +649,11 @@
       "sha256": "db1ea54a08ae1beec965c80d98906b6bb0092456d68b56795d7e3c115dff3933"
     },
     {
+      "path": "validation/native-coordinate-correction.json",
+      "bytes": 1166,
+      "sha256": "75e491c7318ed3995d2cba09425ad5462690e9c2d79cbe46be05412fdf655bfa"
+    },
+    {
       "path": "validation/native-import-validation.json",
       "bytes": 6051,
       "sha256": "26a677c298fafdb28de4d7e1713690a5a4cef920bcd9afed6680f4a20d572831"
@@ -655,19 +674,49 @@
       "sha256": "2d4acf777cc55cda6143aed019e8517fa55dedad91548b76da99021f8b2c5e0e"
     },
     {
+      "path": "validation/part-stats-base.json",
+      "bytes": 433,
+      "sha256": "ebcc6f1dc71b4544d80b1bb68d5d4895c9424b789a5a5d17f96a306551987750"
+    },
+    {
+      "path": "validation/part-stats-lcd-clamp.json",
+      "bytes": 440,
+      "sha256": "3d4970ea5b5c550b4eeab390ff6901c7ffce5acd3d539ba7cf05ed8cf1713ac8"
+    },
+    {
+      "path": "validation/part-stats-lid.json",
+      "bytes": 453,
+      "sha256": "311280e94727b8e93fbdeb7db22d222607d40105bd35291b1b3f30616cdc077e"
+    },
+    {
+      "path": "validation/part-stats-sensor-clamp.json",
+      "bytes": 446,
+      "sha256": "26283ed9a242669d793373be226edfb3a0aac34feb17b72e5625e58622c83072"
+    },
+    {
+      "path": "validation/rear-renders.json",
+      "bytes": 1984,
+      "sha256": "762b683c68c41133897664b514680059ffbcff2527563ecfd4967a81a5db6150"
+    },
+    {
+      "path": "validation/rear-review-source.kcad.ts",
+      "bytes": 16468,
+      "sha256": "981824d1fd4b9370d1d15907ab31b6fd6b00327a2bf09d21f9b956394aa2635e"
+    },
+    {
       "path": "validation/studio-revision.json",
       "bytes": 16717,
       "sha256": "5a0e8f81d03df2a93bac8b011369168182fec7ed09c77b405198c0b20c18f505"
     },
     {
       "path": "validation/submitted-enclosure.kcad.ts",
-      "bytes": 15591,
-      "sha256": "2b3d65256e08fe9a85a590c5197de16faaba63f10ec5886e40cba6a009bb29a3"
+      "bytes": 16309,
+      "sha256": "2760625f61d5820e5a3dd74b56710b74215217f8f02599857c67facc5cf45308"
     },
     {
       "path": "validation/visual-review.json",
-      "bytes": 3879,
-      "sha256": "79d12120d15c8548daaac0e7a04f349b15952d841fcc505f85cf33a34a6d9b4b"
+      "bytes": 4158,
+      "sha256": "64bfa5a4c77905cab94b54ac058b62fef02ba137a8e2d4c311c0a32436c2eea6"
     }
   ]
 }

@@ -82,11 +82,20 @@ def window(path):
     assert len(loops) == 5, "exactly one perimeter and four holes are required"
     perimeter = next(loop for loop in loops if len(loop) == 8)
     assert {(v["x"],v["y"]) for v in perimeter} == {(2,0),(56,0),(58,2),(58,56),(56,58),(2,58),(0,56),(0,2)}
-    assert sum(abs(v["bulge"]-(math.sqrt(2)-1)) < 1e-7 for v in perimeter) == 4
+    # Native-world reflection reverses path winding. A cut contour is valid
+    # in either direction; its bulge signs must agree with that direction.
+    area2 = sum(a["x"]*b["y"]-b["x"]*a["y"]
+                for a,b in zip(perimeter,perimeter[1:]+perimeter[:1]))
+    assert abs(area2) > 1
+    winding = 1 if area2 > 0 else -1
+    curves = [v["bulge"] for v in perimeter if abs(v["bulge"]) > 1e-9]
+    assert len(curves) == 4
+    assert all(abs(b-winding*(math.sqrt(2)-1)) < 1e-7 for b in curves)
     centers = []
     for loop in loops:
         if loop is perimeter: continue
-        assert len(loop) == 2 and all(abs(v["bulge"]-1) < 1e-7 for v in loop)
+        assert len(loop) == 2 and all(abs(abs(v["bulge"])-1) < 1e-7 for v in loop)
+        assert loop[0]["bulge"] == loop[1]["bulge"], "circle halves must share winding"
         diameter = math.hypot(loop[1]["x"]-loop[0]["x"],loop[1]["y"]-loop[0]["y"])
         assert abs(diameter-2.9) < 1e-7
         centers.append([(loop[0]["x"]+loop[1]["x"])/2,(loop[0]["y"]+loop[1]["y"])/2])

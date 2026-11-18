@@ -1,6 +1,6 @@
 # Nokia Breakout assembly and bring-up
 
-This procedure assembles the revision A engineering candidate. The native PCB, firmware and enclosure are supplied together. No fabricated, printed or powered prototype has been recorded. Record the checks below before treating the package as physically qualified.
+This procedure assembles the enclosure revision B engineering candidate (carrier PCB revision A). The native PCB, firmware and enclosure are supplied together. No fabricated, printed or powered prototype has been recorded. Record the checks below before treating the package as physically qualified.
 
 ## Parts and build outputs
 
@@ -13,6 +13,8 @@ Use PETG for the printed parts. The STL exports already have their intended prin
 The base wall is 2.5 mm, floor 3 mm, and lid 2 mm. Do not scale an STL to change fit: that also moves connector and mounting-hole positions. Edit the source dimensions, regenerate the outputs, and repeat the checks.
 
 ## 1. Measure the purchased parts
+
+Use the revision B files in this package. The saved Studio revision 1 has the superseded board orientation. Case coordinates follow native STEP: X is unchanged from the PCB editor, Y is reversed, and the boards face up at positive Z. The USB opening lies at the positive-Y rear. The registration receipt checks every one of the 26 mating header contacts and all seven native mounting axes.
 
 The two board outlines and mounting positions come from native CAD. Several purchased-module details are not published. They are declared in [mechanical-interface.json](mechanical-interface.json); do these measurements before committing to a complete case print.
 

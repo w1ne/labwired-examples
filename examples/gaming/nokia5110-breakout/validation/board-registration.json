@@ -1,0 +1,380 @@
+{
+  "schema": "labwired.native-board-registration.v1",
+  "ok": true,
+  "scope": "Nominal source pads, native STEP mounting axes, board side and CAD placement.",
+  "cad_source_sha256": "9a739f7efc25d4ff66046c3b4dc5ba1fb32826bbafb2d6d50fb77ce4b9010326",
+  "sources": [
+    {
+      "path": "electronics/nokia-carrier.kicad_pcb",
+      "sha256": "9ef455b320b5ff9ddaeacaa8bcac17c575e2fd2986e3fbf4df69afcb7b61913e"
+    },
+    {
+      "path": "references/st/MB1136-mechanical-reference.kicad_pcb",
+      "sha256": "2e3ee4a1ffdc0039f5ab0d0cced0514c6fe6fb378201151dfdcaf8ddac6cdcbc"
+    },
+    {
+      "path": "mechanical/inputs/nokia-carrier.step",
+      "sha256": "9a7142507be4cf31f1532c3ce2204a916cf45432d3d465f4bdf4441d249b0739"
+    },
+    {
+      "path": "mechanical/inputs/nucleo-mb1136-reference.step",
+      "sha256": "23632172f33c522937803ef918369a82e208bde78545da85edfe106e52884cf9"
+    }
+  ],
+  "matched_header_contacts": 26,
+  "header_contacts": [
+    {
+      "carrier": "J1.1",
+      "nucleo": "CN5.1",
+      "world_xy_mm": [
+        69.13,
+        -32.616
+      ],
+      "carrier_net": "/LCD_RST_PA9",
+      "nucleo_native_net": "PA9"
+    },
+    {
+      "carrier": "J1.2",
+      "nucleo": "CN5.2",
+      "world_xy_mm": [
+        69.13,
+        -30.076
+      ],
+      "carrier_net": "/LCD_DC_PC7",
+      "nucleo_native_net": "PC7"
+    },
+    {
+      "carrier": "J1.3",
+      "nucleo": "CN5.3",
+      "world_xy_mm": [
+        69.13,
+        -27.536
+      ],
+      "carrier_net": "/LCD_CE_PB6",
+      "nucleo_native_net": "PB6"
+    },
+    {
+      "carrier": "J1.4",
+      "nucleo": "CN5.4",
+      "world_xy_mm": [
+        69.13,
+        -24.996
+      ],
+      "carrier_net": "/LCD_DIN_PA7",
+      "nucleo_native_net": "NetCN5_4"
+    },
+    {
+      "carrier": "J1.5",
+      "nucleo": "CN5.5",
+      "world_xy_mm": [
+        69.13,
+        -22.456
+      ],
+      "carrier_net": "unconnected-(J1-Pin_5-Pad5)",
+      "nucleo_native_net": "NetCN5_5"
+    },
+    {
+      "carrier": "J1.6",
+      "nucleo": "CN5.6",
+      "world_xy_mm": [
+        69.13,
+        -19.916
+      ],
+      "carrier_net": "/LCD_CLK_PA5",
+      "nucleo_native_net": "NetCN5_6"
+    },
+    {
+      "carrier": "J1.7",
+      "nucleo": "CN5.7",
+      "world_xy_mm": [
+        69.13,
+        -17.376
+      ],
+      "carrier_net": "/GND",
+      "nucleo_native_net": "GND"
+    },
+    {
+      "carrier": "J1.8",
+      "nucleo": "CN5.8",
+      "world_xy_mm": [
+        69.13,
+        -14.836
+      ],
+      "carrier_net": "unconnected-(J1-Pin_8-Pad8)",
+      "nucleo_native_net": "AVDD"
+    },
+    {
+      "carrier": "J1.9",
+      "nucleo": "CN5.9",
+      "world_xy_mm": [
+        69.13,
+        -12.296
+      ],
+      "carrier_net": "unconnected-(J1-Pin_9-Pad9)",
+      "nucleo_native_net": "PB9"
+    },
+    {
+      "carrier": "J1.10",
+      "nucleo": "CN5.10",
+      "world_xy_mm": [
+        69.13,
+        -9.756
+      ],
+      "carrier_net": "unconnected-(J1-Pin_10-Pad10)",
+      "nucleo_native_net": "PB8"
+    },
+    {
+      "carrier": "J2.1",
+      "nucleo": "CN6.1",
+      "world_xy_mm": [
+        20.87,
+        -18.9
+      ],
+      "carrier_net": "unconnected-(J2-Pin_1-Pad1)",
+      "nucleo_native_net": ""
+    },
+    {
+      "carrier": "J2.2",
+      "nucleo": "CN6.2",
+      "world_xy_mm": [
+        20.87,
+        -21.44
+      ],
+      "carrier_net": "unconnected-(J2-Pin_2-Pad2)",
+      "nucleo_native_net": "+3V3"
+    },
+    {
+      "carrier": "J2.3",
+      "nucleo": "CN6.3",
+      "world_xy_mm": [
+        20.87,
+        -23.98
+      ],
+      "carrier_net": "unconnected-(J2-Pin_3-Pad3)",
+      "nucleo_native_net": "NRST"
+    },
+    {
+      "carrier": "J2.4",
+      "nucleo": "CN6.4",
+      "world_xy_mm": [
+        20.87,
+        -26.52
+      ],
+      "carrier_net": "/+3V3",
+      "nucleo_native_net": "+3V3"
+    },
+    {
+      "carrier": "J2.5",
+      "nucleo": "CN6.5",
+      "world_xy_mm": [
+        20.87,
+        -29.06
+      ],
+      "carrier_net": "/+5V",
+      "nucleo_native_net": "+5V"
+    },
+    {
+      "carrier": "J2.6",
+      "nucleo": "CN6.6",
+      "world_xy_mm": [
+        20.87,
+        -31.6
+      ],
+      "carrier_net": "/GND",
+      "nucleo_native_net": "GND"
+    },
+    {
+      "carrier": "J2.7",
+      "nucleo": "CN6.7",
+      "world_xy_mm": [
+        20.87,
+        -34.14
+      ],
+      "carrier_net": "/GND",
+      "nucleo_native_net": "GND"
+    },
+    {
+      "carrier": "J2.8",
+      "nucleo": "CN6.8",
+      "world_xy_mm": [
+        20.87,
+        -36.68
+      ],
+      "carrier_net": "unconnected-(J2-Pin_8-Pad8)",
+      "nucleo_native_net": "VIN"
+    },
+    {
+      "carrier": "J3.1",
+      "nucleo": "CN9.1",
+      "world_xy_mm": [
+        69.13,
+        -54.46
+      ],
+      "carrier_net": "unconnected-(J3-Pin_1-Pad1)",
+      "nucleo_native_net": "PA3"
+    },
+    {
+      "carrier": "J3.2",
+      "nucleo": "CN9.2",
+      "world_xy_mm": [
+        69.13,
+        -51.92
+      ],
+      "carrier_net": "unconnected-(J3-Pin_2-Pad2)",
+      "nucleo_native_net": "PA2"
+    },
+    {
+      "carrier": "J3.3",
+      "nucleo": "CN9.3",
+      "world_xy_mm": [
+        69.13,
+        -49.38
+      ],
+      "carrier_net": "unconnected-(J3-Pin_3-Pad3)",
+      "nucleo_native_net": "PA10"
+    },
+    {
+      "carrier": "J3.4",
+      "nucleo": "CN9.4",
+      "world_xy_mm": [
+        69.13,
+        -46.84
+      ],
+      "carrier_net": "unconnected-(J3-Pin_4-Pad4)",
+      "nucleo_native_net": "PB3"
+    },
+    {
+      "carrier": "J3.5",
+      "nucleo": "CN9.5",
+      "world_xy_mm": [
+        69.13,
+        -44.3
+      ],
+      "carrier_net": "unconnected-(J3-Pin_5-Pad5)",
+      "nucleo_native_net": "PB5"
+    },
+    {
+      "carrier": "J3.6",
+      "nucleo": "CN9.6",
+      "world_xy_mm": [
+        69.13,
+        -41.76
+      ],
+      "carrier_net": "unconnected-(J3-Pin_6-Pad6)",
+      "nucleo_native_net": "PB4"
+    },
+    {
+      "carrier": "J3.7",
+      "nucleo": "CN9.7",
+      "world_xy_mm": [
+        69.13,
+        -39.22
+      ],
+      "carrier_net": "/ECHO_3V3_PB10",
+      "nucleo_native_net": "PB10"
+    },
+    {
+      "carrier": "J3.8",
+      "nucleo": "CN9.8",
+      "world_xy_mm": [
+        69.13,
+        -36.68
+      ],
+      "carrier_net": "/TRIG_PA8",
+      "nucleo_native_net": "PA8"
+    }
+  ],
+  "matched_mounting_axes": 7,
+  "mounting_axes": [
+    {
+      "board": "carrier",
+      "axis_world_xy_mm": [
+        5,
+        -5
+      ],
+      "diameter_mm": 2.9
+    },
+    {
+      "board": "carrier",
+      "axis_world_xy_mm": [
+        85,
+        -5
+      ],
+      "diameter_mm": 2.9
+    },
+    {
+      "board": "carrier",
+      "axis_world_xy_mm": [
+        5,
+        -61
+      ],
+      "diameter_mm": 2.9
+    },
+    {
+      "board": "carrier",
+      "axis_world_xy_mm": [
+        85,
+        -61
+      ],
+      "diameter_mm": 2.9
+    },
+    {
+      "board": "nucleo",
+      "axis_world_xy_mm": [
+        20.87,
+        -4.93
+      ],
+      "diameter_mm": 3.2
+    },
+    {
+      "board": "nucleo",
+      "axis_world_xy_mm": [
+        69.13,
+        -6.2
+      ],
+      "diameter_mm": 3.2
+    },
+    {
+      "board": "nucleo",
+      "axis_world_xy_mm": [
+        53.89,
+        -57
+      ],
+      "diameter_mm": 3.2
+    }
+  ],
+  "orientation_witness": {
+    "pins": [
+      "CN6.1",
+      "CN5.1",
+      "CN9.1"
+    ],
+    "world_xy_mm": [
+      [
+        20.87,
+        -18.9
+      ],
+      [
+        69.13,
+        -32.616
+      ],
+      [
+        69.13,
+        -54.46
+      ]
+    ],
+    "native_top_normal": [
+      0,
+      0,
+      1
+    ],
+    "signed_triple_product_mm2": -1054.19144,
+    "rejected_editor_y_with_upward_components_mm2": 1054.19144
+  },
+  "native_board_transform_determinants": {
+    "carrier": 1.0596026490066226,
+    "nucleo": 1.0607466666666667
+  },
+  "world_mounts_match_native_step": true,
+  "physical_prototype_tested": false
+}

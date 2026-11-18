@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "goal": "Produce an editable Nokia Breakout engineering enclosure for the exact native Nucleo and routed carrier, with declared module envelopes, retained fasteners, removable edge clamps, a clear window and USB access; physical prototype qualification remains separate.",
+  "goal": "Validate the corrected Nokia enclosure against native PCB orientation, exact pad registration, fitted component envelopes, retained fasteners and USB access.",
   "finalAttemptId": "01",
   "attempts": [
     {
@@ -15,54 +15,55 @@
       "visualReview": {
         "accepted": true,
         "findings": [
-          "The closed views show one assembled tabletop device with a rectangular display on the left, paired sonar cans on the right, and a recessed Mini-B opening.",
-          "Four corner screws retain the lid; four separate screws retain the clear display window. The display and sonar face remain unobstructed.",
-          "The enclosure is 122 by 104 mm in plan, with a 66 mm case height plus window and screw heads. The supplier module envelopes and native board dimensions are recorded separately.",
-          "The sole non-visual box-fragment style warning is justified by identified rectangular header insulators and pins, SMD bodies, purchased module envelopes, edge-clamp rails, end stops and cable-tie bridges. The enclosure is a continuous rounded shell; all 85 physical parts have explicit attachments. No decorative or unexplained fragments are present."
+          "The corrected closed isometric and top views show one assembled case with the LCD on the left and two sonar faces on the right; there are no detached or duplicate objects.",
+          "Four corner screws retain the lid and four separate screws retain the clear display window. The window and both sensor openings remain unobstructed.",
+          "The native STEP input has its populated side at +Z. Independent source-pad checks match all 26 carrier/Nucleo contacts and all seven native mounting axes; case geometry uses the same native Y direction.",
+          "The rear inspection uses a proper whole-model 180-degree Z rotation of the same 85 parts and connector frames. It shows the recessed Mini-B receptacle inside the rectangular cable opening.",
+          "The sole non-visual box-fragment style warning is justified by named connector insulators/pins, SMD bodies, module envelopes, edge clamps, end stops and cable-tie bridges. Every part is attached; no physical or path gate is waived."
         ],
-        "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8",
+        "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-Npe3PeSfxMIslzVZyD_VOg/render-iso.png?exp=1795096355&sig=-DLG3ZzWlbIZbGvzSaV_I-zG_frjJKVbap7PcZl3k8o",
         "checks": [
           {
             "code": "main-object-count",
             "passed": true,
-            "finding": "The isometric view shows one complete enclosure assembly, with no second case or duplicate detached device.",
-            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+            "finding": "The canonical isometric view contains one closed device, with one lid seam and no detached second enclosure.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-Npe3PeSfxMIslzVZyD_VOg/render-iso.png?exp=1795096355&sig=-DLG3ZzWlbIZbGvzSaV_I-zG_frjJKVbap7PcZl3k8o"
           },
           {
             "code": "proportions-match-reference",
             "passed": true,
-            "finding": "The top view shows the 45 mm square display beside the 45.5 by 20 mm sensor face in the declared 122 by 104 mm case.",
-            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-2jJHI_-GVemGs9N4nEbiVg/render-top.png?exp=1795089681&sig=4OeIzNs6txFdwrUW_2x9Zeiysnvr7TwgnZWV4UTyN9U"
+            "finding": "The top view shows the declared 45 mm square LCD beside the 45.5 by 20 mm sensor face inside the 122 by 104 mm case.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-es3yM121YaURDdlpxZO6WQ/render-top.png?exp=1795096355&sig=bNibyR8Uw706xE6fpGh4YBtSCQW9zyrmrYn4Kplu6QE"
           },
           {
             "code": "required-visible-features",
             "passed": true,
-            "finding": "The clear display window, two exposed sonar faces, lid fasteners, window fasteners and Mini-B cable opening are visible.",
-            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+            "finding": "The closed views show the display window and paired sonar faces; the rotated rear view also shows the recessed USB opening.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-TKLpEnN8UAXbtOFizWzzsg/render-iso.png?exp=1795097213&sig=oaIIEKX3vsPm5SV5UxqiXS3g8vDFqGpF9ex8MO_p2uk"
           },
           {
             "code": "no-stray-or-floating-geometry",
             "passed": true,
-            "finding": "The closed views contain only the enclosure, seated screws and mounted module faces; no loose visible solid floats beside the device.",
-            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+            "finding": "All visible screws sit on the lid or window, and both module faces sit within their apertures with no stray outside solid.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-Npe3PeSfxMIslzVZyD_VOg/render-iso.png?exp=1795096355&sig=-DLG3ZzWlbIZbGvzSaV_I-zG_frjJKVbap7PcZl3k8o"
           },
           {
             "code": "attachment-plausibility",
             "passed": true,
-            "finding": "The corner screw heads sit on the lid, the window heads sit on the window, and the visible edge lips and end stops locate the modules.",
-            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-2jJHI_-GVemGs9N4nEbiVg/render-top.png?exp=1795089681&sig=4OeIzNs6txFdwrUW_2x9Zeiysnvr7TwgnZWV4UTyN9U"
+            "finding": "Four corner screws retain the lid, four window screws retain the clear sheet, and the visible module lips and end stops support the PCB edges.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-es3yM121YaURDdlpxZO6WQ/render-top.png?exp=1795096355&sig=bNibyR8Uw706xE6fpGh4YBtSCQW9zyrmrYn4Kplu6QE"
           },
           {
             "code": "semantic-orientation-alignment",
             "passed": true,
-            "finding": "Both sonar faces point upward beside the readable display plane, while the USB receptacle faces the rear cable opening.",
-            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+            "finding": "Both sensor faces and the display plane point upward; the Mini-B receptacle faces the positive-Y rear opening of the native-coordinate assembly.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-NqnqgDvJinrZOMbn-YACvQ/render-front.png?exp=1795097214&sig=Ux_bHBsY4C8-e2-8-zpUbyVWqpKJ0OAaRiaLlOLOnLg"
           },
           {
             "code": "canonical-views-physically-coherent",
             "passed": true,
-            "finding": "The isometric, top and front views agree on one lid seam, the two top module openings and the same recessed rear USB port.",
-            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-AtJ0K1YJRxXhJ5dutDclvQ/render-front.png?exp=1795089681&sig=k2-0KZIZp5z8riFwMnZPpo_vBINEjlNiVzU6CciqnnA"
+            "finding": "The canonical top, isometric and front views and the properly rotated rear view agree on one lid seam, the same two top openings and one USB port.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-TKLpEnN8UAXbtOFizWzzsg/render-iso.png?exp=1795097213&sig=oaIIEKX3vsPm5SV5UxqiXS3g8vDFqGpF9ex8MO_p2uk"
           }
         ]
       },
@@ -87,7 +88,7 @@
             "measured": [
               90.0000029883041,
               69.80000149415204,
-              1.6000000000000085
+              1.6000000000000014
             ],
             "limit": {
               "z": [
@@ -95,7 +96,7 @@
                 1.61
               ]
             },
-            "margin": 0.009999999999991571,
+            "margin": 0.009999999999998677,
             "selections": [
               {
                 "consumerFeatureId": "require_1",
@@ -128,7 +129,7 @@
             "measured": [
               70.00001005941891,
               82.50000149415206,
-              1.5911200000000107
+              1.59112
             ],
             "limit": {
               "x": [
@@ -144,7 +145,7 @@
                 1.6
               ]
             },
-            "margin": 0.00887999999998934,
+            "margin": 0.008879999999999999,
             "selections": [
               {
                 "consumerFeatureId": "require_2",
@@ -379,8 +380,8 @@
         "schema": "kernelcad.evaluation-evidence.v1",
         "mode": "build",
         "source": {
-          "sha256": "cfc4bcae3ca6462573e7717801eaa9302e3b84d97db21fe742bc918f7b14e418",
-          "byteLength": 15337
+          "sha256": "7aef8e5a5d9137bc6787328487d55d430e856bf57626b50321f87bd68c670306",
+          "byteLength": 16055
         },
         "parameters": {
           "values": {
@@ -391,7 +392,7 @@
         "engine": {
           "kernel": "occt",
           "version": "0.17.4",
-          "revision": "bf671690568f207dbf52471b5756de6645bf04d3"
+          "revision": "66e8b0c6bd908941f4fddc2a41454ff79fa82eff"
         },
         "dependencies": {
           "status": "untracked"
@@ -401,15 +402,16 @@
           "reason": "dependencies-untracked"
         },
         "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
-        "identitySha256": "607c04c26cbaedbdaed3610be3fe505370b209ce5d16b5b596d94be018e39f35"
+        "identitySha256": "ae2182955290ff9cdc4c884d8d5c0f011f066d5e234a8d168a856f112b985f10"
       },
       "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
     }
   ],
   "record": {
-    "title": "Nokia Breakout enclosure revision A",
-    "goal": "Produce an editable Nokia Breakout engineering enclosure for the exact native Nucleo and routed carrier, with declared module envelopes, retained fasteners, removable edge clamps, a clear window and USB access; physical prototype qualification remains separate.",
+    "title": "Nokia Breakout enclosure revision B: native board registration",
+    "goal": "Validate the corrected Nokia enclosure against native PCB orientation, exact pad registration, fitted component envelopes, retained fasteners and USB access.",
     "steps": []
   },
-  "serverBuild": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z"
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z",
+  "submitted_source_sha256": "2760625f61d5820e5a3dd74b56710b74215217f8f02599857c67facc5cf45308"
 }

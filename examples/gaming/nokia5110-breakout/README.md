@@ -6,7 +6,7 @@ Canonical Lab: [Nokia 5110 Breakout](https://app.labwired.com/?lab=nokia5110-inv
 
 ## Package status and entry points
 
-This is a complete **engineering candidate**: routed native PCB, the exact firmware source and programming files, a purchase BOM, an editable enclosure, print/cutting files and an assembly procedure. Physical prototype qualification remains open. The full assembly-path attempt was inconclusive after the hosted 300-second evaluation limit; the complete receipt is retained in the release manifest.
+This is an **engineering candidate with enclosure revision B**: routed native PCB, the exact firmware source and programming files, a purchase BOM, an editable enclosure, print/cutting files and an assembly procedure. Physical prototype qualification remains open. Assembly-path qualification remains open. The corrected full-scene attempt exceeded the hosted 1000 MB memory budget; its exact source and response are retained. Studio revision 1 contains the superseded geometry and is not the fabrication reference.
 
 ![Nokia Breakout enclosure](mechanical/assembly-iso.png)
 
@@ -16,7 +16,7 @@ This is a complete **engineering candidate**: routed native PCB, the exact firmw
 | Edit the routed PCB and schematic | [KiCad project](electronics/nokia-carrier.kicad_pro) |
 | Buy all parts | [Complete BOM](bom.csv), with [carrier placement BOM](electronics-bom.csv) |
 | Build or program firmware | [Firmware instructions](firmware/README.md), [ELF](firmware/artifacts/nokia-breakout.elf), [BIN](firmware/artifacts/nokia-breakout.bin) |
-| Edit the enclosure | [Portable source](mechanical/nokia-breakout-enclosure.kcad.ts), [saved Studio revision 1](https://app.kernelcad.com/p/YhZimWlS?version=1) |
+| Edit the enclosure | [Portable source](mechanical/nokia-breakout-enclosure.kcad.ts), [historical Studio revision 1](https://app.kernelcad.com/p/YhZimWlS?version=1); corrected saved revision pending |
 | Import the complete geometry | [85-solid assembly STEP](mechanical/nokia-breakout-assembly.step) |
 | Print the case | [Base](mechanical/nokia-base.stl), [lid](mechanical/nokia-lid.stl), [LCD clamp](mechanical/nokia-lcd-clamp.stl) ×2, [sonar clamp](mechanical/nokia-sensor-clamp.stl) ×2 |
 | Cut the clear window | [DXF](mechanical/nokia-window.dxf), [dimensioned drawing](mechanical/nokia-window-drawing.svg) |
@@ -31,10 +31,11 @@ This is a complete **engineering candidate**: routed native PCB, the exact firmw
 | Exact standalone firmware | All seven existing behavioral oracles pass; the released ELF is the tested ELF | [Behavior receipt](validation/firmware-behavior.json), [full log](validation/firmware-behavior.log) |
 | Packaged clean-run baseline | 5 million steps, one stop-reason assertion; built-in descriptor resolves correctly | [Smoke receipt](validation/firmware-smoke.json) |
 | Enclosure review | Seven fit requirements and seven recorded visual checks pass | [Design loop](validation/design-loop.json), [visual review](validation/visual-review.json) |
+| Native board registration | All 26 carrier/Nucleo contacts and seven mounting axes agree with native pad numbers and STEP geometry | [Registration receipt](validation/board-registration.json) |
 | Native assembly export | 85 of 85 BREP solids are valid after STEP re-import | [STEP inspection](validation/assembly-step-inspection.json) |
 | Print and cutting files | Four closed, single-component print meshes; correct DXF units and five closed cutting loops | [Output-file checks](validation/export-file-checks.json) |
-| Editable saved model | Studio revision 1 and its two native board assets are immutable; display mesh is ready | [Saved revision](validation/studio-revision.json) |
-| Complete assembly path | Inconclusive: full 84-moving-part scene reached the 300-second evaluation limit | [Path receipt](validation/assembly-path.json) |
+| Editable saved model | Corrected source and exports are supplied; Studio revision 1 is historical until its existing project is updated | [Historical saved revision](validation/studio-revision.json) |
+| Complete assembly path | Inconclusive: the corrected full 84-moving-part scene exceeded the hosted 1000 MB memory budget | [Current path receipt](validation/assembly-path-revision-b.json) |
 | Physical device | Not fabricated, printed, assembled or powered in this work | [Qualification procedure](ASSEMBLY.md) |
 
 The native carrier's hosted board identifier is pcb_99d3797e40188285. Its PCB reference is sha256:9ef455b320b5ff9ddaeacaa8bcac17c575e2fd2986e3fbf4df69afcb7b61913e. Importing this passive carrier does not by itself establish a functional simulated MCU system; the existing canonical Lab supplies the Nucleo and attached devices.
@@ -49,6 +50,8 @@ The gameplay range is 10–50 cm: near moves right, far moves left, and 30 cm ce
 
 The 122 × 104 mm case retains the intact Nucleo ST-LINK section and gives access to its Mini-B connector. The base carries the Nucleo and carrier on separate supports. The lid retains the LCD and sonar with removable rear edge clamps and front lips; a separate clear PMMA window covers the LCD. The modeled complete height is 70.5 mm, including the window and screw heads.
 
+Revision B uses the native STEP coordinate system: X matches the PCB editor, Y has the opposite sign, and both board top faces remain at positive Z. The USB opening is on the positive-Y rear. The source converts constructed parts and connector frames once; it places the two native boards with positive Z scaling and translation. Standard screws keep their right-hand thread contract. The pin-registration check detects the opposite handedness of the superseded revision A layout.
+
 The assembly includes fasteners, mating connectors and a recorded attachment tree. The full wire routes, acoustics, supply currents, printed tolerances and actual vendor-revision fits still require the physical procedure. The base needs local slicer support below its 18 mm USB opening roof. No support-free print claim is made.
 
 The source-count style heuristic for rectangular component bodies was reviewed explicitly. Those bodies identify headers, pins, SMD parts, module envelopes, rails and cable-tie features. No visual, physical or assembly-path gate was waived.
@@ -57,6 +60,7 @@ To replay the output-file checks, run:
 
 ```sh
 python3 tools/check_exports.py
+/usr/bin/python3 tools/check_board_registration.py
 ```
 
 To regenerate the purchased Nucleo's mechanical reference from the pinned original ST archive, use KiCad 10's Python environment:
@@ -117,7 +121,7 @@ The Nucleo header and mounting-hole coordinates come from ST's native MB1136C Pc
 The Nucleo reference STEP is a bare board derived from that source. The source has no component STEP models. It is not a fully detailed vendor PCBA model.
 
 
-The native STEP inputs contain substrate only: 1.51 mm for the carrier and 1.5 mm for the Nucleo. The CAD wrapper changes only Z to the specified 1.6 mm carrier thickness and the native ST full stack of 1.59112 mm. XY outlines and holes remain from the native source. The carrier's nonuniform transform converts some circular edges into BSplines. The current conservative bbox predicate sees their control hull as 69.8 mm in Y; the exact re-imported transformed STEP remains 90 × 66 ×1.600000381 mm. That distinction is recorded in [the exact-dimension receipt](validation/carrier-exact-dimensions.json), with no widened XY tolerance.
+The native STEP inputs contain substrate only: 1.51 mm for the carrier and 1.5 mm for the Nucleo. The CAD wrapper changes only Z to the specified 1.6 mm carrier thickness and the native ST full stack of 1.59112 mm. XY outlines and holes remain from the native source. The carrier's nonuniform transform converts some circular edges into BSplines. The current conservative bbox predicate sees their control hull as 69.8 mm in Y; the exact re-imported transformed STEP remains 90 × 66 × 1.600000381 mm. That distinction is recorded in [the exact-dimension receipt](validation/carrier-exact-dimensions.json), with no widened XY tolerance.
 
 The supplier does not publish the populated Nucleo socket manufacturer/height or every LCD and sonar detail. The wrapper uses explicitly declared accessory envelopes. It does not present them as exact vendor STEP geometry. The factory socket height is an 8.51 mm fit assumption; the glass, PCB thickness and header details are also listed in mechanical-interface.json for measurement before assembly.
 

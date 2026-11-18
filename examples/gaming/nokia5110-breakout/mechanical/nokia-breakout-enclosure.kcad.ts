@@ -1,4 +1,7 @@
-// Nokia 5110 Breakout enclosure, revision A. Millimetres; carrier XY; Z upwards.
+// Nokia 5110 Breakout enclosure, revision B. Millimetres; native STEP XY; Z upwards.
+// Authoring coordinates below follow the PCB editor (+Y down). The named
+// conversion reflects only constructed geometry into native +Y up. Imported
+// boards retain their top face at +Z; they are never reflected or turned over.
 // Native carrier and ST MB1136 bare-board geometry are retained. Other purchased
 // components are identified drawing/envelope models, not vendor STEP replicas.
 // Physical prototype measurements remain required; see mechanical-interface.json.
@@ -19,7 +22,9 @@ function hex(af,h,x,y,z,theta=30){
  const r=af/Math.sqrt(3);
  return extrudePolygon(Array.from({length:6},(_,i)=>[r*Math.cos((theta+60*i)*Math.PI/180),r*Math.sin((theta+60*i)*Math.PI/180)]),h).translate(x,y,z);
 }
-function frame(p,n,v){p.connector(n,{type:"frame",origin:{kind:"vec3",value:v},normal:[0,0,1]});}
+// Shape transforms mutate: convert once at registration, then reuse that shape.
+function editorToWorld(shape){return shape.reflect("xz");}
+function frame(p,n,v){p.connector(n,{type:"frame",origin:{kind:"vec3",value:[v[0],-v[1],v[2]]},normal:[0,0,1]});}
 let base=rounded(122,104,5,bodyH,45,20.5,0).subtract(rounded(117,99,2.5,bodyH,45,20.5,floorT));
 // Four metal standoffs use flush underside M2.5 x6 countersunk screws.
 for(const[x,y]of mounts){
@@ -97,20 +102,20 @@ const lcdClamps=[clamp(true,-1),clamp(true,1)];
 const sensorClamps=[clamp(false,-1),clamp(false,1)];
 if(output!=="assembly"){
  const print=assembly("nokia-"+output);
- if(output==="base-print")print.part("base",base,{material:"petg"});
- if(output==="lid-print")print.part("lid",lid.rotateX(180).translate(0,41,66),{material:"petg"});
- if(output==="lcd-clamp-print")print.part("lcd-clamp",lcdClamps[0].translate(9.8,-7,-55),{material:"petg"});
- if(output==="sensor-clamp-print")print.part("sensor-clamp",sensorClamps[0].translate(-45.95,-15,-49),{material:"petg"});
- if(output==="window")print.part("window",window.translate(11,4,-66),{density:1180});
+ if(output==="base-print")print.part("base",editorToWorld(base),{material:"petg"});
+ if(output==="lid-print")print.part("lid",editorToWorld(lid).rotateX(180).translate(0,-41,66),{material:"petg"});
+ if(output==="lcd-clamp-print")print.part("lcd-clamp",editorToWorld(lcdClamps[0]).translate(9.8,43,-55),{material:"petg"});
+ if(output==="sensor-clamp-print")print.part("sensor-clamp",editorToWorld(sensorClamps[0]).translate(-45.95,35,-49),{material:"petg"});
+ if(output==="window")print.part("window",editorToWorld(window).translate(11,54,-66),{density:1180});
  if(output!=="window")dfmSpec({process:"fdm",buildDirection:"+z",nozzleMm:.4,minWall:.8,maxBridgeMm:6,maxOverhangDeg:45});
  return print.model();
 }
-const carrier=(await lib.fromSTEP("./inputs/nokia-carrier.step")).scale([1,1,1.6/1.51]).rotateX(180).translate(0,0,pcbTop).color("#266a50");
-const nucleo=(await lib.fromSTEP("./inputs/nucleo-mb1136-reference.step")).scale([1,1,nucleoT/1.5]).rotateX(180).translate(10,-23,nucleoTop).color("#204d76");
+const carrier=(await lib.fromSTEP("./inputs/nokia-carrier.step")).scale([1,1,1.6/1.51]).translate(0,0,pcbZ).color("#266a50");
+const nucleo=(await lib.fromSTEP("./inputs/nucleo-mb1136-reference.step")).scale([1,1,nucleoT/1.5]).translate(10,23,nucleoZ).color("#204d76");
 const a=assembly("nokia-breakout-device");
-const bp=a.part("base",base,{material:"petg"});
-function fixed(name,shape,parent,seat,density=1850){
- const p=a.part(name,shape,{density});frame(parent,name,seat);frame(p,"seat",seat);
+const bp=a.part("base",editorToWorld(base),{material:"petg"});
+function fixed(name,shape,parent,seat,density=1850,nativeCoordinates=false){
+ const p=a.part(name,nativeCoordinates?shape:editorToWorld(shape),{density});frame(parent,name,seat);frame(p,"seat",seat);
  a.mate(name+"-fixed",parent.name+"."+name,name+".seat","fastened");return p;
 }
 function screwShape(d,l){
@@ -119,7 +124,9 @@ function screwShape(d,l){
 }
 function screw(name,d,l,x,y,z,parent,up=false){
  let shape=screwShape(d,l);if(up)shape=shape.rotateX(180);
- const p=a.part(name,shape.translate(x,y,z),{density:7900});
+ // Standard screws use only proper rotations and translations. Threads retain
+ // the ISO right-hand contract; the model uses symmetric fit envelopes.
+ const p=a.part(name,shape.translate(x,-y,z),{density:7900});
  frame(parent,name,[x,y,z]);frame(p,"seat",[x,y,z]);
  a.mate(name+"-mate",parent.name+"."+name,name+".seat","fastened",{fastener:{part:name,axis:up?[0,0,-1]:[0,0,1],pitchMm:d===2?.4:.45,threadLengthMm:l,standard:"ISO4762",tool:{kind:"cylinder",lengthMm:40,diameterMm:d===2?3:4,label:"straight hex key"}}});return p;
 }
@@ -129,7 +136,7 @@ function nut(name,d,x,y,z,parent,theta=30){
 }
 const lp=fixed("lid",lid,bp,[45,-30.25,64],1270);
 const wp=fixed("lcd-window",window,lp,[-9,0,66],1180);
-const np=fixed("nucleo-native-pcb",nucleo,bp,[20.87+2.5,4.93,10],1850);
+const np=fixed("nucleo-native-pcb",nucleo,bp,[20.87+2.5,4.93,10],1850,true);
 const cp=a.part("carrier-native-pcb",carrier,{density:1850});
 for(let i=0;i<nucleoMounts.length;i++){
  const[x,y]=nucleoMounts[i];nut("nucleo-nut-"+i,2,x,y,2.5,bp,0);
@@ -142,7 +149,7 @@ for(let i=0;i<mounts.length;i++){
  if(i===0){frame(st,"carrier-seat",[x+1.8,y,23]);frame(cp,"seat",[x+1.8,y,23]);a.mate("carrier-seat",st.name+".carrier-seat",cp.name+".seat","fastened");}
  screw("carrier-screw-"+i,2.5,5,x,y,pcbTop,cp);
  // ISO10642 envelope; overall length includes head, flush top lies at Z0.16.
- let cs=path().moveTo(0,0).lineTo(2.94,0).lineTo(1.25,1.69).lineTo(1.25,6).lineTo(0,6).close().revolve().subtract(hex(1.5,1,0,0,-.001)).translate(x,y,.16).color("#b9bec5");
+ let cs=path().moveTo(0,0).lineTo(2.94,0).lineTo(1.25,1.69).lineTo(1.25,6).lineTo(0,6).close().revolve().subtract(hex(1.5,1,0,0,-.001)).translate(x,-y,.16).color("#b9bec5");
  const p=a.part("standoff-lower-screw-"+i,cs,{density:7900});
  frame(bp,p.name,[x,y,.16]);frame(p,"seat",[x,y,.16]);
  a.mate(p.name+"-mate","base."+p.name,p.name+".seat","fastened",{fastener:{part:p.name,axis:[0,0,-1],pitchMm:.45,threadLengthMm:6,standard:"ISO10642",tool:{kind:"cylinder",lengthMm:40,diameterMm:3,label:"underside hex key"}}});
@@ -153,8 +160,8 @@ for(let i=0;i<lidMounts.length;i++){
 for(let i=0;i<windowMounts.length;i++){
  const[x,y]=windowMounts[i];nut("window-nut-"+i,2.5,x,y,60.5,lp);screw("window-screw-"+i,2.5,8,x,y,68,wp);
 }
-const lcp=lcdClamps.map((s,i)=>a.part("lcd-clamp-"+i,s,{material:"petg"}));
-const scp=sensorClamps.map((s,i)=>a.part("sensor-clamp-"+i,s,{material:"petg"}));
+const lcp=lcdClamps.map((s,i)=>a.part("lcd-clamp-"+i,editorToWorld(s),{material:"petg"}));
+const scp=sensorClamps.map((s,i)=>a.part("sensor-clamp-"+i,editorToWorld(s),{material:"petg"}));
 for(let i=0;i<lcdClampAxes.length;i++){
  const[x,y]=lcdClampAxes[i];nut("lcd-clamp-nut-"+i,2,x,y,58.4,lp);screw("lcd-clamp-screw-"+i,2,8,x,y,55,lcp[Math.floor(i/2)],true);
 }
@@ -230,6 +237,6 @@ require("lcd-to-window-clearance",clearance(lcd,window).gte(3));
 require("lcd-to-carrier-clearance",clearance(lcd,carrier).gte(20));
 require("sonar-to-carrier-clearance",clearance(sonar,carrier).gte(20));
 const plug=box(16,24,8).translate(49.065,-45,10);
-require("usb-plug-base-clearance",clearance(plug,base).gte(.9));
+require("usb-plug-base-clearance",clearance(editorToWorld(plug),base).gte(.9));
 require("carrier-to-case-clearance",clearance(carrier,base).gte(3));
 return a.solvedModel({}, {validate:"warn"});
