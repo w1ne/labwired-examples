@@ -51,11 +51,15 @@
     "native_registration": "validation/handedness/native-registration.json",
     "print_meshes": "validation/handedness/mesh-export-check.json",
     "base_dfm": "validation/handedness/base-dfm-verification.json",
-    "lid_dfm": "validation/handedness/lid-dfm-verification.json"
+    "lid_dfm": "validation/handedness/lid-dfm-verification.json",
+    "ordered_geometric_removal": "validation/handedness/path/pico-ordered-complete-native-path.json",
+    "ordered_geometric_provenance": "validation/handedness/path/provenance.json",
+    "native_member_sweep_controls": "validation/handedness/path/pico-native-member-controls.json",
+    "ordered_module_mesh_inconclusive": "validation/handedness/path/module-mesh-budget.json"
   },
   "open_acceptance_items": [
     "Update the existing Studio 675KJsgq project with the final exact-body source after the generic imported-asset collaboration repair is deployed.",
-    "Finish full assembly-path verification; the first full-scene pass exhausted its work budget and is inconclusive.",
+    "Obtain hosted full assembly-path acceptance; the source-bound 31-stage native proof covers all 50 parts, while the hosted complete-scene and ordered module mesh searches remain budget-limited. Preserve the raw-solid support findings and qualify the factory/header solder joints physically.",
     "Bind and verify the exact package in the canonical featured Lab.",
     "Fabricate and measure a physical prototype, including header height,USB cable overmold,printed tolerances,fastener engagement,and UART waveform."
   ],
@@ -67,8 +71,8 @@
     },
     {
       "path": "ASSEMBLY.md",
-      "bytes": 5995,
-      "sha256": "e2c2dc558252aa20680555b7d0c1e8710fe08b50d2b60292ad8855cafa4f5148"
+      "bytes": 6720,
+      "sha256": "535310da9606f250616f9b66441bd1387fc226ca28947a439d9180faf2e068cf"
     },
     {
       "path": "LICENSE",
@@ -77,8 +81,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13395,
-      "sha256": "91e6dd5472732616ab2e144573e0cbf8312157b552c2ca9c1dbfa9cb41ae52ef"
+      "bytes": 14110,
+      "sha256": "c3cce3732cb51820acbf797e64bc688ad90e4c078b28f94fcab4dbc06587ae79"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -769,6 +773,126 @@
       "path": "validation/visual-review.json",
       "bytes": 4605,
       "sha256": "aa2005db7af12baac048cbedb9b607f3849d786aeaacf61c42fdee4501f72024"
+    },
+    {
+      "path": "validation/handedness/path/concat-argument-limit.json",
+      "bytes": 124452,
+      "sha256": "9c7202d0fe1d594f72f6d7d019bc090580b26a5fbc72f9589e12ef50fbf13103"
+    },
+    {
+      "path": "validation/handedness/path/concat-argument-limit.log",
+      "bytes": 1302,
+      "sha256": "87f026c5233cfc6c0b8bf908dffa64e5eb5842e73e674bba60ae33d4e0bc0b59"
+    },
+    {
+      "path": "validation/handedness/path/concat-argument-limit.mts",
+      "bytes": 16402,
+      "sha256": "b4e71665cc91b1c07a38d0fbd0f9edadabd4db0fe9da6447219f66200fc6f3fd"
+    },
+    {
+      "path": "validation/handedness/path/member-controls.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "validation/handedness/path/member-controls.log",
+      "bytes": 581,
+      "sha256": "206fbc10ee1c064afc312600e579af8d73df369fcd3eb5e9fa4ec36002d2936c"
+    },
+    {
+      "path": "validation/handedness/path/missing-local-file-dependency.json",
+      "bytes": 347,
+      "sha256": "655954b435904f675ed9a3bbbd1f5e6f1e31a522e602360bf93290e1a0b68bc7"
+    },
+    {
+      "path": "validation/handedness/path/missing-local-file-dependency.log",
+      "bytes": 1304,
+      "sha256": "7966c4cf5925f610ffaa4177785ee4a58ca880ff43b8089f8ceda2458dcda090"
+    },
+    {
+      "path": "validation/handedness/path/module-mesh-budget.json",
+      "bytes": 131187,
+      "sha256": "58b707685ae5342a7042edb006a890ada1d271d79441656ee68ea40a873674e4"
+    },
+    {
+      "path": "validation/handedness/path/module-mesh-budget.log",
+      "bytes": 1351,
+      "sha256": "3bea6ab97e6eb7a487805322e6b601c60f494dd8a381fc1253c8e2963eb6e837"
+    },
+    {
+      "path": "validation/handedness/path/module-mesh-budget.mts",
+      "bytes": 16424,
+      "sha256": "4fe6deddab698ada03430ff6f87bb86f5b9279f5885cb26e610dc3f0301c5d7d"
+    },
+    {
+      "path": "validation/handedness/path/native-axisymmetric-sweep.mts",
+      "bytes": 6842,
+      "sha256": "fe665761fdabd30e8f64ea14161f1a228758595b48642da89353003f3705fbb6"
+    },
+    {
+      "path": "validation/handedness/path/native-linear-sweep.mts",
+      "bytes": 4869,
+      "sha256": "96810e629c89af0a5713c3c6eeb935460dffccc1ed6607c13f16714197db76f1"
+    },
+    {
+      "path": "validation/handedness/path/native-member-translation.mts",
+      "bytes": 3208,
+      "sha256": "106f930b352b98d3c8995d9b1a9262e5d21dd78327895fec7786b9b751aa50b3"
+    },
+    {
+      "path": "validation/handedness/path/native-sweep-control-fixture.kcad.ts",
+      "bytes": 28,
+      "sha256": "439cea6370ca4ffc18341ad2fccde8a4b369963156fd7d2c750f417458faedc5"
+    },
+    {
+      "path": "validation/handedness/path/native-tool-sweep.mts",
+      "bytes": 2063,
+      "sha256": "ae9291012a3845cc9f35e160206e86bde68cd00b970cbb3f9cce185e343c1bc2"
+    },
+    {
+      "path": "validation/handedness/path/ordered-path.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "validation/handedness/path/ordered-path.log",
+      "bytes": 7470,
+      "sha256": "d0d2c057cd35cfad0eaa46344786f248561f501b266b5b277eeb29707bed51b0"
+    },
+    {
+      "path": "validation/handedness/path/pico-native-member-controls.json",
+      "bytes": 8687,
+      "sha256": "74b540fd82c4e98a297b961e8e86b10d5220f19b941c9a551f5bd808a7391616"
+    },
+    {
+      "path": "validation/handedness/path/pico-native-member-controls.mts",
+      "bytes": 3726,
+      "sha256": "e0c80f1e20f9d12b2e68615ffacca7369132db1013fc5cf9bf7e62341e54c3e0"
+    },
+    {
+      "path": "validation/handedness/path/pico-ordered-complete-native-path.json",
+      "bytes": 613625,
+      "sha256": "bb5ab78359d17e7dbfe8b3ff690ff34826ac2b6172ade042d28d4b7d336fa74d"
+    },
+    {
+      "path": "validation/handedness/path/pico-ordered-complete-native-path.mts",
+      "bytes": 18409,
+      "sha256": "30ee455a635b11b7c1149404601b670e68293559338663002653524917deaae6"
+    },
+    {
+      "path": "validation/handedness/path/provenance.json",
+      "bytes": 5943,
+      "sha256": "29b29c5be737e50a9a27bd47988de5ce89773f1fa09bc212e968ee4d20c19a47"
+    },
+    {
+      "path": "validation/handedness/path/run-member-and-path.sh",
+      "bytes": 977,
+      "sha256": "5021698b9a67f3a7f76de41749a7399dfdf0c08075995dca8c00a9f0dd1a5578"
+    },
+    {
+      "path": "validation/handedness/path/run-ordered-path.sh",
+      "bytes": 473,
+      "sha256": "7e011891be1d9c3fe37c63086392cf71222d6db455b7628459d45b3c6f7e03d6"
     }
   ],
   "native_board_id": "pcb_ce2a5c8078eaf157",
