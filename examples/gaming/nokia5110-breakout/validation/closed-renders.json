@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "images": [
+    {
+      "name": "iso",
+      "path": "/tmp/kernelcad-preview-S4r5Gv/iso.png",
+      "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+      "byte_count": 114424,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8",
+      "expires_at": "2026-11-19T12:01:20.000Z",
+      "inline": true
+    },
+    {
+      "name": "top",
+      "path": "/tmp/kernelcad-preview-S4r5Gv/top.png",
+      "description": "Geometric +Z top-down plan \u2014 camera on +Z looking down; screen right = +X, screen up = +Y. For imported parts, this is not necessarily the product exterior.",
+      "byte_count": 96232,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-2jJHI_-GVemGs9N4nEbiVg/render-top.png?exp=1795089681&sig=4OeIzNs6txFdwrUW_2x9Zeiysnvr7TwgnZWV4UTyN9U",
+      "expires_at": "2026-11-19T12:01:21.000Z",
+      "inline": true
+    },
+    {
+      "name": "front",
+      "path": "/tmp/kernelcad-preview-S4r5Gv/front.png",
+      "description": "Front elevation \u2014 camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+      "byte_count": 64698,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-AtJ0K1YJRxXhJ5dutDclvQ/render-front.png?exp=1795089681&sig=k2-0KZIZp5z8riFwMnZPpo_vBINEjlNiVzU6CciqnnA",
+      "expires_at": "2026-11-19T12:01:21.000Z",
+      "inline": true
+    }
+  ],
+  "out_dir": "/tmp/kernelcad-preview-S4r5Gv",
+  "bounds": {
+    "min": [
+      -16,
+      -31.5,
+      0
+    ],
+    "max": [
+      106,
+      72.5,
+      70.5
+    ]
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 186002.27699220247,
+    "faceCount": 2779,
+    "size": [
+      122,
+      104,
+      70.5
+    ]
+  },
+  "mechanism": "unverified",
+  "render_source": "static-player",
+  "render_ms": 50988,
+  "diagnostics": [],
+  "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+  "images_inline_count": 3,
+  "serverBuild": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z"
+}

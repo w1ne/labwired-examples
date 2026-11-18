@@ -1,0 +1,438 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "sceneSummary": {
+    "valid": true,
+    "volume": 186002.27699220247,
+    "faceCount": 2779,
+    "size": [
+      122,
+      104,
+      70.5
+    ]
+  },
+  "parts": {
+    "count": 85,
+    "names": [
+      "base",
+      "lid",
+      "lcd-window",
+      "nucleo-native-pcb",
+      "carrier-native-pcb",
+      "nucleo-nut-0",
+      "nucleo-screw-0",
+      "nucleo-nut-1",
+      "nucleo-screw-1",
+      "nucleo-nut-2",
+      "nucleo-screw-2",
+      "carrier-standoff-0",
+      "carrier-screw-0",
+      "standoff-lower-screw-0",
+      "carrier-standoff-1",
+      "carrier-screw-1",
+      "standoff-lower-screw-1",
+      "carrier-standoff-2",
+      "carrier-screw-2",
+      "standoff-lower-screw-2",
+      "carrier-standoff-3",
+      "carrier-screw-3",
+      "standoff-lower-screw-3",
+      "lid-nut-0",
+      "lid-screw-0",
+      "lid-nut-1",
+      "lid-screw-1",
+      "lid-nut-2",
+      "lid-screw-2",
+      "lid-nut-3",
+      "lid-screw-3",
+      "window-nut-0",
+      "window-screw-0",
+      "window-nut-1",
+      "window-screw-1",
+      "window-nut-2",
+      "window-screw-2",
+      "window-nut-3",
+      "window-screw-3",
+      "lcd-clamp-0",
+      "lcd-clamp-1",
+      "sensor-clamp-0",
+      "sensor-clamp-1",
+      "lcd-clamp-nut-0",
+      "lcd-clamp-screw-0",
+      "lcd-clamp-nut-1",
+      "lcd-clamp-screw-1",
+      "lcd-clamp-nut-2",
+      "lcd-clamp-screw-2",
+      "lcd-clamp-nut-3",
+      "lcd-clamp-screw-3",
+      "sensor-clamp-nut-0",
+      "sensor-clamp-screw-0",
+      "sensor-clamp-nut-1",
+      "sensor-clamp-screw-1",
+      "sensor-clamp-nut-2",
+      "sensor-clamp-screw-2",
+      "sensor-clamp-nut-3",
+      "sensor-clamp-screw-3",
+      "J1-CN5",
+      "J2-CN6",
+      "J3-CN9",
+      "CN5-socket",
+      "CN6-socket",
+      "CN9-socket",
+      "CN8-socket",
+      "morpho-1325",
+      "morpho-7421",
+      "J4-LCD-header",
+      "J5-sonar-header",
+      "R1-10k",
+      "R2-18k",
+      "C1-100n",
+      "C2-100n",
+      "C3-10u",
+      "mini-b-receptacle-envelope",
+      "USER-button",
+      "RESET-button",
+      "joy-it-rev2-module-envelope",
+      "lcd-glass-view-envelope",
+      "adafruit3942-pcb-envelope",
+      "sonar-transducer-0",
+      "sonar-face-0",
+      "sonar-transducer-1",
+      "sonar-face-1"
+    ]
+  },
+  "requirements": {
+    "ok": true,
+    "status": "pass",
+    "entries": [
+      {
+        "name": "carrier-finished-thickness",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          90.0000029883041,
+          69.80000149415204,
+          1.6000000000000085
+        ],
+        "limit": {
+          "z": [
+            1.59,
+            1.61
+          ]
+        },
+        "margin": 0.009999999999991571,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 113.90610495701438
+          }
+        ],
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "bbox",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "op": "within",
+          "limit": {
+            "z": [
+              1.59,
+              1.61
+            ]
+          }
+        }
+      },
+      {
+        "name": "nucleo-native-finished-size",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          70.00001005941891,
+          82.50000149415206,
+          1.5911200000000107
+        ],
+        "limit": {
+          "x": [
+            69.99,
+            70.01
+          ],
+          "y": [
+            82.49,
+            82.51
+          ],
+          "z": [
+            1.58,
+            1.6
+          ]
+        },
+        "margin": 0.00887999999998934,
+        "selections": [
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(importedStep_2)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 108.20713154736262
+          }
+        ],
+        "featureId": "require_2",
+        "predicate": {
+          "metric": "bbox",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_2"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              69.99,
+              70.01
+            ],
+            "y": [
+              82.49,
+              82.51
+            ],
+            "z": [
+              1.58,
+              1.6
+            ]
+          }
+        }
+      },
+      {
+        "name": "lcd-to-window-clearance",
+        "source": "script",
+        "status": "pass",
+        "measured": 3.381999999999998,
+        "limit": 3,
+        "margin": 0.3819999999999979,
+        "selections": [
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(boolean_370)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 65.16133823057964
+          },
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(boolean_93)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 82.04876598706406
+          }
+        ],
+        "featureId": "require_3",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_370"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_93"
+          },
+          "op": "gte",
+          "limit": 3
+        }
+      },
+      {
+        "name": "lcd-to-carrier-clearance",
+        "source": "script",
+        "status": "pass",
+        "measured": 24.018,
+        "limit": 20,
+        "margin": 4.018000000000001,
+        "selections": [
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(boolean_370)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 65.16133823057964
+          },
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 113.90610495701438
+          }
+        ],
+        "featureId": "require_4",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_370"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "op": "gte",
+          "limit": 20
+        }
+      },
+      {
+        "name": "sonar-to-carrier-clearance",
+        "source": "script",
+        "status": "pass",
+        "measured": 23.86,
+        "limit": 20,
+        "margin": 3.8599999999999994,
+        "selections": [
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(boolean_376)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 53.58534874384976
+          },
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 113.90610495701438
+          }
+        ],
+        "featureId": "require_5",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_376"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "op": "gte",
+          "limit": 20
+        }
+      },
+      {
+        "name": "usb-plug-base-clearance",
+        "source": "script",
+        "status": "pass",
+        "measured": 1,
+        "limit": 0.9,
+        "margin": 0.09999999999999998,
+        "selections": [
+          {
+            "consumerFeatureId": "require_6",
+            "selectorText": "body(box_188)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 29.933259094191527
+          },
+          {
+            "consumerFeatureId": "require_6",
+            "selectorText": "body(boolean_39)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 172.6151789385858
+          }
+        ],
+        "featureId": "require_6",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_188"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_39"
+          },
+          "op": "gte",
+          "limit": 0.9
+        }
+      },
+      {
+        "name": "carrier-to-case-clearance",
+        "source": "script",
+        "status": "pass",
+        "measured": 3.999999999999986,
+        "limit": 3,
+        "margin": 0.9999999999999858,
+        "selections": [
+          {
+            "consumerFeatureId": "require_7",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 113.90610495701438
+          },
+          {
+            "consumerFeatureId": "require_7",
+            "selectorText": "body(boolean_39)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 172.6151789385858
+          }
+        ],
+        "featureId": "require_7",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_39"
+          },
+          "op": "gte",
+          "limit": 3
+        }
+      }
+    ],
+    "summary": {
+      "pass": 7,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "mechanism": "real",
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "e21bbb447d74f405c34900d655466e73ccc6a3e5252ecc326425645d924f1f65",
+      "byteLength": 15337
+    },
+    "parameters": {
+      "values": {
+        "output": "assembly"
+      },
+      "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "bf671690568f207dbf52471b5756de6645bf04d3"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "7357341b738cae0bd537f869e1a861b422075c83cef3e8f203569b89e1f55b72"
+  },
+  "serverBuild": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z",
+  "sourceReference": {
+    "file": "submitted-enclosure.kcad.ts",
+    "sha256": "2b3d65256e08fe9a85a590c5197de16faaba63f10ec5886e40cba6a009bb29a3",
+    "note": "Hosted staging rewrites immutable HTTPS inputs to worker paths before computing evaluationEvidence.source. The submitted source and saved asset manifest are retained separately."
+  }
+}

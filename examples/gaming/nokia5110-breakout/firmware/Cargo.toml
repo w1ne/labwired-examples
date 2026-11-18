@@ -1,0 +1,23 @@
+[package]
+name = "nokia5110-invaders-lab"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "=0.7.7"
+cortex-m-rt = "=0.7.5"
+panic-halt = "=0.2.0"
+
+[[bin]]
+name = "nokia5110-invaders-lab"
+test = false
+bench = false
+
+# Standalone package; match the upstream workspace release profile.
+[workspace]
+
+[profile.release]
+panic = "abort"
+lto = "thin"
+debug = true
+overflow-checks = true

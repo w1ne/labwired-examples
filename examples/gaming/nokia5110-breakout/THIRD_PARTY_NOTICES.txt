@@ -19,3 +19,13 @@ See electronics/licenses/kicad-library-license.txt and electronics/provenance.js
 Joy-IT, Adafruit, Samtec, TDK, Yageo and ST names identify the selected products.
 Their specification links do not imply endorsement. Native vendor CAD and
 drawing-derived fit envelopes are identified separately in the mechanical package.
+
+Rust firmware dependencies:
+Cargo.lock pins cortex-m 0.7.7, cortex-m-rt 0.7.5 and panic-halt 0.2.0 plus their transitive
+dependencies. Each dependency retains its upstream copyright and license. Cargo
+fetches the corresponding source and license files for relinking. The package
+firmware source is inherited from LabWired core under its MIT license.
+
+Accu, Würth Elektronik and Panduit names identify purchased mechanical parts.
+Their links in bom.csv are dimensional/source references, not endorsements.
+The modeled hardware bodies are drawing-derived or declared fit envelopes.

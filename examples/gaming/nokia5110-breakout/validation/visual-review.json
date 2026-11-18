@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8",
+  "findings": [
+    "The closed views show one assembled tabletop device with a rectangular display on the left, paired sonar cans on the right, and a recessed Mini-B opening.",
+    "Four corner screws retain the lid; four separate screws retain the clear display window. The display and sonar face remain unobstructed.",
+    "The enclosure is 122 by 104 mm in plan, with a 66 mm case height plus window and screw heads. The supplier module envelopes and native board dimensions are recorded separately.",
+    "The sole non-visual box-fragment style warning is justified by identified rectangular header insulators and pins, SMD bodies, purchased module envelopes, edge-clamp rails, end stops and cable-tie bridges. The enclosure is a continuous rounded shell; all 85 physical parts have explicit attachments. No decorative or unexplained fragments are present."
+  ],
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "The isometric view shows one complete enclosure assembly, with no second case or duplicate detached device.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The top view shows the 45 mm square display beside the 45.5 by 20 mm sensor face in the declared 122 by 104 mm case.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-2jJHI_-GVemGs9N4nEbiVg/render-top.png?exp=1795089681&sig=4OeIzNs6txFdwrUW_2x9Zeiysnvr7TwgnZWV4UTyN9U"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "The clear display window, two exposed sonar faces, lid fasteners, window fasteners and Mini-B cable opening are visible.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "The closed views contain only the enclosure, seated screws and mounted module faces; no loose visible solid floats beside the device.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "The corner screw heads sit on the lid, the window heads sit on the window, and the visible edge lips and end stops locate the modules.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-2jJHI_-GVemGs9N4nEbiVg/render-top.png?exp=1795089681&sig=4OeIzNs6txFdwrUW_2x9Zeiysnvr7TwgnZWV4UTyN9U"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "Both sonar faces point upward beside the readable display plane, while the USB receptacle faces the rear cable opening.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "The isometric, top and front views agree on one lid seam, the two top module openings and the same recessed rear USB port.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-AtJ0K1YJRxXhJ5dutDclvQ/render-front.png?exp=1795089681&sig=k2-0KZIZp5z8riFwMnZPpo_vBINEjlNiVzU6CciqnnA"
+    }
+  ]
+}

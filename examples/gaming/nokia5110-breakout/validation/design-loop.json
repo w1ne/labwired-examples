@@ -1,0 +1,415 @@
+{
+  "ok": true,
+  "goal": "Produce an editable Nokia Breakout engineering enclosure for the exact native Nucleo and routed carrier, with declared module envelopes, retained fasteners, removable edge clamps, a clear window and USB access; physical prototype qualification remains separate.",
+  "finalAttemptId": "01",
+  "attempts": [
+    {
+      "id": "01",
+      "title": "Attempt 01",
+      "ok": true,
+      "functional": true,
+      "qualityOk": true,
+      "featureCount": 943,
+      "diagnosticCount": 168,
+      "reviewFacts": [],
+      "visualReview": {
+        "accepted": true,
+        "findings": [
+          "The closed views show one assembled tabletop device with a rectangular display on the left, paired sonar cans on the right, and a recessed Mini-B opening.",
+          "Four corner screws retain the lid; four separate screws retain the clear display window. The display and sonar face remain unobstructed.",
+          "The enclosure is 122 by 104 mm in plan, with a 66 mm case height plus window and screw heads. The supplier module envelopes and native board dimensions are recorded separately.",
+          "The sole non-visual box-fragment style warning is justified by identified rectangular header insulators and pins, SMD bodies, purchased module envelopes, edge-clamp rails, end stops and cable-tie bridges. The enclosure is a continuous rounded shell; all 85 physical parts have explicit attachments. No decorative or unexplained fragments are present."
+        ],
+        "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8",
+        "checks": [
+          {
+            "code": "main-object-count",
+            "passed": true,
+            "finding": "The isometric view shows one complete enclosure assembly, with no second case or duplicate detached device.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+          },
+          {
+            "code": "proportions-match-reference",
+            "passed": true,
+            "finding": "The top view shows the 45 mm square display beside the 45.5 by 20 mm sensor face in the declared 122 by 104 mm case.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-2jJHI_-GVemGs9N4nEbiVg/render-top.png?exp=1795089681&sig=4OeIzNs6txFdwrUW_2x9Zeiysnvr7TwgnZWV4UTyN9U"
+          },
+          {
+            "code": "required-visible-features",
+            "passed": true,
+            "finding": "The clear display window, two exposed sonar faces, lid fasteners, window fasteners and Mini-B cable opening are visible.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+          },
+          {
+            "code": "no-stray-or-floating-geometry",
+            "passed": true,
+            "finding": "The closed views contain only the enclosure, seated screws and mounted module faces; no loose visible solid floats beside the device.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+          },
+          {
+            "code": "attachment-plausibility",
+            "passed": true,
+            "finding": "The corner screw heads sit on the lid, the window heads sit on the window, and the visible edge lips and end stops locate the modules.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-2jJHI_-GVemGs9N4nEbiVg/render-top.png?exp=1795089681&sig=4OeIzNs6txFdwrUW_2x9Zeiysnvr7TwgnZWV4UTyN9U"
+          },
+          {
+            "code": "semantic-orientation-alignment",
+            "passed": true,
+            "finding": "Both sonar faces point upward beside the readable display plane, while the USB receptacle faces the rear cable opening.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-FCU3xlFOxjPQwDv2c_86eQ/render-iso.png?exp=1795089680&sig=gFOGe2rKXw6SQTdmkIL5IDF7YxDtKPFGQO5jhDiSUI8"
+          },
+          {
+            "code": "canonical-views-physically-coherent",
+            "passed": true,
+            "finding": "The isometric, top and front views agree on one lid seam, the two top module openings and the same recessed rear USB port.",
+            "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-AtJ0K1YJRxXhJ5dutDclvQ/render-front.png?exp=1795089681&sig=k2-0KZIZp5z8riFwMnZPpo_vBINEjlNiVzU6CciqnnA"
+          }
+        ]
+      },
+      "repairMode": "none",
+      "passedChecks": [
+        "validator-no-errors"
+      ],
+      "blockingReasons": [],
+      "mechanismSummary": {
+        "sampleCount": 0,
+        "interferenceCount": 0,
+        "trackedConnectorCount": 0
+      },
+      "requirements": {
+        "ok": true,
+        "status": "pass",
+        "entries": [
+          {
+            "name": "carrier-finished-thickness",
+            "source": "script",
+            "status": "pass",
+            "measured": [
+              90.0000029883041,
+              69.80000149415204,
+              1.6000000000000085
+            ],
+            "limit": {
+              "z": [
+                1.59,
+                1.61
+              ]
+            },
+            "margin": 0.009999999999991571,
+            "selections": [
+              {
+                "consumerFeatureId": "require_1",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 113.90610495701438
+              }
+            ],
+            "featureId": "require_1",
+            "predicate": {
+              "metric": "bbox",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "op": "within",
+              "limit": {
+                "z": [
+                  1.59,
+                  1.61
+                ]
+              }
+            }
+          },
+          {
+            "name": "nucleo-native-finished-size",
+            "source": "script",
+            "status": "pass",
+            "measured": [
+              70.00001005941891,
+              82.50000149415206,
+              1.5911200000000107
+            ],
+            "limit": {
+              "x": [
+                69.99,
+                70.01
+              ],
+              "y": [
+                82.49,
+                82.51
+              ],
+              "z": [
+                1.58,
+                1.6
+              ]
+            },
+            "margin": 0.00887999999998934,
+            "selections": [
+              {
+                "consumerFeatureId": "require_2",
+                "selectorText": "body(importedStep_2)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 108.20713154736262
+              }
+            ],
+            "featureId": "require_2",
+            "predicate": {
+              "metric": "bbox",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_2"
+              },
+              "op": "within",
+              "limit": {
+                "x": [
+                  69.99,
+                  70.01
+                ],
+                "y": [
+                  82.49,
+                  82.51
+                ],
+                "z": [
+                  1.58,
+                  1.6
+                ]
+              }
+            }
+          },
+          {
+            "name": "lcd-to-window-clearance",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.381999999999998,
+            "limit": 3,
+            "margin": 0.3819999999999979,
+            "selections": [
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(boolean_370)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 65.16133823057964
+              },
+              {
+                "consumerFeatureId": "require_3",
+                "selectorText": "body(boolean_93)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 82.04876598706406
+              }
+            ],
+            "featureId": "require_3",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_370"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_93"
+              },
+              "op": "gte",
+              "limit": 3
+            }
+          },
+          {
+            "name": "lcd-to-carrier-clearance",
+            "source": "script",
+            "status": "pass",
+            "measured": 24.018,
+            "limit": 20,
+            "margin": 4.018000000000001,
+            "selections": [
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(boolean_370)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 65.16133823057964
+              },
+              {
+                "consumerFeatureId": "require_4",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 113.90610495701438
+              }
+            ],
+            "featureId": "require_4",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_370"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "op": "gte",
+              "limit": 20
+            }
+          },
+          {
+            "name": "sonar-to-carrier-clearance",
+            "source": "script",
+            "status": "pass",
+            "measured": 23.86,
+            "limit": 20,
+            "margin": 3.8599999999999994,
+            "selections": [
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(boolean_376)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 53.58534874384976
+              },
+              {
+                "consumerFeatureId": "require_5",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 113.90610495701438
+              }
+            ],
+            "featureId": "require_5",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "boolean_376"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "op": "gte",
+              "limit": 20
+            }
+          },
+          {
+            "name": "usb-plug-base-clearance",
+            "source": "script",
+            "status": "pass",
+            "measured": 1,
+            "limit": 0.9,
+            "margin": 0.09999999999999998,
+            "selections": [
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(box_188)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 29.933259094191527
+              },
+              {
+                "consumerFeatureId": "require_6",
+                "selectorText": "body(boolean_39)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 172.6151789385858
+              }
+            ],
+            "featureId": "require_6",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "box_188"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_39"
+              },
+              "op": "gte",
+              "limit": 0.9
+            }
+          },
+          {
+            "name": "carrier-to-case-clearance",
+            "source": "script",
+            "status": "pass",
+            "measured": 3.999999999999986,
+            "limit": 3,
+            "margin": 0.9999999999999858,
+            "selections": [
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(importedStep_1)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 113.90610495701438
+              },
+              {
+                "consumerFeatureId": "require_7",
+                "selectorText": "body(boolean_39)",
+                "syntax": "lineage",
+                "fingerprints": [],
+                "partDiagonal": 172.6151789385858
+              }
+            ],
+            "featureId": "require_7",
+            "predicate": {
+              "metric": "clearance",
+              "a": {
+                "kind": "body",
+                "ref": "importedStep_1"
+              },
+              "b": {
+                "kind": "body",
+                "ref": "boolean_39"
+              },
+              "op": "gte",
+              "limit": 3
+            }
+          }
+        ],
+        "summary": {
+          "pass": 7,
+          "fail": 0,
+          "notEvaluated": 0
+        }
+      },
+      "evaluationEvidence": {
+        "schema": "kernelcad.evaluation-evidence.v1",
+        "mode": "build",
+        "source": {
+          "sha256": "cfc4bcae3ca6462573e7717801eaa9302e3b84d97db21fe742bc918f7b14e418",
+          "byteLength": 15337
+        },
+        "parameters": {
+          "values": {
+            "output": "assembly"
+          },
+          "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+        },
+        "engine": {
+          "kernel": "occt",
+          "version": "0.17.4",
+          "revision": "bf671690568f207dbf52471b5756de6645bf04d3"
+        },
+        "dependencies": {
+          "status": "untracked"
+        },
+        "reuse": {
+          "eligible": false,
+          "reason": "dependencies-untracked"
+        },
+        "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+        "identitySha256": "607c04c26cbaedbdaed3610be3fe505370b209ce5d16b5b596d94be018e39f35"
+      },
+      "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+    }
+  ],
+  "record": {
+    "title": "Nokia Breakout enclosure revision A",
+    "goal": "Produce an editable Nokia Breakout engineering enclosure for the exact native Nucleo and routed carrier, with declared module envelopes, retained fasteners, removable edge clamps, a clear window and USB access; physical prototype qualification remains separate.",
+    "steps": []
+  },
+  "serverBuild": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z"
+}

@@ -1,0 +1,128 @@
+{
+  "status": "imported",
+  "mode": "preserve",
+  "routing_status": "not_run",
+  "drc_status": "not_run",
+  "job_id": "38f18e4d-5a3f-4fd0-958f-283131daff87",
+  "board_id": "pcb_99d3797e40188285",
+  "rev": 0,
+  "pcb_ref": "sha256:9ef455b320b5ff9ddaeacaa8bcac17c575e2fd2986e3fbf4df69afcb7b61913e",
+  "rules_ref": "sha256:069a2d06dd7ac3273e7540c62daddbafedce7c1715f5b665fe6d1a3d66b50163",
+  "rules_digest": "7185cb1f35c09b1aea0419948cff64dc1367202f131c2d2dc9136924f270b64a",
+  "coverage_ref": "sha256:edafdb0dc1ce33d62b63aa35e9f45bc6830ed292089079c8fd50b4f9b1d31e5c",
+  "twin_buildable": false,
+  "capabilities": {
+    "route": "supported",
+    "view": "supported",
+    "simulation": "model_gaps"
+  },
+  "model": {
+    "mapped": 1,
+    "dropped": 4,
+    "ignored": 16
+  },
+  "simulation_blockers": [],
+  "applied_rules": {
+    "version": 1,
+    "defaults": {
+      "track_width_mm": 0.3,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 0.6,
+      "via_drill_mm": 0.3
+    },
+    "fabrication": {
+      "reference": "Project fabrication specification: two-layer FR-4, 1.6 mm finished, 35 um copper, ENIG; conservative prototype rules recorded in native KiCad project.",
+      "min_track_width_mm": 0.25,
+      "min_clearance_mm": 0.2,
+      "min_drill_mm": 0.3,
+      "min_annular_ring_mm": 0.15,
+      "min_hole_to_hole_mm": 0.25,
+      "min_edge_clearance_mm": 0.5,
+      "min_hole_clearance_mm": 0.25
+    },
+    "sources": [
+      {
+        "kind": "datasheet",
+        "reference": "https://www.st.com/resource/en/board_manufacturing_specification/mb1136_bdp.zip",
+        "rationale": "Actual MB1136C Arduino CN5/CN6/CN9 pad coordinates determine the underside Nucleo mating interface and board registration."
+      },
+      {
+        "kind": "datasheet",
+        "reference": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf",
+        "rationale": "Exact TSW single-row headers use 2.54 mm pitch and 0.635 mm square terminals; local footprints retain standard 1 mm finished PTH drills."
+      },
+      {
+        "kind": "assumption",
+        "reference": "examples/gaming/nokia5110-breakout/README.md at e0113213b2701903e0777ca3e37d51f7b180b053",
+        "rationale": "1 MHz LCD SPI and low-current 3.3/5 V accessory rails use 0.30 mm signal and 0.50 mm power branches; no controlled impedance or hardware qualification is claimed."
+      }
+    ],
+    "net_classes": [
+      {
+        "name": "Default",
+        "track_width_mm": 0.3,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 0.6,
+        "via_drill_mm": 0.3,
+        "nets": [
+          "/+3V3",
+          "/+5V",
+          "/ECHO_3V3_PB10",
+          "/ECHO_5V",
+          "/GND",
+          "/LCD_CE_PB6",
+          "/LCD_CLK_PA5",
+          "/LCD_DC_PC7",
+          "/LCD_DIN_PA7",
+          "/LCD_RST_PA9",
+          "/TRIG_PA8",
+          "unconnected-(J1-Pin_10-Pad10)",
+          "unconnected-(J1-Pin_5-Pad5)",
+          "unconnected-(J1-Pin_8-Pad8)",
+          "unconnected-(J1-Pin_9-Pad9)",
+          "unconnected-(J2-Pin_1-Pad1)",
+          "unconnected-(J2-Pin_2-Pad2)",
+          "unconnected-(J2-Pin_3-Pad3)",
+          "unconnected-(J2-Pin_8-Pad8)",
+          "unconnected-(J3-Pin_1-Pad1)",
+          "unconnected-(J3-Pin_2-Pad2)",
+          "unconnected-(J3-Pin_3-Pad3)",
+          "unconnected-(J3-Pin_4-Pad4)",
+          "unconnected-(J3-Pin_5-Pad5)",
+          "unconnected-(J3-Pin_6-Pad6)"
+        ],
+        "parts": [],
+        "sources": [
+          {
+            "kind": "datasheet",
+            "reference": "https://www.st.com/resource/en/board_manufacturing_specification/mb1136_bdp.zip",
+            "rationale": "Actual MB1136C Arduino CN5/CN6/CN9 pad coordinates determine the underside Nucleo mating interface and board registration."
+          },
+          {
+            "kind": "datasheet",
+            "reference": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf",
+            "rationale": "Exact TSW single-row headers use 2.54 mm pitch and 0.635 mm square terminals; local footprints retain standard 1 mm finished PTH drills."
+          },
+          {
+            "kind": "assumption",
+            "reference": "examples/gaming/nokia5110-breakout/README.md at e0113213b2701903e0777ca3e37d51f7b180b053",
+            "rationale": "1 MHz LCD SPI and low-current 3.3/5 V accessory rails use 0.30 mm signal and 0.50 mm power branches; no controlled impedance or hardware qualification is claimed."
+          }
+        ]
+      }
+    ]
+  },
+  "blob_path": "/v1/blobs/sha256/9ef455b320b5ff9ddaeacaa8bcac17c575e2fd2986e3fbf4df69afcb7b61913e",
+  "layer_count": 2,
+  "backend": "native-kicad-preserved",
+  "source_url": "https://raw.githubusercontent.com/w1ne/labwired-examples/e0113213b2701903e0777ca3e37d51f7b180b053/examples/gaming/nokia5110-breakout/electronics/nokia-carrier.kicad_pcb",
+  "warnings": [
+    "Original native PCB bytes preserved; routing and independent KiCad DRC were not run",
+    "Run validate_imported with the returned PCB and rules references before fabrication",
+    "The unrouted and violations counts come from Freerouting. Run labwired_pcb_validate_imported with pcb_ref and rules_ref for independent design-rule checks on the returned board."
+  ],
+  "log": [],
+  "manufacturing_verified": false,
+  "lpddr4_si_verified": false,
+  "functional_simulation_verified": false
+}
