@@ -1,0 +1,119 @@
+{
+  "schema": "labwired.physical-firmware-digital-device-proof.v1",
+  "date": "2026-11-18",
+  "source": {
+    "repository": "https://github.com/w1ne/labwired-core",
+    "commit": "e2908774da4d254e1244dfdf9e5fb7bf6cdf4cf1",
+    "pullRequest": "https://github.com/w1ne/labwired-core/pull/2039",
+    "feature": "event-scheduler",
+    "workingDiff": ""
+  },
+  "firmware": {
+    "path": "firmware/release/iolink-device.elf",
+    "bytes": 1547352,
+    "sha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508"
+  },
+  "cpuHz": 80000000,
+  "scope": "Unchanged physical STM32 HAL device image, real Cortex-M4 execution, L6362A digital line/control model, HC165 GPIO model, and a controlled master line using the existing TimedUartNet. This is one device, not the physical master image or a complete station.",
+  "observed": {
+    "startupError": 0,
+    "di8Patterns": [
+      0,
+      255,
+      165,
+      60
+    ],
+    "wakePulseMicroseconds": 80,
+    "wakeInterrupts": 1,
+    "overloadFallingEdges": 1,
+    "uartBrr": 2083,
+    "uartCr2": 196608,
+    "type0Request": [
+      162,
+      0
+    ],
+    "type0Reply": [
+      73,
+      6
+    ],
+    "replyChecksumValid": true,
+    "minCycleMicroseconds": 10000,
+    "deviceState": 2,
+    "uartErrors": 0,
+    "rxOverflows": 0,
+    "networkParityErrors": 0,
+    "networkFramingErrors": 0,
+    "networkEventsDropped": 0
+  },
+  "regressions": {
+    "stm32": {
+      "passed": 174,
+      "failed": 0,
+      "ignored": 19
+    },
+    "timedUart": {
+      "passed": 8,
+      "failed": 0
+    }
+  },
+  "notEstablished": [
+    "Complete physical-master/two-device station operation",
+    "Analog C/Q voltage, current, clamp, slew, enable settling or cable behavior",
+    "Physical-board clock/rate, wake and response waveform measurement",
+    "Three distinct hardware identities; this component probe uses the explicit synthetic UID reset state",
+    "Fitted full-station mechanical qualification"
+  ],
+  "nextDefect": "The L6360 control-model review found that master startup must respect stored PARITY reset semantics; the master driver/host fixture repair and subsequent master-image runtime proof remain pending.",
+  "receipts": [
+    {
+      "path": "evidence/physical-runtime-device/l476-physical-device-scheduler-probe.json",
+      "bytes": 8523,
+      "sha256": "54f0e6110ac9b90ba06b15e0957ac6f69f62b60bf83b14883ddf92f7759c9dcd"
+    },
+    {
+      "path": "evidence/physical-runtime-device/l476-physical-device-scheduler-probe.txt",
+      "bytes": 1818,
+      "sha256": "3153cc608f66201944996a6ac4b6fb4bd419324a9b6b19f547a5b34cec71dc5c"
+    },
+    {
+      "path": "evidence/physical-runtime-device/l476-physical-device-scheduler-probe-invocation.json",
+      "bytes": 470,
+      "sha256": "52afdeefa47edfb35351eb881b3b2d0702cbc0db72ed2f621880d3cdd9f6bcf2"
+    },
+    {
+      "path": "evidence/physical-runtime-device/l476-physical-device-scheduler-probe.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/physical-runtime-device/stm32-phy-committed.txt",
+      "bytes": 19822,
+      "sha256": "09132237487d59fd12b2ce5cb8452e03a134d815d49efcedbcf32d1fa127a2de"
+    },
+    {
+      "path": "evidence/physical-runtime-device/stm32-phy-committed-invocation.json",
+      "bytes": 362,
+      "sha256": "2209d8a5e77485fdd658008f57841f848b2d8dc2fba6d1759756e04d9fda814e"
+    },
+    {
+      "path": "evidence/physical-runtime-device/stm32-phy-committed.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/physical-runtime-device/timed-uart-phy-committed.txt",
+      "bytes": 2523,
+      "sha256": "2e358eb357332dde4cab98e9a786b08335f75d5110d2ef0cb3bc5549be55b041"
+    },
+    {
+      "path": "evidence/physical-runtime-device/timed-uart-phy-committed-invocation.json",
+      "bytes": 378,
+      "sha256": "18f1f306779aaadcdbceca81c1661371b82c23ed8297462ebb26f4f5ad77e5a0"
+    },
+    {
+      "path": "evidence/physical-runtime-device/timed-uart-phy-committed.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  ]
+}

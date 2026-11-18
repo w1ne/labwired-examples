@@ -45,7 +45,7 @@
   "simulationContract": "Existing byte-wake fixture is separate from these physical HAL images; do not replace its ELF without a matching core/model run.",
   "remaining": [
     "Full fitted mount and hardware BOM",
-    "Matching physical-image core boot and protocol probes",
+    "L6360 stored-parity startup repair and matching physical-master/two-device runtime proof",
     "Physical two-port acceptance and measurements",
     "Region-specific AC lead selection",
     "Current IODD business-rule check and conformity where applicable"
@@ -110,6 +110,16 @@
       "path": "evidence/protocol-profile.txt",
       "bytes": 539,
       "sha256": "d3389d1da22d528d58b9787c58fe4d794bacc82fd4a89842f2ca963c4294c4f9"
+    },
+    {
+      "path": "evidence/physical-runtime-device/manifest.json",
+      "bytes": 4211,
+      "sha256": "793fec9f05880470e16cb709ad0e300a7bc74a76a400e122a7510eb8e791a838"
     }
-  ]
+  ],
+  "devicePhysicalRuntime": {
+    "manifest": "evidence/physical-runtime-device/manifest.json",
+    "coreCommit": "e2908774da4d254e1244dfdf9e5fb7bf6cdf4cf1",
+    "scope": "One unchanged physical device image plus a controlled digital master line; complete station pending"
+  }
 }

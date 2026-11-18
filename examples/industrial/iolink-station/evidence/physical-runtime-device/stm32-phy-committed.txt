@@ -1,0 +1,242 @@
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/h735-telematics-lab/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/rc-oscilloscope-lab/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/nrf52832/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/nrf52840/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/rp2040/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+    Finished `test` profile [optimized] target(s) in 30.24s
+     Running tests/stm32/main.rs (/data/cargo-target/industrial-boot-20261118/debug/deps/stm32-759f4c778d1e4a54)
+
+running 193 tests
+test cortex_m_event_sleep::wfe_parks_until_event_and_sev_is_consumed_once ... ok
+test cortex_m_event_sleep::wfe_wide_hints_match_narrow_encodings ... ok
+test cortex_m_event_sleep::wfe_does_not_wake_for_primask_masked_interrupt ... ok
+test cortex_m_event_sleep::wfe_exception_return_records_event_before_thread_sleeps ... ok
+test cortex_m_event_sleep::wfe_snapshot_preserves_sleep_and_unconsumed_event ... ok
+test fdcan::fdcan_nodes_exchange_classic_can_frames_over_can_bus ... ok
+test fdcan::transmitter_does_not_receive_its_own_frame_but_other_endpoints_do ... ok
+test fdcan::fdcan_can_fd_frames_preserve_fd_metadata_and_64_byte_payload ... ok
+test fdcan::txbrp_stays_set_until_tick_then_txbto_is_set ... ok
+test cortex_m_event_sleep::wfe_sevonpend_wakes_on_disabled_irq_transition_only ... ok
+test cortex_m_event_sleep::wfe_ignores_cleared_or_disabled_external_pending_bits ... ok
+test g0_customer_timing::real_g0_firmware_timed_cq_session ... ignored, requires IOLINKI_G0_ELF; optional HZ/BAUD/PROFILE select the built firmware
+test fdcan_attach_seam::attach_can_bus_by_id_binds_a_constructed_fdcan_to_a_live_endpoint ... ok
+test g0_exti::g0_masked_edges_latch_and_rising_falling_clear_independently ... ok
+test g0_reference_firmware::customer_g0_firmware_initializes_and_handles_external_wake ... ignored, requires the built customer G0 ELF in IOLINKI_G0_ELF
+test fdcan_attach_seam::attach_can_bus_by_id_rejects_missing_and_non_fdcan_peripherals ... ok
+test g0_exti::g0_registers_group_gpio_pending_into_the_correct_irqs ... ok
+test g0_exti::external_wake_pad_uses_configured_port_and_falling_edge ... ok
+test exti_handler_once_per_edge::g0b1_exti_handler_runs_once_per_edge ... ok
+test exti_handler_once_per_edge::g071_exti_handler_runs_once_per_edge ... ok
+test exti_handler_once_per_edge::f103_exti_handler_runs_once_per_edge ... ok
+test exti_handler_once_per_edge::f401_exti_handler_runs_once_per_edge ... ok
+test flash_h5_ops::swap_bank_reboots_into_bank2 ... ok
+test exti_handler_once_per_edge::l073_exti_handler_runs_once_per_edge ... ok
+test flash_h5_ops::erase_targets_bank2_with_bksel ... ok
+test flash_h5_ops::erase_fills_sector_with_ff ... ok
+test flash_h5_ops::swap_applied_via_run ... ok
+test g0_uart_pad::g0_pa9_routes_uart_tx_only_through_af1 ... ok
+test flash_h5_ops::h563_installs_the_flash_op_batch_watch ... ok
+test flash_h5_ops::erase_applied_via_run ... ok
+test h563_conformance::class_model_reset_state_matches_silicon ... ok
+test h563_conformance::crc_compute_matches_silicon ... ok
+test h563_conformance::peripheral_estate_reset_state_matches_silicon ... ok
+test h563_conformance::gpio_reset_state_matches_silicon ... ok
+test l6362a_digital::overload_requires_known_opposed_drives_and_retains_a_real_ol_delay ... ok
+test l6362a_digital::physical_noninverting_phy_composes_with_stm32_pin_inversion ... ok
+test l6362a_digital::short_opposition_does_not_become_a_wakeup_and_persistent_overload_cuts_off ... ok
+test l6362a_digital::sourced_push_pull_and_receiver_truth_tables_are_independent_of_enable ... ok
+test l6362a_digital::thermal_shutdown_and_uvlo_do_not_generate_ol_wake ... ok
+test l6362a_digital::digital_history_uses_timestamped_peer_levels_and_fails_closed_after_eviction ... ok
+test modern_uart_timing::clear_tc_during_transmit_does_not_hide_completion ... ok
+test modern_uart_timing::disabled_usart_does_not_raise_tc_interrupt ... ok
+test h563_conformance::systick_and_usart_reset_state_match_silicon ... ok
+test modern_uart_timing::modern_8e1_registers_transmit_complete_and_receive_peek ... ok
+test modern_uart_timing::parity_error_survives_read_and_next_clean_character_until_icr ... ok
+test modern_uart_timing::icr_clears_only_selected_error_and_rx_flush_preserves_error ... ok
+test modern_uart_timing::tc_completion_survives_first_service_after_entire_frame ... ok
+test modern_uart_timing::a_transmitted_frames_polarity_does_not_change_with_later_cr2_writes ... ok
+test modern_uart_timing::txinv_inverts_the_complete_8e1_waveform ... ok
+test modern_uart_timing::rxinv_normalizes_start_data_parity_and_stop_before_decoding ... ok
+test h563_conformance::reserved_uart_register_window_remains_unimplemented_on_h563 ... ok
+test nucleo_u545re::cube_hal_firmware_reaches_160mhz_blinks_ld2_and_reports_b1 ... ignored, 20M-step Cube HAL run (~1 min); run with --ignored
+test exti_handler_once_per_edge::u545_exti_handler_runs_once_per_edge ... ok
+test g0_tiol112::live_clock_guard_blocks_wrong_timebase_until_firmware_programs_pll ... ok
+test g0_tiol112::en_blocks_tx_and_timed_cq_inverts_with_propagation_and_echo ... ok
+test g0_tiol112::no_enable_wait_loses_first_frame_and_configured_guard_passes ... ok
+test g0_tiol112::wake_and_fault_are_active_low_and_wake_reaches_real_exti ... ok
+test g0_tiol112::exact_g0b1_memory_irq_and_64mhz_clock_guard ... ok
+test g0_tiol112::timing_oracle_uses_final_stop_end_and_first_cq_start_not_tc ... ok
+test g0_tiol112::disable_delay_truncates_in_flight_cq_and_preserves_time_of_release ... ok
+test h563_conformance::rcc_reset_state_matches_silicon ... ok
+test g0_tiol112::machine_advance_services_tiol112_uart_and_enable_edges ... ok
+test g0_tiol112::tiol112_truth_table_and_bad_wiring_fail_closed ... ok
+test nvic_masking_config_path::every_chip_declaring_scb_gets_the_real_model ... ok
+test l6362a_digital::a_real_gpio_opposition_pends_the_device_ol_exti_line ... ok
+test stm32_iolink_physical::unchanged_hal_image_wakes_through_ol_exti_and_answers_a_real_type0_request ... ignored, requires immutable physical IO-Link device ELF and explicit report path
+test sn74hc165_gpio::high_load_holds_the_word_across_live_input_changes ... ok
+test nvic_masking_config_path::config_path_installs_a_real_nvic ... ok
+test nvic_masking_config_path::icer_disabled_irq_does_not_fire ... ok
+test sn74hc165_gpio::every_parallel_pattern_arrives_h_first_without_peripheral_ticks ... ok
+test nucleo_u545re::peripherals_the_u545_lacks_are_unmapped ... ok
+test nvic_masking_config_path::enabled_irq_still_fires ... ok
+test nucleo_u545re::flash_banks_are_256k_so_bker_erase_hits_the_second_half ... ok
+test nucleo_u545re::dbgmcu_idcode_is_the_u545_one ... ok
+test nucleo_u545re::memory_map_is_the_u545_one ... ok
+test nucleo_u545re::button_pc13_press_and_release_reach_the_vcp ... ok
+test nucleo_u545re::blinky_prints_ok_on_usart1_vcp ... ok
+test nucleo_u545re::vcp_rx_pa10_is_echoed_back_on_tx_pa9 ... ok
+test sn74hc165_gpio::low_load_is_transparent_and_clocks_do_not_shift ... ok
+test nucleo_u545re::blinky_configures_the_board_pins_and_toggles_ld2_on_pa5 ... ok
+test stm32_v2_timer_output_pad::unknown_timer_pad_map_is_refused ... ok
+test stm32_v2_timer_output_pad::g071_tim2_ch1_pwm_reaches_pa0_on_af2 ... ok
+test stm32_v2_timer_output_pad::g0b1_tim2_ch1_pwm_reaches_pa0_on_af2 ... ok
+test stm32_variant_geometry::the_inventory_ids_are_public_builtins ... ok
+test stm32_v2_timer_output_pad::l476_complementary::l476_tim1_both_enabled_have_exact_two_cycle_dead_time ... ok
+test stm32_v2_timer_output_pad::l073_tim2_ch1_pwm_reaches_pa0_on_af2 ... ok
+test stm32_v2_timer_output_pad::l476_complementary::l476_tim1_pb14_armed_undriven_records_later_native_states ... ok
+test stm32_v2_timer_output_pad::f411_tim2_ch1_pwm_reaches_pa0_on_af1 ... ok
+test stm32_v2_timer_output_pad::g474_tim2_ch1_pwm_reaches_pa0_on_af1 ... ok
+test stm32_v2_timer_output_pad::l476_complementary::l476_tim1_pwm2_and_n_polarity_are_native ... ok
+test stm32_v2_timer_output_pad::wb55_tim2_ch1_pwm_reaches_pa0_on_af1 ... ok
+test stm32_v2_timer_output_pad::l476_complementary::l476_tim1_n_only_follows_ocref_on_pb13 ... ok
+test stm32_v2_timer_output_pad::h563_tim2_ch1_pwm_reaches_pa0_on_af1 ... ok
+test stm32_v2_timer_output_pad::l476_complementary::l476_tim1_complementary_route_requires_af_enable_and_moe ... ok
+test stm32_v2_timer_output_pad::wba52_tim2_ch1_pwm_reaches_pa5_on_af1 ... ok
+test stm32f1_gpio_lock_reset::f1_reset_change_does_not_reset_wch_gpio ... ok
+test stm32f1_gpio_lock_reset::system_reset_releases_f1_gpio_configuration_lock ... ok
+test stm32f401_conformance::flash_reset_state_matches_svd ... ok
+test stm32_v2_timer_output_pad::l476_tim2_ch1_pwm_reaches_pa0_on_af1 ... ok
+test stm32f401_conformance::gpio_reset_state_matches_svd ... ok
+test stm32f401_conformance::pwr_reset_state_matches_svd ... ok
+test stm32_v2_timer_output_pad::u545_tim2_ch1_pwm_reaches_pa0_on_af1 ... ok
+test stm32f401_conformance::rcc_reset_state_matches_rm0368 ... ok
+test stm32f407_dma_walk_differential::stm32f407_dma1_memory_to_memory_is_blocked ... ok
+test stm32g0_dmamux_generators::an_exti_edge_makes_a_generator_issue_gnbreq_plus_one_dma_requests ... ok
+test stm32g0_dmamux_generators::synchronisation_lets_nbreq_plus_one_requests_through_per_edge ... ok
+test stm32f407_dma_walk_differential::stm32f407_dma2_m2m_transfer_copies_buffer_and_latches_tcif ... ok
+test stm32f407_dma_walk_differential::stm32f407_dma2_stream_irq_routes_through_nvic ... ok
+test stm32g0_uart_dma::delayed_uart_service_applies_overwrite_and_dma_error_drop_per_character ... ok
+test stm32g0_uart_dma::failed_bus_copy_sets_te_without_completion_and_recovers_after_rearm ... ok
+test stm32g0_uart_dma::machine_dispatches_real_timed_dma_requests_and_node_reset_clears_dma ... ok
+test stm32g0_uart_dma::overrun_retains_old_rdr_and_ovrdis_overwrites_without_ore ... ok
+test stm32_v2_timer_output_pad::u575_tim2_ch1_pwm_reaches_pa0_on_af1 ... ok
+test stm32g0_uart_dma::ddre_drop_mask_and_explicit_error_recovery_match_modern_usart ... ok
+test stm32g0_uart_dma::request_id_dma_gate_disable_and_rearm_are_real ... ok
+test stm32g0_uart_dma::circular_rx_reloads_count_and_memory_base_with_exact_half_and_full_irqs ... ok
+test stm32h735_peripheral_estate::new_instances_are_dark_until_their_rcc_bit_is_set ... ok
+test stm32h735_peripheral_estate::the_two_fdcan_instances_are_independent ... ok
+test stm32g0_uart_dma::tx_dma_completion_precedes_usart_tc_and_moves_every_byte_through_tdr ... ok
+test stm32h735_peripheral_estate::new_instances_report_their_ip_reset_value_once_clocked ... ok
+test stm32u575_60north::clock_init_reaches_160mhz_and_done_stage ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::core_smoke_maps_memories_and_services_interrupts ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::core_smoke_restarts_after_machine_reset ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::hal_clock_completes_and_reports_160mhz ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::hal_gpio_toggles_mirrors_and_counts_rising_edges ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::hal_spi_dma_loopback_receives_what_it_sent ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::hal_spi_dma_transmits_all_bytes ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::hal_spi_loops_back_8_and_16_bit_frames ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::hal_uart_dma_receives_text ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::hal_uart_prints_configures_baud_and_echoes ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::st_dma_flash_to_ram_copies_and_blinks ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::st_fdcan_loopback_receives_its_own_frames ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::st_i2c_twoboards_master_writes_and_reads_back ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north::st_spi_fullduplex_polling_master_sends_and_receives ... ignored, requires external 60North firmware; set RENODE_U5_FIRMWARE and run with --ignored
+test stm32u575_60north_registers::fdcan_extended_range_filter_type_three_ignores_xidam ... ok
+test stm32u575_60north_registers::fdcan_fifo_ack_drains_all_entries_across_index_wrap ... ok
+test stm32u575_60north_registers::fdcan_global_filter_rejects_standard_and_extended_remote_frames ... ok
+test stm32u575_60north_registers::fdcan_matched_filter_sets_real_index_and_clears_anmf ... ok
+test stm32l476_exti_mux::exticr_retains_all_sixteen_sources_and_reserved_bits_stay_zero ... ok
+test stm32l476_exti_mux::each_line_respects_the_selected_port_edge_polarity_and_masked_pending_flag ... ok
+test stm32l476_exti_mux::mux_is_opt_in_and_missing_or_overlapping_descriptor_fields_are_rejected ... ok
+test stm32u575_60north_registers::gpio_inputs_and_exti_edges ... ok
+test stm32u575_60north_registers::flash_page_and_mass_erase_touch_only_the_selected_region ... ok
+test stm32u575_60north_registers::gpio_lckk_is_irreversible_until_reset ... ok
+test nvic_masking_config_path::every_chip_declaring_nvic_gets_the_real_model ... ok
+test stm32u575_60north_registers::gpio_locked_alternate_functions_preserve_only_selected_nibbles ... ok
+test stm32u575_60north_registers::gpdma_bndt_bytes_irq_split_and_peripheral_routing ... ok
+test stm32u575_60north_registers::gpio_lock_sequence_with_changed_masks_aborts ... ok
+test stm32u575_60north_registers::flash_latency_lock_keys_and_sequence_errors ... ok
+test stm32u575_60north_registers::pwr_voltage_range_booster_regulator_and_dbpr ... ok
+test stm32u575_60north_registers::rcc_reset_pll_gating_prescalers_and_backup_domain ... ok
+test stm32u575_60north_registers::u575_crypto_accelerator_register_surfaces_are_mapped ... ok
+test stm32u575_60north_registers::i2c_write_read_and_nack ... ok
+test stm32u575_60north_registers::u575_hash_sha256_digest_registers_match_the_abc_vector ... ok
+test stm32u575_60north_registers::u575_hash_sha1_sha224_and_md5_match_the_abc_vectors ... ok
+test stm32u575_60north_registers::spi3_limits_loopback_threshold_and_irq ... ok
+test stm32u5_crypto_walk_free::hash_level_irq_tracks_the_register_mask_and_status_on_writes ... ok
+test stm32_variant_geometry::variant_analog_pads_follow_the_package_featured_map ... ok
+test stm32_variant_geometry::variants_expose_the_declared_peripheral_instance_set ... ok
+test stm32_variant_geometry::variant_geometry_matches_the_st_datasheets ... ok
+test stm32_variant_geometry::variant_pin_labels_use_the_reference_port_groups ... ok
+test stm32u575_60north_registers::gpio_reset_values_and_set_reset_priority ... ok
+test stm32_variant_geometry::variants_build_the_shared_public_estate ... ok
+test stm32u5_reset_conformance::u5a5_chip_and_crypto_peripheral_resets_match_the_selected_profile ... ok
+test stm32u5_exec_oracle::u5a5_hash_saes_and_pka_execute_register_level_operations ... ok
+test stm32u5_crypto_walk_free::pka_level_irq_tracks_the_register_mask_and_status_on_writes ... ok
+test stm32u5_crypto_walk_free::stm32u5_crypto_registers_preserve_wide_cpu_batching ... ok
+test stm32u5_crypto_walk_free::saes_level_irq_tracks_the_register_mask_and_status_on_writes ... ok
+test timer_input_capture::a_timer_without_the_f4_declaration_gets_no_pad_routes ... ok
+test timer_level_deassert_unpends::a_software_pend_survives_a_low_line ... ok
+test stm32u5_exec_oracle::u5a5_pka_rejects_operand_widths_above_the_hardware_limit ... ok
+test timer_input_capture::pwm_input_mode_sees_nothing_when_the_pad_is_not_muxed_to_the_timer ... ok
+test stm32u575_60north_registers::usart_reset_values_prescaler_and_fifo_flags ... ok
+test u545_u575_drift_guard::u545_merged_memory_map_is_the_u545_one ... ok
+test timer_level_deassert_unpends::an_unserviced_level_keeps_pending ... ok
+test u545_u575_drift_guard::u545_peripherals_match_u575_except_allow_list ... ok
+test u5_exti::u5_gpio_mux_split_pending_and_individual_irqs ... ok
+test u5_reference_firmware::customer_u5_firmware_initializes_and_handles_external_wake ... ignored, requires the built customer U5 ELF in IOLINKI_U5_ELF
+test timer_level_deassert_unpends::clearing_the_flag_drops_the_level_pend ... ok
+test u545_u575_drift_guard::u545_top_level_matches_u575_except_allow_list ... ok
+test timer_masked_level_batches::a_masked_held_level_does_not_pin_the_quantum_to_one_instruction ... ok
+test timer_masked_level_batches::unmasking_takes_the_held_level_and_it_pends_again_while_active ... ok
+test stm32u5_exec_oracle::u5a5_pka_arithmetic_subtraction_returns_sign_extended_negative_result ... ok
+test timer_input_capture::pwm_input_mode_measures_period_and_duty_exactly ... ok
+stm32f103 serial:
+reg 0xD0 len 1 end=0 got=1 : 60
+reg 0x88 len 2 end=0 got=2 : 70 6F
+reg 0x88 len 3 end=0 got=3 : 70 6F 43
+reg 0x88 len 6 end=0 got=6 : 70 6F 43 67 18 FC
+BME280 ok
+T=25.00 C
+DONE
+
+test stm32duino_i2c_multibyte_bme280::f103_wire_multibyte_reads_and_bme280_begin ... ok
+stm32f401 serial:
+reg 0xD0 len 1 end=0 got=1 : 60
+reg 0x88 len 2 end=0 got=2 : 70 6F
+reg 0x88 len 3 end=0 got=3 : 70 6F 43
+reg 0x88 len 6 end=0 got=6 : 70 6F 43 67 18 FC
+BME280 ok
+T=25.00 C
+DONE
+
+test stm32duino_i2c_multibyte_bme280::f401_wire_multibyte_reads_and_bme280_begin ... ok
+test stm32duino_print_float_vmov::f103_print_float_reaches_serial ... ok
+test stm32duino_print_float_vmov::f401_print_float_reaches_serial ... ok
+test timer_input_capture::echo_on_a_pad_that_is_not_a_timer_input_is_never_captured ... ok
+stm32l476 serial:
+reg 0xD0 len 1 end=0 got=1 : 60
+reg 0x88 len 2 end=0 got=2 : 70 6F
+reg 0x88 len 3 end=0 got=3 : 70 6F 43
+reg 0x88 len 6 end=0 got=6 : 70 6F 43 67 18 FC
+BME280 ok
+T=25.00 C
+DONE
+
+test stm32duino_i2c_multibyte_bme280::l476_wire_multibyte_reads_and_bme280_begin ... ok
+test stm32duino_print_float_vmov::l476_print_float_reaches_serial ... ok
+test timer_input_capture::hc_sr04_echo_width_is_measured_by_tim2_input_capture ... ok
+test timer_input_capture::hc_sr04_beyond_rated_range_answers_with_the_38_ms_timeout_pulse ... ok
+
+test result: ok. 174 passed; 0 failed; 19 ignored; 0 measured; 0 filtered out; finished in 8.47s
+

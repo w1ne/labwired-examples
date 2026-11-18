@@ -1,0 +1,31 @@
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/h735-telematics-lab/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/rc-oscilloscope-lab/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/nrf52832/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/nrf52840/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   /data/worktrees/labwired-core-industrial-boot-20261118/examples/tier1-fixture/rp2040/Cargo.toml
+workspace: /data/worktrees/labwired-core-industrial-boot-20261118/Cargo.toml
+   Compiling labwired-core v0.26.0 (/data/worktrees/labwired-core-industrial-boot-20261118/crates/core)
+    Finished `test` profile [optimized] target(s) in 5m 33s
+     Running unittests src/lib.rs (/data/cargo-target/industrial-boot-20261118/debug/deps/labwired_core-eb5738210f54345e)
+
+running 8 tests
+test network::timed_uart::tests::a_character_arrives_one_frame_minus_half_a_stop_bit_later ... ok
+test network::timed_uart::tests::a_baud_mismatch_produces_framing_errors_not_clean_bytes ... ok
+test network::timed_uart::tests::a_cut_link_drops_and_truncates ... ok
+test network::timed_uart::tests::a_full_data_register_turns_the_next_character_into_an_overrun ... ok
+test network::timed_uart::tests::delay_shifts_arrival_and_jitter_is_seeded ... ok
+test network::timed_uart::tests::lookahead_is_nine_and_a_half_bits_plus_delay ... ok
+test network::timed_uart::tests::parity_is_checked_by_the_receiver ... ok
+test network::timed_uart::tests::tagged_messages_report_origin_and_per_node_latency ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 6039 filtered out; finished in 0.00s
+

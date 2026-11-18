@@ -8,11 +8,14 @@ eight-input PCB for each device. The physical firmware supports **COM2,
 byte per device, TYPE_2_1 M-sequences and a 10 ms configured cycle.
 
 **Release state:** electrical and firmware build candidate. Both physical
-images build, the L6360 host tests pass, and the native input PCB has zero ERC,
+images build, the unchanged device image passes a digital boot/wake/protocol
+probe, and the native input PCB has zero ERC,
 DRC, unconnected-net and schematic-parity findings. A complete fitted station
 mount, physical power/waveform measurements and a two-port hardware acceptance
-run are still required. The simulator and physical images are different
-targets; their evidence is recorded separately.
+run are still required. The L6360 source/model review found a stored-parity
+reset assumption in the master driver; its repair and full three-node
+physical-image runtime proof remain pending. See [the exact device runtime
+proof and reproduction command](runtime/README.md).
 
 ## Contents and evidence
 
