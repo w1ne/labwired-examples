@@ -76,7 +76,7 @@ class OledDevicePackage(unittest.TestCase):
         parts = {p['id']: p for p in diagram['parts']}
         self.assertEqual(parts['mcu']['manufacturerPart'], 'seeed-113991054')
         self.assertEqual(parts['oled']['manufacturerPart'], 'adafruit-326')
-        self.assertEqual(parts['oled']['attrs']['i2c_address'], '0x3C')
+        self.assertEqual(parts['oled']['attrs']['module_i2c_address'], '0x3C')
         source = (ROOT / 'firmware/vendor/esp32c3-display-workshop.ino').read_text()
         self.assertIn('PIN_I2C_SDA = 4;', source)
         self.assertIn('PIN_I2C_SCL = 5;', source)
