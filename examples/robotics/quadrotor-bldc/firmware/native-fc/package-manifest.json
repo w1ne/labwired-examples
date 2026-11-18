@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "name": "OpenFC-Lite rev2-LW1 native flight-controller firmware",
+  "hardware_identity": {
+    "mcu": "RP2354B QFN80",
+    "flash_bytes": 2097152,
+    "sram_bytes": 532480,
+    "native_hardware": "hardware/flight-controller-openfc-lite-rev2-lw1",
+    "board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348"
+  },
+  "firmware_status": "reproducible physical build; complete runtime acceptance pending",
+  "runtime_status": "executed precise BusFault at DEMCR 0xE000EDFC after boot-vector repair",
+  "model_dependency": {
+    "repository": "https://github.com/w1ne/labwired-core",
+    "rp2354b_source_commit": "641589dfe6aa0e6492f3b257ad510d9da2ef67d4",
+    "demcr_repair": "separate generic Cortex-M follow-up, pending"
+  },
+  "proofs": {
+    "native_gpio_bindings": 34,
+    "native_negative_controls": 7,
+    "compiled_default_negative_controls": 3,
+    "elf_uf2_bin_reproduce": true,
+    "source_archives": 5
+  },
+  "physical_hardware_tested": false,
+  "files": [
+    {
+      "path": "firmware/native-fc/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "firmware/native-fc/README.md",
+      "bytes": 7845,
+      "sha256": "a00ccb9050aea4acfc0054d407d428ee069d540981d70fd409ad4bb6e7b07c1b"
+    },
+    {
+      "path": "firmware/native-fc/artifacts/betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin",
+      "bytes": 430128,
+      "sha256": "2cf345e0fa6f9b60b7039d568b52221059d6cdb68d6bf7c1ad9babf437f47ca5"
+    },
+    {
+      "path": "firmware/native-fc/artifacts/betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2",
+      "bytes": 860672,
+      "sha256": "0bdbdbe6f9f5f91b76285cef41a198bf866b400c76ee677887d93f60cb11a433"
+    },
+    {
+      "path": "firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf",
+      "bytes": 752808,
+      "sha256": "8c0a2953dbb7a65e1e22d949c5fd08f68a1babdeda88d13b14b2632bbc7ce43a"
+    },
+    {
+      "path": "firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.map",
+      "bytes": 3596862,
+      "sha256": "665f27ae151dc62fc42145d83d7aa952ce586dcd8608640d005e2f60b4648b1a"
+    },
+    {
+      "path": "firmware/native-fc/artifacts/build-receipt.json",
+      "bytes": 4911,
+      "sha256": "d01172e2d67f20dbd9eca98cefe1de44f7a9d4162739c6ed246662fcbe438812"
+    },
+    {
+      "path": "firmware/native-fc/axes.md",
+      "bytes": 2941,
+      "sha256": "bac11717af7aabc3df14e53b50b0088500782025204190f9d5bd4cd03e32440e"
+    },
+    {
+      "path": "firmware/native-fc/build.py",
+      "bytes": 7483,
+      "sha256": "7fce14e806eb32214c01ddd4b8691a7a70f1e7cbebe4356f8a1e8a87c394bc10"
+    },
+    {
+      "path": "firmware/native-fc/configs/OPENFC_LITE_REV2_LW1/config.h",
+      "bytes": 5525,
+      "sha256": "c8b926b6bd15a8f69c391916bb01ef89153cf1b042f02ce998ea5be28144e1e0"
+    },
+    {
+      "path": "firmware/native-fc/configs/OPENFC_LITE_REV2_LW1/pico_flash_mem.ld",
+      "bytes": 95,
+      "sha256": "0cfb6e89f8c358b58e5f31517a4efe2360c6ce4a7bd9802d9373ad3a49120b1c"
+    },
+    {
+      "path": "firmware/native-fc/source/archives.json",
+      "bytes": 1688,
+      "sha256": "37a6aff77550e9a59e27eb92fdd49d761eee4f43f77c14cf209153f008dea93c"
+    },
+    {
+      "path": "firmware/native-fc/source/betaflight-31066c0f3789.tar.gz",
+      "bytes": 21627696,
+      "sha256": "c150bfbf16a70cd4243e3f68240596ba211881e35ddf36775f511eae4c755e3d"
+    },
+    {
+      "path": "firmware/native-fc/source/libcanard-601ed35467e0.tar.gz",
+      "bytes": 263409,
+      "sha256": "d2e93a8eb1940cf5ed08d798c3788810b7d3fd45d118e69bff23bcbeefaa58ee"
+    },
+    {
+      "path": "firmware/native-fc/source/pico-sdk-ee68c78d0afa.tar.gz",
+      "bytes": 2341729,
+      "sha256": "debc9a0dda356b97c546ce90cbc6ad9f02f343c3c5960f4ead557250e6a081c1"
+    },
+    {
+      "path": "firmware/native-fc/source/picotool-de8ae5ac334e.tar.gz",
+      "bytes": 476823,
+      "sha256": "8a327353116dfd950a1610e3379a407b3cf22321e931a9c2bef68752a7f9b816"
+    },
+    {
+      "path": "firmware/native-fc/source/tinyusb-86ad6e56c170.tar.gz",
+      "bytes": 3241006,
+      "sha256": "6fe3deb7f92b9ed04d2f05f1c5c87f29f3873278a915e14e701ae0f3d8be7c03"
+    },
+    {
+      "path": "firmware/native-fc/source-versions.json",
+      "bytes": 2858,
+      "sha256": "70e9a4eab24a42d88115b797ae7318a3e80c62ab6532e981ecb27478ad1b6967"
+    },
+    {
+      "path": "firmware/native-fc/validation/artifact-contract.json",
+      "bytes": 1563,
+      "sha256": "087dc7f45764193c7cda567969810071fc3403050eb5631940e0210949601986"
+    },
+    {
+      "path": "firmware/native-fc/validation/bmi270-axis-page.jpg",
+      "bytes": 50871,
+      "sha256": "bbbd0974ffa8e35a996f3624303289f80ee6ddc2e03199318f45a83683e621af"
+    },
+    {
+      "path": "firmware/native-fc/validation/bmi270-package-page.jpg",
+      "bytes": 50482,
+      "sha256": "892073e8b8b19562074d0d19645c6ae36df40e55e49364925dda942f7fbe6f09"
+    },
+    {
+      "path": "firmware/native-fc/validation/build-process.json",
+      "bytes": 1516,
+      "sha256": "c6b9081d24366b4618fee3144e3e9e8640e43d4d46c946baca8fd8eb907183ed"
+    },
+    {
+      "path": "firmware/native-fc/validation/build.log",
+      "bytes": 42641,
+      "sha256": "19c9511ae86ea87c3b4a1b927a19f8e6b5118f8a894aa86977779d41047f32ea"
+    },
+    {
+      "path": "firmware/native-fc/validation/native-pin-contract.json",
+      "bytes": 6915,
+      "sha256": "ca400caf7548b0b345e512bf6bba0b14ac0b6d8a14d7ec54f51b5b55b5e3ee38"
+    },
+    {
+      "path": "firmware/native-fc/validation/picotool-info.txt",
+      "bytes": 818,
+      "sha256": "e021d3142dba3be64c0c78fb6a99576264f679c4d4d65e569b4836c5743bdc3c"
+    },
+    {
+      "path": "firmware/native-fc/validation/reproduction.json",
+      "bytes": 2005,
+      "sha256": "a1f6750f7fd90be3c6f5114b48d22ca5b69d1faaf096921d8e9a14e33bfca935"
+    },
+    {
+      "path": "firmware/native-fc/validation/uf2-layout.json",
+      "bytes": 213,
+      "sha256": "ee30d9fc3daec782aae42019d9105327695a3803cd28b08ce8f670801be8672b"
+    },
+    {
+      "path": "firmware/native-fc/validation/upstream-nominal-config.h",
+      "bytes": 4736,
+      "sha256": "ba5976529e3998c37bf0b41d1c9f0deb1af13e127f6e3d1b7e11934552ce29ad"
+    },
+    {
+      "path": "firmware/native-fc/verify_artifacts.py",
+      "bytes": 5565,
+      "sha256": "078f5084cb1f0eab53d40e3df824e66e04ed3fb5916fd6c059afc32e97e8b009"
+    },
+    {
+      "path": "firmware/native-fc/verify_native_pins.py",
+      "bytes": 6859,
+      "sha256": "2362b85a31f2ffaf531164ad0e7770a47f9a45c6d8c3fdbf1e23402e8eb7ebae"
+    },
+    {
+      "path": "runtime/native-fc/README.md",
+      "bytes": 2402,
+      "sha256": "4ae0b787bf406b55ae3e21d0c3bb753ce171b90e5929cdda684e48a259ba384a"
+    },
+    {
+      "path": "runtime/native-fc/probe.yaml",
+      "bytes": 409,
+      "sha256": "dacbccd8429d9344def96e2d9e20d4995100cab650475143f6a16d52abcef281"
+    },
+    {
+      "path": "runtime/native-fc/system.yaml",
+      "bytes": 512,
+      "sha256": "dacdd47c6299358ec16625b76837b10ef03093c809eb36fe0fc18a05b6e47fed"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-demcr/probe.py",
+      "bytes": 1682,
+      "sha256": "3997b48abe35b66418572dab5dceb8e422d0beabdfc5cea0b26552c975fe896c"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-demcr/receipt.json",
+      "bytes": 1371,
+      "sha256": "6dfcaedc9f8d6a0176696fc789ce92c4a5a248458fd4a7fd62db99da5088bf8f"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-demcr/runtime.log",
+      "bytes": 624,
+      "sha256": "5863bf53badcf798684809f8bcd6ae5f573136007739fc0e25a02326bc9bf882"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-demcr/spi.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "runtime/native-fc/validation/pre-demcr/system.yaml",
+      "bytes": 356,
+      "sha256": "b3971d3697f5b725742036d1f7054ececcc8b783055613f54e4fb1d51436ded7"
+    }
+  ]
+}

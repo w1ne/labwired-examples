@@ -1,0 +1,17 @@
+name: openfc-lite-rev2-lw1-native-probe
+chip: /data/worktrees/labwired-core-doom-rd-20261118/configs/chips/rp2354b.yaml
+cpu_hz: 150000000
+external_devices:
+- id: U9
+  type: bmi270_spi
+  connection: spi0
+  config:
+    cs_pin: GP14
+    int1_pin: GP13
+board_io:
+- id: D1_status_led
+  kind: led
+  peripheral: sio
+  pin: 12
+  signal: output
+  active_high: true

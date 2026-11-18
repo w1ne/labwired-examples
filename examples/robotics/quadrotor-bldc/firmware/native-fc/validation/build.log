@@ -1,0 +1,994 @@
++ python3 /data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc/verify_native_pins.py
+{
+  "status": "pass",
+  "native_board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+  "native_netlist_sha256": "95348ddeb855a944bc3b0bc13586bc8a7d0638cc81c594c7937e183742b1e52c",
+  "config_sha256": "c8b926b6bd15a8f69c391916bb01ef89153cf1b042f02ce998ea5be28144e1e0",
+  "pin_checks": [
+    {
+      "macro": "MOTOR1_PIN",
+      "gpio": 31,
+      "mcu_pad": "39",
+      "endpoint": [
+        "P1",
+        "5"
+      ],
+      "net": "/PADS/M1"
+    },
+    {
+      "macro": "MOTOR2_PIN",
+      "gpio": 30,
+      "mcu_pad": "38",
+      "endpoint": [
+        "P1",
+        "6"
+      ],
+      "net": "/PADS/M2"
+    },
+    {
+      "macro": "MOTOR3_PIN",
+      "gpio": 29,
+      "mcu_pad": "37",
+      "endpoint": [
+        "P1",
+        "7"
+      ],
+      "net": "/PADS/M3"
+    },
+    {
+      "macro": "MOTOR4_PIN",
+      "gpio": 28,
+      "mcu_pad": "36",
+      "endpoint": [
+        "P1",
+        "8"
+      ],
+      "net": "/PADS/M4"
+    },
+    {
+      "macro": "UART0_TX_PIN",
+      "gpio": 0,
+      "mcu_pad": "77",
+      "endpoint": [
+        "U8",
+        "3"
+      ],
+      "net": "/PADS/UART0_TX"
+    },
+    {
+      "macro": "UART0_RX_PIN",
+      "gpio": 1,
+      "mcu_pad": "78",
+      "endpoint": [
+        "U8",
+        "4"
+      ],
+      "net": "/PADS/UART0_RX"
+    },
+    {
+      "macro": "PIOUART0_TX_PIN",
+      "gpio": 2,
+      "mcu_pad": "79",
+      "endpoint": [
+        "CN1",
+        "4"
+      ],
+      "net": "/PADS/PIOUART0_TX"
+    },
+    {
+      "macro": "PIOUART0_RX_PIN",
+      "gpio": 3,
+      "mcu_pad": "80",
+      "endpoint": [
+        "CN1",
+        "3"
+      ],
+      "net": "/PADS/PIOUART0_RX"
+    },
+    {
+      "macro": "I2C0_SDA_PIN",
+      "gpio": 16,
+      "mcu_pad": "16",
+      "endpoint": [
+        "U14",
+        "5"
+      ],
+      "net": "/PADS/I2C0.SDA"
+    },
+    {
+      "macro": "I2C0_SCL_PIN",
+      "gpio": 17,
+      "mcu_pad": "17",
+      "endpoint": [
+        "U14",
+        "6"
+      ],
+      "net": "/PADS/I2C0.SCL"
+    },
+    {
+      "macro": "GYRO_1_CS_PIN",
+      "gpio": 14,
+      "mcu_pad": "13",
+      "endpoint": [
+        "U9",
+        "12"
+      ],
+      "net": "/IMU/CS"
+    },
+    {
+      "macro": "GYRO_1_EXTI_PIN",
+      "gpio": 13,
+      "mcu_pad": "12",
+      "endpoint": [
+        "U9",
+        "4"
+      ],
+      "net": "/IMU/GYRO_INT"
+    },
+    {
+      "macro": "SPI0_SCK_PIN",
+      "gpio": 18,
+      "mcu_pad": "18",
+      "endpoint": [
+        "U9",
+        "13"
+      ],
+      "net": "/IMU/SPI0.SCK"
+    },
+    {
+      "macro": "SPI0_SDO_PIN",
+      "gpio": 19,
+      "mcu_pad": "19",
+      "endpoint": [
+        "U9",
+        "14"
+      ],
+      "net": "/IMU/SPI0.MOSI"
+    },
+    {
+      "macro": "SPI0_SDI_PIN",
+      "gpio": 20,
+      "mcu_pad": "20",
+      "endpoint": [
+        "U9",
+        "1"
+      ],
+      "net": "/IMU/SPI0.MISO"
+    },
+    {
+      "macro": "SPI1_SCK_PIN",
+      "gpio": 42,
+      "mcu_pad": "53",
+      "endpoint": [
+        "Card1",
+        "5"
+      ],
+      "net": "/BLACKBOX/SPI1.SCK"
+    },
+    {
+      "macro": "SPI1_SDO_PIN",
+      "gpio": 43,
+      "mcu_pad": "54",
+      "endpoint": [
+        "Card1",
+        "3"
+      ],
+      "net": "/BLACKBOX/SPI1.MOSI"
+    },
+    {
+      "macro": "SPI1_SDI_PIN",
+      "gpio": 44,
+      "mcu_pad": "55",
+      "endpoint": [
+        "Card1",
+        "7"
+      ],
+      "net": "/BLACKBOX/SPI1.MISO"
+    },
+    {
+      "macro": "SDCARD_SPI_CS_PIN",
+      "gpio": 46,
+      "mcu_pad": "57",
+      "endpoint": [
+        "Card1",
+        "2"
+      ],
+      "net": "/BLACKBOX/FLASH_CS"
+    },
+    {
+      "macro": "ADC_CURR_PIN",
+      "gpio": 40,
+      "mcu_pad": "49",
+      "endpoint": [
+        "R6",
+        "1"
+      ],
+      "net": "Net-(U2-GPIO40_ADC0)"
+    },
+    {
+      "macro": "ADC_VBAT_PIN",
+      "gpio": 41,
+      "mcu_pad": "52",
+      "endpoint": [
+        "R1",
+        "1"
+      ],
+      "net": "/RP2350A/ADC_VBAT"
+    },
+    {
+      "macro": "ADC_RSSI_PIN",
+      "gpio": 45,
+      "mcu_pad": "56",
+      "endpoint": [
+        "R7",
+        "1"
+      ],
+      "net": "Net-(U2-GPIO45_ADC5)"
+    },
+    {
+      "macro": "ADC_EXTERNAL1_PIN",
+      "gpio": 47,
+      "mcu_pad": "58",
+      "endpoint": [
+        "R8",
+        "1"
+      ],
+      "net": "Net-(U2-GPIO47_ADC7)"
+    },
+    {
+      "macro": "UART1_TX_PIN",
+      "gpio": 22,
+      "mcu_pad": "22",
+      "endpoint": [
+        "J13",
+        "1"
+      ],
+      "net": "/PADS/UART1_TX"
+    },
+    {
+      "macro": "UART1_RX_PIN",
+      "gpio": 21,
+      "mcu_pad": "21",
+      "endpoint": [
+        "U8",
+        "6"
+      ],
+      "net": "/PADS/U1RX"
+    },
+    {
+      "macro": "PIOUART1_TX_PIN",
+      "gpio": 26,
+      "mcu_pad": "27",
+      "endpoint": [
+        "U14",
+        "4"
+      ],
+      "net": "/PADS/PU1TX"
+    },
+    {
+      "macro": "PIOUART1_RX_PIN",
+      "gpio": 27,
+      "mcu_pad": "28",
+      "endpoint": [
+        "P1",
+        "4"
+      ],
+      "net": "/PADS/PU1RX"
+    },
+    {
+      "macro": "OSD_W_PIN",
+      "gpio": 4,
+      "mcu_pad": "1",
+      "endpoint": [
+        "R32",
+        "1"
+      ],
+      "net": "/OSD/OSD_W"
+    },
+    {
+      "macro": "OSD_EN_PIN",
+      "gpio": 5,
+      "mcu_pad": "2",
+      "endpoint": [
+        "U10",
+        "6"
+      ],
+      "net": "/OSD/OSD_EN"
+    },
+    {
+      "macro": "OSD_SYNC_PIN",
+      "gpio": 6,
+      "mcu_pad": "3",
+      "endpoint": [
+        "U12",
+        "1"
+      ],
+      "net": "/OSD/OSD_SYNC"
+    },
+    {
+      "macro": "BEEPER_PIN",
+      "gpio": 7,
+      "mcu_pad": "4",
+      "endpoint": [
+        "Q1",
+        "1"
+      ],
+      "net": "/RP2350A/BEEPER"
+    },
+    {
+      "macro": "PINIO1_PIN",
+      "gpio": 11,
+      "mcu_pad": "9",
+      "endpoint": [
+        "U6",
+        "2"
+      ],
+      "net": "/POWER/10V_ENABLE"
+    },
+    {
+      "macro": "LED0_PIN",
+      "gpio": 12,
+      "mcu_pad": "11",
+      "endpoint": [
+        "R15",
+        "1"
+      ],
+      "net": "/RP2350A/LED0"
+    },
+    {
+      "macro": "LED_STRIP_PIN",
+      "gpio": 23,
+      "mcu_pad": "23",
+      "endpoint": [
+        "Q2",
+        "2"
+      ],
+      "net": "/RP2350A/LED_STRIP_L"
+    }
+  ],
+  "negative_controls": {
+    "wrong_led_polarity": {
+      "rejected": true,
+      "reason": "D1 is active high"
+    },
+    "wrong_beeper_polarity": {
+      "rejected": true,
+      "reason": "Q1 needs active-high push-pull"
+    },
+    "historical_motor_rework": {
+      "rejected": true,
+      "reason": "('MOTOR1_PIN', 'PA21', 31)"
+    },
+    "historical_uart_rework": {
+      "rejected": true,
+      "reason": "('UART0_TX_PIN', 'PA16', 0)"
+    },
+    "wrong_receiver_connector": {
+      "rejected": true,
+      "reason": "SERIALRX_UART"
+    },
+    "invented_serial_esc_telemetry": {
+      "rejected": true,
+      "reason": "Forbidden serial ESC telemetry definition"
+    },
+    "swapped_gyro_bus_direction": {
+      "rejected": true,
+      "reason": "('SPI0_SDO_PIN', 'PA20', 19)"
+    }
+  }
+}
++ git diff --quiet --ignore-submodules=all HEAD --
++ git submodule update --init --checkout --depth=1 -- lib/modules/pico-sdk lib/modules/dronecan/libcanard
++ git submodule update --init --checkout --depth=1 -- lib/tinyusb
++ git diff --quiet HEAD --
++ git diff --quiet HEAD --
++ git diff --quiet HEAD --
++ make -j4 CONFIG=OPENFC_LITE_REV2_LW1 CONFIG_DIR=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj ARM_SDK_DIR=/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi PICOTOOL=/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool CONFIG_REVISION=1bcff6e CONFIG_REVISION_DEFINE=-D'__CONFIG_REVISION__="1bcff6e"' EXTRA_FLAGS=-ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc uf2
+EF HASH -> /data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main/RP2350B_OPENFC_LITE_REV2_LW1/.efhash_98df3ff40cba732e1398116be41fd5ff
+%% (optimised) ./src/main/drivers/dshot_bitbang_decode.c 
+%% (speed optimised) ./src/main/drivers/accgyro/accgyro_mpu.c 
+%% (speed optimised) ./src/main/drivers/bus_spi.c 
+%% (optimised) ./src/main/drivers/inverter.c 
+%% (optimised) ./src/main/drivers/bus_spi_config.c 
+%% (optimised) ./src/main/drivers/bus_i2c_utils.c 
+%% (optimised) ./src/main/drivers/serial_pinconfig.c 
+%% (optimised) ./src/main/drivers/usb_io.c 
+%% (optimised) ./src/main/drivers/dshot.c 
+%% (optimised) ./src/main/drivers/adc.c 
+%% (optimised) ./src/platform/PICO/adc_pico.c 
+%% (optimised) ./src/platform/PICO/bus_i2c_pico.c 
+%% (optimised) ./src/platform/PICO/bus_spi_pico.c 
+%% (optimised) ./src/platform/PICO/bus_quadspi_pico.c 
+%% (optimised) ./src/platform/PICO/config_flash.c 
+%% (optimised) ./src/platform/PICO/debug_pico.c 
+%% (optimised) ./src/platform/PICO/dma_pico.c 
+%% (optimised) ./src/platform/PICO/dshot_bidir_pico.c 
+%% (optimised) ./src/platform/PICO/dshot_pico.c 
+%% (optimised) ./src/platform/PICO/exti_pico.c 
+%% (optimised) ./src/platform/PICO/io_pico.c 
+%% (optimised) ./src/platform/PICO/osd/font_betaflight.c 
+%% (optimised) ./src/platform/PICO/osd/fb_osd_pico.c 
+%% (optimised) ./src/platform/PICO/osd/osd_element_ah.c 
+%% (optimised) ./src/platform/PICO/osd/osd_elements_pico.c 
+%% (optimised) ./src/platform/PICO/osd/osd_pico.c 
+%% (optimised) ./src/platform/PICO/persistent.c 
+%% (optimised) ./src/platform/PICO/pwm_motor_pico.c 
+%% (optimised) ./src/platform/PICO/pwm_servo_pico.c 
+%% (optimised) ./src/platform/PICO/pwm_beeper_pico.c 
+%% (optimised) ./src/platform/PICO/gyro_clkin_pico.c 
+%% (optimised) ./src/platform/PICO/serial_usb_vcp_pico.c 
+%% (optimised) ./src/platform/PICO/system.c 
+%% (optimised) ./src/platform/PICO/uart/serial_uart_pico.c 
+%% (optimised) ./src/platform/PICO/uart/uart_hw.c 
+%% (optimised) ./src/platform/PICO/uart/uart_pio.c 
+%% (optimised) ./src/platform/PICO/uart/uart_rx_program.c 
+%% (optimised) ./src/platform/PICO/uart/uart_tx_program.c 
+%% (optimised) ./src/platform/PICO/usb/usb_cdc.c 
+%% (optimised) ./src/platform/PICO/usb/usb_descriptors.c 
+%% (optimised) ./src/platform/PICO/usb/usb_msc_pico.c 
+%% (optimised) ./src/platform/PICO/multicore.c 
+%% (optimised) ./src/platform/PICO/debug_pin.c 
+%% (optimised) ./src/platform/PICO/light_ws2811strip_pico.c 
+%% (optimised) ./src/main/drivers/flash/flash.c 
+%% (optimised) ./src/main/drivers/flash/flash_m25p16.c 
+%% (optimised) ./src/main/drivers/flash/flash_mt29f.c 
+%% (optimised) ./src/main/drivers/flash/flash_mx66uw1g45g.c 
+%% (optimised) ./src/main/drivers/flash/flash_w25m.c 
+%% (optimised) ./src/main/drivers/flash/flash_w25n.c 
+%% (optimised) ./src/main/drivers/flash/flash_w25q128fv.c 
+%% (optimised) ./src/main/io/flashfs.c 
+%% (optimised) ./src/main/drivers/usb_msc_common.c 
+%% (optimised) ./src/main/msc/usbd_storage.c 
+%% (optimised) ./src/main/msc/usbd_storage_emfat.c 
+%% (optimised) ./src/main/msc/emfat.c 
+%% (optimised) ./src/main/msc/emfat_file.c 
+%% (optimised) ./src/main/drivers/sdcard.c 
+%% (optimised) ./src/main/drivers/sdcard_spi.c 
+%% (optimised) ./src/main/drivers/sdcard_sdio_baremetal.c 
+%% (optimised) ./src/main/drivers/sdcard_standard.c 
+%% (optimised) ./src/main/io/asyncfatfs/asyncfatfs.c 
+%% (optimised) ./src/main/io/asyncfatfs/fat_standard.c 
+%% (optimised) ./src/main/build/build_config.c 
+%% (optimised) ./src/main/build/debug.c 
+%% (optimised) ./src/main/build/version.c 
+%% (size optimised) ./src/main/main.c 
+%% (optimised) ./src/main/common/bitarray.c 
+%% (optimised) ./src/main/common/chirp.c 
+%% (optimised) ./src/main/common/colorconversion.c 
+%% (optimised) ./src/main/common/crc.c 
+%% (speed optimised) ./src/main/common/encoding.c 
+%% (optimised) ./src/main/common/explog_approx.c 
+%% (speed optimised) ./src/main/common/filter.c 
+%% (optimised) ./src/main/common/gps_conversion.c 
+%% (optimised) ./src/main/common/huffman.c 
+%% (optimised) ./src/main/common/huffman_table.c 
+%% (speed optimised) ./src/main/common/maths.c 
+%% (optimised) ./src/main/common/printf.c 
+%% (optimised) ./src/main/common/printf_serial.c 
+%% (speed optimised) ./src/main/common/pwl.c 
+%% (speed optimised) ./src/main/common/sdft.c 
+%% (optimised) ./src/main/common/sensor_alignment.c 
+%% (speed optimised) ./src/main/common/stopwatch.c 
+%% (optimised) ./src/main/common/streambuf.c 
+%% (optimised) ./src/main/common/string_light.c 
+%% (optimised) ./src/main/common/strtol.c 
+%% (optimised) ./src/main/common/time.c 
+%% (speed optimised) ./src/main/common/typeconversion.c 
+%% (optimised) ./src/main/common/uvarint.c 
+%% (speed optimised) ./src/main/common/vector.c 
+%% (optimised) ./src/main/config/config.c 
+%% (size optimised) ./src/main/config/config_eeprom.c 
+%% (size optimised) ./src/main/config/config_streamer.c 
+%% (size optimised) ./src/main/config/feature.c 
+%% (size optimised) ./src/main/config/simplified_tuning.c 
+%% (size optimised) ./src/main/cli/cli.c 
+%% (size optimised) ./src/main/cli/settings.c 
+%% (optimised) ./src/main/drivers/dshot_command.c 
+%% (speed optimised) ./src/main/drivers/buf_writer.c 
+%% (speed optimised) ./src/main/drivers/bus.c 
+%% (optimised) ./src/main/drivers/bus_i2c_busdev.c 
+%% (optimised) ./src/main/drivers/bus_i2c_soft.c 
+%% (optimised) ./src/main/drivers/bus_octospi.c 
+%% (speed optimised) ./src/main/drivers/bus_quadspi.c 
+%% (optimised) ./src/main/drivers/buttons.c 
+%% (optimised) ./src/main/drivers/camera_control.c 
+%% (optimised) ./src/main/drivers/display.c 
+%% (optimised) ./src/main/drivers/display_canvas.c 
+%% (optimised) ./src/main/drivers/dma.c 
+%% (speed optimised) ./src/main/drivers/io.c 
+%% (optimised) ./src/main/drivers/io_preinit.c 
+%% (optimised) ./src/main/drivers/lcd_console.c 
+%% (optimised) ./src/main/drivers/lcd_panel/lcd_panel_font_5x7.c 
+%% (optimised) ./src/main/drivers/lcd_panel/lcd_panel_stub.c 
+%% (optimised) ./src/main/drivers/lcd_panel/ssd1306_i2c.c 
+%% (optimised) ./src/main/drivers/light_led.c 
+%% (optimised) ./src/main/drivers/motor.c 
+%% (optimised) ./src/main/drivers/pinio.c 
+%% (optimised) ./src/main/drivers/pin_pull_up_down.c 
+%% (optimised) ./src/main/drivers/pwm_output.c 
+%% (optimised) ./src/main/drivers/resource.c 
+%% (speed optimised) ./src/main/drivers/serial.c 
+%% (optimised) ./src/main/drivers/serial_impl.c 
+%% (optimised) ./src/main/drivers/serial_lcd_console.c 
+%% (optimised) ./src/main/drivers/sound_beeper.c 
+%% (optimised) ./src/main/drivers/stack_check.c 
+%% (optimised) ./src/main/drivers/timer_common.c 
+%% (optimised) ./src/main/drivers/transponder_ir_arcitimer.c 
+%% (optimised) ./src/main/drivers/transponder_ir_ilap.c 
+%% (optimised) ./src/main/drivers/transponder_ir_erlt.c 
+%% (size optimised) ./src/main/fc/board_info.c 
+%% (optimised) ./src/main/fc/dispatch.c 
+%% (optimised) ./src/main/fc/faults.c 
+%% (speed optimised) ./src/main/fc/tasks.c 
+%% (speed optimised) ./src/main/fc/runtime_config.c 
+%% (optimised) ./src/main/fc/stats.c 
+%% (optimised) ./src/main/io/beeper.c 
+%% (optimised) ./src/main/io/piniobox.c 
+%% (size optimised) ./src/main/io/serial.c 
+%% (optimised) ./src/main/io/serial_resource.c 
+%% (optimised) ./src/main/io/smartaudio_protocol.c 
+%% (optimised) ./src/main/io/statusindicator.c 
+%% (optimised) ./src/main/io/tramp_protocol.c 
+%% (size optimised) ./src/main/io/transponder_ir.c 
+%% (size optimised) ./src/main/io/usb_cdc_hid.c 
+%% (optimised) ./src/main/io/usb_msc.c 
+%% (optimised) ./src/main/msp/msp.c 
+%% (optimised) ./src/main/msp/msp_box.c 
+%% (optimised) ./src/main/msp/msp_build_info.c 
+%% (size optimised) ./src/main/msp/msp_serial.c 
+%% (speed optimised) ./src/main/scheduler/scheduler.c 
+%% (optimised) ./src/main/sensors/adcinternal.c 
+%% (optimised) ./src/main/sensors/battery.c 
+%% (optimised) ./src/main/sensors/current.c 
+%% (optimised) ./src/main/sensors/voltage.c 
+%% (optimised) ./src/main/target/config_helper.c 
+%% (size optimised) ./src/main/fc/init.c 
+%% (optimised) ./src/main/drivers/accgyro/gyro_sync.c 
+%% (optimised) ./src/main/fc/controlrate_profile.c 
+%% (optimised) ./src/main/drivers/rx/rx_spi.c 
+%% (optimised) ./src/main/drivers/rx/rx_xn297.c 
+%% (optimised) ./src/main/drivers/rx/rx_pwm.c 
+%% (optimised) ./src/main/drivers/serial_softserial.c 
+%% (speed optimised) ./src/main/fc/core.c 
+%% (optimised) ./src/main/fc/gps_lap_timer.c 
+%% (speed optimised) ./src/main/fc/rc.c 
+%% (optimised) ./src/main/fc/rc_adjustments.c 
+%% (speed optimised) ./src/main/fc/rc_controls.c 
+%% (optimised) ./src/main/fc/rc_modes.c 
+%% (optimised) ./src/main/flight/alt_hold_multirotor.c 
+%% (optimised) ./src/main/flight/alt_hold_wing.c 
+%% (optimised) ./src/main/flight/autopilot_multirotor.c 
+%% (optimised) ./src/main/flight/autopilot_wing.c 
+%% (speed optimised) ./src/main/flight/dyn_notch_filter.c 
+%% (optimised) ./src/main/flight/failsafe.c 
+%% (optimised) ./src/main/flight/flight_plan_nav.c 
+%% (optimised) ./src/main/flight/gps_rescue_multirotor.c 
+%% (optimised) ./src/main/flight/gps_rescue_wing.c 
+%% (speed optimised) ./src/main/flight/imu.c 
+%% (speed optimised) ./src/main/flight/mixer.c 
+%% (size optimised) ./src/main/flight/mixer_init.c 
+%% (optimised) ./src/main/flight/mixer_tricopter.c 
+%% (speed optimised) ./src/main/flight/pid.c 
+%% (size optimised) ./src/main/flight/pid_init.c 
+%% (optimised) ./src/main/flight/position.c 
+%% (optimised) ./src/main/flight/position_estimator.c 
+%% (optimised) ./src/main/flight/position_filter.c 
+%% (optimised) ./src/main/flight/position_nav.c 
+%% (optimised) ./src/main/flight/pos_hold_multirotor.c 
+%% (optimised) ./src/main/flight/pos_hold_wing.c 
+%% (speed optimised) ./src/main/flight/rpm_filter.c 
+%% (optimised) ./src/main/flight/servos.c 
+%% (optimised) ./src/main/flight/servos_tricopter.c 
+%% (size optimised) ./src/main/io/serial_4way.c 
+%% (size optimised) ./src/main/io/serial_4way_avrootloader.c 
+%% (size optimised) ./src/main/io/serial_4way_stk500v2.c 
+%% (speed optimised) ./src/main/rx/ibus.c 
+%% (optimised) ./src/main/rx/jetiexbus.c 
+%% (optimised) ./src/main/rx/msp.c 
+%% (optimised) ./src/main/rx/pwm.c 
+%% (speed optimised) ./src/main/rx/frsky_crc.c 
+%% (speed optimised) ./src/main/rx/rc_stats.c 
+%% (speed optimised) ./src/main/rx/rx.c 
+%% (size optimised) ./src/main/rx/rx_bind.c 
+%% (speed optimised) ./src/main/rx/rx_spi.c 
+%% (optimised) ./src/main/rx/rx_spi_common.c 
+%% (speed optimised) ./src/main/rx/crsf.c 
+%% (optimised) ./src/main/rx/ghst.c 
+%% (speed optimised) ./src/main/rx/sbus.c 
+%% (speed optimised) ./src/main/rx/sbus_channels.c 
+%% (speed optimised) ./src/main/rx/spektrum.c 
+%% (speed optimised) ./src/main/rx/srxl2.c 
+%% (size optimised) ./src/main/io/spektrum_vtx_control.c 
+%% (optimised) ./src/main/io/spektrum_rssi.c 
+%% (speed optimised) ./src/main/rx/sumd.c 
+%% (optimised) ./src/main/rx/sumh.c 
+%% (speed optimised) ./src/main/rx/xbus.c 
+%% (speed optimised) ./src/main/rx/fport.c 
+%% (optimised) ./src/main/rx/mavlink.c 
+%% (optimised) ./src/main/rx/msp_override.c 
+%% (speed optimised) ./src/main/sensors/acceleration.c 
+%% (size optimised) ./src/main/sensors/acceleration_init.c 
+%% (speed optimised) ./src/main/sensors/boardalignment.c 
+%% (optimised) ./src/main/sensors/compass.c 
+%% (speed optimised) ./src/main/sensors/gyro.c 
+%% (size optimised) ./src/main/sensors/gyro_init.c 
+%% (optimised) ./src/main/sensors/initialisation.c 
+%% (optimised) ./src/main/sensors/sensors.c 
+%% (optimised) ./src/main/blackbox/blackbox.c 
+%% (optimised) ./src/main/blackbox/blackbox_encoding.c 
+%% (optimised) ./src/main/blackbox/blackbox_io.c 
+%% (size optimised) ./src/main/cms/cms.c 
+%% (size optimised) ./src/main/cms/cms_menu_blackbox.c 
+%% (size optimised) ./src/main/cms/cms_menu_failsafe.c 
+%% (size optimised) ./src/main/cms/cms_menu_firmware.c 
+%% (size optimised) ./src/main/cms/cms_menu_gps_rescue_multirotor.c 
+%% (size optimised) ./src/main/cms/cms_menu_gps_rescue_wing.c 
+%% (size optimised) ./src/main/cms/cms_menu_gps_lap_timer.c 
+%% (size optimised) ./src/main/cms/cms_menu_imu.c 
+%% (size optimised) ./src/main/cms/cms_menu_ledstrip.c 
+%% (size optimised) ./src/main/cms/cms_menu_main.c 
+%% (size optimised) ./src/main/cms/cms_menu_misc.c 
+%% (size optimised) ./src/main/cms/cms_menu_osd.c 
+%% (size optimised) ./src/main/cms/cms_menu_power.c 
+%% (size optimised) ./src/main/cms/cms_menu_saveexit.c 
+%% (size optimised) ./src/main/cms/cms_menu_vtx_common.c 
+%% (size optimised) ./src/main/cms/cms_menu_vtx_rtc6705.c 
+%% (size optimised) ./src/main/cms/cms_menu_vtx_smartaudio.c 
+%% (size optimised) ./src/main/cms/cms_menu_vtx_tramp.c 
+%% (size optimised) ./src/main/cms/cms_menu_persistent_stats.c 
+%% (size optimised) ./src/main/cms/cms_menu_rpm_limit.c 
+%% (size optimised) ./src/main/cms/cms_menu_quick.c 
+%% (size optimised) ./src/main/drivers/display_ug2864hsweg01.c 
+%% (size optimised) ./src/main/drivers/light_ws2811strip.c 
+%% (optimised) ./src/main/drivers/rangefinder/rangefinder_hcsr04.c 
+%% (optimised) ./src/main/drivers/rangefinder/rangefinder_lidartf.c 
+%% (optimised) ./src/main/drivers/rangefinder/rangefinder_lidarmt.c 
+%% (optimised) ./src/main/drivers/rangefinder/rangefinder_nooploop.c 
+%% (optimised) ./src/main/drivers/rangefinder/rangefinder_upt1.c 
+%% (size optimised) ./src/main/drivers/vtx_common.c 
+%% (optimised) ./src/main/drivers/vtx_table.c 
+%% (size optimised) ./src/main/io/dashboard.c 
+%% (optimised) ./src/main/io/displayport_fb_osd.c 
+%% (optimised) ./src/main/io/displayport_frsky_osd.c 
+%% (optimised) ./src/main/io/displayport_max7456.c 
+%% (optimised) ./src/main/io/displayport_msp.c 
+%% (optimised) ./src/main/io/displayport_oled.c 
+%% (optimised) ./src/main/io/displayport_srxl.c 
+%% (optimised) ./src/main/io/displayport_crsf.c 
+%% (optimised) ./src/main/io/displayport_hott.c 
+%% (optimised) ./src/main/io/frsky_osd.c 
+%% (optimised) ./src/main/io/gimbal_control.c 
+%% (optimised) ./src/main/io/rcdevice_cam.c 
+%% (optimised) ./src/main/io/rcdevice.c 
+%% (optimised) ./src/main/io/gps.c 
+%% (optimised) ./src/main/io/ledstrip.c 
+%% (optimised) ./src/main/io/pidaudio.c 
+%% (size optimised) ./src/main/osd/osd.c 
+%% (size optimised) ./src/main/osd/osd_custom_text.c 
+%% (size optimised) ./src/main/osd/osd_elements.c 
+%% (size optimised) ./src/main/osd/osd_warnings.c 
+%% (optimised) ./src/main/sensors/barometer.c 
+%% (optimised) ./src/main/sensors/rangefinder.c 
+%% (optimised) ./src/main/sensors/opticalflow.c 
+%% (optimised) ./src/main/telemetry/telemetry.c 
+%% (optimised) ./src/main/telemetry/crsf.c 
+%% (optimised) ./src/main/telemetry/ghst.c 
+%% (optimised) ./src/main/telemetry/srxl.c 
+%% (optimised) ./src/main/telemetry/frsky_hub.c 
+%% (optimised) ./src/main/telemetry/hott.c 
+%% (optimised) ./src/main/telemetry/jetiexbus.c 
+%% (optimised) ./src/main/telemetry/smartport.c 
+%% (optimised) ./src/main/telemetry/ltm.c 
+%% (optimised) ./src/main/telemetry/mavlink.c 
+%% (optimised) ./src/main/telemetry/mavlink_mission.c 
+%% (optimised) ./src/main/telemetry/msp_shared.c 
+%% (optimised) ./src/main/telemetry/ibus.c 
+%% (optimised) ./src/main/telemetry/ibus_shared.c 
+%% (optimised) ./src/main/sensors/esc_sensor.c 
+%% (size optimised) ./src/main/io/vtx.c 
+%% (size optimised) ./src/main/io/vtx_rtc6705.c 
+%% (size optimised) ./src/main/io/vtx_smartaudio.c 
+%% (size optimised) ./src/main/io/vtx_tramp.c 
+%% (size optimised) ./src/main/io/vtx_control.c 
+%% (size optimised) ./src/main/io/vtx_msp.c 
+%% (size optimised) ./src/main/cms/cms_menu_vtx_msp.c 
+%% (speed optimised) ./src/main/drivers/serial_uart.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_mpu6050.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_mpu6500.c 
+%% (speed optimised) ./src/main/drivers/accgyro/accgyro_spi_bmi160.c 
+%% (speed optimised) ./src/main/drivers/accgyro/accgyro_spi_bmi270.c 
+%% (optimised) ./src/main/drivers/accgyro/accgyro_spi_icm20649.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_spi_icm20689.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_spi_icm426xx.c 
+%% (optimised) ./src/main/drivers/accgyro/accgyro_spi_icm456xx.c 
+%% (optimised) ./src/main/drivers/accgyro/accgyro_spi_icm40609.c 
+%% (optimised) ./src/main/drivers/accgyro/accgyro_spi_l3gd20.c 
+%% (speed optimised) ./src/main/drivers/accgyro/accgyro_spi_lsm6dso.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_spi_lsm6dso_init.c 
+%% (optimised) ./src/main/drivers/accgyro/accgyro_spi_lsm6dsv16x.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_spi_mpu6000.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_spi_mpu6500.c 
+%% (size optimised) ./src/main/drivers/accgyro/accgyro_spi_mpu9250.c 
+%% (optimised) ./src/main/drivers/accgyro/accgyro_virtual.c 
+%% (optimised) ./lib/main/BoschSensortec/BMI270-Sensor-API/bmi270_maximum_fifo.c 
+%% (size optimised) ./src/main/drivers/barometer/barometer_2smpb_02b.c 
+%% (size optimised) ./src/main/drivers/barometer/barometer_bmp085.c 
+%% (size optimised) ./src/main/drivers/barometer/barometer_bmp280.c 
+%% (optimised) ./src/main/drivers/barometer/barometer_bmp388.c 
+%% (optimised) ./src/main/drivers/barometer/barometer_bmp5xx.c 
+%% (optimised) ./src/main/drivers/barometer/barometer_dps310.c 
+%% (optimised) ./src/main/drivers/barometer/barometer_lps22df.c 
+%% (size optimised) ./src/main/drivers/barometer/barometer_lps.c 
+%% (size optimised) ./src/main/drivers/barometer/barometer_ms5611.c 
+%% (size optimised) ./src/main/drivers/barometer/barometer_qmp6988.c 
+%% (optimised) ./src/main/drivers/barometer/barometer_virtual.c 
+%% (size optimised) ./src/main/drivers/compass/compass_ak8963.c 
+%% (size optimised) ./src/main/drivers/compass/compass_ak8975.c 
+%% (size optimised) ./src/main/drivers/compass/compass_hmc5883l.c 
+%% (size optimised) ./src/main/drivers/compass/compass_ist8310.c 
+%% (size optimised) ./src/main/drivers/compass/compass_lis2mdl.c 
+%% (size optimised) ./src/main/drivers/compass/compass_lis3mdl.c 
+%% (size optimised) ./src/main/drivers/compass/compass_mmc560x.c 
+%% (optimised) ./src/main/drivers/compass/compass_mpu925x_ak8963.c 
+%% (size optimised) ./src/main/drivers/compass/compass_qmc5883.c 
+%% (optimised) ./src/main/drivers/compass/compass_virtual.c 
+%% (optimised) ./src/main/drivers/max7456.c 
+%% (size optimised) ./src/main/drivers/vtx_rtc6705.c 
+%% (size optimised) ./src/main/drivers/vtx_rtc6705_soft_spi.c 
+%% (optimised) ./src/main/pg/adc.c 
+%% (optimised) ./src/main/pg/alt_hold_multirotor.c 
+%% (optimised) ./src/main/pg/alt_hold_wing.c 
+%% (optimised) ./src/main/pg/autopilot.c 
+%% (optimised) ./src/main/pg/beeper.c 
+%% (optimised) ./src/main/pg/beeper_dev.c 
+%% (optimised) ./src/main/pg/board.c 
+%% (optimised) ./src/main/pg/bus_i2c.c 
+%% (optimised) ./src/main/pg/bus_quadspi.c 
+%% (optimised) ./src/main/pg/bus_spi.c 
+%% (optimised) ./src/main/pg/can.c 
+%% (optimised) ./src/main/pg/dashboard.c 
+%% (optimised) ./src/main/pg/dronecan.c 
+%% (optimised) ./src/main/pg/dronecan_dna.c 
+%% (optimised) ./src/main/pg/displayport_profiles.c 
+%% (optimised) ./src/main/pg/dyn_notch.c 
+%% (optimised) ./src/main/pg/flash.c 
+%% (optimised) ./src/main/pg/flight_plan.c 
+%% (optimised) ./src/main/pg/gimbal.c 
+%% (optimised) ./src/main/pg/gps.c 
+%% (optimised) ./src/main/pg/gps_lap_timer.c 
+%% (optimised) ./src/main/pg/gps_rescue_multirotor.c 
+%% (optimised) ./src/main/pg/gps_rescue_wing.c 
+%% (optimised) ./src/main/pg/gyrodev.c 
+%% (optimised) ./src/main/pg/max7456.c 
+%% (optimised) ./src/main/pg/mco.c 
+%% (optimised) ./src/main/pg/motor.c 
+%% (optimised) ./src/main/pg/msp.c 
+%% (optimised) ./src/main/pg/pg.c 
+%% (optimised) ./src/main/pg/pilot.c 
+%% (optimised) ./src/main/pg/piniobox.c 
+%% (optimised) ./src/main/pg/pinio.c 
+%% (optimised) ./src/main/pg/pin_pull_up_down.c 
+%% (optimised) ./src/main/pg/pos_hold_multirotor.c 
+%% (optimised) ./src/main/pg/pos_hold_wing.c 
+%% (optimised) ./src/main/pg/rcdevice.c 
+%% (optimised) ./src/main/pg/rpm_filter.c 
+%% (optimised) ./src/main/pg/rx.c 
+%% (optimised) ./src/main/pg/rx_pwm.c 
+%% (optimised) ./src/main/pg/rx_spi.c 
+%% (optimised) ./src/main/pg/rx_spi_cc2500.c 
+%% (optimised) ./src/main/pg/rx_spi_expresslrs.c 
+%% (optimised) ./src/main/pg/scheduler.c 
+%% (optimised) ./src/main/pg/sdcard.c 
+%% (optimised) ./src/main/pg/sdio.c 
+%% (optimised) ./src/main/pg/serial_uart.c 
+%% (optimised) ./src/main/pg/stats.c 
+%% (optimised) ./src/main/pg/timerio.c 
+%% (optimised) ./src/main/pg/timerup.c 
+%% (optimised) ./src/main/pg/usb.c 
+%% (optimised) ./src/main/pg/vcd.c 
+%% (optimised) ./src/main/pg/vtx_io.c 
+%% (optimised) ./src/main/pg/vtx_table.c 
+%% crt0.S 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_gpio/gpio.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_uart/uart.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_irq/irq.c 
+%% irq_handler_chain.S 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_timer/timer.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_clocks/clocks.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_pll/pll.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_dma/dma.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_spi/spi.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_i2c/i2c.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_adc/adc.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_pio/pio.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_flash/flash.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_platform_panic/panic.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_multicore/multicore.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_sync/mutex.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_time/time.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_sync/lock_core.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/hardware_claim/claim.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_sync/critical_section.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_sync/sync.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_runtime/runtime.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_ticks/ticks.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_xosc/xosc.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_sync/sem.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_time/timeout_helper.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_util/datetime.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_util/pheap.c 
+%% (optimised) ./lib/modules/pico-sdk/src/common/pico_util/queue.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2350/pico_platform/platform.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_atomic/atomic.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_flash/flash.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_divider/divider.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_vreg/vreg.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_malloc/malloc.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c 
+%% bit_ops_aeabi.S 
+%% float_common_m33.S 
+%% float_conv32_vfp.S 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_float/float_math.c 
+%% float_sci_m33_vfp.S 
+%% double_aeabi_dcp.S 
+%% double_conv_m33.S 
+%% double_fma_dcp.S 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_double/double_math.c 
+%% double_sci_m33.S 
+%% memfunctions.S 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_stdio/stdio.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_printf/printf.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c 
+%% (optimised) ./lib/modules/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/tusb.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/device/usbd.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/device/usbd_control.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/video/video_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c 
+%% (optimised) lib/modules/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c 
+%% (optimised) ./src/main/drivers/rx/expresslrs_driver.c 
+%% (optimised) ./src/main/drivers/rx/rx_a7105.c 
+%% (optimised) ./src/main/drivers/rx/rx_cc2500.c 
+%% (optimised) ./src/main/drivers/rx/rx_cyrf6936.c 
+%% (optimised) ./src/main/drivers/rx/rx_nrf24l01.c 
+%% (optimised) ./src/main/drivers/rx/rx_sx127x.c 
+%% (optimised) ./src/main/drivers/rx/rx_sx1280.c 
+%% (optimised) ./src/main/rx/cc2500_common.c 
+%% (optimised) ./src/main/rx/cc2500_frsky_shared.c 
+%% (optimised) ./src/main/rx/cc2500_frsky_d.c 
+%% (optimised) ./src/main/rx/cc2500_frsky_x.c 
+%% (optimised) ./src/main/rx/cc2500_sfhss.c 
+%% (optimised) ./src/main/rx/cc2500_redpine.c 
+%% (optimised) ./src/main/rx/a7105_flysky.c 
+%% (optimised) ./src/main/rx/cyrf6936_spektrum.c 
+%% (optimised) ./src/main/rx/expresslrs.c 
+%% (optimised) ./src/main/rx/expresslrs_common.c 
+%% (optimised) ./src/main/rx/expresslrs_telemetry.c 
+%% (size optimised) ./lib/main/google/olc/olc.c 
+Linking RP2350B_OPENFC_LITE_REV2_LW1 
+/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: warning: /data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf has a LOAD segment with RWX permissions
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      430128 B      1968 KB     21.34%
+    FLASH_CONFIG:           0 B        64 KB      0.00%
+      FLASH_FONT:           0 B        16 KB      0.00%
+             RAM:      506832 B       512 KB     96.67%
+       SCRATCH_X:          4 KB         4 KB    100.00%
+       SCRATCH_Y:           0 B         4 KB      0.00%
+   text	   data	    bss	    dec	    hex	filename
+ 430128	      0	 152828	 582956	  8e52c	/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf
+Creating UF2 /data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2 
++ make -j4 CONFIG=OPENFC_LITE_REV2_LW1 CONFIG_DIR=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj ARM_SDK_DIR=/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi PICOTOOL=/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool CONFIG_REVISION=1bcff6e CONFIG_REVISION_DEFINE=-D'__CONFIG_REVISION__="1bcff6e"' EXTRA_FLAGS=-ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc binary
+Creating BIN /data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin 
+{
+  "status": "pass",
+  "source": {
+    "source_repo": "https://github.com/OpenDrone-hw/betaflight",
+    "source_commit": "31066c0f3789d2dbc34b394cf383b04394d43724",
+    "base_config_repo": "https://github.com/OpenDrone-hw/betaflight-config",
+    "base_config_commit": "dd0e3200b27f43b581f4559574ddc5d12e6040f0",
+    "base_config_path": "configs/OPDR/OPENFC_LITE_RP2350B/config.h",
+    "config_content_sha256": "1bcff6ed93470a7f2d91bfc5597b66f6473b00d40ee99cbf9049f2a4982feab1",
+    "pico_sdk_commit": "ee68c78d0afae2b69c03ae1a72bf5cc267a2d94c",
+    "tinyusb_commit": "86ad6e56c1700e85f1c5678607a762cfe3aa2f47",
+    "picotool_commit": "de8ae5ac334e1126993f72a5c67949712fd1e1a4",
+    "gcc_archive_sha256": "95c011cee430e64dd6087c75c800f04b9c49832cc1000127a92a97f9c8d83af4",
+    "gcc_version": "13.3.1",
+    "physical_hardware_tested": false,
+    "source_date_epoch": 1787049419,
+    "libcanard_commit": "601ed35467e0ac38819df17cd7c918de19f62d58",
+    "gcc_archive_url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz",
+    "gcc_archive_md5": "0601a9588bc5b9c99ad2b56133b7f118",
+    "native_board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+    "native_schematic_sha256": "36dba5ebd75912f935bc4d5f2e8f00a7d07f7f4628c6047bb0be40bbb745c0fc",
+    "native_export_uncompressed_sha256": "95348ddeb855a944bc3b0bc13586bc8a7d0638cc81c594c7937e183742b1e52c",
+    "bosch_datasheet": {
+      "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf",
+      "document": "BST-BMI270-DS000-08",
+      "revision": "1.6",
+      "date": "March 2026",
+      "sha256": "0dab40659d3a8598af76a0b2da1fd8a216aeb87254541632c89145f974694af7",
+      "pages": [
+        143,
+        144
+      ]
+    }
+  },
+  "argv": [
+    [
+      "make",
+      "-j4",
+      "CONFIG=OPENFC_LITE_REV2_LW1",
+      "CONFIG_DIR=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc",
+      "OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main",
+      "BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj",
+      "ARM_SDK_DIR=/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi",
+      "PICOTOOL=/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool",
+      "CONFIG_REVISION=1bcff6e",
+      "CONFIG_REVISION_DEFINE=-D'__CONFIG_REVISION__=\"1bcff6e\"'",
+      "EXTRA_FLAGS=-ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc",
+      "uf2"
+    ],
+    [
+      "make",
+      "-j4",
+      "CONFIG=OPENFC_LITE_REV2_LW1",
+      "CONFIG_DIR=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc",
+      "OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main",
+      "BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj",
+      "ARM_SDK_DIR=/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi",
+      "PICOTOOL=/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool",
+      "CONFIG_REVISION=1bcff6e",
+      "CONFIG_REVISION_DEFINE=-D'__CONFIG_REVISION__=\"1bcff6e\"'",
+      "EXTRA_FLAGS=-ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc",
+      "binary"
+    ]
+  ],
+  "source_date_epoch": "1787049419",
+  "seconds": 31.597503021999728,
+  "gcc": "arm-none-eabi-gcc (Arm GNU Toolchain 13.3.Rel1 (Build arm-13.24)) 13.3.1 20240614",
+  "picotool": "picotool v2.1.1 (Linux, GNU-13.3.0, Release)",
+  "picotool_executable_sha256": "50e24389132cf959e8f0071f730972afd4e2671ef7f5e9a44597ddcdcca0a65f",
+  "artifacts": {
+    "betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf": {
+      "bytes": 752808,
+      "sha256": "8c0a2953dbb7a65e1e22d949c5fd08f68a1babdeda88d13b14b2632bbc7ce43a"
+    },
+    "betaflight_RP2350B_OPENFC_LITE_REV2_LW1.map": {
+      "bytes": 3596862,
+      "sha256": "665f27ae151dc62fc42145d83d7aa952ce586dcd8608640d005e2f60b4648b1a"
+    },
+    "betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2": {
+      "bytes": 860672,
+      "sha256": "0bdbdbe6f9f5f91b76285cef41a198bf866b400c76ee677887d93f60cb11a433"
+    },
+    "betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin": {
+      "bytes": 430128,
+      "sha256": "2cf345e0fa6f9b60b7039d568b52221059d6cdb68d6bf7c1ad9babf437f47ca5"
+    }
+  },
+  "physical_hardware_tested": false
+}

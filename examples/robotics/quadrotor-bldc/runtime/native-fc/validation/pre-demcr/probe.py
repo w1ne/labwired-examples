@@ -1,0 +1,8 @@
+from pathlib import Path
+import json,subprocess,time,hashlib
+p=Path(__file__).parent
+args=['/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/core-rp2354b/labwired-rp2354b-5c95d7917cfe', 'run', '--system', '/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/runtime-final-fc-pre-demcr/system.yaml', '--firmware', '/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf', '--max-steps', '10000000', '--bus-trace-out', '/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/runtime-final-fc-pre-demcr/spi.json']
+binary={'path': '/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/core-rp2354b/labwired-rp2354b-5c95d7917cfe', 'bytes': 159721584, 'sha256': 'e43c47d37eeb3d7ecdefb7758b46c6a5d9fd2befb6f4a57e4066643017daefee', 'base': 'b66049938767b313c6b04ba1b36360f35cba0b5f', 'source_diff_sha256': '5c95d7917cfe8e3e185965106851b521e3b7cf308bc672f043475308e2caabae', 'untracked': ['configs/chips/rp2354b.yaml', 'configs/peripherals/rp2350/sysinfo-qfn80.yaml', 'crates/core/tests/gpio_logic/rp2354b_gpio.rs']}
+r={'args':args,'binary':binary,'stage':'run','firmware_sha256':hashlib.sha256(Path(args[args.index('--firmware')+1]).read_bytes()).hexdigest()};(p/'receipt.json').write_text(json.dumps(r,indent=2));start=time.time()
+with (p/'runtime.log').open('w') as log:q=subprocess.run(args,cwd='/data/worktrees/labwired-core-doom-rd-20261118',stdout=log,stderr=subprocess.STDOUT)
+r.update(stage='complete',exit=q.returncode,seconds=time.time()-start);(p/'receipt.json').write_text(json.dumps(r,indent=2))

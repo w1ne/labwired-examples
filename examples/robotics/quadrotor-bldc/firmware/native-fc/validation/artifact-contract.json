@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "compiled_defaults": {
+    "pgResetTemplate_statusLedConfig": {
+      "address": "0x10068de0",
+      "bytes": "4c000001"
+    },
+    "pgResetTemplate_beeperDevConfig": {
+      "address": "0x10068f20",
+      "bytes": "470100000000"
+    }
+  },
+  "uf2": {
+    "blocks": 1681,
+    "family": "0xe48bff59",
+    "start": "0x10000000",
+    "end_exclusive": "0x10069100",
+    "bin_bytes": 430128,
+    "payload_matches_bin": true
+  },
+  "negative_controls": {
+    "active_low_led": {
+      "rejected": true,
+      "reason": "pgResetTemplate_statusLedConfig: 4c000000 != 4c000001"
+    },
+    "open_drain_active_low_beeper": {
+      "rejected": true,
+      "reason": "pgResetTemplate_beeperDevConfig: 470001000000 != 470100000000"
+    },
+    "historical_compiled_target": {
+      "rejected": true,
+      "sha256": "87f62003c89c4e4d9635a875240cda0d201c62eedc70b86fc8ffac6b4c93ba3b",
+      "reason": "pgResetTemplate_statusLedConfig: 4c000000 != 4c000001"
+    }
+  },
+  "artifacts": {
+    "betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf": {
+      "bytes": 752808,
+      "sha256": "8c0a2953dbb7a65e1e22d949c5fd08f68a1babdeda88d13b14b2632bbc7ce43a"
+    },
+    "betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2": {
+      "bytes": 860672,
+      "sha256": "0bdbdbe6f9f5f91b76285cef41a198bf866b400c76ee677887d93f60cb11a433"
+    },
+    "betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin": {
+      "bytes": 430128,
+      "sha256": "2cf345e0fa6f9b60b7039d568b52221059d6cdb68d6bf7c1ad9babf437f47ca5"
+    }
+  },
+  "physical_hardware_tested": false
+}
