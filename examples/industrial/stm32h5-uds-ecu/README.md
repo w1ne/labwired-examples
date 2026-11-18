@@ -240,3 +240,9 @@ as the build revision of the separately pinned 0.26.0 release binary.
 - [JST XH family](https://www.jst-mfg.com/product/index.php?lang=en&series=277)
 - [PCAN-USB FD](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb-fd/?L=1)
 - [Tracking issue #3554](https://github.com/w1ne/labwired/issues/3554)
+
+## Complete offline firmware source
+
+The complete application and required pinned vendor sources are available in [the source archive](firmware/source/stm32h563-uds-complete-source.tar.gz). The archive is 1,635,372 bytes. [Build instructions](firmware/source/BUILD.md), the [per-file source manifest](firmware/source/source-bundle.json), and the [fresh extracted-source rebuild receipt](firmware/source/rebuild-evidence.json) are included.
+
+The fresh rebuild matches the accepted flash BIN and every loadable ELF segment, including address, data, memory extent, flags and entry point. Relocated debug paths change the rebuilt ELF file hash; the original tested ELF files remain unchanged. Both an altered vendor byte and an unlisted dependency file are rejected by the source verification gate. This source rebuild adds no physical test claim.

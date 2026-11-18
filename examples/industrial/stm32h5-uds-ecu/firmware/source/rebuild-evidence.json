@@ -1,0 +1,209 @@
+{
+  "name": "uds",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "source/package.py",
+        "--cube",
+        "/data/work-evidence/labwired-industrial-packages-20261118/STM32CubeH5",
+        "--udslib",
+        "/data/work-evidence/labwired-industrial-packages-20261118/udslib"
+      ],
+      "exit": 0,
+      "seconds": 2.9774704499868676,
+      "log": "package.log"
+    },
+    {
+      "command": [
+        "python3",
+        "verify-deps.py",
+        "/data/work-evidence/labwired-industrial-packages-20261118/STM32CubeH5",
+        "/data/work-evidence/labwired-industrial-packages-20261118/udslib"
+      ],
+      "exit": 0,
+      "seconds": 1.549171574995853,
+      "log": "git-dependencies.log"
+    },
+    {
+      "command": [
+        "python3",
+        "source/build.py",
+        "--output-dir",
+        "/data/work-evidence/labwired-industrial-packages-20261118/complete-source-uds-v3/build",
+        "--verify-release"
+      ],
+      "exit": 0,
+      "seconds": 12.395319984992966,
+      "log": "build.log"
+    }
+  ],
+  "archive": {
+    "archive": "stm32h563-uds-complete-source.tar.gz",
+    "bytes": 1635372,
+    "sha256": "2d0bd8c06a72e90c22e85957128d1979324b51376c7d5f47e49e1593b89d1b2a",
+    "entries": [
+      {
+        "target": "primary",
+        "path": "main.c",
+        "board": "nucleo-h563zi",
+        "language": "c",
+        "bytes": 6394,
+        "sha256": "5c537ae95c767f6b4cd5284549b093e78b853f3dab073f2c63150cab71de6b2f"
+      }
+    ]
+  },
+  "archiveFilesVerified": 215,
+  "alteredVendorRejected": "Dependency byte mismatch: deps/STM32CubeH5/Drivers/CMSIS/Device/ST/STM32H5xx/Include/stm32h563xx.h",
+  "extraVendorRejected": "Dependency inventory differs: ['deps/STM32CubeH5/unexpected-source.h']",
+  "build": {
+    "schema": "labwired.complete-source-rebuild.v1",
+    "compiler": "arm-none-eabi-gcc (15:13.2.rel1-2) 13.2.1 20231009",
+    "sourceBefore": {
+      "main.c": "5c537ae95c767f6b4cd5284549b093e78b853f3dab073f2c63150cab71de6b2f",
+      "clock.c": "bf295ddd851b60bff3d758e4de45ebbb59a0c108b8ccc81d9572d775e996b23c",
+      "uds_ecu_app.c": "bebd7c6ae8708a9234574e07d38f3449e038b10fd80d8a0ab011685a99825f24",
+      "uds_ecu_app.h": "9f068b4a8a767f5de81152aec7cd362c49f278f0de4331b89e22d04e51fb7225",
+      "stm32h563.ld": "46eafbd3c30cbb027fe21ff34e060f91ef9f2dcdd08a411abea2c851503be1c6",
+      "stm32h5xx_hal_conf.h": "380da9e407d39a2e203adfb9d0c9ba6c50112e8053f9be51d9c4640ab3eb6f39",
+      "Makefile": "3df9cbd77edf4e1299e25c9ed751806cc979ee25482aa19ddf5922a11db5aa00",
+      "LICENSE-ST.txt": "06a8a2c4dd0516964772c2629b18cdfc68b5e9f472ffe10c24dcc55850188bab",
+      "provenance.json": "ba0c39dae548b77e7afc2ad4d3f9a50c9787de9f30609588db5283688d302624",
+      "verify-deps.py": "17ee54ce39024e18a8c4219d56eb376835e703be341ca992e1dc13b02714cc4c",
+      "source/config.json": "e899fc173c771df3ee498b0cf55919601835d3e4288ddabd3c8bc885d4f9e904",
+      "source/toolchain.json": "9e842f41e73aedf3de4570ce07c5afbf0e0e17b7e3cbc0f99c857997540bc001",
+      "source/vendor-manifest.json": "79da662c79e4853702cde5bd70817b5a4df5f53aea3c04e35a46fed0f318f3f1",
+      "source/verify_export.py": "33b1353475812a565acb16ca6b146d4f807082636e18b8351e95a2c0570120cd",
+      "source/build.py": "392d0f6ef2daaf459c4eafd86ca1c486025f8c1c664ccbcb042749a191c06320",
+      "source/package.py": "c550ca95f8e03f6a997f2632e14ce4f7fb58edc960846d41b0c0de3b781296ba",
+      "source/BUILD.md": "9eaf08406e5106282fb3d59329782f34c284afc193162d7b07032d995a11187b",
+      "source/LICENSE-labwired-MIT": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    "targets": [
+      {
+        "target": "uds",
+        "command": [
+          "make",
+          "-j2",
+          "all",
+          "CUBE_DIR=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-uds-v3/source/deps/STM32CubeH5",
+          "UDSLIB_DIR=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-uds-v3/source/deps/udslib",
+          "TARGET=/data/work-evidence/labwired-industrial-packages-20261118/complete-source-uds-v3/build/uds/h563-uds-physical"
+        ],
+        "directory": "/data/work-evidence/labwired-industrial-packages-20261118/complete-source-uds-v3/source",
+        "exit": 0,
+        "seconds": 12.160137665981892,
+        "log": "uds-build.log",
+        "artifacts": {
+          "elf": {
+            "path": "uds/h563-uds-physical.elf",
+            "bytes": 1900212,
+            "sha256": "8aecd5d3799c518e65881210b01eab65e7a47cead2d6bd6da1faa17bf9c1dddd",
+            "acceptedSha256": "d78d30a8ae57835c237e21c99104b56e1fcf50fcd8872440c986132eba67275f",
+            "matchesAccepted": false
+          },
+          "bin": {
+            "path": "uds/h563-uds-physical.bin",
+            "bytes": 34656,
+            "sha256": "28578bc7fd4a5bd4790cee3860a37d8dd9da6201b511a6c682c43ee79a9950df",
+            "acceptedSha256": "28578bc7fd4a5bd4790cee3860a37d8dd9da6201b511a6c682c43ee79a9950df",
+            "matchesAccepted": true
+          }
+        },
+        "flashImageMatchesAccepted": true,
+        "loadableImage": {
+          "entry": 134250905,
+          "machine": 40,
+          "flags": 83886592,
+          "segments": [
+            {
+              "virtualAddress": 134217728,
+              "physicalAddress": 134217728,
+              "fileBytes": 34564,
+              "memoryBytes": 34564,
+              "flags": 5,
+              "alignment": 4096,
+              "sha256": "997f2c25d4ba17b85f123dedf859667058007cb1ab90f1013b8947e9d473c575"
+            },
+            {
+              "virtualAddress": 536870912,
+              "physicalAddress": 134252292,
+              "fileBytes": 92,
+              "memoryBytes": 2188,
+              "flags": 6,
+              "alignment": 4096,
+              "sha256": "fbbb6b53ecafb9c34e601c3f0b336fb018c5ba1b5f148694ddfa85e9fca9a858"
+            },
+            {
+              "virtualAddress": 536873100,
+              "physicalAddress": 134252384,
+              "fileBytes": 0,
+              "memoryBytes": 1540,
+              "flags": 6,
+              "alignment": 4096,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ]
+        },
+        "loadableImageMatchesAccepted": true
+      }
+    ],
+    "physicalHardwareTested": false,
+    "sourceAfter": {
+      "main.c": "5c537ae95c767f6b4cd5284549b093e78b853f3dab073f2c63150cab71de6b2f",
+      "clock.c": "bf295ddd851b60bff3d758e4de45ebbb59a0c108b8ccc81d9572d775e996b23c",
+      "uds_ecu_app.c": "bebd7c6ae8708a9234574e07d38f3449e038b10fd80d8a0ab011685a99825f24",
+      "uds_ecu_app.h": "9f068b4a8a767f5de81152aec7cd362c49f278f0de4331b89e22d04e51fb7225",
+      "stm32h563.ld": "46eafbd3c30cbb027fe21ff34e060f91ef9f2dcdd08a411abea2c851503be1c6",
+      "stm32h5xx_hal_conf.h": "380da9e407d39a2e203adfb9d0c9ba6c50112e8053f9be51d9c4640ab3eb6f39",
+      "Makefile": "3df9cbd77edf4e1299e25c9ed751806cc979ee25482aa19ddf5922a11db5aa00",
+      "LICENSE-ST.txt": "06a8a2c4dd0516964772c2629b18cdfc68b5e9f472ffe10c24dcc55850188bab",
+      "provenance.json": "ba0c39dae548b77e7afc2ad4d3f9a50c9787de9f30609588db5283688d302624",
+      "verify-deps.py": "17ee54ce39024e18a8c4219d56eb376835e703be341ca992e1dc13b02714cc4c",
+      "source/config.json": "e899fc173c771df3ee498b0cf55919601835d3e4288ddabd3c8bc885d4f9e904",
+      "source/toolchain.json": "9e842f41e73aedf3de4570ce07c5afbf0e0e17b7e3cbc0f99c857997540bc001",
+      "source/vendor-manifest.json": "79da662c79e4853702cde5bd70817b5a4df5f53aea3c04e35a46fed0f318f3f1",
+      "source/verify_export.py": "33b1353475812a565acb16ca6b146d4f807082636e18b8351e95a2c0570120cd",
+      "source/build.py": "392d0f6ef2daaf459c4eafd86ca1c486025f8c1c664ccbcb042749a191c06320",
+      "source/package.py": "c550ca95f8e03f6a997f2632e14ce4f7fb58edc960846d41b0c0de3b781296ba",
+      "source/BUILD.md": "9eaf08406e5106282fb3d59329782f34c284afc193162d7b07032d995a11187b",
+      "source/LICENSE-labwired-MIT": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    "sourceUnchanged": true,
+    "scope": "Exact flash bytes and ELF PT_LOAD addresses, bytes, memory extents, flags and entry comparison against the accepted image. ELF debug paths can differ after relocation; each ELF digest and equality result is explicit. No physical execution is implied."
+  },
+  "packagedLogs": [
+    {
+      "originalPath": "build.log",
+      "storedPath": "source/evidence/build.log.gz",
+      "originalBytes": 2077,
+      "originalSha256": "1809aef9d0c497599daab902f06b7b865d1592c794889b869ded33f3efc0fd90",
+      "storedBytes": 747,
+      "storedSha256": "b5c94f1671e2c4e6a83d7a7de19a3bfb738e66435edbfea8e1322601892ff61a"
+    },
+    {
+      "originalPath": "git-dependencies.log",
+      "storedPath": "source/evidence/git-dependencies.log.gz",
+      "originalBytes": 56,
+      "originalSha256": "fef64777fe18a60634f1c3388028943c8d4c6303195e473f4df5522dcb884fc7",
+      "storedBytes": 74,
+      "storedSha256": "d097000911f2edc72124669f57bb6fba6449439f96bba2ed08a852d3cebf3259"
+    },
+    {
+      "originalPath": "package.log",
+      "storedPath": "source/evidence/package.log.gz",
+      "originalBytes": 450,
+      "originalSha256": "23eb0d7e6e7507cf766cecbd8481390093bc89c73f900e38f53741a886991653",
+      "storedBytes": 298,
+      "storedSha256": "a159536aa64758ff474c3c052ae40599942fdc795892aee92de5e92644fbd4e7"
+    },
+    {
+      "originalPath": "build/uds-build.log",
+      "storedPath": "source/evidence/build/uds-build.log.gz",
+      "originalBytes": 11078,
+      "originalSha256": "f5980d6909a3cc943c9e8f1334dce6b7316a48cdf6a90778896e51a9e14471df",
+      "storedBytes": 1271,
+      "storedSha256": "66c2f0136c03a1df129603b9517e1aaf251919fd9c363ed9fbbc8e8320ad7d11"
+    }
+  ]
+}
