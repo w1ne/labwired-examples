@@ -1,0 +1,193 @@
+{
+  "schema": "labwired.native-firmware-package/v1",
+  "identity": "openfc-native-motor-bench",
+  "target_chip": "rp2354b",
+  "status": "reproducible-runtime-candidate",
+  "main_source": "src/main.c",
+  "runtime": "../../runtime/native-fc-bench/system.yaml",
+  "artifact_names": [
+    "openfc_motor_bench.elf",
+    "openfc_motor_bench.bin",
+    "openfc_motor_bench.uf2"
+  ],
+  "source_archive": {
+    "path": "source/openfc-native-motor-bench-source.tar.gz",
+    "bytes": 2717844,
+    "sha256": "76404083363e845a30dd079338521fc1501b72def8597e5d5dee288bbdadf60a"
+  },
+  "build_qualified": true,
+  "five_node_runtime_qualified": false,
+  "physical_hardware_tested": false,
+  "files": {
+    "CMakeLists.txt": {
+      "bytes": 1437,
+      "sha256": "d1e6d868505d297ab4b6fb0307b5610feb36906d166d9d595b0e51a110599446"
+    },
+    "LICENSE": {
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    "README.md": {
+      "bytes": 8536,
+      "sha256": "acb03ae853008279278579bf3145c8a9c7341e995b8de4148ea88316cb6ed1ae"
+    },
+    "artifacts/artifact-contract.json": {
+      "bytes": 1887,
+      "sha256": "1fdea99eb6af6195911fd248edadc6165b70fd40965619a8307092e5c9630faa"
+    },
+    "artifacts/build-receipt.json": {
+      "bytes": 4880,
+      "sha256": "133370b0b5e02b8a56a15432bc77bbe1475e5922068e847694f1f8bae387dc5b"
+    },
+    "artifacts/openfc_motor_bench.bin": {
+      "bytes": 21884,
+      "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780"
+    },
+    "artifacts/openfc_motor_bench.elf": {
+      "bytes": 432448,
+      "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b"
+    },
+    "artifacts/openfc_motor_bench.elf.map": {
+      "bytes": 591039,
+      "sha256": "72268f25fc7aebf9c0a8cde1fa01c4783a515343f2f529039d17964cb7210d12"
+    },
+    "artifacts/openfc_motor_bench.uf2": {
+      "bytes": 44032,
+      "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502"
+    },
+    "artifacts/picotool-info.txt": {
+      "bytes": 1206,
+      "sha256": "2a1fcb5777bcfbfa611113dacc3bc7a188d3bf38b21babb42acbb323b5b3148d"
+    },
+    "boards/openfc_lite_rp2354b_bench.h": {
+      "bytes": 453,
+      "sha256": "d731bbccb6e6a6dcd1889ecca38b5111352b9cbfa0b211bdb639be17dcd6e9b3"
+    },
+    "build.py": {
+      "bytes": 5980,
+      "sha256": "deb82708f5b53fef36fe0b01e53135a28e8beaa34773d2be40df5228b34af300"
+    },
+    "source/dshot-bench.patch": {
+      "bytes": 885,
+      "sha256": "2c1796220e9ef5ff5fdd9a5acad41b02474682bdaf7982f899b2d96da2868954"
+    },
+    "source/host-console-harness.json": {
+      "bytes": 3196,
+      "sha256": "18eb70e56876c9e865d80a54dd6df609c0171702df64b4a83ad04c65ebc53199"
+    },
+    "source/openfc-native-motor-bench-source.tar.gz": {
+      "bytes": 2717844,
+      "sha256": "76404083363e845a30dd079338521fc1501b72def8597e5d5dee288bbdadf60a"
+    },
+    "source/pico-sdk-ee68c78d0afa.tar.gz": {
+      "bytes": 2341729,
+      "sha256": "debc9a0dda356b97c546ce90cbc6ad9f02f343c3c5960f4ead557250e6a081c1"
+    },
+    "source/picotool-de8ae5ac334e.tar.gz": {
+      "bytes": 476823,
+      "sha256": "8a327353116dfd950a1610e3379a407b3cf22321e931a9c2bef68752a7f9b816"
+    },
+    "source/upstream-dshot.pio": {
+      "bytes": 6516,
+      "sha256": "b6e65ce2214673ae19a150dee8cafb58c8f1cae7adaaeec29ff402d43eb4e028"
+    },
+    "source-versions.json": {
+      "bytes": 2353,
+      "sha256": "cd99b0483dac8f45bd86bb50b304555a582282ae37da25c1e0b6a9b45279c104"
+    },
+    "src/dshot.pio": {
+      "bytes": 6480,
+      "sha256": "581b5d2c103caf7e0b93ab55ea81c269ad61043aa59ed91dcd064fdeb16caa4b"
+    },
+    "src/main.c": {
+      "bytes": 13455,
+      "sha256": "089654018b94eb2a543517dbd4ced9d04a5f1c29c58a9f90488c504684d52a5e"
+    },
+    "src/protocol.c": {
+      "bytes": 2821,
+      "sha256": "4a2ef3fa5a59a949f5f85fa518e01fe17636e977cf80b0fa4d5ee7da00a0ccb0"
+    },
+    "src/protocol.h": {
+      "bytes": 472,
+      "sha256": "b1ed4c67577e745f7010cef43d3d7ef49ac5a74bc6362e652a00857ddcca1489"
+    },
+    "tests/fixtures/am32-stopped.h": {
+      "bytes": 354,
+      "sha256": "d3dc9751825c9cdfa0731906dfc477ec63791d5de270ef10aaef0a33deaef86c"
+    },
+    "tests/fixtures/am32-stopped.json": {
+      "bytes": 2299,
+      "sha256": "48323fcc82b87aa75e38ab66dd4b4b191b1357274430334a3faa17dd3e626ffd"
+    },
+    "tests/protocol_test.c": {
+      "bytes": 2435,
+      "sha256": "84d789ee4c3455a15151938b1d3fd600660edfa395c769f3198dc32caea13d9f"
+    },
+    "validation/archive-artifact-contract.json": {
+      "bytes": 1887,
+      "sha256": "1fdea99eb6af6195911fd248edadc6165b70fd40965619a8307092e5c9630faa"
+    },
+    "validation/build-4.json": {
+      "bytes": 4263,
+      "sha256": "246ae88545dfe20bea0fa114d36cb46052fbf4de32ef07500036f18376d8aaea"
+    },
+    "validation/build-5.json": {
+      "bytes": 4264,
+      "sha256": "a8abb57f1bcba0adac08f86b8b5220cca1320f2267744316383fe53a933835db"
+    },
+    "validation/build-6.json": {
+      "bytes": 4310,
+      "sha256": "e62b4ccca123c8ea0c9ab31f7016a589faaa11be40f03d8a8b95f8405bfc99a6"
+    },
+    "validation/build-8.json": {
+      "bytes": 4880,
+      "sha256": "133370b0b5e02b8a56a15432bc77bbe1475e5922068e847694f1f8bae387dc5b"
+    },
+    "validation/complete-source-archive-replay-before-console-labels.json": {
+      "bytes": 1168,
+      "sha256": "38d491582f2791f5eb4192c10922a997d8e8f8428af4592bf0ebce3451e431cb"
+    },
+    "validation/complete-source-archive-replay.json": {
+      "bytes": 1170,
+      "sha256": "2590101619943d34188ec8fb9ac6cf26986359e7f945f994308f0268d212009e"
+    },
+    "validation/protocol-host.json": {
+      "bytes": 933,
+      "sha256": "c8c9a8247629937b97fca736de736a7999e6a791b5dc97fb44ed8feb7f2fe555"
+    },
+    "validation/protocol-host.log": {
+      "bytes": 28,
+      "sha256": "5ab2eb5509b061b826ad4cb03391e7dba894df2239b5f1c5ef59de5feab787ed"
+    },
+    "validation/reproducibility.json": {
+      "bytes": 4181,
+      "sha256": "874203600c9851cb74c82ed5df2601907d809740e0040a8767a6850640fbf841"
+    },
+    "verify_artifacts.py": {
+      "bytes": 5743,
+      "sha256": "16d7a7e3bca249b0b2a6ef91cdb69e34f52d731286e64a1a39e9c7b58fe1a5e9"
+    }
+  },
+  "runtime_files": {
+    "probe.yaml": {
+      "bytes": 309,
+      "sha256": "bcc8e685507604b4dffed9a80ff4633fab44fd4d659dface4a33e722c79d4c29"
+    },
+    "system.yaml": {
+      "bytes": 352,
+      "sha256": "ce1a180ad3b86545ee0e0191e4197b701384be5cf3a1647be43016e83da6f962"
+    },
+    "validation/pre-dma/invocation.json": {
+      "bytes": 890,
+      "sha256": "0c324dc27c03630d59fa9b1d5a80aa54eed42d16ba898179f5f4244f8b396fdb"
+    },
+    "validation/pre-dma/runtime.log": {
+      "bytes": 2420,
+      "sha256": "da429cbdf7e2af5a4aa12b72d34c3f036533dfda4fa2d51a9cd4226726f54cf7"
+    },
+    "validation/pre-dma/scope.json": {
+      "bytes": 527,
+      "sha256": "bdde18aeaf1f37f4aea5f07f597efe55186bfae0b6a0b880c073ba830c9ba093"
+    }
+  }
+}

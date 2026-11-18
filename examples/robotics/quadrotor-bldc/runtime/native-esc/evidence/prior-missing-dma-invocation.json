@@ -1,0 +1,18 @@
+{
+  "command": [
+    "cargo",
+    "test",
+    "-p",
+    "labwired-core",
+    "--features",
+    "event-scheduler",
+    "--test",
+    "vendor",
+    "at32_am32_native::",
+    "--",
+    "--ignored",
+    "--nocapture"
+  ],
+  "exit": 101,
+  "seconds": 16.38516508002067
+}

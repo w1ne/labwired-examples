@@ -1,0 +1,114 @@
+{
+  "schema": "labwired.native-model-datum-repair.v1",
+  "scope": "Only existing 3D model transform fields change in each native PCB and matching library footprint. Copper, pad lands, drill locations, component placements, nets, tracks, vias, zones and project rules are byte-identical after removing these exact transform changes. No solid or component is removed.",
+  "files": [
+    {
+      "file": "hardware/esc-4in1/4in1.kicad_pcb",
+      "beforeSha256": "393502202933d8d57a1f4740a06687292e5fad9c5bc01732a16fd8197b9072b9",
+      "afterSha256": "77763cb169469585c30f954fff17747ac7324374c9da8e68b6e00a774647a2ab",
+      "model": "SC-70-6_L2.0-W1.3-P0.65-LS2.1-BL-1.step",
+      "beforeOffsetMm": [
+        0,
+        0,
+        0
+      ],
+      "afterOffsetMm": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "beforeRotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "afterRotationDeg": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "onlyModelTransformTokensChanged": true
+    },
+    {
+      "file": "hardware/esc-4in1/4in1ESC-30x30.pretty/SOT-363_SC-70-6.kicad_mod",
+      "beforeSha256": "ec73ed18c3146b6bdb9c19d2777bc0a5f83caca3ffbdab00c1635feec8e7ed7f",
+      "afterSha256": "4dd8e94324ad955cc4ae2831a078334eadee352ead4ecab4b01af030af4ad383",
+      "model": "SC-70-6_L2.0-W1.3-P0.65-LS2.1-BL-1.step",
+      "beforeOffsetMm": [
+        0,
+        0,
+        0
+      ],
+      "afterOffsetMm": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "beforeRotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "afterRotationDeg": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "onlyModelTransformTokensChanged": true
+    },
+    {
+      "file": "hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb",
+      "beforeSha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
+      "afterSha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+      "model": "TF-SMD_TF-PUSH.wrl",
+      "beforeOffsetMm": [
+        0,
+        0,
+        0
+      ],
+      "afterOffsetMm": [
+        0.0,
+        -2.45,
+        0.0
+      ],
+      "beforeRotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "afterRotationDeg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "onlyModelTransformTokensChanged": true
+    },
+    {
+      "file": "hardware/flight-controller-openfc-lite-rev2-lw1/hardware/lib.pretty/TF-SMD_TF-PUSH.kicad_mod",
+      "beforeSha256": "06176b79ec0937b212d41bec835d299f2ebd567a02fa48f10d605dc174fc1918",
+      "afterSha256": "031d565c4a5a4858ba224e115466f88db8aa8599dcbd76e776f0fc0036b15ce1",
+      "model": "TF-SMD_TF-PUSH.wrl",
+      "beforeOffsetMm": [
+        0,
+        0,
+        0
+      ],
+      "afterOffsetMm": [
+        0.0,
+        -2.45,
+        0.0
+      ],
+      "beforeRotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "afterRotationDeg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "onlyModelTransformTokensChanged": true
+    }
+  ]
+}

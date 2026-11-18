@@ -2,7 +2,7 @@
   "schema_version": 1,
   "kind": "reviewable-hardware-repair-candidate",
   "revision": "2-LW1",
-  "date": "2026-11-12",
+  "date": "2026-11-18",
   "source": {
     "repository": "https://github.com/OpenDrone-hw/OpenFC-Lite",
     "commit": "def4ab29a5af430551aa15756b747e9ad6d4c480",
@@ -14,14 +14,15 @@
   },
   "hardware_files_sha256": {
     "hardware/OpenFC.kicad_dru": "86275a61a5c8cd29d4a6315bb026524cecdf5eb6d01deaa60be3b1c6af365f0d",
-    "hardware/OpenFC.kicad_pcb": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
+    "hardware/OpenFC.kicad_pcb": "0dd6d998387854d45afd1a9649bfd59e6818aea89bdd68ece065a30a8be3b4b7",
+    "hardware/OpenFC.kicad_prl": "e68674173bb9a233745080fd7218c8591ab9a9bcc401bf7df2ceb9445bc560eb",
     "hardware/OpenFC.kicad_pro": "1ad2949fe79436a92685d25c8ddbddc3bda77cf13f8f03889318030023467b95",
     "hardware/OpenFC.kicad_sch": "36dba5ebd75912f935bc4d5f2e8f00a7d07f7f4628c6047bb0be40bbb745c0fc",
-    "hardware/blackbox.kicad_sch": "3bcd26b6c10ed18f743b0c594d20f21f7337c988ecfba669c62289b728a3fdb5",
+    "hardware/blackbox.kicad_sch": "697aa68bb5845bc0c0d2ad74f67074a4f53de8a35e70811147f70a5894521eed",
     "hardware/fabrication-toolkit-options.json": "c323fbbd05cdd9a6c4572dcfd25871c55b4b57aa91da4ec12a4f035b4671d02c",
-    "hardware/fp-lib-table": "1ef6b0ac1524f6c9ea38713c2a1377cc16c9dd4712eb35c83827795bc6bc37ae",
-    "hardware/imu.kicad_sch": "cd9f4d32fbf8b702297c7be08f0e6bfd193f9a68216a2e925fe75c3e02a4bf2a",
-    "hardware/lib.kicad_sym": "d8e840076bb4a2e45d670685037281207bf93a340e31b8b9ef221dd6c7739ab9",
+    "hardware/fp-lib-table": "d2dc8509b72a53f5c792ea0da641b8c0f60b93449f9952a6f00d7339cc4af794",
+    "hardware/imu.kicad_sch": "be2197f03911a616cc4d383edea6e1915d5f4144abe03f2eff884640d6c6145b",
+    "hardware/lib.kicad_sym": "30222ffc7b1d0c4de4e325350a081c886136e25e575cba3ccfbab7446ce42f84",
     "hardware/lib.pretty/ANT-SMD_47948-0001.kicad_mod": "862fd29854cb623f44d59cdceac6f242f5d00c35c63b691a1bda04ba3ab9dd9d",
     "hardware/lib.pretty/ANT-SMD_L3.2-W1.6.kicad_mod": "a040ba24c6a9466a20ac338c0cdadd0ec9325bc5849191ce984f488badc8ee4c",
     "hardware/lib.pretty/ANT-SMD_L8.0-W1.0-SLDA81-3R010G-S1TF.kicad_mod": "b10055765bfec09281c8af75d440bdd73236c049d40a743724123533829ad336",
@@ -82,10 +83,13 @@
     "hardware/lib.pretty/SOT-583-8_L2.1-W1.6-P0.50-LS1.6-BL.kicad_mod": "1e821dcd2513907530c86cc99683b185b1420703c2482f41b1599814a091469e",
     "hardware/lib.pretty/SOT-666-6_L1.6-W1.2-P0.50-LS1.6-BR.kicad_mod": "432a1fa305599d1424d1d1c94bc51212c9918824736c88366810d27e8da2d2ab",
     "hardware/lib.pretty/SW-SMD_4P-L3.0-W2.0-P0.85-LS3.5.kicad_mod": "65fdd93c4a7485b70840e38ee4fca80d87d304407996931fec36c0a55e7b775c",
+    "hardware/lib.pretty/SolderPad_1mm_J52.kicad_mod": "7f0e56f072269c25b9c6d02bc98077a774f27856446cedd8868b4dbe4e725833",
+    "hardware/lib.pretty/SolderPad_1mm_J54.kicad_mod": "f7f7e2c85cf7d7ca56868c8652cc4fd21048d452865642db921575ec4846654d",
     "hardware/lib.pretty/TDFN-6_L1.0-W1.0-P0.35-BL.kicad_mod": "520f67da0153a5a290cc51377df733cc81a34e96ac545a1cee35c5e6b7ff8a5f",
     "hardware/lib.pretty/TF-SMD_TF-01A.kicad_mod": "fcb7693b7f03d6149addb244be0ee7c043f24dd00f36488a3f867c13e8793ec2",
     "hardware/lib.pretty/TF-SMD_TF-021B-H265.kicad_mod": "b984f093c83e67d3292e84fdf6cec8b0d35b7eb9f2f56570e617bf1d72c6b55e",
-    "hardware/lib.pretty/TF-SMD_TF-PUSH.kicad_mod": "3551b2fbab0c18a96097b1e63a4ff4fc52f35020ffa34127af627cff768256af",
+    "hardware/lib.pretty/TF-SMD_TF-PUSH.kicad_mod": "031d565c4a5a4858ba224e115466f88db8aa8599dcbd76e776f0fc0036b15ce1",
+    "hardware/lib.pretty/TI_DPW0005A_X2SON-5_0.8x0.8mm.kicad_mod": "d907fe7724cea3ffd7586ecea5ab60425d408987412849635d4ca30b012a3a04",
     "hardware/lib.pretty/TI_DTB0006A_RevC_SMD.kicad_mod": "36759b78b584eedca34f0ba846d7ba07528e3f3a0bd100c1ed15116be3640ca7",
     "hardware/lib.pretty/TSOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL.kicad_mod": "e44b5040e8013b8a94c8771c903bd5de9527fb89c262012c963e451fc6f6bcd7",
     "hardware/lib.pretty/TSOT-23-8_L2.9-W1.6-P0.65-LS2.8-BR.kicad_mod": "fd5b669b77fea3ca9f59792998523e5989fa33265a3ed5f6868af132f450ad1b",
@@ -95,7 +99,7 @@
     "hardware/lib.pretty/UQFN-10_L1.8-W1.4-P0.40-TL.kicad_mod": "9178aa07e2a4e0358edc23d69ae0aa93e095ec4cc9fa756b442785eebe8ae5bb",
     "hardware/lib.pretty/USB-C-SMD_TYPE-C-6PIN-2MD-073.kicad_mod": "24374b3adb0e3c87534bc2215f829570d7ff024cf4d6e3ffb90443ae46d051ff",
     "hardware/lib.pretty/USB-C-SMD_TYPE-C16PIN.kicad_mod": "2e589e9e0fb23fa84eec3f2203aa49029f41587608ef4512e0d74a4e3db2d36b",
-    "hardware/lib.pretty/USB-TYPE-C-SMD_TYPE-C-16P-QTWT.kicad_mod": "65eb384a1f53122e6c978f2ca6f988d60d8bbc3b6a51c582219cff1761ca5115",
+    "hardware/lib.pretty/USB-TYPE-C-SMD_TYPE-C-16P-QTWT.kicad_mod": "6d8c914f40914d9f82bf96a3f6091b093882a12e9d5fe4b1bf55800b885b9e14",
     "hardware/lib.pretty/USON-8_L3.0-W2.0-P0.50-BL-EP.kicad_mod": "d731d23ef622bb6584ba52b5e181003ee279c60379137c2e12b2c23789e60fa6",
     "hardware/lib.pretty/WDFN-6_L2.0-W2.0-P0.65-BL-EP.kicad_mod": "69fe06f14951260e34fddb8fea82ba015815b98b9382ef2d1e63a96cc7c50234",
     "hardware/lib.pretty/WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm_ThermalVias.kicad_mod": "19fcaf330804e49c067fa9fff23678ccd0d738903c9fb3d36233bad53a68ca3d",
@@ -108,15 +112,14 @@
     "hardware/lib.pretty/X2SON-6_L1.0-W0.8-BL.kicad_mod": "7eb990f5e8f50574bb85098c1ab710bf48795729e3478a461cab04d1ea23fb14",
     "hardware/lib.pretty/X3-DFN0603-2_L0.6-W0.3-RD.kicad_mod": "befe87382ddb696ef01f35c3356de2ceead42d2ce0b156385a2ca91ea17c3bd8",
     "hardware/lib.pretty/small_pad.kicad_mod": "a781a58adb78b45496389103879fc742f932e0d8a353d9d3003f0ca3920cfa5c",
-    "hardware/osd.kicad_sch": "322f879fc985fcdc0b5c9a18cfdc140484beaa42d4b50b159e2766969e3b1530",
-    "hardware/pads.kicad_sch": "7d8769c094b0335d4e76eddec19d26b362c580677fcac0ba2c1da4653275503e",
-    "hardware/power.kicad_sch": "ba3a3cb88cade563d144613b0a02bcb6516aab12df06671da4fa0a818791ab33",
-    "hardware/rp2350a.kicad_sch": "f89f247dcf558d4b782ab321a7c77f29c321a8d0970d25d85327452acb33081e",
-    "hardware/sym-lib-table": "b4731946c5cc9b5d987d1de0389bc54a977e4e58d5e73c4c83413026ca0ae9ec"
+    "hardware/osd.kicad_sch": "486ecf9d039a1b27f078d24f0121b005645ea4c7a019b5eb97e04f3161f6bae0",
+    "hardware/pads.kicad_sch": "185f16b9941818ca236396469589f97350548c11eafcf484c00ecc888bb3395a",
+    "hardware/power.kicad_sch": "9da39fde1995929e147f370f95fc6eeb14f257904f8bd8e5d15809256c1fad38",
+    "hardware/rp2350a.kicad_sch": "6c259305027e5f0ee1ce1e55e5842fc4ed88b873574f7d69093e20f706d26277",
+    "hardware/sym-lib-table": "396e1573f6e4e1361938da088e54365f6bce628282c75992250c4ef8127c04b6"
   },
   "external_dependencies": {
-    "hardware/KiCad-Library": "../../flight-controller-openfc-lite/hardware/KiCad-Library",
-    "hardware/lib.3dshapes": "../../flight-controller-openfc-lite/hardware/lib.3dshapes"
+    "hardware/KiCad-Library": "../../flight-controller-openfc-lite/hardware/KiCad-Library"
   },
   "primary_sources": [
     {
@@ -168,6 +171,23 @@
     },
     "corrected": {
       "drc_errors": 0,
+      "drc_warnings": 0,
+      "unconnected": 0,
+      "parity_warnings": 0,
+      "erc_errors": 0,
+      "erc_warnings": 0,
+      "erc_exclusions": 1,
+      "footprints": 164,
+      "pad_objects": 584,
+      "schematic_endpoints": 445,
+      "isolated_nc_pad_contacts": 0
+    },
+    "published_copy_recheck": "Current native source passes KiCad ERC, DRC and schematic parity with zero errors or warnings; the read-only structural comparison preserves the earlier physical repair and its exact project rules.",
+    "physical_rules_unchanged": true,
+    "erc_severities_unchanged": true,
+    "app_import_source_proof": "validation/erc-annotation-import-proof.json",
+    "initial_2_lw1": {
+      "drc_errors": 0,
       "drc_warnings": 5,
       "unconnected": 0,
       "parity_warnings": 0,
@@ -179,22 +199,54 @@
       "schematic_endpoints": 445,
       "isolated_nc_pad_contacts": 0
     },
-    "published_copy_recheck": "The exact files in this directory were rerun through KiCad ERC/DRC/parity and the independent read-only pad proof; the pad proof is identical to the archived receipt.",
-    "physical_rules_unchanged": true,
-    "erc_severities_unchanged": true,
-    "app_import_source_proof": "validation/erc-annotation-import-proof.json"
+    "library_cleanup": {
+      "receipt": "validation/20261118-library-cleanup/receipt.json",
+      "erc": "validation/20261118-library-cleanup/erc.json",
+      "drc": "validation/20261118-library-cleanup/drc.json",
+      "geometry_proof": "validation/20261118-library-cleanup/pcb-repair.json",
+      "input_board_sha256": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
+      "current_board_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9"
+    },
+    "app_import_source_proof_scope": "Historical initial 2-LW1 importer proof. Native runtime acceptance is not established by the current library cleanup.",
+    "model_datum_correction": {
+      "receipt": "../../cad/evidence/model-datum-correction-20261118/component-datums.json",
+      "sourceTransformProof": "../../cad/evidence/model-datum-correction-20261118/source-transform-proof.json",
+      "solidComparison": "../../cad/evidence/model-datum-correction-20261118/native-solid-comparison.json",
+      "drc": "../../cad/evidence/model-datum-correction-20261118/fc-drc.json",
+      "boardSha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+      "drcViolations": 0,
+      "unconnected": 0,
+      "parityFindings": 0,
+      "projectRulesChanged": false
+    }
   },
   "remaining_limits": [
     "Card1 DAT1 pad 8 is restored from the exact library pad as an isolated NC contact. Clearing it moved or removed six through vias and rerouted the U2.64/C19.1 IOVDD connection inside the U2 pad ring (validation/card1-dat1-pad-restoration.json); no signal- or power-integrity review of that reroute was performed.",
-    "178 ERC warnings and5 physical DRC warnings remain visible.",
     "LP5912 NC pads restore the existing source-library pattern; this is not a claim of TI land-pattern qualification.",
     "Native cold boot, internal RP2354B buck behavior, BMI270 firmware traffic, motor drive, thermal/electrical hardware performance and flight are not accepted by this repair.",
-    "The existing KernelCAD revision4 fit evidence applies to earlier geometry and is not requalification of2-LW1."
+    "Native STEP and component assets now bind to the current PCB hash; earlier KernelCAD fit receipts remain historical until this exact assembly is evaluated."
   ],
   "accepted_for_manufacture": false,
   "native_firmware_accepted": false,
   "mechanical_fit_requalified": false,
   "validation_files_sha256": {
+    "validation/20261118-library-cleanup/before/OpenFC.kicad_pcb.gz": "86f5c798b3f88b0b0a4ebe71a3f33c437fb905cebc7da7fc8cfe52e0ae96c6df",
+    "validation/20261118-library-cleanup/before/OpenFC.kicad_sch.gz": "424bde1ab0d8bcfdc00b76bb9cd290d0afa0dfe0d6ae9400818cf23f9c229f92",
+    "validation/20261118-library-cleanup/before/blackbox.kicad_sch.gz": "9056e15e08fdae876f9d241494dce2899c6a35e38d333e9f6a6da14a71d37f49",
+    "validation/20261118-library-cleanup/before/imu.kicad_sch.gz": "16f0ccf2be0fd8ec76a1c3ca6352f0aa27cdff6a3929bdd59ce85463753b3946",
+    "validation/20261118-library-cleanup/before/lib.kicad_sym.gz": "96173e5e82a92899b8882dba99b964e91f1cb6a5959a41a63b0df7f36d949f84",
+    "validation/20261118-library-cleanup/before/osd.kicad_sch.gz": "6c3476b0f994e1e068043f29e76b83629748f107a27b0b70e473c86dec8a232d",
+    "validation/20261118-library-cleanup/before/pads.kicad_sch.gz": "a99c371d3b1762a2b31b09994582a028dc6aef01dd57640f2004fffe9539e562",
+    "validation/20261118-library-cleanup/before/power.kicad_sch.gz": "ac6f7ef130e597a46cce2a72988a87bf5cd3eb68ba1a20c851fcc2a68b737b2a",
+    "validation/20261118-library-cleanup/before/rp2350a.kicad_sch.gz": "15542d512254c18ae1c6e68fbb0b4d950099d64a6136fa6bc8c682a78b885375",
+    "validation/20261118-library-cleanup/drc.json": "8bd74d8f9543274acfd091f02525b7884e0740636aa73c2668b584fa788a4cd2",
+    "validation/20261118-library-cleanup/erc.json": "1af14e811a1729c101772ef1d3ff77b8b6b600f29b988df4ea3bbc7abd3c68ec",
+    "validation/20261118-library-cleanup/pcb-repair.json": "9a7122d3d38aa48b755fa6911f1f0775c7fc28fff83783edf5f44a2cd5f4eaa1",
+    "validation/20261118-library-cleanup/receipt.json": "d10a00cc0d81d15366d7dd1da9efbc17a6acfa7fa7e03ab1235a7bc968dde870",
+    "validation/20261118-library-cleanup/schematic-repair.json": "9ac365fd7a1d2edad02c543e6a5842929f05799744fc3717e81bc328d2243832",
+    "validation/20261118-library-cleanup/schematic.net.xml.gz": "335249e56036832e732ed2b2239ad07837e287604545c5ba5375d37d7b3ceb8f",
+    "validation/20261118-library-cleanup/schematic.pdf": "26dc40d8d5d19ada5571bb38ccece852eb7b2e810d375b30a5c6a9b32c731b15",
+    "validation/20261118-library-cleanup/verify_geometry.py": "86e7e727415f61a6b49e54df368b7447ba07505bc27fb107aba6352196fbb4d0",
     "validation/accepted-nc-pad-restoration.json": "209adcc3039d2504f78e00e0242378888e37f743fe1829a2123a846fefe58df6",
     "validation/audit_import.mjs": "8b53e0f1e9085c8c6a1c3d49fcc4d6af1a29f694aee5ae84ac139b17b21f6f35",
     "validation/baseline-drc.json.gz": "2ebf077690d194455bbdedef707d6d0ccf2641066badaa16bce197ed85d251c7",
@@ -202,6 +254,8 @@
     "validation/baseline.net.xml.gz": "a15ef407b592c04999358a70ecedd29e3f8c65c9c79b1aeeff8dcf24387820d2",
     "validation/before-erc-intent-audit.json.gz": "9924984b8f662c2f350d22db820b5efd490ea74d429eb26a9f6dd5d0e062d579",
     "validation/before-erc-intent.net.gz": "89950d01fa2f29a1bd44c823375bd2872c1ad66193b805af5872cd5dfe421e7e",
+    "validation/card1-dat1-before-drc.json": "5a3cf7110a5825325aa51037b2dde8855e810dc36f426389685eabc9e2302bd9",
+    "validation/card1-dat1-pad-restoration.json": "79d88d1f6ba3a6dfe85b907b988d332b39630da924093bd361c7a2bb700afc13",
     "validation/documented-pg-erc-exclusion.json": "f963f280b25b87b83c6457e080362222795bbbbbe3499f81631bbdc139e74ff5",
     "validation/erc-annotation-import-proof.json": "1dfceb2099181c0e1efd29bfedb8bf1f48483c3e1f7072f8970449d59274b90c",
     "validation/erc-source-annotations.json": "a8a5e3fb6c325543e706e539c56afd64b707e4f5c20cbc9b482a91f810b78f3d",
@@ -211,6 +265,7 @@
     "validation/final-import-audit.json.gz": "f7f41d3e350bbd4f4d8cad2f8f160e9c4ac8a21515131c4de0d4ec2ebf27c61a",
     "validation/final-pcb-connectivity-proof.json": "40e5c315c9a76579c59612f22f49138fa18141aab123b063480d686cf253157c",
     "validation/hole-clearance-edits.json": "1961e27453c1f97ed5ad6bd81b10e47d9328a8f516684adaf81b203509b18567",
+    "validation/model-resolution-inventory.json": "97724d0dc551e6e70aadf6de3ffacb6f4e21445a3dd5a1e550bbec75766fee5e",
     "validation/nc-pad-candidate-drc.json": "0d6199e721628cb6432bf84fb13d4399b5ef8bff88bc3481b89f0347166a5dc0",
     "validation/nc-pad-restoration.json": "47046c2fa1173c79f3cf5928fb0e151fb4b80e18890a918325ad10f8c3d6cd2d",
     "validation/nc-via-trial-drc.json": "419ff4b31c03e0f4e6ad5cf257f40bc170566788a959df319a49271a64bf3cf3",
@@ -230,12 +285,9 @@
     "validation/u9-pcb-edit.json": "93638be78c9d521f8af379cbda348f79891882bbe48027b012769106da7109dd",
     "validation/u9-schematic-edit.json": "ea0d279b407b85caff6d7db8d23746863a9a99806a6d83a60863205da3083328",
     "validation/verify_pcb.py": "d92dae2f4a0573c6432cc88750a745c9a2b251466e032112a6cf549c094c0bbb",
-    "validation/versioned-annotation-edits.json": "4805af834235930a218dde0cb3bb5696d371dac064b898d88848ecb9b3a900fa",
-    "validation/model-resolution-inventory.json": "97724d0dc551e6e70aadf6de3ffacb6f4e21445a3dd5a1e550bbec75766fee5e",
-    "validation/card1-dat1-pad-restoration.json": "79d88d1f6ba3a6dfe85b907b988d332b39630da924093bd361c7a2bb700afc13",
-    "validation/card1-dat1-before-drc.json": "5a3cf7110a5825325aa51037b2dde8855e810dc36f426389685eabc9e2302bd9"
+    "validation/versioned-annotation-edits.json": "4805af834235930a218dde0cb3bb5696d371dac064b898d88848ecb9b3a900fa"
   },
-  "model_availability_at_review": {
+  "initial_model_availability_at_review": {
     "footprints": 164,
     "model_entries": 107,
     "enabled": 107,
@@ -244,5 +296,26 @@
     "model_less_footprints": 57,
     "unique_resolved_files": 10,
     "unique_missing_files": 17
+  },
+  "model_availability_at_review": {
+    "footprints": 164,
+    "model_entries": 107,
+    "enabled": 107,
+    "resolved": 107,
+    "missing": 0,
+    "model_less_footprints": 57,
+    "current_review": "mechanical-review/model-resolution-review.json"
+  },
+  "initial_external_dependencies": {
+    "hardware/KiCad-Library": "../../flight-controller-openfc-lite/hardware/KiCad-Library"
+  },
+  "local_model_assets": {
+    "directory": "hardware/lib.3dshapes",
+    "scope": "Real checked-in source model assets replace the earlier submodule-relative symlink. This records availability, not exact manufacturer geometry or assembly acceptance."
+  },
+  "consoleValueCorrection": {
+    "receipt": "validation/20261118-console-labels/receipt.json",
+    "scope": "Correct hidden template Value properties only. Native copper, pads, routing, placed component geometry, visible drawing text, and net partitions must remain identical.",
+    "nativeModelGeometryUnchanged": true
   }
 }

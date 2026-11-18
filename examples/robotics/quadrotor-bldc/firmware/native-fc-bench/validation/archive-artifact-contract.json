@@ -1,0 +1,58 @@
+{
+  "status": "pass",
+  "compiled_contract": {
+    "motor_pin": {
+      "address": "0x10004b48",
+      "size": 16,
+      "initial_bytes": "1f0000001e0000001d0000001c000000"
+    },
+    "g_bench": {
+      "address": "0x200005a8",
+      "size": 168,
+      "initial_bytes": "010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "vectors": {
+      "sp": "0x20082000",
+      "reset_pc": "0x1000015d",
+      "elf_entry": "0x1000014d"
+    }
+  },
+  "uf2": {
+    "blocks": 86,
+    "family": "0xe48bff59",
+    "start": "0x10000000",
+    "end_exclusive": "0x10005600",
+    "bin_bytes": 21884,
+    "payload_matches_bin": true
+  },
+  "negative_controls": {
+    "wrong_motor_pad": {
+      "rejected": true,
+      "reason": "Wrong compiled motor_pin contract"
+    },
+    "nonzero_startup_command": {
+      "rejected": true,
+      "reason": "Wrong compiled g_bench contract"
+    },
+    "corrupt_flash_byte": {
+      "rejected": true,
+      "reason": "UF2 payload differs from BIN"
+    }
+  },
+  "artifacts": {
+    "openfc_motor_bench.elf": {
+      "bytes": 432448,
+      "sha256": "f38456f3c78197f9168e26a095c6f7f19afd044ef338825d25afdbd167dd418b"
+    },
+    "openfc_motor_bench.uf2": {
+      "bytes": 44032,
+      "sha256": "e43766b933f67c42801e9342291c7681ff71f342323d4a861713eb1380dd9502"
+    },
+    "openfc_motor_bench.bin": {
+      "bytes": 21884,
+      "sha256": "b16880c82fed523271b5ec4f1e245b37ce51c7c1e085c3e359ea1901b34fc780"
+    }
+  },
+  "scope": "Artifact structure, native pads and zero startup state only; runtime and hardware qualification are separate.",
+  "physical_hardware_tested": false
+}

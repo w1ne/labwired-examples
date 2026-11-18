@@ -84,16 +84,16 @@ for(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2
 // Moving both frames together leaves the authored component placement unchanged.
 attach('esc-population-native-mesh',(await lib.meshFromSTL("https://raw.githubusercontent.com/w1ne/labwired-examples/574470d/examples/robotics/quadrotor-bldc/cad/inputs/esc-population-native.stl")).translate(-75.63257,34.6,14.4),[0,-12.75,15.93],'paint-matte','#363b40','esc-board');
 
-// Repaired native OpenFC-Lite board, immutable PCB SHA9794ec1a2bfd07f7.
+// Repaired native OpenFC-Lite board, immutable PCB SHA5c458e5101e154ad.
 // Declared nominal thickness 1.0 mm. KiCad exports the substrate z0..0.9378;
 // outer copper/mask and package stand-offs retain the source export convention.
 // Four open 4 mm mounting cutouts on 30.5 mm centres, real scalloped outline.
 // Export origin is mounting-pattern centre (153.0912,87.1597) in native PCB mm.
-const fcShape=await lib.fromSTEP("https://raw.githubusercontent.com/w1ne/labwired-examples/2c9bef1efcfa6ea9ec8008565b50d32267d782ea/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-substrate.step");
+const fcShape=await lib.fromSTEP("https://raw.githubusercontent.com/w1ne/labwired-examples/f741c8ca2ed11c9b55c84bcdae6cc6dec888a676/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-substrate.step");
 attach('fc-board-native',fcShape.translate(0,stackY,22),[-12.5,-28,22],'paint-matte','#18575e','fc-grommet-1-ENVELOPE');
-// 107 assigned component models, 47,786 STL facets. Original poses preserved.
+// 107 assigned component models, 47,778 STL facets. Original poses preserved.
 // L1/L2/L3 retain source package proxies; 53 bare contacts and 4 TP have no 3D body.
-attach('fc-population-native-mesh',(await lib.meshFromSTL("https://raw.githubusercontent.com/w1ne/labwired-examples/2c9bef1efcfa6ea9ec8008565b50d32267d782ea/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-components.stl")).translate(0,stackY,22),[0,stackY,22.9378],'paint-matte','#3a4044','fc-board-native');
+attach('fc-population-native-mesh',(await lib.meshFromSTL("https://raw.githubusercontent.com/w1ne/labwired-examples/f741c8ca2ed11c9b55c84bcdae6cc6dec888a676/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-components.stl")).translate(0,stackY,22),[0,stackY,22.9378],'paint-matte','#3a4044','fc-board-native');
 
 // Nominal blades for visual sweep checks only. The clipping cylinder fixes
 // the maximum radius; these straight sections are not a Gemfan airfoil.

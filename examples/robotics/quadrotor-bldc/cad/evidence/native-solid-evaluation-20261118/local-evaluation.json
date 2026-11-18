@@ -1,0 +1,812 @@
+{
+  "scope": "Full local raw-source evaluateScriptTool; exact imported bytes staged locally; hosted deployment/resource acceptance and physical qualification are separate.",
+  "runtimeHead": "b89aceba980c12ed404ce3963add0ee26106be0f",
+  "staging": {
+    "canonicalSourceSha256": "72810ad3fbf9ceb53b29d3fc50abbb2567e3416552b4df77d87d111884098dcb",
+    "stagedSourceSha256": "a7b9394e801c113de5a6c27acc936f4be8d7d2e44397a71b4146d07932737e1a",
+    "inputs": [
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Arm.step",
+        "sha256": "eaa66a41693627d9154bdaeb6282bcb17a4108f0f15fe9cfd97d4fe471597e69",
+        "bytes": 168139
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Base-Bot.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Base-Bot.step",
+        "sha256": "47538aaa7bba939307ca73825236777609665b951f54175ebd48d3ccbad275d5",
+        "bytes": 430839
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Base-Top.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Base-Top.step",
+        "sha256": "28074c26e7a674f75a5c16eab4f30821e275c0c4f9cc434ced0edcbd96dc445a",
+        "bytes": 398354
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Cross.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Cross.step",
+        "sha256": "709b3642fbc3c9ace2fdcb6083f23543451abcfbbbeb1cd7baa2cbc33958c4e6",
+        "bytes": 48708
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-L.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Standoff-L.step",
+        "sha256": "1b01cf10fb440f11400bd72386fb596af89b6235284e05fa21d0124c86725ad8",
+        "bytes": 92441
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-M3-F-F-20-OD5.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Standoff-M3-F-F-20-OD5.step",
+        "sha256": "a75bb2b867d196ddb3a6e04b7dac1512d3a39ada7504064446ab4870f4e27618",
+        "bytes": 5900
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-R.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Standoff-R.step",
+        "sha256": "ff99e5caa605ba44f68af114b3baa02c94a01014ccbf091a401368489392b925",
+        "bytes": 92781
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Top.step",
+        "file": "/data/work-evidence/labwired-industrial-packages-20261118/quad-native-inputs/Top.step",
+        "sha256": "d11cf26c7efadbd8619560f5080e52968a60fd9ce4434a31b8cc8a0d6156e8c1",
+        "bytes": 396351
+      },
+      {
+        "url": "https://raw.githubusercontent.com/w1ne/labwired-examples/100aec12c272423e484b20db36caa796d21adea4/examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/esc-board-populated.step",
+        "file": "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/esc-board-populated.step",
+        "sha256": "7b58fa3894becdccf4c6ed8fca309f84c85c3039856585594aae61d42e3c1390",
+        "bytes": 2345972
+      },
+      {
+        "url": "https://raw.githubusercontent.com/w1ne/labwired-examples/100aec12c272423e484b20db36caa796d21adea4/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-populated.step",
+        "file": "/data/worktrees/labwired-examples-quad-package-20261118/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-populated.step",
+        "sha256": "2dd54c18285a50d89ca85a3d5a2345aa6f29f7100e1c078eaba7fa83537a3592",
+        "bytes": 10089423
+      }
+    ],
+    "scope": "Only immutable HTTPS input locations were resolved to byte-identical local files. Geometry, poses, contact settings and all validation gates are unchanged."
+  },
+  "elapsedMs": 334976,
+  "cacheBefore": {
+    "hits": 0,
+    "misses": 0,
+    "size": 0
+  },
+  "cacheAfter": {
+    "hits": 382,
+    "misses": 10,
+    "size": 8
+  },
+  "result": {
+    "ok": true,
+    "buildOk": true,
+    "viewerError": "Studio viewer bundle missing. Run npm run build:mcp-viewer or reinstall kernelcad.",
+    "step": {
+      "validity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 159020.5307929975
+      },
+      "snapshots": {
+        "status": "unavailable",
+        "frame": {
+          "view": "iso",
+          "width": 512,
+          "height": 512,
+          "bounds": {
+            "min": [
+              -124.0621778264911,
+              -125.29520028260632,
+              -3
+            ],
+            "max": [
+              153.84514488891477,
+              126.25609240122212,
+              36.3
+            ]
+          }
+        },
+        "out_dir": "/data/tmp/andrii/kernelcad-step-OQKm3q",
+        "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+      }
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 159020.5307929975,
+      "faceCount": 17830,
+      "size": [
+        277.9073227154059,
+        251.55129268382842,
+        39.3
+      ]
+    },
+    "featureCount": 894,
+    "diagnostics": [],
+    "featureHealth": [],
+    "evaluationEvidence": {
+      "schema": "kernelcad.evaluation-evidence.v1",
+      "mode": "build",
+      "source": {
+        "sha256": "a7b9394e801c113de5a6c27acc936f4be8d7d2e44397a71b4146d07932737e1a",
+        "byteLength": 23697
+      },
+      "parameters": {
+        "values": {
+          "rotor1Angle": 0,
+          "rotor2Angle": 0,
+          "rotor3Angle": 0,
+          "rotor4Angle": 0
+        },
+        "sha256": "2840ecdb84bea879d65315e427d6cf7970b71a4524b246939d7bf6886766556b"
+      },
+      "engine": {
+        "kernel": "occt",
+        "version": "0.17.2",
+        "revision": null
+      },
+      "dependencies": {
+        "status": "untracked"
+      },
+      "reuse": {
+        "eligible": false,
+        "reason": "dependencies-untracked"
+      },
+      "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+      "identitySha256": "0816359f1aeddbb0e32fa920711c4f22b9bb5809e010cee9ffa2ddd32b9db56c"
+    },
+    "selections": [
+      {
+        "consumerFeatureId": "holes_1",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_1",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              5.4
+            ]
+          }
+        ],
+        "partDiagonal": 10.057833114543117
+      },
+      {
+        "consumerFeatureId": "holes_2",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_2",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              5.4
+            ]
+          }
+        ],
+        "partDiagonal": 10.057833114543117
+      },
+      {
+        "consumerFeatureId": "holes_3",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_3",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              5.4
+            ]
+          }
+        ],
+        "partDiagonal": 10.057833114543117
+      },
+      {
+        "consumerFeatureId": "holes_4",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_4",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              5.4
+            ]
+          }
+        ],
+        "partDiagonal": 10.057833114543117
+      },
+      {
+        "consumerFeatureId": "holes_5",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_5",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              6.07
+            ]
+          }
+        ],
+        "partDiagonal": 10.432876268220577
+      },
+      {
+        "consumerFeatureId": "holes_6",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_6",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              6.07
+            ]
+          }
+        ],
+        "partDiagonal": 10.432876268220577
+      },
+      {
+        "consumerFeatureId": "holes_7",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_7",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              6.07
+            ]
+          }
+        ],
+        "partDiagonal": 10.432876268220577
+      },
+      {
+        "consumerFeatureId": "holes_8",
+        "selectorText": "top",
+        "syntax": "lineage",
+        "fingerprints": [
+          {
+            "entityKind": "face",
+            "geomType": "PLANE",
+            "producer": "cylinder_8",
+            "role": "top",
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "size": 28.274333882308145,
+            "centroid": [
+              4.440892098500626e-16,
+              2.7042426428277396e-16,
+              6.07
+            ]
+          }
+        ],
+        "partDiagonal": 10.432876268220577
+      }
+    ],
+    "requirements": {
+      "ok": true,
+      "status": "not-declared",
+      "entries": [],
+      "summary": {
+        "pass": 0,
+        "fail": 0,
+        "notEvaluated": 0
+      }
+    },
+    "ports": [],
+    "parts": {
+      "count": 412,
+      "names": [
+        "frame-bottom",
+        "frame-cross",
+        "frame-middle",
+        "camera-side-left",
+        "camera-side-right",
+        "arm-rear-right",
+        "arm-front-right",
+        "arm-rear-left",
+        "arm-front-left",
+        "standoff-rear-left",
+        "standoff-rear-right",
+        "standoff-middle-left",
+        "standoff-middle-right",
+        "frame-top",
+        "esc-grommet-1-ENVELOPE",
+        "esc-grommet-2-ENVELOPE",
+        "esc-grommet-3-ENVELOPE",
+        "esc-grommet-4-ENVELOPE",
+        "esc-board",
+        "fc-grommet-1-ENVELOPE",
+        "fc-grommet-2-ENVELOPE",
+        "fc-grommet-3-ENVELOPE",
+        "fc-grommet-4-ENVELOPE",
+        "esc-native-solid-000",
+        "esc-native-solid-001",
+        "esc-native-solid-002",
+        "esc-native-solid-003",
+        "esc-native-solid-004",
+        "esc-native-solid-005",
+        "esc-native-solid-006",
+        "esc-native-solid-007",
+        "esc-native-solid-008",
+        "esc-native-solid-009",
+        "esc-native-solid-010",
+        "esc-native-solid-011",
+        "esc-native-solid-012",
+        "esc-native-solid-013",
+        "esc-native-solid-014",
+        "esc-native-solid-015",
+        "esc-native-solid-016",
+        "esc-native-solid-017",
+        "esc-native-solid-018",
+        "esc-native-solid-019",
+        "esc-native-solid-020",
+        "esc-native-solid-021",
+        "esc-native-solid-022",
+        "esc-native-solid-023",
+        "esc-native-solid-024",
+        "esc-native-solid-025",
+        "esc-native-solid-026",
+        "esc-native-solid-027",
+        "esc-native-solid-028",
+        "esc-native-solid-029",
+        "esc-native-solid-030",
+        "esc-native-solid-031",
+        "esc-native-solid-032",
+        "esc-native-solid-033",
+        "esc-native-solid-034",
+        "esc-native-solid-035",
+        "esc-native-solid-036",
+        "esc-native-solid-037",
+        "esc-native-solid-038",
+        "esc-native-solid-039",
+        "esc-native-solid-040",
+        "esc-native-solid-041",
+        "esc-native-solid-042",
+        "esc-native-solid-043",
+        "esc-native-solid-044",
+        "esc-native-solid-045",
+        "esc-native-solid-046",
+        "esc-native-solid-047",
+        "esc-native-solid-048",
+        "esc-native-solid-049",
+        "esc-native-solid-050",
+        "esc-native-solid-051",
+        "esc-native-solid-052",
+        "esc-native-solid-053",
+        "esc-native-solid-054",
+        "esc-native-solid-055",
+        "esc-native-solid-056",
+        "esc-native-solid-057",
+        "esc-native-solid-058",
+        "esc-native-solid-059",
+        "esc-native-solid-060",
+        "esc-native-solid-061",
+        "esc-native-solid-062",
+        "esc-native-solid-063",
+        "esc-native-solid-064",
+        "esc-native-solid-065",
+        "esc-native-solid-066",
+        "esc-native-solid-067",
+        "esc-native-solid-068",
+        "esc-native-solid-069",
+        "esc-native-solid-070",
+        "esc-native-solid-071",
+        "esc-native-solid-072",
+        "esc-native-solid-073",
+        "esc-native-solid-074",
+        "esc-native-solid-075",
+        "esc-native-solid-076",
+        "esc-native-solid-077",
+        "esc-native-solid-078",
+        "esc-native-solid-079",
+        "esc-native-solid-080",
+        "esc-native-solid-081",
+        "esc-native-solid-082",
+        "esc-native-solid-083",
+        "esc-native-solid-084",
+        "esc-native-solid-085",
+        "esc-native-solid-086",
+        "esc-native-solid-087",
+        "esc-native-solid-088",
+        "esc-native-solid-089",
+        "esc-native-solid-090",
+        "esc-native-solid-091",
+        "esc-native-solid-092",
+        "esc-native-solid-093",
+        "esc-native-solid-094",
+        "esc-native-solid-095",
+        "esc-native-solid-096",
+        "esc-native-solid-097",
+        "esc-native-solid-098",
+        "esc-native-solid-099",
+        "esc-native-solid-100",
+        "esc-native-solid-101",
+        "esc-native-solid-102",
+        "esc-native-solid-103",
+        "esc-native-solid-104",
+        "esc-native-solid-105",
+        "esc-native-solid-106",
+        "esc-native-solid-107",
+        "esc-native-solid-108",
+        "esc-native-solid-109",
+        "esc-native-solid-110",
+        "esc-native-solid-111",
+        "esc-native-solid-112",
+        "esc-native-solid-113",
+        "esc-native-solid-114",
+        "esc-native-solid-115",
+        "esc-native-solid-116",
+        "esc-native-solid-117",
+        "esc-native-solid-118",
+        "esc-native-solid-119",
+        "esc-native-solid-120",
+        "esc-native-solid-121",
+        "esc-native-solid-122",
+        "esc-native-solid-123",
+        "esc-native-solid-124",
+        "esc-native-solid-125",
+        "esc-native-solid-126",
+        "esc-native-solid-127",
+        "esc-native-solid-128",
+        "esc-native-solid-129",
+        "esc-native-solid-130",
+        "esc-native-solid-131",
+        "esc-native-solid-132",
+        "esc-native-solid-133",
+        "esc-native-solid-134",
+        "esc-native-solid-135",
+        "esc-native-solid-136",
+        "esc-native-solid-137",
+        "esc-native-solid-138",
+        "esc-native-solid-139",
+        "esc-native-solid-140",
+        "esc-native-solid-141",
+        "esc-native-solid-142",
+        "esc-native-solid-143",
+        "esc-native-solid-144",
+        "esc-native-solid-145",
+        "esc-native-solid-146",
+        "esc-native-solid-147",
+        "esc-native-solid-148",
+        "esc-native-solid-149",
+        "esc-native-solid-150",
+        "esc-native-solid-151",
+        "esc-native-solid-152",
+        "esc-native-solid-153",
+        "esc-native-solid-154",
+        "esc-native-solid-155",
+        "esc-native-solid-156",
+        "esc-native-solid-157",
+        "esc-native-solid-158",
+        "esc-native-solid-159",
+        "esc-native-solid-160",
+        "esc-native-solid-161",
+        "esc-native-solid-162",
+        "esc-native-solid-163",
+        "esc-native-solid-164",
+        "esc-native-solid-165",
+        "esc-native-solid-166",
+        "esc-native-solid-167",
+        "esc-native-solid-168",
+        "esc-native-solid-169",
+        "esc-native-solid-170",
+        "esc-native-solid-171",
+        "esc-native-solid-172",
+        "esc-native-solid-173",
+        "esc-native-solid-174",
+        "esc-native-solid-175",
+        "esc-native-solid-176",
+        "esc-native-solid-177",
+        "esc-native-solid-178",
+        "esc-native-solid-179",
+        "esc-native-solid-180",
+        "esc-native-solid-181",
+        "esc-native-solid-182",
+        "esc-native-solid-183",
+        "esc-native-solid-184",
+        "esc-native-solid-185",
+        "esc-native-solid-186",
+        "esc-native-solid-187",
+        "esc-native-solid-188",
+        "esc-native-solid-189",
+        "esc-native-solid-190",
+        "esc-native-solid-191",
+        "esc-native-solid-192",
+        "esc-native-solid-193",
+        "esc-native-solid-194",
+        "esc-native-solid-195",
+        "esc-native-solid-196",
+        "esc-native-solid-197",
+        "esc-native-solid-198",
+        "esc-native-solid-199",
+        "esc-native-solid-200",
+        "esc-native-solid-201",
+        "esc-native-solid-202",
+        "esc-native-solid-203",
+        "esc-native-solid-204",
+        "esc-native-solid-205",
+        "esc-native-solid-206",
+        "esc-native-solid-207",
+        "esc-native-solid-208",
+        "esc-native-solid-209",
+        "esc-native-solid-210",
+        "esc-native-solid-211",
+        "esc-native-solid-212",
+        "fc-board-native",
+        "fc-native-solid-049",
+        "fc-native-solid-110",
+        "fc-native-solid-000",
+        "fc-native-solid-001",
+        "fc-native-solid-002",
+        "fc-native-solid-003",
+        "fc-native-solid-004",
+        "fc-native-solid-005",
+        "fc-native-solid-006",
+        "fc-native-solid-007",
+        "fc-native-solid-008",
+        "fc-native-solid-009",
+        "fc-native-solid-010",
+        "fc-native-solid-011",
+        "fc-native-solid-012",
+        "fc-native-solid-013",
+        "fc-native-solid-014",
+        "fc-native-solid-015",
+        "fc-native-solid-016",
+        "fc-native-solid-017",
+        "fc-native-solid-018",
+        "fc-native-solid-019",
+        "fc-native-solid-020",
+        "fc-native-solid-021",
+        "fc-native-solid-022",
+        "fc-native-solid-023",
+        "fc-native-solid-024",
+        "fc-native-solid-025",
+        "fc-native-solid-026",
+        "fc-native-solid-027",
+        "fc-native-solid-028",
+        "fc-native-solid-029",
+        "fc-native-solid-030",
+        "fc-native-solid-031",
+        "fc-native-solid-032",
+        "fc-native-solid-033",
+        "fc-native-solid-034",
+        "fc-native-solid-035",
+        "fc-native-solid-036",
+        "fc-native-solid-037",
+        "fc-native-solid-038",
+        "fc-native-solid-039",
+        "fc-native-solid-040",
+        "fc-native-solid-041",
+        "fc-native-solid-042",
+        "fc-native-solid-043",
+        "fc-native-solid-044",
+        "fc-native-solid-045",
+        "fc-native-solid-046",
+        "fc-native-solid-047",
+        "fc-native-solid-048",
+        "fc-native-solid-050",
+        "fc-native-solid-051",
+        "fc-native-solid-052",
+        "fc-native-solid-053",
+        "fc-native-solid-054",
+        "fc-native-solid-055",
+        "fc-native-solid-056",
+        "fc-native-solid-057",
+        "fc-native-solid-058",
+        "fc-native-solid-059",
+        "fc-native-solid-060",
+        "fc-native-solid-061",
+        "fc-native-solid-062",
+        "fc-native-solid-063",
+        "fc-native-solid-064",
+        "fc-native-solid-065",
+        "fc-native-solid-066",
+        "fc-native-solid-067",
+        "fc-native-solid-068",
+        "fc-native-solid-069",
+        "fc-native-solid-070",
+        "fc-native-solid-071",
+        "fc-native-solid-072",
+        "fc-native-solid-073",
+        "fc-native-solid-074",
+        "fc-native-solid-075",
+        "fc-native-solid-076",
+        "fc-native-solid-077",
+        "fc-native-solid-078",
+        "fc-native-solid-079",
+        "fc-native-solid-080",
+        "fc-native-solid-081",
+        "fc-native-solid-082",
+        "fc-native-solid-083",
+        "fc-native-solid-084",
+        "fc-native-solid-085",
+        "fc-native-solid-086",
+        "fc-native-solid-087",
+        "fc-native-solid-088",
+        "fc-native-solid-089",
+        "fc-native-solid-090",
+        "fc-native-solid-091",
+        "fc-native-solid-092",
+        "fc-native-solid-093",
+        "fc-native-solid-094",
+        "fc-native-solid-095",
+        "fc-native-solid-096",
+        "fc-native-solid-097",
+        "fc-native-solid-098",
+        "fc-native-solid-099",
+        "fc-native-solid-100",
+        "fc-native-solid-101",
+        "fc-native-solid-102",
+        "fc-native-solid-103",
+        "fc-native-solid-104",
+        "fc-native-solid-105",
+        "fc-native-solid-106",
+        "fc-native-solid-107",
+        "fc-native-solid-108",
+        "fc-native-solid-109",
+        "fc-native-solid-111",
+        "fc-native-solid-112",
+        "fc-native-solid-113",
+        "fc-native-solid-114",
+        "fc-native-solid-115",
+        "fc-native-solid-116",
+        "fc-native-solid-117",
+        "fc-native-solid-118",
+        "fc-native-solid-119",
+        "fc-native-solid-120",
+        "fc-native-solid-121",
+        "fc-native-solid-122",
+        "fc-native-solid-123",
+        "fc-native-solid-124",
+        "fc-native-solid-125",
+        "fc-native-solid-126",
+        "fc-native-solid-127",
+        "fc-native-solid-128",
+        "fc-native-solid-129",
+        "fc-native-solid-130",
+        "fc-native-solid-131",
+        "fc-native-solid-132",
+        "fc-native-solid-133",
+        "fc-native-solid-134",
+        "fc-native-solid-135",
+        "fc-native-solid-136",
+        "fc-native-solid-137",
+        "fc-native-solid-138",
+        "fc-native-solid-139",
+        "fc-native-solid-140",
+        "fc-native-solid-141",
+        "fc-native-solid-142",
+        "fc-native-solid-143",
+        "fc-native-solid-144",
+        "fc-native-solid-145",
+        "fc-native-solid-146",
+        "fc-native-solid-147",
+        "fc-native-solid-148",
+        "fc-native-solid-149",
+        "fc-native-solid-150",
+        "fc-native-solid-151",
+        "fc-native-solid-152",
+        "fc-native-solid-153",
+        "fc-native-solid-154",
+        "fc-native-solid-155",
+        "fc-native-solid-156",
+        "fc-native-solid-157",
+        "fc-native-solid-158",
+        "fc-native-solid-159",
+        "fc-native-solid-160",
+        "fc-native-solid-161",
+        "fc-native-solid-162",
+        "motor-base-rear-right-ENVELOPE",
+        "rotor-rear-right-ENVELOPE",
+        "prop-rear-right-ENVELOPE",
+        "motor-base-front-right-ENVELOPE",
+        "rotor-front-right-ENVELOPE",
+        "prop-front-right-ENVELOPE",
+        "motor-base-rear-left-ENVELOPE",
+        "rotor-rear-left-ENVELOPE",
+        "prop-rear-left-ENVELOPE",
+        "motor-base-front-left-ENVELOPE",
+        "rotor-front-left-ENVELOPE",
+        "prop-front-left-ENVELOPE"
+      ]
+    },
+    "mechanism": "real",
+    "mechanismSummary": {
+      "verdict": "real",
+      "maxLevel": "ok",
+      "statement": "Motion checked: 13 poses across 4 joints (each joint at its limits), animation within limits on 4 joints, all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+      "checked": [
+        "13 poses across 4 joints (each joint at its limits)",
+        "animation within limits on 4 joints",
+        "all mates satisfied",
+        "no collisions",
+        "fastened parts stay rigid"
+      ],
+      "skipped": [
+        "gravity hold and drop-on-release were not checked"
+      ],
+      "failures": []
+    },
+    "reviewHint": "This model has articulated mates, and evaluate_script's mechanism check is shallow: it does not check joint-support intents, pose-envelope overlap at declared mate limits, or gravity drop / static hold. Run review_cad for pose-envelope + gravity checks before calling the mechanism done."
+  }
+}

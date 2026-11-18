@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-18T20:13:56",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.8",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64",
+            "violations": []
+        },
+        {
+            "path": "/RP2350A/",
+            "uuid_path": "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cec45a0d-1d48-4800-9760-14c521e5fc8b",
+            "violations": []
+        },
+        {
+            "path": "/POWER/",
+            "uuid_path": "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161",
+            "violations": []
+        },
+        {
+            "path": "/PADS/",
+            "uuid_path": "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/e8ddc219-4a16-40b0-9f20-756a7d038611",
+            "violations": []
+        },
+        {
+            "path": "/IMU/",
+            "uuid_path": "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/757ed1e6-9a5f-4a0e-a946-254eae8dfb0d",
+            "violations": []
+        },
+        {
+            "path": "/BLACKBOX/",
+            "uuid_path": "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68",
+            "violations": []
+        },
+        {
+            "path": "/OSD/",
+            "uuid_path": "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b",
+            "violations": []
+        }
+    ],
+    "source": "OpenFC.kicad_sch"
+}

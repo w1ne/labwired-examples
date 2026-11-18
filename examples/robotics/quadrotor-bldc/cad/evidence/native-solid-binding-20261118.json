@@ -1,0 +1,55 @@
+{
+  "schema": "labwired.quadrotor.native-solid-binding.v1",
+  "candidateSource": "cad/drone-native-solids.kcad.ts",
+  "candidateSourceSha256": "72810ad3fbf9ceb53b29d3fc50abbb2567e3416552b4df77d87d111884098dcb",
+  "nativeSolidCount": 378,
+  "expectedAssemblyPartCount": 412,
+  "expectedMateCount": 411,
+  "validationStatus": "local evaluateScriptTool green; strict physical review and hosted acceptance pending",
+  "inputs": {
+    "esc": {
+      "url": "https://raw.githubusercontent.com/w1ne/labwired-examples/100aec12c272423e484b20db36caa796d21adea4/examples/robotics/quadrotor-bldc/hardware/esc-4in1/fabrication-review/esc-board-populated.step",
+      "sha256": "7b58fa3894becdccf4c6ed8fca309f84c85c3039856585594aae61d42e3c1390",
+      "solidCount": 214,
+      "substrateIndex": 213,
+      "componentIndices": [
+        0,
+        212
+      ]
+    },
+    "fc": {
+      "url": "https://raw.githubusercontent.com/w1ne/labwired-examples/100aec12c272423e484b20db36caa796d21adea4/examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1/mechanical-review/fc-populated.step",
+      "sha256": "2dd54c18285a50d89ca85a3d5a2345aa6f29f7100e1c078eaba7fa83537a3592",
+      "solidCount": 164,
+      "substrateIndex": 163,
+      "componentIndices": [
+        0,
+        162
+      ]
+    }
+  },
+  "preservation": "All378 original native solid shapes retained. Source-qualified Card1/INA186 transforms are recorded in model-datum-correction-20261118; other native poses, frame, motor, prop and support envelopes are unchanged. Parent relationships express purchased connector subassemblies and do not imply measured solder or mechanical strength.",
+  "previousCandidateSourceSha256": "71b878546aa3fded0cca5573cef25ee26923d2a88e68695cb086181910d637ba",
+  "assetCommit": "100aec12c272423e484b20db36caa796d21adea4",
+  "componentParents": {
+    "fc-native-solid-110": [
+      "111..143: USB shell/contact tips/tails"
+    ],
+    "fc-native-solid-049": [
+      "040..048 and050: microSD contacts/shell"
+    ]
+  },
+  "localEvaluation": {
+    "receipt": "cad/evidence/native-solid-evaluation-20261118/local-evaluation.json",
+    "runtimeCommit": "b89aceba980c12ed404ce3963add0ee26106be0f",
+    "elapsedMs": 334976,
+    "ok": true,
+    "buildOk": true,
+    "features": 894,
+    "diagnostics": 0,
+    "checkedPoses": 13,
+    "rotorJoints": 4,
+    "strictPhysicalReviewAccepted": false,
+    "hostedResourceAcceptance": false
+  }
+}

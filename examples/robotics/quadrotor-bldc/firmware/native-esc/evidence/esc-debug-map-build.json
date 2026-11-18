@@ -1,0 +1,68 @@
+{
+  "runs": [
+    {
+      "label": "checkout",
+      "command": [
+        "make",
+        "-j2",
+        "OPENESC_30_F421",
+        "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+        "PART=AT32F421G8U7",
+        "OBJ=obj-debug-map",
+        "CFLAGS_COMMON=$(CFLAGS_BASE) -ffile-prefix-map=/data/worktrees/quad-am32-native-20261118=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi -Wa,--debug-prefix-map=/data/worktrees/quad-am32-native-20261118=."
+      ],
+      "cwd": "/data/worktrees/quad-am32-native-20261118",
+      "exit": 0,
+      "seconds": 10.580208247993141,
+      "artifacts": {
+        ".elf": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-debug-map/AM32_OPENESC_30_F421_2.21.elf",
+          "bytes": 567480,
+          "sha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d"
+        },
+        ".bin": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-debug-map/AM32_OPENESC_30_F421_2.21.bin",
+          "bytes": 27648,
+          "sha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843"
+        },
+        ".hex": {
+          "path": "/data/worktrees/quad-am32-native-20261118/obj-debug-map/AM32_OPENESC_30_F421_2.21.hex",
+          "bytes": 59024,
+          "sha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0"
+        }
+      }
+    },
+    {
+      "label": "archive",
+      "command": [
+        "make",
+        "-j2",
+        "OPENESC_30_F421",
+        "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+        "PART=AT32F421G8U7",
+        "OBJ=obj-debug-map",
+        "CFLAGS_COMMON=$(CFLAGS_BASE) -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-replay/am32-f421=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi -Wa,--debug-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-replay/am32-f421=."
+      ],
+      "cwd": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-replay/am32-f421",
+      "exit": 0,
+      "seconds": 20.04077500902349,
+      "artifacts": {
+        ".elf": {
+          "path": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-replay/am32-f421/obj-debug-map/AM32_OPENESC_30_F421_2.21.elf",
+          "bytes": 567480,
+          "sha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d"
+        },
+        ".bin": {
+          "path": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-replay/am32-f421/obj-debug-map/AM32_OPENESC_30_F421_2.21.bin",
+          "bytes": 27648,
+          "sha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843"
+        },
+        ".hex": {
+          "path": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-replay/am32-f421/obj-debug-map/AM32_OPENESC_30_F421_2.21.hex",
+          "bytes": 59024,
+          "sha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0"
+        }
+      }
+    }
+  ]
+}
