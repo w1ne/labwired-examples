@@ -6,16 +6,16 @@ The original submodule remains unchanged at
 `def4ab29a5af430551aa15756b747e9ad6d4c480`.
 
 The candidate passes the configured KiCad 10.0.8 physical DRC with **zero
-errors, zero unconnected items and zero schematic/PCB parity differences**.
+errors or warnings, zero unconnected items and zero schematic/PCB parity differences**.
 The original omission of Card1 DAT1 pad 8 is repaired with the exact library
 pad. ERC has
-zero active errors after one exact, source-backed exclusion for the unused
+zero active errors or warnings after one exact, source-backed exclusion for the unused
 LP5912 PG pin connected to ground. All design rules and ERC severities are
 unchanged.
 
 [Editable PCB](hardware/OpenFC.kicad_pcb) ·
 [Editable schematic](hardware/OpenFC.kicad_sch) ·
-[Seven-sheet review PDF](validation/schematic-rev2-lw1.pdf) ·
+[Current seven-sheet review PDF](validation/20261118-library-cleanup/schematic.pdf) ·
 [Immutable source and result manifest](source-and-validation.json)
 
 ## Changes
@@ -37,6 +37,40 @@ This repair does not claim that the source pattern is TI's land-pattern
 example. U10's new footprint is explicitly a TI example extraction and is
 recorded separately.
 
+## Native library cleanup — 2026-11-18
+
+The follow-up cleanup resolves the remaining 178 ERC warnings and five DRC
+warnings at their native source. It preserves every routed land, drill,
+track, via and filled-zone polygon from the DAT1-restored board. The
+[change receipt](validation/20261118-library-cleanup/receipt.json) classifies
+the original warnings and links the selected package identity.
+
+- Define active pin directions from the RP2350, BMI270, LMR51635, LP5912,
+  SN74LVC1G3157, COS8051 and TLV7031 manufacturer tables. Use passive roles
+  for physical connector contacts, inductors, diodes, crystals and switches.
+  Synchronize the project library and schematic caches.
+- Give the existing BMI270 its own correct symbol identity. The populated
+  device remains BMI270; it no longer inherits the unrelated LSM6 symbol name.
+- Normalize U12 TLV7031 numbering to functional table 4-1 and the separately
+  linked TI DPW0005A drawing: OUT1, VCC2, VEE3, IN−4, IN+5. Both schematic
+  and footprint retain their physical terminal positions and connections.
+  TI also appends DPW0005B in its current datasheet. This is documented
+  A-drawing identity consistency, not evidence of a repaired physical short.
+- Preserve the actual J52/J54 custom solder lands under distinct project
+  footprint names. Synchronize the Card1 and USB1 definitions with the
+  existing placed lands and drills. Keep U12 under its named A drawing.
+- Remove one dangling no-connect marker, unify redundant net aliases and
+  move the outside-board “B = SIGNAL” note from B.Cu to Cmts.User.
+- Declare the filtered VREG_AVDD supply after the existing 30 Ω R12 with
+  one PWR_FLAG. This is ERC intent, not a physical voltage source.
+
+No rule severity, minimum clearance, design-rule exclusion or pin-compatibility
+matrix changed. The exact pre-existing U7 PG exception remains. The project
+file is byte-identical to its input. The read-only
+[structural proof](validation/20261118-library-cleanup/pcb-repair.json)
+checks 584 pad objects, 1,753 tracks/vias, 19 zones and 113 net partitions.
+All compare equal after the documented aliases and U12 identifier map.
+
 ## Manufacturer evidence
 
 Bosch's [BMI270 datasheet BST-BMI270-DS000-08](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf),
@@ -44,7 +78,7 @@ page 135, states for the auxiliary pins: **“Do not connect to GND.”**
 The original board assigned both pads to GND and one GND via physically
 contacted both. The final read-only KiCad shape test checks each restored
 or corrected NC pad against all pads, tracks, vias and filled copper on its
-copper layer. All six tested pads have zero contacts.
+copper layer. All seven tested pads, including restored Card1 DAT1, have zero contacts.
 
 TI's [SN74LVC1G3157 datasheet SCES424O](https://www.ti.com/lit/ds/symlink/sn74lvc1g3157.pdf),
 pages 54–55, provides the DTB0006A example mask and paste geometry used for
@@ -69,30 +103,31 @@ yield.
 
 ## Observed checks
 
-| KiCad 10.0.8 check | Pinned source | Revision 2-LW1 |
-| --- | ---: | ---: |
-| Physical DRC errors | 5: four hole-clearance, one copper-clearance | 0 |
-| Physical DRC warnings | 11 | 5 |
-| Unconnected PCB items | 0 | 0 |
-| Schematic/PCB parity warnings | 17 | 0 |
-| Active ERC errors | 9: eight supply declarations, one input-driver declaration | 0 |
-| ERC warnings | 182 | 178 |
-| Exact documented ERC exclusions | 0 | 1: unused U7 PG3 grounded |
+| KiCad 10.0.8 check | Pinned upstream | Initial 2-LW1 | Current cleanup |
+| --- | ---: | ---: | ---: |
+| Physical DRC errors | 5 | 0 | 0 |
+| Physical DRC warnings | 11 | 5 | 0 |
+| Unconnected PCB items | 0 | 0 | 0 |
+| Schematic/PCB parity warnings | 17 | 0 | 0 |
+| Active ERC errors | 9 | 0 | 0 |
+| ERC warnings | 182 | 178 | 0 |
+| Exact documented ERC exclusions | 0 | 1 | 1 |
 
-The five final physical warnings are four preserved source/library footprint
-mismatches and the original non-mirrored `B = SIGNAL` annotation outside the
-board. The 178 ERC warnings are retained; this repair does not reclassify
-unknown pin roles or change the global pin-compatibility matrix to clear them.
+Current [ERC](validation/20261118-library-cleanup/erc.json) and
+[DRC/parity](validation/20261118-library-cleanup/drc.json) receipts apply to
+PCB SHA-256 5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9.
+The older receipts remain unchanged and bind to the preceding native hashes.
 The installed environment substitutes DejaVu for the unavailable Tokyo font.
 
-The final board has **164 footprints and 584 pad objects**, up from 579 pad
-objects. Its 19 zones were refilled with the original rules. All 445
-schematic electrical endpoints remain. Only U9 pads 2/3 change their net
-assignment. The six U10 pads each retain an actual same-net track contact.
-See [native PCB proof](validation/final-pcb-connectivity-proof.json) and
-[schematic endpoint proof](validation/schematic-connectivity-proof.json).
+The board has **164 footprints and 584 pad objects**, up from the upstream
+579 pad objects. The preceding physical repair changed the auxiliary BMI270
+connections and local routing; this follow-up library cleanup changes no
+physical connectivity or placement. Its explicit U12 numbering map is
+applied when comparing the 113 net partitions. The six U10 pads retain the
+same-net track contacts established by the earlier
+[native proof](validation/final-pcb-connectivity-proof.json).
 
-The actual app importer produces the same 160-part, 82-net graph before and
+The archived initial-repair app importer check produced the same 160-part, 82-net graph before and
 after the ERC flags and symbol annotations. Diagram, resolved nets, mapping,
 compiler result and lowerer result are identical. The source-free import
 still fails with `PWR_RAIL_UNDRIVEN` on `net@C22:1`, which contains the real
@@ -121,31 +156,28 @@ Every coordinate is in the
 before and after DRC reports. No rule, layer or footprint changed. No
 signal-integrity or power-integrity review of the reroute was performed.
 
-The board copper changed after the mechanical-review exports, reviewed-model
-provenance and model inventory were generated; their recorded board hash is
-the previous revision. Footprints and models did not change, but those
-exports were not regenerated.
+The native STEP and component mesh have now been regenerated from the current
+board. The [export manifest](mechanical-review/export-result.json) binds each
+actual command and output to the exact native board hash. The existing
+KernelCAD revision 4 used earlier geometry and does not qualify this revision.
+Native sensor startup, Betaflight arming, ESC operation, flight control and
+physical power-on remain unqualified.
 
-The existing populated KernelCAD revision 4 uses earlier board geometry.
-Its fit receipt cannot qualify the moved components or changed copper in
-2-LW1. This candidate also does not establish native sensor startup,
-Betaflight arming, ESC operation, flight control or physical power-on.
+## Model availability
 
-## Model availability at review
+All 107 enabled source model entries resolve to their pinned assets. The
+17 standard KiCad STEP files are preserved under reviewed-models; custom
+models remain in the original source submodule. The
+[current model review](mechanical-review/model-resolution-review.json)
+records every model hash, native offset, rotation and scale. The earlier
+[model inventory](validation/model-resolution-inventory.json) remains a
+historical record of the initially incomplete export environment.
 
-The [model inventory](validation/model-resolution-inventory.json) records
-107 enabled source model references. Eleven references resolve to ten cached
-upstream files; each file matches its exact Git blob at the pinned upstream
-commit. The environment lacks 17 standard KiCad STEP files used by 96 other
-references. The 57 footprints without models are 53 solder contacts and four
-testpoints. The committed hardware refers to the original pinned model
-library through relative links; initialize that submodule to resolve them.
-
-All source model paths, offsets and rotations remain unchanged. The native
-inductor entries reference generic Murata/Changjiang package models. Their
-presence does not establish manufacturer-specific dimensions. Root assembly
-work must resolve and inspect the missing models and verify the newly moved
-parts before claiming a populated FC fit.
+The 57 model-free footprints are 53 solder contacts and four testpoints.
+The inductor models remain nominal Murata/Changjiang package proxies, not
+manufacturer-specific models. The new component mesh has 47,778 facets.
+No assigned body, source pose or model scale was changed to improve fit.
+A native identity binding is not a populated assembly fit result.
 
 ## Reproduce
 
@@ -155,17 +187,22 @@ parts before claiming a populated FC fit.
 2. Use KiCad 10.0.8 with its standard symbol/footprint libraries and the project
    tables. Run `validation/run_native_checks.sh` with an output directory.
    The script does not edit or refill the board; it audits the committed fill.
-3. Run the read-only `validation/verify_pcb.py` with KiCad's `pcbnew` Python
-   environment, the pinned original board, the copied board, and an output
-   receipt path. It compares pad identities, nets, geometry changes and direct
-   NC copper contacts, and verifies the single allowed project-metadata delta.
+3. Run the read-only validation/20261118-library-cleanup/verify_geometry.py
+   with Python and sexpdata 1.0.2. Its compressed baseline files reproduce
+   the exact structural comparison without a KiCad mutation. An optional
+   output-path argument writes a fresh JSON receipt. The older
+   validation/verify_pcb.py describes the initial physical repair; its
+   historical output is linked by the new proof's input board hash.
 4. To repeat app import checks, set `LABWIRED_APP_ROOT` to the reviewed app
    checkout listed in the manifest. Run `node --import tsx
    validation/audit_import.mjs INPUT.net OUTPUT.json` from that app checkout.
    Compare the recorded before-annotation and final netlists. The exact app
    source and generated metadata are required; an older released catalog
    cannot reproduce this onboarding result.
-5. Run the repository's `python3 -m unittest discover -s scripts -p
+5. To regenerate native mechanical inputs, use KiCad 10.0.8 and its pcbnew
+   Python module to run mechanical-review/export_native.py. The script fails
+   if an assigned model asset or local transform differs from the review.
+6. Run the repository's `python3 -m unittest discover -s scripts -p
    'test_*.py' -v` integrity suite. These tests verify archived source/evidence
    consistency; they do not substitute for KiCad or a physical test.
 

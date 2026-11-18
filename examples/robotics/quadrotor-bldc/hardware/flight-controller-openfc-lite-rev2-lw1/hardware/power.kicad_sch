@@ -32,7 +32,7 @@
 
 (symbol "C_1_1" (pin passive line (at 0 3.81 270) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
-(symbol "Device:LED" (pin_numbers (hide yes)) (pin_names (offset 1.016) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "lib:LED" (pin_numbers (hide yes)) (pin_names (offset 1.016) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "D" (at 0 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -120,7 +120,7 @@
 
 (symbol "R_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
-(symbol "LP5912-3.3DRV_1" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
+(symbol "lib:LP5912-3.3DRVR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
 (property "Reference" "U7" (at 0 10.16 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -136,11 +136,11 @@
 
 (property "ki_fp_filters" "WSON*1EP*2x2mm*P0.65mm*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
-(symbol "LP5912-3.3DRV_1_0_1" 
+(symbol "LP5912-3.3DRVR_0_1" 
 
 (rectangle (start -7.62 -5.08) (end 7.62 5.08) (stroke (width 0.254) (type default)) (fill (type background))) (pin power_out line (at 10.16 2.54 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin no_connect line (at 7.62 0 180) (length 2.54) (hide yes) (name "NC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin input line (at -10.16 -2.54 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin power_in line (at -10.16 2.54 0) (length 2.54) (name "IN" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))) 
 
-(symbol "LP5912-3.3DRV_1_1_1" (pin open_collector line (at 0 -7.62 90) (length 2.54) (name "PG" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin power_in line (at 10.16 -2.54 180) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 -7.62 90) (length 2.54) (name "EP" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(symbol "LP5912-3.3DRVR_1_1" (pin open_collector line (at 0 -7.62 90) (length 2.54) (name "PG" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin power_in line (at 10.16 -2.54 180) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 -7.62 90) (length 2.54) (name "EP" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "lib:DSK24_C64890" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -208,7 +208,7 @@
 
 (symbol "LMR51635YDDCR_0_1" 
 
-(rectangle (start -6.35 6.35) (end 6.35 -6.35) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 5.08) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin input line (at 8.89 0 180) (length 2.54) (name "FB" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin input line (at -8.89 0 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin power_in line (at -8.89 3.81 0) (length 2.54) (name "VIN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin power_in line (at -8.89 -3.81 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin output line (at 8.89 3.81 180) (length 2.54) (name "SW" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin passive line (at 8.89 -3.81 180) (length 2.54) (name "CB" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(rectangle (start -6.35 6.35) (end 6.35 -6.35) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 5.08) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin input line (at 8.89 0 180) (length 2.54) (name "FB" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin input line (at -8.89 0 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin power_in line (at -8.89 3.81 0) (length 2.54) (name "VIN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin power_in line (at -8.89 -3.81 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin power_out line (at 8.89 3.81 180) (length 2.54) (name "SW" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin passive line (at 8.89 -3.81 180) (length 2.54) (name "CB" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "lib:LP5912-1.8DRVR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -232,7 +232,7 @@
 
 (symbol "LP5912-1.8DRVR_0_1" 
 
-(rectangle (start -6.35 6.35) (end 6.35 -6.35) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 5.08) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin power_out line (at 8.89 2.54 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -3.81 -8.89 90) (length 2.54) (name "NC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 8.89 -2.54 180) (length 2.54) (name "PG" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -8.89 0 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -1.27 -8.89 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -8.89 2.54 0) (length 2.54) (name "IN" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 1.27 -8.89 90) (length 2.54) (name "EP" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(rectangle (start -6.35 6.35) (end 6.35 -6.35) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 5.08) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin power_out line (at 8.89 2.54 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin no_connect line (at -3.81 -8.89 90) (length 2.54) (name "NC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin open_collector line (at 8.89 -2.54 180) (length 2.54) (name "PG" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin input line (at -8.89 0 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin power_in line (at -1.27 -8.89 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin power_in line (at -8.89 2.54 0) (length 2.54) (name "IN" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27))))) (pin passive line (at 1.27 -8.89 90) (length 2.54) (name "EP" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "lib:XRTC303020D4R7MBCA" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -248,7 +248,7 @@
 
 (property "LCSC" "C39846837" (at 0 -10.16 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
-(symbol "XRTC303020D4R7MBCA_0_1" (arc (start -4.06 -0.01) (mid -2.83 0.99) (end -2.03 0.01) (stroke (width 0) (type default)) (fill (type none))) (arc (start -2.03 -0.01) (mid -0.8 0.99) (end 0 0.01) (stroke (width 0) (type default)) (fill (type none))) (arc (start 0 -0.01) (mid 1.23 0.99) (end 2.03 0.01) (stroke (width 0) (type default)) (fill (type none))) (arc (start 2.03 -0.01) (mid 3.26 0.99) (end 4.06 0.01) (stroke (width 0) (type default)) (fill (type none))) (pin unspecified line (at -5.08 0 0) (length 1.016) (name "1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 5.08 0 180) (length 1.016) (name "2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(symbol "XRTC303020D4R7MBCA_0_1" (arc (start -4.06 -0.01) (mid -2.83 0.99) (end -2.03 0.01) (stroke (width 0) (type default)) (fill (type none))) (arc (start -2.03 -0.01) (mid -0.8 0.99) (end 0 0.01) (stroke (width 0) (type default)) (fill (type none))) (arc (start 0 -0.01) (mid 1.23 0.99) (end 2.03 0.01) (stroke (width 0) (type default)) (fill (type none))) (arc (start 2.03 -0.01) (mid 3.26 0.99) (end 4.06 0.01) (stroke (width 0) (type default)) (fill (type none))) (pin passive line (at -5.08 0 0) (length 1.016) (name "1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 5.08 0 180) (length 1.016) (name "2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "power:+12V" (power global) (pin_numbers (hide yes)) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -6036,7 +6036,7 @@
 
 (property "Manufacturer" "Murata Electronics" (at 1.27 -1.27 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "b1e699aa-c3dd-4c63-9ec4-ebcf3dae8a94")) (pin "2" (uuid "b49cf66c-21b1-41f0-880d-5ab50243dbe0")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161" (reference "C24") (unit 1))))) 
 
-(symbol (lib_id "Device:LED") (at 142.24 97.79 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "23fe7142-ce28-4907-84a9-65c5b01304f1") 
+(symbol (lib_id "lib:LED") (at 142.24 97.79 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "23fe7142-ce28-4907-84a9-65c5b01304f1") 
 
 (property "Reference" "D5" (at 146.05 98.1074 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6054,7 +6054,7 @@
 
 (property "Manufacturer" "XINGLIGHT" (at -165.1 27.94 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "69e3dbe4-fe90-479e-aec9-12e9b2fdf5ee")) (pin "1" (uuid "ce134748-6664-4939-825e-07eaad438cec")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161" (reference "D5") (unit 1))))) 
 
-(symbol (lib_id "Device:LED") (at 260.35 60.96 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "26134c9e-ee6a-405f-bf0a-077831b2c9a2") 
+(symbol (lib_id "lib:LED") (at 260.35 60.96 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "26134c9e-ee6a-405f-bf0a-077831b2c9a2") 
 
 (property "Reference" "D9" (at 257.81 63.8176 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -6076,7 +6076,7 @@
 
 (property "Reference" "#PWR061" (at 80.01 132.08 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Value" "+5V_BUCK" (at 80.01 123.19 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Value" "+5V" (at 80.01 123.19 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Footprint" "" (at 80.01 128.27 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6088,7 +6088,7 @@
 
 (property "Reference" "#PWR069" (at 142.24 82.55 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Value" "+5V_BUCK" (at 142.24 73.66 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Value" "+5V" (at 142.24 73.66 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Footprint" "" (at 142.24 78.74 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6240,7 +6240,7 @@
 
 (property "Manufacturer" "Samsung Electro-Mechanics" (at 1.27 15.24 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "ae72f1b7-ff85-400a-87cf-3ca052bf0585")) (pin "2" (uuid "bcdae741-7fa8-429a-8fb3-634a18b1a500")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161" (reference "C32") (unit 1))))) 
 
-(symbol (lib_id "Device:LED") (at 142.24 55.88 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "4400e6d1-4868-4a72-b3c6-fc16ef48d383") 
+(symbol (lib_id "lib:LED") (at 142.24 55.88 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "4400e6d1-4868-4a72-b3c6-fc16ef48d383") 
 
 (property "Reference" "D4" (at 146.05 56.1974 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6288,7 +6288,7 @@
 
 (property "Manufacturer" "XR" (at 1.27 -1.27 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "caa3bc6a-e698-44b5-a87d-bb4ed6547212")) (pin "1" (uuid "4ff13850-3014-4dac-add7-6d967feda8f4")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161" (reference "L2") (unit 1))))) 
 
-(symbol (lib_id "Device:LED") (at 254 128.27 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "55b6d88a-9ade-4e3f-8d6c-68c48f68b687") 
+(symbol (lib_id "lib:LED") (at 254 128.27 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "55b6d88a-9ade-4e3f-8d6c-68c48f68b687") 
 
 (property "Reference" "D7" (at 257.81 128.5874 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
 
@@ -6342,7 +6342,7 @@
 
 (property "Description" "Power symbol creates a global label with name \"+12V\"" (at 142.24 36.83 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "46ce22cf-060b-4992-820c-60908f1a07ec")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f8522f96-c979-41d2-ae00-e5ad899a3161" (reference "#PWR068") (unit 1))))) 
 
-(symbol (lib_name "LP5912-3.3DRV_1") (lib_id "Regulator_Linear:LP5912-3.3DRV") (at 219.71 121.92 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "5f1437cf-7452-40ba-9fb1-978526783cd4") 
+(symbol (lib_id "lib:LP5912-3.3DRVR") (at 219.71 121.92 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "5f1437cf-7452-40ba-9fb1-978526783cd4") 
 
 (property "Reference" "U7" (at 219.71 111.76 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 

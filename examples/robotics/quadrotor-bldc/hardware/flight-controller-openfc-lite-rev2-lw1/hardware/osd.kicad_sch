@@ -134,7 +134,7 @@
 
 (xy 0 -2.54) 
 
-(xy 0 -5.08)) (stroke (width 0) (type default)) (fill (type none))) (pin output line (at 10.16 0 180) (length 5.08) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 -10.16 90) (length 5.08) (name "-VS" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -10.16 2.54 0) (length 5.08) (name "IN+" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -10.16 -2.54 0) (length 5.08) (name "IN-" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 10.16 270) (length 5.08) (name "+VS" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(xy 0 -5.08)) (stroke (width 0) (type default)) (fill (type none))) (pin output line (at 10.16 0 180) (length 5.08) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 -10.16 90) (length 5.08) (name "-VS" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin input line (at -10.16 2.54 0) (length 5.08) (name "IN+" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin input line (at -10.16 -2.54 0) (length 5.08) (name "IN-" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 10.16 270) (length 5.08) (name "+VS" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "lib:SDM02U30LP3-7B" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -170,7 +170,7 @@
 
 (xy 1.27 1.78) 
 
-(xy 1.27 -1.52)) (stroke (width 0) (type default)) (fill (type background))) (pin unspecified line (at -5.08 0 0) (length 3.81) (name "C" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 5.08 0 180) (length 3.81) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(xy 1.27 -1.52)) (stroke (width 0) (type default)) (fill (type background))) (pin passive line (at -5.08 0 0) (length 3.81) (name "C" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 5.08 0 180) (length 3.81) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "lib:SN74LVC1G3157DTBR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -188,7 +188,7 @@
 
 (symbol "SN74LVC1G3157DTBR_0_1" 
 
-(rectangle (start -6.35 5.08) (end 6.35 -5.08) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 3.81) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin unspecified line (at -8.89 -2.54 0) (length 2.54) (name "B2" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 0 -7.62 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -8.89 2.54 0) (length 2.54) (name "B1" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 8.89 2.54 180) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 0 7.62 270) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 8.89 -2.54 180) (length 2.54) (name "S" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(rectangle (start -6.35 5.08) (end 6.35 -5.08) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 3.81) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin bidirectional line (at -8.89 -2.54 0) (length 2.54) (name "B2" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 -7.62 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin bidirectional line (at -8.89 2.54 0) (length 2.54) (name "B1" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin bidirectional line (at 8.89 2.54 180) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 7.62 270) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin input line (at 8.89 -2.54 180) (length 2.54) (name "S" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "lib:TLV7031DPWR" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -196,7 +196,7 @@
 
 (property "Value" "TLV7031DPWR" (at 0.254 0 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "lib:X2SON-4_L0.8-W0.8-P0.48-TL-A" (at 0 -10.16 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "lib:TI_DPW0005A_X2SON-5_0.8x0.8mm" (at 0 -10.16 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "https://www.lcsc.com/datasheet/C2876045.pdf" (at 0 -12.7 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
@@ -212,7 +212,7 @@
 
 (symbol "TLV7031DPWR_0_1" 
 
-(rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 3.81) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin unspecified line (at 10.16 2.54 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 0 10.16 270) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -10.16 3.81 0) (length 2.54) (name "IN-" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -10.16 -3.81 0) (length 2.54) (name "IN+" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 0 -10.16 90) (length 2.54) (name "VEE" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+(rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0) (type default)) (fill (type background))) (circle (center -5.08 3.81) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin output line (at 10.16 2.54 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 10.16 270) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin input line (at -10.16 3.81 0) (length 2.54) (name "IN-" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin input line (at -10.16 -3.81 0) (length 2.54) (name "IN+" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 -10.16 90) (length 2.54) (name "VEE" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
 
 (symbol "power:+3.3V" (power global) (pin_numbers (hide yes)) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
 
@@ -5830,7 +5830,7 @@
 
 (property "Value" "TLV7031DPWR" (at 247.904 92.71 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "lib:X2SON-4_L0.8-W0.8-P0.48-TL-A" (at 247.65 102.87 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "lib:TI_DPW0005A_X2SON-5_0.8x0.8mm" (at 247.65 102.87 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "https://www.lcsc.com/datasheet/C2876045.pdf" (at 247.65 105.41 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -5840,7 +5840,7 @@
 
 (property "MPN" "TLV7031DPWR" (at 247.65 110.49 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C2876045" (at 247.65 113.03 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "4" (uuid "1ab2a4e4-521d-4fd4-aaac-fa21204ace4c")) (pin "5" (uuid "bc0a9457-7946-4085-b7b5-be2d26b90774")) (pin "2" (uuid "86c610f4-1df5-4653-93e8-9f23db9c17b5")) (pin "3" (uuid "ad5fef72-3703-4bdc-92e2-9ef877303581")) (pin "1" (uuid "5c7ad24d-d40b-43e0-93bc-83ff83ea074b")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b" (reference "U12") (unit 1))))) 
+(property "LCSC" "C2876045" (at 247.65 113.03 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "5" (uuid "1ab2a4e4-521d-4fd4-aaac-fa21204ace4c")) (pin "3" (uuid "bc0a9457-7946-4085-b7b5-be2d26b90774")) (pin "2" (uuid "86c610f4-1df5-4653-93e8-9f23db9c17b5")) (pin "4" (uuid "ad5fef72-3703-4bdc-92e2-9ef877303581")) (pin "1" (uuid "5c7ad24d-d40b-43e0-93bc-83ff83ea074b")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b" (reference "U12") (unit 1))))) 
 
 (symbol (lib_id "Device:R") (at 146.05 158.75 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "f889e826-15c5-4787-a20d-66bd19afa15a") 
 
