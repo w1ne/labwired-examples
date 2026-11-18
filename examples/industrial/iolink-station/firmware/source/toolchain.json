@@ -1,0 +1,66 @@
+{
+  "compiler": "arm-none-eabi-gcc (15:13.2.rel1-2) 13.2.1 20231009",
+  "files": [
+    {
+      "kind": "program",
+      "query": "arm-none-eabi-gcc",
+      "bytes": 1280856,
+      "sha256": "38fc178604a84beb10f9adb8ea243bd5e0475a9e6e31c9270f53e2fcaa79ec59"
+    },
+    {
+      "kind": "program",
+      "query": "arm-none-eabi-objcopy",
+      "bytes": 1209784,
+      "sha256": "782d8a0a03424f5b54ea10d269b253b4506f85cb48cd40b2de1b9635ce16a821"
+    },
+    {
+      "kind": "program",
+      "query": "arm-none-eabi-as",
+      "bytes": 2128064,
+      "sha256": "ec839647452c629c6b26b35c8e29b56cd5be8d9bbf5221d01947451395bb7689"
+    },
+    {
+      "kind": "program",
+      "query": "arm-none-eabi-ld",
+      "bytes": 1747136,
+      "sha256": "3a45f0f6cd20f341f56efcbc408774ca7894721547a1e79712a268d8aa36b490"
+    },
+    {
+      "kind": "compiler-query",
+      "query": "-print-prog-name=cc1",
+      "bytes": 29225288,
+      "sha256": "1d284dd98e80e416ad199f5a2e24df5e704b43c0afd15ee3a34357dc46d8c5c0"
+    },
+    {
+      "kind": "compiler-query",
+      "query": "-print-file-name=libgcc.a",
+      "bytes": 9566684,
+      "sha256": "52685b9aaaf8e5e0a8ecbae72f08cfa18b14441245282b8ccc0ed40632e66722"
+    },
+    {
+      "kind": "compiler-query",
+      "query": "-print-file-name=libc_nano.a",
+      "bytes": 4291616,
+      "sha256": "52de085417d9555637904afcb598aeb2f71e15e9c26a90ea7418c2fb8c0f93d1"
+    },
+    {
+      "kind": "compiler-query",
+      "query": "-print-file-name=libnosys.a",
+      "bytes": 76746,
+      "sha256": "f59e20d0db6c4df5ead201d54b4aceb8b15529976c112d283bf3583addcd0725"
+    },
+    {
+      "kind": "compiler-query",
+      "query": "-print-file-name=nano.specs",
+      "bytes": 743,
+      "sha256": "ea55b4c8d8ac860d4700c8e5b7dcb3b3ad3bbf019697d2f82c7aa469ce33caa4"
+    },
+    {
+      "kind": "compiler-query",
+      "query": "-print-file-name=nosys.specs",
+      "bytes": 277,
+      "sha256": "24f0304a9ef660646fcb468d0ecf308b6e82ee5648e9b10b568e19ed4726d8d8"
+    }
+  ],
+  "scope": "Installed compiler, assembler, linker, objcopy, cc1 and selected CPU multilib archive/spec bytes. Compiler is a separately installed prerequisite; not duplicated in the source archive."
+}

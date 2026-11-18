@@ -1,0 +1,252 @@
+{
+  "schema": "labwired.offline-source-build.v1",
+  "name": "Two-port NUCLEO-L476RG IO-Link physical station",
+  "archiveName": "iolink-station-complete-source.tar.gz",
+  "sourcePins": [
+    {
+      "name": "STM32CubeL4",
+      "root": "CUBE",
+      "revision": "703570fd63f1e8623e89df99285ead68f1665f83",
+      "url": "https://github.com/STMicroelectronics/STM32CubeL4.git"
+    },
+    {
+      "name": "STM32L4xx_HAL_Driver",
+      "root": "CUBE",
+      "revision": "047a8610c7dc0dcfdb4cd63b86cd3a2cbd3e5899",
+      "url": "https://github.com/STMicroelectronics/stm32l4xx_hal_driver.git",
+      "subPath": "Drivers/STM32L4xx_HAL_Driver"
+    },
+    {
+      "name": "CMSIS_Device_STM32L4",
+      "root": "CUBE",
+      "revision": "dc04e41afbd7c204cd09f2fa5dd29658efbaff6c",
+      "url": "https://github.com/STMicroelectronics/cmsis_device_l4.git",
+      "subPath": "Drivers/CMSIS/Device/ST/STM32L4xx"
+    },
+    {
+      "name": "iolinki",
+      "root": "IOLINKI",
+      "revision": "9c8938793243f3dda4945ec93ba0214195cb8878",
+      "url": "https://github.com/w1ne/iolinki.git"
+    },
+    {
+      "name": "iolinki-master",
+      "root": "MASTER",
+      "revision": "941a6c5caf0c53b66aa5af9290e5ecba5972ec72",
+      "url": "https://github.com/w1ne/labwired-core.git",
+      "tree": "c247c3fa50f7ed16d7085e2fd675c2748103f252",
+      "treePath": "third_party/iolinki-master"
+    }
+  ],
+  "vendors": {
+    "CUBE": {
+      "archivePath": "deps/STM32CubeL4",
+      "patterns": [
+        "LICENSE.md",
+        "Drivers/CMSIS/LICENSE.txt",
+        "Drivers/CMSIS/Include/*.h",
+        "Drivers/CMSIS/Device/ST/STM32L4xx/LICENSE.md",
+        "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h",
+        "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h",
+        "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h",
+        "Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c",
+        "Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc/startup_stm32l476xx.s",
+        "Drivers/STM32L4xx_HAL_Driver/LICENSE.md",
+        "Drivers/STM32L4xx_HAL_Driver/Inc/**/*.h",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c",
+        "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c",
+        "Projects/NUCLEO-L476RG/Templates/STM32CubeIDE/STM32L476RGTX_FLASH.ld"
+      ]
+    },
+    "IOLINKI": {
+      "archivePath": "deps/iolinki",
+      "patterns": [
+        "LICENSE",
+        "LICENSE.COMMERCIAL",
+        "include/**/*.h",
+        "src/**/*.h",
+        "src/**/*.c"
+      ]
+    },
+    "MASTER": {
+      "archivePath": "deps/iolinki-master",
+      "patterns": [
+        "LICENSE",
+        "LICENSE.COMMERCIAL",
+        "include/**/*.h",
+        "src/**/*.c",
+        "src/**/*.h"
+      ]
+    }
+  },
+  "entries": [
+    {
+      "target": "master",
+      "path": "master/main.c",
+      "board": "nucleo-l476rg",
+      "language": "c"
+    },
+    {
+      "target": "device",
+      "path": "device/main.c",
+      "board": "nucleo-l476rg",
+      "language": "c"
+    }
+  ],
+  "cpuFlags": [
+    "-mcpu=cortex-m4",
+    "-mthumb",
+    "-mfpu=fpv4-sp-d16",
+    "-mfloat-abi=hard"
+  ],
+  "applicationFiles": [
+    "master/.gitignore",
+    "master/Makefile",
+    "master/board_hal.c",
+    "master/board_hal.h",
+    "master/board_pinmap.h",
+    "master/dependencies.json",
+    "master/fetch-deps.py",
+    "master/l6360.c",
+    "master/l6360.h",
+    "master/main.c",
+    "master/stm32l4xx_hal_conf.h",
+    "master/tests/check_timing.py",
+    "master/tests/test_l6360.c",
+    "master/verify-deps.py",
+    "common/station_clock.c",
+    "common/station_clock.h",
+    "common/station_profile.h",
+    "device/.gitignore",
+    "device/Makefile",
+    "device/board_hal.c",
+    "device/board_hal.h",
+    "device/main.c",
+    "tests/protocol_profile.c",
+    "tests/run-protocol-profile.py",
+    "source/config.json",
+    "source/toolchain.json",
+    "source/vendor-manifest.json",
+    "source/verify_export.py",
+    "source/build.py",
+    "source/package.py",
+    "source/BUILD.md",
+    "source/LICENSE-labwired-MIT"
+  ],
+  "targets": [
+    {
+      "name": "master",
+      "directory": "master",
+      "makeDependencies": {
+        "CUBE": "deps/STM32CubeL4",
+        "IOLINKI": "deps/iolinki",
+        "MASTER": "deps/iolinki-master"
+      },
+      "outputVariable": "BUILD",
+      "outputValue": "",
+      "artifactStem": "iolink-master",
+      "expected": {
+        "elf": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9",
+        "bin": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7"
+      },
+      "expectedLoadableImage": {
+        "entry": 134240861,
+        "machine": 40,
+        "flags": 83887104,
+        "segments": [
+          {
+            "virtualAddress": 134217728,
+            "physicalAddress": 134217728,
+            "fileBytes": 23436,
+            "memoryBytes": 23436,
+            "flags": 5,
+            "alignment": 4096,
+            "sha256": "647b660ca3f5055919cb2b37ef57685c732c86945b03a98874dea93dd0718401"
+          },
+          {
+            "virtualAddress": 536870912,
+            "physicalAddress": 134241164,
+            "fileBytes": 16,
+            "memoryBytes": 16,
+            "flags": 6,
+            "alignment": 4096,
+            "sha256": "1ffdfb0007e5eef0a6136bac50d062191044cf1eda10897cfd12fdb61fb03da6"
+          },
+          {
+            "virtualAddress": 536870928,
+            "physicalAddress": 536870928,
+            "fileBytes": 0,
+            "memoryBytes": 5520,
+            "flags": 6,
+            "alignment": 4096,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      }
+    },
+    {
+      "name": "device",
+      "directory": "device",
+      "makeDependencies": {
+        "CUBE": "deps/STM32CubeL4",
+        "IOLINKI": "deps/iolinki",
+        "MASTER": "deps/iolinki-master"
+      },
+      "outputVariable": "BUILD",
+      "outputValue": "",
+      "artifactStem": "iolink-device",
+      "expected": {
+        "elf": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508",
+        "bin": "78f502bc6d249b389275b24481c20d81d018a7fa28c1b7f33258f5f0cadfdae0"
+      },
+      "expectedLoadableImage": {
+        "entry": 134239381,
+        "machine": 40,
+        "flags": 83887104,
+        "segments": [
+          {
+            "virtualAddress": 134217728,
+            "physicalAddress": 134217728,
+            "fileBytes": 22252,
+            "memoryBytes": 22252,
+            "flags": 5,
+            "alignment": 4096,
+            "sha256": "2ce2dfa5256f8f6ca1f02bd2b07bee5ae9ebc458f4b84da3da21cabe109b7bc2"
+          },
+          {
+            "virtualAddress": 536870912,
+            "physicalAddress": 134239980,
+            "fileBytes": 72,
+            "memoryBytes": 72,
+            "flags": 6,
+            "alignment": 4096,
+            "sha256": "bf8bfa5064c23c77d9436c37ca07868821388bbf0a4b1d472785e36020495498"
+          },
+          {
+            "virtualAddress": 536870984,
+            "physicalAddress": 536870984,
+            "fileBytes": 0,
+            "memoryBytes": 4976,
+            "flags": 6,
+            "alignment": 4096,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      }
+    }
+  ]
+}

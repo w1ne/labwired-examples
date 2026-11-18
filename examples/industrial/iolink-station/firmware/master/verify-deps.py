@@ -4,6 +4,10 @@ from pathlib import Path
 import json,subprocess,sys
 manifest=json.loads((Path(__file__).parent/'dependencies.json').read_text())
 cube,iolinki,master=map(Path,sys.argv[1:])
+root=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(root/'source'))
+from verify_export import verify_export
+if verify_export(root,{'CUBE':cube,'IOLINKI':iolinki,'MASTER':master}):raise SystemExit(0)
 def git(path,*args):return subprocess.check_output(['git','-C',str(path),*args],text=True).strip()
 def verify(path,entry):
     assert git(path,'rev-parse','HEAD')==entry['revision'],f'{path}: revision mismatch'

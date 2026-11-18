@@ -313,3 +313,9 @@ ST's source licensing and notices.
 - [SN74HC165 datasheet and package](https://www.ti.com/lit/ds/symlink/sn74hc165.pdf)
 - [IO-Link Interface and System Specification v1.1.4: §7.3.2.2, Table 9 and Annex A/B](https://io-link.com/fileadmin/user_upload/Downloads/Package_2024/IOL-Interface-Spec_10002_V114_Jun24.pdf)
 - [Tracking issue #3555](https://github.com/w1ne/labwired/issues/3555)
+
+## Complete offline firmware source
+
+The complete application and required pinned vendor sources are available in [the source archive](firmware/source/iolink-station-complete-source.tar.gz). The archive is 1,420,487 bytes. [Build instructions](firmware/source/BUILD.md), the [per-file source manifest](firmware/source/source-bundle.json), and the [fresh extracted-source rebuild receipt](firmware/source/rebuild-evidence.json) are included.
+
+The fresh rebuild matches the accepted flash BIN and every loadable ELF segment, including address, data, memory extent, flags and entry point. Relocated debug paths change the rebuilt ELF file hash; the original tested ELF files remain unchanged. Both an altered vendor byte and an unlisted dependency file are rejected by the source verification gate. This source rebuild adds no physical test claim.
