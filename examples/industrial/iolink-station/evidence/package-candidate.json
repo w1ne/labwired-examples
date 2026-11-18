@@ -32,20 +32,20 @@
     },
     {
       "path": "firmware/release/iolink-master.bin",
-      "bytes": 23312,
-      "sha256": "153cb4a7007d160276caf1b29fcee726dde640db5946b945f04aa9e0293694c5"
+      "bytes": 23452,
+      "sha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7"
     },
     {
       "path": "firmware/release/iolink-master.elf",
-      "bytes": 1624956,
-      "sha256": "802f9f2cc0d4ca5e7b1e973ff67a72ff89d6e29e094ab8566ccba5a2b1ce50e1"
+      "bytes": 1625936,
+      "sha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9"
     }
   ],
   "mechanicalDesignBinding": null,
   "simulationContract": "Existing byte-wake fixture is separate from these physical HAL images; do not replace its ELF without a matching core/model run.",
   "remaining": [
     "Full fitted mount and hardware BOM",
-    "L6360 stored-parity startup repair and matching physical-master/two-device runtime proof",
+    "Matching corrected physical-master/two-device runtime proof",
     "Physical two-port acceptance and measurements",
     "Region-specific AC lead selection",
     "Current IODD business-rule check and conformity where applicable"
@@ -89,12 +89,12 @@
     {
       "path": "evidence/master-driver-host-tests.txt",
       "bytes": 1114,
-      "sha256": "7bf2fd1493a8ab9d845d3c486d977f80ea135afe5ee4ef3eff89611f6e67acc8"
+      "sha256": "54561584b1ee1b6f4f0554a2e1f01d999f5f22ee364d42f3e21abbcb32f1c4b4"
     },
     {
       "path": "evidence/master-physical-build.txt",
-      "bytes": 2630,
-      "sha256": "2731449c378462fcb4ff047b0effe384a914dbbd22610c73d9175a0b6de4e840"
+      "bytes": 3366,
+      "sha256": "d153657c8448c3c5f7ceb25b3846676239e72427bb46fbba12aba290f2289679"
     },
     {
       "path": "evidence/master-timing-analysis.json",
@@ -103,8 +103,8 @@
     },
     {
       "path": "evidence/physical-build.json",
-      "bytes": 7020,
-      "sha256": "08ade3ba3c3e2dab986748d6fa8f710aa4b124bcca4cca1ec3839827431c9078"
+      "bytes": 7359,
+      "sha256": "204879aeaac4745bfe81b5b6d74d25a4825e77972a26b101e7370701e6675c8e"
     },
     {
       "path": "evidence/protocol-profile.txt",
@@ -115,11 +115,17 @@
       "path": "evidence/physical-runtime-device/manifest.json",
       "bytes": 4211,
       "sha256": "793fec9f05880470e16cb709ad0e300a7bc74a76a400e122a7510eb8e791a838"
+    },
+    {
+      "path": "evidence/master-stored-parity/receipt.json",
+      "bytes": 4183,
+      "sha256": "07afa99938dcf50d2c9a7eeb903db434264a09770acaa5ce71ab86bbba24caa6"
     }
   ],
   "devicePhysicalRuntime": {
     "manifest": "evidence/physical-runtime-device/manifest.json",
     "coreCommit": "e2908774da4d254e1244dfdf9e5fb7bf6cdf4cf1",
     "scope": "One unchanged physical device image plus a controlled digital master line; complete station pending"
-  }
+  },
+  "masterStoredParityRepair": "evidence/master-stored-parity/receipt.json"
 }

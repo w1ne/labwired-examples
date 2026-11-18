@@ -64,6 +64,11 @@ typedef struct {
     l6360_io_t io;
     uint8_t address7;
     uint8_t registers[9];
+    /* DS8900 stored parity describes received write bytes, including unused
+     * bits. Compare defined register bits separately from stored bus parity. */
+    uint8_t expected_registers[8];
+    uint8_t expected_parity;
+    uint8_t written_parity_mask;
     uint8_t latched_faults;
     uint8_t startup_status;
     int last_error;

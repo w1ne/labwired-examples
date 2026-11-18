@@ -42,9 +42,9 @@ the same commit.
 This proof uses one physical device image and a controlled digital master
 line. It does not execute the physical master image or the complete
 three-node station. Those are separate required integration steps. The
-current L6360 review also exposed a master startup parity/reset assumption
-that must be fixed in the physical driver and host fixture before its
-image is accepted.
+L6360 startup parity/reset defect is now repaired in the physical driver
+and host fixture; its new master image still needs matching digital runtime
+acceptance with both devices.
 
 The L6362A model represents explicit digital enable, inversion, opposition,
 fault and line-state scenarios. It does not calculate analog voltage,

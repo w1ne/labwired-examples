@@ -1,7 +1,7 @@
 make: Entering directory '/data/worktrees/labwired-examples-iolink-package-20261118/examples/industrial/iolink-station/firmware/master'
 cc -std=c11 -Wall -Wextra -Werror -O1 -g -fsanitize=address,undefined l6360.c tests/test_l6360.c -o build/test_l6360
 build/test_l6360
-{"suite":"l6360-datasheet-contract","passed":12,"failed":0,"scope":"host unit tests; no physical bus or timing measurement"}
+{"suite":"l6360-datasheet-contract","passed":18,"failed":0,"scope":"host unit tests; no physical bus or timing measurement"}
 python3 tests/check_timing.py
 {
   "scope": "analytical timing bounds; no measured bus/waveform",

@@ -62,25 +62,6 @@ static int read_bytes(l6360_t *dev, uint8_t *data, size_t length) {
     return L6360_OK;
 }
 
-int l6360_read_all(l6360_t *dev) {
-    uint8_t start = L6360_REG_STATUS;
-    uint8_t data[9], expected = 0;
-    if (!dev || !dev->io.write || !dev->io.read)
-        return L6360_ERR_ARG;
-    if (write_bytes(dev, &start, 1) || read_bytes(dev, data, sizeof(data)))
-        return dev->last_error;
-    for (unsigned i = 0; i < 8; ++i)
-        expected |= (uint8_t)(parity(data[i]) << (7U - i));
-    if (expected != data[L6360_REG_PARITY])
-        return fail(dev, L6360_ERR_PARITY);
-    memcpy(dev->registers, data, sizeof(data));
-    if (data[L6360_REG_STATUS] & L6360_STATUS_FAULTS) {
-        dev->latched_faults |= data[L6360_REG_STATUS] & L6360_STATUS_FAULTS;
-        return fail(dev, L6360_ERR_FAULT);
-    }
-    return L6360_OK;
-}
-
 static uint8_t writable_mask(uint8_t address) {
     if (address == L6360_REG_CONFIG)
         return 0xE0U;
@@ -89,17 +70,51 @@ static uint8_t writable_mask(uint8_t address) {
     return 0xFFU;
 }
 
+static void remember_write(l6360_t *dev, uint8_t address, uint8_t data) {
+    uint8_t mask = (uint8_t)(1U << (7U - address));
+    dev->expected_registers[address] = data;
+    dev->expected_parity = (uint8_t)((dev->expected_parity & ~mask) |
+                                   (parity(data) << (7U - address)));
+    dev->written_parity_mask |= mask;
+}
+
+int l6360_read_all(l6360_t *dev) {
+    uint8_t start = L6360_REG_STATUS;
+    uint8_t data[9], expected, checked;
+    if (!dev || !dev->io.write || !dev->io.read)
+        return L6360_ERR_ARG;
+    if (write_bytes(dev, &start, 1) || read_bytes(dev, data, sizeof(data)))
+        return dev->last_error;
+    /* DS8900 pp24/26/33: PARITY resets to zero and retains parity of received
+     * write DATA. It is not recomputed from reserved/unspecified read bits.
+     * Status parity is live; only initialized writable parity bits are known. */
+    expected = (uint8_t)((parity(data[0]) << 7) | dev->expected_parity);
+    checked = (uint8_t)(0x80U | dev->written_parity_mask);
+    if (((expected ^ data[L6360_REG_PARITY]) & checked) != 0)
+        return fail(dev, L6360_ERR_PARITY);
+    memcpy(dev->registers, data, sizeof(data));
+    if (data[L6360_REG_STATUS] & L6360_STATUS_FAULTS) {
+        dev->latched_faults |= data[L6360_REG_STATUS] & L6360_STATUS_FAULTS;
+        return fail(dev, L6360_ERR_FAULT);
+    }
+    for (uint8_t address = L6360_REG_CONFIG; address <= L6360_REG_LED2_L; ++address) {
+        if ((dev->written_parity_mask & (1U << (7U - address))) != 0 &&
+            ((data[address] ^ dev->expected_registers[address]) & writable_mask(address)) != 0)
+            return fail(dev, L6360_ERR_READBACK);
+    }
+    return L6360_OK;
+}
+
 int l6360_write_checked(l6360_t *dev, uint8_t address, uint8_t data) {
     uint8_t bytes[2] = {data, l6360_write_check_byte(address, data)};
     if (!dev || address < L6360_REG_CONFIG || address > L6360_REG_LED2_L)
         return L6360_ERR_ARG;
     if (dev->last_error != L6360_OK)
         return dev->last_error;
-    if (write_bytes(dev, bytes, sizeof(bytes)) || l6360_read_all(dev))
+    if (write_bytes(dev, bytes, sizeof(bytes)))
         return dev->last_error;
-    if (((dev->registers[address] ^ data) & writable_mask(address)) != 0)
-        return fail(dev, L6360_ERR_READBACK);
-    return L6360_OK;
+    remember_write(dev, address, data);
+    return l6360_read_all(dev);
 }
 
 static bool active(uint8_t mode) { return mode != L6360_OFF && mode != L6360_TRISTATE; }
@@ -166,10 +181,21 @@ int l6360_init(l6360_t *dev, const l6360_io_t *io, uint8_t address7) {
     dev->io = *io;
     dev->address7 = address7;
     l6360_shutdown(dev);
-    if (l6360_read_all(dev) || l6360_set_mode(dev, L6360_TRISTATE) ||
-        l6360_write_checked(dev, L6360_REG_CONTROL1, CONTROL1_COMMUNICATION) ||
-        l6360_write_checked(dev, L6360_REG_CONTROL2, CONTROL2_COMMUNICATION) ||
-        l6360_set_mode(dev, L6360_PUSH_PULL))
+    /* Current-status read uses live status parity, independent of reset
+     * writable parity. Sequential write (DS8900 pp33-35) initializes all seven
+     * writable registers atomically while both external enables remain low.
+     * LED sequences are explicitly off. The transmitted parity byte is 0x50. */
+    uint8_t initial[8] = {L6360_TRISTATE, CONTROL1_COMMUNICATION,
+                          CONTROL2_COMMUNICATION, 0, 0, 0, 0, 0};
+    if (current_status(dev, false))
+        return dev->last_error;
+    for (uint8_t address = L6360_REG_CONFIG; address <= L6360_REG_LED2_L; ++address)
+        initial[7] |= (uint8_t)(parity(initial[address - 1]) << (7U - address));
+    if (write_bytes(dev, initial, sizeof(initial)))
+        return dev->last_error;
+    for (uint8_t address = L6360_REG_CONFIG; address <= L6360_REG_LED2_L; ++address)
+        remember_write(dev, address, initial[address - 1]);
+    if (l6360_read_all(dev) || l6360_set_mode(dev, L6360_PUSH_PULL))
         return dev->last_error;
     dev->configured = true;
     return L6360_OK;

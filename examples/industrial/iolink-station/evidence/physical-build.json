@@ -102,13 +102,13 @@
     },
     {
       "path": "firmware/master/l6360.c",
-      "bytes": 8261,
-      "sha256": "750acb7995edab06c6b5317482e839c0be9671324c5406448489bd552a62e57e"
+      "bytes": 9827,
+      "sha256": "1edb77aa2f54ecf988cd228f1a8b5ec52e64fde95de36cd079d2544d20394e21"
     },
     {
       "path": "firmware/master/l6360.h",
-      "bytes": 2553,
-      "sha256": "8848bb8f4da8598c5766626b9364fb40b81c65f162e6cd2d966767153265450f"
+      "bytes": 2808,
+      "sha256": "4e3611b21567823088de899deeb6df63bf7de100d77988c026db2a0163017c8d"
     },
     {
       "path": "firmware/master/main.c",
@@ -127,8 +127,8 @@
     },
     {
       "path": "firmware/master/tests/test_l6360.c",
-      "bytes": 7387,
-      "sha256": "9c4ac659d0b325ed7aedca5facb26115fe2409c4370db79b2dd41c332c218755"
+      "bytes": 11033,
+      "sha256": "d961b1572e89906897ef871e5136d0e231be91059e1718b41c3d5dacda6e7c41"
     },
     {
       "path": "firmware/master/verify-deps.py",
@@ -159,19 +159,19 @@
     },
     {
       "path": "firmware/release/iolink-master.bin",
-      "bytes": 23312,
-      "sha256": "153cb4a7007d160276caf1b29fcee726dde640db5946b945f04aa9e0293694c5"
+      "bytes": 23452,
+      "sha256": "1f0a2a563d7a29ed7cb2349a4b9fb0ef5e5172289cc630678c51953eeb0862c7"
     },
     {
       "path": "firmware/release/iolink-master.elf",
-      "bytes": 1624956,
-      "sha256": "802f9f2cc0d4ca5e7b1e973ff67a72ff89d6e29e094ab8566ccba5a2b1ce50e1"
+      "bytes": 1625936,
+      "sha256": "26a1c6fdf4303cfba634cb20d3478672e55b5b648ced67dbfdefa8361f912bd9"
     }
   ],
-  "sizeOutput": "   text\t   data\t    bss\t    dec\t    hex\tfilename\n  23296\t     16\t   5496\t  28808\t   7088\texamples/industrial/iolink-station/firmware/release/iolink-master.elf\n  22196\t     72\t   4976\t  27244\t   6a6c\texamples/industrial/iolink-station/firmware/release/iolink-device.elf\n",
+  "sizeOutput": "   text\t   data\t    bss\t    dec\t    hex\tfilename\n  23436\t     16\t   5520\t  28972\t   712c\texamples/industrial/iolink-station/firmware/release/iolink-master.elf\n  22196\t     72\t   4976\t  27244\t   6a6c\texamples/industrial/iolink-station/firmware/release/iolink-device.elf\n",
   "buildResult": "PASS",
   "hostL6360Tests": {
-    "passed": 12,
+    "passed": 18,
     "failed": 0,
     "sanitizers": [
       "address",
@@ -181,7 +181,7 @@
   "physicalExecution": "NOT RUN",
   "physicalMeasurements": "NOT RECORDED",
   "scope": "Cross-compiled on recorded source. No simulator execution or physical hardware performance is implied.",
-  "recordedAt": "2026-11-18T12:38:34.617346+00:00",
+  "recordedAt": "2026-11-18T14:40:28.830558+00:00",
   "wireProfile": {
     "baudrate": 38400,
     "dataBits": 8,
@@ -192,5 +192,8 @@
     "processOutputBytes": 0,
     "cycleMs": 10
   },
-  "hostProtocolScope": "Four input patterns through the pinned real master/device byte fixture; synthetic PHY and timing enforcement disabled only in that fixture. Physical firmware keeps timing enforcement enabled."
+  "hostProtocolScope": "Four input patterns through the pinned real master/device byte fixture; synthetic PHY and timing enforcement disabled only in that fixture. Physical firmware keeps timing enforcement enabled.",
+  "sourceCorrection": "Master L6360 stored-parity startup repair; device source/image unchanged.",
+  "masterBuildInvocation": "evidence/master-stored-parity/l6360-stored-parity-master-build-invocation.json",
+  "digitalRuntimeEvidence": "evidence/physical-runtime-device/manifest.json (device only; physical master/full station pending)"
 }

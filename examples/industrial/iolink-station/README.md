@@ -12,9 +12,8 @@ images build, the unchanged device image passes a digital boot/wake/protocol
 probe, and the native input PCB has zero ERC,
 DRC, unconnected-net and schematic-parity findings. A complete fitted station
 mount, physical power/waveform measurements and a two-port hardware acceptance
-run are still required. The L6360 source/model review found a stored-parity
-reset assumption in the master driver; its repair and full three-node
-physical-image runtime proof remain pending. See [the exact device runtime
+run are still required. The L6360 stored-parity startup defect is fixed and passes 18 host tests;
+the full three-node physical-image runtime proof remains pending. See [the exact device runtime
 proof and reproduction command](runtime/README.md).
 
 ## Contents and evidence
@@ -222,7 +221,12 @@ reproduction instructions; no physical flashing receipt is included.
 
 ## Firmware behaviour and acceptance
 
-The master initializes both L6360s with checked readback/parity, controls
+The master reads current status first, then initializes all seven writable
+L6360 registers with an atomic sequential write while outputs are disabled.
+It compares stored parity with the bytes sent, and checks defined register
+bits separately from unused reset/read bits. The [repair receipt and red/green
+tests](evidence/master-stored-parity/receipt.json) preserve the original
+startup failure. The master then selects push-pull, controls
 L+ and C/Q, generates an 80 µs wake pulse with timer outputs, waits the
 enable/test guard and runs both COM2 ports. It uses fresh clock samples
 for each port. NACK, parity, register mismatch and severe PHY faults disable
@@ -240,7 +244,7 @@ process bytes. The image's unassigned bench identity is vendor **0xFFFF**,
 device **0x000001**, product **L476-L6362A-DI8**. The full 96-bit MCU UID
 is encoded into a sixteen-character serial number.
 
-The recorded checks cover twelve L6360 host cases, analytical I2C/wake
+The recorded checks cover eighteen L6360 host cases, analytical I2C/wake
 bounds, 38 shared-stack CTest targets (including response timing and fixed-baud
 recovery), four TYPE_2_1 byte profiles, both cross-builds, the device
 description and native input PCB checks. The byte-profile fixture disables

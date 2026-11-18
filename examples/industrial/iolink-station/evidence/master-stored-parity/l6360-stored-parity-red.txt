@@ -1,0 +1,6 @@
+make: Entering directory '/data/worktrees/labwired-examples-iolink-package-20261118/examples/industrial/iolink-station/firmware/master'
+cc -std=c11 -Wall -Wextra -Werror -O1 -g -fsanitize=address,undefined l6360.c tests/test_l6360.c -o build/test_l6360
+build/test_l6360
+test_l6360: tests/test_l6360.c:133: init: Assertion `l6360_init(d, &io, f->address7) == 0' failed.
+make: *** [Makefile:39: test] Aborted (core dumped)
+make: Leaving directory '/data/worktrees/labwired-examples-iolink-package-20261118/examples/industrial/iolink-station/firmware/master'

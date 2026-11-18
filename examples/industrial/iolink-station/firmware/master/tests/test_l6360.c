@@ -10,7 +10,7 @@
 typedef struct {
     uint8_t reg[9], address7, select;
     bool cq, power, fail_write, bad_parity, mismatch, persistent_po;
-    bool startup_po, expect_opposite_pulse;
+    bool startup_po, bad_write_parity;
     unsigned writes, reads, pulses, last_pulse_us, delay_us;
     uint8_t config_writes[8];
     unsigned config_count;
@@ -26,6 +26,22 @@ static uint8_t fixture_parity(const uint8_t *bytes) {
     }
     return result;
 }
+/* DS8900 Rev9: lower PARITY bits store parity of received write DATA.
+ * Reserved read bits are not the bytes that were received on the bus.
+ */
+static void store_received_parity(fixture_t *f, unsigned reg, uint8_t data) {
+    uint8_t values[8] = {0};
+    uint8_t mask = (uint8_t)(1U << (7U - reg));
+    values[reg] = data;
+    f->reg[8] = (uint8_t)((f->reg[8] & ~mask) | (fixture_parity(values) & mask));
+}
+static void store_register(fixture_t *f, unsigned reg, uint8_t data) {
+    uint8_t mask = reg == 1 ? 0xE0U : (reg == 3 ? 0xBFU : 0xFFU);
+    if (reg == 1 && f->config_count < 8)
+        f->config_writes[f->config_count++] = data;
+    if (!f->mismatch)
+        f->reg[reg] = (uint8_t)((f->reg[reg] & ~mask) | (data & mask));
+}
 static int bus_write(void *user, uint8_t addr, const uint8_t *bytes, size_t len) {
     fixture_t *f = user;
     assert(addr == f->address7);
@@ -37,20 +53,41 @@ static int bus_write(void *user, uint8_t addr, const uint8_t *bytes, size_t len)
         f->select = 0;
         return 0;
     }
+    if (len == 8) {
+        uint8_t values[8] = {0};
+        memcpy(values + 1, bytes, 7);
+        uint8_t calculated = fixture_parity(values) & 0x7FU;
+        f->reg[8] = (uint8_t)((f->reg[8] & 0x80U) | calculated);
+        if (calculated != (bytes[7] & 0x7FU) || f->bad_write_parity) {
+            f->reg[0] |= L6360_STATUS_PE;
+            return 0; /* I2C ACK does not mean the register update was accepted. */
+        }
+        for (unsigned reg = 1; reg <= 7; ++reg)
+            store_register(f, reg, bytes[reg - 1]);
+        return 0;
+    }
     assert(len == 2);
     const unsigned reg = bytes[1] & 15U;
     assert(reg >= 1 && reg <= 7);
-    if (reg == 1 && f->config_count < 8)
-        f->config_writes[f->config_count++] = bytes[0];
-    if (!f->mismatch)
-        f->reg[reg] = bytes[0];
+    unsigned p0 = 0, p1 = 0, p2 = 0;
+    for (unsigned bit = 0; bit < 8; ++bit) {
+        unsigned value = (bytes[0] >> bit) & 1U;
+        p0 ^= value;
+        if (bit & 1U) p1 ^= value; else p2 ^= value;
+    }
+    store_received_parity(f, reg, bytes[0]);
+    if (((bytes[1] >> 5) & 7U) != (p0 | (p1 << 1) | (p2 << 2)) || f->bad_write_parity) {
+        f->reg[0] |= L6360_STATUS_PE;
+        return 0;
+    }
+    store_register(f, reg, bytes[0]);
     return 0;
 }
 static int bus_read(void *user, uint8_t addr, uint8_t *bytes, size_t len) {
     fixture_t *f = user;
     assert(addr == f->address7);
     ++f->reads;
-    f->reg[8] = fixture_parity(f->reg);
+    f->reg[8] = (uint8_t)((f->reg[8] & 0x7FU) | (fixture_parity(f->reg) & 0x80U));
     if (len == 9)
         memcpy(bytes, f->reg, 9);
     else {
@@ -110,7 +147,7 @@ static void test_config(void) {
     init(&d, &f);
     assert(d.configured && !d.powered && !f.cq && !f.power);
     assert(f.reg[1] == 0xE0 && f.reg[2] == 0xA0 && f.reg[3] == 0x20);
-    assert(f.writes == 7 && f.reads == 4); /* initial read plus 3 verified writes */
+    assert(f.writes == 4 && f.reads == 3); /* status, sequential write/read, PP write/read */
 }
 static void test_bad_args(void) {
     fixture_t f = fixture(0x60);
@@ -209,8 +246,65 @@ static void test_wake(void) {
     assert(f.pulses == 1 && f.last_pulse_us == 80 && !f.cq);
     assert(f.reg[2] == 0xA0 && d.configured && d.powered);
 }
+static void test_reset_parity_contract(void) {
+    fixture_t f = fixture(0x60);
+    l6360_t d;
+    assert(f.reg[8] == 0 && f.reg[1] == 0x80);
+    assert(fixture_parity(f.reg) == 0x40); /* reset PARITY is not recomputed */
+    init(&d, &f);
+    assert(d.configured && f.reg[8] == 0x50);
+}
+static void test_unknown_reserved_read_bits(void) {
+    fixture_t f = fixture(0x60);
+    l6360_t d;
+    f.reg[1] |= 0x1FU;
+    f.reg[3] |= 0x40U;
+    init(&d, &f);
+    assert(f.reg[1] == 0xFF && f.reg[3] == 0x60);
+    assert(f.reg[8] == 0x50); /* parity of transmitted E0/A0/20/zero LEDs */
+    assert(l6360_read_all(&d) == 0);
+}
+static void test_initial_status_parity_failure(void) {
+    fixture_t f = fixture(0x60);
+    l6360_t d;
+    l6360_io_t io = callbacks(&f);
+    f.bad_parity = true;
+    assert(l6360_init(&d, &io, f.address7) == L6360_ERR_PARITY);
+    assert(f.writes == 0 && !f.cq && !f.power && !d.configured);
+}
+static void test_rejected_sequential_write(void) {
+    fixture_t f = fixture(0x60);
+    l6360_t d;
+    l6360_io_t io = callbacks(&f);
+    f.bad_write_parity = true;
+    assert(l6360_init(&d, &io, f.address7) == L6360_ERR_FAULT);
+    assert(f.reg[1] == 0x80 && f.reg[2] == 0x21 && f.reg[3] == 0x21);
+    assert(d.latched_faults == L6360_STATUS_PE && !f.cq && !f.power);
+}
+static void test_register_changes_without_parity_refresh(void) {
+    fixture_t f = fixture(0x60);
+    l6360_t d;
+    init(&d, &f);
+    f.reg[2] ^= 1U;
+    assert(l6360_read_all(&d) == L6360_ERR_READBACK);
+    assert(!f.cq && !f.power && !d.configured);
+}
+static void test_stored_parity_corruption(void) {
+    fixture_t f = fixture(0x60);
+    l6360_t d;
+    init(&d, &f);
+    f.reg[8] ^= 0x20U;
+    assert(l6360_read_all(&d) == L6360_ERR_PARITY);
+    assert(!f.cq && !f.power && !d.configured);
+}
 int main(void) {
     test_vectors();
+    test_reset_parity_contract();
+    test_unknown_reserved_read_bits();
+    test_initial_status_parity_failure();
+    test_rejected_sequential_write();
+    test_register_changes_without_parity_refresh();
+    test_stored_parity_corruption();
     test_config();
     test_bad_args();
     test_readback();
@@ -222,7 +316,7 @@ int main(void) {
     test_active_mode_transition();
     test_direction();
     test_wake();
-    puts("{\"suite\":\"l6360-datasheet-contract\",\"passed\":12,\"failed\":0,\"scope\":\"host unit "
+    puts("{\"suite\":\"l6360-datasheet-contract\",\"passed\":18,\"failed\":0,\"scope\":\"host unit "
          "tests; no physical bus or timing measurement\"}");
     return 0;
 }
