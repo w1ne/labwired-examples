@@ -1,0 +1,367 @@
+{
+  "status": "drc_passed",
+  "pcb_ref": "sha256:f67ace8a8f6dc8839b870d50db1a26dcb4d78e566459f5e71a1c54e2894e7570",
+  "drc": {
+    "passed": true,
+    "kicad_version": "10.0.8",
+    "warnings": 11,
+    "schematic_parity_checked": false,
+    "review": {
+      "source": "kicad-cli",
+      "total": 11,
+      "truncated": false,
+      "counts": {
+        "error": 0,
+        "warning": 11,
+        "info": 0,
+        "excluded": 0
+      },
+      "findings": [
+        {
+          "id": "drc:945f901bf5c52b70",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/3V3] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/3V3] on F.Cu - B.Cu",
+              "uuid": "7a3909f1-0ab3-48c8-8e16-c82c10b1ba3d",
+              "x": 68,
+              "y": 64.5654,
+              "net": "/3V3",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:232629e35ad0d4f6",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_D8] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_D8] on F.Cu - B.Cu",
+              "uuid": "da7c18af-6d84-4af1-af74-5d067b816bb3",
+              "x": 19.495,
+              "y": 73.1335,
+              "net": "/LCD_D8",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:51e03f209644544f",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_BL] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_BL] on F.Cu - B.Cu",
+              "uuid": "fb0cc600-4b15-49fc-8254-05cf11ba78e6",
+              "x": 54.165,
+              "y": 57.8933,
+              "net": "/LCD_BL",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:f4c99d39dbf1ac24",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_RST] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_RST] on F.Cu - B.Cu",
+              "uuid": "63d09180-d3f8-4dd9-a51f-140183cc72e6",
+              "x": 53.34,
+              "y": 59.9232,
+              "net": "/LCD_RST",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:7f0fc4808c12ac50",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_D1] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_D1] on F.Cu - B.Cu",
+              "uuid": "fd2503cb-dbcb-4404-9539-84ed4017accc",
+              "x": 53.3448,
+              "y": 47.9998,
+              "net": "/LCD_D1",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:55a56da506988392",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_D9] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_D9] on F.Cu - B.Cu",
+              "uuid": "f6fe4fc9-7307-4647-bba0-747f6ae1dceb",
+              "x": 16.9,
+              "y": 76.76,
+              "net": "/LCD_D9",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:be5ab49b76bf2436",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_D10] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_D10] on F.Cu - B.Cu",
+              "uuid": "9082903c-8b34-4d9b-9ae6-a50804558fc1",
+              "x": 16.9,
+              "y": 79.3,
+              "net": "/LCD_D10",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:b8ccb8221cf14190",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_D13] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_D13] on F.Cu - B.Cu",
+              "uuid": "312b6acc-3b27-4d76-b587-2a4b9cbefbf9",
+              "x": 20.32,
+              "y": 86.095,
+              "net": "/LCD_D13",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:3c8ae4d9d20db9dc",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_D14] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_D14] on F.Cu - B.Cu",
+              "uuid": "a81094ea-4893-41a9-996a-0da675e527f4",
+              "x": 18.6686,
+              "y": 55.6136,
+              "net": "/LCD_D14",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:608d7ec9b56ce994",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_FLASH_CS] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_FLASH_CS] on F.Cu - B.Cu",
+              "uuid": "0c611241-78fe-4b1e-b9ab-40ea6efd5fc6",
+              "x": 67.825,
+              "y": 46.8931,
+              "net": "/LCD_FLASH_CS",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        },
+        {
+          "id": "drc:9ced4d46b083ece7",
+          "source": "drc",
+          "list": "violation",
+          "severity": "warning",
+          "rule": "via_dangling",
+          "title": "Via is not connected or connected on only one layer",
+          "detail": "Via [/LCD_TOUCH_CS] on F.Cu - B.Cu",
+          "anchors": [
+            {
+              "doc": "pcb",
+              "text": "Via [/LCD_TOUCH_CS] on F.Cu - B.Cu",
+              "uuid": "bfb50687-d158-4d43-bbe5-a6147268d338",
+              "x": 66.9989,
+              "y": 38.2875,
+              "net": "/LCD_TOUCH_CS",
+              "layer": "F.Cu"
+            }
+          ],
+          "fix": "Remove the unused via or connect it to its destination"
+        }
+      ],
+      "native_coordinates": "kicad_xy_mm"
+    }
+  },
+  "files": [
+    {
+      "name": "pcb_f67ace8a903104c1-rev0-fab.zip",
+      "bytes": 1712622,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/pcb_f67ace8a903104c1-rev0-fab.zip?exp=1795087344&sig=72bcbf95fbae153bb2bf431955ab7bd6f40054f226c0d79b34a9aa46d2cdd51d"
+    },
+    {
+      "name": "board-B_Cu.gbl",
+      "bytes": 11158,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-B_Cu.gbl?exp=1795087344&sig=919e817974803e0d706270e564ec6ff1a45c6475c003cbec8e441c97fdd914b9"
+    },
+    {
+      "name": "board-B_Mask.gbs",
+      "bytes": 2674,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-B_Mask.gbs?exp=1795087344&sig=db7d5beb8b571035ed8e0d12d585c2bde85bef1ec63baaf04440ca8f28c90015"
+    },
+    {
+      "name": "board-B_Paste.gbp",
+      "bytes": 492,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-B_Paste.gbp?exp=1795087344&sig=c9772f8c73f580fbe42fde7c47cb1a678b35bfcfe08d8b5bf6a5c35d366dd81a"
+    },
+    {
+      "name": "board-B_Silkscreen.gbo",
+      "bytes": 493,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-B_Silkscreen.gbo?exp=1795087344&sig=0b3103594d75baa12f415ea9baaa0a29051496903f56b12d22ba0a122b555dfb"
+    },
+    {
+      "name": "board-Edge_Cuts.gm1",
+      "bytes": 944,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-Edge_Cuts.gm1?exp=1795087344&sig=02ad2503e48acea85b64c32030ee4a4e2465e70021f8cc4d38548aec75a35d28"
+    },
+    {
+      "name": "board-F_Cu.gtl",
+      "bytes": 24519,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-F_Cu.gtl?exp=1795087344&sig=5ad5c84dd18b2640c0c33b781b9dcdffe78e8aea8cf0d6a2c131ca228d691877"
+    },
+    {
+      "name": "board-F_Mask.gts",
+      "bytes": 5612,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-F_Mask.gts?exp=1795087344&sig=0f67b618c1fd5ff554ff1f4e7d32e433b6eaf5aa82b781a2a6467facf3ea6f4e"
+    },
+    {
+      "name": "board-F_Paste.gtp",
+      "bytes": 3203,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-F_Paste.gtp?exp=1795087344&sig=d73c5df343e93b437724064da4df52d91751cdad5ea3dba395deab91e70b74da"
+    },
+    {
+      "name": "board-F_Silkscreen.gto",
+      "bytes": 91769,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-F_Silkscreen.gto?exp=1795087344&sig=ee2990bc56f6f6a81f3a155849c9c581baeaedde9d708f6ee8628c04bbf7f261"
+    },
+    {
+      "name": "board-NPTH-drl_map.pdf",
+      "bytes": 12383,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-NPTH-drl_map.pdf?exp=1795087344&sig=20b327e9d69256a8715c9b16c2fbaf51cb884ab0505a4b0703b10997c7febb44"
+    },
+    {
+      "name": "board-NPTH.drl",
+      "bytes": 414,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-NPTH.drl?exp=1795087344&sig=aa71c1ce72f29477193d5ca730ec71d293f7bc268600571157aa15ea64ebd7e5"
+    },
+    {
+      "name": "board-PTH-drl_map.pdf",
+      "bytes": 17851,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-PTH-drl_map.pdf?exp=1795087344&sig=6bf82d7400173b64fbbd5388f351452a51a47f9597ae94067694825d10a279ba"
+    },
+    {
+      "name": "board-PTH.drl",
+      "bytes": 2045,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-PTH.drl?exp=1795087344&sig=f043778939e0ffda3c01ac629ddebc07ba3e5af157e956f2787a667e86aafa69"
+    },
+    {
+      "name": "board-job.gbrjob",
+      "bytes": 2624,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board-job.gbrjob?exp=1795087344&sig=d425f9e238f5c3bf40187e1bab9e0bea4b3045ec02432e28ff97cd5e1a7af548"
+    },
+    {
+      "name": "board.kicad_dru",
+      "bytes": 29450,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board.kicad_dru?exp=1795087344&sig=bb9f566c00010749fa0e36031de015c6f7806fb7134b6532ba0c38db91a3164f"
+    },
+    {
+      "name": "board.kicad_pcb",
+      "bytes": 215145,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board.kicad_pcb?exp=1795087344&sig=edda38f5d2edacab55c292c0d22036a4c5fe68cd3cd959e01e6a72004fcbcde0"
+    },
+    {
+      "name": "board.kicad_pro",
+      "bytes": 10412,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board.kicad_pro?exp=1795087344&sig=73aa4ba6ef36da338c133cb74c4ec27c39c27c78471fa42179ee6759b116acb4"
+    },
+    {
+      "name": "bom.csv",
+      "bytes": 259,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/bom.csv?exp=1795087344&sig=5446ab12308ba64da4237491096210e79ac2066cd79fe81c49158efb8719c1ca"
+    },
+    {
+      "name": "positions.csv",
+      "bytes": 1701,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/positions.csv?exp=1795087344&sig=3ca52f4fa8b0633d10c1b64d9a761e543dd799291782c85b0448667c6748da40"
+    },
+    {
+      "name": "board.step",
+      "bytes": 1276699,
+      "url": "https://api.labwired.com/v1/pcb/export/pcb_f67ace8a903104c1/0/board.step?exp=1795087344&sig=26cb71c6a015169b4dc30516cb6fbe7b8171d2c70eca2d9fd5dad768ee4b5c96"
+    }
+  ],
+  "artifact_hash": "6d055b4a21d2ccc59c07c43cc5e4eb8948daff90c032fd924e59f48688e87a61",
+  "manufacturing_verified": false,
+  "lpddr4_si_verified": false,
+  "functional_simulation_verified": false,
+  "warning": "PCB design-rule checks do not prove LPDDR4 power, stackup, impedance, signal integrity or hardware operation."
+}

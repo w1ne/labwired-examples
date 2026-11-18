@@ -1,0 +1,559 @@
+{
+  "sourceSha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
+  "warningJustification": "Rectangular geometry represents actual PCB, resistor, capacitor, socket and module envelopes. The box-fragment heuristic is acknowledged only for this exact assembly; no collision or physical acceptance gate is relaxed.",
+  "result": {
+    "ok": true,
+    "goal": "Fitted desktop enclosure for the routed 80x100 mm carrier, exact DevKitC-1 PCBv1.0 drawing/header geometry and MRB3205. Four carrier mounts, removable display lid and accessible USB. Physical component metrology, cable dress and printed fit remain explicit acceptance items.",
+    "finalAttemptId": "01",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Attempt 01",
+        "ok": true,
+        "functional": true,
+        "qualityOk": true,
+        "script": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-desktop.kcad.ts",
+        "featureCount": 962,
+        "diagnosticCount": 94,
+        "reviewFacts": [],
+        "visualReview": {
+          "accepted": true,
+          "findings": [
+            "Closed iso, top and back views show one fitted desktop shell, a flush lid, aligned display window, eight seated fastener heads and one roofed USB opening.",
+            "The separate base-subassembly view shows the native carrier on four corner mounts, the DevKit outline and header stack facing the USB opening, and the carrier ribbon connector. Removed lid components are excluded together, so no unsupported floating parts appear.",
+            "Rectangular geometry represents actual PCB, resistor, capacitor, socket and module envelopes. The box-fragment heuristic is acknowledged only for this exact assembly; no collision or physical acceptance gate is relaxed.",
+            "The DevKit component-height volume, display rear volume and USB cable plug are declared design allowances. Screenshots do not establish physical component metrology, cable dress or print fit."
+          ],
+          "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png",
+          "checks": [
+            {
+              "code": "main-object-count",
+              "passed": true,
+              "finding": "Closed views show one desktop unit: a dark base, a light screw lid and one display window.",
+              "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+            },
+            {
+              "code": "proportions-match-reference",
+              "passed": true,
+              "finding": "The top view is a 100 by 120 mm shell around the 80 by 100 mm carrier, with a portrait module window; the iso height matches the documented 65.5 mm shell.",
+              "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+            },
+            {
+              "code": "required-visible-features",
+              "passed": true,
+              "finding": "Top view shows four case screws and four display screws; back view shows the roofed USB opening below the display lid.",
+              "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+            },
+            {
+              "code": "no-stray-or-floating-geometry",
+              "passed": true,
+              "finding": "The complete closed unit has no detached solids. The intentionally separated base inspection view excludes the entire lid subassembly and leaves only installed base parts.",
+              "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure-open/sheet.png"
+            },
+            {
+              "code": "attachment-plausibility",
+              "passed": true,
+              "finding": "The base top view shows the carrier retained at all four corners, four captive corner nut bosses joined to the walls, the DevKit seated between its headers and the IDC housing on its header.",
+              "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure-open/sheet.png"
+            },
+            {
+              "code": "semantic-orientation-alignment",
+              "passed": true,
+              "finding": "The DevKit USB end faces the single rear opening. The display window follows the module active area and the carrier ribbon header occupies the opposite end.",
+              "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+            },
+            {
+              "code": "canonical-views-physically-coherent",
+              "passed": true,
+              "finding": "Top, rear and isometric views agree on the lid seam, window position, corner fasteners and rear USB aperture. The base view exposes the matching internal board orientation.",
+              "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+            }
+          ]
+        },
+        "repairMode": "none",
+        "passedChecks": [
+          "validator-no-errors",
+          "pose-envelope-solved",
+          "pose-envelope-no-interference"
+        ],
+        "blockingReasons": [],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 0,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": true,
+          "status": "pass",
+          "entries": [
+            {
+              "name": "ribbon-depth-stop-height",
+              "source": "script",
+              "status": "pass",
+              "measured": [
+                45,
+                6,
+                1.1000000000000014
+              ],
+              "limit": {
+                "z": [
+                  0.78,
+                  1.41
+                ]
+              },
+              "margin": 0.3099999999999985,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_1",
+                  "selectorText": "body(boolean_40)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.41156240430404
+                }
+              ],
+              "featureId": "require_1",
+              "predicate": {
+                "metric": "bbox",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_40"
+                },
+                "op": "within",
+                "limit": {
+                  "z": [
+                    0.78,
+                    1.41
+                  ]
+                }
+              }
+            },
+            {
+              "name": "lower-ribbon-connector-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 11.64,
+              "limit": 0.5,
+              "margin": 11.14,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_2",
+                  "selectorText": "body(boolean_360)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_2",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_2",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_360"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "upper-ribbon-connector-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 12.265,
+              "limit": 0.5,
+              "margin": 11.765,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_3",
+                  "selectorText": "body(boolean_394)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_3",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_3",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_394"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "ribbon-connectors-to-devkit-reserve",
+              "source": "script",
+              "status": "pass",
+              "measured": 28.617304205672482,
+              "limit": 2,
+              "margin": 26.617304205672482,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_4",
+                  "selectorText": "body(boolean_394)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_4",
+                  "selectorText": "body(box_121)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.8561415198383
+                }
+              ],
+              "featureId": "require_4",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_394"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "box_121"
+                },
+                "op": "gte",
+                "limit": 2
+              }
+            },
+            {
+              "name": "carrier-to-lid",
+              "source": "script",
+              "status": "pass",
+              "measured": 43.39,
+              "limit": 1,
+              "margin": 42.39,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_5",
+                  "selectorText": "body(boolean_192)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 128.5469703096479
+                },
+                {
+                  "consumerFeatureId": "require_5",
+                  "selectorText": "body(boolean_39)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 156.23776752117269
+                }
+              ],
+              "featureId": "require_5",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_192"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_39"
+                },
+                "op": "gte",
+                "limit": 1
+              }
+            },
+            {
+              "name": "devkit-height-reserve-to-display",
+              "source": "script",
+              "status": "pass",
+              "measured": 12.11,
+              "limit": 2,
+              "margin": 10.11,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_6",
+                  "selectorText": "body(box_121)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.8561415198383
+                },
+                {
+                  "consumerFeatureId": "require_6",
+                  "selectorText": "body(boolean_326)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 107.89209655947958
+                }
+              ],
+              "featureId": "require_6",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "box_121"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_326"
+                },
+                "op": "gte",
+                "limit": 2
+              }
+            },
+            {
+              "name": "devkit-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 8.013612629195654,
+              "limit": 0.5,
+              "margin": 7.513612629195654,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_7",
+                  "selectorText": "body(boolean_282)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.67647565942796
+                },
+                {
+                  "consumerFeatureId": "require_7",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_7",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_282"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "display-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 11.122444758782702,
+              "limit": 0.5,
+              "margin": 10.622444758782702,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_8",
+                  "selectorText": "body(boolean_322)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 108.54469355984199
+                },
+                {
+                  "consumerFeatureId": "require_8",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_8",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_322"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "usb-plug-access",
+              "source": "script",
+              "status": "pass",
+              "measured": 0.5,
+              "limit": 0.5,
+              "margin": 0,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_9",
+                  "selectorText": "body(box_230)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 44.04543109109048
+                },
+                {
+                  "consumerFeatureId": "require_9",
+                  "selectorText": "body(boolean_26)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_9",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "box_230"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_26"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "touch-glass-to-lid",
+              "source": "script",
+              "status": "pass",
+              "measured": 0.29999999999999893,
+              "limit": 0.3,
+              "margin": -1.0547118733938987e-15,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_10",
+                  "selectorText": "body(boolean_322)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 108.54469355984199
+                },
+                {
+                  "consumerFeatureId": "require_10",
+                  "selectorText": "body(boolean_39)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 156.23776752117269
+                }
+              ],
+              "featureId": "require_10",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_322"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_39"
+                },
+                "op": "gte",
+                "limit": 0.3
+              }
+            }
+          ],
+          "summary": {
+            "pass": 10,
+            "fail": 0,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
+            "byteLength": 12251
+          },
+          "parameters": {
+            "values": {
+              "output": "assembly"
+            },
+            "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.2",
+            "revision": null
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+          "identitySha256": "04c5f45a0e8d034af29fcaba2d039cc789f0cd1b3ee81e803af67039c0c80b10"
+        },
+        "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Fitted desktop enclosure for the routed 80x100 mm carrier, exact DevKitC-1 PCBv1.0 drawing/header geometry and MRB3205. Four carrier mounts, removable display lid and accessible USB. Physical component metrology, cable dress and printed fit remain explicit acceptance items.",
+      "steps": [
+        {
+          "id": "01",
+          "title": "Attempt 01",
+          "status": "passed",
+          "script": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/mechanical/doom-desktop.kcad.ts",
+          "review": {
+            "ok": true,
+            "functional": true,
+            "qualityOk": true,
+            "evaluationEvidence": {
+              "schema": "kernelcad.evaluation-evidence.v1",
+              "mode": "build",
+              "source": {
+                "sha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
+                "byteLength": 12251
+              },
+              "parameters": {
+                "values": {
+                  "output": "assembly"
+                },
+                "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+              },
+              "engine": {
+                "kernel": "occt",
+                "version": "0.17.2",
+                "revision": null
+              },
+              "dependencies": {
+                "status": "untracked"
+              },
+              "reuse": {
+                "eligible": false,
+                "reason": "dependencies-untracked"
+              },
+              "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+              "identitySha256": "04c5f45a0e8d034af29fcaba2d039cc789f0cd1b3ee81e803af67039c0c80b10"
+            },
+            "summary": "validator clean, pose envelope solved, no interferences",
+            "blockingReasons": [],
+            "reviewFacts": []
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "candidate",
+  "hardware_tested": false,
+  "firmware_build": "passed; complete reviewed source and digest-pinned recipe reproduce byte-identical ELF, application, bootloader, partition table and full flash image",
+  "native_electrical": {
+    "erc_findings": 0,
+    "drc_findings": 0,
+    "unrouted": 0,
+    "parity_errors": 0
+  },
+  "simulation": {
+    "initial_existing_model_rom_boot": true,
+    "panel_dimensions": [
+      320,
+      240
+    ],
+    "unique_rgb_colors": 236,
+    "steps": 600000000,
+    "scope": "Initial run still has legacyGPIO47 RD model declaration. Final tied-high RD replay and UART controls pending."
+  },
+  "mechanical": {
+    "status": "local strict design-loop passed",
+    "source_sha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
+    "named_parts": 48,
+    "requirements_passed": 10,
+    "requirements_failed": 0,
+    "visual_checks_passed": 7,
+    "blocking_geometry_reasons": 0,
+    "negative_control": "Closing the USB opening fails the usb-plug-access requirement: 0 mm measured versus 0.5 mm required.",
+    "exports": [
+      "assembly STEP",
+      "base STEP/STL/3MF",
+      "lid STEP/STL/3MF",
+      "ribbon depth spacer STEP/STL/3MF"
+    ],
+    "review_warning_acknowledged": {
+      "code": "assembly.quality.box-fragment-clutter",
+      "reason": "Rectangular solids represent physical PCB, socket, resistor, capacitor and module geometry; no geometric tolerance or collision gate is changed."
+    },
+    "vendor_model_limits": [
+      "DevKit populated components use a stated 12 mm design allowance",
+      "USB overmould is a design envelope",
+      "Display rear components use the factory drawing envelope",
+      "Ribbon flex shape and contact springs are not rigid-body proof"
+    ],
+    "runtime": "local KernelCAD private product build; see exact build receipt",
+    "hosted_saved_revision": {
+      "slug": "sZrRpIhi",
+      "version": 1,
+      "mesh_status": "failed",
+      "error": "revision-mesh-artifact exceeded the 896 MB worker memory limit (932 MB)",
+      "server_build": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z"
+    }
+  },
+  "remaining_acceptance": [
+    "Final matching RD model replay and keyboard stimulus",
+    "Saved Studio mesh must pass the existing worker memory limit",
+    "Closed-case current and regulator temperature",
+    "Fabricated native carrier inspection and powered bring-up",
+    "Measured ribbon insertion depth and strain-free cable dress",
+    "Printed fit, screw engagement, USB access and service sequence"
+  ],
+  "tracker": "https://github.com/w1ne/labwired/issues/3552"
+}

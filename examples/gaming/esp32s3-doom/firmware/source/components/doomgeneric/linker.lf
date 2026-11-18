@@ -1,0 +1,12 @@
+# Doom's static arrays (screens, sprite/flat caches, sound tables, the menu
+# structures) overflow the S3's internal DRAM on their own. Push the whole
+# doomgeneric archive's .bss and .common into the 8 MB octal PSRAM; internal
+# RAM then stays free for stacks, DMA buffers and the IDF itself.
+#
+# `extram_bss` is the stock scheme (bss -> extern_ram, common -> extern_ram)
+# and needs CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY=y.
+
+[mapping:doomgeneric]
+archive: libdoomgeneric.a
+entries:
+    * (extram_bss)

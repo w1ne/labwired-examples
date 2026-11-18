@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "sourceSha256": "ee3b84071cd2b46b6d4846019778121e6c5a4fb53abd5ef814e3e45204a9f628",
+  "assetSha256": "3f3acd019eecbdb4a12c02664f13205d03566391ca2e52298401a7d16b9a89c9",
+  "evaluation": {
+    "ok": true,
+    "buildOk": true,
+    "serverBuild": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z",
+    "sceneSummary": {
+      "valid": true,
+      "volume": 178169.4771498894,
+      "faceCount": 2371,
+      "size": [
+        100,
+        120,
+        68.5
+      ]
+    },
+    "featureCount": 962,
+    "parts": {
+      "count": 48,
+      "names": [
+        "base",
+        "lid",
+        "carrier-pcba",
+        "esp32s3-devkitc-v1-outline-and-headers",
+        "mrb3205-drawing-envelope",
+        "idsd-carrier-end-envelope",
+        "idsd-display-end-envelope",
+        "display-ribbon-depth-spacer",
+        "carrier-washer-0",
+        "carrier-standoff-0",
+        "carrier-upper-screw-0",
+        "carrier-lower-screw-0",
+        "carrier-washer-1",
+        "carrier-standoff-1",
+        "carrier-upper-screw-1",
+        "carrier-lower-screw-1",
+        "carrier-washer-2",
+        "carrier-standoff-2",
+        "carrier-upper-screw-2",
+        "carrier-lower-screw-2",
+        "carrier-washer-3",
+        "carrier-standoff-3",
+        "carrier-upper-screw-3",
+        "carrier-lower-screw-3",
+        "lid-nut-0",
+        "lid-screw-0",
+        "lid-nut-1",
+        "lid-screw-1",
+        "lid-nut-2",
+        "lid-screw-2",
+        "lid-nut-3",
+        "lid-screw-3",
+        "display-spacer-0",
+        "display-washer-0",
+        "display-nut-0",
+        "display-screw-0",
+        "display-spacer-1",
+        "display-washer-1",
+        "display-nut-1",
+        "display-screw-1",
+        "display-spacer-2",
+        "display-washer-2",
+        "display-nut-2",
+        "display-screw-2",
+        "display-spacer-3",
+        "display-washer-3",
+        "display-nut-3",
+        "display-screw-3"
+      ]
+    },
+    "requirements": {
+      "pass": 10,
+      "fail": 0,
+      "notEvaluated": 0
+    },
+    "diagnostics": [
+      {
+        "target": "export-occt",
+        "code": "authoring.prefer-api.thread",
+        "severity": "info",
+        "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+        "hint": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+        "nextAction": {
+          "kind": "call-tool",
+          "tool": "lookup_cookbook",
+          "args": {
+            "query": "M4 threaded hole tap drill"
+          }
+        }
+      },
+      {
+        "target": "export-occt",
+        "code": "authoring.prefer-api.hole-by-cylinder",
+        "severity": "info",
+        "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+        "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+        "nextAction": {
+          "kind": "call-tool",
+          "tool": "lookup_cookbook",
+          "args": {
+            "query": "clearance hole through plate"
+          }
+        }
+      }
+    ],
+    "mechanism": "real"
+  },
+  "studio": {
+    "projectId": "44eb515e-dfdb-4714-99c7-a1f7fcee1438",
+    "slug": "sZrRpIhi",
+    "version": 1,
+    "url": "https://app.kernelcad.com/p/sZrRpIhi?version=1&show_electronics=1",
+    "projectSaved": true,
+    "meshStatus": "failed",
+    "meshReady": false,
+    "assetHashes": [
+      "3f3acd019eecbdb4a12c02664f13205d03566391ca2e52298401a7d16b9a89c9"
+    ],
+    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/sZrRpIhi/v1.json",
+    "meshError": "revision-mesh-artifact exceeded the 896 MB worker memory limit (932 MB)",
+    "serverBuild": "0.1.0+bf671690568f@2026-11-18T11:49:19.635Z"
+  }
+}

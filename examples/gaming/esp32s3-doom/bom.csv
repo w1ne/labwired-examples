@@ -1,0 +1,24 @@
+Reference,Quantity,Manufacturer,MPN,Description,Source,Assembly note
+PCB1,1,LabWired,DOOM-CARRIER-REV-A,"80x100x1.6mm, two layers, routed KiCad10 native board",electronics/doom-carrier.kicad_pcb,Manufacture from the included Gerbers and drill files.
+MCU1,1,Espressif,"ESP32-S3-DevKitC-1-N16R8, PCB v1.0","16MB QSPI flash,8MB octal PSRAM,44 factory header pins",https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html,PCB v1.0 has RGB LED onGPIO48. v1.1 is a different layout/LED route and is not this package.
+LCD1,1,LCDWiki / QDtech,MRB3205,"3.2inch320x240 ILI9341,34pin16bit8080 interface",https://www.lcdwiki.com/3.2inch_16BIT_Module_ILI9341_SKU:MRB3205,"R16=0R,R8=open,3V3 supply with moduleJ1 closed. The SPI/40pin variants are incompatible."
+"J1,J2",2,Samtec,SSW-122-01-G-S,"1x22 socket,2.54mm pitch,8.51mm body,56.39mm body length",https://www.samtec.com/products/ssw-122-01-g-s,Use manufacturer dimensions; the generic KiCad model is only a board visualization.
+J3,1,Samtec,TSW-117-07-G-D,"2x17 male header,2.54mm pitch,5.842mm mating posts",https://www.samtec.com/products/tsw-117-07-g-d,Pin1 is square and marked on the carrier.
+CABLE1,1,Samtec,IDSD-17-D-04.00-G,"34conductor gray double-ended IDC,101.6mm nominal,straight1:1 wiring",https://www.samtec.com/products/idsd-17-d-04.00-g,No-R/reverse suffix. Red edge identifies conductor1. Use the printed depth spacer at the MRB3205 end.
+R1..R21,21,Yageo,RC0603FR-0733RL,"33ohm1%,0603 series termination",https://www.yageo.com/en/Chart/Download/pdf/RC,Each data/control trace has its own source resistor.
+R22..R25,4,Yageo,RC0603FR-0710KL,"10kohm1%,0603 pull-ups",https://www.yageo.com/en/Chart/Download/pdf/RC,RD and unused SD/flash/touch chip selects.
+C1,1,TDK,C2012X7R1A106K125AC,"10uF10VX7R+/-10%,0805",https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC,Manufacturer listed Production on2026-11-18.
+C2,1,TDK,C2012X8R1H104K125AA,"100nF50VX8R+/-10%,0805",https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X8R1H104K125AA,Manufacturer listed Production on2026-11-18.
+USB1,1,Adafruit,592,"USB-A to Micro-B data cable,approximately1m",https://www.adafruit.com/product/592,Use the DevKit UART USB connector for flashing and keyboard input.
+PRINT1,1,LabWired,doom-base-print,"PETG base,100x120mm footprint",mechanical/doom-base-print.3mf,"0.4mm nozzle,0.2mm layers,4perimeters; verify fit coupons."
+PRINT2,1,LabWired,doom-lid-print,PETG display lid,mechanical/doom-lid-print.3mf,"Print exterior face down,as exported."
+PRINT3,1,LabWired,doom-ribbon-spacer-print,PETG45x6x1.1mm depth-stop frame,mechanical/doom-ribbon-spacer-print.3mf,Print0.1mm layers. Measure thickness and pin length;5.59..6.22mm insertion required.
+M1..M4,4,Harwin,R25-1000702,"M2.5 female/female brass standoff,7mm long,5mm AF",https://www.harwin.com/products/R25-1000702,Through threaded. Place on0.5mm nylon washers.
+M5..M12,8,Accu,HPW-2.7-6.5-0.5-N,Nylon washer2.7IDx6.5ODx0.5mm,https://www.accu.co.uk/metric-flat-washers/465680-HPW-2-7-6-5-0-5-N,Four below carrier standoffs;four behind displayPCB.
+M13..M16,4,Accu,SSK-M2.5-5-A2,"M2.5x5 countersunk socket screw,A2",https://www.accu.co.uk/countersunk-socket-head-screws/5413-SSK-M2-5-5-A2,"Carrier lower screws,installed from underside."
+M17..M20,4,Accu,SSCF-M2.5-5-A2,"M2.5x5 socket cap screw,A2",https://www.accu.co.uk/metric-cap-head-screws/3803-SSCF-M2-5-5-A2,Carrier upper screws.
+M21..M24,4,Wurth Elektronik,960040021,"Nylon unthreaded spacer,2.7IDx5ODx4mm",https://www.we-online.com/components/products/datasheet/960040021.pdf,Between display frontPCB and lid underside.
+M25..M28,4,Accu,SSCF-M2.5-12-A2,"M2.5x12 socket cap screw,A2",https://www.accu.co.uk/metric-cap-head-screws/3807-SSCF-M2-5-12-A2,Display retention.
+M29..M32,4,Accu,HPN-M2.5-A2,"M2.5 nut,5mm AF,2mm nominal height",https://www.accu.co.uk/hexagon-nuts/7886-HPN-M2-5-A2,Install against rear nylon washer while lid is on bench.
+M33..M36,4,Accu,SSCF-M3-10-A2,"M3x10 socket cap screw,A2",https://www.accu.co.uk/metric-cap-head-screws/3819-SSCF-M3-10-A2,Four case corner screws.
+M37..M40,4,Accu,HPN-M3-A2,"M3 nut,5.5mm AF,2.4mm nominal height",https://www.accu.co.uk/hexagon-nuts/7888-HPN-M3-A2,Insert in printed pockets before fitting carrier.

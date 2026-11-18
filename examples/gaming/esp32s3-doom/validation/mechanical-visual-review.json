@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png",
+  "findings": [
+    "Closed iso, top and back views show one fitted desktop shell, a flush lid, aligned display window, eight seated fastener heads and one roofed USB opening.",
+    "The separate base-subassembly view shows the native carrier on four corner mounts, the DevKit outline and header stack facing the USB opening, and the carrier ribbon connector. Removed lid components are excluded together, so no unsupported floating parts appear.",
+    "Rectangular geometry represents actual PCB, resistor, capacitor, socket and module envelopes. The box-fragment heuristic is acknowledged only for this exact assembly; no collision or physical acceptance gate is relaxed.",
+    "The DevKit component-height volume, display rear volume and USB cable plug are declared design allowances. Screenshots do not establish physical component metrology, cable dress or print fit."
+  ],
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "Closed views show one desktop unit: a dark base, a light screw lid and one display window.",
+      "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The top view is a 100 by 120 mm shell around the 80 by 100 mm carrier, with a portrait module window; the iso height matches the documented 65.5 mm shell.",
+      "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "Top view shows four case screws and four display screws; back view shows the roofed USB opening below the display lid.",
+      "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "The complete closed unit has no detached solids. The intentionally separated base inspection view excludes the entire lid subassembly and leaves only installed base parts.",
+      "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure-open/sheet.png"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "The base top view shows the carrier retained at all four corners, four captive corner nut bosses joined to the walls, the DevKit seated between its headers and the IDC housing on its header.",
+      "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure-open/sheet.png"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "The DevKit USB end faces the single rear opening. The display window follows the module active area and the carrier ribbon header occupies the opposite end.",
+      "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "Top, rear and isometric views agree on the lid seam, window position, corner fasteners and rear USB aperture. The base view exposes the matching internal board orientation.",
+      "screenshotPath": "/data/worktrees/labwired-examples-doom-package-20261118/examples/gaming/esp32s3-doom/validation/renders/enclosure/sheet.png"
+    }
+  ]
+}

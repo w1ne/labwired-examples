@@ -1,0 +1,491 @@
+{
+  "sourceSha256": "7508205bfc63e484da47379187a3e033e114b7cd2ecadee6ce49cec905b34221",
+  "mutation": "Remove only the USB opening subtraction; retain all assembly geometry and requirements.",
+  "result": {
+    "ok": false,
+    "goal": "Fitted desktop enclosure for the routed 80x100 mm carrier, exact DevKitC-1 PCBv1.0 drawing/header geometry and MRB3205. Four carrier mounts, removable display lid and accessible USB. Physical component metrology, cable dress and printed fit remain explicit acceptance items.",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Attempt 01",
+        "ok": false,
+        "functional": false,
+        "qualityOk": false,
+        "featureCount": 961,
+        "diagnosticCount": 94,
+        "reviewFacts": [
+          {
+            "code": "requirement.failed",
+            "severity": "error",
+            "message": "usb-plug-access failed: measured 0, limit 0.500, margin -0.500 (box_230 vs boolean_25).",
+            "hint": "requirement.fail — repair the selection or geometry named in the message; measured value, limit and margin are in the requirements ledger (selections carry S1 fingerprints for highlighting)."
+          }
+        ],
+        "repairMode": "none",
+        "passedChecks": [
+          "validator-no-errors",
+          "pose-envelope-solved",
+          "pose-envelope-no-interference"
+        ],
+        "blockingReasons": [],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 0,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": false,
+          "status": "fail",
+          "entries": [
+            {
+              "name": "ribbon-depth-stop-height",
+              "source": "script",
+              "status": "pass",
+              "measured": [
+                45,
+                6,
+                1.1000000000000014
+              ],
+              "limit": {
+                "z": [
+                  0.78,
+                  1.41
+                ]
+              },
+              "margin": 0.3099999999999985,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_1",
+                  "selectorText": "body(boolean_39)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.41156240430404
+                }
+              ],
+              "featureId": "require_1",
+              "predicate": {
+                "metric": "bbox",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_39"
+                },
+                "op": "within",
+                "limit": {
+                  "z": [
+                    0.78,
+                    1.41
+                  ]
+                }
+              }
+            },
+            {
+              "name": "lower-ribbon-connector-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 11.64,
+              "limit": 0.5,
+              "margin": 11.14,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_2",
+                  "selectorText": "body(boolean_359)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_2",
+                  "selectorText": "body(boolean_25)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_2",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_359"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_25"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "upper-ribbon-connector-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 12.265,
+              "limit": 0.5,
+              "margin": 11.765,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_3",
+                  "selectorText": "body(boolean_393)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_3",
+                  "selectorText": "body(boolean_25)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_3",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_393"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_25"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "ribbon-connectors-to-devkit-reserve",
+              "source": "script",
+              "status": "pass",
+              "measured": 28.617304205672482,
+              "limit": 2,
+              "margin": 26.617304205672482,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_4",
+                  "selectorText": "body(boolean_393)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 45.913415250882835
+                },
+                {
+                  "consumerFeatureId": "require_4",
+                  "selectorText": "body(box_121)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.8561415198383
+                }
+              ],
+              "featureId": "require_4",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_393"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "box_121"
+                },
+                "op": "gte",
+                "limit": 2
+              }
+            },
+            {
+              "name": "carrier-to-lid",
+              "source": "script",
+              "status": "pass",
+              "measured": 43.39,
+              "limit": 1,
+              "margin": 42.39,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_5",
+                  "selectorText": "body(boolean_191)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 128.5469703096479
+                },
+                {
+                  "consumerFeatureId": "require_5",
+                  "selectorText": "body(boolean_38)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 156.23776752117269
+                }
+              ],
+              "featureId": "require_5",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_191"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_38"
+                },
+                "op": "gte",
+                "limit": 1
+              }
+            },
+            {
+              "name": "devkit-height-reserve-to-display",
+              "source": "script",
+              "status": "pass",
+              "measured": 12.11,
+              "limit": 2,
+              "margin": 10.11,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_6",
+                  "selectorText": "body(box_121)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.8561415198383
+                },
+                {
+                  "consumerFeatureId": "require_6",
+                  "selectorText": "body(boolean_325)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 107.89209655947958
+                }
+              ],
+              "featureId": "require_6",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "box_121"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_325"
+                },
+                "op": "gte",
+                "limit": 2
+              }
+            },
+            {
+              "name": "devkit-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 7.539999999999992,
+              "limit": 0.5,
+              "margin": 7.039999999999992,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_7",
+                  "selectorText": "body(boolean_281)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 68.67647565942796
+                },
+                {
+                  "consumerFeatureId": "require_7",
+                  "selectorText": "body(boolean_25)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_7",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_281"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_25"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "display-to-base",
+              "source": "script",
+              "status": "pass",
+              "measured": 11.122444758782702,
+              "limit": 0.5,
+              "margin": 10.622444758782702,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_8",
+                  "selectorText": "body(boolean_321)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 108.54469355984199
+                },
+                {
+                  "consumerFeatureId": "require_8",
+                  "selectorText": "body(boolean_25)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "featureId": "require_8",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_321"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_25"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "usb-plug-access",
+              "source": "script",
+              "status": "fail",
+              "measured": 0,
+              "limit": 0.5,
+              "margin": -0.5,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_9",
+                  "selectorText": "body(box_230)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 44.04543109109048
+                },
+                {
+                  "consumerFeatureId": "require_9",
+                  "selectorText": "body(boolean_25)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 168.6186525862427
+                }
+              ],
+              "message": "usb-plug-access failed: measured 0, limit 0.500, margin -0.500 (box_230 vs boolean_25).",
+              "featureId": "require_9",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "box_230"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_25"
+                },
+                "op": "gte",
+                "limit": 0.5
+              }
+            },
+            {
+              "name": "touch-glass-to-lid",
+              "source": "script",
+              "status": "pass",
+              "measured": 0.29999999999999893,
+              "limit": 0.3,
+              "margin": -1.0547118733938987e-15,
+              "selections": [
+                {
+                  "consumerFeatureId": "require_10",
+                  "selectorText": "body(boolean_321)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 108.54469355984199
+                },
+                {
+                  "consumerFeatureId": "require_10",
+                  "selectorText": "body(boolean_38)",
+                  "syntax": "lineage",
+                  "fingerprints": [],
+                  "partDiagonal": 156.23776752117269
+                }
+              ],
+              "featureId": "require_10",
+              "predicate": {
+                "metric": "clearance",
+                "a": {
+                  "kind": "body",
+                  "ref": "boolean_321"
+                },
+                "b": {
+                  "kind": "body",
+                  "ref": "boolean_38"
+                },
+                "op": "gte",
+                "limit": 0.3
+              }
+            }
+          ],
+          "summary": {
+            "pass": 9,
+            "fail": 1,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "7508205bfc63e484da47379187a3e033e114b7cd2ecadee6ce49cec905b34221",
+            "byteLength": 12324
+          },
+          "parameters": {
+            "values": {
+              "output": "assembly"
+            },
+            "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.2",
+            "revision": null
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "535b234c13807585cafda66c7cc5c5d3cf81de0cae7022b6a2845469466284f8",
+          "identitySha256": "dd04b5546ef5a09deb8ef92f95d74a067e60ad3ddb475c541fc03814d3ba6da6"
+        },
+        "nextActionPrompt": "Top diagnostics:\n- [info] assembly.mounting-hole.unverified @ mate=lid-seat\n- [info] assembly.mounting-hole.unverified @ mate=lid-seat\n- [info] assembly.mounting-hole.unverified @ mate=ribbon-carrier-seat\n\nRepair mode: none\nDirective: No repair needed. Preserve the current topology and keep validating with review_cad after changes.\n\nDesign goal: Fitted desktop enclosure for the routed 80x100 mm carrier, exact DevKitC-1 PCBv1.0 drawing/header geometry and MRB3205. Four carrier mounts, removable display lid and accessible USB. Physical component metrology, cable dress and printed fit remain explicit acceptance items.\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- requirement.failed: usb-plug-access failed: measured 0, limit 0.500, margin -0.500 (box_230 vs boolean_25). → requirement.fail — repair the selection or geometry named in the message; measured value, limit and margin are in the requirements ledger (selections carry S1 fingerprints for highlighting).",
+        "revisionAssist": {
+          "mode": "hints-only",
+          "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+          "hints": [
+            {
+              "code": "requirement.failed",
+              "summary": "usb-plug-access failed: measured 0, limit 0.500, margin -0.500 (box_230 vs boolean_25).",
+              "suggestedChange": "requirement.fail — repair the selection or geometry named in the message; measured value, limit and margin are in the requirements ledger (selections carry S1 fingerprints for highlighting)."
+            }
+          ]
+        }
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Fitted desktop enclosure for the routed 80x100 mm carrier, exact DevKitC-1 PCBv1.0 drawing/header geometry and MRB3205. Four carrier mounts, removable display lid and accessible USB. Physical component metrology, cable dress and printed fit remain explicit acceptance items.",
+      "steps": []
+    },
+    "revisionAssist": {
+      "mode": "hints-only",
+      "honesty": "Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.",
+      "hints": [
+        {
+          "code": "requirement.failed",
+          "summary": "usb-plug-access failed: measured 0, limit 0.500, margin -0.500 (box_230 vs boolean_25).",
+          "suggestedChange": "requirement.fail — repair the selection or geometry named in the message; measured value, limit and margin are in the requirements ledger (selections carry S1 fingerprints for highlighting)."
+        }
+      ]
+    },
+    "nextActionPrompt": "Top diagnostics:\n- [info] assembly.mounting-hole.unverified @ mate=lid-seat\n- [info] assembly.mounting-hole.unverified @ mate=lid-seat\n- [info] assembly.mounting-hole.unverified @ mate=ribbon-carrier-seat\n\nRepair mode: none\nDirective: No repair needed. Preserve the current topology and keep validating with review_cad after changes.\n\nDesign goal: Fitted desktop enclosure for the routed 80x100 mm carrier, exact DevKitC-1 PCBv1.0 drawing/header geometry and MRB3205. Four carrier mounts, removable display lid and accessible USB. Physical component metrology, cable dress and printed fit remain explicit acceptance items.\n\nRevision assist (structured — prefer over guessing):\n- mode: hints-only\n- Revision assist returns actionable patches/hints for the agent to apply. It does not autonomously rewrite full CAD models; complex redesign stays agent-driven via nextActionPrompt + cookbooks.\n- requirement.failed: usb-plug-access failed: measured 0, limit 0.500, margin -0.500 (box_230 vs boolean_25). → requirement.fail — repair the selection or geometry named in the message; measured value, limit and margin are in the requirements ledger (selections carry S1 fingerprints for highlighting)."
+  }
+}
