@@ -2,7 +2,7 @@
 
 This package contains a USB-powered OLED counter, its routed carrier PCB, firmware, enclosure CAD, assembly instructions and verification evidence. A Seeed XIAO ESP32C3 drives an Adafruit 326 STEMMA QT display. The counter starts at **19:00:00 after every reset** and advances once per second. It has no real-time clock, time-setting control or saved time.
 
-**Status: engineering assembly candidate.** Firmware behavior and native PCB checks pass. Revision 2 increases nominal glass/support clearance from 0.277 mm to 1.277 mm while retaining the 0.8 mm minimum-wall requirement. The enclosure passes nine dimensional checks, both print-orientation checks, valid STEP solids and a design-loop review with actual screenshots. Full assembly-path acceptance remains open because the verifier cannot yet resolve nominal seated contacts after its containment performance limit. No physical prototype has been built.
+**Status: engineering assembly candidate.** Firmware behavior and native PCB checks pass. Revision 2 increases nominal glass/support clearance from 0.277 mm to 1.277 mm while retaining the 0.8 mm minimum-wall requirement. The enclosure passes nine dimensional checks, both print-orientation checks, valid STEP solids and a design-loop review with actual screenshots. A subsequent independent check passes 39 ordered geometric stages for all 41 source parts; the complete [path evidence](cad/verification/ordered-path-followup/) records required holds and tool limits. Hosted assembly-path acceptance remains open. No physical prototype has been built.
 
 [Open the canonical Lab](https://app.labwired.com/?lab=esp32c3-oled-lab) · [Open the pinned enclosure](https://app.kernelcad.com/p/t_IaE1EE?version=2) · [Track remaining work](https://github.com/w1ne/labwired/issues/3550)
 
@@ -109,7 +109,8 @@ The public runtime is [firmware-demos-v19](https://github.com/w1ne/labwired-core
 | Published runtime + packaged configuration | **5/5 assertions pass**, 300 million steps | Cold boot of exact v19 bytes with the exported Lab system |
 | Published runtime + browser WASM | Two distinct nonblank 128×64 frames; **19:00:00 → 19:00:01** | Exact v19 ELF/flash/snapshot and pinned core engine |
 | Enclosure solids and print orientations | **41/41 STEP solids valid; base/lid FDM pass; 9/9 dimensional requirements pass** | Exact revision 2 CAD and configured FDM geometry |
-| Full assembly-path check | **Unresolved: budget / seated-contact mesh ambiguity** | Hosted 80-million budget receipt and local fail-closed contact receipt; no accepted sequence |
+| Independent ordered path check | **39/39 stages pass; all 41 source parts covered** | Continuous mesh/native swept-envelope evidence; 13 helper controls and a shifted-screw negative; holds and zero-margin driver fit remain documented |
+| Hosted assembly-path acceptance | **Open** | Earlier budget/contact receipts remain; independent follow-up does not change the hosted result |
 | `design_loop` review | **Pass: functional, quality and screenshot review** | Exact revision 2 source, native STEP and actual closed/interior/lid-print renders |
 | Printed/device prototype | **Not performed** | Electrical measurements, cable fit and physical assembly remain open |
 
