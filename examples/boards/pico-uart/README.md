@@ -6,6 +6,16 @@ This package turns the featured Pico example into a buildable USB-powered bench 
 
 The firmware prints the boot banner and toggles the Pico's actual GP25 LED. The console is UART0 on GP0/GP1 at 115200 baud, 8 data bits, no parity, one stop bit. The physical console uses an Adafruit 954 USB-to-TTL adapter. The Pico's micro-USB port supplies power and accepts the UF2 image.
 
+## Runtime configuration
+
+The package owns its runtime descriptor at `runtime/system.yaml`. It selects the existing RP2040 chip model, declares the 125,000,000 Hz model time base and UART0 console, and retains the active-high GP25 LED. `runtime/acceptance.yaml` references the exact hosted release ELF and the same five serial/GPIO acceptance clauses. Run it from this package with:
+
+```sh
+labwired test --script runtime/acceptance.yaml --no-uart-stdout --output-dir build/runtime-check
+```
+
+The exact released ELF passes all five clauses with this descriptor; `validation/explicit-runtime-acceptance.json` binds the source and result hashes. This model time base does not certify physical baud error or PLL behavior.
+
 ## Qualification
 
 | Check | Recorded result | Evidence |

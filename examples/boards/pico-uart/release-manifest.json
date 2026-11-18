@@ -38,7 +38,8 @@
     "mechanical_historical": "validation/design-loop.json",
     "mechanical_evaluation_current": "validation/socket-correction-evaluation.json",
     "visual_review_current": "validation/socket-correction-visual-review.json",
-    "step_historical": "validation/assembly-step-inspection.json"
+    "step_historical": "validation/assembly-step-inspection.json",
+    "runtime": "validation/explicit-runtime-acceptance.json"
   },
   "open_acceptance_items": [
     "Update the existing Studio 675KJsgq project with the final exact-body source after the generic imported-asset collaboration repair is deployed.",
@@ -64,8 +65,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11341,
-      "sha256": "a173ec64b59f7da5d054bcc508208c6dc53b8af09906d67a04542fe8d76a2c9c"
+      "bytes": 12060,
+      "sha256": "943f5ebc834ab3aa09fda15ce4b5c527f562c048b3213387d443cef12b655a7c"
     },
     {
       "path": "SHA256SUMS",
@@ -184,8 +185,8 @@
     },
     {
       "path": "firmware/release-manifest.json",
-      "bytes": 1842,
-      "sha256": "3a78f1124b120f9fde4e0f9e9a3f6de429d11daa31de3ca37503b64bf95085dd"
+      "bytes": 2057,
+      "sha256": "35d4f81371978a71638933b0b5f865acf140e7a1706bb01e5b8f2437c0883018"
     },
     {
       "path": "firmware/src/main.ino",
@@ -363,6 +364,16 @@
       "sha256": "890f20796637b7947c7655aabf919d055b56988a01c20338b635f2daf35b051f"
     },
     {
+      "path": "runtime/acceptance.yaml",
+      "bytes": 364,
+      "sha256": "f003d1361c4f83b0af4fdb07d959b50df4c19637b68a753600477351af2dced9"
+    },
+    {
+      "path": "runtime/system.yaml",
+      "bytes": 373,
+      "sha256": "a686ebe81e24dd0165f16f04da749e04327d58fd4fd9288f903dc3fef0909531"
+    },
+    {
       "path": "validation/assembly-path-budget.json",
       "bytes": 13278,
       "sha256": "4ce34ffecc79f9d33ff1461c9575b6cf913af8cb1f9583fa416fa42e4d09b944"
@@ -416,6 +427,21 @@
       "path": "validation/erc.json",
       "bytes": 985,
       "sha256": "c62c4cafbd2c8cec900ea9624a56cf21c6c3a9a2944107b07b3ff391deca4f07"
+    },
+    {
+      "path": "validation/explicit-runtime-acceptance.json",
+      "bytes": 1736,
+      "sha256": "3bc77ef00b66079f1bad44bc1facce83203f31d912446742f593141de35b3566"
+    },
+    {
+      "path": "validation/explicit-runtime-result.json",
+      "bytes": 261387,
+      "sha256": "1e677bc9cc564d0a05dfa45d38d0c38e2054f190e39bc9fc9e2b9d6f9973a830"
+    },
+    {
+      "path": "validation/explicit-runtime-uart.txt",
+      "bytes": 49,
+      "sha256": "61ffba47fd71668281c2d3916ea2908db6158484deaf0df2ec6293287b5e7e08"
     },
     {
       "path": "validation/firmware-compile.json",
@@ -550,5 +576,13 @@
   ],
   "native_board_id": "pcb_ce2a5c8078eaf157",
   "native_rules_ref": "sha256:3d3ee892b03a1f065286a96e12173ef6cdd5e07a55e8d9cfb5876154eea5775e",
-  "source_commit": "c687840445882f331d784054e234745b11fdf84f"
+  "source_commit": "c687840445882f331d784054e234745b11fdf84f",
+  "runtime": {
+    "system": "runtime/system.yaml",
+    "system_sha256": "a686ebe81e24dd0165f16f04da749e04327d58fd4fd9288f903dc3fef0909531",
+    "acceptance": "runtime/acceptance.yaml",
+    "verified_firmware_sha256": "324a84cbb18276a4814bc4ecf7a20c8b7117ebe874d0df86952ea029dc84bce3",
+    "cpu_hz": 125000000,
+    "debug_uart": "uart0"
+  }
 }

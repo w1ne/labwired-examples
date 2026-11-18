@@ -1,0 +1,59 @@
+{
+  "schema": "labwired.runtime-acceptance.v1",
+  "status": "pass",
+  "runtime_source": "runtime/system.yaml",
+  "runtime_sha256": "a686ebe81e24dd0165f16f04da749e04327d58fd4fd9288f903dc3fef0909531",
+  "test_source": "runtime/acceptance.yaml",
+  "test_sha256": "f003d1361c4f83b0af4fdb07d959b50df4c19637b68a753600477351af2dced9",
+  "firmware_sha256": "324a84cbb18276a4814bc4ecf7a20c8b7117ebe874d0df86952ea029dc84bce3",
+  "core_source_commit": "60e594f5535d4e6ff9707ce7fecb7f2bf2cb1f66",
+  "cli_sha256": "5c3d3d7b9ba15a5cfa7a46fafe8ccf8dadc2ce5e800c70a4ccc2387fa27d2caf",
+  "cpu_hz": 125000000,
+  "debug_uart": "uart0",
+  "board_io": "GP25 active-high LED on sio",
+  "assertions": [
+    {
+      "assertion": {
+        "uart_contains": "RP2040_SMOKE_OK\n"
+      },
+      "passed": true
+    },
+    {
+      "assertion": {
+        "uart_contains": "PICO_LED=1\n"
+      },
+      "passed": true
+    },
+    {
+      "assertion": {
+        "uart_contains": "PICO_LED=0\n"
+      },
+      "passed": true
+    },
+    {
+      "assertion": {
+        "gpio_edges": {
+          "pin": "sio:0",
+          "min_edges": 4
+        }
+      },
+      "passed": true
+    },
+    {
+      "assertion": {
+        "gpio_edges": {
+          "pin": "sio:25",
+          "min_edges": 2
+        }
+      },
+      "passed": true
+    }
+  ],
+  "steps_executed": 50000464,
+  "cycles": 37801300,
+  "stop_reason": "max_steps",
+  "result_file": "validation/explicit-runtime-result.json",
+  "result_sha256": "1e677bc9cc564d0a05dfa45d38d0c38e2054f190e39bc9fc9e2b9d6f9973a830",
+  "scope": "Exact hosted release ELF and explicit package descriptor. Serial text and GPIO transitions only; no physical baud, clock, power or waveform qualification.",
+  "physical_hardware_tested": false
+}
