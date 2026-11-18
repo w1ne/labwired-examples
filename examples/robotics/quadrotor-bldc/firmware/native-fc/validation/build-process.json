@@ -1,12 +1,12 @@
 {
   "stages": [
     {
-      "name": "final-a",
+      "name": "2m-a",
       "args": [
         "python3",
         "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc/build.py",
         "--work-dir",
-        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-a",
+        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-2m-a",
         "--source-tree",
         "/data/worktrees/quad-betaflight-native-20261118",
         "--toolchain",
@@ -14,18 +14,18 @@
         "--picotool",
         "/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool",
         "--jobs",
-        "4"
+        "3"
       ],
       "exit": 0,
-      "seconds": 49.230990409851074
+      "seconds": 477.77965092658997
     },
     {
-      "name": "final-b",
+      "name": "2m-b",
       "args": [
         "python3",
         "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc/build.py",
         "--work-dir",
-        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b",
+        "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-2m-b",
         "--source-tree",
         "/data/worktrees/quad-betaflight-native-20261118",
         "--toolchain",
@@ -33,10 +33,10 @@
         "--picotool",
         "/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool",
         "--jobs",
-        "4"
+        "3"
       ],
       "exit": 0,
-      "seconds": 33.07059931755066
+      "seconds": 225.4643895626068
     }
   ],
   "current": "complete"

@@ -30,59 +30,89 @@
         143,
         144
       ]
+    },
+    "output_polarity_authority": {
+      "native_validation": "hardware/flight-controller-openfc-lite-rev2-lw1/validation/schematic-role-edits.json",
+      "q1_mpn": "ALLPOWER AP1606",
+      "q1_datasheet_revision": "V1.0",
+      "q1_datasheet_sha256": "f0ceb0b3865757ae1729798de38daa512bf99b1aa55c55769c1151a3dc410610",
+      "sources": {
+        "src/main/drivers/light_led.c": "efad411a066e411485796b6b8e04b8dd8a8686a61f0296940033b589fcdfa210",
+        "src/main/drivers/light_led.h": "ea0dc8c5487aa8b5c78f7d739abee7d75bc06b7ae9e19b5a11ee167760b6aa05",
+        "src/main/drivers/sound_beeper.c": "1241e9650d7d5562c0f843c221ce514496adf4c405b992f606381e88ef3e6b9e",
+        "src/main/pg/beeper_dev.c": "3ba771515236af328ec51d7ce77598cff265d75db8bbc945f14a2fd018dcfdac",
+        "src/main/pg/beeper_dev.h": "0368b5533524a1a66b3254f952bc9cc3c97dd41fb4e591248c0257601ca72b60",
+        "src/main/drivers/io_def.h": "d8c782e36ec04a76f3b7363bc651aa0156db482a40c97db2cf4081ea53bb173c",
+        "src/platform/PICO/io_def_generated.h": "f70c0c0fff92825d7f34b288a95d13a0b16152a00691382f0d27a3985a4f8987"
+      },
+      "physical_hardware_tested": false
+    },
+    "target_flash_bytes": 2097152,
+    "sdk_flash_override": {
+      "upstream_target_makefile": "src/platform/PICO/target/RP2350B/target.mk",
+      "upstream_default_bytes": 8388608,
+      "native_bytes": 2097152,
+      "reason": "RP2354B has2MiB stacked flash; the pinned generic RP2350B target defaults to8MiB."
     }
   },
   "argv": [
     [
       "make",
-      "-j4",
+      "-j3",
       "CONFIG=OPENFC_LITE_REV2_LW1",
       "CONFIG_DIR=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc",
-      "OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main",
-      "BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj",
+      "OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-2m-b/obj/main",
+      "BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-2m-b/obj",
       "ARM_SDK_DIR=/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi",
       "PICOTOOL=/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool",
+      "MCU_FLASH_SIZE=2048",
       "CONFIG_REVISION=1bcff6e",
       "CONFIG_REVISION_DEFINE=-D'__CONFIG_REVISION__=\"1bcff6e\"'",
-      "EXTRA_FLAGS=-ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc",
+      "EXTRA_FLAGS=-UPICO_FLASH_SIZE_BYTES -DPICO_FLASH_SIZE_BYTES=2097152 -ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc",
       "uf2"
     ],
     [
       "make",
-      "-j4",
+      "-j3",
       "CONFIG=OPENFC_LITE_REV2_LW1",
       "CONFIG_DIR=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc",
-      "OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj/main",
-      "BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-final-b/obj",
+      "OBJECT_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-2m-b/obj/main",
+      "BIN_DIR=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/fc-2m-b/obj",
       "ARM_SDK_DIR=/data/worktrees/quad-betaflight-native-20261118/tools/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi",
       "PICOTOOL=/data/worktrees/quad-betaflight-native-20261118/tools/picotool-build/picotool",
+      "MCU_FLASH_SIZE=2048",
       "CONFIG_REVISION=1bcff6e",
       "CONFIG_REVISION_DEFINE=-D'__CONFIG_REVISION__=\"1bcff6e\"'",
-      "EXTRA_FLAGS=-ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc",
+      "EXTRA_FLAGS=-UPICO_FLASH_SIZE_BYTES -DPICO_FLASH_SIZE_BYTES=2097152 -ffile-prefix-map=/data/worktrees/quad-betaflight-native-20261118=/src/betaflight -ffile-prefix-map=/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc=/src/native-fc",
       "binary"
     ]
   ],
   "source_date_epoch": "1787049419",
-  "seconds": 31.597503021999728,
+  "seconds": 211.60882582201157,
   "gcc": "arm-none-eabi-gcc (Arm GNU Toolchain 13.3.Rel1 (Build arm-13.24)) 13.3.1 20240614",
   "picotool": "picotool v2.1.1 (Linux, GNU-13.3.0, Release)",
+  "target_flash_bytes": 2097152,
+  "linked_sdk_flash_guards": {
+    "flash_range_erase": "200483ce:\tf5b3 1f00 \tcmp.w\tr3, #2097152\t@ 0x200000",
+    "flash_range_program": "200484ae:\tf5b3 1f00 \tcmp.w\tr3, #2097152\t@ 0x200000"
+  },
   "picotool_executable_sha256": "50e24389132cf959e8f0071f730972afd4e2671ef7f5e9a44597ddcdcca0a65f",
   "artifacts": {
     "betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf": {
       "bytes": 752808,
-      "sha256": "8c0a2953dbb7a65e1e22d949c5fd08f68a1babdeda88d13b14b2632bbc7ce43a"
+      "sha256": "cfb1f6a19225695804d79200ddc7158bc421365af9cc8b8c74ab06170980d27b"
     },
     "betaflight_RP2350B_OPENFC_LITE_REV2_LW1.map": {
-      "bytes": 3596862,
-      "sha256": "665f27ae151dc62fc42145d83d7aa952ce586dcd8608640d005e2f60b4648b1a"
+      "bytes": 3547845,
+      "sha256": "ca255ed75fcfa2595847f6756be1a78a3e8ba5b91a091676b69900b73951e226"
     },
     "betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.uf2": {
       "bytes": 860672,
-      "sha256": "0bdbdbe6f9f5f91b76285cef41a198bf866b400c76ee677887d93f60cb11a433"
+      "sha256": "7eb466b5845044acd71c8984fd5eae871353127a6d7a3540740d29b2fb7c467b"
     },
     "betaflight_2026.6.0-alpha_RP2350B_OPENFC_LITE_REV2_LW1.bin": {
       "bytes": 430128,
-      "sha256": "2cf345e0fa6f9b60b7039d568b52221059d6cdb68d6bf7c1ad9babf437f47ca5"
+      "sha256": "341fb35b879b3f2946e24aca88ee57ec37f84f495b2469203d71151b1b42f062"
     }
   },
   "physical_hardware_tested": false

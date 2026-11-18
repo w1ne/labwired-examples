@@ -106,11 +106,19 @@ def main():
     env = os.environ.copy()
     env["SOURCE_DATE_EPOCH"] = str(VERSIONS["source_date_epoch"])
     revision = config_hash[:7]
+    flash_bytes = VERSIONS["target_flash_bytes"]
+    if flash_bytes != 2 * 1024 * 1024:
+        raise RuntimeError("The native RP2354B requires exactly2MiB stacked flash")
+    # The pinned generic RP2350B make target hard-codes8MiB for the SDK.
+    # EXTRA_FLAGS is appended after DEVICE_FLAGS; undefine before the explicit
+    # native value so SDK and application translation units agree without a
+    # macro-redefinition warning. Keep upstream source unchanged.
+    flash_flags = f"-UPICO_FLASH_SIZE_BYTES -DPICO_FLASH_SIZE_BYTES={flash_bytes}"
     command = ["make", f"-j{args.jobs}", f"CONFIG={TARGET}", f"CONFIG_DIR={PACKAGE}",
         f"OBJECT_DIR={obj / 'main'}", f"BIN_DIR={obj}", f"ARM_SDK_DIR={toolchain}",
-        f"PICOTOOL={picotool}", f"CONFIG_REVISION={revision}",
+        f"PICOTOOL={picotool}", f"MCU_FLASH_SIZE={flash_bytes // 1024}", f"CONFIG_REVISION={revision}",
         f"CONFIG_REVISION_DEFINE=-D'__CONFIG_REVISION__=\"{revision}\"'",
-        f"EXTRA_FLAGS=-ffile-prefix-map={source}=/src/betaflight -ffile-prefix-map={PACKAGE}=/src/native-fc",
+        f"EXTRA_FLAGS={flash_flags} -ffile-prefix-map={source}=/src/betaflight -ffile-prefix-map={PACKAGE}=/src/native-fc",
         "uf2"]
     start = time.monotonic()
     run(command, source, env)
@@ -133,9 +141,22 @@ def main():
         hashes[dest.name] = {"bytes": dest.stat().st_size, "sha256": sha(dest)}
     run(["python3", PACKAGE / "verify_artifacts.py", "--artifacts", artifacts,
          "--output", artifacts / "artifact-contract.json"])
+    # Check the actual linked SDK guard, not just the make argument. Both ROM
+    # wrapper functions must compare the requested end offset to native flash.
+    elf = artifacts / f"betaflight_RP2350B_{TARGET}.elf"
+    sdk_flash_guards = {}
+    for function in ["flash_range_erase", "flash_range_program"]:
+        disassembly = output([toolchain / "bin/arm-none-eabi-objdump", "-d",
+                              f"--disassemble={function}", elf])
+        matches = [line.strip() for line in disassembly.splitlines()
+                   if re.search(rf"\bcmp(?:\.w)?\s+[^,]+,\s*#{flash_bytes}\b", line)]
+        if len(matches) != 1:
+            raise RuntimeError(f"{function} does not enforce the native flash extent")
+        sdk_flash_guards[function] = matches[0]
     receipt = {"status": "pass", "source": VERSIONS, "argv": [command, binary_command],
         "source_date_epoch": env["SOURCE_DATE_EPOCH"], "seconds": time.monotonic() - start,
         "gcc": output([gcc, "--version"]).splitlines()[0], "picotool": version,
+        "target_flash_bytes": flash_bytes, "linked_sdk_flash_guards": sdk_flash_guards,
         "picotool_executable_sha256": sha(picotool), "artifacts": hashes,
         "physical_hardware_tested": False}
     (artifacts / "build-receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")

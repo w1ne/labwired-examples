@@ -1,0 +1,45 @@
+{
+  "source_commit": "9a325465b59542320e1d13d4fd86d4f8e9a6a2e0",
+  "source_tree": "1212b9b018173bd2c5c43e2268554526d7ef60c3",
+  "argv": [
+    "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/core-rp2354b-demcr-candidate/labwired-tree-1212b9b01817",
+    "test",
+    "--script",
+    "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/probe.yaml",
+    "--firmware",
+    "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf",
+    "--system",
+    "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/system.yaml",
+    "--output-dir",
+    "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/validation/pre-rom-flash/runtime",
+    "--bus-trace-out",
+    "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/validation/pre-rom-flash/runtime/spi.json",
+    "--run-manifest",
+    "--json"
+  ],
+  "inputs": [
+    {
+      "path": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/core-rp2354b-demcr-candidate/labwired-tree-1212b9b01817",
+      "sha256": "59080a8d557b7a182e392fbecabcadd41a70c759625077ea7393f6ca80a5a4b1",
+      "bytes": 159767648
+    },
+    {
+      "path": "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf",
+      "sha256": "cfb1f6a19225695804d79200ddc7158bc421365af9cc8b8c74ab06170980d27b",
+      "bytes": 752808
+    },
+    {
+      "path": "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/system.yaml",
+      "sha256": "dacdd47c6299358ec16625b76837b10ef03093c809eb36fe0fc18a05b6e47fed",
+      "bytes": 512
+    },
+    {
+      "path": "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/probe.yaml",
+      "sha256": "dacbccd8429d9344def96e2d9e20d4995100cab650475143f6a16d52abcef281",
+      "bytes": 409
+    }
+  ],
+  "physical_hardware_tested": false,
+  "exit": 1,
+  "seconds": 1.535945177078247
+}

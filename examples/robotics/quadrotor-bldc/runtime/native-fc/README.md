@@ -1,44 +1,55 @@
 # Native RP2354B runtime boundary
 
-`system.yaml` declares the physical controller's RP2354B, 150 MHz model
-clock, BMI270 on SPI0 with CS14/INT13, and the native active-high status LED
-on GPIO12. It preserves the physical pins and image. It does not use the
-separate STM32 motor bench as a substitute controller.
+`system.yaml` declares the physical RP2354B controller, a 150 MHz model
+clock, BMI270 on SPI0 with CS14/INT13, and the active-high status LED on
+GPIO12. The native pin assignments and the physical firmware are preserved.
 
-The final physical image is the ELF with SHA256
-`8c0a2953dbb7a65e1e22d949c5fd08f68a1babdeda88d13b14b2632bbc7ce43a`.
-The current recorded run loads that exact image and passes the earlier
-SDK IRQ-vector assertion after the generic boot-vector repair. At step
-470000 it encounters the first confirmed missing runtime register:
-DEMCR at 0xE000EDFC, accessed by `systemInit` / `cycleCounterInit`. The engine
-raises a precise BusFault and escalates to HardFault. No SPI events occur
-before that stop. This is a failed execution receipt, not a boot pass.
+The current 2 MiB image is ELF SHA256
+`cfb1f6a19225695804d79200ddc7158bc421365af9cc8b8c74ab06170980d27b`.
+Two clean builds produce identical ELF, UF2 and BIN files. Both linked SDK
+flash functions check the actual 2,097,152-byte physical capacity. Build
+identity and the exact bounds instructions are in
+`../../firmware/native-fc/artifacts/build-receipt.json`.
 
-The generic RP2354B repair adds the exact package, 48 GPIO pads and nine ADC
-mux inputs. Its 184 existing/extended RP tests and seven package tests pass
-with event scheduling enabled and disabled. A generated descriptor entry
-is required for the standalone built-in `rp2354b` name. A separate Cortex-M
-repair makes firmware trace control available without attaching a debugger;
-the final image must be replayed against those merged repairs before any
-complete runtime acceptance is claimed.
+## Executed boundary
 
-Run the bounded probe with a LabWired CLI that includes the RP2354B model:
+The current recorded run uses core source
+`9a325465b59542320e1d13d4fd86d4f8e9a6a2e0` and immutable CLI SHA256
+`59080a8d557b7a182e392fbecabcadd41a70c759625077ea7393f6ca80a5a4b1`.
+The generic boot-vector and DEMCR repairs allow the firmware to reach flash
+configuration initialization. It then halts at 550,000 instructions in
+`__assert_func` / `_exit`: the clean-room RP2350 ROM returns NULL for
+`flash_range_erase`. The SDK correctly rejects the missing API. Its flash
+initialization and assertions remain unchanged. No SPI events occur before
+this stop. This is a failed execution receipt; full initialization is pending.
+
+`validation/pre-rom-flash/` contains the current run, exact inputs, raw
+snapshot and result, decoded assertion, disassembly and CLI provenance.
+`validation/pre-demcr/` retains the earlier image's precise DEMCR BusFault
+as historical evidence. The shared Cortex-M DEMCR repair is merged in
+[core PR2043](https://github.com/w1ne/labwired-core/pull/2043). The RP2354B
+package/GPIO descriptor and generic ROM/XIP flash support must complete their
+normal gates before a final runtime proof can be accepted.
+
+## Repeating the probe
+
+Run from `examples/robotics/quadrotor-bldc` with a CLI that includes the
+RP2354B descriptor:
 
 ```sh
 labwired test --script runtime/native-fc/probe.yaml \
   --output-dir /tmp/openfc-native-runtime --run-manifest
 ```
 
-The probe checks only that bounded execution reaches its instruction limit
-without a CPU fault. It cannot establish boot completion, gyro accuracy,
-receiver control, DShot timing or motor response. Those require separate
-observable oracles once the first executed model gaps are resolved. The
-model does not inject a fake voltage/current or fake sensor response to
-hide startup behavior. Unconnected analog inputs retain their model defaults.
+The bounded probe requires reaching its instruction limit without a CPU
+fault. It does not establish boot completion, gyro accuracy, receiver input,
+DShot timing or motor response. Those need separate observable oracles after
+the executed model gaps are resolved. The model uses a fixed 150 MHz clock
+and an ideal supply; it does not yet track PLL changes or board brown-out.
 
-`validation/pre-demcr/` retains the actual command, firmware hash, immutable
-CLI hash, model source-diff identity, raw failure and empty bus trace. Its
-file-backed descriptor points to the exact candidate source used for that
-run; it is historical evidence. The portable system above uses the built-in
-chip name. Physical flash, sensor motion, motor direction and flight
-qualification remain unperformed.
+The full station must derive each motor pad's drive from the FC's real
+IO_BANK0/PIO initialization. The RP2354B pads start released; forcing an
+initial high would hold the native PB4 ESC bootloader in programming
+recognition. No motor waveform or successful initialization is injected.
+Physical flashing, sensor motion, motor direction and flight qualification
+remain unperformed.

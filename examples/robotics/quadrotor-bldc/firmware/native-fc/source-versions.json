@@ -44,5 +44,12 @@
       "src/platform/PICO/io_def_generated.h": "f70c0c0fff92825d7f34b288a95d13a0b16152a00691382f0d27a3985a4f8987"
     },
     "physical_hardware_tested": false
+  },
+  "target_flash_bytes": 2097152,
+  "sdk_flash_override": {
+    "upstream_target_makefile": "src/platform/PICO/target/RP2350B/target.mk",
+    "upstream_default_bytes": 8388608,
+    "native_bytes": 2097152,
+    "reason": "RP2354B has2MiB stacked flash; the pinned generic RP2350B target defaults to8MiB."
   }
 }
