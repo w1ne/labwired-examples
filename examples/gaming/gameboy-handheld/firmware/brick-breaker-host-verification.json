@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "emulator": "Peanut-GB",
+  "rom_sha256": "708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5",
+  "controls": [
+    "LEFT",
+    "RIGHT",
+    "A",
+    "B",
+    "START",
+    "SELECT"
+  ],
+  "checks": [
+    "launch",
+    "paddle movement",
+    "pause/resume freezes paddle and ball",
+    "restart resets score and lives",
+    "palette",
+    "brick collision increments score",
+    "paddle bounces",
+    "missed ball costs life"
+  ],
+  "scripted_play": {
+    "frames": 2400,
+    "max_score": 47,
+    "paddle_bounces": 25,
+    "lives_remaining": 3
+  },
+  "source": "host_brick_breaker.c",
+  "not_a_wall_clock_performance_measurement": true
+}

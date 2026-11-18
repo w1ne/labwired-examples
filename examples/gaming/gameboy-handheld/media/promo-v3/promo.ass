@@ -1,0 +1,26 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Brand,DejaVu Sans,27,&H003B2E21,&H003B2E21,&H00FFFFFF,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,0,0,7,100,100,52,1
+Style: Title,DejaVu Sans,46,&H003B2E21,&H003B2E21,&H00FFFFFF,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,0,0,7,100,100,940,1
+Style: Detail,DejaVu Sans,26,&H006D6051,&H006D6051,&H00FFFFFF,&H00FFFFFF,0,0,0,0,100,100,0,0,1,0,0,7,100,100,1005,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:18.00,Brand,,0,0,0,,{\fad(180,250)}LabWired × KernelCAD
+Dialogue: 1,0:00:00.00,0:00:01.50,Title,,0,0,0,,{\fad(180,180)}Build it. Play it.
+Dialogue: 1,0:00:00.00,0:00:01.50,Detail,,0,0,0,,{\fad(180,180)}A complete simulated handheld
+Dialogue: 1,0:00:01.50,0:00:05.00,Title,,0,0,0,,{\fad(180,180)}Every layer, revealed.
+Dialogue: 1,0:00:01.50,0:00:05.00,Detail,,0,0,0,,{\fad(180,180)}59 parts · one assembly
+Dialogue: 1,0:00:05.00,0:00:06.50,Title,,0,0,0,,{\fad(180,180)}Routed copper.
+Dialogue: 1,0:00:05.00,0:00:06.50,Detail,,0,0,0,,{\fad(180,180)}RIGHT button → PB6
+Dialogue: 1,0:00:06.50,0:00:08.50,Title,,0,0,0,,{\fad(180,180)\pos(340,940)}Meet the controller.
+Dialogue: 1,0:00:06.50,0:00:08.50,Detail,,0,0,0,,{\fad(180,180)\pos(340,1005)}STM32F411 / BlackPill
+Dialogue: 1,0:00:12.00,0:00:18.00,Title,,0,0,0,,{\fad(180,250)}Now play.
+Dialogue: 1,0:00:12.00,0:00:18.00,Detail,,0,0,0,,{\fad(180,250)}Brick Breaker · original Game Boy ROM

@@ -1,0 +1,100 @@
+{
+  "purpose": "Offline recording of immutable KernelCAD native triangle geometry; presentation-only rigid-body poses",
+  "mesh_url": "https://mesh.kernelcad.com/mesh-artifacts/kQAFdaQs/v3.json?provenance=9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196",
+  "mesh_sha256": "5b5a7d34cc9cf000da329b97fa78bc09dd3f37889b4d74c5f88bb3329e346af1",
+  "feature_count": 59,
+  "revision": 3,
+  "model": "kQAFdaQs",
+  "source_provenance": {
+    "schema": "kernelcad.revision-mesh-provenance.v1",
+    "source": {
+      "sha256": "3b9c8f2a85ef94c639d5ed762f65366b739d3c35633521d2b14f1405c97c2fa6",
+      "byteLength": 31338
+    },
+    "assetsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "geometryHash": "53fae0a11c15172b14ebc76f513249beb32f85d72fb7a7a6201e7e849ad2825e",
+    "producer": {
+      "serverBuild": "0.1.0+ba16b0f4cc93@2026-11-11T17:40:14.762Z",
+      "serverCommit": "ba16b0f4cc93d2620a67dab2ab1f72ba30abf913",
+      "runtimeSourceHash": "b5df1c4918dc7cbfd23a59abb48b3529d935e0cbf826d85c2d99c1d05fa90725",
+      "sessionArtifactSha256": "954bab2d39ed4780f26946e97440270416d613f98eed03a8baa344ac701c54ad"
+    }
+  },
+  "fps": 60,
+  "duration_seconds": 18,
+  "frame_count": 1080,
+  "routing_source": "pcb/routing.json",
+  "render_method": "Per-frame exact geometry projection, triangle depth buffer, smooth normals, two directional lights, shadow map, four subpixel samples",
+  "disclosures": [
+    "Offline CAD rendering, not a recording of realtime KernelCAD UI",
+    "Exploded offsets are presentation transforms, not a saved design change",
+    "Selected routing is a physical net highlight, not measured analog current",
+    "Controller package details use an optional sourced photo material; source geometry remains envelope-level"
+  ],
+  "source_files": {
+    "mesh.json": {
+      "sha256": "5b5a7d34cc9cf000da329b97fa78bc09dd3f37889b4d74c5f88bb3329e346af1",
+      "bytes": 4161037
+    },
+    "scene.bin": {
+      "sha256": "7dbdd1da3b1a08a4b58d556a19e47355291c689fd0fcfc3957e7bca28027a9f3",
+      "bytes": 3685489
+    },
+    "render_cpu.cpp": {
+      "sha256": "da2acec2ec6e35e56d86c0b5251f371fe52b54d9099f2ac45426c510b3e5f191",
+      "bytes": 10494
+    },
+    "render_cpu": {
+      "sha256": "5d1aa5857225d6656b4eb67db800d225687e88444ff476f8500d257fa8520c16",
+      "bytes": 57344
+    },
+    "prepare_mesh.py": {
+      "sha256": "20f513343a89572c5d130657e0d2b18b83282b79c11a49d69d429c01ba9ac529",
+      "bytes": 3884
+    },
+    "record.py": {
+      "sha256": "fc64be14a8fe53c63ff1ac24de6197be6cf7d1f07aebc71e9534b25d4174679f",
+      "bytes": 1673
+    },
+    "controller.ppm": {
+      "sha256": "08f76ca648dbe6692ab457366441bf22fa3ff6b1fc38506a450480f9584984dc",
+      "bytes": 7879097
+    },
+    "controls.bin": {
+      "sha256": "0c8222e61efa0f28e9c2964f13d7873a399e34d6e4f344c4f7b14bc8ece371ae",
+      "bytes": 21600
+    },
+    "lcd.rgb": {
+      "sha256": "76bda322c1c4d016f46936ac6ba3b09f826ac4b136a3ab2fe538b777d6ecddb7",
+      "bytes": 248832000
+    },
+    "lcd-state.json": {
+      "sha256": "e05982af5a3795497ecfb4a761394acc001f6cf3b97dad78056c3f70d388a1d1",
+      "bytes": 187330
+    }
+  },
+  "controller_texture_receipt": "../pcb/controller-texture-provenance.json",
+  "lcd_receipt": "lcd-provenance.json",
+  "geometry_to_display": "Native x right, y up, z front; orthographic camera with up=(0,1,0)",
+  "subpixel_sampling": 4,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "final_camera_key": {
+    "time": 18,
+    "position": [
+      25,
+      116,
+      370
+    ],
+    "target": [
+      0,
+      96,
+      18
+    ],
+    "height_mm": 120
+  },
+  "final_segment_note": "Full device through16s, then intentional LCD and physical-controls closeup; source geometry and framebuffer remain exact per-frame renders.",
+  "receipt_path_normalization": "Original absolute recording workspace prefix removed; source identities and hashes unchanged."
+}

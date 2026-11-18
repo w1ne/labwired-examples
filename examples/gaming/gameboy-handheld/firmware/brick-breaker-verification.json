@@ -1,0 +1,87 @@
+{
+  "status": "model_verified",
+  "ok": true,
+  "proven": true,
+  "verification": "serial contains \"DMG_ROM_OK title=BRICK_BREAKER\"; serial contains \"INPUT=000000ef\"; serial contains \"INPUT=000000fe\"; serial matches /DMG_FRAME=[0-9]+ x=([7-9][0-9]|1[0-3][0-9]) ball_x=/; serial matches /DMG_FRAME=[0-9]+ .*phase=1/; display PAINTED on framebuffer (refresh_gen=n/a, ink=153600>=10000). Model-verified deterministically while driven with btn-right/pressed=1 at cycle 22000000 (applied), btn-right/pressed=0 at cycle 35000000 (applied), btn-a/pressed=1 at cycle 36000000 (applied), btn-a/pressed=0 at cycle 42000000 (applied).",
+  "oracle_results": [
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"DMG_ROM_OK title=BRICK_BREAKER\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"INPUT=000000ef\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial contains \"INPUT=000000fe\""
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial matches /DMG_FRAME=[0-9]+ x=([7-9][0-9]|1[0-3][0-9]) ball_x=/"
+    },
+    {
+      "kind": "serial",
+      "passed": true,
+      "detail": "serial matches /DMG_FRAME=[0-9]+ .*phase=1/"
+    },
+    {
+      "kind": "display",
+      "passed": true,
+      "detail": "display PAINTED on framebuffer (refresh_gen=n/a, ink=153600>=10000)"
+    }
+  ],
+  "stimuli": [
+    {
+      "channel": "pressed",
+      "value": 1,
+      "outcome": "applied",
+      "at_cycle": 22000000,
+      "component": "btn-right"
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "outcome": "applied",
+      "at_cycle": 35000000,
+      "component": "btn-right"
+    },
+    {
+      "channel": "pressed",
+      "value": 1,
+      "outcome": "applied",
+      "at_cycle": 36000000,
+      "component": "btn-a"
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "outcome": "applied",
+      "at_cycle": 42000000,
+      "component": "btn-a"
+    }
+  ],
+  "serial": "LABWIRED DMG BOOT\nDMG_ROM_OK title=BRICK_BREAKER bytes=32768\nDMG_FRAME=1 x=0 ball_x=0 ball_y=0 score=0 lives=0 phase=0 hash=811c9dc5 lines=0\nDMG_FRAME=2 x=0 ball_x=0 ball_y=0 score=0 lives=0 phase=0 hash=811c9dc5 lines=0\nDMG_FRAME=3 x=68 ball_x=77 ball_y=116 score=0 lives=3 phase=0 hash=811c9dc5 lines=0\nDMG_FRAME=4 x=68 ball_x=77 ball_y=116 score=0 lives=3 phase=0 hash=c26be44a lines=144\nINPUT=000000ef\nDMG_FRAME=5 x=71 ball_x=80 ball_y=116 score=0 lives=3 phase=0 hash=c5d03452 lines=288\nDMG_FRAME=6 x=74 ball_x=83 ball_y=116 score=0 lives=3 phase=0 hash=a729176a lines=432\nDMG_FRAME=7 x=77 ball_x=86 ball_y=116 score=0 lives=3 phase=0 hash=1e8cb9b2 lines=576\nDMG_FRAME=8 x=80 ball_x=89 ball_y=116 score=0 lives=3 phase=0 hash=e5edeb8a lines=720\nDMG_FRAME=9 x=83 ball_x=92 ball_y=116 score=0 lives=3 phase=0 hash=d6ba8212 lines=864\nDMG_FRAME=10 x=86 ball_x=95 ball_y=116 score=0 lives=3 phase=0 hash=ac39a8aa lines=1008\nINPUT=000000fe\nDMG_FRAME=11 x=86 ball_x=97 ball_y=114 score=0 lives=3 phase=1 hash=a46243c6 lines=1152\nDMG_FRAME=12 x=86 ball_x=99 ball_y=112 score=0 lives=3 phase=1 hash=58234b46 lines=1296\nDMG_FRAME=13 x=86 ball_x=101 ball_y=110 score=0 lives=3 phase=1 hash=2735a6c6 lines=1440\nINPUT=000000ff\nDMG_FRAME=14 x=86 ball_x=103 ball_y=108 score=0 lives=3 phase=1 hash=8d403646 lines=1584\nDMG_FRAME=15 x=86 ball_x=105 ball_y=106 score=0 lives=3 phase=1 hash=d976d9c6 lines=1728\nDMG_FRAME=16 x=86 ball_x=107 ball_y=104 score=0 lives=3 phase=1 hash=1f927146 lines=1872\n",
+  "gaps": [
+    {
+      "code": "approximation",
+      "scope": "model",
+      "detail": "device time derived from cpu_hz (100000000 Hz); PLL reconfiguration is not tracked",
+      "address": "0x0",
+      "pc": "0x0"
+    },
+    {
+      "code": "approximation",
+      "scope": "model",
+      "detail": "no power net drives the MCU (board.power.vdd_volts is not routed); VDD assumed an ideal 3.3 V rail, so power-on and brown-out reset are not simulated",
+      "address": "0x0",
+      "pc": "0x0"
+    }
+  ],
+  "run_status": "pass",
+  "stop_reason": "max_steps"
+}

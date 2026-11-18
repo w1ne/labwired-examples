@@ -1,0 +1,27 @@
+{
+  "width": 320,
+  "height": 240,
+  "format": "rgb24",
+  "frames": 1080,
+  "fps": 60,
+  "duration_seconds": 18,
+  "sha256": "76bda322c1c4d016f46936ac6ba3b09f826ac4b136a3ab2fe538b777d6ecddb7",
+  "native_fps_numerator": 4194304,
+  "native_fps_denominator": 70224,
+  "rom_sha256": "708714362154e758603e7a60e811466736348fa8b919be313c56ae1a1656f6a5",
+  "source": "Exact original ROM executed by Peanut-GB in the deterministic CPU host harness. RGB565 palette and integer framebuffer scaling match the STM32 LCD firmware. Native frames sampled by floor(output_frame*4194304/(60*70224)).",
+  "inputs": "External scripted button track only. No game logic or autoplay added to firmware. B reset at native frame693; A launch at729.",
+  "state_file": "lcd-state.json",
+  "joypad_pressed_mask": {
+    "A": 1,
+    "B": 2,
+    "SELECT": 4,
+    "START": 8,
+    "RIGHT": 16,
+    "LEFT": 32,
+    "UP": 64,
+    "DOWN": 128
+  },
+  "independent_hardware_model_verification": "Hosted STM32F411 firmware run passed 6 declared oracles, all 4 driven button stimuli, and painted 153,600 LCD bytes. CPU time and ideal 3.3 V are model approximations.",
+  "wall_clock_performance_measured": false
+}

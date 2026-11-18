@@ -1,0 +1,21 @@
+{
+  "ok": false,
+  "stage": "loading-circuit",
+  "error": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('button').filter({ hasText: /^Preview$/ })\n    - locator resolved to <button type=\"button\" aria-pressed=\"false\" class=\"h-full min-w-[4.5rem] px-4 text-body font-semibold transition-colors duration-micro border-0 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent rounded-lg bg-transparent text-fg-secondary hover:text-fg-primary hover:bg-white/[0.06]\">Preview</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - performing click action\n",
+  "stack": "locator.click: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('button').filter({ hasText: /^Preview$/ })\n    - locator resolved to <button type=\"button\" aria-pressed=\"false\" class=\"h-full min-w-[4.5rem] px-4 text-body font-semibold transition-colors duration-micro border-0 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent rounded-lg bg-transparent text-fg-secondary hover:text-fg-primary hover:bg-white/[0.06]\">Preview</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - performing click action\n\n    at /data/work-evidence/gameboy-performance-20261111/isolated145-profile-after-valid.mjs:23:138",
+  "errors": [],
+  "runtimeResponses": [
+    {
+      "url": "http://127.0.0.1:5189/wasm/labwired_wasm_bg.wasm",
+      "status": 200,
+      "bytes": 12400007,
+      "sha256": "0ccceb8db3fe4a3a4e1f25cdfecbfb9a568c81f2ef0f2bc15a6a20198e092421"
+    },
+    {
+      "url": "http://127.0.0.1:5189/wasm/labwired_wasm_bg.wasm",
+      "status": 200,
+      "bytes": 12400007,
+      "sha256": "0ccceb8db3fe4a3a4e1f25cdfecbfb9a568c81f2ef0f2bc15a6a20198e092421"
+    }
+  ]
+}

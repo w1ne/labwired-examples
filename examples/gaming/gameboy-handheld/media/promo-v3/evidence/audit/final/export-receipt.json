@@ -1,0 +1,90 @@
+{
+  "file": "LabWired-KernelCAD-BrickBreaker-18s.mp4",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1",
+        "duration": "18.000000",
+        "nb_frames": "1080",
+        "nb_read_frames": "1080"
+      }
+    ]
+  },
+  "decoded_frame_count": 1080,
+  "presentation_first": 0.0,
+  "presentation_last": 17.983333,
+  "min_presentation_step": 0.016665999999997183,
+  "max_presentation_step": 0.016667000000001764,
+  "caption_review": {
+    "result": "PASS",
+    "controller_caption": "Moved to x340; clear of rear shell, battery, controller, PCB and routing at6.6,7.0,8.0s.",
+    "reassembly_caption": "Removed; no lower caption overlaps parts at9,10,11s.",
+    "unchanged_gameplay": "Earlier check retains clear LCD, D-pad, A/B and side captions.",
+    "evidence": "caption-corrections.jpg"
+  },
+  "master_motion_audit": "../master/decode-audit.json",
+  "master_seam_check": {
+    "frames": [
+      957,
+      958,
+      959,
+      960,
+      961,
+      962,
+      963
+    ],
+    "comparison_crop": [
+      500,
+      80,
+      900,
+      1000
+    ],
+    "mean_rgb_error_master_vs_final": [
+      0.21628592592592594,
+      0.21639259259259258,
+      0.21933333333333332,
+      0.22984296296296297,
+      0.22747851851851852,
+      0.22700592592592592,
+      0.23073925925925926
+    ],
+    "final_pairwise_mean_rgb_change": [
+      0.03105037037037037,
+      0.024034074074074076,
+      0.024825185185185186,
+      0.031737777777777774,
+      0.02462074074074074,
+      0.051245925925925924
+    ],
+    "result": "Frames align with master; differences are limited to expected re-encode error. No replacement-segment seam added."
+  },
+  "final_file_sha256": "340b7615e02912218b4ce843900f176726e168038549e7f1165f1977f458dea5",
+  "final_file_bytes": 6552783,
+  "final_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1",
+        "duration": "18.000000",
+        "nb_frames": "1080"
+      }
+    ]
+  },
+  "final_decode_check": "The final corrected export was decoded to EOF during six-frame select extraction. FFmpeg exited0 with no decode errors.",
+  "result": "PASS",
+  "receipt_path_normalization": "Original absolute recording workspace prefix removed; observations and numerical results unchanged.",
+  "unbundled_original_visuals": [
+    "caption-corrections.jpg"
+  ]
+}

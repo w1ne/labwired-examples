@@ -1,15 +1,27 @@
 # Game Boy-compatible handheld in LabWired
 
-This example joins an STM32F411 Game Boy emulator, an original playable ROM, a routed carrier PCB, and a revision-pinned KernelCAD enclosure. Peanut-GB executes the ROM's SM83 instructions inside the STM32 firmware. Wire Runner is a 32 KiB original homebrew game. No Nintendo game, boot ROM, logo image, or sound asset is included.
+This example joins an STM32F411 Game Boy emulator, an original playable ROM, a routed carrier PCB, and a revision-pinned KernelCAD enclosure. Peanut-GB executes the ROM's SM83 instructions inside the STM32 firmware. The saved project now runs **Brick Breaker**, an original 32 KiB game with 24 bricks, paddle steering and three lives. The earlier Wire Runner source and evidence remain available. No Nintendo game, boot ROM, logo image, or sound asset is included.
 
 ## Open and play
 
-- [LabWired saved project](https://app.labwired.com/?project=f44771855a18a70d418e363622de2e28&run=1)
+- [Play the handheld in LabWired + KernelCAD](https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1&view=kernelcad)
 - [Original firmware checkpoint](https://app.labwired.com/?share=aV3vKsFaQjTi&run=1)
 - [KernelCAD assembly, revision 3](https://app.kernelcad.com/p/kQAFdaQs?version=3)
-- [57-second recorded demonstration](media/gameboy-wire-runner-promo.mp4)
+- [Current 20-second Brick Breaker promo with LabWired ending — source and reproduction](media/promo-v4/README.md)
+- [18-second CAD action cut — source and reproduction](media/promo-v3/README.md)
+- [Historical 57-second Wire Runner demonstration](media/gameboy-wire-runner-promo.mp4)
 
-In the LabWired circuit, select **Preview** to operate the on-screen buttons. Let the firmware initialize the display. Hold a direction button to move the chip and collect the diamond. A increases movement speed, B resets the position and score, Start pauses, and Select changes the palette. The project's button `key` attributes are descriptive; global keyboard mappings are not implemented by the generic button component.
+The play link selects **KernelCAD** and starts the MCU simulation. Let the firmware initialize the LCD, then click **A** to launch the ball and hold **LEFT** or **RIGHT** to move the paddle. B restarts with three lives, START pauses or resumes, and SELECT changes the palette. The CAD LCD receives actual simulated display updates, and the mapped device controls send inputs to the same simulation. In the Circuit view, select **Preview** to use the circuit buttons. The project's button `key` attributes are descriptive; global keyboard mappings are not implemented by the generic button component.
+
+The interactive CAD view requires WebGL2. Its display update rate depends on the browser and simulation. The promotional movie's 60 fps is an offline export rate, not a claim of real-time MCU or browser performance.
+
+## Current game: Brick Breaker
+
+See [the game instructions and reproducible build](firmware/BRICK_BREAKER.md). The saved project now runs the [verified speed revision](firmware/performance/README.md): VBlank/HALT, exact dirty LCD spans and GCC O3. It completes 39 DMG frames in the same 50,000,000-step hosted budget where the baseline completes 16, with identical game states and LCD pixels across 2,400 test frames. One sequential Circuit-browser observation measured approximately 5.5 to 18.6 game frames/s; this is not raster FPS or a CAD performance measurement.
+
+The unchanged six-clause oracle passed again after the guarded save. The [promotion receipt](firmware/performance/promotion-receipt.json) records matching content/verified hashes, the exact pinned ELF/source and preservation of the PCB, CAD, nine bindings, inputs and unlisted visibility. The same-ROM host harness tests scoring, collisions, life loss, pause and restart. The original recording source and ROM remain intact for movie reproduction. See the [generic MCP recipe and current boundaries](MCP_RECIPE.md) and [Brick Breaker artifact index](firmware/brick-breaker-artifacts.json).
+
+The remaining recorded verification and screenshots below describe the earlier Wire Runner baseline unless explicitly labelled Brick Breaker.
 
 The saved project retains the full editable source, exact compiled ELF reference, 10 parts, 24 wires, and KernelCAD revision 3 with its mesh provenance. It includes the verified Right press/release input track. The original firmware checkpoint predates this assembly revision. The exact native PCB is now attached as `pcb_c8da1d7776dba9bc`, revision 0, after hosted source-preserving import, byte/hash readback and separate passing KiCad 9.0.2 DRC. `project-binding.json` records the final owner readback after the generic electronics save and a fresh passing firmware verification. Existing desktop/mobile guest evidence shows the exact assembly while the same firmware Worker continued; its earlier owner WebGL limitation remains a historical result in `firmware/production-view/index.json`. The exact generic 3D display/input configuration in `mechanical/revision-3/electronics-bindings.json` is saved on the project: one display and all eight controls. The final content and verified hashes match `7eea85d8…`; `firmware/final-project-binding-readback.json` proves that the rest of the diagram, firmware, stimuli, PCB link and unlisted visibility are unchanged.
 

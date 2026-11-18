@@ -1,0 +1,186 @@
+{
+  "verified_at_utc": "2026-11-11T21:09:11.825603+00:00",
+  "entry_url": "https://app.labwired.com/p/f44771855a18a70d418e363622de2e28/edit?run=1&view=kernelcad",
+  "cad_iframe_url": "https://app.kernelcad.com/embed/kQAFdaQs?revision=3&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FkQAFdaQs%2Fv3.json%3Fprovenance%3D9ae8dcdbbc9bf46c519af88ff9c39a9d3bfd4957431f351ea22fba4e0669e196&runtimeOrigin=https%3A%2F%2Fapp.labwired.com&mode=viewer&customize=false",
+  "environment": {
+    "browser": "Google Chrome",
+    "headed": true,
+    "separate_clean_profile": true,
+    "viewport_css": {
+      "width": 1887,
+      "height": 950
+    },
+    "renderer_launch_flags": [
+      "--use-gl=angle",
+      "--use-angle=swiftshader",
+      "--enable-unsafe-swiftshader"
+    ]
+  },
+  "method": {
+    "source": "Saved public production project and default simulation worker",
+    "interaction": "Real pointer down/up on visible 3D control meshes; native exploded-view UI and orbit drag",
+    "observation": "Read-only copies of worker UART observations and canonical runtime messages",
+    "response_proxies": false,
+    "injected_runtime_inputs": false,
+    "injected_display_frames": false
+  },
+  "viewer": {
+    "source": "kernelcad-embed",
+    "type": "kernelcad.viewer-status",
+    "status": "model_displayed",
+    "revision": 3,
+    "geometryNonempty": true,
+    "cameraFitted": true,
+    "framePresented": true,
+    "origin": "https://app.kernelcad.com",
+    "fromCanonicalChild": true,
+    "fromParent": false
+  },
+  "binding_acknowledgement": {
+    "source": "kernelcad-embed",
+    "type": "kernelcad.runtime.ready",
+    "v": 1,
+    "revision": 3,
+    "accepted": [
+      "lcd1",
+      "btn-up",
+      "btn-down",
+      "btn-left",
+      "btn-right",
+      "btn-a",
+      "btn-b",
+      "btn-select",
+      "btn-start"
+    ],
+    "missingParts": [],
+    "origin": "https://app.kernelcad.com",
+    "fromCanonicalChild": true,
+    "fromParent": false
+  },
+  "right_control": {
+    "canonical_events": [
+      {
+        "source": "kernelcad-embed",
+        "type": "kernelcad.runtime.input",
+        "v": 1,
+        "sequence": 1,
+        "id": "btn-right",
+        "value": 1,
+        "origin": "https://app.kernelcad.com",
+        "fromCanonicalChild": true,
+        "fromParent": false
+      },
+      {
+        "source": "kernelcad-embed",
+        "type": "kernelcad.runtime.input",
+        "v": 1,
+        "sequence": 2,
+        "id": "btn-right",
+        "value": 0,
+        "origin": "https://app.kernelcad.com",
+        "fromCanonicalChild": true,
+        "fromParent": false
+      }
+    ],
+    "firmware_input": "000000ef",
+    "initial_paddle_x": 68,
+    "observed_paddle_x": 113,
+    "uart_first_movement": "DMG_FRAME=872 x=71 ball_x=80 ball_y=116 score=0 lives=3 phase=0 hash=c5d03452 lines=125136",
+    "lcd_after": [
+      {
+        "id": "lcd1",
+        "width": 320,
+        "height": 240,
+        "bytes": 307200,
+        "fnv1a32": "152236bb"
+      }
+    ]
+  },
+  "launch_control": {
+    "canonical_events": [
+      {
+        "source": "kernelcad-embed",
+        "type": "kernelcad.runtime.input",
+        "v": 1,
+        "sequence": 3,
+        "id": "btn-a",
+        "value": 1,
+        "origin": "https://app.kernelcad.com",
+        "fromCanonicalChild": true,
+        "fromParent": false
+      },
+      {
+        "source": "kernelcad-embed",
+        "type": "kernelcad.runtime.input",
+        "v": 1,
+        "sequence": 4,
+        "id": "btn-a",
+        "value": 0,
+        "origin": "https://app.kernelcad.com",
+        "fromCanonicalChild": true,
+        "fromParent": false
+      }
+    ],
+    "firmware_input": "000000fe",
+    "uart_first_active_ball": "DMG_FRAME=1484 x=113 ball_x=124 ball_y=114 score=0 lives=3 phase=1 hash=f7b7c30e lines=213264",
+    "lcd_before": [
+      {
+        "id": "lcd1",
+        "width": 320,
+        "height": 240,
+        "bytes": 307200,
+        "fnv1a32": "152236bb"
+      }
+    ],
+    "lcd_after": [
+      {
+        "id": "lcd1",
+        "width": 320,
+        "height": 240,
+        "bytes": 307200,
+        "fnv1a32": "0a80022b"
+      }
+    ]
+  },
+  "exploded_view": {
+    "native_toggle_pressed": true,
+    "distance_percent": 60,
+    "display_frames_before": 266,
+    "display_frames_after": 289,
+    "simulation_state": "running"
+  },
+  "handoff": {
+    "browser_process_alive": true,
+    "automation_disconnected": true,
+    "browser_left_open": true,
+    "state": "running",
+    "all_controls_released": true,
+    "view": "Assembled front view",
+    "reset_via": "Native 3D B control",
+    "firmware_input": "000000fd",
+    "uart_final_game_state": "DMG_FRAME=3456 x=68 ball_x=77 ball_y=116 score=0 lives=3 phase=0 hash=c26be44a lines=497232",
+    "lcd": [
+      {
+        "id": "lcd1",
+        "width": 320,
+        "height": 240,
+        "bytes": 307200,
+        "fnv1a32": "8df14c7b"
+      }
+    ]
+  },
+  "screenshots_sha256": {
+    "ready.png": "9145124002642fffea30c149113242d0285e2f4cd421c3716d8a0dbd2552beb8",
+    "front.png": "02c63c1c1d1b2e747a1f05a7c628052309f885793a1f5337da1c77d0089a9604",
+    "right-control.png": "f524858d545c3af739e9ffde6269f324ad65257383659b1346eb729d132d6086",
+    "playing.png": "b6c04bc9a0b872dd4f6856af4496f7f965d1166bed56923a506c224c71a253f8",
+    "exploded-live.png": "be3c1c84774d74f2e9df61c4985bdef9be8d7332c0272e9adbb53658e27cdd88",
+    "browser-handoff.png": "79b95b43ba8548228a0190cf55f06bd0548dc9dd1f311ce2cf950b1d9a8a8a1b"
+  },
+  "nonblocking_console_errors": [
+    "Access to fetch at 'https://telemetry.kernelcad.com/v1/events' from origin 'https://app.kernelcad.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: the server responded with a status of 401 ()"
+  ],
+  "scope": "Production CAD view, actual simulated LCD, native button interaction, and native exploded view verified. The 60 fps promotional export is an offline CAD render; this receipt does not claim realtime 60 fps. Native PCB authentication and board mapping are outside this verification."
+}

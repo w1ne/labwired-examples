@@ -1,0 +1,46 @@
+{
+  "project_id": "f44771855a18a70d418e363622de2e28",
+  "name": "Game Boy recreation — Brick Breaker",
+  "content_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+  "verified_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+  "updated_at": "2026-11-11T20:36:21.380Z",
+  "visibility": "unlisted",
+  "pcb_board_id": "pcb_c8da1d7776dba9bc",
+  "pcb_board_rev": 0,
+  "firmware": {
+    "board": "stm32f411ceu6-blackpill",
+    "language": "c",
+    "artifact": {
+      "ref": "sha256:cfa5fd07dbaa457d7e3315d69d5076c90b70f453d490229889e440a595ea4681"
+    },
+    "source": {
+      "treeRef": "sha256:629de67c0c0a65029a80ce8cc3cc7bd126e582c99621e843577964e2e967db38",
+      "files": [
+        {
+          "path": "src/main.c",
+          "ref": "sha256:cd30bf4b2ea545786b0fcc7673dc3fd1c1e9a8cb08ed9a37b7ee96f5c649c7e4"
+        }
+      ]
+    }
+  },
+  "source_bytes": 125425,
+  "source_sha256": "cd30bf4b2ea545786b0fcc7673dc3fd1c1e9a8cb08ed9a37b7ee96f5c649c7e4",
+  "unchanged_diagram_excluding_firmware": true,
+  "unchanged_pcb_attachment": true,
+  "unchanged_visibility": true,
+  "saved_project_verify": {
+    "ok": true,
+    "status": 200,
+    "verified": false,
+    "reason": "ORACLE_NOT_REACHED",
+    "failure": "declared_oracle_not_reached",
+    "oracle_source": "declared",
+    "markers": [
+      "DMG_ROM_OK title=BRICK_BREAKER",
+      "INPUT=000000ef",
+      "INPUT=000000fe"
+    ],
+    "detail": "The firmware ran cleanly to the end of the step budget without reaching the output YOU declared it would produce. This is usually timing, not a bug: the marker is printed once per cycle and the cycle is longer than the run. Print a marker earlier, shorten the period, or drop the `oracle` to verify on the weak bar instead."
+  },
+  "independent_direct_verification": "brick-breaker-verification.json"
+}

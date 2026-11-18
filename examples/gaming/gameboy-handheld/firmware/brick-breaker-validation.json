@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "error_count": 0,
+  "warning_count": 3,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "code": "PIN_LACKS_SPI",
+      "message": "PB0 isn't SPI-capable — fine if this is a control line (DC/RST/BUSY/etc.).",
+      "fix": "SPI MOSI/MISO/SCK signals must go to SPI-capable pins.",
+      "location": {
+        "pin": "PB0",
+        "part_id": "lcd1"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "PIN_LACKS_SPI",
+      "message": "PB1 isn't SPI-capable — fine if this is a control line (DC/RST/BUSY/etc.).",
+      "fix": "SPI MOSI/MISO/SCK signals must go to SPI-capable pins.",
+      "location": {
+        "pin": "PB1",
+        "part_id": "lcd1"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "PIN_LACKS_SPI",
+      "message": "PA8 isn't SPI-capable — fine if this is a control line (DC/RST/BUSY/etc.).",
+      "fix": "SPI MOSI/MISO/SCK signals must go to SPI-capable pins.",
+      "location": {
+        "pin": "PA8",
+        "part_id": "lcd1"
+      }
+    }
+  ]
+}

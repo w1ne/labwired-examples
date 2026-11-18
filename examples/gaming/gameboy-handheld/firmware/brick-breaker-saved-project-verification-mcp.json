@@ -1,0 +1,88 @@
+{
+  "schema": "labwired.saved-project-mcp-verification.v1",
+  "started_at_utc": "2026-11-11 21:33:47 UTC",
+  "completed_at_utc": "2026-11-11 21:33:57 UTC",
+  "transport": "Connected LabWired MCP product tool; no direct HTTP verification call",
+  "tool": "labwired_project_verify",
+  "discovery": {
+    "tool": "labwired_search",
+    "query": "labwired_project_verify max_steps",
+    "served_schema_revision": "mcp-2bd081b7",
+    "live_schema_exposes_max_steps": true,
+    "registered_connector_description_exposes_max_steps": false,
+    "live_defined_parameter_accepted": true
+  },
+  "request": {
+    "project_id": "f44771855a18a70d418e363622de2e28",
+    "max_steps": 50000000,
+    "oracle": {
+      "serial": [
+        {
+          "contains": "DMG_ROM_OK title=BRICK_BREAKER"
+        },
+        {
+          "contains": "INPUT=000000ef"
+        },
+        {
+          "contains": "INPUT=000000fe"
+        },
+        {
+          "matches": "DMG_FRAME=[0-9]+ x=([7-9][0-9]|1[0-3][0-9]) ball_x="
+        },
+        {
+          "matches": "DMG_FRAME=[0-9]+ .*phase=1"
+        }
+      ],
+      "display": {
+        "painted": true,
+        "min_ink_bytes": 10000
+      }
+    }
+  },
+  "response": {
+    "ok": true,
+    "status": 200,
+    "verified": true,
+    "verified_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "markers": [
+      "DMG_ROM_OK title=BRICK_BREAKER",
+      "INPUT=000000ef",
+      "INPUT=000000fe"
+    ]
+  },
+  "before": {
+    "content_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+    "verified_hash": "7eea85d86978912151589949fa7e30400d7d8e85a2ab7ffcdd688e091f00f9d8",
+    "visibility": "unlisted",
+    "pcb_board_id": "pcb_c8da1d7776dba9bc",
+    "pcb_board_rev": 0
+  },
+  "after": {
+    "content_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+    "verified_hash": "626abc0c2c33242a95223c8fd37523338a2965b2a0da5b11dace42d75c60825b",
+    "visibility": "unlisted",
+    "pcb_board_id": "pcb_c8da1d7776dba9bc",
+    "pcb_board_rev": 0
+  },
+  "preserved_fields": {
+    "id": true,
+    "name": true,
+    "board_id": true,
+    "diagram_json": true,
+    "source_code": true,
+    "source_language": true,
+    "source_entry_path": true,
+    "stimuli": true,
+    "visibility": true,
+    "pcb_board_id": true,
+    "pcb_board_rev": true,
+    "content_hash": true,
+    "cosim_models_json": true,
+    "cosim_models": true
+  },
+  "oracle_unchanged_from": "firmware/brick-breaker-verify-request.json",
+  "saved_stimuli_identical_to_direct_verify": true,
+  "scope": "Declared-oracle model verification of the exact saved project. Records fresh proof only; no source, firmware, diagram, stimuli, CAD binding, PCB attachment or visibility change. Does not prove physical hardware or real-time frame rate."
+}
