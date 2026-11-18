@@ -1,0 +1,35 @@
+{
+  "scope": "Source-qualified assembly supply items; no physical cable or prototype measurement.",
+  "bareCarrier": {
+    "reference": "PCB1",
+    "source": "electronics/can-interface.kicad_pcb",
+    "sha256": "bf9cbb006c7d56ad4dc6efe4ea6ad9119ac4925921be773cf57c75e4b729e1cb",
+    "quantity": 1,
+    "dimensionsMm": [
+      60,
+      40,
+      1.6
+    ],
+    "copperLayers": 2
+  },
+  "usbCable": {
+    "reference": "USB1",
+    "manufacturer": "StarTech.com",
+    "mpn": "USB2AC1M",
+    "datasheet": "https://media.startech.com/cms/pdfs/usb2ac1m_datasheet.pdf",
+    "lengthM": 1,
+    "hostConnector": "USB-A male",
+    "boardConnector": "USB-C male",
+    "dataRateMbps": 480,
+    "boardSource": "https://www.st.com/resource/en/user_manual/dm00936683.pdf",
+    "boardSourceSections": [
+      "3.1 System requirements",
+      "8.1 STLINK-V3EC power input",
+      "12.1 STLINK-V3EC USB Type-C connector CN1"
+    ],
+    "boardInputCurrentLimitMa": 500,
+    "boardJumper": "JP2 STLK [1-2]",
+    "boardSourceRevision": "UM3115 Rev 1, February 2023",
+    "boardSourcePdfSha256": "41b6eb85350ac97670dfef8b806be5533d04afc28ad8e343b18fd22c337fead5"
+  }
+}

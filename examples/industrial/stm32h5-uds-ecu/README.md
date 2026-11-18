@@ -27,14 +27,20 @@ the same UDSLib 2.0.0 application and post-transmit reset deferral.
 Open electronics/can-interface.kicad_pro in KiCad 10. The board is
 **60 × 40 × 1.6 mm**, two layers. Four 3.2 mm NPTH mounting holes are at
 (4,4), (56,4), (4,36), (56,36) mm. The native board is the final routed
-source. Manufacturing includes Gerber, drill, netlist, and schematic PDF.
+source. Order one bare carrier from these manufacturing files; PCB1 in the
+assembly BOM is separate from its populated components. Manufacturing includes
+Gerber, drill, netlist, and schematic PDF.
 cad/can-interface.step is the populated native export.
 
 - **MCP2562FD-E/SN**, SOIC-8: pin 3 gets 5 V, pin 5 gets 3.3 V, pin 8 STBY
   is grounded. C1/C2 decouple each supply; C3 is local bulk capacitance.
 - **PESD2CAN,215** protects the bus. D1 pin 1 is CANL, 2 CANH, 3 ground.
 - JP1 enables the **120 Ω, 1%, 0.5 W** termination. Fit it at a bus end only.
-- USB at NUCLEO CN1 is the only fixture power source. This carrier has no
+- Connect the BOM cable, StarTech.com USB2AC1M (1 m, USB-A to USB-C,
+  USB 2.0 data and power), from a host USB-A port to the STLINK-V3EC
+  USB-C connector CN1. Keep JP2 at its default STLK [1-2] setting.
+  UM3115 specifies a 500 mA maximum for this supply path; the cable
+  does not increase that board limit. CN1 is the only fixture power source. This carrier has no
   galvanic isolation or vehicle battery input.
 - Physical firmware uses **11-bit IDs**, request 0x7E0 and response 0x7E8,
   **500 kbit/s nominal / 2 Mbit/s data**, ISO CAN FD with BRS for frames
@@ -181,6 +187,7 @@ as the build revision of the separately pinned 0.26.0 release binary.
 
 ## Primary sources
 
+- [StarTech.com USB2AC1M manufacturer datasheet](https://media.startech.com/cms/pdfs/usb2ac1m_datasheet.pdf)
 - [ST product and MB1404 design downloads](https://www.st.com/en/evaluation-tools/nucleo-h563zi.html)
 - [ST UM3115: CN8/CN9 pinout and board dimensions](https://www.st.com/resource/en/user_manual/dm00936683.pdf)
 - [ST HAL FDCAN example, exact source revision](https://github.com/STMicroelectronics/STM32CubeH5/tree/0d526a4930310cf8fa6dce7538ab891cc37eb250/Projects/NUCLEO-H563ZI/Examples/FDCAN/FDCAN_Com_Polling)
