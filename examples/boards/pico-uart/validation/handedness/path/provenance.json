@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "475fc4ebd1281aa31b417bd2b72e2b1a37eeb4ad8dd6906957bff32836746526",
+  "sourcePackageBaseline": "16c5cfb54c3054ca21eb9a23649b240bf3576686",
+  "runtimeCommit": "50531ef47f6514b5a447000c3738de1a80584c8b",
+  "runtimeDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtimeSourceFingerprint": "02896d5a952ef37f4f9c4ccecd3688a4d8ef43d0abbe86943e4c64b5fb44e253",
+  "assemblyStepSha256": "93e7ec2db3f66de6868b66416cebc10b5c9354afac34f247fd0fa830c320a391",
+  "coverage": {
+    "sourceParts": 50,
+    "removalStages": 31,
+    "removedOriginalParts": 49,
+    "remainingFixture": [
+      "base"
+    ],
+    "allStagesGeometricallyClear": true,
+    "moduleOriginalParts": 19,
+    "modulePairs": 494
+  },
+  "controls": {
+    "memberSweepControls": 7,
+    "memberSweepControlsPassed": 7,
+    "actualShiftedFastenerNegativeBlocked": true
+  },
+  "method": "Ordered source-bound geometric proof. The intact 19-part Pico module moves in +Z. Each original BREP solid is checked against every remaining original obstacle; conservative swept boxes refine to axial slabs only when necessary. Fasteners retain declared source axes and native conservative helical envelopes, with driver reach checks.",
+  "restPoseAndTrajectoryPolicy": "No positive intersection volume or unknown measurement is accepted. Every rigid module member ends completely outside remaining native bounds.",
+  "hostedAssemblyPathStatus": "open; original complete-scene and ordered module mesh searches remain budget-limited and inconclusive",
+  "supportStatus": "The base is held. The unmodified raw-solid support calculation flags pico-board and pico-component-2 through pico-component-5. These belong to the purchased soldered PCBA. Solder joints are not present in the manufacturer STEP; their integrity is a physical precondition, not a modeled stability pass.",
+  "physicalQualificationPerformed": false,
+  "reproduction": "The retained harnesses pin the package and runtime paths used for this run. Use the recorded runtime commit, install its locked dependencies, and update only those absolute workspace roots before replay. The canonical CAD source and STEP hashes must remain unchanged.",
+  "files": [
+    {
+      "path": "concat-argument-limit.json",
+      "sha256": "9c7202d0fe1d594f72f6d7d019bc090580b26a5fbc72f9589e12ef50fbf13103",
+      "bytes": 124452
+    },
+    {
+      "path": "concat-argument-limit.log",
+      "sha256": "87f026c5233cfc6c0b8bf908dffa64e5eb5842e73e674bba60ae33d4e0bc0b59",
+      "bytes": 1302
+    },
+    {
+      "path": "concat-argument-limit.mts",
+      "sha256": "b4e71665cc91b1c07a38d0fbd0f9edadabd4db0fe9da6447219f66200fc6f3fd",
+      "bytes": 16402
+    },
+    {
+      "path": "member-controls.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "member-controls.log",
+      "sha256": "206fbc10ee1c064afc312600e579af8d73df369fcd3eb5e9fa4ec36002d2936c",
+      "bytes": 581
+    },
+    {
+      "path": "missing-local-file-dependency.json",
+      "sha256": "655954b435904f675ed9a3bbbd1f5e6f1e31a522e602360bf93290e1a0b68bc7",
+      "bytes": 347
+    },
+    {
+      "path": "missing-local-file-dependency.log",
+      "sha256": "7966c4cf5925f610ffaa4177785ee4a58ca880ff43b8089f8ceda2458dcda090",
+      "bytes": 1304
+    },
+    {
+      "path": "module-mesh-budget.json",
+      "sha256": "58b707685ae5342a7042edb006a890ada1d271d79441656ee68ea40a873674e4",
+      "bytes": 131187
+    },
+    {
+      "path": "module-mesh-budget.log",
+      "sha256": "3bea6ab97e6eb7a487805322e6b601c60f494dd8a381fc1253c8e2963eb6e837",
+      "bytes": 1351
+    },
+    {
+      "path": "module-mesh-budget.mts",
+      "sha256": "4fe6deddab698ada03430ff6f87bb86f5b9279f5885cb26e610dc3f0301c5d7d",
+      "bytes": 16424
+    },
+    {
+      "path": "native-axisymmetric-sweep.mts",
+      "sha256": "fe665761fdabd30e8f64ea14161f1a228758595b48642da89353003f3705fbb6",
+      "bytes": 6842
+    },
+    {
+      "path": "native-linear-sweep.mts",
+      "sha256": "96810e629c89af0a5713c3c6eeb935460dffccc1ed6607c13f16714197db76f1",
+      "bytes": 4869
+    },
+    {
+      "path": "native-member-translation.mts",
+      "sha256": "106f930b352b98d3c8995d9b1a9262e5d21dd78327895fec7786b9b751aa50b3",
+      "bytes": 3208
+    },
+    {
+      "path": "native-sweep-control-fixture.kcad.ts",
+      "sha256": "439cea6370ca4ffc18341ad2fccde8a4b369963156fd7d2c750f417458faedc5",
+      "bytes": 28
+    },
+    {
+      "path": "native-tool-sweep.mts",
+      "sha256": "ae9291012a3845cc9f35e160206e86bde68cd00b970cbb3f9cce185e343c1bc2",
+      "bytes": 2063
+    },
+    {
+      "path": "ordered-path.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "ordered-path.log",
+      "sha256": "d0d2c057cd35cfad0eaa46344786f248561f501b266b5b277eeb29707bed51b0",
+      "bytes": 7470
+    },
+    {
+      "path": "pico-native-member-controls.json",
+      "sha256": "74b540fd82c4e98a297b961e8e86b10d5220f19b941c9a551f5bd808a7391616",
+      "bytes": 8687
+    },
+    {
+      "path": "pico-native-member-controls.mts",
+      "sha256": "e0c80f1e20f9d12b2e68615ffacca7369132db1013fc5cf9bf7e62341e54c3e0",
+      "bytes": 3726
+    },
+    {
+      "path": "pico-ordered-complete-native-path.json",
+      "sha256": "bb5ab78359d17e7dbfe8b3ff690ff34826ac2b6172ade042d28d4b7d336fa74d",
+      "bytes": 613625
+    },
+    {
+      "path": "pico-ordered-complete-native-path.mts",
+      "sha256": "30ee455a635b11b7c1149404601b670e68293559338663002653524917deaae6",
+      "bytes": 18409
+    },
+    {
+      "path": "run-member-and-path.sh",
+      "sha256": "5021698b9a67f3a7f76de41749a7399dfdf0c08075995dca8c00a9f0dd1a5578",
+      "bytes": 977
+    },
+    {
+      "path": "run-ordered-path.sh",
+      "sha256": "7e011891be1d9c3fe37c63086392cf71222d6db455b7628459d45b3c6f7e03d6",
+      "bytes": 473
+    }
+  ]
+}
