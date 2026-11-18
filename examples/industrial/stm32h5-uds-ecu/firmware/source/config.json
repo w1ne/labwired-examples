@@ -1,0 +1,160 @@
+{
+  "schema": "labwired.offline-source-build.v1",
+  "name": "NUCLEO-H563ZI UDS physical firmware",
+  "archiveName": "stm32h563-uds-complete-source.tar.gz",
+  "sourcePins": [
+    {
+      "name": "STM32CubeH5",
+      "root": "CUBE",
+      "revision": "0d526a4930310cf8fa6dce7538ab891cc37eb250",
+      "url": "https://github.com/STMicroelectronics/STM32CubeH5",
+      "tag": "v1.4.0"
+    },
+    {
+      "name": "STM32H5xx_HAL_Driver",
+      "root": "CUBE",
+      "subPath": "Drivers/STM32H5xx_HAL_Driver",
+      "revision": "3db1b2636365214687c6d1587d7c82a47fc06745",
+      "url": "https://github.com/STMicroelectronics/stm32h5xx_hal_driver"
+    },
+    {
+      "name": "CMSIS_Device_STM32H5",
+      "root": "CUBE",
+      "subPath": "Drivers/CMSIS/Device/ST/STM32H5xx",
+      "revision": "748d6807f238eba64456bba0b38cff7b0880c3dd",
+      "url": "https://github.com/STMicroelectronics/cmsis_device_h5"
+    },
+    {
+      "name": "udslib",
+      "root": "UDSLIB",
+      "revision": "a2b5e5e5b28edbafa7ad78f0035c1a7072fbd160",
+      "url": "https://github.com/w1ne/udslib",
+      "tag": "v2.0.0"
+    }
+  ],
+  "vendors": {
+    "CUBE": {
+      "archivePath": "deps/STM32CubeH5",
+      "patterns": [
+        "LICENSE.md",
+        "Drivers/CMSIS/LICENSE.txt",
+        "Drivers/CMSIS/Include/*.h",
+        "Drivers/CMSIS/Device/ST/STM32H5xx/LICENSE.md",
+        "Drivers/CMSIS/Device/ST/STM32H5xx/Include/stm32h5xx.h",
+        "Drivers/CMSIS/Device/ST/STM32H5xx/Include/stm32h563xx.h",
+        "Drivers/CMSIS/Device/ST/STM32H5xx/Include/system_stm32h5xx.h",
+        "Drivers/CMSIS/Device/ST/STM32H5xx/Source/Templates/system_stm32h5xx.c",
+        "Drivers/CMSIS/Device/ST/STM32H5xx/Source/Templates/gcc/startup_stm32h563xx.s",
+        "Drivers/STM32H5xx_HAL_Driver/LICENSE.md",
+        "Drivers/STM32H5xx_HAL_Driver/Inc/**/*.h",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_fdcan.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c",
+        "Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c"
+      ]
+    },
+    "UDSLIB": {
+      "archivePath": "deps/udslib",
+      "patterns": [
+        "LICENSE",
+        "COMMERCIAL_LICENSE.md",
+        "include/**/*.h",
+        "src/**/*.h",
+        "src/**/*.c"
+      ]
+    }
+  },
+  "entries": [
+    {
+      "target": "primary",
+      "path": "main.c",
+      "board": "nucleo-h563zi",
+      "language": "c"
+    }
+  ],
+  "cpuFlags": [
+    "-mcpu=cortex-m33",
+    "-mthumb",
+    "-mfloat-abi=soft"
+  ],
+  "applicationFiles": [
+    "main.c",
+    "clock.c",
+    "uds_ecu_app.c",
+    "uds_ecu_app.h",
+    "stm32h563.ld",
+    "stm32h5xx_hal_conf.h",
+    "Makefile",
+    "LICENSE-ST.txt",
+    "provenance.json",
+    "verify-deps.py",
+    "source/config.json",
+    "source/toolchain.json",
+    "source/vendor-manifest.json",
+    "source/verify_export.py",
+    "source/build.py",
+    "source/package.py",
+    "source/BUILD.md",
+    "source/LICENSE-labwired-MIT"
+  ],
+  "targets": [
+    {
+      "name": "uds",
+      "directory": ".",
+      "makeDependencies": {
+        "CUBE_DIR": "deps/STM32CubeH5",
+        "UDSLIB_DIR": "deps/udslib"
+      },
+      "outputVariable": "TARGET",
+      "outputValue": "h563-uds-physical",
+      "artifactStem": "h563-uds-physical",
+      "expected": {
+        "elf": "d78d30a8ae57835c237e21c99104b56e1fcf50fcd8872440c986132eba67275f",
+        "bin": "28578bc7fd4a5bd4790cee3860a37d8dd9da6201b511a6c682c43ee79a9950df"
+      },
+      "expectedLoadableImage": {
+        "entry": 134250905,
+        "machine": 40,
+        "flags": 83886592,
+        "segments": [
+          {
+            "virtualAddress": 134217728,
+            "physicalAddress": 134217728,
+            "fileBytes": 34564,
+            "memoryBytes": 34564,
+            "flags": 5,
+            "alignment": 4096,
+            "sha256": "997f2c25d4ba17b85f123dedf859667058007cb1ab90f1013b8947e9d473c575"
+          },
+          {
+            "virtualAddress": 536870912,
+            "physicalAddress": 134252292,
+            "fileBytes": 92,
+            "memoryBytes": 2188,
+            "flags": 6,
+            "alignment": 4096,
+            "sha256": "fbbb6b53ecafb9c34e601c3f0b336fb018c5ba1b5f148694ddfa85e9fca9a858"
+          },
+          {
+            "virtualAddress": 536873100,
+            "physicalAddress": 134252384,
+            "fileBytes": 0,
+            "memoryBytes": 1540,
+            "flags": 6,
+            "alignment": 4096,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      }
+    }
+  ]
+}

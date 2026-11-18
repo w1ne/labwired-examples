@@ -17,8 +17,7 @@ STARTUP := $(DEVICE)/Source/Templates/gcc/startup_stm32h563xx.s
 SOURCE := main.c clock.c uds_ecu_app.c $(DEVICE)/Source/Templates/system_stm32h5xx.c $(HAL_SRC) $(UDS_SRC) $(STARTUP)
 all: check-deps $(TARGET).elf $(TARGET).bin
 check-deps:
-	@test "$$(git -C $(CUBE_DIR) rev-parse HEAD)" = 0d526a4930310cf8fa6dce7538ab891cc37eb250
-	@grep -q 'UDS_VERSION_STR "2.0.0"' $(UDSLIB_DIR)/include/uds/uds_version.h
+	python3 verify-deps.py $(CUBE_DIR) $(UDSLIB_DIR)
 $(TARGET).elf: $(SOURCE) stm32h563.ld
 	@mkdir -p build
 	$(CC) $(CFLAGS) $(SOURCE) -Tstm32h563.ld --specs=nano.specs --specs=nosys.specs 	  -Wl,--gc-sections,-Map=$(TARGET).map -o $@
