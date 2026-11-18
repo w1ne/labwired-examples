@@ -1,0 +1,45 @@
+{
+  "manifest_schema_version": "1.0",
+  "engine_version": "0.26.0",
+  "seed": 0,
+  "nondeterminism": "none",
+  "firmware": {
+    "path": "h563-uds-physical.elf",
+    "sha256": "d78d30a8ae57835c237e21c99104b56e1fcf50fcd8872440c986132eba67275f"
+  },
+  "configs": [
+    {
+      "path": "test.yaml",
+      "sha256": "4c348dbd279a7e4ff8572bd97b23250640bec606bc1ccd9a95f71e4daa5b8a09"
+    },
+    {
+      "path": "system.yaml",
+      "sha256": "d2131b9146d3ed63c104f70c786cfb2194a0b9d1ffac19a42221c7f1c5321ad5"
+    }
+  ],
+  "results": {
+    "status": "pass",
+    "stop_reason": "MaxSteps",
+    "steps_executed": 4000000,
+    "cycles": 4000000,
+    "instructions": 4000000,
+    "assertions": [
+      {
+        "assertion": "UartContains(UartContainsAssertion { uart_contains: \"H563-UDS-ECU PHYSICAL HAL 500K/2M FD\" })",
+        "passed": true
+      },
+      {
+        "assertion": "UartOrdered(UartOrderedAssertion { uart_ordered: [\"ECU_READY\", \"H563-UDS-ECU PHYSICAL HAL\", \"ECU_READY\"] })",
+        "passed": true
+      },
+      {
+        "assertion": "UdsTester(UdsTesterAssertion { uds_tester: UdsTesterDetails { id: \"uds-tester\", result: Done } })",
+        "passed": true
+      }
+    ],
+    "cpu_state_digest": "1e554e34dc9c75d114b0bb24dc67a7c151ae619f91f6a54e422e3b8118a52e09"
+  },
+  "coverage": null,
+  "fault_injections": [],
+  "digest": "24ac4296405b5509f96875c4740860ca578b31c7803c7e23e87b077cef72f5cf"
+}

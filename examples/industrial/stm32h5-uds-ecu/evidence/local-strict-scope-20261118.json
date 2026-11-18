@@ -1,0 +1,20 @@
+{
+  "scope": "local generic KernelCAD full design_loop with root PR759 candidate; not hosted deployment evidence",
+  "sourceSha256": "2c4fd1e6c424a810a707f4236cbeefb0c43d55034e1178c09c7b99884ad6deb1",
+  "negativeSourceSha256": "adaa1adf3e0aa626f055d17e11f3e024da98e49ec8ba8e6033e9e5bff87ba0d1",
+  "runtimePullRequest": "https://github.com/w1ne/kernelCAD-server/pull/759",
+  "runtimeHead": "78ab539b",
+  "receiptFiles": [
+    {
+      "file": "local-strict-positive-20261118.json",
+      "sha256": "b18d362f8aaf899195079e42b8e5bbcf56d0eca33d02c78b336fe4a70562d94c"
+    },
+    {
+      "file": "local-strict-negative-20261118.json",
+      "sha256": "81e66b1a48b0af43e6ab1e9e918642b18e3853b821c0db0c8f0cbd0c2fc6cb69"
+    }
+  ],
+  "positiveExpected": "ok=true,functional=true,qualityOk=true,zero blockers",
+  "negativeExpected": "housing collision rejected",
+  "visualScope": "Previously viewed hosted image; geometry unchanged by explicit connector-frame resolution. See original render receipt."
+}

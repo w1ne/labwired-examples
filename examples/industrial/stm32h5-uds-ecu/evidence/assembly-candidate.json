@@ -1,0 +1,45 @@
+{
+  "schema": "labwired.uds-assembly-candidate.v1",
+  "scope": "Exact carrier plus editable bench mounting; Nucleo outline reference only. Strict local design-loop proof, not hosted full-assembly publication or physical fit.",
+  "canonicalDesign": {
+    "code": "isJ4PMf4",
+    "publishedRevision": 1,
+    "publishedScope": "Existing print-only mount; new full assembly not yet published"
+  },
+  "runtimePullRequest": "https://github.com/w1ne/kernelCAD-server/pull/759",
+  "localRuntimeHead": "78ab539b",
+  "localStrictPositive": {
+    "ok": true,
+    "functional": true,
+    "qualityOk": true,
+    "blockers": 0
+  },
+  "housingShiftNegative": "Rejected; exact negative source and receipt retained",
+  "files": [
+    {
+      "path": "cad/bench-assembly.kcad.ts",
+      "bytes": 4605,
+      "sha256": "2c4fd1e6c424a810a707f4236cbeefb0c43d55034e1178c09c7b99884ad6deb1"
+    },
+    {
+      "path": "evidence/housing-collision-negative.kcad.ts",
+      "bytes": 4613,
+      "sha256": "adaa1adf3e0aa626f055d17e11f3e024da98e49ec8ba8e6033e9e5bff87ba0d1"
+    },
+    {
+      "path": "electronics/can-interface.kicad_pcb",
+      "bytes": 78416,
+      "sha256": "bf9cbb006c7d56ad4dc6efe4ea6ad9119ac4925921be773cf57c75e4b729e1cb"
+    },
+    {
+      "path": "cad/bench-mount.step",
+      "bytes": 321100,
+      "sha256": "406aefafd1ffc8be28ce93ea015f3addb4f2d7b5cb4596272643cb025afbe47c"
+    },
+    {
+      "path": "cad/can-interface.step",
+      "bytes": 1118860,
+      "sha256": "cc7f0a7e6d479f67d8161da6a73d84818381e10076d1d5bfd58bada2f5b5aadc"
+    }
+  ]
+}

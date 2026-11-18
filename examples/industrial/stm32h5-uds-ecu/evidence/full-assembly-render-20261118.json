@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "images": [
+    {
+      "name": "iso",
+      "path": "/tmp/kernelcad-preview-1QhyrF/iso.png",
+      "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+      "byte_count": 104403,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-9jK59b9nhdxpl77IYkOpzg/render-iso.png?exp=1795084302&sig=sZMCaYdOV6okZVRveWCds9eszU90E1SsndLjEMwWRyY",
+      "expires_at": "2026-11-19T10:31:42.000Z",
+      "inline": true
+    },
+    {
+      "name": "top",
+      "path": "/tmp/kernelcad-preview-1QhyrF/top.png",
+      "description": "Geometric +Z top-down plan \u2014 camera on +Z looking down; screen right = +X, screen up = +Y. For imported parts, this is not necessarily the product exterior.",
+      "byte_count": 56419,
+      "url": "https://api.kernelcad.com/api/v1/exports/20261118-mV8S1jWkahSWfohQY7jqag/render-top.png?exp=1795084302&sig=u8krNOKEKFB4sSz2XyDtXOFPKWJms-URPVaq8GUA6Rg",
+      "expires_at": "2026-11-19T10:31:42.000Z",
+      "inline": true
+    }
+  ],
+  "out_dir": "/tmp/kernelcad-preview-1QhyrF",
+  "bounds": {
+    "min": [
+      -4.440892098500626e-16,
+      -4.440892098500626e-16,
+      0
+    ],
+    "max": [
+      222,
+      90,
+      20.135000228881836
+    ]
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 87035.26421796075,
+    "faceCount": 815,
+    "size": [
+      222,
+      90,
+      20.134999999999998
+    ]
+  },
+  "mechanism": "real",
+  "render_source": "static-player",
+  "render_ms": 18011,
+  "diagnostics": [],
+  "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+  "images_inline_count": 2,
+  "serverBuild": "0.1.0+67fdae7818cb@2026-11-18T10:26:05.783Z"
+}

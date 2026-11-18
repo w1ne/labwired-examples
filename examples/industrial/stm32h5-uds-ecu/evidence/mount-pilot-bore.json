@@ -1,0 +1,33 @@
+{
+  "purpose": "Verify the actual M3 pilot bore rather than infer a thread from annotation",
+  "construction": "cylinder(7,3.3).holes('top',{positions:[{u:0,v:0}],diameter:3,depth:7,thread:{pitch:0.5},name:'M3'})",
+  "measurement": {
+    "ok": true,
+    "axis": "z",
+    "slices": [
+      {
+        "position": 3,
+        "area": 29.463918764787326,
+        "perimeter": 28.458852570492436,
+        "loopCount": 2,
+        "holeCount": 1,
+        "bbox": {
+          "min": [
+            -3.3,
+            0
+          ],
+          "max": [
+            3.3,
+            4.0413344371862655e-16
+          ]
+        }
+      }
+    ],
+    "minAreaIndex": 0,
+    "minAreaPosition": 3,
+    "serverBuild": "0.1.0+998c457b7810@2026-11-18T09:30:48.889Z"
+  },
+  "derived_minor_diameter_mm": 2.4587341226347275,
+  "method": "D=2*sqrt(R^2-section_area/pi), outer R=3.3 mm; section has two loops and one hole",
+  "manufacturing": "Ream to 2.5 mm and tap M3x0.5 after printing; no helical thread was modeled."
+}
