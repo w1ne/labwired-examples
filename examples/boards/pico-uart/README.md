@@ -1,4 +1,4 @@
-# Raspberry Pi Pico UART fixture — revision A
+# Raspberry Pi Pico UART fixture — revision B candidate
 
 This package turns the featured Pico example into a buildable USB-powered bench fixture. It contains a routed 60 × 70 mm carrier, a Raspberry Pi Pico SC0915 with specified Samtec headers, a fitted two-piece case, bootable Arduino Mbed firmware, a bill of materials, fabrication files, and verification receipts.
 
@@ -25,10 +25,10 @@ The exact released ELF passes all five clauses with this descriptor; `validation
 | Independent hosted native validation | Exact bytes preserved; KiCad10.0.8 reports0 errors and0 warnings | [Hosted DRC](validation/native-import-validation.json) |
 | Released hosted firmware | All 5 oracle clauses passed; GP0 made 181 transitions and GP25 made 2 transitions before the gate stopped | [Model-verification receipt](validation/firmware-model-verify.json) |
 | Local pinned SDK build | Build succeeded; the same 5 behavior assertions passed over 50,000,000 interpreted steps | [Local build acceptance](validation/local-build-acceptance.json) |
-| Nominal case fit | All 5 dimensional requirements passed | [CAD evaluation](validation/cad-evaluation.json) |
-| Design review | Accepted: functional and quality checks passed, seven visual checks recorded; one source-count style heuristic explicitly reviewed | [Current design loop](validation/socket-correction-design-loop.json) |
-| Assembly STEP | Export passed; all 50 re-imported solids are valid | [STEP inspection](validation/assembly-step-inspection.json) |
-| Printed parts | Base and lid STL exports passed with verification enabled | [Base](validation/base-stl-export.json), [lid](validation/lid-stl-export.json) |
+| Nominal fit and registration | All 12 requirements pass: five physical fit checks and seven native orientation checks | [Current evaluation](validation/handedness/evaluation.json) |
+| Design review | Accepted: functional and quality checks passed, seven visual checks recorded; one source-count style heuristic explicitly reviewed | [Current design loop](validation/handedness/design-loop.json) |
+| Assembly STEP | Export passed; all 50 re-imported solids are valid | [Current STEP inspection](validation/handedness/assembly-step-inspection.json) |
+| Printed parts | Base/lid DFM pass; both STL and 3MF meshes have zero non-two-manifold edges and the declared dimensions | [Mesh check](validation/handedness/mesh-export-check.json), [base DFM](validation/handedness/base-dfm-verification.json), [lid DFM](validation/handedness/lid-dfm-verification.json) |
 | Assembly-path sequence | The initial full-scene computation exhausted its work budget; it is inconclusive | [Recorded result](validation/assembly-path-budget.json) |
 | Physical qualification | No fabricated board, printed case, cable measurement, powered test, or assembly test has been recorded | [Bring-up procedure](ASSEMBLY.md) |
 
@@ -43,7 +43,7 @@ Model verification proves the listed behavior in the RP2040 model. The model ass
 - [Arduino source](firmware/src/main.ino), [pinned build configuration](firmware/platformio.ini), [ELF](firmware/artifacts/pico-uart.elf), [UF2](firmware/artifacts/pico-uart.uf2), and [build manifest](firmware/release-manifest.json).
 - [Assembly and bring-up instructions](ASSEMBLY.md), [source notices](THIRD_PARTY_NOTICES.txt), and [release hashes](SHA256SUMS).
 
-![Native Pico and specified header stack inside the fitted carrier case](mechanical/assembly-interior.png)
+![Correctly oriented native Pico and specified header stack inside the fitted carrier case](renders/native-frame-interior-top.png)
 
 ## Electrical contract
 
@@ -114,4 +114,14 @@ The editable CAD file loads two source-relative STEP files from this package. Th
 
 The next physical action is to fabricate one carrier, print one base/lid pair, and complete the recorded assembly and electrical bring-up procedure. Release qualification stays explicit until those measurements exist.
 
-The current CAD source supersedes the preliminary Studio revision1. A Samtec drawing review corrected the SSW-120 socket body to 2.41 mm REF width and 51.31 ±0.25 mm length. The refreshed assembly STEP contains 50 valid BREP solids; the corrected source passes all five fit requirements. The corrected source also passes the full design loop: all five fit requirements and seven visual checks pass, with no blocking reasons. The single documented box-fragment style warning is reviewed; no physical or path gate is waived. The earlier full design-loop receipt remains historical, and the base and lid print geometry is unchanged. See validation/connector-dimension-correction.json. Updating that existing Studio project is still pending because its collaboration path does not support imported STEP assets. No replacement project has been created.
+## Native coordinate correction
+
+Revision B preserves the native carrier populated side at +Z. Authored geometry uses world Y = −editor Y. The exact manufacturer Pico STEP uses a proper 90° rotation about X and translation (19.5, −57, 21.15) mm. All 17 manufacturer solids remain separate and retain their shape and handedness. Physical pin 1 now meets J1.1; physical pin 40 meets J2.1. The historical module rotation swapped the two rows, a defect that symmetric header holes could hide.
+
+The independent [registration check](validation/handedness/native-registration.json) matches all **47 native carrier drilled pads** to the source STEP axes with zero XY error. It also matches all **40 native Pico header axes** through the rigid transform to both carrier pads and the re-imported assembly. An asymmetric LED-position requirement distinguishes the correct pin-1 side: the historical row swap passes the symmetric hole gauges but fails the LED negative control.
+
+All **12 fit and registration requirements**, **seven actual visual checks**, and the full design loop pass. The refreshed assembly STEP contains **50/50 valid solids**. Both printed parts pass DFM and independent STL/3MF checks. The corrected Samtec SSW-120 body remains 2.41 mm REF wide and 51.31 ±0.25 mm long. The electrical carrier, firmware and runtime descriptor are unchanged.
+
+Earlier Studio revision 1 and the socket-correction geometry receipts remain historical. The existing Studio project awaits an update through the repaired imported-asset collaboration path. The printable files here supersede the earlier orientation. Full assembly-path and physical qualification remain open.
+
+Run `python3 validation/handedness/verify_native_registration.py --kind pico --package .` with the KiCad 10 Python module available. Run `python3 validation/handedness/verify_mesh_exports.py --kind pico --package .` to check the actual print files.

@@ -1,0 +1,874 @@
+{
+  "ok": false,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "invalid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 63122.45709039566
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -9,
+            -79,
+            0
+          ],
+          "max": [
+            79,
+            9,
+            32
+          ]
+        }
+      },
+      "out_dir": "[server path]",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 63122.45709039566,
+    "faceCount": 1632,
+    "size": [
+      78,
+      88,
+      32
+    ]
+  },
+  "featureCount": 513,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.thread",
+      "severity": "info",
+      "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+      "hint": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "M4 threaded hole tap drill"
+        }
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.hole-by-cylinder",
+      "severity": "info",
+      "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+      "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "clearance hole through plate"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "c7349bd347b2668948191fb5176d36b2e1ea65a463c5e454a6a84614e84cec10",
+      "byteLength": 10999
+    },
+    "parameters": {
+      "values": {
+        "output": "assembly"
+      },
+      "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "66e8b0c6bd908941f4fddc2a41454ff79fa82eff"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "fed28190e45a7db3c3d1f5a35ea1877bccc16425fdf526eb26d5277dc8bbde9a"
+  },
+  "selections": [
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 92.20933129005482
+    },
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(cylinder_13)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.9339079605813723
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 92.20933129005482
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(cylinder_14)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.9339079605813723
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 92.20933129005482
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(cylinder_15)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.9339079605813723
+    },
+    {
+      "consumerFeatureId": "require_4",
+      "selectorText": "body(importedStep_10)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.8867962264113263
+    },
+    {
+      "consumerFeatureId": "require_5",
+      "selectorText": "body(importedStep_2)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 55.163393659201205
+    },
+    {
+      "consumerFeatureId": "require_5",
+      "selectorText": "body(cylinder_96)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.3928388277184112
+    },
+    {
+      "consumerFeatureId": "require_6",
+      "selectorText": "body(importedStep_2)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 55.163393659201205
+    },
+    {
+      "consumerFeatureId": "require_6",
+      "selectorText": "body(cylinder_97)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.3928388277184112
+    },
+    {
+      "consumerFeatureId": "require_7",
+      "selectorText": "body(importedStep_2)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 55.163393659201205
+    },
+    {
+      "consumerFeatureId": "require_7",
+      "selectorText": "body(cylinder_98)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.3928388277184112
+    },
+    {
+      "consumerFeatureId": "require_8",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 92.20933129005482
+    },
+    {
+      "consumerFeatureId": "require_9",
+      "selectorText": "body(assemblyExport_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 57.64538614668134
+    },
+    {
+      "consumerFeatureId": "require_9",
+      "selectorText": "body(boolean_28)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 117.63604889658612
+    },
+    {
+      "consumerFeatureId": "require_10",
+      "selectorText": "body(boolean_114)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 92.86723467918641
+    },
+    {
+      "consumerFeatureId": "require_10",
+      "selectorText": "body(boolean_28)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 117.63604889658612
+    },
+    {
+      "consumerFeatureId": "require_11",
+      "selectorText": "body(box_55)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 34.928498393145965
+    },
+    {
+      "consumerFeatureId": "require_11",
+      "selectorText": "body(boolean_18)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 120.76526818584885
+    },
+    {
+      "consumerFeatureId": "require_12",
+      "selectorText": "body(box_55)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 34.928498393145965
+    },
+    {
+      "consumerFeatureId": "require_12",
+      "selectorText": "body(boolean_28)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 117.63604889658612
+    }
+  ],
+  "requirements": {
+    "ok": false,
+    "status": "fail",
+    "entries": [
+      {
+        "name": "native-carrier-registration-J1.1",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999999062,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.0009999999999906195,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 92.20933129005482
+          },
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(cylinder_13)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.9339079605813723
+          }
+        ],
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_13"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-carrier-registration-J1.2",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999999023,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.000999999999990231,
+        "selections": [
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 92.20933129005482
+          },
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(cylinder_14)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.9339079605813723
+          }
+        ],
+        "featureId": "require_2",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_14"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-carrier-registration-J2.1",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.2499999999999861,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.0009999999999860953,
+        "selections": [
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 92.20933129005482
+          },
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(cylinder_15)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.9339079605813723
+          }
+        ],
+        "featureId": "require_3",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_15"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-pico-led-on-pin1-side",
+        "source": "script",
+        "status": "fail",
+        "measured": [
+          24.3,
+          -10.800000000000002,
+          21.915384615384575
+        ],
+        "limit": {
+          "x": [
+            24.29,
+            24.31
+          ],
+          "y": [
+            -10.81,
+            -10.79
+          ],
+          "z": [
+            21.94,
+            21.96
+          ]
+        },
+        "margin": -0.02461538461542645,
+        "selections": [
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(importedStep_10)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.8867962264113263
+          }
+        ],
+        "message": "native-pico-led-on-pin1-side failed: measured [24.300, -10.800, 21.915], limit {x: [24.290, 24.310], y: [-10.810, -10.790], z: [21.940, 21.960]}, margin -0.025 (importedStep_10).",
+        "featureId": "require_4",
+        "predicate": {
+          "metric": "centerOfMass",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_10"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              24.29,
+              24.31
+            ],
+            "y": [
+              -10.81,
+              -10.79
+            ],
+            "z": [
+              21.94,
+              21.96
+            ]
+          }
+        }
+      },
+      {
+        "name": "native-pico-registration-pin1",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999999734,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.0009999999999973364,
+        "selections": [
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(importedStep_2)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 55.163393659201205
+          },
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(cylinder_96)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.3928388277184112
+          }
+        ],
+        "featureId": "require_5",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_2"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_96"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-pico-registration-pin2",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999996977,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.000999999999969775,
+        "selections": [
+          {
+            "consumerFeatureId": "require_6",
+            "selectorText": "body(importedStep_2)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 55.163393659201205
+          },
+          {
+            "consumerFeatureId": "require_6",
+            "selectorText": "body(cylinder_97)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.3928388277184112
+          }
+        ],
+        "featureId": "require_6",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_2"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_97"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-pico-registration-pin40",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.24999999999999734,
+        "limit": [
+          0.249,
+          0.251
+        ],
+        "margin": 0.0009999999999973364,
+        "selections": [
+          {
+            "consumerFeatureId": "require_7",
+            "selectorText": "body(importedStep_2)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 55.163393659201205
+          },
+          {
+            "consumerFeatureId": "require_7",
+            "selectorText": "body(cylinder_98)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.3928388277184112
+          }
+        ],
+        "featureId": "require_7",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_2"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_98"
+          },
+          "op": "between",
+          "limit": [
+            0.249,
+            0.251
+          ]
+        }
+      },
+      {
+        "name": "native-carrier-size",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          60.0000029883041,
+          70.00000298830409,
+          1.5999999999999996
+        ],
+        "limit": {
+          "x": [
+            59.99,
+            60.01
+          ],
+          "y": [
+            69.99,
+            70.01
+          ],
+          "z": [
+            1.59,
+            1.61
+          ]
+        },
+        "margin": 0.009997011695901392,
+        "selections": [
+          {
+            "consumerFeatureId": "require_8",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 92.20933129005482
+          }
+        ],
+        "featureId": "require_8",
+        "predicate": {
+          "metric": "bbox",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              59.99,
+              60.01
+            ],
+            "y": [
+              69.99,
+              70.01
+            ],
+            "z": [
+              1.59,
+              1.61
+            ]
+          }
+        }
+      },
+      {
+        "name": "pico-to-lid",
+        "source": "script",
+        "status": "pass",
+        "measured": 3.120000000000008,
+        "limit": 1,
+        "margin": 2.120000000000008,
+        "selections": [
+          {
+            "consumerFeatureId": "require_9",
+            "selectorText": "body(assemblyExport_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 57.64538614668134
+          },
+          {
+            "consumerFeatureId": "require_9",
+            "selectorText": "body(boolean_28)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 117.63604889658612
+          }
+        ],
+        "featureId": "require_9",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "assemblyExport_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_28"
+          },
+          "op": "gte",
+          "limit": 1
+        }
+      },
+      {
+        "name": "carrier-to-lid",
+        "source": "script",
+        "status": "pass",
+        "measured": 9.39,
+        "limit": 1,
+        "margin": 8.39,
+        "selections": [
+          {
+            "consumerFeatureId": "require_10",
+            "selectorText": "body(boolean_114)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 92.86723467918641
+          },
+          {
+            "consumerFeatureId": "require_10",
+            "selectorText": "body(boolean_28)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 117.63604889658612
+          }
+        ],
+        "featureId": "require_10",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_114"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_28"
+          },
+          "op": "gte",
+          "limit": 1
+        }
+      },
+      {
+        "name": "usb-plug-base-access",
+        "source": "script",
+        "status": "pass",
+        "measured": 1,
+        "limit": 0.5,
+        "margin": 0.5,
+        "selections": [
+          {
+            "consumerFeatureId": "require_11",
+            "selectorText": "body(box_55)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 34.928498393145965
+          },
+          {
+            "consumerFeatureId": "require_11",
+            "selectorText": "body(boolean_18)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 120.76526818584885
+          }
+        ],
+        "featureId": "require_11",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_55"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_18"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      },
+      {
+        "name": "usb-plug-lid-access",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.735000000000003,
+        "limit": 0.5,
+        "margin": 0.23500000000000298,
+        "selections": [
+          {
+            "consumerFeatureId": "require_12",
+            "selectorText": "body(box_55)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 34.928498393145965
+          },
+          {
+            "consumerFeatureId": "require_12",
+            "selectorText": "body(boolean_28)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 117.63604889658612
+          }
+        ],
+        "featureId": "require_12",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_55"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_28"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      }
+    ],
+    "summary": {
+      "pass": 11,
+      "fail": 1,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 50,
+    "names": [
+      "base",
+      "lid",
+      "carrier-pcba",
+      "pico-board",
+      "pico-component-1",
+      "pico-component-2",
+      "pico-component-3",
+      "pico-component-4",
+      "pico-component-5",
+      "pico-component-6",
+      "pico-component-7",
+      "pico-component-8",
+      "pico-component-9",
+      "pico-component-10",
+      "pico-component-11",
+      "pico-component-12",
+      "pico-component-13",
+      "pico-component-14",
+      "pico-component-15",
+      "pico-component-16",
+      "pico-header-2111",
+      "pico-header-3889",
+      "carrier-washer-0",
+      "carrier-standoff-0",
+      "carrier-screw-0",
+      "carrier-lower-screw-0",
+      "carrier-washer-1",
+      "carrier-standoff-1",
+      "carrier-screw-1",
+      "carrier-lower-screw-1",
+      "carrier-washer-2",
+      "carrier-standoff-2",
+      "carrier-screw-2",
+      "carrier-lower-screw-2",
+      "carrier-washer-3",
+      "carrier-standoff-3",
+      "carrier-screw-3",
+      "carrier-lower-screw-3",
+      "lid-standoff-0",
+      "lid-screw-0",
+      "lid-lower-screw-0",
+      "lid-standoff-1",
+      "lid-screw-1",
+      "lid-lower-screw-1",
+      "lid-standoff-2",
+      "lid-screw-2",
+      "lid-lower-screw-2",
+      "lid-standoff-3",
+      "lid-screw-3",
+      "lid-lower-screw-3"
+    ]
+  },
+  "mechanism": "real",
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z",
+  "kernelcadError": {
+    "code": "authoring.prefer-api.thread",
+    "category": "transport_internal_failure",
+    "stage": "transport_or_internal",
+    "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+    "recovery": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+    "correlationId": "f8a5398d-fcd5-4256-b13a-355e0e831c64",
+    "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z"
+  }
+}

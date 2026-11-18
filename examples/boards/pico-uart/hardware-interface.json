@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "units": "mm",
-  "coordinate_system": "Carrier top view: X right,Y down from USB edge; CAD Z up from enclosure underside. The carrier-only KiCad frame has its underside at localZ0.",
+  "coordinate_system": "Electrical and native PCB editor top view: X right, Y down from the USB edge. Interface XY values retain that editor frame. CAD world X=editorX, Y=-editorY, Z up from the enclosure underside.",
   "carrier": {
     "size": [
       60,
@@ -179,5 +179,37 @@
     "Printed tolerances and screw torque untested.",
     "The opaque lid covers GP25 LED; inspect it with the lid removed.",
     "The released firmware transmits on GP0; GP1 receive behavior has not been exercised."
-  ]
+  ],
+  "cad_world_frame": {
+    "x": "editorX",
+    "y": "-editorY",
+    "z": "up",
+    "carrier_transform": {
+      "positive_scale": [
+        1,
+        1,
+        1.0596026490066226
+      ],
+      "translation": [
+        0,
+        0,
+        8
+      ]
+    },
+    "pico_vendor_transform": {
+      "rotate_x_degrees": 90,
+      "translation": [
+        19.5,
+        -57,
+        21.15
+      ],
+      "determinant": 1,
+      "populated_normal_after": [
+        0,
+        0,
+        1
+      ]
+    },
+    "registration_receipt": "validation/handedness/native-registration.json"
+  }
 }
