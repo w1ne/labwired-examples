@@ -8,6 +8,7 @@ This repository is for runnable hardware verification stories, **not concept art
 
 | Example | Firmware and electronics | Mechanics | Evidence |
 | --- | --- | --- | --- |
+| [ESP32-C3 OLED device — Rev A candidate](examples/displays/esp32c3-oled/) | XIAO ESP32C3 clock demo, native KiCad 10 routed carrier, full BOM and pinned firmware | Removable enclosure source and STEP/STL/3MF; full path/review checks remain unresolved | 5/5 ROM-boot assertions, matching browser-WASM frames, zero native ERC/DRC findings; no physical prototype |
 | [Game Boy-compatible handheld](examples/gaming/gameboy-handheld/) | STM32F411 C firmware runs Peanut-GB and an original ROM; ILI9341 and eight controls | Shared carrier/case interfaces, attached exact-source KiCad board, 59 CAD parts and 58 fixed mates | Saved-project MCU verification, host ROM behavior, browser input, hosted native PCB DRC/attachment and static CAD checks; no physical hardware |
 | [HeyPCB imported-board acceptance sample](examples/pcb/heypcb-import-acceptance/) | Seven pinned KiCad PCB files and model-gap evidence; no full-board pass | No mechanical model | Source blobs verified; seven imports reported in unmerged PR #2934; none completely simulated |
 | [Industrial BLDC fault verification](examples/industrial/bldc-fault-verification/) | STM32L476 compiled C, 24 V motor plant, three digital fault flags, inverter shutdown | No mechanical model in this example | Normal spin-up and 3 fault scenarios model-verified; ideal MCU supply, no physical bench |

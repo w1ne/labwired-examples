@@ -1,0 +1,147 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 10577.494841178484
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -9,
+            -54,
+            -7.549516567451064e-15
+          ],
+          "max": [
+            79,
+            54,
+            32
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-Z51QhE",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 10577.494841178484,
+    "faceCount": 73,
+    "size": [
+      88,
+      63,
+      4.300000000000008
+    ]
+  },
+  "featureCount": 85,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.thread",
+      "severity": "info",
+      "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+      "hint": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "M4 threaded hole tap drill"
+        }
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.hole-by-cylinder",
+      "severity": "info",
+      "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+      "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "clearance hole through plate"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "f8efcf4a7fcd67cefb4152a878c7c22c665478d0609b5018a2b70cfe887bf2d9",
+      "byteLength": 12818
+    },
+    "parameters": {
+      "values": {
+        "output": "lid-print"
+      },
+      "sha256": "18064e76b92b170f09d812fd9b012b844b25195560a73b7edfd6c59434077486"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "66e8b0c6bd908941f4fddc2a41454ff79fa82eff"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "7ebfc06ad0686eb663be0a02ea965b5aea2737fe4530c6f295ccdcc0531a5088"
+  },
+  "requirements": {
+    "ok": true,
+    "status": "pass",
+    "entries": [
+      {
+        "name": "dfm.minWall.lid",
+        "source": "dfm",
+        "status": "pass",
+        "measured": 0.8498339486088142,
+        "limit": 0.8,
+        "margin": 0.04983394860881418,
+        "selections": []
+      },
+      {
+        "name": "dfm.fdm.lid",
+        "source": "dfm",
+        "status": "pass",
+        "measured": 0,
+        "limit": 45,
+        "margin": null,
+        "selections": []
+      }
+    ],
+    "summary": {
+      "pass": 2,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 1,
+    "names": [
+      "lid"
+    ]
+  },
+  "mechanism": "real",
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z"
+}

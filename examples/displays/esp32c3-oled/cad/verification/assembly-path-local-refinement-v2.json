@@ -1,0 +1,28 @@
+{
+  "acceptance": "not-accepted",
+  "runtimeCommit": "2634ecba16add4adb9d177a5f736000cfbf8e623",
+  "runtimeScope": "local private KernelCAD runtime; not deployed hosted result",
+  "sourceSha256": "67cde40ec0d6bc1113c5a71b5d3778520f7147f88190ee7d5bf2b61412707fd8",
+  "nativeStepSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
+  "fullAssembly": {
+    "sourceSha256": "67cde40ec0d6bc1113c5a71b5d3778520f7147f88190ee7d5bf2b61412707fd8",
+    "elapsedMs": 27645,
+    "report": {
+      "ok": false,
+      "source": "local",
+      "error": "Assembly path containment for 'carrier-lower-screw-0' at [6.88, 4, 0.22000000000000003] is numerically ambiguous; no clear result is available.",
+      "errorCode": "feature.invalid-args"
+    }
+  },
+  "baseFixtured": {
+    "sourceSha256": "67cde40ec0d6bc1113c5a71b5d3778520f7147f88190ee7d5bf2b61412707fd8",
+    "elapsedMs": 37238,
+    "report": {
+      "ok": false,
+      "source": "local",
+      "error": "Assembly path containment for 'carrier-standoff-0' at [4, 5.45, 7.999999999999999] is numerically ambiguous; no clear result is available.",
+      "errorCode": "feature.invalid-args"
+    }
+  },
+  "note": "The optimization preserves ambiguous contact as failure. Neither run is a completed assembly-path proof."
+}

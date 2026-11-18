@@ -1,0 +1,651 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 56131.85539990512
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -9,
+            -9,
+            0
+          ],
+          "max": [
+            79,
+            54,
+            32
+          ]
+        }
+      },
+      "out_dir": "/tmp/kernelcad-step-14zUFn",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 56131.85539990512,
+    "faceCount": 580,
+    "size": [
+      88,
+      63,
+      32
+    ]
+  },
+  "featureCount": 300,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.thread",
+      "severity": "info",
+      "message": "Script names a thread / M-size / insert but no hole() carries it: use hole(face, { diameter, thread: { pitch } }) (cookbook threaded-hole-tap-drill; inserts: heat-set-insert-pilot).",
+      "hint": "Make threaded / M-size holes with shape.hole(face, { diameter: <nominal>, thread: { pitch } }) or holes(...), not a subtracted cylinder. Recipes: threaded-hole-tap-drill, heat-set-insert-pilot.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "M4 threaded hole tap drill"
+        }
+      }
+    },
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.hole-by-cylinder",
+      "severity": "info",
+      "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+      "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "clearance hole through plate"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "2794984265b2bd0be79ca1ceaea8d72b5a9d0185043f2b8887da283d1c69ff4b",
+      "byteLength": 12008
+    },
+    "parameters": {
+      "values": {
+        "output": "assembly"
+      },
+      "sha256": "d56fd39bd861da9497224e2c7dee6cd49ba6cb7ac709964b8c1bb619b25f5e93"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "cda2808dbd0d5797020aff549c8412d959b92d58"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "107cf1aa0114c876bd19d6e84e9fcdad5b061ee4c2084f071d660b5470b0f704"
+  },
+  "selections": [
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 83.23196914233112
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(box_14)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 32.97085986139883
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(boolean_36)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 108.3120030282886
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(box_14)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 32.97085986139883
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(boolean_28)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 5.503635162326805
+    },
+    {
+      "consumerFeatureId": "require_4",
+      "selectorText": "body(box_14)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 32.97085986139883
+    },
+    {
+      "consumerFeatureId": "require_4",
+      "selectorText": "body(boolean_31)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 5.503635162326805
+    },
+    {
+      "consumerFeatureId": "require_5",
+      "selectorText": "body(boolean_58)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 29.07875186884747
+    },
+    {
+      "consumerFeatureId": "require_5",
+      "selectorText": "body(boolean_36)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 108.3120030282886
+    },
+    {
+      "consumerFeatureId": "require_6",
+      "selectorText": "body(boolean_60)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 86.36942447277016
+    },
+    {
+      "consumerFeatureId": "require_6",
+      "selectorText": "body(boolean_71)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 43.644548342261594
+    },
+    {
+      "consumerFeatureId": "require_7",
+      "selectorText": "body(boolean_60)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 86.36942447277016
+    },
+    {
+      "consumerFeatureId": "require_7",
+      "selectorText": "body(boolean_36)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 108.3120030282886
+    },
+    {
+      "consumerFeatureId": "require_8",
+      "selectorText": "body(box_18)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 28.354893757515654
+    },
+    {
+      "consumerFeatureId": "require_8",
+      "selectorText": "body(boolean_18)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 111.66579601650633
+    },
+    {
+      "consumerFeatureId": "require_9",
+      "selectorText": "body(box_18)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 28.354893757515654
+    },
+    {
+      "consumerFeatureId": "require_9",
+      "selectorText": "body(boolean_36)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 108.3120030282886
+    }
+  ],
+  "requirements": {
+    "ok": true,
+    "status": "pass",
+    "entries": [
+      {
+        "name": "pcb-outside-envelope",
+        "source": "script",
+        "status": "pass",
+        "measured": [
+          70.00000298830409,
+          45.000002988304104,
+          1.6000000000000059
+        ],
+        "limit": {
+          "x": [
+            69.99,
+            70.01
+          ],
+          "y": [
+            44.99,
+            45.01
+          ],
+          "z": [
+            1.59,
+            1.61
+          ]
+        },
+        "margin": 0.009997011695894287,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 83.23196914233112
+          }
+        ],
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "bbox",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "op": "within",
+          "limit": {
+            "x": [
+              69.99,
+              70.01
+            ],
+            "y": [
+              44.99,
+              45.01
+            ],
+            "z": [
+              1.59,
+              1.61
+            ]
+          }
+        }
+      },
+      {
+        "name": "oled-glass-to-lid-gap",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.5,
+        "limit": 0.5,
+        "margin": 0,
+        "selections": [
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(box_14)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 32.97085986139883
+          },
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(boolean_36)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 108.3120030282886
+          }
+        ],
+        "featureId": "require_2",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_14"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_36"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      },
+      {
+        "name": "oled-glass-to-open-support-0",
+        "source": "script",
+        "status": "pass",
+        "measured": 1.277000000000001,
+        "limit": 1,
+        "margin": 0.277000000000001,
+        "selections": [
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(box_14)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 32.97085986139883
+          },
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(boolean_28)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 5.503635162326805
+          }
+        ],
+        "featureId": "require_3",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_14"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_28"
+          },
+          "op": "gte",
+          "limit": 1
+        }
+      },
+      {
+        "name": "oled-glass-to-open-support-1",
+        "source": "script",
+        "status": "pass",
+        "measured": 1.277000000000001,
+        "limit": 1,
+        "margin": 0.277000000000001,
+        "selections": [
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(box_14)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 32.97085986139883
+          },
+          {
+            "consumerFeatureId": "require_4",
+            "selectorText": "body(boolean_31)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 5.503635162326805
+          }
+        ],
+        "featureId": "require_4",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_14"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_31"
+          },
+          "op": "gte",
+          "limit": 1
+        }
+      },
+      {
+        "name": "controller-to-lid-gap",
+        "source": "script",
+        "status": "pass",
+        "measured": 3.3200000000000003,
+        "limit": 0.5,
+        "margin": 2.8200000000000003,
+        "selections": [
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(boolean_58)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 29.07875186884747
+          },
+          {
+            "consumerFeatureId": "require_5",
+            "selectorText": "body(boolean_36)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 108.3120030282886
+          }
+        ],
+        "featureId": "require_5",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_58"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_36"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      },
+      {
+        "name": "pcb-assembly-to-oled-assembly-gap",
+        "source": "script",
+        "status": "pass",
+        "measured": 8.709513476652985,
+        "limit": 0.5,
+        "margin": 8.209513476652985,
+        "selections": [
+          {
+            "consumerFeatureId": "require_6",
+            "selectorText": "body(boolean_60)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 86.36942447277016
+          },
+          {
+            "consumerFeatureId": "require_6",
+            "selectorText": "body(boolean_71)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 43.644548342261594
+          }
+        ],
+        "featureId": "require_6",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_60"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_71"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      },
+      {
+        "name": "pcb-assembly-to-lid-gap",
+        "source": "script",
+        "status": "pass",
+        "measured": 3.3200000000000003,
+        "limit": 0.5,
+        "margin": 2.8200000000000003,
+        "selections": [
+          {
+            "consumerFeatureId": "require_7",
+            "selectorText": "body(boolean_60)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 86.36942447277016
+          },
+          {
+            "consumerFeatureId": "require_7",
+            "selectorText": "body(boolean_36)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 108.3120030282886
+          }
+        ],
+        "featureId": "require_7",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "boolean_60"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_36"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      },
+      {
+        "name": "usb-plug-access-to-base",
+        "source": "script",
+        "status": "pass",
+        "measured": 1,
+        "limit": 0.5,
+        "margin": 0.5,
+        "selections": [
+          {
+            "consumerFeatureId": "require_8",
+            "selectorText": "body(box_18)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 28.354893757515654
+          },
+          {
+            "consumerFeatureId": "require_8",
+            "selectorText": "body(boolean_18)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 111.66579601650633
+          }
+        ],
+        "featureId": "require_8",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_18"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_18"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      },
+      {
+        "name": "usb-plug-access-to-lid",
+        "source": "script",
+        "status": "pass",
+        "measured": 0.9250000000000007,
+        "limit": 0.5,
+        "margin": 0.4250000000000007,
+        "selections": [
+          {
+            "consumerFeatureId": "require_9",
+            "selectorText": "body(box_18)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 28.354893757515654
+          },
+          {
+            "consumerFeatureId": "require_9",
+            "selectorText": "body(boolean_36)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 108.3120030282886
+          }
+        ],
+        "featureId": "require_9",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "box_18"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "boolean_36"
+          },
+          "op": "gte",
+          "limit": 0.5
+        }
+      }
+    ],
+    "summary": {
+      "pass": 9,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 41,
+    "names": [
+      "base",
+      "lid",
+      "carrier-pcba-envelope",
+      "oled-pcba-envelope",
+      "oled-display-surface",
+      "carrier-washer-0",
+      "carrier-standoff-0",
+      "carrier-screw-0",
+      "carrier-lower-screw-0",
+      "carrier-washer-1",
+      "carrier-standoff-1",
+      "carrier-screw-1",
+      "carrier-lower-screw-1",
+      "carrier-washer-2",
+      "carrier-standoff-2",
+      "carrier-screw-2",
+      "carrier-lower-screw-2",
+      "carrier-washer-3",
+      "carrier-standoff-3",
+      "carrier-screw-3",
+      "carrier-lower-screw-3",
+      "lid-standoff-0",
+      "lid-screw-0",
+      "lid-lower-screw-0",
+      "lid-standoff-1",
+      "lid-screw-1",
+      "lid-lower-screw-1",
+      "lid-standoff-2",
+      "lid-screw-2",
+      "lid-lower-screw-2",
+      "lid-standoff-3",
+      "lid-screw-3",
+      "lid-lower-screw-3",
+      "display-screw-0",
+      "display-nut-0",
+      "display-screw-1",
+      "display-nut-1",
+      "display-screw-2",
+      "display-nut-2",
+      "display-screw-3",
+      "display-nut-3"
+    ]
+  },
+  "mechanism": "real",
+  "serverBuild": "0.1.0+cda2808dbd0d@2026-11-18T08:39:34.231Z"
+}

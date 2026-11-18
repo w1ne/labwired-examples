@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "sourceFiles": {
+    "submitted": "submitted-source.kcad.ts",
+    "savedRevision": "../esp32c3-oled-enclosure.kcad.ts",
+    "assemblyPath": "assembly-path-source.kcad.ts",
+    "designLoop": "design-loop-source.kcad.ts"
+  },
+  "pathCall": {
+    "tool": "verify",
+    "check": "assembly-path",
+    "sequence": true,
+    "stability": true,
+    "fixtures": [
+      "base"
+    ],
+    "gravity": [
+      0,
+      0,
+      -1
+    ],
+    "directions": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "attempts": [
+      {
+        "workBudget": 80000000,
+        "result": "assembly-path-budget.json",
+        "status": "unknown-budget"
+      },
+      {
+        "workBudget": 1000000000,
+        "result": "assembly-path-timeout.json",
+        "status": "300-second-evaluator-timeout"
+      }
+    ],
+    "finalRevisionRelation": "The path input predates final asset-byte refresh, USB X shift\u22120.0635 mm, and nut helical metadata. It produced no path result; no assembly-path success is claimed for any revision."
+  },
+  "designLoopCall": {
+    "tool": "design_loop",
+    "argumentsWithoutCode": {
+      "goal": "Validate the source-derived ESP32-C3 OLED desk enclosure as a dimensional CAD candidate, with two printable shells, exact native carrier holes, accessible USB, retained OLED and documented physical-fit limitations.",
+      "attempts": [
+        {
+          "visualReview": {
+            "accepted": true,
+            "screenshotPath": "/tmp/kernelcad-preview-Gjr5KW/iso.png",
+            "findings": [
+              "Closed and open views inspected. Final USB X correction is0.0635 mm toward the notch and does not change the case; final solid clearance check passed. Physical fit and assembly path are not proven."
+            ],
+            "checks": [
+              {
+                "code": "main-object-count",
+                "passed": true,
+                "finding": "One base and one lid, with four carrier supports, four lid standoffs and one display; 41 named parts including electronic and screw envelopes."
+              },
+              {
+                "code": "proportions-match-reference",
+                "passed": true,
+                "finding": "88\u00d763 mm case surrounds the native70\u00d745 mm carrier. Heights follow final round-pin header stack."
+              },
+              {
+                "code": "required-visible-features",
+                "passed": true,
+                "finding": "Rendered closed and open views show the display window, USB notch, locating seam and retention fasteners."
+              },
+              {
+                "code": "no-stray-or-floating-geometry",
+                "passed": true,
+                "finding": "All rendered bodies sit in the enclosure or on its retaining stacks. Full build reports no orphan or overlap errors."
+              },
+              {
+                "code": "attachment-plausibility",
+                "passed": true,
+                "finding": "Metal standoffs support the carrier and lid. The OLED is retained at its four source-defined holes; threads use smooth envelopes."
+              },
+              {
+                "code": "semantic-orientation-alignment",
+                "passed": true,
+                "finding": "USB faces\u2212X; display active face is+Z. Native carrier uses Y-up to Y-down conversion."
+              },
+              {
+                "code": "canonical-views-physically-coherent",
+                "passed": true,
+                "finding": "Closed iso/top/front and open iso/top views agree with the same source and bounds. Screw caps are simplified envelopes, not fabricated studs."
+              }
+            ]
+          },
+          "sourceFile": "design-loop-source.kcad.ts"
+        }
+      ],
+      "stopOnPass": true,
+      "requireVisualReview": true,
+      "outputRecordPath": "/tmp/oled-enclosure-design-loop.json"
+    },
+    "genericImport": {
+      "tool": "import_step",
+      "contentSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
+      "returnedPath": "/tmp/kernelcad-import-VCl601/oled-carrier-final.step",
+      "result": "carrier-import.json"
+    },
+    "errors": [
+      {
+        "input": "data URI",
+        "correlationId": "c4163895-0000-4d9e-930d-ae923488d310",
+        "receipt": "design-loop-data-uri-error.json"
+      },
+      {
+        "input": "documented import_step server path",
+        "correlationId": "bf2bcb31-f913-4eb3-806b-6f2fc7ef8d7c",
+        "receipt": "design-loop-error.json"
+      }
+    ]
+  },
+  "assetStaging": {
+    "note": "Hosted save rewrote lib.fromSTEP(carrierSource) to lib.fromSTEP('./inputs/47111971a61f.step') and attached the identical asset. The submitted and immutable saved source files are both retained.",
+    "assetSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+  },
+  "longRetriesStopped": true,
+  "inputSha256": {
+    "submitted": "39b8bf5465cd968a102963735f597c697fa8dda131a87ca3ac8b251bde5b1031",
+    "savedRevision": "67dabf600707d07a4337e5e000e538ce5553b432e0e0c1fcb7afc8e867a9fe82",
+    "assemblyPath": "17289e57330ab4c9071dd2aa31473fe0ba8c1002941858a35e2a53539aff5e94",
+    "designLoop": "283d6537ff1115fdb00ce036f491efb431916fabbddc559bf6d555188510b3cc"
+  },
+  "printDfmReproduction": {
+    "source": "assembly-path-source.kcad.ts",
+    "override": "Replace only param(\"output\", \"assembly\" with param(\"output\", \"base-print\" or param(\"output\", \"lid-print\". The printed-part branch returns before electronics, whose last XY correction did not alter either shell."
+  }
+}

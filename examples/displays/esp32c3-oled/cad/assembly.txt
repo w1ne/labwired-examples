@@ -1,0 +1,53 @@
+ESP32-C3 OLED enclosure — assembly and fit notes
+
+STATUS
+This is an unprinted dimensional CAD candidate. Revision 2 passes the solid build, nine dimensional requirements, base/lid FDM checks and a design-loop review with actual screenshots. The full hosted assembly-path check still exhausts its work budget. A local generic containment improvement reaches nominal screw-seat and PCB-support contacts, then fails closed on sub-ulp mesh ambiguity. These results do not establish an accepted assembly sequence. No physical fit, print-quality, cable-routing, screw-torque, impact, thermal or environmental result is claimed.
+
+FILES
+esp32c3-oled-enclosure.kcad.ts is the editable source. The output parameter selects assembly, base-print or lid-print.
+exports/ contains actual generated files. See release.json for their hashes and verification status.
+mechanical-bom.csv lists the eight purchased mechanical part types. Electronics and their mating headers are listed in the package hardware BOM.
+
+PRINT SETUP
+Use the base-print and lid-print outputs without scaling. Units are millimetres.
+Print the base with its flat underside on the bed. Print the lid with its exterior face on the bed; the two open OLED supports, two round posts and three locating tabs face upward.
+The CAD check uses a 0.4 mm nozzle, minimum wall0.8 mm, overhang limit45 degrees and bridge limit10 mm. Both orientations have zero unsupported area in that check.
+PETG is the specified case material. Start with a 0.2 mm layer height and at least three perimeters, then inspect the slicer output. These settings have not been printed or load tested.
+Remove burrs from clearance holes and countersinks. Do not force a screw into an undersized printed hole. Confirm each bottom screw head is recessed below the base plane.
+
+TOOLS
+1.5 mm and 2 mm hex keys; 4 mm nut driver for M2 nuts; 5 mm spanner for spacer flats; caliper; nonconductive feeler strip.
+Do not use a powered driver on the plastic case. No tightening torque has been qualified.
+
+ASSEMBLY ORDER TO CHECK ON THE BENCH
+1. Disconnect USB. Build and electrically check the carrier, XIAO and OLED using the electrical assembly instructions. Close OLED SJ3 for address0x3C. Do not populate the OLED straight pin header. No battery or antenna belongs to this assembly; the demo does not use radio.
+2. Put one 0.5 mm nylon washer at each carrier mounting position. Fit four 5 mm female spacers on the washers. Fit four 25 mm female spacers at the case corners. Retain all eight spacers with M2.5 x 5 countersunk screws inserted from below. Hold the spacer flats while turning each screw.
+3. Confirm the carrier support planes are 8.0 mm above the base underside. Fit the carrier on the four short spacers. Retain it with four M2.5 x 4 cap screws. The nominal opposing screw-tip gap inside each short spacer is0.44 mm; confirm the screws clamp the board and do not bottom against one another.
+4. Plug the XIAO into the two HSS sockets with its USB-C connector facing the left case notch. Support both header rows during insertion. The round-pin BHS/HSS pair and the stated stack height are mandatory; generic 8.5 mm sockets or square0.635 mm header tails are not equivalent.
+5. With the lid exterior face down on a clean soft surface, align the OLED glass with the window and its four mounting holes with the printed posts. Fit four M2 x 8 cap screws from the outside and four M2 nuts on the PCB rear. Tighten evenly only enough to retain the PCB. Keep the glass unloaded.
+6. Before connecting the cable, confirm a gap between the glass and every printed support and between the glass face and lid. The two glass-near U supports end 1.0 mm from the hole centre toward the glass. Their nominal glass clearance is 1.277 mm; the original 2.3 mm screw position is unchanged and the arms/back remain 0.85 mm thick. The opposite two round supports remain unchanged. The vertical glass-to-lid gap is 0.50 mm with a 1.80 mm glass/film envelope. These are model values, not worst-case manufacturing tolerances. Check that a nonconductive 0.50 mm feeler passes freely at each glass-near support and measure the vertical gap before tightening. If the check fails, revise the editable geometry using measured parts. This is a proposed bench acceptance check, not a result. Keep the glass unloaded.
+7. Connect the Adafruit4210 100 mm JST-SH cable between the carrier and OLED. Route the cable through the reserved central corridor X26..36, Y15..34 in carrier coordinates. Keep it clear of the XIAO, display rear components, spacer threads and lid seam. Connector plugs and the cable bend have not been fit-verified; check them with the actual cable.
+8. Lower the lid vertically while watching the cable. The three locating tabs have0.30 mm nominal lateral clearance. Fit the four M2.5 x 8 lid screws. The lid must seat against the base without force or bowing.
+9. Insert the USB cable horizontally through the left notch. The CAD access check used a16 x 8 mm plug overmold ending at the receptacle front; a larger or short-nose plug needs a new check. Do not use the enclosure wall to push on the receptacle.
+10. Power the demo and check the two framebuffer states described in the firmware instructions. Record printed dimensions, actual component revisions, glass clearance, cable routing and repeated lid/USB insertion before calling the physical build validated.
+
+SERVICE
+Remove the four M2.5 lid screws and lift the lid only enough to disconnect the JST cable. The OLED remains on the lid. Boot/reset buttons and the controller sockets are then accessible.
+Remove the four carrier screws to lift the carrier vertically through the open-top USB notch. Do not pull on the USB shell.
+The underside spacer screws can be serviced from outside while the spacer flats are held inside.
+
+MODEL LIMITS
+The carrier STEP retains native XY and holes. Its1.51 mm substrate is scaled only in Z to the1.60 mm finished-board clearance envelope.
+The Seeed vendor STEP is an older1.0 mm board revision. Current native v1.3 board thickness1.6 mm and native USB XY placement take precedence. The component-height envelope is based on the older STEP; confirm the purchased revision.
+The OLED rear components use a conservative3.2 mm keepout envelope. The cable and connector plug shapes are not included.
+Purchased screws and female threads use smooth clearance envelopes. The model is not a thread-manufacturing drawing. Engagement lengths come from the BOM dimensions.
+Do not use the PCB assembly-envelope STEP to fabricate electronics. Use the native KiCad and manufacturing files in the hardware package.
+
+ORDERED PATH FOLLOW-UP (2026-11-18)
+The unchanged revision 2 geometry passes 39 nominal removal stages with every
+remaining source part retained as an obstacle. See verification/ordered-path-followup.
+Hold the base and lid for their respective phases. Hold the OLED and loose M2
+hardware until the fasteners engage; the support assessment requires these holds.
+The specified 6 mm nut-driver envelope has zero nominal clearance margin. Verify
+the actual tool, counterholding, cable and printed dimensions before assembly.
+This evidence does not establish physical assembly, torque or tolerance acceptance.

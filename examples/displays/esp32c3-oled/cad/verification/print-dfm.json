@@ -1,0 +1,128 @@
+{
+  "base": {
+    "ok": true,
+    "serverBuild": "0.1.0+16cc683e5b3d@2026-11-18T00:36:28.303Z",
+    "diagnostics": [],
+    "fdm": [
+      {
+        "part": "base",
+        "settings": {
+          "buildDirection": [
+            0,
+            0,
+            1
+          ],
+          "nozzleMm": 0.4,
+          "maxOverhangDeg": 45,
+          "maxBridgeMm": 10,
+          "printer": "generic-fdm"
+        },
+        "orientation": {
+          "buildDirection": [
+            0,
+            0,
+            1
+          ],
+          "label": "+z",
+          "rotation": {
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "deg": 0,
+            "apply": ""
+          },
+          "sizeMm": {
+            "x": 88,
+            "y": 63,
+            "z": 27.5
+          },
+          "fitsBed": true,
+          "unsupportedAreaMm2": 0,
+          "bedContact": {
+            "areaMm2": 5281.031059791231,
+            "footprintMm2": 5522.531678974931,
+            "ratio": 0.9562699440723668,
+            "minBaseMm": 63,
+            "heightMm": 27.5,
+            "tipRatio": 0.4365079365079365
+          },
+          "bedContactLow": false,
+          "tipRisk": false
+        },
+        "walls": {
+          "violations": [],
+          "truncated": false,
+          "sampleCount": 26788,
+          "thinnestMm": 2.499705731202419
+        },
+        "smallFeatures": [],
+        "verdict": "pass"
+      }
+    ]
+  },
+  "lid": {
+    "ok": true,
+    "serverBuild": "0.1.0+16cc683e5b3d@2026-11-18T00:36:28.303Z",
+    "diagnostics": [],
+    "fdm": [
+      {
+        "part": "lid",
+        "settings": {
+          "buildDirection": [
+            0,
+            0,
+            1
+          ],
+          "nozzleMm": 0.4,
+          "maxOverhangDeg": 45,
+          "maxBridgeMm": 10,
+          "printer": "generic-fdm"
+        },
+        "orientation": {
+          "buildDirection": [
+            0,
+            0,
+            1
+          ],
+          "label": "+z",
+          "rotation": {
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "deg": 0,
+            "apply": ""
+          },
+          "sizeMm": {
+            "x": 88,
+            "y": 63.00000000000001,
+            "z": 4.300000000000004
+          },
+          "fitsBed": true,
+          "unsupportedAreaMm2": 0,
+          "bedContact": {
+            "areaMm2": 5209.970646719452,
+            "footprintMm2": 5522.531678974934,
+            "ratio": 0.9434025822893064,
+            "minBaseMm": 63.000000000000014,
+            "heightMm": 4.300000000000004,
+            "tipRatio": 0.0682539682539683
+          },
+          "bedContactLow": false,
+          "tipRisk": false
+        },
+        "walls": {
+          "violations": [],
+          "truncated": false,
+          "sampleCount": 14224,
+          "thinnestMm": 0.8498339486088149
+        },
+        "smallFeatures": [],
+        "verdict": "pass"
+      }
+    ]
+  }
+}

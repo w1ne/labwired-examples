@@ -1,0 +1,4 @@
+(version 1)
+(rule "M2.5 fastener copper pad keepout"
+  (condition "A.Type == 'Pad' && A.Pad_Type != 'NPTH' && A.intersectsArea('mount-keepout-*')")
+  (constraint disallow))

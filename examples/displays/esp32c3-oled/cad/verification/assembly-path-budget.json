@@ -1,0 +1,688 @@
+{
+  "ok": false,
+  "source": "local",
+  "basis": "continuous-triangle-mesh",
+  "limitations": [
+    "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+  ],
+  "model": {
+    "rigidParts": true,
+    "motion": "straight-line-translation",
+    "motionModels": [
+      "straight-line-translation"
+    ],
+    "testedDirections": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "gravity": "not-modelled",
+    "basis": "continuous-triangle-mesh",
+    "tessellation": {
+      "linearMm": 0.01,
+      "relative": true,
+      "angularRad": 0.05,
+      "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+    },
+    "clearanceMm": 0,
+    "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+    "toolReach": "not-modelled"
+  },
+  "parts": [
+    {
+      "part": "base",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-pcba-envelope",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "oled-pcba-envelope",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "oled-display-surface",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-washer-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-standoff-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-screw-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-lower-screw-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-washer-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-standoff-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-screw-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-lower-screw-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-washer-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-standoff-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-screw-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-lower-screw-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-washer-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-standoff-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-screw-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "carrier-lower-screw-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-standoff-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-screw-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-lower-screw-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-standoff-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-screw-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-lower-screw-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-standoff-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-screw-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-lower-screw-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-standoff-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-screw-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "lid-lower-screw-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-screw-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-nut-0",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-screw-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-nut-1",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-screw-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-nut-2",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-screw-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "display-nut-3",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    }
+  ],
+  "blockingGraph": {
+    "parts": [
+      "base",
+      "lid",
+      "carrier-pcba-envelope",
+      "oled-pcba-envelope",
+      "oled-display-surface",
+      "carrier-washer-0",
+      "carrier-standoff-0",
+      "carrier-screw-0",
+      "carrier-lower-screw-0",
+      "carrier-washer-1",
+      "carrier-standoff-1",
+      "carrier-screw-1",
+      "carrier-lower-screw-1",
+      "carrier-washer-2",
+      "carrier-standoff-2",
+      "carrier-screw-2",
+      "carrier-lower-screw-2",
+      "carrier-washer-3",
+      "carrier-standoff-3",
+      "carrier-screw-3",
+      "carrier-lower-screw-3",
+      "lid-standoff-0",
+      "lid-screw-0",
+      "lid-lower-screw-0",
+      "lid-standoff-1",
+      "lid-screw-1",
+      "lid-lower-screw-1",
+      "lid-standoff-2",
+      "lid-screw-2",
+      "lid-lower-screw-2",
+      "lid-standoff-3",
+      "lid-screw-3",
+      "lid-lower-screw-3",
+      "display-screw-0",
+      "display-nut-0",
+      "display-screw-1",
+      "display-nut-1",
+      "display-screw-2",
+      "display-nut-2",
+      "display-screw-3",
+      "display-nut-3"
+    ],
+    "directions": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "edges": []
+  },
+  "stuckParts": [
+    "base",
+    "lid",
+    "carrier-pcba-envelope",
+    "oled-pcba-envelope",
+    "oled-display-surface",
+    "carrier-washer-0",
+    "carrier-standoff-0",
+    "carrier-screw-0",
+    "carrier-lower-screw-0",
+    "carrier-washer-1",
+    "carrier-standoff-1",
+    "carrier-screw-1",
+    "carrier-lower-screw-1",
+    "carrier-washer-2",
+    "carrier-standoff-2",
+    "carrier-screw-2",
+    "carrier-lower-screw-2",
+    "carrier-washer-3",
+    "carrier-standoff-3",
+    "carrier-screw-3",
+    "carrier-lower-screw-3",
+    "lid-standoff-0",
+    "lid-screw-0",
+    "lid-lower-screw-0",
+    "lid-standoff-1",
+    "lid-screw-1",
+    "lid-lower-screw-1",
+    "lid-standoff-2",
+    "lid-screw-2",
+    "lid-lower-screw-2",
+    "lid-standoff-3",
+    "lid-screw-3",
+    "lid-lower-screw-3",
+    "display-screw-0",
+    "display-nut-0",
+    "display-screw-1",
+    "display-nut-1",
+    "display-screw-2",
+    "display-nut-2",
+    "display-screw-3",
+    "display-nut-3"
+  ],
+  "sequence": {
+    "steps": [],
+    "model": {
+      "rigidParts": true,
+      "motion": "straight-line-translation",
+      "motionModels": [
+        "straight-line-translation"
+      ],
+      "testedDirections": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "gravity": "not-modelled",
+      "basis": "continuous-triangle-mesh",
+      "tessellation": {
+        "linearMm": 0.01,
+        "relative": true,
+        "angularRad": 0.05,
+        "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+      },
+      "clearanceMm": 0,
+      "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+      "toolReach": "not-modelled"
+    },
+    "unknown": [
+      "base",
+      "lid",
+      "carrier-pcba-envelope",
+      "oled-pcba-envelope",
+      "oled-display-surface",
+      "carrier-washer-0",
+      "carrier-standoff-0",
+      "carrier-screw-0",
+      "carrier-lower-screw-0",
+      "carrier-washer-1",
+      "carrier-standoff-1",
+      "carrier-screw-1",
+      "carrier-lower-screw-1",
+      "carrier-washer-2",
+      "carrier-standoff-2",
+      "carrier-screw-2",
+      "carrier-lower-screw-2",
+      "carrier-washer-3",
+      "carrier-standoff-3",
+      "carrier-screw-3",
+      "carrier-lower-screw-3",
+      "lid-standoff-0",
+      "lid-screw-0",
+      "lid-lower-screw-0",
+      "lid-standoff-1",
+      "lid-screw-1",
+      "lid-lower-screw-1",
+      "lid-standoff-2",
+      "lid-screw-2",
+      "lid-lower-screw-2",
+      "lid-standoff-3",
+      "lid-screw-3",
+      "lid-lower-screw-3",
+      "display-screw-0",
+      "display-nut-0",
+      "display-screw-1",
+      "display-nut-1",
+      "display-screw-2",
+      "display-nut-2",
+      "display-screw-3",
+      "display-nut-3"
+    ]
+  },
+  "serverBuild": "0.1.0+16cc683e5b3d@2026-11-18T00:36:28.303Z"
+}

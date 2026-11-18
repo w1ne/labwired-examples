@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-fkYmdwvL5cGdcXzvvdx1uw/render-iso.png?exp=1795096448&sig=6P6rhFAljnwRvnyzU6dR-U2Gag7metAIC-TW3Cj5MZo",
+  "checks": [
+    {
+      "code": "main-object-count",
+      "passed": true,
+      "finding": "The closed iso and top views show one base, one lid, one display opening, four lid fasteners and four display fasteners.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-0UyN0IFxNbB1l_m1Suh9qA/render-top.png?exp=1795096449&sig=vLTl0iCjpCJE95MIGTgH9manerpTfnMTJnCF5vzLVzU"
+    },
+    {
+      "code": "proportions-match-reference",
+      "passed": true,
+      "finding": "The 88 by 63 mm enclosure surrounds the native 70 by 45 mm carrier with separate perimeter standoffs. The open top render matches the carrier outline and left USB notch.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-gWNZEG8YTGxp55s9B6zWsg/render-top.png?exp=1795096517&sig=WlQUwPR6k4W2W--AyGOdq7SOsiO-QyF6uV4InzZgX2s"
+    },
+    {
+      "code": "required-visible-features",
+      "passed": true,
+      "finding": "The display surface is visible through the rectangular lid aperture. The open interior views show the left-facing XIAO USB envelope at the open-top wall notch.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-oOHPjTHZYEHYkNVaXtp-AQ/render-iso.png?exp=1795096516&sig=l4Mz8m5xHpsF2KjIws4XPZKgso7SCQZj6hyWKtkbtdA"
+    },
+    {
+      "code": "no-stray-or-floating-geometry",
+      "passed": true,
+      "finding": "The closed assembly has no detached exterior bodies. The interior view hides the documented lid/display subassembly and shows the carrier, controller envelope and mounting hardware inside the base.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-oOHPjTHZYEHYkNVaXtp-AQ/render-iso.png?exp=1795096516&sig=l4Mz8m5xHpsF2KjIws4XPZKgso7SCQZj6hyWKtkbtdA"
+    },
+    {
+      "code": "attachment-plausibility",
+      "passed": true,
+      "finding": "The carrier fasteners align with four corner mounts, and four tall perimeter standoffs meet the seated lid. The display is retained by four dedicated fasteners around its window.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-fkYmdwvL5cGdcXzvvdx1uw/render-iso.png?exp=1795096448&sig=6P6rhFAljnwRvnyzU6dR-U2Gag7metAIC-TW3Cj5MZo"
+    },
+    {
+      "code": "semantic-orientation-alignment",
+      "passed": true,
+      "finding": "The top view uses screen-right +X and screen-up +Y. The XIAO USB faces -X, the OLED faces +Z, and the native registration gauges independently check three PCB pad centres in Y=-editorY.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-gWNZEG8YTGxp55s9B6zWsg/render-top.png?exp=1795096517&sig=WlQUwPR6k4W2W--AyGOdq7SOsiO-QyF6uV4InzZgX2s"
+    },
+    {
+      "code": "canonical-views-physically-coherent",
+      "passed": true,
+      "finding": "The closed top/iso and open top/iso views agree on the one case, offset display, left USB access, carrier mounts and perimeter lid hardware.",
+      "screenshotPath": "https://api.kernelcad.com/api/v1/exports/20261118-0UyN0IFxNbB1l_m1Suh9qA/render-top.png?exp=1795096449&sig=vLTl0iCjpCJE95MIGTgH9manerpTfnMTJnCF5vzLVzU"
+    }
+  ],
+  "findings": [
+    "Reviewed actual OCCT renders of the corrected source, including closed and open interior iso/top views.",
+    "The native PCB keeps its +Z populated side. Authored primitive geometry converts to Y=-editorY before boolean construction; catalog fasteners retain rigid transforms.",
+    "The 12 evaluated requirements include three independent native pin-centre gauges and preserve the 1.277 mm glass/support and 0.500 mm glass/lid gaps.",
+    "Printed fit, incoming module tolerances, cable routing, tool clearance margins and physical assembly remain untested."
+  ]
+}

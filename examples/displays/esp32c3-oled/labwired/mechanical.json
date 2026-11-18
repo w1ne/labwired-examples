@@ -1,0 +1,28 @@
+{
+  "provider": "kernelcad",
+  "slug": "t_IaE1EE",
+  "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+  "version": 2,
+  "title": "OLED Rev A enclosure candidate 2",
+  "pcbBindings": [
+    {
+      "id": "carrier",
+      "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+      "cadPart": "carrier-pcba-envelope"
+    }
+  ],
+  "electronics": {
+    "version": 1,
+    "displays": [
+      {
+        "id": "oled-screen",
+        "component": "oled",
+        "part": "oled-display-surface",
+        "face": "+z",
+        "rotation": 0
+      }
+    ],
+    "inputs": []
+  },
+  "meshProvenance": "0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d"
+}

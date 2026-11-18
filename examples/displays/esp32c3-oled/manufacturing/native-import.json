@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-18T01:00:00.782891+00:00",
+  "source": {
+    "repository": "w1ne/labwired-examples",
+    "commit": "61a802de810b705e9a3155ce8a03357dc2442cd7",
+    "path": "examples/displays/esp32c3-oled/electronics/oled-carrier.kicad_pcb",
+    "bytes": 98441,
+    "sha256": "3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a"
+  },
+  "scope": {
+    "attachment": "Unattached native board. No saved or published project was created or modified.",
+    "preservation": "The hosted preserve import retained the native KiCad PCB bytes exactly.",
+    "hosted_routing": "Not run. The input already contains routed copper.",
+    "hosted_drc": "Not run by preserve mode. Native KiCad 10.0.8 DRC, schematic parity and ERC receipts are supplied separately in this folder.",
+    "native_validation_receipt": "validation.json",
+    "runnable_mcu_model": false,
+    "model_mapping": "The native carrier import maps no runnable MCU model. Its model result reports mapped=0, dropped=2, ignored=11. Use the separate canonical functional diagram for firmware simulation.",
+    "physical_hardware_tested": false,
+    "manufacturing_or_functional_proof": "This import receipt proves stored source identity only. It does not prove a manufactured assembly, physical fit or firmware behavior."
+  },
+  "import_result": {
+    "status": "imported",
+    "mode": "preserve",
+    "routing_status": "not_run",
+    "drc_status": "not_run",
+    "job_id": "dc263eda-f5a2-4210-80a5-31106614cf63",
+    "board_id": "pcb_3b1f96ad7f25f4f0",
+    "rev": 0,
+    "pcb_ref": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+    "rules_ref": "sha256:01e0003180c930ce99ddf7a52280592dbe0ab3c240252600e2db60729b1b8272",
+    "rules_digest": "5b448f8932b3a3b90f6ceee7e76aa7c4d3ca14b4bcb7e772e40d386a29fac2e4",
+    "coverage_ref": "sha256:1fd4f96eb21b29485c93286831a4f31f715ff35703824413a9e59607f1582cf7",
+    "twin_buildable": false,
+    "capabilities": {
+      "route": "supported",
+      "view": "supported",
+      "simulation": "model_gaps"
+    },
+    "model": {
+      "mapped": 0,
+      "dropped": 2,
+      "ignored": 11
+    },
+    "simulation_blockers": [],
+    "applied_rules": {
+      "version": 1,
+      "defaults": {
+        "track_width_mm": 0.3,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 0.6,
+        "via_drill_mm": 0.3
+      },
+      "fabrication": {
+        "reference": "https://github.com/w1ne/labwired-examples/blob/61a802de810b705e9a3155ce8a03357dc2442cd7/examples/displays/esp32c3-oled/manufacturing/fabrication-settings.json",
+        "min_track_width_mm": 0.25,
+        "min_clearance_mm": 0.2,
+        "min_drill_mm": 0.3,
+        "min_annular_ring_mm": 0.15,
+        "min_hole_to_hole_mm": 0.25,
+        "min_edge_clearance_mm": 0.5,
+        "min_hole_clearance_mm": 0.25
+      },
+      "sources": [
+        {
+          "kind": "assumption",
+          "reference": "https://github.com/w1ne/labwired-examples/blob/61a802de810b705e9a3155ce8a03357dc2442cd7/examples/displays/esp32c3-oled/manufacturing/fabrication-settings.json",
+          "rationale": "Conservative 2-layer FR-4, 1.6 mm finished stack, 35 um copper. Signals use 0.3 mm tracks; power uses 0.4 and 0.6 mm. Vias are 0.6/0.3 mm. This is an exact preserve import of KiCad 10.0.8-routed and checked copper. No fabrication quote or order; native ERC, DRC and parity receipts are in the same package."
+        }
+      ],
+      "net_classes": [
+        {
+          "name": "Default",
+          "track_width_mm": 0.3,
+          "clearance_mm": 0.2,
+          "via_diameter_mm": 0.6,
+          "via_drill_mm": 0.3,
+          "nets": [
+            "/3V3",
+            "/GND",
+            "/SCL",
+            "/SDA",
+            "unconnected-(J2-Pin_1-Pad1)",
+            "unconnected-(J2-Pin_2-Pad2)",
+            "unconnected-(J2-Pin_5-Pad5)",
+            "unconnected-(J2-Pin_6-Pad6)",
+            "unconnected-(J2-Pin_7-Pad7)",
+            "unconnected-(J3-Pin_1-Pad1)",
+            "unconnected-(J3-Pin_2-Pad2)",
+            "unconnected-(J3-Pin_3-Pad3)",
+            "unconnected-(J3-Pin_4-Pad4)",
+            "unconnected-(J3-Pin_7-Pad7)"
+          ],
+          "parts": [],
+          "sources": [
+            {
+              "kind": "assumption",
+              "reference": "https://github.com/w1ne/labwired-examples/blob/61a802de810b705e9a3155ce8a03357dc2442cd7/examples/displays/esp32c3-oled/manufacturing/fabrication-settings.json",
+              "rationale": "Conservative 2-layer FR-4, 1.6 mm finished stack, 35 um copper. Signals use 0.3 mm tracks; power uses 0.4 and 0.6 mm. Vias are 0.6/0.3 mm. This is an exact preserve import of KiCad 10.0.8-routed and checked copper. No fabrication quote or order; native ERC, DRC and parity receipts are in the same package."
+            }
+          ]
+        }
+      ]
+    },
+    "blob_path": "/v1/blobs/sha256/3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+    "layer_count": 2,
+    "backend": "native-kicad-preserved",
+    "source_url": "https://raw.githubusercontent.com/w1ne/labwired-examples/61a802de810b705e9a3155ce8a03357dc2442cd7/examples/displays/esp32c3-oled/electronics/oled-carrier.kicad_pcb",
+    "warnings": [
+      "Original native PCB bytes preserved; routing and independent KiCad DRC were not run",
+      "Run validate_imported with the returned PCB and rules references before fabrication",
+      "The unrouted and violations counts come from Freerouting. Run labwired_pcb_validate_imported with pcb_ref and rules_ref for independent design-rule checks on the returned board."
+    ],
+    "log": [],
+    "manufacturing_verified": false,
+    "lpddr4_si_verified": false,
+    "functional_simulation_verified": false
+  }
+}

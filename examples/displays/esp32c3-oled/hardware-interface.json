@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "status": "Native coordinate registration and nominal enclosure checks pass. Physical assembly and tolerance qualification remain open.",
+  "units": "mm",
+  "coordinate_system": "Electrical and PCB editor top view: origin at the top-left envelope corner, X right and Y down. These interface XY coordinates remain in the editor frame. The CAD world uses X=editorX, Y=-editorY, Z up; carrier underside is at Z=8 mm.",
+  "carrier": {
+    "width": 70,
+    "height": 45,
+    "thickness": 1.6,
+    "corner_radius": 2,
+    "mount_holes": [
+      {
+        "x": 4,
+        "y": 4,
+        "diameter": 2.9,
+        "keepout_radius": 3.5
+      },
+      {
+        "x": 66,
+        "y": 4,
+        "diameter": 2.9,
+        "keepout_radius": 3.5
+      },
+      {
+        "x": 4,
+        "y": 41,
+        "diameter": 2.9,
+        "keepout_radius": 3.5
+      },
+      {
+        "x": 66,
+        "y": 41,
+        "diameter": 2.9,
+        "keepout_radius": 3.5
+      }
+    ]
+  },
+  "controller": {
+    "manufacturer": "Seeed Studio",
+    "sku": "113991054",
+    "model": "XIAO ESP32C3 v1.3",
+    "board_origin": [
+      -0.041,
+      13.61
+    ],
+    "board_size": [
+      20.955,
+      17.78,
+      1.6
+    ],
+    "usb_direction": [
+      -1,
+      0,
+      0
+    ],
+    "usb_front_plane_x": -1.549,
+    "usb_center_y": 22.5,
+    "mount": "Two socketed 1x7 headers, 2.54 mm pitch, 15.24 mm row spacing.",
+    "header_centers": {
+      "pin1": [
+        2.88,
+        30.12
+      ],
+      "pin7": [
+        18.12,
+        30.12
+      ],
+      "pin8": [
+        18.12,
+        14.88
+      ],
+      "pin14": [
+        2.88,
+        14.88
+      ]
+    },
+    "header_bom": [
+      {
+        "part": "HSS-107-G-2",
+        "manufacturer": "Samtec",
+        "quantity": 2,
+        "role": "Carrier receptacle J2/J3",
+        "total_height_above_carrier": 4.44,
+        "plastic_height": 2.54,
+        "width": 2.54,
+        "length": 17.78,
+        "tail_length": 3.18,
+        "tail_diameter": 0.51,
+        "carrier_drill": 0.8,
+        "accepted_mating_pin_diameter": [
+          0.38,
+          0.56
+        ],
+        "accepted_insertion_depth": [
+          2.41,
+          3.68
+        ]
+      },
+      {
+        "part": "BHS-107-G-A",
+        "manufacturer": "Samtec",
+        "quantity": 2,
+        "role": "XIAO module male stacking header",
+        "module_to_mating_post_root": 5.33,
+        "width": 2.54,
+        "length": 17.78,
+        "mating_post_length": 3.18,
+        "mating_post_diameter": 0.46,
+        "solder_tail_length": 3.18,
+        "solder_tail_diameter": 0.46,
+        "xiao_native_drill": 0.85
+      }
+    ],
+    "module_pcb_underside_z": 11.37,
+    "module_height_above_own_pcb": "Use the official STEP model to establish USB, antenna connector, and button envelopes. The v1.3 native PCB specifies 1.6 mm thickness.",
+    "used_pins": {
+      "3": "D2/GPIO4/SDA",
+      "4": "D3/GPIO5/SCL",
+      "12": "3V3",
+      "13": "GND"
+    },
+    "power": "USB-C only. BAT pads and the 5 V header pin are unused. Native USB provides programming and debug. BOOT and RESET are accessible with the lid removed.",
+    "board_geometry_note": "Native v1.3 Edge.Cuts centerline, aligned to the actual header center. Nominal vendor envelope is 21 x 17.8 mm. Native KiCad thickness is 1.6 mm; older 2023 STEP uses 1.0 mm. The package uses the larger thickness and a conservative USB height envelope.",
+    "usb_shell_xy": {
+      "xmin": -1.549,
+      "xmax": 5.801,
+      "ymin": 18,
+      "ymax": 27
+    },
+    "interboard_gap": 9.77,
+    "module_pcb_top_z": 12.97,
+    "header_fit_note": "BHS round 0.46 mm module tails fit the native 0.85 mm XIAO holes; 3.18 mm mating length lies inside the HSS socket insertion specification. The earlier square-pin TSW/SSW proposal was rejected before release. Do not substitute generic square-pin headers."
+  },
+  "display": {
+    "manufacturer": "Adafruit",
+    "product_id": "326",
+    "revision": "STEMMA QT; source commit 51ef8e242dcf460d5effc298d8565110624e6b23",
+    "board_origin": [
+      35,
+      6.5
+    ],
+    "board_size": [
+      29.21,
+      31.75,
+      1.6
+    ],
+    "top_view_transform": "Eagle manufacturer XY: (x,y) -> (35+x,38.25-y), viewed from the display face. Dimensions include the mounting tabs.",
+    "mount_holes": [
+      {
+        "x": 37.54,
+        "y": 35.71,
+        "diameter": 2.5
+      },
+      {
+        "x": 61.67,
+        "y": 35.71,
+        "diameter": 2.5
+      },
+      {
+        "x": 37.54,
+        "y": 9.04,
+        "diameter": 2.5
+      },
+      {
+        "x": 61.67,
+        "y": 9.04,
+        "diameter": 2.5
+      }
+    ],
+    "mount": "Lid-mounted with four M2 screws. No OLED mounting holes are required in the carrier. Allow a removable lid and a 100 mm STEMMA QT cable loop.",
+    "full_assembly_thickness": 6.2,
+    "address": "0x3C",
+    "address_setting": "Bridge SJ3/ADDR to connect SA0 to GND. Keep the factory I2C mode jumpers SJ1 and SJ2 closed. Confirm address 0x3C with a scanner after assembly.",
+    "interface": "JST SH 4-pin (STEMMA QT): pin 1 GND, pin 2 3V3, pin 3 SDA, pin 4 SCL.",
+    "display_area_source": "The exact UG-2864HSWEG01_0.96IN_WRAPAROUND package in the official Eagle board defines glass and active-area positions. Mechanics derives the lid window from these geometries."
+  },
+  "carrier_connector": {
+    "ref": "J1",
+    "mpn": "SM04B-SRSS-TB(LF)(SN)",
+    "manufacturer": "JST",
+    "center": [
+      29,
+      25
+    ],
+    "facing": "Toward the display, right (+X). Reserve the cable and service corridor x=26..36, y=15..34.",
+    "pins": {
+      "1": "GND",
+      "2": "3V3",
+      "3": "SDA",
+      "4": "SCL"
+    },
+    "mate": "Adafruit product 4210, STEMMA QT / Qwiic JST SH 4-pin cable, 100 mm long."
+  },
+  "mechanical_notes": [
+    "Local Z=0 is the carrier underside. The enclosure assembly applies its current CAD-defined carrier elevation.",
+    "Keep the supplied external RF antenna separate; the package firmware keeps RF disabled.",
+    "All carrier mounts have a 3.5 mm component/copper exclusion radius.",
+    "HSS tails extend 1.58 mm below the 1.6 mm carrier before solder.",
+    "The source-derived mated board gap is 9.77 mm. Verify the actual gap during physical assembly."
+  ],
+  "sources": [
+    "https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/",
+    "https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip",
+    "https://github.com/adafruit/Adafruit-128x64-Monochrome-OLED-PCB/tree/51ef8e242dcf460d5effc298d8565110624e6b23",
+    "https://www.adafruit.com/product/4210",
+    "https://suddendocs.samtec.com/catalog_english/bbs.pdf",
+    "https://suddendocs.samtec.com/catalog_english/ss.pdf",
+    "https://suddendocs.samtec.com/catalog_english/sockets.pdf"
+  ],
+  "cad_coordinate_system": {
+    "x": "editorX",
+    "y": "-editorY",
+    "z": "up",
+    "carrier_underside_z": 8,
+    "registration": "cad/verification/handedness/native-registration.json"
+  }
+}

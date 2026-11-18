@@ -1,0 +1,64 @@
+OLED PACKAGE RUNTIME REPRODUCTION
+
+Run from examples/displays/esp32c3-oled. Use LabWired CLI 0.26.0 and
+PlatformIO Core 6.2.0. No custom simulator is included.
+
+1. Download the exact public runtime and pinned ROM files with Python 3:
+
+python3 - <<'PY'
+from pathlib import Path
+import hashlib, json, urllib.request
+root = Path('firmware')
+output = root / 'released'
+output.mkdir(exist_ok=True)
+for asset in json.loads((root / 'release-manifest.json').read_text())['assets']:
+    data = urllib.request.urlopen(asset['url'], timeout=120).read()
+    assert len(data) == asset['sizeBytes'], asset['filename']
+    assert hashlib.sha256(data).hexdigest() == asset['sha256'], asset['filename']
+    (output / asset['filename']).write_bytes(data)
+    print('verified', asset['filename'])
+PY
+
+(cd firmware/released && sha256sum -c ../SHA256SUMS)
+
+2. Cold-boot the exact released firmware with the normal CLI:
+
+LABWIRED_ESP32C3_ROM="$PWD/firmware/released/esp32c3_rom.bin" \
+LABWIRED_ESP32C3_ROM_DATA="$PWD/firmware/released/esp32c3_drom.bin" \
+LABWIRED_ESP32C3_FLASH="$PWD/firmware/released/demo-esp32c3-display-workshop-flash.bin" \
+labwired test \
+  --firmware firmware/released/demo-esp32c3-display-workshop.elf \
+  --system labwired/system.yaml --script verification/rom-boot.yaml \
+  --rom-boot --run-manifest --inspect-bytes-max 1048576 \
+  --output-dir verification/rerun
+
+python3 verification/verify-display.py verification/rerun/result.json
+
+Expected: all five assertions pass, 0x3C, 128 x 64 powered display,
+at least two distinct nonblank frame hashes. The 300-million-step limit is
+a bounded simulation workload, not a hardware timing measurement.
+
+3. To verify a fresh standalone build, first build and merge matching bytes:
+
+export PLATFORMIO_CORE_DIR="${PLATFORMIO_CORE_DIR:-$HOME/.platformio}"
+pio run -d firmware -e clock
+python3 "$PLATFORMIO_CORE_DIR/packages/tool-esptoolpy/esptool.py" \
+  --chip esp32c3 merge_bin --flash_mode dio --flash_freq 80m --flash_size 4MB \
+  -o firmware/.pio/build/clock/merged-flash.bin \
+  0x0 firmware/.pio/build/clock/bootloader.bin \
+  0x8000 firmware/.pio/build/clock/partitions.bin \
+  0x10000 firmware/.pio/build/clock/firmware.bin
+
+PLATFORMIO_CORE_DIR above is your PlatformIO core directory, normally
+$HOME/.platformio. Change the assignment above if your installation uses another directory.
+Use the same labwired test command with --firmware pointing at the new
+firmware.elf and LABWIRED_ESP32C3_FLASH pointing at its merged-flash.bin.
+Do not reuse the published snapshot with a separately built ELF. Build paths
+can change ELF bytes even when the source sketch is identical.
+
+Observed package build: verification/package-rom-boot-manifest.json.
+Observed public runtime cold boot: verification/released-rom-boot-manifest.json.
+Observed exact public runtime in browser WASM: verification/released-wasm-acceptance.json.
+The latter records the pinned engine hash, runtime hashes and both frame hashes.
+The real browser WASM test used the published app-entry snapshot; the CLI command
+above deliberately starts from the mask ROM to provide a separate cold-boot path.

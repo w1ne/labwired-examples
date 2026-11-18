@@ -1,0 +1,1057 @@
+{
+  "schema_version": 1,
+  "package_id": "esp32c3-oled-rev-a-candidate-3",
+  "status": "engineering-candidate",
+  "date": "2026-11-18",
+  "canonical_lab_url": "https://app.labwired.com/?lab=esp32c3-oled-lab",
+  "tracker": "https://github.com/w1ne/labwired/issues/3550",
+  "firmware_release": "firmware-demos-v19",
+  "firmware_manifest": "firmware/release-manifest.json",
+  "native_pcb_ref": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "t_IaE1EE",
+    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "version": 2,
+    "title": "OLED Rev A enclosure candidate 3, native coordinates",
+    "pcbBindings": [
+      {
+        "id": "carrier",
+        "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+        "cadPart": "carrier-pcba-envelope"
+      }
+    ],
+    "electronics": {
+      "version": 1,
+      "displays": [
+        {
+          "id": "oled-screen",
+          "component": "oled",
+          "part": "oled-display-surface",
+          "face": "+z",
+          "rotation": 0
+        }
+      ],
+      "inputs": []
+    },
+    "meshProvenance": "0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+    "published_version_is_current": false,
+    "current_studio_revision_pending": true,
+    "source_sha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+    "historical_publication_note": "The revision-2 reference and provenance identify the earlier saved publication. This package source and exports supersede it; a corrected existing-project revision is pending."
+  },
+  "physical_hardware_tested": false,
+  "open_acceptance_items": [
+    "Save the corrected source into the existing Studio project, then verify the Lab model binding and OLED framebuffer orientation. Revision 2 remains historical.",
+    "Integrate and rerun full hosted assembly-path verification. Independent post-release evidence passes 39 ordered nominal geometric stages for all 41 source parts; hosted acceptance remains open.",
+    "Build and measure a physical prototype:1.277 mm nominal glass/support gap,0.50 mm vertical glass/lid gap, USB overmold, cable routing, short-spacer screw clearance and module revision.",
+    "Qualify real nut-driver clearance, counterholding and the external holds identified by support analysis; the modeled 6 mm driver has zero nominal dimensional margin."
+  ],
+  "verification": {
+    "native_pcb": "manufacturing/validation.json",
+    "native_import": "manufacturing/native-import.json",
+    "package_rom_boot": "verification/package-rom-boot-manifest.json",
+    "released_browser_wasm": "verification/released-wasm-acceptance.json",
+    "mechanical": "cad/release.json",
+    "released_rom_boot": "verification/released-rom-boot-manifest.json",
+    "independent_ordered_path": "cad/verification/handedness/path/provenance.json",
+    "native_registration": "cad/verification/handedness/native-registration.json"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 54,
+      "sha256": "a0ce6ed9391d374633a9956e8a3e4aac04e33a84e11efee30d3d3efb55dd5cde"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1098,
+      "sha256": "a2facb6a75fa40935d30bc499c696a99d7e019f7c0d29657413d0410a61bf1d0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14890,
+      "sha256": "5a98cecb582f4f5b1cd7afff158f61f36188d47cf39ddf38052219ebaf80a0a6"
+    },
+    {
+      "path": "bom.csv",
+      "bytes": 3918,
+      "sha256": "3dce94167f2abfa649b5d4f3be40a0d31025fd9cead18d95c792433d03c5d089"
+    },
+    {
+      "path": "cad/assembly.txt",
+      "bytes": 7209,
+      "sha256": "81f6b18b57134e82169635d8e9343d2814650f89de3929851353da2ec28b7bbb"
+    },
+    {
+      "path": "cad/components/hss-107-g-2.kcad.ts",
+      "bytes": 500,
+      "sha256": "48cb013149def78bee21d66b0c5d399f534d2045e53b8f49cf10279af27d225c"
+    },
+    {
+      "path": "cad/components/hss-107-g-2.step",
+      "bytes": 118706,
+      "sha256": "8b6bf8491de08bac85d6a7f6eccf983de21ab46906a36d5c23f5e7a2cbaac82e"
+    },
+    {
+      "path": "cad/esp32c3-oled-enclosure.kcad.ts",
+      "bytes": 12796,
+      "sha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-assembly.step",
+      "bytes": 1871615,
+      "sha256": "48dfd28315a9581cc3bd5d15757f37ee524b9cde6ebfa69d7c18841053fbe9d2"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-base.3mf",
+      "bytes": 354705,
+      "sha256": "8f9d43d0394feb1f32345487065df6507b2cb187496a9884566a5aae4a722315"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-base.step",
+      "bytes": 136127,
+      "sha256": "545184b08361e91b78a8e427c28fffb061c582b997892679a2229120d7925b6d"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-base.stl",
+      "bytes": 1339484,
+      "sha256": "acb42deec21246f877332627aec294fef37ea1c5602a0b02871b193d5446306f"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-lid.3mf",
+      "bytes": 157104,
+      "sha256": "c34d76165ed02acfea8b6bcc429d5d8d035fb9cd4d650747afb84d710a3ca17a"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-lid.step",
+      "bytes": 233729,
+      "sha256": "3f1f01e09a194d6e1370c3a59d424d6603cebd8f3b170531f7e12c71925fca73"
+    },
+    {
+      "path": "cad/exports/esp32c3-oled-lid.stl",
+      "bytes": 614284,
+      "sha256": "3ef7b8fe900a9aca79d462bf8913e7e9bfe6399e1f7c9886dfcee7cd5cfcdbd8"
+    },
+    {
+      "path": "cad/inputs/47111971a61f.step",
+      "bytes": 53022,
+      "sha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+    },
+    {
+      "path": "cad/mechanical-bom.csv",
+      "bytes": 1610,
+      "sha256": "d42a13d78699fc9bde9da1bc9d744ce2621cb60b1b8147a752b72bcb5a5b6bf2"
+    },
+    {
+      "path": "cad/mechanical-interface.json",
+      "bytes": 5431,
+      "sha256": "7baf6babeb8536ed06293272581d0ccf15223cfd1adf72350c63c2892229ba84"
+    },
+    {
+      "path": "cad/provenance.json",
+      "bytes": 2675,
+      "sha256": "16dede78ed859c188a3c8eae0742fe526421d21c2e87b88f718254846f8d29a1"
+    },
+    {
+      "path": "cad/release.json",
+      "bytes": 7438,
+      "sha256": "275f4b5a4cd0da4f89ba88e38dd6b09f8b90509d240ed46392315f9cab4e1dcc"
+    },
+    {
+      "path": "cad/renders/closed-front.png",
+      "bytes": 40935,
+      "sha256": "dc7300f83207579eb3714eb836eb5c5136926a03683dbb4353095585ce70cc3c"
+    },
+    {
+      "path": "cad/renders/closed-iso.png",
+      "bytes": 72836,
+      "sha256": "ec9b6e13c2d9a9ad794fc0528d54a60824eec42b0907c2686273b8b1a4cf2f83"
+    },
+    {
+      "path": "cad/renders/closed-top.png",
+      "bytes": 38556,
+      "sha256": "8f93684ad5f0389d189f700ffed7612ccd762dcf24494ab905d9b62a42e67ffd"
+    },
+    {
+      "path": "cad/renders/interior-iso.png",
+      "bytes": 87872,
+      "sha256": "1f7e7b1ea6bf5b4f67be9fb4659160cd53ea9a8436699cbf9be7743d72acf18b"
+    },
+    {
+      "path": "cad/renders/interior-top.png",
+      "bytes": 100211,
+      "sha256": "2da42742faf5091c4b50f54235b6bea1432962bb1d91524aae429c91e17b7b9f"
+    },
+    {
+      "path": "cad/renders/native-frame-closed-iso.png",
+      "bytes": 72857,
+      "sha256": "7a10fb2aa2e237dfe80d45a3ff541a8fd693401bb4a562797129e77f4fff69f4"
+    },
+    {
+      "path": "cad/renders/native-frame-closed-top.png",
+      "bytes": 38215,
+      "sha256": "e8c08a2b7b2455be96e1af9acee424e9fa6ac2907bf0a892c07461498499f52f"
+    },
+    {
+      "path": "cad/renders/native-frame-interior-iso.png",
+      "bytes": 87730,
+      "sha256": "fc7b7bdbcfac7bfe35d961ea4d970b870e58b820fe5be9ff202c8d7572901960"
+    },
+    {
+      "path": "cad/renders/native-frame-interior-top.png",
+      "bytes": 100297,
+      "sha256": "71d21aca9c2b80b38670dd26e00b8b8fc58a8ae9eadb5820d7683ec19fc6c314"
+    },
+    {
+      "path": "cad/renders/native-frame-lid-print-iso.png",
+      "bytes": 41152,
+      "sha256": "8f1566b22b92ce3595afa2988637f643aa27ee3e75696e1e6061161638282595"
+    },
+    {
+      "path": "cad/renders/revision-v1-iso.png",
+      "bytes": 34330,
+      "sha256": "9f68c6787c4b1cf2ca54d070d79964edc213b543fed63ef2eee75b4a875cad4e"
+    },
+    {
+      "path": "cad/renders/revision-v2-iso.png",
+      "bytes": 34330,
+      "sha256": "9f68c6787c4b1cf2ca54d070d79964edc213b543fed63ef2eee75b4a875cad4e"
+    },
+    {
+      "path": "cad/renders/v2-closed-iso.png",
+      "bytes": 75524,
+      "sha256": "c098344727e99afcbc918b39a84f962498dc06eb1c76d4d94853a4cdd3ea858c"
+    },
+    {
+      "path": "cad/renders/v2-closed-right.png",
+      "bytes": 37876,
+      "sha256": "d9b52da6b18712fd70e2d070729f1d9d3d70a12f505c937c01b70d0004832878"
+    },
+    {
+      "path": "cad/renders/v2-interior-iso.png",
+      "bytes": 87786,
+      "sha256": "bc44ce47259bc65e5e749e58c9d016d9b8be8b72b619773fc616413fefb73744"
+    },
+    {
+      "path": "cad/renders/v2-interior-top.png",
+      "bytes": 100246,
+      "sha256": "5ee6ada544cb6e8674ac00147cd7a34648bfe90d28e1ccf94954899cfd6b6680"
+    },
+    {
+      "path": "cad/renders/v2-lid-print-iso.png",
+      "bytes": 46325,
+      "sha256": "60a37b4a632602a674598a8b260a31ba136fd80c53b820a723fc1db00d221265"
+    },
+    {
+      "path": "cad/renders/v2-lid-print-top.png",
+      "bytes": 29769,
+      "sha256": "532593acd388588114b38885e1e3d3616b2e1c6a4ce6791f33fac7c9ddb18895"
+    },
+    {
+      "path": "cad/third-party-notices.txt",
+      "bytes": 987,
+      "sha256": "1a7770e368c1f06a6f8aacfb33a40d8e12411d8db6e6f6974c8e665a8ca56f4b"
+    },
+    {
+      "path": "cad/verification/assembly-export-v2.json",
+      "bytes": 1459,
+      "sha256": "22868ab8888950d513f03b8e7193e561144b7131d97e4dc23e7dc6f6f9d9f513"
+    },
+    {
+      "path": "cad/verification/assembly-path-budget-v2.json",
+      "bytes": 15823,
+      "sha256": "5978d43999da87a46475c612d9afc05e79b8990d4729ba1e01b902f6676feb01"
+    },
+    {
+      "path": "cad/verification/assembly-path-budget.json",
+      "bytes": 14908,
+      "sha256": "827bfc9dd2858a33d4e13794a93d79a2690193690bf4054fcfd2141adb8b8c50"
+    },
+    {
+      "path": "cad/verification/assembly-path-local-refinement-v2.json",
+      "bytes": 1282,
+      "sha256": "4f8b794dee2ca89e930ae5b3beeaa5426b935897ebaf9ada24f9d177c009663e"
+    },
+    {
+      "path": "cad/verification/assembly-path-source.kcad.ts",
+      "bytes": 81932,
+      "sha256": "17289e57330ab4c9071dd2aa31473fe0ba8c1002941858a35e2a53539aff5e94"
+    },
+    {
+      "path": "cad/verification/assembly-path-timeout.json",
+      "bytes": 1093,
+      "sha256": "c322169e9227275c57155c1eff127fa03122e3d6d008e1275894b9af86049802"
+    },
+    {
+      "path": "cad/verification/base-fdm-v2.json",
+      "bytes": 4024,
+      "sha256": "e29b71e3d5ad7349011a1d586598e7a8583f97a78c88d78f07442fe7a264ee1e"
+    },
+    {
+      "path": "cad/verification/candidate1-negative-control.json",
+      "bytes": 18366,
+      "sha256": "331c6963233bf09aec86749c353c0cf99dcf56471b409dc353931810dfc464d6"
+    },
+    {
+      "path": "cad/verification/candidate1-negative-control.kcad.ts",
+      "bytes": 82383,
+      "sha256": "f6ed3ebffdc2d9fd65ff18a218795fbe580359199922d78c73bd671bbf9bb8c8"
+    },
+    {
+      "path": "cad/verification/carrier-import.json",
+      "bytes": 973,
+      "sha256": "db08e7a699bb4fa9859e95dd4a976faec3ddc26920e2291050f147ed4b039aaf"
+    },
+    {
+      "path": "cad/verification/design-loop-data-uri-error.json",
+      "bytes": 754,
+      "sha256": "67d45f1a659f87e4987bb0fe7e6cd751bf5059356b0bb63f4ec4bd2cebc6dfd4"
+    },
+    {
+      "path": "cad/verification/design-loop-error.json",
+      "bytes": 754,
+      "sha256": "e90098c7bdef96981a4f0f6b581fd7afa953ff3faa2a668b98bde082adcd0b24"
+    },
+    {
+      "path": "cad/verification/design-loop-source.kcad.ts",
+      "bytes": 11530,
+      "sha256": "283d6537ff1115fdb00ce036f491efb431916fabbddc559bf6d555188510b3cc"
+    },
+    {
+      "path": "cad/verification/design-loop-v2.json",
+      "bytes": 18301,
+      "sha256": "5c064c774b91d19760b34c6a2a445cdd710db0ce3e928466062169ad6ff3f2c8"
+    },
+    {
+      "path": "cad/verification/exports-v2.json",
+      "bytes": 11523,
+      "sha256": "32992b5597b1a7c3f90aee1c77f4bb30e57d234aef617f1f7efab454b636463e"
+    },
+    {
+      "path": "cad/verification/handedness/assembly-export.json",
+      "bytes": 1499,
+      "sha256": "2078d4704a643009e10dd808c5450e01c718f4596d726a2c83bc72ec533ec704"
+    },
+    {
+      "path": "cad/verification/handedness/assembly-step-inspection.json",
+      "bytes": 696017,
+      "sha256": "8ef57cd34642437d2f789096d884cf0b9d50166346c6e9b10b970cfd4e2f7965"
+    },
+    {
+      "path": "cad/verification/handedness/base-3mf-export.json",
+      "bytes": 1476,
+      "sha256": "5e6172b24392fb17d3b6f358d9e068f97ec811d0d944caabf04a8aa2844ba003"
+    },
+    {
+      "path": "cad/verification/handedness/base-dfm-verification.json",
+      "bytes": 541762,
+      "sha256": "f976f74959e7faf645cb74083510f625a39a89f610e101e5ffc3d8c86c761f24"
+    },
+    {
+      "path": "cad/verification/handedness/base-fdm.json",
+      "bytes": 4046,
+      "sha256": "fa62031fd060800cbe5f1d11e27f988faa6281fc706bbb06e2a37ac18f4314b9"
+    },
+    {
+      "path": "cad/verification/handedness/base-print-stats.json",
+      "bytes": 429,
+      "sha256": "e968a4c2547818690e749dce5fcaa93eecf02b52a889688ccddff4f202e1148f"
+    },
+    {
+      "path": "cad/verification/handedness/base-step-export.json",
+      "bytes": 1482,
+      "sha256": "12090e4ef95c02aec8a85b3b0097c07969f7303698efb981206da653207e84d0"
+    },
+    {
+      "path": "cad/verification/handedness/base-stl-export.json",
+      "bytes": 1478,
+      "sha256": "b420e3c67d653c95a60ade84e57fa7ff262e8859200ac7c3f22c8b73c56e4914"
+    },
+    {
+      "path": "cad/verification/handedness/closed-render.json",
+      "bytes": 1912,
+      "sha256": "89c13ac5e1419d34ad84b820bcfbaf0cb6f765c6fd3c7fcc08d974ec4781081c"
+    },
+    {
+      "path": "cad/verification/handedness/design-loop.json",
+      "bytes": 21464,
+      "sha256": "7cc45cd77cc2411b5ea95b34fdaafab3bc8d9876f7ffcd0a901eaaf88ae2cb8c"
+    },
+    {
+      "path": "cad/verification/handedness/downloads.json",
+      "bytes": 3042,
+      "sha256": "06854f55b2ff86e46aa4c28becf71c91c9e43e302ee8ef3478c5d2ec58a739fe"
+    },
+    {
+      "path": "cad/verification/handedness/evaluation.json",
+      "bytes": 21844,
+      "sha256": "329b60759eb820b8a32325958b182821b115b484b563ae3dc28e848b13494006"
+    },
+    {
+      "path": "cad/verification/handedness/interior-render.json",
+      "bytes": 1913,
+      "sha256": "26d262a87918f8b76fd851fea52543a46717ff2fe0cd7ca68558418281f81450"
+    },
+    {
+      "path": "cad/verification/handedness/lid-3mf-export.json",
+      "bytes": 1485,
+      "sha256": "8c61adbff5060476c16a2e3f7d788d5edca22183d5960fd92d5aee592ff62443"
+    },
+    {
+      "path": "cad/verification/handedness/lid-dfm-verification.json",
+      "bytes": 6471,
+      "sha256": "d471c32ed77ea2567caa0307f7ecbaf8b3c0dc3afc3b4494301daf577c828b14"
+    },
+    {
+      "path": "cad/verification/handedness/lid-fdm.json",
+      "bytes": 4054,
+      "sha256": "444df7cf23f0a0addc38426df9d07800eb27e389274607729183e9c00fa487ae"
+    },
+    {
+      "path": "cad/verification/handedness/lid-print-stats.json",
+      "bytes": 462,
+      "sha256": "86f26c4d5f3c7edaba23ce6d642186ee2a73d1efb0a82d4d5e844b3dd0ace214"
+    },
+    {
+      "path": "cad/verification/handedness/lid-render.json",
+      "bytes": 1427,
+      "sha256": "82ea1a7c75366f4295ae5258e70421c2cd2c6f96eb29a39ef87c7455880268b9"
+    },
+    {
+      "path": "cad/verification/handedness/lid-step-export.json",
+      "bytes": 1491,
+      "sha256": "30c96c68767aeef24e34d96c41acf27fd78bdc8724db86775cfeabea9f91307e"
+    },
+    {
+      "path": "cad/verification/handedness/lid-stl-export.json",
+      "bytes": 1485,
+      "sha256": "9b3230400768b2e7932d78203553d928b11a86d15639f0ba76aee4f6baf219d2"
+    },
+    {
+      "path": "cad/verification/handedness/mesh-export-check.json",
+      "bytes": 1662,
+      "sha256": "2534437fbc185912e3fabd42596db8399c3b9f86b9f3d4a7e4bc740c51ed707f"
+    },
+    {
+      "path": "cad/verification/handedness/native-carrier-inspection.json",
+      "bytes": 86122,
+      "sha256": "9c63574df1b097202ad5775ee2a072ea60ae80446cb1067a6f42fd9a38f402ea"
+    },
+    {
+      "path": "cad/verification/handedness/native-registration.json",
+      "bytes": 14628,
+      "sha256": "0beea8d9d605f2c388d52ef2e9f78c43ac98a60811837b03ad099478ff9d4083"
+    },
+    {
+      "path": "cad/verification/handedness/negative-old-carrier.json",
+      "bytes": 8080,
+      "sha256": "529531b1ec88f6b0e62123e28a352139f06eb635ba86e50e11d176479b62a27d"
+    },
+    {
+      "path": "cad/verification/handedness/negative-old-carrier.kcad.ts",
+      "bytes": 577,
+      "sha256": "22f2bcb4bf9c8477f1547ccd83d05e2c592c73ceb17407a9a9403bc8e289d604"
+    },
+    {
+      "path": "cad/verification/handedness/path/controls-runner.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cad/verification/handedness/path/linear-controls.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cad/verification/handedness/path/linear-controls.log",
+      "bytes": 1201,
+      "sha256": "e2b353e32cd9e2654a38f0e452dfe9871bfd3b7f08da6c2a29539668e01415c7"
+    },
+    {
+      "path": "cad/verification/handedness/path/native-axisymmetric-sweep.mts",
+      "bytes": 6842,
+      "sha256": "fe665761fdabd30e8f64ea14161f1a228758595b48642da89353003f3705fbb6"
+    },
+    {
+      "path": "cad/verification/handedness/path/native-linear-sweep.mts",
+      "bytes": 4869,
+      "sha256": "96810e629c89af0a5713c3c6eeb935460dffccc1ed6607c13f16714197db76f1"
+    },
+    {
+      "path": "cad/verification/handedness/path/native-tool-sweep.mts",
+      "bytes": 2063,
+      "sha256": "ae9291012a3845cc9f35e160206e86bde68cd00b970cbb3f9cce185e343c1bc2"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-native-linear-controls.json",
+      "bytes": 44947,
+      "sha256": "ea598f267efd550bf2bd83a7133aa12c72cf71be32c1974e723c3b821503a373"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-native-linear-controls.mts",
+      "bytes": 4043,
+      "sha256": "5c573fd3ad2a64d7529b9a0c8d6e91721ea6b6b2936ab376095404a345e92835"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-native-sweep-controls.json",
+      "bytes": 9144,
+      "sha256": "4bc89353b3121c92370c67550cfa73337cdd944262b30dd6a82f99559b3a610c"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-native-sweep-controls.mts",
+      "bytes": 4747,
+      "sha256": "baf5e698d882dccbdadf62e5ebce1ce53e92b7fd9f9ad0bb3b5a579123107ac4"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-native-tool-controls.json",
+      "bytes": 1279,
+      "sha256": "a6c4913095b85761275aabf29a89394edc474e2e9d0f22fc9e89af11302d9435"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-native-tool-controls.mts",
+      "bytes": 3062,
+      "sha256": "5ee5e5b7596ac4e2797f2b11fe7f13472070924ef2a2c4ed90a6f35e91ec3344"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-ordered-complete-native-path.json",
+      "bytes": 459506,
+      "sha256": "645648c71ea81f276cf0c7a2bbc88c2e9f726254812ab1048cd2f34537c4e8f6"
+    },
+    {
+      "path": "cad/verification/handedness/path/oled-ordered-complete-native-path.mts",
+      "bytes": 16326,
+      "sha256": "e98ea9f9c41e7faf192471a98480230cea77cdca5031778d25dba0e1e2a78464"
+    },
+    {
+      "path": "cad/verification/handedness/path/ordered-path.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cad/verification/handedness/path/ordered-path.log",
+      "bytes": 9720,
+      "sha256": "d5491537f0add8b6a3025c322684ce8987b8cf86ebb10113d62bf7ed905d3e7c"
+    },
+    {
+      "path": "cad/verification/handedness/path/provenance.json",
+      "bytes": 21360,
+      "sha256": "7d1a168dfe77794d47e1bfdb3e799c01f7b9ba47f77c5614b5c751e210a2804c"
+    },
+    {
+      "path": "cad/verification/handedness/path/run-controls.sh",
+      "bytes": 1609,
+      "sha256": "1c86ff08e1053ac6c8a42f866ba1409b83d444b6061948bad261bd3c3c1f6659"
+    },
+    {
+      "path": "cad/verification/handedness/path/run-ordered-path.sh",
+      "bytes": 519,
+      "sha256": "a4f09663f63789c56ca58dc1f631b1a0b7e0f9c858b52bc1fc1a5f60cd0e894a"
+    },
+    {
+      "path": "cad/verification/handedness/path/sweep-controls.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cad/verification/handedness/path/sweep-controls.log",
+      "bytes": 747,
+      "sha256": "6815fe83d24ecfa4084dc2eecd2ff3d6302a6cb287d8d959089313cf305c88c1"
+    },
+    {
+      "path": "cad/verification/handedness/path/tool-controls.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "cad/verification/handedness/path/tool-controls.log",
+      "bytes": 837,
+      "sha256": "3c0ca59b23017ed3927a4fe8179fce8eb9a3be4aa82daf3f58ea727088881021"
+    },
+    {
+      "path": "cad/verification/handedness/submitted-source.kcad.ts",
+      "bytes": 12927,
+      "sha256": "aed3dd9698250717d267b9f774656ce4b8e6417aab235447c7dc63e8b3159fef"
+    },
+    {
+      "path": "cad/verification/handedness/verify_mesh_exports.py",
+      "bytes": 3713,
+      "sha256": "d04d8008cba948db8bf191401f7004425a8274b99450bb6d1c98b83ab8d605f4"
+    },
+    {
+      "path": "cad/verification/handedness/verify_native_registration.py",
+      "bytes": 8981,
+      "sha256": "853adbd2294066feb9cafe091ae90271b77a4c2e03f3b38670f1df9b5046dedf"
+    },
+    {
+      "path": "cad/verification/handedness/visual-review.json",
+      "bytes": 3893,
+      "sha256": "a1004e8026c955fdce831ccef080a8cd0fc6397e78c4cc835cfa6673f3435860"
+    },
+    {
+      "path": "cad/verification/kernelcad-publish-v2.json",
+      "bytes": 3709,
+      "sha256": "b70404988da5501064514ee27b80b824d86ed39e7d99d039b0a2f84ac25e31a8"
+    },
+    {
+      "path": "cad/verification/kernelcad-revision-v2.json",
+      "bytes": 698,
+      "sha256": "f5c64557cfbdf953dd4b7dd66f9a811c8521d26d664ab2e08937033a1c658e32"
+    },
+    {
+      "path": "cad/verification/kernelcad-revision.json",
+      "bytes": 1699,
+      "sha256": "a4be90a86471ae6b93d527f6a2725dfd26a0c68d84e3120f88a5a67d5ee880e3"
+    },
+    {
+      "path": "cad/verification/lid-fdm-v2.json",
+      "bytes": 4099,
+      "sha256": "99d2bd67123f6af3e16bfa41344bac2a81591638bbf277fbd2ed146d02dfcfaf"
+    },
+    {
+      "path": "cad/verification/mesh-export-check-v2.json",
+      "bytes": 1289,
+      "sha256": "922520e1ed10a6609b5879fc8c4d5c6b1b3d9516fe2fbd662e0e3659d09678cd"
+    },
+    {
+      "path": "cad/verification/mesh-export-check.json",
+      "bytes": 961,
+      "sha256": "94e5e0aa23a90ce658b7822abc04ea18ea6236d1b20879c6f667c545f3b0e5a2"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/README.md",
+      "bytes": 3420,
+      "sha256": "9ed817b1d43e98b92301d9e1884693f6519f39013a5a93df1da6a1631fe20621"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-native-linear-controls.json",
+      "bytes": 45358,
+      "sha256": "4cd5a6e90a3b4f5611f920865c2125dfbc1356b7d49d9d358a86350a24c26dda"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-native-sweep-controls.json",
+      "bytes": 9148,
+      "sha256": "d1da2dd4e070ffbda81d7c6b596991649ce0347ff344b179381f6f9ee0f63789"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-native-tool-controls.json",
+      "bytes": 1278,
+      "sha256": "fb4c6df5839c381ed18b742bb8738c72dfc923fff265907591c102b30cbf4ebb"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/oled-ordered-complete-native-path.json",
+      "bytes": 506655,
+      "sha256": "5003123dbcd1b09a59fa267447b956d81c80feb772f049ea913997f237194b1b"
+    },
+    {
+      "path": "cad/verification/ordered-path-followup/provenance.json",
+      "bytes": 1752,
+      "sha256": "e8f41312576593e315edd32b110eeb38a6648d1950082d5512fbf31324944d4e"
+    },
+    {
+      "path": "cad/verification/print-dfm.json",
+      "bytes": 2962,
+      "sha256": "f872eec788be63f978c54af2476339caa9d67bb8d4f0332d1decdfb767172d88"
+    },
+    {
+      "path": "cad/verification/renders-v2.json",
+      "bytes": 6066,
+      "sha256": "2de70d6d2987333c8eb39dfd57cc7a8a3d03c23c8027800da73ebd4b66743daf"
+    },
+    {
+      "path": "cad/verification/reproduction.json",
+      "bytes": 5637,
+      "sha256": "ea5970ea3ed11fc84a1107126c8ead28b8dd7f0ac3aba631fda03e41a0ce9a4e"
+    },
+    {
+      "path": "cad/verification/solid-build-v2.json",
+      "bytes": 17236,
+      "sha256": "8ca43f2ea14d52a5ae1ba9ddd4870ab809b78b6fced656ddfe5fc682d481d922"
+    },
+    {
+      "path": "cad/verification/solid-build.json",
+      "bytes": 14476,
+      "sha256": "9e66ff7cb0854ff8d5da1676729d4dbce8203ae14767494c29c36609bd98aed6"
+    },
+    {
+      "path": "cad/verification/staged-input-regression-v2.json",
+      "bytes": 2414,
+      "sha256": "8db5e85016d15271fe317112fdb2972c41b414810a4f9888e7cd3c19682dc9a0"
+    },
+    {
+      "path": "cad/verification/step-inspection-v2.json",
+      "bytes": 44901,
+      "sha256": "06cc3fc7b7736910fa314b2ae6033594667c742c2bb765bca678fce4d7fad308"
+    },
+    {
+      "path": "cad/verification/step-inspection.json",
+      "bytes": 19388,
+      "sha256": "f863897eb51f34cfcddf67d9c2dc7af15db39b75157f851bdb99b8bc80b86735"
+    },
+    {
+      "path": "cad/verification/submitted-source.kcad.ts",
+      "bytes": 82686,
+      "sha256": "0dad608ad219e5c96d79d8b913d5183ccaee22ae67236006e3cd5b1a21f3b1de"
+    },
+    {
+      "path": "cad/verification/visual-review-v2.json",
+      "bytes": 4097,
+      "sha256": "e6a36ac4fb4b0d59e9e108e55a1b073df1e805d2967dd3cc5190b7e9d66e5bbd"
+    },
+    {
+      "path": "electronics/assembly-notes.txt",
+      "bytes": 3214,
+      "sha256": "0191725a555980faad65c5155bad310f2e0cd8582d1be5f45cfc9dcbb2dfb988"
+    },
+    {
+      "path": "electronics/fp-lib-table",
+      "bytes": 166,
+      "sha256": "c768450112af6e21af6983662a51008077dff582185fbec4a2b550d8a9d29907"
+    },
+    {
+      "path": "electronics/licenses/kicad-library-license.txt",
+      "bytes": 2105,
+      "sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_dru",
+      "bytes": 173,
+      "sha256": "c7f0bf1ac25518967c08b1483de8b06257d821b5bbbd735ba219b213d16de9d1"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_pcb",
+      "bytes": 98441,
+      "sha256": "3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_pro",
+      "bytes": 908,
+      "sha256": "e9f5be08584ecb105fc9f3dcd9a000939d09becba83554a62ae282b5952cc92c"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_sch",
+      "bytes": 33263,
+      "sha256": "ccbb910a03ae74da0abe2c5e28c1275ef92e16400162aa46553b640aea68d99f"
+    },
+    {
+      "path": "electronics/oled-carrier.kicad_sym",
+      "bytes": 14760,
+      "sha256": "e42a74a48e9cedcd31041c144a9c174accd8491b56e4e31bf3a76b45436b0984"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/Display4.kicad_mod",
+      "bytes": 5175,
+      "sha256": "efade989a0a6d7a5d5b07183b66521498ba9b6f4129d8fe1bbd04247d62f352f"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/MountingHole.kicad_mod",
+      "bytes": 1283,
+      "sha256": "5338e639154e928d89c918a14751f74b94c6fc36d8865219bcd905f409f446a1"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/R.kicad_mod",
+      "bytes": 1927,
+      "sha256": "6815a2b35d141fe7a05c3c16d461b6a08abc38f5cfca4aa50a0fdd7a2f1290ac"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/Socket7.kicad_mod",
+      "bytes": 3781,
+      "sha256": "0617bac5d7e74f2bb3e7a5073ae7c856d2faac49474b371ee09d5ac73a46e2d4"
+    },
+    {
+      "path": "electronics/oled-carrier.pretty/TestPoint.kicad_mod",
+      "bytes": 1745,
+      "sha256": "85191310ec9441ccfc23a1b699133b7468f39be889683b83f50bec9ac0a3762f"
+    },
+    {
+      "path": "electronics/provenance.json",
+      "bytes": 5898,
+      "sha256": "63698fae85d4c20df48832dfc7b37b24be4115ed9554262c414d0f399e0d0893"
+    },
+    {
+      "path": "electronics/sym-lib-table",
+      "bytes": 174,
+      "sha256": "c12fab3921269cbac23a7ce032494d921fd524bc32b2b67b1f3dbeecc115057d"
+    },
+    {
+      "path": "electronics-bom.csv",
+      "bytes": 2171,
+      "sha256": "f95862d298108dc76cad9d23bc72f58b3f455db77ada2a6cb398eb954641eb51"
+    },
+    {
+      "path": "firmware/LICENSE",
+      "bytes": 1072,
+      "sha256": "cee2a5445168030357d6f8d3b51e7e3dd244dfa052687b9dbe558f30a864454b"
+    },
+    {
+      "path": "firmware/SHA256SUMS",
+      "bytes": 464,
+      "sha256": "6e97785431688f972d31dd718d24a8ec95ee6d967c9612d436581dd6b87b4890"
+    },
+    {
+      "path": "firmware/platformio.ini",
+      "bytes": 285,
+      "sha256": "969b375038bca5981d81defed4cb71164408c7459da5552a063183a98db65f70"
+    },
+    {
+      "path": "firmware/release-manifest.json",
+      "bytes": 2128,
+      "sha256": "7e493abb42bb9b89f53b579fe9e39bccaf60fa2b252507641fffe103768c8fb1"
+    },
+    {
+      "path": "firmware/source-provenance.json",
+      "bytes": 732,
+      "sha256": "6420526f7f4a554a47cae7f13984163d8584c9bb62fd1a76b711e243335be8db"
+    },
+    {
+      "path": "firmware/src/i2c-scan.cpp",
+      "bytes": 543,
+      "sha256": "65903ddfc26e799e55153b5015060708576234012556fb7d0be0260fad793fcc"
+    },
+    {
+      "path": "firmware/src/main.cpp",
+      "bytes": 89,
+      "sha256": "824a2a996574407988d2afab367443ea6fad61f09bf838cfb37e9c236aa969f3"
+    },
+    {
+      "path": "firmware/vendor/esp32c3-display-workshop.ino",
+      "bytes": 6053,
+      "sha256": "35fdccdd16f37952564ba1cddda4d5b529f27bb856a1eb70c2702cecbf6d28e1"
+    },
+    {
+      "path": "hardware-interface.json",
+      "bytes": 6978,
+      "sha256": "ac46bfd30fdc5efa3c39765713208e52bdb738226d99d388685d6d1b85e7fe9a"
+    },
+    {
+      "path": "labwired/circuit.json",
+      "bytes": 8227,
+      "sha256": "096188e1e949dc3fa8688beaaf304abec729cc0939e39313839d5fa2717dec1e"
+    },
+    {
+      "path": "labwired/esp32c3.yaml",
+      "bytes": 15777,
+      "sha256": "5e1bfc6de3542d912b66ace0f1d2b1c131ab729c6909c071e43a6a609107687c"
+    },
+    {
+      "path": "labwired/mechanical.json",
+      "bytes": 691,
+      "sha256": "33eed7e213ae92395edd84dbdc48f9a3d99b43078300a5c7b0e128840ef6c8ca"
+    },
+    {
+      "path": "labwired/native-sources.json",
+      "bytes": 1044,
+      "sha256": "be6d35be852dc73f8a2324e5978dab583cdd17ce21d07b7dee244fbb4506e9d3"
+    },
+    {
+      "path": "labwired/system.yaml",
+      "bytes": 277,
+      "sha256": "502151e927cb747cc050898df071b1e22a89da2ec74dce9900216b8379d6039e"
+    },
+    {
+      "path": "manufacturing/drc.json",
+      "bytes": 1069,
+      "sha256": "acf71801b2a284f3cff9cfd84951016ad08258b21655b09078dc6526fda02290"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-NPTH-drl_map.pdf",
+      "bytes": 12447,
+      "sha256": "d7564a6e3546556f46e1ece34db2250ae91a94bfcb520153f7af7867b0d609e8"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-NPTH.drl",
+      "bytes": 414,
+      "sha256": "c66c90d2d9b66c0043ba2c169599fe8f54376d3ba237ffbe745c83ace0f6164a"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-PTH-drl_map.pdf",
+      "bytes": 13111,
+      "sha256": "a67d61cc0b859ac58f80cee2129986574ba66decc7081baaf1e1835afd2cec63"
+    },
+    {
+      "path": "manufacturing/drill/oled-carrier-PTH.drl",
+      "bytes": 688,
+      "sha256": "6b669162533134998ab7d1a5a0bd422485cdd2263b3ea9aab878a2dcea311ee7"
+    },
+    {
+      "path": "manufacturing/drill-report.txt",
+      "bytes": 699,
+      "sha256": "a59f4fb2fec6583da94426e0f3f300a135e1610602125fcf0a6cf526b6619988"
+    },
+    {
+      "path": "manufacturing/erc.json",
+      "bytes": 985,
+      "sha256": "aa3698b7e2828f6bd04172dcc6c94db0c7499b3746995640a90f81f6155cf128"
+    },
+    {
+      "path": "manufacturing/fabrication-settings.json",
+      "bytes": 1106,
+      "sha256": "855624d97e4d0ac9b3e10c7eaa91a9543ec8cfcd99eb6469632558c8588882a2"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Cu.gbl",
+      "bytes": 35371,
+      "sha256": "d1d49b60234224a8f4d28eef20c43a11d931af912b8881fdc60a8f2841764ef1"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Mask.gbs",
+      "bytes": 1124,
+      "sha256": "5969b6ca4a634f629553267f96c0ba2755572bdc19f3ccebb7e69d25259e0ced"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-B_Silkscreen.gbo",
+      "bytes": 500,
+      "sha256": "53f8b4ef0651faba269ffc7ed193d64bbb5d9269ebefa6528ed748e5dd061c0e"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-Edge_Cuts.gm1",
+      "bytes": 947,
+      "sha256": "0c6537c7b59a87575227c3d7373fa6b180631cbe4b62fd9bc432615936a2838c"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Cu.gtl",
+      "bytes": 4859,
+      "sha256": "26b9ac44741241ffc575e47d5c02cc1d84a8b2272f623874f455c33deefeba1d"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Mask.gts",
+      "bytes": 2497,
+      "sha256": "f62ca8e128ec836332347a705a4f238dfa7191a86c69fdea42cf7fa597d81591"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Paste.gtp",
+      "bytes": 1670,
+      "sha256": "d8f11ba8e080dce1d33b604fbbff2ea6aed1990439db0d02c8a0780116dcd12a"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-F_Silkscreen.gto",
+      "bytes": 43868,
+      "sha256": "7861d794760ce2045628d3b35787f62142473d2331349f2944f7a19fd0fd1191"
+    },
+    {
+      "path": "manufacturing/gerbers/oled-carrier-job.gbrjob",
+      "bytes": 2622,
+      "sha256": "8f537831d35cf88a1457dc4d83dff9a900a5e44329d3ca05366fe8e47b060d57"
+    },
+    {
+      "path": "manufacturing/native-import.json",
+      "bytes": 5732,
+      "sha256": "161a40be75d19a8b1cfcec6435fc6523683a2ba8e01c1c311d41573dc009dcfe"
+    },
+    {
+      "path": "manufacturing/oled-carrier-bare.step",
+      "bytes": 53022,
+      "sha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997"
+    },
+    {
+      "path": "manufacturing/oled-carrier-bottom.svg",
+      "bytes": 27487,
+      "sha256": "77a984dbbe9a0fde24580ff7a2e543fbb8c260881292b89896306868d542edba"
+    },
+    {
+      "path": "manufacturing/oled-carrier-fabrication.zip",
+      "bytes": 39247,
+      "sha256": "12be533f71c17badf8b102da76c3692a712b67caa7f705e19e4ef8799a19b1bb"
+    },
+    {
+      "path": "manufacturing/oled-carrier-positions.csv",
+      "bytes": 336,
+      "sha256": "1ba82c60db1128fba19b0eb5e05d041cb0e59ea93ba82621edc3c1998b93774a"
+    },
+    {
+      "path": "manufacturing/oled-carrier-schematic.pdf",
+      "bytes": 83955,
+      "sha256": "752598606692b33f3ebcb304cbc9bc8d6feab0fec2dfc4a536d9dbbf36ae4496"
+    },
+    {
+      "path": "manufacturing/oled-carrier-top.svg",
+      "bytes": 58067,
+      "sha256": "0bde306e6ba06df4d293e7ec63fb6f7b2f79a74b7141ec09a4142836f4e9386f"
+    },
+    {
+      "path": "manufacturing/oled-carrier.net.xml",
+      "bytes": 20272,
+      "sha256": "7e7255237256419e6417a3a6481ab03d192fd6a97d020d61bc6b1130c89c58c7"
+    },
+    {
+      "path": "manufacturing/reproduce.txt",
+      "bytes": 3374,
+      "sha256": "978bab1ac09c2a0062928e256453368db78af0f301d107fdc569229e4ebb086f"
+    },
+    {
+      "path": "manufacturing/validation.json",
+      "bytes": 10396,
+      "sha256": "fd1527ebb7bfa6dd9ca9f2cc977ee16bc433e0a5ee056e0d30f19b4264c6b007"
+    },
+    {
+      "path": "verification/native-public-downloads.json",
+      "bytes": 915,
+      "sha256": "c86b9f29ca9303d22c9b52bf8767cf5109b5e5a3372343b9acab84f3c14d5cc4"
+    },
+    {
+      "path": "verification/package-rom-boot-manifest.json",
+      "bytes": 1815,
+      "sha256": "b2e9138af0add1bd80423733e24bd6e9f4db818a55596ac86ca0b59ac6ea3924"
+    },
+    {
+      "path": "verification/package-rom-boot-observations.json",
+      "bytes": 22306,
+      "sha256": "230f5881970f004b000d4a8759d95da44225334f71a9e4ebbd2984b0f828f293"
+    },
+    {
+      "path": "verification/package-rom-boot-result.json.gz",
+      "bytes": 48841,
+      "sha256": "2f82bc27a4405627136790ca6ad105a83e1314ef093de1304599a095a4277b3f"
+    },
+    {
+      "path": "verification/package-rom-boot-uart.txt",
+      "bytes": 310,
+      "sha256": "2d1a4c313d461838d4e685260a49dc8b71f622282550406c11dd41c922284a12"
+    },
+    {
+      "path": "verification/released-build-provenance.json",
+      "bytes": 1576,
+      "sha256": "40e79a0d1cd59085f44665ae457af1b0402a57057498846542c71a56f17bb4ef"
+    },
+    {
+      "path": "verification/released-rom-boot-manifest.json",
+      "bytes": 1825,
+      "sha256": "8c91abcacf9c26bf69b6623e02d7ef5dc1540423642dd7ad4a03711fc65ca571"
+    },
+    {
+      "path": "verification/released-rom-boot-observations.json",
+      "bytes": 22306,
+      "sha256": "948b7faad02fb4770232b5723b9192d87624f89d8a95e12d73e23cb56ae071ac"
+    },
+    {
+      "path": "verification/released-rom-boot-result.json.gz",
+      "bytes": 48819,
+      "sha256": "9d48d6f2d245a74b288998397679f72e5166a7202a08bd131110b4d443ce9ba9"
+    },
+    {
+      "path": "verification/released-rom-boot-uart.txt",
+      "bytes": 310,
+      "sha256": "2d1a4c313d461838d4e685260a49dc8b71f622282550406c11dd41c922284a12"
+    },
+    {
+      "path": "verification/released-wasm-acceptance.json",
+      "bytes": 1003,
+      "sha256": "8f5504bcb57a0f9e107460b9356887f0e344cff1bcd5fd24b5d1904e81cdc44f"
+    },
+    {
+      "path": "verification/reproduce.txt",
+      "bytes": 3111,
+      "sha256": "fb10629a48df7beff81a3fadca68809bbcd3ec07908bb51332b83582843644dc"
+    },
+    {
+      "path": "verification/rom-boot.yaml",
+      "bytes": 509,
+      "sha256": "7815c58d158a0f3ed1d9424d9b12341504ba7895f29a93c06baa97a7eb0f957d"
+    },
+    {
+      "path": "verification/verify-display.py",
+      "bytes": 1032,
+      "sha256": "53448b4c932840c21f1888ec84c2a58d9ba3835a62cb0c61810a962ba55aec29"
+    }
+  ]
+}

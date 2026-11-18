@@ -1,0 +1,278 @@
+{
+  "ok": false,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "invalid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 4979.65255092828
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -9,
+            -54,
+            0
+          ],
+          "max": [
+            79,
+            45.000001494152045,
+            27.5
+          ]
+        }
+      },
+      "out_dir": "[server path]",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 4979.65255092828,
+    "faceCount": 35,
+    "size": [
+      70.00000298830409,
+      45.000002988304104,
+      1.6000000000000059
+    ]
+  },
+  "featureCount": 7,
+  "diagnostics": [],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "e398e8dd05d44a8263b96f019c866fafd6831a2db794385e424f5751a1336a18",
+      "byteLength": 467
+    },
+    "parameters": {
+      "values": {},
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": "66e8b0c6bd908941f4fddc2a41454ff79fa82eff"
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "277dd744834dec4839407b30c255acdbd84c07dc2b9d0a7ed0047b12750b31d0"
+  },
+  "selections": [
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 83.23196914233112
+    },
+    {
+      "consumerFeatureId": "require_1",
+      "selectorText": "body(cylinder_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.8867962264113212
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 83.23196914233112
+    },
+    {
+      "consumerFeatureId": "require_2",
+      "selectorText": "body(cylinder_2)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.8867962264113212
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(importedStep_1)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 83.23196914233112
+    },
+    {
+      "consumerFeatureId": "require_3",
+      "selectorText": "body(cylinder_3)",
+      "syntax": "lineage",
+      "fingerprints": [],
+      "partDiagonal": 1.8867962264113212
+    }
+  ],
+  "requirements": {
+    "ok": false,
+    "status": "fail",
+    "entries": [
+      {
+        "name": "native-carrier-registration-J2.1",
+        "source": "script",
+        "status": "fail",
+        "measured": 29.92,
+        "limit": [
+          0.199,
+          0.201
+        ],
+        "margin": -29.719,
+        "selections": [
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 83.23196914233112
+          },
+          {
+            "consumerFeatureId": "require_1",
+            "selectorText": "body(cylinder_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.8867962264113212
+          }
+        ],
+        "message": "native-carrier-registration-J2.1 failed: measured 29.920, limit [0.199, 0.201], margin -29.719 (importedStep_1 vs cylinder_1).",
+        "featureId": "require_1",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_1"
+          },
+          "op": "between",
+          "limit": [
+            0.199,
+            0.201
+          ]
+        }
+      },
+      {
+        "name": "native-carrier-registration-J2.2",
+        "source": "script",
+        "status": "fail",
+        "measured": 29.92,
+        "limit": [
+          0.199,
+          0.201
+        ],
+        "margin": -29.719,
+        "selections": [
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 83.23196914233112
+          },
+          {
+            "consumerFeatureId": "require_2",
+            "selectorText": "body(cylinder_2)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.8867962264113212
+          }
+        ],
+        "message": "native-carrier-registration-J2.2 failed: measured 29.920, limit [0.199, 0.201], margin -29.719 (importedStep_1 vs cylinder_2).",
+        "featureId": "require_2",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_2"
+          },
+          "op": "between",
+          "limit": [
+            0.199,
+            0.201
+          ]
+        }
+      },
+      {
+        "name": "native-carrier-registration-J3.7",
+        "source": "script",
+        "status": "fail",
+        "measured": 14.680000000000001,
+        "limit": [
+          0.199,
+          0.201
+        ],
+        "margin": -14.479000000000001,
+        "selections": [
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(importedStep_1)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 83.23196914233112
+          },
+          {
+            "consumerFeatureId": "require_3",
+            "selectorText": "body(cylinder_3)",
+            "syntax": "lineage",
+            "fingerprints": [],
+            "partDiagonal": 1.8867962264113212
+          }
+        ],
+        "message": "native-carrier-registration-J3.7 failed: measured 14.680, limit [0.199, 0.201], margin -14.479 (importedStep_1 vs cylinder_3).",
+        "featureId": "require_3",
+        "predicate": {
+          "metric": "clearance",
+          "a": {
+            "kind": "body",
+            "ref": "importedStep_1"
+          },
+          "b": {
+            "kind": "body",
+            "ref": "cylinder_3"
+          },
+          "op": "between",
+          "limit": [
+            0.199,
+            0.201
+          ]
+        }
+      }
+    ],
+    "summary": {
+      "pass": 0,
+      "fail": 3,
+      "notEvaluated": 0
+    }
+  },
+  "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z",
+  "kernelcadError": {
+    "code": "mcp.internal.failure",
+    "category": "transport_internal_failure",
+    "stage": "transport_or_internal",
+    "message": "{\"ok\":false,\"buildOk\":true,\"viewerMode\":\"hosted\",\"viewerHint\":\"Use open_in_studio to view this model in hosted Studio.\",\"step\":{\"validity\":{\"status\":\"invalid\",\"checks\":[\"build\",\"feature-health\",\"finite-geometry\"],\"volume\":4979.65255092828},\"snapshots\":{\"status\":\"unavailable\",\"frame\":{\"view\":\"iso\",\"width\":512,\"height\":512,\"bounds\":{\"min\":[-9,-54,0],\"max\":[79,45.000001494152045,27.5]}},\"out_dir\":\"[server path]\",\"error\":\"Step snapshots require an existing browser attachment (PW_CDP_URL).\"}},\"sceneS",
+    "recovery": "Retry or choose another supported tool; include the correlation ID if the failure recurs.",
+    "correlationId": "3e18cfc8-b9e6-4e5b-9434-5deb1d029ecb",
+    "serverBuild": "0.1.0+66e8b0c6bd90@2026-11-18T13:15:57.635Z"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "status": "assembly-candidate",
+  "acceptance": {
+    "solidBuild": "pass",
+    "scriptClearances": "12/12 pass: 9 physical dimensions and 3 native carrier registration gauges",
+    "baseFdm": "pass: measured minWall 1.1261785276 mm",
+    "lidFdm": "pass: measured minWall 0.8498339486 mm",
+    "stepBrep": "41/41 assembly solids valid",
+    "meshExports": "pass: both binary STLs and 3MF meshes have zero non-two-manifold edges; dimensions and millimetre units verified",
+    "designLoop": "pass: functional, quality and actual screenshot review accepted",
+    "assemblyPath": "hosted acceptance open: independent ordered follow-up passes 39 stages for all 41 source parts; earlier hosted budget/contact receipts retained",
+    "physicalFit": "not performed",
+    "printing": "not performed",
+    "cableRouting": "not performed",
+    "independentOrderedPath": "pass: 39/39 nominal geometric stages; required holds, zero-margin driver fit and physical qualification remain open",
+    "nativeRegistration": "18/18 native drilled pads match exact STEP axes; historical rotation fails all 3 source gauges"
+  },
+  "kernelcad": {
+    "provider": "kernelcad",
+    "slug": "t_IaE1EE",
+    "version": 2,
+    "projectId": "2b108bf1-6f84-4536-9d29-5f128a46c099",
+    "privacy": "public_unlisted",
+    "url": "https://app.kernelcad.com/p/t_IaE1EE?version=2",
+    "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/t_IaE1EE/v2.json?provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+    "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/t_IaE1EE/revisions/2/mesh-artifact?download=1&provenance=0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
+    "meshReady": true,
+    "isCurrentSource": false,
+    "currentRevisionPending": true,
+    "historicalReason": "Revision 2 used an incorrect populated coordinate reconstruction; source and exports here supersede it."
+  },
+  "source": "esp32c3-oled-enclosure.kcad.ts",
+  "submittedSource": "verification/handedness/submitted-source.kcad.ts",
+  "asset": "inputs/47111971a61f.step",
+  "hardware": {
+    "pcbRef": "sha256:3a50bf80e51fdea217bdf82b9b7007b61b1c949a72f1a4c6b266eb8f84f3e00a",
+    "boardId": "pcb_3b1f96ad7f25f4f0",
+    "revision": 0,
+    "pcbCommit": "61a802de810b705e9a3155ce8a03357dc2442cd7",
+    "hardwareInterfaceSha256": "ac46bfd30fdc5efa3c39765713208e52bdb738226d99d388685d6d1b85e7fe9a"
+  },
+  "exports": [
+    {
+      "path": "exports/esp32c3-oled-assembly.step",
+      "sha256": "48dfd28315a9581cc3bd5d15757f37ee524b9cde6ebfa69d7c18841053fbe9d2",
+      "bytes": 1871615,
+      "mediaType": "model/step"
+    },
+    {
+      "path": "exports/esp32c3-oled-base.step",
+      "sha256": "545184b08361e91b78a8e427c28fffb061c582b997892679a2229120d7925b6d",
+      "bytes": 136127,
+      "mediaType": "model/step"
+    },
+    {
+      "path": "exports/esp32c3-oled-base.stl",
+      "sha256": "acb42deec21246f877332627aec294fef37ea1c5602a0b02871b193d5446306f",
+      "bytes": 1339484,
+      "mediaType": "model/stl"
+    },
+    {
+      "path": "exports/esp32c3-oled-base.3mf",
+      "sha256": "8f9d43d0394feb1f32345487065df6507b2cb187496a9884566a5aae4a722315",
+      "bytes": 354705,
+      "mediaType": "model/3mf"
+    },
+    {
+      "path": "exports/esp32c3-oled-lid.step",
+      "sha256": "3f1f01e09a194d6e1370c3a59d424d6603cebd8f3b170531f7e12c71925fca73",
+      "bytes": 233729,
+      "mediaType": "model/step"
+    },
+    {
+      "path": "exports/esp32c3-oled-lid.stl",
+      "sha256": "3ef7b8fe900a9aca79d462bf8913e7e9bfe6399e1f7c9886dfcee7cd5cfcdbd8",
+      "bytes": 614284,
+      "mediaType": "model/stl"
+    },
+    {
+      "path": "exports/esp32c3-oled-lid.3mf",
+      "sha256": "c34d76165ed02acfea8b6bcc429d5d8d035fb9cd4d650747afb84d710a3ca17a",
+      "bytes": 157104,
+      "mediaType": "model/3mf"
+    }
+  ],
+  "renderNote": "native-frame-* renders use the corrected source recorded in verification/handedness. Revision 1/2 renders and their receipts remain historical.",
+  "sourceSha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+  "submittedSourceSha256": "aed3dd9698250717d267b9f774656ce4b8e6417aab235447c7dc63e8b3159fef",
+  "assetSha256": "47111971a61f5666f49988a513c82620bbea72f277ada4c35495e8018119d997",
+  "componentEnvelopes": [
+    {
+      "source": "components/hss-107-g-2.kcad.ts",
+      "sourceSha256": "48cb013149def78bee21d66b0c5d399f534d2045e53b8f49cf10279af27d225c",
+      "step": "components/hss-107-g-2.step",
+      "stepSha256": "8b6bf8491de08bac85d6a7f6eccf983de21ab46906a36d5c23f5e7a2cbaac82e",
+      "representation": "source-dimensioned envelope; not manufacturer STEP",
+      "bbox": {
+        "min": [
+          -1.27,
+          -1.27,
+          -3.18
+        ],
+        "max": [
+          1.27,
+          16.51,
+          4.44
+        ]
+      }
+    }
+  ],
+  "historicalToleranceBlocker": {
+    "glassPostGapNominalMm": 0.277,
+    "holeCentreToGlassEdgeMm": 2.277,
+    "postDiameterMm": 4,
+    "boreDiameterMm": 2.3,
+    "postWallMm": 0.85,
+    "fdmMinWallMm": 0.8,
+    "diameterForHalfMmGlassGap": 3.554,
+    "wallIfHalfMmGlassGap": 0.627,
+    "action": "Measure actual glass/post gap before tightening; no contact or glass preload permitted. This nominal model does not meet a0.5 mm glass-to-post allowance."
+  },
+  "glassSupportRevision": {
+    "geometry": "two open U supports beside the glass; two original round supports at the opposite mounts",
+    "glassPostGapNominalMm": 1.277,
+    "glassLidVerticalGapMm": 0.5,
+    "openSupportOuterMm": [
+      4,
+      3,
+      2.3
+    ],
+    "openSlotWidthMm": 2.3,
+    "armsAndBackNominalMm": 0.85,
+    "measuredPrintedPartMinWallMm": 0.8498339486088153,
+    "fdmMinWallMm": 0.8,
+    "supportEndAreaMm2": 7.055,
+    "minimumMeasuredBenchGlassPostGapTargetMm": 0.5,
+    "physicalMeasurementPerformed": false,
+    "note": "The 1.0 mm nominal CAD support gate and 0.5 mm glass/lid gate pass; manufacturing and component tolerances remain a physical acceptance item."
+  },
+  "historicalBlockedGateReceipts": [
+    "verification/design-loop-error.json",
+    "verification/design-loop-data-uri-error.json",
+    "verification/assembly-path-budget.json",
+    "verification/assembly-path-timeout.json",
+    "verification/reproduction.json"
+  ],
+  "blockedGateReceipts": [
+    "verification/assembly-path-budget-v2.json",
+    "verification/assembly-path-local-refinement-v2.json"
+  ],
+  "acceptedGateReceipts": [
+    "verification/handedness/evaluation.json",
+    "verification/handedness/design-loop.json",
+    "verification/handedness/visual-review.json",
+    "verification/handedness/native-registration.json",
+    "verification/handedness/base-dfm-verification.json",
+    "verification/handedness/lid-dfm-verification.json",
+    "verification/handedness/assembly-step-inspection.json",
+    "verification/handedness/mesh-export-check.json",
+    "verification/handedness/negative-old-carrier.json"
+  ],
+  "independentOrderedPathEvidence": "verification/handedness/path/provenance.json",
+  "historicalAcceptedGateReceipts": [
+    "verification/solid-build-v2.json",
+    "verification/design-loop-v2.json",
+    "verification/base-fdm-v2.json",
+    "verification/lid-fdm-v2.json",
+    "verification/step-inspection-v2.json",
+    "verification/mesh-export-check-v2.json",
+    "verification/candidate1-negative-control.json"
+  ],
+  "historicalOrderedPathEvidence": "verification/ordered-path-followup/provenance.json"
+}

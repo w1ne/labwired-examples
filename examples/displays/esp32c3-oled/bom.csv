@@ -1,0 +1,20 @@
+assembly,references,quantity,manufacturer,part_number,description,source,notes
+electronics,PCB1,1,Custom fabrication,OLED-CARRIER-REV-A,"70 x 45 x 1.6 mm, two-layer carrier",manufacturing/gerbers,"Internal design ID. Fabricate from this package; FR-4, 35 um copper, ENIG, green mask, white silkscreen."
+electronics,U1,1,Seeed Studio,113991054,XIAO ESP32C3,https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html,Buy the unheadered module. v1.3 design reference. USB power only. Supplied RF antenna remains separate; firmware does not enable RF.
+electronics,J2 J3,2,Samtec,HSS-107-G-2,"7-position machined socket, 2.54 mm pitch",https://www.samtec.com/products/hss-107-g-2,Carrier mounted. Accepts 0.38..0.56 mm round mating pins. Do not substitute a square-pin socket/header pair.
+electronics,U1-H1 U1-H2,2,Samtec,BHS-107-G-A,"7-position round-pin stacking header, 2.54 mm pitch",https://www.samtec.com/products/bhs-107-g-a,Solder 0.46 mm round tails into XIAO. The 3.18 mm mating posts enter J2/J3. The XIAO native holes are 0.85 mm.
+electronics,J1,1,JST,SM04B-SRSS-TB(LF)(SN),"4-pin horizontal SH connector, 1.00 mm pitch",https://www.jst-mfg.com/product/index.php?series=231&lang=en,"STEMMA QT assignment: 1 GND, 2 VCC=3V3, 3 SDA, 4 SCL."
+electronics,R1 R2,2,Yageo,RC0603FR-074K7L,"4.7 kohm, 1%, 0603 pull-up resistor",https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L,SDA/SCL pull-ups to 3V3. Parallel with display 10 kohm pull-ups gives 3.20 kohm nominal.
+electronics,DISP1,1,Adafruit,326,"0.96 inch 128x64 SSD1306 OLED, STEMMA QT revision",https://www.adafruit.com/product/326,Native source commit 51ef8e242dcf460d5effc298d8565110624e6b23. Bridge SJ3 for 0x3C; keep I2C SJ1/SJ2 closed. Leave JP2 unpopulated.
+electronics,W1,1,Adafruit,4210,"STEMMA QT / Qwiic JST SH 4-pin cable, 100 mm",https://www.adafruit.com/product/4210,Connect carrier J1 to either display QT port. Route with a service loop for lid removal.
+electronics,W2,1,Adafruit,4474,"USB Type A to Type C data cable, approximately 1 m",https://www.adafruit.com/product/4474,Host USB supplies 5 V and programming data. Vendor does not publish overmold dimensions; check actual cable against the enclosure access envelope during physical assembly.
+enclosure,BASE,1,PETG,OLED-BASE,Printed base,cad/esp32c3-oled-enclosure.kcad.ts,output=base-print; 88 x 63 x 27.5 mm
+enclosure,LID,1,PETG,OLED-LID,Printed lid,cad/esp32c3-oled-enclosure.kcad.ts,output=lid-print; outer face on bed; 4.3 mm overall
+enclosure,ST1-ST4,4,Accu,HHTPS-M2.5-5-5-BR-NI,M2.5 female female spacer AF5 length5,https://www.accu.co.uk/threaded-standoffs/464667-HHTPS-M2-5-5-5-BR-NI,Through thread; nickel plated brass
+enclosure,ST5-ST8,4,Accu,HHTPS-M2.5-5-25-BR-NI,M2.5 female female spacer AF5 length25,https://www.accu.co.uk/threaded-standoffs/464662-HHTPS-M2-5-5-25-BR-NI,8 mm thread depth at each end
+enclosure,W1-W4,4,Accu,HPW-2.7-6.5-0.5-N,Nylon flat washer ID2.7 OD6.5 thickness0.5,https://www.accu.co.uk/metric-flat-washers/465680-HPW-2-7-6-5-0-5-N,Under each 5 mm carrier spacer
+enclosure,S1-S8,8,Accu,SSK-M2.5-5-A2,M2.5 x 5 countersunk socket screw ISO10642 A2,https://www.accu.co.uk/countersunk-socket-head-screws/5413-SSK-M2-5-5-A2,Underside; overall length includes head; 1.5 mm hex
+enclosure,S9-S12,4,Accu,SSCF-M2.5-4-A2,M2.5 x 4 socket cap screw ISO4762 A2,https://www.accu.co.uk/metric-cap-head-screws/3802-SSCF-M2-5-4-A2,Carrier retention; 2 mm hex
+enclosure,S13-S16,4,Accu,SSCF-M2.5-8-A2,M2.5 x 8 socket cap screw ISO4762 A2,https://www.accu.co.uk/metric-cap-head-screws/3805-SSCF-M2-5-8-A2,Lid retention; 2 mm hex
+enclosure,S17-S20,4,Accu,SSCF-M2-8-A2,M2 x 8 socket cap screw ISO4762 A2,https://www.accu.co.uk/metric-cap-head-screws/3793-SSCF-M2-8-A2,OLED retention; 1.5 mm hex
+enclosure,N1-N4,4,Accu,HPN-M2-A2,M2 hex nut DIN934 A2,https://www.accu.co.uk/hexagon-nuts/7884-HPN-M2-A2,OLED backside; AF4 height1.6

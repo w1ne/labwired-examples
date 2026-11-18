@@ -1,0 +1,45 @@
+{
+  "release": "firmware-demos-v19",
+  "release_url": "https://github.com/w1ne/labwired-core/releases/tag/firmware-demos-v19",
+  "assets": [
+    {
+      "boardId": "esp32c3-oled-lab",
+      "filename": "demo-esp32c3-display-workshop-flash.bin",
+      "kind": "blob",
+      "sha256": "7e78e313a44ea591ad44c2fdd33072ff383975e1b23877c0ed6d258bde818cde",
+      "sizeBytes": 350928,
+      "url": "https://github.com/w1ne/labwired-core/releases/download/firmware-demos-v19/demo-esp32c3-display-workshop-flash.bin"
+    },
+    {
+      "boardId": "esp32c3-oled-lab",
+      "filename": "demo-esp32c3-display-workshop.elf",
+      "sha256": "f96445d5169e1ee70d4c96da095f5498854fdedcf1c23d706ba2e75ed07f1776",
+      "sizeBytes": 6307072,
+      "url": "https://github.com/w1ne/labwired-core/releases/download/firmware-demos-v19/demo-esp32c3-display-workshop.elf"
+    },
+    {
+      "boardId": "esp32c3-oled-lab",
+      "filename": "demo-esp32c3-oled-lab.lwrs",
+      "kind": "snapshot",
+      "sha256": "595f25f7de3f008d6c7c80ddf032b2bcf013f3f410f3520a968b18398d936861",
+      "sizeBytes": 1339632,
+      "url": "https://github.com/w1ne/labwired-core/releases/download/firmware-demos-v19/demo-esp32c3-oled-lab.lwrs"
+    },
+    {
+      "filename": "esp32c3_rom.bin",
+      "kind": "rom",
+      "sha256": "b62bce949b045d3b911eb4a2cc80ca0d5645fc2f66055286532641a0b8b7d000",
+      "sizeBytes": 393216,
+      "url": "https://raw.githubusercontent.com/w1ne/labwired-core/941a6c5caf0c53b66aa5af9290e5ecba5972ec72/crates/core/roms/esp32c3/esp32c3_rom.bin"
+    },
+    {
+      "filename": "esp32c3_drom.bin",
+      "kind": "rom",
+      "sha256": "bb66c9b542697ef2f5fcb2646ec2cf56af3577e11569501513aaabd7830e5c4c",
+      "sizeBytes": 131072,
+      "url": "https://raw.githubusercontent.com/w1ne/labwired-core/941a6c5caf0c53b66aa5af9290e5ecba5972ec72/crates/core/roms/esp32c3/esp32c3_drom.bin"
+    }
+  ],
+  "core_commit": "941a6c5caf0c53b66aa5af9290e5ecba5972ec72",
+  "scope": "Three published browser runtime assets plus two ROM files from the pinned core source. The standalone PlatformIO build uses the same sketch but can differ with build paths."
+}

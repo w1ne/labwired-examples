@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-18",
+  "design": "LabWired OLED carrier rev A",
+  "toolchain": {
+    "kicad": "10.0.8",
+    "library_packages": "10.0.8~ubuntu24.04.1"
+  },
+  "library_license": {
+    "name": "CC-BY-SA-4.0 with KiCad design exception",
+    "attribution": "KiCad library contributors",
+    "source": "https://www.kicad.org/libraries/license/",
+    "local": "licenses/kicad-library-license.txt"
+  },
+  "footprints": [
+    {
+      "local": "oled-carrier.pretty/Socket7.kicad_mod",
+      "upstream": "Connector_PinSocket_2.54mm.pretty/PinSocket_1x07_P2.54mm_Vertical.kicad_mod",
+      "upstream_sha256": "65e3473c9e4dbf272a77062472f5d7c4905354cb9eee089789d4672b3f431be8",
+      "changes": "Socket7: 0.8 mm drill, Samtec HSS description, obsolete generic height model removed; project HSS dimensional envelope replaces generic model, rotated 180 degrees for native model coordinates."
+    },
+    {
+      "local": "oled-carrier.pretty/Display4.kicad_mod",
+      "upstream": "Connector_JST.pretty/JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal.kicad_mod",
+      "upstream_sha256": "fcf75d7a8c7a92e3748de7972eac2adc2bf2ea1adc2d10942df5f1be542d1320",
+      "changes": "Project name only"
+    },
+    {
+      "local": "oled-carrier.pretty/R.kicad_mod",
+      "upstream": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "upstream_sha256": "7190ac4a00125b807e54129ef0d87d87f2a658eeb74d025a7028203419b09f23",
+      "changes": "Project name only"
+    },
+    {
+      "local": "oled-carrier.pretty/TestPoint.kicad_mod",
+      "upstream": "TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "upstream_sha256": "d7ae230b69d8c3dad5082515a51aac9e4840360c8f4324a00673353676d43042",
+      "changes": "Project name only"
+    },
+    {
+      "local": "oled-carrier.pretty/MountingHole.kicad_mod",
+      "upstream": "MountingHole.pretty/MountingHole_2.7mm_M2.5.kicad_mod",
+      "upstream_sha256": "d28d0215a45e6dd7c7ea0a27ffc55c41e75cd87ce37ab43b84c6cbe6abfe67d8",
+      "changes": "MountingHole: 2.9 mm NPTH and 3.5 mm hardware courtyard"
+    }
+  ],
+  "vendor_inputs": [
+    {
+      "url": "https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip",
+      "sha256": "477bc61cec652eaeefa887cb1f97abb1514e8a61ea9659240b88be7213c3b6ff",
+      "bytes": 339671,
+      "use": "Pinout and mechanical dimensions; original vendor design is not part of carrier fabrication files."
+    },
+    {
+      "url": "https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip",
+      "sha256": "671cb119639e489091b87a64e070d4aba1f22860ddfdbecc85ff143c0c295e28",
+      "bytes": 1084956,
+      "use": "Pinout and mechanical dimensions; original vendor design is not part of carrier fabrication files."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-128x64-Monochrome-OLED-PCB/51ef8e242dcf460d5effc298d8565110624e6b23/Adafruit_0.96in_128x64_OLED_STEMMA_QT.brd",
+      "sha256": "0f3edce362179e1520a71fe477d631187fbc6f914fc569b8ba39931fe741d617",
+      "bytes": 291290,
+      "use": "Pinout and mechanical dimensions; original vendor design is not part of carrier fabrication files."
+    },
+    {
+      "url": "https://suddendocs.samtec.com/catalog_english/bbs.pdf",
+      "sha256": "96b49c52de92c862ae3b32651e15321c6bfc0dd941d90d2a03e7867d01ae6d78",
+      "bytes": 410448,
+      "use": "Pinout and mechanical dimensions; original vendor design is not part of carrier fabrication files."
+    },
+    {
+      "url": "https://suddendocs.samtec.com/catalog_english/ss.pdf",
+      "sha256": "91121b88cd3e77e683f52214ccc7f69657fe2c60c77a45eb1838300cb0af42c8",
+      "bytes": 398379,
+      "use": "Pinout and mechanical dimensions; original vendor design is not part of carrier fabrication files."
+    }
+  ],
+  "symbols": [
+    {
+      "local": "Socket7",
+      "upstream": "Connector_Generic:Conn_01x07",
+      "source_library_sha256": "b40057d620867e58e8c3d1be9ab822bba6955e76ccfc566fd0945eedcf527fd3",
+      "changes": "Project-local symbol names; electrical pins unchanged."
+    },
+    {
+      "local": "Display4",
+      "upstream": "Connector_Generic:Conn_01x04",
+      "source_library_sha256": "b40057d620867e58e8c3d1be9ab822bba6955e76ccfc566fd0945eedcf527fd3",
+      "changes": "Project-local symbol names; electrical pins unchanged."
+    },
+    {
+      "local": "R",
+      "upstream": "Device:R",
+      "source_library_sha256": "d8cd2847723eef0397104b8647872c80147795358312230604a502750f87023d",
+      "changes": "Project-local symbol names; electrical pins unchanged."
+    },
+    {
+      "local": "TestPoint",
+      "upstream": "Connector:TestPoint",
+      "source_library_sha256": "50b42bf755009d3d459c310182dca1c37e1ff1a01fa6ae23846b416fafffc914",
+      "changes": "Project-local symbol names; electrical pins unchanged."
+    },
+    {
+      "local": "MountingHole",
+      "upstream": "Mechanical:MountingHole",
+      "source_library_sha256": "7eb7affded8c741aed9762b1c54655ac0f876fba66959e69518928849bc1a2ed",
+      "changes": "Project-local symbol names; electrical pins unchanged."
+    },
+    {
+      "local": "PWR_FLAG",
+      "upstream": "power:PWR_FLAG",
+      "source_library_sha256": "dfd086b4029e347d7a0041744b684ba8dda351ba8d8f7838cc0cbaeb06c87b54",
+      "changes": "Project-local symbol names; electrical pins unchanged."
+    }
+  ],
+  "component_envelopes": [
+    {
+      "model": "../cad/components/hss-107-g-2.step",
+      "sha256": "8b6bf8491de08bac85d6a7f6eccf983de21ab46906a36d5c23f5e7a2cbaac82e",
+      "type": "Source-derived dimensional envelope; not manufacturer STEP",
+      "source": "https://suddendocs.samtec.com/catalog_english/ss.pdf",
+      "native_footprint_rotation_deg": [
+        0,
+        0,
+        180
+      ],
+      "reason": "Envelope uses a +Y pin row; the native KiCad model frame uses a -Y row. The symmetric X section allows a 180 degree Z rotation."
+    }
+  ]
+}

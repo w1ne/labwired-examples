@@ -1,0 +1,19 @@
+# Pass --system <pinned-core>/configs/systems/esp32c3-oled-demo.yaml and --rom-boot.
+schema_version: "1.2"
+inputs:
+  firmware: "../firmware/.pio/build/clock/firmware.elf"
+limits:
+  max_steps: 300000000
+assertions:
+  - uart_contains: "ESP32-C3 Display Workshop"
+  - uart_contains: "WORKSHOP_TICK 19:00:00"
+  - uart_contains: "WORKSHOP_TICK 19:00:01"
+  - display_region:
+      id: "oled"
+      x: 0
+      y: 0
+      w: 128
+      h: 64
+      min_ink: 0.05
+      max_ink: 0.60
+  - expected_stop_reason: max_steps

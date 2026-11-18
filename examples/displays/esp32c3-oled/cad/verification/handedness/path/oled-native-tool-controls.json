@@ -1,0 +1,55 @@
+{
+  "sourceSha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+  "helperSha256": "ae9291012a3845cc9f35e160206e86bde68cd00b970cbb3f9cce185e343c1bc2",
+  "allControlsPassed": true,
+  "results": [
+    {
+      "case": "declared-six-mm-driver",
+      "expected": "clear",
+      "passed": true,
+      "proof": {
+        "basis": "exact-declared-cylinder-tool-swept-BREP",
+        "tool": {
+          "kind": "cylinder",
+          "lengthMm": 25,
+          "diameterMm": 6,
+          "label": "M2 nut driver envelope"
+        },
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "headMm": [
+          37.54,
+          -35.71,
+          21.999999999999996
+        ],
+        "toolTranslationDistanceMm": 100,
+        "totalAxialExtentMm": 125
+      },
+      "result": {
+        "clear": true,
+        "volumeMm3": 0
+      }
+    },
+    {
+      "case": "larger-six-point-two-mm-driver",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "volumeMm3": 1.047797593704118
+      }
+    },
+    {
+      "case": "driver-through-PCB-wrong-side",
+      "expected": "blocked",
+      "passed": true,
+      "result": {
+        "clear": false,
+        "volumeMm3": 29.387837922762927
+      }
+    }
+  ]
+}
