@@ -1,7 +1,7 @@
 ESP32-C3 OLED enclosure — assembly and fit notes
 
 STATUS
-This is an unprinted dimensional CAD candidate. Revision 2 passes the solid build, nine dimensional requirements, base/lid FDM checks and a design-loop review with actual screenshots. The full hosted assembly-path check still exhausts its work budget. A local generic containment improvement reaches nominal screw-seat and PCB-support contacts, then fails closed on sub-ulp mesh ambiguity. These results do not establish an accepted assembly sequence. No physical fit, print-quality, cable-routing, screw-torque, impact, thermal or environmental result is claimed.
+This is an unprinted dimensional CAD candidate. The current source passes 16 fit, registration and tool-clearance requirements. All 41 manufactured part geometries match the corrected native-coordinate source exactly; its valid STEP exports, base/lid FDM checks and reviewed actual renders remain applicable. A current-source independent path check passes 39 removal stages, both support phases and a shifted-screw negative control. Hosted assembly-path acceptance and physical hardware qualification remain open.
 
 FILES
 esp32c3-oled-enclosure.kcad.ts is the editable source. The output parameter selects assembly, base-print or lid-print.
@@ -16,7 +16,7 @@ PETG is the specified case material. Start with a 0.2 mm layer height and at lea
 Remove burrs from clearance holes and countersinks. Do not force a screw into an undersized printed hole. Confirm each bottom screw head is recessed below the base plane.
 
 TOOLS
-1.5 mm and 2 mm hex keys; 4 mm nut driver for M2 nuts; 5 mm spanner for spacer flats; caliper; nonconductive feeler strip.
+1.5 mm and 2 mm hex keys; Wera 2069 05118120001 nut driver for M2 nuts (4 mm AF,5.7 mm blade diameter,60 mm blade); 5 mm spanner for spacer flats; caliper; nonconductive feeler strip.
 Do not use a powered driver on the plastic case. No tightening torque has been qualified.
 
 ASSEMBLY ORDER TO CHECK ON THE BENCH
@@ -24,7 +24,7 @@ ASSEMBLY ORDER TO CHECK ON THE BENCH
 2. Put one 0.5 mm nylon washer at each carrier mounting position. Fit four 5 mm female spacers on the washers. Fit four 25 mm female spacers at the case corners. Retain all eight spacers with M2.5 x 5 countersunk screws inserted from below. Hold the spacer flats while turning each screw.
 3. Confirm the carrier support planes are 8.0 mm above the base underside. Fit the carrier on the four short spacers. Retain it with four M2.5 x 4 cap screws. The nominal opposing screw-tip gap inside each short spacer is0.44 mm; confirm the screws clamp the board and do not bottom against one another.
 4. Plug the XIAO into the two HSS sockets with its USB-C connector facing the left case notch. Support both header rows during insertion. The round-pin BHS/HSS pair and the stated stack height are mandatory; generic 8.5 mm sockets or square0.635 mm header tails are not equivalent.
-5. With the lid exterior face down on a clean soft surface, align the OLED glass with the window and its four mounting holes with the printed posts. Fit four M2 x 8 cap screws from the outside and four M2 nuts on the PCB rear. Tighten evenly only enough to retain the PCB. Keep the glass unloaded.
+5. With the lid exterior face down on a clean soft surface, align the OLED glass with the window and its four mounting holes with the printed posts. Fit four M2 x 8 cap screws from the outside and four M2 nuts on the PCB rear. Hold the lid so both the outside screw head and rear nut are accessible. Use the specified Wera driver to counterhold each nut while turning the1.5 mm hex key. Engage approximately1.4 mm of the1.6 mm nut; leave0.2 mm between the driver tip and PCB. The conservative6 mm rear-electronics reservation gives0.15 mm nominal radial clearance to the5.7 mm blade. Do not substitute a6 mm outer-diameter driver or press the tip into the PCB. Tighten evenly only enough to retain the PCB. Keep the glass unloaded.
 6. Before connecting the cable, confirm a gap between the glass and every printed support and between the glass face and lid. The two glass-near U supports end 1.0 mm from the hole centre toward the glass. Their nominal glass clearance is 1.277 mm; the original 2.3 mm screw position is unchanged and the arms/back remain 0.85 mm thick. The opposite two round supports remain unchanged. The vertical glass-to-lid gap is 0.50 mm with a 1.80 mm glass/film envelope. These are model values, not worst-case manufacturing tolerances. Check that a nonconductive 0.50 mm feeler passes freely at each glass-near support and measure the vertical gap before tightening. If the check fails, revise the editable geometry using measured parts. This is a proposed bench acceptance check, not a result. Keep the glass unloaded.
 7. Connect the Adafruit4210 100 mm JST-SH cable between the carrier and OLED. Route the cable through the reserved central corridor X26..36, Y15..34 in carrier coordinates. Keep it clear of the XIAO, display rear components, spacer threads and lid seam. Connector plugs and the cable bend have not been fit-verified; check them with the actual cable.
 8. Lower the lid vertically while watching the cable. The three locating tabs have0.30 mm nominal lateral clearance. Fit the four M2.5 x 8 lid screws. The lid must seat against the base without force or bowing.
@@ -43,11 +43,14 @@ The OLED rear components use a conservative3.2 mm keepout envelope. The cable an
 Purchased screws and female threads use smooth clearance envelopes. The model is not a thread-manufacturing drawing. Engagement lengths come from the BOM dimensions.
 Do not use the PCB assembly-envelope STEP to fabricate electronics. Use the native KiCad and manufacturing files in the hardware package.
 
-ORDERED PATH FOLLOW-UP (2026-11-18)
-The unchanged revision 2 geometry passes 39 nominal removal stages with every
-remaining source part retained as an obstacle. See verification/ordered-path-followup.
+ORDERED PATH AND TOOL FOLLOW-UP (2026-11-18)
+The current source passes 39 nominal removal stages with every remaining source
+part retained as an obstacle. See verification/tool-access/ordered-path-summary.json.
 Hold the base and lid for their respective phases. Hold the OLED and loose M2
-hardware until the fasteners engage; the support assessment requires these holds.
-The specified 6 mm nut-driver envelope has zero nominal clearance margin. Verify
-the actual tool, counterholding, cable and printed dimensions before assembly.
-This evidence does not establish physical assembly, torque or tolerance acceptance.
+hardware until the fasteners engage; both support phases record these holds.
+The sourced Wera 5.7 mm driver has0.150 mm minimum nominal clearance, including1.4 mm
+socket engagement and0.2 mm PCB tip clearance. Its handle and100 mm withdrawal
+sweep clear every other retained lid/display part. Larger 5.9 mm and6.2 mm tools,
+and0.2 mm PCB over-insertion, fail the stated margin or collision controls.
+Actual tool tolerances, counterholding, cable routing, print dimensions and
+assembly torque remain physical qualification items.

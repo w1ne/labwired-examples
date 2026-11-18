@@ -37,15 +37,15 @@
     "meshProvenance": "0fc34f9c6b51b9c50b1439e0436384ff44456bafe75cfa7ce90bcbf4ddb5469d",
     "published_version_is_current": false,
     "current_studio_revision_pending": true,
-    "source_sha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+    "source_sha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253",
     "historical_publication_note": "The revision-2 reference and provenance identify the earlier saved publication. This package source and exports supersede it; a corrected existing-project revision is pending."
   },
   "physical_hardware_tested": false,
   "open_acceptance_items": [
     "Save the corrected source into the existing Studio project, then verify the Lab model binding and OLED framebuffer orientation. Revision 2 remains historical.",
-    "Integrate and rerun full hosted assembly-path verification. Independent post-release evidence passes 39 ordered nominal geometric stages for all 41 source parts; hosted acceptance remains open.",
+    "Integrate and rerun full hosted assembly-path verification. Independent current-source evidence passes 39 ordered nominal geometric stages for all 41 parts; hosted acceptance remains open.",
     "Build and measure a physical prototype:1.277 mm nominal glass/support gap,0.50 mm vertical glass/lid gap, USB overmold, cable routing, short-spacer screw clearance and module revision.",
-    "Qualify real nut-driver clearance, counterholding and the external holds identified by support analysis; the modeled 6 mm driver has zero nominal dimensional margin."
+    "Check actual tool dimensions, counterholding and required external holds. Specified Wera 05118120001 now has0.150 mm nominal CAD clearance; physical assembly and torque remain unperformed."
   ],
   "verification": {
     "native_pcb": "manufacturing/validation.json",
@@ -54,8 +54,9 @@
     "released_browser_wasm": "verification/released-wasm-acceptance.json",
     "mechanical": "cad/release.json",
     "released_rom_boot": "verification/released-rom-boot-manifest.json",
-    "independent_ordered_path": "cad/verification/handedness/path/provenance.json",
-    "native_registration": "cad/verification/handedness/native-registration.json"
+    "independent_ordered_path": "cad/verification/tool-access/ordered-path-summary.json",
+    "native_registration": "cad/verification/handedness/native-registration.json",
+    "nut_driver_access": "cad/verification/tool-access/provenance.json"
   },
   "files": [
     {
@@ -70,18 +71,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 14890,
-      "sha256": "5a98cecb582f4f5b1cd7afff158f61f36188d47cf39ddf38052219ebaf80a0a6"
+      "bytes": 15410,
+      "sha256": "7e7ded3a8d178f05165b5436d571e0e5372757e74bbddd520adf2a0cc5b63a6b"
     },
     {
       "path": "bom.csv",
-      "bytes": 3918,
-      "sha256": "3dce94167f2abfa649b5d4f3be40a0d31025fd9cead18d95c792433d03c5d089"
+      "bytes": 4253,
+      "sha256": "1c1f7f97f22bcf990faccef1f117eb094af552feeeedc62ff264ccc86fd28273"
     },
     {
       "path": "cad/assembly.txt",
-      "bytes": 7209,
-      "sha256": "81f6b18b57134e82169635d8e9343d2814650f89de3929851353da2ec28b7bbb"
+      "bytes": 7866,
+      "sha256": "4083a4035a31c7d3d9d7ba801d80eb6c8d1e3c7c30ac38e0a052b61db0ff12d8"
     },
     {
       "path": "cad/components/hss-107-g-2.kcad.ts",
@@ -95,8 +96,8 @@
     },
     {
       "path": "cad/esp32c3-oled-enclosure.kcad.ts",
-      "bytes": 12796,
-      "sha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12"
+      "bytes": 13434,
+      "sha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253"
     },
     {
       "path": "cad/exports/esp32c3-oled-assembly.step",
@@ -145,18 +146,23 @@
     },
     {
       "path": "cad/mechanical-interface.json",
-      "bytes": 5431,
-      "sha256": "7baf6babeb8536ed06293272581d0ccf15223cfd1adf72350c63c2892229ba84"
+      "bytes": 6162,
+      "sha256": "eda5c0bc01720419aaea4362a275b38e1d63d3caec5f729496f5f9a09eafa4e0"
     },
     {
       "path": "cad/provenance.json",
-      "bytes": 2675,
-      "sha256": "16dede78ed859c188a3c8eae0742fe526421d21c2e87b88f718254846f8d29a1"
+      "bytes": 2981,
+      "sha256": "d95826cc6578529ed3331ebdbdb0945a4d35b6dc55ced79f72e3c7525a41f555"
+    },
+    {
+      "path": "cad/references/wera-05118120001.pdf",
+      "bytes": 454123,
+      "sha256": "f2bff4b30ddfc74f046f4b5d8368211a09493cef927536bde41c10ba158776b5"
     },
     {
       "path": "cad/release.json",
-      "bytes": 7438,
-      "sha256": "275f4b5a4cd0da4f89ba88e38dd6b09f8b90509d240ed46392315f9cab4e1dcc"
+      "bytes": 8160,
+      "sha256": "b77a450cf986c6279ec8ff03cf48a474e174623da80ffe412eb0731f10858db0"
     },
     {
       "path": "cad/renders/closed-front.png",
@@ -250,8 +256,8 @@
     },
     {
       "path": "cad/third-party-notices.txt",
-      "bytes": 987,
-      "sha256": "1a7770e368c1f06a6f8aacfb33a40d8e12411d8db6e6f6974c8e665a8ca56f4b"
+      "bytes": 1227,
+      "sha256": "05bd48d1c125e8fd16fff09a6fcda5443aefc338d5c63b8b80703f71b00a7177"
     },
     {
       "path": "cad/verification/assembly-export-v2.json",
@@ -692,6 +698,86 @@
       "path": "cad/verification/submitted-source.kcad.ts",
       "bytes": 82686,
       "sha256": "0dad608ad219e5c96d79d8b913d5183ccaee22ae67236006e3cd5b1a21f3b1de"
+    },
+    {
+      "path": "cad/verification/tool-access/engagement-clearance.json",
+      "bytes": 48192,
+      "sha256": "af3c1618f18e024f5f8239a6ff8e0e25192e76e8b7feae4bba13c4c49077167e"
+    },
+    {
+      "path": "cad/verification/tool-access/engagement-proof.json",
+      "bytes": 115744,
+      "sha256": "5a661c5952e30998651a8e5fca1453bfce28e4e1568e142ce431e5c97f827fb9"
+    },
+    {
+      "path": "cad/verification/tool-access/engagement-proof.mts",
+      "bytes": 6678,
+      "sha256": "fcefd20b48ff71ecff29b423236d9ba487e6eedfd83324a70aeceb7c74a9b5db"
+    },
+    {
+      "path": "cad/verification/tool-access/geometry-equivalence.json",
+      "bytes": 87668,
+      "sha256": "04bdff5a0ab63edf2169568f68073594b0604569f3294201db6478b832617eda"
+    },
+    {
+      "path": "cad/verification/tool-access/geometry-equivalence.mts",
+      "bytes": 3150,
+      "sha256": "899f30fa6bd9cab04d56d46a91d72db5a0b811717b74e0f24471f8568ba6868c"
+    },
+    {
+      "path": "cad/verification/tool-access/harness-api-rejection-engagement-proof.json",
+      "bytes": 950,
+      "sha256": "eac8dd1056a81a8ce337fcd473bd40cebc4fb37633df3f79e7d2125c1305df76"
+    },
+    {
+      "path": "cad/verification/tool-access/historical-path-rejection-engagement-proof.json",
+      "bytes": 47860,
+      "sha256": "1b18ae4d4c9e1f9a8cb0899484a31c69211436827ecc7fec4ee4c77d4b47ba0f"
+    },
+    {
+      "path": "cad/verification/tool-access/ordered-path-summary.json",
+      "bytes": 22954,
+      "sha256": "acebd1d6c7c07c8d386cf8b09088f66a056e9ca7042cde93b1198ebc538fc0d1"
+    },
+    {
+      "path": "cad/verification/tool-access/path/execution-completion.json",
+      "bytes": 572,
+      "sha256": "af4c19e6fadb8aeb6634bb3416c6e49de1c9f52a836e73e060376d8fc3f01425"
+    },
+    {
+      "path": "cad/verification/tool-access/path/native-axisymmetric-sweep.mts",
+      "bytes": 6842,
+      "sha256": "fe665761fdabd30e8f64ea14161f1a228758595b48642da89353003f3705fbb6"
+    },
+    {
+      "path": "cad/verification/tool-access/path/native-linear-sweep.mts",
+      "bytes": 4869,
+      "sha256": "96810e629c89af0a5713c3c6eeb935460dffccc1ed6607c13f16714197db76f1"
+    },
+    {
+      "path": "cad/verification/tool-access/path/native-tool-sweep.mts",
+      "bytes": 2063,
+      "sha256": "ae9291012a3845cc9f35e160206e86bde68cd00b970cbb3f9cce185e343c1bc2"
+    },
+    {
+      "path": "cad/verification/tool-access/path/oled-ordered-complete-native-path.json",
+      "bytes": 478571,
+      "sha256": "b563e4e4f66fd9dc4674717845ac583021dacdbcf32bb5e5c193621c23fe4c43"
+    },
+    {
+      "path": "cad/verification/tool-access/path/oled-ordered-complete-native-path.mts",
+      "bytes": 16359,
+      "sha256": "76e478e61d159216faf0b89a7b5b1a5f80aa39cf81e1bbed0e3795c367c74336"
+    },
+    {
+      "path": "cad/verification/tool-access/provenance.json",
+      "bytes": 1798,
+      "sha256": "8868194ec00261e4cb9507fe9745d46b80b1d44fe2cd256bbfeb3ab00b202860"
+    },
+    {
+      "path": "cad/verification/tool-access/submitted-source.kcad.ts",
+      "bytes": 13434,
+      "sha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253"
     },
     {
       "path": "cad/verification/visual-review-v2.json",

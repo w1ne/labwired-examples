@@ -1,0 +1,41 @@
+{
+  "sourceSha256": "d195ebb70a34a7b5ff6de3e203c80599295a2f7b4e80ab133ceaa1f9ba55c253",
+  "sourceBytes": 13434,
+  "priorSourceSha256": "503244ab430873cb2d03db5881a8043a292721574914764b27218e99de7b0b12",
+  "geometryChange": "none; selected driver metadata and four lid-phase tool clearance predicates only",
+  "tool": {
+    "manufacturer": "Wera",
+    "mpn": "05118120001",
+    "hexAfMm": 4,
+    "bladeDiameterMm": 5.7,
+    "bladeLengthMm": 60,
+    "handleLengthMm": 97,
+    "overallBoundingSizeMm": [
+      157,
+      13,
+      13
+    ],
+    "source": "https://hybris-media.wera.de/download/pdfgenerator-datasheets/en/05118120001.pdf"
+  },
+  "fit": {
+    "rearReservationDiameterMm": 6,
+    "nominalRadialMarginMm": 0.15,
+    "minimumClearanceMm": 0.1,
+    "nominalNutEngagementMm": 1.4,
+    "tipToPcbMm": 0.2
+  },
+  "state": "nominal-geometric-verification-passed",
+  "datasheet": {
+    "path": "../../references/wera-05118120001.pdf",
+    "source": "https://hybris-media.wera.de/download/pdfgenerator-datasheets/en/05118120001.pdf",
+    "bytes": 454123,
+    "sha256": "f2bff4b30ddfc74f046f4b5d8368211a09493cef927536bde41c10ba158776b5"
+  },
+  "requirements": "16/16 pass, including four 0.10 mm tool-margin requirements",
+  "toolEvidence": "engagement-clearance.json",
+  "geometryEquivalence": "geometry-equivalence.json",
+  "orderedPath": "ordered-path-summary.json",
+  "retainedGeometryEvidence": "All 41 per-part volume, world bounds, vertex/normal/index buffers and face partitions match the prior corrected source exactly. Its exports, print checks and actual renders remain valid geometry evidence.",
+  "negativeControls": "All four positions reject5.9 mm at the0.10 mm margin requirement;6.2 mm and0.2 mm PCB over-insertion have positive BREP overlap.",
+  "physicalHardwareTested": false
+}
