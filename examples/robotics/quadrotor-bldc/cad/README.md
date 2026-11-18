@@ -5,6 +5,29 @@ the native ESC substrate and population, and the current repaired OpenFC-Lite
 board. [Studio revision 6](https://app.kernelcad.com/p/DyJ405zg?version=6)
 is saved with 12 exact imported assets and a ready cloud display mesh.
 
+## Full native-solid assembly checkpoint — 18 November 2026
+
+The editable `drone-native-solids.kcad.ts` retains all 378 imported FC/ESC
+solids as separate parts with explicit fixed relationships. USB contact and
+shell bodies attach to their native connector housing; microSD contacts and
+shell bodies attach to their native socket housing. The native poses and all
+frame, motor and propeller bodies remain present.
+
+The [local full evaluator receipt](evidence/native-solid-evaluation-20261118/local-evaluation.json)
+passes with **894 features, 412 parts, 411 mates and zero diagnostics**. It checks
+13 poses across four rotor joints in 334.976 seconds on private runtime commit
+`b89aceba980c12ed404ce3963add0ee26106be0f`. Exact downloaded STEP bytes were
+staged locally; their original URLs and hashes are in the receipt. The source
+SHA-256 is `72810ad3fbf9ceb53b29d3fc50abbb2567e3416552b4df77d87d111884098dcb`.
+
+This evaluator checks joint limits, rigid attachment and sampled interference.
+Its own review hint still requires strict pose-envelope, support-intent and
+gravity review. The run used an 8 GiB local Node heap and does not establish
+hosted memory acceptance. Motor/propeller/support envelopes and physical load
+qualification remain separate from the exact imported PCB bodies. Studio
+revision 6 remains the earlier saved checkpoint until the complete strict
+review and hosted save succeed.
+
 ## Corrected native model datums — 18 November 2026
 
 The native boards now contain two source-qualified **3D model transform**
@@ -28,7 +51,8 @@ The new native STEP files retain **164 valid FC solids and 214 valid ESC
 solids**. Only Card1's eleven solids and ESC U12 move. All other body bounds
 are unchanged within the inspection API's 0.00001 mm comparison tolerance;
 all solid volumes are unchanged within 0.000001 mm3. This is a native datum
-proof. Full assembly acceptance still requires the corrected assembly replay.
+proof. The corrected all-solid evaluator replay above passes; strict physical
+review remains outstanding.
 
 - [Manufacturer drawing identity, exact datum calculations and limits](evidence/model-datum-correction-20261118/component-datums.json)
 - [Four native-source transform-only checks](evidence/model-datum-correction-20261118/source-transform-proof.json)
