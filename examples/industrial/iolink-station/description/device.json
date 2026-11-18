@@ -1,0 +1,104 @@
+{
+  "vendorId": 65535,
+  "vendorName": "LabWired",
+  "vendorUrl": "https://labwired.com",
+  "deviceId": 1,
+  "productName": "Eight-bit input station",
+  "productId": "L476-L6362A-DI8",
+  "deviceFamily": "LabWired educational bench examples",
+  "description": "Unassigned bench identity 0xFFFF/0x000001. STM32L476 plus L6362A and SN74HC165; eight 3.3 V shunt inputs. Not a registered or certified product identity.",
+  "copyright": "LabWired contributors",
+  "releaseDate": "2026-11-18",
+  "version": "V1.0",
+  "variables": [],
+  "processData": [
+    {
+      "id": "PD_DI8",
+      "in": {
+        "id": "PD_IN",
+        "bitLength": 8,
+        "fields": [
+          {
+            "name": "Input A (open=1, shunt=0)",
+            "bitOffset": 0,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          },
+          {
+            "name": "Input B (open=1, shunt=0)",
+            "bitOffset": 1,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          },
+          {
+            "name": "Input C (open=1, shunt=0)",
+            "bitOffset": 2,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          },
+          {
+            "name": "Input D (open=1, shunt=0)",
+            "bitOffset": 3,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          },
+          {
+            "name": "Input E (open=1, shunt=0)",
+            "bitOffset": 4,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          },
+          {
+            "name": "Input F (open=1, shunt=0)",
+            "bitOffset": 5,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          },
+          {
+            "name": "Input G (open=1, shunt=0)",
+            "bitOffset": 6,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          },
+          {
+            "name": "Input H (open=1, shunt=0)",
+            "bitOffset": 7,
+            "bitLength": 1,
+            "datatype": "BooleanT"
+          }
+        ]
+      }
+    }
+  ],
+  "physical": {
+    "bitrate": "COM2",
+    "minCycleTime": 10000,
+    "sioSupported": false,
+    "mSequenceCapability": 1
+  },
+  "terminalConnection": {
+    "type": "OtherConnectionT",
+    "description": "STEVAL-IOD003V1 CN1 five-position screw terminal. Pins 2 and 5 are unused. Nucleo logic is separately USB powered; field L+ feeds the PHY. No M12 connector is fitted.",
+    "wires": [
+      {
+        "pin": 1,
+        "function": "L+",
+        "color": "RD",
+        "name": "CN1 terminal 1"
+      },
+      {
+        "pin": 3,
+        "function": "L-",
+        "color": "BK",
+        "name": "CN1 terminal 3"
+      },
+      {
+        "pin": 4,
+        "function": "C/Q",
+        "color": "WH",
+        "name": "CN1 terminal 4"
+      }
+    ]
+  },
+  "status": "Source description; unassigned vendor identity. Semantic/CRC and official IODD 1.1 XSD checks are recorded separately from business-rule/conformity and physical acceptance."
+}

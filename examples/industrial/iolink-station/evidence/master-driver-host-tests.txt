@@ -1,0 +1,30 @@
+make: Entering directory '/data/worktrees/labwired-examples-iolink-package-20261118/examples/industrial/iolink-station/firmware/master'
+cc -std=c11 -Wall -Wextra -Werror -O1 -g -fsanitize=address,undefined l6360.c tests/test_l6360.c -o build/test_l6360
+build/test_l6360
+{"suite":"l6360-datasheet-contract","passed":12,"failed":0,"scope":"host unit tests; no physical bus or timing measurement"}
+python3 tests/check_timing.py
+{
+  "scope": "analytical timing bounds; no measured bus/waveform",
+  "i2c_timing_hex": "0x20f71b27",
+  "clock_bound_hz": [
+    76000000.0,
+    84000000.0
+  ],
+  "i2c_frequency_range_hz": [
+    259279.47598253278,
+    388170.0554528651
+  ],
+  "wake_pulse_range_us": [
+    76.19047619047619,
+    84.21052631578948
+  ],
+  "nominal_com2_actual_baud": 38406.144983197315,
+  "nominal_com2_divider_error_ppm": 160.02560409678068,
+  "master_frequency_acceptance_hz": [
+    38361.6,
+    38438.399999999994
+  ],
+  "wake_to_test_min_us": 1334,
+  "result": "PASS"
+}
+make: Leaving directory '/data/worktrees/labwired-examples-iolink-package-20261118/examples/industrial/iolink-station/firmware/master'

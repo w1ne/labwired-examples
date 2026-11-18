@@ -1,0 +1,105 @@
+{
+  "schema": "labwired.native-pcb-verification.v1",
+  "tool": "KiCad 10.0.8",
+  "board": {
+    "path": "electronics/input-board/input-board.kicad_pcb",
+    "bytes": 97605,
+    "sha256": "3c88ac04f9de2b6e85857b29755118534f445ae61e08aecdc440831a095f4daa"
+  },
+  "schematic": {
+    "path": "electronics/input-board/input-board.kicad_sch",
+    "bytes": 58241,
+    "sha256": "e3a9cc97a4f6a55c41e4f1678cd8389b26518b44274bf80bf0432986f91df04d"
+  },
+  "counts": {
+    "erc": 0,
+    "drc": 0,
+    "unconnected": 0,
+    "schematicParity": 0
+  },
+  "drcExclusions": [],
+  "stockIgnoredChecks": [
+    {
+      "description": "Footprint has no courtyard defined",
+      "key": "missing_courtyard"
+    },
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    },
+    {
+      "description": "Footprint doesn't match symbol's footprint filters",
+      "key": "footprint_filters_mismatch"
+    },
+    {
+      "description": "Footprint component type doesn't match footprint pads",
+      "key": "footprint_type_mismatch"
+    }
+  ],
+  "routing": "Freerouting 2.5.0 then native width/silkscreen repair; DSN/SES retained. 127 track/via items.",
+  "outlineMm": [
+    50,
+    40
+  ],
+  "thicknessMm": 1.6,
+  "mountingHoleDiameterMm": 3.2,
+  "mountingCentersMm": [
+    [
+      4,
+      4
+    ],
+    [
+      46,
+      4
+    ],
+    [
+      4,
+      36
+    ],
+    [
+      46,
+      36
+    ]
+  ],
+  "visualReview": {
+    "performed": true,
+    "scope": "Actual exported 3D view and corrected schematic PDF raster inspected; no whole-station fit or hardware assembly claim.",
+    "images": [
+      {
+        "path": "cad/input-board-iso.png",
+        "finding": "DIP16, vertical JST XH, 2x8 input header, passives and all four mounting holes are present. Mounting holes are visibly clear."
+      },
+      {
+        "path": "manufacturing/input-board/input-board.pdf",
+        "finding": "Pin/net labels and component values are legible. Actual line breaks replace escaped newline text; mounting symbols and notes do not cross the page footer."
+      }
+    ]
+  },
+  "derivedAssets": [
+    {
+      "path": "cad/input-board-populated.step",
+      "bytes": 1507137,
+      "sha256": "7b4c89a08d55ce7d8155b0d9a10db3d6260d8788e63e8c78e3eb51f1a56141a9"
+    },
+    {
+      "path": "cad/input-board-substrate.step",
+      "bytes": 73711,
+      "sha256": "752ff8e1fb4be841387489910da7ce05956d39f5a8c8acdc68fac005ba8e81bc"
+    },
+    {
+      "path": "cad/input-board-iso.png",
+      "bytes": 942961,
+      "sha256": "82646f2e6b5632a39ddbb6e5664169393aecc5127b158e16b4a403ebfb89233c"
+    },
+    {
+      "path": "manufacturing/input-board/input-board.pdf",
+      "bytes": 106215,
+      "sha256": "9bde97a2cbe0333644d8f7a4f8785b1b4bb007c9387d8898b199b6c7ec282a0b"
+    }
+  ],
+  "scope": "Manufacturing data candidate; no physical-board fabrication or populated-fit verification."
+}

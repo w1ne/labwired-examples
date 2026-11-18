@@ -1,0 +1,115 @@
+{
+  "schema": "labwired.example-package-candidate.v1",
+  "project": "iolink-station-l476",
+  "trackingIssue": "https://github.com/w1ne/labwired/issues/3555",
+  "state": "electrical/firmware build candidate; fitted full station and hardware acceptance pending",
+  "canonicalLab": "https://app.labwired.com/?lab=iolink-station-l476",
+  "nativeBoard": {
+    "path": "electronics/input-board/input-board.kicad_pcb",
+    "bytes": 97605,
+    "sha256": "3c88ac04f9de2b6e85857b29755118534f445ae61e08aecdc440831a095f4daa"
+  },
+  "nativeSchematic": {
+    "path": "electronics/input-board/input-board.kicad_sch",
+    "bytes": 58241,
+    "sha256": "e3a9cc97a4f6a55c41e4f1678cd8389b26518b44274bf80bf0432986f91df04d"
+  },
+  "populatedInputStep": {
+    "path": "cad/input-board-populated.step",
+    "bytes": 1507137,
+    "sha256": "7b4c89a08d55ce7d8155b0d9a10db3d6260d8788e63e8c78e3eb51f1a56141a9"
+  },
+  "firmware": [
+    {
+      "path": "firmware/release/iolink-device.bin",
+      "bytes": 22324,
+      "sha256": "78f502bc6d249b389275b24481c20d81d018a7fa28c1b7f33258f5f0cadfdae0"
+    },
+    {
+      "path": "firmware/release/iolink-device.elf",
+      "bytes": 1547352,
+      "sha256": "0e6cfe0df8a355dcf0f7508ba9ffc46e655edd5e82a1fb31227aa45a6bde8508"
+    },
+    {
+      "path": "firmware/release/iolink-master.bin",
+      "bytes": 23312,
+      "sha256": "153cb4a7007d160276caf1b29fcee726dde640db5946b945f04aa9e0293694c5"
+    },
+    {
+      "path": "firmware/release/iolink-master.elf",
+      "bytes": 1624956,
+      "sha256": "802f9f2cc0d4ca5e7b1e973ff67a72ff89d6e29e094ab8566ccba5a2b1ce50e1"
+    }
+  ],
+  "mechanicalDesignBinding": null,
+  "simulationContract": "Existing byte-wake fixture is separate from these physical HAL images; do not replace its ELF without a matching core/model run.",
+  "remaining": [
+    "Full fitted mount and hardware BOM",
+    "Matching physical-image core boot and protocol probes",
+    "Physical two-port acceptance and measurements",
+    "Region-specific AC lead selection",
+    "Current IODD business-rule check and conformity where applicable"
+  ],
+  "evidence": [
+    {
+      "path": "evidence/device-description-validation.txt",
+      "bytes": 93,
+      "sha256": "f347ea67a61948dabb09839e6cecd63f6f13a717e0acda148488859a91226812"
+    },
+    {
+      "path": "evidence/device-description.json",
+      "bytes": 1325,
+      "sha256": "217134378e8ee3f4dfd89b92ce8cdefe3f0479974a1a8b287db67dd82a6139c7"
+    },
+    {
+      "path": "evidence/device-physical-build.txt",
+      "bytes": 2650,
+      "sha256": "dc9dd7d91fcd263557d201667d1d8dad63c9f5262a0863aa6fdd09283e88ae23"
+    },
+    {
+      "path": "evidence/input-drc.json",
+      "bytes": 1068,
+      "sha256": "fb84b9ecf54a67001455ce8622b3843af5e69c26ab7aaa56f5b9e84b6dba6c45"
+    },
+    {
+      "path": "evidence/input-erc.json",
+      "bytes": 984,
+      "sha256": "0606373051e934cdabc09ec44564ce4588f2624455bcf36e100fb68f422aae4a"
+    },
+    {
+      "path": "evidence/input-native-review.json",
+      "bytes": 3007,
+      "sha256": "064666e93e3a11ed03bbe28e4e4594e25dc9b61403eb095f41e9e618b7d49122"
+    },
+    {
+      "path": "evidence/iolinki-host-regressions.txt",
+      "bytes": 4253,
+      "sha256": "7772bfe4d00765cc3a6ad3d25dee961cf68bfbb3f5e630be24ab27793e1d066d"
+    },
+    {
+      "path": "evidence/master-driver-host-tests.txt",
+      "bytes": 1114,
+      "sha256": "7bf2fd1493a8ab9d845d3c486d977f80ea135afe5ee4ef3eff89611f6e67acc8"
+    },
+    {
+      "path": "evidence/master-physical-build.txt",
+      "bytes": 2630,
+      "sha256": "2731449c378462fcb4ff047b0effe384a914dbbd22610c73d9175a0b6de4e840"
+    },
+    {
+      "path": "evidence/master-timing-analysis.json",
+      "bytes": 554,
+      "sha256": "72922ba9ee0a8c652195994a90c6c258c39893f36305401d995956721c7e47e1"
+    },
+    {
+      "path": "evidence/physical-build.json",
+      "bytes": 7020,
+      "sha256": "08ade3ba3c3e2dab986748d6fa8f710aa4b124bcca4cca1ec3839827431c9078"
+    },
+    {
+      "path": "evidence/protocol-profile.txt",
+      "bytes": 539,
+      "sha256": "d3389d1da22d528d58b9787c58fe4d794bacc82fd4a89842f2ca963c4294c4f9"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+quantity,unit,reference,manufacturer,mpn,description,source
+3,each,MCU-M; MCU-D1; MCU-D2,STMicroelectronics,NUCLEO-L476RG,STM32L476RG development board; retain USB-powered ST-LINK and MCO,https://www.st.com/en/evaluation-tools/nucleo-l476rg.html
+2,each,PHY-M1; PHY-M2,STMicroelectronics,STEVAL-IOM001V1,Purchased routed L6360 master shield; port 2 resistor/address rework required,https://www.st.com/en/evaluation-tools/steval-iom001v1.html
+2,each,PHY-D1; PHY-D2,STMicroelectronics,STEVAL-IOD003V1,Purchased routed L6362A device shield; UART/IN1 rework required,https://www.st.com/en/evaluation-tools/steval-iod003v1.html
+2,each,PCB-D1; PCB-D2,Fabricate from supplied native project,LABWIRED-DI8-A,Bare 50x40x1.6 mm two-layer input PCB; populate with input-board-bom.csv,../electronics/input-board/input-board.kicad_pcb
+11,each,IOM port2: R115 R119 R143 R114 R108 R117 R163; IOD each: R111 R112,Panasonic,ERJ3BD1000V,100 ohm 0.5% 0.1 W 0603 routing resistors; supply new parts or verify recovered parts,vendor-sources.json: ST IOM/IOD BOM
+1,each,PSU1,Mean Well,GST25A24-P1J,24 V 1.04 A Class I adapter; IEC C14 input; centre-positive 2.1x5.5x11 mm DC,https://www.meanwell.com/Upload/PDF/GST25A/GST25A-SPEC.PDF
+1,each,PWR-J1,Adafruit,368,Female 2.1 mm DC power jack to screw terminal adapter,https://www.adafruit.com/product/368
+2,each,PWR-S1; PWR-S2,WAGO,221-413,Separate three-conductor +24 V and return splices; single wire per clamp,https://www.wago.com/global/installation-terminal-blocks-and-connectors/splicing-connector-with-levers/p/221-413
+1.6,metre minimum cut length,FIELD1 FIELD2 PWR0 PWR1 PWR2,Belden,9533,3-core 24 AWG; 2x500 mm field and 3x200 mm power cuts; allow termination waste,https://catalog.belden.com/techdata/EN/9533_techdata.pdf
+3,each,USB-M; USB-D1; USB-D2,StarTech,USB2HABM1M,1 m USB-A to Mini-B for Nucleo ST-LINK power/debug,https://www.startech.com/en-at/cables/usb2habm1m
+2,each,INPUT-H1; INPUT-H2,JST,XHP-6,Six-position XH input-harness shell,https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf
+12,each,INPUT-H1/H2 contacts,JST,SXH-001T-P0.6,XH crimp contact for 24 AWG harness,https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf
+12,each,Nucleo input-harness shells,Harwin,M20-1060100,Single-position 2.54 mm female crimp housing; 14 mm high,https://www.harwin.com/products/M20-1060100
+12,each,Nucleo input-harness contacts,Harwin,M20-1180042,Gold loose female crimp contact; 22-30 AWG,https://www.harwin.com/products/M20-1180042
+3,metre minimum cut length,INPUT-H1/H2 conductors,Alpha Wire,3050,24 AWG stranded hook-up wire; twelve 250 mm cuts with colours in harnesses.json,https://www.alphawire.com/products/wire/hook-up-wire/premium/3050?popup=pdf
+16,each,Input J2 shunts,Samtec,SNT-100-BK-G,"2.54 mm shunt; eight per input board, close to read zero",https://www.samtec.com/products/snt
+1,each; regional choice pending,AC-CORD,Region dependent,UNSELECTED-IEC-C13-REGIONAL,Protective-earth IEC C13 mains cord with approved local plug and rating for GST25A24-P1J; unresolved regional item,https://www.meanwell.com/Upload/PDF/GST25A/GST25A-SPEC.PDF

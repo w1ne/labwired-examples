@@ -1,0 +1,172 @@
+{
+  "schema": "labwired.iolink-station.device-pinmap.v1",
+  "verifiedOn": "2026-11-18",
+  "mcuBoard": "NUCLEO-L476RG",
+  "phyBoard": "STEVAL-IOD003V1",
+  "deviceQuantity": 2,
+  "sources": [
+    {
+      "title": "UM2424 Rev 2, September 2023",
+      "url": "https://www.st.com/resource/en/user_manual/um2424-getting-started-with-stevaliod003v1-iolink-phy-device-evaluation-board-compatible-with-stm32-nucleo-stmicroelectronics.pdf",
+      "sections": [
+        "GPIO routing tables",
+        "Switches and jumpers",
+        "Field connector and supply"
+      ]
+    },
+    {
+      "title": "UM1724 Rev 17",
+      "url": "https://www.st.com/resource/en/user_manual/dm00105823-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf",
+      "sections": [
+        "Table 32 NUCLEO-L476RG Morpho",
+        "Section 7.9.1 HSE MCO"
+      ]
+    },
+    {
+      "title": "L6362A datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/l6362a.pdf",
+      "sections": [
+        "IN1/IN2 push-pull truth table",
+        "OL and DIAG",
+        "Receiver inversion"
+      ]
+    },
+    {
+      "title": "TI SN74HC165",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74hc165.pdf",
+      "sections": [
+        "DIP pinout and serial order"
+      ]
+    }
+  ],
+  "phySignals": [
+    {
+      "signal": "IN1",
+      "pin": "GND",
+      "remove": "R102",
+      "fit": "R112",
+      "purpose": "Ground reference selects push-pull with IN2 drive"
+    },
+    {
+      "signal": "IN2",
+      "pin": "PA9",
+      "function": "USART1_TX AF7 TXINV",
+      "connector": "CN10.21",
+      "remove": "R101",
+      "fit": "R111"
+    },
+    {
+      "signal": "OUTIQ",
+      "pin": "PA10",
+      "function": "USART1_RX AF7 RXINV",
+      "connector": "CN10.33",
+      "retain": "R103"
+    },
+    {
+      "signal": "EN",
+      "pin": "PC7",
+      "function": "GPIO output",
+      "connector": "CN10.19",
+      "retain": "R109; R10 330 ohm series"
+    },
+    {
+      "signal": "OL",
+      "pin": "PA6",
+      "function": "EXTI6 overload/wake",
+      "connector": "CN10.13",
+      "retain": "R105"
+    },
+    {
+      "signal": "DIAG",
+      "pin": "PA4",
+      "function": "GPIO active-low fault",
+      "connector": "CN7.32",
+      "retain": "R104"
+    }
+  ],
+  "routingResistor": {
+    "manufacturer": "Panasonic",
+    "mpn": "ERJ3BD1000V",
+    "resistanceOhm": 100,
+    "tolerancePercent": 0.5,
+    "powerW": 0.1,
+    "package": "0603",
+    "quantityPerDevice": 2
+  },
+  "switches": {
+    "SW1": "All three DIP positions closed",
+    "SW2": "2-3 factory",
+    "SW3": "2-3 factory",
+    "JP1": "closed",
+    "JP2": "open",
+    "JP3": "open: no backfeed",
+    "JP4": "open: no backfeed",
+    "JP5": "open: no backfeed",
+    "JP6": "open",
+    "NucleoJP5": "U5V"
+  },
+  "clockRequirement": "Same retained USB-powered ST-LINK MCO setup as master-pin-map.json; all three Nucleos require it.",
+  "fieldConnector": {
+    "reference": "CN1",
+    "mpn": "MB312-25405NIP",
+    "pins": {
+      "1": "L+",
+      "2": "unused",
+      "3": "GND",
+      "4": "C/Q",
+      "5": "unused"
+    }
+  },
+  "inputHarness": [
+    {
+      "j1": 1,
+      "signal": "GND",
+      "nucleo": "CN7.20"
+    },
+    {
+      "j1": 2,
+      "signal": "V3V3",
+      "nucleo": "CN7.16"
+    },
+    {
+      "j1": 3,
+      "signal": "CLK",
+      "mcuPin": "PB13",
+      "nucleo": "CN10.30"
+    },
+    {
+      "j1": 4,
+      "signal": "SH_LD_N",
+      "mcuPin": "PC6",
+      "nucleo": "CN10.4"
+    },
+    {
+      "j1": 5,
+      "signal": "QH",
+      "mcuPin": "PB14",
+      "nucleo": "CN10.28"
+    },
+    {
+      "j1": 6,
+      "signal": "GND",
+      "nucleo": "CN10.20"
+    }
+  ],
+  "serial": {
+    "baud": 38400,
+    "dataBits": 8,
+    "parity": "even",
+    "stopBits": 1,
+    "onlySupportedRate": "COM2",
+    "rxInverted": true,
+    "txInverted": true
+  },
+  "processData": {
+    "inputBytes": 1,
+    "outputBytes": 0,
+    "cycleMs": 10,
+    "sampleRateHz": 1000,
+    "bitMapping": "A=bit0 through H=bit7; closed shunt=0, open=1"
+  },
+  "qualification": "Source and build verified. Physical wiring, waveforms, UART/CQ timing and input data have not been measured."
+}
