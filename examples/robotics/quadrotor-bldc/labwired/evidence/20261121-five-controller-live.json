@@ -64,5 +64,58 @@
     "The five-controller run did not assert body position, velocity, quaternion, measured IMU, battery sag, thermal, real gate-driver current or six-DOF closed-loop response.",
     "Separate simulated driver-fault campaign is needed; do not infer actuator fault safety from startup-only requirements.",
     "The native six-layer physical PCB is not electrically equivalent to the STM32L476 model plant, and no physical flight is accepted."
-  ]
+  ],
+  "fault_campaign": {
+    "run_id": "world-job:1e04d462-bfb8-42c8-9f5f-b44672fe53af",
+    "result": "model_verified",
+    "mcu_count": 5,
+    "assertions": {
+      "passed": 9,
+      "total": 9
+    },
+    "source_scope": "Test-only FC source and a modified 16-part/79-wire fault-injection circuit from examples PR #34; original saved projects unmodified.",
+    "stimulus": "Test-only FC PC12 drives ESC1 PB7 high after 15000 FC ticks; this is not a physical external fault switch.",
+    "oracle": [
+      {
+        "node": "ctrl2",
+        "contains": "ROTOR 2 HALL LOCKED"
+      },
+      {
+        "node": "ctrl3",
+        "contains": "ROTOR 3 HALL LOCKED"
+      },
+      {
+        "node": "ctrl4",
+        "contains": "ROTOR 4 HALL LOCKED"
+      },
+      {
+        "node": "ctrl1",
+        "contains": "ESC 1 FAULT DRIVER"
+      },
+      {
+        "node": "ctrl1",
+        "contains": "ESC 1 LATCHED OFF"
+      },
+      {
+        "node": "fc",
+        "contains": "FC FAULT DETECTED - ALL ESC DISARM"
+      },
+      {
+        "node": "ctrl2",
+        "contains": "ESC 2 DISARMED"
+      },
+      {
+        "node": "ctrl3",
+        "contains": "ESC 3 DISARMED"
+      },
+      {
+        "node": "ctrl4",
+        "contains": "ESC 4 DISARMED"
+      }
+    ],
+    "limits": [
+      "Serial assertions verify modeled firmware fault/disarm sequence only.",
+      "No measured motor torque, thrust, 6DOF response, attitude stabilization, physical electrical/electronic protection or safe landing."
+    ]
+  }
 }
