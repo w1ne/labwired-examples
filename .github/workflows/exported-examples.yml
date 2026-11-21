@@ -12,6 +12,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "scripts/check-pathfinder-fit.mjs"
       - "examples/aerospace/pathfinder-rocket/**"
       - "examples/robotics/axiom-h1/**"
       - "examples/fabrication/a1-mini-printer/**"
