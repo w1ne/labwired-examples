@@ -1,0 +1,81 @@
+{
+  "tool": "OpenCascade cadquery-ocp 8.0.1.1.0",
+  "method": "BRep solid and face geometry, not STEP filename or Cartesian control points",
+  "scope": "declared package-body/contact dimensions and pin count; not supplier certification or physical sample inspection",
+  "models": {
+    "A4988SETTR-T": {
+      "source": "/usr/share/kicad/3dmodels/Package_DFN_QFN.3dshapes/QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm.step",
+      "source_sha256": "e9d6d740f505b03e5aa0ac826330f9e269344b84656d051f50eb07ac162749eb",
+      "path": "/data/a1-finish-mechanical-20261121/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee",
+      "drawing": "https://www.allegromicro.com/-/media/files/datasheets/a4988-datasheet.pdf",
+      "page": 19,
+      "source_ep_mm": [
+        3.15,
+        3.15
+      ],
+      "modified_heel_length_mm": {
+        "before": 0.4,
+        "after": 0.55
+      },
+      "bbox_mm": [
+        -2.5,
+        -2.5,
+        0.0,
+        2.5,
+        2.5,
+        0.92
+      ],
+      "contact_count": 28,
+      "contact_width_mm": 0.25,
+      "pitch_mm": 0.5,
+      "ep_mm": [
+        3.15,
+        3.15
+      ],
+      "valid_solid": true,
+      "pass": true
+    },
+    "LMR36520ADDAR": {
+      "source": "/usr/share/kicad/3dmodels/Package_SO.3dshapes/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm.step",
+      "source_sha256": "2d6f7e774e8143e3320cbd59eb5be9f3b7864614644e3b072006e1eb05fb7fa6",
+      "path": "/data/a1-finish-mechanical-20261121/models/LMR36520ADDAR_DDA0008B_drawing-checked.step",
+      "sha256": "2d6f7e774e8143e3320cbd59eb5be9f3b7864614644e3b072006e1eb05fb7fa6",
+      "drawing": "https://www.ti.com/lit/ds/symlink/lmr36520.pdf",
+      "package_drawing": "DDA0008B 4214849/B 09/2025",
+      "bbox_mm": [
+        -3.0,
+        -2.4500001,
+        -0.0,
+        3.0,
+        2.4500001,
+        1.5500001
+      ],
+      "contact_count": 8,
+      "pitch_mm": 1.27,
+      "ep_mm": [
+        2.29,
+        3.0
+      ],
+      "ep_allowed_mm": [
+        [
+          2.11,
+          2.71
+        ],
+        [
+          2.8,
+          3.4
+        ]
+      ],
+      "valid_solid": true,
+      "pass": true
+    }
+  },
+  "qualified_instances": {
+    "U10": "A4988SETTR-T",
+    "U11": "A4988SETTR-T",
+    "U12": "A4988SETTR-T",
+    "U13": "A4988SETTR-T",
+    "U20": "LMR36520ADDAR"
+  }
+}

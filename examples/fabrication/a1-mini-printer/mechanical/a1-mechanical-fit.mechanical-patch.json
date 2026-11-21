@@ -1,0 +1,86 @@
+{
+  "source": "/home/andrii/ventures/state/pr-merge-backlog/a1-usb4216-landpattern-20261121T0800Z/usb4216-a2-landpattern-candidate.kicad_pcb",
+  "source_sha256": "19e6b415ad41bd9c068ce39610e7412091724cf7323162625783c7bed13c0142",
+  "output": "/data/a1-finish-mechanical-20261121/a1-mechanical-fit.kicad_pcb",
+  "output_sha256": "6a28c9068728323e7b520e9f4cb2a0f1c0fa4a5aa108a4891778e58813b0230d",
+  "pad_changes": [
+    {
+      "pad": "NPTH",
+      "x_mm": 32.0,
+      "before_y_mm": 94.57,
+      "after_y_mm": 94.595,
+      "delta_y_mm": 0.025
+    },
+    {
+      "pad": "NPTH",
+      "x_mm": 38.0,
+      "before_y_mm": 94.57,
+      "after_y_mm": 94.595,
+      "delta_y_mm": 0.025
+    },
+    {
+      "pad": "SH",
+      "x_mm": 29.905,
+      "before_y_mm": 93.89,
+      "after_y_mm": 93.97,
+      "delta_y_mm": 0.08
+    },
+    {
+      "pad": "SH",
+      "x_mm": 29.905,
+      "before_y_mm": 97.92,
+      "after_y_mm": 97.895,
+      "delta_y_mm": -0.025
+    },
+    {
+      "pad": "SH",
+      "x_mm": 40.095,
+      "before_y_mm": 93.89,
+      "after_y_mm": 93.97,
+      "delta_y_mm": 0.08
+    },
+    {
+      "pad": "SH",
+      "x_mm": 40.095,
+      "before_y_mm": 97.92,
+      "after_y_mm": 97.895,
+      "delta_y_mm": -0.025
+    }
+  ],
+  "signal_pad_records_unchanged": true,
+  "models": {
+    "U10": {
+      "path": "/data/a1-finish-mechanical-20261121/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U11": {
+      "path": "/data/a1-finish-mechanical-20261121/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U12": {
+      "path": "/data/a1-finish-mechanical-20261121/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U13": {
+      "path": "/data/a1-finish-mechanical-20261121/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U20": {
+      "path": "/data/a1-finish-mechanical-20261121/models/LMR36520ADDAR_DDA0008B_drawing-checked.step",
+      "sha256": "2d6f7e774e8143e3320cbd59eb5be9f3b7864614644e3b072006e1eb05fb7fa6"
+    },
+    "J20": {
+      "path": "/data/a1-finish-mechanical-20261121/models/USB4216-03-A_A2_drawing-clearance.step",
+      "sha256": "b473402f376c634144b123f30ea4326d6ee7fe3c2818d60842cef381cba3b2df"
+    }
+  },
+  "primary_drawing": "GCT USB4216 revA2 28July2025 p1 recommended PCB layout",
+  "datum": {
+    "unchanged_signal_center_y_mm": 93.32,
+    "lower_shell_center_y_mm": 97.895,
+    "upper_shell_center_y_mm": 93.97,
+    "peg_center_y_mm": 94.595,
+    "body_front_y_mm": 99.99499999999999
+  },
+  "required_next": "refill copper zones and run original project DRC"
+}
