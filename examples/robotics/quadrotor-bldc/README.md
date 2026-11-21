@@ -138,3 +138,9 @@ Use **engineering-superintelligence demo** for the complete LabWired workflow an
 - [media/](media/) contains recordings and the scripts that produced them.
 
 The original [35-second single-channel recording](media/quadrotor-demo.mp4), [single-channel circuit](labwired/circuit.json), [firmware](firmware/main.c) and [evidence](labwired/evidence.json) are retained as historical reference. They do not establish four-channel operation. The original motor test uses a simulated inverter; it does not run ODrive firmware or reproduce a proprietary ODrive PCB.
+
+## Live Studio screenshot — 21 November 2026
+
+![Quadrotor motor bench, Mechanics view](media/labwired-live-mechanics-20261121.png)
+
+[Source-pinned live screenshot and independent verification scope](../../flagship-live-snapshots-20261121.json). Static CAD screenshot. Motor M1-M4 read No sample while electronics stopped. No flight or current motor-motion evidence.

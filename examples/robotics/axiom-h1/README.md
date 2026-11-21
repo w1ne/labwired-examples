@@ -35,3 +35,9 @@ A **local compile with the pending PCA9685 runtime branch** emitted 20 servo mod
 ## Regulated servo rail (21 November 2026)
 
 The [current exported input](20-servo-powered-input.json) is the **same unlisted LabWired project** with one modeled independent 5 V supply (`servo_rail`), 20 added servo VCC wires and one shared MCU ground wire. The original controller source, 20 PWM mapping wires, OE GPIO assignments, four input stimuli and three requirements remain byte-identical. Live `labwired_validate` reports **0 errors, 20 `SERVO_EXPANDER_UNMODELED` warnings, 0 `PWR_SUPPLY_UNCONNECTED` warnings**. An explicit hosted rerun returned **3/3 controller-only `model_verified`** on saved hash `386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548`. The model assumes an ideal regulated 5 V rail; **no real current capability, dynamic sag, torque, mechanical movement or collision safety** was verified. The original unpowered 30-part candidate remains in `20-servo-candidate.json` as a baseline; it is not the currently saved live revision.
+
+## Live Studio screenshot — 21 November 2026
+
+![AXIOM H1 controller, PCB view](media/labwired-live-pcb-20261121.png)
+
+[Source-pinned live screenshot and independent verification scope](../../flagship-live-snapshots-20261121.json). Original 10-part project PCB with 9/9 nets connected; not the 31-part servo candidate. No PCA-to-servo motion, MuJoCo coupling, fit or physical proof.
