@@ -14,8 +14,8 @@
     "id": "stm32f411ceu6-hse8-b2e4b857d2ee1f2336995b3e88c61f1d2dac982e5f00bda134e1ccec8a89dcff",
     "managed_source": "src/labwired_board_clock.c",
     "managed_source_sha256": "b2e4b857d2ee1f2336995b3e88c61f1d2dac982e5f00bda134e1ccec8a89dcff",
-    "labwired_commit": "a8f577b6318dbd0ce123030252d1d63cd07e0599",
-    "upstream_source": "https://github.com/w1ne/labwired/blob/a8f577b6318dbd0ce123030252d1d63cd07e0599/services/labwired-builder/src/pio-profile-files.ts",
+    "labwired_commit": "37c63a09ed59c3df743d2e8dd8eeb657ab132c73",
+    "upstream_source": "https://github.com/w1ne/labwired/blob/37c63a09ed59c3df743d2e8dd8eeb657ab132c73/services/labwired-builder/src/pio-profile-files.ts",
     "hse_hz": 8000000,
     "cpu_hz": 100000000,
     "pll": {
@@ -32,7 +32,9 @@
       "rx": "PA3",
       "baud": 115200
     },
-    "usb_enabled": false
+    "usb_enabled": false,
+    "validated_source_commit": "a8f577b6318dbd0ce123030252d1d63cd07e0599",
+    "managed_module_git_blob": "88fd21a63fc71722eb63fa92a80b9ebf36ecd9cb"
   },
   "build": {
     "command": "pio run -e a1-reference",

@@ -45,7 +45,7 @@ future hosted compiler image has its own separately recorded artifact identity.
 | `artifacts/a1-reference.elf` | `1dc47c7c7772a9e9cc65851530e0e885edf2482cd498938a3451fc02de919b14` |
 
 The sketch bytes are unchanged. The startup file is copied byte-for-byte from
-LabWired commit [a8f577b6318dbd0ce123030252d1d63cd07e0599](https://github.com/w1ne/labwired/commit/a8f577b6318dbd0ce123030252d1d63cd07e0599).
+LabWired commit [37c63a09ed59c3df743d2e8dd8eeb657ab132c73](https://github.com/w1ne/labwired/commit/37c63a09ed59c3df743d2e8dd8eeb657ab132c73).
 The profile identifier includes the startup SHA256; LabWired hashes that
 identifier into its compile cache and refuses an incompatible builder revision.
 The portable project supplies the same startup as a normal C translation unit.
