@@ -1,0 +1,67 @@
+{
+  "schema": "labwired-saved-example-evidence-v1",
+  "captured_date": "2026-11-21",
+  "saved_project_id": "c9ede30a619b12d7c97056a2da040cc1",
+  "name": "Pathfinder — hobby rocket: flight computer, camera, parachute, physics and CAD",
+  "board_id": "stm32f411ceu6-blackpill",
+  "content_hash": "2e8fef00dc7123091c40e3079e7d127604d5f5c8bb691da02bcd1a230fd70663",
+  "verified_hash": "2e8fef00dc7123091c40e3079e7d127604d5f5c8bb691da02bcd1a230fd70663",
+  "pcb_board_id": "pcb_e2ec5d2f4ade4aac",
+  "pcb_board_rev": 1,
+  "requirements": [
+    {
+      "id": "R1",
+      "status": "verified",
+      "text": "Boot: barometer and IMU pass the self-test; the pyro channel is off at reset; the board waits safe on the pad."
+    },
+    {
+      "id": "R2",
+      "status": "verified",
+      "text": "Arming: the arm switch calibrates ground pressure, powers the camera and starts recording before launch."
+    },
+    {
+      "id": "R3",
+      "status": "verified",
+      "text": "Launch and burnout: launch is detected from axial acceleration; burnout is detected between T+1.9 s and T+2.3 s (motor burn ends at 2.12 s)."
+    },
+    {
+      "id": "R4",
+      "status": "verified",
+      "text": "Apogee deployment: the pyro channel fires after true apogee (T+8.885 s in the CAD-mass flight, 8.835 s after launch detection) and no later than T+10.0 s, then switches off after 1 s."
+    },
+    {
+      "id": "R5",
+      "status": "verified",
+      "text": "Recovery: landing is detected, the camera stops recording and powers off, the flight summary reports apogee 355-372 m (simulated 364 m), and all outputs end safe."
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "pcb_export",
+      "status": "passed",
+      "created_at": 1794863313778,
+      "content_hash": "2e8fef00dc7123091c40e3079e7d127604d5f5c8bb691da02bcd1a230fd70663",
+      "pcb_board_id": "pcb_e2ec5d2f4ade4aac",
+      "pcb_board_rev": 1,
+      "artifact_hash": "c088f2ae5e5a6a86ce958a380314b678285e5f488cf954b5a81245346da5c5b7",
+      "ref": "pcb/pcb_e2ec5d2f4ade4aac/export/1/pcb_e2ec5d2f4ade4aac-rev1-fab.zip",
+      "fresh": true,
+      "stale_reason": null
+    },
+    {
+      "kind": "sim_verify",
+      "status": "model_verified",
+      "created_at": 1794921692180,
+      "content_hash": "2e8fef00dc7123091c40e3079e7d127604d5f5c8bb691da02bcd1a230fd70663",
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "artifact_hash": null,
+      "ref": null,
+      "fresh": true,
+      "stale_reason": null
+    }
+  ],
+  "observed_results_only": true,
+  "physical_acceptance": false,
+  "model_boundary": "Firmware phase transitions and saved simulated pressure/acceleration cases are verified; firmware-to-flight dynamics, fabrication, PCB fit and physical flight are not. This is the hobby-rocket showcase, not OLGA."
+}
