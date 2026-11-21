@@ -2,6 +2,12 @@
 
 This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, and a **four-channel STM32 propulsion bench**. The motor bench uses real compiled firmware and reduced-order motor models. It does not yet simulate the electronics or flight controller on the physical boards.
 
+## Separate five-controller live LabWired twin — 21 November 2026
+
+The [saved five-controller LabWired project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit) runs one STM32L476 flight controller with a BMI270 model, plus four STM32L476 ESC controllers and four simulated BLDC motors. On the **exact current saved revision**, hosted verification at 2,000,000 steps passed **four of four** independent Hall-lock serial assertions. The FC reported BMI270 online, arm command and takeoff **command**, but no sensor-measured takeoff, hover, flight-control stability or physical-hardware acceptance.
+
+A separate [single-channel safety campaign](https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit) passed **four of four** assertions: Hall-lock before injected fault, driver fault recognition, latched inverter-off marker and PB0 output low. It does not demonstrate a coupled four-motor in-flight failsafe. Source hash, saved project IDs, explicit oracle clauses and [live proof readback](labwired/evidence/20261121-five-controller-hosted-proof.json) are pinned here. Keep this experimental five-controller target separate from the four-channel published reference and the actual native ESC/FC hardware.
+
 ## Native FC mechanical candidate, 12 November 2026
 
 The [current CAD source and evidence](cad/README.md) replace the FC envelope with
