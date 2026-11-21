@@ -22,3 +22,11 @@ This example is exported from a **real saved LabWired project**, not a proposed 
 Firmware phase transitions and saved simulated pressure/acceleration cases are verified; firmware-to-flight dynamics, fabrication, PCB fit and physical flight are not. This is the hobby-rocket showcase, not OLGA.
 
 The linked PCB/CAD items, if present, are **not** reconstructed by the project-input import. The `evidence.json` file is a readback of the original saved project on 2026-11-21, not a promise that any future deployment or new copy has passed.
+
+## Pinned PCB-to-CAD geometry rejection
+
+The source-bound [pad fixture](pcb-cad-fit-negative.json) was read from LabWired PCB `pcb_e2ec5d2f4ade4aac`, revision 1 (38 parts, 152 pad centers). KernelCAD `K_DmeiaD`, immutable revision 2, declares a 38.4 mm coupler inner diameter and a 32 mm sled.
+
+[The executable negative-control check](../../../scripts/check-pathfinder-fit.mjs) computes the minimum projected width of all pad centers over every in-plane board rotation: **50.896 mm**. This exceeds the 38.4 mm coupler ID, even before adding pad sizes, board edge and clearance. The board **cannot fit** this CAD assembly. The test passing means this known incompatibility is correctly detected; it does **not** mean the rocket has passed PCB/CAD fit.
+
+A future design must revise the physical PCB placement/partition and native board, or intentionally change the airframe and rerun stability/mass/fit analyses. The current 42 mm airframe has no accepted avionics-board fit.
