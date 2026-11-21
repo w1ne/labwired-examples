@@ -1,0 +1,77 @@
+{
+  "schema": "labwired-examples/axiom-original-topology-promotion/v1",
+  "captured_utc_date": "2026-11-21",
+  "before_content_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+  "id": "e6b30d45ba55e64aa450a2aa292edd4b",
+  "content_hash": "0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee",
+  "verified_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+  "parts": 31,
+  "wires": 88,
+  "pcb_board_id": "pcb_172fd76a950f0bd9",
+  "pcb_board_rev": 2,
+  "source_preserved": true,
+  "metadata_preserved": true,
+  "media_preserved": true,
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "ESP32-C3 boots and recognizes both PCA9685 I2C devices.",
+      "check": {
+        "serial": [
+          {
+            "contains": "AXIOM_BOOT_OK"
+          },
+          {
+            "contains": "AXIOM_PCA_I2C:OK"
+          }
+        ]
+      },
+      "status": "stale"
+    },
+    {
+      "id": "R2",
+      "text": "Firmware writes all 20 logical actuator channels.",
+      "check": {
+        "serial": [
+          {
+            "contains": "AXIOM_20_CHANNELS_WRITTEN"
+          }
+        ]
+      },
+      "status": "stale"
+    },
+    {
+      "id": "R3",
+      "text": "At a 1500-mm target the range sensor reads 1500 mm and obstacle interlock clears.",
+      "check": {
+        "serial": [
+          {
+            "contains": "AXIOM_FIRST_RANGE_MM:1500"
+          },
+          {
+            "contains": "AXIOM_CLEAR_PATH"
+          }
+        ]
+      },
+      "status": "stale"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "sim_verify",
+      "status": "model_verified",
+      "created_at": 1795266554721,
+      "content_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "artifact_hash": null,
+      "ref": null,
+      "fresh": false,
+      "stale_reason": "project_changed"
+    }
+  ],
+  "source_input": "current-project.input.json",
+  "hosted_servo_runtime": "pending app deployment",
+  "linked_pcb_scope": "Original controller-only PCB; added actuators and external rail are not represented in this PCB",
+  "mechanical_scope": "QC9kIRT9@1 is linked in the README only; no mechanical binding or executable joint graph is present"
+}
