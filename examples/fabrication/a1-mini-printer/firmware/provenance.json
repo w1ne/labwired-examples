@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "scope": "Portable exact-source firmware build and local native WASM regressions. Final hosted acceptance is recorded by the parent release evidence.",
+  "source": {
+    "path": "src/main.ino",
+    "sha256": "6f1776ae97cd8b3d153e06a2715d23e60a891390a97a7af78041fdfe6a9bfeab",
+    "entry_path": "src/main.ino",
+    "language": "arduino",
+    "unchanged_sketch": true
+  },
+  "profile": {
+    "board_id": "stm32f411ceu6-chip",
+    "platformio_board": "genericSTM32F411CE",
+    "id": "stm32f411ceu6-hse8-b2e4b857d2ee1f2336995b3e88c61f1d2dac982e5f00bda134e1ccec8a89dcff",
+    "managed_source": "src/labwired_board_clock.c",
+    "managed_source_sha256": "b2e4b857d2ee1f2336995b3e88c61f1d2dac982e5f00bda134e1ccec8a89dcff",
+    "labwired_commit": "a8f577b6318dbd0ce123030252d1d63cd07e0599",
+    "upstream_source": "https://github.com/w1ne/labwired/blob/a8f577b6318dbd0ce123030252d1d63cd07e0599/services/labwired-builder/src/pio-profile-files.ts",
+    "hse_hz": 8000000,
+    "cpu_hz": 100000000,
+    "pll": {
+      "m": 8,
+      "n": 200,
+      "p": 2,
+      "q": 4
+    },
+    "apb1_hz": 50000000,
+    "apb2_hz": 100000000,
+    "serial": {
+      "peripheral": "USART2",
+      "tx": "PA2",
+      "rx": "PA3",
+      "baud": 115200
+    },
+    "usb_enabled": false
+  },
+  "build": {
+    "command": "pio run -e a1-reference",
+    "platformio_core_version": "6.2.0",
+    "packages": {
+      "ststm32": {
+        "version": "20.0.0",
+        "package_metadata_sha256": "fd31012f94f4d4660d8e596a9a6df0ec51571c06c20fc2248c36cb3330936b5c"
+      },
+      "framework-arduinoststm32": {
+        "version": "4.30000.0",
+        "package_metadata_sha256": "7927f8a1d1dd1f018cb7f953db6770e76e227018655258029815cbc44287a320"
+      },
+      "framework-cmsis": {
+        "version": "2.60300.0",
+        "package_metadata_sha256": "f40e1215061428f1366d78847d0d98b8b0d69365c51f86aef75fe3abb547a3cc"
+      },
+      "framework-cmsis-dsp": {
+        "version": "1.16.2",
+        "package_metadata_sha256": "2db3062fc0779170a5813b1b177881951ebe8e5186a48e1f003099c7d143a00d"
+      },
+      "toolchain-gccarmnoneeabi": {
+        "version": "1.120301.0",
+        "package_metadata_sha256": "e5038a37ce22f9c6e73f4129d17904c7d35a9757b390359dc3c863a75904c03b"
+      }
+    },
+    "platformio_board_manifest_sha256": "f66b94ada90dd8fd61abbed645003a0ac56b4ab99aa60568c750405989fcb4b0",
+    "configuration_sha256": "ef83908ad49919317174d8c55a8ec83b1d3a31819ced9a3179ae9f437f0ab0a8",
+    "duration_seconds": 11.63,
+    "ram_bytes": 2704,
+    "flash_bytes": 29060
+  },
+  "elf": {
+    "path": "artifacts/a1-reference.elf",
+    "sha256": "1dc47c7c7772a9e9cc65851530e0e885edf2482cd498938a3451fc02de919b14",
+    "bytes": 66740,
+    "same_bytes_as_builder_local_build": true,
+    "hosted_firmware_ref": null
+  },
+  "verification": {
+    "class": "local_native_wasm_regression",
+    "clock_receipt": "validation/local-clock.json",
+    "fault_summary": "validation/local-fault-summary.json",
+    "builder_build_receipt": "validation/builder-local-build.json",
+    "fault_cases_passed": 5,
+    "fault_cases_total": 5,
+    "post_pass_hold_cycles": 10000000,
+    "oracles_modified": false,
+    "stimuli_modified": false,
+    "engine_sha256": "03a9d741862dcc566e8a09d32a85585e92a49f7c90bef7ffcb057ca89d2018e7",
+    "circuit_diagram_sha256": "a682f7cf5a1d6e200f17bc6fe4d1bd3d37132dec9ecba39dc21001240816ff49",
+    "compiled_system_sha256": "2105b593161a4b288517303cce9e83de12d2dc547fd735e41757d4a3f8b660d5",
+    "case_manifest_sha256": "781371dd64363792db1b96bee949f5ab03f39b3779f2c09fd27ceeb9fbd22264"
+  },
+  "limits": [
+    "No physical board write or hardware qualification was performed.",
+    "The runtime does not qualify crystal startup, capacitor loading or oscillator accuracy.",
+    "The 100 MHz main PLL Q output is 50 MHz and unused; this firmware does not enable USB.",
+    "Local case receipts predate the final saved-project hosted acceptance and retain their original provenance.",
+    "The native model uses explicit regulated-supply boundaries, an ideal logic buffer and scripted endstop/temperature inputs."
+  ]
+}

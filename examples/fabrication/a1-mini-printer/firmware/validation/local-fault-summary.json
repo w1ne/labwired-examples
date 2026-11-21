@@ -1,0 +1,307 @@
+{
+  "identity": {
+    "diagramSha256": "a682f7cf5a1d6e200f17bc6fe4d1bd3d37132dec9ecba39dc21001240816ff49",
+    "caseManifestSha256": "781371dd64363792db1b96bee949f5ab03f39b3779f2c09fd27ceeb9fbd22264",
+    "systemSha256": "2105b593161a4b288517303cce9e83de12d2dc547fd735e41757d4a3f8b660d5",
+    "chipSha256": "8397e21cbbbaf3b008334d6c7de73e41ba82125b74f3fd7da8d8277fb3939d20",
+    "elfSha256": "1dc47c7c7772a9e9cc65851530e0e885edf2482cd498938a3451fc02de919b14",
+    "manifestFirmwareRef": "sha256:ce7ccaa4d0b2a74f5a3f081ec47da329ec7a98ce264738bb57022ea650dd2569",
+    "firmwarePath": "/data/a1-live-cad-20261121/bare-hse8-local.elf",
+    "sourceSha256": "6f1776ae97cd8b3d153e06a2715d23e60a891390a97a7af78041fdfe6a9bfeab",
+    "engineSha256": "03a9d741862dcc566e8a09d32a85585e92a49f7c90bef7ffcb057ca89d2018e7",
+    "compilerCommit": "546d462+bare-profile-uncommitted"
+  },
+  "holdCycles": 10000000,
+  "cases": [
+    {
+      "name": "emergency_stop_hot",
+      "pass": true,
+      "cycles": 41000000,
+      "wallMs": 4746.3657490000005,
+      "stopReason": "assertions_passed_after_hold",
+      "firstPassCycle": 31000000,
+      "holdCycles": 10000000,
+      "finalVerdict": {
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"MOTION_START\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"FAULT EMERGENCY_STOP\""
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB13 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB14 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB15 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB12 is high (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PA10 is low (gpio evidence)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sensor_out_of_range",
+      "pass": true,
+      "cycles": 37000000,
+      "wallMs": 4021.6296570000004,
+      "stopReason": "assertions_passed_after_hold",
+      "firstPassCycle": 27000000,
+      "holdCycles": 10000000,
+      "finalVerdict": {
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"FAULT SENSOR_FAULT\""
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB13 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB14 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB15 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB12 is high (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PA10 is low (gpio evidence)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "x_homing_timeout",
+      "pass": true,
+      "cycles": 198500000,
+      "wallMs": 20871.815387,
+      "stopReason": "assertions_passed_after_hold",
+      "firstPassCycle": 188500000,
+      "holdCycles": 10000000,
+      "finalVerdict": {
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"HOME_START\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"FAULT HOME_TIMEOUT\""
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB13 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB14 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB15 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB12 is high (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PA10 is low (gpio evidence)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "heat_no_rise",
+      "pass": true,
+      "cycles": 823000000,
+      "wallMs": 92553.254454,
+      "stopReason": "assertions_passed_after_hold",
+      "firstPassCycle": 813000000,
+      "holdCycles": 10000000,
+      "finalVerdict": {
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ALL_HOMED\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"FAULT HEAT_NO_RISE\""
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB13 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB14 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB15 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB12 is high (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PA10 is low (gpio evidence)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "normal_then_overtemp",
+      "pass": true,
+      "cycles": 57000000,
+      "wallMs": 7548.798653999998,
+      "stopReason": "assertions_passed_after_hold",
+      "firstPassCycle": 47000000,
+      "holdCycles": 10000000,
+      "finalVerdict": {
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"HOME_X\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"HOME_Y\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"HOME_Z\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ALL_HOMED\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"MOTION_START\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"PRINT_DONE\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"POSITION_STEPS 150 150 25 600\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"STEP_RISE_COUNTS\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"OUTPUTS_SAFE EN=1 HOT=0 BED=0 FAN=0\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"PRINT_DONE\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"FAULT OVERTEMP\""
+          },
+          {
+            "kind": "display",
+            "passed": true,
+            "detail": "display PAINTED on framebuffer (refresh_gen=n/a, ink=175>=100)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB13 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB14 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB15 is low (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB12 is high (gpio evidence)"
+          },
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PA10 is low (gpio evidence)"
+          }
+        ]
+      }
+    }
+  ]
+}
