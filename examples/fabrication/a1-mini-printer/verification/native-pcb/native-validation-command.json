@@ -1,0 +1,32 @@
+{
+  "pcb": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb",
+  "pcb_sha256": "b5c0150f327aae1f248b9a61d6feccc1185ad7934152249f1155c6fc3bb36c99",
+  "rules_sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71",
+  "schematic_sha256": "04543f9e7ed5b629feae1b4300723c32c0f89aa326c1aea4d836a97bd52fd97f",
+  "kicad_version": "10.0.8",
+  "command": [
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--schematic-parity",
+    "--format",
+    "json",
+    "--output",
+    "/data/a1-finish-pcb-20261121/release/evidence/native-drc.json",
+    "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb"
+  ],
+  "return_code": 0,
+  "elapsed_seconds": 5.346,
+  "schematic_parity_checked": true,
+  "counts": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "input_files_unchanged": true,
+  "input_hashes_after": {
+    ".kicad_pcb": "b5c0150f327aae1f248b9a61d6feccc1185ad7934152249f1155c6fc3bb36c99",
+    ".kicad_pro": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71",
+    ".kicad_sch": "04543f9e7ed5b629feae1b4300723c32c0f89aa326c1aea4d836a97bd52fd97f"
+  }
+}

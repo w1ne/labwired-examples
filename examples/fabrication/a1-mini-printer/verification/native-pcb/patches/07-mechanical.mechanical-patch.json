@@ -1,0 +1,86 @@
+{
+  "source": "/data/a1-finish-pcb-20261121/release/intermediate/06-fan-led.kicad_pcb",
+  "source_sha256": "716d6e155e5392e4ea6d93bebc9d6d19d681360485952c98610698ef755cc0e5",
+  "output": "/data/a1-finish-pcb-20261121/release/intermediate/07-mechanical.kicad_pcb",
+  "output_sha256": "5664e507590e42367fbe0914434ef8007684d484179c1b4c63e6462b8b4bee79",
+  "pad_changes": [
+    {
+      "pad": "NPTH",
+      "x_mm": 32.0,
+      "before_y_mm": 94.57,
+      "after_y_mm": 94.595,
+      "delta_y_mm": 0.025
+    },
+    {
+      "pad": "NPTH",
+      "x_mm": 38.0,
+      "before_y_mm": 94.57,
+      "after_y_mm": 94.595,
+      "delta_y_mm": 0.025
+    },
+    {
+      "pad": "SH",
+      "x_mm": 29.905,
+      "before_y_mm": 93.89,
+      "after_y_mm": 93.97,
+      "delta_y_mm": 0.08
+    },
+    {
+      "pad": "SH",
+      "x_mm": 29.905,
+      "before_y_mm": 97.92,
+      "after_y_mm": 97.895,
+      "delta_y_mm": -0.025
+    },
+    {
+      "pad": "SH",
+      "x_mm": 40.095,
+      "before_y_mm": 93.89,
+      "after_y_mm": 93.97,
+      "delta_y_mm": 0.08
+    },
+    {
+      "pad": "SH",
+      "x_mm": 40.095,
+      "before_y_mm": 97.92,
+      "after_y_mm": 97.895,
+      "delta_y_mm": -0.025
+    }
+  ],
+  "signal_pad_records_unchanged": true,
+  "models": {
+    "U10": {
+      "path": "${KIPRJMOD}/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U11": {
+      "path": "${KIPRJMOD}/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U12": {
+      "path": "${KIPRJMOD}/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U13": {
+      "path": "${KIPRJMOD}/models/A4988SETTR-T_ET_drawing-checked.step",
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    "U20": {
+      "path": "${KIPRJMOD}/models/LMR36520ADDAR_DDA0008B_drawing-checked.step",
+      "sha256": "2d6f7e774e8143e3320cbd59eb5be9f3b7864614644e3b072006e1eb05fb7fa6"
+    },
+    "J20": {
+      "path": "${KIPRJMOD}/models/USB4216-03-A_A2_drawing-clearance.step",
+      "sha256": "32bde23cf1b9b326e90cc035d162a1f111d813fbebf6cd93f239eb44cba72603"
+    }
+  },
+  "primary_drawing": "GCT USB4216 revA2 28July2025 p1 recommended PCB layout",
+  "datum": {
+    "unchanged_signal_center_y_mm": 93.32,
+    "lower_shell_center_y_mm": 97.895,
+    "upper_shell_center_y_mm": 93.97,
+    "peg_center_y_mm": 94.595,
+    "body_front_y_mm": 99.99499999999999
+  },
+  "required_next": "refill copper zones and run original project DRC"
+}

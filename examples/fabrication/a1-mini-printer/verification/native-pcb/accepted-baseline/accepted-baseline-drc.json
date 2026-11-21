@@ -1,0 +1,106 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-21T07:57:34",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [],
+    "source": "usb4216-a2-landpattern-candidate.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 29 [END_X] of U1 on F.Cu",
+                    "pos": {
+                        "x": 53.4375,
+                        "y": 54.75
+                    },
+                    "uuid": "db61bf82-5ff4-48ab-872f-5b771940f020"
+                },
+                {
+                    "description": "Track [END_X] on F.Cu, length 1.7198 mm",
+                    "pos": {
+                        "x": 88.9566,
+                        "y": 50.2316
+                    },
+                    "uuid": "4ab954b7-9ef4-49c8-868b-0458dfb161da"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [END_Y] on F.Cu, length 2.2627 mm",
+                    "pos": {
+                        "x": 89.725,
+                        "y": 61.6
+                    },
+                    "uuid": "4e80a821-9e1c-4eac-8e40-e4043b020b13"
+                },
+                {
+                    "description": "Pad 2 [END_Y] of U1 on F.Cu",
+                    "pos": {
+                        "x": 46.5625,
+                        "y": 51.75
+                    },
+                    "uuid": "6abefbaf-f5db-4197-b3fc-a4ef62829f20"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 45 [Z_DIR] of U1 on F.Cu",
+                    "pos": {
+                        "x": 48.75,
+                        "y": 50.5625
+                    },
+                    "uuid": "c0d825ff-8342-4f21-8ca5-d97f7168f757"
+                },
+                {
+                    "description": "Pad 19 [Z_DIR] of U12 on F.Cu",
+                    "pos": {
+                        "x": 64.0625,
+                        "y": 20.5
+                    },
+                    "uuid": "e6ffd87f-e431-40f9-a16f-70d61d0b0d58"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": []
+}

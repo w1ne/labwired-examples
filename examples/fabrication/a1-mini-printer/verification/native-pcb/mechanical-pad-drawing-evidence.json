@@ -1,0 +1,56 @@
+{
+  "schema": "labwired.native-mounting-pad-sources.v1",
+  "classification": "Six explicitly identified connector retention-pad groups, with two net-0 physical pads per group. These are mechanical mounting features, not connector circuit contacts.",
+  "sources": [
+    {
+      "refs": [
+        "J10",
+        "J11",
+        "J12",
+        "J13"
+      ],
+      "footprintItem": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/436/43650/436500211_sd.pdf",
+      "drawingTitle": "MICRO FIT (3.0) RIGHT ANGLE SMT CLIPS",
+      "evidence": "The drawing lists 43650-0410 as the four-circuit finish-B part. It identifies two mounting-clip holes, diameter 2.41 mm, and a four-circuit dimension C of 13.30 mm between mounting holes. Notes 6 and 12 identify the clips as retention features; note 12 specifies plated holes for soldered retention.",
+      "verifiedNative": {
+        "circuitPins": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "mechanicalPadNumber": "MP",
+        "mechanicalPadCountPerFootprint": 2,
+        "mountingPitchMm": 13.3,
+        "drillMm": 2.41
+      }
+    },
+    {
+      "refs": [
+        "J22",
+        "J23"
+      ],
+      "footprintItem": "JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf",
+      "drawingTitle": "SH CONNECTOR, top-entry BM04B-SRSS-TB",
+      "evidence": "The primary catalog identifies BM04B-SRSS-TB as four circuits at 1.00 mm pitch. The top-entry PCB layout shows two separate side retention pads, each 1.20 by 1.80 mm, outside the circuit-contact row. Their derived center span is 3.00 + 2*(0.70 + 1.20/2) = 5.60 mm.",
+      "verifiedNative": {
+        "circuitPins": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "mechanicalPadNumber": "MP",
+        "mechanicalPadCountPerFootprint": 2,
+        "mountingPitchMm": 5.6,
+        "padSizeMm": [
+          1.2,
+          1.8
+        ]
+      }
+    }
+  ],
+  "access": "Primary source content inspected through the connected web service on 2026-11-21. Local PDF downloads did not succeed and are not represented as archived files."
+}

@@ -1,0 +1,49 @@
+{
+  "kicad_version": "10.0.8",
+  "freerouting_version_for_fixed_input": "2.5.0",
+  "fixed_routing_input_sha256": "3d20e0bc9ffbd2e15602754de47ee537e51655ac6465c05a7aa926c4c5cf008d",
+  "accepted_baseline_sha256": "19e6b415ad41bd9c068ce39610e7412091724cf7323162625783c7bed13c0142",
+  "accepted_source_sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad",
+  "ordered_native_build_and_validation_scripts": [
+    {
+      "path": "close_end_z_and_e_step.py",
+      "sha256": "1318004ba87c4fa201ce6f825d877fee5017b7944e9b4e22b167da702724073b"
+    },
+    {
+      "path": "apply_usb_escape.py",
+      "sha256": "75df9be7f5cf0bd018a9eeb65835c4a7870f0c7d92658d931a0a8859112021bf"
+    },
+    {
+      "path": "apply_i2c_escape.py",
+      "sha256": "a07c8a2ad99cbaa5dac4d6bbc627bd5f411f43c7c9bd5733377556d4bfbf4044"
+    },
+    {
+      "path": "apply_vdda_supply.py",
+      "sha256": "c5520673449a62d302c1900efbb3dd5aaa3bb389cf1c9035339f3d92158ae1bb"
+    },
+    {
+      "path": "apply_fullstep_straps_resolved.py",
+      "sha256": "9f66d01c48a653e880dade83d31f6525699f51d5e27c303608f4615ddbef49fe"
+    },
+    {
+      "path": "apply_fan_led_topology.py",
+      "sha256": "65343ae5872a1f729c43b055f3e028b875770681aa5e5e0ff0df6a66aaf34b2f"
+    },
+    {
+      "path": "apply_mechanical_patch.py",
+      "sha256": "180876655823e98c2f6a52acbae2ac9323cf0386af7b6ad21f2814524bece52c"
+    },
+    {
+      "path": "finalize_native.py",
+      "sha256": "40754f967e19fbf9735723808fa1968527d3de54faaf5805f4b8151267607006"
+    },
+    {
+      "path": "audit_native.py",
+      "sha256": "2a070f673676df5974330b2c8da107ecd65db8a356800bd17939651edaabe9d3"
+    }
+  ],
+  "native_drc_pass": true,
+  "source_audit_pass": true,
+  "new_item_uuids_may_differ_on_reproduction": true,
+  "reproduction_entrypoint": "tools/reproduce_native.py"
+}

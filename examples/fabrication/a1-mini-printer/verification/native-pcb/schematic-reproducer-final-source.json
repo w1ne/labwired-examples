@@ -1,0 +1,47 @@
+{
+  "schema": "labwired.native-schematic-reproducer-final-source.v1",
+  "ok": true,
+  "platformSourceCommit": "cc3fe04c2cc3f541dcf77628fcd412e30827a241",
+  "nativePcbSha256": "b5c0150f327aae1f248b9a61d6feccc1185ad7934152249f1155c6fc3bb36c99",
+  "publishedSchematicSha256": "04543f9e7ed5b629feae1b4300723c32c0f89aa326c1aea4d836a97bd52fd97f",
+  "publishedNativeSourcesUnchanged": true,
+  "assemblyInput": {
+    "path": "hardware/source-inputs/native-pcb/schematic-native-assembly.json",
+    "sha256": "e316e5beb50707d60cd426671420c142074acd3d632585d790a209a9a9e8e3b0"
+  },
+  "tools": [
+    {
+      "path": "verification/native-pcb/tools/generate-native-schematic.mjs",
+      "sha256": "52a6d2f717f46a310978f50e4f25320b882703a2c6fccbad13c09114c18bef77"
+    },
+    {
+      "path": "verification/native-pcb/tools/finalize-schematic-package.mjs",
+      "sha256": "545826e161d97d721c0edbebc2c42802c01fb90d8334ddad7d582beda4bb1bee"
+    },
+    {
+      "path": "verification/native-pcb/tools/read-schematic-uuids.mjs",
+      "sha256": "ea58e44bd36a0d21b2427c0f5e6d2ca4c03d5926419769d095dc5378eff24290"
+    },
+    {
+      "path": "verification/native-pcb/tools/verify-native-schematic.py",
+      "sha256": "97a5c604fe8cf7e037e8b35900d5c38befaa4a8798e04fa77b0d46ac3883ad60"
+    }
+  ],
+  "generatedSchematicSha256": "01741bb658d7468e8deb8973bfa98816b00cbcb81837c321a55df150bdcf81e5",
+  "finalizedSchematicSha256": "b7a1bc79c20285bbfa882ccf05e33f58a49c90c64f684d01e197638c0bdd30a5",
+  "kicadXmlSha256": "fdf12cc395e35a395c1a57cb016e1235893eb2299726ff58151e34eca69b5ebf",
+  "validation": {
+    "electricalReferences": 153,
+    "uniqueElectricalPadNames": 526,
+    "allPhysicalPads": 604,
+    "parityIssues": 0,
+    "existingPcbUuidPathsMatched": 153,
+    "rootUuidMatches": true,
+    "physicalSymbolInstances": 157,
+    "physicalPinUuids": 526,
+    "allPhysicalSymbolUuidsMatch": true,
+    "allPhysicalPinUuidsMatch": true
+  },
+  "scope": "Electrical connectivity, native component metadata, mechanical retention inventory and existing PCB/schematic UUID identity. Byte-identical regeneration of the published schematic and its final drawing layout is not asserted. The frozen published PCB and schematic remain authoritative.",
+  "rawGateResultsNotRegenerated": "Frozen PCB/SCH/PRO bytes are unchanged, so their existing complete raw DRC, schematic parity and ERC reports remain attached to the same exact source hashes."
+}

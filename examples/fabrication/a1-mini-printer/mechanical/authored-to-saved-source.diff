@@ -1,0 +1,11 @@
+--- a1-native-fit.kcad.ts
++++ a1-native-fit.saved.kcad.ts
+@@ -41,7 +41,7 @@
+ const bottom=fixed('base-bottom',bottomShape.color(DARK),base,[100,4,8]);
+ for(const [i,x,y] of [[0,-126,-104],[1,-126,104],[2,142,-104],[3,142,104]]) fixed('foot-'+i,rr(20,24,5,5,x,y,0).color(BLACK),bottom,[x,y,5]);
+ 
+-const nativePcb=await lib.fromSTEP('https://raw.githubusercontent.com/w1ne/labwired-examples/539dff7c2c9a78790aeb159daefd04527fabe074/examples/fabrication/a1-mini-printer/hardware/exports/a1-printcore-populated.step');
++const nativePcb=await lib.fromSTEP("./inputs/4fa338f753a8.step");
+ const pcb=nativePcb.rotate([0,0,1],90).translate(57,-49,17.205);
+ // Retain the original part identity so existing saved references remain stable.
+ const pcbRef=A.part('controller-pcb-reserve',pcb);
