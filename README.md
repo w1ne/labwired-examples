@@ -13,6 +13,10 @@ This repository is for runnable hardware verification stories, **not concept art
 | [HeyPCB imported-board acceptance sample](examples/pcb/heypcb-import-acceptance/) | Seven pinned KiCad PCB files and model-gap evidence; no full-board pass | No mechanical model | Source blobs verified; seven imports reported in unmerged PR #2934; none completely simulated |
 | [Industrial BLDC fault verification](examples/industrial/bldc-fault-verification/) | STM32L476 compiled C, 24 V motor plant, three digital fault flags, inverter shutdown | No mechanical model in this example | Normal spin-up and 3 fault scenarios model-verified; ideal MCU supply, no physical bench |
 | [Quadrotor co-design](examples/robotics/quadrotor-bldc/) | Four STM32L476 C channels; separate native six-layer ESC with zero configured ERC/DRC findings | 36-part KernelCAD frame and four rotor joints; populated-board assembly candidate remains blocked | Candidate browser: 360 exact motor/CAD observations, isolated fault, pause and reset. Actual board simulation and flight remain open. |
+| [Pathfinder hobby rocket](examples/aerospace/pathfinder-rocket/) | STM32F411 saved firmware/diagram/stimuli; 5/5 saved flight-sequence oracle clauses | Linked CAD; PCB is wider than the stated available sled width | Saved model-verified firmware; **PCB fit and physical flight blocked** |
+| [AXIOM H1 humanoid controller](examples/robotics/axiom-h1/) | ESP32-C3 + two PCA9685 expanders, IMU and ToF; 3/3 controller clauses | Separate 20-DOF MuJoCo model and KernelCAD assembly | Saved firmware verified; **no expander-to-servo physics coupling** |
+| [A1 mini printer](examples/fabrication/a1-mini-printer/) | STM32F411 four-axis firmware, endstops, heaters and display; 2/2 saved clauses | Linked printer CAD; native cross-domain acceptance pending | Saved firmware verified; **machine/assembly behavior unverified** |
+| [P.I.G. robot arm](examples/robotics/pig-arm/) | Six PCA9685 servo channels, nine poses, limits and E-stop; 3/3 saved clauses | Physical motion/kinematics not accepted | Saved controller verified; **joint actuation not verified** |
 
 ## Featured video
 
@@ -20,7 +24,7 @@ This repository is for runnable hardware verification stories, **not concept art
 
 ## Run
 
-Open an example directory. It contains firmware source, the exact LabWired circuit JSON, observed test evidence, editable KernelCAD source when appropriate, and screenshots recorded from the actual tools. Each example links to a runnable LabWired project and a versioned KernelCAD design.
+Open an example directory. The export-backed packs contain the saved LabWired firmware, circuit, stimuli, and requirements in `project.input.json`, plus revision-pinned evidence in `evidence.json`. They link to existing saved projects. Some require separate linked PCB/CAD assets or further integration. An import does **not** imply the original evidence transfers to the new project. The quadrotor and other engineering demos additionally include native sources and recorded tools.
 
 For an introduction to firmware-aware circuit simulation, use the [LabWired circuit simulator guide](https://labwired.com/circuit-simulator/). It links to a GPIO-to-RC oscilloscope demonstration and explains the different browser linear-circuit and native ngspice capabilities. The quadrotor example above is a separate motor-control verification.
 
