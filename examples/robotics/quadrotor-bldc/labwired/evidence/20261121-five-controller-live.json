@@ -1,0 +1,68 @@
+{
+  "schema": "labwired-live-multi-mcu-proof-v1",
+  "captured_utc_date": "2026-11-21",
+  "source_reproducer": "https://github.com/w1ne/labwired-examples/pull/34",
+  "bench": {
+    "project_id": "701c988648a93ef187b74ede9d6544c6",
+    "parts": 16,
+    "wires": 78,
+    "content_hash": "de4341d8555f84df74e834826b5b563e4865884e8a9f4018c184398911c5f343",
+    "verified_hash": "de4341d8555f84df74e834826b5b563e4865884e8a9f4018c184398911c5f343",
+    "run_id": "world-job:c0ce92e3-110b-45a3-a2f8-da2f5e1cca6e",
+    "requirements": {
+      "passed": 4,
+      "total": 4
+    },
+    "evidence": {
+      "status": "model_verified",
+      "fresh": true
+    }
+  },
+  "full_wiring_candidate": {
+    "project_id": "2260a09dcf2b05f195b169a0180d5f54",
+    "parts": 17,
+    "wires": 81,
+    "content_hash": "b84409ca3381a22c00c5fe1bd9b493443d9f15ee07c873a055b7dfeffc3e2ab3",
+    "verified_hash": "b84409ca3381a22c00c5fe1bd9b493443d9f15ee07c873a055b7dfeffc3e2ab3",
+    "run_id": "world-job:f4903887-724d-4c7b-9482-f1755e3bdf15",
+    "requirements": {
+      "passed": 4,
+      "total": 4
+    },
+    "evidence": {
+      "status": "model_verified",
+      "fresh": true
+    },
+    "added_interface": "FC PC4 emergency-stop button and PB6/PB7 internal pullups on the 5-MCU circuit"
+  },
+  "oracle": [
+    {
+      "node": "ctrl1",
+      "contains": "ROTOR 1 HALL LOCKED"
+    },
+    {
+      "node": "ctrl2",
+      "contains": "ROTOR 2 HALL LOCKED"
+    },
+    {
+      "node": "ctrl3",
+      "contains": "ROTOR 3 HALL LOCKED"
+    },
+    {
+      "node": "ctrl4",
+      "contains": "ROTOR 4 HALL LOCKED"
+    }
+  ],
+  "fc_serial_observed": [
+    "FC READY BMI270 ONLINE",
+    "FC ARM COMMAND",
+    "FC TAKEOFF COMMAND"
+  ],
+  "limitations": [
+    "Motor controller Hall lock and flight-controller command markers do not demonstrate body movement, takeoff, hover or recovery.",
+    "The controller status on these source/diagram revisions does not establish physical 4in1 AT32F421 ESC or RP2354B FC equivalence.",
+    "The five-controller run did not assert body position, velocity, quaternion, measured IMU, battery sag, thermal, real gate-driver current or six-DOF closed-loop response.",
+    "Separate simulated driver-fault campaign is needed; do not infer actuator fault safety from startup-only requirements.",
+    "The native six-layer physical PCB is not electrically equivalent to the STM32L476 model plant, and no physical flight is accepted."
+  ]
+}
