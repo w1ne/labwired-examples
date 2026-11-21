@@ -15,6 +15,8 @@ A second live [five-controller safety-wiring project](https://app.labwired.com/p
 
 **Both** saved projects now have fresh, revision-matching **4/4 model-verified Hall-lock** requirements with original individual controller serial output. Exact project hashes, run IDs, scope and limitations are recorded in [the 21 November hosted receipt](labwired/evidence/20261121-five-controller-live.json). The validation script `node scripts/check-five-controller-live.mjs` checks the evidence metadata. It does not run firmware.
 
+A separate **five-controller test-only driver-fault campaign** now also passed **9/9 direct serial oracles** (`world-job:1e04d462-bfb8-42c8-9f5f-b44672fe53af`): ESC1 detected and latched the injected fault; the flight controller reported all-motor disarm, and ESC2–4 reported disarmed. This uses an FC PC12 → ESC1 PB7 injected-fault fixture rather than the saved normal-flight source. No motor-force, attitude or safe-landing result is inferred. The full clause manifest and test scope are in the same [live receipt](labwired/evidence/20261121-five-controller-live.json).
+
 These are successful **five-controller propulsion/control firmware** tests. A printed `FC TAKEOFF COMMAND` is not measured flight. **Six-DOF body translation, hover, attitude recovery, model-to-native ESC equivalence, battery/power, and physical flight remain open.** The full-flight candidate source in PR #34 remains draft for those gates. Keep it separate from the four-channel published reference.
 
 
