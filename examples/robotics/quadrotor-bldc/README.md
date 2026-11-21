@@ -8,6 +8,16 @@ The [saved five-controller LabWired project](https://app.labwired.com/p/7c92d38a
 
 A separate [single-channel safety campaign](https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit) passed **four of four** assertions: Hall-lock before injected fault, driver fault recognition, latched inverter-off marker and PB0 output low. It does not demonstrate a coupled four-motor in-flight failsafe. Source hash, saved project IDs, explicit oracle clauses and [live proof readback](labwired/evidence/20261121-five-controller-hosted-proof.json) are pinned here. Keep this experimental five-controller target separate from the four-channel published reference and the actual native ESC/FC hardware.
 
+
+## New five-MCU saved projects — 21 November 2026
+
+A second live [five-controller safety-wiring project](https://app.labwired.com/p/2260a09dcf2b05f195b169a0180d5f54/edit) contains the exact **17 parts and 81 wires** of the [source-bound flight-candidate PR #34](https://github.com/w1ne/labwired-examples/pull/34): 5 separately compiled STM32L476 firmwares, 4 BLDC motor plants, BMI270, four ESC fault inputs, and the FC emergency-stop switch on PC4 with PB6/PB7 I²C pull-ups. An original [16-part staging project](https://app.labwired.com/p/701c988648a93ef187b74ede9d6544c6/edit) was separately repaired in place with the same five exact firmware sources and kept for regression comparison.
+
+**Both** saved projects now have fresh, revision-matching **4/4 model-verified Hall-lock** requirements with original individual controller serial output. Exact project hashes, run IDs, scope and limitations are recorded in [the 21 November hosted receipt](labwired/evidence/20261121-five-controller-live.json). The validation script `node scripts/check-five-controller-live.mjs` checks the evidence metadata. It does not run firmware.
+
+These are successful **five-controller propulsion/control firmware** tests. A printed `FC TAKEOFF COMMAND` is not measured flight. **Six-DOF body translation, hover, attitude recovery, model-to-native ESC equivalence, battery/power, and physical flight remain open.** The full-flight candidate source in PR #34 remains draft for those gates. Keep it separate from the four-channel published reference.
+
+
 ## Native FC mechanical candidate, 12 November 2026
 
 The [current CAD source and evidence](cad/README.md) replace the FC envelope with
