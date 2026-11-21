@@ -1,0 +1,6068 @@
+{
+  "schema": "labwired.native-schematic-projection.v1",
+  "pcbRef": "sha256:55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad",
+  "assemblySha256": "a682f7cf5a1d6e200f17bc6fe4d1bd3d37132dec9ecba39dc21001240816ff49",
+  "schematicSha256": "556dda0632cc3a22f1627c1fbb02eb734dc54295cba8f5f07309e576b8c647e8",
+  "scope": "Electrical components and pad connectivity from the validated native PCB. Mechanical holes are retained in the PCB only. External test supplies are excluded.",
+  "componentCount": 153,
+  "netCount": 125,
+  "connectorGraphics": [
+    {
+      "ref": "J1",
+      "partId": "power24",
+      "originalModelType": "dc-barrel-jack",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J10",
+      "partId": "x_motor",
+      "originalModelType": "nema17",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J11",
+      "partId": "y_motor",
+      "originalModelType": "nema17",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J12",
+      "partId": "z_motor",
+      "originalModelType": "nema17",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J13",
+      "partId": "e_motor",
+      "originalModelType": "nema17",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J2",
+      "partId": "heater_bed",
+      "originalModelType": "resistor",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J3",
+      "partId": "heater_hotend",
+      "originalModelType": "resistor",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J4",
+      "partId": "fan",
+      "originalModelType": "dc-motor",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J5",
+      "partId": "fan2_header",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J22",
+      "partId": "screen",
+      "originalModelType": "oled-ssd1306",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J33",
+      "partId": "ntc_bed",
+      "originalModelType": "ntc-thermistor",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J34",
+      "partId": "ntc_hotend",
+      "originalModelType": "ntc-thermistor",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J30",
+      "partId": "endstop_x_header",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J31",
+      "partId": "endstop_y_header",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J32",
+      "partId": "endstop_z_header",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J35",
+      "partId": "controls_header",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J23",
+      "partId": "serial",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J21",
+      "partId": "debug_header",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "J20",
+      "partId": "usb_connector",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP20",
+      "partId": "TP20",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP22",
+      "partId": "TP22",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP21",
+      "partId": "TP21",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP2",
+      "partId": "TP2",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP4",
+      "partId": "TP4",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP1",
+      "partId": "TP1",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP3",
+      "partId": "TP3",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    },
+    {
+      "ref": "TP23",
+      "partId": "TP23",
+      "originalModelType": "pin-header",
+      "schematicType": "pin-header"
+    }
+  ],
+  "unboundPads": [
+    {
+      "ref": "U10",
+      "pad": "7",
+      "pin": "PAD_7",
+      "nativeNet": null
+    },
+    {
+      "ref": "U10",
+      "pad": "20",
+      "pin": "PAD_20",
+      "nativeNet": null
+    },
+    {
+      "ref": "U10",
+      "pad": "25",
+      "pin": "PAD_25",
+      "nativeNet": null
+    },
+    {
+      "ref": "U11",
+      "pad": "7",
+      "pin": "PAD_7",
+      "nativeNet": null
+    },
+    {
+      "ref": "U11",
+      "pad": "20",
+      "pin": "PAD_20",
+      "nativeNet": null
+    },
+    {
+      "ref": "U11",
+      "pad": "25",
+      "pin": "PAD_25",
+      "nativeNet": null
+    },
+    {
+      "ref": "U12",
+      "pad": "7",
+      "pin": "PAD_7",
+      "nativeNet": null
+    },
+    {
+      "ref": "U12",
+      "pad": "20",
+      "pin": "PAD_20",
+      "nativeNet": null
+    },
+    {
+      "ref": "U12",
+      "pad": "25",
+      "pin": "PAD_25",
+      "nativeNet": null
+    },
+    {
+      "ref": "U13",
+      "pad": "7",
+      "pin": "PAD_7",
+      "nativeNet": null
+    },
+    {
+      "ref": "U13",
+      "pad": "20",
+      "pin": "PAD_20",
+      "nativeNet": null
+    },
+    {
+      "ref": "U13",
+      "pad": "25",
+      "pin": "PAD_25",
+      "nativeNet": null
+    },
+    {
+      "ref": "J10",
+      "pad": "MP",
+      "pin": "PAD_MP",
+      "nativeNet": null
+    },
+    {
+      "ref": "J11",
+      "pad": "MP",
+      "pin": "PAD_MP",
+      "nativeNet": null
+    },
+    {
+      "ref": "J12",
+      "pad": "MP",
+      "pin": "PAD_MP",
+      "nativeNet": null
+    },
+    {
+      "ref": "J13",
+      "pad": "MP",
+      "pin": "PAD_MP",
+      "nativeNet": null
+    },
+    {
+      "ref": "J22",
+      "pad": "MP",
+      "pin": "PAD_MP",
+      "nativeNet": null
+    },
+    {
+      "ref": "J23",
+      "pad": "MP",
+      "pin": "PAD_MP",
+      "nativeNet": null
+    }
+  ],
+  "components": [
+    {
+      "ref": "C1",
+      "partId": "C1",
+      "value": "12p",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C10",
+      "partId": "C10",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C100",
+      "partId": "C100",
+      "value": "470u/35V",
+      "footprint": "CP_Elec_10x10.5",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C101",
+      "partId": "C101",
+      "value": "1u/50V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C102",
+      "partId": "C102",
+      "value": "4.7u/50V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C103",
+      "partId": "C103",
+      "value": "4.7u/50V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C104",
+      "partId": "C104",
+      "value": "22u/10V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C105",
+      "partId": "C105",
+      "value": "22u/10V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C106",
+      "partId": "C106",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C107",
+      "partId": "C107",
+      "value": "1u",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C109",
+      "partId": "C109",
+      "value": "4.7u",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C110",
+      "partId": "C110",
+      "value": "4.7u",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C112",
+      "partId": "C112",
+      "value": "220n/50V",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C120",
+      "partId": "C120",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C140",
+      "partId": "C140",
+      "value": "10n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C141",
+      "partId": "C141",
+      "value": "10n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C142",
+      "partId": "C142",
+      "value": "10n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C143",
+      "partId": "C143",
+      "value": "10n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C144",
+      "partId": "C144",
+      "value": "10n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C2",
+      "partId": "C2",
+      "value": "12p",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C3",
+      "partId": "C3",
+      "value": "2.2u",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C30",
+      "partId": "C30",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C31",
+      "partId": "C31",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C32",
+      "partId": "C32",
+      "value": "220n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C33",
+      "partId": "C33",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C34",
+      "partId": "C34",
+      "value": "100n/50V",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C35",
+      "partId": "C35",
+      "value": "47u/50V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C4",
+      "partId": "C4",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C40",
+      "partId": "C40",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C41",
+      "partId": "C41",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C42",
+      "partId": "C42",
+      "value": "220n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C43",
+      "partId": "C43",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C44",
+      "partId": "C44",
+      "value": "100n/50V",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C45",
+      "partId": "C45",
+      "value": "47u/50V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C5",
+      "partId": "C5",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C50",
+      "partId": "C50",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C51",
+      "partId": "C51",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C52",
+      "partId": "C52",
+      "value": "220n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C53",
+      "partId": "C53",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C54",
+      "partId": "C54",
+      "value": "100n/50V",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C55",
+      "partId": "C55",
+      "value": "47u/50V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C6",
+      "partId": "C6",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C60",
+      "partId": "C60",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C61",
+      "partId": "C61",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C62",
+      "partId": "C62",
+      "value": "220n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C63",
+      "partId": "C63",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C64",
+      "partId": "C64",
+      "value": "100n/50V",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C65",
+      "partId": "C65",
+      "value": "47u/50V",
+      "footprint": "C_1210_3225Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C7",
+      "partId": "C7",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C8",
+      "partId": "C8",
+      "value": "1u",
+      "footprint": "C_0805_2012Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "C9",
+      "partId": "C9",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "D1",
+      "partId": "D1",
+      "value": "SMBJ33A",
+      "footprint": "D_SMB",
+      "pinToPad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "D10",
+      "partId": "D10",
+      "value": "PWR",
+      "footprint": "LED_0603_1608Metric",
+      "pinToPad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "D11",
+      "partId": "led_fault",
+      "value": "FAULT",
+      "footprint": "LED_0603_1608Metric",
+      "pinToPad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "D3",
+      "partId": "D3",
+      "value": "SS34",
+      "footprint": "D_SMA",
+      "pinToPad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "D4",
+      "partId": "D4",
+      "value": "SS34",
+      "footprint": "D_SMA",
+      "pinToPad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "F1",
+      "partId": "F1",
+      "value": "25A MINI",
+      "footprint": "Fuseholder_Blade_Mini_Keystone_3568",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "L1",
+      "partId": "L1",
+      "value": "10uH/3.2A",
+      "footprint": "L_Bourns_SRN6045TA",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "Q1",
+      "partId": "Q1",
+      "value": "AOD4184A",
+      "footprint": "TO-252-3_TabPin2",
+      "pinToPad": {
+        "G": [
+          "1"
+        ],
+        "D": [
+          "2"
+        ],
+        "S": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "Q2",
+      "partId": "Q2",
+      "value": "AOD4184A",
+      "footprint": "TO-252-3_TabPin2",
+      "pinToPad": {
+        "G": [
+          "1"
+        ],
+        "D": [
+          "2"
+        ],
+        "S": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "Q3",
+      "partId": "Q3",
+      "value": "AOD4184A",
+      "footprint": "TO-252-3_TabPin2",
+      "pinToPad": {
+        "G": [
+          "1"
+        ],
+        "D": [
+          "2"
+        ],
+        "S": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "Q4",
+      "partId": "Q4",
+      "value": "AO3400A",
+      "footprint": "SOT-23",
+      "pinToPad": {
+        "G": [
+          "1"
+        ],
+        "S": [
+          "2"
+        ],
+        "D": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "Q5",
+      "partId": "Q5",
+      "value": "AO3400A",
+      "footprint": "SOT-23",
+      "pinToPad": {
+        "G": [
+          "1"
+        ],
+        "S": [
+          "2"
+        ],
+        "D": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "R1",
+      "partId": "R1",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R100",
+      "partId": "R100",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R103",
+      "partId": "R103",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R104",
+      "partId": "R104",
+      "value": "24.9k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R105",
+      "partId": "R105",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R120",
+      "partId": "R120",
+      "value": "33R",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R121",
+      "partId": "R121",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R122",
+      "partId": "R122",
+      "value": "33R",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R123",
+      "partId": "R123",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R124",
+      "partId": "R124",
+      "value": "33R",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R125",
+      "partId": "R125",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R126",
+      "partId": "R126",
+      "value": "100R",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R127",
+      "partId": "R127",
+      "value": "100R",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R128",
+      "partId": "R128",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R129",
+      "partId": "R129",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R140",
+      "partId": "R140",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R141",
+      "partId": "R141",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R142",
+      "partId": "R142",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R143",
+      "partId": "R143",
+      "value": "100k 0.1%",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R144",
+      "partId": "R144",
+      "value": "100k 0.1%",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R150",
+      "partId": "R150",
+      "value": "4.7k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R151",
+      "partId": "R151",
+      "value": "4.7k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R152",
+      "partId": "R152",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R153",
+      "partId": "R153",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R160",
+      "partId": "R160",
+      "value": "1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R161",
+      "partId": "led_r",
+      "value": "1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R2",
+      "partId": "R2",
+      "value": "100k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R3",
+      "partId": "R3",
+      "value": "22R",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R30",
+      "partId": "R30",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R31",
+      "partId": "R31",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R32",
+      "partId": "R32",
+      "value": "30.1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R33",
+      "partId": "R33",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R34",
+      "partId": "R34",
+      "value": "24.9k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R4",
+      "partId": "R4",
+      "value": "22R",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R40",
+      "partId": "R40",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R41",
+      "partId": "R41",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R42",
+      "partId": "R42",
+      "value": "30.1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R43",
+      "partId": "R43",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R44",
+      "partId": "R44",
+      "value": "24.9k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R5",
+      "partId": "R5",
+      "value": "5.1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R50",
+      "partId": "R50",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R51",
+      "partId": "R51",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R52",
+      "partId": "R52",
+      "value": "30.1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R53",
+      "partId": "R53",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R54",
+      "partId": "R54",
+      "value": "24.9k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R6",
+      "partId": "R6",
+      "value": "5.1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R60",
+      "partId": "R60",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R61",
+      "partId": "R61",
+      "value": "0.10R",
+      "footprint": "R_2512_6332Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R62",
+      "partId": "R62",
+      "value": "30.1k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R63",
+      "partId": "R63",
+      "value": "10k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R64",
+      "partId": "R64",
+      "value": "24.9k",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "R7",
+      "partId": "R7",
+      "value": "1M",
+      "footprint": "R_0603_1608Metric",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "SW1",
+      "partId": "SW1",
+      "value": "RESET",
+      "footprint": "SW_SPST_PTS810",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "U1",
+      "partId": "mcu",
+      "value": "STM32F411CEU6",
+      "footprint": "QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm",
+      "pinToPad": {
+        "VBAT": [
+          "1"
+        ],
+        "PC13": [
+          "2"
+        ],
+        "PC14": [
+          "3"
+        ],
+        "PC15": [
+          "4"
+        ],
+        "PH0": [
+          "5"
+        ],
+        "PH1": [
+          "6"
+        ],
+        "NRST": [
+          "7"
+        ],
+        "VSSA": [
+          "8"
+        ],
+        "VDDA": [
+          "9"
+        ],
+        "PA0": [
+          "10"
+        ],
+        "PA1": [
+          "11"
+        ],
+        "PA2": [
+          "12"
+        ],
+        "PA3": [
+          "13"
+        ],
+        "PA4": [
+          "14"
+        ],
+        "PA5": [
+          "15"
+        ],
+        "PA6": [
+          "16"
+        ],
+        "PA7": [
+          "17"
+        ],
+        "PB0": [
+          "18"
+        ],
+        "PB1": [
+          "19"
+        ],
+        "PB2": [
+          "20"
+        ],
+        "PB10": [
+          "21"
+        ],
+        "VCAP_1": [
+          "22"
+        ],
+        "VSS": [
+          "23",
+          "35",
+          "47",
+          "49"
+        ],
+        "VDD": [
+          "24",
+          "36",
+          "48"
+        ],
+        "PB12": [
+          "25"
+        ],
+        "PB13": [
+          "26"
+        ],
+        "PB14": [
+          "27"
+        ],
+        "PB15": [
+          "28"
+        ],
+        "PA8": [
+          "29"
+        ],
+        "PA9": [
+          "30"
+        ],
+        "PA10": [
+          "31"
+        ],
+        "PA11": [
+          "32"
+        ],
+        "PA12": [
+          "33"
+        ],
+        "PA13": [
+          "34"
+        ],
+        "PA14": [
+          "37"
+        ],
+        "PA15": [
+          "38"
+        ],
+        "PB3": [
+          "39"
+        ],
+        "PB4": [
+          "40"
+        ],
+        "PB5": [
+          "41"
+        ],
+        "PB6": [
+          "42"
+        ],
+        "PB7": [
+          "43"
+        ],
+        "BOOT0": [
+          "44"
+        ],
+        "PB8": [
+          "45"
+        ],
+        "PB9": [
+          "46"
+        ]
+      }
+    },
+    {
+      "ref": "U10",
+      "partId": "x_driver",
+      "value": "A4988SETTR-T",
+      "footprint": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "pinToPad": {
+        "2B": [
+          "1"
+        ],
+        "EN": [
+          "2"
+        ],
+        "GND": [
+          "3",
+          "18",
+          "29"
+        ],
+        "CP1": [
+          "4"
+        ],
+        "CP2": [
+          "5"
+        ],
+        "VCP": [
+          "6"
+        ],
+        "VREG": [
+          "8"
+        ],
+        "MS1": [
+          "9"
+        ],
+        "MS2": [
+          "10"
+        ],
+        "MS3": [
+          "11"
+        ],
+        "RESET": [
+          "12"
+        ],
+        "ROSC": [
+          "13"
+        ],
+        "SLEEP": [
+          "14"
+        ],
+        "VDD": [
+          "15"
+        ],
+        "STEP": [
+          "16"
+        ],
+        "REF": [
+          "17"
+        ],
+        "DIR": [
+          "19"
+        ],
+        "1B": [
+          "21"
+        ],
+        "VMOT": [
+          "22",
+          "28"
+        ],
+        "SENSE1": [
+          "23"
+        ],
+        "1A": [
+          "24"
+        ],
+        "2A": [
+          "26"
+        ],
+        "SENSE2": [
+          "27"
+        ],
+        "PAD_7": [
+          "7"
+        ],
+        "PAD_20": [
+          "20"
+        ],
+        "PAD_25": [
+          "25"
+        ]
+      }
+    },
+    {
+      "ref": "U11",
+      "partId": "y_driver",
+      "value": "A4988SETTR-T",
+      "footprint": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "pinToPad": {
+        "2B": [
+          "1"
+        ],
+        "EN": [
+          "2"
+        ],
+        "GND": [
+          "3",
+          "18",
+          "29"
+        ],
+        "CP1": [
+          "4"
+        ],
+        "CP2": [
+          "5"
+        ],
+        "VCP": [
+          "6"
+        ],
+        "VREG": [
+          "8"
+        ],
+        "MS1": [
+          "9"
+        ],
+        "MS2": [
+          "10"
+        ],
+        "MS3": [
+          "11"
+        ],
+        "RESET": [
+          "12"
+        ],
+        "ROSC": [
+          "13"
+        ],
+        "SLEEP": [
+          "14"
+        ],
+        "VDD": [
+          "15"
+        ],
+        "STEP": [
+          "16"
+        ],
+        "REF": [
+          "17"
+        ],
+        "DIR": [
+          "19"
+        ],
+        "1B": [
+          "21"
+        ],
+        "VMOT": [
+          "22",
+          "28"
+        ],
+        "SENSE1": [
+          "23"
+        ],
+        "1A": [
+          "24"
+        ],
+        "2A": [
+          "26"
+        ],
+        "SENSE2": [
+          "27"
+        ],
+        "PAD_7": [
+          "7"
+        ],
+        "PAD_20": [
+          "20"
+        ],
+        "PAD_25": [
+          "25"
+        ]
+      }
+    },
+    {
+      "ref": "U12",
+      "partId": "z_driver",
+      "value": "A4988SETTR-T",
+      "footprint": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "pinToPad": {
+        "2B": [
+          "1"
+        ],
+        "EN": [
+          "2"
+        ],
+        "GND": [
+          "3",
+          "18",
+          "29"
+        ],
+        "CP1": [
+          "4"
+        ],
+        "CP2": [
+          "5"
+        ],
+        "VCP": [
+          "6"
+        ],
+        "VREG": [
+          "8"
+        ],
+        "MS1": [
+          "9"
+        ],
+        "MS2": [
+          "10"
+        ],
+        "MS3": [
+          "11"
+        ],
+        "RESET": [
+          "12"
+        ],
+        "ROSC": [
+          "13"
+        ],
+        "SLEEP": [
+          "14"
+        ],
+        "VDD": [
+          "15"
+        ],
+        "STEP": [
+          "16"
+        ],
+        "REF": [
+          "17"
+        ],
+        "DIR": [
+          "19"
+        ],
+        "1B": [
+          "21"
+        ],
+        "VMOT": [
+          "22",
+          "28"
+        ],
+        "SENSE1": [
+          "23"
+        ],
+        "1A": [
+          "24"
+        ],
+        "2A": [
+          "26"
+        ],
+        "SENSE2": [
+          "27"
+        ],
+        "PAD_7": [
+          "7"
+        ],
+        "PAD_20": [
+          "20"
+        ],
+        "PAD_25": [
+          "25"
+        ]
+      }
+    },
+    {
+      "ref": "U13",
+      "partId": "e_driver",
+      "value": "A4988SETTR-T",
+      "footprint": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "pinToPad": {
+        "2B": [
+          "1"
+        ],
+        "EN": [
+          "2"
+        ],
+        "GND": [
+          "3",
+          "18",
+          "29"
+        ],
+        "CP1": [
+          "4"
+        ],
+        "CP2": [
+          "5"
+        ],
+        "VCP": [
+          "6"
+        ],
+        "VREG": [
+          "8"
+        ],
+        "MS1": [
+          "9"
+        ],
+        "MS2": [
+          "10"
+        ],
+        "MS3": [
+          "11"
+        ],
+        "RESET": [
+          "12"
+        ],
+        "ROSC": [
+          "13"
+        ],
+        "SLEEP": [
+          "14"
+        ],
+        "VDD": [
+          "15"
+        ],
+        "STEP": [
+          "16"
+        ],
+        "REF": [
+          "17"
+        ],
+        "DIR": [
+          "19"
+        ],
+        "1B": [
+          "21"
+        ],
+        "VMOT": [
+          "22",
+          "28"
+        ],
+        "SENSE1": [
+          "23"
+        ],
+        "1A": [
+          "24"
+        ],
+        "2A": [
+          "26"
+        ],
+        "SENSE2": [
+          "27"
+        ],
+        "PAD_7": [
+          "7"
+        ],
+        "PAD_20": [
+          "20"
+        ],
+        "PAD_25": [
+          "25"
+        ]
+      }
+    },
+    {
+      "ref": "U20",
+      "partId": "U20",
+      "value": "LMR36520A",
+      "footprint": "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm",
+      "pinToPad": {
+        "PGND": [
+          "1"
+        ],
+        "VIN": [
+          "2"
+        ],
+        "EN": [
+          "3"
+        ],
+        "PG": [
+          "4"
+        ],
+        "FB": [
+          "5"
+        ],
+        "VCC": [
+          "6"
+        ],
+        "BOOT": [
+          "7"
+        ],
+        "SW": [
+          "8"
+        ],
+        "PAD": [
+          "9"
+        ]
+      }
+    },
+    {
+      "ref": "U21",
+      "partId": "U21",
+      "value": "AP2112K-3.3",
+      "footprint": "SOT-23-5",
+      "pinToPad": {
+        "VIN": [
+          "1"
+        ],
+        "GND": [
+          "2"
+        ],
+        "EN": [
+          "3"
+        ],
+        "NC": [
+          "4"
+        ],
+        "VOUT": [
+          "5"
+        ]
+      }
+    },
+    {
+      "ref": "U30",
+      "partId": "U30",
+      "value": "74HCT125D",
+      "footprint": "SOIC-14_3.9x8.7mm_P1.27mm",
+      "pinToPad": {
+        "OE1": [
+          "1"
+        ],
+        "A1": [
+          "2"
+        ],
+        "Y1": [
+          "3"
+        ],
+        "OE2": [
+          "4"
+        ],
+        "A2": [
+          "5"
+        ],
+        "Y2": [
+          "6"
+        ],
+        "GND": [
+          "7"
+        ],
+        "Y3": [
+          "8"
+        ],
+        "A3": [
+          "9"
+        ],
+        "OE3": [
+          "10"
+        ],
+        "Y4": [
+          "11"
+        ],
+        "A4": [
+          "12"
+        ],
+        "OE4": [
+          "13"
+        ],
+        "VCC": [
+          "14"
+        ]
+      }
+    },
+    {
+      "ref": "U31",
+      "partId": "U31",
+      "value": "USBLC6-2SC6",
+      "footprint": "SOT-23-6",
+      "pinToPad": {
+        "IO1_A": [
+          "1"
+        ],
+        "GND": [
+          "2"
+        ],
+        "IO2_A": [
+          "3"
+        ],
+        "IO2_B": [
+          "4"
+        ],
+        "VBUS": [
+          "5"
+        ],
+        "IO1_B": [
+          "6"
+        ]
+      }
+    },
+    {
+      "ref": "Y1",
+      "partId": "Y1",
+      "value": "8MHz",
+      "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ],
+        "4": [
+          "4"
+        ]
+      }
+    },
+    {
+      "ref": "J1",
+      "partId": "power24",
+      "value": "24V INPUT",
+      "footprint": "AMASS_XT30PW-M_1x02_P2.50mm_Horizontal",
+      "pinToPad": {
+        "+": [
+          "1"
+        ],
+        "-": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "J10",
+      "partId": "x_motor",
+      "value": "X_MOTOR",
+      "footprint": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "pinToPad": {
+        "1A": [
+          "1"
+        ],
+        "1B": [
+          "2"
+        ],
+        "2A": [
+          "3"
+        ],
+        "2B": [
+          "4"
+        ],
+        "PAD_MP": [
+          "MP"
+        ]
+      }
+    },
+    {
+      "ref": "J11",
+      "partId": "y_motor",
+      "value": "Y_MOTOR",
+      "footprint": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "pinToPad": {
+        "1A": [
+          "1"
+        ],
+        "1B": [
+          "2"
+        ],
+        "2A": [
+          "3"
+        ],
+        "2B": [
+          "4"
+        ],
+        "PAD_MP": [
+          "MP"
+        ]
+      }
+    },
+    {
+      "ref": "J12",
+      "partId": "z_motor",
+      "value": "Z_MOTOR",
+      "footprint": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "pinToPad": {
+        "1A": [
+          "1"
+        ],
+        "1B": [
+          "2"
+        ],
+        "2A": [
+          "3"
+        ],
+        "2B": [
+          "4"
+        ],
+        "PAD_MP": [
+          "MP"
+        ]
+      }
+    },
+    {
+      "ref": "J13",
+      "partId": "e_motor",
+      "value": "E_MOTOR",
+      "footprint": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "pinToPad": {
+        "1A": [
+          "1"
+        ],
+        "1B": [
+          "2"
+        ],
+        "2A": [
+          "3"
+        ],
+        "2B": [
+          "4"
+        ],
+        "PAD_MP": [
+          "MP"
+        ]
+      }
+    },
+    {
+      "ref": "J2",
+      "partId": "heater_bed",
+      "value": "BED 24V/12A",
+      "footprint": "TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "J3",
+      "partId": "heater_hotend",
+      "value": "HOTEND 24V/3A",
+      "footprint": "TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "J4",
+      "partId": "fan",
+      "value": "FAN1",
+      "footprint": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "pinToPad": {
+        "+": [
+          "1"
+        ],
+        "-": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "J5",
+      "partId": "fan2_header",
+      "value": "FAN2",
+      "footprint": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "J22",
+      "partId": "screen",
+      "value": "OLED I2C",
+      "footprint": "JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical",
+      "pinToPad": {
+        "GND": [
+          "1"
+        ],
+        "VCC": [
+          "2"
+        ],
+        "SCL": [
+          "3"
+        ],
+        "SDA": [
+          "4"
+        ],
+        "PAD_MP": [
+          "MP"
+        ]
+      }
+    },
+    {
+      "ref": "J33",
+      "partId": "ntc_bed",
+      "value": "BED NTC",
+      "footprint": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "pinToPad": {
+        "A": [
+          "1"
+        ],
+        "B": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "J34",
+      "partId": "ntc_hotend",
+      "value": "HOT NTC",
+      "footprint": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "pinToPad": {
+        "A": [
+          "1"
+        ],
+        "B": [
+          "2"
+        ]
+      }
+    },
+    {
+      "ref": "J30",
+      "partId": "endstop_x_header",
+      "value": "X END",
+      "footprint": "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "J31",
+      "partId": "endstop_y_header",
+      "value": "Y END",
+      "footprint": "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "J32",
+      "partId": "endstop_z_header",
+      "value": "Z END",
+      "footprint": "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ]
+      }
+    },
+    {
+      "ref": "J35",
+      "partId": "controls_header",
+      "value": "ESTOP/START",
+      "footprint": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ],
+        "4": [
+          "4"
+        ]
+      }
+    },
+    {
+      "ref": "J23",
+      "partId": "serial",
+      "value": "UART",
+      "footprint": "JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ],
+        "4": [
+          "4"
+        ],
+        "PAD_MP": [
+          "MP"
+        ]
+      }
+    },
+    {
+      "ref": "J21",
+      "partId": "debug_header",
+      "value": "SWD",
+      "footprint": "PinHeader_2x05_P1.27mm_Vertical_SMD",
+      "pinToPad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3",
+          "5",
+          "9"
+        ],
+        "4": [
+          "4"
+        ],
+        "5": [
+          "6"
+        ],
+        "6": [
+          "7"
+        ],
+        "7": [
+          "8"
+        ],
+        "8": [
+          "10"
+        ]
+      }
+    },
+    {
+      "ref": "J20",
+      "partId": "usb_connector",
+      "value": "USB4216-03-A",
+      "footprint": "LabWired_GCT:USB4216-03-A",
+      "mpn": "USB4216-03-A",
+      "manufacturer": "GCT",
+      "datasheet": "https://www.mouser.lt/datasheet/3/1507/1/usb4216.pdf",
+      "pinToPad": {
+        "1": [
+          "A1",
+          "A12",
+          "B1",
+          "B12",
+          "SH"
+        ],
+        "2": [
+          "A4",
+          "A9",
+          "B4",
+          "B9"
+        ],
+        "3": [
+          "A5"
+        ],
+        "4": [
+          "B5"
+        ],
+        "5": [
+          "A6",
+          "B6"
+        ],
+        "6": [
+          "A7",
+          "B7"
+        ],
+        "7": [
+          "A8"
+        ],
+        "8": [
+          "B8"
+        ]
+      }
+    },
+    {
+      "ref": "TP20",
+      "partId": "TP20",
+      "value": "24V",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    },
+    {
+      "ref": "TP22",
+      "partId": "TP22",
+      "value": "3V3",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    },
+    {
+      "ref": "TP21",
+      "partId": "TP21",
+      "value": "5V",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    },
+    {
+      "ref": "TP2",
+      "partId": "TP2",
+      "value": "Y_VREF",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    },
+    {
+      "ref": "TP4",
+      "partId": "TP4",
+      "value": "E_VREF",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    },
+    {
+      "ref": "TP1",
+      "partId": "TP1",
+      "value": "X_VREF",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    },
+    {
+      "ref": "TP3",
+      "partId": "TP3",
+      "value": "Z_VREF",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    },
+    {
+      "ref": "TP23",
+      "partId": "TP23",
+      "value": "GND",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "pinToPad": {
+        "1": [
+          "1"
+        ]
+      }
+    }
+  ],
+  "nets": [
+    {
+      "code": 1,
+      "name": "+24V",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C100",
+          "pin": "1"
+        },
+        {
+          "part": "C101",
+          "pin": "1"
+        },
+        {
+          "part": "C102",
+          "pin": "1"
+        },
+        {
+          "part": "C103",
+          "pin": "1"
+        },
+        {
+          "part": "C112",
+          "pin": "1"
+        },
+        {
+          "part": "C31",
+          "pin": "2"
+        },
+        {
+          "part": "C34",
+          "pin": "1"
+        },
+        {
+          "part": "C35",
+          "pin": "1"
+        },
+        {
+          "part": "C41",
+          "pin": "2"
+        },
+        {
+          "part": "C44",
+          "pin": "1"
+        },
+        {
+          "part": "C45",
+          "pin": "1"
+        },
+        {
+          "part": "C51",
+          "pin": "2"
+        },
+        {
+          "part": "C54",
+          "pin": "1"
+        },
+        {
+          "part": "C55",
+          "pin": "1"
+        },
+        {
+          "part": "C61",
+          "pin": "2"
+        },
+        {
+          "part": "C64",
+          "pin": "1"
+        },
+        {
+          "part": "C65",
+          "pin": "1"
+        },
+        {
+          "part": "D1",
+          "pin": "K"
+        },
+        {
+          "part": "D3",
+          "pin": "K"
+        },
+        {
+          "part": "D4",
+          "pin": "K"
+        },
+        {
+          "part": "e_driver",
+          "pin": "VMOT"
+        },
+        {
+          "part": "F1",
+          "pin": "2"
+        },
+        {
+          "part": "fan",
+          "pin": "+"
+        },
+        {
+          "part": "fan2_header",
+          "pin": "1"
+        },
+        {
+          "part": "heater_bed",
+          "pin": "1"
+        },
+        {
+          "part": "heater_hotend",
+          "pin": "1"
+        },
+        {
+          "part": "R100",
+          "pin": "1"
+        },
+        {
+          "part": "TP20",
+          "pin": "1"
+        },
+        {
+          "part": "U20",
+          "pin": "VIN"
+        },
+        {
+          "part": "x_driver",
+          "pin": "VMOT"
+        },
+        {
+          "part": "y_driver",
+          "pin": "VMOT"
+        },
+        {
+          "part": "z_driver",
+          "pin": "VMOT"
+        }
+      ]
+    },
+    {
+      "code": 2,
+      "name": "+24VIN",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "F1",
+          "pin": "1"
+        },
+        {
+          "part": "power24",
+          "pin": "+"
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "name": "+3V3",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C10",
+          "pin": "1"
+        },
+        {
+          "part": "C110",
+          "pin": "1"
+        },
+        {
+          "part": "C33",
+          "pin": "1"
+        },
+        {
+          "part": "C4",
+          "pin": "1"
+        },
+        {
+          "part": "C43",
+          "pin": "1"
+        },
+        {
+          "part": "C5",
+          "pin": "1"
+        },
+        {
+          "part": "C53",
+          "pin": "1"
+        },
+        {
+          "part": "C6",
+          "pin": "1"
+        },
+        {
+          "part": "C63",
+          "pin": "1"
+        },
+        {
+          "part": "C7",
+          "pin": "1"
+        },
+        {
+          "part": "C8",
+          "pin": "1"
+        },
+        {
+          "part": "C9",
+          "pin": "1"
+        },
+        {
+          "part": "controls_header",
+          "pin": "4"
+        },
+        {
+          "part": "debug_header",
+          "pin": "1"
+        },
+        {
+          "part": "e_driver",
+          "pin": "RESET"
+        },
+        {
+          "part": "e_driver",
+          "pin": "SLEEP"
+        },
+        {
+          "part": "e_driver",
+          "pin": "VDD"
+        },
+        {
+          "part": "endstop_x_header",
+          "pin": "2"
+        },
+        {
+          "part": "endstop_y_header",
+          "pin": "2"
+        },
+        {
+          "part": "endstop_z_header",
+          "pin": "2"
+        },
+        {
+          "part": "led_r",
+          "pin": "1"
+        },
+        {
+          "part": "mcu",
+          "pin": "VBAT"
+        },
+        {
+          "part": "mcu",
+          "pin": "VDD"
+        },
+        {
+          "part": "mcu",
+          "pin": "VDDA"
+        },
+        {
+          "part": "ntc_bed",
+          "pin": "A"
+        },
+        {
+          "part": "ntc_hotend",
+          "pin": "A"
+        },
+        {
+          "part": "R1",
+          "pin": "1"
+        },
+        {
+          "part": "R105",
+          "pin": "1"
+        },
+        {
+          "part": "R140",
+          "pin": "1"
+        },
+        {
+          "part": "R141",
+          "pin": "1"
+        },
+        {
+          "part": "R142",
+          "pin": "1"
+        },
+        {
+          "part": "R150",
+          "pin": "1"
+        },
+        {
+          "part": "R151",
+          "pin": "1"
+        },
+        {
+          "part": "R152",
+          "pin": "1"
+        },
+        {
+          "part": "R153",
+          "pin": "1"
+        },
+        {
+          "part": "R160",
+          "pin": "1"
+        },
+        {
+          "part": "R32",
+          "pin": "1"
+        },
+        {
+          "part": "R42",
+          "pin": "1"
+        },
+        {
+          "part": "R52",
+          "pin": "1"
+        },
+        {
+          "part": "R62",
+          "pin": "1"
+        },
+        {
+          "part": "screen",
+          "pin": "VCC"
+        },
+        {
+          "part": "serial",
+          "pin": "2"
+        },
+        {
+          "part": "TP22",
+          "pin": "1"
+        },
+        {
+          "part": "U21",
+          "pin": "VOUT"
+        },
+        {
+          "part": "x_driver",
+          "pin": "RESET"
+        },
+        {
+          "part": "x_driver",
+          "pin": "SLEEP"
+        },
+        {
+          "part": "x_driver",
+          "pin": "VDD"
+        },
+        {
+          "part": "y_driver",
+          "pin": "RESET"
+        },
+        {
+          "part": "y_driver",
+          "pin": "SLEEP"
+        },
+        {
+          "part": "y_driver",
+          "pin": "VDD"
+        },
+        {
+          "part": "z_driver",
+          "pin": "RESET"
+        },
+        {
+          "part": "z_driver",
+          "pin": "SLEEP"
+        },
+        {
+          "part": "z_driver",
+          "pin": "VDD"
+        }
+      ]
+    },
+    {
+      "code": 4,
+      "name": "+5V",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C104",
+          "pin": "1"
+        },
+        {
+          "part": "C105",
+          "pin": "1"
+        },
+        {
+          "part": "C109",
+          "pin": "1"
+        },
+        {
+          "part": "C120",
+          "pin": "1"
+        },
+        {
+          "part": "L1",
+          "pin": "2"
+        },
+        {
+          "part": "R103",
+          "pin": "1"
+        },
+        {
+          "part": "TP21",
+          "pin": "1"
+        },
+        {
+          "part": "U21",
+          "pin": "EN"
+        },
+        {
+          "part": "U21",
+          "pin": "VIN"
+        },
+        {
+          "part": "U30",
+          "pin": "VCC"
+        }
+      ]
+    },
+    {
+      "code": 5,
+      "name": "BED_CMD",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB14"
+        },
+        {
+          "part": "U30",
+          "pin": "A2"
+        }
+      ]
+    },
+    {
+      "code": 6,
+      "name": "BED_GATE",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R120",
+          "pin": "1"
+        },
+        {
+          "part": "R122",
+          "pin": "1"
+        },
+        {
+          "part": "U30",
+          "pin": "Y2"
+        }
+      ]
+    },
+    {
+      "code": 7,
+      "name": "BED_GATE_A",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "Q1",
+          "pin": "G"
+        },
+        {
+          "part": "R120",
+          "pin": "2"
+        },
+        {
+          "part": "R121",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 8,
+      "name": "BED_GATE_B",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "Q2",
+          "pin": "G"
+        },
+        {
+          "part": "R122",
+          "pin": "2"
+        },
+        {
+          "part": "R123",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 9,
+      "name": "BED_SW",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "heater_bed",
+          "pin": "2"
+        },
+        {
+          "part": "Q1",
+          "pin": "D"
+        },
+        {
+          "part": "Q2",
+          "pin": "D"
+        }
+      ]
+    },
+    {
+      "code": 10,
+      "name": "BOOT0",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "BOOT0"
+        },
+        {
+          "part": "R2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 11,
+      "name": "BUCK_BOOT",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C106",
+          "pin": "1"
+        },
+        {
+          "part": "U20",
+          "pin": "BOOT"
+        }
+      ]
+    },
+    {
+      "code": 12,
+      "name": "BUCK_EN",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R100",
+          "pin": "2"
+        },
+        {
+          "part": "U20",
+          "pin": "EN"
+        }
+      ]
+    },
+    {
+      "code": 13,
+      "name": "BUCK_FB",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R103",
+          "pin": "2"
+        },
+        {
+          "part": "R104",
+          "pin": "1"
+        },
+        {
+          "part": "U20",
+          "pin": "FB"
+        }
+      ]
+    },
+    {
+      "code": 14,
+      "name": "BUCK_PG",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R105",
+          "pin": "2"
+        },
+        {
+          "part": "U20",
+          "pin": "PG"
+        }
+      ]
+    },
+    {
+      "code": 15,
+      "name": "BUCK_SW",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C106",
+          "pin": "2"
+        },
+        {
+          "part": "L1",
+          "pin": "1"
+        },
+        {
+          "part": "U20",
+          "pin": "SW"
+        }
+      ]
+    },
+    {
+      "code": 16,
+      "name": "BUCK_VCC",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C107",
+          "pin": "1"
+        },
+        {
+          "part": "U20",
+          "pin": "VCC"
+        }
+      ]
+    },
+    {
+      "code": 17,
+      "name": "CC1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R5",
+          "pin": "1"
+        },
+        {
+          "part": "usb_connector",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 18,
+      "name": "CC2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R6",
+          "pin": "1"
+        },
+        {
+          "part": "usb_connector",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 19,
+      "name": "DRV_EN",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "EN"
+        },
+        {
+          "part": "mcu",
+          "pin": "PB12"
+        },
+        {
+          "part": "x_driver",
+          "pin": "EN"
+        },
+        {
+          "part": "y_driver",
+          "pin": "EN"
+        },
+        {
+          "part": "z_driver",
+          "pin": "EN"
+        }
+      ]
+    },
+    {
+      "code": 20,
+      "name": "END_X",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C140",
+          "pin": "1"
+        },
+        {
+          "part": "endstop_x_header",
+          "pin": "3"
+        },
+        {
+          "part": "mcu",
+          "pin": "PA8"
+        },
+        {
+          "part": "R140",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 21,
+      "name": "END_Y",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C141",
+          "pin": "1"
+        },
+        {
+          "part": "endstop_y_header",
+          "pin": "3"
+        },
+        {
+          "part": "mcu",
+          "pin": "PC13"
+        },
+        {
+          "part": "R141",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 22,
+      "name": "END_Z",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C142",
+          "pin": "1"
+        },
+        {
+          "part": "endstop_z_header",
+          "pin": "3"
+        },
+        {
+          "part": "mcu",
+          "pin": "PC14"
+        },
+        {
+          "part": "R142",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 23,
+      "name": "ESTOP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "controls_header",
+          "pin": "2"
+        },
+        {
+          "part": "mcu",
+          "pin": "PB2"
+        },
+        {
+          "part": "R152",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 24,
+      "name": "E_A+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "1A"
+        },
+        {
+          "part": "e_motor",
+          "pin": "1A"
+        }
+      ]
+    },
+    {
+      "code": 25,
+      "name": "E_A-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "1B"
+        },
+        {
+          "part": "e_motor",
+          "pin": "1B"
+        }
+      ]
+    },
+    {
+      "code": 26,
+      "name": "E_B+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "2A"
+        },
+        {
+          "part": "e_motor",
+          "pin": "2A"
+        }
+      ]
+    },
+    {
+      "code": 27,
+      "name": "E_B-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "2B"
+        },
+        {
+          "part": "e_motor",
+          "pin": "2B"
+        }
+      ]
+    },
+    {
+      "code": 28,
+      "name": "E_CP1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C60",
+          "pin": "1"
+        },
+        {
+          "part": "e_driver",
+          "pin": "CP1"
+        }
+      ]
+    },
+    {
+      "code": 29,
+      "name": "E_CP2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C60",
+          "pin": "2"
+        },
+        {
+          "part": "e_driver",
+          "pin": "CP2"
+        }
+      ]
+    },
+    {
+      "code": 30,
+      "name": "E_DIR",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "DIR"
+        },
+        {
+          "part": "mcu",
+          "pin": "PB10"
+        }
+      ]
+    },
+    {
+      "code": 31,
+      "name": "E_ROSC",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "ROSC"
+        },
+        {
+          "part": "R64",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 32,
+      "name": "E_S1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "SENSE1"
+        },
+        {
+          "part": "R60",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 33,
+      "name": "E_S2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "SENSE2"
+        },
+        {
+          "part": "R61",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 34,
+      "name": "E_STEP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "STEP"
+        },
+        {
+          "part": "mcu",
+          "pin": "PB9"
+        }
+      ]
+    },
+    {
+      "code": 35,
+      "name": "E_VCP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C61",
+          "pin": "1"
+        },
+        {
+          "part": "e_driver",
+          "pin": "VCP"
+        }
+      ]
+    },
+    {
+      "code": 36,
+      "name": "E_VREF",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "e_driver",
+          "pin": "REF"
+        },
+        {
+          "part": "R62",
+          "pin": "2"
+        },
+        {
+          "part": "R63",
+          "pin": "1"
+        },
+        {
+          "part": "TP4",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 37,
+      "name": "E_VREG",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C62",
+          "pin": "1"
+        },
+        {
+          "part": "e_driver",
+          "pin": "VREG"
+        }
+      ]
+    },
+    {
+      "code": 38,
+      "name": "FAN1_CMD",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB15"
+        },
+        {
+          "part": "U30",
+          "pin": "A3"
+        }
+      ]
+    },
+    {
+      "code": 39,
+      "name": "FAN1_GATE",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R126",
+          "pin": "1"
+        },
+        {
+          "part": "U30",
+          "pin": "Y3"
+        }
+      ]
+    },
+    {
+      "code": 40,
+      "name": "FAN1_GATE_Q",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "Q4",
+          "pin": "G"
+        },
+        {
+          "part": "R126",
+          "pin": "2"
+        },
+        {
+          "part": "R128",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 41,
+      "name": "FAN1_SW",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "D3",
+          "pin": "A"
+        },
+        {
+          "part": "fan",
+          "pin": "-"
+        },
+        {
+          "part": "Q4",
+          "pin": "D"
+        }
+      ]
+    },
+    {
+      "code": 42,
+      "name": "FAN2_CMD",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA0"
+        },
+        {
+          "part": "U30",
+          "pin": "A4"
+        }
+      ]
+    },
+    {
+      "code": 43,
+      "name": "FAN2_GATE",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R127",
+          "pin": "1"
+        },
+        {
+          "part": "U30",
+          "pin": "Y4"
+        }
+      ]
+    },
+    {
+      "code": 44,
+      "name": "FAN2_GATE_Q",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "Q5",
+          "pin": "G"
+        },
+        {
+          "part": "R127",
+          "pin": "2"
+        },
+        {
+          "part": "R129",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 45,
+      "name": "FAN2_SW",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "D4",
+          "pin": "A"
+        },
+        {
+          "part": "fan2_header",
+          "pin": "2"
+        },
+        {
+          "part": "Q5",
+          "pin": "D"
+        }
+      ]
+    },
+    {
+      "code": 46,
+      "name": "GND",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C1",
+          "pin": "2"
+        },
+        {
+          "part": "C10",
+          "pin": "2"
+        },
+        {
+          "part": "C100",
+          "pin": "2"
+        },
+        {
+          "part": "C101",
+          "pin": "2"
+        },
+        {
+          "part": "C102",
+          "pin": "2"
+        },
+        {
+          "part": "C103",
+          "pin": "2"
+        },
+        {
+          "part": "C104",
+          "pin": "2"
+        },
+        {
+          "part": "C105",
+          "pin": "2"
+        },
+        {
+          "part": "C107",
+          "pin": "2"
+        },
+        {
+          "part": "C109",
+          "pin": "2"
+        },
+        {
+          "part": "C110",
+          "pin": "2"
+        },
+        {
+          "part": "C112",
+          "pin": "2"
+        },
+        {
+          "part": "C120",
+          "pin": "2"
+        },
+        {
+          "part": "C140",
+          "pin": "2"
+        },
+        {
+          "part": "C141",
+          "pin": "2"
+        },
+        {
+          "part": "C142",
+          "pin": "2"
+        },
+        {
+          "part": "C143",
+          "pin": "2"
+        },
+        {
+          "part": "C144",
+          "pin": "2"
+        },
+        {
+          "part": "C2",
+          "pin": "2"
+        },
+        {
+          "part": "C3",
+          "pin": "2"
+        },
+        {
+          "part": "C32",
+          "pin": "2"
+        },
+        {
+          "part": "C33",
+          "pin": "2"
+        },
+        {
+          "part": "C34",
+          "pin": "2"
+        },
+        {
+          "part": "C35",
+          "pin": "2"
+        },
+        {
+          "part": "C4",
+          "pin": "2"
+        },
+        {
+          "part": "C42",
+          "pin": "2"
+        },
+        {
+          "part": "C43",
+          "pin": "2"
+        },
+        {
+          "part": "C44",
+          "pin": "2"
+        },
+        {
+          "part": "C45",
+          "pin": "2"
+        },
+        {
+          "part": "C5",
+          "pin": "2"
+        },
+        {
+          "part": "C52",
+          "pin": "2"
+        },
+        {
+          "part": "C53",
+          "pin": "2"
+        },
+        {
+          "part": "C54",
+          "pin": "2"
+        },
+        {
+          "part": "C55",
+          "pin": "2"
+        },
+        {
+          "part": "C6",
+          "pin": "2"
+        },
+        {
+          "part": "C62",
+          "pin": "2"
+        },
+        {
+          "part": "C63",
+          "pin": "2"
+        },
+        {
+          "part": "C64",
+          "pin": "2"
+        },
+        {
+          "part": "C65",
+          "pin": "2"
+        },
+        {
+          "part": "C7",
+          "pin": "2"
+        },
+        {
+          "part": "C8",
+          "pin": "2"
+        },
+        {
+          "part": "C9",
+          "pin": "2"
+        },
+        {
+          "part": "controls_header",
+          "pin": "1"
+        },
+        {
+          "part": "D1",
+          "pin": "A"
+        },
+        {
+          "part": "D10",
+          "pin": "K"
+        },
+        {
+          "part": "debug_header",
+          "pin": "3"
+        },
+        {
+          "part": "e_driver",
+          "pin": "GND"
+        },
+        {
+          "part": "e_driver",
+          "pin": "MS1"
+        },
+        {
+          "part": "e_driver",
+          "pin": "MS2"
+        },
+        {
+          "part": "e_driver",
+          "pin": "MS3"
+        },
+        {
+          "part": "endstop_x_header",
+          "pin": "1"
+        },
+        {
+          "part": "endstop_y_header",
+          "pin": "1"
+        },
+        {
+          "part": "endstop_z_header",
+          "pin": "1"
+        },
+        {
+          "part": "mcu",
+          "pin": "VSS"
+        },
+        {
+          "part": "mcu",
+          "pin": "VSSA"
+        },
+        {
+          "part": "power24",
+          "pin": "-"
+        },
+        {
+          "part": "Q1",
+          "pin": "S"
+        },
+        {
+          "part": "Q2",
+          "pin": "S"
+        },
+        {
+          "part": "Q3",
+          "pin": "S"
+        },
+        {
+          "part": "Q4",
+          "pin": "S"
+        },
+        {
+          "part": "Q5",
+          "pin": "S"
+        },
+        {
+          "part": "R104",
+          "pin": "2"
+        },
+        {
+          "part": "R121",
+          "pin": "2"
+        },
+        {
+          "part": "R123",
+          "pin": "2"
+        },
+        {
+          "part": "R125",
+          "pin": "2"
+        },
+        {
+          "part": "R128",
+          "pin": "2"
+        },
+        {
+          "part": "R129",
+          "pin": "2"
+        },
+        {
+          "part": "R143",
+          "pin": "2"
+        },
+        {
+          "part": "R144",
+          "pin": "2"
+        },
+        {
+          "part": "R2",
+          "pin": "2"
+        },
+        {
+          "part": "R30",
+          "pin": "2"
+        },
+        {
+          "part": "R31",
+          "pin": "2"
+        },
+        {
+          "part": "R33",
+          "pin": "2"
+        },
+        {
+          "part": "R34",
+          "pin": "2"
+        },
+        {
+          "part": "R40",
+          "pin": "2"
+        },
+        {
+          "part": "R41",
+          "pin": "2"
+        },
+        {
+          "part": "R43",
+          "pin": "2"
+        },
+        {
+          "part": "R44",
+          "pin": "2"
+        },
+        {
+          "part": "R5",
+          "pin": "2"
+        },
+        {
+          "part": "R50",
+          "pin": "2"
+        },
+        {
+          "part": "R51",
+          "pin": "2"
+        },
+        {
+          "part": "R53",
+          "pin": "2"
+        },
+        {
+          "part": "R54",
+          "pin": "2"
+        },
+        {
+          "part": "R6",
+          "pin": "2"
+        },
+        {
+          "part": "R60",
+          "pin": "2"
+        },
+        {
+          "part": "R61",
+          "pin": "2"
+        },
+        {
+          "part": "R63",
+          "pin": "2"
+        },
+        {
+          "part": "R64",
+          "pin": "2"
+        },
+        {
+          "part": "R7",
+          "pin": "2"
+        },
+        {
+          "part": "screen",
+          "pin": "GND"
+        },
+        {
+          "part": "serial",
+          "pin": "1"
+        },
+        {
+          "part": "SW1",
+          "pin": "2"
+        },
+        {
+          "part": "TP23",
+          "pin": "1"
+        },
+        {
+          "part": "U20",
+          "pin": "PAD"
+        },
+        {
+          "part": "U20",
+          "pin": "PGND"
+        },
+        {
+          "part": "U21",
+          "pin": "GND"
+        },
+        {
+          "part": "U30",
+          "pin": "GND"
+        },
+        {
+          "part": "U30",
+          "pin": "OE1"
+        },
+        {
+          "part": "U30",
+          "pin": "OE2"
+        },
+        {
+          "part": "U30",
+          "pin": "OE3"
+        },
+        {
+          "part": "U30",
+          "pin": "OE4"
+        },
+        {
+          "part": "U31",
+          "pin": "GND"
+        },
+        {
+          "part": "usb_connector",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "GND"
+        },
+        {
+          "part": "x_driver",
+          "pin": "MS1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "MS2"
+        },
+        {
+          "part": "x_driver",
+          "pin": "MS3"
+        },
+        {
+          "part": "y_driver",
+          "pin": "GND"
+        },
+        {
+          "part": "y_driver",
+          "pin": "MS1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "MS2"
+        },
+        {
+          "part": "y_driver",
+          "pin": "MS3"
+        },
+        {
+          "part": "Y1",
+          "pin": "2"
+        },
+        {
+          "part": "Y1",
+          "pin": "4"
+        },
+        {
+          "part": "z_driver",
+          "pin": "GND"
+        },
+        {
+          "part": "z_driver",
+          "pin": "MS1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "MS2"
+        },
+        {
+          "part": "z_driver",
+          "pin": "MS3"
+        }
+      ]
+    },
+    {
+      "code": 47,
+      "name": "HOTEND_CMD",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB13"
+        },
+        {
+          "part": "U30",
+          "pin": "A1"
+        }
+      ]
+    },
+    {
+      "code": 48,
+      "name": "HOT_GATE",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R124",
+          "pin": "1"
+        },
+        {
+          "part": "U30",
+          "pin": "Y1"
+        }
+      ]
+    },
+    {
+      "code": 49,
+      "name": "HOT_GATE_Q",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "Q3",
+          "pin": "G"
+        },
+        {
+          "part": "R124",
+          "pin": "2"
+        },
+        {
+          "part": "R125",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 50,
+      "name": "HOT_SW",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "heater_hotend",
+          "pin": "2"
+        },
+        {
+          "part": "Q3",
+          "pin": "D"
+        }
+      ]
+    },
+    {
+      "code": 51,
+      "name": "I2C_SCL",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        {
+          "part": "R150",
+          "pin": "2"
+        },
+        {
+          "part": "screen",
+          "pin": "SCL"
+        }
+      ]
+    },
+    {
+      "code": 52,
+      "name": "I2C_SDA",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        {
+          "part": "R151",
+          "pin": "2"
+        },
+        {
+          "part": "screen",
+          "pin": "SDA"
+        }
+      ]
+    },
+    {
+      "code": 53,
+      "name": "LED_FAULT_A",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "led_fault",
+          "pin": "A"
+        },
+        {
+          "part": "led_r",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 54,
+      "name": "LED_PWR_A",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "D10",
+          "pin": "A"
+        },
+        {
+          "part": "R160",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 55,
+      "name": "NC_LDO",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "U21",
+          "pin": "NC"
+        }
+      ]
+    },
+    {
+      "code": 56,
+      "name": "NC_PC15",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PC15"
+        }
+      ]
+    },
+    {
+      "code": 57,
+      "name": "NC_SBU1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "usb_connector",
+          "pin": "7"
+        }
+      ]
+    },
+    {
+      "code": 58,
+      "name": "NC_SBU2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "usb_connector",
+          "pin": "8"
+        }
+      ]
+    },
+    {
+      "code": 59,
+      "name": "NC_SWD7",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "debug_header",
+          "pin": "6"
+        }
+      ]
+    },
+    {
+      "code": 60,
+      "name": "NC_SWD8",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "debug_header",
+          "pin": "7"
+        }
+      ]
+    },
+    {
+      "code": 61,
+      "name": "NRST",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "debug_header",
+          "pin": "8"
+        },
+        {
+          "part": "mcu",
+          "pin": "NRST"
+        },
+        {
+          "part": "R1",
+          "pin": "2"
+        },
+        {
+          "part": "SW1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 62,
+      "name": "OSC_IN",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C1",
+          "pin": "1"
+        },
+        {
+          "part": "mcu",
+          "pin": "PH0"
+        },
+        {
+          "part": "Y1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 63,
+      "name": "OSC_OUT",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C2",
+          "pin": "1"
+        },
+        {
+          "part": "mcu",
+          "pin": "PH1"
+        },
+        {
+          "part": "Y1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 64,
+      "name": "SPI_MISO",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA6"
+        }
+      ]
+    },
+    {
+      "code": 65,
+      "name": "SPI_MOSI",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA7"
+        }
+      ]
+    },
+    {
+      "code": 66,
+      "name": "SPI_SCK",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA5"
+        }
+      ]
+    },
+    {
+      "code": 67,
+      "name": "START",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "controls_header",
+          "pin": "3"
+        },
+        {
+          "part": "mcu",
+          "pin": "PA15"
+        },
+        {
+          "part": "R153",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 68,
+      "name": "SWCLK",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "debug_header",
+          "pin": "4"
+        },
+        {
+          "part": "mcu",
+          "pin": "PA14"
+        }
+      ]
+    },
+    {
+      "code": 69,
+      "name": "SWDIO",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "debug_header",
+          "pin": "2"
+        },
+        {
+          "part": "mcu",
+          "pin": "PA13"
+        }
+      ]
+    },
+    {
+      "code": 70,
+      "name": "TH_BED",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C143",
+          "pin": "1"
+        },
+        {
+          "part": "mcu",
+          "pin": "PA1"
+        },
+        {
+          "part": "ntc_bed",
+          "pin": "B"
+        },
+        {
+          "part": "R143",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 71,
+      "name": "TH_HOT",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C144",
+          "pin": "1"
+        },
+        {
+          "part": "mcu",
+          "pin": "PA4"
+        },
+        {
+          "part": "ntc_hotend",
+          "pin": "B"
+        },
+        {
+          "part": "R144",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 72,
+      "name": "UART_RX",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA3"
+        },
+        {
+          "part": "serial",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 73,
+      "name": "UART_TX",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA2"
+        },
+        {
+          "part": "serial",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 74,
+      "name": "USB_DM",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA11"
+        },
+        {
+          "part": "R3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 75,
+      "name": "USB_DM_CONN",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "U31",
+          "pin": "IO1_A"
+        },
+        {
+          "part": "usb_connector",
+          "pin": "6"
+        }
+      ]
+    },
+    {
+      "code": 76,
+      "name": "USB_DM_MCU",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R3",
+          "pin": "1"
+        },
+        {
+          "part": "U31",
+          "pin": "IO1_B"
+        }
+      ]
+    },
+    {
+      "code": 77,
+      "name": "USB_DP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA12"
+        },
+        {
+          "part": "R4",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 78,
+      "name": "USB_DP_CONN",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "U31",
+          "pin": "IO2_A"
+        },
+        {
+          "part": "usb_connector",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "code": 79,
+      "name": "USB_DP_MCU",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R4",
+          "pin": "1"
+        },
+        {
+          "part": "U31",
+          "pin": "IO2_B"
+        }
+      ]
+    },
+    {
+      "code": 80,
+      "name": "USB_VBUS",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "U31",
+          "pin": "VBUS"
+        },
+        {
+          "part": "usb_connector",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 81,
+      "name": "USB_VBUS_SENSE",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PA9"
+        },
+        {
+          "part": "R7",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 82,
+      "name": "USER_AUX",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "led_fault",
+          "pin": "K"
+        },
+        {
+          "part": "mcu",
+          "pin": "PA10"
+        }
+      ]
+    },
+    {
+      "code": 83,
+      "name": "VCAP1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C3",
+          "pin": "1"
+        },
+        {
+          "part": "mcu",
+          "pin": "VCAP_1"
+        }
+      ]
+    },
+    {
+      "code": 84,
+      "name": "X_A+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "x_driver",
+          "pin": "1A"
+        },
+        {
+          "part": "x_motor",
+          "pin": "1A"
+        }
+      ]
+    },
+    {
+      "code": 85,
+      "name": "X_A-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "x_driver",
+          "pin": "1B"
+        },
+        {
+          "part": "x_motor",
+          "pin": "1B"
+        }
+      ]
+    },
+    {
+      "code": 86,
+      "name": "X_B+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "x_driver",
+          "pin": "2A"
+        },
+        {
+          "part": "x_motor",
+          "pin": "2A"
+        }
+      ]
+    },
+    {
+      "code": 87,
+      "name": "X_B-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "x_driver",
+          "pin": "2B"
+        },
+        {
+          "part": "x_motor",
+          "pin": "2B"
+        }
+      ]
+    },
+    {
+      "code": 88,
+      "name": "X_CP1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C30",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "CP1"
+        }
+      ]
+    },
+    {
+      "code": 89,
+      "name": "X_CP2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C30",
+          "pin": "2"
+        },
+        {
+          "part": "x_driver",
+          "pin": "CP2"
+        }
+      ]
+    },
+    {
+      "code": 90,
+      "name": "X_DIR",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "DIR"
+        }
+      ]
+    },
+    {
+      "code": 91,
+      "name": "X_ROSC",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R34",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "ROSC"
+        }
+      ]
+    },
+    {
+      "code": 92,
+      "name": "X_S1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R30",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "SENSE1"
+        }
+      ]
+    },
+    {
+      "code": 93,
+      "name": "X_S2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R31",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "SENSE2"
+        }
+      ]
+    },
+    {
+      "code": 94,
+      "name": "X_STEP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB0"
+        },
+        {
+          "part": "x_driver",
+          "pin": "STEP"
+        }
+      ]
+    },
+    {
+      "code": 95,
+      "name": "X_VCP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C31",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "VCP"
+        }
+      ]
+    },
+    {
+      "code": 96,
+      "name": "X_VREF",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R32",
+          "pin": "2"
+        },
+        {
+          "part": "R33",
+          "pin": "1"
+        },
+        {
+          "part": "TP1",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "REF"
+        }
+      ]
+    },
+    {
+      "code": 97,
+      "name": "X_VREG",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C32",
+          "pin": "1"
+        },
+        {
+          "part": "x_driver",
+          "pin": "VREG"
+        }
+      ]
+    },
+    {
+      "code": 98,
+      "name": "Y_A+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "y_driver",
+          "pin": "1A"
+        },
+        {
+          "part": "y_motor",
+          "pin": "1A"
+        }
+      ]
+    },
+    {
+      "code": 99,
+      "name": "Y_A-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "y_driver",
+          "pin": "1B"
+        },
+        {
+          "part": "y_motor",
+          "pin": "1B"
+        }
+      ]
+    },
+    {
+      "code": 100,
+      "name": "Y_B+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "y_driver",
+          "pin": "2A"
+        },
+        {
+          "part": "y_motor",
+          "pin": "2A"
+        }
+      ]
+    },
+    {
+      "code": 101,
+      "name": "Y_B-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "y_driver",
+          "pin": "2B"
+        },
+        {
+          "part": "y_motor",
+          "pin": "2B"
+        }
+      ]
+    },
+    {
+      "code": 102,
+      "name": "Y_CP1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C40",
+          "pin": "1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "CP1"
+        }
+      ]
+    },
+    {
+      "code": 103,
+      "name": "Y_CP2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C40",
+          "pin": "2"
+        },
+        {
+          "part": "y_driver",
+          "pin": "CP2"
+        }
+      ]
+    },
+    {
+      "code": 104,
+      "name": "Y_DIR",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB4"
+        },
+        {
+          "part": "y_driver",
+          "pin": "DIR"
+        }
+      ]
+    },
+    {
+      "code": 105,
+      "name": "Y_ROSC",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R44",
+          "pin": "1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "ROSC"
+        }
+      ]
+    },
+    {
+      "code": 106,
+      "name": "Y_S1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R40",
+          "pin": "1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "SENSE1"
+        }
+      ]
+    },
+    {
+      "code": 107,
+      "name": "Y_S2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R41",
+          "pin": "1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "SENSE2"
+        }
+      ]
+    },
+    {
+      "code": 108,
+      "name": "Y_STEP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "debug_header",
+          "pin": "5"
+        },
+        {
+          "part": "mcu",
+          "pin": "PB3"
+        },
+        {
+          "part": "y_driver",
+          "pin": "STEP"
+        }
+      ]
+    },
+    {
+      "code": 109,
+      "name": "Y_VCP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C41",
+          "pin": "1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "VCP"
+        }
+      ]
+    },
+    {
+      "code": 110,
+      "name": "Y_VREF",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R42",
+          "pin": "2"
+        },
+        {
+          "part": "R43",
+          "pin": "1"
+        },
+        {
+          "part": "TP2",
+          "pin": "1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "REF"
+        }
+      ]
+    },
+    {
+      "code": 111,
+      "name": "Y_VREG",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C42",
+          "pin": "1"
+        },
+        {
+          "part": "y_driver",
+          "pin": "VREG"
+        }
+      ]
+    },
+    {
+      "code": 112,
+      "name": "Z_A+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "z_driver",
+          "pin": "1A"
+        },
+        {
+          "part": "z_motor",
+          "pin": "1A"
+        }
+      ]
+    },
+    {
+      "code": 113,
+      "name": "Z_A-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "z_driver",
+          "pin": "1B"
+        },
+        {
+          "part": "z_motor",
+          "pin": "1B"
+        }
+      ]
+    },
+    {
+      "code": 114,
+      "name": "Z_B+",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "z_driver",
+          "pin": "2A"
+        },
+        {
+          "part": "z_motor",
+          "pin": "2A"
+        }
+      ]
+    },
+    {
+      "code": 115,
+      "name": "Z_B-",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "z_driver",
+          "pin": "2B"
+        },
+        {
+          "part": "z_motor",
+          "pin": "2B"
+        }
+      ]
+    },
+    {
+      "code": 116,
+      "name": "Z_CP1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C50",
+          "pin": "1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "CP1"
+        }
+      ]
+    },
+    {
+      "code": 117,
+      "name": "Z_CP2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C50",
+          "pin": "2"
+        },
+        {
+          "part": "z_driver",
+          "pin": "CP2"
+        }
+      ]
+    },
+    {
+      "code": 118,
+      "name": "Z_DIR",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        {
+          "part": "z_driver",
+          "pin": "DIR"
+        }
+      ]
+    },
+    {
+      "code": 119,
+      "name": "Z_ROSC",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R54",
+          "pin": "1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "ROSC"
+        }
+      ]
+    },
+    {
+      "code": 120,
+      "name": "Z_S1",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R50",
+          "pin": "1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "SENSE1"
+        }
+      ]
+    },
+    {
+      "code": 121,
+      "name": "Z_S2",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R51",
+          "pin": "1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "SENSE2"
+        }
+      ]
+    },
+    {
+      "code": 122,
+      "name": "Z_STEP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "mcu",
+          "pin": "PB5"
+        },
+        {
+          "part": "z_driver",
+          "pin": "STEP"
+        }
+      ]
+    },
+    {
+      "code": 123,
+      "name": "Z_VCP",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C51",
+          "pin": "1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "VCP"
+        }
+      ]
+    },
+    {
+      "code": 124,
+      "name": "Z_VREF",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "R52",
+          "pin": "2"
+        },
+        {
+          "part": "R53",
+          "pin": "1"
+        },
+        {
+          "part": "TP3",
+          "pin": "1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "REF"
+        }
+      ]
+    },
+    {
+      "code": 125,
+      "name": "Z_VREG",
+      "declared": true,
+      "nodes": [
+        {
+          "part": "C52",
+          "pin": "1"
+        },
+        {
+          "part": "z_driver",
+          "pin": "VREG"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "title": "MCU / USB",
+      "refs": [
+        "U1",
+        "U31",
+        "J20",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "SW1",
+        "Y1"
+      ]
+    },
+    {
+      "title": "POWER INPUT / REGULATORS",
+      "refs": [
+        "U20",
+        "U21",
+        "J1",
+        "C100",
+        "C101",
+        "C102",
+        "C103",
+        "C104",
+        "C105",
+        "C106",
+        "C107",
+        "C109",
+        "C110",
+        "C112",
+        "D1",
+        "F1",
+        "L1",
+        "R100",
+        "R103",
+        "R104",
+        "R105",
+        "TP20",
+        "TP21",
+        "TP22",
+        "TP23"
+      ]
+    },
+    {
+      "title": "X AXIS",
+      "refs": [
+        "U10",
+        "J10",
+        "C30",
+        "C31",
+        "C32",
+        "C33",
+        "C34",
+        "C35",
+        "R30",
+        "R31",
+        "R32",
+        "R33",
+        "R34",
+        "TP1"
+      ]
+    },
+    {
+      "title": "Y AXIS",
+      "refs": [
+        "U11",
+        "J11",
+        "C40",
+        "C41",
+        "C42",
+        "C43",
+        "C44",
+        "C45",
+        "R40",
+        "R41",
+        "R42",
+        "R43",
+        "R44",
+        "TP2"
+      ]
+    },
+    {
+      "title": "Z AXIS",
+      "refs": [
+        "U12",
+        "J12",
+        "C50",
+        "C51",
+        "C52",
+        "C53",
+        "C54",
+        "C55",
+        "R50",
+        "R51",
+        "R52",
+        "R53",
+        "R54",
+        "TP3"
+      ]
+    },
+    {
+      "title": "EXTRUDER",
+      "refs": [
+        "U13",
+        "J13",
+        "C60",
+        "C61",
+        "C62",
+        "C63",
+        "C64",
+        "C65",
+        "R60",
+        "R61",
+        "R62",
+        "R63",
+        "R64",
+        "TP4"
+      ]
+    },
+    {
+      "title": "HEATERS / FANS",
+      "refs": [
+        "U30",
+        "J2",
+        "J3",
+        "J4",
+        "J5",
+        "C120",
+        "D3",
+        "D4",
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "R120",
+        "R121",
+        "R122",
+        "R123",
+        "R124",
+        "R125",
+        "R126",
+        "R127",
+        "R128",
+        "R129"
+      ]
+    },
+    {
+      "title": "I/O / CONTROLS",
+      "refs": [
+        "J21",
+        "J22",
+        "J23",
+        "J30",
+        "J31",
+        "J32",
+        "J33",
+        "J34",
+        "J35",
+        "C140",
+        "C141",
+        "C142",
+        "C143",
+        "C144",
+        "D10",
+        "D11",
+        "R140",
+        "R141",
+        "R142",
+        "R143",
+        "R144",
+        "R150",
+        "R151",
+        "R152",
+        "R153",
+        "R160",
+        "R161"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,473 @@
+{
+  "baseline_sha256": "19e6b415ad41bd9c068ce39610e7412091724cf7323162625783c7bed13c0142",
+  "candidate_sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad",
+  "rules_sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71",
+  "rules_byte_identical": true,
+  "zone_outlines_and_nets_identical": true,
+  "footprint_count": 157,
+  "pad_count": 604,
+  "track_count": 1763,
+  "via_count": 251,
+  "pad_net_map_sha256": "7a5902910d191e5fe8c0cff09feee719237eca2d46f5a5dbf783ed0b56e9ceea",
+  "schematic_parity_checked": false,
+  "added_components": {
+    "C10": {
+      "uuid": "b829f827-08b0-4a8c-9556-917eb84add68",
+      "value": "100n",
+      "footprint": "C_0603_1608Metric",
+      "xy_nm": [
+        42900000,
+        56000000
+      ],
+      "orientation_deg": 180.0,
+      "pads": [
+        {
+          "uuid": "995d2563-1211-4f00-95a0-595bf102126d",
+          "ref": "C10",
+          "pad": "2",
+          "net": "GND",
+          "xy_nm": [
+            42125000,
+            56000000
+          ],
+          "size_nm": [
+            900000,
+            950000
+          ],
+          "drill_nm": [
+            0,
+            0
+          ],
+          "shape": 4,
+          "layers": "00000000_00000000_00000000_00002003"
+        },
+        {
+          "uuid": "aff87cb6-2fc5-41f5-b776-2167f824f2b8",
+          "ref": "C10",
+          "pad": "1",
+          "net": "+3V3",
+          "xy_nm": [
+            43675000,
+            56000000
+          ],
+          "size_nm": [
+            900000,
+            950000
+          ],
+          "drill_nm": [
+            0,
+            0
+          ],
+          "shape": 4,
+          "layers": "00000000_00000000_00000000_00002003"
+        }
+      ],
+      "fields": {
+        "Reference": "C10",
+        "Value": "100n",
+        "Datasheet": "",
+        "Description": "100 nF ceramic VDDA decoupler; paired with C8=1 uF per STM32F411CE datasheet power-supply scheme.",
+        "KiLib_Generator": "SMD_2terminal_chip_molded"
+      },
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+      ]
+    }
+  },
+  "authorized_pad_net_changes": [
+    {
+      "reference": "C8",
+      "pad": "1",
+      "uuid": "08a97c2b-878a-4ba8-9360-d6dd336a5bc6",
+      "before": "+3V3A",
+      "after": "+3V3"
+    },
+    {
+      "reference": "D10",
+      "pad": "1",
+      "uuid": "d631537c-851e-479e-80e3-7e8b110ab0c7",
+      "before": "LED_PWR_A",
+      "after": "GND"
+    },
+    {
+      "reference": "D10",
+      "pad": "2",
+      "uuid": "f54dc4ec-8eb5-4456-a160-752e99f14ebb",
+      "before": "GND",
+      "after": "LED_PWR_A"
+    },
+    {
+      "reference": "D11",
+      "pad": "1",
+      "uuid": "0141a873-66ba-42bb-bb67-80b90ca76a91",
+      "before": "LED_FAULT_A",
+      "after": "USER_AUX"
+    },
+    {
+      "reference": "D11",
+      "pad": "2",
+      "uuid": "dbb07575-e957-497d-95b2-ff28b9e82ea9",
+      "before": "USER_AUX",
+      "after": "LED_FAULT_A"
+    },
+    {
+      "reference": "J33",
+      "pad": "1",
+      "uuid": "a20e4beb-5463-4d2d-a521-6b80c7c4cb76",
+      "before": "+3V3A",
+      "after": "+3V3"
+    },
+    {
+      "reference": "J34",
+      "pad": "1",
+      "uuid": "87aa81c3-fc26-4db1-a692-b1d36dc7deb8",
+      "before": "+3V3A",
+      "after": "+3V3"
+    },
+    {
+      "reference": "Q4",
+      "pad": "1",
+      "uuid": "847b3160-7ccf-48d2-8e8c-38f453fee7bf",
+      "before": "FAN1_GATE",
+      "after": "FAN1_GATE_Q"
+    },
+    {
+      "reference": "Q5",
+      "pad": "1",
+      "uuid": "f5fb0ce9-91b2-4786-ac23-21b9b36ac80b",
+      "before": "FAN2_GATE",
+      "after": "FAN2_GATE_Q"
+    },
+    {
+      "reference": "R126",
+      "pad": "2",
+      "uuid": "76513da7-33ed-41eb-990a-08b850c41c27",
+      "before": "FAN1_GATE",
+      "after": "FAN1_GATE_Q"
+    },
+    {
+      "reference": "R127",
+      "pad": "2",
+      "uuid": "30289c5f-4f32-48d3-ac5d-54d6f6207629",
+      "before": "FAN2_GATE",
+      "after": "FAN2_GATE_Q"
+    },
+    {
+      "reference": "R128",
+      "pad": "1",
+      "uuid": "7c24922d-7272-40af-a180-d83ae19e9d96",
+      "before": "FAN1_GATE",
+      "after": "FAN1_GATE_Q"
+    },
+    {
+      "reference": "R129",
+      "pad": "1",
+      "uuid": "3cba116e-facd-41e5-b82b-4a79ca40784f",
+      "before": "FAN2_GATE",
+      "after": "FAN2_GATE_Q"
+    },
+    {
+      "reference": "U1",
+      "pad": "9",
+      "uuid": "6f2e3c59-4201-4347-90d0-460bd244745f",
+      "before": "+3V3A",
+      "after": "+3V3"
+    },
+    {
+      "reference": "U10",
+      "pad": "10",
+      "uuid": "d5fc3997-ebb5-439f-8acf-e559c87ca5a4",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U10",
+      "pad": "11",
+      "uuid": "404210a7-c3fd-4ea6-b391-a0a9019d99d5",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U10",
+      "pad": "9",
+      "uuid": "7ad23b81-07f0-4c5e-a1c3-8a55e0400503",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U11",
+      "pad": "10",
+      "uuid": "608f1370-f5df-434f-8b53-79f0c9b2316f",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U11",
+      "pad": "11",
+      "uuid": "9adb3001-9274-477b-b9c4-cf7eeb7f1e04",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U11",
+      "pad": "9",
+      "uuid": "8cb56dca-3f07-42ba-bdc6-639896d83a2d",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U12",
+      "pad": "10",
+      "uuid": "2cba6713-1758-4d4c-85d7-8849a162cce0",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U12",
+      "pad": "11",
+      "uuid": "c126a61a-8a3c-4c99-905d-c7b41a445f0c",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U12",
+      "pad": "9",
+      "uuid": "90682da9-3aca-47fc-9bb0-bbc5528a9c43",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U13",
+      "pad": "10",
+      "uuid": "67e576d9-0395-4fea-8950-e139ed2a8084",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U13",
+      "pad": "11",
+      "uuid": "80fc0117-6ac6-425d-a091-5076cea3c33f",
+      "before": "+3V3",
+      "after": "GND"
+    },
+    {
+      "reference": "U13",
+      "pad": "9",
+      "uuid": "74f828c8-450e-4043-bd0c-080dff105689",
+      "before": "+3V3",
+      "after": "GND"
+    }
+  ],
+  "authorized_pad_position_changes": [
+    {
+      "reference": "D10",
+      "pad": "1",
+      "uuid": "d631537c-851e-479e-80e3-7e8b110ab0c7",
+      "before_mm": [
+        58.2125,
+        67.0
+      ],
+      "after_mm": [
+        59.7875,
+        67.0
+      ]
+    },
+    {
+      "reference": "D10",
+      "pad": "2",
+      "uuid": "f54dc4ec-8eb5-4456-a160-752e99f14ebb",
+      "before_mm": [
+        59.7875,
+        67.0
+      ],
+      "after_mm": [
+        58.2125,
+        67.0
+      ]
+    },
+    {
+      "reference": "D11",
+      "pad": "1",
+      "uuid": "0141a873-66ba-42bb-bb67-80b90ca76a91",
+      "before_mm": [
+        63.2125,
+        67.0
+      ],
+      "after_mm": [
+        64.7875,
+        67.0
+      ]
+    },
+    {
+      "reference": "D11",
+      "pad": "2",
+      "uuid": "dbb07575-e957-497d-95b2-ff28b9e82ea9",
+      "before_mm": [
+        64.7875,
+        67.0
+      ],
+      "after_mm": [
+        63.2125,
+        67.0
+      ]
+    },
+    {
+      "reference": "J20",
+      "pad": "NPTH",
+      "uuid": "272d1070-693a-4cde-9051-7edad6946d0a",
+      "before_mm": [
+        38.0,
+        94.57
+      ],
+      "after_mm": [
+        38.0,
+        94.595
+      ]
+    },
+    {
+      "reference": "J20",
+      "pad": "NPTH",
+      "uuid": "440b1f10-1a63-4432-9f00-39ca81421e48",
+      "before_mm": [
+        32.0,
+        94.57
+      ],
+      "after_mm": [
+        32.0,
+        94.595
+      ]
+    },
+    {
+      "reference": "J20",
+      "pad": "SH",
+      "uuid": "1ff346e6-a836-4eb0-9f61-83e153bc0c9b",
+      "before_mm": [
+        29.905,
+        93.89
+      ],
+      "after_mm": [
+        29.905,
+        93.97
+      ]
+    },
+    {
+      "reference": "J20",
+      "pad": "SH",
+      "uuid": "30f58f63-aa29-4703-9c88-f18a65bbe302",
+      "before_mm": [
+        29.905,
+        97.92
+      ],
+      "after_mm": [
+        29.905,
+        97.895
+      ]
+    },
+    {
+      "reference": "J20",
+      "pad": "SH",
+      "uuid": "730993cf-cd4f-450c-a877-3925f6e068ba",
+      "before_mm": [
+        40.095,
+        97.92
+      ],
+      "after_mm": [
+        40.095,
+        97.895
+      ]
+    },
+    {
+      "reference": "J20",
+      "pad": "SH",
+      "uuid": "9aac66e4-dec0-4c38-9cad-f17a8cf26674",
+      "before_mm": [
+        40.095,
+        93.89
+      ],
+      "after_mm": [
+        40.095,
+        93.97
+      ]
+    }
+  ],
+  "mcu_contract": {
+    "9": "+3V3",
+    "18": "X_STEP",
+    "39": "Y_STEP",
+    "41": "Z_STEP",
+    "46": "E_STEP",
+    "19": "X_DIR",
+    "40": "Y_DIR",
+    "45": "Z_DIR",
+    "21": "E_DIR",
+    "25": "DRV_EN",
+    "29": "END_X",
+    "2": "END_Y",
+    "3": "END_Z",
+    "14": "TH_HOT",
+    "11": "TH_BED",
+    "26": "HOTEND_CMD",
+    "27": "BED_CMD",
+    "28": "FAN1_CMD",
+    "42": "I2C_SCL",
+    "43": "I2C_SDA"
+  },
+  "drc_counts": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "drc_ignored_checks_unchanged": true,
+  "ignored_checks": [
+    {
+      "description": "Footprint has no courtyard defined",
+      "key": "missing_courtyard"
+    },
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    },
+    {
+      "description": "Footprint doesn't match symbol's footprint filters",
+      "key": "footprint_filters_mismatch"
+    },
+    {
+      "description": "Footprint component type doesn't match footprint pads",
+      "key": "footprint_type_mismatch"
+    }
+  ],
+  "edge_cuts_identical": true,
+  "u12_thermal_via": {
+    "before": {
+      "xy_mm": [
+        65.0777,
+        20.5746
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "front_tented": true,
+      "back_tented": true,
+      "filled": false,
+      "capped": false
+    },
+    "after": {
+      "xy_mm": [
+        61.7,
+        21.0
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "front_tented": true,
+      "back_tented": true,
+      "filled": false,
+      "capped": false
+    },
+    "source": "Allegro A4988 datasheet p19 note C and p12 layout"
+  },
+  "errors": [],
+  "pass": true
+}

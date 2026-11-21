@@ -1,0 +1,1297 @@
+{
+  "schema": "labwired.native-schematic-packaging.v1",
+  "inputSchematicSha256": "4917c9165de1698c4febfb6592297c66d622bba8f5ad541e39ae1c3ece3d8462",
+  "outputSchematicSha256": "04543f9e7ed5b629feae1b4300723c32c0f89aa326c1aea4d836a97bd52fd97f",
+  "rootUuid": "23e1b941-22e1-b7ae-21e1-b61b20e1b488",
+  "powerIntentAnnotations": [
+    {
+      "net": "GND",
+      "ref": "#FLG901",
+      "x": 101.6,
+      "description": "External supply return at J1 pin 2 and USB J20 ground contacts. Nonphysical power-intent marker."
+    },
+    {
+      "net": "+24V",
+      "ref": "#FLG902",
+      "x": 177.8,
+      "description": "External 24 V supply through J1 and F1. Nonphysical power-intent marker; operating voltage and fuse condition are not measured."
+    },
+    {
+      "net": "USB_VBUS",
+      "ref": "#FLG903",
+      "x": 254,
+      "description": "External USB host VBUS at J20 A4/A9/B4/B9. Nonphysical power-intent marker; USB connection and voltage are not measured."
+    }
+  ],
+  "footprintUpdates": [
+    {
+      "reference": "C1",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C10",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native_C10:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C100",
+      "before": "CP_Elec_10x10.5",
+      "after": "A1_Native:CP_Elec_10x10.5",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C101",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C102",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C103",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C104",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C105",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C106",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C107",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C109",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C110",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C112",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C120",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C140",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C141",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C142",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C143",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C144",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C2",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C3",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C30",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C31",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C32",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C33",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C34",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C35",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C4",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C40",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C41",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C42",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C43",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C44",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C45",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C5",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C50",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C51",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C52",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C53",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C54",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C55",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C6",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C60",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C61",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C62",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C63",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C64",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C65",
+      "before": "C_1210_3225Metric",
+      "after": "A1_Native:C_1210_3225Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C7",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C8",
+      "before": "C_0805_2012Metric",
+      "after": "A1_Native:C_0805_2012Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "C9",
+      "before": "C_0603_1608Metric",
+      "after": "A1_Native:C_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "D1",
+      "before": "D_SMB",
+      "after": "A1_Native:D_SMB",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "D10",
+      "before": "LED_0603_1608Metric",
+      "after": "A1_Native:LED_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "D11",
+      "before": "LED_0603_1608Metric",
+      "after": "A1_Native:LED_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "D3",
+      "before": "D_SMA",
+      "after": "A1_Native:D_SMA",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "D4",
+      "before": "D_SMA",
+      "after": "A1_Native:D_SMA",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "F1",
+      "before": "Fuseholder_Blade_Mini_Keystone_3568",
+      "after": "A1_Native:Fuseholder_Blade_Mini_Keystone_3568",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "H1",
+      "before": "MountingHole_3.2mm_M3",
+      "after": "A1_Native:MountingHole_3.2mm_M3",
+      "schematicOccurrences": 0,
+      "boardOnlyMechanical": true
+    },
+    {
+      "reference": "H2",
+      "before": "MountingHole_3.2mm_M3",
+      "after": "A1_Native:MountingHole_3.2mm_M3",
+      "schematicOccurrences": 0,
+      "boardOnlyMechanical": true
+    },
+    {
+      "reference": "H3",
+      "before": "MountingHole_3.2mm_M3",
+      "after": "A1_Native:MountingHole_3.2mm_M3",
+      "schematicOccurrences": 0,
+      "boardOnlyMechanical": true
+    },
+    {
+      "reference": "H4",
+      "before": "MountingHole_3.2mm_M3",
+      "after": "A1_Native:MountingHole_3.2mm_M3",
+      "schematicOccurrences": 0,
+      "boardOnlyMechanical": true
+    },
+    {
+      "reference": "J1",
+      "before": "AMASS_XT30PW-M_1x02_P2.50mm_Horizontal",
+      "after": "A1_Native:AMASS_XT30PW-M_1x02_P2.50mm_Horizontal",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J10",
+      "before": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "after": "A1_Native:Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J11",
+      "before": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "after": "A1_Native:Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J12",
+      "before": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "after": "A1_Native:Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J13",
+      "before": "Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "after": "A1_Native:Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J2",
+      "before": "TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal",
+      "after": "A1_Native:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J21",
+      "before": "PinHeader_2x05_P1.27mm_Vertical_SMD",
+      "after": "A1_Native:PinHeader_2x05_P1.27mm_Vertical_SMD",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J22",
+      "before": "JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical",
+      "after": "A1_Native:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J23",
+      "before": "JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical",
+      "after": "A1_Native:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J3",
+      "before": "TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal",
+      "after": "A1_Native:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J30",
+      "before": "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J31",
+      "before": "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J32",
+      "before": "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J33",
+      "before": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J34",
+      "before": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J35",
+      "before": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J4",
+      "before": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "J5",
+      "before": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "after": "A1_Native:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "L1",
+      "before": "L_Bourns_SRN6045TA",
+      "after": "A1_Native:L_Bourns_SRN6045TA",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "Q1",
+      "before": "TO-252-3_TabPin2",
+      "after": "A1_Native:TO-252-3_TabPin2",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "Q2",
+      "before": "TO-252-3_TabPin2",
+      "after": "A1_Native:TO-252-3_TabPin2",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "Q3",
+      "before": "TO-252-3_TabPin2",
+      "after": "A1_Native:TO-252-3_TabPin2",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "Q4",
+      "before": "SOT-23",
+      "after": "A1_Native:SOT-23",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "Q5",
+      "before": "SOT-23",
+      "after": "A1_Native:SOT-23",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R1",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R100",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R103",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R104",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R105",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R120",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R121",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R122",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R123",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R124",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R125",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R126",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R127",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R128",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R129",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R140",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R141",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R142",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R143",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R144",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R150",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R151",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R152",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R153",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R160",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R161",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R2",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R3",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R30",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R31",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R32",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R33",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R34",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R4",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R40",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R41",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R42",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R43",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R44",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R5",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R50",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R51",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R52",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R53",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R54",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R6",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R60",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R61",
+      "before": "R_2512_6332Metric",
+      "after": "A1_Native:R_2512_6332Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R62",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R63",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R64",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "R7",
+      "before": "R_0603_1608Metric",
+      "after": "A1_Native:R_0603_1608Metric",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "SW1",
+      "before": "SW_SPST_PTS810",
+      "after": "A1_Native:SW_SPST_PTS810",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP1",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP2",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP20",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP21",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP22",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP23",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP3",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "TP4",
+      "before": "TestPoint_Pad_D1.5mm",
+      "after": "A1_Native:TestPoint_Pad_D1.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U1",
+      "before": "QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm",
+      "after": "A1_Native:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U10",
+      "before": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "after": "A1_Native:TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U11",
+      "before": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "after": "A1_Native:TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U12",
+      "before": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "after": "A1_Native:TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U13",
+      "before": "TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "after": "A1_Native:TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U20",
+      "before": "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm",
+      "after": "A1_Native:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U21",
+      "before": "SOT-23-5",
+      "after": "A1_Native:SOT-23-5",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U30",
+      "before": "SOIC-14_3.9x8.7mm_P1.27mm",
+      "after": "A1_Native:SOIC-14_3.9x8.7mm_P1.27mm",
+      "schematicOccurrences": 5,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "U31",
+      "before": "SOT-23-6",
+      "after": "A1_Native:SOT-23-6",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    },
+    {
+      "reference": "Y1",
+      "before": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "after": "A1_Native:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "schematicOccurrences": 1,
+      "boardOnlyMechanical": false
+    }
+  ],
+  "layoutChanges": [
+    {
+      "kind": "rigid schematic unit group",
+      "ref": "U30",
+      "unit": 1,
+      "from": [
+        848.36,
+        66.04
+      ],
+      "to": [
+        650.24,
+        685.8
+      ],
+      "topLevelItems": 7
+    },
+    {
+      "kind": "rigid schematic unit group",
+      "ref": "U30",
+      "unit": 2,
+      "from": [
+        878.84,
+        66.04
+      ],
+      "to": [
+        716.28,
+        685.8
+      ],
+      "topLevelItems": 7
+    },
+    {
+      "kind": "rigid schematic unit group",
+      "ref": "U30",
+      "unit": 3,
+      "from": [
+        909.32,
+        66.04
+      ],
+      "to": [
+        782.32,
+        685.8
+      ],
+      "topLevelItems": 7
+    },
+    {
+      "kind": "rigid schematic unit group",
+      "ref": "U30",
+      "unit": 4,
+      "from": [
+        939.8,
+        66.04
+      ],
+      "to": [
+        848.36,
+        685.8
+      ],
+      "topLevelItems": 7
+    },
+    {
+      "kind": "rigid schematic unit group",
+      "ref": "U30",
+      "unit": 5,
+      "from": [
+        970.28,
+        66.04
+      ],
+      "to": [
+        914.4000000000001,
+        685.8
+      ],
+      "topLevelItems": 5
+    },
+    {
+      "kind": "mechanical note",
+      "ref": "J10",
+      "from": [
+        350.52,
+        134.62
+      ],
+      "to": [
+        406.4,
+        119.38
+      ]
+    },
+    {
+      "kind": "mechanical note",
+      "ref": "J11",
+      "from": [
+        487.68,
+        134.62
+      ],
+      "to": [
+        543.5600000000001,
+        119.38
+      ]
+    },
+    {
+      "kind": "mechanical note",
+      "ref": "J12",
+      "from": [
+        629.92,
+        134.62
+      ],
+      "to": [
+        685.8,
+        119.38
+      ]
+    },
+    {
+      "kind": "mechanical note",
+      "ref": "J13",
+      "from": [
+        769.62,
+        134.62
+      ],
+      "to": [
+        825.5,
+        119.38
+      ]
+    },
+    {
+      "kind": "mechanical note",
+      "ref": "J22",
+      "from": [
+        1046.48,
+        109.22
+      ],
+      "to": [
+        1102.3600000000001,
+        93.98
+      ]
+    },
+    {
+      "kind": "mechanical note",
+      "ref": "J23",
+      "from": [
+        1046.48,
+        134.62
+      ],
+      "to": [
+        1102.3600000000001,
+        119.38
+      ]
+    }
+  ],
+  "projectLibraries": [
+    {
+      "file": "labwired.kicad_sym",
+      "sha256": "89dbbe1dff8defd916fa4796845401b1f89576ec5107060dec3e12ccb8e8c5e2"
+    },
+    {
+      "file": "Device.kicad_sym",
+      "sha256": "13fad7d7df3933b5c77c78325766e2362e13499fc90131785f70e46b22c2f8e8"
+    },
+    {
+      "file": "Transistor_FET.kicad_sym",
+      "sha256": "39cf2415bb70a014d8d30cb2b83a676c63ae647583b50e3c339f62b9c16924b9"
+    },
+    {
+      "file": "Switch.kicad_sym",
+      "sha256": "3e1e577266347043c29e42b62c931b15e12cfab38fca16142746d4fea758febd"
+    },
+    {
+      "file": "74xx.kicad_sym",
+      "sha256": "f8c95acc8044a74ab11208c031fa36cda5cc496c747143e8d8a38ccea1c88ea9"
+    },
+    {
+      "file": "power.kicad_sym",
+      "sha256": "0fbc038728e37e5f6d84a9a1a616a8892401c848ed88dba2d346c21d204c2d03"
+    },
+    {
+      "file": "sym-lib-table",
+      "sha256": "d0ae9d8e9075fef0f029ed10e2714144d0a5dd661b1383e70bfa04a906bf347e"
+    }
+  ],
+  "libraryMethod": "Existing packages/board-pcb/src/layout/project-libs.ts projectLibraryFiles: exact embedded symbol definitions, namespace-local tables via KIPRJMOD.",
+  "physicalPartChanges": 0,
+  "physicalPinChanges": 0
+}

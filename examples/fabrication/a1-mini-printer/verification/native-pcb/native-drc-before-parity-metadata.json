@@ -1,0 +1,607 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-21T11:39:15",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [
+        {
+            "description": "Field 'Description' differs (PCB: '100 nF ceramic VDDA decoupler; paired with C8=1 uF per STM32F411CE datasheet power-supply scheme.', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 42.9,
+                        "y": 56.0
+                    },
+                    "uuid": "b829f827-08b0-4a8c-9556-917eb84add68"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J10-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J10",
+                    "pos": {
+                        "x": 21.65,
+                        "y": 8.35
+                    },
+                    "uuid": "a4f1d8d8-cd02-48a7-9ec5-a6130e88ad19"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J10-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J10",
+                    "pos": {
+                        "x": 8.35,
+                        "y": 8.35
+                    },
+                    "uuid": "eb262403-96a8-46ff-8181-2291dcb6f335"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J11-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J11",
+                    "pos": {
+                        "x": 44.95,
+                        "y": 8.35
+                    },
+                    "uuid": "271e76dc-bd75-4e92-a823-f86746868bf6"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J11-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J11",
+                    "pos": {
+                        "x": 31.65,
+                        "y": 8.35
+                    },
+                    "uuid": "a5edfd3f-f8ff-447a-83c7-f5905b183abd"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J12-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J12",
+                    "pos": {
+                        "x": 68.35,
+                        "y": 8.35
+                    },
+                    "uuid": "46f9b361-bd40-42d1-9669-58266c27e68d"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J12-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J12",
+                    "pos": {
+                        "x": 55.05,
+                        "y": 8.35
+                    },
+                    "uuid": "0e8333c2-ac61-437c-bcc9-3af31bc6ea0d"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J13-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J13",
+                    "pos": {
+                        "x": 89.15,
+                        "y": 8.35
+                    },
+                    "uuid": "145a4038-ff51-4757-a272-22f12b4bc575"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J13-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "PTH pad MP [<no net>] of J13",
+                    "pos": {
+                        "x": 75.85,
+                        "y": 8.35
+                    },
+                    "uuid": "64c530a2-072e-4bc3-abf4-f0dc840a9f17"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: 'USB Type-C receptacle; GCT USB4216-03-A drawing rev A2, 2025-07-28; primary drawing land pattern and clearance model.', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint J20",
+                    "pos": {
+                        "x": 35.0,
+                        "y": 97.0
+                    },
+                    "uuid": "f7951b03-9bdb-49e3-b9f8-308a2998913e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J22-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "Pad MP [<no net>] of J22 on F.Cu",
+                    "pos": {
+                        "x": 31.2,
+                        "y": 71.8
+                    },
+                    "uuid": "89a088ee-22a7-4867-84d3-0b6453ea9f01"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J22-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "Pad MP [<no net>] of J22 on F.Cu",
+                    "pos": {
+                        "x": 36.8,
+                        "y": 71.8
+                    },
+                    "uuid": "7e7641a7-d92d-4e53-badc-251fbaf0fc6b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J23-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "Pad MP [<no net>] of J23 on F.Cu",
+                    "pos": {
+                        "x": 40.2,
+                        "y": 71.8
+                    },
+                    "uuid": "ab63d981-7680-42c6-93b4-c3501571f2c6"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J23-PAD_MP-PadMP))",
+            "items": [
+                {
+                    "description": "Pad MP [<no net>] of J23 on F.Cu",
+                    "pos": {
+                        "x": 45.8,
+                        "y": 71.8
+                    },
+                    "uuid": "e62bf96b-bde6-443e-a9fb-8621456ba3d5"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 15.4,
+                        "y": 32.0
+                    },
+                    "uuid": "a8d0aa35-8b09-41c7-aaee-b6c3572550a1"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 38.7,
+                        "y": 32.0
+                    },
+                    "uuid": "3de01841-c16c-481b-a8d8-e51f67b4d717"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP3",
+                    "pos": {
+                        "x": 62.1,
+                        "y": 32.0
+                    },
+                    "uuid": "b651339d-03ab-49cb-8bf4-51ce1a741349"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP4",
+                    "pos": {
+                        "x": 85.4,
+                        "y": 32.0
+                    },
+                    "uuid": "9bab5b50-5242-485d-a590-4bda101ac9cd"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP20",
+                    "pos": {
+                        "x": 4.5,
+                        "y": 54.0
+                    },
+                    "uuid": "112bc6dc-211b-4319-8c24-b184c44ae7f8"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP21",
+                    "pos": {
+                        "x": 38.0,
+                        "y": 36.5
+                    },
+                    "uuid": "39b6d412-fce9-4df1-ab9a-2945750bebd0"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP22",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 36.5
+                    },
+                    "uuid": "216f9f8e-d77f-49c5-b99d-edb2418985e4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP23",
+                    "pos": {
+                        "x": 4.5,
+                        "y": 59.0
+                    },
+                    "uuid": "f64c0d0f-d159-47b5-b39a-a514918f49dc"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U10-PAD_7-Pad7))",
+            "items": [
+                {
+                    "description": "Pad 7 [<no net>] of U10 on F.Cu",
+                    "pos": {
+                        "x": 12.6375,
+                        "y": 22.5
+                    },
+                    "uuid": "c8f05c9b-57af-4716-8055-040a6aed151b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U10-PAD_20-Pad20))",
+            "items": [
+                {
+                    "description": "Pad 20 [<no net>] of U10 on F.Cu",
+                    "pos": {
+                        "x": 17.3625,
+                        "y": 20.0
+                    },
+                    "uuid": "f3fc7fe5-4426-4170-8d34-446a437e5650"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U10-PAD_25-Pad25))",
+            "items": [
+                {
+                    "description": "Pad 25 [<no net>] of U10 on F.Cu",
+                    "pos": {
+                        "x": 15.0,
+                        "y": 18.6375
+                    },
+                    "uuid": "8e82cee0-e741-48d6-877d-551af729e07d"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U11-PAD_7-Pad7))",
+            "items": [
+                {
+                    "description": "Pad 7 [<no net>] of U11 on F.Cu",
+                    "pos": {
+                        "x": 35.9375,
+                        "y": 22.5
+                    },
+                    "uuid": "e1bb90c3-e0e6-4a9b-9ea0-4e72e760f295"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U11-PAD_20-Pad20))",
+            "items": [
+                {
+                    "description": "Pad 20 [<no net>] of U11 on F.Cu",
+                    "pos": {
+                        "x": 40.6625,
+                        "y": 20.0
+                    },
+                    "uuid": "7eb9fdaf-f505-4058-af4c-db5e4cceb94b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U11-PAD_25-Pad25))",
+            "items": [
+                {
+                    "description": "Pad 25 [<no net>] of U11 on F.Cu",
+                    "pos": {
+                        "x": 38.3,
+                        "y": 18.6375
+                    },
+                    "uuid": "6675248b-07ef-450e-8c36-a35b4ca04a53"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U12-PAD_7-Pad7))",
+            "items": [
+                {
+                    "description": "Pad 7 [<no net>] of U12 on F.Cu",
+                    "pos": {
+                        "x": 59.3375,
+                        "y": 22.5
+                    },
+                    "uuid": "003dafe1-2102-4c33-b084-dd4b1cc86ff3"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U12-PAD_20-Pad20))",
+            "items": [
+                {
+                    "description": "Pad 20 [<no net>] of U12 on F.Cu",
+                    "pos": {
+                        "x": 64.0625,
+                        "y": 20.0
+                    },
+                    "uuid": "f2ea2988-0b01-44e9-8c53-89d2ff56c371"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U12-PAD_25-Pad25))",
+            "items": [
+                {
+                    "description": "Pad 25 [<no net>] of U12 on F.Cu",
+                    "pos": {
+                        "x": 61.7,
+                        "y": 18.6375
+                    },
+                    "uuid": "3119defd-55f0-4775-b671-137c110105f0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U13-PAD_7-Pad7))",
+            "items": [
+                {
+                    "description": "Pad 7 [<no net>] of U13 on F.Cu",
+                    "pos": {
+                        "x": 82.6375,
+                        "y": 22.5
+                    },
+                    "uuid": "0e077e0e-bc4d-4cf7-b2b0-77f9d3e83795"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U13-PAD_20-Pad20))",
+            "items": [
+                {
+                    "description": "Pad 20 [<no net>] of U13 on F.Cu",
+                    "pos": {
+                        "x": 87.3625,
+                        "y": 20.0
+                    },
+                    "uuid": "2d8ec337-4ab2-40e6-a1ec-b4fe86e5d00e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U13-PAD_25-Pad25))",
+            "items": [
+                {
+                    "description": "Pad 25 [<no net>] of U13 on F.Cu",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 18.6375
+                    },
+                    "uuid": "ed8a7397-52bb-4e60-8363-e904dc8e5a7a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 4.5,
+                        "y": 38.0
+                    },
+                    "uuid": "33cbc6c1-2d5c-4f92-a8e1-c9be38210f0e"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 95.5,
+                        "y": 38.0
+                    },
+                    "uuid": "621eebb7-730e-490a-9276-cfcf87ed9d23"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H4",
+                    "pos": {
+                        "x": 95.5,
+                        "y": 4.5
+                    },
+                    "uuid": "a022ad33-30c0-4828-81e1-502c1cc7811e"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H3",
+                    "pos": {
+                        "x": 4.5,
+                        "y": 95.5
+                    },
+                    "uuid": "bf63e1db-1dbf-4f37-9f8b-78c164b2577b"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        }
+    ],
+    "source": "a1-printcore.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}

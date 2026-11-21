@@ -1,0 +1,94 @@
+{
+  "reason": "STM32F411CE requires VDDA connected to VDD and a 100nF plus1uF decoupling pair. C8 retains1uF; C10 adds100nF.",
+  "source_url": "https://www.st.com/resource/en/datasheet/stm32f411ce.pdf",
+  "source_sha256": "c5170c6687a3dbd0a7892652de89946f880d756107337a12b6626d2ed819e973",
+  "pad_changes": [
+    {
+      "reference": "U1",
+      "pad": "9",
+      "from": "+3V3A",
+      "to": "+3V3"
+    },
+    {
+      "reference": "J34",
+      "pad": "1",
+      "from": "+3V3A",
+      "to": "+3V3"
+    },
+    {
+      "reference": "J33",
+      "pad": "1",
+      "from": "+3V3A",
+      "to": "+3V3"
+    },
+    {
+      "reference": "C8",
+      "pad": "1",
+      "from": "+3V3A",
+      "to": "+3V3"
+    }
+  ],
+  "retagged_copper": [
+    "0ab62fb9-265d-4adc-899f-50b5698fcea7",
+    "247cc222-b40e-4892-b650-aa3b36c7cf39",
+    "4e698254-677b-4cea-a250-140bdbfc1ca5",
+    "88fe6402-9d53-4cfd-97ae-0d5f8290df52",
+    "e287c751-2f89-446a-ac86-67be1f9f9487",
+    "e72c37e8-cc79-4fbf-ac8c-2ee1493f22c4",
+    "297e3ea9-e744-44dd-9421-86e44ec16ba9",
+    "8c5081d5-6848-4766-a62f-f1dc026d1347",
+    "0e1e0f58-c1a4-4897-9544-0fd14ba3f359",
+    "6545cb32-aa00-416d-995b-9af74488504c",
+    "e9b92aa1-59de-49a0-a3d8-c88f6fd4e8e0",
+    "05209a13-685e-43ee-94e4-0fab4ec1b31d",
+    "1664297e-91cd-4a32-ad9c-bbc708c749e3",
+    "759fb77f-5edb-4bc4-8ed5-5751d64b626b",
+    "7d23b338-d62b-4f83-8b86-6694e4b936fd",
+    "9b741021-d5bc-45d8-9c38-3f14955e56d8",
+    "e0b02aa4-c2a4-44a1-becc-833c550e418a",
+    "efe17226-ecfe-4b0e-8ecc-c3fc90129975"
+  ],
+  "new_reference": "C10",
+  "new_component_value": "100n",
+  "new_component_function": "VDDA high-frequency decoupling",
+  "retained_bulk_capacitor": "C8 1u",
+  "footprint_source": {
+    "library": "/usr/share/kicad/footprints/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+    "sha256": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405",
+    "footprint_id": "C_0603_1608Metric",
+    "position_mm": [
+      42.9,
+      56.0
+    ],
+    "orientation_deg": 180.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "+3V3",
+        "xy_mm": [
+          43.675,
+          56.0
+        ]
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "xy_mm": [
+          42.125,
+          56.0
+        ]
+      }
+    ]
+  },
+  "added_copper": [
+    "d3c12923-567b-4992-9794-b1d2af025439",
+    "f7f46a0c-5122-4f46-ab7a-a285b464e3ee",
+    "0170ec6a-0300-444a-8ac7-dcef1b5606bb",
+    "7340a2ba-1d76-45a4-8638-4c5edd847016",
+    "be3ee1a1-87f2-4f5b-a3f0-86bb8c33360d",
+    "6343748a-e9ab-41af-adcd-698666387844",
+    "f32fed1b-f004-4e6a-a89d-942d63ad8210",
+    "0d333eba-1f6c-4bd7-aee9-25babc34bf28"
+  ],
+  "output_sha256": "e551384e9c89191b07c96f2afcf2e7e2aacbd3bce589383deb6e5057335ffcad"
+}

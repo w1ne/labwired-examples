@@ -1,50 +1,240 @@
 {
-  "generated_utc": "2026-11-21T11:19:16.347820+00:00",
-  "source_pcb_sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad",
+  "schema": "labwired.native-pcb-release-package.v2",
+  "generated_utc": "2026-11-21T12:09:53.470277+00:00",
+  "source_pcb_sha256": "b5c0150f327aae1f248b9a61d6feccc1185ad7934152249f1155c6fc3bb36c99",
+  "source_schematic_sha256": "04543f9e7ed5b629feae1b4300723c32c0f89aa326c1aea4d836a97bd52fd97f",
   "rules_sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71",
+  "physical_source_sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad",
   "drc": {
     "violations": 0,
-    "unconnected_items": 0
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "schematic_parity_checked": true,
+  "native_erc_errors": 0,
+  "native_erc_warnings": {
+    "isolated_pin_label": 9
   },
   "footprints": 157,
   "physical_pads": 604,
-  "schematic_parity_checked": false,
+  "archive_sha256": "3a210cd9014f7066035e9810ce3b700ba11b3c1ed70fb694eef53801d036edcf",
+  "archive_bytes": 6033824,
   "files": [
     {
-      "source": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/a1-printcore.kicad_pcb",
-      "bytes": 1869857,
-      "sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad"
+      "source": "/data/a1-finish-pcb-20261121/release/source/74xx.kicad_sym",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/74xx.kicad_sym",
+      "bytes": 6426,
+      "sha256": "f8c95acc8044a74ab11208c031fa36cda5cc496c747143e8d8a38ccea1c88ea9"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pro",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/a1-printcore.kicad_pro",
-      "bytes": 9903,
-      "sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71"
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/AMASS_XT30PW-M_1x02_P2.50mm_Horizontal.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/AMASS_XT30PW-M_1x02_P2.50mm_Horizontal.kicad_mod",
+      "bytes": 7190,
+      "sha256": "e7d2081c9b9f6b15e3052c358ac3653560fc17096824e93105257a3281775934"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/source/fp-lib-table",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/fp-lib-table",
-      "bytes": 185,
-      "sha256": "2c2d3ae7fcc50b8ef8100f13e7cdb4e3a76eafabaebec9b4e040e63f437421b3"
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/CP_Elec_10x10.5.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/CP_Elec_10x10.5.kicad_mod",
+      "bytes": 7279,
+      "sha256": "c241bbd8af571004222b28acea7a1769352b8cebbcab96e1502fd4ca4312495b"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/source/models/USB4216-03-A_A2_drawing-clearance.step",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/USB4216-03-A_A2_drawing-clearance.step",
-      "bytes": 602613,
-      "sha256": "32bde23cf1b9b326e90cc035d162a1f111d813fbebf6cd93f239eb44cba72603"
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/C_0603_1608Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/C_0603_1608Metric.kicad_mod",
+      "bytes": 3588,
+      "sha256": "5b7b612a3e032167dca7b33cf7bd2fb707b90612f9a09abef732ceac98b242e9"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/source/models/A4988SETTR-T_ET_drawing-checked.step",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/A4988SETTR-T_ET_drawing-checked.step",
-      "bytes": 1494109,
-      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/C_0805_2012Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/C_0805_2012Metric.kicad_mod",
+      "bytes": 3685,
+      "sha256": "99469c2b284f13b2020a2d3aae2aa0c2952994c84c13b3616c3a3aa4ba5c0eff"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/source/models/LMR36520ADDAR_DDA0008B_drawing-checked.step",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/LMR36520ADDAR_DDA0008B_drawing-checked.step",
-      "bytes": 128409,
-      "sha256": "2d6f7e774e8143e3320cbd59eb5be9f3b7864614644e3b072006e1eb05fb7fa6"
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/C_1210_3225Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/C_1210_3225Metric.kicad_mod",
+      "bytes": 3595,
+      "sha256": "4d87e63c511db5c70978a78fdcd430e0bf426f42631b5567be051e283c23183b"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/Crystal_SMD_3225-4Pin_3.2x2.5mm.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/Crystal_SMD_3225-4Pin_3.2x2.5mm.kicad_mod",
+      "bytes": 3817,
+      "sha256": "f0cb147070c35b75af5667bb3d0885b7d6cb9ffa872a1aa9c478b6b91ad67d19"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/D_SMA.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/D_SMA.kicad_mod",
+      "bytes": 4533,
+      "sha256": "e4175a0775430aa49421da025eeff2197c1bbf8140587be0482e2379c9a2bfdf"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/D_SMB.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/D_SMB.kicad_mod",
+      "bytes": 4536,
+      "sha256": "2b9e2200dfd09cfffe19dc5ae4815ffaff2087dba754a430cb4c4d7c0f11cfce"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/Fuseholder_Blade_Mini_Keystone_3568.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/Fuseholder_Blade_Mini_Keystone_3568.kicad_mod",
+      "bytes": 4680,
+      "sha256": "428dbf935c9d69f43b0b57846fc11b761454d1fdc6e3a94209cea4be9123e534"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical.kicad_mod",
+      "bytes": 7813,
+      "sha256": "02af82cd1807485a7b0d49c009b31ad505c96ee4ca0f26f5485bd7100c43fda4"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.kicad_mod",
+      "bytes": 7500,
+      "sha256": "1f8f4d63c290f3829829568da5d0d60cdf2d89d5278f2546e85ace3f2f93bdf2"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical.kicad_mod",
+      "bytes": 7680,
+      "sha256": "a7e409eb7b5e82fb1494297c863b752efc81881390cbe6a82730e9c2707f98eb"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.kicad_mod",
+      "bytes": 7881,
+      "sha256": "e5892942a621529f310c16144d6cf8c25e0199cc6fc5432075d86f4f358a08ba"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/LED_0603_1608Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/LED_0603_1608Metric.kicad_mod",
+      "bytes": 3866,
+      "sha256": "d1f113e4ca246813807046d7fe6cf3842e3f86bfe5788fa590da68168b03e560"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/L_Bourns_SRN6045TA.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/L_Bourns_SRN6045TA.kicad_mod",
+      "bytes": 3940,
+      "sha256": "3d9e668570f99df27dc4bce1b4dadae5c7ebdbab2d1747d5096e372310da07e2"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal.kicad_mod",
+      "bytes": 9037,
+      "sha256": "ca28be74240aca6d6ea3d1ebf3410b5fa2d48d39114b6003deba1445097667d0"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/MountingHole_3.2mm_M3.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/MountingHole_3.2mm_M3.kicad_mod",
+      "bytes": 1768,
+      "sha256": "87c15f67c8b26453c1f0b453dfd0eb34ae901d1aae2bd6fc4aa686833371b243"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/PinHeader_2x05_P1.27mm_Vertical_SMD.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/PinHeader_2x05_P1.27mm_Vertical_SMD.kicad_mod",
+      "bytes": 10522,
+      "sha256": "6424db4e200bbed990b4385daa4c798981d441e6f26d12a5b9d3acbebe5c2a7e"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm.kicad_mod",
+      "bytes": 15837,
+      "sha256": "bb07cef3ada33e8ca45d3a10c64236e645206046e3f77c722a13409ffcd928c7"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/R_0603_1608Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/R_0603_1608Metric.kicad_mod",
+      "bytes": 3621,
+      "sha256": "cfab29dab719bc7380ef7e342e1ef6b32344e9adca564a85fe6661bada8d6f4a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/R_2512_6332Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/R_2512_6332Metric.kicad_mod",
+      "bytes": 3610,
+      "sha256": "cea391fa4afdf9392c8bbd09d55561d368286df048c4d50e741d186af59698cc"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/SOIC-14_3.9x8.7mm_P1.27mm.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/SOIC-14_3.9x8.7mm_P1.27mm.kicad_mod",
+      "bytes": 6362,
+      "sha256": "ec46087c2b68275ec689744b85b35ced47650b4d0d34aa382e75aa88f391ee0a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.kicad_mod",
+      "bytes": 6088,
+      "sha256": "29c0263dbf23dc8cfefac9cd3bba943d3da3e4a609e9f8d9b2a4d315524061a1"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/SOT-23-5.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/SOT-23-5.kicad_mod",
+      "bytes": 4704,
+      "sha256": "d78b8c7fa49b2c127ff2828190fc83acfa9b6fd00f23bf154398bcf55236843b"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/SOT-23-6.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/SOT-23-6.kicad_mod",
+      "bytes": 4877,
+      "sha256": "dc4adfedefc81efab4286990ea4b91c46dfa54bfc7a5761d0f31fe3d94602393"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/SOT-23.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/SOT-23.kicad_mod",
+      "bytes": 4364,
+      "sha256": "67cf016becf74d470f83c976f3ab6210216853a9963ef729940e7246750addbf"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/SW_SPST_PTS810.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/SW_SPST_PTS810.kicad_mod",
+      "bytes": 5316,
+      "sha256": "d1c739489a7d04242d75a10009dcd49f4dcc16112306f0d9e9eef0fa6e074a21"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/TO-252-3_TabPin2.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/TO-252-3_TabPin2.kicad_mod",
+      "bytes": 7199,
+      "sha256": "98d4cb28ea3544203b8e80f541001024ff055ef50a5992b6d2cd5c6d9fc07792"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/TQFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm.kicad_mod",
+      "bytes": 10279,
+      "sha256": "607764ed04b070a1857e740473b3724d3345591b561a4219e8e0e2cb1dd28f1f"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal.kicad_mod",
+      "bytes": 8289,
+      "sha256": "58bf3cc7954503bf3332cfc7a6332925e984d6fff3c2b0817f63a0d77464622f"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "bytes": 1730,
+      "sha256": "ace6ee7aaec03ba1015485c86100a2b867111f9f4b6a1a2d537276077423ee70"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/A1_Native_C10.pretty/C_0603_1608Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/A1_Native_C10.pretty/C_0603_1608Metric.kicad_mod",
+      "bytes": 2869,
+      "sha256": "a27f68891bd3cbab6873ca3c8c67923567f70d5ee230fe4c53ecb455deee9e6a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/Device.kicad_sym",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/Device.kicad_sym",
+      "bytes": 13210,
+      "sha256": "13fad7d7df3933b5c77c78325766e2362e13499fc90131785f70e46b22c2f8e8"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/KICAD_SYMBOLS_ATTRIBUTION.md",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/KICAD_SYMBOLS_ATTRIBUTION.md",
+      "bytes": 1768,
+      "sha256": "83058eff4c7a9a167128dbbb1c91c91d706a812479f62ec54f749a99ceb1573b"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/KICAD_SYMBOLS_LICENSE.md",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/KICAD_SYMBOLS_LICENSE.md",
+      "bytes": 2101,
+      "sha256": "45d2bce75e5a4208f5afb01b8fb2c406e700371c4fe2b5f5cd5c443d46db4d8f"
     },
     {
       "source": "/data/a1-finish-pcb-20261121/release/source/LabWired_GCT.pretty/USB4216-03-A.kicad_mod",
@@ -53,256 +243,46 @@
       "sha256": "76b1b4829dd0a741c3ba9fc59f0f5c9967823ada651947ed08133c10166692f8"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/inputs/routing-base.kicad_pro",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/routing-base.kicad_pro",
+      "source": "/data/a1-finish-pcb-20261121/release/source/Switch.kicad_sym",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/Switch.kicad_sym",
+      "bytes": 2543,
+      "sha256": "3e1e577266347043c29e42b62c931b15e12cfab38fca16142746d4fea758febd"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/Transistor_FET.kicad_sym",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/Transistor_FET.kicad_sym",
+      "bytes": 4732,
+      "sha256": "39cf2415bb70a014d8d30cb2b83a676c63ae647583b50e3c339f62b9c16924b9"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/a1-printcore.kicad_pcb",
+      "bytes": 1884735,
+      "sha256": "b5c0150f327aae1f248b9a61d6feccc1185ad7934152249f1155c6fc3bb36c99"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pro",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/a1-printcore.kicad_pro",
       "bytes": 9903,
       "sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/inputs/routing-base.kicad_pcb",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/routing-base.kicad_pcb",
-      "bytes": 1841376,
-      "sha256": "3d20e0bc9ffbd2e15602754de47ee537e51655ac6465c05a7aa926c4c5cf008d"
+      "source": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_sch",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/a1-printcore.kicad_sch",
+      "bytes": 579346,
+      "sha256": "04543f9e7ed5b629feae1b4300723c32c0f89aa326c1aea4d836a97bd52fd97f"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/inputs/README.md",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/README.md",
-      "bytes": 648,
-      "sha256": "73e2960faa8460a12960fa22cf9594da8bad739400f1dd787aa2a0a0eb3f8392"
+      "source": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-native-kicad.manifest.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/exports/a1-printcore-native-kicad.manifest.json",
+      "bytes": 29756,
+      "sha256": "7e2e520156b94ad203d95b9b8620f1632bbcf790a99d9b60f7c280f3f761d368"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/inputs/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
-      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
-      "bytes": 1928,
-      "sha256": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_i2c_escape.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_i2c_escape.py",
-      "bytes": 3335,
-      "sha256": "a07c8a2ad99cbaa5dac4d6bbc627bd5f411f43c7c9bd5733377556d4bfbf4044"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/finalize_native.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/finalize_native.py",
-      "bytes": 2561,
-      "sha256": "40754f967e19fbf9735723808fa1968527d3de54faaf5805f4b8151267607006"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_fan_led_topology.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_fan_led_topology.py",
-      "bytes": 6419,
-      "sha256": "65343ae5872a1f729c43b055f3e028b875770681aa5e5e0ff0df6a66aaf34b2f"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/reproduce_native.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/reproduce_native.py",
-      "bytes": 2678,
-      "sha256": "cb9762161da2e5ac65686bb6004954a81cd3e86bef30a42097d9c2f025e0b414"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/audit_native.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/audit_native.py",
-      "bytes": 10352,
-      "sha256": "2a070f673676df5974330b2c8da107ecd65db8a356800bd17939651edaabe9d3"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_vdda_supply.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_vdda_supply.py",
-      "bytes": 3943,
-      "sha256": "c5520673449a62d302c1900efbb3dd5aaa3bb389cf1c9035339f3d92158ae1bb"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_fullstep_straps_resolved.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_fullstep_straps_resolved.py",
-      "bytes": 4156,
-      "sha256": "9f66d01c48a653e880dade83d31f6525699f51d5e27c303608f4615ddbef49fe"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_usb_escape.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_usb_escape.py",
-      "bytes": 4954,
-      "sha256": "75df9be7f5cf0bd018a9eeb65835c4a7870f0c7d92658d931a0a8859112021bf"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_mechanical_patch.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_mechanical_patch.py",
-      "bytes": 5151,
-      "sha256": "180876655823e98c2f6a52acbae2ac9323cf0386af7b6ad21f2814524bece52c"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/tools/close_end_z_and_e_step.py",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/close_end_z_and_e_step.py",
-      "bytes": 1866,
-      "sha256": "1318004ba87c4fa201ce6f825d877fee5017b7944e9b4e22b167da702724073b"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_usb_escape.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/apply_usb_escape.log",
-      "bytes": 282,
-      "sha256": "629ddde4f7e01683158ee69937c0826d8b6818f8b33de052720da3b673602e0d"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-source-audit.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-source-audit.json",
-      "bytes": 10480,
-      "sha256": "9007ce1007736d37dacc42f8a3e23ee3b8fd8c54d763f2a1adf709cb12cfe947"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-validation-command.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-validation-command.json",
-      "bytes": 973,
-      "sha256": "738163a0d4520cea34856707775c498c3bf2bcc1b96e76784c0dbef28ff15615"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_i2c_escape.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/apply_i2c_escape.log",
-      "bytes": 8,
-      "sha256": "70af1ddd83f57b33839e9f5054163efef082a1d639a38075ecf687b1c516087a"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/audit_native.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/audit_native.log",
-      "bytes": 1186,
-      "sha256": "76329215457ed30c44cc4ff4b5215f1275e7bf25f7dcad137a099c30aef5b2e4"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/routing-rules-source.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/routing-rules-source.json",
-      "bytes": 8095,
-      "sha256": "9d4419475297b0fb1f556ae99619f4a6491a1b61ceca7d4c9c6e89299075f27a"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/close_end_z_and_e_step.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/close_end_z_and_e_step.log",
-      "bytes": 747,
-      "sha256": "531ee33186a25f9c970d9e7e96935682a0e721c98bbb42ce38b4f4a6e0766650"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-drc.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-drc.log",
-      "bytes": 127,
-      "sha256": "c79c5b4bd3afc0e0d5fda8d631b10cd5ad68d2b4abbaeb9ab9fbbae30e7f0224"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_mechanical_patch.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/apply_mechanical_patch.log",
-      "bytes": 4568,
-      "sha256": "a9c40ee412247fd4ed2bd841082c8755b5f6e21d7fa86b68459406efcb12bf38"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_fan_led_topology.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/apply_fan_led_topology.log",
-      "bytes": 8986,
-      "sha256": "2ca819b5193713a9cc2ad97b3b1f3eeeec05e79c01419dddd86dcdfea4c482de"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-pad-net-map.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-pad-net-map.json",
-      "bytes": 72167,
-      "sha256": "28a1d059954dff01b61aceb0749ac437cae4f0c388fca2ae6ad76665cf9b8bbe"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/package-solid-qualification.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/package-solid-qualification.json",
-      "bytes": 2367,
-      "sha256": "ab0779ff6ebbbbee3010549aa37befa9f54bf2960e903f5c70cd2cb2eddc27a7"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/finalize_native.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/finalize_native.log",
-      "bytes": 973,
-      "sha256": "738163a0d4520cea34856707775c498c3bf2bcc1b96e76784c0dbef28ff15615"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-step-exports.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-step-exports.json",
-      "bytes": 1360,
-      "sha256": "b8bac98971c3fdef725d86420f6a6a0648b545d9cd46869faedf6d47060da84e"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/reproduction.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/reproduction.json",
-      "bytes": 1823,
-      "sha256": "1fac6d03456e4eea696ab0c1ae825781e178e695db52f5975dca511e8865dcf5"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/usb4216-solid-qualification.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/usb4216-solid-qualification.json",
-      "bytes": 1693,
-      "sha256": "7140a65e2f157d9998d2a2728043e4b10db7e538db057ed4dd2e33957de74b5e"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_vdda_supply.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/apply_vdda_supply.log",
-      "bytes": 2745,
-      "sha256": "24f93b36e8b7321f162d5c80dceec3436c99bf92a536de63c63ff750d9784018"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_fullstep_straps_resolved.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/build-logs/apply_fullstep_straps_resolved.log",
-      "bytes": 2446,
-      "sha256": "1313004a4dbcb75101f0522b9ed1d0b436513ca8fef9d5e54983baf3e1bb7dc1"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-drc.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-drc.json",
-      "bytes": 1069,
-      "sha256": "7f94a9a655b90adfe98cb781720536c168e8e563e7ea9bb2e30786c81bf91441"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/accepted-baseline/accepted-baseline.kicad_pro",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/accepted-baseline/accepted-baseline.kicad_pro",
-      "bytes": 9903,
-      "sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/accepted-baseline/accepted-baseline.kicad_pcb",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/accepted-baseline/accepted-baseline.kicad_pcb",
-      "bytes": 1814831,
-      "sha256": "19e6b415ad41bd9c068ce39610e7412091724cf7323162625783c7bed13c0142"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/accepted-baseline/accepted-baseline-drc.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/accepted-baseline/accepted-baseline-drc.json",
-      "bytes": 3472,
-      "sha256": "62a5bc1731b5572e16bbf868f4709cdef46911058a0267ed62acac4f5526c996"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/07-mechanical.mechanical-patch.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/07-mechanical.mechanical-patch.json",
-      "bytes": 2671,
-      "sha256": "e033a7336dd976e9378dcfa7ff15fd2a121982e9615019c2c1038e88cca62b7a"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/02-usb-escape.delta.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/02-usb-escape.delta.json",
-      "bytes": 15645,
-      "sha256": "cfb3a16aae9bcc7357e7ce06d7c29fc4e9425658f1d3a20e00f178a1de0405e4"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/fullstep-straps-delta.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/fullstep-straps-delta.json",
-      "bytes": 2445,
-      "sha256": "47cdf98a855e2f0a2d44d35ccd836759117f260475e33452b8c172a52294c31a"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/06-fan-led.fan-led-delta.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/06-fan-led.fan-led-delta.json",
-      "bytes": 8985,
-      "sha256": "72af7c4bfecceffe13d07d0f81b5d3be398b7a042c552567f0c4de00136f4ca8"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/i2c-escape-delta.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/i2c-escape-delta.json",
-      "bytes": 2260,
-      "sha256": "42f4a5b7f03b42db21768886a8d870bc3b599c47c2cbaeee5424520da41937fb"
-    },
-    {
-      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/04-vdda.vdda-delta.json",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/04-vdda.vdda-delta.json",
-      "bytes": 2745,
-      "sha256": "24f93b36e8b7321f162d5c80dceec3436c99bf92a536de63c63ff750d9784018"
+      "source": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-native-kicad.zip",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/exports/a1-printcore-native-kicad.zip",
+      "bytes": 6033824,
+      "sha256": "3a210cd9014f7066035e9810ce3b700ba11b3c1ed70fb694eef53801d036edcf"
     },
     {
       "source": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated-pads.step",
@@ -317,22 +297,604 @@
       "sha256": "4fa338f753a8c8a17331facabd8ee8d3698bc0a0cd3fa152b71749e88baa2e2a"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated.step.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/step-export-logs/a1-printcore-populated.step.log",
-      "bytes": 115,
-      "sha256": "7d3c9f5f447df15d0100d5b61adc4764122ab82c72e255ac048ee61054f9dcb9"
+      "source": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-schematic.pdf",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/exports/a1-printcore-schematic.pdf",
+      "bytes": 443891,
+      "sha256": "c1bcd838c2b1c1d020176f3d09125a0c43b0c708321c23afd6b1873160dc054e"
     },
     {
-      "source": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated-pads.step.log",
-      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/step-export-logs/a1-printcore-populated-pads.step.log",
-      "bytes": 120,
-      "sha256": "1f71208d348946ed3dd67f888e36e2933605bd2d8ffce14375969353b5c7257d"
+      "source": "/data/a1-finish-pcb-20261121/release/source/fp-lib-table",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/fp-lib-table",
+      "bytes": 496,
+      "sha256": "6726608cfaf0a8af575921044d22411d074177e47ac4f0a31a2c80ef427d69bf"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/labwired.kicad_sym",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/labwired.kicad_sym",
+      "bytes": 62772,
+      "sha256": "89dbbe1dff8defd916fa4796845401b1f89576ec5107060dec3e12ccb8e8c5e2"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/models/A4988SETTR-T_ET_drawing-checked.step",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/A4988SETTR-T_ET_drawing-checked.step",
+      "bytes": 1494109,
+      "sha256": "fe4d989320093a20fdef8fdd9fa3d16ba072ca6909377ae8204e3e99e08542ee"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/models/LMR36520ADDAR_DDA0008B_drawing-checked.step",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/LMR36520ADDAR_DDA0008B_drawing-checked.step",
+      "bytes": 128409,
+      "sha256": "2d6f7e774e8143e3320cbd59eb5be9f3b7864614644e3b072006e1eb05fb7fa6"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/models/Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal.stp",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/Molex_Micro-Fit_3.0_43650-0410_1x04-1MP_P3.00mm_Horizontal.stp",
+      "bytes": 242133,
+      "sha256": "2d52fa75c9bc7928f3f3e8afb974956297365d501a06f1ca39d65186777a4b9a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/models/QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm.step",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm.step",
+      "bytes": 528922,
+      "sha256": "ba30b82fac313a906167a8e5739f396cae47472c2ef885c0975be7ea93235b26"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/models/USB4216-03-A_A2_drawing-clearance.step",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/USB4216-03-A_A2_drawing-clearance.step",
+      "bytes": 602613,
+      "sha256": "32bde23cf1b9b326e90cc035d162a1f111d813fbebf6cd93f239eb44cba72603"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/models/XT30PW-M-media.step",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/models/XT30PW-M-media.step",
+      "bytes": 780466,
+      "sha256": "8d503f92f9a79ceb5c7c2edea1f45ed92a7a1d3fd24ebe6179f6de88b64e38ed"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/power.kicad_sym",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/power.kicad_sym",
+      "bytes": 7874,
+      "sha256": "0fbc038728e37e5f6d84a9a1a616a8892401c848ed88dba2d346c21d204c2d03"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/inputs/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "bytes": 1928,
+      "sha256": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/inputs/README.md",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/README.md",
+      "bytes": 648,
+      "sha256": "73e2960faa8460a12960fa22cf9594da8bad739400f1dd787aa2a0a0eb3f8392"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/inputs/routing-base.kicad_pcb",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/routing-base.kicad_pcb",
+      "bytes": 1841376,
+      "sha256": "3d20e0bc9ffbd2e15602754de47ee537e51655ac6465c05a7aa926c4c5cf008d"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/inputs/routing-base.kicad_pro",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/source-inputs/native-pcb/routing-base.kicad_pro",
+      "bytes": 9903,
+      "sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/source/sym-lib-table",
+      "repository_path": "examples/fabrication/a1-mini-printer/hardware/sym-lib-table",
+      "bytes": 831,
+      "sha256": "d0ae9d8e9075fef0f029ed10e2714144d0a5dd661b1383e70bfa04a906bf347e"
     },
     {
       "source": "/data/a1-finish-pcb-20261121/release/README.md",
       "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/README.md",
-      "bytes": 4900,
-      "sha256": "cb8a99049c4003640d11062e28f5621b9f7c8caa5bae2046dfd7682c727c4f98"
+      "bytes": 8383,
+      "sha256": "317b768fe9ff8c757130fb6f29cf4296546c10c90f05c8cdd4b885c7414156c1"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/a1-printcore.net.xml",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/a1-printcore.net.xml",
+      "bytes": 199746,
+      "sha256": "cbd570f5090c19974dda45b6c02c5d9ee44bf2475232296fa52325c41c17d173"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/accepted-baseline/accepted-baseline-drc.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/accepted-baseline/accepted-baseline-drc.json",
+      "bytes": 3472,
+      "sha256": "62a5bc1731b5572e16bbf868f4709cdef46911058a0267ed62acac4f5526c996"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/accepted-baseline/accepted-baseline.kicad_pcb",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/accepted-baseline/accepted-baseline.kicad_pcb",
+      "bytes": 1814831,
+      "sha256": "19e6b415ad41bd9c068ce39610e7412091724cf7323162625783c7bed13c0142"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/accepted-baseline/accepted-baseline.kicad_pro",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/accepted-baseline/accepted-baseline.kicad_pro",
+      "bytes": 9903,
+      "sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_fan_led_topology.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/apply_fan_led_topology.log",
+      "bytes": 8986,
+      "sha256": "2ca819b5193713a9cc2ad97b3b1f3eeeec05e79c01419dddd86dcdfea4c482de"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_fullstep_straps_resolved.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/apply_fullstep_straps_resolved.log",
+      "bytes": 2446,
+      "sha256": "1313004a4dbcb75101f0522b9ed1d0b436513ca8fef9d5e54983baf3e1bb7dc1"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_i2c_escape.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/apply_i2c_escape.log",
+      "bytes": 8,
+      "sha256": "70af1ddd83f57b33839e9f5054163efef082a1d639a38075ecf687b1c516087a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_mechanical_patch.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/apply_mechanical_patch.log",
+      "bytes": 4568,
+      "sha256": "a9c40ee412247fd4ed2bd841082c8755b5f6e21d7fa86b68459406efcb12bf38"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_usb_escape.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/apply_usb_escape.log",
+      "bytes": 282,
+      "sha256": "629ddde4f7e01683158ee69937c0826d8b6818f8b33de052720da3b673602e0d"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/apply_vdda_supply.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/apply_vdda_supply.log",
+      "bytes": 2745,
+      "sha256": "24f93b36e8b7321f162d5c80dceec3436c99bf92a536de63c63ff750d9784018"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/audit_native.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/audit_native.log",
+      "bytes": 1186,
+      "sha256": "cc98f649aee0230435670165e0a57779e85323366730bfc3799c7808fb3a85ca"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/close_end_z_and_e_step.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/close_end_z_and_e_step.log",
+      "bytes": 747,
+      "sha256": "531ee33186a25f9c970d9e7e96935682a0e721c98bbb42ce38b4f4a6e0766650"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/finalize_native.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/finalize_native.log",
+      "bytes": 973,
+      "sha256": "738163a0d4520cea34856707775c498c3bf2bcc1b96e76784c0dbef28ff15615"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/footprint-library-drc.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/footprint-library-drc.json",
+      "bytes": 1069,
+      "sha256": "2613a87f219da62072726fd81d2f393d354ad3aca9afb33e115bd4e558d81e95"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/hosted-native-import-limitations.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/hosted-native-import-limitations.json",
+      "bytes": 3027,
+      "sha256": "f5dad2b3f07d7a5aeee4d77dd60be8740da90f2be6d01d0c89504a320fa2ea3a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/mechanical-pad-drawing-evidence.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/mechanical-pad-drawing-evidence.json",
+      "bytes": 2276,
+      "sha256": "42267d5de563fe3b38a89742c5221cc2b486e1bfa78674339f6aa1140b908e9a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/mounting-hole-board-only.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/mounting-hole-board-only.json",
+      "bytes": 1606,
+      "sha256": "af746865ccada743a9d0e18de61d8ff1fd22cbb7bd8d019bc4aae8a92c5942d7"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-assembly-validation.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-assembly-validation.json",
+      "bytes": 33547,
+      "sha256": "02bd9ce51542baeda3b4f7ec4f331ebe2c6eb3fa14785ff7dcf1b54156969c1d"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-drc-before-parity-metadata.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-drc-before-parity-metadata.json",
+      "bytes": 20943,
+      "sha256": "4246fe30005de46179087634c272f2685f60305357df5ff472259f4a3e9849f6"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-drc.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-drc.json",
+      "bytes": 1069,
+      "sha256": "18067f6477edbd8d0caa3ec759c1f34dad1e880648bec0d99a9296ab79c49038"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-drc.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-drc.log",
+      "bytes": 159,
+      "sha256": "5dca42349b5bbe942575cb92e8904ba501d2e89e5b1c2c3f2eb01f05a8e56e0b"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-erc-summary.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-erc-summary.json",
+      "bytes": 4529,
+      "sha256": "6f582c878032c4a42866884c963fc6f40d6b450e96cd186c7563d43d7ff030c6"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-erc.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-erc.json",
+      "bytes": 6440,
+      "sha256": "9255c8e2952dc92e07175a952e2ff8c8b73fcc8d8b7bce2103291e5a9a48f671"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-erc.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-erc.log",
+      "bytes": 101,
+      "sha256": "8adcb70882e16cdc9ecc521f4a1d8c5e4e0b8dff4837f81c030adf3f651031b7"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-final-schematic-parity.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-final-schematic-parity.json",
+      "bytes": 27092,
+      "sha256": "82e13763a81c94fc5da226c4476e03bcf97be1705cf54252c40cbe1a7a05c505"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-footprint-map.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-footprint-map.json",
+      "bytes": 18596,
+      "sha256": "55084e5e8dbdc5514553ce0b224767d0db9a661a8464bbbee2f3fa3a0b6a1776"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-footprint-namespaces.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-footprint-namespaces.json",
+      "bytes": 61433,
+      "sha256": "d37a233935c95b8ce245c0d55004e4df9ced0e1d8f378eac26b7184454346512"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-linked-schematic-parity.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-linked-schematic-parity.json",
+      "bytes": 3140,
+      "sha256": "b673ade91f43c8ef9faf01a81b02dfae1802cae4d0d60bb4e631339c8f9f8ed0"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-mechanical-pad-inventory.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-mechanical-pad-inventory.json",
+      "bytes": 8677,
+      "sha256": "ef80ebdc4063472abbfc0dd1856fcebda856888b2c047c036cbeca38d04d8ee2"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-metadata-only-provenance.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-metadata-only-provenance.json",
+      "bytes": 1708,
+      "sha256": "5d97c29ba591451b2061cea95a1ed99aa8506bde19b4809f940b4cfa11450588"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-nc-metadata.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-nc-metadata.json",
+      "bytes": 5054,
+      "sha256": "faf6bfc1223e7507230d77e4739fe569e821aa4686e03fd9f3a34697bf2a5b9b"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-pad-net-map.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-pad-net-map.json",
+      "bytes": 72519,
+      "sha256": "d4930f21ef864d4d1811f753c268b9f7a3347825d8fca39959dc24595e90d558"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-project-portability.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-project-portability.json",
+      "bytes": 47756,
+      "sha256": "60236d5d2f6acc3dd2dabbf2130b5a1308b814c6b0be800aa87aebd9649b9dd7"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-schematic-linkage.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-schematic-linkage.json",
+      "bytes": 23108,
+      "sha256": "b15b5bb166552c3100c8cd8350d79efad7204f737a4477c879621462db4c53fa"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-schematic-packaging.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-schematic-packaging.json",
+      "bytes": 35339,
+      "sha256": "2e95b4a387f3ed43f474a708e227fe2a992e76d382275bfac1cde35a02f0b034"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-schematic-parity.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-schematic-parity.json",
+      "bytes": 27092,
+      "sha256": "82e13763a81c94fc5da226c4476e03bcf97be1705cf54252c40cbe1a7a05c505"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-schematic-projection.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-schematic-projection.json",
+      "bytes": 100577,
+      "sha256": "6403a389d57f94f922e2fa01f22e9e4ae1c35441d473497acb08cfbdc84ec63a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-source-audit.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-source-audit.json",
+      "bytes": 43132,
+      "sha256": "32b162cb86c394a3568464036dc07dc376aef6a4397762f32bf25ce0903d9314"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-step-exports.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-step-exports.json",
+      "bytes": 1360,
+      "sha256": "b8bac98971c3fdef725d86420f6a6a0648b545d9cd46869faedf6d47060da84e"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/native-validation-command.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/native-validation-command.json",
+      "bytes": 1141,
+      "sha256": "e3f881a7c9b1801f5ece048805a4bf51c80b39a1bcf64c885a105a930710b78b"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/package-solid-qualification.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/package-solid-qualification.json",
+      "bytes": 2367,
+      "sha256": "ab0779ff6ebbbbee3010549aa37befa9f54bf2960e903f5c70cd2cb2eddc27a7"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/02-usb-escape.delta.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/02-usb-escape.delta.json",
+      "bytes": 15645,
+      "sha256": "cfb3a16aae9bcc7357e7ce06d7c29fc4e9425658f1d3a20e00f178a1de0405e4"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/04-vdda.vdda-delta.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/04-vdda.vdda-delta.json",
+      "bytes": 2745,
+      "sha256": "24f93b36e8b7321f162d5c80dceec3436c99bf92a536de63c63ff750d9784018"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/06-fan-led.fan-led-delta.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/06-fan-led.fan-led-delta.json",
+      "bytes": 8985,
+      "sha256": "72af7c4bfecceffe13d07d0f81b5d3be398b7a042c552567f0c4de00136f4ca8"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/07-mechanical.mechanical-patch.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/07-mechanical.mechanical-patch.json",
+      "bytes": 2671,
+      "sha256": "e033a7336dd976e9378dcfa7ff15fd2a121982e9615019c2c1038e88cca62b7a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/fullstep-straps-delta.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/fullstep-straps-delta.json",
+      "bytes": 2445,
+      "sha256": "47cdf98a855e2f0a2d44d35ccd836759117f260475e33452b8c172a52294c31a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/patches/i2c-escape-delta.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/patches/i2c-escape-delta.json",
+      "bytes": 2260,
+      "sha256": "42f4a5b7f03b42db21768886a8d870bc3b599c47c2cbaeee5424520da41937fb"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/physical-source/a1-printcore.kicad_pcb",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/physical-source/a1-printcore.kicad_pcb",
+      "bytes": 1869857,
+      "sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/physical-source/a1-printcore.kicad_pro",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/physical-source/a1-printcore.kicad_pro",
+      "bytes": 9903,
+      "sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/physical-source/native-drc.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/physical-source/native-drc.json",
+      "bytes": 1069,
+      "sha256": "7f94a9a655b90adfe98cb781720536c168e8e563e7ea9bb2e30786c81bf91441"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/physical-source/native-drc.log",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/physical-source/native-drc.log",
+      "bytes": 127,
+      "sha256": "c79c5b4bd3afc0e0d5fda8d631b10cd5ad68d2b4abbaeb9ab9fbbae30e7f0224"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/physical-source/native-source-audit.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/physical-source/native-source-audit.json",
+      "bytes": 10480,
+      "sha256": "9007ce1007736d37dacc42f8a3e23ee3b8fd8c54d763f2a1adf709cb12cfe947"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/physical-source/native-validation-command.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/physical-source/native-validation-command.json",
+      "bytes": 973,
+      "sha256": "738163a0d4520cea34856707775c498c3bf2bcc1b96e76784c0dbef28ff15615"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/portable-model-files.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/portable-model-files.json",
+      "bytes": 1381,
+      "sha256": "7444329b963e152e2ca79d3a37f1e4ae31b2012d8f25779ba5552dce10d3e82c"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/portable-model-paths.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/portable-model-paths.json",
+      "bytes": 1904,
+      "sha256": "35205ef37c31bdf49388b8b4ac58892db5e0d92476cf34025bd1da46100dbdc7"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/reproduction.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/reproduction.json",
+      "bytes": 1823,
+      "sha256": "1fac6d03456e4eea696ab0c1ae825781e178e695db52f5975dca511e8865dcf5"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/routing-rules-source.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/routing-rules-source.json",
+      "bytes": 8095,
+      "sha256": "9d4419475297b0fb1f556ae99619f4a6491a1b61ceca7d4c9c6e89299075f27a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/schematic-identity-transition.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/schematic-identity-transition.json",
+      "bytes": 1609,
+      "sha256": "1dfb56bc482f636ab8d8c81dc238dd1fa9be58de8d1e76d6e691c637033380b9"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/schematic-uuid-map.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/schematic-uuid-map.json",
+      "bytes": 46168,
+      "sha256": "92e6614d9fba241b836683a591b9b8bdb24267bf79f91f14c468bac3bd544cfe"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_fan_led_topology.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_fan_led_topology.py",
+      "bytes": 6419,
+      "sha256": "65343ae5872a1f729c43b055f3e028b875770681aa5e5e0ff0df6a66aaf34b2f"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_fullstep_straps_resolved.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_fullstep_straps_resolved.py",
+      "bytes": 4156,
+      "sha256": "9f66d01c48a653e880dade83d31f6525699f51d5e27c303608f4615ddbef49fe"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_i2c_escape.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_i2c_escape.py",
+      "bytes": 3335,
+      "sha256": "a07c8a2ad99cbaa5dac4d6bbc627bd5f411f43c7c9bd5733377556d4bfbf4044"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_mechanical_patch.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_mechanical_patch.py",
+      "bytes": 5151,
+      "sha256": "180876655823e98c2f6a52acbae2ac9323cf0386af7b6ad21f2814524bece52c"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_usb_escape.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_usb_escape.py",
+      "bytes": 4954,
+      "sha256": "75df9be7f5cf0bd018a9eeb65835c4a7870f0c7d92658d931a0a8859112021bf"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/apply_vdda_supply.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/apply_vdda_supply.py",
+      "bytes": 3943,
+      "sha256": "c5520673449a62d302c1900efbb3dd5aaa3bb389cf1c9035339f3d92158ae1bb"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/audit_native.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/audit_native.py",
+      "bytes": 14687,
+      "sha256": "e5b18db0071f3b1f9ca4a67a3f28606dcee80243ae214d9753b401d113f713d7"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/build_native_archive.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/build_native_archive.py",
+      "bytes": 5315,
+      "sha256": "0433c28206b2dc9ae223cd6bb54adfacb7dbc4dc5d25bd2062a2134283260196"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/close_end_z_and_e_step.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/close_end_z_and_e_step.py",
+      "bytes": 1866,
+      "sha256": "1318004ba87c4fa201ce6f825d877fee5017b7944e9b4e22b167da702724073b"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/finalize-schematic-package.mjs",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/finalize-schematic-package.mjs",
+      "bytes": 6852,
+      "sha256": "545826e161d97d721c0edbebc2c42802c01fb90d8334ddad7d582beda4bb1bee"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/finalize_native.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/finalize_native.py",
+      "bytes": 2561,
+      "sha256": "40754f967e19fbf9735723808fa1968527d3de54faaf5805f4b8151267607006"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/generate-native-schematic.mjs",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/generate-native-schematic.mjs",
+      "bytes": 14053,
+      "sha256": "32dd12104dca56b1b52dfbbdd60a4e413ded3c435f2437fce5b93f2c76384c05"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/link-native-schematic.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/link-native-schematic.py",
+      "bytes": 4792,
+      "sha256": "a437f231adeeaa4332b60bc53b775b6a23ee80e5fb2613199b8a538b85a92f21"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/make_native_portable.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/make_native_portable.py",
+      "bytes": 4026,
+      "sha256": "2253c2918c6b630109a28d6ac7c9361f3e0c6c32a0daf88c4304f0248c9fffaa"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/mark_native_mounting_holes.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/mark_native_mounting_holes.py",
+      "bytes": 2517,
+      "sha256": "5c1a5d30f5ee2ad830902d93caada3fe576b5607468a78eb80d055ba84c0c70a"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/normalize_native_nc.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/normalize_native_nc.py",
+      "bytes": 4478,
+      "sha256": "94903e82420857151f77ef382c40af52e502f66c9710e2ceb1db851e5ad4b410"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/package_native_footprints.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/package_native_footprints.py",
+      "bytes": 3720,
+      "sha256": "00906642c0f13a56612ce6874d1e245fb52efb489e8cc331e51ba5fba09c9afa"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/read-schematic-uuids.mjs",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/read-schematic-uuids.mjs",
+      "bytes": 1311,
+      "sha256": "ea58e44bd36a0d21b2427c0f5e6d2ca4c03d5926419769d095dc5378eff24290"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/reproduce_native.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/reproduce_native.py",
+      "bytes": 2867,
+      "sha256": "70d90b843d00e7bd5a6fe487ddbbbe4654202584f77b887584b03585a74db6f1"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/run_final_drc.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/run_final_drc.py",
+      "bytes": 1610,
+      "sha256": "271c9709716cfdc775950c11fba1b71a0bc6a88236c6d7281dd0f88c57b89759"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/run_final_erc.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/run_final_erc.py",
+      "bytes": 1814,
+      "sha256": "6c664fc7fb75c7263bf2c1cc098237c78af5f7bc009722da36120f093dfc6b69"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/verify-native-schematic.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/verify-native-schematic.py",
+      "bytes": 8682,
+      "sha256": "97a5c604fe8cf7e037e8b35900d5c38befaa4a8798e04fa77b0d46ac3883ad60"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/verify_native_metadata.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/verify_native_metadata.py",
+      "bytes": 5417,
+      "sha256": "c66f97ca6fce2a7b12450bd447234fc868d2f4b9664ad2acfd0611b2f0d73782"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/tools/verify_portable_project.py",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/tools/verify_portable_project.py",
+      "bytes": 5543,
+      "sha256": "9f3724bafc0b72f6e9b9ce2dcc9f3fcedd012db472ea570187b42acf48c05368"
+    },
+    {
+      "source": "/data/a1-finish-pcb-20261121/release/evidence/usb4216-solid-qualification.json",
+      "repository_path": "examples/fabrication/a1-mini-printer/verification/native-pcb/usb4216-solid-qualification.json",
+      "bytes": 1693,
+      "sha256": "7140a65e2f157d9998d2a2728043e4b10db7e538db057ed4dd2e33957de74b5e"
     }
   ]
 }

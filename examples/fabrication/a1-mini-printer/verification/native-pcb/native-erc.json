@@ -1,0 +1,172 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-21T12:09:29",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.8",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/23e1b941-22e1-b7ae-21e1-b61b20e1b488",
+            "violations": [
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'NC_PC15'",
+                            "pos": {
+                                "x": 49.53,
+                                "y": 66.04
+                            },
+                            "uuid": "a41c1674-a51c-1807-a61c-199aa71c1b2d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SPI_SCK'",
+                            "pos": {
+                                "x": 49.53,
+                                "y": 93.98
+                            },
+                            "uuid": "36871bf2-3787-1d85-3487-18cc35871a5f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SPI_MISO'",
+                            "pos": {
+                                "x": 49.53,
+                                "y": 96.52
+                            },
+                            "uuid": "b875e902-b975-ea95-b675-e5dcb775e76f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SPI_MOSI'",
+                            "pos": {
+                                "x": 49.53,
+                                "y": 99.06
+                            },
+                            "uuid": "4fcb8a15-4ecb-8882-4dcb-86ef4ccb855c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'NC_SBU1'",
+                            "pos": {
+                                "x": 87.63,
+                                "y": 186.69
+                            },
+                            "uuid": "0b217bf7-0a21-7a64-0d21-7f1d0c217d8a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'NC_SBU2'",
+                            "pos": {
+                                "x": 87.63,
+                                "y": 189.23
+                            },
+                            "uuid": "e29a9ed4-e39a-a067-e49a-a1fae59aa38d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'NC_LDO'",
+                            "pos": {
+                                "x": 227.33,
+                                "y": 92.71
+                            },
+                            "uuid": "b2b90714-b3b9-08a7-b4b9-0a3ab5b90bcd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'NC_SWD7'",
+                            "pos": {
+                                "x": 1065.53,
+                                "y": 63.5
+                            },
+                            "uuid": "b04d122b-af4d-1098-b24d-1551b14d13be"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'NC_SWD8'",
+                            "pos": {
+                                "x": 1065.53,
+                                "y": 66.04
+                            },
+                            "uuid": "1d9e8a51-1c9e-88be-1b9e-872b1a9e8598"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                }
+            ]
+        }
+    ],
+    "source": "a1-printcore.kicad_sch"
+}

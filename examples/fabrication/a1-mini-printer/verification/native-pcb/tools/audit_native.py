@@ -3,7 +3,8 @@
 import argparse,csv,hashlib,json
 from pathlib import Path
 import pcbnew as p
-ap=argparse.ArgumentParser();ap.add_argument('baseline');ap.add_argument('candidate');ap.add_argument('--evidence',required=True);ap.add_argument('--require-clean',action='store_true');args=ap.parse_args()
+from make_native_portable import MODEL_FILES
+ap=argparse.ArgumentParser();ap.add_argument('baseline');ap.add_argument('candidate');ap.add_argument('--evidence',required=True);ap.add_argument('--require-clean',action='store_true');ap.add_argument('--require-portable',action='store_true');ap.add_argument('--schematic-parity',action='store_true');args=ap.parse_args()
 base=Path(args.baseline);dst=Path(args.candidate);ev=Path(args.evidence);ev.mkdir(parents=True,exist_ok=True)
 sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest()
 assert sha(base)=='19e6b415ad41bd9c068ce39610e7412091724cf7323162625783c7bed13c0142','Wrong accepted baseline'
@@ -15,7 +16,7 @@ def snapshot(path):
    pos=v.GetPosition();size=v.GetSize();drill=v.GetDrillSize()
    rec={'uuid':v.m_Uuid.AsString(),'ref':f.GetReference(),'pad':v.GetNumber(),'net':v.GetNetname(),'xy_nm':[pos.x,pos.y],'size_nm':[size.x,size.y],'drill_nm':[drill.x,drill.y],'shape':int(v.GetShape()),'layers':v.GetLayerSet().FmtHex()}
    ps.append(rec);pads[rec['uuid']]=rec
-  pos=f.GetPosition();out[f.GetReference()]={'uuid':f.m_Uuid.AsString(),'value':f.GetValue(),'footprint':f.GetFPIDAsString(),'xy_nm':[pos.x,pos.y],'orientation_deg':f.GetOrientationDegrees(),'pads':sorted(ps,key=lambda x:x['uuid']),'fields':{v.GetName():v.GetText() for v in f.GetFields()},'models':[m.m_Filename for m in f.Models()]}
+  pos=f.GetPosition();out[f.GetReference()]={'uuid':f.m_Uuid.AsString(),'value':f.GetValue(),'footprint':f.GetFPIDAsString(),'xy_nm':[pos.x,pos.y],'orientation_deg':f.GetOrientationDegrees(),'attributes':f.GetAttributes(),'pads':sorted(ps,key=lambda x:x['uuid']),'fields':{v.GetName():v.GetText() for v in f.GetFields()},'models':[m.m_Filename for m in f.Models()]}
  zones=[]
  for z in b.Zones():
   poly=z.Outline();lines=[]
@@ -33,14 +34,19 @@ expected.update({('D10','1'):('LED_PWR_A','GND'),('D10','2'):('GND','LED_PWR_A')
 if set(b['footprints'])!=set(a['footprints'])|{'C10'}:errors.append('Unexpected footprint inventory change')
 new_pad_ids=set(b['pads'])-set(a['pads'])
 if not set(a['pads']).issubset(b['pads']) or len(new_pad_ids)!=2 or any(b['pads'][u]['ref']!='C10' for u in new_pad_ids):errors.append('Unexpected pad UUID inventory change')
-netdelta=[];geometry=[]
+netdelta=[];geometry=[];portable_models=[];board_only_metadata=[];nc_metadata=[]
+nc_expected={(ref,str(pad)):'unconnected-('+ref+'-PAD_'+str(pad)+'-Pad'+str(pad)+')' for ref in ['U10','U11','U12','U13'] for pad in [7,20,25]}
+portable_by_ref={ref:entry for entry in MODEL_FILES for ref in entry['references']}
 for uid,x in a['pads'].items():
  y=b['pads'].get(uid)
  if not y:continue
  pair=(x['ref'],x['pad'])
  if x['net']!=y['net']:
-  d={'reference':x['ref'],'pad':x['pad'],'uuid':uid,'before':x['net'],'after':y['net']};netdelta.append(d)
-  if expected.get(pair)!=(x['net'],y['net']):errors.append('Unexpected pad net change: '+str(d))
+  d={'reference':x['ref'],'pad':x['pad'],'uuid':uid,'before':x['net'],'after':y['net']}
+  if pair in nc_expected and x['net']=='' and y['net']==nc_expected[pair]:nc_metadata.append(d)
+  else:
+   netdelta.append(d)
+   if expected.get(pair)!=(x['net'],y['net']):errors.append('Unexpected pad net change: '+str(d))
  if pair in expected and (x['net'],y['net'])!=expected[pair]:errors.append('Missing authorized pad net change '+str(pair))
  for key in ['ref','pad','size_nm','drill_nm','shape','layers']:
   if x[key]!=y[key]:errors.append('Unexpected pad '+key+' change '+str(pair))
@@ -57,15 +63,38 @@ for ref,x in a['footprints'].items():
  y=b['footprints'][ref]
  for key in ['uuid','xy_nm']:
   if x[key]!=y[key]:errors.append('Unexpected footprint '+key+' '+ref)
+ if x['attributes']!=y['attributes']:
+  if ref not in ['H1','H2','H3','H4'] or x['attributes']!=12 or y['attributes']!=28:errors.append('Unexpected footprint attributes '+ref)
+  else:board_only_metadata.append({'reference':ref,'before':12,'after':28,'meaning':'Unnumbered NPTH mounting hole is board-only'})
+
  expect_angle=(x['orientation_deg']+180)%360 if ref in ['D10','D11'] else x['orientation_deg']%360
  if abs(y['orientation_deg']%360-expect_angle)>1e-7:errors.append('Unexpected footprint angle '+ref)
  if ref=='J20':
   if y['value']!='USB4216-03-A' or y['footprint']!='LabWired_GCT:USB4216-03-A':errors.append('Wrong J20 source identity')
  else:
-  for key in ['value','footprint','fields']:
+  for key in ['value','fields']:
    if x[key]!=y[key]:errors.append('Unexpected footprint '+key+' '+ref)
- if ref not in ['U10','U11','U12','U13','U20','J20'] and x['models']!=y['models']:errors.append('Unexpected model change '+ref)
+  if x['footprint']!=y['footprint'] and y['footprint']!='A1_Native:'+x['footprint']:errors.append('Unexpected footprint identity '+ref)
+ if ref not in ['U10','U11','U12','U13','U20','J20'] and x['models']!=y['models']:
+  entry=portable_by_ref.get(ref)
+  if not entry or x['models']!=[entry['original_path']] or y['models']!=['${KIPRJMOD}/models/'+entry['filename']]:errors.append('Unexpected model change '+ref)
+  else:
+   model=dst.parent/'models'/entry['filename']
+   if not model.is_file() or sha(model)!=entry['sha256']:errors.append('Portable model bytes changed '+ref)
+   portable_models.append({'reference':ref,'filename':entry['filename'],'sha256':entry['sha256']})
 if len(netdelta)!=26:errors.append('Expected 26 pad-net changes, got '+str(len(netdelta)))
+if nc_metadata:
+ if len(nc_metadata)!=12:errors.append('Expected exactly twelve isolated IC NC metadata names')
+ bs.BuildConnectivity();board.BuildConnectivity()
+ before_objects={v.m_Uuid.AsString():v for f in bs.GetFootprints() for v in f.Pads()}
+ after_objects={v.m_Uuid.AsString():v for f in board.GetFootprints() for v in f.Pads()}
+ for change in nc_metadata:
+  net=change['after'];uid=change['uuid']
+  if sum(v['net']==net for v in b['pads'].values())!=1:errors.append('NC net has multiple physical pads: '+net)
+  if [item for item in bs.GetConnectivity().GetConnectedItems(before_objects[uid]) if item.m_Uuid.AsString()!=uid] or [item for item in board.GetConnectivity().GetConnectedItems(after_objects[uid]) if item.m_Uuid.AsString()!=uid]:errors.append('NC pad acquired conductive connectivity: '+net)
+  if any(t.GetNetname()==net for t in board.GetTracks()) or any(z.GetNetname()==net for z in board.Zones()):errors.append('NC net has associated copper: '+net)
+if args.schematic_parity and len(nc_metadata)!=12:errors.append('Missing isolated NC names for full KiCad parity')
+
 cap=b['footprints'].get('C10')
 if not cap or cap['value']!='100n' or not cap['footprint'].endswith('C_0603_1608Metric') or cap['xy_nm']!=[42900000,56000000]:errors.append('VDDA capacitor identity or placement mismatch')
 if cap and {(v['pad'],v['net']) for v in cap['pads']}!={('1','+3V3'),('2','GND')}:errors.append('VDDA capacitor net mismatch')
@@ -88,6 +117,26 @@ if min(t.GetWidth(p.F_Cu) for t in vias)<p.FromMM(.5):errors.append('Subminimum 
 if min((t.GetWidth(p.F_Cu)-t.GetDrill())/2 for t in vias)<p.FromMM(.1):errors.append('Subminimum via annulus')
 drcpath=ev/'native-drc.json';drc=json.loads(drcpath.read_text()) if drcpath.exists() else None
 if args.require_clean and (not drc or drc['violations'] or drc['unconnected_items'] or drc['schematic_parity']):errors.append('Final DRC is not clean')
+namespace_record=ev/'native-footprint-namespaces.json'
+namespace_metadata=json.loads(namespace_record.read_text()) if namespace_record.is_file() else None
+if namespace_metadata:
+ if not namespace_metadata.get('pass') or not namespace_metadata.get('reverse_restores_input_bytes') or namespace_metadata.get('output_sha256')!=sha(dst):errors.append('Invalid footprint namespace provenance')
+ for change in namespace_metadata['changes']:
+  ref=change['reference'];before=change['before'];after=change['after']
+  expected_namespace='A1_Native_C10' if ref=='C10' else 'A1_Native'
+  if after!=expected_namespace+':'+before or b['footprints'][ref]['footprint']!=after:errors.append('Invalid namespace-only footprint change '+ref)
+if args.require_portable:
+ for ref,foot in b['footprints'].items():
+  for model in foot['models']:
+   if model.startswith('${KIPRJMOD}/'):
+    if not (dst.parent/model[len('${KIPRJMOD}/'):]).is_file():errors.append('Missing project-local model '+ref)
+   elif not model.startswith('${KICAD10_3DMODEL_DIR}/'):errors.append('Nonportable model path '+ref)
+ if len(portable_models)!=6:errors.append('Expected six references to copied exact STEP models')
+if args.schematic_parity:
+ command_path=ev/'native-validation-command.json'
+ command=json.loads(command_path.read_text()) if command_path.is_file() else {}
+ if not command.get('schematic_parity_checked') or '--schematic-parity' not in command.get('command',[]) or command.get('pcb_sha256')!=sha(dst):errors.append('Missing explicit parity invocation for this exact PCB hash')
+
 baseline_drc_path=base.with_name(base.stem+'-drc.json')
 baseline_drc=json.loads(baseline_drc_path.read_text()) if baseline_drc_path.exists() else None
 ignored_equal=None if not baseline_drc or not drc else baseline_drc['ignored_checks']==drc['ignored_checks']
@@ -109,5 +158,5 @@ edge_equal=edge_records(bs)==edge_records(board)
 if not edge_equal:errors.append('Board outline changed')
 netlist=sorted([{'reference':v['ref'],'pad':v['pad'],'net':v['net'],'uuid':v['uuid']} for v in b['pads'].values()],key=lambda x:(x['reference'],x['pad'],x['uuid']))
 netbytes=json.dumps(netlist,sort_keys=True,separators=(',',':')).encode();(ev/'native-pad-net-map.json').write_text(json.dumps(netlist,indent=2)+'\n')
-report={'baseline_sha256':sha(base),'candidate_sha256':sha(dst),'rules_sha256':sha(pro),'rules_byte_identical':pro.read_bytes()==dp.read_bytes(),'zone_outlines_and_nets_identical':a['zones']==b['zones'],'footprint_count':len(b['footprints']),'pad_count':len(netlist),'track_count':len(tracks),'via_count':len(vias),'pad_net_map_sha256':hashlib.sha256(netbytes).hexdigest(),'schematic_parity_checked':False,'added_components':{'C10':cap},'authorized_pad_net_changes':sorted(netdelta,key=lambda x:(x['reference'],x['pad'])),'authorized_pad_position_changes':sorted(geometry,key=lambda x:(x['reference'],x['pad'],x['uuid'])),'mcu_contract':mcu,'drc_counts':None if not drc else {k:len(drc[k]) for k in ['violations','unconnected_items','schematic_parity']},'drc_ignored_checks_unchanged':ignored_equal,'ignored_checks':None if not drc else drc['ignored_checks'],'edge_cuts_identical':edge_equal,'u12_thermal_via':{'before':thermal_before,'after':thermal_after,'source':'Allegro A4988 datasheet p19 note C and p12 layout'},'errors':errors,'pass':not errors}
+report={'baseline_sha256':sha(base),'candidate_sha256':sha(dst),'rules_sha256':sha(pro),'rules_byte_identical':pro.read_bytes()==dp.read_bytes(),'zone_outlines_and_nets_identical':a['zones']==b['zones'],'footprint_count':len(b['footprints']),'pad_count':len(netlist),'track_count':len(tracks),'via_count':len(vias),'pad_net_map_sha256':hashlib.sha256(netbytes).hexdigest(),'schematic_parity_checked':args.schematic_parity,'portable_models':portable_models,'portability_required':args.require_portable,'board_only_metadata':board_only_metadata,'footprint_namespace_metadata':None if namespace_metadata is None else namespace_metadata['changes'],'isolated_nc_metadata':nc_metadata,'added_components':{'C10':cap},'authorized_pad_net_changes':sorted(netdelta,key=lambda x:(x['reference'],x['pad'])),'authorized_pad_position_changes':sorted(geometry,key=lambda x:(x['reference'],x['pad'],x['uuid'])),'mcu_contract':mcu,'drc_counts':None if not drc else {k:len(drc[k]) for k in ['violations','unconnected_items','schematic_parity']},'drc_ignored_checks_unchanged':ignored_equal,'ignored_checks':None if not drc else drc['ignored_checks'],'edge_cuts_identical':edge_equal,'u12_thermal_via':{'before':thermal_before,'after':thermal_after,'source':'Allegro A4988 datasheet p19 note C and p12 layout'},'errors':errors,'pass':not errors}
 (ev/'native-source-audit.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:report[k] for k in ['candidate_sha256','rules_byte_identical','zone_outlines_and_nets_identical','footprint_count','pad_count','track_count','via_count','drc_counts','errors','pass']},indent=2));assert not errors,errors

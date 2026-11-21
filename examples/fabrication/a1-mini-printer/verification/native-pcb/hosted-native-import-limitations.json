@@ -1,0 +1,64 @@
+{
+  "scope": "Read-only review of the existing hosted native-import implementation; not a deployment test",
+  "reviewed_utc": "2026-11-21T11:37:17.049737+00:00",
+  "repository_head": "5d6665e8af551465b1a06e951adce0b3abce09bb",
+  "source_files": [
+    {
+      "path": "packages/api/src/mcp/handlers/github-board-source.ts",
+      "sha256": "9107d634fe1f915ff591a9f0b187070a90bbdd21dc1c3fcbe13ce4de29f445b5"
+    },
+    {
+      "path": "packages/api/src/mcp/handlers/pcb.ts",
+      "sha256": "a3ac2a0d949f8c2a5676fb4f44f8b981bdec8f92051eb38a6f00e833afefb9a8"
+    },
+    {
+      "path": "packages/api/src/mcp/builder-client.ts",
+      "sha256": "45390fdc864fb41512d43e74ab576fa864416d58febc80c4c6f6ce7cc6054157"
+    },
+    {
+      "path": "packages/api/src/pcb/export.ts",
+      "sha256": "3d08d0cb8d5a86b68381c450265952ef93176890a0403ae9ce9cf3884ae7678b"
+    },
+    {
+      "path": "services/labwired-builder/src/route-imported-native.ts",
+      "sha256": "137ff8f61063c578abbbc6a982e20cc62457bd4ea5b4dd27faf0138ad04b4dba"
+    },
+    {
+      "path": "services/labwired-fab/src/export-job.ts",
+      "sha256": "d7aa8b8e5f407624985c22bc85cc2fb706c8cb1b1df79a2e22ede9e557dd134e"
+    },
+    {
+      "path": "services/labwired-fab/src/server.ts",
+      "sha256": "bc3bc2f24c7f242ca6a32b13fc9b97465856586ecf200be11d393ffa2a3210e4"
+    }
+  ],
+  "findings": [
+    {
+      "behavior": "source_github fetches one .kicad_pcb file only; it does not fetch sibling native project dependencies.",
+      "source": "packages/api/src/mcp/handlers/github-board-source.ts",
+      "symbol": "fetchPublicGithubBoard"
+    },
+    {
+      "behavior": "Preserve mode retains PCB bytes, but .kicad_pro and .kicad_dru are generated from structured routing_rules. The original native .kicad_pro file is not imported.",
+      "source": "services/labwired-builder/src/route-imported-native.ts",
+      "symbol": "prepareNativeBoard"
+    },
+    {
+      "behavior": "validate_imported passes pcb, generated pro and dru to builderFabExport. It does not pass a schematic, footprint table, custom footprint library or STEP assets.",
+      "source": "packages/api/src/mcp/handlers/pcb.ts",
+      "symbol": "validateImported"
+    },
+    {
+      "behavior": "The fab export request has no dependency-file bundle field. Imported exports skip the generated projectLibraryFiles ZIP helper.",
+      "source": "packages/api/src/pcb/export.ts",
+      "symbol": "storeExport"
+    },
+    {
+      "behavior": "The hosted DRC summary excludes lib_footprint_issues and lib_footprint_mismatch from blocking and warning counts.",
+      "source": "services/labwired-fab/src/export-job.ts",
+      "symbol": "summarise"
+    }
+  ],
+  "acceptance_scope": "The hosted imported-board result is an independent copper/connectivity check under generated rules. Full native project acceptance uses the committed unchanged .kicad_pro, included local dependencies, raw KiCad DRC and schematic parity. The exact populated STEP is the separately hash-pinned native export.",
+  "changes_made": []
+}
