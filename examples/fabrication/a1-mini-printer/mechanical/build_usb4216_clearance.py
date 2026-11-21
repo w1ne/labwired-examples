@@ -6,7 +6,7 @@ latch, forming radii and peg depth are nominal visual geometry, not qualified.
 Run with cadquery-ocp==8.0.1.1.0.
 """
 from pathlib import Path
-import json,hashlib
+import json,hashlib,argparse
 from OCP.STEPControl import STEPControl_Writer,STEPControl_AsIs,STEPControl_Reader
 from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox,BRepPrimAPI_MakeCylinder
 from OCP.BRepAlgoAPI import BRepAlgoAPI_Fuse,BRepAlgoAPI_Cut,BRepAlgoAPI_Common
@@ -17,6 +17,10 @@ from OCP.Bnd import Bnd_Box
 from OCP.BRepBndLib import BRepBndLib
 from OCP.gp import gp_Pnt,gp_Dir,gp_Ax2
 D=Path(__file__).resolve().parent
+parser=argparse.ArgumentParser();parser.add_argument('--models-dir',default=str(D/'models'));parser.add_argument('--drawing-pdf');args=parser.parse_args()
+M=Path(args.models_dir).resolve();M.mkdir(parents=True,exist_ok=True)
+DRAWING_SHA256='af4ebb92b1027c31a55977f4a2b5fa0bdecbb633a31e294a52691f1c7fcff96f'
+if args.drawing_pdf:assert hashlib.sha256(Path(args.drawing_pdf).read_bytes()).hexdigest()==DRAWING_SHA256
 def box(x,y,z,w,d,h):return BRepPrimAPI_MakeBox(gp_Pnt(x,y,z),w,d,h).Shape()
 def fuse(a,b):return BRepAlgoAPI_Fuse(a,b).Shape()
 def bbox(s):
@@ -37,6 +41,8 @@ stakes=[]
 for x0 in [-5.57,4.27]:
  for cy,depth in [(-.895,1.20),(3.030,.95)]:
   foot=box(x0,cy-depth/2,0,1.30,depth,.30)
+  riser_x = -4.57 if x0 < 0 else 4.27
+  foot=fuse(foot,box(riser_x,cy-depth/2,0,.30,depth,1.30))
   stakes.append(foot);shell=fuse(shell,foot)
 # Insulator back wall and tongue. Nominal front setback0.15mm from4.60-4.45.
 rear=BRepAlgoAPI_Common(capsule(8.34,2.56,front_y+4.60,1.90),box(-4.18,front_y+4.60,.39,8.36,1.91,2.58)).Shape()
@@ -44,7 +50,7 @@ tongue=box(-6.69/2,front_y+.15,1.68-.35,6.69,6.35,.70)
 plastic=fuse(rear,tongue)
 # Locating pegs: drawing diameter and6.00mm spacing; depth0.50mm is nominal,
 # because the primary drawing does not dimension this depth.
-for x in [-3,3]:plastic=fuse(plastic,BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt(x,2.405,-.5),gp_Dir(0,0,1)),.245,.61).Shape())
+for x in [-3,3]:plastic=fuse(plastic,BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt(x,2.405,-.5),gp_Dir(0,0,1)),.245,1.10).Shape())
 tails=[]
 xs=[-3.325,-3.075,-2.525,-2.275,-1.75,-1.25,-.75,-.25,.25,.75,1.25,1.75,2.275,2.525,3.075,3.325]
 for x in xs:tails.append(box(x-.10,3.105,0,.20,.65,.10))
@@ -53,13 +59,13 @@ for s in [shell,plastic,*tails]:
  assert BRepCheck_Analyzer(s).IsValid()
  bld.Add(shape,s)
 assert BRepCheck_Analyzer(shape).IsValid()
-out=D/'models'/'USB4216-03-A_A2_drawing-clearance.step'
+out=M/'USB4216-03-A_A2_drawing-clearance.step'
 w=STEPControl_Writer();w.Transfer(shape,STEPControl_AsIs);assert str(w.Write(str(out))).endswith('RetDone')
 text=out.read_text().replace('HEADER;','HEADER;\n/* Original drawing-derived clearance geometry. GCT USB4216 revA2,28July2025. Not supplier CAD. Springs/latches/peg depth are nominal; shell, mating envelope, mounting interface are dimensioned. */',1)
 out.write_text(text)
 res={
  'part':'GCT USB4216-03-A','provenance':'original drawing-derived clearance model; not vendor CAD',
- 'drawing_url':'https://www.mouser.lt/datasheet/3/1507/1/usb4216.pdf','drawing_revision':'A2,2025-07-28','drawing_sha256':hashlib.sha256((D/'gct-usb4216-drawing.pdf').read_bytes()).hexdigest(),
+ 'drawing_url':'https://www.mouser.lt/datasheet/3/1507/1/usb4216.pdf','drawing_revision':'A2,2025-07-28','drawing_sha256':DRAWING_SHA256,
  'path':str(out),'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),
  'body_mm':{'width':8.94,'length':6.50,'height':3.16,'standoff':.10,'top_above_pcb':3.26,'front_at_footprint_y':2.995},
  'mating_opening_mm':{'width':8.34,'height':2.56,'tongue_width':6.69,'tongue_thickness':.70},

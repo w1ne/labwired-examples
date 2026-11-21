@@ -3,7 +3,7 @@
 Run with cadquery-ocp==8.0.1.1.0. Does not certify the physical parts or fabrication.
 """
 from pathlib import Path
-import hashlib,json,shutil,re
+import hashlib,json,shutil,re,argparse
 from OCP.STEPControl import STEPControl_Reader,STEPControl_Writer,STEPControl_AsIs
 from OCP.Bnd import Bnd_Box
 from OCP.BRepBndLib import BRepBndLib
@@ -17,7 +17,8 @@ from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox
 from OCP.BRepAlgoAPI import BRepAlgoAPI_Fuse,BRepAlgoAPI_Common
 from OCP.gp import gp_Pnt
 D=Path(__file__).resolve().parent
-M=D/'models';M.mkdir(exist_ok=True)
+parser=argparse.ArgumentParser();parser.add_argument('--models-dir',default=str(D/'models'));args=parser.parse_args()
+M=Path(args.models_dir).resolve();M.mkdir(parents=True,exist_ok=True)
 Q=Path('/usr/share/kicad/3dmodels/Package_DFN_QFN.3dshapes/QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm.step')
 T=Path('/usr/share/kicad/3dmodels/Package_SO.3dshapes/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm.step')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -46,7 +47,7 @@ qp=M/'A4988SETTR-T_ET_drawing-checked.step'
 w=STEPControl_Writer();w.Transfer(q,STEPControl_AsIs);assert str(w.Write(str(qp))).endswith('RetDone')
 # Preserve the source license and special ECAD exception in the derivative.
 license_block=re.search(r'/\*.*?\*/',Q.read_text(),re.S).group()
-txt=qp.read_text();qp.write_text(txt.replace('HEADER;','HEADER;\n'+license_block+'\n/* Modified 2026-11-21: extend contact heels to0.55mm per Allegro ET drawing. */',1))
+txt=qp.read_text();qp.write_text(txt.replace('HEADER;','HEADER;\n'+license_block+'\n/* Modified 2026-11-21: extend contact heels to 0.55 mm per Allegro ET drawing. */',1))
 q=load(qp);after=bottoms(q)
 contacts=[b for b in after if not(b[0]<0<b[3] and b[1]<0<b[4])]
 # Boolean splits coplanar faces, so check disconnected metal islands below body standoff.

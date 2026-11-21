@@ -1,0 +1,79 @@
+{
+  "schema": "labwired.kernelcad-source-materialization.v2",
+  "status": "authored-and-saved-source-exactly-reconciled",
+  "authored": {
+    "file": "a1-native-fit.kcad.ts",
+    "sha256": "5ac9ba79f62d2b2cd5841b6c94a430c3c34a320253f77813626a8baf09c4fdff",
+    "byteLength": 11742,
+    "toolRequestFile": "kernelcad-evaluate-request.json",
+    "toolRequestSha256": "9d857ab8fa419c5a6243f8abd6a6f43e86eae5d56cbbc8af25f4f3140734f1d6"
+  },
+  "dependency": {
+    "url": "https://raw.githubusercontent.com/w1ne/labwired-examples/539dff7c2c9a78790aeb159daefd04527fabe074/examples/fabrication/a1-mini-printer/hardware/exports/a1-printcore-populated.step",
+    "format": "step",
+    "sha256": "4fa338f753a8c8a17331facabd8ee8d3698bc0a0cd3fa152b71749e88baa2e2a",
+    "mediaType": "model/step",
+    "byteLength": 6142388
+  },
+  "evaluated": {
+    "sha256": "b0f3371600d4686c893aff3c622329e66ab45ba892c5799abf9d7f6689f5fd73",
+    "byteLength": 11610
+  },
+  "evaluationReceipt": {
+    "file": "kernelcad-evaluation.json",
+    "sha256": "9b56bce4cfc0886a0b7ff2883b116519e230fe431a93afa6c0469aa61748aa83",
+    "identitySha256": "f25f3161b8b70e37a5963955f36adc21127aec51a7147607dc4c579fcc9a00a4",
+    "runtimeBuild": "0.1.0+1c750c5e4c12@2026-11-21T07:44:12.796Z"
+  },
+  "evaluationRewrite": {
+    "operation": "Replace the static lib.fromSTEP URL literal with JSON.stringify(materialized temporary path); preserve every surrounding source byte.",
+    "literalBefore": "'https://raw.githubusercontent.com/w1ne/labwired-examples/539dff7c2c9a78790aeb159daefd04527fabe074/examples/fabrication/a1-mini-printer/hardware/exports/a1-printcore-populated.step'",
+    "literalAfterPattern": "\"/tmp/kernelcad-input-<six-character-suffix>/0-4fa338f753a8.step\"",
+    "originalReferenceBytes": 179,
+    "temporaryReferenceBytes": 47,
+    "byteDifference": 132,
+    "temporarySuffix": "Not retained; the exact ephemeral source is not reconstructed or claimed to be the authored source."
+  },
+  "saved": {
+    "slug": "MwczxIII",
+    "version": 7,
+    "viewUrl": "https://app.kernelcad.com/p/MwczxIII?version=7&show_electronics=1",
+    "file": "a1-native-fit.saved.kcad.ts",
+    "sha256": "7017ff83d1c28f7fa30717c545e2e0edc3f26fe43ecfe0116844a312cef89478",
+    "byteLength": 11589,
+    "readBackReceiptFile": "kernelcad-saved-revision.json",
+    "readBackReceiptSha256": "7ca1fbab9396bbd1a283427d14d43f9856373f14311ff722e92ece6e7e27c538",
+    "assets": {
+      "inputs/4fa338f753a8.step": {
+        "format": "step",
+        "sha256": "4fa338f753a8c8a17331facabd8ee8d3698bc0a0cd3fa152b71749e88baa2e2a",
+        "mediaType": "model/step",
+        "byteLength": 6142388
+      }
+    }
+  },
+  "savedRewrite": {
+    "operation": "Replace the same URL literal with the saved relative project attachment literal; no other source bytes differ.",
+    "literalBefore": "'https://raw.githubusercontent.com/w1ne/labwired-examples/539dff7c2c9a78790aeb159daefd04527fabe074/examples/fabrication/a1-mini-printer/hardware/exports/a1-printcore-populated.step'",
+    "literalAfter": "\"./inputs/4fa338f753a8.step\"",
+    "exactReplacementEquality": true,
+    "diffFile": "authored-to-saved-source.diff",
+    "diffSha256": "fd87e88a17d4ea003c52a11d739caa2c2f2af603021fc8fcef9e53834ab8c075"
+  },
+  "implementation": {
+    "repository": "w1ne/kernelCAD-server",
+    "revision": "1c750c5e4c12",
+    "file": "src/mcp/hostedInputs.ts",
+    "fileSha256": "c81b86dbd12ce787eb5056f79ecac7be58c7b9edf1b14e1651016eeed029262e",
+    "functions": [
+      "prepareHostedInputs",
+      "rewriteScriptRefs",
+      "prepareOpenInStudioInputs"
+    ]
+  },
+  "limits": [
+    "The authored, materialized evaluation and saved sources are different byte sequences; their hashes are not interchangeable.",
+    "The exact ephemeral evaluation path is intentionally not retained. Its byte count and the stored request/receipt agree with the identified hosted rewrite.",
+    "Mesh availability is a separate hosted result; this receipt proves saved source and attachment identity, not successful display meshing."
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "tool": "OpenCascade cadquery-ocp 8.0.1.1.0",
+  "scope": "nominal modeled enclosure/board fit and reference plug passage; not physical hardware or OEM qualification",
+  "enclosure_geometry_method": "KernelCAD exported exact BReps",
+  "source_path": "/data/a1-finish-mechanical-20261121/a1-native-fit.kcad.ts",
+  "source_sha256": "5ac9ba79f62d2b2cd5841b6c94a430c3c34a320253f77813626a8baf09c4fdff",
+  "board_step_path": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated.step",
+  "board_step_sha256": "4fa338f753a8c8a17331facabd8ee8d3698bc0a0cd3fa152b71749e88baa2e2a",
+  "native_step_transform": {
+    "rotation_z_deg": 90,
+    "translation_mm": [
+      57,
+      -49,
+      17.205
+    ]
+  },
+  "valid_breps": {
+    "pcb": true,
+    "housing": true,
+    "tray": true
+  },
+  "pcb_bounds_world_mm": [
+    57.0,
+    -49.000000000000014,
+    13.799999999999997,
+    157.0,
+    51.0,
+    36.8
+  ],
+  "housing_bounds_mm": [
+    -150.0,
+    -134.0,
+    8.0,
+    166.0,
+    142.0,
+    48.00000000000022
+  ],
+  "tray_bounds_mm": [
+    -144.0,
+    -126.0,
+    5.0,
+    160.0,
+    126.0,
+    17.2
+  ],
+  "intersections": {
+    "pcb_to_housing_overlap_mm3": 0.0,
+    "pcb_to_tray_overlap_mm3": 0.0,
+    "plug_path_to_housing_overlap_mm3": 0.0,
+    "pcb_downward_removal_bound_overlap_mm3": 0.0,
+    "tray_downward_removal_bound_overlap_mm3": 0.0
+  },
+  "clearances_mm": {
+    "minimum_pcb_to_housing": 1.2000000000000028,
+    "minimum_pcb_to_tray": 0.004999999999999005,
+    "minimum_declared_plug_to_housing": 0.707557109910194,
+    "pcb_outline_to_cavity_sidewall_nominal": 2.5,
+    "highest_component_to_roof": 1.2000000000000028
+  },
+  "mounting_holes": [
+    {
+      "world_center_mm": [
+        95,
+        -44.5
+      ],
+      "pcb_center_mm": [
+        95.0,
+        -44.50000000000001
+      ],
+      "tray_center_mm": [
+        95.0,
+        -44.5
+      ],
+      "coaxial_error_mm": 7.105427357601002e-15,
+      "diameter_mm": 3.2,
+      "pcb_z_range_mm": [
+        17.205,
+        18.715
+      ],
+      "tray_z_range_mm": [
+        5.0,
+        17.2
+      ]
+    },
+    {
+      "world_center_mm": [
+        95,
+        46.5
+      ],
+      "pcb_center_mm": [
+        95.0,
+        46.5
+      ],
+      "tray_center_mm": [
+        95.0,
+        46.5
+      ],
+      "coaxial_error_mm": 0.0,
+      "diameter_mm": 3.2,
+      "pcb_z_range_mm": [
+        17.205,
+        18.715
+      ],
+      "tray_z_range_mm": [
+        5.0,
+        17.2
+      ]
+    },
+    {
+      "world_center_mm": [
+        152.5,
+        -44.5
+      ],
+      "pcb_center_mm": [
+        152.5,
+        -44.500000000000014
+      ],
+      "tray_center_mm": [
+        152.5,
+        -44.5
+      ],
+      "coaxial_error_mm": 1.4210854715202004e-14,
+      "diameter_mm": 3.2,
+      "pcb_z_range_mm": [
+        17.205,
+        18.715
+      ],
+      "tray_z_range_mm": [
+        5.0,
+        17.2
+      ]
+    },
+    {
+      "world_center_mm": [
+        61.5,
+        46.5
+      ],
+      "pcb_center_mm": [
+        61.500000000000014,
+        46.5
+      ],
+      "tray_center_mm": [
+        61.5,
+        46.5
+      ],
+      "coaxial_error_mm": 1.4210854715202004e-14,
+      "diameter_mm": 3.2,
+      "pcb_z_range_mm": [
+        17.205,
+        18.715
+      ],
+      "tray_z_range_mm": [
+        5.0,
+        17.2
+      ]
+    }
+  ],
+  "usb": {
+    "mouth_center_world_mm": [
+      156.995,
+      -14,
+      20.48
+    ],
+    "outward_axis": [
+      1,
+      0,
+      0
+    ],
+    "reference_plug_envelope_yz_mm": [
+      12,
+      6.5
+    ],
+    "opening_yz_mm": [
+      14,
+      8
+    ],
+    "reference_plug_width_is_design_assumption": true
+  },
+  "assembly_access": {
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "method": "Continuous conservative swept bounding prisms for PCB and tray slab; bosses lie inside PCB prism",
+    "clear": true
+  },
+  "limitations": [
+    "Exact nominal geometry only; component and enclosure manufacturing tolerances are not propagated.",
+    "USB spring/latch/forming details and locating-peg depth are nominal because the public drawing does not dimension them.",
+    "Cable overmold width 12 mm is the declared reference envelope; all commercial cable housings are not covered.",
+    "This checks installation and static fit, not thermal, vibration, screw preload, wire-harness routing or physical printer operation."
+  ],
+  "pass": true,
+  "enclosure_step_sha256": "92495e6cd0a980520de47ac2c01dc8193dd4c0bc185d7f42f8613de33fa53df3",
+  "tray_step_sha256": "db8c5fa68c8eccb1c036b89d1cdf2675bc40051d33f47645d973588ad6e58640"
+}
