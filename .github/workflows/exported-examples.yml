@@ -7,10 +7,12 @@ on:
       - "examples/fabrication/a1-mini-printer/**"
       - "examples/robotics/pig-arm/**"
       - "scripts/verify-exported-examples.mjs"
+      - "scripts/check-pathfinder-fit.mjs"
       - ".github/workflows/exported-examples.yml"
   push:
     branches: [main]
     paths:
+      - "scripts/check-pathfinder-fit.mjs"
       - "examples/aerospace/pathfinder-rocket/**"
       - "examples/robotics/axiom-h1/**"
       - "examples/fabrication/a1-mini-printer/**"
@@ -27,3 +29,4 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/verify-exported-examples.mjs
+      - run: node scripts/check-pathfinder-fit.mjs
