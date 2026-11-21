@@ -1,8 +1,8 @@
 {
   "archive_filename": "a1-printcore-native-kicad.zip",
-  "archive_bytes": 6033824,
-  "archive_sha256": "3a210cd9014f7066035e9810ce3b700ba11b3c1ed70fb694eef53801d036edcf",
-  "archive_member_count": 145,
+  "archive_bytes": 6051464,
+  "archive_sha256": "67bc042fe0a13b7a1afdcfce334540fa2e8436ed0c57fd23f20b383cba5dac9e",
+  "archive_member_count": 150,
   "manifest": {
     "schema": "labwired.native-kicad-package.v1",
     "pcb_sha256": "b5c0150f327aae1f248b9a61d6feccc1185ad7934152249f1155c6fc3bb36c99",
@@ -29,8 +29,8 @@
     "files": [
       {
         "path": "README.md",
-        "bytes": 8337,
-        "sha256": "5f2d8972f2be61498f1fd74b2533250b0ff36a9916989575b6854d823a1218de"
+        "bytes": 10757,
+        "sha256": "a36483dde7ea986d41d7c53240c2e437f9da2ff31eda96235809edae42b59df8"
       },
       {
         "path": "hardware/74xx.kicad_sym",
@@ -323,6 +323,11 @@
         "sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71"
       },
       {
+        "path": "hardware/source-inputs/native-pcb/schematic-native-assembly.json",
+        "bytes": 164121,
+        "sha256": "e316e5beb50707d60cd426671420c142074acd3d632585d790a209a9a9e8e3b0"
+      },
+      {
         "path": "hardware/sym-lib-table",
         "bytes": 831,
         "sha256": "d0ae9d8e9075fef0f029ed10e2714144d0a5dd661b1383e70bfa04a906bf347e"
@@ -603,6 +608,21 @@
         "sha256": "35205ef37c31bdf49388b8b4ac58892db5e0d92476cf34025bd1da46100dbdc7"
       },
       {
+        "path": "verification/native-pcb/reproducer-native-mechanical-pad-inventory.json",
+        "bytes": 8074,
+        "sha256": "a4bb5c60b0122259eaba4d9437d60b77f358639a4c36fa9e5745fa4b1f9e6e79"
+      },
+      {
+        "path": "verification/native-pcb/reproducer-native-schematic-parity.json",
+        "bytes": 27092,
+        "sha256": "fd76ac8d73cf1617f7f7db49661431340e3427193ba5277c955d9c452af29712"
+      },
+      {
+        "path": "verification/native-pcb/reproducer-schematic-uuid-link-parity.json",
+        "bytes": 617,
+        "sha256": "e0440587527be0e75dfd9d7e2d19771ccb9f962aefe97e199768b107321a8554"
+      },
+      {
         "path": "verification/native-pcb/reproduction.json",
         "bytes": 1823,
         "sha256": "1fac6d03456e4eea696ab0c1ae825781e178e695db52f5975dca511e8865dcf5"
@@ -616,6 +636,11 @@
         "path": "verification/native-pcb/schematic-identity-transition.json",
         "bytes": 1609,
         "sha256": "1dfb56bc482f636ab8d8c81dc238dd1fa9be58de8d1e76d6e691c637033380b9"
+      },
+      {
+        "path": "verification/native-pcb/schematic-reproducer-final-source.json",
+        "bytes": 2410,
+        "sha256": "cf977050e822e275872bac774ae3957a41affb7736c6262dae0dd519162c0439"
       },
       {
         "path": "verification/native-pcb/schematic-uuid-map.json",
@@ -679,8 +704,8 @@
       },
       {
         "path": "verification/native-pcb/tools/generate-native-schematic.mjs",
-        "bytes": 14053,
-        "sha256": "32dd12104dca56b1b52dfbbdd60a4e413ded3c435f2437fce5b93f2c76384c05"
+        "bytes": 14969,
+        "sha256": "52a6d2f717f46a310978f50e4f25320b882703a2c6fccbad13c09114c18bef77"
       },
       {
         "path": "verification/native-pcb/tools/link-native-schematic.py",

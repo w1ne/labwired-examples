@@ -34,12 +34,12 @@ const mechanicalFootprints = new Map([
 const mechanicalPads = [];
 for (const [ref,footprint] of mechanicalFootprints) {
   const record = nativeRecords[ref], pads = record?.pads.filter(p => p.number==='MP');
-  if (!record || record.footprint!==footprint || pads.length!==2 || pads.some(p=>p.netCode!==0 || p.net))
+  if (!record || record.footprint.split(':').at(-1)!==footprint || pads.length!==2 || pads.some(p=>p.netCode!==0 || p.net))
     throw new Error(`Mechanical mounting classification no longer matches the native source: ${ref}`);
   const expectedSpan = ref==='J22'||ref==='J23' ? 5.6 : 13.3;
   if (Math.abs(Math.abs(pads[0].position[0]-pads[1].position[0])-expectedSpan)>1e-6 || Math.abs(pads[0].position[1]-pads[1].position[1])>1e-6)
     throw new Error(`Mounting-pad geometry differs from its source drawing: ${ref}`);
-  mechanicalPads.push({ref,footprint,nativeDescription:record.description,reason:'Two mechanical retention pads; neither is an electrical circuit terminal.',drawing:expectedSpan===13.3
+  mechanicalPads.push({ref,footprint:record.footprint,nativeDescription:record.description,reason:'Two mechanical retention pads; neither is an electrical circuit terminal.',drawing:expectedSpan===13.3
     ? 'https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/436/43650/436500211_sd.pdf'
     : 'https://www.jst-mfg.com/product/pdf/eng/eSH.pdf',drawingMountSpanMm:expectedSpan,pads});
 }
@@ -65,13 +65,26 @@ netlist.components = netlist.components.filter(c => bindingByPart.has(c.partId))
   for (const pad of native.pads) {
     if (!pad.number || covered.has(pad.number)) continue;
     if (pad.number==='MP' && mechanicalFootprints.has(native.ref)) continue;
-    if ((pad.net ?? 0) > 0) throw new Error(`Unbound connected native pad ${native.ref}.${pad.number}`);
-    // Native pad has no net. Keep it visible and explicitly unconnected without
-    // claiming that the vendor calls it NC or that it is bonded internally.
     const pin = `PAD_${pad.number}`;
+    let nativeNet = null;
+    if ((pad.net ?? 0) > 0) {
+      // The released KiCad pair gives these twelve actual A4988 NC pads their
+      // unique KiCad no-connect names. It adds no conductive association.
+      nativeNet = read.snapshot.nets.find(n=>n.code===pad.net)?.name;
+      const expectedName = `unconnected-(${native.ref}-${pin}-Pad${pad.number})`;
+      const members = read.components.flatMap(c=>c.pads.filter(p=>p.net===pad.net));
+      const copper = [...read.snapshot.tracks,...read.snapshot.vias,...read.innerTracks,...read.arcTracks];
+      const zones = [...read.snapshot.zones,...read.importZones];
+      if (!/^U1[0-3]$/.test(native.ref) || !['7','20','25'].includes(pad.number) || native.value!=='A4988SETTR-T'
+        || nativeNet!==expectedName || members.length!==1 || copper.some(c=>c.net===pad.net)
+        || zones.some(z=>z.net===nativeNet || z.net===String(pad.net)) || read.zoneLayersUnread.length)
+        throw new Error(`Unbound connected native pad ${native.ref}.${pad.number}`);
+    }
+    // Preserve every other native no-net numbered pad explicitly; never infer
+    // an internal bond from an absent PCB net.
     if (padOf.has(pin)) throw new Error(`Unwired pad identity collision ${native.ref}.${pad.number}`);
     padOf.set(pin, [pad.number]); covered.add(pad.number);
-    unboundPads.push({ ref: native.ref, pad: pad.number, pin, nativeNet: null });
+    unboundPads.push({ ref: native.ref, pad: pad.number, pin, nativeNet });
   }
   return { ...c, ref: native.ref, value: native.value, footprint: native.footprintId,
     mpn: nativeProperties[native.ref]?.MPN || undefined,

@@ -8,6 +8,7 @@ From `examples/fabrication/a1-mini-printer/`, open `hardware/a1-printcore.kicad_
 
 | Artifact | SHA256 |
 |---|---|
+| Complete native KiCad ZIP | `67bc042fe0a13b7a1afdcfce334540fa2e8436ed0c57fd23f20b383cba5dac9e` |
 | Final PCB | `b5c0150f327aae1f248b9a61d6feccc1185ad7934152249f1155c6fc3bb36c99` |
 | Final schematic | `04543f9e7ed5b629feae1b4300723c32c0f89aa326c1aea4d836a97bd52fd97f` |
 | Original project rules | `aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71` |
@@ -81,5 +82,27 @@ kicad-cli sch erc --format json \
 ```
 
 The system Python must provide KiCad's `pcbnew` module. The physical-routing reproduction pipeline starts from the included fixed routing exchange input and exact original rules. Freshly created KiCad object UUIDs can differ in a new reproduction; the acceptance evidence checks geometry, connectivity and source contracts. The immutable final editable source and its byte-level inverse proof are included directly.
+
+## Schematic reproduction scope
+
+The shipped schematic generator accepts the final qualified footprint namespaces and preserves the twelve source-identified A4988 NC names. It rejects a shared NC net, a duplicate physical pad, an associated track, via, arc or zone, and unread zone geometry. It retains the twelve connector retention pads as no-net mechanical features.
+
+Schematic reproduction requires Node 22, KiCad 10 with `pcbnew`, and a built LabWired checkout containing the generic native package/NC resolver. The verified platform source is `cc3fe04c2cc3f541dcf77628fcd412e30827a241`; its resolver includes `e44cfd9b1abe826ad27b661deb18b7f1809d06db`. Set `LABWIRED_ROOT` to that checkout. The exact assembly input is included as `hardware/source-inputs/native-pcb/schematic-native-assembly.json` (SHA256 `e316e5beb50707d60cd426671420c142074acd3d632585d790a209a9a9e8e3b0`).
+
+The verified scope is electrical and component-metadata parity for 153 references and 526 unique electrical pad numbers, reconciliation of all 604 physical pad records, the mechanical retention-pad inventory, all 153 existing PCB schematic UUID paths, all 157 placed symbol-instance UUIDs, and all 526 physical pin UUIDs. Byte-identical regeneration of the published schematic is not asserted. Qualified footprint namespaces affect generated library identities, and the published schematic retains its accepted drawing layout. The frozen `04543f9e...` schematic and `b5c0150f...` PCB remain the authoritative editable pair.
+
+`schematic-reproducer-final-source.json`, `reproducer-native-schematic-parity.json` and `reproducer-schematic-uuid-link-parity.json` record the exact tool/input/output hashes and the scope of this check. Generate into a separate directory; do not overwrite the frozen native source:
+
+```sh
+node verification/native-pcb/tools/generate-native-schematic.mjs \
+  hardware/a1-printcore.kicad_pcb \
+  hardware/source-inputs/native-pcb/schematic-native-assembly.json /tmp/a1-repro/raw
+node --import "$LABWIRED_ROOT/node_modules/tsx/dist/loader.mjs" \
+  verification/native-pcb/tools/finalize-schematic-package.mjs \
+  /tmp/a1-repro/raw/a1-printcore.kicad_sch /tmp/a1-repro/final
+/usr/bin/python3 verification/native-pcb/tools/verify-native-schematic.py \
+  hardware/a1-printcore.kicad_pcb /tmp/a1-repro/final/a1-printcore.net.xml \
+  /tmp/a1-repro/parity.json /tmp/a1-repro/raw/native-mechanical-pad-inventory.json
+```
 
 The existing hosted native-import gate has a narrower dependency scope: it imports one PCB, generates project/custom rules from structured routing rules, and does not fetch sibling native dependencies. Its summary also filters library-environment findings. `hosted-native-import-limitations.json` records the reviewed source implementation. Full native-project acceptance is based on the complete project and raw local KiCad results in this archive.
