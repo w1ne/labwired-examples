@@ -1,0 +1,52 @@
+{
+  "schema": "labwired-saved-example-evidence-v1",
+  "captured_date": "2026-11-21",
+  "saved_project_id": "4926352279d2673187b55cd5e727ff69",
+  "name": "A1 mini printer",
+  "board_id": "stm32f411ceu6-blackpill",
+  "content_hash": "63c92bacf144cf5ed240425d4828d8a97b2cbc9203688dc901eb56fc9221a980",
+  "verified_hash": "63c92bacf144cf5ed240425d4828d8a97b2cbc9203688dc901eb56fc9221a980",
+  "pcb_board_id": "pcb_3da27a08b82b74d7",
+  "pcb_board_rev": 1,
+  "requirements": [
+    {
+      "id": "R1",
+      "status": "verified",
+      "text": "Home X/Y/Z through the endstop cables, reach print temperature with the hotend read as a beta-model NTC, execute the X/Y/Z/E path, render the display through its cable, count all commanded STEP pulses, and finish with drivers, heaters, and fan safe."
+    },
+    {
+      "id": "R2",
+      "status": "verified",
+      "text": "Hotend over-temperature after the print is caught: the firmware reports FAULT OVERTEMP and holds heater, bed and fan gates low and the drivers disabled."
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "pcb_export",
+      "status": "passed",
+      "created_at": 1794875819960,
+      "content_hash": "63c92bacf144cf5ed240425d4828d8a97b2cbc9203688dc901eb56fc9221a980",
+      "pcb_board_id": "pcb_3da27a08b82b74d7",
+      "pcb_board_rev": 1,
+      "artifact_hash": "84c1e90fa6cb9561fbbcf584eb14374321c54568935b31b8382e5f203fa7366c",
+      "ref": "pcb/pcb_3da27a08b82b74d7/export/1/pcb_3da27a08b82b74d7-rev1-fab.zip",
+      "fresh": true,
+      "stale_reason": null
+    },
+    {
+      "kind": "sim_verify",
+      "status": "model_verified",
+      "created_at": 1794943152400,
+      "content_hash": "63c92bacf144cf5ed240425d4828d8a97b2cbc9203688dc901eb56fc9221a980",
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "artifact_hash": null,
+      "ref": null,
+      "fresh": true,
+      "stale_reason": null
+    }
+  ],
+  "observed_results_only": true,
+  "physical_acceptance": false,
+  "model_boundary": "Homing, step-command counts, OLED rendering and an overtemperature fail-safe are verified in the firmware twin; live machine mechanics, PCB-to-assembly equivalence, true extrusion and physical printer operation are not."
+}
