@@ -1,0 +1,29 @@
+name: Exported LabWired example provenance
+on:
+  pull_request:
+    paths:
+      - "examples/aerospace/pathfinder-rocket/**"
+      - "examples/robotics/axiom-h1/**"
+      - "examples/fabrication/a1-mini-printer/**"
+      - "examples/robotics/pig-arm/**"
+      - "scripts/verify-exported-examples.mjs"
+      - ".github/workflows/exported-examples.yml"
+  push:
+    branches: [main]
+    paths:
+      - "examples/aerospace/pathfinder-rocket/**"
+      - "examples/robotics/axiom-h1/**"
+      - "examples/fabrication/a1-mini-printer/**"
+      - "examples/robotics/pig-arm/**"
+      - "scripts/verify-exported-examples.mjs"
+permissions:
+  contents: read
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/verify-exported-examples.mjs
