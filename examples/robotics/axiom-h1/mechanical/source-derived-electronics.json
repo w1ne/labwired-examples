@@ -1,0 +1,585 @@
+{
+  "version": 2,
+  "displays": [],
+  "inputs": [],
+  "motions": [
+    {
+      "id": "neck_yaw",
+      "component": "servo0",
+      "joint": "neck_yaw",
+      "parts": [
+        "neck_yaw"
+      ],
+      "origin": [
+        0,
+        0,
+        742
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      }
+    },
+    {
+      "id": "neck_pitch",
+      "component": "servo1",
+      "joint": "neck_pitch",
+      "parent": "neck_yaw",
+      "parts": [
+        "neck_pitch",
+        "head_visor",
+        "right_eye",
+        "left_eye"
+      ],
+      "origin": [
+        0,
+        0,
+        754
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.4363323129985824,
+          0.5235987755982988
+        ]
+      }
+    },
+    {
+      "id": "left_shoulder_pitch",
+      "component": "servo2",
+      "joint": "left_shoulder_pitch",
+      "parts": [
+        "left_shoulder_pitch"
+      ],
+      "origin": [
+        112.5,
+        -115,
+        690
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.6580627893946132,
+          1.5707963267948966
+        ]
+      }
+    },
+    {
+      "id": "left_shoulder_roll",
+      "component": "servo3",
+      "joint": "left_shoulder_roll",
+      "parent": "left_shoulder_pitch",
+      "parts": [
+        "left_shoulder_roll"
+      ],
+      "origin": [
+        148.5,
+        -115,
+        690
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.2217304763960306,
+          1.3962634015954636
+        ]
+      }
+    },
+    {
+      "id": "left_elbow",
+      "component": "servo4",
+      "joint": "left_elbow",
+      "parent": "left_shoulder_roll",
+      "parts": [
+        "left_elbow"
+      ],
+      "origin": [
+        167.5,
+        -115,
+        540
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.08726646259971647,
+          2.1816615649929116
+        ]
+      }
+    },
+    {
+      "id": "left_wrist",
+      "component": "servo5",
+      "joint": "left_wrist",
+      "parent": "left_elbow",
+      "parts": [
+        "left_wrist"
+      ],
+      "origin": [
+        167.5,
+        -115,
+        400
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.2217304763960306,
+          1.2217304763960306
+        ]
+      }
+    },
+    {
+      "id": "left_gripper",
+      "component": "servo6",
+      "joint": "left_gripper",
+      "parent": "left_wrist",
+      "parts": [
+        "left_gripper"
+      ],
+      "origin": [
+        158.5,
+        -115,
+        330
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          0,
+          0.6108652381980153
+        ]
+      }
+    },
+    {
+      "id": "right_shoulder_pitch",
+      "component": "servo7",
+      "joint": "right_shoulder_pitch",
+      "parts": [
+        "right_shoulder_pitch"
+      ],
+      "origin": [
+        -112.5,
+        -175,
+        690
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.6580627893946132,
+          1.5707963267948966
+        ]
+      }
+    },
+    {
+      "id": "right_shoulder_roll",
+      "component": "servo8",
+      "joint": "right_shoulder_roll",
+      "parent": "right_shoulder_pitch",
+      "parts": [
+        "right_shoulder_roll"
+      ],
+      "origin": [
+        -148.5,
+        -175,
+        690
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.3962634015954636,
+          1.2217304763960306
+        ]
+      }
+    },
+    {
+      "id": "right_elbow",
+      "component": "servo9",
+      "joint": "right_elbow",
+      "parent": "right_shoulder_roll",
+      "parts": [
+        "right_elbow"
+      ],
+      "origin": [
+        -167.5,
+        -175,
+        540
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.08726646259971647,
+          2.1816615649929116
+        ]
+      }
+    },
+    {
+      "id": "right_wrist",
+      "component": "servo10",
+      "joint": "right_wrist",
+      "parent": "right_elbow",
+      "parts": [
+        "right_wrist"
+      ],
+      "origin": [
+        -167.5,
+        -175,
+        400
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.2217304763960306,
+          1.2217304763960306
+        ]
+      }
+    },
+    {
+      "id": "right_gripper",
+      "component": "servo11",
+      "joint": "right_gripper",
+      "parent": "right_wrist",
+      "parts": [
+        "right_gripper"
+      ],
+      "origin": [
+        -158.5,
+        -175,
+        330
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          0,
+          0.6108652381980153
+        ]
+      }
+    },
+    {
+      "id": "left_hip_pitch",
+      "component": "servo12",
+      "joint": "left_hip_pitch",
+      "parts": [
+        "left_hip_pitch"
+      ],
+      "origin": [
+        90,
+        100,
+        480
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.4835298641951802,
+          1.3962634015954636
+        ]
+      }
+    },
+    {
+      "id": "left_hip_roll",
+      "component": "servo13",
+      "joint": "left_hip_roll",
+      "parent": "left_hip_pitch",
+      "parts": [
+        "left_hip_roll"
+      ],
+      "origin": [
+        135,
+        100,
+        462
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      }
+    },
+    {
+      "id": "left_knee",
+      "component": "servo14",
+      "joint": "left_knee",
+      "parent": "left_hip_roll",
+      "parts": [
+        "left_knee"
+      ],
+      "origin": [
+        123,
+        100,
+        270
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.08726646259971647,
+          2.007128639793479
+        ]
+      }
+    },
+    {
+      "id": "left_ankle",
+      "component": "servo15",
+      "joint": "left_ankle",
+      "parent": "left_knee",
+      "parts": [
+        "left_ankle"
+      ],
+      "origin": [
+        123,
+        100,
+        65
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.6108652381980153,
+          0.6108652381980153
+        ]
+      }
+    },
+    {
+      "id": "right_hip_pitch",
+      "component": "servo16",
+      "joint": "right_hip_pitch",
+      "parts": [
+        "right_hip_pitch"
+      ],
+      "origin": [
+        -90,
+        -100,
+        480
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -1.4835298641951802,
+          1.3962634015954636
+        ]
+      }
+    },
+    {
+      "id": "right_hip_roll",
+      "component": "servo17",
+      "joint": "right_hip_roll",
+      "parent": "right_hip_pitch",
+      "parts": [
+        "right_hip_roll"
+      ],
+      "origin": [
+        -135,
+        -100,
+        462
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      }
+    },
+    {
+      "id": "right_knee",
+      "component": "servo18",
+      "joint": "right_knee",
+      "parent": "right_hip_roll",
+      "parts": [
+        "right_knee"
+      ],
+      "origin": [
+        -123,
+        -100,
+        270
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.08726646259971647,
+          2.007128639793479
+        ]
+      }
+    },
+    {
+      "id": "right_ankle",
+      "component": "servo19",
+      "joint": "right_ankle",
+      "parent": "right_knee",
+      "parts": [
+        "right_ankle"
+      ],
+      "origin": [
+        -123,
+        -100,
+        65
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "servoPulseMapping": {
+        "pulseUs": [
+          536.8,
+          2440
+        ],
+        "jointRad": [
+          -0.6108652381980153,
+          0.6108652381980153
+        ]
+      }
+    }
+  ]
+}
