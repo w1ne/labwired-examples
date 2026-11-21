@@ -1,0 +1,2345 @@
+{
+  "name": "A1 mini printer",
+  "board": "stm32f411ceu6-blackpill",
+  "diagram": {
+    "version": 1,
+    "board": "stm32f411ceu6-blackpill",
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "stm32f411ceu6-blackpill",
+        "x": 0,
+        "y": 0,
+        "rotate": 0,
+        "attrs": {
+          "label": "PrintCore controller STM32F411"
+        }
+      },
+      {
+        "id": "power24",
+        "type": "dc-barrel-jack",
+        "x": -400,
+        "y": -250,
+        "rotate": 0,
+        "attrs": {
+          "voltage": "24",
+          "label": "24V DC input"
+        }
+      },
+      {
+        "id": "bulk",
+        "type": "capacitor",
+        "x": -270,
+        "y": -250,
+        "rotate": 0,
+        "attrs": {
+          "value": "470uF",
+          "voltage": "35V"
+        }
+      },
+      {
+        "id": "logic_decouple",
+        "type": "capacitor",
+        "x": -270,
+        "y": -150,
+        "rotate": 0,
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "id": "x_driver",
+        "type": "a4988",
+        "x": 330,
+        "y": -250,
+        "rotate": 0,
+        "attrs": {
+          "label": "X stepper driver"
+        }
+      },
+      {
+        "id": "x_motor",
+        "type": "nema17",
+        "x": 600,
+        "y": -250,
+        "rotate": 0,
+        "attrs": {
+          "label": "X axis"
+        }
+      },
+      {
+        "id": "x_bulk",
+        "type": "capacitor",
+        "x": 460,
+        "y": -220,
+        "rotate": 0,
+        "attrs": {
+          "value": "100uF",
+          "voltage": "35V"
+        }
+      },
+      {
+        "id": "y_driver",
+        "type": "a4988",
+        "x": 330,
+        "y": -40,
+        "rotate": 0,
+        "attrs": {
+          "label": "Y stepper driver"
+        }
+      },
+      {
+        "id": "y_motor",
+        "type": "nema17",
+        "x": 600,
+        "y": -40,
+        "rotate": 0,
+        "attrs": {
+          "label": "Y axis"
+        }
+      },
+      {
+        "id": "y_bulk",
+        "type": "capacitor",
+        "x": 460,
+        "y": -10,
+        "rotate": 0,
+        "attrs": {
+          "value": "100uF",
+          "voltage": "35V"
+        }
+      },
+      {
+        "id": "z_driver",
+        "type": "a4988",
+        "x": 330,
+        "y": 170,
+        "rotate": 0,
+        "attrs": {
+          "label": "Z stepper driver"
+        }
+      },
+      {
+        "id": "z_motor",
+        "type": "nema17",
+        "x": 600,
+        "y": 170,
+        "rotate": 0,
+        "attrs": {
+          "label": "Z axis"
+        }
+      },
+      {
+        "id": "z_bulk",
+        "type": "capacitor",
+        "x": 460,
+        "y": 200,
+        "rotate": 0,
+        "attrs": {
+          "value": "100uF",
+          "voltage": "35V"
+        }
+      },
+      {
+        "id": "e_driver",
+        "type": "a4988",
+        "x": 330,
+        "y": 380,
+        "rotate": 0,
+        "attrs": {
+          "label": "E stepper driver"
+        }
+      },
+      {
+        "id": "e_motor",
+        "type": "nema17",
+        "x": 600,
+        "y": 380,
+        "rotate": 0,
+        "attrs": {
+          "label": "E axis"
+        }
+      },
+      {
+        "id": "e_bulk",
+        "type": "capacitor",
+        "x": 460,
+        "y": 410,
+        "rotate": 0,
+        "attrs": {
+          "value": "100uF",
+          "voltage": "35V"
+        }
+      },
+      {
+        "id": "cab_x_sig",
+        "type": "resistor",
+        "x": -520,
+        "y": 20,
+        "rotate": 0,
+        "attrs": {
+          "value": "1",
+          "label": "X_ENDSTOP cable pin 3 (J30.3 to endstop J1.3)"
+        }
+      },
+      {
+        "id": "limit_x",
+        "type": "button",
+        "x": -330,
+        "y": 50,
+        "rotate": 0,
+        "attrs": {
+          "label": "X endstop board switch"
+        }
+      },
+      {
+        "id": "cab_y_sig",
+        "type": "resistor",
+        "x": -520,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "value": "1",
+          "label": "Y_ENDSTOP cable pin 3 (J31.3 to endstop J1.3)"
+        }
+      },
+      {
+        "id": "limit_y",
+        "type": "button",
+        "x": -330,
+        "y": 150,
+        "rotate": 0,
+        "attrs": {
+          "label": "Y endstop board switch"
+        }
+      },
+      {
+        "id": "cab_z_sig",
+        "type": "resistor",
+        "x": -520,
+        "y": 220,
+        "rotate": 0,
+        "attrs": {
+          "value": "1",
+          "label": "Z_ENDSTOP cable pin 3 (J32.3 to endstop J1.3)"
+        }
+      },
+      {
+        "id": "limit_z",
+        "type": "button",
+        "x": -330,
+        "y": 250,
+        "rotate": 0,
+        "attrs": {
+          "label": "Z endstop board switch"
+        }
+      },
+      {
+        "id": "start",
+        "type": "button",
+        "x": -330,
+        "y": 350,
+        "rotate": 0,
+        "attrs": {
+          "label": "start"
+        }
+      },
+      {
+        "id": "stop",
+        "type": "button",
+        "x": -330,
+        "y": 450,
+        "rotate": 0,
+        "attrs": {
+          "label": "stop"
+        }
+      },
+      {
+        "id": "heater_hotend",
+        "type": "resistor",
+        "x": 820,
+        "y": -200,
+        "rotate": 0,
+        "attrs": {
+          "value": "14.4",
+          "label": "hotend heater equivalent"
+        }
+      },
+      {
+        "id": "q_hotend",
+        "type": "nmos",
+        "x": 820,
+        "y": -80,
+        "rotate": 0,
+        "attrs": {
+          "label": "hotend low-side MOSFET"
+        }
+      },
+      {
+        "id": "gate_hotend",
+        "type": "resistor",
+        "x": 700,
+        "y": -80,
+        "rotate": 0,
+        "attrs": {
+          "value": "100"
+        }
+      },
+      {
+        "id": "gate_pd_hotend",
+        "type": "resistor",
+        "x": 700,
+        "y": -10,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000"
+        }
+      },
+      {
+        "id": "ntc_bed",
+        "type": "ntc-thermistor",
+        "x": -650,
+        "y": 250,
+        "rotate": 0,
+        "attrs": {
+          "beta": "3950",
+          "r0": "10K",
+          "r25": "100000",
+          "temperature": "25",
+          "label": "bed 100K NTC"
+        }
+      },
+      {
+        "id": "pull_bed",
+        "type": "resistor",
+        "x": -780,
+        "y": 180,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000"
+        }
+      },
+      {
+        "id": "ntc_hotend",
+        "type": "ntc-thermistor",
+        "x": -650,
+        "y": 0,
+        "rotate": 0,
+        "attrs": {
+          "beta": "3950",
+          "r0": "10K",
+          "r25": "100000",
+          "temperature": "25",
+          "label": "hotend 100K NTC"
+        }
+      },
+      {
+        "id": "pull_hotend",
+        "type": "resistor",
+        "x": -780,
+        "y": -60,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000"
+        }
+      },
+      {
+        "id": "heater_bed",
+        "type": "resistor",
+        "x": 820,
+        "y": 50,
+        "rotate": 0,
+        "attrs": {
+          "value": "5.76",
+          "label": "bed heater equivalent"
+        }
+      },
+      {
+        "id": "q_bed",
+        "type": "nmos",
+        "x": 820,
+        "y": 170,
+        "rotate": 0,
+        "attrs": {
+          "label": "bed low-side MOSFET"
+        }
+      },
+      {
+        "id": "gate_bed",
+        "type": "resistor",
+        "x": 700,
+        "y": 170,
+        "rotate": 0,
+        "attrs": {
+          "value": "100"
+        }
+      },
+      {
+        "id": "gate_pd_bed",
+        "type": "resistor",
+        "x": 700,
+        "y": 240,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000"
+        }
+      },
+      {
+        "id": "fan",
+        "type": "dc-motor",
+        "x": 820,
+        "y": 430,
+        "rotate": 0,
+        "attrs": {
+          "label": "24V cooling fan"
+        }
+      },
+      {
+        "id": "q_fan",
+        "type": "nmos",
+        "x": 820,
+        "y": 530,
+        "rotate": 0,
+        "attrs": {
+          "label": "Fan MOSFET"
+        }
+      },
+      {
+        "id": "gate_fan",
+        "type": "resistor",
+        "x": 700,
+        "y": 530,
+        "rotate": 0,
+        "attrs": {
+          "value": "100"
+        }
+      },
+      {
+        "id": "gate_pd_fan",
+        "type": "resistor",
+        "x": 700,
+        "y": 600,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000"
+        }
+      },
+      {
+        "id": "fan_flyback",
+        "type": "diode",
+        "x": 940,
+        "y": 460,
+        "rotate": 0,
+        "attrs": {
+          "type": "diode",
+          "value": "SS34"
+        }
+      },
+      {
+        "id": "led_r",
+        "type": "resistor",
+        "x": -150,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "value": "1000",
+          "label": "fault LED resistor"
+        }
+      },
+      {
+        "id": "led_fault",
+        "type": "led",
+        "x": -150,
+        "y": 400,
+        "rotate": 0,
+        "attrs": {
+          "color": "red",
+          "label": "fault LED"
+        }
+      },
+      {
+        "id": "screen",
+        "type": "oled-ssd1306",
+        "x": 0,
+        "y": -250,
+        "rotate": 0,
+        "attrs": {
+          "label": "Display board SSD1306 module (cable J22 to J1: GND, 3V3, SCL, SDA)"
+        }
+      },
+      {
+        "id": "i2c_pull_scl",
+        "type": "resistor",
+        "x": -120,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "value": "4700"
+        }
+      },
+      {
+        "id": "i2c_pull_sda",
+        "type": "resistor",
+        "x": -120,
+        "y": -220,
+        "rotate": 0,
+        "attrs": {
+          "value": "4700"
+        }
+      },
+      {
+        "id": "serial",
+        "type": "pin-header",
+        "x": -150,
+        "y": 250,
+        "rotate": 0,
+        "attrs": {
+          "label": "UART 3.3V TX/RX/GND"
+        }
+      },
+      {
+        "id": "x_step_r",
+        "type": "resistor",
+        "x": 230,
+        "y": -270,
+        "rotate": 0,
+        "attrs": {
+          "value": "33",
+          "label": "X STEP termination"
+        }
+      },
+      {
+        "id": "y_step_r",
+        "type": "resistor",
+        "x": 230,
+        "y": -60,
+        "rotate": 0,
+        "attrs": {
+          "value": "33",
+          "label": "Y STEP termination"
+        }
+      },
+      {
+        "id": "z_step_r",
+        "type": "resistor",
+        "x": 230,
+        "y": 150,
+        "rotate": 0,
+        "attrs": {
+          "value": "33",
+          "label": "Z STEP termination"
+        }
+      },
+      {
+        "id": "e_step_r",
+        "type": "resistor",
+        "x": 230,
+        "y": 360,
+        "rotate": 0,
+        "attrs": {
+          "value": "33",
+          "label": "E STEP termination"
+        }
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "bulk",
+          "pin": "1"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "bulk",
+          "pin": "2"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "logic_decouple",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "logic_decouple",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB0"
+        },
+        "to": {
+          "part": "x_step_r",
+          "pin": "1"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "DIR"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB12"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "EN"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "VDD"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "VMOT"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "RESET"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "SLEEP"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "MS1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "MS2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "MS3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "1A"
+        },
+        "to": {
+          "part": "x_motor",
+          "pin": "1A"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "1B"
+        },
+        "to": {
+          "part": "x_motor",
+          "pin": "1B"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "2A"
+        },
+        "to": {
+          "part": "x_motor",
+          "pin": "2A"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "2B"
+        },
+        "to": {
+          "part": "x_motor",
+          "pin": "2B"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "x_bulk",
+          "pin": "1"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "VMOT"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "x_bulk",
+          "pin": "2"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB3"
+        },
+        "to": {
+          "part": "y_step_r",
+          "pin": "1"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB4"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "DIR"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "VDD"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "VMOT"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "RESET"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "SLEEP"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "MS1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "MS2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "MS3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "1A"
+        },
+        "to": {
+          "part": "y_motor",
+          "pin": "1A"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "1B"
+        },
+        "to": {
+          "part": "y_motor",
+          "pin": "1B"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "2A"
+        },
+        "to": {
+          "part": "y_motor",
+          "pin": "2A"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "y_driver",
+          "pin": "2B"
+        },
+        "to": {
+          "part": "y_motor",
+          "pin": "2B"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "y_bulk",
+          "pin": "1"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "VMOT"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "y_bulk",
+          "pin": "2"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB5"
+        },
+        "to": {
+          "part": "z_step_r",
+          "pin": "1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "DIR"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "VDD"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "VMOT"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "RESET"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "SLEEP"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "MS1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "MS2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "MS3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "1A"
+        },
+        "to": {
+          "part": "z_motor",
+          "pin": "1A"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "1B"
+        },
+        "to": {
+          "part": "z_motor",
+          "pin": "1B"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "2A"
+        },
+        "to": {
+          "part": "z_motor",
+          "pin": "2A"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "z_driver",
+          "pin": "2B"
+        },
+        "to": {
+          "part": "z_motor",
+          "pin": "2B"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "z_bulk",
+          "pin": "1"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "VMOT"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "z_bulk",
+          "pin": "2"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB9"
+        },
+        "to": {
+          "part": "e_step_r",
+          "pin": "1"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB10"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "DIR"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "VDD"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "VMOT"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "RESET"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "SLEEP"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "MS1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "MS2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "MS3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "1A"
+        },
+        "to": {
+          "part": "e_motor",
+          "pin": "1A"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "1B"
+        },
+        "to": {
+          "part": "e_motor",
+          "pin": "1B"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "2A"
+        },
+        "to": {
+          "part": "e_motor",
+          "pin": "2A"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "e_driver",
+          "pin": "2B"
+        },
+        "to": {
+          "part": "e_motor",
+          "pin": "2B"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "e_bulk",
+          "pin": "1"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "VMOT"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "e_bulk",
+          "pin": "2"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA8"
+        },
+        "to": {
+          "part": "cab_x_sig",
+          "pin": "1"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "cab_x_sig",
+          "pin": "2"
+        },
+        "to": {
+          "part": "limit_x",
+          "pin": "1"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "limit_x",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PC13"
+        },
+        "to": {
+          "part": "cab_y_sig",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "cab_y_sig",
+          "pin": "2"
+        },
+        "to": {
+          "part": "limit_y",
+          "pin": "1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "limit_y",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PC14"
+        },
+        "to": {
+          "part": "cab_z_sig",
+          "pin": "1"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "cab_z_sig",
+          "pin": "2"
+        },
+        "to": {
+          "part": "limit_z",
+          "pin": "1"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "limit_z",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA15"
+        },
+        "to": {
+          "part": "start",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "start",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB2"
+        },
+        "to": {
+          "part": "stop",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "stop",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "to": {
+          "part": "heater_hotend",
+          "pin": "1"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "heater_hotend",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_hotend",
+          "pin": "D"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "q_hotend",
+          "pin": "S"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB13"
+        },
+        "to": {
+          "part": "gate_hotend",
+          "pin": "1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "gate_hotend",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_hotend",
+          "pin": "G"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "q_hotend",
+          "pin": "G"
+        },
+        "to": {
+          "part": "gate_pd_hotend",
+          "pin": "1"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "gate_pd_hotend",
+          "pin": "2"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "to": {
+          "part": "heater_bed",
+          "pin": "1"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "heater_bed",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_bed",
+          "pin": "D"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "q_bed",
+          "pin": "S"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB14"
+        },
+        "to": {
+          "part": "gate_bed",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "gate_bed",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_bed",
+          "pin": "G"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "q_bed",
+          "pin": "G"
+        },
+        "to": {
+          "part": "gate_pd_bed",
+          "pin": "1"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "gate_pd_bed",
+          "pin": "2"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "power24",
+          "pin": "+"
+        },
+        "to": {
+          "part": "fan",
+          "pin": "+"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "fan",
+          "pin": "-"
+        },
+        "to": {
+          "part": "q_fan",
+          "pin": "D"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "q_fan",
+          "pin": "S"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB15"
+        },
+        "to": {
+          "part": "gate_fan",
+          "pin": "1"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "gate_fan",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_fan",
+          "pin": "G"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "q_fan",
+          "pin": "G"
+        },
+        "to": {
+          "part": "gate_pd_fan",
+          "pin": "1"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "gate_pd_fan",
+          "pin": "2"
+        },
+        "to": {
+          "part": "power24",
+          "pin": "-"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "fan_flyback",
+          "pin": "A"
+        },
+        "to": {
+          "part": "fan",
+          "pin": "-"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "fan_flyback",
+          "pin": "K"
+        },
+        "to": {
+          "part": "fan",
+          "pin": "+"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "led_r",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "led_r",
+          "pin": "2"
+        },
+        "to": {
+          "part": "led_fault",
+          "pin": "A"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "led_fault",
+          "pin": "K"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA10"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "screen",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "screen",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "screen",
+          "pin": "SCL"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "screen",
+          "pin": "SDA"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "i2c_pull_scl",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "i2c_pull_scl",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "i2c_pull_sda",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "i2c_pull_sda",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA2"
+        },
+        "to": {
+          "part": "serial",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA3"
+        },
+        "to": {
+          "part": "serial",
+          "pin": "2"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "serial",
+          "pin": "3"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "serial",
+          "pin": "4"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "EN"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "EN"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "EN"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "EN"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "x_driver",
+          "pin": "EN"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "EN"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "x_step_r",
+          "pin": "2"
+        },
+        "to": {
+          "part": "x_driver",
+          "pin": "STEP"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "y_step_r",
+          "pin": "2"
+        },
+        "to": {
+          "part": "y_driver",
+          "pin": "STEP"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "z_step_r",
+          "pin": "2"
+        },
+        "to": {
+          "part": "z_driver",
+          "pin": "STEP"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "e_step_r",
+          "pin": "2"
+        },
+        "to": {
+          "part": "e_driver",
+          "pin": "STEP"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "ntc_bed",
+          "pin": "B"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "ntc_bed",
+          "pin": "A"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "ntc_bed",
+          "pin": "A"
+        },
+        "to": {
+          "part": "pull_bed",
+          "pin": "1"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "pull_bed",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "ntc_hotend",
+          "pin": "B"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "ntc_hotend",
+          "pin": "A"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA4"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "ntc_hotend",
+          "pin": "A"
+        },
+        "to": {
+          "part": "pull_hotend",
+          "pin": "1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "pull_hotend",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      }
+    ],
+    "mechanical": {
+      "electronics": {
+        "version": 1,
+        "displays": [],
+        "inputs": [],
+        "motions": [
+          {
+            "id": "axis-x",
+            "component": "x_driver",
+            "joint": "axis-x",
+            "parts": [],
+            "origin": [
+              -130,
+              -7,
+              125
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "parent": "axis-z",
+            "linearTravel": {
+              "parts": [
+                "toolhead",
+                "toolhead-fan",
+                "fan-rotor",
+                "hotend-sock",
+                "nozzle",
+                "cooling-duct-left",
+                "cooling-duct-right",
+                "filament-entry",
+                "filament-collet",
+                "toolhead-status-led",
+                "extruder-motor",
+                "extruder-shaft"
+              ],
+              "axis": [
+                1,
+                0,
+                0
+              ],
+              "mmPerRad": 6.366197723675814
+            }
+          },
+          {
+            "id": "axis-y",
+            "component": "y_driver",
+            "joint": "axis-y",
+            "parts": [],
+            "origin": [
+              -69,
+              70,
+              55
+            ],
+            "axis": [
+              0,
+              -1,
+              0
+            ],
+            "linearTravel": {
+              "parts": [
+                "bed-carriage",
+                "heatbed",
+                "pei-build-sheet",
+                "plate-handle",
+                "plate-reference-grid"
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "mmPerRad": 6.366197723675814
+            }
+          },
+          {
+            "id": "axis-z",
+            "component": "z_driver",
+            "joint": "axis-z",
+            "parts": [],
+            "origin": [
+              130,
+              17,
+              126
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "linearTravel": {
+              "parts": [
+                "x-gantry",
+                "x-rail",
+                "x-belt",
+                "x-end-cap",
+                "x-rail-bolt-0",
+                "x-rail-bolt-1",
+                "x-rail-bolt-2",
+                "x-rail-bolt-3",
+                "x-rail-bolt-4",
+                "x-rail-bolt-5",
+                "x-rail-bolt-6",
+                "purge-wiper",
+                "filament-hub",
+                "monitoring-camera",
+                "toolhead",
+                "toolhead-fan",
+                "fan-rotor",
+                "hotend-sock",
+                "nozzle",
+                "cooling-duct-left",
+                "cooling-duct-right",
+                "filament-entry",
+                "filament-collet",
+                "toolhead-status-led",
+                "extruder-motor",
+                "extruder-shaft"
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "mmPerRad": 1.2732395447351628
+            }
+          },
+          {
+            "id": "axis-e",
+            "component": "e_driver",
+            "joint": "axis-e",
+            "parts": [
+              "extruder-shaft"
+            ],
+            "origin": [
+              -130,
+              4,
+              151
+            ],
+            "axis": [
+              0,
+              1,
+              0
+            ],
+            "parent": "axis-x"
+          }
+        ]
+      },
+      "provider": "kernelcad",
+      "slug": "MwczxIII",
+      "projectId": "5445bd81-080e-4c11-b849-aed3eae78c95",
+      "version": 3,
+      "title": "A1 mini — Live Closed-Loop Twin"
+    }
+  },
+  "source": "#include <Arduino.h>\n#include <Wire.h>\n#include <math.h>\n#include <stdint.h>\n#include <string.h>\n\nstatic const uint32_t X_STEP = PB0;\nstatic const uint32_t X_DIR = PB1;\nstatic const uint32_t Y_STEP = PB3;\nstatic const uint32_t Y_DIR = PB4;\nstatic const uint32_t Z_STEP = PB5;\nstatic const uint32_t Z_DIR = PB8;\nstatic const uint32_t E_STEP = PB9;\nstatic const uint32_t E_DIR = PB10;\nstatic const uint32_t STEPPER_EN = PB12;\n\nstatic const uint32_t X_MIN = PA8;\nstatic const uint32_t Y_MIN = PC13;\nstatic const uint32_t Z_MIN = PC14;\nstatic const uint32_t START_PIN = PA15;\nstatic const uint32_t STOP_PIN = PB2;\n\nstatic const uint32_t HOTEND_PWM = PB13;\nstatic const uint32_t BED_PWM = PB14;\nstatic const uint32_t FAN_PWM = PB15;\nstatic const uint32_t HOT_ADC = PA4;\nstatic const uint32_t BED_ADC = PA1;\n// Fault LED on the controller board: 3V3 - 1k - LED - PA10, so LOW lights it.\nstatic const uint32_t STATUS_LED = PA10;\n\nstatic const uint8_t OLED_ADDRESS = 0x3c;\nstatic const uint32_t STEP_PIN[4] = {X_STEP, Y_STEP, Z_STEP, E_STEP};\nstatic const uint32_t DIR_PIN[4] = {X_DIR, Y_DIR, Z_DIR, E_DIR};\nstatic const uint32_t LIMIT_PIN[3] = {X_MIN, Y_MIN, Z_MIN};\nstatic const int32_t STEPS_PER_MM[4] = {5, 5, 25, 100};\n\nenum class State : uint8_t { IDLE, HOME, HEATING, PRINTING, DONE, FAULT };\nstatic State state = State::IDLE;\n\nstatic uint8_t oledFrame[1024];\nstatic bool oledOk = true;\nstatic int hotC = 25;\nstatic int bedC = 25;\nstatic uint16_t hotAdc = 0;\nstatic int32_t axisSteps[4] = {0, 0, 0, 0};\nstatic uint32_t stepRiseCount[4] = {0, 0, 0, 0};\n\nstatic uint8_t hotDuty = 0;\nstatic uint8_t bedDuty = 0;\nstatic uint32_t thermalAt = 0;\nstatic uint32_t reportedAt = 0;\nstatic uint32_t heatWatchAt = 0;\nstatic int heatWatchHot = 25;\nstatic int heatWatchBed = 25;\n\nstatic uint8_t homeAxis = 0;\nstatic uint32_t homeCount = 0;\nstatic uint32_t stateAt = 0;\nstatic uint32_t stepAt = 0;\nstatic uint32_t pulseAt = 0;\nstatic uint8_t pulseMask = 0;\n\nstatic bool rawStart = false;\nstatic bool stableStart = false;\nstatic uint32_t startChangedAt = 0;\n\nstatic uint8_t segment = 0;\nstatic uint32_t majorSteps = 0;\nstatic uint32_t stepsTaken = 0;\nstatic uint32_t stepIntervalUs = 0;\nstatic int32_t deltaSteps[4] = {0, 0, 0, 0};\nstatic int32_t ddaError[4] = {0, 0, 0, 0};\nstatic int8_t stepSign[4] = {1, 1, 1, 1};\n\nstatic const int32_t PATH[][4] = {\n  {0, 0, 25, 0},\n  {150, 150, 25, 0},\n  {450, 150, 25, 100},\n  {450, 450, 25, 200},\n  {150, 450, 25, 300},\n  {150, 150, 25, 400},\n  {450, 450, 25, 500},\n  {150, 150, 25, 600}\n};\n\nstatic const uint16_t NTC_ADC[] = {\n  32,47,69,99,140,195,265,355,466,600,758,939,1140,1357,1585,1817,\n  2048,2270,2481,2676,2854,3014,3155,3280,3388,3482,3563,3633,3694,\n  3745,3790,3828,3861,3889,3914,3935,3953,3969,3983,3995,4006,4015\n};\nstatic const int16_t NTC_TEMP[] = {\n  -55,-50,-45,-40,-35,-30,-25,-20,-15,-10,-5,0,5,10,15,20,25,30,\n  35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,\n  130,135,140,145,150\n};\n\nstatic const uint8_t GLYPHS[][5] = {\n {0x3e,0x51,0x49,0x45,0x3e},{0,0x42,0x7f,0x40,0},{0x42,0x61,0x51,0x49,0x46},\n {0x21,0x41,0x45,0x4b,0x31},{0x18,0x14,0x12,0x7f,0x10},{0x27,0x45,0x45,0x45,0x39},\n {0x3c,0x4a,0x49,0x49,0x30},{1,0x71,9,5,3},{0x36,0x49,0x49,0x49,0x36},\n {6,0x49,0x49,0x29,0x1e},\n {0x7e,0x11,0x11,0x11,0x7e},{0x7f,0x49,0x49,0x49,0x36},{0x3e,0x41,0x41,0x41,0x22},\n {0x7f,0x41,0x41,0x22,0x1c},{0x7f,0x49,0x49,0x49,0x41},{0x7f,9,9,9,1},\n {0x3e,0x41,0x49,0x49,0x7a},{0x7f,8,8,8,0x7f},{0,0x41,0x7f,0x41,0},\n {0x20,0x40,0x41,0x3f,1},{0x7f,8,0x14,0x22,0x41},{0x7f,0x40,0x40,0x40,0x40},\n {0x7f,2,0x0c,2,0x7f},{0x7f,4,8,0x10,0x7f},{0x3e,0x41,0x41,0x41,0x3e},\n {0x7f,9,9,9,6},{0x3e,0x41,0x51,0x21,0x5e},{0x7f,9,0x19,0x29,0x46},\n {0x46,0x49,0x49,0x49,0x31},{1,1,0x7f,1,1},{0x3f,0x40,0x40,0x40,0x3f},\n {0x1f,0x20,0x40,0x20,0x1f},{0x3f,0x40,0x38,0x40,0x3f},{0x63,0x14,8,0x14,0x63},\n {7,8,0x70,8,7},{0x61,0x51,0x49,0x45,0x43}\n};\n\nstatic void serialEvent(const char *name) {\n  Serial.print(name);\n  Serial.print(\" t_us=\");\n  Serial.println(micros());\n}\n\nstatic void setPixel(uint8_t x, uint8_t y) {\n  if (x < 128 && y < 64) {\n    oledFrame[(y >> 3) * 128 + x] |= uint8_t(1U << (y & 7));\n  }\n}\n\nstatic void drawText(uint8_t x, uint8_t y, const char *text) {\n  while (*text && x < 123) {\n    char c = *text++;\n    int8_t index = -1;\n    if (c >= '0' && c <= '9') index = c - '0';\n    else if (c >= 'A' && c <= 'Z') index = c - 'A' + 10;\n    for (uint8_t col = 0; col < 5; ++col) {\n      uint8_t bits = index >= 0 ? GLYPHS[index][col] : 0;\n      for (uint8_t row = 0; row < 7; ++row) {\n        if (bits & (1U << row)) setPixel(x + col, y + row);\n      }\n    }\n    x += 6;\n  }\n}\n\nstatic void oledCommand(const uint8_t *bytes, size_t count) {\n  Wire.beginTransmission(OLED_ADDRESS);\n  Wire.write(uint8_t(0));\n  Wire.write(bytes, count);\n  if (Wire.endTransmission() != 0) oledOk = false;\n}\n\nstatic void flushDisplay() {\n  const uint8_t addressWindow[] = {0x21,0,127,0x22,0,7};\n  oledCommand(addressWindow, sizeof(addressWindow));\n  for (size_t offset = 0; offset < sizeof(oledFrame); offset += 16) {\n    Wire.beginTransmission(OLED_ADDRESS);\n    Wire.write(uint8_t(0x40));\n    Wire.write(oledFrame + offset, 16);\n    if (Wire.endTransmission() != 0) oledOk = false;\n  }\n}\n\nstatic void showScreen(const char *status) {\n  memset(oledFrame, 0, sizeof(oledFrame));\n  drawText(0, 2, \"A1 MINI\");\n  drawText(0, 18, status);\n  drawText(0, 34, \"HOT 140C\");\n  drawText(0, 48, \"BED 60C\");\n  flushDisplay();\n  Serial.print(\"DISPLAY \");\n  Serial.println(status);\n}\n\nstatic void initDisplay() {\n  const uint8_t initBytes[] = {\n    0xae,0xd5,0x80,0xa8,0x3f,0xd3,0x00,0x40,0x8d,0x14,0x20,0x00,\n    0xa1,0xc8,0xda,0x12,0x81,0x7f,0xd9,0xf1,0xdb,0x20,0xa4,0xa6,0x2e,0xaf\n  };\n  oledCommand(initBytes, sizeof(initBytes));\n  showScreen(\"PRESS START\");\n}\n\nstatic int decodeBedTemperature(uint16_t adc) {\n  const size_t count = sizeof(NTC_ADC) / sizeof(NTC_ADC[0]);\n  for (size_t i = 1; i < count; ++i) {\n    if (adc <= NTC_ADC[i]) {\n      const int32_t span = int32_t(NTC_ADC[i] - NTC_ADC[i - 1]);\n      const int32_t offset = int32_t(adc - NTC_ADC[i - 1]);\n      return NTC_TEMP[i - 1] +\n        int((offset * (NTC_TEMP[i] - NTC_TEMP[i - 1]) + span / 2) / span);\n    }\n  }\n  return 200;\n}\n\n// 100K NTC (beta 3950) from 3V3A to PA4, 100K pulldown on the board:\n// Rntc = 100K * (4095 - adc) / adc, then the beta equation.\nstatic bool readHotendTemperature(int &temperatureC) {\n  hotAdc = uint16_t(analogRead(HOT_ADC));\n  if (hotAdc < 40 || hotAdc > 4090) return false;\n  const float rNtc = 100000.0f * float(4095 - hotAdc) / float(hotAdc);\n  const float invT = 1.0f / 298.15f + logf(rNtc / 100000.0f) / 3950.0f;\n  temperatureC = int(1.0f / invT - 273.15f + 0.5f);\n  return temperatureC >= 0 && temperatureC <= 500;\n}\n\nstatic bool readTemperatures() {\n  int measuredHot = 0;\n  const bool hotValid = readHotendTemperature(measuredHot);\n  const uint16_t bedAdc = uint16_t(analogRead(BED_ADC));\n  const int measuredBed = decodeBedTemperature(bedAdc);\n\n  hotC = measuredHot;\n  bedC = measuredBed;\n  return hotValid && bedAdc > 40 && bedAdc < 4088 && bedC >= 0 && bedC <= 150;\n}\n\nstatic uint8_t dutyFor(int target, int actual) {\n  const int error = target - actual;\n  if (error <= 0) return 0;\n  if (error >= 25) return 100;\n  return uint8_t(error * 4);\n}\n\nstatic void writePowerOutputs(uint32_t nowUs) {\n  const uint8_t phase = uint8_t((nowUs % 100000UL) / 1000UL);\n  digitalWrite(HOTEND_PWM, phase < hotDuty ? HIGH : LOW);\n  digitalWrite(BED_PWM, phase < bedDuty ? HIGH : LOW);\n}\n\nstatic void disableOutputs() {\n  hotDuty = 0;\n  bedDuty = 0;\n  digitalWrite(HOTEND_PWM, LOW);\n  digitalWrite(BED_PWM, LOW);\n  digitalWrite(FAN_PWM, LOW);\n  digitalWrite(STEPPER_EN, HIGH);\n  for (uint8_t axis = 0; axis < 4; ++axis) digitalWrite(STEP_PIN[axis], LOW);\n  pulseMask = 0;\n}\n\nstatic void fail(const char *reason) {\n  if (state == State::FAULT) return;\n  state = State::FAULT;\n  disableOutputs();\n  digitalWrite(STATUS_LED, LOW);\n  Serial.print(\"FAULT \");\n  serialEvent(reason);\n  showScreen(reason);\n}\n\nstatic void serviceThermal(uint32_t nowUs) {\n  if (uint32_t(nowUs - thermalAt) < 10000UL) return;\n  thermalAt = nowUs;\n\n  if (!readTemperatures()) {\n    fail(\"SENSOR_FAULT\");\n    return;\n  }\n\n  if (uint32_t(nowUs - reportedAt) >= 100000UL) {\n    reportedAt = nowUs;\n    Serial.print(\"TEMP hot=\");\n    Serial.print(hotC);\n    Serial.print(\" bed=\");\n    Serial.print(bedC);\n    Serial.print(\" hot_adc=\");\n    Serial.println(hotAdc);\n  }\n\n  // The twin's NTC model spans -55..150 C, so the simulated hotend profile\n  // is a 140 C setpoint with a 148 C hard limit (a real A1 runs hotter).\n  if (hotC > 148 || bedC > 90) {\n    fail(\"OVERTEMP\");\n    return;\n  }\n\n  const bool fanOn = hotC > 50 || state == State::PRINTING;\n  digitalWrite(FAN_PWM, fanOn ? HIGH : LOW);\n\n  if (state == State::HEATING || state == State::PRINTING) {\n    hotDuty = dutyFor(140, hotC);\n    bedDuty = dutyFor(60, bedC);\n\n    if (uint32_t(nowUs - heatWatchAt) >= 8000000UL) {\n      if ((hotDuty > 80 && hotC < heatWatchHot + 2) ||\n          (bedDuty > 80 && bedC < heatWatchBed + 2)) {\n        fail(\"HEAT_NO_RISE\");\n        return;\n      }\n      heatWatchHot = hotC;\n      heatWatchBed = bedC;\n      heatWatchAt = nowUs;\n    }\n  } else {\n    hotDuty = 0;\n    bedDuty = 0;\n  }\n}\n\nstatic void beginPulse(uint8_t mask, uint32_t nowUs) {\n  for (uint8_t axis = 0; axis < 4; ++axis) {\n    if (mask & (1U << axis)) {\n      digitalWrite(STEP_PIN[axis], HIGH);\n      ++stepRiseCount[axis];\n    }\n  }\n  pulseMask = mask;\n  pulseAt = nowUs;\n}\n\nstatic void endPulse(uint32_t nowUs) {\n  if (pulseMask == 0 || uint32_t(nowUs - pulseAt) < 5UL) return;\n  for (uint8_t axis = 0; axis < 4; ++axis) {\n    if (pulseMask & (1U << axis)) digitalWrite(STEP_PIN[axis], LOW);\n  }\n  pulseMask = 0;\n}\n\nstatic bool endstopPressed(uint8_t axis) {\n  return digitalRead(LIMIT_PIN[axis]) == LOW;\n}\n\nstatic void startHoming(uint32_t nowUs) {\n  state = State::HOME;\n  homeAxis = 0;\n  homeCount = 0;\n  stateAt = nowUs;\n  stepAt = nowUs;\n  digitalWrite(STEPPER_EN, LOW);\n  for (uint8_t axis = 0; axis < 4; ++axis) digitalWrite(DIR_PIN[axis], LOW);\n  serialEvent(\"HOME_START\");\n  showScreen(\"HOMING XYZ\");\n}\n\nstatic void serviceHoming(uint32_t nowUs) {\n  if (endstopPressed(homeAxis)) {\n    axisSteps[homeAxis] = 0;\n    serialEvent(homeAxis == 0 ? \"HOME_X\" : homeAxis == 1 ? \"HOME_Y\" : \"HOME_Z\");\n    ++homeAxis;\n    homeCount = 0;\n    stateAt = nowUs;\n    stepAt = nowUs;\n\n    if (homeAxis == 3) {\n      serialEvent(\"ALL_HOMED\");\n      state = State::HEATING;\n      stateAt = nowUs;\n      heatWatchAt = nowUs;\n      heatWatchHot = hotC;\n      heatWatchBed = bedC;\n      showScreen(\"HEATING\");\n    }\n    return;\n  }\n\n  const uint32_t timeoutUs = homeAxis == 2 ? 10000000UL : 2200000UL;\n  if (uint32_t(nowUs - stateAt) > timeoutUs ||\n      homeCount > uint32_t(185 * STEPS_PER_MM[homeAxis])) {\n    fail(\"HOME_TIMEOUT\");\n    return;\n  }\n\n  if (pulseMask == 0 && uint32_t(nowUs - stepAt) >= 2000UL) {\n    stepAt = nowUs;\n    beginPulse(uint8_t(1U << homeAxis), nowUs);\n    --axisSteps[homeAxis];\n    ++homeCount;\n  }\n}\n\nstatic void reportPosition(const char *prefix) {\n  Serial.print(prefix);\n  for (uint8_t axis = 0; axis < 4; ++axis) {\n    Serial.print(\" \");\n    Serial.print(axisSteps[axis]);\n  }\n  Serial.println();\n}\n\nstatic void beginSegment(uint32_t nowUs) {\n  majorSteps = 0;\n  stepsTaken = 0;\n  for (uint8_t axis = 0; axis < 4; ++axis) {\n    const int32_t signedDelta = PATH[segment][axis] - axisSteps[axis];\n    stepSign[axis] = signedDelta >= 0 ? 1 : -1;\n    deltaSteps[axis] = signedDelta >= 0 ? signedDelta : -signedDelta;\n    if (uint32_t(deltaSteps[axis]) > majorSteps) majorSteps = uint32_t(deltaSteps[axis]);\n    ddaError[axis] = 0;\n    digitalWrite(DIR_PIN[axis], stepSign[axis] > 0 ? HIGH : LOW);\n  }\n  stepIntervalUs = majorSteps ? 25000UL / majorSteps : 25000UL;\n  if (stepIntervalUs < 20UL) stepIntervalUs = 20UL;\n  stepAt = nowUs;\n  Serial.print(\"SEGMENT \");\n  Serial.println(segment);\n}\n\nstatic void finishPrint() {\n  state = State::DONE;\n  disableOutputs();\n  serialEvent(\"PRINT_DONE\");\n  reportPosition(\"POSITION_STEPS\");\n  Serial.print(\"STEP_RISE_COUNTS\");\n  for (uint8_t axis = 0; axis < 4; ++axis) {\n    Serial.print(\" \");\n    Serial.print(stepRiseCount[axis]);\n  }\n  Serial.println();\n  Serial.println(\"OUTPUTS_SAFE EN=1 HOT=0 BED=0 FAN=0\");\n  showScreen(\"PATH COMPLETE\");\n}\n\nstatic void servicePrint(uint32_t nowUs) {\n  if (pulseMask != 0) return;\n\n  if (stepsTaken >= majorSteps) {\n    reportPosition(\"MOTION_POSITION\");\n    ++segment;\n    if (segment >= sizeof(PATH) / sizeof(PATH[0])) {\n      finishPrint();\n    } else {\n      beginSegment(nowUs);\n    }\n    return;\n  }\n\n  if (uint32_t(nowUs - stepAt) < stepIntervalUs) return;\n  stepAt = nowUs;\n\n  uint8_t mask = 0;\n  for (uint8_t axis = 0; axis < 4; ++axis) {\n    ddaError[axis] += deltaSteps[axis];\n    if (ddaError[axis] >= int32_t(majorSteps)) {\n      ddaError[axis] -= int32_t(majorSteps);\n      axisSteps[axis] += stepSign[axis];\n      mask |= uint8_t(1U << axis);\n    }\n  }\n  if (mask) beginPulse(mask, nowUs);\n  ++stepsTaken;\n}\n\nstatic void serviceStartButton(uint32_t nowUs) {\n  const bool pressed = digitalRead(START_PIN) == LOW;\n  if (pressed != rawStart) {\n    rawStart = pressed;\n    startChangedAt = nowUs;\n  }\n  if (pressed == stableStart || uint32_t(nowUs - startChangedAt) < 18000UL) return;\n\n  stableStart = pressed;\n  if (!stableStart) return;\n\n  if (state == State::IDLE || state == State::DONE) {\n    startHoming(nowUs);\n  } else if (state == State::FAULT && digitalRead(STOP_PIN) == HIGH) {\n    state = State::IDLE;\n    digitalWrite(STATUS_LED, HIGH);\n    showScreen(\"PRESS START\");\n    serialEvent(\"RESET_TO_IDLE\");\n  }\n}\n\nvoid setup() {\n  Serial.begin(115200);\n\n  for (uint8_t axis = 0; axis < 4; ++axis) {\n    pinMode(STEP_PIN[axis], OUTPUT);\n    pinMode(DIR_PIN[axis], OUTPUT);\n    digitalWrite(STEP_PIN[axis], LOW);\n    digitalWrite(DIR_PIN[axis], LOW);\n  }\n  pinMode(STEPPER_EN, OUTPUT);\n  pinMode(HOTEND_PWM, OUTPUT);\n  pinMode(BED_PWM, OUTPUT);\n  pinMode(FAN_PWM, OUTPUT);\n  pinMode(HOT_ADC, INPUT_ANALOG);\n  pinMode(STATUS_LED, OUTPUT);\n  pinMode(X_MIN, INPUT_PULLUP);\n  pinMode(Y_MIN, INPUT_PULLUP);\n  pinMode(Z_MIN, INPUT_PULLUP);\n  pinMode(START_PIN, INPUT_PULLUP);\n  pinMode(STOP_PIN, INPUT_PULLUP);\n  pinMode(BED_ADC, INPUT_ANALOG);\n\n  digitalWrite(STATUS_LED, HIGH);\n  disableOutputs();\n\n  analogReadResolution(12);\n\n  Wire.setSCL(PB6);\n  Wire.setSDA(PB7);\n  Wire.begin();\n  Wire.setClock(400000UL);\n\n  initDisplay();\n  Serial.println(\"A1_REFERENCE_BOOT\");\n  serialEvent(\"READY\");\n  thermalAt = micros();\n  startChangedAt = thermalAt;\n}\n\nvoid loop() {\n  const uint32_t nowUs = micros();\n\n  endPulse(nowUs);\n\n  if (digitalRead(STOP_PIN) == LOW && state != State::FAULT) {\n    fail(\"EMERGENCY_STOP\");\n  }\n\n  serviceStartButton(nowUs);\n  serviceThermal(nowUs);\n  writePowerOutputs(nowUs);\n\n  if (state == State::HOME) {\n    serviceHoming(nowUs);\n  } else if (state == State::HEATING) {\n    if (hotC >= 138 && hotC <= 142 && bedC >= 58 && bedC <= 62) {\n      state = State::PRINTING;\n      segment = 0;\n      serialEvent(\"MOTION_START\");\n      showScreen(\"PRINTING\");\n      beginSegment(nowUs);\n    } else if (uint32_t(nowUs - stateAt) > 20000000UL) {\n      fail(\"HEAT_TIMEOUT\");\n    }\n  } else if (state == State::PRINTING) {\n    servicePrint(nowUs);\n  }\n}\n",
+  "language": "arduino",
+  "entry_path": "src/main.ino",
+  "stimuli": [
+    {
+      "channel": "temperature",
+      "value": 25,
+      "component": "ntc_hotend",
+      "after_cycles": 0
+    },
+    {
+      "channel": "temperature",
+      "value": 25,
+      "component": "ntc_bed",
+      "after_cycles": 0
+    },
+    {
+      "channel": "pressed",
+      "value": 1,
+      "component": "start",
+      "after_cycles": 500000
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "component": "start",
+      "after_cycles": 5500000
+    },
+    {
+      "channel": "pressed",
+      "value": 1,
+      "component": "limit_x",
+      "after_cycles": 7000000
+    },
+    {
+      "channel": "pressed",
+      "value": 1,
+      "component": "limit_y",
+      "after_cycles": 9500000
+    },
+    {
+      "channel": "pressed",
+      "value": 1,
+      "component": "limit_z",
+      "after_cycles": 12000000
+    },
+    {
+      "channel": "temperature",
+      "value": 140,
+      "component": "ntc_hotend",
+      "after_cycles": 15000000
+    },
+    {
+      "channel": "temperature",
+      "value": 60,
+      "component": "ntc_bed",
+      "after_cycles": 15000000
+    },
+    {
+      "channel": "temperature",
+      "value": 150,
+      "component": "ntc_hotend",
+      "after_cycles": 46000000
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "Home X/Y/Z through the endstop cables, reach print temperature with the hotend read as a beta-model NTC, execute the X/Y/Z/E path, render the display through its cable, count all commanded STEP pulses, and finish with drivers, heaters, and fan safe.",
+      "check": {
+        "serial": [
+          {
+            "contains": "HOME_X"
+          },
+          {
+            "contains": "HOME_Y"
+          },
+          {
+            "contains": "HOME_Z"
+          },
+          {
+            "contains": "ALL_HOMED"
+          },
+          {
+            "contains": "MOTION_START"
+          },
+          {
+            "contains": "PRINT_DONE"
+          },
+          {
+            "contains": "POSITION_STEPS 150 150 25 600"
+          },
+          {
+            "contains": "STEP_RISE_COUNTS"
+          },
+          {
+            "contains": "OUTPUTS_SAFE EN=1 HOT=0 BED=0 FAN=0"
+          }
+        ],
+        "display": {
+          "painted": true,
+          "min_ink_bytes": 100
+        }
+      }
+    },
+    {
+      "id": "R2",
+      "text": "Hotend over-temperature after the print is caught: the firmware reports FAULT OVERTEMP and holds heater, bed and fan gates low and the drivers disabled.",
+      "check": {
+        "serial": [
+          {
+            "contains": "PRINT_DONE"
+          },
+          {
+            "contains": "FAULT OVERTEMP"
+          }
+        ],
+        "gpio": [
+          {
+            "pin": "PB13",
+            "state": "low"
+          },
+          {
+            "pin": "PB14",
+            "state": "low"
+          },
+          {
+            "pin": "PB15",
+            "state": "low"
+          },
+          {
+            "pin": "PB12",
+            "state": "high"
+          },
+          {
+            "pin": "PA10",
+            "state": "low"
+          }
+        ]
+      }
+    }
+  ],
+  "firmware": [],
+  "visibility": "unlisted",
+  "description": "A four-axis STM32 printer reference with homing, heater control, an OLED and a linked 3D printer model.",
+  "readme": "# A1 mini printer\n\nA desktop printer reference with STM32F411 firmware, four A4988 stepper channels, endstop inputs, hotend and bed temperature inputs, heater and fan outputs, and an SSD1306 display.\n\n## Try the lab\n\n1. Open the lab and select Mechanics to inspect the printer, or Circuit to inspect the wiring.\n2. Press Run. The saved input sequence presses Start, activates the X/Y/Z endstops and raises the simulated temperatures.\n3. Watch the serial output for `HOME_X`, `HOME_Y`, `HOME_Z`, `ALL_HOMED`, `MOTION_START` and `PRINT_DONE`.\n4. Inspect `POSITION_STEPS` and the final `OUTPUTS_SAFE EN=1 HOT=0 BED=0 FAN=0` message. The display shows the controller state.\n\nThe published circuit uses a MAX31855 hotend sensor and an NTC bed sensor. X, Y, Z and extruder motion bindings connect it to [KernelCAD model revision 3](https://app.kernelcad.com/p/MwczxIII?version=3).\n\n## Scope\n\nThis is an original firmware and mechanical reference inspired by the A1 mini. It does not contain Bambu Lab firmware or OEM CAD. Model motion depends on the simulator's motor-to-mechanics support; a completed serial sequence alone does not establish that the visible model moved. The PCB attachment is an engineering study, not a replacement printer controller.\n"
+}
