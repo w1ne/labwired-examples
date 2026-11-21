@@ -1,0 +1,29 @@
+{
+  "pcb": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb",
+  "pcb_sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad",
+  "rules_sha256": "aadb3db043caa9fc08d5f006143fa1742f7c7971c417f6408140782370a78c71",
+  "kicad_version": "10.0.8",
+  "command": [
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--output",
+    "/data/a1-finish-pcb-20261121/release/evidence/native-drc.json",
+    "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb"
+  ],
+  "return_code": 0,
+  "schematic_parity_checked": false,
+  "counts": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "j20_source_fields": {
+    "MPN": "USB4216-03-A",
+    "Manufacturer": "GCT",
+    "Datasheet": "https://www.mouser.lt/datasheet/3/1507/1/usb4216.pdf",
+    "Description": "USB Type-C receptacle; GCT USB4216-03-A drawing rev A2, 2025-07-28; primary drawing land pattern and clearance model."
+  }
+}

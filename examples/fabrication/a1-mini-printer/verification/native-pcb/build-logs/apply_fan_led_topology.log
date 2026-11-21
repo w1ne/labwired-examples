@@ -1,0 +1,465 @@
+{
+  "reason": "Restore the declared100ohm series gate resistors and source-backed LED cathode/anode convention.",
+  "source": "/data/a1-finish-pcb-20261121/release/intermediate/05-fullstep.kicad_pcb",
+  "source_sha256": "3f591f3a7561a92db0bfa97e33acc598b9b844539578777cbc5bde7f716553fa",
+  "pad_changes": [
+    {
+      "ref": "R126",
+      "pad": "2",
+      "from": "FAN1_GATE",
+      "to": "FAN1_GATE_Q"
+    },
+    {
+      "ref": "Q4",
+      "pad": "1",
+      "from": "FAN1_GATE",
+      "to": "FAN1_GATE_Q"
+    },
+    {
+      "ref": "R128",
+      "pad": "1",
+      "from": "FAN1_GATE",
+      "to": "FAN1_GATE_Q"
+    },
+    {
+      "ref": "R127",
+      "pad": "2",
+      "from": "FAN2_GATE",
+      "to": "FAN2_GATE_Q"
+    },
+    {
+      "ref": "Q5",
+      "pad": "1",
+      "from": "FAN2_GATE",
+      "to": "FAN2_GATE_Q"
+    },
+    {
+      "ref": "R129",
+      "pad": "1",
+      "from": "FAN2_GATE",
+      "to": "FAN2_GATE_Q"
+    },
+    {
+      "ref": "D10",
+      "pad": "1",
+      "from": "LED_PWR_A",
+      "to": "GND"
+    },
+    {
+      "ref": "D10",
+      "pad": "2",
+      "from": "GND",
+      "to": "LED_PWR_A"
+    },
+    {
+      "ref": "D11",
+      "pad": "1",
+      "from": "LED_FAULT_A",
+      "to": "USER_AUX"
+    },
+    {
+      "ref": "D11",
+      "pad": "2",
+      "from": "USER_AUX",
+      "to": "LED_FAULT_A"
+    }
+  ],
+  "removed_tracks": [
+    {
+      "uuid": "51b1c72f-d3c3-4142-a826-cd4413aca423",
+      "net": "FAN1_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        43.825,
+        80.5
+      ],
+      "end_mm": [
+        42.175,
+        80.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "af8f818a-94e2-4124-b9c6-a33859b25258",
+      "net": "FAN1_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        42.175,
+        83.5
+      ],
+      "end_mm": [
+        42.175,
+        80.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "48c9df70-11fc-4af6-b318-a8f735815368",
+      "net": "FAN2_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        51.825,
+        80.5
+      ],
+      "end_mm": [
+        50.175,
+        80.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "512230e0-f84e-47c6-9ccc-ce5e7919f1d7",
+      "net": "FAN2_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        50.175,
+        80.5
+      ],
+      "end_mm": [
+        50.175,
+        83.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "da7b2f9b-805d-403b-93d1-669e0af08516",
+      "net": "FAN1_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        46.0625,
+        81.05
+      ],
+      "end_mm": [
+        50.875,
+        76.2375
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "a1af163a-771f-4667-a0f0-99a69a3341fc",
+      "net": "FAN2_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        55.3374,
+        80.9911
+      ],
+      "end_mm": [
+        54.1214,
+        80.9911
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "5fc7b859-2185-4161-bea3-d83f8610e112",
+      "net": "FAN2_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        54.1214,
+        80.9911
+      ],
+      "end_mm": [
+        54.0625,
+        81.05
+      ],
+      "width_mm": 0.2
+    }
+  ],
+  "retagged_tracks": [
+    {
+      "uuid": "a876e557-3f4b-4f59-af07-c2a09541df0a",
+      "net": "FAN1_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        43.825,
+        80.5
+      ],
+      "end_mm": [
+        45.5125,
+        80.5
+      ],
+      "width_mm": 0.2,
+      "new_net": "FAN1_GATE_Q"
+    },
+    {
+      "uuid": "526b9bfa-4ac5-4a5f-b51e-37a5f4ee382e",
+      "net": "FAN1_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        45.5125,
+        80.5
+      ],
+      "end_mm": [
+        46.0625,
+        81.05
+      ],
+      "width_mm": 0.2,
+      "new_net": "FAN1_GATE_Q"
+    },
+    {
+      "uuid": "afaeb4ee-0b0f-438f-ada1-3204ae1a094a",
+      "net": "FAN2_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        51.825,
+        80.5
+      ],
+      "end_mm": [
+        53.5125,
+        80.5
+      ],
+      "width_mm": 0.2,
+      "new_net": "FAN2_GATE_Q"
+    },
+    {
+      "uuid": "e1fa9e1a-a759-4ab9-9701-253b3e8e346a",
+      "net": "FAN2_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        53.5125,
+        80.5
+      ],
+      "end_mm": [
+        54.0625,
+        81.05
+      ],
+      "width_mm": 0.2,
+      "new_net": "FAN2_GATE_Q"
+    }
+  ],
+  "added_tracks": [
+    {
+      "uuid": "83418ce7-1a9e-475f-91ba-a716bcb8062d",
+      "net": "FAN1_GATE_Q",
+      "layer": "F.Cu",
+      "start_mm": [
+        43.825,
+        80.5
+      ],
+      "end_mm": [
+        43.825,
+        81.3
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "edda7aac-d2a1-4cc0-9036-1c2df2514e68",
+      "net": "FAN1_GATE_Q",
+      "layer": "F.Cu",
+      "start_mm": [
+        43.825,
+        81.3
+      ],
+      "end_mm": [
+        42.175,
+        82.95
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "95a3fb7b-d0a5-437f-a5b0-9ba35683d842",
+      "net": "FAN1_GATE_Q",
+      "layer": "F.Cu",
+      "start_mm": [
+        42.175,
+        82.95
+      ],
+      "end_mm": [
+        42.175,
+        83.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "7dfa2937-6150-44f4-b190-dc129ddc2010",
+      "net": "FAN1_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        42.175,
+        79.25
+      ],
+      "end_mm": [
+        42.175,
+        80.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "e6be3a87-9ad4-494f-a8a8-fea586b5cd4e",
+      "net": "FAN2_GATE_Q",
+      "layer": "F.Cu",
+      "start_mm": [
+        51.825,
+        80.5
+      ],
+      "end_mm": [
+        51.825,
+        81.3
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "9d18a335-3351-4193-b9c6-02b4904f2931",
+      "net": "FAN2_GATE_Q",
+      "layer": "F.Cu",
+      "start_mm": [
+        51.825,
+        81.3
+      ],
+      "end_mm": [
+        50.175,
+        82.95
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "18e9937f-709e-4bcd-be26-2c32b983923e",
+      "net": "FAN2_GATE_Q",
+      "layer": "F.Cu",
+      "start_mm": [
+        50.175,
+        82.95
+      ],
+      "end_mm": [
+        50.175,
+        83.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "e6789c2e-5aa9-4b6a-88d9-59f7bd382156",
+      "net": "FAN2_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        50.175,
+        79.25
+      ],
+      "end_mm": [
+        50.175,
+        80.5
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "28075067-20d8-4bd7-a8e5-577d2fe7894e",
+      "net": "FAN1_GATE",
+      "layer": "F.Cu",
+      "start_mm": [
+        50.875,
+        76.2375
+      ],
+      "end_mm": [
+        47.1125,
+        80.0
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "916c3d26-7abb-4a87-a343-7393c39e7f80",
+      "net": "FAN1_GATE",
+      "layer": "B.Cu",
+      "start_mm": [
+        47.1125,
+        80.0
+      ],
+      "end_mm": [
+        46.3625,
+        79.25
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "5eba2601-f369-4927-9acd-ec9224006ebf",
+      "net": "FAN1_GATE",
+      "layer": "B.Cu",
+      "start_mm": [
+        46.3625,
+        79.25
+      ],
+      "end_mm": [
+        42.175,
+        79.25
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "b8366f33-9302-4a32-9c5c-9f1c13f51304",
+      "net": "FAN2_GATE",
+      "layer": "B.Cu",
+      "start_mm": [
+        55.3374,
+        80.9911
+      ],
+      "end_mm": [
+        53.5963,
+        79.25
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "uuid": "4034f5bb-ff51-4217-89db-60267f33d22a",
+      "net": "FAN2_GATE",
+      "layer": "B.Cu",
+      "start_mm": [
+        53.5963,
+        79.25
+      ],
+      "end_mm": [
+        50.175,
+        79.25
+      ],
+      "width_mm": 0.2
+    }
+  ],
+  "added_vias": [
+    {
+      "net": "FAN1_GATE",
+      "xy_mm": [
+        42.175,
+        79.25
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "tenting": "copied from existing FAN2_GATE through via"
+    },
+    {
+      "net": "FAN2_GATE",
+      "xy_mm": [
+        50.175,
+        79.25
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "tenting": "copied from existing FAN2_GATE through via"
+    },
+    {
+      "net": "FAN1_GATE",
+      "xy_mm": [
+        47.1125,
+        80.0
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "tenting": "copied from existing FAN2_GATE through via"
+    }
+  ],
+  "footprint_rotations": [
+    {
+      "ref": "D10",
+      "before_deg": 0.0,
+      "after_deg": 180.0,
+      "absolute_copper_net_positions_unchanged": true
+    },
+    {
+      "ref": "D11",
+      "before_deg": 0.0,
+      "after_deg": 180.0,
+      "absolute_copper_net_positions_unchanged": true
+    }
+  ],
+  "sources": [
+    "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+    "https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/master/LED_SMD.pretty/LED_0603_1608Metric.kicad_mod"
+  ],
+  "output": "/data/a1-finish-pcb-20261121/release/intermediate/06-fan-led.kicad_pcb",
+  "output_sha256": "716d6e155e5392e4ea6d93bebc9d6d19d681360485952c98610698ef755cc0e5"
+}

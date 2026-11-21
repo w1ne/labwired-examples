@@ -1,0 +1,41 @@
+{
+  "source": "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb",
+  "source_sha256": "55b7162b73d0d9675725c5ea9211b6c633feeb2bd298e9a1e6209b5e5c25a6ad",
+  "exports": [
+    {
+      "path": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated.step",
+      "sha256": "4fa338f753a8c8a17331facabd8ee8d3698bc0a0cd3fa152b71749e88baa2e2a",
+      "bytes": 6142388,
+      "elapsed_seconds": 5.561,
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "step",
+        "--subst-models",
+        "--force",
+        "--output",
+        "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated.step",
+        "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb"
+      ]
+    },
+    {
+      "path": "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated-pads.step",
+      "sha256": "fba783fc8c4a4c968b5c63f6dfcc8607fa2c381eaa90d0806394d5c0281cc8e7",
+      "bytes": 13942641,
+      "elapsed_seconds": 9.332,
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "step",
+        "--subst-models",
+        "--force",
+        "--output",
+        "/data/a1-finish-pcb-20261121/release/exports/a1-printcore-populated-pads.step",
+        "--include-pads",
+        "/data/a1-finish-pcb-20261121/release/source/a1-printcore.kicad_pcb"
+      ]
+    }
+  ]
+}
