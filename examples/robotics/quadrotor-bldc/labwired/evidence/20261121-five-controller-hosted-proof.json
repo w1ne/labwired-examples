@@ -1,0 +1,101 @@
+{
+  "schema": "labwired-five-controller-hosted-proof-v1",
+  "captured_date": "2026-11-21",
+  "project": {
+    "id": "7c92d38a4f2ac205aa91502291fde0d8",
+    "url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+    "name": "Quadrotor motor bench",
+    "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "pcb_board_id": "pcb_156d01483ccb67cb",
+    "pcb_board_rev": 0,
+    "kernelcad_slug": "DyJ405zg",
+    "kernelcad_revision": 6
+  },
+  "hosted_run": {
+    "run_id": "world-job:1abdb3f7-75f4-4e2b-9907-56f7686f1a79",
+    "max_steps": 2000000,
+    "verified": true,
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": [
+      {
+        "id": "R1",
+        "node": "ctrl1",
+        "marker": "ROTOR 1 HALL LOCKED",
+        "passed": true
+      },
+      {
+        "id": "R2",
+        "node": "ctrl2",
+        "marker": "ROTOR 2 HALL LOCKED",
+        "passed": true
+      },
+      {
+        "id": "R3",
+        "node": "ctrl3",
+        "marker": "ROTOR 3 HALL LOCKED",
+        "passed": true
+      },
+      {
+        "id": "R4",
+        "node": "ctrl4",
+        "marker": "ROTOR 4 HALL LOCKED",
+        "passed": true
+      }
+    ],
+    "flight_controller_serial": [
+      "FC READY BMI270 ONLINE",
+      "FC ARM COMMAND",
+      "FC TAKEOFF COMMAND"
+    ],
+    "flight_takeoff_measured": false,
+    "hover_measured": false,
+    "flight_6dof_accepted": false,
+    "pcb_cad_fit_accepted": false
+  },
+  "negative_control": {
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+    "project_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "run_max_steps": 2500000,
+    "proof": "oracle",
+    "verified": true,
+    "requirements": [
+      {
+        "id": "R1",
+        "marker": "ROTOR 1 HALL LOCKED",
+        "passed": true
+      },
+      {
+        "id": "R2",
+        "marker": "ROTOR 1 FAULT DRIVER",
+        "passed": true
+      },
+      {
+        "id": "R3",
+        "marker": "ROTOR 1 INVERTER OFF",
+        "passed": true
+      },
+      {
+        "id": "R4",
+        "gpio": "PB0",
+        "expected": "low",
+        "passed": true
+      }
+    ],
+    "fault_stimulus": {
+      "component": "fault1",
+      "channel": "pressed",
+      "value": 1,
+      "after_cycles": 1250000
+    },
+    "scope": "single simulated propulsion channel; not a four-ESC coupled aircraft failure proof"
+  },
+  "limitations": [
+    "Five-controller proof covers Hall feedback lock and command markers, not measured takeoff or stable hover.",
+    "Native six-layer board and KernelCAD assembly are not established as manufactured/simulated electrical equivalents.",
+    "Negative-control campaign is a distinct single-channel saved project, not in-flight four-controller fault injection.",
+    "The initial 350000-step run did not reach Hall lock; a 50000000-step run was SIGKILLed, so proof uses the confirmed 2000000-step hosted run."
+  ]
+}
