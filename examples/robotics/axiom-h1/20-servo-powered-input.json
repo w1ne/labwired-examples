@@ -1,0 +1,1288 @@
+{
+  "name": "AXIOM H1 \u2014 20-channel PCA9685 actuator topology candidate (ideal servo rail)",
+  "board": "esp32-c3-supermini",
+  "diagram": {
+    "board": "esp32-c3-supermini",
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "esp32-c3-supermini"
+      },
+      {
+        "id": "pwm1",
+        "type": "pca9685",
+        "attrs": {
+          "i2c_address": "0x40"
+        }
+      },
+      {
+        "id": "pwm2",
+        "type": "pca9685",
+        "attrs": {
+          "i2c_address": "0x41"
+        }
+      },
+      {
+        "id": "imu",
+        "type": "mpu6050"
+      },
+      {
+        "id": "tof",
+        "type": "vl53l0x"
+      },
+      {
+        "id": "estop",
+        "type": "button"
+      },
+      {
+        "id": "status_led",
+        "type": "led"
+      },
+      {
+        "id": "led_r",
+        "type": "resistor",
+        "attrs": {
+          "value": "220"
+        }
+      },
+      {
+        "id": "sda_pull",
+        "type": "resistor",
+        "attrs": {
+          "value": "4700"
+        }
+      },
+      {
+        "id": "scl_pull",
+        "type": "resistor",
+        "attrs": {
+          "value": "4700"
+        }
+      },
+      {
+        "id": "servo0",
+        "type": "servo",
+        "x": 720,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "label": "neck_yaw"
+        }
+      },
+      {
+        "id": "servo1",
+        "type": "servo",
+        "x": 895,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "label": "neck_pitch"
+        }
+      },
+      {
+        "id": "servo2",
+        "type": "servo",
+        "x": 1070,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_shoulder_pitch"
+        }
+      },
+      {
+        "id": "servo3",
+        "type": "servo",
+        "x": 1245,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_shoulder_roll"
+        }
+      },
+      {
+        "id": "servo4",
+        "type": "servo",
+        "x": 720,
+        "y": 265,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_elbow"
+        }
+      },
+      {
+        "id": "servo5",
+        "type": "servo",
+        "x": 895,
+        "y": 265,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_wrist"
+        }
+      },
+      {
+        "id": "servo6",
+        "type": "servo",
+        "x": 1070,
+        "y": 265,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_gripper"
+        }
+      },
+      {
+        "id": "servo7",
+        "type": "servo",
+        "x": 1245,
+        "y": 265,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_shoulder_pitch"
+        }
+      },
+      {
+        "id": "servo8",
+        "type": "servo",
+        "x": 720,
+        "y": 410,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_shoulder_roll"
+        }
+      },
+      {
+        "id": "servo9",
+        "type": "servo",
+        "x": 895,
+        "y": 410,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_elbow"
+        }
+      },
+      {
+        "id": "servo10",
+        "type": "servo",
+        "x": 1070,
+        "y": 410,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_wrist"
+        }
+      },
+      {
+        "id": "servo11",
+        "type": "servo",
+        "x": 1245,
+        "y": 410,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_gripper"
+        }
+      },
+      {
+        "id": "servo12",
+        "type": "servo",
+        "x": 720,
+        "y": 555,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_hip_pitch"
+        }
+      },
+      {
+        "id": "servo13",
+        "type": "servo",
+        "x": 895,
+        "y": 555,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_hip_roll"
+        }
+      },
+      {
+        "id": "servo14",
+        "type": "servo",
+        "x": 1070,
+        "y": 555,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_knee"
+        }
+      },
+      {
+        "id": "servo15",
+        "type": "servo",
+        "x": 1245,
+        "y": 555,
+        "rotate": 0,
+        "attrs": {
+          "label": "left_ankle"
+        }
+      },
+      {
+        "id": "servo16",
+        "type": "servo",
+        "x": 720,
+        "y": 700,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_hip_pitch"
+        }
+      },
+      {
+        "id": "servo17",
+        "type": "servo",
+        "x": 895,
+        "y": 700,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_hip_roll"
+        }
+      },
+      {
+        "id": "servo18",
+        "type": "servo",
+        "x": 1070,
+        "y": 700,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_knee"
+        }
+      },
+      {
+        "id": "servo19",
+        "type": "servo",
+        "x": 1245,
+        "y": 700,
+        "rotate": 0,
+        "attrs": {
+          "label": "right_ankle"
+        }
+      },
+      {
+        "id": "servo_rail",
+        "type": "dc-barrel-jack",
+        "x": 320,
+        "y": 800,
+        "rotate": 0,
+        "attrs": {
+          "label": "Independent regulated 5V servo supply \u2014 ideal simulation source"
+        }
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "to": {
+          "part": "pwm1",
+          "pin": "VCC"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "pwm1",
+          "pin": "GND"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO8"
+        },
+        "to": {
+          "part": "pwm1",
+          "pin": "SDA"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO9"
+        },
+        "to": {
+          "part": "pwm1",
+          "pin": "SCL"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "to": {
+          "part": "pwm2",
+          "pin": "VCC"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "pwm2",
+          "pin": "GND"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO8"
+        },
+        "to": {
+          "part": "pwm2",
+          "pin": "SDA"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO9"
+        },
+        "to": {
+          "part": "pwm2",
+          "pin": "SCL"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "to": {
+          "part": "imu",
+          "pin": "VCC"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "imu",
+          "pin": "GND"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO8"
+        },
+        "to": {
+          "part": "imu",
+          "pin": "SDA"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO9"
+        },
+        "to": {
+          "part": "imu",
+          "pin": "SCL"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "to": {
+          "part": "tof",
+          "pin": "VCC"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "tof",
+          "pin": "GND"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO8"
+        },
+        "to": {
+          "part": "tof",
+          "pin": "SDA"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO9"
+        },
+        "to": {
+          "part": "tof",
+          "pin": "SCL"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO3"
+        },
+        "to": {
+          "part": "pwm1",
+          "pin": "OE"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO4"
+        },
+        "to": {
+          "part": "pwm2",
+          "pin": "OE"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO10"
+        },
+        "to": {
+          "part": "estop",
+          "pin": "1"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "estop",
+          "pin": "2"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GPIO5"
+        },
+        "to": {
+          "part": "led_r",
+          "pin": "1"
+        }
+      },
+      {
+        "from": {
+          "part": "led_r",
+          "pin": "2"
+        },
+        "to": {
+          "part": "status_led",
+          "pin": "A"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "status_led",
+          "pin": "K"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "to": {
+          "part": "sda_pull",
+          "pin": "1"
+        }
+      },
+      {
+        "from": {
+          "part": "sda_pull",
+          "pin": "2"
+        },
+        "to": {
+          "part": "pwm1",
+          "pin": "SDA"
+        }
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "to": {
+          "part": "scl_pull",
+          "pin": "1"
+        }
+      },
+      {
+        "from": {
+          "part": "scl_pull",
+          "pin": "2"
+        },
+        "to": {
+          "part": "pwm1",
+          "pin": "SCL"
+        }
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED0"
+        },
+        "to": {
+          "part": "servo0",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo0",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED1"
+        },
+        "to": {
+          "part": "servo1",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo1",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED2"
+        },
+        "to": {
+          "part": "servo2",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo2",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED3"
+        },
+        "to": {
+          "part": "servo3",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo3",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED4"
+        },
+        "to": {
+          "part": "servo4",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo4",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED5"
+        },
+        "to": {
+          "part": "servo5",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo5",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED6"
+        },
+        "to": {
+          "part": "servo6",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo6",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED7"
+        },
+        "to": {
+          "part": "servo7",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo7",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED8"
+        },
+        "to": {
+          "part": "servo8",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo8",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED9"
+        },
+        "to": {
+          "part": "servo9",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo9",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED10"
+        },
+        "to": {
+          "part": "servo10",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo10",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED11"
+        },
+        "to": {
+          "part": "servo11",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo11",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED12"
+        },
+        "to": {
+          "part": "servo12",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo12",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED13"
+        },
+        "to": {
+          "part": "servo13",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo13",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED14"
+        },
+        "to": {
+          "part": "servo14",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo14",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm1",
+          "pin": "LED15"
+        },
+        "to": {
+          "part": "servo15",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo15",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm2",
+          "pin": "LED0"
+        },
+        "to": {
+          "part": "servo16",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo16",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm2",
+          "pin": "LED1"
+        },
+        "to": {
+          "part": "servo17",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo17",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm2",
+          "pin": "LED2"
+        },
+        "to": {
+          "part": "servo18",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo18",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "pwm2",
+          "pin": "LED3"
+        },
+        "to": {
+          "part": "servo19",
+          "pin": "PWM"
+        },
+        "color": "#5BD8FF"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "servo19",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo0",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo1",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo2",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo3",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo4",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo5",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo6",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo7",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo8",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo9",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo10",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo11",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo12",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo13",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo14",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo15",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo16",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo17",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo18",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "+"
+        },
+        "to": {
+          "part": "servo19",
+          "pin": "VCC"
+        },
+        "color": "#FF6B6B"
+      },
+      {
+        "from": {
+          "part": "servo_rail",
+          "pin": "-"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#888888"
+      }
+    ],
+    "version": 1
+  },
+  "source": "#include <Arduino.h>\n#include <Wire.h>\n#include <math.h>\n\n// AXIOM H1, Rev A. 20 logical joints are mapped to two PCA9685 controllers.\n// PCA9685 OE is HIGH=disabled, LOW=enabled; both are disabled on any safety fault.\nstatic constexpr uint8_t SDA_PIN=8, SCL_PIN=9;\nstatic constexpr uint8_t OE_A=3, OE_B=4, ESTOP_PIN=10, STATUS_LED=5;\nstatic constexpr uint8_t PCA_A=0x40, PCA_B=0x41, MPU=0x68, TOF=0x29;\nstatic constexpr int NUM_JOINTS=20;\nstatic const char *const joint_name[NUM_JOINTS] = {\n  \"neck_yaw\",\"neck_pitch\",\n  \"left_shoulder_pitch\",\"left_shoulder_roll\",\"left_elbow\",\"left_wrist\",\"left_gripper\",\n  \"right_shoulder_pitch\",\"right_shoulder_roll\",\"right_elbow\",\"right_wrist\",\"right_gripper\",\n  \"left_hip_pitch\",\"left_hip_roll\",\"left_knee\",\"left_ankle\",\n  \"right_hip_pitch\",\"right_hip_roll\",\"right_knee\",\"right_ankle\"\n};\nstatic constexpr int16_t jmin[NUM_JOINTS]={-60,-25,-95,-70,-5,-70,0,-95,-80,-5,-70,0,-85,-40,-5,-35,-85,-40,-5,-35};\nstatic constexpr int16_t jmax[NUM_JOINTS]={60,30,90,80,125,70,35,90,70,125,70,35,80,40,115,35,80,40,115,35};\nstatic float joints[NUM_JOINTS]={};\nstatic uint32_t lastControl=0, lastReport=0;\nenum State { STARTUP, POSE_IDLE, WAVE, PROX_BLOCKED, TILT_BLOCKED, ESTOP_LATCHED, SENSOR_UNAVAILABLE };\nstatic State state=STARTUP;\nstatic bool latch=false;\nstatic bool pcaOK=false;\nstatic bool reportedClear=false, reportedFirstRange=false;\n\nstatic bool writeReg(uint8_t addr,uint8_t reg,uint8_t value){\n  Wire.beginTransmission(addr);Wire.write(reg);Wire.write(value);\n  return Wire.endTransmission()==0;\n}\nstatic bool readN(uint8_t addr,uint8_t reg,uint8_t *buf,size_t n){\n  Wire.beginTransmission(addr);Wire.write(reg);\n  if(Wire.endTransmission(false)!=0)return false;\n  if((size_t)Wire.requestFrom(addr,(uint8_t)n)!=n)return false;\n  for(size_t i=0;i<n;i++)buf[i]=(uint8_t)Wire.read();\n  return true;\n}\nstatic bool initPca(uint8_t addr){\n  // MODE1 sleep -> 50 Hz prescale 121, restart/autoincrement.\n  return writeReg(addr,0x00,0x10)&&writeReg(addr,0xFE,121)&&\n         writeReg(addr,0x00,0x20);\n}\nstatic bool writeAngle(int j,float a){\n  if(j<0||j>=NUM_JOINTS)return false;\n  a=fmaxf(jmin[j],fminf(jmax[j],a));\n  float fraction=(a-jmin[j])/(float)(jmax[j]-jmin[j]);\n  uint16_t width=(uint16_t)(110+390*fraction);\n  uint8_t addr=j<16?PCA_A:PCA_B;\n  uint8_t channel=(uint8_t)(j%16),reg=(uint8_t)(0x06+4*channel);\n  Wire.beginTransmission(addr);\n  Wire.write(reg);Wire.write((uint8_t)0);Wire.write((uint8_t)0);\n  Wire.write((uint8_t)(width&0xFF));Wire.write((uint8_t)(width>>8));\n  bool ok=Wire.endTransmission()==0;\n  if(ok)joints[j]=a;\n  return ok;\n}\nstatic void enableOutputs(bool enable){\n  digitalWrite(OE_A,enable?LOW:HIGH);\n  digitalWrite(OE_B,enable?LOW:HIGH);\n  digitalWrite(STATUS_LED,enable?HIGH:LOW);\n}\nstatic bool readRangeMm(uint16_t *mm){\n  uint8_t b[2];\n  if(!readN(TOF,0x1e,b,2))return false;\n  *mm=(uint16_t(b[0])<<8)|b[1];\n  return true;\n}\nstatic bool readTiltDeg(float *pitch){\n  uint8_t b[6];\n  if(!readN(MPU,0x3b,b,6))return false;\n  int16_t ax=(int16_t)((b[0]<<8)|b[1]);\n  int16_t az=(int16_t)((b[4]<<8)|b[5]);\n  *pitch=atan2f((float)ax,(float)az)*180.0f/3.14159265f;\n  return true;\n}\nstatic const char *stateName(State s){\n  switch(s){case STARTUP:return \"STARTUP\";case POSE_IDLE:return \"IDLE\";\n  case WAVE:return \"WAVE\";case PROX_BLOCKED:return \"PROX_STOP\";\n  case TILT_BLOCKED:return \"TILT_STOP\";case ESTOP_LATCHED:return \"ESTOP\";\n  default:return \"SENSOR_GAP\";}\n}\nstatic void transition(State s){\n  if(state!=s){state=s;Serial.print(\"AXIOM_STATE:\");Serial.println(stateName(s));}\n}\nvoid setup(){\n  Serial.begin(115200);\n  pinMode(OE_A,OUTPUT);pinMode(OE_B,OUTPUT);\n  pinMode(STATUS_LED,OUTPUT);pinMode(ESTOP_PIN,INPUT_PULLUP);\n  enableOutputs(false);\n  Wire.begin(SDA_PIN,SCL_PIN);\n  Wire.setClock(100000);\n  pcaOK=initPca(PCA_A)&&initPca(PCA_B);\n  bool zeroOK=true;\n  for(int j=0;j<NUM_JOINTS;j++)zeroOK=writeAngle(j,0.0f)&&zeroOK;\n  Serial.println(\"AXIOM_BOOT_OK\");\n  Serial.print(\"AXIOM_PCA_I2C:\");Serial.println((pcaOK&&zeroOK)?\"OK\":\"FAIL\");\n  if(pcaOK&&zeroOK){transition(POSE_IDLE);Serial.println(\"AXIOM_20_CHANNELS_WRITTEN\");}\n  else transition(SENSOR_UNAVAILABLE);\n}\nvoid loop(){\n  uint32_t now=millis();\n  if(now-lastControl<40)return;\n  lastControl=now;\n  bool estop=digitalRead(ESTOP_PIN)==LOW;\n  if(estop)latch=true;\n  // A real reset needs a separate physical reset + software acknowledgement.\n  if(latch){enableOutputs(false);transition(ESTOP_LATCHED);return;}\n  if(!pcaOK){enableOutputs(false);transition(SENSOR_UNAVAILABLE);return;}\n  uint16_t mm=0;float tilt=0;\n  bool rangeValid=readRangeMm(&mm);\n  bool tiltValid=readTiltDeg(&tilt);\n  if(!rangeValid||!tiltValid){\n    enableOutputs(false);transition(SENSOR_UNAVAILABLE);return;\n  }\n  if(!reportedFirstRange){Serial.print(\"AXIOM_FIRST_RANGE_MM:\");Serial.println(mm);reportedFirstRange=true;}\n  if(mm<250){enableOutputs(false);transition(PROX_BLOCKED);return;}\n  if(fabsf(tilt)>20){enableOutputs(false);transition(TILT_BLOCKED);return;}\n  if(!reportedClear){Serial.println(\"AXIOM_CLEAR_PATH\");reportedClear=true;}\n  const bool wave=(now/400)%2;\n  float phase=(now%400)/400.0f;\n  bool ok=true;\n  ok=writeAngle(0,10.0f*sinf(now*.004f))&&ok;\n  ok=writeAngle(4,wave?55.0f*sinf(3.14159265f*phase):0.0f)&&ok;\n  ok=writeAngle(2,wave?-22.0f:0.0f)&&ok;\n  if(!ok){enableOutputs(false);transition(SENSOR_UNAVAILABLE);return;}\n  enableOutputs(true);\n  transition(wave?WAVE:POSE_IDLE);\n  if(now-lastReport>=500){\n    lastReport=now;\n    Serial.print(\"AXIOM_RANGE_MM:\");Serial.println(mm);\n    Serial.print(\"AXIOM_TILT_DEG:\");Serial.println(tilt,1);\n  }\n}",
+  "language": "arduino",
+  "entry_path": "src/main.ino",
+  "stimuli": [
+    {
+      "channel": "distance",
+      "value": 1500,
+      "component": "tof"
+    },
+    {
+      "channel": "ax",
+      "value": 0,
+      "component": "imu"
+    },
+    {
+      "channel": "az",
+      "value": 1,
+      "component": "imu"
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "component": "estop"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "ESP32-C3 boots and recognizes both PCA9685 I2C devices.",
+      "check": {
+        "serial": [
+          {
+            "contains": "AXIOM_BOOT_OK"
+          },
+          {
+            "contains": "AXIOM_PCA_I2C:OK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R2",
+      "text": "Firmware writes all 20 logical actuator channels.",
+      "check": {
+        "serial": [
+          {
+            "contains": "AXIOM_20_CHANNELS_WRITTEN"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R3",
+      "text": "At a 1500-mm target the range sensor reads 1500 mm and obstacle interlock clears.",
+      "check": {
+        "serial": [
+          {
+            "contains": "AXIOM_FIRST_RANGE_MM:1500"
+          },
+          {
+            "contains": "AXIOM_CLEAR_PATH"
+          }
+        ]
+      }
+    }
+  ],
+  "firmware": [],
+  "visibility": "unlisted",
+  "description": "Non-published candidate: 20 explicitly wired PCA9685 PWM-to-servo actuator twins, with retained source and sensor paths. Actuator supply, physical geometry, coupled MuJoCo and real joint motion are NOT verified. Controller behavior only; separate ideal 5 V servo-rail source is not a validated physical supply.",
+  "readme": "Topology-only candidate from the original saved AXIOM H1 project. Source and original requirements are preserved. 20 simulated servo signal pins are wired explicitly to PCA9685 LED0..LED15 at 0x40 and LED0..LED3 at 0x41; OE remains GPIO3/4. The actual robot motors, their supply rails, joint calibration, movement and physical contacts are not modeled. This is NOT a final verified project; it must be re-created/reverified on the deployed server before use.\n\nA separate ideal 5V servo supply is modeled on servo_rail. Supply current, voltage sag, power-up, physical wiring, torque and movement remain UNVERIFIED.\n"
+}

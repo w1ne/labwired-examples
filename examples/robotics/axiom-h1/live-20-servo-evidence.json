@@ -3,12 +3,12 @@
   "captured_utc_date": "2026-11-21",
   "project_id": "dab8622b41adbf3b9e2175909146b207",
   "project_url": "https://app.labwired.com/p/dab8622b41adbf3b9e2175909146b207/edit",
-  "source_candidate": "examples/robotics/axiom-h1/20-servo-candidate.json",
-  "content_hash": "e57287b7baba239d06818314903c48d5c8ec5f7e27eb96916d7987e637278eb4",
-  "verified_hash": "e57287b7baba239d06818314903c48d5c8ec5f7e27eb96916d7987e637278eb4",
+  "source_candidate": "examples/robotics/axiom-h1/20-servo-powered-input.json",
+  "content_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
+  "verified_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
   "board": "esp32-c3-supermini",
-  "diagram_part_count": 30,
-  "diagram_wire_count": 67,
+  "diagram_part_count": 31,
+  "diagram_wire_count": 88,
   "requirements": [
     {
       "id": "R1",
@@ -30,18 +30,32 @@
     {
       "kind": "sim_verify",
       "status": "model_verified",
-      "created_at": 1795242912731,
-      "content_hash": "e57287b7baba239d06818314903c48d5c8ec5f7e27eb96916d7987e637278eb4",
+      "created_at": 1795244424811,
+      "content_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
       "fresh": true
     }
   ],
   "proven_scope": "The saved firmware boots, initializes two PCA9685 register models, writes 20 logical actuator channels, and reads the scripted range/IMU inputs through its original declared serial oracles.",
   "unverified_scope": [
-    "PCA9685-driven servo twin outputs on deployed app until PR #3676 is merged and deployed",
-    "motor/servo external power rails (20 PWR_SUPPLY_UNCONNECTED warnings)",
-    "real servo angular motion, torque, load and OE failure negative control",
-    "physical KernelCAD joint graph and collision-safe motion",
+    "20 modeled PCA9685-driven servo twin outputs pending app PR #3676 deployment and direct motion oracle",
+    "servo current draw, dynamic voltage sag, real power distribution and protection (ideal supply model only)",
+    "real servo angular movement, torque, load and OE negative controls",
+    "collision-safe KernelCAD assembly joints",
     "coupled MuJoCo firmware-driven robot behavior",
     "physical hardware"
-  ]
+  ],
+  "power_assumption": {
+    "part_id": "servo_rail",
+    "type": "dc-barrel-jack",
+    "model": "independent ideal 5 V regulated external servo rail; all 20 VCC connected, common MCU ground",
+    "physical_supply_verified": false
+  },
+  "circuit_validation": {
+    "errors": 0,
+    "warnings": 20,
+    "warnings_by_code": {
+      "SERVO_EXPANDER_UNMODELED": 20
+    },
+    "unconnected_supply_warnings": 0
+  }
 }
