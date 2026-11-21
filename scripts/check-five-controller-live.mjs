@@ -30,5 +30,15 @@ for (let i = 1; i <= 4; i++) {
 assert.ok(evidence.fc_serial_observed.includes('FC TAKEOFF COMMAND'));
 assert.ok(evidence.limitations.some(x => x.includes('do not demonstrate body movement')));
 assert.ok(evidence.limitations.some(x => x.includes('physical flight')));
-console.log('PASS source-pinned 16/17-part saved five-MCU motor-controller proofs: two current hashes, 4/4 separate Hall-lock clauses each');
+const fault = evidence.fault_campaign;
+assert.equal(fault.result, 'model_verified');
+assert.equal(fault.mcu_count, 5);
+assert.deepEqual(fault.assertions, { passed: 9, total: 9 });
+assert.match(fault.run_id, /^world-job:[a-f0-9-]+$/);
+assert.equal(fault.oracle.length, 9);
+assert.ok(fault.oracle.some((c) => c.node === 'fc' && c.contains === 'FC FAULT DETECTED - ALL ESC DISARM'));
+assert.ok([2, 3, 4].every(i => fault.oracle.some((c) => c.node === `ctrl${i}` && c.contains === `ESC ${i} DISARMED`)));
+assert.ok(fault.source_scope.includes('Test-only'));
+assert.ok(fault.limits.some(s => s.includes('No measured motor torque')));
+console.log('PASS source-pinned 16/17-part saved five-MCU motor-controller proofs: two current hashes, 4/4 Hall-lock clauses each; direct test-only fault campaign 9/9');
 console.log('Scope: motor-control models only; six-DOF flight, safety and physical equivalence NOT verified.');
