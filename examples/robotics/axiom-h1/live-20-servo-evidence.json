@@ -1,0 +1,47 @@
+{
+  "schema": "labwired-axiom-live-candidate-model-proof-v1",
+  "captured_utc_date": "2026-11-21",
+  "project_id": "dab8622b41adbf3b9e2175909146b207",
+  "project_url": "https://app.labwired.com/p/dab8622b41adbf3b9e2175909146b207/edit",
+  "source_candidate": "examples/robotics/axiom-h1/20-servo-candidate.json",
+  "content_hash": "e57287b7baba239d06818314903c48d5c8ec5f7e27eb96916d7987e637278eb4",
+  "verified_hash": "e57287b7baba239d06818314903c48d5c8ec5f7e27eb96916d7987e637278eb4",
+  "board": "esp32-c3-supermini",
+  "diagram_part_count": 30,
+  "diagram_wire_count": 67,
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "ESP32-C3 boots and recognizes both PCA9685 I2C devices.",
+      "status": "verified"
+    },
+    {
+      "id": "R2",
+      "text": "Firmware writes all 20 logical actuator channels.",
+      "status": "verified"
+    },
+    {
+      "id": "R3",
+      "text": "At a 1500-mm target the range sensor reads 1500 mm and obstacle interlock clears.",
+      "status": "verified"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "sim_verify",
+      "status": "model_verified",
+      "created_at": 1795242912731,
+      "content_hash": "e57287b7baba239d06818314903c48d5c8ec5f7e27eb96916d7987e637278eb4",
+      "fresh": true
+    }
+  ],
+  "proven_scope": "The saved firmware boots, initializes two PCA9685 register models, writes 20 logical actuator channels, and reads the scripted range/IMU inputs through its original declared serial oracles.",
+  "unverified_scope": [
+    "PCA9685-driven servo twin outputs on deployed app until PR #3676 is merged and deployed",
+    "motor/servo external power rails (20 PWR_SUPPLY_UNCONNECTED warnings)",
+    "real servo angular motion, torque, load and OE failure negative control",
+    "physical KernelCAD joint graph and collision-safe motion",
+    "coupled MuJoCo firmware-driven robot behavior",
+    "physical hardware"
+  ]
+}

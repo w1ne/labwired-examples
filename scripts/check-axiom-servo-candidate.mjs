@@ -53,5 +53,16 @@ for (const [board, address, oePin] of [['pwm1','0x40','GPIO3'],['pwm2','0x41','G
   assert.equal(candidate.diagram.parts.find((p) => p.id === board)?.attrs?.i2c_address, address);
   assert.ok(candidate.diagram.wires.some((w) => w.from.part === 'mcu' && w.from.pin === oePin && w.to.part === board && w.to.pin === 'OE'));
 }
+// A source-bound live receipt is NOT an assertion that unmodeled servos move.
+const live = JSON.parse(readFileSync(`${at}live-20-servo-evidence.json`, 'utf8'));
+assert.equal(live.schema, 'labwired-axiom-live-candidate-model-proof-v1');
+assert.equal(live.project_id, 'dab8622b41adbf3b9e2175909146b207');
+assert.match(live.content_hash, /^[a-f0-9]{64}$/);
+assert.equal(live.content_hash, live.verified_hash);
+assert.equal(live.diagram_part_count, candidate.diagram.parts.length);
+assert.equal(live.diagram_wire_count, candidate.diagram.wires.length);
+assert.deepEqual(live.requirements.map((item) => [item.id, item.status]), candidate.requirements.map((item) => [item.id, 'verified']));
+assert.ok(live.evidence.some((e) => e.kind === 'sim_verify' && e.status === 'model_verified' && e.fresh === true && e.content_hash === live.content_hash));
+assert.ok(live.unverified_scope.some((item) => item.includes('servo')));
 console.log(`PASS AXIOM 20-servo source ${hash(original.source).slice(0,12)}…; 20 one-to-one PCA PWM outputs, OE on GPIO3/4, negative control rejected`);
 console.log('Status: source-bound candidate only. Simulation, actuator power, CAD motion, physical operation NOT verified.');
