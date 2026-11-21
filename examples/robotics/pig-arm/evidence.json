@@ -1,0 +1,45 @@
+{
+  "schema": "labwired-saved-example-evidence-v1",
+  "captured_date": "2026-11-21",
+  "saved_project_id": "db959cbc4ca34a1a6fe6738b153b9a14",
+  "name": "P.I.G. arm controller",
+  "board_id": "nucleo-f401re",
+  "content_hash": "5745ef9b5f844b01c9cebf3977e4b814fe9f83aca1d651cab63797b1bb4931c9",
+  "verified_hash": "5745ef9b5f844b01c9cebf3977e4b814fe9f83aca1d651cab63797b1bb4931c9",
+  "pcb_board_id": "pcb_a72c5cb3340055ca",
+  "pcb_board_rev": 1,
+  "requirements": [
+    {
+      "id": "R1",
+      "status": "verified",
+      "text": "PCA9685 answers at 0x40 with PRE_SCALE=121 (50 Hz) and its LEDn_OFF registers, read back over I2C, follow the 9-pose pick-and-place sequence in order"
+    },
+    {
+      "id": "R2",
+      "status": "verified",
+      "text": "No joint's LEDn_OFF readback ever leaves its limit window (base 10-170, shoulder 30-150, elbow 20-160, wrist pitch 20-160, wrist roll 0-180, gripper 30-110 deg)"
+    },
+    {
+      "id": "R3",
+      "status": "verified",
+      "text": "E-stop pressed after the first full cycle drives PCA9685 /OE (PA8) high and no pose is reported after it"
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "sim_verify",
+      "status": "model_verified",
+      "created_at": 1794831366914,
+      "content_hash": "5745ef9b5f844b01c9cebf3977e4b814fe9f83aca1d651cab63797b1bb4931c9",
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "artifact_hash": null,
+      "ref": null,
+      "fresh": true,
+      "stale_reason": null
+    }
+  ],
+  "observed_results_only": true,
+  "physical_acceptance": false,
+  "model_boundary": "PCA9685 pose register sequence, joint limit logic and emergency-stop state are verified; servo motion, collision, torque and physical arm operation are not."
+}

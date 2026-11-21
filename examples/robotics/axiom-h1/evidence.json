@@ -1,0 +1,45 @@
+{
+  "schema": "labwired-saved-example-evidence-v1",
+  "captured_date": "2026-11-21",
+  "saved_project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+  "name": "AXIOM H1 — 20-axis robot controller",
+  "board_id": "esp32-c3-supermini",
+  "content_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+  "verified_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+  "pcb_board_id": "pcb_172fd76a950f0bd9",
+  "pcb_board_rev": 2,
+  "requirements": [
+    {
+      "id": "R1",
+      "status": "verified",
+      "text": "ESP32-C3 boots and recognizes both PCA9685 I2C devices."
+    },
+    {
+      "id": "R2",
+      "status": "verified",
+      "text": "Firmware writes all 20 logical actuator channels."
+    },
+    {
+      "id": "R3",
+      "status": "verified",
+      "text": "At a 1500-mm target the range sensor reads 1500 mm and obstacle interlock clears."
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "sim_verify",
+      "status": "model_verified",
+      "created_at": 1794860572462,
+      "content_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "artifact_hash": null,
+      "ref": null,
+      "fresh": true,
+      "stale_reason": null
+    }
+  ],
+  "observed_results_only": true,
+  "physical_acceptance": false,
+  "model_boundary": "PCA9685 register writes and sensor/controller behavior are verified; PCA9685-driven servo motion, firmware-to-MuJoCo coupling and physical robot response are not."
+}

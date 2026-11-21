@@ -1,0 +1,259 @@
+{
+  "name": "P.I.G. arm controller",
+  "board": "nucleo-f401re",
+  "diagram": {
+    "version": 1,
+    "board": "nucleo-f401re",
+    "firmware": {
+      "source": {
+        "files": [
+          {
+            "path": "src/main.ino",
+            "ref": "sha256:3265c45c8390185820351c1c2821dedeaae15d7b27bcfe68174b74b3fb86588a"
+          }
+        ],
+        "treeRef": "sha256:1bd20f287e857f217b6399814214141ce8ac2e68d96bdd0d88f8bbb5d221644f",
+        "libDeps": [
+          "adafruit/Adafruit PWM Servo Driver Library"
+        ]
+      }
+    },
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "nucleo-f401re",
+        "x": 0,
+        "y": 0,
+        "attrs": {
+          "internal_pullups": "PB8,PB9"
+        }
+      },
+      {
+        "id": "pca",
+        "type": "pca9685",
+        "attrs": {
+          "i2c_address": "0x40"
+        },
+        "x": 420,
+        "y": 0
+      },
+      {
+        "id": "estop",
+        "type": "button",
+        "attrs": {
+          "label": "E-STOP"
+        },
+        "x": -140,
+        "y": 300
+      },
+      {
+        "id": "vservo",
+        "type": "dc-barrel-jack",
+        "attrs": {
+          "label": "6 V servo supply",
+          "voltage": "6"
+        },
+        "x": 780,
+        "y": 40
+      },
+      {
+        "id": "cbulk",
+        "type": "capacitor",
+        "attrs": {
+          "value": "1000uF"
+        },
+        "x": 800,
+        "y": 200
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB9"
+        },
+        "to": {
+          "part": "pca",
+          "pin": "SDA"
+        },
+        "color": "blue"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        "to": {
+          "part": "pca",
+          "pin": "SCL"
+        },
+        "color": "yellow"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "pca",
+          "pin": "VCC"
+        },
+        "color": "red"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "pca",
+          "pin": "GND"
+        },
+        "color": "black"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA8"
+        },
+        "to": {
+          "part": "pca",
+          "pin": "OE"
+        },
+        "color": "orange"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PA10"
+        },
+        "to": {
+          "part": "estop",
+          "pin": "1"
+        },
+        "color": "green"
+      },
+      {
+        "from": {
+          "part": "estop",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "black"
+      },
+      {
+        "from": {
+          "part": "vservo",
+          "pin": "+"
+        },
+        "to": {
+          "part": "cbulk",
+          "pin": "1"
+        },
+        "color": "red"
+      },
+      {
+        "from": {
+          "part": "vservo",
+          "pin": "-"
+        },
+        "to": {
+          "part": "cbulk",
+          "pin": "2"
+        },
+        "color": "black"
+      },
+      {
+        "from": {
+          "part": "vservo",
+          "pin": "-"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "black"
+      }
+    ]
+  },
+  "source": "// P.I.G. desktop robot arm: NUCLEO-F401RE + PCA9685 (Adafruit #815) driving\n// 3x MG995 (base, shoulder, elbow) and 3x MG90S (wrist pitch, wrist roll, gripper).\n// Pick-and-place loop with per-joint limits and an E-stop that pulls the\n// PCA9685 /OE line high (all outputs off) and stops motion.\n#include <SPI.h>  // Adafruit BusIO (pulled in by the driver) includes SPI.h\n#include <Wire.h>\n#include <Adafruit_PWMServoDriver.h>\n\nstatic const uint8_t PCA_ADDR = 0x40;\nstatic const uint8_t PIN_OE = D7;     // PA8 -> PCA9685 /OE (high = outputs disabled)\nstatic const uint8_t PIN_ESTOP = D2;  // PA10 <- E-stop contact to GND, pull-up\n\nAdafruit_PWMServoDriver pwm(PCA_ADDR, Wire);\n\n// 50 Hz frame, 4096 counts per 20 ms: 500 us = 102 counts, 2500 us = 512 counts.\nstatic const uint16_t PULSE_MIN = 102;\nstatic const uint16_t PULSE_MAX = 512;\n\nstruct Joint {\n  const char *name;\n  uint8_t channel;\n  int16_t minDeg;\n  int16_t maxDeg;\n  int16_t deg;\n};\n\n// Channel order = PCA9685 LED0..LED5.\nJoint joints[6] = {\n  {\"base\", 0, 10, 170, 90},\n  {\"shoulder\", 1, 30, 150, 90},\n  {\"elbow\", 2, 20, 160, 90},\n  {\"wrist_pitch\", 3, 20, 160, 90},\n  {\"wrist_roll\", 4, 0, 180, 90},\n  {\"gripper\", 5, 30, 110, 40},\n};\n\nstruct Pose {\n  const char *name;\n  int16_t deg[6];\n};\n\nstatic const Pose poses[] = {\n  {\"home\", {90, 90, 90, 90, 90, 40}},\n  {\"over_pick\", {45, 70, 120, 60, 90, 40}},\n  {\"pick_down\", {45, 55, 135, 50, 90, 40}},\n  {\"grip\", {45, 55, 135, 50, 90, 105}},\n  {\"lift\", {45, 80, 110, 70, 90, 105}},\n  {\"over_place\", {135, 80, 110, 70, 120, 105}},\n  {\"place_down\", {135, 58, 132, 52, 120, 105}},\n  {\"release\", {135, 58, 132, 52, 120, 40}},\n  {\"home\", {90, 90, 90, 90, 90, 40}},\n};\n\nstatic bool estopped = false;\n\nstatic uint16_t degToCounts(int16_t deg) {\n  return PULSE_MIN + (uint32_t)(PULSE_MAX - PULSE_MIN) * (uint32_t)deg / 180u;\n}\n\nstatic int16_t clampJoint(const Joint &j, int16_t deg) {\n  if (deg < j.minDeg) return j.minDeg;\n  if (deg > j.maxDeg) return j.maxDeg;\n  return deg;\n}\n\nstatic bool readReg(uint8_t reg, uint8_t *out, uint8_t n) {\n  Wire.beginTransmission(PCA_ADDR);\n  Wire.write(reg);\n  if (Wire.endTransmission(false) != 0) return false;\n  if (Wire.requestFrom(PCA_ADDR, n) != n) return false;\n  for (uint8_t i = 0; i < n; i++) out[i] = Wire.read();\n  return true;\n}\n\nstatic int32_t readOffCounts(uint8_t ch) {\n  uint8_t b[2];\n  if (!readReg(0x08 + 4 * ch, b, 2)) return -1;  // LEDn_OFF_L, LEDn_OFF_H\n  return (int32_t)b[0] | ((int32_t)(b[1] & 0x0F) << 8);\n}\n\nstatic void enterEstop() {\n  digitalWrite(PIN_OE, HIGH);  // hardware disable of every PCA9685 output\n  estopped = true;\n  Serial.println(\"ESTOP OE=1 motion=stopped\");\n}\n\nstatic bool checkEstop() {\n  if (!estopped && digitalRead(PIN_ESTOP) == LOW) enterEstop();\n  return estopped;\n}\n\nstatic void writeJoint(Joint &j, int16_t deg) {\n  j.deg = clampJoint(j, deg);\n  pwm.setPWM(j.channel, 0, degToCounts(j.deg));\n}\n\n// Move all joints together in 5 degree increments, checking the E-stop each step.\nstatic bool moveTo(const Pose &p) {\n  bool moving = true;\n  while (moving) {\n    if (checkEstop()) return false;\n    moving = false;\n    for (uint8_t i = 0; i < 6; i++) {\n      int16_t target = clampJoint(joints[i], p.deg[i]);\n      int16_t d = target - joints[i].deg;\n      if (d == 0) continue;\n      moving = true;\n      if (d > 5) d = 5;\n      if (d < -5) d = -5;\n      writeJoint(joints[i], joints[i].deg + d);\n    }\n    delay(2);\n  }\n  return true;\n}\n\nstatic void reportPose(uint8_t step, const Pose &p) {\n  Serial.print(\"POSE \");\n  Serial.print(step);\n  Serial.print(' ');\n  Serial.println(p.name);\n  bool ok = true;\n  for (uint8_t i = 0; i < 6; i++) {\n    const Joint &j = joints[i];\n    int32_t off = readOffCounts(j.channel);\n    Serial.print(\"  J\");\n    Serial.print(j.channel);\n    Serial.print(' ');\n    Serial.print(j.name);\n    Serial.print(\" deg=\");\n    Serial.print(j.deg);\n    Serial.print(\" off=\");\n    Serial.println(off);\n    if (off < degToCounts(j.minDeg) || off > degToCounts(j.maxDeg)) ok = false;\n  }\n  Serial.println(ok ? \"LIMITS_OK\" : \"LIMIT_VIOLATION\");\n}\n\nvoid setup() {\n  Serial.begin(115200);\n  pinMode(PIN_OE, OUTPUT);\n  digitalWrite(PIN_OE, HIGH);  // outputs off until every servo has a valid pulse\n  pinMode(PIN_ESTOP, INPUT_PULLUP);\n  Wire.setSDA(PB9);  // Arduino header D14/D15 on the Nucleo\n  Wire.setSCL(PB8);\n  Wire.begin();\n  Serial.println(\"PIG BOOT\");\n\n  Wire.beginTransmission(PCA_ADDR);\n  if (Wire.endTransmission() != 0) {\n    Serial.println(\"PCA9685_MISSING\");\n    estopped = true;\n    return;\n  }\n  pwm.begin();\n  pwm.setPWMFreq(50);\n  uint8_t prescale = 0;\n  readReg(0xFE, &prescale, 1);\n  Serial.print(\"PCA9685_OK addr=0x40 prescale=\");\n  Serial.println(prescale);\n  for (uint8_t i = 0; i < 6; i++) writeJoint(joints[i], joints[i].deg);\n  digitalWrite(PIN_OE, LOW);  // enable outputs\n  Serial.println(\"OE=0 armed\");\n}\n\nstatic uint8_t cycle = 0;\n\nvoid loop() {\n  if (estopped) {\n    delay(10);\n    return;\n  }\n  cycle++;\n  Serial.print(\"CYCLE \");\n  Serial.println(cycle);\n  for (uint8_t s = 0; s < sizeof(poses) / sizeof(poses[0]); s++) {\n    if (!moveTo(poses[s])) {\n      Serial.println(\"HALTED\");\n      return;\n    }\n    reportPose(s, poses[s]);\n  }\n  Serial.println(\"SEQ_DONE\");\n}\n",
+  "language": "arduino",
+  "entry_path": "src/main.ino",
+  "stimuli": [
+    {
+      "channel": "pressed",
+      "value": 1,
+      "component": "estop",
+      "after_cycles": 20000000
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "PCA9685 answers at 0x40 with PRE_SCALE=121 (50 Hz) and its LEDn_OFF registers, read back over I2C, follow the 9-pose pick-and-place sequence in order",
+      "check": {
+        "serial": [
+          {
+            "contains": "PCA9685_OK addr=0x40 prescale=121"
+          },
+          {
+            "matches": "POSE 0 home\\r?\\n  J0 base deg=90 off=307\\r?\\n  J1 shoulder deg=90 off=307\\r?\\n  J2 elbow deg=90 off=307\\r?\\n  J3 wrist_pitch deg=90 off=307\\r?\\n  J4 wrist_roll deg=90 off=307\\r?\\n  J5 gripper deg=40 off=193[\\s\\S]*?POSE 1 over_pick\\r?\\n  J0 base deg=45 off=204\\r?\\n  J1 shoulder deg=70 off=261\\r?\\n  J2 elbow deg=120 off=375\\r?\\n  J3 wrist_pitch deg=60 off=238\\r?\\n  J4 wrist_roll deg=90 off=307\\r?\\n  J5 gripper deg=40 off=193[\\s\\S]*?POSE 2 pick_down\\r?\\n  J0 base deg=45 off=204\\r?\\n  J1 shoulder deg=55 off=227\\r?\\n  J2 elbow deg=135 off=409\\r?\\n  J3 wrist_pitch deg=50 off=215\\r?\\n  J4 wrist_roll deg=90 off=307\\r?\\n  J5 gripper deg=40 off=193[\\s\\S]*?POSE 3 grip\\r?\\n  J0 base deg=45 off=204\\r?\\n  J1 shoulder deg=55 off=227\\r?\\n  J2 elbow deg=135 off=409\\r?\\n  J3 wrist_pitch deg=50 off=215\\r?\\n  J4 wrist_roll deg=90 off=307\\r?\\n  J5 gripper deg=105 off=341[\\s\\S]*?POSE 4 lift\\r?\\n  J0 base deg=45 off=204\\r?\\n  J1 shoulder deg=80 off=284\\r?\\n  J2 elbow deg=110 off=352\\r?\\n  J3 wrist_pitch deg=70 off=261\\r?\\n  J4 wrist_roll deg=90 off=307\\r?\\n  J5 gripper deg=105 off=341[\\s\\S]*?POSE 5 over_place\\r?\\n  J0 base deg=135 off=409\\r?\\n  J1 shoulder deg=80 off=284\\r?\\n  J2 elbow deg=110 off=352\\r?\\n  J3 wrist_pitch deg=70 off=261\\r?\\n  J4 wrist_roll deg=120 off=375\\r?\\n  J5 gripper deg=105 off=341[\\s\\S]*?POSE 6 place_down\\r?\\n  J0 base deg=135 off=409\\r?\\n  J1 shoulder deg=58 off=234\\r?\\n  J2 elbow deg=132 off=402\\r?\\n  J3 wrist_pitch deg=52 off=220\\r?\\n  J4 wrist_roll deg=120 off=375\\r?\\n  J5 gripper deg=105 off=341[\\s\\S]*?POSE 7 release\\r?\\n  J0 base deg=135 off=409\\r?\\n  J1 shoulder deg=58 off=234\\r?\\n  J2 elbow deg=132 off=402\\r?\\n  J3 wrist_pitch deg=52 off=220\\r?\\n  J4 wrist_roll deg=120 off=375\\r?\\n  J5 gripper deg=40 off=193[\\s\\S]*?POSE 8 home\\r?\\n  J0 base deg=90 off=307\\r?\\n  J1 shoulder deg=90 off=307\\r?\\n  J2 elbow deg=90 off=307\\r?\\n  J3 wrist_pitch deg=90 off=307\\r?\\n  J4 wrist_roll deg=90 off=307\\r?\\n  J5 gripper deg=40 off=193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R2",
+      "text": "No joint's LEDn_OFF readback ever leaves its limit window (base 10-170, shoulder 30-150, elbow 20-160, wrist pitch 20-160, wrist roll 0-180, gripper 30-110 deg)",
+      "check": {
+        "serial": [
+          {
+            "matches": "^(?![\\s\\S]*J0 base deg=-?\\d+ off=(?!(?:12[4-9]|1[3-9]\\d|[2-3]\\d\\d|4[0-8]\\d)\\r?\\n))[\\s\\S]*SEQ_DONE"
+          },
+          {
+            "matches": "^(?![\\s\\S]*J1 shoulder deg=-?\\d+ off=(?!(?:1[7-9]\\d|[2-3]\\d\\d|4[0-3]\\d|44[0-3])\\r?\\n))[\\s\\S]*SEQ_DONE"
+          },
+          {
+            "matches": "^(?![\\s\\S]*J2 elbow deg=-?\\d+ off=(?!(?:14[7-9]|1[5-9]\\d|[2-3]\\d\\d|4[0-5]\\d|46[0-6])\\r?\\n))[\\s\\S]*SEQ_DONE"
+          },
+          {
+            "matches": "^(?![\\s\\S]*J3 wrist_pitch deg=-?\\d+ off=(?!(?:14[7-9]|1[5-9]\\d|[2-3]\\d\\d|4[0-5]\\d|46[0-6])\\r?\\n))[\\s\\S]*SEQ_DONE"
+          },
+          {
+            "matches": "^(?![\\s\\S]*J4 wrist_roll deg=-?\\d+ off=(?!(?:10[2-9]|1[1-9]\\d|[2-4]\\d\\d|50\\d|51[0-2])\\r?\\n))[\\s\\S]*SEQ_DONE"
+          },
+          {
+            "matches": "^(?![\\s\\S]*J5 gripper deg=-?\\d+ off=(?!(?:1[7-9]\\d|2\\d\\d|3[0-4]\\d|35[0-2])\\r?\\n))[\\s\\S]*SEQ_DONE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R3",
+      "text": "E-stop pressed after the first full cycle drives PCA9685 /OE (PA8) high and no pose is reported after it",
+      "check": {
+        "serial": [
+          {
+            "contains": "ESTOP OE=1 motion=stopped"
+          },
+          {
+            "matches": "ESTOP OE=1[^\\n]*\\n(?![\\s\\S]*POSE)[\\s\\S]*HALTED"
+          }
+        ],
+        "gpio": [
+          {
+            "pin": "PA8",
+            "state": "high"
+          }
+        ]
+      }
+    }
+  ],
+  "firmware": [],
+  "visibility": "unlisted",
+  "description": "A six-channel arm controller with a PCA9685, a nine-pose sequence, joint limits and an emergency-stop input.",
+  "readme": "# P.I.G. arm controller\n\nAn STM32F401 Nucleo drives six PCA9685 channels for base, shoulder, elbow, wrist pitch, wrist roll and gripper control.\n\n## Try the lab\n\n1. Press Run and open the serial output.\n2. Look for `PCA9685_OK addr=0x40 prescale=121` and the nine poses from `home` through pick, place and return.\n3. Inspect each joint's reported angle and PCA9685 register value.\n4. Press E-stop. The output-enable signal goes high and the firmware reports `ESTOP OE=1 motion=stopped`, followed by `HALTED`. The saved input sequence also exercises E-stop automatically.\n\n## Circuit\n\nThe PCA9685 uses I2C address 0x40, SDA on PB9 and SCL on PB8. PA8 drives /OE. The active-low E-stop input is PA10. Servo power has a separate supply and bulk capacitor.\n\n## Scope\n\nThis published lab checks the controller sequence, register values, joint limits and E-stop logic. The canvas does not yet include six servo models or a linked moving CAD arm. It does not demonstrate physical pick-and-place motion.\n"
+}
