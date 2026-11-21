@@ -1,0 +1,84 @@
+{
+  "schema": "labwired-live-static-snapshot-inventory-v1",
+  "captured_utc_date": "2026-11-21",
+  "capture_method": "Headless Google Chrome at 1440x900, fresh live saved-project pages in signed-out mode on connected work-1. No edits to saved project content.",
+  "verification_scope": "Independent labwired_project_verify readbacks; a screenshot is not simulated motion, physics, fit or physical hardware proof.",
+  "screenshots": [
+    {
+      "slug": "quadrotor",
+      "dst": "examples/robotics/quadrotor-bldc/media/labwired-live-mechanics-20261121.png",
+      "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+      "title": "Quadrotor motor bench, Mechanics view",
+      "hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+      "verification": "4/4 Hall-lock serial oracles (2,000,000 simulation steps)",
+      "run_id": "world-job:a31ebdc1-6f0d-4c53-90d4-0d4b74dec452",
+      "limitations": "Static CAD screenshot. Motor M1-M4 read No sample while electronics stopped. No flight or current motor-motion evidence.",
+      "screenshot_sha256": "71d311d4b93c1597a1ddd51dfde35abb5dff3b366e179a0692a6b230918be946",
+      "bytes": 225760,
+      "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+      "artifact_readback": {
+        "pcb_id": "pcb_156d01483ccb67cb",
+        "pcb_rev": 0,
+        "cad_provider": "kernelcad",
+        "cad_slug": "DyJ405zg",
+        "cad_rev": 6,
+        "cad_link": "https://app.kernelcad.com/p/DyJ405zg?version=6",
+        "cad_pinned": true
+      }
+    },
+    {
+      "slug": "axiom",
+      "dst": "examples/robotics/axiom-h1/media/labwired-live-pcb-20261121.png",
+      "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+      "title": "AXIOM H1 controller, PCB view",
+      "hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+      "verification": "3/3 controller serial oracles, no servo motion oracle",
+      "run_id": null,
+      "limitations": "Original 10-part project PCB with 9/9 nets connected; not the 31-part servo candidate. No PCA-to-servo motion, MuJoCo coupling, fit or physical proof.",
+      "screenshot_sha256": "a2082a77f0fd0c1e2d9aa25fa88202dd17f8e061fb22985d64b01f3beb52833c",
+      "bytes": 180202,
+      "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+      "artifact_readback": {
+        "pcb_id": "pcb_172fd76a950f0bd9",
+        "pcb_rev": 2,
+        "cad_provider": "kernelcad",
+        "cad_slug": "QC9kIRT9",
+        "cad_rev": 1,
+        "cad_link": "https://app.kernelcad.com/p/QC9kIRT9?version=1",
+        "cad_pinned": false,
+        "note": "Reference geometry is in original README, not a pinned CAD artifact in project assembly readback."
+      }
+    },
+    {
+      "slug": "pathfinder",
+      "dst": "examples/aerospace/pathfinder-rocket/media/labwired-live-mechanics-20261121.png",
+      "project_id": "c9ede30a619b12d7c97056a2da040cc1",
+      "title": "Pathfinder hobby rocket, Mechanics view",
+      "hash": "2e8fef00dc7123091c40e3079e7d127604d5f5c8bb691da02bcd1a230fd70663",
+      "verification": "Previously verified 5/5 firmware oracle requirements; not re-run for screenshot",
+      "run_id": null,
+      "limitations": "Static CAD rocket visualization. Pinned PCB pcb_e2ec5d2f4ade4aac@1 fails fit against KernelCAD K_DmeiaD@2 (min pad-center width 50.896 mm vs 38.4 mm coupler ID). No fabrication or physical flight proof.",
+      "screenshot_sha256": "cd07504295231fce8ef4a6e88d8fcb9ca5aa8f94d33fc8453fcca45f7352d7c0",
+      "bytes": 144811,
+      "project_url": "https://app.labwired.com/p/c9ede30a619b12d7c97056a2da040cc1/edit",
+      "artifact_readback": {
+        "pcb_id": "pcb_e2ec5d2f4ade4aac",
+        "pcb_rev": 1,
+        "cad_provider": "kernelcad",
+        "cad_slug": "K_DmeiaD",
+        "cad_rev": 2,
+        "cad_link": "https://app.kernelcad.com/p/K_DmeiaD?version=2",
+        "cad_pinned": true,
+        "fit_result": "REJECTED"
+      }
+    }
+  ],
+  "fault_negative_control": {
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "project_url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+    "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "result": "4/4 single ESC Hall lock, injected driver fault, inverter off, PB0 low",
+    "run_id": null,
+    "scope": "Single modeled ESC fault shutdown only; no multirotor aircraft recovery."
+  }
+}

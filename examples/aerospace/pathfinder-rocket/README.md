@@ -30,3 +30,9 @@ The source-bound [pad fixture](pcb-cad-fit-negative.json) was read from LabWired
 [The executable negative-control check](../../../scripts/check-pathfinder-fit.mjs) computes the minimum projected width of all pad centers over every in-plane board rotation: **50.896 mm**. This exceeds the 38.4 mm coupler ID, even before adding pad sizes, board edge and clearance. The board **cannot fit** this CAD assembly. The test passing means this known incompatibility is correctly detected; it does **not** mean the rocket has passed PCB/CAD fit.
 
 A future design must revise the physical PCB placement/partition and native board, or intentionally change the airframe and rerun stability/mass/fit analyses. The current 42 mm airframe has no accepted avionics-board fit.
+
+## Live Studio screenshot — 21 November 2026
+
+![Pathfinder hobby rocket, Mechanics view](media/labwired-live-mechanics-20261121.png)
+
+[Source-pinned live screenshot and independent verification scope](../../flagship-live-snapshots-20261121.json). Static CAD rocket visualization. Pinned PCB pcb_e2ec5d2f4ade4aac@1 fails fit against KernelCAD K_DmeiaD@2 (min pad-center width 50.896 mm vs 38.4 mm coupler ID). No fabrication or physical flight proof.
