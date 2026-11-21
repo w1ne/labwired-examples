@@ -47,11 +47,74 @@ node scripts/check-axiom-actuator-runtime.mjs \
 
 The script checks all 20 channel identities, changing commands, fault recovery, the E-stop latch and disconnected-signal rejection. It writes a failure receipt if an assertion fails. It keeps the simulator's default peripheral tick interval of one and records flash fast-start use.
 
-## Mechanical integration
+## Mechanical integration — command motion passes, physical acceptance fails
 
-[Immutable KernelCAD source](mechanical/QC9kIRT9-v1.kcad.ts) preserves [QC9kIRT9 version 1](https://app.kernelcad.com/p/QC9kIRT9?version=1). The [source audit](mechanical-audit.json) identifies 27 bodies and 20 named revolute channels, but the helper functions only declare connectors: they make **zero `robot.mate` calls**. The saved LabWired diagram has no mechanical bindings.
+The revised [AXIOM H1 staggered frame, revision 1](https://app.kernelcad.com/p/45f5VM8t?version=1) has **27 parts, 20 revolute mates and six fastened mates**. The saved source is [axiom-compact-frame.kcad.ts](mechanical/axiom-compact-frame.kcad.ts), SHA-256 `5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496`. The immutable saved revision was read back and matched those exact bytes.
 
-The CAD shoulder-roll range is ±75° on both sides. The firmware maps the left shoulder to −70°/+80° and the right shoulder to −80°/+70°. A real joint graph, clearance validation and an explicit pulse-to-joint mapping are required before firmware-driven CAD motion can be claimed. The local actuator run does not prove hierarchical CAD transforms or firmware-to-MuJoCo coupling.
+The [full evaluation](mechanical/compact-frame-evaluation.json) checked **59 sampled poses across all 20 source joint ranges**. All mates remained satisfied, no sampled collisions occurred, and fastened parts remained rigid. No joint range was reduced and no collision pair was ignored. This discrete check does not establish every continuous path or simultaneous joint combination.
+
+### Geometry changes
+
+The original [QC9kIRT9 version 1](https://app.kernelcad.com/p/QC9kIRT9?version=1) and its [source](mechanical/QC9kIRT9-v1.kcad.ts) remain unchanged. Its helper functions declared connectors but made zero `robot.mate` calls. Adding the real graph exposed intersecting joint envelopes and connectors outside their bodies. The new frame adds cleared fork-and-tongue joints, connects the ankle and neck gaps, and moves the bearing mounts onto connected material.
+
+| Property | Original source | Revised frame |
+| --- | ---: | ---: |
+| Width × depth × height | 393 × 230 × 874 mm | 375 × 430 × 873 mm |
+| Shoulder fore/aft positions | Both y = 0 mm | Left −115 mm; right −175 mm |
+| Hip fore/aft positions | Both y = 0 mm | Left +100 mm; right −100 mm |
+| Hip roll pivot, absolute x | 126 mm | 135 mm |
+| Hip roll pivot, z | 480 mm | 462 mm |
+| Thigh/shin center, absolute x | 114 mm | 123 mm |
+| Palm width | 58 mm | 40 mm |
+| Gripper offset from palm center | 18 mm | 9 mm |
+| Uniform solid ABS mass estimate | 15.02526 kg | 15.02686 kg |
+| Estimated center of mass, x/y/z | 0 / −8.282 / 448.939 mm | −0.189 / −18.453 / 449.690 mm |
+
+The +200 mm depth is a deliberate structural revision. It separates the limb workspaces while retaining the original torso size and limb lengths. The source shoulder-roll limits are now −70°/+80° on the left and −80°/+70° on the right. Both are derived from firmware; the original CAD used ±75°.
+
+The mass calculation applies **1040 kg/m³ to solid ABS envelopes**. It is not the mass of a hollow, manufactured robot with installed actuators, bearings, wiring and battery. The [review receipt](mechanical/compact-frame-review.json) includes both mass-property results, bounds, source identity, render provenance and the failed physical checks.
+
+| Original geometry | Revised geometry |
+| --- | --- |
+| ![Original AXIOM frame, isometric](media/original-frame-iso.png) | ![Revised staggered AXIOM frame, isometric](media/compact-frame-iso.png) |
+| ![Original AXIOM frame, right side](media/original-frame-right.png) | ![Revised staggered AXIOM frame, right side](media/compact-frame-right.png) |
+
+[Original front view](media/original-frame-front.png) and [revised front view](media/compact-frame-front.png) complete the inspected canonical views. These images came from the real kernelCAD renderer. An earlier 1208 mm wide clearance diagnostic was rejected and is not the delivered frame.
+
+### Firmware pulse → joint → CAD transform
+
+The [joint-transform receipt](mechanical/joint-transform-evidence.json) passes against the exact saved compact source. It replays the 46 snapshots from the real 185-million-instruction firmware run through the production LabWired `KernelCadRuntimeHost`, kernelCAD `ElectronicsRuntimeStore` and `motionGeometries`.
+
+- All 20 component bindings are acknowledged. Their 23 dynamic parts have unique ownership and a parent motion hierarchy.
+- The map derives from the unchanged firmware's names and `jmin`/`jmax` arrays. PCA prescale 121 and counts 110–500 correspond to 536.8–2440 µs. These source-derived endpoints are command mappings, not measured servo calibration.
+- The three changing firmware commands move 10 dependent CAD parts, including the head visor/eyes and the full left arm chain.
+- The production affine matrices match an independent axis-angle calculation at four reference points per moving part. Maximum error is 1.93 × 10⁻¹³ mm.
+- Disabled output reports a source fault and retains the last command pose. E-stop release remains latched. The receipt does not claim that real unpowered joints retain their position.
+
+The [pinned LabWired model reference](mechanical/compact-frame-model.json) includes all 20 bindings and exact mesh provenance. [Derived electronics mappings](mechanical/source-derived-electronics.json) are also available separately. At this receipt's creation, the original LabWired project had the powered servo topology but had not yet received this mechanical reference. Hosted integration still depends on the pulse mapping implementation in [LabWired PR #3677](https://github.com/w1ne/labwired/pull/3677).
+
+Reproduce the transform proof with the app and kernelCAD-app commits recorded in the receipt:
+
+```sh
+node scripts/check-axiom-joint-transforms.mjs \
+  --app /path/to/labwired \
+  --kernelcad-app /path/to/kernelCAD-app \
+  --output /path/to/joint-transform-evidence.json
+```
+
+The script uses existing production runtimes and the stored firmware run. It does not create a simulator or write MCU registers. It verifies the saved source hash and bindings before writing the receipt. Browser paint remains outside this proof.
+
+### Physical acceptance failures
+
+**Physical robot acceptance is failed.** The controller and affine motion evidence do not establish lifting, balance or actuator sizing.
+
+1. **Actuator travel mismatch.** The diagram uses SG90 command proxies. [TowerPro's official SG90 page](https://towerpro.com.tw/product/sg90-7/) states in the manufacturer's range response that normal servos operate from 0° to 150° unless a wider range is specified. The AXIOM source spans 185° at both shoulder-pitch joints and 165° at both hip-pitch joints. No matching actuator or transmission is declared.
+2. **No load or holding coverage.** Generic `verify(check:"motion-load", motion_mode:"range", quasi_static:true)` returned zero joints and zero samples because no `mechanicalJoint` drive contracts exist. Generic `static-hold` also returned zero joints and zero poses. Their `ok:true` fields are not an acceptance result.
+3. **No installed actuator/load model.** The same manufacturer page lists 9 g and a 1.8 kgf·cm stall rating at 4.8 V, equivalent to 0.1765197 N·m. A stall rating is not a continuous holding rating. The frame has no actuator mounting, shaft/support contract, measured mass distribution, torque/current model or validated transmission.
+4. **No physical dynamics proof.** Gravity response, ground contact, balance, friction, deflection, thermal behavior, rail sag and drop on release remain unverified.
+
+The generic `design_loop` and `review_cad` wrappers returned an internal vendor-evaluator error on this source. Their correlation IDs are retained in the review receipt. Direct full evaluation, canonical rendering, saved mesh generation and the independent runtime transform proof completed; no successful wrapper review is claimed.
+
 
 ## Earlier source and hosted receipts
 

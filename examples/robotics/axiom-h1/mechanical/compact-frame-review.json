@@ -1,0 +1,433 @@
+{
+  "schema": "labwired-examples/axiom-compact-frame-review/v1",
+  "cadSourceSha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+  "model": {
+    "provider": "kernelcad",
+    "slug": "45f5VM8t",
+    "projectId": "f7118cb8-bcdb-4341-888c-1f6238907038",
+    "version": 1,
+    "meshProvenance": "091c0eb483f28d952e9835e2c54407be9d937504a8386e8fba861ff1e58f7bba",
+    "title": "AXIOM H1 \u2014 staggered kinematic frame"
+  },
+  "sourceReadbackMatched": true,
+  "original": {
+    "slug": "QC9kIRT9",
+    "version": 1,
+    "sizeMm": [
+      393,
+      230,
+      874
+    ],
+    "mass": {
+      "ok": true,
+      "massProperties": {
+        "id": "assemblyExport_1",
+        "mass": 15.025262735043324,
+        "density": 1040,
+        "densitySource": "raw",
+        "densityDefaulted": false,
+        "com": [
+          -4.125640373783954e-15,
+          -8.2820709267839,
+          448.9392366873891
+        ],
+        "inertia6": [
+          1.0656152086897053,
+          4.4806810476693665e-18,
+          6.738562547237369e-17,
+          1.1652857511853199,
+          -0.047425851453537594,
+          0.15672364441661224
+        ],
+        "inertiaMatrix": [
+          [
+            1.0656152086897053,
+            4.4806810476693665e-18,
+            6.738562547237369e-17
+          ],
+          [
+            4.4806810476693665e-18,
+            1.1652857511853199,
+            -0.047425851453537594
+          ],
+          [
+            6.738562547237369e-17,
+            -0.047425851453537594,
+            0.15672364441661224
+          ]
+        ],
+        "principalMoments": [
+          1.1675109585604224,
+          1.0656152086897053,
+          0.1544984370415096
+        ],
+        "principalAxes": [
+          [
+            1.2930052109440286e-17,
+            0.998901084311584,
+            -0.04686815295210432
+          ],
+          [
+            1,
+            -9.442510530243282e-18,
+            7.463315453739614e-17
+          ],
+          [
+            -7.410858596521571e-17,
+            0.04686815295210432,
+            0.998901084311584
+          ]
+        ],
+        "hasSymmetryAxis": false,
+        "hasSymmetryPoint": false,
+        "volume": 14447368.014464732
+      },
+      "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+    }
+  },
+  "revised": {
+    "sizeMm": [
+      375,
+      430,
+      873
+    ],
+    "mass": {
+      "ok": true,
+      "massProperties": {
+        "id": "assemblyExport_1",
+        "mass": 15.026860001861737,
+        "density": 1040,
+        "densitySource": "raw",
+        "densityDefaulted": false,
+        "com": [
+          -0.1891940586875697,
+          -18.452707115441523,
+          449.6895194513163
+        ],
+        "inertia6": [
+          1.1207396184914038,
+          -0.06534103538847896,
+          0.0007116375775896649,
+          1.163188189247662,
+          -0.03535652139215325,
+          0.23482241570122292
+        ],
+        "inertiaMatrix": [
+          [
+            1.1207396184914038,
+            -0.06534103538847896,
+            0.0007116375775896649
+          ],
+          [
+            -0.06534103538847896,
+            1.163188189247662,
+            -0.03535652139215325
+          ],
+          [
+            0.0007116375775896649,
+            -0.03535652139215325,
+            0.23482241570122292
+          ]
+        ],
+        "principalMoments": [
+          1.21153053079957,
+          1.073745428829865,
+          0.23347426381085395
+        ],
+        "principalAxes": [
+          [
+            -0.5840319392081073,
+            0.8111838523712391,
+            -0.02979012650146384
+          ],
+          [
+            0.8117281958817233,
+            0.5835459574583214,
+            -0.02390505270133292
+          ],
+          [
+            0.0020074848493035063,
+            0.03814279992615303,
+            0.9992702821651275
+          ]
+        ],
+        "hasSymmetryAxis": false,
+        "hasSymmetryPoint": false,
+        "volume": 14448903.847943977
+      },
+      "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+    }
+  },
+  "massAssumption": "All CAD volumes are solid ABS at 1040 kg/m3. These are envelope estimates, not measured or catalog robot assembly masses.",
+  "materialSource": {
+    "repo": "https://github.com/w1ne/kernelCAD-web",
+    "file": "src/shared/materials/materialCatalog.ts",
+    "key": "abs",
+    "densityKgPerM3": 1040,
+    "commit": "bf98bf4cddffd34611045f8b4b89022297851d2e",
+    "fileSha256": "94110fa26933f6fd591d245d4d3fca7ac4d4bb7b848927d41bca89ff1f72fda7"
+  },
+  "kinematicAcceptance": {
+    "status": "passed",
+    "checkedPoses": 59,
+    "joints": 20,
+    "collisionFailures": 0,
+    "graph": {
+      "parts": 27,
+      "revolute": 20,
+      "fastened": 6
+    },
+    "limits": "All source endpoints retained. Discrete poses do not establish every continuous path or simultaneous combination."
+  },
+  "physicalAcceptance": {
+    "status": "failed",
+    "rangeMismatch": {
+      "status": "failed",
+      "actuatorProxy": "TowerPro SG90",
+      "manufacturerNormalTravelDeg": 150,
+      "sourceRangesDeg": {
+        "left_shoulder_pitch": [
+          -95,
+          90
+        ],
+        "right_shoulder_pitch": [
+          -95,
+          90
+        ],
+        "left_hip_pitch": [
+          -85,
+          80
+        ],
+        "right_hip_pitch": [
+          -85,
+          80
+        ]
+      },
+      "sourceUrl": "https://towerpro.com.tw/product/sg90-7/",
+      "sourceAccessed": "2026-11-21",
+      "sourceBasis": "Manufacturer response on the official product page states normal servos operate from 0 to 150 degrees unless 180 or 360 is specified. No matching 185/165 degree actuator or transmission is declared."
+    },
+    "loadHold": {
+      "status": "unverified",
+      "motionLoad": {
+        "ok": true,
+        "source": "local",
+        "mode": "range",
+        "quasiStatic": true,
+        "samples": 0,
+        "totalMassKg": 0,
+        "joints": [],
+        "partLoads": [],
+        "maxLevel": "warning",
+        "statement": "Loads not checked: no mechanicalJoint drives a revolute mate.",
+        "messages": [
+          "Loads not checked: no mechanicalJoint drives a revolute mate."
+        ],
+        "diagnostics": [],
+        "limitations": [
+          "rigid bodies; no deflection, friction or contact",
+          "tree mate graphs only; a joint inside a closed loop is not resolved",
+          "accelerations come from finite differences of the timeline; a keyframed track has velocity steps at its keys, so peaks depend on sampleMs",
+          "two coaxial supports are simple supports; three or more are indeterminate and not split",
+          "a support bears at its connector on the joint axis, else at the axial span of its material nearest the axis; an ambiguous station is not split",
+          "partLoads rank poses by a joint-moment or section-bending proxy; the proxy chooses the pose, an FEA solve (feaStudy loadsFrom) gives the safety factor"
+        ],
+        "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+      },
+      "staticHold": {
+        "ok": true,
+        "source": "local",
+        "joints": [],
+        "posesSampled": 0,
+        "diagnostics": [],
+        "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+      },
+      "interpretation": "Both generic tools evaluated zero joints and zero poses. ok:true does not establish any load or holding coverage."
+    },
+    "actuatorReference": {
+      "sourceUrl": "https://towerpro.com.tw/product/sg90-7/",
+      "massKg": 0.009,
+      "stallTorqueKgfCm": 1.8,
+      "stallTorqueNm": 0.1765197,
+      "ratingVoltageV": 4.8,
+      "ratingScope": "Manufacturer stall rating only. It is not a continuous holding rating or an installed actuator measurement. This value is not assigned to the solid frame."
+    },
+    "absent": [
+      "Purchased-actuator geometry and mechanicalJoint drive/support contracts",
+      "Measured masses and centers of mass for the assembled robot",
+      "Continuous holding and transient torque, actuator inertia, damping, friction and contact",
+      "Ground contact, balance, gravity response and drop on release",
+      "Electrical current demand, rail sag, thermal limits and physical calibration"
+    ]
+  },
+  "renders": {
+    "ok": true,
+    "images": [
+      {
+        "name": "front",
+        "description": "Front elevation \u2014 camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+        "byte_count": 79174,
+        "inline": true,
+        "repositoryPath": "media/compact-frame-front.png",
+        "sha256": "29e1e333e546af04a2850ebbf1b153ea71d415a1e5caa1b039c0d673cf31598e",
+        "capturedAt": "2026-11-21T22:50:52+00:00"
+      },
+      {
+        "name": "right",
+        "description": "Right side elevation \u2014 camera on +X; screen right = +Y, screen up = +Z.",
+        "byte_count": 61493,
+        "inline": true,
+        "repositoryPath": "media/compact-frame-right.png",
+        "sha256": "e30ffb945b84288309d54d9c49d4519460ea8cac536c17f9b3aed2c142aa3451",
+        "capturedAt": "2026-11-21T22:50:53+00:00"
+      },
+      {
+        "name": "iso",
+        "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+        "byte_count": 116011,
+        "inline": true,
+        "repositoryPath": "media/compact-frame-iso.png",
+        "sha256": "7249700e652524c36398b0152c00bb04450d9868e78a29d386577f38b4156306",
+        "capturedAt": "2026-11-21T22:50:53+00:00"
+      }
+    ],
+    "bounds": {
+      "min": [
+        -187.5,
+        -253,
+        0
+      ],
+      "max": [
+        187.5,
+        177,
+        873
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 14448902.644512877,
+      "faceCount": 638,
+      "size": [
+        375,
+        430,
+        873
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 45928,
+    "diagnostics": [],
+    "images_inline_count": 3,
+    "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+  },
+  "originalRenders": {
+    "ok": true,
+    "images": [
+      {
+        "name": "front",
+        "description": "Front elevation \u2014 camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+        "byte_count": 69540,
+        "inline": true,
+        "repositoryPath": "media/original-frame-front.png",
+        "sha256": "fcf5e4cdc219dd9eb3f919fd08368d3b1d77158b0d757400aa47abf9e228fd48",
+        "capturedAt": "2026-11-21T22:58:11+00:00"
+      },
+      {
+        "name": "right",
+        "description": "Right side elevation \u2014 camera on +X; screen right = +Y, screen up = +Z.",
+        "byte_count": 44065,
+        "inline": true,
+        "repositoryPath": "media/original-frame-right.png",
+        "sha256": "e1cb342d6728516ba4133d678995ecb69cb65ee04306d2abde640daf8bd03ea9",
+        "capturedAt": "2026-11-21T22:58:12+00:00"
+      },
+      {
+        "name": "iso",
+        "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+        "byte_count": 105663,
+        "inline": true,
+        "repositoryPath": "media/original-frame-iso.png",
+        "sha256": "db8a8efb9439e7fdf389599bbc702df03b58b704ac565ddb999e883a969b8495",
+        "capturedAt": "2026-11-21T22:58:12+00:00"
+      }
+    ],
+    "bounds": {
+      "min": [
+        -196.5,
+        -153,
+        0
+      ],
+      "max": [
+        196.5,
+        77,
+        874
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 14447368.014464725,
+      "faceCount": 97,
+      "size": [
+        393,
+        230,
+        874
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 8465,
+    "diagnostics": [],
+    "images_inline_count": 3,
+    "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+  },
+  "visualReview": {
+    "accepted": true,
+    "scope": "Appearance and connected kinematic envelope only",
+    "views": [
+      "front",
+      "right",
+      "iso"
+    ],
+    "findings": [
+      "One humanoid frame with two connected arms, legs, hands, feet, a torso and a neck-mounted head.",
+      "Shoulders move forward to y=-115/-175 mm; hips stagger to y=+100/-100 mm; the depth grows by 200 mm.",
+      "No detached or stray geometry is visible; support ribs and clevis links connect the intended bodies.",
+      "Large clevis envelopes and solid body volumes do not establish actuator installation or structural strength."
+    ]
+  },
+  "reviewToolFailures": {
+    "designLoop": {
+      "kernelcadError": {
+        "code": "mcp.internal.failure",
+        "category": "transport_internal_failure",
+        "stage": "transport_or_internal",
+        "message": "Vendor evaluator failed: 29555880",
+        "recovery": "Retry or choose another supported tool; include the correlation ID if the failure recurs.",
+        "correlationId": "a2d74249-9ae9-4a4a-ae91-e6980f09f001",
+        "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+      }
+    },
+    "reviewCad": {
+      "kernelcadError": {
+        "code": "mcp.internal.failure",
+        "category": "transport_internal_failure",
+        "stage": "transport_or_internal",
+        "message": "Vendor evaluator failed: 29555880",
+        "recovery": "Retry or choose another supported tool; include the correlation ID if the failure recurs.",
+        "correlationId": "172af04a-8363-4d68-b561-ee93182855da",
+        "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+      }
+    }
+  },
+  "savedProject": {
+    "slug": "45f5VM8t",
+    "version": 1,
+    "projectId": "f7118cb8-bcdb-4341-888c-1f6238907038",
+    "sourceReadbackMatched": true,
+    "meshReady": true,
+    "meshProvenance": "091c0eb483f28d952e9835e2c54407be9d937504a8386e8fba861ff1e58f7bba",
+    "url": "https://app.kernelcad.com/p/45f5VM8t?version=1",
+    "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z",
+    "viewerPainted": false
+  }
+}

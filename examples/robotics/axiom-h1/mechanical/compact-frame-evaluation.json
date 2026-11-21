@@ -1,0 +1,154 @@
+{
+  "ok": true,
+  "buildOk": true,
+  "viewerMode": "hosted",
+  "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+  "step": {
+    "validity": {
+      "status": "valid",
+      "checks": [
+        "build",
+        "feature-health",
+        "finite-geometry"
+      ],
+      "volume": 14448902.644512877
+    },
+    "snapshots": {
+      "status": "unavailable",
+      "frame": {
+        "view": "iso",
+        "width": 512,
+        "height": 512,
+        "bounds": {
+          "min": [
+            -187.5,
+            -253,
+            0
+          ],
+          "max": [
+            187.5,
+            177,
+            873
+          ]
+        }
+      },
+      "out_dir": "/tmp/kc-sbx/61182-ox2ina1gt0/kernelcad-step-t4WDhk",
+      "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+    }
+  },
+  "sceneSummary": {
+    "valid": true,
+    "volume": 14448902.644512877,
+    "faceCount": 638,
+    "size": [
+      375,
+      430,
+      873
+    ]
+  },
+  "featureCount": 360,
+  "diagnostics": [
+    {
+      "target": "export-occt",
+      "code": "authoring.prefer-api.hole-by-cylinder",
+      "severity": "info",
+      "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+      "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+      "nextAction": {
+        "kind": "call-tool",
+        "tool": "lookup_cookbook",
+        "args": {
+          "query": "clearance hole through plate"
+        }
+      }
+    }
+  ],
+  "featureHealth": [],
+  "evaluationEvidence": {
+    "schema": "kernelcad.evaluation-evidence.v1",
+    "mode": "build",
+    "source": {
+      "sha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+      "byteLength": 5966
+    },
+    "parameters": {
+      "values": {},
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "engine": {
+      "kernel": "occt",
+      "version": "0.17.4",
+      "revision": null
+    },
+    "dependencies": {
+      "status": "untracked"
+    },
+    "reuse": {
+      "eligible": false,
+      "reason": "dependencies-untracked"
+    },
+    "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+    "identitySha256": "6c1bd2e6ce633deb483c6e6726fc58dce4e1ca7fcc763f376a8eab672df4ab2c"
+  },
+  "requirements": {
+    "ok": true,
+    "status": "not-declared",
+    "entries": [],
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "notEvaluated": 0
+    }
+  },
+  "ports": [],
+  "parts": {
+    "count": 27,
+    "names": [
+      "pelvis",
+      "torso",
+      "chest_panel",
+      "chest_status_light",
+      "neck_yaw",
+      "neck_pitch",
+      "head_visor",
+      "right_eye",
+      "left_eye",
+      "left_shoulder_pitch",
+      "left_shoulder_roll",
+      "left_elbow",
+      "left_wrist",
+      "left_gripper",
+      "left_hip_pitch",
+      "left_hip_roll",
+      "left_knee",
+      "left_ankle",
+      "right_shoulder_pitch",
+      "right_shoulder_roll",
+      "right_elbow",
+      "right_wrist",
+      "right_gripper",
+      "right_hip_pitch",
+      "right_hip_roll",
+      "right_knee",
+      "right_ankle"
+    ]
+  },
+  "mechanism": "real",
+  "mechanismSummary": {
+    "verdict": "real",
+    "maxLevel": "ok",
+    "statement": "Motion checked: 59 poses across 20 joints (each joint at its limits), all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+    "checked": [
+      "59 poses across 20 joints (each joint at its limits)",
+      "all mates satisfied",
+      "no collisions",
+      "fastened parts stay rigid"
+    ],
+    "skipped": [
+      "gravity hold and drop-on-release were not checked"
+    ],
+    "failures": []
+  },
+  "reviewHint": "This model has articulated mates, and evaluate_script's mechanism check is shallow: it does not check joint-support intents, pose-envelope overlap at declared mate limits, or gravity drop / static hold. Run review_cad for pose-envelope + gravity checks before calling the mechanism done.",
+  "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+}
