@@ -14,6 +14,8 @@ All five fault cases pass: the external driver-fault button and native inverter,
 
 The [22 November hosted recheck](../../flagship-hosted-recheck-20261122.json) records the exact new 4/4 Hall-lock run, a builder SIGKILL interruption that initially cleared same-hash proof, and an independent 4/4 single-ESC fault control. The succeeding verification restored fresh saved proof. Neither result establishes measured flight.
 
+The [22 November authenticated UI readback](../../flagship-ui-readbacks-20261122.json) includes a [fresh screenshot of the original circuit and Architect warning](media/live-readback/quadrotor-original-ui-20261122.jpg). The UI did **not** produce a fresh Hall-lock world-verification result in this capture. Earlier 4/4 verified runs remain historical model evidence; no aircraft motion is proved.
+
 ## Separate five-controller live LabWired twin — 21 November 2026
 
 The [saved five-controller LabWired project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit) runs one STM32L476 flight controller with a BMI270 model, plus four STM32L476 ESC controllers and four simulated BLDC motors. On the **21 November saved revision**, hosted verification at 2,000,000 steps passed **four of four** independent Hall-lock serial assertions. The FC reported BMI270 online, arm command and takeoff **command**, but no sensor-measured takeoff, hover, flight-control stability or physical-hardware acceptance.
