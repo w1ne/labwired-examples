@@ -163,3 +163,7 @@ The original [35-second single-channel recording](media/quadrotor-demo.mp4), [si
 ![Quadrotor motor bench, Mechanics view](media/labwired-live-mechanics-20261121.png)
 
 [Source-pinned live screenshot and independent verification scope](../../flagship-live-snapshots-20261121.json). Static CAD screenshot. Motor M1-M4 read No sample while electronics stopped. No flight or current motor-motion evidence.
+
+## Fresh multi-controller Hall and injected-fault recheck — 22 November 2026
+
+The unchanged original saved four-controller project passed a new hosted **4/4 Hall-lock oracle** at 2,000,000 steps, run `world-job:218a1aca-e78c-47aa-827b-bf3274592210`. A fresh independent saved single-ESC injected-driver-fault test passed **4/4** including inverter shutdown and PB0 low; the synchronous service returned no run ID. Source hashes and requirement clauses are in the [immutable late recheck receipt](../../flagship-quadrotor-hall-reverify-20261122-2116z.json). The outcomes qualify simulated Hall commutation and a modeled single-ESC fault only, **not a six-axis flight controller, physical flight, or four-motor fault containment**.

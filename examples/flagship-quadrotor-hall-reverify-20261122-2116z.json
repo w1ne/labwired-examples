@@ -1,0 +1,50 @@
+{
+  "schema": "labwired-quadrotor-hall-reverify-v1",
+  "observed_date_utc": "2026-11-22",
+  "source": "Signed-in LabWired saved project_verify followed by independent project_get readback",
+  "positive_control": {
+    "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+    "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+    "observed_project_updated_at": "2026-11-22T21:16:28.652Z",
+    "run_id": "world-job:218a1aca-e78c-47aa-827b-bf3274592210",
+    "step_limit": 2000000,
+    "result": "verified",
+    "proof": "oracle",
+    "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "requirements": [
+      {"id": "R1", "status": "verified", "passed": true, "serial_contains": "ROTOR 1 HALL LOCKED"},
+      {"id": "R2", "status": "verified", "passed": true, "serial_contains": "ROTOR 2 HALL LOCKED"},
+      {"id": "R3", "status": "verified", "passed": true, "serial_contains": "ROTOR 3 HALL LOCKED"},
+      {"id": "R4", "status": "verified", "passed": true, "serial_contains": "ROTOR 4 HALL LOCKED"}
+    ],
+    "scope": "Four individually named virtual Hall-commutation controllers in the saved multi-MCU bench. Not six-axis flight or an actual motor/power-stage test."
+  },
+  "fault_negative_control": {
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "project_url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+    "observed_project_updated_at": "2026-11-22T21:16:36.678Z",
+    "run_id": null,
+    "result": "verified",
+    "proof": "oracle",
+    "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "requirements": [
+      {"id": "R1", "status": "verified", "passed": true, "serial_contains": "ROTOR 1 HALL LOCKED"},
+      {"id": "R2", "status": "verified", "passed": true, "serial_contains": "ROTOR 1 FAULT DRIVER"},
+      {"id": "R3", "status": "verified", "passed": true, "serial_contains": "ROTOR 1 INVERTER OFF"},
+      {"id": "R4", "status": "verified", "passed": true, "gpio": {"pin": "PB0", "state": "low"}}
+    ],
+    "scope": "One saved simulated ESC with an injected driver fault; not a physical fault or four-motor flight failsafe. Synchronous verification returned no run ID."
+  },
+  "observed": {
+    "four_hall_oracles_passed": 4,
+    "single_esc_fault_oracles_passed": 4,
+    "six_dof_flight_verified": false,
+    "physical_hardware_verified": false,
+    "original_project_hash_changed": false,
+    "source_code_changed_in_this_check": false
+  },
+  "historical_evidence": "examples/flagship-fresh-hosted-reverify-20261122.json",
+  "overall": "SIMULATION-ONLY HALL AND DRIVER-FAULT ORACLES VERIFIED; NOT END-TO-END FLIGHT ACCEPTANCE"
+}
