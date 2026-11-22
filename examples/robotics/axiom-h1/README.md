@@ -4,13 +4,13 @@ The original saved AXIOM project now contains **20 explicitly wired servo models
 
 - [Open the original LabWired project](https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit).
 - Current source: [current-project.input.json](current-project.input.json), 31 parts and 88 wires.
-- Current saved hash: `0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee`.
+- Historical saved hash before linking the mechanical model: `0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee`.
 - [Promotion receipt](original-project-promotion.json): the guarded update preserved firmware, metadata, media and `pcb_172fd76a950f0bd9` revision 2.
-- **Hosted acceptance is pending.** The three earlier controller requirements became stale after the diagram update. The local result below does not establish deployed servo support.
+- **Current controller acceptance: 3/3 model-verified serial requirements** on saved hash `e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c` (22 November 14:13 UTC). Deployed PCA9685-to-CAD joint motion remains unverified.
 
 The linked PCB is the existing controller board. It does not include the added servo loads or external servo rail.
 
-The [22 November hosted recheck](../../flagship-hosted-recheck-20261122.json) confirms that the current original project still has three **stale** controller oracles after its diagram update. A separate candidate has 3/3 controller-serial oracles on its own hash, but no hosted PCA9685-to-joint motion proof. Dependencies remain [#3676](https://github.com/w1ne/labwired/pull/3676) and [#3677](https://github.com/w1ne/labwired/pull/3677).
+The [earlier 22 November hosted recheck](../../flagship-hosted-recheck-20261122.json) observed three **stale** controller requirements after a diagram update. That historical receipt is preserved. The [later authenticated readback](../../flagship-live-current-20261122.json) now shows the original and candidate at **3/3 source-matched model-verified** controller requirements. Both saved diagrams link [KernelCAD model `45f5VM8t`, revision 1](https://app.kernelcad.com/p/45f5VM8t?version=1) with motion-binding metadata. [#3676](https://github.com/w1ne/labwired/pull/3676) and [#3677](https://github.com/w1ne/labwired/pull/3677) are merged. Neither serial status nor the saved binding demonstrates a live servo-to-joint transform.
 
 ## Firmware-driven actuator evidence — 21 November 2026
 
@@ -176,4 +176,4 @@ To make a new saved copy, use `labwired_project_create` with `current-project.in
 
 ## Authenticated live UI readback — 22 November 2026
 
-The [original AXIOM circuit](media/live-readback/axiom-original-circuit-20261122.jpg) renders, but the [original Mechanics view](media/live-readback/axiom-original-mechanics-unlinked-20261122.jpg) and [verified-controller candidate Mechanics view](media/live-readback/axiom-candidate-mechanics-unlinked-20261122.jpg) both prompt for a KernelCAD project link. The [readback manifest](../../flagship-ui-readbacks-20261122.json) captures image hashes and dates. The KernelCAD models named elsewhere in this repository are not linked to those two saved project Mechanics views; modeled PCA source tests do not prove joint motion. This is the next live integration gate.
+The [original AXIOM circuit](media/live-readback/axiom-original-circuit-20261122.jpg) rendered at this **earlier capture**, but the [original Mechanics view](media/live-readback/axiom-original-mechanics-unlinked-20261122.jpg) and [candidate Mechanics view](media/live-readback/axiom-candidate-mechanics-unlinked-20261122.jpg) then prompted for a KernelCAD project link. The [source-pinned screenshot manifest](../../flagship-ui-readbacks-20261122.json) preserves that historical state. The subsequent saved diagrams now contain the KernelCAD link; the remaining gate is actual hosted servo-to-joint motion verification, not metadata presence.

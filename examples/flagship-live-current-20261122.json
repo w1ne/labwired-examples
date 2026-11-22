@@ -1,0 +1,312 @@
+{
+  "schema": "labwired-flagship-current-rest-and-image-v1",
+  "observed_at_utc": "2026-11-22T14:13:26+00:00",
+  "method": "Authenticated browser GET https://api.labwired.com/v1/projects/:id and GET /media; saved server verification evidence. No new run initiated by this receipt.",
+  "prior_oracle_rerun": "examples/flagship-direct-verify-20261122-1340z.json",
+  "current_projects": {
+    "quadrotor": {
+      "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+      "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+      "http_status": 200,
+      "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+      "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "verified"
+        },
+        {
+          "id": "R2",
+          "status": "verified"
+        },
+        {
+          "id": "R3",
+          "status": "verified"
+        },
+        {
+          "id": "R4",
+          "status": "verified"
+        }
+      ],
+      "sim_verify": [
+        {
+          "kind": "sim_verify",
+          "status": "model_verified",
+          "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+          "fresh": true,
+          "created_at": 1795354799730
+        }
+      ],
+      "pcb_board_id": "pcb_156d01483ccb67cb",
+      "pcb_board_rev": 0,
+      "parts": 17,
+      "wires": 81,
+      "mechanical": {
+        "provider": "kernelcad",
+        "slug": "DyJ405zg",
+        "version": 6,
+        "pcb_binding_count": 2,
+        "electronics_keys": [
+          "version",
+          "displays",
+          "inputs",
+          "motions",
+          "bodies"
+        ]
+      }
+    },
+    "esc_negative_control": {
+      "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+      "project_url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+      "http_status": 200,
+      "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+      "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "verified"
+        },
+        {
+          "id": "R2",
+          "status": "verified"
+        },
+        {
+          "id": "R3",
+          "status": "verified"
+        },
+        {
+          "id": "R4",
+          "status": "verified"
+        }
+      ],
+      "sim_verify": [
+        {
+          "kind": "sim_verify",
+          "status": "model_verified",
+          "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+          "fresh": true,
+          "created_at": 1795354822804
+        }
+      ],
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "parts": 3,
+      "wires": 16,
+      "mechanical": null
+    },
+    "pathfinder_original": {
+      "project_id": "c9ede30a619b12d7c97056a2da040cc1",
+      "project_url": "https://app.labwired.com/p/c9ede30a619b12d7c97056a2da040cc1/edit",
+      "http_status": 200,
+      "content_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+      "verified_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "verified"
+        },
+        {
+          "id": "R2",
+          "status": "verified"
+        },
+        {
+          "id": "R3",
+          "status": "verified"
+        },
+        {
+          "id": "R4",
+          "status": "verified"
+        },
+        {
+          "id": "R5",
+          "status": "verified"
+        }
+      ],
+      "sim_verify": [
+        {
+          "kind": "sim_verify",
+          "status": "model_verified",
+          "content_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+          "fresh": true,
+          "created_at": 1795309186924
+        }
+      ],
+      "pcb_board_id": "pcb_e2ec5d2f4ade4aac",
+      "pcb_board_rev": 1,
+      "parts": 38,
+      "wires": 83,
+      "mechanical": {
+        "provider": "kernelcad",
+        "slug": "K_DmeiaD",
+        "version": 2,
+        "pcb_binding_count": 0,
+        "electronics_keys": [
+          "version",
+          "displays",
+          "inputs"
+        ]
+      }
+    },
+    "pathfinder_candidate": {
+      "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+      "project_url": "https://app.labwired.com/p/d4de8c2bc6aad00bab720da9e1ff2414/edit",
+      "http_status": 200,
+      "content_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+      "verified_hash": null,
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "failed"
+        },
+        {
+          "id": "R2",
+          "status": "failed"
+        },
+        {
+          "id": "R3",
+          "status": "failed"
+        },
+        {
+          "id": "R4",
+          "status": "failed"
+        },
+        {
+          "id": "R5",
+          "status": "failed"
+        }
+      ],
+      "sim_verify": [
+        {
+          "kind": "sim_verify",
+          "status": "failed",
+          "content_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+          "fresh": true,
+          "created_at": 1795323473801
+        }
+      ],
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "parts": 41,
+      "wires": 92,
+      "mechanical": {
+        "provider": "kernelcad",
+        "slug": "PuRrQzv1",
+        "version": 2,
+        "pcb_binding_count": 1,
+        "electronics_keys": [
+          "version",
+          "displays",
+          "inputs"
+        ]
+      }
+    },
+    "axiom_original": {
+      "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+      "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+      "http_status": 200,
+      "content_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+      "verified_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "verified"
+        },
+        {
+          "id": "R2",
+          "status": "verified"
+        },
+        {
+          "id": "R3",
+          "status": "verified"
+        }
+      ],
+      "sim_verify": [
+        {
+          "kind": "sim_verify",
+          "status": "model_verified",
+          "content_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+          "fresh": true,
+          "created_at": 1795355824047
+        }
+      ],
+      "pcb_board_id": "pcb_172fd76a950f0bd9",
+      "pcb_board_rev": 2,
+      "parts": 31,
+      "wires": 88,
+      "mechanical": {
+        "provider": "kernelcad",
+        "slug": "45f5VM8t",
+        "version": 1,
+        "pcb_binding_count": 0,
+        "electronics_keys": [
+          "version",
+          "displays",
+          "inputs",
+          "motions"
+        ]
+      }
+    },
+    "axiom_candidate": {
+      "project_id": "dab8622b41adbf3b9e2175909146b207",
+      "project_url": "https://app.labwired.com/p/dab8622b41adbf3b9e2175909146b207/edit",
+      "http_status": 200,
+      "content_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+      "verified_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "verified"
+        },
+        {
+          "id": "R2",
+          "status": "verified"
+        },
+        {
+          "id": "R3",
+          "status": "verified"
+        }
+      ],
+      "sim_verify": [
+        {
+          "kind": "sim_verify",
+          "status": "model_verified",
+          "content_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+          "fresh": true,
+          "created_at": 1795355821281
+        }
+      ],
+      "pcb_board_id": null,
+      "pcb_board_rev": null,
+      "parts": 31,
+      "wires": 88,
+      "mechanical": {
+        "provider": "kernelcad",
+        "slug": "45f5VM8t",
+        "version": 1,
+        "pcb_binding_count": 0,
+        "electronics_keys": [
+          "version",
+          "displays",
+          "inputs",
+          "motions"
+        ]
+      }
+    }
+  },
+  "quadrotor_live_screenshot": {
+    "path": "examples/robotics/quadrotor-bldc/media/quadrotor-live-circuit-20261122.png",
+    "sha256": "d5914e2d77c1c7e5b2802b691a11bf8abed76df55822a470cf0c8d0877d54266",
+    "bytes": 517533,
+    "scope": "Current browser 2D electronics editor for original quadrotor; no motor motion, flight or electrical measurements shown.",
+    "live_project_media_id": "89fffdfc7516f4a9fd05777e",
+    "live_project_media_url": "https://api.labwired.com/v1/projects/7c92d38a4f2ac205aa91502291fde0d8/media/89fffdfc7516f4a9fd05777e/raw",
+    "media_readback_confirmed": true
+  },
+  "acceptance_limits": {
+    "quadrotor": "4/4 Hall-lock serial requirements, and independent 4/4 single ESC fault control only. No coupled faulted flight or physical aircraft proof.",
+    "axiom": "3/3 controller serial requirements. Saved CAD binding identity does not prove that PWM pulses move 20 CAD joints in the deployed runtime.",
+    "pathfinder": "Original firmware verified 5/5 but original PCB oversized for coupler; source-bound candidate is 5/5 failed and no swept-clearance or insertion proof exists.",
+    "screenshot": "Image reflects the browser circuit UI at capture, not server-oracle results or physical hardware.",
+    "run_id": "The REST GET does not return a fresh world-job ID; do not invent one."
+  }
+}
