@@ -1,0 +1,130 @@
+{
+  "schema": "labwired-flagship-hosted-recheck-v1",
+  "captured_utc_date": "2026-11-22",
+  "method": "Independent saved-project get/verify and device-assembly tool readbacks against the deployed LabWired service, not a physical bench",
+  "historical_screenshots_manifest": "examples/flagship-live-snapshots-20261121.json",
+  "screenshots_note": "The linked PNGs were captured 2026-11-21. No fresh screenshot was captured for this recheck; static frames are not runtime or hardware proof.",
+  "quadrotor": {
+    "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+    "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+    "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "run_id": "world-job:96f95df2-d0c7-433b-a4d2-a86faa35666a",
+    "max_steps": 2000000,
+    "verified": true,
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": {
+      "R1": "ctrl1: ROTOR 1 HALL LOCKED",
+      "R2": "ctrl2: ROTOR 2 HALL LOCKED",
+      "R3": "ctrl3: ROTOR 3 HALL LOCKED",
+      "R4": "ctrl4: ROTOR 4 HALL LOCKED"
+    },
+    "flight_controller_observation": [
+      "FC READY BMI270 ONLINE",
+      "FC ARM COMMAND",
+      "FC TAKEOFF COMMAND"
+    ],
+    "nonproof": "FC takeoff commands do not observe takeoff, hover, 6DOF body response or physical flight",
+    "board": {
+      "id": "pcb_156d01483ccb67cb",
+      "rev": 0
+    },
+    "cad": "https://app.kernelcad.com/p/DyJ405zg?version=6",
+    "interrupted_run": {
+      "run_id": "world-job:547f8fd7-bdba-46fd-958f-f131b771db30",
+      "verified": false,
+      "reason": "config_error",
+      "observation": "simulator terminated by SIGKILL; no controller serial returned",
+      "scope": "This infrastructure interruption is not an observed Hall-lock behavioral failure; it temporarily revoked previously verified same-hash state before the passing rerun."
+    }
+  },
+  "single_esc_fault_control": {
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "project_url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+    "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "verified": true,
+    "proof": "oracle",
+    "max_steps": 2500000,
+    "run_id": null,
+    "requirements": [
+      "ROTOR 1 HALL LOCKED",
+      "ROTOR 1 FAULT DRIVER",
+      "ROTOR 1 INVERTER OFF",
+      "GPIO PB0 low"
+    ],
+    "scope": "One saved ESC with an injected driver fault; no whole-aircraft fault recovery or real inverter shutdown"
+  },
+  "pathfinder": {
+    "project_id": "c9ede30a619b12d7c97056a2da040cc1",
+    "project_url": "https://app.labwired.com/p/c9ede30a619b12d7c97056a2da040cc1/edit",
+    "content_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+    "verified_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+    "verified": true,
+    "proof": "oracle",
+    "max_steps": 20000000,
+    "run_id": null,
+    "requirements": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5"
+    ],
+    "prior_budget_control": {
+      "max_steps": 4000000,
+      "result": "ORACLE_NOT_REACHED",
+      "passed": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "not_reached": [
+        "R5"
+      ]
+    },
+    "board": {
+      "id": "pcb_e2ec5d2f4ade4aac",
+      "rev": 1,
+      "export_evidence_status": "passed",
+      "fit": "REJECTED"
+    },
+    "cad": "https://app.kernelcad.com/p/K_DmeiaD?version=2",
+    "fit_geometry": {
+      "minimum_pad_center_width_mm": 50.896,
+      "airframe_coupler_inner_diameter_mm": 38.4
+    },
+    "nonproof": "Correct saved firmware oracle is not a CAD clearance check, fabrication acceptance, pyro-hardware acceptance or physical flight"
+  },
+  "axiom": {
+    "original_project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+    "original_project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+    "original_content_hash": "0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee",
+    "original_verified_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+    "original_requirements": [
+      "stale",
+      "stale",
+      "stale"
+    ],
+    "original_board": {
+      "id": "pcb_172fd76a950f0bd9",
+      "rev": 2
+    },
+    "candidate_project_id": "dab8622b41adbf3b9e2175909146b207",
+    "candidate_project_url": "https://app.labwired.com/p/dab8622b41adbf3b9e2175909146b207/edit",
+    "candidate_content_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
+    "candidate_verified_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
+    "candidate_requirements": [
+      "verified",
+      "verified",
+      "verified"
+    ],
+    "candidate_scope": "Controller serial oracles only; no hosted observed PCA-to-servo joint motion, output power, calibrated torque or physical acceptance",
+    "runtime_dependencies": [
+      "https://github.com/w1ne/labwired/pull/3676",
+      "https://github.com/w1ne/labwired/pull/3677"
+    ]
+  },
+  "overall": "NOT END-TO-END ACCEPTED: quadrotor 6DOF flight, AXIOM production CAD motion/deployment and physical loads, and Pathfinder PCB-CAD fit are open."
+}

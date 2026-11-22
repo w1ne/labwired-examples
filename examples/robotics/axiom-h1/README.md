@@ -10,6 +10,8 @@ The original saved AXIOM project now contains **20 explicitly wired servo models
 
 The linked PCB is the existing controller board. It does not include the added servo loads or external servo rail.
 
+The [22 November hosted recheck](../../flagship-hosted-recheck-20261122.json) confirms that the current original project still has three **stale** controller oracles after its diagram update. A separate candidate has 3/3 controller-serial oracles on its own hash, but no hosted PCA9685-to-joint motion proof. Dependencies remain [#3676](https://github.com/w1ne/labwired/pull/3676) and [#3677](https://github.com/w1ne/labwired/pull/3677).
+
 ## Firmware-driven actuator evidence — 21 November 2026
 
 [Runtime receipt](actuator-runtime-evidence.json) records 185,000,000 instructions through the real `WasmSimulator`, using app-generated YAML and the exact saved Arduino source. Inputs used the existing `set_inputs` API. The test did not write PCA registers or output-enable GPIO registers directly.
