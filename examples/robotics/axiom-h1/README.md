@@ -55,11 +55,25 @@ The revised [AXIOM H1 staggered frame, revision 1](https://app.kernelcad.com/p/4
 
 The [full evaluation](mechanical/compact-frame-evaluation.json) checked **59 sampled poses across all 20 source joint ranges**. All mates remained satisfied, no sampled collisions occurred, and fastened parts remained rigid. No joint range was reduced and no collision pair was ignored. This discrete check does not establish every continuous path or simultaneous joint combination.
 
-### Current mesh artifact — 22 November 2026
+### Current stored mesh — deployed producer refresh
+
+The [current model reference](mechanical/producer-refresh-20261122/model.json) pins provenance `857d1a3086a88873bcf79a27f5ce6a28f644aaf5877ddedb6e80369180906420`. The [producer qualification](mechanical/producer-refresh-20261122/qualification.json) binds the actual deployed server `fd52f2c20b801c8a7ab875ebeb6b844a928baf97` and runtime `f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977`.
+
+Both the stored-only API and CDN returned the same 3,107,233 bytes, SHA-256 `3fccde237da7ee0b96019f291f866882766fc42973046747b9470ed1be8a4eb6`. The exact [mesh archive](mechanical/producer-refresh-20261122/mesh.json.gz) preserves those bytes. Comparison with the archived `613a4609…` artifact proves that **only producer provenance changed**. All 27 features, vertices, indices, normals, transforms, dimensions and bounds are identical. The source, parameters and all 20 electronics mappings are unchanged.
+
+The existing 59-pose evaluator result and 46-sample transform result below apply to this unchanged geometry. This producer refresh used read-only stored-artifact downloads and an exact comparison. The original LabWired project's mechanical update still awaits the deployed v2 binding schema. **Physical acceptance remains failed**, and the separate dense-sweep timeout remains recorded.
+
+Reproduce the offline geometry, producer and binding checks from this checkout:
+
+```sh
+node scripts/check-axiom-producer-refresh.mjs --out /tmp/axiom-producer-refresh.json
+```
+
+### Prior mesh artifact qualification — 22 November 2026
 
 The provider regenerated the revision-1 mesh under provenance `613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea`. The source and all 20 bindings are unchanged. The [artifact qualification](mechanical/artifact-refresh-20261122/qualification.json) repeats the original evaluator check on server `eb097a77bc0e`: **59 poses, 20 joints, zero sampled collisions**. The [pose manifest](mechanical/artifact-refresh-20261122/pose-coverage.json) records every pose and the deployed enumeration source hashes.
 
-The [current model reference](mechanical/artifact-refresh-20261122/model.json) is qualified for logical CAD binding. The original saved LabWired project still awaits the deployed v2 binding schema and its guarded mechanical update. Physical acceptance remains failed.
+The [613a model reference](mechanical/artifact-refresh-20261122/model.json) was qualified for logical CAD binding. The original saved LabWired project still awaits the deployed v2 binding schema and its guarded mechanical update. Physical acceptance remains failed.
 
 The exact [mesh archive](mechanical/artifact-refresh-20261122/mesh.json.gz) contains 27 parts, 38,604 vertices and 43,356 triangles. Its decompressed length is 3,107,233 bytes and SHA-256 is `aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5`. This archive retains the tested bytes independently of later provider repairs.
 
@@ -121,7 +135,7 @@ The [joint-transform receipt](mechanical/joint-transform-evidence.json) passes a
 - The production affine matrices match an independent axis-angle calculation at four reference points per moving part. Maximum error is 1.93 × 10⁻¹³ mm.
 - Disabled output reports a source fault and retains the last command pose. E-stop release remains latched. The receipt does not claim that real unpowered joints retain their position.
 
-The [historical LabWired model reference](mechanical/compact-frame-model.json) preserves all 20 bindings and the original mesh provenance. Use the [qualified current reference](mechanical/artifact-refresh-20261122/model.json) for the pending integration. [Derived electronics mappings](mechanical/source-derived-electronics.json) are also available separately. At this receipt's creation, the original LabWired project had the powered servo topology but had not yet received this mechanical reference. Hosted integration still depends on the pulse mapping implementation in [LabWired PR #3677](https://github.com/w1ne/labwired/pull/3677).
+The [historical LabWired model reference](mechanical/compact-frame-model.json) preserves all 20 bindings and the original mesh provenance. Use the [qualified current reference](mechanical/producer-refresh-20261122/model.json) for the pending integration. [Derived electronics mappings](mechanical/source-derived-electronics.json) are also available separately. At this receipt's creation, the original LabWired project had the powered servo topology but had not yet received this mechanical reference. Hosted integration still depends on the pulse mapping implementation in [LabWired PR #3677](https://github.com/w1ne/labwired/pull/3677).
 
 Reproduce the transform proof with the app and kernelCAD-app commits recorded in the receipt:
 
