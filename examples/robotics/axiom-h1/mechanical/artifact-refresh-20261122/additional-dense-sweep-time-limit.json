@@ -1,0 +1,34 @@
+{
+  "savedAt": "2026-11-22T03:40:40.940Z",
+  "jobId": "e70558ef-64ca-45ba-91b0-def6cbe2a756",
+  "input": {
+    "check": "swept-collision",
+    "range_samples": 3,
+    "sourceSha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+    "meshProvenance": "613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea"
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ok\":false,\"error_code\":\"job.time-limit\",\"message\":\"Vendor evaluator call \\\"verify\\\" timed out after 300000ms: the model exceeded the 300 s time budget for one call.\",\"serverBuild\":\"0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z\",\"kernelcadError\":{\"code\":\"job.time-limit\",\"category\":\"resource_limit\",\"stage\":\"evaluation_budget\",\"message\":\"Vendor evaluator call \\\"verify\\\" timed out after 300000ms: the model exceeded the 300 s time budget for one call.\",\"recovery\":\"Use the diagnostic to choose an appropriate tool or simplify the expensive operation.\",\"correlationId\":\"9f954c1d-0df4-4703-b3bd-21252dfb9a16\",\"serverBuild\":\"0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z\"}}"
+      }
+    ],
+    "structuredContent": {
+      "ok": false,
+      "error_code": "INVALID_ARGUMENT",
+      "message": "Vendor evaluator call \"verify\" timed out after 300000ms: the model exceeded the 300 s time budget for one call.",
+      "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+      "kernelcadError": {
+        "code": "job.time-limit",
+        "category": "resource_limit",
+        "stage": "evaluation_budget",
+        "message": "Vendor evaluator call \"verify\" timed out after 300000ms: the model exceeded the 300 s time budget for one call.",
+        "recovery": "Use the diagnostic to choose an appropriate tool or simplify the expensive operation.",
+        "correlationId": "9f954c1d-0df4-4703-b3bd-21252dfb9a16",
+        "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z"
+      }
+    },
+    "isError": true
+  }
+}

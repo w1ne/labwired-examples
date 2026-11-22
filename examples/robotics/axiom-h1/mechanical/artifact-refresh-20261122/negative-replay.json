@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "case": "wrong-content-hash",
+      "exitCode": 1,
+      "expectedFailure": "exact archived mesh bytes",
+      "wroteSuccessReceipt": false,
+      "logSha256": "4f1805f541a5807ef6c6874b02097dddf236279e7dfabd791ca738eca4969d0c",
+      "logFile": "negative-wrong-content-hash.txt"
+    },
+    {
+      "case": "old-provenance-pin",
+      "exitCode": 1,
+      "expectedFailure": "mesh provenance pin",
+      "wroteSuccessReceipt": false,
+      "logSha256": "e4c3693442bb483ceb1192692a68607c304c98151514df7fa4f0b4e3d9fd5d69",
+      "logFile": "negative-old-provenance-pin.txt"
+    }
+  ]
+}

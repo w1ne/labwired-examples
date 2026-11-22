@@ -4,11 +4,12 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import { createHash } from "node:crypto";
+import { gunzipSync } from "node:zlib";
 import { createRequire } from "node:module";
 import { execFileSync } from "node:child_process";
 import { pathToFileURL } from "node:url";
 const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, arg, i, all) => i % 2 ? pairs : [...pairs, [arg, all[i + 1]]], []));
-for (const key of ["--app", "--kernelcad-app"]) if (!args[key]) throw new Error("Usage: node scripts/check-axiom-joint-transforms.mjs --app APP_CHECKOUT --kernelcad-app KERNELCAD_APP_CHECKOUT [--output PATH]");
+for (const key of ["--app", "--kernelcad-app"]) if (!args[key]) throw new Error("Usage: node scripts/check-axiom-joint-transforms.mjs --app APP_CHECKOUT --kernelcad-app KERNELCAD_APP_CHECKOUT [--output PATH] [--model PATH] [--mesh PATH --mesh-sha256 RAW_SHA256]");
 const app = path.resolve(args["--app"]), cadApp = path.resolve(args["--kernelcad-app"]);
 const example = new URL("../examples/robotics/axiom-h1/", import.meta.url).pathname;
 const qa = path.join(app, ".qa/axiom-mechanical-transform");
@@ -67,7 +68,7 @@ const require2 = createRequire(path.join(app, "package.json"));
 const { build } = require2("esbuild");
 await build({ stdin: { contents: `export {KernelCadRuntimeHost} from ${JSON.stringify(app + "/packages/playground/src/mechanical/kernelcadRuntime.ts")}; export {ElectronicsRuntimeStore} from ${JSON.stringify(cadApp + "/src/funnel/electronics/runtimeStore.ts")}; export {motionGeometries} from ${JSON.stringify(cadApp + "/src/funnel/electronics/motionGeometry.ts")};`, resolveDir: app, sourcefile: "axiom-joint-proof-entry.ts", loader: "ts" }, bundle: true, platform: "node", format: "esm", outfile: path.join(qa, "joint-proof-runtime.mjs"), nodePaths: [app + "/node_modules", cadApp + "/node_modules"], alias: { "@labwired/ui": app + "/packages/ui/src/editor/displayDecoders.ts", "@core": cadApp + "/core/src" } });
 const { KernelCadRuntimeHost, ElectronicsRuntimeStore, motionGeometries } = await import(pathToFileURL(path.join(qa, "joint-proof-runtime.mjs")).href);
-const model = JSON.parse(await fs.readFile(path.join(example, "mechanical/compact-frame-model.json"), "utf8"));
+const model = JSON.parse(await fs.readFile(args["--model"] ?? path.join(example, "mechanical/compact-frame-model.json"), "utf8"));
 const review = JSON.parse(await fs.readFile(path.join(example, "mechanical/compact-frame-review.json"), "utf8"));
 assert.equal(hash(code), review.cadSourceSha256, "source matches saved revision and geometry receipt");
 assert.deepEqual(electronics, model.electronics, "saved model uses the derived bindings");
@@ -89,7 +90,35 @@ host = new KernelCadRuntimeHost({ model, sessionId: "axiom-source-proof", live: 
   else assert.equal(store.frame(m), true, "CAD frame");
 } });
 host.bind();
-const baseline = [...parts.keys()].map((name) => ({ featureId: name, assemblyPartName: name, faces: [] }));
+let meshEvidence;
+let baseline = [...parts.keys()].map((name) => ({ featureId: name, assemblyPartName: name, faces: [] }));
+if (args["--mesh"]) {
+  assert.match(args["--mesh-sha256"] ?? "", /^[0-9a-f]{64}$/, "--mesh needs an exact raw SHA-256");
+  const stored = await fs.readFile(args["--mesh"]);
+  const bytes = args["--mesh"].endsWith(".gz") ? gunzipSync(stored) : stored;
+  assert.equal(hash(bytes), args["--mesh-sha256"], "exact archived mesh bytes");
+  const mesh = JSON.parse(bytes);
+  assert.equal(mesh.provenance.source.sha256, hash(code), "mesh binds exact accepted CAD source");
+  const canonical = (v) => Array.isArray(v) ? v.map(canonical) : v && typeof v === "object" ? Object.fromEntries(Object.keys(v).sort().map((k) => [k, canonical(v[k])])) : v;
+  assert.equal(hash(JSON.stringify(canonical(mesh.provenance))), model.meshProvenance, "mesh provenance pin");
+  assert.equal(mesh.revision, model.version, "mesh revision");
+  baseline = mesh.features;
+  assert.equal(baseline.length, parts.size);
+  assert.deepEqual(baseline.map(g => g.assemblyPartName).sort(), [...parts.keys()].sort(), "complete mesh part roster");
+  assert.equal(new Set(baseline.map(g => g.featureId)).size, baseline.length, "unique feature IDs");
+  let vertices = 0, triangles = 0;
+  for (const g of baseline) {
+    assert.deepEqual(g.transform, [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1], "affine oracle requires authored identity rest transforms");
+    assert.ok(g.faces.length > 0, "every part has mesh faces");
+    for (const face of g.faces) {
+      assert.equal(face.vertices.length % 3, 0); assert.equal(face.indices.length % 3, 0);
+      assert.ok(face.vertices.every(Number.isFinite));
+      assert.ok(face.indices.every(i => Number.isInteger(i) && i >= 0 && i < face.vertices.length / 3));
+      vertices += face.vertices.length / 3; triangles += face.indices.length / 3;
+    }
+  }
+  meshEvidence = { sha256: hash(bytes), byteLength: bytes.length, provenance: model.meshProvenance, partCount: baseline.length, vertices, triangles };
+} else assert.equal(args["--mesh-sha256"], undefined, "--mesh-sha256 requires --mesh");
 const byId = new Map(motions.map((m) => [m.id, m]));
 const applyExpected = (point, id, positions) => {
   const m = byId.get(id);
@@ -148,6 +177,6 @@ assert.ok(changedParts.has("left_gripper"));
 assert.ok(priorDisabled);
 const sha = (repo) => execFileSync("git", ["rev-parse", "HEAD"], { cwd: repo, encoding: "utf8" }).trim();
 const runtimeSourceHashes = Object.fromEntries(await Promise.all([[app, "packages/playground/src/mechanical/kernelcadRuntime.ts"], [cadApp, "src/funnel/electronics/runtimeStore.ts"], [cadApp, "src/funnel/electronics/motionGeometry.ts"], [cadApp, "src/funnel/electronics/runtimeProtocol.ts"]].map(async ([root, file]) => [file, hash(await fs.readFile(path.join(root, file)))])));
-const receipt = { model: { slug: model.slug, version: model.version, meshProvenance: model.meshProvenance }, runtimeSourceHashes, schema: "labwired-examples/axiom-joint-transform/v1", status: "passed", proofClass: "source_runtime_protocol_and_affine_geometry", appCommit: sha(app), kernelcadAppCommit: sha(cadApp), cadSourceSha256: hash(code), firmwareSourceSha256: hash(project.source), actuatorEvidenceSha256: hash(evidenceText), bindingCount: motions.length, dynamicPartCount: new Set(motions.flatMap((m) => m.parts)).size, changedParts: [...changedParts], maximumMatrixMarkerErrorMm: maxError, sourceLimitsDeg: names.map((name, i) => ({ name, min: mins[i], max: maxs[i] })), limits: ["No browser rendering, torque, force, gravity, contact or power assertion.", "The pinned CAD revision has a separate sampled collision receipt. This transform proof does not establish physical load capacity.", "Only three joint commands vary in the saved firmware. All 20 pulse mappings and hierarchical transforms are checked."], samples };
+const receipt = { ...(meshEvidence ? { mesh: meshEvidence } : {}), model: { slug: model.slug, version: model.version, meshProvenance: model.meshProvenance }, runtimeSourceHashes, schema: "labwired-examples/axiom-joint-transform/v1", status: "passed", proofClass: "source_runtime_protocol_and_affine_geometry", appCommit: sha(app), kernelcadAppCommit: sha(cadApp), cadSourceSha256: hash(code), firmwareSourceSha256: hash(project.source), actuatorEvidenceSha256: hash(evidenceText), bindingCount: motions.length, dynamicPartCount: new Set(motions.flatMap((m) => m.parts)).size, changedParts: [...changedParts], maximumMatrixMarkerErrorMm: maxError, sourceLimitsDeg: names.map((name, i) => ({ name, min: mins[i], max: maxs[i] })), limits: ["No browser rendering, torque, force, gravity, contact or power assertion.", "The pinned CAD revision has a separate sampled collision receipt. This transform proof does not establish physical load capacity.", "Only three joint commands vary in the saved firmware. All 20 pulse mappings and hierarchical transforms are checked."], samples };
 await fs.writeFile(args["--output"] ?? path.join(example, "mechanical/joint-transform-evidence.json"), JSON.stringify(receipt, null, 2) + "\n");
 console.log(JSON.stringify({ status: receipt.status, bindingCount: receipt.bindingCount, dynamicPartCount: receipt.dynamicPartCount, changedParts: receipt.changedParts, maximumMatrixMarkerErrorMm: maxError, samples: samples.length }, null, 2));
