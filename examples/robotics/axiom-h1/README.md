@@ -10,6 +10,8 @@ The original saved AXIOM project now contains **20 explicitly wired servo models
 
 The linked PCB is the existing controller board. It does not include the added servo loads or external servo rail.
 
+The [22 November hosted recheck](../../flagship-hosted-recheck-20261122.json) confirms that the current original project still has three **stale** controller oracles after its diagram update. A separate candidate has 3/3 controller-serial oracles on its own hash, but no hosted PCA9685-to-joint motion proof. Dependencies remain [#3676](https://github.com/w1ne/labwired/pull/3676) and [#3677](https://github.com/w1ne/labwired/pull/3677).
+
 ## Firmware-driven actuator evidence — 21 November 2026
 
 [Runtime receipt](actuator-runtime-evidence.json) records 185,000,000 instructions through the real `WasmSimulator`, using app-generated YAML and the exact saved Arduino source. Inputs used the existing `set_inputs` API. The test did not write PCA registers or output-enable GPIO registers directly.
@@ -53,6 +55,34 @@ The revised [AXIOM H1 staggered frame, revision 1](https://app.kernelcad.com/p/4
 
 The [full evaluation](mechanical/compact-frame-evaluation.json) checked **59 sampled poses across all 20 source joint ranges**. All mates remained satisfied, no sampled collisions occurred, and fastened parts remained rigid. No joint range was reduced and no collision pair was ignored. This discrete check does not establish every continuous path or simultaneous joint combination.
 
+### Current mesh artifact — 22 November 2026
+
+The provider regenerated the revision-1 mesh under provenance `613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea`. The source and all 20 bindings are unchanged. The [artifact qualification](mechanical/artifact-refresh-20261122/qualification.json) repeats the original evaluator check on server `eb097a77bc0e`: **59 poses, 20 joints, zero sampled collisions**. The [pose manifest](mechanical/artifact-refresh-20261122/pose-coverage.json) records every pose and the deployed enumeration source hashes.
+
+The [current model reference](mechanical/artifact-refresh-20261122/model.json) is qualified for logical CAD binding. The original saved LabWired project still awaits the deployed v2 binding schema and its guarded mechanical update. Physical acceptance remains failed.
+
+The exact [mesh archive](mechanical/artifact-refresh-20261122/mesh.json.gz) contains 27 parts, 38,604 vertices and 43,356 triangles. Its decompressed length is 3,107,233 bytes and SHA-256 is `aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5`. This archive retains the tested bytes independently of later provider repairs.
+
+The previous `091c0eb4…` stored-only API returned HTTP 404. Its CDN URL returned HTTP 200 with the **new** artifact bytes. The [stored-artifact readback](mechanical/artifact-refresh-20261122/stored-artifact-readback.json) and [old-CDN readback](mechanical/artifact-refresh-20261122/old-cdn-pin-readback.json) preserve both observations. This evidence bundle does not contain the old mesh bytes; byte or triangulation equivalence is not claimed. The original model, review, evaluation and renders remain as historical evidence.
+
+The existing transform proof also passes with the actual mesh features as its baseline. All 20 bindings and all 46 firmware samples pass the same affine oracle. The final 44 matrix samples exactly match the source-only proof. At the first two samples, no actuator command exists: the real mesh has explicit identity transforms, while the original mock baseline has no transforms. With missing rest transforms normalized to identity, all 46 samples match. Consequently, 23 parts change from the authored rest pose to their initial commanded pose; 10 parts vary after the first command observation. These are different measurements. Both [source-runtime](mechanical/artifact-refresh-20261122/joint-transform.json.gz) and [actual-mesh](mechanical/artifact-refresh-20261122/mesh-transform.json.gz) receipts are retained.
+
+Reproduce the actual-mesh proof with the app and kernelCAD-app commits recorded in the qualification:
+
+```sh
+node scripts/check-axiom-joint-transforms.mjs \
+  --app /path/to/labwired \
+  --kernelcad-app /path/to/kernelCAD-app \
+  --model examples/robotics/axiom-h1/mechanical/artifact-refresh-20261122/model.json \
+  --mesh examples/robotics/axiom-h1/mechanical/artifact-refresh-20261122/mesh.json.gz \
+  --mesh-sha256 aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5 \
+  --output /path/to/mesh-joint-transform.json
+```
+
+The replay rejects a wrong mesh content hash or the old provenance pin before writing a success receipt. It uses the same production runtime source and affine oracle as the original proof. Browser paint, physical loads and deployed project acceptance remain outside this result.
+
+A separate `verify(check:"swept-collision", range_samples:3)` request timed out at 300 seconds. That wrapper does not use `range_samples`; it starts the default 1-degree sweep. This [failed additional check](mechanical/artifact-refresh-20261122/additional-dense-sweep-time-limit.json) is preserved separately. The original 59-pose evaluator check passed. Neither result establishes every continuous path or every simultaneous joint combination.
+
 ### Geometry changes
 
 The original [QC9kIRT9 version 1](https://app.kernelcad.com/p/QC9kIRT9?version=1) and its [source](mechanical/QC9kIRT9-v1.kcad.ts) remain unchanged. Its helper functions declared connectors but made zero `robot.mate` calls. Adding the real graph exposed intersecting joint envelopes and connectors outside their bodies. The new frame adds cleared fork-and-tongue joints, connects the ankle and neck gaps, and moves the bearing mounts onto connected material.
@@ -91,7 +121,7 @@ The [joint-transform receipt](mechanical/joint-transform-evidence.json) passes a
 - The production affine matrices match an independent axis-angle calculation at four reference points per moving part. Maximum error is 1.93 × 10⁻¹³ mm.
 - Disabled output reports a source fault and retains the last command pose. E-stop release remains latched. The receipt does not claim that real unpowered joints retain their position.
 
-The [pinned LabWired model reference](mechanical/compact-frame-model.json) includes all 20 bindings and exact mesh provenance. [Derived electronics mappings](mechanical/source-derived-electronics.json) are also available separately. At this receipt's creation, the original LabWired project had the powered servo topology but had not yet received this mechanical reference. Hosted integration still depends on the pulse mapping implementation in [LabWired PR #3677](https://github.com/w1ne/labwired/pull/3677).
+The [historical LabWired model reference](mechanical/compact-frame-model.json) preserves all 20 bindings and the original mesh provenance. Use the [qualified current reference](mechanical/artifact-refresh-20261122/model.json) for the pending integration. [Derived electronics mappings](mechanical/source-derived-electronics.json) are also available separately. At this receipt's creation, the original LabWired project had the powered servo topology but had not yet received this mechanical reference. Hosted integration still depends on the pulse mapping implementation in [LabWired PR #3677](https://github.com/w1ne/labwired/pull/3677).
 
 Reproduce the transform proof with the app and kernelCAD-app commits recorded in the receipt:
 

@@ -10,6 +10,8 @@ This example is exported from a **real saved LabWired project**, not a proposed 
 - Original simulator evidence on this exact revision: **model_verified**
 - Individual saved requirement results: **5/5 verified**
 
+The [22 November hosted recheck](../../flagship-hosted-recheck-20261122.json) verifies the current saved revision (`83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0`) at 20,000,000 simulation steps: **5/5 firmware oracles passed**, after the 4,000,000-step run stopped before landing. The project input and `evidence.json` below remain immutable receipts of the earlier `2e8fef00...` revision; they are not silently replaced with the current bytes. PCB-to-CAD fit remains **rejected**.
+
 ## Reproduce
 
 1. Inspect `project.input.json`, which contains the original editable firmware source, circuit/netlist, input stimuli and explicit verification requirements.

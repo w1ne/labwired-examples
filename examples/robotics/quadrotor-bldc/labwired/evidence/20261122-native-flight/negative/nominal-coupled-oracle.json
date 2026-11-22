@@ -1,0 +1,61 @@
+{
+  "kind": "independent-readback-oracle",
+  "passed": false,
+  "checks": {
+    "complete": true,
+    "nativeLoadsAcknowledged": true,
+    "noNativeFaults": true,
+    "takeoff": true,
+    "hover": false,
+    "roll": true,
+    "pitch": true,
+    "yaw": true,
+    "recovery": false
+  },
+  "measurements": {
+    "maximumAltitudeM": 2.3358431891672122,
+    "finalAltitudeM": 2.063329078206472,
+    "finalEulerDegrees": [
+      0.2900781973762306,
+      1.9683780880165176,
+      -6.0061182114465845
+    ],
+    "hover": {
+      "seconds": 0.2999999999999998,
+      "window": [
+        5.3,
+        5.6
+      ]
+    },
+    "recovery": {
+      "seconds": 0.0,
+      "window": null
+    },
+    "rollPeakDegrees": 7.658480621589592,
+    "pitchPeakDegrees": 10.590566387436965,
+    "yawPeakDegrees": 22.237061068068652
+  },
+  "traceSampleIntervalSeconds": 0.01,
+  "maximumAllowedTraceGapSeconds": 0.03,
+  "thresholds": {
+    "hoverAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "hoverEulerLimitDegrees": 5.007162376990549,
+    "hoverDurationSeconds": 1,
+    "recoveryAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "recoveryEulerLimitDegrees": 3.1489361702737737,
+    "recoveryYawLimitDegrees": 5,
+    "recoveryDurationSeconds": 0.5,
+    "rollLowerDegrees": 3.4992317616567097,
+    "pitchLowerDegrees": 3.1489361702737737,
+    "yawLowerDegrees": 8
+  },
+  "sourceResult": "/data/work-evidence/quadrotor-world-adapter-20261121/candidate-coupled-governor/nominal-coupled-result.json",
+  "runtime": "direct-native-world-with-existing-flight-runtime",
+  "wasmSha256": "1ae7d6b200140ac5e1b410cebba5cde3ea389370631e43aac800d6da087902ea"
+}

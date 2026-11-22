@@ -1,0 +1,150 @@
+{
+  "kind": "native-gate-positive-control",
+  "activeBeforeFault": {
+    "seconds": 5.99,
+    "gates": [
+      {
+        "owner": "ctrl1",
+        "gpioBOutput": 1,
+        "gpioBInput": 8193,
+        "gpioCInput": 8210,
+        "timer1BreakDeadTime": 32816,
+        "timer1ChannelEnable": 20
+      },
+      {
+        "owner": "ctrl2",
+        "gpioBOutput": 1,
+        "gpioBInput": 8193,
+        "gpioCInput": 8210,
+        "timer1BreakDeadTime": 32816,
+        "timer1ChannelEnable": 20
+      },
+      {
+        "owner": "ctrl3",
+        "gpioBOutput": 1,
+        "gpioBInput": 8193,
+        "gpioCInput": 8210,
+        "timer1BreakDeadTime": 32816,
+        "timer1ChannelEnable": 20
+      },
+      {
+        "owner": "ctrl4",
+        "gpioBOutput": 1,
+        "gpioBInput": 8193,
+        "gpioCInput": 8210,
+        "timer1BreakDeadTime": 32816,
+        "timer1ChannelEnable": 20
+      }
+    ],
+    "motorStates": [
+      {
+        "owner": "ctrl1",
+        "id": "rotor1",
+        "control_state": "inverter",
+        "speed_rpm": 2022.5838857456445,
+        "faults": []
+      },
+      {
+        "owner": "ctrl2",
+        "id": "rotor2",
+        "control_state": "inverter",
+        "speed_rpm": 2021.0401427120405,
+        "faults": []
+      },
+      {
+        "owner": "ctrl3",
+        "id": "rotor3",
+        "control_state": "inverter",
+        "speed_rpm": 2024.0157488073273,
+        "faults": []
+      },
+      {
+        "owner": "ctrl4",
+        "id": "rotor4",
+        "control_state": "inverter",
+        "speed_rpm": 2024.0240872284135,
+        "faults": []
+      }
+    ]
+  },
+  "disabledAfterClearAttempt": {
+    "seconds": 6.1,
+    "gates": [
+      {
+        "owner": "ctrl1",
+        "gpioBOutput": 0,
+        "gpioBInput": 0,
+        "gpioCInput": 8265,
+        "timer1BreakDeadTime": 48,
+        "timer1ChannelEnable": 0
+      },
+      {
+        "owner": "ctrl2",
+        "gpioBOutput": 1,
+        "gpioBInput": 1,
+        "gpioCInput": 8197,
+        "timer1BreakDeadTime": 48,
+        "timer1ChannelEnable": 0
+      },
+      {
+        "owner": "ctrl3",
+        "gpioBOutput": 1,
+        "gpioBInput": 1,
+        "gpioCInput": 8201,
+        "timer1BreakDeadTime": 48,
+        "timer1ChannelEnable": 0
+      },
+      {
+        "owner": "ctrl4",
+        "gpioBOutput": 1,
+        "gpioBInput": 1,
+        "gpioCInput": 8201,
+        "timer1BreakDeadTime": 48,
+        "timer1ChannelEnable": 0
+      }
+    ],
+    "motorStates": [
+      {
+        "owner": "ctrl1",
+        "id": "rotor1",
+        "control_state": "fault:inverter",
+        "speed_rpm": -1.4822209548282408,
+        "faults": []
+      },
+      {
+        "owner": "ctrl2",
+        "id": "rotor2",
+        "control_state": "off:moe",
+        "speed_rpm": -5.765015727550746,
+        "faults": []
+      },
+      {
+        "owner": "ctrl3",
+        "id": "rotor3",
+        "control_state": "off:moe",
+        "speed_rpm": -5.924227343800691,
+        "faults": []
+      },
+      {
+        "owner": "ctrl4",
+        "id": "rotor4",
+        "control_state": "off:moe",
+        "speed_rpm": -5.924349496610357,
+        "faults": []
+      }
+    ]
+  },
+  "registerAddresses": {
+    "gpioBOutput": "0x48000414",
+    "gpioBInput": "0x48000410",
+    "gpioCInput": "0x48000810",
+    "timer1BreakDeadTime": "0x40012c44",
+    "timer1ChannelEnable": "0x40012c20"
+  },
+  "disableMasks": {
+    "externalEnablePb0": "0x1",
+    "timerMoe": "0x8000",
+    "phaseEnables": "0x555"
+  },
+  "sourceTraceSha256": "1648bf7ce17e396643be75f304e87e0380c2c11feeac28d6b75c24b29077132c"
+}

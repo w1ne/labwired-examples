@@ -1,0 +1,66 @@
+{
+  "kind": "independent-readback-oracle",
+  "passed": true,
+  "checks": {
+    "complete": true,
+    "completeBodyTrace": true,
+    "allNativeMotorsObserved": true,
+    "nativeLoadsAcknowledged": true,
+    "noNativeFaults": true,
+    "takeoff": true,
+    "hover": true,
+    "roll": true,
+    "pitch": true,
+    "yaw": true,
+    "recovery": true
+  },
+  "measurements": {
+    "maximumAltitudeM": 1.101109270699049,
+    "finalAltitudeM": 1.0357562047050002,
+    "finalEulerDegrees": [
+      -1.599216116550813,
+      0.6858487561149993,
+      -0.191211740234936
+    ],
+    "hover": {
+      "seconds": 2.6800000000000006,
+      "window": [
+        5.31,
+        7.99
+      ]
+    },
+    "recovery": {
+      "seconds": 1.8699999999999992,
+      "window": [
+        13.13,
+        15.0
+      ]
+    },
+    "rollPeakDegrees": 7.3761947160675865,
+    "pitchPeakDegrees": 6.817831962470591,
+    "yawPeakDegrees": 24.446746286670635
+  },
+  "traceSampleIntervalSeconds": 0.01,
+  "maximumAllowedTraceGapSeconds": 0.03,
+  "thresholds": {
+    "hoverAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "hoverEulerLimitDegrees": 5.007162376990549,
+    "hoverDurationSeconds": 1,
+    "recoveryAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "recoveryEulerLimitDegrees": 3.1489361702737737,
+    "recoveryYawLimitDegrees": 5,
+    "recoveryDurationSeconds": 0.5,
+    "rollLowerDegrees": 3.4992317616567097,
+    "pitchLowerDegrees": 3.1489361702737737,
+    "yawLowerDegrees": 8
+  },
+  "sourceResult": "/data/work-evidence/quadrotor-world-adapter-20261121/portable-final-app/portable-nominal-result.json",
+  "runtime": "direct-native-world-with-existing-flight-runtime",
+  "wasmSha256": "4c45fb97b6af9e0a93407a7cc20b9e5d95eb769e653938ab8b284ecf6a5925d7"
+}

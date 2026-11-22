@@ -1,0 +1,262 @@
+{
+  "schema": "labwired-examples/axiom-mesh-artifact-refresh/v1",
+  "status": "qualified_for_logical_cad_binding",
+  "createdAt": "2026-11-22T03:48:44.407426+00:00",
+  "model": {
+    "provider": "kernelcad",
+    "slug": "45f5VM8t",
+    "projectId": "f7118cb8-bcdb-4341-888c-1f6238907038",
+    "version": 1,
+    "meshProvenance": "613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+    "title": "AXIOM H1 — staggered kinematic frame"
+  },
+  "priorMeshProvenance": "091c0eb483f28d952e9835e2c54407be9d937504a8386e8fba861ff1e58f7bba",
+  "changedModelFields": [
+    "meshProvenance"
+  ],
+  "unchangedSourceSha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+  "unchangedSourceBytes": 5966,
+  "unchangedElectronicsSha256": "aa7e7869a2cfea4a2d58ad8aba271d2d45b5f372c0a02ce429398db83e3f9093",
+  "producer": {
+    "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+    "serverCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+    "runtimeSourceHash": "4293d157357b0f5a75a6a563abff4635247082d63666bda496993222196ad2d0",
+    "sessionArtifactSha256": "72551de25f740cff680c571eebd04e753911e9780d7d21b29122d3fda4628327"
+  },
+  "geometryHash": "3b2b45447f0efdec5c17247dae53c8ade82b19b71779a97ee58db135b4032f28",
+  "mesh": {
+    "sha256": "aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5",
+    "byteLength": 3107233,
+    "provenance": "613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+    "partCount": 27,
+    "vertices": 38604,
+    "triangles": 43356
+  },
+  "boundsMm": {
+    "min": [
+      -187.5,
+      -253,
+      0
+    ],
+    "max": [
+      187.5,
+      177,
+      873
+    ]
+  },
+  "parts": [
+    "pelvis",
+    "torso",
+    "chest_panel",
+    "chest_status_light",
+    "neck_yaw",
+    "neck_pitch",
+    "head_visor",
+    "right_eye",
+    "left_eye",
+    "left_shoulder_pitch",
+    "left_shoulder_roll",
+    "left_elbow",
+    "left_wrist",
+    "left_gripper",
+    "left_hip_pitch",
+    "left_hip_roll",
+    "left_knee",
+    "left_ankle",
+    "right_shoulder_pitch",
+    "right_shoulder_roll",
+    "right_elbow",
+    "right_wrist",
+    "right_gripper",
+    "right_hip_pitch",
+    "right_hip_roll",
+    "right_knee",
+    "right_ankle"
+  ],
+  "evaluation": {
+    "receipt": "evaluation.json",
+    "check": "evaluate_script",
+    "input": {
+      "codeSha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+      "autosave": false
+    },
+    "status": "passed",
+    "poses": 59,
+    "joints": 20,
+    "mechanism": "real",
+    "summary": {
+      "verdict": "real",
+      "maxLevel": "ok",
+      "statement": "Motion checked: 59 poses across 20 joints (each joint at its limits), all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+      "checked": [
+        "59 poses across 20 joints (each joint at its limits)",
+        "all mates satisfied",
+        "no collisions",
+        "fastened parts stay rigid"
+      ],
+      "skipped": [
+        "gravity hold and drop-on-release were not checked"
+      ],
+      "failures": []
+    },
+    "poseManifest": "pose-coverage.json",
+    "continuousPathsAndSimultaneousCombinations": "not_verified"
+  },
+  "runtimeReplay": {
+    "script": "../../../../../scripts/check-axiom-joint-transforms.mjs",
+    "scriptSha256": "686f8b4d022a31181c8dfd2220496d8344d5517dc411188c8f15fed8cba65387",
+    "appCommit": "20430971773d7d7ab851cfd31044f919b07910f6",
+    "kernelcadAppCommit": "dafaad3338bf471c80cdef2aafe99a6af4385abf",
+    "bindingCount": 20,
+    "dynamicPartCount": 23,
+    "samples": 46,
+    "maximumMatrixMarkerErrorMm": 1.9273471707492718e-13,
+    "sourceRuntimeReceipt": "joint-transform.json.gz",
+    "actualMeshReceipt": "mesh-transform.json.gz",
+    "allSamplesEqualWithMissingRestTransformsNormalizedToIdentity": true,
+    "later44SamplesExactlyEqual": true,
+    "initialRepresentationDifference": [
+      {
+        "sample": 0,
+        "phase": "initial",
+        "steps": 0,
+        "acceptedMotions": 0,
+        "historicalBaselineTransforms": 0,
+        "actualMeshBaselineTransforms": 23
+      },
+      {
+        "sample": 1,
+        "phase": "normal",
+        "steps": 5000000,
+        "acceptedMotions": 0,
+        "historicalBaselineTransforms": 0,
+        "actualMeshBaselineTransforms": 23
+      }
+    ],
+    "partsVaryingAfterFirstObservedCommand": [
+      "neck_yaw",
+      "neck_pitch",
+      "head_visor",
+      "right_eye",
+      "left_eye",
+      "left_shoulder_pitch",
+      "left_shoulder_roll",
+      "left_elbow",
+      "left_wrist",
+      "left_gripper"
+    ],
+    "partsChangingIncludingInitialRestToCommand": [
+      "neck_yaw",
+      "neck_pitch",
+      "head_visor",
+      "right_eye",
+      "left_eye",
+      "left_shoulder_pitch",
+      "left_shoulder_roll",
+      "left_elbow",
+      "left_wrist",
+      "left_gripper",
+      "right_shoulder_pitch",
+      "right_shoulder_roll",
+      "right_elbow",
+      "right_wrist",
+      "right_gripper",
+      "left_hip_pitch",
+      "left_hip_roll",
+      "left_knee",
+      "left_ankle",
+      "right_hip_pitch",
+      "right_hip_roll",
+      "right_knee",
+      "right_ankle"
+    ],
+    "noPhysicsOrSolverChanges": true
+  },
+  "priorArtifact": {
+    "storedOnlyApiStatus": 404,
+    "storedOnlyApiError": "verified_mesh_artifact_missing",
+    "oldPinCdnStatus": 200,
+    "oldPinCdnBodyProvenance": "613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+    "oldPinCdnBodySha256": "aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5",
+    "oldMeshBytesArchived": false,
+    "oldAndNewByteOrTriangulationEquivalence": "not_claimed",
+    "historicalModelPath": "../compact-frame-model.json",
+    "historicalModelSha256": "beaf253c12b75b5de1d5f39542c5bdb91a5651e9bdeff3966f15890842cbeb8d"
+  },
+  "additionalDenseSweep": {
+    "status": "timed_out",
+    "receipt": "additional-dense-sweep-time-limit.json",
+    "budgetSeconds": 300,
+    "interpretation": "This separate verify(swept-collision) call used the default 1-degree walk because that wrapper ignores range_samples. It did not replace the original 59-pose evaluator check and produced no acceptance result."
+  },
+  "physicalAcceptance": {
+    "status": "failed",
+    "historicalReceipt": "../compact-frame-review.json",
+    "historicalReceiptSha256": "afbe7b8eea274254f106c4954b400eefeb306bcbee611a9e084e3645ac16b994",
+    "actuatorTravelMismatch": "185-degree shoulder and 165-degree hip source ranges exceed the SG90 proxy manufacturer normal 150-degree range.",
+    "loadAndHold": "No mechanicalJoint load contracts; earlier generic load/hold checks evaluated zero joints and zero poses.",
+    "gravityContactBalancePower": "not_verified"
+  },
+  "savedLabWiredProject": {
+    "projectId": "e6b30d45ba55e64aa450a2aa292edd4b",
+    "mechanicalCas": "pending_deployed_v2_schema",
+    "mechanicalCasPerformed": false
+  },
+  "viewerPainted": false,
+  "files": {
+    "mesh-transform.json.gz": {
+      "sha256": "7cc37faac50721b76849d266c4cb78c6f0a72b848bd42553b2c4ad0cfb600bd3",
+      "bytes": 13524,
+      "uncompressedSha256": "fce02bf110ca87f89e9cc00ea2256944d820a9e1eef39eb0230d40124ff9242c",
+      "uncompressedBytes": 654484
+    },
+    "pose-coverage.json": {
+      "sha256": "4017647f1eba08eccdfe772e9e7d6d48cd28733e8f85ddca8702b1b08a88ec32",
+      "bytes": 9496
+    },
+    "negative-replay.json": {
+      "sha256": "2a2bec75c24d879d8e1aa2d8354c34a33c307ced57465ea6e1309debfe674c8b",
+      "bytes": 610
+    },
+    "stored-artifact-readback.json": {
+      "sha256": "83af4cd9a36d06ecd3c1ead0f7d9e60a59013d54f63c1838211e9f460f76704a",
+      "bytes": 3865
+    },
+    "additional-dense-sweep-time-limit.json": {
+      "sha256": "6e14b73bbd455ba822112f172ba87a9f91e82f32a836f46c95dd19b952e91177",
+      "bytes": 2005
+    },
+    "joint-transform.json.gz": {
+      "sha256": "7d326dbd9306c143084ab5b64c72349034c6993083580e86a01aea8ee3507401",
+      "bytes": 13220,
+      "uncompressedSha256": "149874fea2efdfe5f3debbec79f1bbaaaa8f1d88d5b11d4e9e8220ca7f45a30b",
+      "uncompressedBytes": 642679
+    },
+    "evaluation.json": {
+      "sha256": "050af4acb7c0b37975e976f0a9a8b7198562580c5d0a12a3456d9fb60b43aa4f",
+      "bytes": 4276
+    },
+    "mesh.json.gz": {
+      "sha256": "6f718fefe6c0712e5827bc5feb8adba59fe10b7eda3ef8ae65e696f0ef299134",
+      "bytes": 649584,
+      "uncompressedSha256": "aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5",
+      "uncompressedBytes": 3107233
+    },
+    "old-cdn-pin-readback.json": {
+      "sha256": "6d4c277a13360dd4adc687a6ad0860a39866838ba1fc810e1cc60f844efc47d1",
+      "bytes": 1257
+    },
+    "model.json": {
+      "sha256": "f3b8b0c810426b3af4b4f269e42847b554fc16f8f135f35ec08426a0f9e35004",
+      "bytes": 11448
+    },
+    "negative-wrong-content-hash.txt": {
+      "sha256": "4f1805f541a5807ef6c6874b02097dddf236279e7dfabd791ca738eca4969d0c",
+      "bytes": 663
+    },
+    "negative-old-provenance-pin.txt": {
+      "sha256": "e4c3693442bb483ceb1192692a68607c304c98151514df7fa4f0b4e3d9fd5d69",
+      "bytes": 658
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "kind": "independent-readback-oracle",
+  "passed": false,
+  "checks": {
+    "complete": true,
+    "completeBodyTrace": true,
+    "allNativeMotorsObserved": true,
+    "nativeLoadsAcknowledged": true,
+    "noNativeFaults": true,
+    "takeoff": true,
+    "hover": false,
+    "roll": true,
+    "pitch": true,
+    "yaw": true,
+    "recovery": true
+  },
+  "measurements": {
+    "maximumAltitudeM": 1.2936118110815022,
+    "finalAltitudeM": 0.9349652242658528,
+    "finalEulerDegrees": [
+      -1.400458936348284,
+      0.2081252129600788,
+      -0.19800808864806282
+    ],
+    "hover": {
+      "seconds": 0.9199999999999999,
+      "window": [
+        7.07,
+        7.99
+      ]
+    },
+    "recovery": {
+      "seconds": 1.9000000000000004,
+      "window": [
+        13.1,
+        15.0
+      ]
+    },
+    "rollPeakDegrees": 7.731887666856419,
+    "pitchPeakDegrees": 6.2229439981453645,
+    "yawPeakDegrees": 24.53903441757874
+  },
+  "traceSampleIntervalSeconds": 0.01,
+  "maximumAllowedTraceGapSeconds": 0.03,
+  "thresholds": {
+    "hoverAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "hoverEulerLimitDegrees": 5.007162376990549,
+    "hoverDurationSeconds": 1,
+    "recoveryAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "recoveryEulerLimitDegrees": 3.1489361702737737,
+    "recoveryYawLimitDegrees": 5,
+    "recoveryDurationSeconds": 0.5,
+    "rollLowerDegrees": 3.4992317616567097,
+    "pitchLowerDegrees": 3.1489361702737737,
+    "yawLowerDegrees": 8
+  },
+  "sourceResult": "nominal-irq-result.json",
+  "runtime": "direct-native-world-with-existing-flight-runtime",
+  "wasmSha256": "4c45fb97b6af9e0a93407a7cc20b9e5d95eb769e653938ab8b284ecf6a5925d7"
+}

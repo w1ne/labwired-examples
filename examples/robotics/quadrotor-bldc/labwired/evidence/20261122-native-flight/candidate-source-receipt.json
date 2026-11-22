@@ -1,0 +1,17 @@
+{
+  "parentCandidate": "candidate-edge-irq",
+  "baseSavedContentHash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+  "diagramSha256": "4198c3afa92c801f179dcfa96a43990c69ce328390d8317f0ebacbe5af100cc6",
+  "sources": {
+    "ctrl1": "11176f5f3b0706288b2b96058aee71495ff5fd88f4b92be61e6b738b26eede82",
+    "ctrl2": "7b03d0047e86e88df52821124961420892a720657280b5025432e5f5cd13b657",
+    "ctrl3": "d9828f7026c2e046e4ee264b0921a337bad98631578cbc609ab72b7907f9d428",
+    "ctrl4": "6dbdcc800587a53471d76155633568aec1dba4b7219eda264d89a53d58d68b22",
+    "fc": "96ed83fd340f0f633651e9fd07229ffc1c35619db5af5cc9c203a729b59ea4fc"
+  },
+  "changes": [
+    "Retain altitude position gain 1 output tick per 120 mm; increase velocity damping from 1 tick per 350 mm/s to 1 tick per 200 mm/s",
+    "Round the combined rational PD terms once with sign-correct nearest rounding",
+    "Retain +/-10 output saturation, 80 MHz and interrupt rates, setpoint schedule, airframe constants and independent oracle limits"
+  ]
+}
