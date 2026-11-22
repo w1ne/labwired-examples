@@ -2,6 +2,8 @@
 
 This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, and a **four-channel STM32 propulsion bench**. The motor bench uses real compiled firmware and reduced-order motor models. It does not yet simulate the electronics or flight controller on the physical boards.
 
+The [22 November hosted recheck](../../flagship-hosted-recheck-20261122.json) records the exact new 4/4 Hall-lock run, a builder SIGKILL interruption that initially cleared same-hash proof, and an independent 4/4 single-ESC fault control. The succeeding verification restored fresh saved proof. Neither result establishes measured flight.
+
 ## Separate five-controller live LabWired twin — 21 November 2026
 
 The [saved five-controller LabWired project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit) runs one STM32L476 flight controller with a BMI270 model, plus four STM32L476 ESC controllers and four simulated BLDC motors. On the **exact current saved revision**, hosted verification at 2,000,000 steps passed **four of four** independent Hall-lock serial assertions. The FC reported BMI270 online, arm command and takeoff **command**, but no sensor-measured takeoff, hover, flight-control stability or physical-hardware acceptance.
