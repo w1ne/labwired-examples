@@ -34,6 +34,8 @@ The [original example](../README.md), original project, PCB and CAD remain prese
 | Nominal assembly path | All 161 checked moving bounds fit within an R18.4 mm cassette. Axial translation through the constant R19 mm bore is clear under the stated removal/disconnection steps | [Containment proof](assembly-envelope-proof.json), [bounded path](assembly-path-bounded.json) |
 | Saved CAD delivery | Immutable source readback matches. Mesh is ready. Stored API and public Node download return the same 4,659,194 bytes and 66 features | [Artifact readiness](cad-artifact-readiness.json) |
 
+The exact ready CAD mesh is archived as [deterministic gzip](cad-artifact-20261122/mesh.json.gz). It decompresses to 4,659,194 bytes with SHA-256 `c5c78d0f0c81dc26833aec7f0d7b4c8e7dfae7dd3d8a0c9e97124634d8c1f0e6`. The [archive receipt](cad-artifact-20261122/archive.json) binds the gzip bytes, producer identity, original ready project response and immutable revision source readback. This fixes the comparison baseline for the later generic mesh-producer update.
+
 These checks have separate meanings. DRC does not establish logical circuit parity. Compiler parity does not model measured analog loads. A ready mesh does not establish that the interactive viewer painted it. Nominal geometric clearance does not establish a manufacturable tolerance stack.
 
 The original Freerouting log reports one unrouted item and 13 internal violations. That observation is retained. Independent KiCad DRC and physical copper extraction are the acceptance checks on the imported final native board. The router log is not described as a pass.

@@ -4,6 +4,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
+import { gunzipSync } from 'node:zlib';
 const root=new URL('../examples/aerospace/pathfinder-rocket/candidate/',import.meta.url);
 const bytes=path=>readFileSync(new URL(path,root));
 const json=path=>JSON.parse(bytes(path).toString('utf8'));
@@ -133,6 +134,31 @@ assert.equal(ready.saved_revision_readback.meshReady,true);
 assert.equal(ready.saved_revision_readback.viewerPainted,false);
 assert.equal(ready.cdn_download.sha256,ready.stored_api_download.sha256);
 assert.equal(ready.cdn_download.http_status,200);assert.equal(ready.artifact.feature_count,66);
+const meshArchive=json('cad-artifact-20261122/archive.json');
+const meshGzip=bytes('cad-artifact-20261122/'+meshArchive.mesh.path);
+assert.equal(meshGzip.readUInt32LE(4),0);assert.equal(meshGzip[3]&8,0);
+assert.equal(meshArchive.mesh.compression,'gzip');assert.equal(meshArchive.mesh.mtime,0);
+assert.equal(meshGzip.length,meshArchive.mesh.compressed_bytes);
+assert.equal(sha(meshGzip),meshArchive.mesh.compressed_sha256);
+const meshRaw=gunzipSync(meshGzip),meshArtifact=JSON.parse(meshRaw.toString('utf8'));
+assert.equal(meshRaw.length,4659194);assert.equal(meshRaw.length,meshArchive.mesh.decompressed_bytes);
+assert.equal(sha(meshRaw),ready.cdn_download.sha256);assert.equal(sha(meshRaw),meshArchive.mesh.decompressed_sha256);
+assert.equal(meshArtifact.revision,record.cad.revision);assert.equal(meshArtifact.features.length,66);
+assert.deepEqual(meshArtifact.provenance,ready.artifact.provenance);
+assert.deepEqual(meshArchive.mesh.provenance,meshArtifact.provenance);
+assert.equal(meshArchive.project.source_sha256,cadHash);assert.equal(meshArchive.mutation_performed,false);
+assert.equal(meshArchive.viewer_paint_observed,false);assert.equal(meshArchive.physical_acceptance,false);
+for(const [name,evidence]of Object.entries(meshArchive.readbacks)){
+  const body=bytes('cad-artifact-20261122/'+name);
+  assert.equal(body.length,evidence.bytes);assert.equal(sha(body),evidence.sha256);
+}
+const readySource=json('cad-artifact-20261122/project-readback.json');
+assert.equal(readySource.project.meshReady,true);assert.equal(readySource.project.meshStatus,'ready');
+for(const response of [readySource.project,readySource.revision]){
+  assert.equal(response.slug,record.cad.slug);assert.equal(response.version,record.cad.revision);
+  assert.equal(sha(response.code),cadHash);assert.equal(response.code,bytes('pathfinder-extended.kcad.ts').toString('utf8'));
+}
+
 const parts=json('source-parts.json');assert.equal(parts.design_input_sha256,designHash);
 assert.equal(parts.selections.length,41);assert.equal(Object.keys(parts.manufacturer_records).length,22);
 assert.equal(parts.selections.filter(p=>!p.offboard&&p.manufacturer_part).length,31);
