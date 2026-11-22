@@ -1,0 +1,46 @@
+{
+  "schema": "labwired-axiom-live-mechanics-link-readback-v1",
+  "captured_date": "2026-11-22",
+  "method": "Authenticated work-1 Chrome GUI; ImageMagick import of active Chrome window including browser chrome, without generated or repainted pixels. Original and candidate Mechanics panes were separately loaded.",
+  "historical_readback": "examples/flagship-ui-readbacks-20261122.json",
+  "expected_cad_project_reference": "https://app.kernelcad.com/p/45f5VM8t?version=1",
+  "cad_reference_basis": "Source-pinned model reference in AXIOM example; this screenshot shows the model title, not its slug/revision or an accepted motion handshake.",
+  "captures": [
+    {
+      "id": "original",
+      "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+      "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+      "view": "mechanics",
+      "image": "examples/robotics/axiom-h1/media/live-readback/axiom-original-mechanics-linked-webgl-unavailable-20261122.png",
+      "sha256": "927ede649a31d3bc3789bfa6bf7083e5dc82d79ba342ea7a0e88bdd531ab7d74",
+      "bytes": 222289,
+      "captured_utc": "2026-11-22T21:10:58Z",
+      "observed_model_title": "AXIOM H1 — staggered kinematic frame",
+      "linked_model_title_visible": true,
+      "browser_3d_renderer": "unavailable",
+      "servo_to_cad_motion_observed": false
+    },
+    {
+      "id": "candidate",
+      "project_id": "dab8622b41adbf3b9e2175909146b207",
+      "project_url": "https://app.labwired.com/p/dab8622b41adbf3b9e2175909146b207/edit",
+      "view": "mechanics",
+      "image": "examples/robotics/axiom-h1/media/live-readback/axiom-candidate-mechanics-linked-webgl-unavailable-20261122.png",
+      "sha256": "f91c8d40593af0718e354d6374bda61d13df8364ae51a01c56a227be27a37db7",
+      "bytes": 223377,
+      "captured_utc": "2026-11-22T21:11:10Z",
+      "observed_model_title": "AXIOM H1 — staggered kinematic frame",
+      "linked_model_title_visible": true,
+      "browser_3d_renderer": "unavailable",
+      "servo_to_cad_motion_observed": false
+    }
+  ],
+  "model_link_visible_but_motion_unverified": true,
+  "limitations": [
+    "The live editor showed AXIOM H1 — staggered kinematic frame and the Mechanics panel, unlike the earlier unlinked captures. This confirms a UI model link at the capture time only.",
+    "The work-1 Chrome browser showed 3D view is unavailable; it did not start WebGL, render a pose or expose joint frames.",
+    "Controller serial verification, retained modeled servo angle, displayed CAD title and physical servo actuation are distinct acceptance gates. No pulse-to-CAD motion result was observed."
+  ],
+  "new_live_run_ids": [],
+  "physical_hardware_verified": false
+}
