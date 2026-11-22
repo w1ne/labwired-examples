@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-11-22T00:27:09.236286+00:00",
+  "coreBase": "54b5fa3a051ec93152a9458d87531cccfcc543b6",
+  "coreBuildTree": "586fec760c60a604cdccb7703ba2db4f81e6205e",
+  "build": "wasm-pack Rust release --no-opt; native /data target; no wasm-opt size pass",
+  "artifacts": {
+    "candidate-wasm.mjs": "374ad64561b7b2f01e88ebb04617d2faa815ef7d4fcd24d559997cb913b77800",
+    "candidate-wasm.wasm": "4c45fb97b6af9e0a93407a7cc20b9e5d95eb769e653938ab8b284ecf6a5925d7",
+    "core-source.patch": "70e1827bd31e96eecdd439b13f0a2b21686256ad7f1fd3529608a340378e5efd"
+  },
+  "appBase": "b389b658d67f9600f5502f2a7f7fa77099ad3482",
+  "appSource": {
+    "packages/playground/src/mechanical/flightRuntime.ts": "f5026ed3d797d8395e8d46bb64b7c4f44d6acae7b4d0afde6d54a4de6a9db031",
+    "packages/playground/src/mechanical/flightShaftLoad.ts": "b2afcd8bb01e39f11694f7410e8bb890bc492c87abde587c0215300e087da35a",
+    "packages/playground/src/mechanical/flightRuntimeSources.ts": "76b2c65e1a05d124c094f5703573eed7e4ab15b9cac86316cf92e1f270f81d90",
+    "packages/ui/src/wasm/simulator-bridge.ts": "04d2303cd1cd418a0dd6f14abea87dfd3bedefa5d17628cfbc1052cf1829b4e1",
+    "packages/board-config/src/chip-yamls.generated.ts": "cc4c31fcad589183d0621205a8288209b3bbc3207ba443e9bd4a27077ae32045"
+  },
+  "coreCommit": "7c0825e7bbcae493b710c5ffeb0d848b4ddd4fa0",
+  "coreBuildTreeVerifiedAgainstCommit": true,
+  "coreBaseline": "5af794255a13949c3d3e1e0f0f3f6723579e1253"
+}

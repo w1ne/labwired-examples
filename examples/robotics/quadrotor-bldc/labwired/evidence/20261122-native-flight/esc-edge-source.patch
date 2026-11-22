@@ -1,0 +1,164 @@
+--- polled-hall-esc.c
++++ exti-hall-esc.c
+@@ -40,14 +40,26 @@
+ #define TIM1_CCR2 REG(0x40012C38)
+ #define TIM1_CCR3 REG(0x40012C3C)
+ #define TIM1_BDTR REG(0x40012C44)
++#define TIM2_CR1 REG(0x40000000)
++#define TIM2_EGR REG(0x40000014)
++#define TIM2_CNT REG(0x40000024)
++#define TIM2_PSC REG(0x40000028)
++#define TIM2_ARR REG(0x4000002C)
++#define SYSCFG_EXTICR1 REG(0x40010008)
++#define EXTI_IMR1 REG(0x40010400)
++#define EXTI_RTSR1 REG(0x40010408)
++#define EXTI_FTSR1 REG(0x4001040C)
++#define EXTI_PR1 REG(0x40010414)
++#define NVIC_ISER0 REG(0xE000E100)
++#define NVIC_ICPR0 REG(0xE000E280)
+ #define SYST_CSR REG(0xE000E010)
+ #define SYST_RVR REG(0xE000E014)
+ #define SYST_CVR REG(0xE000E018)
+ #define MOE 0x8000u
+ #define CPU_HZ 80000000u
+ #define PWM_HZ 20000u
+-// Preserve the native 20 kHz carrier and service Hall edges every 100 us.
+-// At hover speed a 7-pole-pair rotor crosses a Hall sector faster than 2 ms.
++// Preserve the 20 kHz carrier and 10 kHz command/fault sampling.
++// Hall EXTI edges commutate immediately; TIM2 timestamps them at 1 MHz.
+ #define PWM_PERIOD_TICKS (CPU_HZ/((3u+1u)*PWM_HZ))
+ #define CONTROL_HZ 10000u
+ #define COMMAND_FRAME_TICKS 100u
+@@ -71,6 +83,9 @@
+ static uint32_t consumed_control_tick = 0;
+ static volatile uint16_t uart_head = 0, uart_tail = 0;
+ static volatile uint8_t uart_queue[UART_QUEUE_MASK + 1u];
++static volatile bool hall_irq_running = false, hall_stamp_valid = false;
++static volatile uint32_t hall_stamp_us = 0, hall_period_us_q8 = 0, hall_duty_permille = 0;
++static volatile uint32_t hall_irq_edges = 0;
+ static bool clock_wait(volatile uint32_t *reg, uint32_t mask, uint32_t value) {
+   for (uint32_t poll = 0; poll < CLOCK_WAIT_LIMIT; poll++)
+     if ((*reg & mask) == value) return true;
+@@ -132,8 +147,8 @@
+     __asm__ volatile("dsb 0xF\nwfi\ncpsie i" ::: "memory");
+   }
+ }
+-static void stop_inverter(void){TIM1_BDTR&=~MOE;TIM1_CCER=0;}
+-static void start_inverter(void){TIM1_BDTR|=MOE;}
++static void stop_inverter(void){hall_irq_running=false;TIM1_BDTR&=~MOE;TIM1_CCER=0;}
++static void start_inverter(void){hall_stamp_valid=false;hall_period_us_q8=0;hall_duty_permille=0;TIM1_BDTR|=MOE;hall_irq_running=true;}
+ static void number(uint32_t value){char b[11];uint32_t p=10;b[p]=0;do{b[--p]=(char)('0'+value%10u);value/=10u;}while(value);text(b+p);}
+ static void fatal(const char*name){stop_inverter();GPIOB_ODR&=~1u;text(PREFIX);text(name);text(PREFIX "LATCHED OFF\r\n");for(;;){__asm__ volatile("wfi");}}
+ // PWM the sourcing high side; hold the selected sinking low side on.
+@@ -143,10 +158,49 @@
+  switch(hall){case 1:b=low;c=duty;break;case 2:a=low;b=duty;break;case 3:a=low;c=duty;break;case 4:a=duty;c=low;break;case 5:a=duty;b=low;break;case 6:b=duty;c=low;break;default:break;}
+  TIM1_CCR1=a;TIM1_CCR2=b;TIM1_CCR3=c;TIM1_CCER=comm_table[hall&7u];
+ }
++// A bounded ISR only acknowledges the edge, timestamps it, and commutates.
++// Stop/fatal clears hall_irq_running before disabling the inverter, so a
++// queued Hall IRQ cannot re-enable an output after the fault latch trips.
++static void hall_edge(void) {
++ uint32_t pending=EXTI_PR1&7u;EXTI_PR1=pending;
++ if(!pending||!hall_irq_running)return;
++ uint32_t hall=GPIOC_IDR&7u,now=TIM2_CNT;
++ if(hall==0u||hall==7u)return;
++ if(hall_stamp_valid){
++  uint32_t period=now-hall_stamp_us; // unsigned subtraction is wrap-safe
++  if(period>0u&&period<100000u){
++   uint32_t sample=period<<8;
++   hall_period_us_q8=hall_period_us_q8?(3u*hall_period_us_q8+sample)/4u:sample;
++  }
++ }
++ hall_stamp_us=now;hall_stamp_valid=true;hall_irq_edges++;
++ commutate(hall,hall_duty_permille);
++}
++void EXTI0_IRQHandler(void){hall_edge();}
++void EXTI1_IRQHandler(void){hall_edge();}
++void EXTI2_IRQHandler(void){hall_edge();}
++static void update_motor_command(uint32_t duty) {
++ uint32_t primask;
++ __asm__ volatile("mrs %0, primask\ncpsid i" : "=r"(primask) :: "memory");
++ hall_duty_permille=duty;
++ if(hall_irq_running)commutate(GPIOC_IDR&7u,duty);
++ __asm__ volatile("msr primask, %0" :: "r"(primask) : "memory");
++}
++static uint32_t measured_speed_rpm(void) {
++ uint32_t primask,period,stamp,now;
++ __asm__ volatile("mrs %0, primask\ncpsid i" : "=r"(primask) :: "memory");
++ period=hall_period_us_q8;stamp=hall_stamp_us;now=TIM2_CNT;
++ __asm__ volatile("msr primask, %0" :: "r"(primask) : "memory");
++ if(!period)return 0;
++ uint32_t elapsed=now-stamp;
++ if(elapsed>100000u)elapsed=100000u;
++ if((elapsed<<8)>period)period=elapsed<<8;
++ return (uint32_t)(15360000000ULL/(42ULL*period));
++}
+ static void init(void) {
+   SYST_CSR = 0;
+   if (!system_clock_80mhz()) for (;;) { __asm__ volatile("wfi"); }
+- RCC_AHB2ENR|=7u;RCC_APB1ENR1|=1u<<17;RCC_APB2ENR|=1u<<11;
++ RCC_AHB2ENR|=7u;RCC_APB1ENR1|=(1u<<17)|1u;RCC_APB2ENR|=(1u<<11)|1u;
+  // PA0 is the flight-controller duty command. PA2 is UART; PA8/9/10 are high-side gates.
+  uint32_t aclear=(3u<<0)|(3u<<4)|(3u<<16)|(3u<<18)|(3u<<20);
+  GPIOA_MODER=(GPIOA_MODER&~aclear)|(2u<<4)|(2u<<16)|(2u<<18)|(2u<<20);
+@@ -157,6 +211,12 @@
+  USART2_BRR=(CPU_HZ+57600u)/115200u;USART2_CR1=(1u<<0)|(1u<<3);
+  TIM1_PSC=3;TIM1_ARR=PWM_PERIOD_TICKS-1u;TIM1_CCR1=0;TIM1_CCR2=0;TIM1_CCR3=0;
+  TIM1_CCMR1=(6u<<4)|(1u<<3)|(6u<<12)|(1u<<11);TIM1_CCMR2=(6u<<4)|(1u<<3);TIM1_EGR=1;TIM1_BDTR=0x30;TIM1_CR1=1;
++ // 32-bit TIM2 provides a 1 MHz timestamp; IRQs route both Hall polarities.
++ TIM2_CR1=0;TIM2_PSC=CPU_HZ/1000000u-1u;TIM2_ARR=0xffffffffu;
++ TIM2_EGR=1;TIM2_CNT=0;TIM2_CR1=1;
++ SYSCFG_EXTICR1=(SYSCFG_EXTICR1&~0xfffu)|0x222u;
++ EXTI_RTSR1|=7u;EXTI_FTSR1|=7u;EXTI_PR1=7u;EXTI_IMR1|=7u;
++ NVIC_ICPR0=(1u<<6)|(1u<<7)|(1u<<8);NVIC_ISER0=(1u<<6)|(1u<<7)|(1u<<8);
+ }
+ int main(void){
+  init();text(PREFIX "READY command_pwm=PA0\r\n");
+@@ -165,7 +225,7 @@
+  uint32_t driver_t=0,overcurrent_t=0,undervoltage_t=0,enc_edges=0;
+  uint32_t command_phase=0,command_high=0,command_permille=0,command_age=COMMAND_TIMEOUT_FRAMES;
+  bool hall_mode=false,target=false,running=false;
+- uint32_t previous_tick=0, hall_period_q8=0, speed_control_phase=0, duty_permille=0;
++ uint32_t previous_tick=0, speed_control_phase=0, duty_permille=0;
+  int32_t speed_integral=0;
+  uint32_t measured_rpm=0,last_status_tick=0;
+  start_control_clock();
+@@ -186,15 +246,13 @@
+   if(overcurrent_t>=20)fatal("FAULT OVERCURRENT\r\n");
+   if(undervoltage_t>=20)fatal("FAULT UNDERVOLTAGE\r\n");
+   if(command_permille==0){if(running){running=false;stop_inverter();text(PREFIX "DISARMED\r\n");}hall_mode=false;sequence=0;startup_t=0;stall_t=0;edge_t=0;
+-   hall_period_q8=0;speed_control_phase=0;duty_permille=0;speed_integral=0;continue;}
++   speed_control_phase=0;duty_permille=0;speed_integral=0;continue;}
+   if(!running){running=true;start_inverter();text(PREFIX "ARMED\r\n");}
+   // Command width requests speed: 600 permille corresponds to 2000 RPM.
+   // Regulate with measured Hall periods, not with a presumed duty/RPM curve.
+   if(++speed_control_phase>=10u){
+    speed_control_phase=0;
+-   uint32_t period_q8=hall_period_q8;
+-   if((edge_t<<8)>period_q8)period_q8=edge_t<<8;
+-   measured_rpm=hall_period_q8?153600000u/(42u*period_q8):0u;
++   measured_rpm=measured_speed_rpm();
+    int32_t error=(int32_t)(command_permille*10u/3u)-(int32_t)measured_rpm;
+    speed_integral+=error;
+    if(speed_integral<0)speed_integral=0;
+@@ -206,17 +264,15 @@
+   if(hall==0||hall==7){if(++invalid_t>=100)fatal("FAULT HALL\r\n");continue;}invalid_t=0;
+   if(hall!=old_hall){int oi=-1,ni=-1;for(int i=0;i<6;i++){if(order[i]==old_hall)oi=i;if(order[i]==hall)ni=i;}
+    if(oi>=0&&ni==(oi+1)%6)sequence++;else sequence=0;old_hall=hall;uint32_t period=edge_t;edge_t=0;stall_t=0;
+-   if(hall_period_q8==0)hall_period_q8=period<<8;
+-   else hall_period_q8=(3u*hall_period_q8+(period<<8))/4u;
+    if(sequence>=3)hall_mode=true;
+-   if(hall_mode){commutate(hall,duty_permille);in_band=period>=1&&period<=20?in_band+1:0;if(!target&&in_band>=2&&enc_edges>0){target=true;text(PREFIX "HALL LOCKED\r\n");text("ROTOR " STR(ESC_ID) " HALL LOCKED\r\n");}}
++   if(hall_mode){update_motor_command(duty_permille);in_band=period>=1&&period<=20?in_band+1:0;if(!target&&in_band>=2&&enc_edges>0){target=true;text(PREFIX "HALL LOCKED\r\n");text("ROTOR " STR(ESC_ID) " HALL LOCKED\r\n");}}
+   }else{stall_t++;if(hall_mode&&stall_t>=CONTROL_HZ/25u)fatal("FAULT STALL\r\n");}
+   // Hall position is available at rest; energize its sector from startup.
+-  commutate(hall,duty_permille);
++  update_motor_command(duty_permille);
+   if(!hall_mode&&startup_t>=5000)fatal("FAULT STARTUP\r\n");
+   if(tick-last_status_tick>=CONTROL_HZ/2u){last_status_tick=tick;
+    text(PREFIX "STATE ms=");number(tick/10u);text(" cmd=");number(command_permille);
+    text(" rpm=");number(measured_rpm);text(" duty=");number(duty_permille);
+-   text(" period_q8=");number(hall_period_q8);text("\r\n");}
++   text(" period_us_q8=");number(hall_period_us_q8);text(" irq_edges=");number(hall_irq_edges);text("\r\n");}
+  }
+ }

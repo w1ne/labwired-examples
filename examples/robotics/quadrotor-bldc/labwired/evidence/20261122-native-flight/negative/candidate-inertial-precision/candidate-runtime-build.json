@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-11-21T23:44:35.594732+00:00",
+  "coreBase": "75315fb46fe47d90de763762770dfd6317f5566b",
+  "build": "wasm-pack Rust release --no-opt; native /data target; no wasm-opt size pass",
+  "artifacts": {
+    "candidate-wasm.mjs": "5178cec4525e5f1983cc09b274853f114a08e5e60277285578c50e63627860d4",
+    "candidate-wasm.wasm": "1ae7d6b200140ac5e1b410cebba5cde3ea389370631e43aac800d6da087902ea",
+    "core-source.patch": "6c23019e48fb45eb15c43b125af6deb865a5adac8be6c0477ce79085500bf7ed"
+  },
+  "appBase": "b389b658d67f9600f5502f2a7f7fa77099ad3482",
+  "appSource": {
+    "packages/playground/src/mechanical/flightRuntime.ts": "f5026ed3d797d8395e8d46bb64b7c4f44d6acae7b4d0afde6d54a4de6a9db031",
+    "packages/playground/src/mechanical/flightShaftLoad.ts": "b2afcd8bb01e39f11694f7410e8bb890bc492c87abde587c0215300e087da35a"
+  }
+}
