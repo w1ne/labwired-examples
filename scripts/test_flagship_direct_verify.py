@@ -1,5 +1,6 @@
 """Regress fresh direct REST/oracle receipts without promoting them to hardware proof."""
 import json
+import hashlib
 from pathlib import Path
 import unittest
 
@@ -53,6 +54,11 @@ class FlagshipDirectVerify(unittest.TestCase):
         self.assertEqual(self.r['axiom_original_mechanical_link']['after_content_hash'], self.r['axiom_h1_original']['verified_hash'])
         self.assertEqual(self.r['axiom_original_mechanical_link']['motion_bindings'], 20)
         self.assertFalse(self.r['axiom_original_mechanical_link']['hosted_joint_transform_oracle_verified'])
+        shot = self.r['ui']['failed_capture']
+        raw = (ROOT / shot['image']).read_bytes()
+        self.assertTrue(raw.startswith(b'\xff\xd8\xff'))
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), shot['sha256'])
+        self.assertIn('editor error', shot['scope'])
         self.assertTrue(self.r['unverified'])
 
 
