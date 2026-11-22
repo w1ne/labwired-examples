@@ -168,6 +168,8 @@ The generic `design_loop` and `review_cad` wrappers returned an internal vendor-
 
 To make a new saved copy, use `labwired_project_create` with `current-project.input.json`. It does not inherit PCB, CAD, media or verification records. Run `labwired_project_verify` against the exact saved revision after the required runtime is deployed.
 
+The [fresh 22 November readback](../../flagship-fresh-hosted-reverify-20261122.json) again confirms **3/3 controller requirements** as verified on exact current original project content `e87f0ce2…35a778c`. This is not a new AXIOM verification run. Hosted PCA9685 pulse-to-CAD joint motion remains unverified.
+
 ## Earlier live Studio screenshot
 
 ![AXIOM H1 controller, PCB view](media/labwired-live-pcb-20261121.png)
