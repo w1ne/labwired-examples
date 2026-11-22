@@ -1,0 +1,19 @@
+{
+  "parentCandidate": "candidate-edge-governor",
+  "baseSavedContentHash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+  "diagramSha256": "4198c3afa92c801f179dcfa96a43990c69ce328390d8317f0ebacbe5af100cc6",
+  "sources": {
+    "ctrl1": "11176f5f3b0706288b2b96058aee71495ff5fd88f4b92be61e6b738b26eede82",
+    "ctrl2": "7b03d0047e86e88df52821124961420892a720657280b5025432e5f5cd13b657",
+    "ctrl3": "d9828f7026c2e046e4ee264b0921a337bad98631578cbc609ab72b7907f9d428",
+    "ctrl4": "6dbdcc800587a53471d76155633568aec1dba4b7219eda264d89a53d58d68b22",
+    "fc": "16fa301b70113f45a88826130cfe084f2974db87bfb0dfa8a75b7840a1377aaf"
+  },
+  "changes": [
+    "EXTI0..2 commutate on both Hall edge polarities with bounded ISR work",
+    "TIM2 1 MHz unsigned timestamps and atomic speed sample snapshot",
+    "10 kHz command/fault, 1 kHz speed PI, 100 Hz FC/IMU, 20 kHz PWM and 80 MHz core unchanged",
+    "Existing fault latch gates all interrupt output writes; source includes 2 Hz measurement telemetry",
+    "Native STM32L476 SYSCFG EXTICR-only routing; firmware and flight thresholds unchanged"
+  ]
+}

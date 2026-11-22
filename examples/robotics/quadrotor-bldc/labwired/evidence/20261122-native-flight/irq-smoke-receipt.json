@@ -1,0 +1,185 @@
+{
+  "kind": "actual-native-ELF-Hall-IRQ-smoke",
+  "passed": true,
+  "durationSeconds": 3,
+  "wallSeconds": 24.091,
+  "states": {
+    "ctrl1": [
+      {
+        "ms": 1020,
+        "cmd": 220,
+        "rpm": 0,
+        "duty": 0,
+        "period_us_q8": 0,
+        "irq_edges": 0
+      },
+      {
+        "ms": 1520,
+        "cmd": 220,
+        "rpm": 738,
+        "duty": 4,
+        "period_us_q8": 495268,
+        "irq_edges": 255
+      },
+      {
+        "ms": 2020,
+        "cmd": 600,
+        "rpm": 736,
+        "duty": 4,
+        "period_us_q8": 496438,
+        "irq_edges": 512
+      },
+      {
+        "ms": 2520,
+        "cmd": 610,
+        "rpm": 1993,
+        "duty": 155,
+        "period_us_q8": 183637,
+        "irq_edges": 1166
+      }
+    ],
+    "ctrl2": [
+      {
+        "ms": 1020,
+        "cmd": 220,
+        "rpm": 0,
+        "duty": 0,
+        "period_us_q8": 0,
+        "irq_edges": 0
+      },
+      {
+        "ms": 1520,
+        "cmd": 220,
+        "rpm": 738,
+        "duty": 4,
+        "period_us_q8": 495268,
+        "irq_edges": 255
+      },
+      {
+        "ms": 2020,
+        "cmd": 600,
+        "rpm": 736,
+        "duty": 4,
+        "period_us_q8": 496438,
+        "irq_edges": 512
+      },
+      {
+        "ms": 2520,
+        "cmd": 610,
+        "rpm": 1993,
+        "duty": 155,
+        "period_us_q8": 183642,
+        "irq_edges": 1166
+      }
+    ],
+    "ctrl3": [
+      {
+        "ms": 1020,
+        "cmd": 220,
+        "rpm": 0,
+        "duty": 0,
+        "period_us_q8": 0,
+        "irq_edges": 0
+      },
+      {
+        "ms": 1520,
+        "cmd": 220,
+        "rpm": 738,
+        "duty": 4,
+        "period_us_q8": 495268,
+        "irq_edges": 255
+      },
+      {
+        "ms": 2020,
+        "cmd": 600,
+        "rpm": 736,
+        "duty": 4,
+        "period_us_q8": 496438,
+        "irq_edges": 512
+      },
+      {
+        "ms": 2520,
+        "cmd": 610,
+        "rpm": 1976,
+        "duty": 156,
+        "period_us_q8": 183559,
+        "irq_edges": 1166
+      }
+    ],
+    "ctrl4": [
+      {
+        "ms": 1020,
+        "cmd": 220,
+        "rpm": 0,
+        "duty": 0,
+        "period_us_q8": 0,
+        "irq_edges": 0
+      },
+      {
+        "ms": 1520,
+        "cmd": 220,
+        "rpm": 738,
+        "duty": 4,
+        "period_us_q8": 495293,
+        "irq_edges": 255
+      },
+      {
+        "ms": 2020,
+        "cmd": 600,
+        "rpm": 737,
+        "duty": 4,
+        "period_us_q8": 496153,
+        "irq_edges": 512
+      },
+      {
+        "ms": 2520,
+        "cmd": 610,
+        "rpm": 1993,
+        "duty": 155,
+        "period_us_q8": 183577,
+        "irq_edges": 1166
+      }
+    ]
+  },
+  "vectorReceiptSha256": "ad3104e16a41f583450b64b34122c41dcdb3c6fe704260111f966a8f29edafbc",
+  "runtimeAssets": [
+    {
+      "name": "candidate-wasm.mjs",
+      "size": 167509,
+      "sha256": "374ad64561b7b2f01e88ebb04617d2faa815ef7d4fcd24d559997cb913b77800"
+    },
+    {
+      "name": "candidate-wasm.wasm",
+      "size": 21336502,
+      "sha256": "4c45fb97b6af9e0a93407a7cc20b9e5d95eb769e653938ab8b284ecf6a5925d7"
+    },
+    {
+      "name": "ctrl1.elf",
+      "size": 93360,
+      "sha256": "240155b860d41d759596edef458e2fe47096835dca7a0ff39a3bac4dc44eb32e"
+    },
+    {
+      "name": "ctrl2.elf",
+      "size": 93360,
+      "sha256": "1f9d80b4242e7e105bb38d588f6556e3c746ad49d35ed462ab3623c98ea405fc"
+    },
+    {
+      "name": "ctrl3.elf",
+      "size": 93360,
+      "sha256": "f3023e937128803b3e5ef08c8b56f6773d6e0752359e15dd113764486bacd0ff"
+    },
+    {
+      "name": "ctrl4.elf",
+      "size": 93360,
+      "sha256": "8db11d2019889f06439719c4eff6aa1f1f2328cfd64bf3100f6778fc56b09819"
+    },
+    {
+      "name": "fc.elf",
+      "size": 98972,
+      "sha256": "bf9c84cf25da7a760ec5f59217419fefe83495d3a2695e0ae402ad49b99579fc"
+    }
+  ],
+  "limitations": [
+    "This is a 3 s interrupt/commutation smoke, not the full flight acceptance."
+  ]
+}

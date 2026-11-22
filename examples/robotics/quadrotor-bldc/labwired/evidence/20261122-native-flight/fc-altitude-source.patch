@@ -1,0 +1,18 @@
+--- candidate-edge-irq/fc.c
++++ candidate-altitude-damping/fc.c
+@@ -452,8 +452,13 @@
+       base = 22;
+     } else if (ticks >= 2u * TICKS_PER_SECOND) {
+       const int altitude_mm = (int)(altitude_centi_mm / 100);
+-      const int altitude_correction = clamp_int((target_altitude_mm - altitude_mm) / 120
+-        - vertical_speed_mm_s / 350, -10, 10);
++      // One command tick per 120 mm position error and per 200 mm/s
++      // vertical speed. Sum the rational PD terms before rounding so small
++      // terms do not disappear independently; round both signs symmetrically.
++      const int altitude_pd = (target_altitude_mm - altitude_mm) * 200
++        - vertical_speed_mm_s * 120;
++      const int altitude_correction = clamp_int(
++        (altitude_pd + (altitude_pd >= 0 ? 12000 : -12000)) / 24000, -10, 10);
+       base = 60 + altitude_correction;
+     }
+     const int roll = clamp_int((desired_roll_raw - roll_raw) / 700 - gx_raw / 700, -7, 7);

@@ -1,0 +1,506 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-modeled-quadrotor-flight-acceptance",
+  "status": "passed-native",
+  "recordedAt": "2026-11-22T01:04:25.547005+00:00",
+  "projectId": "7c92d38a4f2ac205aa91502291fde0d8",
+  "baseSavedContentHash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+  "savedProjectPromoted": false,
+  "hostedBrowserFlightProven": false,
+  "physicalHardwareValidated": false,
+  "appCommit": "3157a536da36051d5b1eec9a7c5dff6a720833b6",
+  "appPullRequest": "https://github.com/w1ne/labwired/pull/3967",
+  "coreCommit": "7c0825e7bbcae493b710c5ffeb0d848b4ddd4fa0",
+  "coreTree": "586fec760c60a604cdccb7703ba2db4f81e6205e",
+  "coreMergedBy": "https://github.com/w1ne/labwired-core/pull/2155",
+  "diagramSha256": "4198c3afa92c801f179dcfa96a43990c69ce328390d8317f0ebacbe5af100cc6",
+  "sourceFiles": {
+    "ctrl1": {
+      "path": "../../../firmware/flight-native/ctrl1.c",
+      "sha256": "11176f5f3b0706288b2b96058aee71495ff5fd88f4b92be61e6b738b26eede82"
+    },
+    "ctrl2": {
+      "path": "../../../firmware/flight-native/ctrl2.c",
+      "sha256": "7b03d0047e86e88df52821124961420892a720657280b5025432e5f5cd13b657"
+    },
+    "ctrl3": {
+      "path": "../../../firmware/flight-native/ctrl3.c",
+      "sha256": "d9828f7026c2e046e4ee264b0921a337bad98631578cbc609ab72b7907f9d428"
+    },
+    "ctrl4": {
+      "path": "../../../firmware/flight-native/ctrl4.c",
+      "sha256": "6dbdcc800587a53471d76155633568aec1dba4b7219eda264d89a53d58d68b22"
+    },
+    "fc": {
+      "path": "../../../firmware/flight-native/fc.c",
+      "sha256": "96ed83fd340f0f633651e9fd07229ffc1c35619db5af5cc9c203a729b59ea4fc"
+    }
+  },
+  "model": {
+    "engine": "existing native WasmWorld + production FlightBodyRuntime",
+    "shaftDragInput": "quadratic-drag-nm-per-rad-s2",
+    "shaftDragCoefficient": 9.118906527810402e-07,
+    "shaftDragUnits": "N m/(rad/s)^2",
+    "bodyYawCoefficient": 1e-08,
+    "bodyYawUnits": "N m/RPM^2",
+    "conversion": "k_rad = k_RPM * (60/(2*pi))^2",
+    "clockHz": 80000000,
+    "commandSamplingHz": 10000,
+    "speedControlHz": 1000,
+    "imuControlHz": 100,
+    "pwmHz": 20000
+  },
+  "pollConvergence": {
+    "originalWorldRounds": 5000,
+    "refinedWorldRounds": 1000,
+    "bothPassed": true,
+    "peakAltitudeDifferenceM": -0.01527168062143347,
+    "finalAltitudeDifferenceM": 0.005216900299517491
+  },
+  "scenarios": [
+    {
+      "tag": "nominal-damping",
+      "expectedPass": true,
+      "worldRoundsPerPoll": 5000,
+      "result": "traces/nominal-damping-result.json.gz",
+      "trace": "traces/nominal-damping.ndjson.gz",
+      "oracle": "oracles/nominal-damping-oracle.json",
+      "runtimeSeconds": 15,
+      "wallSeconds": 151.794,
+      "checks": {
+        "complete": true,
+        "completeBodyTrace": true,
+        "allNativeMotorsObserved": true,
+        "nativeLoadsAcknowledged": true,
+        "noNativeFaults": true,
+        "takeoff": true,
+        "hover": true,
+        "roll": true,
+        "pitch": true,
+        "yaw": true,
+        "recovery": true
+      },
+      "measurements": {
+        "maximumAltitudeM": 1.101109270699049,
+        "finalAltitudeM": 1.0357562047050002,
+        "finalEulerDegrees": [
+          -1.599216116550813,
+          0.6858487561149993,
+          -0.191211740234936
+        ],
+        "hover": {
+          "seconds": 2.6800000000000006,
+          "window": [
+            5.31,
+            7.99
+          ]
+        },
+        "recovery": {
+          "seconds": 1.8699999999999992,
+          "window": [
+            13.13,
+            15.0
+          ]
+        },
+        "rollPeakDegrees": 7.3761947160675865,
+        "pitchPeakDegrees": 6.817831962470591,
+        "yawPeakDegrees": 24.446746286670635
+      }
+    },
+    {
+      "tag": "nominal-convergence",
+      "expectedPass": true,
+      "worldRoundsPerPoll": 1000,
+      "result": "traces/nominal-convergence-result.json.gz",
+      "trace": "traces/nominal-convergence.ndjson.gz",
+      "oracle": "oracles/nominal-convergence-oracle.json",
+      "runtimeSeconds": 15,
+      "wallSeconds": 200.043,
+      "checks": {
+        "complete": true,
+        "completeBodyTrace": true,
+        "allNativeMotorsObserved": true,
+        "nativeLoadsAcknowledged": true,
+        "noNativeFaults": true,
+        "takeoff": true,
+        "hover": true,
+        "roll": true,
+        "pitch": true,
+        "yaw": true,
+        "recovery": true
+      },
+      "measurements": {
+        "maximumAltitudeM": 1.0858375900776156,
+        "finalAltitudeM": 1.0409731050045177,
+        "finalEulerDegrees": [
+          -1.410272397275966,
+          0.8907600210443808,
+          -0.16934788285106875
+        ],
+        "hover": {
+          "seconds": 2.6900000000000004,
+          "window": [
+            5.3,
+            7.99
+          ]
+        },
+        "recovery": {
+          "seconds": 1.8800000000000008,
+          "window": [
+            13.12,
+            15.0
+          ]
+        },
+        "rollPeakDegrees": 7.33665745256673,
+        "pitchPeakDegrees": 6.770979678989005,
+        "yawPeakDegrees": 24.466474064343803
+      }
+    },
+    {
+      "tag": "fault-button",
+      "expectedPass": true,
+      "worldRoundsPerPoll": 5000,
+      "result": "traces/fault-button-result.json.gz",
+      "trace": "traces/fault-button.ndjson.gz",
+      "oracle": "oracles/fault-button-oracle.json",
+      "runtimeSeconds": 10,
+      "wallSeconds": 77.531,
+      "checks": {
+        "complete": true,
+        "completeBodyTrace": true,
+        "allNativeMotorsObserved": true,
+        "nativeLoadsAcknowledged": true,
+        "airborneBeforeFault": true,
+        "faultClearAttempted": true,
+        "faultClearContract": true,
+        "nativeFaultObserved": true,
+        "firmwareFaultPath": true,
+        "allInvertersOff": true,
+        "allRotorsStopped": true,
+        "latchAfterClearAttempt": true,
+        "finalRotorsStopped": true,
+        "groundContact": true
+      },
+      "measurements": {
+        "maximumAltitudeM": 1.0750696709491032,
+        "finalAltitudeM": 0,
+        "finalEulerDegrees": [
+          -4.1920654157728427e-13,
+          4.363147078607083e-13,
+          -1.7679122078495337
+        ],
+        "hover": {
+          "seconds": 0.9200000000000008,
+          "window": [
+            5.31,
+            6.23
+          ]
+        },
+        "recovery": {
+          "seconds": 0.0,
+          "window": null
+        },
+        "rollPeakDegrees": -6.14376823411669e-10,
+        "pitchPeakDegrees": 5.844133426662054e-10,
+        "yawPeakDegrees": 0,
+        "faultInjectedAt": 6,
+        "allInvertersOffAt": 6.05,
+        "allRotorsStoppedAt": 6.16,
+        "faultKind": "button",
+        "allInvertersOffLatencySeconds": 0.04999999999999982,
+        "allRotorsStoppedLatencySeconds": 0.16000000000000014,
+        "clearAttemptAt": 6.1,
+        "inputCleared": true,
+        "clearAttemptDisposition": "input-cleared",
+        "clearRejection": null,
+        "postClearAttemptObservations": 391,
+        "unprovenOffPostClearAttemptObservations": 0,
+        "directGateConfirmedPostClearAttemptObservations": 0
+      }
+    },
+    {
+      "tag": "fault-inverter-gates",
+      "expectedPass": true,
+      "worldRoundsPerPoll": 5000,
+      "result": "traces/fault-inverter-gates-result.json.gz",
+      "trace": "traces/fault-inverter-gates.ndjson.gz",
+      "oracle": "oracles/fault-inverter-gates-oracle.json",
+      "runtimeSeconds": 10,
+      "wallSeconds": 78.975,
+      "checks": {
+        "complete": true,
+        "completeBodyTrace": true,
+        "allNativeMotorsObserved": true,
+        "nativeLoadsAcknowledged": true,
+        "airborneBeforeFault": true,
+        "faultClearAttempted": true,
+        "faultClearContract": true,
+        "nativeFaultObserved": true,
+        "firmwareFaultPath": true,
+        "allInvertersOff": true,
+        "allRotorsStopped": true,
+        "latchAfterClearAttempt": true,
+        "finalRotorsStopped": true,
+        "groundContact": true
+      },
+      "measurements": {
+        "maximumAltitudeM": 1.0749471660444463,
+        "finalAltitudeM": 0,
+        "finalEulerDegrees": [
+          -4.374099582872557e-13,
+          4.54925047416694e-13,
+          -1.8526925548665374
+        ],
+        "hover": {
+          "seconds": 0.9100000000000001,
+          "window": [
+            5.31,
+            6.22
+          ]
+        },
+        "recovery": {
+          "seconds": 0.0,
+          "window": null
+        },
+        "rollPeakDegrees": -6.410552175307899e-10,
+        "pitchPeakDegrees": 6.093406040033121e-10,
+        "yawPeakDegrees": 0,
+        "faultInjectedAt": 6,
+        "allInvertersOffAt": 6.05,
+        "allRotorsStoppedAt": 6.16,
+        "faultKind": "inverter_fault",
+        "allInvertersOffLatencySeconds": 0.04999999999999982,
+        "allRotorsStoppedLatencySeconds": 0.16000000000000014,
+        "clearAttemptAt": 6.1,
+        "inputCleared": true,
+        "clearAttemptDisposition": "input-cleared",
+        "clearRejection": null,
+        "postClearAttemptObservations": 391,
+        "unprovenOffPostClearAttemptObservations": 0,
+        "directGateConfirmedPostClearAttemptObservations": 1
+      }
+    },
+    {
+      "tag": "fault-overcurrent_fault",
+      "expectedPass": true,
+      "worldRoundsPerPoll": 5000,
+      "result": "traces/fault-overcurrent_fault-result.json.gz",
+      "trace": "traces/fault-overcurrent_fault.ndjson.gz",
+      "oracle": "oracles/fault-overcurrent_fault-oracle.json",
+      "runtimeSeconds": 10,
+      "wallSeconds": 77.659,
+      "checks": {
+        "complete": true,
+        "completeBodyTrace": true,
+        "allNativeMotorsObserved": true,
+        "nativeLoadsAcknowledged": true,
+        "airborneBeforeFault": true,
+        "faultClearAttempted": true,
+        "faultClearContract": true,
+        "nativeFaultObserved": true,
+        "firmwareFaultPath": true,
+        "allInvertersOff": true,
+        "allRotorsStopped": true,
+        "latchAfterClearAttempt": true,
+        "finalRotorsStopped": true,
+        "groundContact": true
+      },
+      "measurements": {
+        "maximumAltitudeM": 1.0750697064517214,
+        "finalAltitudeM": 0,
+        "finalEulerDegrees": [
+          -4.1920142130905143e-13,
+          4.363094656216212e-13,
+          -1.767890720687732
+        ],
+        "hover": {
+          "seconds": 0.9200000000000008,
+          "window": [
+            5.31,
+            6.23
+          ]
+        },
+        "recovery": {
+          "seconds": 0.0,
+          "window": null
+        },
+        "rollPeakDegrees": -6.14369319296586e-10,
+        "pitchPeakDegrees": 5.84406321049897e-10,
+        "yawPeakDegrees": 0,
+        "faultInjectedAt": 6,
+        "allInvertersOffAt": 6.05,
+        "allRotorsStoppedAt": 6.16,
+        "faultKind": "overcurrent_fault",
+        "allInvertersOffLatencySeconds": 0.04999999999999982,
+        "allRotorsStoppedLatencySeconds": 0.16000000000000014,
+        "clearAttemptAt": 6.1,
+        "inputCleared": false,
+        "clearAttemptDisposition": "rejected-native-overcurrent-latch",
+        "clearRejection": "value 0 for channel 'overcurrent_fault' is out of range [1, 1]",
+        "postClearAttemptObservations": 391,
+        "unprovenOffPostClearAttemptObservations": 0,
+        "directGateConfirmedPostClearAttemptObservations": 0
+      }
+    },
+    {
+      "tag": "fault-undervoltage_fault",
+      "expectedPass": true,
+      "worldRoundsPerPoll": 5000,
+      "result": "traces/fault-undervoltage_fault-result.json.gz",
+      "trace": "traces/fault-undervoltage_fault.ndjson.gz",
+      "oracle": "oracles/fault-undervoltage_fault-oracle.json",
+      "runtimeSeconds": 10,
+      "wallSeconds": 77.876,
+      "checks": {
+        "complete": true,
+        "completeBodyTrace": true,
+        "allNativeMotorsObserved": true,
+        "nativeLoadsAcknowledged": true,
+        "airborneBeforeFault": true,
+        "faultClearAttempted": true,
+        "faultClearContract": true,
+        "nativeFaultObserved": true,
+        "firmwareFaultPath": true,
+        "allInvertersOff": true,
+        "allRotorsStopped": true,
+        "latchAfterClearAttempt": true,
+        "finalRotorsStopped": true,
+        "groundContact": true
+      },
+      "measurements": {
+        "maximumAltitudeM": 1.0750393034215808,
+        "finalAltitudeM": 0,
+        "finalEulerDegrees": [
+          -4.228134004422711e-13,
+          4.400073681707433e-13,
+          -1.7830153035388356
+        ],
+        "hover": {
+          "seconds": 0.9200000000000008,
+          "window": [
+            5.31,
+            6.23
+          ]
+        },
+        "recovery": {
+          "seconds": 0.0,
+          "window": null
+        },
+        "rollPeakDegrees": -6.196629300731449e-10,
+        "pitchPeakDegrees": 5.893594054879247e-10,
+        "yawPeakDegrees": 0,
+        "faultInjectedAt": 6,
+        "allInvertersOffAt": 6.05,
+        "allRotorsStoppedAt": 6.16,
+        "faultKind": "undervoltage_fault",
+        "allInvertersOffLatencySeconds": 0.04999999999999982,
+        "allRotorsStoppedLatencySeconds": 0.16000000000000014,
+        "clearAttemptAt": 6.1,
+        "inputCleared": true,
+        "clearAttemptDisposition": "input-cleared",
+        "clearRejection": null,
+        "postClearAttemptObservations": 391,
+        "unprovenOffPostClearAttemptObservations": 0,
+        "directGateConfirmedPostClearAttemptObservations": 0
+      }
+    },
+    {
+      "tag": "fault-stall",
+      "expectedPass": true,
+      "worldRoundsPerPoll": 5000,
+      "result": "traces/fault-stall-result.json.gz",
+      "trace": "traces/fault-stall.ndjson.gz",
+      "oracle": "oracles/fault-stall-oracle.json",
+      "runtimeSeconds": 10,
+      "wallSeconds": 75.624,
+      "checks": {
+        "complete": true,
+        "completeBodyTrace": true,
+        "allNativeMotorsObserved": true,
+        "nativeLoadsAcknowledged": true,
+        "airborneBeforeFault": true,
+        "faultClearAttempted": true,
+        "faultClearContract": true,
+        "nativeFaultObserved": true,
+        "firmwareFaultPath": true,
+        "allInvertersOff": true,
+        "allRotorsStopped": true,
+        "latchAfterClearAttempt": true,
+        "finalRotorsStopped": true,
+        "groundContact": true
+      },
+      "measurements": {
+        "maximumAltitudeM": 1.0761581190299379,
+        "finalAltitudeM": 0,
+        "finalEulerDegrees": [
+          -1.146605876974735e-12,
+          1.1766923119085683e-12,
+          -3.7665452697315676
+        ],
+        "hover": {
+          "seconds": 0.8300000000000001,
+          "window": [
+            5.31,
+            6.14
+          ]
+        },
+        "recovery": {
+          "seconds": 0.0,
+          "window": null
+        },
+        "rollPeakDegrees": -1.680431974535369e-09,
+        "pitchPeakDegrees": 1.5760978827961429e-09,
+        "yawPeakDegrees": 0,
+        "faultInjectedAt": 6,
+        "allInvertersOffAt": 6.09,
+        "allRotorsStoppedAt": 6.2,
+        "faultKind": "stall",
+        "allInvertersOffLatencySeconds": 0.08999999999999986,
+        "allRotorsStoppedLatencySeconds": 0.20000000000000018,
+        "clearAttemptAt": 6.1,
+        "inputCleared": true,
+        "clearAttemptDisposition": "input-cleared",
+        "clearRejection": null,
+        "postClearAttemptObservations": 391,
+        "unprovenOffPostClearAttemptObservations": 0,
+        "directGateConfirmedPostClearAttemptObservations": 0
+      }
+    },
+    {
+      "tag": "nominal-coupled",
+      "expectedPass": false,
+      "result": "negative/nominal-coupled-result.json.gz",
+      "trace": "negative/nominal-coupled.ndjson.gz",
+      "oracle": "negative/nominal-coupled-oracle.json"
+    },
+    {
+      "tag": "nominal-precision",
+      "expectedPass": false,
+      "result": "negative/nominal-precision-result.json.gz",
+      "trace": "negative/nominal-precision.ndjson.gz",
+      "oracle": "negative/nominal-precision-oracle.json"
+    },
+    {
+      "tag": "nominal-irq",
+      "expectedPass": false,
+      "result": "negative/nominal-irq-result.json.gz",
+      "trace": "negative/nominal-irq.ndjson.gz",
+      "oracle": "negative/nominal-irq-oracle.json"
+    },
+    {
+      "tag": "fault-inverter_fault",
+      "expectedPass": false,
+      "result": "negative/fault-inverter_fault-result.json.gz",
+      "trace": "negative/fault-inverter_fault.ndjson.gz",
+      "oracle": "negative/fault-inverter_fault-oracle.json"
+    }
+  ],
+  "limitations": [
+    "Native modeled flight acceptance; saved-project promotion and hosted/browser flight proof remain separate gates.",
+    "The existing body has bounded six-degree-of-freedom motion, authored inertia/drag/thrust constants and a simplified BMI270 feedback mapping.",
+    "Fault acceptance proves latched output shutdown, passive rotor decay and model ground contact; it does not prove a controlled landing or impact survivability.",
+    "The electrical plant is the declared ideal 24 V reduced-order STM32L476/BLDC model, without measured motor calibration, battery sag, transistor switching or native physical-board equivalence.",
+    "The native motor checkpoint API does not provide full motor-state restore; no checkpoint round-trip claim is made."
+  ],
+  "integrationAppCommit": "3eb32947c2d591010682f8fc75734ba03c055dc9"
+}

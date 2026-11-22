@@ -1,0 +1,144 @@
+{
+  "baseSavedContentHash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+  "localDiagramSha256": "4198c3afa92c801f179dcfa96a43990c69ce328390d8317f0ebacbe5af100cc6",
+  "diagramHashEncoding": "UTF-8 JSON with sorted keys, no whitespace, ensure_ascii=false; not a server saved-content hash",
+  "addedFaultWires": [
+    {
+      "from": {
+        "part": "rotor1",
+        "pin": "INVERTER_FAULT"
+      },
+      "to": {
+        "part": "ctrl1",
+        "pin": "PC6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor1",
+        "pin": "OVERCURRENT_FAULT"
+      },
+      "to": {
+        "part": "ctrl1",
+        "pin": "PB6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor1",
+        "pin": "UNDERVOLTAGE_FAULT"
+      },
+      "to": {
+        "part": "ctrl1",
+        "pin": "PC7"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor2",
+        "pin": "INVERTER_FAULT"
+      },
+      "to": {
+        "part": "ctrl2",
+        "pin": "PC6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor2",
+        "pin": "OVERCURRENT_FAULT"
+      },
+      "to": {
+        "part": "ctrl2",
+        "pin": "PB6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor2",
+        "pin": "UNDERVOLTAGE_FAULT"
+      },
+      "to": {
+        "part": "ctrl2",
+        "pin": "PC7"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor3",
+        "pin": "INVERTER_FAULT"
+      },
+      "to": {
+        "part": "ctrl3",
+        "pin": "PC6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor3",
+        "pin": "OVERCURRENT_FAULT"
+      },
+      "to": {
+        "part": "ctrl3",
+        "pin": "PB6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor3",
+        "pin": "UNDERVOLTAGE_FAULT"
+      },
+      "to": {
+        "part": "ctrl3",
+        "pin": "PC7"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor4",
+        "pin": "INVERTER_FAULT"
+      },
+      "to": {
+        "part": "ctrl4",
+        "pin": "PC6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor4",
+        "pin": "OVERCURRENT_FAULT"
+      },
+      "to": {
+        "part": "ctrl4",
+        "pin": "PB6"
+      }
+    },
+    {
+      "from": {
+        "part": "rotor4",
+        "pin": "UNDERVOLTAGE_FAULT"
+      },
+      "to": {
+        "part": "ctrl4",
+        "pin": "PC7"
+      }
+    }
+  ],
+  "sources": {
+    "ctrl1": "9b45c58071b2a743eb968834dfe35e9607c01c50422307079a18b952d408efbc",
+    "ctrl3": "f262132d35aa553fad3914183d8464dc52a8c22ce4cb75a1a53ea0d3749b104e",
+    "ctrl4": "769480d82e25423535c5714b08bc2461e37e409b12163e732cabfc48cf051cc1",
+    "fc": "468fcadf20683e00ac5fd1c75339753d033657e3137ee22db2fac822cc893680",
+    "ctrl2": "8bb11542f184870d6e4c09978e529a8784198ca5a65111e246fe70821b402d65"
+  },
+  "shaftLoads": [
+    {
+      "body": "airframe",
+      "sourceCoefficient": 1e-08,
+      "sourceUnits": "N m/RPM^2",
+      "nativeCoefficient": 9.118906527810402e-07,
+      "nativeUnits": "N m/(rad/s)^2",
+      "nativeInput": "quadratic-drag-nm-per-rad-s2"
+    }
+  ]
+}

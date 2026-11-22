@@ -2,9 +2,17 @@
 
 This package contains a versioned **KernelCAD assembly**, a real **six-layer OpenESC schematic and PCB**, and a **four-channel STM32 propulsion bench**. The motor bench uses real compiled firmware and reduced-order motor models. It does not yet simulate the electronics or flight controller on the physical boards.
 
+## Native five-controller flight acceptance — 22 November 2026
+
+The [source-bound native flight candidate](labwired/evidence/20261122-native-flight/README.md) now passes a 15-second run with measured takeoff, 2.68 seconds of hover within 0.85–1.15 m, roll/pitch/yaw tracking and 1.87 seconds of attitude recovery. A smaller-poll replay also passes. Five separate compiled STM32L476 ELFs drive the existing native motors, body and BMI270 feedback loop with the declared propeller shaft load.
+
+All five fault cases pass: the external driver-fault button and native inverter, overcurrent, undervoltage and stall inputs cause latched all-motor shutdown and model ground contact. Every case has 391 post-clear-attempt observations with the outputs proven off. Native overcurrent rejects clearing, and its receipt records that distinction. This establishes shutdown and ground contact within the model, without a controlled-landing or physical-aircraft claim.
+
+[Exact sources, archived ELFs/WASM, trace audit and failed-candidate history](labwired/evidence/20261122-native-flight/README.md) · [Machine-readable acceptance](labwired/evidence/20261122-native-flight/acceptance.json) · [App integration PR #3967](https://github.com/w1ne/labwired/pull/3967). The published four-channel reference is unchanged. Saved-project promotion and hosted/browser flight verification remain pending integration and deployment.
+
 ## Separate five-controller live LabWired twin — 21 November 2026
 
-The [saved five-controller LabWired project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit) runs one STM32L476 flight controller with a BMI270 model, plus four STM32L476 ESC controllers and four simulated BLDC motors. On the **exact current saved revision**, hosted verification at 2,000,000 steps passed **four of four** independent Hall-lock serial assertions. The FC reported BMI270 online, arm command and takeoff **command**, but no sensor-measured takeoff, hover, flight-control stability or physical-hardware acceptance.
+The [saved five-controller LabWired project](https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit) runs one STM32L476 flight controller with a BMI270 model, plus four STM32L476 ESC controllers and four simulated BLDC motors. On the **21 November saved revision**, hosted verification at 2,000,000 steps passed **four of four** independent Hall-lock serial assertions. The FC reported BMI270 online, arm command and takeoff **command**, but no sensor-measured takeoff, hover, flight-control stability or physical-hardware acceptance.
 
 A separate [single-channel safety campaign](https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit) passed **four of four** assertions: Hall-lock before injected fault, driver fault recognition, latched inverter-off marker and PB0 output low. It does not demonstrate a coupled four-motor in-flight failsafe. Source hash, saved project IDs, explicit oracle clauses and [live proof readback](labwired/evidence/20261121-five-controller-hosted-proof.json) are pinned here. Keep this experimental five-controller target separate from the four-channel published reference and the actual native ESC/FC hardware.
 
@@ -17,7 +25,7 @@ A second live [five-controller safety-wiring project](https://app.labwired.com/p
 
 A separate **five-controller test-only driver-fault campaign** now also passed **9/9 direct serial oracles** (`world-job:1e04d462-bfb8-42c8-9f5f-b44672fe53af`): ESC1 detected and latched the injected fault; the flight controller reported all-motor disarm, and ESC2–4 reported disarmed. This uses an FC PC12 → ESC1 PB7 injected-fault fixture rather than the saved normal-flight source. No motor-force, attitude or safe-landing result is inferred. The full clause manifest and test scope are in the same [live receipt](labwired/evidence/20261121-five-controller-live.json).
 
-These are successful **five-controller propulsion/control firmware** tests. A printed `FC TAKEOFF COMMAND` is not measured flight. **Six-DOF body translation, hover, attitude recovery, model-to-native ESC equivalence, battery/power, and physical flight remain open.** The full-flight candidate source in PR #34 remains draft for those gates. Keep it separate from the four-channel published reference.
+These are successful **five-controller propulsion/control firmware** tests. A printed `FC TAKEOFF COMMAND` is not measured flight. At that checkpoint, six-DOF body translation, hover and attitude recovery were still open; the 22 November native candidate above now supplies those modeled results. **Model-to-native ESC equivalence, battery/power and physical flight remain open.** The full-flight candidate source in PR #34 remains draft for those gates. Keep it separate from the four-channel published reference.
 
 
 ## Native FC mechanical candidate, 12 November 2026
@@ -72,7 +80,8 @@ The saved flagship project links to KernelCAD revision 5. Its circuit contains f
 | Physical OpenESC | Four AT32F421 controllers, four gate drivers, 24 MOSFETs; six copper layers | [Native electrical/layout review](hardware/esc-4in1/validation/) |
 | Firmware bench | Four independent STM32L476 six-step commutators, Hall/encoder feedback, latched inverter shutdown | [Exact source and circuit manifest](labwired/four-channel-project.json) |
 | Motor-to-CAD binding | Observed motor position/RPM mapped to explicit rotor/propeller groups | [Revision-pinned mapping](cad/runtime-bindings.json) |
-| Aircraft flight | No connected IMU, flight-controller firmware, thrust model or six-degree-of-freedom body | Not implemented |
+| Native flight candidate | Five STM32L476 ELFs, native shaft load, body/IMU feedback, nominal and fault acceptance | [22 November native proof](labwired/evidence/20261122-native-flight/README.md) |
+| Physical aircraft flight | Physical board, power and calibrated flight performance remain unvalidated | No physical-flight acceptance |
 
 The CAD exploded view is an assembly illustration. The mechanism check samples rotor poses. Neither establishes a complete physical assembly path, frame strength or flight performance.
 
@@ -80,7 +89,7 @@ The CAD exploded view is an assembly illustration. The mechanism check samples r
 
 These are two distinct electrical targets. Keep this distinction visible in recordings and demonstrations.
 
-| Property | Physical aircraft design | Firmware simulation |
+| Property | Physical aircraft design | Published four-channel bench |
 | --- | --- | --- |
 | ESC MCU | Four AT32F421G8U7 | Four STM32L476 |
 | ESC firmware | AM32 / DShot | Inspectable six-step commutator |

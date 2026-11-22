@@ -1,0 +1,17 @@
+{
+  "parentCandidate": "candidate-coupled-governor",
+  "baseSavedContentHash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+  "diagramSha256": "4198c3afa92c801f179dcfa96a43990c69ce328390d8317f0ebacbe5af100cc6",
+  "sources": {
+    "ctrl1": "9b45c58071b2a743eb968834dfe35e9607c01c50422307079a18b952d408efbc",
+    "ctrl2": "8bb11542f184870d6e4c09978e529a8784198ca5a65111e246fe70821b402d65",
+    "ctrl3": "f262132d35aa553fad3914183d8464dc52a8c22ce4cb75a1a53ea0d3749b104e",
+    "ctrl4": "769480d82e25423535c5714b08bc2461e37e409b12163e732cabfc48cf051cc1",
+    "fc": "16fa301b70113f45a88826130cfe084f2974db87bfb0dfa8a75b7840a1377aaf"
+  },
+  "changes": [
+    "Retain Q16 velocity and altitude residuals in the existing 100 Hz inertial estimator",
+    "Retain gyro integration remainder",
+    "Add 2 Hz UART state diagnostics; physical parameters, controller gains and oracle thresholds unchanged"
+  ]
+}

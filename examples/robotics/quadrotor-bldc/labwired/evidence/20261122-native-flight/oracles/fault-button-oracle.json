@@ -1,0 +1,79 @@
+{
+  "kind": "independent-readback-oracle",
+  "passed": true,
+  "checks": {
+    "complete": true,
+    "completeBodyTrace": true,
+    "allNativeMotorsObserved": true,
+    "nativeLoadsAcknowledged": true,
+    "airborneBeforeFault": true,
+    "faultClearAttempted": true,
+    "faultClearContract": true,
+    "nativeFaultObserved": true,
+    "firmwareFaultPath": true,
+    "allInvertersOff": true,
+    "allRotorsStopped": true,
+    "latchAfterClearAttempt": true,
+    "finalRotorsStopped": true,
+    "groundContact": true
+  },
+  "measurements": {
+    "maximumAltitudeM": 1.0750696709491032,
+    "finalAltitudeM": 0,
+    "finalEulerDegrees": [
+      -4.1920654157728427e-13,
+      4.363147078607083e-13,
+      -1.7679122078495337
+    ],
+    "hover": {
+      "seconds": 0.9200000000000008,
+      "window": [
+        5.31,
+        6.23
+      ]
+    },
+    "recovery": {
+      "seconds": 0.0,
+      "window": null
+    },
+    "rollPeakDegrees": -6.14376823411669e-10,
+    "pitchPeakDegrees": 5.844133426662054e-10,
+    "yawPeakDegrees": 0,
+    "faultInjectedAt": 6,
+    "allInvertersOffAt": 6.05,
+    "allRotorsStoppedAt": 6.16,
+    "faultKind": "button",
+    "allInvertersOffLatencySeconds": 0.04999999999999982,
+    "allRotorsStoppedLatencySeconds": 0.16000000000000014,
+    "clearAttemptAt": 6.1,
+    "inputCleared": true,
+    "clearAttemptDisposition": "input-cleared",
+    "clearRejection": null,
+    "postClearAttemptObservations": 391,
+    "unprovenOffPostClearAttemptObservations": 0,
+    "directGateConfirmedPostClearAttemptObservations": 0
+  },
+  "traceSampleIntervalSeconds": 0.01,
+  "maximumAllowedTraceGapSeconds": 0.03,
+  "thresholds": {
+    "hoverAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "hoverEulerLimitDegrees": 5.007162376990549,
+    "hoverDurationSeconds": 1,
+    "recoveryAltitudeM": [
+      0.85,
+      1.15
+    ],
+    "recoveryEulerLimitDegrees": 3.1489361702737737,
+    "recoveryYawLimitDegrees": 5,
+    "recoveryDurationSeconds": 0.5,
+    "rollLowerDegrees": 3.4992317616567097,
+    "pitchLowerDegrees": 3.1489361702737737,
+    "yawLowerDegrees": 8
+  },
+  "sourceResult": "/data/work-evidence/quadrotor-world-adapter-20261121/candidate-altitude-damping/fault-button-result.json",
+  "runtime": "direct-native-world-with-existing-flight-runtime",
+  "wasmSha256": "4c45fb97b6af9e0a93407a7cc20b9e5d95eb769e653938ab8b284ecf6a5925d7"
+}

@@ -1,0 +1,83 @@
+schema_version: "1.0"
+name: "Quadrotor exact draft null"
+nodes:
+  - id: "ctrl1"
+    system: "ctrl1/system.yaml"
+    firmware: "ctrl1/firmware.bin"
+  - id: "ctrl2"
+    system: "ctrl2/system.yaml"
+    firmware: "ctrl2/firmware.bin"
+  - id: "ctrl3"
+    system: "ctrl3/system.yaml"
+    firmware: "ctrl3/firmware.bin"
+  - id: "ctrl4"
+    system: "ctrl4/system.yaml"
+    firmware: "ctrl4/firmware.bin"
+  - id: "fc"
+    system: "fc/system.yaml"
+    firmware: "fc/firmware.bin"
+interconnects:
+  - type: "gpio_net"
+    nodes: ["ctrl1", "fc"]
+    config:
+      name: "ctrl1.PA0"
+      pull: none
+      members:
+        - { node: "ctrl1", peripheral: "gpioa", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 8 }
+  - type: "gpio_net"
+    nodes: ["ctrl1", "fc"]
+    config:
+      name: "ctrl1.PB0"
+      pull: none
+      members:
+        - { node: "ctrl1", peripheral: "gpiob", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 0 }
+  - type: "gpio_net"
+    nodes: ["ctrl2", "fc"]
+    config:
+      name: "ctrl2.PA0"
+      pull: none
+      members:
+        - { node: "ctrl2", peripheral: "gpioa", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 9 }
+  - type: "gpio_net"
+    nodes: ["ctrl2", "fc"]
+    config:
+      name: "ctrl2.PB0"
+      pull: none
+      members:
+        - { node: "ctrl2", peripheral: "gpiob", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 1 }
+  - type: "gpio_net"
+    nodes: ["ctrl3", "fc"]
+    config:
+      name: "ctrl3.PA0"
+      pull: none
+      members:
+        - { node: "ctrl3", peripheral: "gpioa", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 10 }
+  - type: "gpio_net"
+    nodes: ["ctrl3", "fc"]
+    config:
+      name: "ctrl3.PB0"
+      pull: none
+      members:
+        - { node: "ctrl3", peripheral: "gpiob", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 2 }
+  - type: "gpio_net"
+    nodes: ["ctrl4", "fc"]
+    config:
+      name: "ctrl4.PA0"
+      pull: none
+      members:
+        - { node: "ctrl4", peripheral: "gpioa", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 11 }
+  - type: "gpio_net"
+    nodes: ["ctrl4", "fc"]
+    config:
+      name: "ctrl4.PB0"
+      pull: none
+      members:
+        - { node: "ctrl4", peripheral: "gpiob", pin: 0 }
+        - { node: "fc", peripheral: "gpioc", pin: 3 }
