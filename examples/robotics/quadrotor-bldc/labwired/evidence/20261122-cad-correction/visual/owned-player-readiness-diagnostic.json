@@ -1,0 +1,93 @@
+{
+  "schema": "kernelcad.owned-player-readiness-diagnostic.v1",
+  "startedAt": "2026-11-22T05:47:37.165Z",
+  "scriptSha256": "5cd7f40000a50d7b36d1408d85bce0fa8a21d5093bed06e142b105b7de7321f7",
+  "rendererBuildSha256": "8d1614b6af11f3d8de1cf5f48c20ec75219754104b84eaf3f27736fb249e0b62",
+  "runtimeSourceHash": "f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977",
+  "sourceHead": "4aa581464aff2e09b8c2366fb1d166202e0e72d2",
+  "sourceTree": "f879597f14fad52180a9655c5e8835c33256b41d",
+  "playerArtifactFiles": 8,
+  "driver": "puppeteer-core@25.18.1",
+  "endpointPort": 9222,
+  "attachmentCapMs": 30000,
+  "readinessCapMs": 15000,
+  "existingTargetsReloadedOrClosed": false,
+  "browserLaunched": false,
+  "productModified": false,
+  "modelLoaded": false,
+  "console": [
+    {
+      "type": "error",
+      "text": "THREE.WebGLRenderer: A WebGL context could not be created. Reason:  Could not create a WebGL context, VENDOR = 0x1013, DEVICE = 0x00b8, GL_VENDOR = Google Inc. (Mesa), GL_RENDERER = ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.5), GL_VERSION = 25.2.8, Sandboxed = no, Optimus = no, AMD switchable = no, Reset notification strategy = 0x8261, ErrorMessage = BindToCurrentSequence failed: .",
+      "elapsedMs": 516
+    },
+    {
+      "type": "error",
+      "text": "THREE.WebGLRenderer: A WebGL context could not be created. Reason:  Could not create a WebGL context, VENDOR = 0x1013, DEVICE = 0x00b8, GL_VENDOR = Google Inc. (Mesa), GL_RENDERER = ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.5), GL_VERSION = 25.2.8, Sandboxed = no, Optimus = no, AMD switchable = no, Reset notification strategy = 0x8261, ErrorMessage = BindToCurrentSequence failed: .",
+      "elapsedMs": 522
+    },
+    {
+      "type": "error",
+      "text": "THREE.WebGLRenderer: Error creating WebGL context.",
+      "elapsedMs": 522
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "elapsedMs": 530
+    }
+  ],
+  "pageErrors": [
+    {
+      "name": "Error",
+      "message": "Error creating WebGL context."
+    }
+  ],
+  "responses": [
+    {
+      "path": "/demo-player",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "elapsedMs": 397
+    },
+    {
+      "path": "/assets/index-DA1xHVL6.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "elapsedMs": 450
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 404,
+      "contentType": null,
+      "elapsedMs": 530
+    }
+  ],
+  "requestFailures": [],
+  "ownedContextDisposed": true,
+  "connectionDisconnected": true,
+  "navigationStatus": 200,
+  "playerReady": false,
+  "readinessError": {
+    "name": "TimeoutError",
+    "message": "Waiting failed: 15000ms exceeded"
+  },
+  "ownedPageState": {
+    "title": "kernelCAD headless player",
+    "readyState": "complete",
+    "hasDemoPlayer": false,
+    "canvasCount": 0,
+    "bodyText": "",
+    "webgl2": {
+      "available": false,
+      "creationError": "Could not create a WebGL context, VENDOR = 0x1013, DEVICE = 0x00b8, GL_VENDOR = Google Inc. (Mesa), GL_RENDERER = ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.5), GL_VERSION = 25.2.8, Sandboxed = no, Optimus = no, AMD switchable = no, Reset notification strategy = 0x8261, ErrorMessage = BindToCurrentSequence failed: ."
+    },
+    "webgl": {
+      "available": false,
+      "creationError": "Could not create a WebGL context, VENDOR = 0x1013, DEVICE = 0x00b8, GL_VENDOR = Google Inc. (Mesa), GL_RENDERER = ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.5), GL_VERSION = 25.2.8, Sandboxed = no, Optimus = no, AMD switchable = no, Reset notification strategy = 0x8261, ErrorMessage = BindToCurrentSequence failed: ."
+    }
+  },
+  "diagnosticCompleted": true,
+  "finishedAt": "2026-11-22T05:47:52.679Z",
+  "elapsedMs": 15514
+}

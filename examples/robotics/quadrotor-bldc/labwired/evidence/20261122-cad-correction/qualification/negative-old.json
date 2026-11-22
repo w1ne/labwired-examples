@@ -1,0 +1,92 @@
+{
+  "schema": "kernelcad.repaired-deployed-artifact-qualification.v1",
+  "checkedAt": "2026-11-22T04:13:52.210Z",
+  "expectedServerCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+  "expectedRuntimeSourceHash": "4293d157357b0f5a75a6a563abff4635247082d63666bda496993222196ad2d0",
+  "scriptSha256": "a26b40eff0c40dc0d0e64563be9c93e780e1f5c0248c4c4993d9c6cd8885d677",
+  "baselineExamplesCommit": "4d21fea30c19d856d2d1ecd16272d9fab934df46",
+  "inputs": {
+    "getProject-ready.json": {
+      "bytes": 14155,
+      "sha256": "f550cd26e731d9285deb8a9c74c987bada0c44126b936e589b73fda6b2f24645"
+    },
+    "getProjectRevision.json": {
+      "bytes": 12962,
+      "sha256": "d24156c6ebf018adc48256549d440d81b96e5ad31046e07a847e1d0333094f26"
+    },
+    "current-stored-body.bin": {
+      "bytes": 12865247,
+      "sha256": "e041191cfd930893229d3d569dece43dc5ed8441dff865270f65e09b1f78e141"
+    },
+    "current-stored-receipt.json": {
+      "bytes": 2559,
+      "sha256": "b5601dabcd58485a303d1985ef45dd322d2466743aa24b377aec4bbfc8dc60bf"
+    },
+    "current-cdn-body.bin": {
+      "bytes": 12865247,
+      "sha256": "e041191cfd930893229d3d569dece43dc5ed8441dff865270f65e09b1f78e141"
+    },
+    "current-cdn-receipt.json": {
+      "bytes": 2461,
+      "sha256": "cf6cb268d2e5ee46af5aad5fce2864fe0a64ffee980036daed52a3ff5e167146"
+    }
+  },
+  "passed": false,
+  "cadSourceChanged": false,
+  "savedProjectUpdated": false,
+  "viewerPainted": false,
+  "browserFlightPerformed": false,
+  "currentArtifact": {
+    "sha256": "e041191cfd930893229d3d569dece43dc5ed8441dff865270f65e09b1f78e141",
+    "bytes": 12865247,
+    "producerPin": "98618663029a83e4c28d833e398203f0510277938e07128a05dafe1c1a1be348",
+    "provenance": {
+      "schema": "kernelcad.revision-mesh-provenance.v1",
+      "source": {
+        "sha256": "f87316c6a9de81148c8985e9387641a0ead22d5d2744186d2041678c0364a10e",
+        "byteLength": 9688
+      },
+      "assetsSha256": "dc2a30ea0f02103b263c6337f94b35cf4882d8e94a6f04ac8b48ff2ed099e0d8",
+      "geometryHash": "ecffb214fec5a7e04d86ac6d224630e9dbe97016e327ba890780860836ab4997",
+      "producer": {
+        "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+        "serverCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+        "runtimeSourceHash": "4293d157357b0f5a75a6a563abff4635247082d63666bda496993222196ad2d0",
+        "sessionArtifactSha256": "72551de25f740cff680c571eebd04e753911e9780d7d21b29122d3fda4628327"
+      }
+    }
+  },
+  "populations": [
+    {
+      "part": "esc-population-native-mesh",
+      "assetSha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+      "triangles": 56072,
+      "wrongCorners": 0,
+      "maximumSerializationErrorMm": 0.0004999618530270311,
+      "indexChanges": 0,
+      "changes": [],
+      "positionsUnchanged": true,
+      "normalsUnchanged": true
+    },
+    {
+      "part": "fc-population-native-mesh",
+      "assetSha256": "70a02a51dfa161cb3eca7974f200a58232c7db43c317ea6d5c2837f216e45a0e",
+      "triangles": 47778,
+      "wrongCorners": 28,
+      "maximumSerializationErrorMm": 20.160300903320312,
+      "indexChanges": 0,
+      "changes": [],
+      "positionsUnchanged": true,
+      "normalsUnchanged": true
+    }
+  ],
+  "geometry": {
+    "expectedSha256": "853fde6738b69cdab1fcc221ce48b86488304cf401d3f7903bf6d1265e11680e",
+    "actualSha256": "156edc71174de52aabc576d5dc08ad9e903383bcde8a110ada05e3a4ceda6599",
+    "assemblyParts": 38
+  },
+  "failure": {
+    "name": "AssertionError",
+    "message": "fc-population-native-mesh must preserve every source corner\n\n28 !== 0\n"
+  }
+}

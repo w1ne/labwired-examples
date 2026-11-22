@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "slug": "DyJ405zg",
+  "title": "LabWired quadrotor — current native board engineering preview",
+  "privacy": "public_unlisted",
+  "version": 6,
+  "url": "https://app.kernelcad.com/p/DyJ405zg?version=6",
+  "embedUrl": "https://app.kernelcad.com/embed/DyJ405zg?revision=6&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FDyJ405zg%2Fv6.json%3Fprovenance%3D7f92c6bc2c640367d6e5767f3a3c45179f6f7be336a9b4c65c78975a1455b563",
+  "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/DyJ405zg/v6.json?provenance=7f92c6bc2c640367d6e5767f3a3c45179f6f7be336a9b4c65c78975a1455b563",
+  "meshDownloadUrl": "https://api.kernelcad.com/api/v1/projects/DyJ405zg/revisions/6/mesh-artifact?download=1&provenance=7f92c6bc2c640367d6e5767f3a3c45179f6f7be336a9b4c65c78975a1455b563",
+  "meshStatus": "ready",
+  "projectSaved": true,
+  "meshReady": true,
+  "viewerPainted": false,
+  "paintHint": "Do NOT claim the interactive viewer painted unless the widget reports viewerPainted=true (ui/update-model-context or widgetState.modelContent) — tools/call always leaves viewerPainted=false. projectSaved≠viewerPainted. meshReady=false with meshStatus=building is OK — embed retries meshUrl. Do NOT call get_model_mesh or get_latest_render to force interactive paint; use open_in_studio only.",
+  "updated_at": "2026-11-18T10:17:41.40929+00:00",
+  "code": "// LabWired x KernelCAD: OpenFrame-5F mechanical integration model, mm.\n// Frame: unmodified OpenDrone rev2.2 STEP, pinned by commit and SHA-256 in\n// mechanical-evidence.json. OpenFrame hardware is CERN-OHL-S-2.0.\n// This is an assembly/clearance model, not a flight or strength simulation.\n// The motor bodies, propeller blade profiles and soft mounts are ENVELOPES:\n// they are not vendor manufacturing geometry. Props retain the\n// published 129.7 mm sweep diameter, three blades, 6 mm hub and 5 mm bore.\nmeta({name:'labwired-quad-openframe-5f',\n  title:'LabWired quadrotor — populated ESC and repaired FC',\n  description:'Pinned 226 mm OpenFrame-5F frame, four independently posed rotor joints, native ESC and repaired FC substrates with populated KiCad meshes and nominal tri-blade envelopes. Exact STEP exports support separate clearance checks; meshes preserve component placement.'});\n\nconst rotor1 = param('rotor1Angle',0,{min:-2160,max:2160,label:'M1 rear-right angle (deg)'});\nconst rotor2 = param('rotor2Angle',0,{min:-2160,max:2160,label:'M2 front-right angle (deg)'});\nconst rotor3 = param('rotor3Angle',0,{min:-2160,max:2160,label:'M3 rear-left angle (deg)'});\nconst rotor4 = param('rotor4Angle',0,{min:-2160,max:2160,label:'M4 front-left angle (deg)'});\n\n// Onshape part exports already share the assembly frame. +Z is up, -Y is\n// forward (camera). Actual motor centres are NOT a square-X arrangement.\nconst motorX = 89;\nconst motorY = 69.534420756;\nconst propRadius = 64.85;\nconst stackY = -12.75;\nconst armFile = 'https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Arm.step';\nconst standoffFile = 'https://raw.githubusercontent.com/OpenDrone-hw/OpenFrame-5F/71aacb91c09e2970edd459390a4b79e5c61dfd39/releases/rev2.2/step/Standoff-M3-F-F-20-OD5.step';\nconst origin=(x:number,y:number,z:number)=>({kind:'vec3' as const,value:[x,y,z] as [number,number,number]});\nconst rig=assembly('labwired-quad-bldc');\n\nconst baseShape = await lib.fromSTEP(\"./inputs/47538aaa7bba.step\");\nconst base = rig.part('frame-bottom',baseShape.finish('paint-matte',{color:'#24282c'}));\nconst partRefs:any = {'frame-bottom':base};\nfunction attach(name:string,shape:any,point:[number,number,number],finish='paint-matte',color='#24282c',parentName='frame-bottom'){\n  const parent=partRefs[parentName];\n  const p=rig.part(name,shape.finish(finish,{color}));\n  parent.connector(name,{type:'frame',origin:origin(...point)});\n  p.connector('seat',{type:'frame',origin:origin(...point)});\n  rig.mate(name+'-mount',parentName+'.'+name,name+'.seat','fastened');\n  partRefs[name]=p;\n  return p;\n}\nattach('frame-cross',await lib.fromSTEP(\"./inputs/709b3642fbc3.step\"),[0,0,0]);\nattach('frame-middle',await lib.fromSTEP(\"./inputs/28074c26e7a6.step\"),[0,0,6],'paint-matte','#24282c','frame-cross');\nattach('camera-side-left',await lib.fromSTEP(\"./inputs/1b01cf10fb44.step\"),[13.75,-58,0],'anodized','#d6a528');\nattach('camera-side-right',await lib.fromSTEP(\"./inputs/ff99e5caa605.step\"),[-13.75,-58,0],'anodized','#d6a528');\n\n// A fresh imported handle for each instance avoids shared-handle transforms.\nattach('arm-rear-right',await lib.fromSTEP(\"./inputs/eaa66a416936.step\"),[23,17.96956941,0]);\nattach('arm-front-right',(await lib.fromSTEP(\"./inputs/eaa66a416936.step\")).rotateX(180).translate(0,0,6),[23,-17.96956941,0]);\nattach('arm-rear-left',(await lib.fromSTEP(\"./inputs/eaa66a416936.step\")).rotateY(180).translate(0,0,6),[-23,17.96956941,0]);\nattach('arm-front-left',(await lib.fromSTEP(\"./inputs/eaa66a416936.step\")).rotateZ(180),[-23,-17.96956941,0]);\nfor(const [name,dx,dy,x,y] of [\n  ['rear-left',0,0,-10.25,69.5],['rear-right',20.5,0,10.25,69.5],\n  ['middle-left',-2.5,-45.5,-12.75,24],['middle-right',23,-45.5,12.75,24]\n] as [string,number,number,number,number][]){\n  attach('standoff-'+name,(await lib.fromSTEP(\"./inputs/a75bb2b867d1.step\")).translate(dx,dy,0),[x,y,9],'anodized-black','#24282c','frame-middle');\n}\n\nattach('frame-top',await lib.fromSTEP(\"./inputs/d11cf26c7efa.step\"),[-10.25,69.5,29],'paint-matte','#24282c','standoff-rear-left');\n\n// Stack support rings are nominal soft-mount ENVELOPES. Their heights are\n// assembly assumptions, not measured compressed grommet dimensions.\n// Six-millimetre OD rings clear all imported native components. The prior\n// 7 mm OD upper ring intersected a component by 0.0863 mm3. Native STEP\n// verification receipts preserve the failure and eight-ring clearance check.\nfor(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2.5]]){\n  const ring=cylinder(5.4,3).holes('top',{positions:[{u:0,v:0}],diameter:4,depth:'through'}).translate(x,y,9);\n  attach('esc-grommet-'+index+'-ENVELOPE',ring,[x,y,9],'rubber','#363a3f','frame-middle');\n}\n\n// Board geometry comes from the example's native KiCad export; solid 5 is\n// the PCB substrate. Holes measured at 30.5 mm pitch, 4 mm diameter.\n// Candidate stack raised by 2 mm: substrate bottom z14.4, native components\n// descend to z11.32, nominally 2.32 mm above the middle frame top z9.\n// This envelope separation is not a qualified clearance or assembly proof.\nconst escShape = await lib.fromSTEP(\"./inputs/a5be2430df75.step\",{solid:5});\nattach('esc-board',escShape.translate(-75.63257,34.6,14.4),[-15.25,-28,14.4],'paint-matte','#14735b','esc-grommet-1-ENVELOPE');\nfor(const [index,x,y] of [[1,-15.25,-28],[2,15.25,-28],[3,-15.25,2.5],[4,15.25,2.5]]){\n  const ring=cylinder(6.07,3).holes('top',{positions:[{u:0,v:0}],diameter:4,depth:'through'}).translate(x,y,15.93);\n  attach('fc-grommet-'+index+'-ENVELOPE',ring,[x,y,15.93],'rubber','#363a3f','esc-board');\n}\n// Native KiCad GLB component geometry, with its PCB mesh excluded. Converted\n// from glTF metres/Y-up to CAD millimetres/Z-up; 213 refs, 56072 triangles.\n// Color is uniform after STL conversion. Shape source and SHA are in receipts.\n// Both mate frames use substrate top at its centre, not the empty screw bore.\n// Moving both frames together leaves the authored component placement unchanged.\nattach('esc-population-native-mesh',(await lib.meshFromSTL(\"./inputs/297c5f78a471.stl\")).translate(-75.63257,34.6,14.4),[0,-12.75,15.93],'paint-matte','#363b40','esc-board');\n\n// Repaired native OpenFC-Lite board, immutable PCB SHA5c458e5101e154ad.\n// Declared nominal thickness 1.0 mm. KiCad exports the substrate z0..0.9378;\n// outer copper/mask and package stand-offs retain the source export convention.\n// Four open 4 mm mounting cutouts on 30.5 mm centres, real scalloped outline.\n// Export origin is mounting-pattern centre (153.0912,87.1597) in native PCB mm.\nconst fcShape=await lib.fromSTEP(\"./inputs/72ff181beca2.step\");\nattach('fc-board-native',fcShape.translate(0,stackY,22),[-12.5,-28,22],'paint-matte','#18575e','fc-grommet-1-ENVELOPE');\n// 107 assigned component models, 47,778 STL facets. Original poses preserved.\n// L1/L2/L3 retain source package proxies; 53 bare contacts and 4 TP have no 3D body.\nattach('fc-population-native-mesh',(await lib.meshFromSTL(\"./inputs/70a02a51dfa1.stl\")).translate(0,stackY,22),[0,stackY,22.9378],'paint-matte','#3a4044','fc-board-native');\n\n// Nominal blades for visual sweep checks only. The clipping cylinder fixes\n// the maximum radius; these straight sections are not a Gemfan airfoil.\nfunction nominalProp(){\n  let p=cylinder(6,7);\n  for(const a of [0,120,240]){\n    const blade=path().moveTo(5,-3).lineTo(17,-8).lineTo(38,-10)\n      .lineTo(58,-7).lineTo(65,-1).lineTo(62,3).lineTo(38,8)\n      .lineTo(15,7).lineTo(5,3).close().extrude(1.6).translate(0,0,2.2).rotateZ(a);\n    p=p.union(blade);\n  }\n  return p.intersect(cylinder(6,propRadius)).subtract(cylinder(8,2.5).translate(0,0,-1));\n}\nconst motorRows:[string,number,number,any,string][]=[\n  ['rear-right',motorX,motorY,rotor1,'#e66f35'],\n  ['front-right',motorX,-motorY,rotor2,'#e66f35'],\n  ['rear-left',-motorX,motorY,rotor3,'#427daf'],\n  ['front-left',-motorX,-motorY,rotor4,'#427daf']\n];\nfor(const [name,x,y,angle,color] of motorRows){\n  // Motor ENVELOPE: 28 mm OD, 3 mm mounting foot and 15 mm bell.\n  // Exact stator, magnets, bearings, thread engagement and mass are absent.\n  const foot=attach('motor-base-'+name+'-ENVELOPE',cylinder(3,14).translate(x,y,6),[x,y,6],'anodized-black','#24282c','arm-'+name);\n  const bellShape=cylinder(15,14).union(cylinder(12,2.5).translate(0,0,15)).translate(x,y,9.3).finish('anodized-black');\n  const bell=rig.part('rotor-'+name+'-ENVELOPE',bellShape);\n  foot.connector('axis',{type:'axis',origin:origin(x,y,9.3),axis:[0,0,1]});\n  bell.connector('axis',{type:'axis',origin:origin(x,y,9.3),axis:[0,0,1]});\n  rig.mate('prop-shaft-'+name,'motor-base-'+name+'-ENVELOPE.axis','rotor-'+name+'-ENVELOPE.axis','revolute',{pose:angle,limitsDeg:[-2160,2160]});\n  const prop=rig.part('prop-'+name+'-ENVELOPE',nominalProp().translate(x,y,25.3).finish('polycarbonate',{color}));\n  bell.connector('prop-seat',{type:'frame',origin:origin(x,y,25.3)});\n  prop.connector('prop-seat',{type:'frame',origin:origin(x,y,25.3)});\n  rig.mate('prop-nut-'+name,'rotor-'+name+'-ENVELOPE.prop-seat','prop-'+name+'-ENVELOPE.prop-seat','fastened');\n}\nanimationView({name:'Four rotor joint demonstration — visual only',fps:24,tracks:[\n  {param:'rotor1Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:2160},{atMs:3200,value:2160}]},\n  {param:'rotor2Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:-1800},{atMs:3200,value:-1800}]},\n  {param:'rotor3Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:-1440},{atMs:3200,value:-1440}]},\n  {param:'rotor4Angle',keys:[{atMs:0,value:0},{atMs:300,value:0},{atMs:2600,value:1080},{atMs:3200,value:1080}]}\n]});\nreturn rig.model();",
+  "parameters": [
+    {
+      "name": "rotor1Angle",
+      "value": 0,
+      "kind": "number"
+    },
+    {
+      "name": "rotor2Angle",
+      "value": 0,
+      "kind": "number"
+    },
+    {
+      "name": "rotor3Angle",
+      "value": 0,
+      "kind": "number"
+    },
+    {
+      "name": "rotor4Angle",
+      "value": 0,
+      "kind": "number"
+    }
+  ],
+  "assets": {
+    "inputs/297c5f78a471.stl": {
+      "format": "stl",
+      "sha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+      "mediaType": "model/stl",
+      "byteLength": 2803684
+    },
+    "inputs/70a02a51dfa1.stl": {
+      "format": "stl",
+      "sha256": "70a02a51dfa161cb3eca7974f200a58232c7db43c317ea6d5c2837f216e45a0e",
+      "mediaType": "model/stl",
+      "byteLength": 2388984
+    },
+    "inputs/1b01cf10fb44.step": {
+      "format": "step",
+      "sha256": "1b01cf10fb440f11400bd72386fb596af89b6235284e05fa21d0124c86725ad8",
+      "mediaType": "model/step",
+      "byteLength": 92441
+    },
+    "inputs/28074c26e7a6.step": {
+      "format": "step",
+      "sha256": "28074c26e7a674f75a5c16eab4f30821e275c0c4f9cc434ced0edcbd96dc445a",
+      "mediaType": "model/step",
+      "byteLength": 398354
+    },
+    "inputs/47538aaa7bba.step": {
+      "format": "step",
+      "sha256": "47538aaa7bba939307ca73825236777609665b951f54175ebd48d3ccbad275d5",
+      "mediaType": "model/step",
+      "byteLength": 430839
+    },
+    "inputs/709b3642fbc3.step": {
+      "format": "step",
+      "sha256": "709b3642fbc3c9ace2fdcb6083f23543451abcfbbbeb1cd7baa2cbc33958c4e6",
+      "mediaType": "model/step",
+      "byteLength": 48708
+    },
+    "inputs/72ff181beca2.step": {
+      "format": "step",
+      "sha256": "72ff181beca23a666c59a678b9d62bc17e3f8d01375cd88060d41535af1725cc",
+      "mediaType": "model/step",
+      "byteLength": 98850
+    },
+    "inputs/a5be2430df75.step": {
+      "format": "step",
+      "sha256": "a5be2430df7569f7956a9cc378aaae639abc868d8af577f2e275dd320ff7b405",
+      "mediaType": "model/step",
+      "byteLength": 949810
+    },
+    "inputs/a75bb2b867d1.step": {
+      "format": "step",
+      "sha256": "a75bb2b867d196ddb3a6e04b7dac1512d3a39ada7504064446ab4870f4e27618",
+      "mediaType": "model/step",
+      "byteLength": 5900
+    },
+    "inputs/d11cf26c7efa.step": {
+      "format": "step",
+      "sha256": "d11cf26c7efadbd8619560f5080e52968a60fd9ce4434a31b8cc8a0d6156e8c1",
+      "mediaType": "model/step",
+      "byteLength": 396351
+    },
+    "inputs/eaa66a416936.step": {
+      "format": "step",
+      "sha256": "eaa66a41693627d9154bdaeb6282bcb17a4108f0f15fe9cfd97d4fe471597e69",
+      "mediaType": "model/step",
+      "byteLength": 168139
+    },
+    "inputs/ff99e5caa605.step": {
+      "format": "step",
+      "sha256": "ff99e5caa605ba44f68af114b3baa02c94a01014ccbf091a401368489392b925",
+      "mediaType": "model/step",
+      "byteLength": 92781
+    }
+  },
+  "serverBuild": "0.1.0+fd52f2c20b80@2026-11-22T05:05:20.599Z"
+}
