@@ -33,6 +33,10 @@ The source-bound [pad fixture](pcb-cad-fit-negative.json) was read from LabWired
 
 A future design must revise the physical PCB placement/partition and native board, or intentionally change the airframe and rerun stability/mass/fit analyses. The original PCB/CAD pair has no accepted avionics-board fit.
 
+## Authenticated live UI readback — 22 November 2026
+
+[Original circuit screenshot](media/live-readback/pathfinder-original-circuit-20261122.jpg) and [Mechanics browser error screenshot](media/live-readback/pathfinder-original-mechanics-unavailable-20261122.jpg) are pinned in the [readback manifest](../../flagship-ui-readbacks-20261122.json). The Mechanics viewer on work-1 reports graphics unavailable. This is a browser capture limitation, not PCB/CAD fit proof. The original board remains too wide for the coupler.
+
 ## Live Studio screenshot — 21 November 2026
 
 ![Pathfinder hobby rocket, Mechanics view](media/labwired-live-mechanics-20261121.png)

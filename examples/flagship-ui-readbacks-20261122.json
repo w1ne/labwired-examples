@@ -1,0 +1,77 @@
+{
+  "schema": "labwired-flagship-ui-readback-v1",
+  "capture_date": "2026-11-22",
+  "method": "Authenticated work-1 Chrome GUI; real desktop screenshot by scrot; cropped to application content with no generated/repainted pixels. Browser and system chrome excluded.",
+  "captures": [
+    {
+      "id": "quadrotor-original",
+      "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+      "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+      "view": "circuit_and_architect",
+      "image": "examples/robotics/quadrotor-bldc/media/live-readback/quadrotor-original-ui-20261122.jpg",
+      "sha256": "cc786746476f546ccf86d8af268849cbde163d0e13a2d018fb2fd20e93cdd29a",
+      "captured_utc": "2026-11-22T13:24:46+00:00",
+      "observation": "The existing four-controller circuit loads in the authenticated editor; the sidebar reports verification needs attention and did not produce a new model-verified world result."
+    },
+    {
+      "id": "pathfinder-original-circuit",
+      "project_id": "c9ede30a619b12d7c97056a2da040cc1",
+      "project_url": "https://app.labwired.com/p/c9ede30a619b12d7c97056a2da040cc1/edit",
+      "view": "circuit",
+      "image": "examples/aerospace/pathfinder-rocket/media/live-readback/pathfinder-original-circuit-20261122.jpg",
+      "sha256": "4b6d3fd46d1313e91ae5d664a29612cbff71e03352620a7f3358ec97d28c1818",
+      "captured_utc": "2026-11-22T13:25:20+00:00",
+      "observation": "The original 38-part circuit renders; no PCB/CAD clearance is established."
+    },
+    {
+      "id": "pathfinder-original-mechanics",
+      "project_id": "c9ede30a619b12d7c97056a2da040cc1",
+      "project_url": "https://app.labwired.com/p/c9ede30a619b12d7c97056a2da040cc1/edit",
+      "view": "mechanics",
+      "image": "examples/aerospace/pathfinder-rocket/media/live-readback/pathfinder-original-mechanics-unavailable-20261122.jpg",
+      "sha256": "d837b9c8f577fabb8e4e5d98b03ea8270839cc3d2c2d0f1f5e87ea032eb98a5b",
+      "captured_utc": "2026-11-22T13:25:13+00:00",
+      "observation": "On this work-1 Chrome session, the 3D renderer reports graphics unavailable. The model link is visible; this is a local browser rendering failure, not KernelCAD model proof or model failure."
+    },
+    {
+      "id": "axiom-original-circuit",
+      "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+      "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+      "view": "circuit",
+      "image": "examples/robotics/axiom-h1/media/live-readback/axiom-original-circuit-20261122.jpg",
+      "sha256": "7b06f444079f5b1d5a6685fada9d7125c9439cb18a150fca0e95c297ae361f41",
+      "captured_utc": "2026-11-22T13:25:35+00:00",
+      "observation": "The original AXIOM 31-part, 20-servo circuit is visible. No observed joint motion."
+    },
+    {
+      "id": "axiom-original-mechanics",
+      "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+      "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+      "view": "mechanics",
+      "image": "examples/robotics/axiom-h1/media/live-readback/axiom-original-mechanics-unlinked-20261122.jpg",
+      "sha256": "95ec829d37d937ca806174028caf942f75c39b4fbdd843f6967a518b4265e95e",
+      "captured_utc": "2026-11-22T13:25:53+00:00",
+      "observation": "Mechanics tab prompts to link a KernelCAD project; original saved project has no linked CAD model in its Mechanics view."
+    },
+    {
+      "id": "axiom-candidate-mechanics",
+      "project_id": "dab8622b41adbf3b9e2175909146b207",
+      "project_url": "https://app.labwired.com/p/dab8622b41adbf3b9e2175909146b207/edit",
+      "view": "mechanics",
+      "image": "examples/robotics/axiom-h1/media/live-readback/axiom-candidate-mechanics-unlinked-20261122.jpg",
+      "sha256": "0f639343fd958cedd871514c6bb278b26d07f2342f8ac56333146877f3d2d266",
+      "captured_utc": "2026-11-22T13:26:24+00:00",
+      "observation": "Candidate also prompts to link a KernelCAD project; controller serial verification from another receipt is not joint-motion evidence."
+    }
+  ],
+  "limitations": [
+    "Screenshots prove only the displayed UI state at capture time, not firmware execution, fresh requirements verification, physical electrical or flight performance.",
+    "An unavailable 3D view on this Chrome session is not evidence that a CAD revision is corrupt.",
+    "The candidate AXIOM controller verified-hash receipt, when fresh, does not prove a CAD motion binding; the Mechanics tab is currently unlinked."
+  ],
+  "new_live_world_run_ids": [],
+  "source_receipts": [
+    "examples/flagship-hosted-recheck-20261122.json",
+    "examples/flagship-runtime-readback-20261122.json"
+  ]
+}

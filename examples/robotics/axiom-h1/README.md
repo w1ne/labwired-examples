@@ -173,3 +173,7 @@ To make a new saved copy, use `labwired_project_create` with `current-project.in
 ![AXIOM H1 controller, PCB view](media/labwired-live-pcb-20261121.png)
 
 [Source-pinned screenshot and scope](../../flagship-live-snapshots-20261121.json). This shows the original controller PCB with 9/9 nets connected. It does not show the newly added servo loads or mechanical motion.
+
+## Authenticated live UI readback — 22 November 2026
+
+The [original AXIOM circuit](media/live-readback/axiom-original-circuit-20261122.jpg) renders, but the [original Mechanics view](media/live-readback/axiom-original-mechanics-unlinked-20261122.jpg) and [verified-controller candidate Mechanics view](media/live-readback/axiom-candidate-mechanics-unlinked-20261122.jpg) both prompt for a KernelCAD project link. The [readback manifest](../../flagship-ui-readbacks-20261122.json) captures image hashes and dates. The KernelCAD models named elsewhere in this repository are not linked to those two saved project Mechanics views; modeled PCA source tests do not prove joint motion. This is the next live integration gate.
