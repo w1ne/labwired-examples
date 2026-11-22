@@ -1,0 +1,1493 @@
+{
+  "schema": "pathfinder.nominal-assembly-envelope.v1",
+  "full_cad_sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9",
+  "pcb_sha256": "0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+  "conservative_cassette": {
+    "radius_mm": 18.4,
+    "z_mm": [
+      234,
+      476
+    ],
+    "coupler_bore_radius_mm": 19,
+    "nominal_radial_gap_mm": 0.6,
+    "bounded_hosted_path_receipt": "assembly-path-bounded.json",
+    "all_final_moving_geometry_contained": true
+  },
+  "continuous_axial_slide": {
+    "status": "proved_for_declared_nominal_bounds",
+    "preconditions": [
+      "Remove both bay bulkheads and the radial panel switch.",
+      "Disconnect the external bench leads and all leads that prevent axial motion.",
+      "Install the populated PCB in the carrier before connecting the reserved wiring harness."
+    ],
+    "pcb_width_mm": 31.5,
+    "channel_width_mm": 32.1,
+    "nominal_width_gap_per_side_mm": 0.3,
+    "pcb_nominal_thickness_mm": 1.6,
+    "channel_height_mm": 2.1,
+    "nominal_upper_gap_mm": 0.5,
+    "front_body_max_abs_x_mm": 13.9225,
+    "upper_ledge_inner_abs_x_mm": 14.75,
+    "minimum_body_to_ledge_side_gap_mm": 0.8275000000000006,
+    "maximum_tail_abs_x_mm": 12.500000000000004,
+    "minimum_tail_to_end_bridge_y_gap_mm": 0.65,
+    "minimum_tail_to_reverse_support_y_gap_mm": 0.85
+  },
+  "containment_checks": [
+    {
+      "part": "pcb-mcu",
+      "radius_upper_mm": 15.759907176947284,
+      "z_mm": [
+        239.5,
+        293.06
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-c_bulk",
+      "radius_upper_mm": 17.879474964327112,
+      "z_mm": [
+        455.525,
+        464.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-c_5v",
+      "radius_upper_mm": 10.187277604934499,
+      "z_mm": [
+        444.175,
+        453.825
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-c_3v3",
+      "radius_upper_mm": 10.061343101196778,
+      "z_mm": [
+        456.125,
+        462.875
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-c_dec",
+      "radius_upper_mm": 15.406999221133232,
+      "z_mm": [
+        452.925,
+        460.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_vbat_hi",
+      "radius_upper_mm": 13.516194915729796,
+      "z_mm": [
+        414.495,
+        417.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_vbat_lo",
+      "radius_upper_mm": 6.777353834646676,
+      "z_mm": [
+        414.495,
+        417.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-baro",
+      "radius_upper_mm": 15.429274124209472,
+      "z_mm": [
+        351.86,
+        377.81
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-imu",
+      "radius_upper_mm": 15.429274124209472,
+      "z_mm": [
+        323.81,
+        350.36
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_scl",
+      "radius_upper_mm": 3.795065875581081,
+      "z_mm": [
+        414.495,
+        417.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_sda",
+      "radius_upper_mm": 0.9340904667108,
+      "z_mm": [
+        414.495,
+        417.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-sd",
+      "radius_upper_mm": 14.962369464760586,
+      "z_mm": [
+        294.56,
+        322.31
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-pyro_term",
+      "radius_upper_mm": 12.677662442264348,
+      "z_mm": [
+        423.0,
+        431.65
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-q_pyro",
+      "radius_upper_mm": 13.283942374159864,
+      "z_mm": [
+        461.245,
+        465.155
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_pyro_g",
+      "radius_upper_mm": 3.795065875581081,
+      "z_mm": [
+        414.495,
+        417.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_pyro_pd",
+      "radius_upper_mm": 6.777353834646676,
+      "z_mm": [
+        414.495,
+        417.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_cont_hi",
+      "radius_upper_mm": 9.770492566907771,
+      "z_mm": [
+        414.495,
+        417.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_cont_lo",
+      "radius_upper_mm": 9.770492566907771,
+      "z_mm": [
+        419.495,
+        422.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-d_pyro",
+      "radius_upper_mm": 10.522624434997192,
+      "z_mm": [
+        445.475,
+        452.525
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-buzzer",
+      "radius_upper_mm": 13.645237264335126,
+      "z_mm": [
+        379.31,
+        391.86
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-q_buzz",
+      "radius_upper_mm": 11.791442871845668,
+      "z_mm": [
+        465.545,
+        469.455
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_buzz_g",
+      "radius_upper_mm": 6.777353834646676,
+      "z_mm": [
+        419.495,
+        422.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_buzz_pd",
+      "radius_upper_mm": 3.795065875581081,
+      "z_mm": [
+        419.495,
+        422.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-d_buzz",
+      "radius_upper_mm": 15.561491734406442,
+      "z_mm": [
+        421.115,
+        430.885
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-led_status",
+      "radius_upper_mm": 16.298243003465128,
+      "z_mm": [
+        448.26,
+        454.74
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_led",
+      "radius_upper_mm": 0.9340904667108,
+      "z_mm": [
+        419.495,
+        422.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-cam",
+      "radius_upper_mm": 17.235475225534106,
+      "z_mm": [
+        384.395,
+        395.605
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-q_cam",
+      "radius_upper_mm": 13.283942374159864,
+      "z_mm": [
+        466.245,
+        470.155
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_cam_pu",
+      "radius_upper_mm": 3.795065875581081,
+      "z_mm": [
+        419.495,
+        422.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-q_cam_drv",
+      "radius_upper_mm": 5.535397456371132,
+      "z_mm": [
+        465.545,
+        469.455
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_cam_b",
+      "radius_upper_mm": 6.777353834646676,
+      "z_mm": [
+        419.495,
+        422.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-q_rec",
+      "radius_upper_mm": 4.453001796541296,
+      "z_mm": [
+        465.545,
+        469.455
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-r_rec_b",
+      "radius_upper_mm": 9.770492566907771,
+      "z_mm": [
+        419.495,
+        422.505
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-uart",
+      "radius_upper_mm": 17.235475225534106,
+      "z_mm": [
+        384.395,
+        395.605
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-boost_harness",
+      "radius_upper_mm": 11.846861398699657,
+      "z_mm": [
+        394.0,
+        402.65
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-arm_harness",
+      "radius_upper_mm": 17.235475225534106,
+      "z_mm": [
+        397.67,
+        408.33
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pcb-battery_harness",
+      "radius_upper_mm": 12.677662442264348,
+      "z_mm": [
+        423.0,
+        431.65
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "flight-computer-pcb",
+      "radius_upper_mm": 15.831061240485427,
+      "z_mm": [
+        237.5,
+        472.5
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "battery installation",
+      "radius_upper_mm": 17.4928556845359,
+      "z_mm": [
+        317,
+        385
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "battery cable service",
+      "radius_upper_mm": 12.539936203984453,
+      "z_mm": [
+        388,
+        408
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "battery cable bridge",
+      "radius_upper_mm": 11.918997441060217,
+      "z_mm": [
+        385,
+        388
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "converter",
+      "radius_upper_mm": 12.560279894970494,
+      "z_mm": [
+        263,
+        303.64
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 15.54591988272164,
+      "z_mm": [
+        402.65,
+        413.65
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 16.26501229633719,
+      "z_mm": [
+        431.65,
+        442.65
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 15.192103211866353,
+      "z_mm": [
+        411.5,
+        421.5
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 18.18350901228913,
+      "z_mm": [
+        411.5,
+        421.5
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 15.192103211866353,
+      "z_mm": [
+        440.5,
+        448
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 18.18350901228913,
+      "z_mm": [
+        440.5,
+        448
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 18.18350901228913,
+      "z_mm": [
+        303.64,
+        448
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 18.18350901228913,
+      "z_mm": [
+        303.64,
+        448
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 18.18350901228913,
+      "z_mm": [
+        303.64,
+        314.5
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "wire service",
+      "radius_upper_mm": 13.60294085850556,
+      "z_mm": [
+        396,
+        400
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 6.600189391222043,
+      "z_mm": [
+        410.4,
+        412.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 3.370830758136635,
+      "z_mm": [
+        410.4,
+        412.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 3.370830758136635,
+      "z_mm": [
+        410.4,
+        412.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 6.600189391222043,
+      "z_mm": [
+        410.4,
+        412.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 7.810249675906654,
+      "z_mm": [
+        439.4,
+        441.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 4.477722635447622,
+      "z_mm": [
+        439.4,
+        441.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 4.477722635447622,
+      "z_mm": [
+        439.4,
+        441.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "protected wire port",
+      "radius_upper_mm": 7.810249675906654,
+      "z_mm": [
+        439.4,
+        441.6
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "carrier frame",
+      "radius_upper_mm": 18.4,
+      "z_mm": [
+        234,
+        476
+      ],
+      "proof": "Final intersection with the R18.4 x242 cylinder, followed only by subtraction."
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        241.025,
+        241.525
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        243.565,
+        244.065
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        246.10500000000002,
+        246.60500000000002
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        248.645,
+        249.145
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        251.185,
+        251.685
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        253.725,
+        254.225
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        256.265,
+        256.765
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        258.805,
+        259.305
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        261.345,
+        261.845
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        263.885,
+        264.385
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        266.425,
+        266.925
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        268.96500000000003,
+        269.46500000000003
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        271.505,
+        272.005
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        274.045,
+        274.545
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        276.585,
+        277.085
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        279.125,
+        279.625
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        281.665,
+        282.165
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        284.205,
+        284.705
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        286.745,
+        287.245
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 11.269748222564692,
+      "z_mm": [
+        289.28499999999997,
+        289.78499999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        289.28499999999997,
+        289.78499999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        286.745,
+        287.245
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        284.205,
+        284.705
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        281.665,
+        282.165
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        279.125,
+        279.625
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        276.585,
+        277.085
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        274.045,
+        274.545
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        271.505,
+        272.005
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        268.96500000000003,
+        269.46500000000003
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        266.425,
+        266.925
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        263.885,
+        264.385
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        261.345,
+        261.845
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        258.805,
+        259.305
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        256.265,
+        256.765
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        253.725,
+        254.225
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        251.185,
+        251.685
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        248.645,
+        249.145
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        246.10500000000002,
+        246.60500000000002
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        243.565,
+        244.065
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.802501615682671,
+      "z_mm": [
+        241.025,
+        241.525
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 7.71157838737317,
+      "z_mm": [
+        285.525,
+        286.025
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 5.481779103958951,
+      "z_mm": [
+        285.525,
+        286.025
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 3.678935044901038,
+      "z_mm": [
+        285.525,
+        286.025
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "mcu solder tail",
+      "radius_upper_mm": 3.2758774373594925,
+      "z_mm": [
+        285.525,
+        286.025
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "c_bulk solder tail",
+      "radius_upper_mm": 10.517247738833579,
+      "z_mm": [
+        459.5,
+        460.1
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "c_bulk solder tail",
+      "radius_upper_mm": 7.246550903705845,
+      "z_mm": [
+        459.5,
+        460.1
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "c_dec solder tail",
+      "radius_upper_mm": 12.878664527038511,
+      "z_mm": [
+        458.7,
+        459.3
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "c_dec solder tail",
+      "radius_upper_mm": 12.878664527038511,
+      "z_mm": [
+        453.7,
+        454.3
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "baro solder tail",
+      "radius_upper_mm": 11.572920979597155,
+      "z_mm": [
+        356.89000000000004,
+        357.54
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "baro solder tail",
+      "radius_upper_mm": 11.572920979597155,
+      "z_mm": [
+        359.43,
+        360.08
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "baro solder tail",
+      "radius_upper_mm": 11.572920979597155,
+      "z_mm": [
+        361.97,
+        362.62
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "baro solder tail",
+      "radius_upper_mm": 11.572920979597155,
+      "z_mm": [
+        364.51000000000005,
+        365.16
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "baro solder tail",
+      "radius_upper_mm": 11.572920979597155,
+      "z_mm": [
+        367.05,
+        367.7
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "baro solder tail",
+      "radius_upper_mm": 11.572920979597155,
+      "z_mm": [
+        369.59,
+        370.23999999999995
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "baro solder tail",
+      "radius_upper_mm": 11.572920979597155,
+      "z_mm": [
+        372.13000000000005,
+        372.78000000000003
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 11.669297322461194,
+      "z_mm": [
+        330.41,
+        331.06
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 11.669297322461194,
+      "z_mm": [
+        332.95,
+        333.59999999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 11.669297322461194,
+      "z_mm": [
+        335.49,
+        336.14
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 11.669297322461194,
+      "z_mm": [
+        338.03000000000003,
+        338.68
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 11.669297322461194,
+      "z_mm": [
+        340.57,
+        341.21999999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 11.669297322461194,
+      "z_mm": [
+        343.11,
+        343.76
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 3.74432904536981,
+      "z_mm": [
+        343.11,
+        343.76
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 3.74432904536981,
+      "z_mm": [
+        340.57,
+        341.21999999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 3.74432904536981,
+      "z_mm": [
+        338.03000000000003,
+        338.68
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 3.74432904536981,
+      "z_mm": [
+        335.49,
+        336.14
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 3.74432904536981,
+      "z_mm": [
+        332.95,
+        333.59999999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "imu solder tail",
+      "radius_upper_mm": 3.74432904536981,
+      "z_mm": [
+        330.41,
+        331.06
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 11.678938307911382,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 9.254642078438257,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 6.913927971855073,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 4.781171404582773,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 3.289376840679705,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 3.7387297308043013,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 5.571974515376035,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 7.811459530715114,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "sd solder tail",
+      "radius_upper_mm": 10.192845530076474,
+      "z_mm": [
+        319.17,
+        319.82
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pyro_term solder tail",
+      "radius_upper_mm": 7.610026281163555,
+      "z_mm": [
+        426.175,
+        427.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "pyro_term solder tail",
+      "radius_upper_mm": 4.638156961552725,
+      "z_mm": [
+        426.175,
+        427.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "buzzer solder tail",
+      "radius_upper_mm": 3.422352991729521,
+      "z_mm": [
+        385.26000000000005,
+        385.91
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "buzzer solder tail",
+      "radius_upper_mm": 7.473285756613353,
+      "z_mm": [
+        385.26000000000005,
+        385.91
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "d_buzz solder tail",
+      "radius_upper_mm": 12.684636376341263,
+      "z_mm": [
+        429.51,
+        430.11
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "d_buzz solder tail",
+      "radius_upper_mm": 12.684636376341263,
+      "z_mm": [
+        421.89,
+        422.49
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "led_status solder tail",
+      "radius_upper_mm": 10.541139644269968,
+      "z_mm": [
+        452.45,
+        453.09999999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "led_status solder tail",
+      "radius_upper_mm": 10.541139644269968,
+      "z_mm": [
+        449.91,
+        450.56
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "cam solder tail",
+      "radius_upper_mm": 12.832566237896453,
+      "z_mm": [
+        385.865,
+        386.515
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "cam solder tail",
+      "radius_upper_mm": 12.832566237896453,
+      "z_mm": [
+        388.40500000000003,
+        389.055
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "cam solder tail",
+      "radius_upper_mm": 12.832566237896453,
+      "z_mm": [
+        390.945,
+        391.59499999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "cam solder tail",
+      "radius_upper_mm": 12.832566237896453,
+      "z_mm": [
+        393.485,
+        394.135
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "uart solder tail",
+      "radius_upper_mm": 12.585269415074116,
+      "z_mm": [
+        385.865,
+        386.515
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "uart solder tail",
+      "radius_upper_mm": 12.585269415074116,
+      "z_mm": [
+        388.40500000000003,
+        389.055
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "uart solder tail",
+      "radius_upper_mm": 12.585269415074116,
+      "z_mm": [
+        390.945,
+        391.59499999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "uart solder tail",
+      "radius_upper_mm": 12.585269415074116,
+      "z_mm": [
+        393.485,
+        394.135
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "boost_harness solder tail",
+      "radius_upper_mm": 6.488451279003334,
+      "z_mm": [
+        397.175,
+        398.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "boost_harness solder tail",
+      "radius_upper_mm": 3.8013155617496426,
+      "z_mm": [
+        397.175,
+        398.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "boost_harness solder tail",
+      "radius_upper_mm": 3.8013155617496426,
+      "z_mm": [
+        397.175,
+        398.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "boost_harness solder tail",
+      "radius_upper_mm": 6.488451279003334,
+      "z_mm": [
+        397.175,
+        398.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "arm_harness solder tail",
+      "radius_upper_mm": 12.832566237896453,
+      "z_mm": [
+        401.40500000000003,
+        402.055
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "arm_harness solder tail",
+      "radius_upper_mm": 12.832566237896453,
+      "z_mm": [
+        403.945,
+        404.59499999999997
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "battery_harness solder tail",
+      "radius_upper_mm": 4.638156961552725,
+      "z_mm": [
+        426.175,
+        427.075
+      ],
+      "within_cassette": true
+    },
+    {
+      "part": "battery_harness solder tail",
+      "radius_upper_mm": 7.610026281163555,
+      "z_mm": [
+        426.175,
+        427.075
+      ],
+      "within_cassette": true
+    }
+  ],
+  "physical_holds": [
+    "Bore/print/PCB tolerances, battery swelling and actual wire bends must be measured.",
+    "Retainers, solder-tail trim, abrasion protection, strain relief and tool access require assembly inspection.",
+    "The full48-body combinatorial solver exceeded its budget on the preceding geometry; this is a conservative bounded-path proof, not a full-assembly search result.",
+    "Continuous geometric translation does not qualify vibration, loads, hardware current, temperature or flight."
+  ]
+}

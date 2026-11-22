@@ -1,0 +1,1071 @@
+{
+  "ok": true,
+  "source_kind": "kicad_pcb",
+  "pack": {
+    "board": "stm32f411ceu6-blackpill",
+    "user_context": "Coverage diagnosis of exact source-bound Pathfinder hobby bench carrier. Do not substitute package identities or drop unknown connected parts. Four offboard devices are retained in the separate full logical diagram.",
+    "agent_brief": "KiCad board (`.kicad_pcb`, version 20260206): 37 symbol(s), 30 net(s) → 28 catalog part(s), 37 wire(s), 5 design-only, 4 ignored (no simulation behaviour).\n4 symbol(s) ignored (connectors, test points, mounting holes, fiducials, jumpers): no simulation behaviour, so they are NOT model gaps and do not make a run unproven.\nBoard hint/resolved: stm32f411ceu6-blackpill.\nMCU symbol not mapped: no imported symbol mapped to an mcu-class catalog part — `board` sets the pin map, it does not add the MCU node. Twin not minted.\nDesign context only — use labwired_part / labwired_datasheet for dropped parts; do not invent pins.\nUser: Coverage diagnosis of exact source-bound Pathfinder hobby bench carrier. Do not substitute package identities or drop unknown connected parts. Four offboard devices are retained in the separate full logical diagram.",
+    "coverage_md": "# Import coverage\n\n- source: kicad_pcb\n- board: `stm32f411ceu6-blackpill`\n- supported: 28\n- dropped: 5\n- ignored: 4\n- mcu_mapped: false — no imported symbol mapped to an mcu-class catalog part — `board` sets the pin map, it does not add the MCU node\n- mint_ok: false\n- twin_buildable: false\n\n## Mapped\n- `C1` · 470uF → capacitor\n- `C2` · 22uF → capacitor\n- `C3` · 10uF → capacitor\n- `C4` · 100nF → capacitor\n- `D1` · SMAJ5.0A → tvs-diode\n- `D2` · 1N4148 → diode\n- `D3` · green → led\n- `J3` · pin-header → pin-header\n- `J4` · pin-header → pin-header\n- `J6` · pin-header → pin-header\n- `Q1` · AO3400A → nmos\n- `Q2` · 2N7000 → nmos\n- `Q4` · 2N3904 → npn\n- `Q5` · 2N3904 → npn\n- `R1` · 100000 → resistor\n- `R10` · 10000 → resistor\n- `R11` · 330 → resistor\n- `R12` · 10000 → resistor\n- `R13` · 1000 → resistor\n- `R14` · 1000 → resistor\n- `R2` · 100000 → resistor\n- `R3` · 4700 → resistor\n- `R4` · 4700 → resistor\n- `R5` · 100 → resistor\n- `R6` · 10000 → resistor\n- `R7` · 47000 → resistor\n- `R8` · 100000 → resistor\n- `R9` · 100 → resistor\n\n## Dropped / design-only (never invent pins)\n### ic (3)\n- `A1` · MiniSTM32F411 — ic — symbol MiniSTM32F411 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n- `U1` · 2652 — ic — symbol 2652 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n- `U2` · 3886 — ic — symbol 3886 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n\n### mosfet (1)\n- `Q3` · AO3401A — mosfet — symbol AO3401A is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n\n### unclassified (1)\n- `LS1` · 1536 — symbol 1536 is not in the catalog — design via labwired_part/datasheet; never invent pins\n\n## Ignored (no simulation behaviour — not a model gap)\n- `J1` · 4682 — connector — KiCad reserves the `J` designator for it; no simulation behaviour\n- `J2` · 1984617 — connector — the twin wires nets, not mating halves\n- `J5` · 1984633 — connector — the twin wires nets, not mating halves\n- `J7` · 1984617 — connector — the twin wires nets, not mating halves\n",
+    "mapping": [
+      {
+        "ref": "A1",
+        "value": "MiniSTM32F411",
+        "status": "dropped",
+        "reason": "ic — symbol MiniSTM32F411 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "ic"
+      },
+      {
+        "ref": "C1",
+        "value": "470uF",
+        "status": "mapped",
+        "catalog_type": "capacitor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "C2",
+        "value": "22uF",
+        "status": "mapped",
+        "catalog_type": "capacitor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "C3",
+        "value": "10uF",
+        "status": "mapped",
+        "catalog_type": "capacitor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "C4",
+        "value": "100nF",
+        "status": "mapped",
+        "catalog_type": "capacitor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "D1",
+        "value": "SMAJ5.0A",
+        "status": "mapped",
+        "catalog_type": "tvs-diode"
+      },
+      {
+        "ref": "D2",
+        "value": "1N4148",
+        "status": "mapped",
+        "catalog_type": "diode"
+      },
+      {
+        "ref": "D3",
+        "value": "green",
+        "status": "mapped",
+        "catalog_type": "led"
+      },
+      {
+        "ref": "J1",
+        "value": "4682",
+        "status": "ignored",
+        "reason": "connector — KiCad reserves the `J` designator for it; no simulation behaviour",
+        "symbol_class": "connector"
+      },
+      {
+        "ref": "J2",
+        "value": "1984617",
+        "status": "ignored",
+        "reason": "connector — the twin wires nets, not mating halves",
+        "symbol_class": "connector"
+      },
+      {
+        "ref": "J3",
+        "value": "pin-header",
+        "status": "mapped",
+        "catalog_type": "pin-header"
+      },
+      {
+        "ref": "J4",
+        "value": "pin-header",
+        "status": "mapped",
+        "catalog_type": "pin-header"
+      },
+      {
+        "ref": "J5",
+        "value": "1984633",
+        "status": "ignored",
+        "reason": "connector — the twin wires nets, not mating halves",
+        "symbol_class": "connector"
+      },
+      {
+        "ref": "J6",
+        "value": "pin-header",
+        "status": "mapped",
+        "catalog_type": "pin-header"
+      },
+      {
+        "ref": "J7",
+        "value": "1984617",
+        "status": "ignored",
+        "reason": "connector — the twin wires nets, not mating halves",
+        "symbol_class": "connector"
+      },
+      {
+        "ref": "LS1",
+        "value": "1536",
+        "status": "dropped",
+        "reason": "symbol 1536 is not in the catalog — design via labwired_part/datasheet; never invent pins"
+      },
+      {
+        "ref": "Q1",
+        "value": "AO3400A",
+        "status": "mapped",
+        "catalog_type": "nmos"
+      },
+      {
+        "ref": "Q2",
+        "value": "2N7000",
+        "status": "mapped",
+        "catalog_type": "nmos"
+      },
+      {
+        "ref": "Q3",
+        "value": "AO3401A",
+        "status": "dropped",
+        "reason": "mosfet — symbol AO3401A is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "mosfet"
+      },
+      {
+        "ref": "Q4",
+        "value": "2N3904",
+        "status": "mapped",
+        "catalog_type": "npn"
+      },
+      {
+        "ref": "Q5",
+        "value": "2N3904",
+        "status": "mapped",
+        "catalog_type": "npn"
+      },
+      {
+        "ref": "R1",
+        "value": "100000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R10",
+        "value": "10000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R11",
+        "value": "330",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R12",
+        "value": "10000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R13",
+        "value": "1000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R14",
+        "value": "1000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R2",
+        "value": "100000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R3",
+        "value": "4700",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R4",
+        "value": "4700",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R5",
+        "value": "100",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R6",
+        "value": "10000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R7",
+        "value": "47000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R8",
+        "value": "100000",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "R9",
+        "value": "100",
+        "status": "mapped",
+        "catalog_type": "resistor",
+        "value_source": "value_field"
+      },
+      {
+        "ref": "U1",
+        "value": "2652",
+        "status": "dropped",
+        "reason": "ic — symbol 2652 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "ic"
+      },
+      {
+        "ref": "U2",
+        "value": "3886",
+        "status": "dropped",
+        "reason": "ic — symbol 3886 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+        "symbol_class": "ic"
+      }
+    ],
+    "mint_ok": false,
+    "supported_part_count": 28,
+    "twin_buildable": false,
+    "design_context_ok": true,
+    "source_kind": "kicad_pcb"
+  },
+  "mapping": [
+    {
+      "ref": "A1",
+      "value": "MiniSTM32F411",
+      "status": "dropped",
+      "reason": "ic — symbol MiniSTM32F411 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "ic"
+    },
+    {
+      "ref": "C1",
+      "value": "470uF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "C2",
+      "value": "22uF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "C3",
+      "value": "10uF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "C4",
+      "value": "100nF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "D1",
+      "value": "SMAJ5.0A",
+      "status": "mapped",
+      "catalog_type": "tvs-diode"
+    },
+    {
+      "ref": "D2",
+      "value": "1N4148",
+      "status": "mapped",
+      "catalog_type": "diode"
+    },
+    {
+      "ref": "D3",
+      "value": "green",
+      "status": "mapped",
+      "catalog_type": "led"
+    },
+    {
+      "ref": "J1",
+      "value": "4682",
+      "status": "ignored",
+      "reason": "connector — KiCad reserves the `J` designator for it; no simulation behaviour",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "J2",
+      "value": "1984617",
+      "status": "ignored",
+      "reason": "connector — the twin wires nets, not mating halves",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "J3",
+      "value": "pin-header",
+      "status": "mapped",
+      "catalog_type": "pin-header"
+    },
+    {
+      "ref": "J4",
+      "value": "pin-header",
+      "status": "mapped",
+      "catalog_type": "pin-header"
+    },
+    {
+      "ref": "J5",
+      "value": "1984633",
+      "status": "ignored",
+      "reason": "connector — the twin wires nets, not mating halves",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "J6",
+      "value": "pin-header",
+      "status": "mapped",
+      "catalog_type": "pin-header"
+    },
+    {
+      "ref": "J7",
+      "value": "1984617",
+      "status": "ignored",
+      "reason": "connector — the twin wires nets, not mating halves",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "LS1",
+      "value": "1536",
+      "status": "dropped",
+      "reason": "symbol 1536 is not in the catalog — design via labwired_part/datasheet; never invent pins"
+    },
+    {
+      "ref": "Q1",
+      "value": "AO3400A",
+      "status": "mapped",
+      "catalog_type": "nmos"
+    },
+    {
+      "ref": "Q2",
+      "value": "2N7000",
+      "status": "mapped",
+      "catalog_type": "nmos"
+    },
+    {
+      "ref": "Q3",
+      "value": "AO3401A",
+      "status": "dropped",
+      "reason": "mosfet — symbol AO3401A is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "mosfet"
+    },
+    {
+      "ref": "Q4",
+      "value": "2N3904",
+      "status": "mapped",
+      "catalog_type": "npn"
+    },
+    {
+      "ref": "Q5",
+      "value": "2N3904",
+      "status": "mapped",
+      "catalog_type": "npn"
+    },
+    {
+      "ref": "R1",
+      "value": "100000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R10",
+      "value": "10000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R11",
+      "value": "330",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R12",
+      "value": "10000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R13",
+      "value": "1000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R14",
+      "value": "1000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R2",
+      "value": "100000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R3",
+      "value": "4700",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R4",
+      "value": "4700",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R5",
+      "value": "100",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R6",
+      "value": "10000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R7",
+      "value": "47000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R8",
+      "value": "100000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R9",
+      "value": "100",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "U1",
+      "value": "2652",
+      "status": "dropped",
+      "reason": "ic — symbol 2652 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "ic"
+    },
+    {
+      "ref": "U2",
+      "value": "3886",
+      "status": "dropped",
+      "reason": "ic — symbol 3886 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "ic"
+    }
+  ],
+  "coverage_md": "# Import coverage\n\n- source: kicad_pcb\n- board: `stm32f411ceu6-blackpill`\n- supported: 28\n- dropped: 5\n- ignored: 4\n- mcu_mapped: false — no imported symbol mapped to an mcu-class catalog part — `board` sets the pin map, it does not add the MCU node\n- mint_ok: false\n- twin_buildable: false\n\n## Mapped\n- `C1` · 470uF → capacitor\n- `C2` · 22uF → capacitor\n- `C3` · 10uF → capacitor\n- `C4` · 100nF → capacitor\n- `D1` · SMAJ5.0A → tvs-diode\n- `D2` · 1N4148 → diode\n- `D3` · green → led\n- `J3` · pin-header → pin-header\n- `J4` · pin-header → pin-header\n- `J6` · pin-header → pin-header\n- `Q1` · AO3400A → nmos\n- `Q2` · 2N7000 → nmos\n- `Q4` · 2N3904 → npn\n- `Q5` · 2N3904 → npn\n- `R1` · 100000 → resistor\n- `R10` · 10000 → resistor\n- `R11` · 330 → resistor\n- `R12` · 10000 → resistor\n- `R13` · 1000 → resistor\n- `R14` · 1000 → resistor\n- `R2` · 100000 → resistor\n- `R3` · 4700 → resistor\n- `R4` · 4700 → resistor\n- `R5` · 100 → resistor\n- `R6` · 10000 → resistor\n- `R7` · 47000 → resistor\n- `R8` · 100000 → resistor\n- `R9` · 100 → resistor\n\n## Dropped / design-only (never invent pins)\n### ic (3)\n- `A1` · MiniSTM32F411 — ic — symbol MiniSTM32F411 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n- `U1` · 2652 — ic — symbol 2652 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n- `U2` · 3886 — ic — symbol 3886 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n\n### mosfet (1)\n- `Q3` · AO3401A — mosfet — symbol AO3401A is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins\n\n### unclassified (1)\n- `LS1` · 1536 — symbol 1536 is not in the catalog — design via labwired_part/datasheet; never invent pins\n\n## Ignored (no simulation behaviour — not a model gap)\n- `J1` · 4682 — connector — KiCad reserves the `J` designator for it; no simulation behaviour\n- `J2` · 1984617 — connector — the twin wires nets, not mating halves\n- `J5` · 1984633 — connector — the twin wires nets, not mating halves\n- `J7` · 1984617 — connector — the twin wires nets, not mating halves\n",
+  "agent_brief": "KiCad board (`.kicad_pcb`, version 20260206): 37 symbol(s), 30 net(s) → 28 catalog part(s), 37 wire(s), 5 design-only, 4 ignored (no simulation behaviour).\n4 symbol(s) ignored (connectors, test points, mounting holes, fiducials, jumpers): no simulation behaviour, so they are NOT model gaps and do not make a run unproven.\nBoard hint/resolved: stm32f411ceu6-blackpill.\nMCU symbol not mapped: no imported symbol mapped to an mcu-class catalog part — `board` sets the pin map, it does not add the MCU node. Twin not minted.\nDesign context only — use labwired_part / labwired_datasheet for dropped parts; do not invent pins.\nUser: Coverage diagnosis of exact source-bound Pathfinder hobby bench carrier. Do not substitute package identities or drop unknown connected parts. Four offboard devices are retained in the separate full logical diagram.",
+  "design_context_ok": true,
+  "twin_buildable": false,
+  "mode": "design_only",
+  "next": [
+    "labwired_part",
+    "labwired_datasheet",
+    "agent_draft",
+    "catalog_gap_report",
+    "labwired_import"
+  ],
+  "summary": "mode=design_only · quality=ok · design_context_ok=true · twin_buildable=false · board=stm32f411ceu6-blackpill · mapping=28 mapped / 5 dropped · goal=Coverage diagnosis of exact source-bound Pathfinder hobby bench carrier. Do not ",
+  "board_file": {
+    "schema": "labwired-board-file/0.1",
+    "format": "kicad_pcb",
+    "source_version": "20260206",
+    "units": "mm",
+    "frame": "mm; origin at the bottom-left corner of the board outline, +x right, +y up",
+    "counts": {
+      "components": 37,
+      "nets": 30,
+      "named_nets": 20
+    },
+    "headers": [
+      {
+        "ref": "J1",
+        "footprint": "labwired:Adafruit_MicroSD_4682_CardEnvelope",
+        "pins": [
+          {
+            "pad": "1",
+            "net": "+3V3",
+            "signal": "3V3",
+            "x": 4.81,
+            "y": 153.01
+          },
+          {
+            "pad": "2",
+            "net": "GND",
+            "signal": "GND",
+            "x": 7.36,
+            "y": 153.01
+          },
+          {
+            "pad": "3",
+            "net": "PA5",
+            "signal": "PA5",
+            "x": 9.9,
+            "y": 153.01
+          },
+          {
+            "pad": "4",
+            "net": "PA6",
+            "signal": "PA6",
+            "x": 12.43,
+            "y": 153.01
+          },
+          {
+            "pad": "5",
+            "net": "PA7",
+            "signal": "PA7",
+            "x": 14.98,
+            "y": 153.01
+          },
+          {
+            "pad": "6",
+            "net": "PA4",
+            "signal": "PA4",
+            "x": 17.52,
+            "y": 153.01
+          },
+          {
+            "pad": "7",
+            "net": "",
+            "signal": null,
+            "x": 20.06,
+            "y": 153.01
+          },
+          {
+            "pad": "8",
+            "net": "",
+            "signal": null,
+            "x": 22.6,
+            "y": 153.01
+          },
+          {
+            "pad": "9",
+            "net": "",
+            "signal": null,
+            "x": 25.14,
+            "y": 153.01
+          }
+        ]
+      },
+      {
+        "ref": "J2",
+        "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",
+        "pins": [
+          {
+            "pad": "1",
+            "net": "+",
+            "signal": "+",
+            "x": 9.25,
+            "y": 45.88
+          },
+          {
+            "pad": "2",
+            "net": "N$11",
+            "signal": null,
+            "x": 12.75,
+            "y": 45.88
+          }
+        ]
+      },
+      {
+        "ref": "J3",
+        "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+        "pins": [
+          {
+            "pad": "1",
+            "net": "N$9",
+            "signal": null,
+            "x": 27.88,
+            "y": 86.31
+          },
+          {
+            "pad": "2",
+            "net": "GND",
+            "signal": "GND",
+            "x": 27.88,
+            "y": 83.77
+          },
+          {
+            "pad": "3",
+            "net": "N$10",
+            "signal": null,
+            "x": 27.88,
+            "y": 81.23
+          },
+          {
+            "pad": "4",
+            "net": "",
+            "signal": null,
+            "x": 27.88,
+            "y": 78.69
+          }
+        ]
+      },
+      {
+        "ref": "J4",
+        "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+        "pins": [
+          {
+            "pad": "1",
+            "net": "PA2",
+            "signal": "PA2",
+            "x": 3.88,
+            "y": 86.31
+          },
+          {
+            "pad": "2",
+            "net": "PA3",
+            "signal": "PA3",
+            "x": 3.88,
+            "y": 83.77
+          },
+          {
+            "pad": "3",
+            "net": "GND",
+            "signal": "GND",
+            "x": 3.88,
+            "y": 81.23
+          },
+          {
+            "pad": "4",
+            "net": "+3V3",
+            "signal": "3V3",
+            "x": 3.88,
+            "y": 78.69
+          }
+        ]
+      },
+      {
+        "ref": "J5",
+        "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",
+        "pins": [
+          {
+            "pad": "1",
+            "net": "+",
+            "signal": "+",
+            "x": 10.5,
+            "y": 74.88
+          },
+          {
+            "pad": "2",
+            "net": "GND",
+            "signal": "GND",
+            "x": 14,
+            "y": 74.88
+          },
+          {
+            "pad": "3",
+            "net": "+5V",
+            "signal": "5V",
+            "x": 17.5,
+            "y": 74.88
+          },
+          {
+            "pad": "4",
+            "net": "GND",
+            "signal": "GND",
+            "x": 21,
+            "y": 74.88
+          }
+        ]
+      },
+      {
+        "ref": "J6",
+        "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+        "pins": [
+          {
+            "pad": "1",
+            "net": "GND",
+            "signal": "GND",
+            "x": 27.88,
+            "y": 70.77
+          },
+          {
+            "pad": "2",
+            "net": "PB12",
+            "signal": "PB12",
+            "x": 27.88,
+            "y": 68.23
+          }
+        ]
+      },
+      {
+        "ref": "J7",
+        "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",
+        "pins": [
+          {
+            "pad": "1",
+            "net": "+",
+            "signal": "+",
+            "x": 18.75,
+            "y": 45.88
+          },
+          {
+            "pad": "2",
+            "net": "GND",
+            "signal": "GND",
+            "x": 22.25,
+            "y": 45.88
+          }
+        ]
+      }
+    ],
+    "outline": {
+      "size_mm": [
+        31.5,
+        235
+      ],
+      "polygon": [
+        [
+          0,
+          235
+        ],
+        [
+          31.5,
+          235
+        ],
+        [
+          31.5,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "cutouts": 8
+    },
+    "holes": [],
+    "nets": [
+      [
+        "N$29",
+        [
+          "R6.1",
+          "Q1.1",
+          "R5.2"
+        ]
+      ],
+      [
+        "GND",
+        [
+          "R6.2",
+          "D3.1",
+          "D1.2",
+          "R10.2",
+          "C4.2",
+          "C2.2",
+          "C3.2",
+          "C1.2",
+          "U1.3",
+          "U1.5",
+          "U2.3",
+          "U2.7",
+          "U2.12",
+          "Q1.2",
+          "A1.19",
+          "A1.39",
+          "A1.44",
+          "J1.2",
+          "Q2.2",
+          "J3.2",
+          "Q4.2",
+          "Q5.2",
+          "J5.2",
+          "J5.4",
+          "J4.3",
+          "J7.2",
+          "J6.1",
+          "R8.2",
+          "R2.2"
+        ]
+      ],
+      [
+        "N$12",
+        [
+          "D3.2",
+          "R11.2"
+        ]
+      ],
+      [
+        "+",
+        [
+          "D2.1",
+          "LS1.1",
+          "C1.1",
+          "J2.1",
+          "J5.1",
+          "J7.1",
+          "R1.1"
+        ]
+      ],
+      [
+        "N$8",
+        [
+          "D2.2",
+          "LS1.2",
+          "Q2.3"
+        ]
+      ],
+      [
+        "N$11",
+        [
+          "D1.1",
+          "Q1.3",
+          "J2.2",
+          "R7.1"
+        ]
+      ],
+      [
+        "N$26",
+        [
+          "R10.1",
+          "Q2.1",
+          "R9.2"
+        ]
+      ],
+      [
+        "PB14",
+        [
+          "R11.1",
+          "A1.3"
+        ]
+      ],
+      [
+        "+5V",
+        [
+          "R12.1",
+          "C2.1",
+          "A1.18",
+          "A1.40",
+          "Q3.2",
+          "J5.3"
+        ]
+      ],
+      [
+        "N$28",
+        [
+          "R12.2",
+          "Q3.1",
+          "Q4.3"
+        ]
+      ],
+      [
+        "PB15",
+        [
+          "R13.1",
+          "A1.4"
+        ]
+      ],
+      [
+        "N$27",
+        [
+          "R13.2",
+          "Q4.1"
+        ]
+      ],
+      [
+        "PB8",
+        [
+          "R14.1",
+          "A1.16"
+        ]
+      ],
+      [
+        "N$30",
+        [
+          "R14.2",
+          "Q5.1"
+        ]
+      ],
+      [
+        "+3V3",
+        [
+          "C4.1",
+          "C3.1",
+          "U1.1",
+          "U1.7",
+          "U2.1",
+          "A1.20",
+          "A1.38",
+          "A1.41",
+          "J1.1",
+          "J4.4",
+          "R3.1",
+          "R4.1"
+        ]
+      ],
+      [
+        "PB6",
+        [
+          "U1.4",
+          "U2.4",
+          "A1.14",
+          "R3.2"
+        ]
+      ],
+      [
+        "PB7",
+        [
+          "U1.6",
+          "U2.5",
+          "A1.15",
+          "R4.2"
+        ]
+      ],
+      [
+        "PB12",
+        [
+          "A1.1",
+          "J6.2"
+        ]
+      ],
+      [
+        "PB13",
+        [
+          "A1.2",
+          "R9.1"
+        ]
+      ],
+      [
+        "PA0",
+        [
+          "A1.26",
+          "R1.2",
+          "R2.1"
+        ]
+      ],
+      [
+        "PA2",
+        [
+          "A1.28",
+          "J4.1"
+        ]
+      ],
+      [
+        "PA3",
+        [
+          "A1.29",
+          "J4.2"
+        ]
+      ],
+      [
+        "PA4",
+        [
+          "A1.30",
+          "J1.6"
+        ]
+      ],
+      [
+        "PA5",
+        [
+          "A1.31",
+          "J1.3"
+        ]
+      ],
+      [
+        "PA6",
+        [
+          "A1.32",
+          "J1.4"
+        ]
+      ],
+      [
+        "PA7",
+        [
+          "A1.33",
+          "J1.5"
+        ]
+      ],
+      [
+        "PB0",
+        [
+          "A1.34",
+          "R5.1"
+        ]
+      ],
+      [
+        "PB1",
+        [
+          "A1.35",
+          "R8.1",
+          "R7.2"
+        ]
+      ],
+      [
+        "N$9",
+        [
+          "Q3.3",
+          "J3.1"
+        ]
+      ],
+      [
+        "N$10",
+        [
+          "J3.3",
+          "Q5.3"
+        ]
+      ]
+    ],
+    "warnings": []
+  },
+  "quality": "ok"
+}

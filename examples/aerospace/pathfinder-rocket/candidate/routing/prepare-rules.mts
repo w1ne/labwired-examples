@@ -1,0 +1,20 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import assert from 'node:assert/strict';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+const checkout=process.env.LABWIRED_CHECKOUT;assert(checkout,'Set LABWIRED_CHECKOUT');
+const fromRepo=(p:string)=>import(pathToFileURL(resolve(checkout!,p)).href);
+const { readBoardFromText }=await fromRepo('packages/board-pcb/src/index.ts');
+const { resolveAgentRoutingRules, emitAgentRuleFiles }=await fromRepo('services/labwired-builder/src/agent-routing-rules.ts');
+const { applyAgentDsnRules }=await fromRepo('services/labwired-builder/src/agent-routing-dsn.ts');
+const { nativeDsnLayerNames }=await fromRepo('services/labwired-builder/src/route-imported-native.ts');
+const root=dirname(fileURLToPath(import.meta.url))+'/';
+const pcb=readFileSync(root+'protected-source.kicad_pcb','utf8'),board=readBoardFromText(pcb);
+const raw=JSON.parse(readFileSync(root+'rules.json','utf8'));
+const names=new Map(board.snapshot.nets.map(n=>[n.code,n.name]));
+const plan=resolveAgentRoutingRules(raw,{nets:board.snapshot.nets.filter(n=>n.name!=='').map(n=>n.name),parts:board.components.map(c=>({ref:c.ref,pins:c.pads.map(p=>({pin:p.number,net:names.get(p.net??-1)??''}))}))});
+const input=applyAgentDsnRules(readFileSync(root+'native.dsn','utf8'),plan,nativeDsnLayerNames(pcb,board.copperLayers));
+const files=emitAgentRuleFiles(plan);
+writeFileSync(root+'input.dsn',input);writeFileSync(root+'rules.kicad_pro',files.project);writeFileSync(root+'rules.kicad_dru',files.custom_rules);writeFileSync(root+'plan.json',JSON.stringify(plan,null,2));
+for(const mode of ['protected-source','strict']){writeFileSync(root+mode+'.kicad_pro',files.project);writeFileSync(root+mode+'.kicad_dru',files.custom_rules);}
+console.log(JSON.stringify({parts:board.components.length,tracks:board.snapshot.tracks.length+board.innerTracks.length+board.arcTracks.length,vias:board.snapshot.vias.length,rulesDigest:files.rules_digest}));

@@ -1,0 +1,2281 @@
+{
+  "schema": "pathfinder.source-parts.v1",
+  "implementation_commit": "14aa25315b8d4f3db16b69332b88e32413d1094a",
+  "design_input_sha256": "496440cc518f18dc7c7c9e4c81d8e8179c65ab471a1bd8b453a489afc891aeff",
+  "scope": "Exact selected records and canonical resolved pin/package evidence. An unsourced generic part remains unsourced; offboard source models do not establish purchased hardware identity.",
+  "selections": [
+    {
+      "part_id": "mcu",
+      "type": "stm32f411ceu6-blackpill",
+      "manufacturer_part": "weact-ministm32f411",
+      "explicit_package": "weact-blackpill-v31-body-envelope",
+      "native_reference": "A1",
+      "offboard": false,
+      "resolved_footprint": "WeAct:WeAct-BlackPill-v31-body-envelope",
+      "resolved_physical_pads": [
+        "PB12",
+        "PB13",
+        "PB14",
+        "PB15",
+        "PA8",
+        "PA9",
+        "PA10",
+        "PA11",
+        "PA12",
+        "PA15",
+        "PB3",
+        "PB4",
+        "PB5",
+        "PB6",
+        "PB7",
+        "PB8",
+        "PB9",
+        "5V",
+        "GND",
+        "3V3",
+        "VBAT",
+        "PC13",
+        "PC14",
+        "PC15",
+        "NRST",
+        "PA0",
+        "PA1",
+        "PA2",
+        "PA3",
+        "PA4",
+        "PA5",
+        "PA6",
+        "PA7",
+        "PB0",
+        "PB1",
+        "PB2",
+        "PB10",
+        "3V3",
+        "GND",
+        "5V",
+        "3V3",
+        "PA13",
+        "PA14",
+        "GND"
+      ],
+      "pin_to_pad": {
+        "PB12": [
+          "1"
+        ],
+        "PB13": [
+          "2"
+        ],
+        "PB14": [
+          "3"
+        ],
+        "PB15": [
+          "4"
+        ],
+        "PA8": [
+          "5"
+        ],
+        "PA9": [
+          "6"
+        ],
+        "PA10": [
+          "7"
+        ],
+        "PA11": [
+          "8"
+        ],
+        "PA12": [
+          "9"
+        ],
+        "PA15": [
+          "10"
+        ],
+        "PB3": [
+          "11"
+        ],
+        "PB4": [
+          "12"
+        ],
+        "PB5": [
+          "13"
+        ],
+        "PB6": [
+          "14"
+        ],
+        "PB7": [
+          "15"
+        ],
+        "PB8": [
+          "16"
+        ],
+        "PB9": [
+          "17"
+        ],
+        "5V": [
+          "18",
+          "40"
+        ],
+        "GND": [
+          "19",
+          "39",
+          "44"
+        ],
+        "3V3": [
+          "20",
+          "38",
+          "41"
+        ],
+        "VBAT": [
+          "21"
+        ],
+        "PC13": [
+          "22"
+        ],
+        "PC14": [
+          "23"
+        ],
+        "PC15": [
+          "24"
+        ],
+        "NRST": [
+          "25"
+        ],
+        "PA0": [
+          "26"
+        ],
+        "PA1": [
+          "27"
+        ],
+        "PA2": [
+          "28"
+        ],
+        "PA3": [
+          "29"
+        ],
+        "PA4": [
+          "30"
+        ],
+        "PA5": [
+          "31"
+        ],
+        "PA6": [
+          "32"
+        ],
+        "PA7": [
+          "33"
+        ],
+        "PB0": [
+          "34"
+        ],
+        "PB1": [
+          "35"
+        ],
+        "PB2": [
+          "36"
+        ],
+        "PB10": [
+          "37"
+        ],
+        "PA13": [
+          "42"
+        ],
+        "PA14": [
+          "43"
+        ]
+      }
+    },
+    {
+      "part_id": "bat",
+      "type": "dc-barrel-jack",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": null,
+      "offboard": true,
+      "resolved_footprint": null,
+      "resolved_physical_pads": [
+        "+",
+        "-"
+      ],
+      "pin_to_pad": null
+    },
+    {
+      "part_id": "c_bulk",
+      "type": "capacitor",
+      "manufacturer_part": "nichicon-upw1a471mpd",
+      "explicit_package": "radial-d8-p3.5",
+      "native_reference": "C1",
+      "offboard": false,
+      "resolved_footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "boost",
+      "type": "pololu-u3v70f5",
+      "manufacturer_part": "pololu-2891",
+      "explicit_package": null,
+      "native_reference": null,
+      "offboard": true,
+      "resolved_footprint": null,
+      "resolved_physical_pads": [
+        "VIN",
+        "GND",
+        "VOUT",
+        "ENABLE"
+      ],
+      "pin_to_pad": null
+    },
+    {
+      "part_id": "c_5v",
+      "type": "capacitor",
+      "manufacturer_part": "nichicon-uwp1a220mcl1gb",
+      "explicit_package": null,
+      "native_reference": "C2",
+      "offboard": false,
+      "resolved_footprint": "Capacitor_SMD:CP_Elec_6.3x5.4",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "c_3v3",
+      "type": "capacitor",
+      "manufacturer_part": "nichicon-uwp1a100mcl1gb",
+      "explicit_package": null,
+      "native_reference": "C3",
+      "offboard": false,
+      "resolved_footprint": "Capacitor_SMD:CP_Elec_4x5.4",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "c_dec",
+      "type": "capacitor",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": "C4",
+      "offboard": false,
+      "resolved_footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_vbat_hi",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-07100kl",
+      "explicit_package": "0603",
+      "native_reference": "R1",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_vbat_lo",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-07100kl",
+      "explicit_package": "0603",
+      "native_reference": "R2",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "baro",
+      "type": "bme280",
+      "manufacturer_part": "adafruit-2652",
+      "explicit_package": null,
+      "native_reference": "U1",
+      "offboard": false,
+      "resolved_footprint": "labwired:Adafruit_BME280_QT",
+      "resolved_physical_pads": [
+        "VCC",
+        null,
+        "GND",
+        "SCL",
+        "SDO",
+        "SDA",
+        "CSB"
+      ],
+      "pin_to_pad": {
+        "VCC": [
+          "1"
+        ],
+        "GND": [
+          "3"
+        ],
+        "SCL": [
+          "4"
+        ],
+        "SDO": [
+          "5"
+        ],
+        "SDA": [
+          "6"
+        ],
+        "CSB": [
+          "7"
+        ]
+      }
+    },
+    {
+      "part_id": "imu",
+      "type": "mpu6050",
+      "manufacturer_part": "adafruit-3886",
+      "explicit_package": null,
+      "native_reference": "U2",
+      "offboard": false,
+      "resolved_footprint": "labwired:Adafruit_MPU6050",
+      "resolved_physical_pads": [
+        "VCC",
+        null,
+        "GND",
+        "SCL",
+        "SDA",
+        "INT",
+        "GND",
+        null,
+        "XDA",
+        "XCL",
+        null,
+        "AD0"
+      ],
+      "pin_to_pad": {
+        "VCC": [
+          "1"
+        ],
+        "GND": [
+          "3",
+          "7"
+        ],
+        "SCL": [
+          "4"
+        ],
+        "SDA": [
+          "5"
+        ],
+        "INT": [
+          "6"
+        ],
+        "XDA": [
+          "9"
+        ],
+        "XCL": [
+          "10"
+        ],
+        "AD0": [
+          "12"
+        ]
+      }
+    },
+    {
+      "part_id": "r_scl",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-074k7l",
+      "explicit_package": "0603",
+      "native_reference": "R3",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_sda",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-074k7l",
+      "explicit_package": "0603",
+      "native_reference": "R4",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "sd",
+      "type": "microsd",
+      "manufacturer_part": "adafruit-4682",
+      "explicit_package": null,
+      "native_reference": "J1",
+      "offboard": false,
+      "resolved_footprint": "labwired:Adafruit_MicroSD_4682_CardEnvelope",
+      "resolved_physical_pads": [
+        "VCC",
+        "GND",
+        "SCK",
+        "MISO",
+        "MOSI",
+        "CS",
+        null,
+        null,
+        null
+      ],
+      "pin_to_pad": {
+        "VCC": [
+          "1"
+        ],
+        "GND": [
+          "2"
+        ],
+        "SCK": [
+          "3"
+        ],
+        "MISO": [
+          "4"
+        ],
+        "MOSI": [
+          "5"
+        ],
+        "CS": [
+          "6"
+        ]
+      }
+    },
+    {
+      "part_id": "arm_switch",
+      "type": "toggle-switch",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": null,
+      "offboard": true,
+      "resolved_footprint": null,
+      "resolved_physical_pads": [
+        "1",
+        "COM",
+        "2"
+      ],
+      "pin_to_pad": null
+    },
+    {
+      "part_id": "pyro_term",
+      "type": "pin-header",
+      "manufacturer_part": "phoenix-1984617",
+      "explicit_package": null,
+      "native_reference": "J2",
+      "offboard": false,
+      "resolved_footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "ematch",
+      "type": "resistor",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": null,
+      "offboard": true,
+      "resolved_footprint": null,
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": null
+    },
+    {
+      "part_id": "q_pyro",
+      "type": "nmos",
+      "manufacturer_part": "aos-ao3400a",
+      "explicit_package": "sot-23",
+      "native_reference": "Q1",
+      "offboard": false,
+      "resolved_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "resolved_physical_pads": [
+        "G",
+        "S",
+        "D"
+      ],
+      "pin_to_pad": {
+        "G": [
+          "1"
+        ],
+        "S": [
+          "2"
+        ],
+        "D": [
+          "3"
+        ]
+      }
+    },
+    {
+      "part_id": "r_pyro_g",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-07100rl",
+      "explicit_package": "0603",
+      "native_reference": "R5",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_pyro_pd",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-0710kl",
+      "explicit_package": "0603",
+      "native_reference": "R6",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_cont_hi",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-0747kl",
+      "explicit_package": "0603",
+      "native_reference": "R7",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_cont_lo",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-07100kl",
+      "explicit_package": "0603",
+      "native_reference": "R8",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "d_pyro",
+      "type": "tvs-diode",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": "D1",
+      "offboard": false,
+      "resolved_footprint": "Diode_SMD:D_SMA",
+      "resolved_physical_pads": [
+        "K",
+        "A"
+      ],
+      "pin_to_pad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "buzzer",
+      "type": "buzzer",
+      "manufacturer_part": "adafruit-1536",
+      "explicit_package": null,
+      "native_reference": "LS1",
+      "offboard": false,
+      "resolved_footprint": "Buzzer_Beeper:Buzzer_12x9.5RM7.6",
+      "resolved_physical_pads": [
+        "+",
+        "-"
+      ],
+      "pin_to_pad": {
+        "+": [
+          "1"
+        ],
+        "-": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "q_buzz",
+      "type": "nmos",
+      "manufacturer_part": "aos-ao3400a",
+      "explicit_package": null,
+      "native_reference": "Q2",
+      "offboard": false,
+      "resolved_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "resolved_physical_pads": [
+        "G",
+        "S",
+        "D"
+      ],
+      "pin_to_pad": {
+        "G": [
+          "1"
+        ],
+        "S": [
+          "2"
+        ],
+        "D": [
+          "3"
+        ]
+      }
+    },
+    {
+      "part_id": "r_buzz_g",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-07100rl",
+      "explicit_package": "0603",
+      "native_reference": "R9",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_buzz_pd",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-0710kl",
+      "explicit_package": "0603",
+      "native_reference": "R10",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "d_buzz",
+      "type": "diode",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": "D2",
+      "offboard": false,
+      "resolved_footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "resolved_physical_pads": [
+        "K",
+        "A"
+      ],
+      "pin_to_pad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "led_status",
+      "type": "led",
+      "manufacturer_part": "kingbright-wp7113gd",
+      "explicit_package": null,
+      "native_reference": "D3",
+      "offboard": false,
+      "resolved_footprint": "LED_THT:LED_D5.0mm",
+      "resolved_physical_pads": [
+        "K",
+        "A"
+      ],
+      "pin_to_pad": {
+        "K": [
+          "1"
+        ],
+        "A": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "r_led",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-07330rl",
+      "explicit_package": "0603",
+      "native_reference": "R11",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "cam",
+      "type": "pin-header",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": "J3",
+      "offboard": false,
+      "resolved_footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "resolved_physical_pads": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ],
+        "4": [
+          "4"
+        ]
+      }
+    },
+    {
+      "part_id": "q_cam",
+      "type": "pmos",
+      "manufacturer_part": "aos-ao3401a",
+      "explicit_package": "sot-23",
+      "native_reference": "Q3",
+      "offboard": false,
+      "resolved_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "resolved_physical_pads": [
+        "G",
+        "S",
+        "D"
+      ],
+      "pin_to_pad": {
+        "G": [
+          "1"
+        ],
+        "S": [
+          "2"
+        ],
+        "D": [
+          "3"
+        ]
+      }
+    },
+    {
+      "part_id": "r_cam_pu",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-0710kl",
+      "explicit_package": "0603",
+      "native_reference": "R12",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "q_cam_drv",
+      "type": "npn",
+      "manufacturer_part": "nexperia-mmbt3904",
+      "explicit_package": null,
+      "native_reference": "Q4",
+      "offboard": false,
+      "resolved_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "resolved_physical_pads": [
+        "B",
+        "E",
+        "C"
+      ],
+      "pin_to_pad": {
+        "B": [
+          "1"
+        ],
+        "E": [
+          "2"
+        ],
+        "C": [
+          "3"
+        ]
+      }
+    },
+    {
+      "part_id": "r_cam_b",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-071kl",
+      "explicit_package": "0603",
+      "native_reference": "R13",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "q_rec",
+      "type": "npn",
+      "manufacturer_part": "nexperia-mmbt3904",
+      "explicit_package": null,
+      "native_reference": "Q5",
+      "offboard": false,
+      "resolved_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "resolved_physical_pads": [
+        "B",
+        "E",
+        "C"
+      ],
+      "pin_to_pad": {
+        "B": [
+          "1"
+        ],
+        "E": [
+          "2"
+        ],
+        "C": [
+          "3"
+        ]
+      }
+    },
+    {
+      "part_id": "r_rec_b",
+      "type": "resistor",
+      "manufacturer_part": "yageo-rc0603fr-071kl",
+      "explicit_package": "0603",
+      "native_reference": "R14",
+      "offboard": false,
+      "resolved_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "uart",
+      "type": "pin-header",
+      "manufacturer_part": null,
+      "explicit_package": null,
+      "native_reference": "J4",
+      "offboard": false,
+      "resolved_footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "resolved_physical_pads": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ],
+        "4": [
+          "4"
+        ]
+      }
+    },
+    {
+      "part_id": "boost_harness",
+      "type": "pin-header",
+      "manufacturer_part": "phoenix-1984633",
+      "explicit_package": null,
+      "native_reference": "J5",
+      "offboard": false,
+      "resolved_footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",
+      "resolved_physical_pads": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ],
+        "3": [
+          "3"
+        ],
+        "4": [
+          "4"
+        ]
+      }
+    },
+    {
+      "part_id": "arm_harness",
+      "type": "pin-header",
+      "manufacturer_part": null,
+      "explicit_package": "1x02",
+      "native_reference": "J6",
+      "offboard": false,
+      "resolved_footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    },
+    {
+      "part_id": "battery_harness",
+      "type": "pin-header",
+      "manufacturer_part": "phoenix-1984617",
+      "explicit_package": null,
+      "native_reference": "J7",
+      "offboard": false,
+      "resolved_footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",
+      "resolved_physical_pads": [
+        "1",
+        "2"
+      ],
+      "pin_to_pad": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2"
+        ]
+      }
+    }
+  ],
+  "manufacturer_records": {
+    "weact-ministm32f411": {
+      "record": {
+        "id": "weact-ministm32f411",
+        "part": "stm32f411ceu6-blackpill",
+        "manufacturer": "weact",
+        "mpn": "MiniSTM32F411",
+        "name": "WeAct MiniSTM32F411 Black Pill (F411CEU6)",
+        "electrical": {
+          "onboard": [
+            "ldo",
+            "crystal"
+          ]
+        },
+        "form": {
+          "widthMm": 20.778999328613253,
+          "heightMm": 52.806999206543,
+          "thicknessMm": 5.301439750202199,
+          "source": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/MiniF4x1Cx_V31_3D.step; bare-module envelope, long axis along footprint Y; add the selected header stand-off separately"
+        },
+        "clickUrl": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "weact",
+        "name": "WeAct Studio",
+        "homepage": "https://github.com/WeActStudio",
+        "country": "CN",
+        "tier": "community"
+      }
+    },
+    "nichicon-upw1a471mpd": {
+      "record": {
+        "id": "nichicon-upw1a471mpd",
+        "part": "capacitor",
+        "manufacturer": "nichicon",
+        "mpn": "UPW1A471MPD",
+        "name": "Nichicon UPW 470 µF 10 V radial electrolytic",
+        "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+        "header": [
+          {
+            "label": "+",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "-",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 8.5,
+          "heightMm": 8.5,
+          "thicknessMm": 13,
+          "source": "https://www.nichicon.com/getmedia/8feec43d-7806-4ea3-a7e2-8f52c40026b3/e-upw.pdf; maximum Ø8.5 × 13 mm envelope for nominal Ø8 × 11.5 mm UPW1A471MPD"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Nichicon UPW radial electrolytic series",
+            "url": "https://www.nichicon.com/getmedia/8feec43d-7806-4ea3-a7e2-8f52c40026b3/e-upw.pdf"
+          },
+          "productPage": {
+            "kind": "product_page",
+            "title": "UPW1A471MPD: 470 µF, 10 V, Ø8 × 11.5 mm, 3.5 mm pitch",
+            "url": "https://www.nichicon.com/en-us/part/upw1a471mpd/8337/"
+          }
+        },
+        "clickUrl": "https://www.nichicon.com/en-us/part/upw1a471mpd/8337/",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "nichicon",
+        "name": "Nichicon",
+        "homepage": "https://www.nichicon.com",
+        "country": "JP",
+        "tier": "community"
+      }
+    },
+    "pololu-2891": {
+      "record": {
+        "id": "pololu-2891",
+        "part": "pololu-u3v70f5",
+        "manufacturer": "pololu",
+        "mpn": "U3V70F5",
+        "name": "Pololu U3V70F5 5 V step-up regulator (item 2891)",
+        "electrical": {
+          "supplyVoltage": {
+            "min": 2.9,
+            "max": 5
+          },
+          "onboard": [
+            "reverse_protection"
+          ]
+        },
+        "form": {
+          "widthMm": 40.64,
+          "heightMm": 15.24,
+          "thicknessMm": 5.4848,
+          "source": "https://www.pololu.com/file/0J1561/step-up-voltage-regulator-u3v70x.step; source STEP bounding box, without separately supplied headers/terminal blocks"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "U3V70x dimension drawing",
+            "url": "https://www.pololu.com/file/0J1560/step-up-voltage-regulator-u3v70x-dimensions.pdf"
+          },
+          "productPage": {
+            "kind": "product_page",
+            "title": "U3V70F5 connections, voltage range, current curves and direct-wire installation",
+            "url": "https://www.pololu.com/product/2891"
+          }
+        },
+        "clickUrl": "https://www.pololu.com/product/2891",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "pololu",
+        "name": "Pololu",
+        "homepage": "https://www.pololu.com",
+        "country": "US",
+        "tier": "community"
+      }
+    },
+    "nichicon-uwp1a220mcl1gb": {
+      "record": {
+        "id": "nichicon-uwp1a220mcl1gb",
+        "part": "capacitor",
+        "manufacturer": "nichicon",
+        "mpn": "UWP1A220MCL1GB",
+        "name": "Nichicon UWP 22 µF 10 V bipolar SMD electrolytic",
+        "footprint": "Capacitor_SMD:CP_Elec_6.3x5.4",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 7.4,
+          "heightMm": 6.8,
+          "thicknessMm": 5.5,
+          "source": "https://www.nichicon.com/en-us/datasheet/4125/; UWP UWP1A220MCL1GB, maximum body/platform/electrode envelope from dimension table"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Nichicon UWP bipolar SMD electrolytic series",
+            "url": "https://www.nichicon.com/en-us/datasheet/4125/"
+          }
+        },
+        "clickUrl": "https://www.nichicon.com/en-us/products/aluminum-electrolytic-capacitors/chip-aluminum-electrolytic-capacitors/uwp/",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "nichicon",
+        "name": "Nichicon",
+        "homepage": "https://www.nichicon.com",
+        "country": "JP",
+        "tier": "community"
+      }
+    },
+    "nichicon-uwp1a100mcl1gb": {
+      "record": {
+        "id": "nichicon-uwp1a100mcl1gb",
+        "part": "capacitor",
+        "manufacturer": "nichicon",
+        "mpn": "UWP1A100MCL1GB",
+        "name": "Nichicon UWP 10 µF 10 V bipolar SMD electrolytic",
+        "footprint": "Capacitor_SMD:CP_Elec_4x5.4",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 5,
+          "heightMm": 4.5,
+          "thicknessMm": 5.5,
+          "source": "https://www.nichicon.com/en-us/datasheet/4125/; UWP UWP1A100MCL1GB, maximum body/platform/electrode envelope from dimension table"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Nichicon UWP bipolar SMD electrolytic series",
+            "url": "https://www.nichicon.com/en-us/datasheet/4125/"
+          }
+        },
+        "clickUrl": "https://www.nichicon.com/en-us/products/aluminum-electrolytic-capacitors/chip-aluminum-electrolytic-capacitors/uwp/",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "nichicon",
+        "name": "Nichicon",
+        "homepage": "https://www.nichicon.com",
+        "country": "JP",
+        "tier": "community"
+      }
+    },
+    "yageo-rc0603fr-07100kl": {
+      "record": {
+        "id": "yageo-rc0603fr-07100kl",
+        "part": "resistor",
+        "manufacturer": "yageo",
+        "mpn": "RC0603FR-07100KL",
+        "name": "Yageo RC0603 100 kohm 1% thick-film resistor",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 1.7,
+          "heightMm": 0.9,
+          "thicknessMm": 0.55,
+          "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL; maximum body dimensions from the individual Yageo spec sheet"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Yageo RC0603FR-07100KL specification",
+            "url": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+          }
+        },
+        "clickUrl": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "yageo",
+        "name": "Yageo",
+        "homepage": "https://yageogroup.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "adafruit-2652": {
+      "record": {
+        "id": "adafruit-2652",
+        "part": "bme280",
+        "footprint": "labwired:Adafruit_BME280_QT",
+        "manufacturer": "adafruit",
+        "mpn": "2652",
+        "name": "Adafruit BME280 I2C or SPI Temperature Humidity Pressure Sensor - STEMMA QT",
+        "header": [
+          {
+            "label": "Vin",
+            "pin": "VCC",
+            "index": 0
+          },
+          {
+            "label": "3Vo",
+            "pin": null,
+            "index": 1
+          },
+          {
+            "label": "GND",
+            "pin": "GND",
+            "index": 2
+          },
+          {
+            "label": "SCK",
+            "pin": "SCL",
+            "index": 3
+          },
+          {
+            "label": "SDO",
+            "pin": "SDO",
+            "index": 4
+          },
+          {
+            "label": "SDI",
+            "pin": "SDA",
+            "index": 5
+          },
+          {
+            "label": "CS",
+            "pin": "CSB",
+            "index": 6
+          }
+        ],
+        "electrical": {
+          "defaultI2cAddress": 119,
+          "i2cAddressOptions": [
+            119,
+            118
+          ],
+          "supplyVoltage": {
+            "min": 3,
+            "max": 5
+          },
+          "logicVoltage": {
+            "min": 3,
+            "max": 5
+          },
+          "onboard": [
+            "ldo",
+            "level_shifter"
+          ]
+        },
+        "form": {
+          "widthMm": 25.4,
+          "heightMm": 18,
+          "thicknessMm": 4.6,
+          "source": "https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/downloads identifies the shared BMP280 QT PCB; adafruit/Adafruit-BMP280-Breakout-PCB @ 1ba329baf692f9e681e0deb891c98ce6579a5c26 (25.4 x 17.78 mm); https://www.adafruit.com/product/2652 supplies the larger 18 mm assembled axis and 4.6 mm height"
+        },
+        "clickUrl": "https://www.adafruit.com/product/2652",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "adafruit",
+        "name": "Adafruit Industries",
+        "homepage": "https://www.adafruit.com",
+        "country": "US",
+        "tier": "community"
+      }
+    },
+    "adafruit-3886": {
+      "record": {
+        "id": "adafruit-3886",
+        "part": "mpu6050",
+        "footprint": "labwired:Adafruit_MPU6050",
+        "manufacturer": "adafruit",
+        "mpn": "3886",
+        "name": "Adafruit MPU-6050 6-DoF Accel and Gyro Sensor - STEMMA QT Qwiic",
+        "header": [
+          {
+            "label": "VIN",
+            "pin": "VCC",
+            "index": 0
+          },
+          {
+            "label": "3Vo",
+            "pin": null,
+            "index": 1
+          },
+          {
+            "label": "GND",
+            "pin": "GND",
+            "index": 2
+          },
+          {
+            "label": "SCL",
+            "pin": "SCL",
+            "index": 3
+          },
+          {
+            "label": "SDA",
+            "pin": "SDA",
+            "index": 4
+          },
+          {
+            "label": "INT",
+            "pin": "INT",
+            "index": 5
+          },
+          {
+            "label": "GND (JP2)",
+            "pin": "GND",
+            "index": 6
+          },
+          {
+            "label": "CLKIN",
+            "pin": null,
+            "index": 7
+          },
+          {
+            "label": "SDE",
+            "pin": "XDA",
+            "index": 8
+          },
+          {
+            "label": "SCE",
+            "pin": "XCL",
+            "index": 9
+          },
+          {
+            "label": "FS",
+            "pin": null,
+            "index": 10
+          },
+          {
+            "label": "AD0",
+            "pin": "AD0",
+            "index": 11
+          }
+        ],
+        "electrical": {
+          "defaultI2cAddress": 104,
+          "i2cAddressOptions": [
+            104,
+            105
+          ],
+          "supplyVoltage": {
+            "min": 3,
+            "max": 5
+          },
+          "logicVoltage": {
+            "min": 3,
+            "max": 5
+          },
+          "onboard": [
+            "ldo",
+            "level_shifter",
+            "i2c_pullups"
+          ],
+          "pullups": {
+            "sda": 10000,
+            "scl": 10000
+          }
+        },
+        "form": {
+          "widthMm": 26,
+          "heightMm": 17.8,
+          "thicknessMm": 4.6,
+          "mountingHoles": 4,
+          "mountingHolesMm": [
+            {
+              "x": 2.84,
+              "y": 2.55,
+              "d": 2.5
+            },
+            {
+              "x": 2.84,
+              "y": 15.25,
+              "d": 2.5
+            },
+            {
+              "x": 23.16,
+              "y": 2.55,
+              "d": 2.5
+            },
+            {
+              "x": 23.16,
+              "y": 15.25,
+              "d": 2.5
+            }
+          ],
+          "source": "adafruit/Adafruit-MPU6050-PCB @ 7158d89fb3, Adafruit MPU6050.brd (CC-BY-SA-3.0); https://www.adafruit.com/product/3886 gives the assembled 26 x 17.8 x 4.6 mm envelope; conservatively centred on the source PCB, holes translated +0.3/+0.01 mm from its original origin"
+        },
+        "clickUrl": "https://www.adafruit.com/product/3886",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "adafruit",
+        "name": "Adafruit Industries",
+        "homepage": "https://www.adafruit.com",
+        "country": "US",
+        "tier": "community"
+      }
+    },
+    "yageo-rc0603fr-074k7l": {
+      "record": {
+        "id": "yageo-rc0603fr-074k7l",
+        "part": "resistor",
+        "manufacturer": "yageo",
+        "mpn": "RC0603FR-074K7L",
+        "name": "Yageo RC0603 4.7 kohm 1% thick-film resistor",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 1.7,
+          "heightMm": 0.9,
+          "thicknessMm": 0.55,
+          "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L; maximum body dimensions from the individual Yageo spec sheet"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Yageo RC0603FR-074K7L specification",
+            "url": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L"
+          }
+        },
+        "clickUrl": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "yageo",
+        "name": "Yageo",
+        "homepage": "https://yageogroup.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "adafruit-4682": {
+      "record": {
+        "id": "adafruit-4682",
+        "part": "microsd",
+        "manufacturer": "adafruit",
+        "mpn": "4682",
+        "name": "Adafruit MicroSD SPI or SDIO breakout - 3.3 V only",
+        "footprint": "labwired:Adafruit_MicroSD_4682_CardEnvelope",
+        "header": [
+          {
+            "label": "3V",
+            "pin": "VCC",
+            "index": 0
+          },
+          {
+            "label": "GND",
+            "pin": "GND",
+            "index": 1
+          },
+          {
+            "label": "CLK",
+            "pin": "SCK",
+            "index": 2
+          },
+          {
+            "label": "SO",
+            "pin": "MISO",
+            "index": 3
+          },
+          {
+            "label": "SI",
+            "pin": "MOSI",
+            "index": 4
+          },
+          {
+            "label": "CS",
+            "pin": "CS",
+            "index": 5
+          },
+          {
+            "label": "DAT1",
+            "pin": null,
+            "index": 6
+          },
+          {
+            "label": "DAT2",
+            "pin": null,
+            "index": 7
+          },
+          {
+            "label": "DET",
+            "pin": null,
+            "index": 8
+          }
+        ],
+        "electrical": {
+          "supplyVoltage": {
+            "min": 2.7,
+            "max": 3.6
+          },
+          "logicVoltage": {
+            "min": 2.7,
+            "max": 3.6
+          }
+        },
+        "form": {
+          "widthMm": 25.4,
+          "heightMm": 27.2,
+          "thicknessMm": 3.5,
+          "source": "adafruit/Adafruit-MicroSD-SPI-or-SDIO-card-breakout-PCB @ 959792478854acec21fb862650427ffaa32b07f1, Adafruit SDIO microSD.brd: 25.4 x 22.86 mm board plus X1 card-service outline to y=27.101 mm, rounded outward to 27.2; https://www.adafruit.com/product/4682 gives 3.5 mm height. The envelope includes card ejection travel."
+        },
+        "references": {
+          "productPage": {
+            "kind": "product_page",
+            "title": "Adafruit 4682 MicroSD SPI/SDIO breakout",
+            "url": "https://www.adafruit.com/product/4682"
+          },
+          "datasheet": {
+            "kind": "reference",
+            "title": "Adafruit 4682 pinouts and 3.3 V interface",
+            "url": "https://learn.adafruit.com/adafruit-microsd-spi-sdio/pinouts"
+          }
+        },
+        "clickUrl": "https://www.adafruit.com/product/4682",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "adafruit",
+        "name": "Adafruit Industries",
+        "homepage": "https://www.adafruit.com",
+        "country": "US",
+        "tier": "community"
+      }
+    },
+    "phoenix-1984617": {
+      "record": {
+        "id": "phoenix-1984617",
+        "part": "pin-header",
+        "manufacturer": "phoenix-contact",
+        "mpn": "1984617",
+        "name": "Phoenix Contact PT 1,5/2-3,5-H two-pole screw terminal",
+        "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 7,
+          "heightMm": 7.55,
+          "thicknessMm": 9.15,
+          "source": "https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-pt-15-2-35-h-1984617; width 7 mm, length 7.55 mm, installed height 9.15 mm; solder tails 4.5 mm are below the body"
+        },
+        "references": {
+          "productPage": {
+            "kind": "product_page",
+            "title": "Phoenix Contact 1984617 dimensions, copper pattern, wire range and current ratings",
+            "url": "https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-pt-15-2-35-h-1984617"
+          }
+        },
+        "clickUrl": "https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-pt-15-2-35-h-1984617",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "phoenix-contact",
+        "name": "Phoenix Contact",
+        "homepage": "https://www.phoenixcontact.com",
+        "country": "DE",
+        "tier": "community"
+      }
+    },
+    "aos-ao3400a": {
+      "record": {
+        "id": "aos-ao3400a",
+        "part": "nmos",
+        "manufacturer": "aos",
+        "mpn": "AO3400A",
+        "name": "Alpha and Omega AO3400A N-channel MOSFET",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "header": [
+          {
+            "label": "G",
+            "pin": "G",
+            "index": 0
+          },
+          {
+            "label": "S",
+            "pin": "S",
+            "index": 1
+          },
+          {
+            "label": "D",
+            "pin": "D",
+            "index": 2
+          }
+        ],
+        "form": {
+          "widthMm": 3.1,
+          "heightMm": 3,
+          "thicknessMm": 1.25,
+          "source": "https://www.aosmd.com/sites/default/files/res/package/SOT23.pdf"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "AO3400A datasheet",
+            "url": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf"
+          }
+        },
+        "clickUrl": "https://www.aosmd.com/products/mosfets/low-voltage-mosfets-12v-30v/ao3400a",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "aos",
+        "name": "Alpha and Omega Semiconductor",
+        "homepage": "https://www.aosmd.com",
+        "country": "US",
+        "tier": "community"
+      }
+    },
+    "yageo-rc0603fr-07100rl": {
+      "record": {
+        "id": "yageo-rc0603fr-07100rl",
+        "part": "resistor",
+        "manufacturer": "yageo",
+        "mpn": "RC0603FR-07100RL",
+        "name": "Yageo RC0603 100 ohm 1% thick-film resistor",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 1.7,
+          "heightMm": 0.9,
+          "thicknessMm": 0.55,
+          "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL; maximum body dimensions from the individual Yageo spec sheet"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Yageo RC0603FR-07100RL specification",
+            "url": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL"
+          }
+        },
+        "clickUrl": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "yageo",
+        "name": "Yageo",
+        "homepage": "https://yageogroup.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "yageo-rc0603fr-0710kl": {
+      "record": {
+        "id": "yageo-rc0603fr-0710kl",
+        "part": "resistor",
+        "manufacturer": "yageo",
+        "mpn": "RC0603FR-0710KL",
+        "name": "Yageo RC0603 10 kohm 1% thick-film resistor",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 1.7,
+          "heightMm": 0.9,
+          "thicknessMm": 0.55,
+          "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL; maximum body dimensions from the individual Yageo spec sheet"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Yageo RC0603FR-0710KL specification",
+            "url": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+          }
+        },
+        "clickUrl": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "yageo",
+        "name": "Yageo",
+        "homepage": "https://yageogroup.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "yageo-rc0603fr-0747kl": {
+      "record": {
+        "id": "yageo-rc0603fr-0747kl",
+        "part": "resistor",
+        "manufacturer": "yageo",
+        "mpn": "RC0603FR-0747KL",
+        "name": "Yageo RC0603 47 kohm 1% thick-film resistor",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 1.7,
+          "heightMm": 0.9,
+          "thicknessMm": 0.55,
+          "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL; maximum body dimensions from the individual Yageo spec sheet"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Yageo RC0603FR-0747KL specification",
+            "url": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL"
+          }
+        },
+        "clickUrl": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "yageo",
+        "name": "Yageo",
+        "homepage": "https://yageogroup.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "adafruit-1536": {
+      "record": {
+        "id": "adafruit-1536",
+        "part": "buzzer",
+        "manufacturer": "adafruit",
+        "mpn": "1536",
+        "name": "Adafruit 3-5 V active 2 kHz buzzer",
+        "footprint": "Buzzer_Beeper:Buzzer_12x9.5RM7.6",
+        "header": [
+          {
+            "label": "+",
+            "pin": "+",
+            "index": 0
+          },
+          {
+            "label": "-",
+            "pin": "-",
+            "index": 1
+          }
+        ],
+        "electrical": {
+          "supplyVoltage": {
+            "min": 3,
+            "max": 5
+          }
+        },
+        "form": {
+          "widthMm": 12,
+          "heightMm": 12,
+          "thicknessMm": 9.7,
+          "source": "https://www.adafruit.com/product/1536; nominal 12 mm diameter x 9.7 mm height, 0.3 inch (7.62 mm) pin spacing"
+        },
+        "references": {
+          "productPage": {
+            "kind": "product_page",
+            "title": "Adafruit 1536 active 3-5 V buzzer dimensions and pin spacing",
+            "url": "https://www.adafruit.com/product/1536"
+          }
+        },
+        "clickUrl": "https://www.adafruit.com/product/1536",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "adafruit",
+        "name": "Adafruit Industries",
+        "homepage": "https://www.adafruit.com",
+        "country": "US",
+        "tier": "community"
+      }
+    },
+    "kingbright-wp7113gd": {
+      "record": {
+        "id": "kingbright-wp7113gd",
+        "part": "led",
+        "manufacturer": "kingbright",
+        "mpn": "WP7113GD",
+        "name": "Kingbright WP7113GD green diffused 5 mm LED",
+        "footprint": "LED_THT:LED_D5.0mm",
+        "header": [
+          {
+            "label": "K",
+            "pin": "K",
+            "index": 0
+          },
+          {
+            "label": "A",
+            "pin": "A",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 6.15,
+          "heightMm": 6.15,
+          "thicknessMm": 8.85,
+          "source": "https://www.kingbrightusa.com/images/catalog/spec/wp7113gd.pdf; page1: 5.9 mm flange diameter,8.6 mm body length,±0.25 mm tolerance,2.54 mm lead pitch; body excludes trimmed solder leads and assembly stand-off"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Kingbright WP7113GD package drawing and electrical data",
+            "url": "https://www.kingbrightusa.com/images/catalog/spec/wp7113gd.pdf"
+          }
+        },
+        "clickUrl": "https://www.kingbrightusa.com/kcpartno.asp?sltSearch=PN&txtPartNo=WP7113GD",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "kingbright",
+        "name": "Kingbright",
+        "homepage": "https://www.kingbrightusa.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "yageo-rc0603fr-07330rl": {
+      "record": {
+        "id": "yageo-rc0603fr-07330rl",
+        "part": "resistor",
+        "manufacturer": "yageo",
+        "mpn": "RC0603FR-07330RL",
+        "name": "Yageo RC0603 330 ohm 1% thick-film resistor",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 1.7,
+          "heightMm": 0.9,
+          "thicknessMm": 0.55,
+          "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07330RL; maximum body dimensions from the individual Yageo spec sheet"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Yageo RC0603FR-07330RL specification",
+            "url": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07330RL"
+          }
+        },
+        "clickUrl": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07330RL",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "yageo",
+        "name": "Yageo",
+        "homepage": "https://yageogroup.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "aos-ao3401a": {
+      "record": {
+        "id": "aos-ao3401a",
+        "part": "pmos",
+        "manufacturer": "aos",
+        "mpn": "AO3401A",
+        "name": "Alpha and Omega AO3401A P-channel MOSFET",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "header": [
+          {
+            "label": "G",
+            "pin": "G",
+            "index": 0
+          },
+          {
+            "label": "S",
+            "pin": "S",
+            "index": 1
+          },
+          {
+            "label": "D",
+            "pin": "D",
+            "index": 2
+          }
+        ],
+        "form": {
+          "widthMm": 3.1,
+          "heightMm": 3,
+          "thicknessMm": 1.25,
+          "source": "https://www.aosmd.com/sites/default/files/res/package/SOT23.pdf"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "AO3401A datasheet",
+            "url": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3401A.pdf"
+          }
+        },
+        "clickUrl": "https://www.aosmd.com/products/mosfets/p-channel-mosfets-8v-60v/AO3401A",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "aos",
+        "name": "Alpha and Omega Semiconductor",
+        "homepage": "https://www.aosmd.com",
+        "country": "US",
+        "tier": "community"
+      }
+    },
+    "nexperia-mmbt3904": {
+      "record": {
+        "id": "nexperia-mmbt3904",
+        "part": "npn",
+        "manufacturer": "nexperia",
+        "mpn": "MMBT3904",
+        "name": "Nexperia MMBT3904 40 V NPN switching transistor",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "header": [
+          {
+            "label": "B",
+            "pin": "B",
+            "index": 0
+          },
+          {
+            "label": "E",
+            "pin": "E",
+            "index": 1
+          },
+          {
+            "label": "C",
+            "pin": "C",
+            "index": 2
+          }
+        ],
+        "form": {
+          "widthMm": 3,
+          "heightMm": 2.5,
+          "thicknessMm": 1.1,
+          "source": "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Nexperia MMBT3904 datasheet",
+            "url": "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
+          }
+        },
+        "clickUrl": "https://www.nexperia.com/product/MMBT3904",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "nexperia",
+        "name": "Nexperia",
+        "homepage": "https://www.nexperia.com",
+        "country": "NL",
+        "tier": "community"
+      }
+    },
+    "yageo-rc0603fr-071kl": {
+      "record": {
+        "id": "yageo-rc0603fr-071kl",
+        "part": "resistor",
+        "manufacturer": "yageo",
+        "mpn": "RC0603FR-071KL",
+        "name": "Yageo RC0603 1 kohm 1% thick-film resistor",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          }
+        ],
+        "form": {
+          "widthMm": 1.7,
+          "heightMm": 0.9,
+          "thicknessMm": 0.55,
+          "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL; maximum body dimensions from the individual Yageo spec sheet"
+        },
+        "references": {
+          "datasheet": {
+            "kind": "datasheet",
+            "title": "Yageo RC0603FR-071KL specification",
+            "url": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL"
+          }
+        },
+        "clickUrl": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "yageo",
+        "name": "Yageo",
+        "homepage": "https://yageogroup.com",
+        "country": "TW",
+        "tier": "community"
+      }
+    },
+    "phoenix-1984633": {
+      "record": {
+        "id": "phoenix-1984633",
+        "part": "pin-header",
+        "manufacturer": "phoenix-contact",
+        "mpn": "1984633",
+        "name": "Phoenix Contact PT 1,5/4-3,5-H four-pole screw terminal",
+        "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",
+        "header": [
+          {
+            "label": "1",
+            "pin": "1",
+            "index": 0
+          },
+          {
+            "label": "2",
+            "pin": "2",
+            "index": 1
+          },
+          {
+            "label": "3",
+            "pin": "3",
+            "index": 2
+          },
+          {
+            "label": "4",
+            "pin": "4",
+            "index": 3
+          }
+        ],
+        "form": {
+          "widthMm": 14,
+          "heightMm": 7.55,
+          "thicknessMm": 9.15,
+          "source": "https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-pt-15-4-35-h-1984633; width 14 mm, length 7.55 mm, installed height 9.15 mm; solder tails 4.5 mm are below the body"
+        },
+        "references": {
+          "productPage": {
+            "kind": "product_page",
+            "title": "Phoenix Contact 1984633 dimensions, copper pattern, wire range and current ratings",
+            "url": "https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-pt-15-4-35-h-1984633"
+          }
+        },
+        "clickUrl": "https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-pt-15-4-35-h-1984633",
+        "tier": "community"
+      },
+      "manufacturer": {
+        "id": "phoenix-contact",
+        "name": "Phoenix Contact",
+        "homepage": "https://www.phoenixcontact.com",
+        "country": "DE",
+        "tier": "community"
+      }
+    }
+  }
+}

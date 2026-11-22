@@ -1,0 +1,18 @@
+{
+  "implementation_commit": "14aa25315b8d4f3db16b69332b88e32413d1094a",
+  "project_input_sha256": "c8981897e3671477e7d7c647df3df1030240361cca61a881d3ae77feecd58064",
+  "normalized": true,
+  "device_diagnostics": [],
+  "compiled": true,
+  "diagnostics": [
+    {
+      "code": "ANALOG_BUZZER_LOAD_UNKNOWN",
+      "severity": "warning",
+      "message": "Buzzer \"buzzer\" has no modeled electrical load in this analog circuit; its impedance and current are unknown",
+      "hint": "If a resistive approximation is justified, set electrical_model to \"resistor\" and load_resistance_ohm to the stated resistance",
+      "subjects": [
+        "buzzer"
+      ]
+    }
+  ]
+}

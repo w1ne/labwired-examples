@@ -1,0 +1,134 @@
+{
+  "kind": "pathfinder-battery-current-design-review",
+  "reviewed_at_utc": "2026-11-22T00:01:41.259316+00:00",
+  "status": "candidate-selected-with-explicit-open-hardware-gates",
+  "diagram_file_sha256": "89086dc5cb27efff6c1cf3cceb46278dd7e7e0f4c862d0ef564d62cc241e7a75",
+  "firmware_source_sha256": "50571b2068a107fc993220384d0f4f3fe6c2b69425217f3e38639672bbc2c90f",
+  "selected_battery": {
+    "manufacturer": "Tattu / Gens ace",
+    "sku": "TAA4501S75BT2",
+    "cell_count": 1,
+    "capacity_mah": 450,
+    "nominal_v": 3.8,
+    "maximum_charge_v": 4.35,
+    "manufacturer_cell_discharge_c": 75,
+    "arithmetic_cell_current_a": 33.75,
+    "cell_rating_is_not_pack_or_harness_acceptance": true,
+    "connector": "BETAFPV BT2.0",
+    "connector_continuous_a": 9,
+    "connector_burst_a": 15,
+    "nominal_lwh_mm": [
+      61,
+      15,
+      7.5
+    ],
+    "published_positive_tolerance_lwh_mm": [
+      5,
+      2,
+      2
+    ],
+    "minimum_part_envelope_lwh_mm": [
+      66,
+      17,
+      9.5
+    ],
+    "envelope_excludes_additional_cable_connector_retention_and_swelling_clearance": true,
+    "mass_nominal_g": 12,
+    "mass_claim_not_a_measured_assembly_mass": true
+  },
+  "electrical_findings": {
+    "load_ohm_nominal": 1.5,
+    "load_supply_net": "VBAT, bypasses the 5V boost",
+    "firmware_on_ms": 1000,
+    "ideal_full_charge_load_a": 2.9,
+    "ideal_full_charge_load_w": 12.614999999999997,
+    "ideal_pulse_energy_j": 12.614999999999997,
+    "losses_and_resistor_tolerance_not_included": true,
+    "vbat_adc_at_full_charge_v": 2.175,
+    "continuity_input_at_full_charge_v": 2.9591836734693873,
+    "boost_part": "Pololu U3V70F5 / 2891",
+    "boost_input_range_v": [
+      2.9,
+      5
+    ],
+    "maximum_battery_v_below_boost_maximum": true,
+    "boost_current_rating_is_input_not_output": true,
+    "boost_output_voltage_v": 5,
+    "battery_current_formula": "I_bat = V_bat / R_load + (5 * I_5V) / (eta * V_bat) + I_aux_battery",
+    "five_volt_camera_and_board_current": "unmeasured; no total-current or endurance pass claimed",
+    "eta_0_8_is_a_budget_scenario_not_guaranteed_minimum": true,
+    "example_budget_rows_excluding_buzzer_and_tolerances": [
+      {
+        "vin_v": 3.5,
+        "five_volt_load_a": 0.5,
+        "assumed_eta": 0.8,
+        "battery_current_a": 3.2261904761904763
+      },
+      {
+        "vin_v": 3.5,
+        "five_volt_load_a": 1.0,
+        "assumed_eta": 0.8,
+        "battery_current_a": 4.119047619047619
+      },
+      {
+        "vin_v": 3.8,
+        "five_volt_load_a": 0.5,
+        "assumed_eta": 0.8,
+        "battery_current_a": 3.3557017543859646
+      },
+      {
+        "vin_v": 3.8,
+        "five_volt_load_a": 1.0,
+        "assumed_eta": 0.8,
+        "battery_current_a": 4.178070175438596
+      },
+      {
+        "vin_v": 4.35,
+        "five_volt_load_a": 0.5,
+        "assumed_eta": 0.8,
+        "battery_current_a": 3.618390804597701
+      },
+      {
+        "vin_v": 4.35,
+        "five_volt_load_a": 1.0,
+        "assumed_eta": 0.8,
+        "battery_current_a": 4.336781609195402
+      }
+    ]
+  },
+  "required_model_changes": [
+    "Set the retained 1.5-ohm resistor to offboard external bench load; do not assemble an unqualified generic 0603 at 12.62W/12.62J.",
+    "Replace barrel-jack stand-in and generic load-header fabrication interfaces with sourced rated connectors or explicit direct wiring. Preserve source model pin semantics and actual topology.",
+    "Fit the battery maximum tolerance envelope and explicit connector/cable/retention volume.",
+    "Record the battery as 1S LiHV and retain maximum 4.35V separately from nominal 3.8V."
+  ],
+  "open_acceptance": [
+    "Physical current, voltage sag, regulator temperature and complete camera/avionics peak budget not measured.",
+    "PCB power path current capacity and connector/cable rating need sourced implementation.",
+    "Original firmware configures VBAT ADC but does not read it; no low-voltage protection claim.",
+    "Original 1.5-ohm part is a model stand-in, not a qualified flight initiator.",
+    "Mass, center of gravity and stability must be recomputed for the new sourced pack and bay; catalogue mass is not measured assembly mass."
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.genstattu.com/tattu-450mah-3.8v-high-voltage-75c-1s1p-lipo-battery-pack-with-bt-2.0-plug-5pcs/",
+      "supports": "SKU, capacity, nominal voltage, C-rate, nominal dimensions and published tolerance, connector; manufacturer warns C-rate is only a cell rating"
+    },
+    {
+      "url": "https://genstattu.com/blog/high-voltage-and-standard-fpv-lipo-battery/",
+      "supports": "LiHV charge maximum 4.35V per cell"
+    },
+    {
+      "url": "https://betafpv.com/products/bt2-0-connectors-10pcs",
+      "supports": "9A continuous /15A burst connector rating and male/female dimensions"
+    },
+    {
+      "url": "https://www.pololu.com/product/2891",
+      "supports": "2.9\u20135V input,5V output,input-current and thermal qualifications"
+    },
+    {
+      "url": "https://betafpv.com/products/bt2-0-1s-whoop-cable-pigtail",
+      "supports": "Existing matched BT2.0 pigtail option; wire gauge not specified in retrieved text"
+    }
+  ]
+}

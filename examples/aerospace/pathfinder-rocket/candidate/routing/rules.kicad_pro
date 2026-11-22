@@ -1,0 +1,361 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_track_width": 0.16,
+        "min_clearance": 0.16,
+        "min_through_hole_diameter": 0.3,
+        "min_via_annular_width": 0.254,
+        "min_hole_clearance": 0.35,
+        "min_hole_to_hole": 0.5,
+        "min_copper_edge_clearance": 0.2
+      },
+      "via_dimensions": [
+        {
+          "diameter": 1,
+          "drill": 0.4
+        },
+        {
+          "diameter": 2.5,
+          "drill": 1.9
+        },
+        {
+          "diameter": 2.1,
+          "drill": 1.5
+        },
+        {
+          "diameter": 1.2,
+          "drill": 0.6
+        },
+        {
+          "diameter": 1.2,
+          "drill": 0.6
+        }
+      ]
+    }
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "priority": 2147483647,
+        "clearance": 0.2,
+        "track_width": 0.25,
+        "via_diameter": 1,
+        "via_drill": 0.4
+      },
+      {
+        "name": "VBAT_AND_RETURN",
+        "priority": 0,
+        "clearance": 0.2,
+        "track_width": 1.8,
+        "via_diameter": 2.5,
+        "via_drill": 1.9
+      },
+      {
+        "name": "BENCH_LOAD_SWITCHED_RETURN",
+        "priority": 1,
+        "clearance": 0.2,
+        "track_width": 1,
+        "via_diameter": 2.1,
+        "via_drill": 1.5
+      },
+      {
+        "name": "FIVE_VOLT_AUXILIARY",
+        "priority": 2,
+        "clearance": 0.2,
+        "track_width": 0.6,
+        "via_diameter": 1.2,
+        "via_drill": 0.6
+      },
+      {
+        "name": "THREE_VOLT_LOGIC",
+        "priority": 3,
+        "clearance": 0.2,
+        "track_width": 0.5,
+        "via_diameter": 1.2,
+        "via_drill": 0.6
+      }
+    ],
+    "netclass_assignments": {
+      "N$10": [
+        "Default"
+      ],
+      "N$12": [
+        "Default"
+      ],
+      "N$26": [
+        "Default"
+      ],
+      "N$27": [
+        "Default"
+      ],
+      "N$28": [
+        "Default"
+      ],
+      "N$29": [
+        "Default"
+      ],
+      "N$30": [
+        "Default"
+      ],
+      "N$8": [
+        "Default"
+      ],
+      "PA0": [
+        "Default"
+      ],
+      "PA2": [
+        "Default"
+      ],
+      "PA3": [
+        "Default"
+      ],
+      "PA4": [
+        "Default"
+      ],
+      "PA5": [
+        "Default"
+      ],
+      "PA6": [
+        "Default"
+      ],
+      "PA7": [
+        "Default"
+      ],
+      "PB0": [
+        "Default"
+      ],
+      "PB1": [
+        "Default"
+      ],
+      "PB12": [
+        "Default"
+      ],
+      "PB13": [
+        "Default"
+      ],
+      "PB14": [
+        "Default"
+      ],
+      "PB15": [
+        "Default"
+      ],
+      "PB6": [
+        "Default"
+      ],
+      "PB7": [
+        "Default"
+      ],
+      "PB8": [
+        "Default"
+      ],
+      "+": [
+        "VBAT_AND_RETURN"
+      ],
+      "GND": [
+        "VBAT_AND_RETURN"
+      ],
+      "N$11": [
+        "BENCH_LOAD_SWITCHED_RETURN"
+      ],
+      "+5V": [
+        "FIVE_VOLT_AUXILIARY"
+      ],
+      "N$9": [
+        "FIVE_VOLT_AUXILIARY"
+      ],
+      "+3V3": [
+        "THREE_VOLT_LOGIC"
+      ]
+    },
+    "meta": {
+      "version": 4
+    }
+  },
+  "meta": {
+    "filename": "board.kicad_pro",
+    "version": 3
+  },
+  "labwired": {
+    "rules_digest": "99ddcd61339ef68f148cfeec8cb3dbc7ae568352ce3002cab20829c4f8b4a7cf",
+    "agent_selected_rules": {
+      "version": 1,
+      "defaults": {
+        "track_width_mm": 0.25,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 1,
+        "via_drill_mm": 0.4
+      },
+      "fabrication": {
+        "reference": "https://jlcpcb.com/capabilities/Capabilities — 2 oz outer-layer line/space 0.16 mm, PTH annulus 0.254 mm; selected conservative 0.35 mm hole-to-copper and 0.5 mm hole-to-hole.",
+        "min_track_width_mm": 0.16,
+        "min_clearance_mm": 0.16,
+        "min_drill_mm": 0.3,
+        "min_annular_ring_mm": 0.254,
+        "min_hole_to_hole_mm": 0.5,
+        "min_edge_clearance_mm": 0.2,
+        "min_hole_clearance_mm": 0.35
+      },
+      "sources": [
+        {
+          "kind": "fabricator",
+          "reference": "https://jlcpcb.com/capabilities/Capabilities",
+          "rationale": "Two copper layers at nominal 70 µm each. 1.6 mm FR4, 0.16 mm minimum trace/space, 0.254 mm PTH annulus and 20% trace-width tolerance. Source-backed native footprint annuli were checked before routing."
+        },
+        {
+          "kind": "stackup",
+          "reference": "pathfinder-unrouted.kicad_pcb setup.stackup",
+          "rationale": "F.Cu and B.Cu 0.07 mm each; FR4 core 1.44 mm and solder mask 0.01 mm per side. This requests 2 oz copper; it is not a measured finished stackup."
+        },
+        {
+          "kind": "assumption",
+          "reference": "battery-current-review.json",
+          "rationale": "External 1.5 ohm resistor bench pulse draws 2.90 A at 4.35 V for 1000 ms. Illustrative auxiliary 1 A at 5 V/80% efficiency totals 4.337 A before buzzer and tolerances. Camera current and thermal performance are not measured."
+        }
+      ],
+      "net_classes": [
+        {
+          "name": "Default",
+          "track_width_mm": 0.25,
+          "clearance_mm": 0.2,
+          "via_diameter_mm": 1,
+          "via_drill_mm": 0.4,
+          "nets": [
+            "N$10",
+            "N$12",
+            "N$26",
+            "N$27",
+            "N$28",
+            "N$29",
+            "N$30",
+            "N$8",
+            "PA0",
+            "PA2",
+            "PA3",
+            "PA4",
+            "PA5",
+            "PA6",
+            "PA7",
+            "PB0",
+            "PB1",
+            "PB12",
+            "PB13",
+            "PB14",
+            "PB15",
+            "PB6",
+            "PB7",
+            "PB8"
+          ],
+          "parts": [],
+          "sources": [
+            {
+              "kind": "fabricator",
+              "reference": "https://jlcpcb.com/capabilities/Capabilities",
+              "rationale": "Two copper layers at nominal 70 µm each. 1.6 mm FR4, 0.16 mm minimum trace/space, 0.254 mm PTH annulus and 20% trace-width tolerance. Source-backed native footprint annuli were checked before routing."
+            },
+            {
+              "kind": "stackup",
+              "reference": "pathfinder-unrouted.kicad_pcb setup.stackup",
+              "rationale": "F.Cu and B.Cu 0.07 mm each; FR4 core 1.44 mm and solder mask 0.01 mm per side. This requests 2 oz copper; it is not a measured finished stackup."
+            },
+            {
+              "kind": "assumption",
+              "reference": "battery-current-review.json",
+              "rationale": "External 1.5 ohm resistor bench pulse draws 2.90 A at 4.35 V for 1000 ms. Illustrative auxiliary 1 A at 5 V/80% efficiency totals 4.337 A before buzzer and tolerances. Camera current and thermal performance are not measured."
+            }
+          ]
+        },
+        {
+          "name": "VBAT_AND_RETURN",
+          "track_width_mm": 1.8,
+          "clearance_mm": 0.2,
+          "via_diameter_mm": 2.5,
+          "via_drill_mm": 1.9,
+          "nets": [
+            "+",
+            "GND"
+          ],
+          "parts": [
+            "J7"
+          ],
+          "sources": [
+            {
+              "kind": "calculation",
+              "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+              "rationale": "Preliminary 5 A routing basis using the IPC-2221 external-layer estimate k=0.048, DeltaT=10 C and nominal t=2 oz. Selected 1.8 mm, or 1.44 mm after -20% trace-width tolerance, gives an estimated 5.149 A. Finished copper thickness is not guaranteed by the cited capability page. A 1.9 mm via at 18 µm average plating has about 0.1074 mm² barrel section versus trace 0.1008 mm², but via heating/neckdowns and actual plating remain unverified."
+            },
+            {
+              "kind": "assumption",
+              "reference": "battery-current-review.json",
+              "rationale": "5 A is a preliminary routing allowance, not a measured maximum. At 4.35 V, 1.5 ohm plus 1 A/5 V at assumed 75% converter efficiency already gives 4.433 A before tolerances and auxiliaries. Peak camera current and all thermal limits remain hardware gates."
+            }
+          ]
+        },
+        {
+          "name": "BENCH_LOAD_SWITCHED_RETURN",
+          "track_width_mm": 1,
+          "clearance_mm": 0.2,
+          "via_diameter_mm": 2.1,
+          "via_drill_mm": 1.5,
+          "nets": [
+            "N$11"
+          ],
+          "parts": [
+            "J2"
+          ],
+          "sources": [
+            {
+              "kind": "calculation",
+              "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+              "rationale": "2.90 A at 2 oz and 10 C rise requires about 0.652 mm by the external IPC-2221 estimate. Selected 1.0 mm, or 0.8 mm after -20% width tolerance. The load remains external and the 1000 ms pulse unchanged; no initiator or flight qualification."
+            }
+          ]
+        },
+        {
+          "name": "FIVE_VOLT_AUXILIARY",
+          "track_width_mm": 0.6,
+          "clearance_mm": 0.2,
+          "via_diameter_mm": 1.2,
+          "via_drill_mm": 0.6,
+          "nets": [
+            "+5V",
+            "N$9"
+          ],
+          "parts": [
+            "J3",
+            "J5"
+          ],
+          "sources": [
+            {
+              "kind": "calculation",
+              "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+              "rationale": "1 A at 2 oz and 10 C estimated rise needs about 0.150 mm. Selected 0.6 mm for margin and voltage drop; the auxiliary/camera 1 A budget remains an unmeasured assumption."
+            }
+          ]
+        },
+        {
+          "name": "THREE_VOLT_LOGIC",
+          "track_width_mm": 0.5,
+          "clearance_mm": 0.2,
+          "via_diameter_mm": 1.2,
+          "via_drill_mm": 0.6,
+          "nets": [
+            "+3V3"
+          ],
+          "parts": [
+            "A1"
+          ],
+          "sources": [
+            {
+              "kind": "assumption",
+              "reference": "project.input.pending.json",
+              "rationale": "Selected 0.5 mm for the 3.3 V sensor/SD rail. Actual startup and SD-write load and MCU regulator thermal margin still require measurement."
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing_verified": false
+  }
+}

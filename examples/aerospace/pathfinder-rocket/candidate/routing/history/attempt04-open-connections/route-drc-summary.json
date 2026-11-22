@@ -1,0 +1,111 @@
+{
+  "sourceSha256": "e83b672243388f45e84bc58ed8c7f6fd98aebd14090254e80836fead442a79bf",
+  "routedSha256": "bad40e853d3d19cf27c4249b8663882290c8aa527267c18a5efc02b780991b69",
+  "routerSummary": [
+    "final score: 913.61 (5 unrouted and 13 violations), using 40.90 total CPU seconds, 221.86 GB total allocated, and 1018.7 MB peak heap usage.",
+    "final score: 913.61 (5 unrouted and 13 violations), using 2.11 total CPU seconds, 22.29 GB total allocated, and 518.7 MB peak heap usage."
+  ],
+  "drcExit": 5,
+  "geometricErrors": [],
+  "unconnected": [
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 2 [GND] of R8 on F.Cu",
+          "pos": {
+            "x": 16.75,
+            "y": 192.675
+          },
+          "uuid": "abb9b64c-295b-48de-aa54-7c5ad8bb05a0"
+        },
+        {
+          "description": "Track [GND] on F.Cu, length 10.7500 mm",
+          "pos": {
+            "x": 22.75,
+            "y": 191.0
+          },
+          "uuid": "20150aec-7b4b-438c-8656-e44e08f5191c"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 2 [GND] of R2 on F.Cu",
+          "pos": {
+            "x": 19.75,
+            "y": 187.675
+          },
+          "uuid": "8d12e292-4801-4c98-abbf-738497500e76"
+        },
+        {
+          "description": "Track [GND] on F.Cu, length 10.7500 mm",
+          "pos": {
+            "x": 22.75,
+            "y": 191.0
+          },
+          "uuid": "20150aec-7b4b-438c-8656-e44e08f5191c"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [GND] on F.Cu, length 10.7500 mm",
+          "pos": {
+            "x": 22.75,
+            "y": 191.0
+          },
+          "uuid": "20150aec-7b4b-438c-8656-e44e08f5191c"
+        },
+        {
+          "description": "Track [GND] on F.Cu, length 2.1710 mm",
+          "pos": {
+            "x": 31.75,
+            "y": 187.675
+          },
+          "uuid": "8a15b0cf-6515-49ae-8b65-3d8feba49b40"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 1 [+] of R1 on F.Cu",
+          "pos": {
+            "x": 16.75,
+            "y": 189.325
+          },
+          "uuid": "3292ac86-0dbe-4408-a12c-a914dd1ef32a"
+        },
+        {
+          "description": "Track [+] on B.Cu, length 3.9862 mm",
+          "pos": {
+            "x": 22.0687,
+            "y": 195.2891
+          },
+          "uuid": "e910ae08-8477-4775-9970-bdf81d23a68a"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    }
+  ],
+  "warnings": {
+    "lib_footprint_issues": 37,
+    "via_dangling": 1
+  },
+  "dimensionViolations": [],
+  "trackCount": 518,
+  "viaCount": 49
+}

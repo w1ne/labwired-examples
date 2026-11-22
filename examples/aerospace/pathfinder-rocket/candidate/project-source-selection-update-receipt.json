@@ -1,0 +1,707 @@
+{
+  "kind": "saved-candidate-source-selection-update",
+  "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+  "prior_content_hash": "4430042eba8ae0d2392ff9de91936d9656b4b4ce6ff1c3bf96d70f82742c6941",
+  "content_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+  "readback_verified": true,
+  "only_diagram_change": {
+    "part": "boost_harness",
+    "removed_attribute": "attrs.package",
+    "prior_value": "1x04"
+  },
+  "preserved_fields": {
+    "source_code": true,
+    "source_language": true,
+    "source_entry_path": true,
+    "firmware": true,
+    "stimuli": true,
+    "requirements": true,
+    "visibility": true,
+    "description": true,
+    "readme": true,
+    "pcb_board_id": true,
+    "pcb_board_rev": true,
+    "device_assembly": true
+  },
+  "native_board": {
+    "id": "flight-computer",
+    "kind": "native",
+    "ref": "sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+    "label": "37-part source-bound carrier PCB",
+    "pcbBoard": {
+      "id": "pcb_af828a3152e61e08",
+      "rev": 0
+    },
+    "pcbAssembly": {
+      "pcbRef": "sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+      "bindings": [
+        {
+          "partId": "mcu",
+          "ref": "A1",
+          "pinToPad": {
+            "PB12": [
+              "1"
+            ],
+            "PB13": [
+              "2"
+            ],
+            "PB14": [
+              "3"
+            ],
+            "PB15": [
+              "4"
+            ],
+            "PA8": [
+              "5"
+            ],
+            "PA9": [
+              "6"
+            ],
+            "PA10": [
+              "7"
+            ],
+            "PA11": [
+              "8"
+            ],
+            "PA12": [
+              "9"
+            ],
+            "PA15": [
+              "10"
+            ],
+            "PB3": [
+              "11"
+            ],
+            "PB4": [
+              "12"
+            ],
+            "PB5": [
+              "13"
+            ],
+            "PB6": [
+              "14"
+            ],
+            "PB7": [
+              "15"
+            ],
+            "PB8": [
+              "16"
+            ],
+            "PB9": [
+              "17"
+            ],
+            "5V": [
+              "18",
+              "40"
+            ],
+            "GND": [
+              "19",
+              "39",
+              "44"
+            ],
+            "3V3": [
+              "20",
+              "38",
+              "41"
+            ],
+            "VBAT": [
+              "21"
+            ],
+            "PC13": [
+              "22"
+            ],
+            "PC14": [
+              "23"
+            ],
+            "PC15": [
+              "24"
+            ],
+            "NRST": [
+              "25"
+            ],
+            "PA0": [
+              "26"
+            ],
+            "PA1": [
+              "27"
+            ],
+            "PA2": [
+              "28"
+            ],
+            "PA3": [
+              "29"
+            ],
+            "PA4": [
+              "30"
+            ],
+            "PA5": [
+              "31"
+            ],
+            "PA6": [
+              "32"
+            ],
+            "PA7": [
+              "33"
+            ],
+            "PB0": [
+              "34"
+            ],
+            "PB1": [
+              "35"
+            ],
+            "PB2": [
+              "36"
+            ],
+            "PB10": [
+              "37"
+            ],
+            "PA13": [
+              "42"
+            ],
+            "PA14": [
+              "43"
+            ]
+          }
+        },
+        {
+          "partId": "c_bulk",
+          "ref": "C1",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "c_5v",
+          "ref": "C2",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "c_3v3",
+          "ref": "C3",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "c_dec",
+          "ref": "C4",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_vbat_hi",
+          "ref": "R1",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_vbat_lo",
+          "ref": "R2",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "baro",
+          "ref": "U1",
+          "pinToPad": {
+            "VCC": [
+              "1"
+            ],
+            "GND": [
+              "3"
+            ],
+            "SCL": [
+              "4"
+            ],
+            "SDO": [
+              "5"
+            ],
+            "SDA": [
+              "6"
+            ],
+            "CSB": [
+              "7"
+            ]
+          }
+        },
+        {
+          "partId": "imu",
+          "ref": "U2",
+          "pinToPad": {
+            "VCC": [
+              "1"
+            ],
+            "GND": [
+              "3",
+              "7"
+            ],
+            "SCL": [
+              "4"
+            ],
+            "SDA": [
+              "5"
+            ],
+            "INT": [
+              "6"
+            ],
+            "XDA": [
+              "9"
+            ],
+            "XCL": [
+              "10"
+            ],
+            "AD0": [
+              "12"
+            ]
+          }
+        },
+        {
+          "partId": "r_scl",
+          "ref": "R3",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_sda",
+          "ref": "R4",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "sd",
+          "ref": "J1",
+          "pinToPad": {
+            "VCC": [
+              "1"
+            ],
+            "GND": [
+              "2"
+            ],
+            "SCK": [
+              "3"
+            ],
+            "MISO": [
+              "4"
+            ],
+            "MOSI": [
+              "5"
+            ],
+            "CS": [
+              "6"
+            ]
+          }
+        },
+        {
+          "partId": "pyro_term",
+          "ref": "J2",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "q_pyro",
+          "ref": "Q1",
+          "pinToPad": {
+            "G": [
+              "1"
+            ],
+            "S": [
+              "2"
+            ],
+            "D": [
+              "3"
+            ]
+          }
+        },
+        {
+          "partId": "r_pyro_g",
+          "ref": "R5",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_pyro_pd",
+          "ref": "R6",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_cont_hi",
+          "ref": "R7",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_cont_lo",
+          "ref": "R8",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "d_pyro",
+          "ref": "D1",
+          "pinToPad": {
+            "K": [
+              "1"
+            ],
+            "A": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "buzzer",
+          "ref": "LS1",
+          "pinToPad": {
+            "+": [
+              "1"
+            ],
+            "-": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "q_buzz",
+          "ref": "Q2",
+          "pinToPad": {
+            "G": [
+              "1"
+            ],
+            "S": [
+              "2"
+            ],
+            "D": [
+              "3"
+            ]
+          }
+        },
+        {
+          "partId": "r_buzz_g",
+          "ref": "R9",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_buzz_pd",
+          "ref": "R10",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "d_buzz",
+          "ref": "D2",
+          "pinToPad": {
+            "K": [
+              "1"
+            ],
+            "A": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "led_status",
+          "ref": "D3",
+          "pinToPad": {
+            "K": [
+              "1"
+            ],
+            "A": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "r_led",
+          "ref": "R11",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "cam",
+          "ref": "J3",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ],
+            "3": [
+              "3"
+            ],
+            "4": [
+              "4"
+            ]
+          }
+        },
+        {
+          "partId": "q_cam",
+          "ref": "Q3",
+          "pinToPad": {
+            "G": [
+              "1"
+            ],
+            "S": [
+              "2"
+            ],
+            "D": [
+              "3"
+            ]
+          }
+        },
+        {
+          "partId": "r_cam_pu",
+          "ref": "R12",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "q_cam_drv",
+          "ref": "Q4",
+          "pinToPad": {
+            "B": [
+              "1"
+            ],
+            "E": [
+              "2"
+            ],
+            "C": [
+              "3"
+            ]
+          }
+        },
+        {
+          "partId": "r_cam_b",
+          "ref": "R13",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "q_rec",
+          "ref": "Q5",
+          "pinToPad": {
+            "B": [
+              "1"
+            ],
+            "E": [
+              "2"
+            ],
+            "C": [
+              "3"
+            ]
+          }
+        },
+        {
+          "partId": "r_rec_b",
+          "ref": "R14",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "uart",
+          "ref": "J4",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ],
+            "3": [
+              "3"
+            ],
+            "4": [
+              "4"
+            ]
+          }
+        },
+        {
+          "partId": "boost_harness",
+          "ref": "J5",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ],
+            "3": [
+              "3"
+            ],
+            "4": [
+              "4"
+            ]
+          }
+        },
+        {
+          "partId": "arm_harness",
+          "ref": "J6",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        },
+        {
+          "partId": "battery_harness",
+          "ref": "J7",
+          "pinToPad": {
+            "1": [
+              "1"
+            ],
+            "2": [
+              "2"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "mechanical": {
+    "electronics": {
+      "version": 1,
+      "displays": [],
+      "inputs": [
+        {
+          "id": "arm-key",
+          "component": "arm_switch",
+          "part": "arm-switch",
+          "face": "+x",
+          "channel": "pressed",
+          "travelMm": 1.5
+        }
+      ]
+    },
+    "provider": "kernelcad",
+    "slug": "PuRrQzv1",
+    "projectId": "bd1d0404-3f3f-4317-a8f3-450c83f35a4c",
+    "version": 2,
+    "title": "Pathfinder — sourced bench carrier and 250 mm avionics bay",
+    "pcbBindings": [
+      {
+        "id": "flight-computer",
+        "pcbRef": "sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+        "cadPart": "flight-computer-pcb"
+      }
+    ]
+  },
+  "source_selection_receipt": "source-selection-correction.json",
+  "scope": "Existing candidate project updated with content-hash compare-and-swap; only the stale explicit generic package was removed. No copper, CAD, firmware, stimuli or requirement change."
+}

@@ -1,0 +1,270 @@
+{
+  "ok": true,
+  "source": "local",
+  "basis": "continuous-triangle-mesh",
+  "limitations": [
+    "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+  ],
+  "model": {
+    "rigidParts": true,
+    "motion": "straight-line-translation",
+    "motionModels": [
+      "straight-line-translation"
+    ],
+    "testedDirections": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "gravity": "not-modelled",
+    "basis": "continuous-triangle-mesh",
+    "tessellation": {
+      "linearMm": 0.01,
+      "relative": true,
+      "angularRad": 0.05,
+      "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+    },
+    "clearanceMm": 0,
+    "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+    "toolReach": "not-modelled"
+  },
+  "parts": [
+    {
+      "part": "conservative-cassette-envelope",
+      "removable": true,
+      "validDirections": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "directions": [
+        {
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "distanceMm": 38.200001,
+          "clear": false,
+          "blockingParts": [
+            "coupler"
+          ]
+        },
+        {
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "distanceMm": 38.200001,
+          "clear": false,
+          "blockingParts": [
+            "coupler"
+          ]
+        },
+        {
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "distanceMm": 38.200001,
+          "clear": false,
+          "blockingParts": [
+            "coupler"
+          ]
+        },
+        {
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "distanceMm": 38.200001,
+          "clear": false,
+          "blockingParts": [
+            "coupler"
+          ]
+        },
+        {
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "distanceMm": 246.000001,
+          "clear": true,
+          "blockingParts": []
+        },
+        {
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "distanceMm": 246.000001,
+          "clear": true,
+          "blockingParts": []
+        }
+      ],
+      "state": {
+        "kind": "removable",
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "testedDirections": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            -1
+          ]
+        ]
+      }
+    }
+  ],
+  "blockingGraph": {
+    "parts": [
+      "conservative-cassette-envelope"
+    ],
+    "directions": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "edges": [
+      {
+        "part": "conservative-cassette-envelope",
+        "blocker": "coupler",
+        "direction": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "part": "conservative-cassette-envelope",
+        "blocker": "coupler",
+        "direction": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "part": "conservative-cassette-envelope",
+        "blocker": "coupler",
+        "direction": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "part": "conservative-cassette-envelope",
+        "blocker": "coupler",
+        "direction": [
+          0,
+          -1,
+          0
+        ]
+      }
+    ]
+  },
+  "scope": {
+    "movingParts": [
+      "conservative-cassette-envelope"
+    ],
+    "stationaryParts": [
+      "coupler"
+    ]
+  },
+  "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z"
+}

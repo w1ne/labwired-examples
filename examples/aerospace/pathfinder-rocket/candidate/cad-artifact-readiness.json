@@ -1,0 +1,74 @@
+{
+  "schema": "labwired-examples/pathfinder-cad-artifact-readiness/v1",
+  "status": "passed",
+  "observed_at": "2026-11-22T03:09:18.983Z",
+  "project": {
+    "slug": "PuRrQzv1",
+    "version": 2,
+    "title": "Pathfinder \u2014 sourced bench carrier and 250 mm avionics bay",
+    "url": "https://app.kernelcad.com/p/PuRrQzv1?version=2",
+    "source_sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9",
+    "source_byte_length": 23342,
+    "mesh_url_provenance": "db5b36961adbd3696b2c0c603d2ed9f5d866ddeada46fb5201a4c5ad6c49cdd2"
+  },
+  "saved_revision_readback": {
+    "projectSaved": true,
+    "meshStatus": "ready",
+    "meshReady": true,
+    "viewerPainted": false,
+    "saved_at": "2026-11-22T02:44:58.730816+00:00",
+    "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+    "immutable_revision_source_matches": true
+  },
+  "stored_api_download": {
+    "url": "https://api.kernelcad.com/api/v1/projects/PuRrQzv1/revisions/2/mesh-artifact?download=1&provenance=db5b36961adbd3696b2c0c603d2ed9f5d866ddeada46fb5201a4c5ad6c49cdd2",
+    "http_status": 200,
+    "size": 4659194,
+    "sha256": "c5c78d0f0c81dc26833aec7f0d7b4c8e7dfae7dd3d8a0c9e97124634d8c1f0e6"
+  },
+  "cdn_download": {
+    "url": "https://mesh.kernelcad.com/mesh-artifacts/PuRrQzv1/v2.json?provenance=db5b36961adbd3696b2c0c603d2ed9f5d866ddeada46fb5201a4c5ad6c49cdd2",
+    "http_status": 200,
+    "size": 4659194,
+    "sha256": "c5c78d0f0c81dc26833aec7f0d7b4c8e7dfae7dd3d8a0c9e97124634d8c1f0e6",
+    "client": "v22.23.4",
+    "custom_headers": false,
+    "credentials": false,
+    "byte_identical_to_stored_api_artifact": true
+  },
+  "artifact": {
+    "revision": 2,
+    "feature_count": 66,
+    "dimension_count": 3,
+    "provenance": {
+      "schema": "kernelcad.revision-mesh-provenance.v1",
+      "source": {
+        "sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9",
+        "byteLength": 23342
+      },
+      "assetsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "geometryHash": "f85c45a19c5580ffd0f3c9674c3ac2198c03d3d10065c7a2bfe78197b476fa1e",
+      "producer": {
+        "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+        "serverCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+        "runtimeSourceHash": "4293d157357b0f5a75a6a563abff4635247082d63666bda496993222196ad2d0",
+        "sessionArtifactSha256": "72551de25f740cff680c571eebd04e753911e9780d7d21b29122d3fda4628327"
+      }
+    }
+  },
+  "earlier_client_observation": {
+    "client": "Python standard-library urllib with its default User-Agent",
+    "http_status": 403,
+    "body": "error code: 1010",
+    "interpretation": "Cloudflare rejected the default client signature. The ordinary Node fetch request subsequently returned the same persisted artifact as the API.",
+    "official_reference": "https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/",
+    "additional_observation": "A documented descriptive application User-Agent also returned HTTP 200; no browser impersonation, credential probing or security-setting change was used."
+  },
+  "reviewer_mutation_performed": false,
+  "limits": [
+    "Source readback, artifact readiness and stored/public download byte identity are verified.",
+    "No interactive viewer paint acknowledgement was observed.",
+    "No resave, get_model_mesh or get_latest_render was requested by this review.",
+    "This artifact receipt does not establish measured mass, full-airframe aerodynamics or flight acceptance."
+  ]
+}

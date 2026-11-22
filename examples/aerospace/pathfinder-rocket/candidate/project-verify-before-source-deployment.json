@@ -1,0 +1,67 @@
+{
+  "scope": "Hosted normal project verification on the existing saved candidate. The latest project readback confirms the same content hash; no project mutation was performed by this verification.",
+  "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+  "content_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+  "verification": {
+    "ok": true,
+    "status": 200,
+    "verified": false,
+    "reason": "DIAGRAM_INVALID",
+    "detail": "The diagram has wiring errors and was rejected before simulation. Fix the errors below, then retry. Call labwired_validate to re-check.",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "code": "UNKNOWN_COMPONENT",
+        "message": "Component type \"pololu-u3v70f5\" not in registry. Did you misspell it?",
+        "location": {
+          "part_id": "boost"
+        }
+      },
+      {
+        "severity": "error",
+        "code": "PACKAGE_UNKNOWN",
+        "message": "part 'mcu' selects package 'weact-blackpill-v31-body-envelope', which 'stm32f411ceu6-blackpill' does not declare",
+        "hint": "Declared packages: reference-module-2x25, weact-blackpill-v3-kicad9, weact-blackpill-dip40-swd",
+        "subjects": [
+          "mcu"
+        ]
+      },
+      {
+        "severity": "error",
+        "code": "PACKAGE_UNKNOWN",
+        "message": "part 'c_bulk' selects package 'radial-d8-p3.5', which 'capacitor' does not declare",
+        "hint": "Declared packages: tht, 0603, radial-d10-p5",
+        "subjects": [
+          "c_bulk"
+        ]
+      },
+      {
+        "severity": "error",
+        "code": "SCHEMA_PART_UNKNOWN",
+        "message": "part 'boost' has unknown type 'pololu-u3v70f5'",
+        "hint": "See the part catalog for valid types",
+        "subjects": [
+          "boost"
+        ]
+      },
+      {
+        "severity": "error",
+        "code": "DEVICE_BOARD_REF",
+        "message": "Board \"boost-module\": catalog ref \"pololu-u3v70f5\" is not a known board or catalog part",
+        "hint": "catalog: a BOARDS id or catalog part type; native: sha256:<hex> of the KiCad board; generated: sha256:<hex> or null",
+        "subjects": [
+          "boost-module"
+        ]
+      }
+    ],
+    "open_url": "https://app.labwired.com/p/d4de8c2bc6aad00bab720da9e1ff2414/edit"
+  },
+  "deployment_dependencies": [
+    3955,
+    3958,
+    3964,
+    3975
+  ],
+  "local_schema_errors_resolved": true,
+  "remaining_category": "catalog/package definitions not yet deployed"
+}

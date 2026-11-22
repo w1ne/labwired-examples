@@ -1,0 +1,270 @@
+{
+  "ok": false,
+  "source": "local",
+  "basis": "continuous-triangle-mesh",
+  "limitations": [
+    "Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a driver drawing. Static stability is approximate: a centre-of-mass projection onto a support polygon of mesh contacts with already-stable parts, not gravity simulation, friction, tipping or fixture analysis. A needs-hold finding names an external hold the model cannot prove. Subassembly and multi-part moves are heuristic, not exhaustive. Sampling paths are found-by-search, never proven. Blocked and unknown parts are not \"impossible\"."
+  ],
+  "model": {
+    "rigidParts": true,
+    "motion": "straight-line-translation",
+    "motionModels": [
+      "straight-line-translation"
+    ],
+    "testedDirections": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "gravity": "not-modelled",
+    "basis": "continuous-triangle-mesh",
+    "tessellation": {
+      "linearMm": 0.01,
+      "relative": true,
+      "angularRad": 0.05,
+      "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+    },
+    "clearanceMm": 0,
+    "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+    "toolReach": "not-modelled"
+  },
+  "parts": [
+    {
+      "part": "avionics-coupler",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "bulkhead-aft",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "bulkhead-fwd",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    },
+    {
+      "part": "arm-switch",
+      "removable": false,
+      "validDirections": [],
+      "directions": [],
+      "state": {
+        "kind": "unknown",
+        "reason": "budget"
+      }
+    }
+  ],
+  "blockingGraph": {
+    "parts": [
+      "avionics-coupler",
+      "bulkhead-aft",
+      "bulkhead-fwd",
+      "arm-switch"
+    ],
+    "directions": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "edges": []
+  },
+  "stuckParts": [
+    "avionics-coupler",
+    "bulkhead-aft",
+    "bulkhead-fwd",
+    "arm-switch"
+  ],
+  "sequence": {
+    "steps": [],
+    "model": {
+      "rigidParts": true,
+      "motion": "straight-line-translation",
+      "motionModels": [
+        "straight-line-translation"
+      ],
+      "testedDirections": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "gravity": "not-modelled",
+      "basis": "continuous-triangle-mesh",
+      "tessellation": {
+        "linearMm": 0.01,
+        "relative": true,
+        "angularRad": 0.05,
+        "source": "meshShapeForExport default: relative linear 0.01, angular 0.05 rad; per-face fallback absolute 0.02 mm, 0.1 rad"
+      },
+      "clearanceMm": 0,
+      "clearancePolicy": "Zero clearance: any positive-travel triangle contact blocks; t=0 departure is free.",
+      "toolReach": "not-modelled"
+    },
+    "unknown": [
+      "avionics-coupler",
+      "bulkhead-aft",
+      "bulkhead-fwd",
+      "arm-switch"
+    ]
+  },
+  "scope": {
+    "movingParts": [
+      "avionics-coupler",
+      "bulkhead-aft",
+      "bulkhead-fwd",
+      "arm-switch"
+    ],
+    "stationaryParts": [
+      "switch-band",
+      "avionics-sled",
+      "flight-computer-pcb",
+      "pcb-mcu",
+      "pcb-c_bulk",
+      "pcb-c_5v",
+      "pcb-c_3v3",
+      "pcb-c_dec",
+      "pcb-r_vbat_hi",
+      "pcb-r_vbat_lo",
+      "pcb-baro",
+      "pcb-imu",
+      "pcb-r_scl",
+      "pcb-r_sda",
+      "pcb-sd",
+      "pcb-pyro_term",
+      "pcb-q_pyro",
+      "pcb-r_pyro_g",
+      "pcb-r_pyro_pd",
+      "pcb-r_cont_hi",
+      "pcb-r_cont_lo",
+      "pcb-d_pyro",
+      "pcb-buzzer",
+      "pcb-q_buzz",
+      "pcb-r_buzz_g",
+      "pcb-r_buzz_pd",
+      "pcb-d_buzz",
+      "pcb-led_status",
+      "pcb-r_led",
+      "pcb-cam",
+      "pcb-q_cam",
+      "pcb-r_cam_pu",
+      "pcb-q_cam_drv",
+      "pcb-r_cam_b",
+      "pcb-q_rec",
+      "pcb-r_rec_b",
+      "pcb-uart",
+      "pcb-boost_harness",
+      "pcb-arm_harness",
+      "pcb-battery_harness",
+      "battery-tattu-450mah-envelope",
+      "battery-pigtail-service-envelope",
+      "boost-pololu-u3v70f5",
+      "power-harness-service-envelope"
+    ]
+  },
+  "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z",
+  "kernelcadError": {
+    "code": "mcp.internal.failure",
+    "category": "transport_internal_failure",
+    "stage": "transport_or_internal",
+    "message": "{\"ok\":false,\"source\":\"local\",\"basis\":\"continuous-triangle-mesh\",\"limitations\":[\"Local watertight mesh validation, not BREP or hardware acceptance. Positive-travel contact is conservatively blocked; starting contact may also block sliding. Mesh tessellation approximates curves. Straight translation and declared helical fastener motion only; no mate solving, deformation, thread engagement or torque. Press/snap fits are declared, never simulated. Tool reach is a swept-envelope approximation, not a ",
+    "recovery": "Retry or choose another supported tool; include the correlation ID if the failure recurs.",
+    "correlationId": "f12551be-2644-4366-a9df-b4816d7a8463",
+    "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z"
+  }
+}

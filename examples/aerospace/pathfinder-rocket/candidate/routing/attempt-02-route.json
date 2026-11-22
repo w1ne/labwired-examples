@@ -1,0 +1,292 @@
+{
+  "status": "partial",
+  "mode": "route",
+  "routed_nets": [
+    "GND",
+    "PB12",
+    "+3V3",
+    "PB6",
+    "PB7",
+    "+",
+    "+5V",
+    "N$8",
+    "N$9",
+    "N$10",
+    "N$11",
+    "N$12",
+    "PA0",
+    "PA2",
+    "PA3",
+    "PA4",
+    "PA5",
+    "PA6",
+    "PA7",
+    "PB0",
+    "PB1",
+    "PB13",
+    "PB14",
+    "PB15",
+    "PB8",
+    "N$26",
+    "N$27",
+    "N$28",
+    "N$29",
+    "N$30"
+  ],
+  "unrouted": 1,
+  "violations": 0,
+  "added_tracks": 555,
+  "added_vias": 54,
+  "seconds": 49.9,
+  "engine": "freerouting",
+  "job_id": "5555a3e5-1db7-4cdd-b711-dd61dffda6ed",
+  "board_id": "pcb_9174939608d80f05",
+  "rev": 0,
+  "pcb_ref": "sha256:28a99bf0292d817527a82951bb7df3c5eea392a9f8d248e09782cf8fffdc7925",
+  "rules_ref": "sha256:a042117ac7ea78e5b81f61eccb284e32293f3321dfed90fe92d34e68bded89cc",
+  "rules_digest": "99ddcd61339ef68f148cfeec8cb3dbc7ae568352ce3002cab20829c4f8b4a7cf",
+  "coverage_ref": "sha256:7c2f2b5bf62092b9abc183e0c1260d02645d9183395343491aa60c28d7c70f60",
+  "twin_buildable": false,
+  "capabilities": {
+    "route": "supported",
+    "view": "supported",
+    "simulation": "model_gaps"
+  },
+  "model": {
+    "mapped": 27,
+    "dropped": 6,
+    "ignored": 4
+  },
+  "simulation_blockers": [],
+  "applied_rules": {
+    "version": 1,
+    "defaults": {
+      "track_width_mm": 0.25,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 1,
+      "via_drill_mm": 0.4
+    },
+    "fabrication": {
+      "reference": "https://jlcpcb.com/capabilities/Capabilities \u2014 2 oz outer-layer line/space 0.16 mm, PTH annulus 0.254 mm; selected conservative 0.35 mm hole-to-copper and 0.5 mm hole-to-hole.",
+      "min_track_width_mm": 0.16,
+      "min_clearance_mm": 0.16,
+      "min_drill_mm": 0.3,
+      "min_annular_ring_mm": 0.254,
+      "min_hole_to_hole_mm": 0.5,
+      "min_edge_clearance_mm": 0.2,
+      "min_hole_clearance_mm": 0.35
+    },
+    "sources": [
+      {
+        "kind": "fabricator",
+        "reference": "https://jlcpcb.com/capabilities/Capabilities",
+        "rationale": "Two copper layers at nominal 70 \u00b5m each. 1.6 mm FR4, 0.16 mm minimum trace/space, 0.254 mm PTH annulus and 20% trace-width tolerance. Source-backed native footprint annuli were checked before routing."
+      },
+      {
+        "kind": "stackup",
+        "reference": "pathfinder-unrouted.kicad_pcb setup.stackup",
+        "rationale": "F.Cu and B.Cu 0.07 mm each; FR4 core 1.44 mm and solder mask 0.01 mm per side. This requests 2 oz copper; it is not a measured finished stackup."
+      },
+      {
+        "kind": "assumption",
+        "reference": "battery-current-review.json",
+        "rationale": "External 1.5 ohm resistor bench pulse draws 2.90 A at 4.35 V for 1000 ms. Illustrative auxiliary 1 A at 5 V/80% efficiency totals 4.337 A before buzzer and tolerances. Camera current and thermal performance are not measured."
+      }
+    ],
+    "net_classes": [
+      {
+        "name": "Default",
+        "track_width_mm": 0.25,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 1,
+        "via_drill_mm": 0.4,
+        "nets": [
+          "N$10",
+          "N$12",
+          "N$26",
+          "N$27",
+          "N$28",
+          "N$29",
+          "N$30",
+          "N$8",
+          "PA0",
+          "PA2",
+          "PA3",
+          "PA4",
+          "PA5",
+          "PA6",
+          "PA7",
+          "PB0",
+          "PB1",
+          "PB12",
+          "PB13",
+          "PB14",
+          "PB15",
+          "PB6",
+          "PB7",
+          "PB8"
+        ],
+        "parts": [],
+        "sources": [
+          {
+            "kind": "fabricator",
+            "reference": "https://jlcpcb.com/capabilities/Capabilities",
+            "rationale": "Two copper layers at nominal 70 \u00b5m each. 1.6 mm FR4, 0.16 mm minimum trace/space, 0.254 mm PTH annulus and 20% trace-width tolerance. Source-backed native footprint annuli were checked before routing."
+          },
+          {
+            "kind": "stackup",
+            "reference": "pathfinder-unrouted.kicad_pcb setup.stackup",
+            "rationale": "F.Cu and B.Cu 0.07 mm each; FR4 core 1.44 mm and solder mask 0.01 mm per side. This requests 2 oz copper; it is not a measured finished stackup."
+          },
+          {
+            "kind": "assumption",
+            "reference": "battery-current-review.json",
+            "rationale": "External 1.5 ohm resistor bench pulse draws 2.90 A at 4.35 V for 1000 ms. Illustrative auxiliary 1 A at 5 V/80% efficiency totals 4.337 A before buzzer and tolerances. Camera current and thermal performance are not measured."
+          }
+        ]
+      },
+      {
+        "name": "VBAT_AND_RETURN",
+        "track_width_mm": 1.8,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 2.5,
+        "via_drill_mm": 1.9,
+        "nets": [
+          "+",
+          "GND"
+        ],
+        "parts": [
+          "J7"
+        ],
+        "sources": [
+          {
+            "kind": "calculation",
+            "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+            "rationale": "Preliminary 5 A routing basis using the IPC-2221 external-layer estimate k=0.048, DeltaT=10 C and nominal t=2 oz. Selected 1.8 mm, or 1.44 mm after -20% trace-width tolerance, gives an estimated 5.149 A. Finished copper thickness is not guaranteed by the cited capability page. A 1.9 mm via at 18 \u00b5m average plating has about 0.1074 mm\u00b2 barrel section versus trace 0.1008 mm\u00b2, but via heating/neckdowns and actual plating remain unverified."
+          },
+          {
+            "kind": "assumption",
+            "reference": "battery-current-review.json",
+            "rationale": "5 A is a preliminary routing allowance, not a measured maximum. At 4.35 V, 1.5 ohm plus 1 A/5 V at assumed 75% converter efficiency already gives 4.433 A before tolerances and auxiliaries. Peak camera current and all thermal limits remain hardware gates."
+          }
+        ]
+      },
+      {
+        "name": "BENCH_LOAD_SWITCHED_RETURN",
+        "track_width_mm": 1,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 2.1,
+        "via_drill_mm": 1.5,
+        "nets": [
+          "N$11"
+        ],
+        "parts": [
+          "J2"
+        ],
+        "sources": [
+          {
+            "kind": "calculation",
+            "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+            "rationale": "2.90 A at 2 oz and 10 C rise requires about 0.652 mm by the external IPC-2221 estimate. Selected 1.0 mm, or 0.8 mm after -20% width tolerance. The load remains external and the 1000 ms pulse unchanged; no initiator or flight qualification."
+          }
+        ]
+      },
+      {
+        "name": "FIVE_VOLT_AUXILIARY",
+        "track_width_mm": 0.6,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 1.2,
+        "via_drill_mm": 0.6,
+        "nets": [
+          "+5V",
+          "N$9"
+        ],
+        "parts": [
+          "J3",
+          "J5"
+        ],
+        "sources": [
+          {
+            "kind": "calculation",
+            "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+            "rationale": "1 A at 2 oz and 10 C estimated rise needs about 0.150 mm. Selected 0.6 mm for margin and voltage drop; the auxiliary/camera 1 A budget remains an unmeasured assumption."
+          }
+        ]
+      },
+      {
+        "name": "THREE_VOLT_LOGIC",
+        "track_width_mm": 0.5,
+        "clearance_mm": 0.2,
+        "via_diameter_mm": 1.2,
+        "via_drill_mm": 0.6,
+        "nets": [
+          "+3V3"
+        ],
+        "parts": [
+          "A1"
+        ],
+        "sources": [
+          {
+            "kind": "assumption",
+            "reference": "project.input.pending.json",
+            "rationale": "Selected 0.5 mm for the 3.3 V sensor/SD rail. Actual startup and SD-write load and MCU regulator thermal margin still require measurement."
+          }
+        ]
+      }
+    ]
+  },
+  "blob_path": "/v1/blobs/sha256/28a99bf0292d817527a82951bb7df3c5eea392a9f8d248e09782cf8fffdc7925",
+  "layer_count": 2,
+  "backend": "kicad9-native",
+  "kicad_versions": [
+    "10.0.8-10.0.8~ubuntu24.04.1",
+    "10.0.8-10.0.8~ubuntu24.04.1"
+  ],
+  "warnings": [
+    "Native KiCad DSN/SES conversion preserves library padstacks and inner copper",
+    "Rules selected by the agent; sources and fabrication limits are retained, not independently qualified",
+    "Independent KiCad DRC and schematic parity still required",
+    "Memory controller, LPDDR4 PHY/eye, impedance and PDN are not simulated",
+    "1 unrouted connections remain",
+    "Routing counts, when present, come from Freerouting. Run labwired_pcb_validate_imported with pcb_ref and rules_ref for independent design-rule checks."
+  ],
+  "log": [
+    "2026-11-22 01:25:21.375 WARN   Couldn't get screen resolution. If you are running in a headless environment, disable the GUI by setting gui.enabled to false.",
+    "2026-11-22 01:25:21.665 WARN   Analytics tracking: first delivery failure in this window - /v1/analytics/identify - IOException: Server returned HTTP response code: 403 for URL: https://api.freerouting.app/v1/analytics/identify | Server response: <!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"\u2026. Further failures will be aggregated and reported every 60 minutes.",
+    "2026-11-22 01:25:23.871 INFO   [D6BAFD\\1534EE] Fanout stage completed: started with 49 total SMD pins, completed in 0.99 seconds, escaped pins: 48/49 (98.0%), using 0.93 total CPU seconds, 2.03 GB total allocated, and 215.1 MB peak heap usage.",
+    "2026-11-22 01:25:23.876 INFO   [D6BAFD\\1534EE] Auto-routing stage started on board '7dccc7074b47bf771230f4bc18cb5c10' for 82 unrouted items.",
+    "2026-11-22 01:25:28.520 INFO   [D6BAFD\\1534EE] Auto-routing pass #1 on board '7dccc7074b47bf771230f4bc18cb5c10' was completed in 4.61 seconds with the score of 670.44 (29 unrouted and 0 violations), using 4.78 CPU seconds and the job allocated 22.64 GB of memory so far.",
+    "2026-11-22 01:25:32.226 INFO   [D6BAFD\\1534EE] Auto-routing pass #2 on board '16c0c363cd32d00adb8cdbfb434d8b10' was completed in 3.67 seconds with the score of 727.26 (24 unrouted and 0 violations), using 8.66 CPU seconds and the job allocated 47.73 GB of memory so far.",
+    "2026-11-22 01:25:36.748 INFO   [D6BAFD\\1534EE] Auto-routing pass #3 on board 'ece435353314ab9ff9b5fdc21920fa8f' was completed in 4.47 seconds with the score of 806.80 (17 unrouted and 0 violations), using 12.55 CPU seconds and the job allocated 71.13 GB of memory so far.",
+    "2026-11-22 01:25:40.187 INFO   [D6BAFD\\1534EE] Auto-routing pass #4 on board '69f8d4493ea40938676370f38753fca6' was completed in 3.40 seconds with the score of 852.26 (13 unrouted and 0 violations), using 16.42 CPU seconds and the job allocated 94.45 GB of memory so far.",
+    "2026-11-22 01:25:42.716 INFO   [D6BAFD\\1534EE] Auto-routing pass #5 on board '5b1367f6b2826146f1e3bc2259821dc5' was completed in 2.48 seconds with the score of 897.71 (9 unrouted and 0 violations), using 18.38 CPU seconds and the job allocated 106.40 GB of memory so far.",
+    "2026-11-22 01:25:45.421 INFO   [D6BAFD\\1534EE] Auto-routing pass #6 on board '4256b808d54ddfdd1eb7150ed6ef2615' was completed in 2.66 seconds with the score of 931.80 (6 unrouted and 0 violations), using 21.30 CPU seconds and the job allocated 124.43 GB of memory so far.",
+    "2026-11-22 01:25:47.708 INFO   [D6BAFD\\1534EE] Auto-routing pass #7 on board '3f335480bde6e8b5280f3dd2b1942631' was completed in 2.24 seconds with the score of 943.16 (5 unrouted and 0 violations), using 23.25 CPU seconds and the job allocated 136.11 GB of memory so far.",
+    "2026-11-22 01:25:49.780 INFO   [D6BAFD\\1534EE] Auto-routing pass #8 on board 'cfb77975dd2586aa67478855b9cdc072' was completed in 2.02 seconds with the score of 943.16 (5 unrouted and 0 violations), using 25.19 CPU seconds and the job allocated 146.96 GB of memory so far.",
+    "2026-11-22 01:25:51.855 INFO   [D6BAFD\\1534EE] Auto-routing pass #9 on board 'cfb77975dd2586aa67478855b9cdc072' was completed in 2.05 seconds with the score of 931.80 (6 unrouted and 0 violations), using 28.10 CPU seconds and the job allocated 163.49 GB of memory so far.",
+    "2026-11-22 01:25:53.779 INFO   [D6BAFD\\1534EE] Auto-routing pass #10 on board '1b0b553e8da6ebd02a4dcd9890c12b76' was completed in 1.88 seconds with the score of 943.16 (5 unrouted and 0 violations), using 29.07 CPU seconds and the job allocated 169.60 GB of memory so far.",
+    "2026-11-22 01:25:56.088 INFO   [D6BAFD\\1534EE] Auto-routing pass #11 on board '042ea3759c7877c4c917390344d66d71' was completed in 2.23 seconds with the score of 954.52 (4 unrouted and 0 violations), using 31.95 CPU seconds and the job allocated 185.29 GB of memory so far.",
+    "2026-11-22 01:25:57.283 INFO   [D6BAFD\\1534EE] Auto-routing pass #12 on board '767463f1ffc634aa7b6acddb4f2f40ec' was completed in 1.14 seconds with the score of 977.25 (2 unrouted and 0 violations), using 32.93 CPU seconds and the job allocated 191.49 GB of memory so far.",
+    "2026-11-22 01:25:58.000 INFO   [D6BAFD\\1534EE] Auto-routing pass #13 on board '8e6e8fd726e2bb3f7a5c6f8f6c2ed53d' was completed in 0.67 seconds with the score of 954.52 (4 unrouted and 0 violations), using 33.90 CPU seconds and the job allocated 198.00 GB of memory so far.",
+    "2026-11-22 01:26:00.126 INFO   [D6BAFD\\1534EE] Auto-routing pass #14 on board '075aa68e189c68bc2c131a65d5bc8ebe' was completed in 2.08 seconds with the score of 977.25 (2 unrouted and 0 violations), using 35.86 CPU seconds and the job allocated 208.79 GB of memory so far.",
+    "2026-11-22 01:26:01.490 INFO   [D6BAFD\\1534EE] Auto-routing pass #15 on board 'addb19bf937bfe5166913eb135f5eacf' was completed in 1.31 seconds with the score of 988.61 (1 unrouted and 0 violations), using 36.83 CPU seconds and the job allocated 214.95 GB of memory so far.",
+    "2026-11-22 01:26:02.136 INFO   [D6BAFD\\1534EE] Auto-routing pass #16 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.59 seconds with the score of 988.61 (1 unrouted and 0 violations), using 37.81 CPU seconds and the job allocated 220.70 GB of memory so far.",
+    "2026-11-22 01:26:02.724 INFO   [D6BAFD\\1534EE] Auto-routing pass #17 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.55 seconds with the score of 988.61 (1 unrouted and 0 violations), using 37.81 CPU seconds and the job allocated 220.70 GB of memory so far.",
+    "2026-11-22 01:26:03.327 INFO   [D6BAFD\\1534EE] Auto-routing pass #18 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.57 seconds with the score of 988.61 (1 unrouted and 0 violations), using 38.79 CPU seconds and the job allocated 227.59 GB of memory so far.",
+    "2026-11-22 01:26:03.924 INFO   [D6BAFD\\1534EE] Auto-routing pass #19 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.57 seconds with the score of 988.61 (1 unrouted and 0 violations), using 39.77 CPU seconds and the job allocated 233.43 GB of memory so far.",
+    "2026-11-22 01:26:04.494 INFO   [D6BAFD\\1534EE] Auto-routing pass #20 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.54 seconds with the score of 988.61 (1 unrouted and 0 violations), using 39.77 CPU seconds and the job allocated 233.43 GB of memory so far.",
+    "2026-11-22 01:26:05.062 INFO   [D6BAFD\\1534EE] Auto-routing pass #21 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.54 seconds with the score of 988.61 (1 unrouted and 0 violations), using 40.76 CPU seconds and the job allocated 240.44 GB of memory so far.",
+    "2026-11-22 01:26:05.636 INFO   [D6BAFD\\1534EE] Auto-routing pass #22 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.54 seconds with the score of 988.61 (1 unrouted and 0 violations), using 40.76 CPU seconds and the job allocated 240.44 GB of memory so far.",
+    "2026-11-22 01:26:06.219 INFO   [D6BAFD\\1534EE] Auto-routing pass #23 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.55 seconds with the score of 988.61 (1 unrouted and 0 violations), using 41.73 CPU seconds and the job allocated 247.40 GB of memory so far.",
+    "2026-11-22 01:26:06.784 INFO   [D6BAFD\\1534EE] Auto-routing pass #24 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.54 seconds with the score of 988.61 (1 unrouted and 0 violations), using 41.73 CPU seconds and the job allocated 247.40 GB of memory so far.",
+    "2026-11-22 01:26:07.348 INFO   [D6BAFD\\1534EE] Auto-routing pass #25 on board '0c5de523d9ebed2e03d981535b0e7714' was completed in 0.54 seconds with the score of 988.61 (1 unrouted and 0 violations), using 42.71 CPU seconds and the job allocated 254.24 GB of memory so far.",
+    "  Net 'GND' (1 unrouted connection):",
+    "2026-11-22 01:26:07.403 INFO   [D6BAFD\\1534EE] Auto-routing stage completed: started with 88 unrouted nets, completed in 44.54 seconds, final score: 988.61 (1 unrouted and 0 violations), using 42.71 total CPU seconds, 254.24 GB total allocated, and 472.7 MB peak heap usage.",
+    "2026-11-22 01:26:07.426 INFO   [D6BAFD\\1534EE] Optimization stage started on board '0c5de523d9ebed2e03d981535b0e7714' with score 988.61 (1 unrouted and 0 violations).",
+    "2026-11-22 01:26:09.591 INFO   [D6BAFD\\1534EE] Optimizer pass #1 on board 'e6ffaf3e3e6004ba0f44f193ce5793af' was completed in 2.09 seconds with the score of 988.61 (1 unrouted and 0 violations).",
+    "2026-11-22 01:26:09.631 INFO   [D6BAFD\\1534EE] Optimization stage completed: started with score 988.61 (1 unrouted and 0 violations), completed in 2.19 seconds, final score: 988.61 (1 unrouted and 0 violations), using 2.12 total CPU seconds, 25.93 GB total allocated, and 502.0 MB peak heap usage."
+  ],
+  "manufacturing_verified": false,
+  "lpddr4_si_verified": false,
+  "functional_simulation_verified": false
+}

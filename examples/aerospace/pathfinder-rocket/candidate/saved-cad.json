@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "show_electronics": true,
+  "hardwarePack": {
+    "schema": "hardware-pack/v1",
+    "kernelcad": {
+      "url": "https://app.kernelcad.com/p/PuRrQzv1?version=2",
+      "slug": "PuRrQzv1",
+      "version": 2
+    },
+    "labwired": {
+      "url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=PuRrQzv1&kernelcad_revision=2",
+      "mcp_url": "https://api.labwired.com/mcp",
+      "tools": [
+        "labwired_hardware",
+        "labwired_list",
+        "labwired_describe",
+        "labwired_project_get",
+        "labwired_export",
+        "labwired_verify"
+      ]
+    },
+    "buy_device_url": "https://app.labwired.com/?source=kernelcad&kernelcad_project=PuRrQzv1&kernelcad_revision=2&device=1",
+    "purchase_mode": "review_separate_orders",
+    "companion_access": "use_connected_plugin_or_open_link"
+  },
+  "project_id": "bd1d0404-3f3f-4317-a8f3-450c83f35a4c",
+  "slug": "PuRrQzv1",
+  "version": 2,
+  "privacy": "public_unlisted",
+  "title": "Pathfinder \u2014 sourced bench carrier and 250 mm avionics bay",
+  "url": "https://app.kernelcad.com/p/PuRrQzv1?version=2&show_electronics=1",
+  "embedUrl": "https://app.kernelcad.com/embed/PuRrQzv1?revision=2&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2FPuRrQzv1%2Fv2.json",
+  "meshUrl": "https://mesh.kernelcad.com/mesh-artifacts/PuRrQzv1/v2.json",
+  "updated": true,
+  "project_note": "Saved as revision 2 of project 'PuRrQzv1': https://app.kernelcad.com/p/PuRrQzv1?version=2&show_electronics=1 (title: Pathfinder \u2014 sourced bench carrier and 250 mm avionics bay). Next save: pass project: 'PuRrQzv1'. Pass new_project: true only for a separate model.\nStudio badge \"Motion checked\". Motion checked: 7 poses across 3 joints (each joint at its limits), all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+  "mechanismSummary": {
+    "verdict": "real",
+    "maxLevel": "ok",
+    "statement": "Motion checked: 7 poses across 3 joints (each joint at its limits), all mates satisfied, no collisions, fastened parts stay rigid. Gravity not checked.",
+    "checked": [
+      "7 poses across 3 joints (each joint at its limits)",
+      "all mates satisfied",
+      "no collisions",
+      "fastened parts stay rigid"
+    ],
+    "skipped": [
+      "gravity hold and drop-on-release were not checked"
+    ],
+    "failures": []
+  },
+  "previewDelivered": true,
+  "previewStatus": "included",
+  "previewView": "iso",
+  "previewWidth": 640,
+  "previewHeight": 640,
+  "previewBytes": 14122,
+  "previewCached": false,
+  "previewHint": "PNG preview is included in this tool result (image content block + previewUrl). Say the preview was delivered only when previewDelivered is true \u2014 do not require a second get_latest_render call for the happy path, and do not tell the user to open Studio just to see a still.",
+  "previewUrl": "https://53f45abe9550f62856af4475880e0a77.r2.cloudflarestorage.com/kernelcad-review-paint/renders/PuRrQzv1/2026-11-22T02-45-18.428Z.png",
+  "meshStatus": "building",
+  "meshSaved": false,
+  "meshHint": "meshStatus=building is TRANSIENT (OCCT/CDN still writing) \u2014 NOT a permanent failure and NOT a missing project. meshUrl is the expected CDN pin even while building; embed FunnelViewer retries 404s. Poll with get_project({ slug }) until meshStatus=ready/meshReady=true, or call open_in_studio again with the same code+slug. Do NOT tell the user the mesh is broken/404; do NOT call get_model_mesh.",
+  "projectSaved": true,
+  "meshReady": false,
+  "viewerPainted": false,
+  "paintHint": "Do NOT claim the interactive viewer painted unless the widget reports viewerPainted=true (ui/update-model-context or widgetState.modelContent) \u2014 tools/call always leaves viewerPainted=false. projectSaved\u2260viewerPainted. meshReady=false with meshStatus=building is OK \u2014 embed retries meshUrl. Do NOT call get_model_mesh or get_latest_render to force interactive paint; use open_in_studio only.",
+  "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z",
+  "receipt_redactions": {
+    "reason": "Temporary signed preview query omitted from the public receipt; artifact and source identities are unchanged.",
+    "url_query_paths": [
+      "$.previewUrl"
+    ],
+    "original_sha256": "0105a225f8b4efbce6547d421635b0027626e0aff4ae48971a70a8dc36122aa8"
+  }
+}

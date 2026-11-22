@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "defaults": {
+    "clearance_mm": 0.2,
+    "track_width_mm": 0.25,
+    "via_diameter_mm": 1,
+    "via_drill_mm": 0.4
+  },
+  "fabrication": {
+    "min_annular_ring_mm": 0.254,
+    "min_clearance_mm": 0.16,
+    "min_drill_mm": 0.3,
+    "min_edge_clearance_mm": 0.2,
+    "min_hole_clearance_mm": 0.35,
+    "min_hole_to_hole_mm": 0.5,
+    "min_track_width_mm": 0.16,
+    "reference": "https://jlcpcb.com/capabilities/Capabilities \u2014 2 oz outer-layer line/space 0.16 mm, PTH annulus 0.254 mm; selected conservative 0.35 mm hole-to-copper and 0.5 mm hole-to-hole."
+  },
+  "sources": [
+    {
+      "kind": "fabricator",
+      "reference": "https://jlcpcb.com/capabilities/Capabilities",
+      "rationale": "Two copper layers at nominal 70 \u00b5m each. 1.6 mm FR4, 0.16 mm minimum trace/space, 0.254 mm PTH annulus and 20% trace-width tolerance. Source-backed native footprint annuli were checked before routing."
+    },
+    {
+      "kind": "stackup",
+      "reference": "pathfinder-unrouted.kicad_pcb setup.stackup",
+      "rationale": "F.Cu and B.Cu 0.07 mm each; FR4 core 1.44 mm and solder mask 0.01 mm per side. This requests 2 oz copper; it is not a measured finished stackup."
+    },
+    {
+      "kind": "assumption",
+      "reference": "battery-current-review.json",
+      "rationale": "External 1.5 ohm resistor bench pulse draws 2.90 A at 4.35 V for 1000 ms. Illustrative auxiliary 1 A at 5 V/80% efficiency totals 4.337 A before buzzer and tolerances. Camera current and thermal performance are not measured."
+    }
+  ],
+  "net_classes": [
+    {
+      "name": "VBAT_AND_RETURN",
+      "part_pins": [
+        {
+          "ref": "J7",
+          "pins": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "track_width_mm": 1.8,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 2.5,
+      "via_drill_mm": 1.9,
+      "sources": [
+        {
+          "kind": "calculation",
+          "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+          "rationale": "Preliminary 5 A routing basis using the IPC-2221 external-layer estimate k=0.048, DeltaT=10 C and nominal t=2 oz. Selected 1.8 mm, or 1.44 mm after -20% trace-width tolerance, gives an estimated 5.149 A. Finished copper thickness is not guaranteed by the cited capability page. A 1.9 mm via at 18 \u00b5m average plating has about 0.1074 mm\u00b2 barrel section versus trace 0.1008 mm\u00b2, but via heating/neckdowns and actual plating remain unverified."
+        },
+        {
+          "kind": "assumption",
+          "reference": "battery-current-review.json",
+          "rationale": "5 A is a preliminary routing allowance, not a measured maximum. At 4.35 V, 1.5 ohm plus 1 A/5 V at assumed 75% converter efficiency already gives 4.433 A before tolerances and auxiliaries. Peak camera current and all thermal limits remain hardware gates."
+        }
+      ]
+    },
+    {
+      "name": "BENCH_LOAD_SWITCHED_RETURN",
+      "part_pins": [
+        {
+          "ref": "J2",
+          "pins": [
+            "2"
+          ]
+        }
+      ],
+      "track_width_mm": 1,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 2.1,
+      "via_drill_mm": 1.5,
+      "sources": [
+        {
+          "kind": "calculation",
+          "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+          "rationale": "2.90 A at 2 oz and 10 C rise requires about 0.652 mm by the external IPC-2221 estimate. Selected 1.0 mm, or 0.8 mm after -20% width tolerance. The load remains external and the 1000 ms pulse unchanged; no initiator or flight qualification."
+        }
+      ]
+    },
+    {
+      "name": "FIVE_VOLT_AUXILIARY",
+      "part_pins": [
+        {
+          "ref": "J5",
+          "pins": [
+            "3"
+          ]
+        },
+        {
+          "ref": "J3",
+          "pins": [
+            "1"
+          ]
+        }
+      ],
+      "track_width_mm": 0.6,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 1.2,
+      "via_drill_mm": 0.6,
+      "sources": [
+        {
+          "kind": "calculation",
+          "reference": "https://www.qorvo.com/design-hub/design-tools/interactive/pcb-trace-power-handling-calculator",
+          "rationale": "1 A at 2 oz and 10 C estimated rise needs about 0.150 mm. Selected 0.6 mm for margin and voltage drop; the auxiliary/camera 1 A budget remains an unmeasured assumption."
+        }
+      ]
+    },
+    {
+      "name": "THREE_VOLT_LOGIC",
+      "part_pins": [
+        {
+          "ref": "A1",
+          "pins": [
+            "20"
+          ]
+        }
+      ],
+      "track_width_mm": 0.5,
+      "clearance_mm": 0.2,
+      "via_diameter_mm": 1.2,
+      "via_drill_mm": 0.6,
+      "sources": [
+        {
+          "kind": "assumption",
+          "reference": "project.input.pending.json",
+          "rationale": "Selected 0.5 mm for the 3.3 V sensor/SD rail. Actual startup and SD-write load and MCU regulator thermal margin still require measurement."
+        }
+      ]
+    }
+  ]
+}
