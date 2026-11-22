@@ -1,0 +1,346 @@
+{
+  "schema": "labwired-flagship-direct-live-verify-v1",
+  "observed_date_utc": "2026-11-22",
+  "prior_receipts": [
+    "examples/flagship-runtime-readback-20261122.json",
+    "examples/flagship-ui-readbacks-20261122.json"
+  ],
+  "scope": "Fresh production API oracle verification on original saved projects after deployed backend fixes; not physical flight, servo actuation or assembly-fit acceptance",
+  "quadrotor": {
+    "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+    "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+    "started_utc": "2026-11-22T13:39:52Z",
+    "method": "authenticated owner POST /v1/projects/:id/verify with max_steps; subsequent authenticated GET readback",
+    "http_status": 200,
+    "elapsed_s": 7.44,
+    "max_steps": 2000000,
+    "verified": true,
+    "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": [
+      {
+        "id": "R1",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ROTOR 1 HALL LOCKED\" on node 'ctrl1'"
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ROTOR 2 HALL LOCKED\" on node 'ctrl2'"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ROTOR 3 HALL LOCKED\" on node 'ctrl3'"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ROTOR 4 HALL LOCKED\" on node 'ctrl4'"
+          }
+        ]
+      }
+    ],
+    "run_id": null,
+    "run_id_note": "REST returned no world-job/run id; do not invent one"
+  },
+  "single_esc_negative_control": {
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "project_url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+    "started_utc": "2026-11-22T13:40:18Z",
+    "method": "authenticated owner POST /v1/projects/:id/verify with max_steps; subsequent authenticated GET readback",
+    "http_status": 200,
+    "elapsed_s": 4.76,
+    "max_steps": 2500000,
+    "verified": true,
+    "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": [
+      {
+        "id": "R1",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ROTOR 1 HALL LOCKED\""
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ROTOR 1 FAULT DRIVER\""
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"ROTOR 1 INVERTER OFF\""
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "gpio",
+            "passed": true,
+            "detail": "PB0 is low (gpio_pins pad)"
+          }
+        ]
+      }
+    ],
+    "run_id": null,
+    "run_id_note": "REST returned no world-job/run id; do not invent one"
+  },
+  "axiom_h1_candidate": {
+    "project_id": "dab8622b41adbf3b9e2175909146b207",
+    "project_url": "https://app.labwired.com/p/dab8622b41adbf3b9e2175909146b207/edit",
+    "started_utc": "2026-11-22T13:40:32Z",
+    "method": "authenticated owner POST /v1/projects/:id/verify with max_steps; subsequent authenticated GET readback",
+    "http_status": 200,
+    "elapsed_s": 5.01,
+    "max_steps": 200000000,
+    "verified": true,
+    "verified_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": [
+      {
+        "id": "R1",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_BOOT_OK\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_PCA_I2C:OK\""
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_20_CHANNELS_WRITTEN\""
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_FIRST_RANGE_MM:1500\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_CLEAR_PATH\""
+          }
+        ]
+      }
+    ],
+    "run_id": null,
+    "run_id_note": "REST returned no world-job/run id; do not invent one"
+  },
+  "axiom_mechanical_link": {
+    "project_id": "dab8622b41adbf3b9e2175909146b207",
+    "before_content_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
+    "after_content_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+    "link_saved_http_status": 200,
+    "model_url": "https://app.kernelcad.com/p/45f5VM8t?version=1",
+    "model_slug": "45f5VM8t",
+    "model_version": 1,
+    "motion_bindings": 20,
+    "circuit_parts_unchanged": true,
+    "circuit_wires_unchanged": true,
+    "static_integration_check": {
+      "ok": true,
+      "status": "integrated",
+      "issue_count": 0,
+      "warning_count": 40
+    },
+    "hosted_joint_transform_oracle_verified": false,
+    "physical_joint_motion_verified": false
+  },
+  "fresh_readbacks": {
+    "quadrotor": {
+      "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+      "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc"
+    },
+    "single_esc_negative_control": {
+      "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+      "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd"
+    },
+    "axiom_h1_candidate": {
+      "content_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+      "verified_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7"
+    },
+    "axiom_h1_original": {
+      "content_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+      "verified_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7"
+    }
+  },
+  "pathfinder": {
+    "project_id": "c9ede30a619b12d7c97056a2da040cc1",
+    "current_content_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+    "current_verified_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+    "rerun_in_this_receipt": false,
+    "original_pcb_cad_fit": "rejected",
+    "candidate_schematic_parity_verified": false,
+    "candidate_full_clearance_verified": false,
+    "note": "Do not equate original firmware verification or candidate matching bounding boxes with safe mechanical fit"
+  },
+  "ui": {
+    "axiom_candidate_reload": "failed",
+    "error": "TypeError: Cannot convert undefined or null to object in appLabRuntimeInputKey Object.entries(part.attrs)",
+    "five_saved_parts_without_attrs": [
+      "mcu",
+      "imu",
+      "tof",
+      "estop",
+      "status_led"
+    ],
+    "source_fix_pr": "https://github.com/w1ne/labwired/pull/4011",
+    "source_fix_commit": "092ba4d6119735e1edb53b37141d5b026ad95f08",
+    "fix_deployed_and_ui_rechecked": false,
+    "failed_capture": {
+      "image": "examples/robotics/axiom-h1/media/live-readback/axiom-candidate-part-attrs-crash-20261122.jpg",
+      "sha256": "64d046d066108147ed9c36dd24005890c93037dd7d240fba2dda4d719ece6f91",
+      "captured_utc": "2026-11-22T13:52:02.361924+00:00",
+      "method": "Chrome DevTools Page.captureScreenshot on authenticated production editor, unchanged JPEG pixels",
+      "scope": "The rendered editor error state, not hardware/motion behavior"
+    }
+  },
+  "unverified": [
+    "whole-vehicle six-axis quadrotor flight and fault handling",
+    "AXIOM hosted PWM-to-CAD joint transformations and physical joint actuation",
+    "Pathfinder original/candidate PCB three-dimensional fit and insertion path",
+    "physical hardware, wiring current, power or safety"
+  ],
+  "axiom_h1_original": {
+    "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+    "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+    "started_utc": "2026-11-22T13:50:49Z",
+    "method": "authenticated owner POST /v1/projects/:id/verify with max_steps; subsequent authenticated GET readback",
+    "http_status": 200,
+    "elapsed_s": 3.62,
+    "max_steps": 200000000,
+    "verified": true,
+    "verified_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": [
+      {
+        "id": "R1",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_BOOT_OK\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_PCA_I2C:OK\""
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_20_CHANNELS_WRITTEN\""
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_FIRST_RANGE_MM:1500\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_CLEAR_PATH\""
+          }
+        ]
+      }
+    ],
+    "run_id": null,
+    "run_id_note": "REST returned no world-job/run id; do not invent one"
+  },
+  "axiom_original_mechanical_link": {
+    "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+    "before_content_hash": "0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee",
+    "after_content_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+    "link_saved_http_status": 200,
+    "model_url": "https://app.kernelcad.com/p/45f5VM8t?version=1",
+    "model_slug": "45f5VM8t",
+    "model_version": 1,
+    "motion_bindings": 20,
+    "circuit_parts_unchanged": true,
+    "circuit_wires_unchanged": true,
+    "static_integration_check": {
+      "ok": true,
+      "status": "integrated",
+      "issue_count": 0,
+      "warning_count": 40
+    },
+    "hosted_joint_transform_oracle_verified": false,
+    "physical_joint_motion_verified": false
+  }
+}
