@@ -1,0 +1,54 @@
+{
+  "schema": "labwired-examples/pathfinder-cad-artifact-archive/v1",
+  "purpose": "Preserve the deployed generic crease-normal producer artifact and exact unchanged-geometry comparison.",
+  "project": {
+    "slug": "PuRrQzv1",
+    "revision": 2,
+    "source_sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9"
+  },
+  "original_observed_at": "2026-11-22 05:09:17 UTC",
+  "mesh": {
+    "path": "mesh.json.gz",
+    "compression": "gzip",
+    "compresslevel": 9,
+    "mtime": 0,
+    "filename": "",
+    "compressed_bytes": 709905,
+    "compressed_sha256": "515709d789c815ded12aa38ac43b49e7b0dea49c5d8a7967b737f71d95059ee1",
+    "decompressed_bytes": 4659194,
+    "decompressed_sha256": "aac0e9745afb76049b8537c67e28a9a8a1ef0dc7206b248c8b00b154aa472e09",
+    "feature_count": 66,
+    "provenance": {
+      "schema": "kernelcad.revision-mesh-provenance.v1",
+      "source": {
+        "sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9",
+        "byteLength": 23342
+      },
+      "assetsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "geometryHash": "f85c45a19c5580ffd0f3c9674c3ac2198c03d3d10065c7a2bfe78197b476fa1e",
+      "producer": {
+        "serverBuild": "0.1.0+fd52f2c20b80@2026-11-22T05:05:20.599Z",
+        "serverCommit": "fd52f2c20b801c8a7ab875ebeb6b844a928baf97",
+        "runtimeSourceHash": "f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977",
+        "sessionArtifactSha256": "bbbbcf04ef339960dfd03e83f6d1d9725971e80c35a50337957e46144985c507"
+      }
+    }
+  },
+  "readbacks": {
+    "project-readback.json": {
+      "bytes": 49335,
+      "sha256": "ce7504aa39c8ac60028cbb7378f021c31672ca3f35146b532e05e26c42d4a059"
+    },
+    "downloads.json": {
+      "bytes": 852,
+      "sha256": "3e4048827b1f679fd8836378e0b89ca584d0092034985447257e02b77b540062"
+    }
+  },
+  "comparison": {
+    "path": "comparison.json",
+    "sha256": "18e376f6a9520b93414d75aff956ea53485cbb1d7e1a91aa404ba3ca2309a14f"
+  },
+  "mutation_performed": false,
+  "viewer_paint_observed": false,
+  "physical_acceptance": false
+}

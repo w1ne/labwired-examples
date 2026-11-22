@@ -1,0 +1,54 @@
+{
+  "schema": "labwired-examples/pathfinder-cad-artifact-comparison/v1",
+  "status": "passed",
+  "source_sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9",
+  "slug": "PuRrQzv1",
+  "revision": 2,
+  "before": {
+    "raw_sha256": "c5c78d0f0c81dc26833aec7f0d7b4c8e7dfae7dd3d8a0c9e97124634d8c1f0e6",
+    "raw_bytes": 4659194,
+    "producer": {
+      "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+      "serverCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+      "runtimeSourceHash": "4293d157357b0f5a75a6a563abff4635247082d63666bda496993222196ad2d0",
+      "sessionArtifactSha256": "72551de25f740cff680c571eebd04e753911e9780d7d21b29122d3fda4628327"
+    },
+    "canonical_without_provenance_sha256": "2333694a63d0adb227d93409e4c1fd7bf8f428aa7f77903aff02f254f5e0085b"
+  },
+  "after": {
+    "artifact_path": "cad-artifact-refresh-20261122/mesh.json.gz",
+    "raw_sha256": "aac0e9745afb76049b8537c67e28a9a8a1ef0dc7206b248c8b00b154aa472e09",
+    "raw_bytes": 4659194,
+    "producer": {
+      "serverBuild": "0.1.0+fd52f2c20b80@2026-11-22T05:05:20.599Z",
+      "serverCommit": "fd52f2c20b801c8a7ab875ebeb6b844a928baf97",
+      "runtimeSourceHash": "f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977",
+      "sessionArtifactSha256": "bbbbcf04ef339960dfd03e83f6d1d9725971e80c35a50337957e46144985c507"
+    },
+    "provenance_sha256": "e62ca90538af17c651599272256d96acd28af4af3bae31527922f6f635f96edb",
+    "canonical_without_provenance_sha256": "2333694a63d0adb227d93409e4c1fd7bf8f428aa7f77903aff02f254f5e0085b"
+  },
+  "evidence": {
+    "readback_path": "cad-artifact-refresh-20261122/project-readback.json",
+    "readback_sha256": "ce7504aa39c8ac60028cbb7378f021c31672ca3f35146b532e05e26c42d4a059",
+    "downloads_path": "cad-artifact-refresh-20261122/downloads.json",
+    "downloads_sha256": "3e4048827b1f679fd8836378e0b89ca584d0092034985447257e02b77b540062",
+    "comparator_sha256": "f2600d94173e3f898dc4ff12fdd4eb860422b2da025164b5716079e0ddee0180"
+  },
+  "comparison": {
+    "excluded_top_level_fields": [
+      "provenance"
+    ],
+    "object_keys_sorted": true,
+    "array_order_preserved": true,
+    "exact_numbers": true,
+    "negative_zero_preserved": true,
+    "changed_top_level_keys": [],
+    "changed_features": [],
+    "feature_count": 66,
+    "face_count": 1074
+  },
+  "mutation_performed": false,
+  "viewer_paint_observed": false,
+  "physical_acceptance": false
+}

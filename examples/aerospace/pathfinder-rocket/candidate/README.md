@@ -1,6 +1,6 @@
 # Pathfinder: sourced carrier and extended avionics bay
 
-This separate bench candidate passes nominal PCB/CAD fit, final native KiCad DRC, and local source-to-copper compiler parity. The saved project exists with exact PCB/CAD bindings. Hosted project replay still requires deployment of the reviewed source and importer stack. Physical assembly, current, thermal and flight acceptance remain open.
+This separate bench candidate passes nominal PCB/CAD fit, final native KiCad DRC, and local source-to-copper compiler parity. The saved project exists with exact PCB/CAD bindings. Hosted project replay still requires deployment of the reviewed source/importer stack and the saved per-board circuit/firmware lookup correction. Physical assembly, current, thermal and flight acceptance remain open.
 
 The [original example](../README.md), original project, PCB and CAD remain preserved. Its pinned geometry rejection remains valid. This directory does not replace that negative evidence.
 
@@ -34,7 +34,11 @@ The [original example](../README.md), original project, PCB and CAD remain prese
 | Nominal assembly path | All 161 checked moving bounds fit within an R18.4 mm cassette. Axial translation through the constant R19 mm bore is clear under the stated removal/disconnection steps | [Containment proof](assembly-envelope-proof.json), [bounded path](assembly-path-bounded.json) |
 | Saved CAD delivery | Immutable source readback matches. Mesh is ready. Stored API and public Node download return the same 4,659,194 bytes and 66 features | [Artifact readiness](cad-artifact-readiness.json) |
 
-The exact ready CAD mesh is archived as [deterministic gzip](cad-artifact-20261122/mesh.json.gz). It decompresses to 4,659,194 bytes with SHA-256 `c5c78d0f0c81dc26833aec7f0d7b4c8e7dfae7dd3d8a0c9e97124634d8c1f0e6`. The [archive receipt](cad-artifact-20261122/archive.json) binds the gzip bytes, producer identity, original ready project response and immutable revision source readback. This fixes the comparison baseline for the later generic mesh-producer update.
+The exact ready CAD mesh is archived as [deterministic gzip](cad-artifact-20261122/mesh.json.gz). It decompresses to 4,659,194 bytes with SHA-256 `c5c78d0f0c81dc26833aec7f0d7b4c8e7dfae7dd3d8a0c9e97124634d8c1f0e6`. The [archive receipt](cad-artifact-20261122/archive.json) binds the gzip bytes, producer identity, original ready project response and immutable revision source readback. This preserves the baseline from before the generic mesh-producer update.
+
+On 2026-11-22, the deployed producer `fd52f2c20b801c8a7ab875ebeb6b844a928baf97` / runtime `f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977` returned a ready artifact for the same saved revision. The [post-deployment comparison](cad-artifact-refresh-20261122/comparison.json) passes with **zero changed features or faces** across all 66 features and 1,074 faces. It excludes only top-level producer provenance; it preserves every other field, array order, numeric value and negative zero. Both actual asset manifests and both API/CDN provenance URL pins match the artifact. Default Node downloads returned identical 4,659,194-byte bodies with SHA-256 `aac0e9745afb76049b8537c67e28a9a8a1ef0dc7206b248c8b00b154aa472e09`.
+
+The [new deterministic archive](cad-artifact-refresh-20261122/archive.json) retains those exact bytes, source readbacks and download results. The [comparison script](compare-cad-artifacts.mjs) reproduces the result locally. Its nine [control cases](cad-artifact-refresh-20261122/comparator-controls.json) accept the archived baseline and reject changed geometry/normals, wrong runtime/source/assets, and stale URL provenance pins. No source save or explicit remesh operation was performed. Interactive viewer paint remains unobserved.
 
 These checks have separate meanings. DRC does not establish logical circuit parity. Compiler parity does not model measured analog loads. A ready mesh does not establish that the interactive viewer painted it. Nominal geometric clearance does not establish a manufacturable tolerance stack.
 
@@ -128,4 +132,4 @@ python3 examples/aerospace/pathfinder-rocket/candidate/routing/audit-copper.py
 
 The final-board script preserves both rule files byte-for-byte and records KiCad's real exit code. Historical placement/routing inputs and failed attempts remain in `history/` and `routing/history/`; they are not current acceptance evidence. Regenerating placement or routing creates a new physical candidate and requires new CAD, DRC, copper and provenance checks.
 
-After the source/importer stack is deployed, rerun `labwired_project_verify` on the same saved candidate and record its exact content hash and clause results. Do not copy the original project's verification receipt onto this candidate. Physical fabrication, assembly, current/thermal and flight holds remain separate even after a software replay pass.
+After the source/importer and saved per-board lookup stack is deployed, rerun `labwired_project_verify` on the same saved candidate and record its exact content hash and clause results. Do not copy the original project's verification receipt onto this candidate. Physical fabrication, assembly, current/thermal and flight holds remain separate even after a software replay pass.

@@ -3,6 +3,8 @@
 // fabrication, current/thermal or flight acceptance.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'node:fs';
 import { gunzipSync } from 'node:zlib';
 const root=new URL('../examples/aerospace/pathfinder-rocket/candidate/',import.meta.url);
@@ -158,6 +160,35 @@ for(const response of [readySource.project,readySource.revision]){
   assert.equal(response.slug,record.cad.slug);assert.equal(response.version,record.cad.revision);
   assert.equal(sha(response.code),cadHash);assert.equal(response.code,bytes('pathfinder-extended.kcad.ts').toString('utf8'));
 }
+
+const refresh=record.cad.artifact_refresh;
+const freshArchive=json(refresh.archive),comparison=json(refresh.comparison);
+assert.equal(comparison.status,'passed');assert.equal(comparison.source_sha256,cadHash);
+assert.equal(comparison.after.raw_sha256,refresh.raw_sha256);
+assert.equal(comparison.after.producer.runtimeSourceHash,refresh.runtime_source_sha256);
+assert.equal(comparison.after.canonical_without_provenance_sha256,refresh.canonical_without_provenance_sha256);
+assert.equal(comparison.before.canonical_without_provenance_sha256,refresh.canonical_without_provenance_sha256);
+assert.equal(freshArchive.mesh.decompressed_sha256,refresh.raw_sha256);
+const freshGzip=bytes('cad-artifact-refresh-20261122/'+freshArchive.mesh.path);
+assert.equal(freshGzip.readUInt32LE(4),0);assert.equal(freshGzip[3]&8,0);
+assert.equal(sha(freshGzip),freshArchive.mesh.compressed_sha256);
+assert.equal(freshGzip.length,freshArchive.mesh.compressed_bytes);
+assert.equal(gunzipSync(freshGzip).length,freshArchive.mesh.decompressed_bytes);
+assert.equal(sha(gunzipSync(freshGzip)),freshArchive.mesh.decompressed_sha256);
+const freshArtifact=JSON.parse(gunzipSync(freshGzip).toString('utf8'));
+assert.deepEqual(freshArchive.mesh.provenance,freshArtifact.provenance);
+assert.equal(freshArchive.comparison.sha256,sha(bytes(refresh.comparison)));
+for(const [name,evidence]of Object.entries(freshArchive.readbacks)){
+  const body=bytes('cad-artifact-refresh-20261122/'+name);
+  assert.equal(body.length,evidence.bytes);assert.equal(sha(body),evidence.sha256);
+}
+const compared=JSON.parse(execFileSync(process.execPath,[fileURLToPath(new URL('compare-cad-artifacts.mjs',root)),
+  ...[comparison.after.artifact_path,comparison.evidence.readback_path,comparison.evidence.downloads_path].map(path=>fileURLToPath(new URL(path,root))),
+  refresh.runtime_source_sha256],{encoding:'utf8'}));
+assert.deepEqual(compared,comparison);
+const controls=json('cad-artifact-refresh-20261122/comparator-controls.json');
+assert.equal(controls.comparator_sha256,sha(bytes('compare-cad-artifacts.mjs')));assert.equal(controls.cases.length,9);
+assert.ok(controls.cases.every(control=>control.exit_code===(control.expected_success?0:1)));
 
 const parts=json('source-parts.json');assert.equal(parts.design_input_sha256,designHash);
 assert.equal(parts.selections.length,41);assert.equal(Object.keys(parts.manufacturer_records).length,22);
