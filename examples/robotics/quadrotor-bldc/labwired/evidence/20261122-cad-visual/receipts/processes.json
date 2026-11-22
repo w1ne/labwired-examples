@@ -1,0 +1,47 @@
+{
+  "schema": "kernelcad.owned-render-process-supervision.v1",
+  "startedAt": "2026-11-22T05:58:48Z",
+  "scriptSha256": "613595ca4d69828dec537dc80e13345a7db49c58a7871d48e2bf16f92539bc57",
+  "captureScriptSha256": "a458375d0a0dfb9276fba5634c65caa8496e1e510ec5bb4c9a01e63406d0427d",
+  "invocation": [
+    "node",
+    "--max-old-space-size=1024",
+    "<reviewed capture driver>",
+    "<deployed qualification JSON>",
+    "<qualified stored artifact>",
+    "<fresh capture directory>",
+    "<reviewed renderer checkout>"
+  ],
+  "wallLimitSeconds": 100,
+  "captureInternalLimitSeconds": 90,
+  "nodeHeapMiB": 1024,
+  "aggregateOwnedRssCapBytes": 2147483648,
+  "samplingIntervalSeconds": 0.2,
+  "childSubreaperEnabled": true,
+  "existingBrowserProcessesTouched": false,
+  "sampledPeakOwnedRssBytes": 995000320,
+  "peakOwnedProcessCount": 7,
+  "limitReason": null,
+  "cleanupSignals": [],
+  "pinnedBrowserInstallReceiptSha256": "3aeb5d21d0312c9cdede19f7cf36b2626b03f5889847ba37f250e1860c98cbcc",
+  "pinnedBrowserExecutable": {
+    "path": "chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell",
+    "exists": true,
+    "bytes": 183557344,
+    "sha256": "27e55cc30e487493b89b663085d6deeb0707be201a568657c922fac9076c317c"
+  },
+  "hostMemAvailableKiBBefore": 53046580,
+  "captureExitCode": 0,
+  "allOwnedProcessesExited": true,
+  "remainingOwnedProcesses": [],
+  "observedOwnedProcessNames": [
+    "chrome-headless",
+    "node"
+  ],
+  "elapsedSeconds": 10.056,
+  "finishedAt": "2026-11-22T05:58:58Z",
+  "captureLogSha256": "a356bd89369f1eab11784352e89e96e1399a508a84901545eb95d7d5192a78ba",
+  "originalReceiptSha256": "4c7ef8e3aad9fdab8ef46466729887f9f18d29b57200e5e47ed7ac2046c143a9",
+  "originalReceiptBytes": 2057,
+  "publicProjectionNote": "Only absolute workspace/cache paths were replaced with descriptive invocation placeholders. All limits, observations, hashes and cleanup results retain the original values."
+}

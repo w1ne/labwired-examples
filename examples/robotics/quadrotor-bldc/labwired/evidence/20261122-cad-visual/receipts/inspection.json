@@ -1,0 +1,105 @@
+{
+  "schema": "kernelcad.stored-artifact-visual-inspection.v1",
+  "observedAt": "2026-11-22T06:10:06.472937+00:00",
+  "observerReview": "passed",
+  "reviewer": "AXIOM acceptance lane",
+  "video": {
+    "file": "crease-corners-stored-artifacts.mp4",
+    "sha256": "e5f59905e8e420554a1cd805e077c26ed4badbba8e297d9279a93c70f30ec0b4",
+    "bytes": 153015,
+    "durationSeconds": 8,
+    "width": 1920,
+    "height": 1080,
+    "framesPerSecond": 24,
+    "decodedFrames": 192
+  },
+  "captureSha256": "484a05abbaf4aec1c6536655110b7b0850bef2f4897e7005050ea8b94b6266e5",
+  "encodingReceiptSha256": "41f31bd7ee4a411548e644a2f015222206814da7cdc58d9fa389dd96ce7ff8cf",
+  "decodeReceiptSha256": "b403f9232e6b4df3cde9302089a819b10e3822fa337263060438cae6fb23f342",
+  "all192FrameHashesSha256": "92e3aaf20a4823afb52d95300a2406182423beaace28f16e8fc7161ef3fc055a",
+  "originalFrames": {
+    "before-top.png": {
+      "bytes": 122268,
+      "sha256": "b2d4ba6e319792fff3d5de1ba8ba3bf18c7f8555b61456d3b7c03d5f9831a255"
+    },
+    "before-iso.png": {
+      "bytes": 114369,
+      "sha256": "98a61509d6eb64099d30a4530ac9418b97d09432d789fc01d366184cd7b16559"
+    },
+    "after-top.png": {
+      "bytes": 100138,
+      "sha256": "f1c399d2bb020521f271f5f4ddb9d9f3bbeec0013a4c81e13e0e4066aa63f59e"
+    },
+    "after-iso.png": {
+      "bytes": 111058,
+      "sha256": "64a418ee8f0d286fb7aed2fa368fc968c3ca8b9a045ee6c95f886bd54b0642dd"
+    }
+  },
+  "methods": [
+    "Opened and visually inspected each of the four original 960×960 PNG files in the native image viewer.",
+    "Played the complete corrected 8-second clip with the native video player; observed top and isometric views and both caption layouts.",
+    "Decoded all 192 frames and inspected the full 1920×1080 top and isometric frame exports."
+  ],
+  "playback": {
+    "exitCode": 0,
+    "lastReportedTimestampSeconds": 7.91,
+    "logSha256": "e027865b5b749c07ac2c987fe54ad3ad30b57ffdf0567313df5536a98d87b84a"
+  },
+  "observations": [
+    "Prior top view shows stray thin diagonal lines; these are absent from the repaired top view.",
+    "Both views retain the same component placement, bounds and camera framing.",
+    "Dark source material is retained; geometric silhouettes and the top-view repair are visible.",
+    "Both corrected provenance footers have visible bottom margin; labels state local player and actual stored artifacts."
+  ],
+  "footerPixelChecks": {
+    "decoded-top.png": {
+      "footerLightPixelBounds": [
+        779,
+        1059,
+        1138,
+        1074
+      ],
+      "blankRowsBelowFooter": 5
+    },
+    "decoded-iso.png": {
+      "footerLightPixelBounds": [
+        779,
+        1059,
+        1138,
+        1074
+      ],
+      "blankRowsBelowFooter": 5
+    }
+  },
+  "layoutOnlyCorrection": {
+    "originalVideoSha256": "ad8b5462377be4cc3bb733bf751a41061e96d6cee50dddadd8b2920d49dafe99",
+    "originalEncoderSha256": "234cc9411e3e8bec694bede9a1844cef4c4dcdbef45bf5c481daa1d9532bc6d9",
+    "finalEncoderSha256": "6dc83e66dd6f15b68c005f7517de6c419923201cf2ab64f44fb15e55d836011e",
+    "caption": {
+      "fontPixels": 22,
+      "y": 1032
+    },
+    "footer": {
+      "fontPixels": 16,
+      "y": 1059
+    },
+    "allFourPngAndCaptureBytesUnchanged": true,
+    "originalVideoRetained": true
+  },
+  "scope": {
+    "localPlayerVideoInspected": true,
+    "actualHostedViewerPaintClaim": false,
+    "sourceGeometryMutated": false,
+    "remeshingPerformed": false,
+    "hardwareOrFlightAcceptanceClaim": false,
+    "desktopOrUserTargetImagesIncluded": false
+  },
+  "independentRootReview": {
+    "result": "passed",
+    "receiptFile": "kcad-crease-corners-video-root-review-20261122.json",
+    "receiptSha256": "8b7268d1b21bbc508d68de171b94150b354c24529e9e4361505539e5913cacb4",
+    "receiptBytes": 1471,
+    "scope": "Four captured images, both original full decoded views, final footer pixel inspection, exact encoder delta, unchanged PNG/capture bytes, complete frame sequence and video identity. Full clip playback was performed by the AXIOM acceptance lane."
+  },
+  "priorObserverReviewReceiptSha256": "837be7ec1b8126cf9a729395864a0c3f9775cfacd2aeebe3627c81333f125745"
+}

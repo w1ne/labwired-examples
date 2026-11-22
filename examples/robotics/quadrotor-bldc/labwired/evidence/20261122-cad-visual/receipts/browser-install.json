@@ -1,0 +1,59 @@
+{
+  "schema": "kernelcad.pinned-render-browser-install.v1",
+  "startedAt": "2026-11-22T05:55:58Z",
+  "scriptSha256": "319966e3843d7b04d202adf3c7bf52dc6c707da9647221e1de7281b99fbf483e",
+  "playwrightVersion": "1.58.0",
+  "packageJsonSha256": "fac77511a5b7b273ce56e047781d17723c8bbc164f9557dbd15ec44fd7ddf6fc",
+  "browserManifestSha256": "6b6e0538d6e46eef71d3e1a0dcb65f8f5ea7914033c8150529d8e207afb6030c",
+  "requiredBrowser": {
+    "name": "chromium-headless-shell",
+    "revision": "1208",
+    "installByDefault": true,
+    "browserVersion": "145.0.7632.6",
+    "title": "Chrome Headless Shell"
+  },
+  "downloadSource": "https://cdn.playwright.dev/chrome-for-testing-public/145.0.7632.6/linux64/chrome-headless-shell-linux64.zip",
+  "installerCliSha256": "5e79302a6aad7d835d92d5ae6b4244c91cf61b28e94d7917279090e6c231f7a1",
+  "command": [
+    "node",
+    "<pinned Playwright package>/cli.js",
+    "install",
+    "--only-shell",
+    "chromium"
+  ],
+  "environment": {
+    "PLAYWRIGHT_SKIP_BROWSER_GC": "1"
+  },
+  "gcReason": "Preserve other browser cache revisions and active user browsers",
+  "diskFreeBeforeBytes": 33407901696,
+  "cacheEntriesBefore": [
+    ".links",
+    "chromium-1228",
+    "chromium_headless_shell-1228",
+    "ffmpeg-1011"
+  ],
+  "browserLaunched": false,
+  "productDependenciesChanged": false,
+  "exitCode": 0,
+  "elapsedSeconds": 6.384,
+  "cacheEntriesAfter": [
+    ".links",
+    "chromium-1228",
+    "chromium_headless_shell-1208",
+    "chromium_headless_shell-1228",
+    "ffmpeg-1011"
+  ],
+  "previousCacheEntriesPreserved": true,
+  "diskFreeAfterBytes": 33141735424,
+  "logSha256": "8114d4a79c5d489a0181a8dee420e1aa198f8aa22a337ddf0168e0b2c201c924",
+  "installedExecutable": {
+    "path": "chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell",
+    "exists": true,
+    "bytes": 183557344,
+    "sha256": "27e55cc30e487493b89b663085d6deeb0707be201a568657c922fac9076c317c"
+  },
+  "finishedAt": "2026-11-22T05:56:05Z",
+  "originalReceiptSha256": "3aeb5d21d0312c9cdede19f7cf36b2626b03f5889847ba37f250e1860c98cbcc",
+  "originalReceiptBytes": 2056,
+  "publicProjectionNote": "Absolute CLI/cache paths are replaced with package-relative descriptions. The exact package/browser versions, download origin, executable hash and preservation results are unchanged."
+}
