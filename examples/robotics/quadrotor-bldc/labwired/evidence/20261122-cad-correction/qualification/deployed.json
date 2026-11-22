@@ -1,0 +1,286 @@
+{
+  "schema": "kernelcad.repaired-deployed-artifact-qualification.v1",
+  "checkedAt": "2026-11-22T05:09:16.196Z",
+  "expectedServerCommit": "fd52f2c20b801c8a7ab875ebeb6b844a928baf97",
+  "expectedRuntimeSourceHash": "f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977",
+  "scriptSha256": "a26b40eff0c40dc0d0e64563be9c93e780e1f5c0248c4c4993d9c6cd8885d677",
+  "baselineExamplesCommit": "4d21fea30c19d856d2d1ecd16272d9fab934df46",
+  "inputs": {
+    "getProject-ready.json": {
+      "bytes": 14155,
+      "sha256": "7e43e4969d63fc5499a296d149fe1a90a3a32b2842f7165a8ae54b53ece984e8"
+    },
+    "getProjectRevision.json": {
+      "bytes": 12962,
+      "sha256": "933a3343bfd74b883eba6d5e075dbc80cdd5165b2196f5f4379acfdf75919ae4"
+    },
+    "current-stored-body.bin": {
+      "bytes": 12865359,
+      "sha256": "166131d834781b76829ffa8d591da349e8c05b7a1206f2338c62cb73de748082"
+    },
+    "current-stored-receipt.json": {
+      "bytes": 2559,
+      "sha256": "0243a7d060e6704d4b6fb0a3b04ce8d841ed9c1a0226305db63223cb5f1e73d6"
+    },
+    "current-cdn-body.bin": {
+      "bytes": 12865359,
+      "sha256": "166131d834781b76829ffa8d591da349e8c05b7a1206f2338c62cb73de748082"
+    },
+    "current-cdn-receipt.json": {
+      "bytes": 2459,
+      "sha256": "efca63ca71f08754a93dc748121bab8cd04831eaec2a722ef1ccb29df4c731ab"
+    }
+  },
+  "passed": true,
+  "cadSourceChanged": false,
+  "savedProjectUpdated": false,
+  "viewerPainted": false,
+  "browserFlightPerformed": false,
+  "currentArtifact": {
+    "sha256": "166131d834781b76829ffa8d591da349e8c05b7a1206f2338c62cb73de748082",
+    "bytes": 12865359,
+    "producerPin": "7f92c6bc2c640367d6e5767f3a3c45179f6f7be336a9b4c65c78975a1455b563",
+    "provenance": {
+      "schema": "kernelcad.revision-mesh-provenance.v1",
+      "source": {
+        "sha256": "f87316c6a9de81148c8985e9387641a0ead22d5d2744186d2041678c0364a10e",
+        "byteLength": 9688
+      },
+      "assetsSha256": "dc2a30ea0f02103b263c6337f94b35cf4882d8e94a6f04ac8b48ff2ed099e0d8",
+      "geometryHash": "ecffb214fec5a7e04d86ac6d224630e9dbe97016e327ba890780860836ab4997",
+      "producer": {
+        "serverBuild": "0.1.0+fd52f2c20b80@2026-11-22T05:05:20.599Z",
+        "serverCommit": "fd52f2c20b801c8a7ab875ebeb6b844a928baf97",
+        "runtimeSourceHash": "f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977",
+        "sessionArtifactSha256": "bbbbcf04ef339960dfd03e83f6d1d9725971e80c35a50337957e46144985c507"
+      }
+    }
+  },
+  "populations": [
+    {
+      "part": "esc-population-native-mesh",
+      "assetSha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+      "triangles": 56072,
+      "wrongCorners": 0,
+      "maximumSerializationErrorMm": 0.0004999618530270311,
+      "indexChanges": 0,
+      "changes": [],
+      "positionsUnchanged": true,
+      "normalsUnchanged": true
+    },
+    {
+      "part": "fc-population-native-mesh",
+      "assetSha256": "70a02a51dfa161cb3eca7974f200a58232c7db43c317ea6d5c2837f216e45a0e",
+      "triangles": 47778,
+      "wrongCorners": 0,
+      "maximumSerializationErrorMm": 0.0004999847412108238,
+      "indexChanges": 28,
+      "changes": [
+        {
+          "index": 31765,
+          "triangle": 10588,
+          "corner": 1,
+          "before": 0,
+          "after": 12169
+        },
+        {
+          "index": 31801,
+          "triangle": 10600,
+          "corner": 1,
+          "before": 0,
+          "after": 12186
+        },
+        {
+          "index": 31907,
+          "triangle": 10635,
+          "corner": 2,
+          "before": 0,
+          "after": 11911
+        },
+        {
+          "index": 31940,
+          "triangle": 10646,
+          "corner": 2,
+          "before": 0,
+          "after": 11924
+        },
+        {
+          "index": 37247,
+          "triangle": 12415,
+          "corner": 2,
+          "before": 0,
+          "after": 14071
+        },
+        {
+          "index": 37430,
+          "triangle": 12476,
+          "corner": 2,
+          "before": 0,
+          "after": 14073
+        },
+        {
+          "index": 37841,
+          "triangle": 12613,
+          "corner": 2,
+          "before": 0,
+          "after": 14134
+        },
+        {
+          "index": 38060,
+          "triangle": 12686,
+          "corner": 2,
+          "before": 0,
+          "after": 14132
+        },
+        {
+          "index": 70957,
+          "triangle": 23652,
+          "corner": 1,
+          "before": 0,
+          "after": 26446
+        },
+        {
+          "index": 70993,
+          "triangle": 23664,
+          "corner": 1,
+          "before": 0,
+          "after": 26463
+        },
+        {
+          "index": 71099,
+          "triangle": 23699,
+          "corner": 2,
+          "before": 0,
+          "after": 26670
+        },
+        {
+          "index": 71132,
+          "triangle": 23710,
+          "corner": 2,
+          "before": 0,
+          "after": 26687
+        },
+        {
+          "index": 77513,
+          "triangle": 25837,
+          "corner": 2,
+          "before": 0,
+          "after": 29338
+        },
+        {
+          "index": 77696,
+          "triangle": 25898,
+          "corner": 2,
+          "before": 0,
+          "after": 29336
+        },
+        {
+          "index": 78107,
+          "triangle": 26035,
+          "corner": 2,
+          "before": 0,
+          "after": 29399
+        },
+        {
+          "index": 78326,
+          "triangle": 26108,
+          "corner": 2,
+          "before": 0,
+          "after": 29397
+        },
+        {
+          "index": 80213,
+          "triangle": 26737,
+          "corner": 2,
+          "before": 0,
+          "after": 30122
+        },
+        {
+          "index": 80396,
+          "triangle": 26798,
+          "corner": 2,
+          "before": 0,
+          "after": 30120
+        },
+        {
+          "index": 80807,
+          "triangle": 26935,
+          "corner": 2,
+          "before": 0,
+          "after": 30183
+        },
+        {
+          "index": 81026,
+          "triangle": 27008,
+          "corner": 2,
+          "before": 0,
+          "after": 30181
+        },
+        {
+          "index": 93442,
+          "triangle": 31147,
+          "corner": 1,
+          "before": 0,
+          "after": 33964
+        },
+        {
+          "index": 93532,
+          "triangle": 31177,
+          "corner": 1,
+          "before": 0,
+          "after": 33962
+        },
+        {
+          "index": 93563,
+          "triangle": 31187,
+          "corner": 2,
+          "before": 0,
+          "after": 34423
+        },
+        {
+          "index": 93635,
+          "triangle": 31211,
+          "corner": 2,
+          "before": 0,
+          "after": 34400
+        },
+        {
+          "index": 111523,
+          "triangle": 37174,
+          "corner": 1,
+          "before": 0,
+          "after": 41530
+        },
+        {
+          "index": 111559,
+          "triangle": 37186,
+          "corner": 1,
+          "before": 0,
+          "after": 41547
+        },
+        {
+          "index": 111665,
+          "triangle": 37221,
+          "corner": 2,
+          "before": 0,
+          "after": 41272
+        },
+        {
+          "index": 111698,
+          "triangle": 37232,
+          "corner": 2,
+          "before": 0,
+          "after": 41285
+        }
+      ],
+      "positionsUnchanged": true,
+      "normalsUnchanged": true
+    }
+  ],
+  "geometry": {
+    "expectedSha256": "853fde6738b69cdab1fcc221ce48b86488304cf401d3f7903bf6d1265e11680e",
+    "actualSha256": "853fde6738b69cdab1fcc221ce48b86488304cf401d3f7903bf6d1265e11680e",
+    "assemblyParts": 38
+  },
+  "scope": "Actual stored and CDN mesh bytes, unchanged saved revision/source/assets, exact expected geometry correction; no viewer or flight claim"
+}
