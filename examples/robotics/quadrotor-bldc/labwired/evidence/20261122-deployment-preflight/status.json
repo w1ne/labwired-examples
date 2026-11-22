@@ -1,0 +1,28 @@
+{
+  "capturedAt": "2026-11-22T03:51:29.357926+00:00",
+  "kind": "staged-deployment-preflight-evidence",
+  "appIntegrationHead": "e3d0cb112606dcbe02c9e9c8c7bc3e919a580f7e",
+  "qualifiedDeployedEngine": false,
+  "savedProjectUpdated": false,
+  "browserFlightPerformed": false,
+  "cadGeometryAccepted": false,
+  "cadDefect": {
+    "artifactSha256": "e041191cfd930893229d3d569dece43dc5ed8441dff865270f65e09b1f78e141",
+    "sourceRevision": 6,
+    "sourceSha256": "f87316c6a9de81148c8985e9387641a0ead22d5d2744186d2041678c0364a10e",
+    "sourceAssetSha256": "70a02a51dfa161cb3eca7974f200a58232c7db43c317ea6d5c2837f216e45a0e",
+    "corruptedCorners": 28,
+    "maxVertexDisplacementMm": 28.023209685591127,
+    "cause": "Crease-normal CSR stores triangle IDs and maps only the first repeated corner; remaining indices retain zero.",
+    "sourceChanged": false
+  },
+  "pending": [
+    "normal app merge and exact live deployment",
+    "seven unchanged native scenarios on actual shipped optimized WASM",
+    "normal CAD correction landing and actual repaired-artifact qualification",
+    "authorized saved-project compare-and-swap and readback",
+    "actual continuous Studio browser flight capture"
+  ],
+  "cadLocalCorrectionVerified": true,
+  "cadCorrectionSourceSha256": "a35a61f22730d2f7259d17e8e8ccb1d4cdc8483f1b53f079850922dbba1678ff"
+}
