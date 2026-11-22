@@ -1,6 +1,6 @@
 # Pathfinder: sourced carrier and extended avionics bay
 
-This separate bench candidate passes nominal PCB/CAD fit, final native KiCad DRC, and local source-to-copper compiler parity. The saved project exists with exact PCB/CAD bindings. Hosted project replay still requires deployment of the reviewed source/importer stack and the saved per-board circuit/firmware lookup correction. Physical assembly, current, thermal and flight acceptance remain open.
+This separate bench candidate passes nominal PCB/CAD fit, final native KiCad DRC, and local source-to-copper compiler parity. The saved project exists with exact PCB/CAD bindings. Fresh hosted project replay on 22 November at 17:36 UTC passes 5/5 saved synthetic firmware requirements at 20,000,000 steps ([immutable receipt](../../../flagship-fresh-hosted-reverify-20261122.json)). This is firmware replay evidence, not physical flight or a PCB-CAD insertion check. Physical assembly, current, thermal and flight acceptance remain open.
 
 The [original example](../README.md), original project, PCB and CAD remain preserved. Its pinned geometry rejection remains valid. This directory does not replace that negative evidence.
 

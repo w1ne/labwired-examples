@@ -1,0 +1,123 @@
+{
+  "schema": "labwired-flagship-fresh-hosted-verification-v1",
+  "observed_utc": "2026-11-22T17:36:58Z",
+  "source": "LabWired signed-in project_get, project_verify, device_assembly via connected LabWired; work-1 Chrome screenshots and exact-byte file hashes",
+  "historical_context": "examples/flagship-live-current-20261122.json",
+  "quadrotor": {
+    "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+    "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+    "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "run_id": "world-job:28888d15-4100-468c-98de-4ff35589f85e",
+    "max_steps": 2000000,
+    "result": "model_verified",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": {
+      "R1": {
+        "node": "ctrl1",
+        "marker": "ROTOR 1 HALL LOCKED",
+        "passed": true
+      },
+      "R2": {
+        "node": "ctrl2",
+        "marker": "ROTOR 2 HALL LOCKED",
+        "passed": true
+      },
+      "R3": {
+        "node": "ctrl3",
+        "marker": "ROTOR 3 HALL LOCKED",
+        "passed": true
+      },
+      "R4": {
+        "node": "ctrl4",
+        "marker": "ROTOR 4 HALL LOCKED",
+        "passed": true
+      }
+    },
+    "fc_serial_markers": [
+      "FC READY BMI270 ONLINE",
+      "FC ARM COMMAND",
+      "FC TAKEOFF COMMAND"
+    ],
+    "six_axis_flight_hosted_verified": false,
+    "physical_flight_verified": false
+  },
+  "single_esc_fault_negative_control": {
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "project_url": "https://app.labwired.com/p/8beab229c9d4ed650ccbdc8725c233cc/edit",
+    "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "run_id": null,
+    "reason_no_run_id": "Synchronous project_verify returned HTTP 200 with no run_id",
+    "proof": "oracle",
+    "requirements": {
+      "R1": "ROTOR 1 HALL LOCKED",
+      "R2": "ROTOR 1 FAULT DRIVER",
+      "R3": "ROTOR 1 INVERTER OFF",
+      "R4": "PB0 low"
+    },
+    "passed_count": 4,
+    "four_motor_flight_failsafe_verified": false,
+    "physical_failsafe_verified": false
+  },
+  "pathfinder_source_bound_candidate": {
+    "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+    "project_url": "https://app.labwired.com/p/d4de8c2bc6aad00bab720da9e1ff2414/edit",
+    "content_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+    "verified_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+    "run_id": null,
+    "reason_no_run_id": "Synchronous project_verify returned HTTP 200 with no run_id",
+    "max_steps": 20000000,
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": {
+      "R1": "SELFTEST baro=1 imu=1; PHASE PAD_SAFE",
+      "R2": "GROUND_PA=99892; CAMERA_POWER_ON; PHASE PAD_ARMED; CAMERA_REC_START",
+      "R3": "LAUNCH and BURNOUT timing regex",
+      "R4": "APOGEE_DETECTED, DEPLOY window, PYRO_OFF",
+      "R5": "LANDED, CAMERA_REC_STOP, CAMERA_POWER_OFF, 355-372m synthetic altitude, OUTPUTS_SAFE"
+    },
+    "passed_count": 5,
+    "pcb_id": "pcb_af828a3152e61e08",
+    "pcb_rev": 0,
+    "pcb_outline_mm": [
+      31.5,
+      235
+    ],
+    "cad_url": "https://app.kernelcad.com/p/PuRrQzv1?version=2&show_electronics=1",
+    "pcb_cad_fit": "not_hosted_verified",
+    "pcb_cad_fit_note": "Matching size and earlier local bounded-envelope checks are not a completed hosted swept-collision or physical insertion proof",
+    "physical_flight_verified": false
+  },
+  "axiom_original": {
+    "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+    "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+    "content_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+    "verified_hash": "e87f0ce2bd0df26a1e016fecdf420bb2876349722dfd49c9341b569aa135778c",
+    "requirements_verified": 3,
+    "proof_scope": "Saved firmware/controller serial status readback; no fresh verify job triggered",
+    "cad_url": "https://app.kernelcad.com/p/45f5VM8t?version=1",
+    "servo_to_joint_hosted_verified": false,
+    "physical_robot_verified": false
+  },
+  "screenshots": [
+    {
+      "view": "circuit",
+      "path": "examples/aerospace/pathfinder-rocket/media/live-readback/pathfinder-candidate-live-circuit-20261122-1735.png",
+      "bytes": 353431,
+      "sha256": "d4fa6d0d4ea9e5cba2234a8b1adad064e80aea4bb6b0a6c510abc22244ab2496",
+      "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+      "scope": "Browser render of saved design; not firmware behavior, copper DRC, collision or physical proof"
+    },
+    {
+      "view": "pcb",
+      "path": "examples/aerospace/pathfinder-rocket/media/live-readback/pathfinder-candidate-live-pcb-20261122-1736.png",
+      "bytes": 257355,
+      "sha256": "ece916c78bf11b87a0cc28f8bb945a58a099fc88624a856e73846a43c5a32480",
+      "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+      "scope": "Browser render of saved design; not firmware behavior, copper DRC, collision or physical proof"
+    }
+  ],
+  "overall": "NOT END-TO-END ACCEPTED: source-bound Pathfinder synthetic firmware and quadrotor Hall / single ESC fault oracles pass; full PCB-CAD clearance, servo-to-CAD live motion, hosted 6-axis flight and physical tests remain open"
+}
