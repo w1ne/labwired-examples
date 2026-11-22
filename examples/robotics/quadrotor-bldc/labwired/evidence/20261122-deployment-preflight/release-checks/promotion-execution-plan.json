@@ -1,0 +1,69 @@
+{
+  "kind": "promotion-execution-plan-not-executed",
+  "appPr": "https://github.com/w1ne/labwired/pull/3967",
+  "appHead": "e3d0cb112606dcbe02c9e9c8c7bc3e919a580f7e",
+  "coreCommit": "7c0825e7bbcae493b710c5ffeb0d848b4ddd4fa0",
+  "hosted": {
+    "tool": "mcp__codex_apps__labwired_eeed1afdfd58_labwired_project_verify",
+    "defaultWorldRounds": 20000000,
+    "maximumBareElfWorldRounds": 50000000,
+    "nativeQualificationRoundsFor15Seconds": 150000000,
+    "nativeCyclesPerNodeAt15Seconds": 1200000000,
+    "nodeClockHz": 80000000,
+    "wallTimeoutFormula": "min(1500000, max(240000, ceil(maxSteps * machines / 150000 * 1000))) ms",
+    "nativeBuilderTimeoutFor50MRounds5NodesMs": 1500000,
+    "runIdPollingResumesSimulation": false,
+    "newVerifyCallStartsFreshWorld": true,
+    "snapshotResumeSupportedByHostedEnvironment": false,
+    "mechanicalBodyOrImuFeedbackScheduled": false,
+    "oracleSurface": "serial per node only",
+    "preparedArgs": "hosted-electrical-check-args.json",
+    "scope": "Four native Hall locks and FC BMI270 readiness only; no flight claim"
+  },
+  "browser": {
+    "entry": "https://app.labwired.com/?project=7c92d38a4f2ac205aa91502291fde0d8&embed=true&run=1&observeFlight=1",
+    "projectInput": "authorized fresh saved readback through one explicit GET project-load response fixture",
+    "fixtureOverrides": [
+      "GET https://api.labwired.com/v1/projects/7c92d38a4f2ac205aa91502291fde0d8"
+    ],
+    "runtimeOrFirmwareResponseOverrides": [],
+    "bodyScheduler": "Studio useFlightRuntime mounts outside CAD and samples native sources every 16 ms; plant time is native cycles/declared Hz",
+    "timeGate": "all five World node counters >=1200000000 and complete fresh body trace through 15 native seconds",
+    "capture": "observeFlight CustomEvents; passive listener installed before page navigation",
+    "oracle": "unchanged analyze-flight.py: all 11 nominal checks; no body value is computed by the capture adapter",
+    "claim": "Deployed Studio runtime tested with exact authorized saved bytes as a local project-load fixture. Not a signed-in saved-project fetch.",
+    "readyToExecute": false,
+    "preflightBlockers": [
+      "No full project JSON file import exists. The one documented project-load response fixture preserves sources and diagram but does not grant compile authority.",
+      "The anonymous compiler requires an identity or source matching the frozen published revision; the published four-controller source differs from the accepted five-controller candidate.",
+      "Existing per-target ELF uploads install separate simulators and retain them through the resume fast path; that path does not construct the required coupled World."
+    ],
+    "accessPolicy": "No auth changes, compile-response interception, unsupported share fields or publication mutation are used to obtain test data.",
+    "connectedLocalBrowser": {
+      "available": false,
+      "receipt": "local-browser-unavailable-receipt.json",
+      "blocker": "Browser access requires the originating browser context. Open ChatGPT in the browser with the connected extension and try again."
+    }
+  },
+  "sequence": [
+    "Wait for normal app merge-train and successful production deployment; verify build-manifest commit and core pin.",
+    "Download actual hashed JS/WASM from the live build manifest, retain byte hashes, and rerun unchanged native nominal/fault oracles using that artifact.",
+    "At the exact deployed checkout, build existing board-config helpers with build-replay-helpers.mjs; retain the normal build log, source/lock identity and emitted dist hashes. Replay checks this receipt before importing generated helpers.",
+    "Read owner project afresh. Abort a stale CAS; do not overwrite any newer edit.",
+    "Root submits project-update-args.json only after deployment and artifact qualification pass.",
+    "Read project back, save raw result, and run check-project-readback.py; require five-source and diagram identity.",
+    "Run the bounded hosted electrical check and poll any run_id through the current project_verify tool. Report only its declared serial scope.",
+    "Prepare the one project-load fixture from that authorized readback; install the passive listener in an isolated existing smoke page before navigation.",
+    "Use the existing continuous Studio Run/Pause UI. Collect exact asset identities, all scope events and World health until 15 native seconds.",
+    "Project captured observations into the unchanged independent oracle only after capture-integrity, source/asset and load-ack gates pass.",
+    "Preserve all original negative/native proof and any failed browser result. Do not change visibility, public feed revision, firmware clocks or thresholds."
+  ],
+  "savedProjectUpdated": false,
+  "browserRunPerformed": false,
+  "qualificationProvenance": {
+    "download": "Stored build-manifest bytes must match receipt manifestSha256, commit and exact asset URLs. Both shipped assets must match their recorded sizes and SHA-256.",
+    "helpers": "Successful normal board-config build at deployed app/core commit; exact source tree/command/lock/log and all seven emitted helper hashes checked.",
+    "archive": "Source, plan and five ELF identities anchored to the reviewed immutable examples commit cbb23bc84bf5d5f2e3ae1346893c99de14aa18fe.",
+    "modelClockOracleChanges": false
+  }
+}

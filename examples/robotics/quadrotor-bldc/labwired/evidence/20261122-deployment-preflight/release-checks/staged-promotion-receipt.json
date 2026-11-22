@@ -1,0 +1,31 @@
+{
+  "kind": "staged-project-update-not-executed",
+  "projectId": "7c92d38a4f2ac205aa91502291fde0d8",
+  "expectedContentHash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+  "payloadSha256": "cdf8c6558ba2f3d68c3a66e5bd6248c4c1b174b01dd839fd6cc50c054fb35775",
+  "sourceSha256": {
+    "ctrl1": "11176f5f3b0706288b2b96058aee71495ff5fd88f4b92be61e6b738b26eede82",
+    "ctrl2": "7b03d0047e86e88df52821124961420892a720657280b5025432e5f5cd13b657",
+    "ctrl3": "d9828f7026c2e046e4ee264b0921a337bad98631578cbc609ab72b7907f9d428",
+    "ctrl4": "6dbdcc800587a53471d76155633568aec1dba4b7219eda264d89a53d58d68b22",
+    "fc": "96ed83fd340f0f633651e9fd07229ffc1c35619db5af5cc9c203a729b59ea4fc"
+  },
+  "diagramSha256": "4198c3afa92c801f179dcfa96a43990c69ce328390d8317f0ebacbe5af100cc6",
+  "coreCommit": "7c0825e7bbcae493b710c5ffeb0d848b4ddd4fa0",
+  "wasmSha256": "4c45fb97b6af9e0a93407a7cc20b9e5d95eb769e653938ab8b284ecf6a5925d7",
+  "appIntegrationHead": "e3d0cb112606dcbe02c9e9c8c7bc3e919a580f7e",
+  "examplesMergedCommit": "792d362ce0c4b827c91c5bfc7ec71acaf1b9cf2a",
+  "sourceAndDiagramValidated": true,
+  "savedProjectUpdated": false,
+  "requiredBeforeMutation": [
+    "deployed app integration confirmed",
+    "actual deployed WASM qualified with unchanged oracle",
+    "fresh owner project readback matches expectedContentHash"
+  ],
+  "requiredAfterMutation": [
+    "exact five-source and diagram readback",
+    "separate hosted serial check",
+    "15 native seconds in continuous Studio body/IMU runtime"
+  ],
+  "wasmSha256Scope": "original no-opt native qualification; actual deployed bytes require separate unchanged-oracle qualification"
+}
