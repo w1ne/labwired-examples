@@ -1,0 +1,44 @@
+{
+  "kind": "source-selection-metadata-correction",
+  "part_id": "boost_harness",
+  "native_reference": "J5",
+  "manufacturer_part": "phoenix-1984633",
+  "removed_attribute": {
+    "package": "1x04"
+  },
+  "reason": "The explicit generic header package contradicts the selected Phoenix terminal body; canonical manufacturer resolution already selected the Phoenix footprint and pads. Remove the stale override instead of silently accepting contradictory source metadata.",
+  "prior_design_input_sha256": "85f00707d243d6909f8b4adcf429da350ae3f2d95b653ef8911cd3c70b09f5f5",
+  "design_input_sha256": "496440cc518f18dc7c7c9e4c81d8e8179c65ab471a1bd8b453a489afc891aeff",
+  "resolved_netlist_before_after_identical": true,
+  "resolved_netlist_sha256": "0654de8ffd76142ceedda1b0a205d7a6d363ccb1df848ad1ebf4f744bb8b8c86",
+  "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",
+  "pad_map": [
+    [
+      "1",
+      [
+        "1"
+      ]
+    ],
+    [
+      "2",
+      [
+        "2"
+      ]
+    ],
+    [
+      "3",
+      [
+        "3"
+      ]
+    ],
+    [
+      "4",
+      [
+        "4"
+      ]
+    ]
+  ],
+  "pcb_sha256": "0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+  "cad_sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9",
+  "scope": "Source selection metadata only. All resolved component fields, nets, pads, values, native PCB bytes and CAD bytes remain unchanged."
+}

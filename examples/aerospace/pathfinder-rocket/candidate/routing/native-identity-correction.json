@@ -1,0 +1,41 @@
+{
+  "schema": "pathfinder.native-identity-correction.v1",
+  "source_pcb_sha256": "bd574454389481d3033f58ba33ab8748d8982baea63c6fa7c5982de8557b050e",
+  "corrected_pcb_sha256": "0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+  "geometry_electrical_snapshot_sha256": "0704f719ec40ccb1e6b62bc90e8ad3b43ff7a7fac824c358a24908654e2fce22",
+  "exact_geometry_and_electrical_parity": true,
+  "compared": [
+    "all footprint references/library IDs/positions/rotations/layers",
+    "all pad names/netcodes/netnames/positions/sizes/shapes/drills/offsets/layers",
+    "all track/via netcodes/netnames/coordinates/widths/drills/layers/locks",
+    "all board edge/graphic shape coordinates",
+    "complete native net table"
+  ],
+  "value_corrections": [
+    {
+      "ref": "Q2",
+      "field": "Value",
+      "from": "2N7000",
+      "to": "AO3400A"
+    },
+    {
+      "ref": "Q4",
+      "field": "Value",
+      "from": "2N3904",
+      "to": "MMBT3904"
+    },
+    {
+      "ref": "Q5",
+      "field": "Value",
+      "from": "2N3904",
+      "to": "MMBT3904"
+    }
+  ],
+  "footprints": 37,
+  "pads": 149,
+  "copper_items": 645,
+  "pin_function_labels_from_source_pad_map": 142,
+  "sourcing_fields": "Hidden MPN, Manufacturer, LabWired source ID/type/selected manufacturer-part fields; exact selected part records only. Passive values remain electrical values.",
+  "manufacturing_verified": false,
+  "native_twin_parity_verified": false
+}

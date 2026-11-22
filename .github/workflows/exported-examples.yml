@@ -9,11 +9,13 @@ on:
       - "scripts/verify-exported-examples.mjs"
       - "scripts/check-axiom-servo-candidate.mjs"
       - "scripts/check-pathfinder-fit.mjs"
+      - "scripts/check-pathfinder-candidate.mjs"
       - ".github/workflows/exported-examples.yml"
   push:
     branches: [main]
     paths:
       - "scripts/check-pathfinder-fit.mjs"
+      - "scripts/check-pathfinder-candidate.mjs"
       - "examples/aerospace/pathfinder-rocket/**"
       - "examples/robotics/axiom-h1/**"
       - "examples/fabrication/a1-mini-printer/**"
@@ -33,3 +35,6 @@ jobs:
       - run: node scripts/verify-exported-examples.mjs
       - run: node scripts/check-axiom-servo-candidate.mjs
       - run: node scripts/check-pathfinder-fit.mjs
+      - run: node scripts/check-pathfinder-candidate.mjs
+      - run: python3 examples/aerospace/pathfinder-rocket/candidate/check-assembly-envelope.py
+      - run: python3 -m unittest discover -s examples/aerospace/pathfinder-rocket/candidate -p 'test_mass_input_validation.py' -v

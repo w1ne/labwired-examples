@@ -1,0 +1,230 @@
+{
+  "evaluation": {
+    "ok": true,
+    "buildOk": true,
+    "viewerMode": "hosted",
+    "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+    "step": {
+      "validity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 91437.0917244058
+      },
+      "snapshots": {
+        "status": "unavailable",
+        "frame": {
+          "view": "iso",
+          "width": 512,
+          "height": 512,
+          "bounds": {
+            "min": [
+              -21,
+              -20.993868295684052,
+              230
+            ],
+            "max": [
+              22.650000000000002,
+              20.993868295684052,
+              493
+            ]
+          }
+        },
+        "out_dir": "/tmp/kc-sbx/61074-oych069l03/kernelcad-step-RYQz3G",
+        "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+      }
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 91437.0917244058,
+      "faceCount": 1578,
+      "size": [
+        43.650000000000006,
+        41.987736591368105,
+        263
+      ]
+    },
+    "featureCount": 321,
+    "diagnostics": [
+      {
+        "target": "export-occt",
+        "code": "authoring.prefer-api.hole-by-cylinder",
+        "severity": "info",
+        "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+        "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+        "nextAction": {
+          "kind": "call-tool",
+          "tool": "lookup_cookbook",
+          "args": {
+            "query": "clearance hole through plate"
+          }
+        }
+      },
+      {
+        "target": "export-occt",
+        "code": "authoring.prefer-api.fdm-clearance",
+        "severity": "info",
+        "message": "Print clearance is typed but never checked: declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) (cookbook fdm-fit-clearance-by-fit-type).",
+        "hint": "Declare dfmSpec({ process: 'fdm', minClearance, minWall, printer }) so the print clearance is checked, not only typed. Recipe: fdm-fit-clearance-by-fit-type.",
+        "nextAction": {
+          "kind": "call-tool",
+          "tool": "lookup_cookbook",
+          "args": {
+            "query": "print clearance for a snap fit lid"
+          }
+        }
+      }
+    ],
+    "featureHealth": [],
+    "evaluationEvidence": {
+      "schema": "kernelcad.evaluation-evidence.v1",
+      "mode": "build",
+      "source": {
+        "sha256": "607804661bb37b0d2ae76cd32b9a2a92968aa6c764f9e83287d776435e0ac8c6",
+        "byteLength": 10577
+      },
+      "parameters": {
+        "values": {},
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      "engine": {
+        "kernel": "occt",
+        "version": "0.17.4",
+        "revision": null
+      },
+      "dependencies": {
+        "status": "untracked"
+      },
+      "reuse": {
+        "eligible": false,
+        "reason": "dependencies-untracked"
+      },
+      "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+      "identitySha256": "dd587cf57b062afde8f69f90421523d9ac036ca3faf5215bf1ab09690a572683"
+    },
+    "requirements": {
+      "ok": true,
+      "status": "not-declared",
+      "entries": [],
+      "summary": {
+        "pass": 0,
+        "fail": 0,
+        "notEvaluated": 0
+      }
+    },
+    "ports": [],
+    "parts": {
+      "count": 47,
+      "names": [
+        "avionics-coupler",
+        "switch-band",
+        "bulkhead-aft",
+        "bulkhead-fwd",
+        "avionics-sled",
+        "flight-computer-pcb",
+        "pcb-mcu",
+        "pcb-bat",
+        "pcb-c_bulk",
+        "pcb-c_5v",
+        "pcb-c_3v3",
+        "pcb-c_dec",
+        "pcb-r_vbat_hi",
+        "pcb-r_vbat_lo",
+        "pcb-baro",
+        "pcb-imu",
+        "pcb-r_scl",
+        "pcb-r_sda",
+        "pcb-sd",
+        "pcb-pyro_term",
+        "pcb-ematch",
+        "pcb-q_pyro",
+        "pcb-r_pyro_g",
+        "pcb-r_pyro_pd",
+        "pcb-r_cont_hi",
+        "pcb-r_cont_lo",
+        "pcb-d_pyro",
+        "pcb-buzzer",
+        "pcb-q_buzz",
+        "pcb-r_buzz_g",
+        "pcb-r_buzz_pd",
+        "pcb-d_buzz",
+        "pcb-led_status",
+        "pcb-r_led",
+        "pcb-cam",
+        "pcb-q_cam",
+        "pcb-r_cam_pu",
+        "pcb-q_cam_drv",
+        "pcb-r_cam_b",
+        "pcb-q_rec",
+        "pcb-r_rec_b",
+        "pcb-uart",
+        "pcb-boost_harness",
+        "pcb-arm_harness",
+        "lipo-1s-400mah",
+        "boost-pololu-u3v70f5",
+        "arm-switch"
+      ]
+    },
+    "mechanism": "real",
+    "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+  },
+  "render": {
+    "ok": true,
+    "images": [
+      {
+        "name": "iso",
+        "path": "/tmp/kernelcad-mcp-exports/out/render_preview-pwExUA/iso.png",
+        "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+        "byte_count": 58291,
+        "url": "https://api.kernelcad.com/api/v1/exports/20261121-5O_XGIQHzeoNi9-KCox1xg/render-iso.png",
+        "expires_at": "2026-11-22T23:54:25.000Z",
+        "inline": true
+      }
+    ],
+    "out_dir": "/tmp/kernelcad-mcp-exports/out/render_preview-pwExUA",
+    "bounds": {
+      "min": [
+        -21,
+        -20.9510440826416,
+        230
+      ],
+      "max": [
+        22.649999618530273,
+        20.9510440826416,
+        493
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 91437.0917244058,
+      "faceCount": 1578,
+      "size": [
+        43.650000000000006,
+        41.902088306002646,
+        263
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 59458,
+    "diagnostics": [],
+    "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+    "images_inline_count": 1,
+    "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+  },
+  "receipt_redactions": {
+    "reason": "Temporary signed download query parameters omitted from the public receipt. Downloaded artifacts and source identities are retained separately.",
+    "fields": [
+      {
+        "field": "/render/images/0/url",
+        "omitted_query_parameters": [
+          "exp",
+          "sig"
+        ]
+      }
+    ]
+  }
+}

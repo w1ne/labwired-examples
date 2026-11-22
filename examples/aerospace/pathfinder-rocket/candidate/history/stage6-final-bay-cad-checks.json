@@ -1,0 +1,364 @@
+{
+  "schema": 1,
+  "scope": "Nominal body and installation-volume fit only. Purchased-module mass, manufacture, hardware current/thermal and flight acceptance remain unverified.",
+  "evaluation": {
+    "ok": true,
+    "buildOk": true,
+    "viewerMode": "hosted",
+    "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+    "step": {
+      "validity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 111908.66572069694
+      },
+      "snapshots": {
+        "status": "unavailable",
+        "frame": {
+          "view": "iso",
+          "width": 512,
+          "height": 512,
+          "bounds": {
+            "min": [
+              -21,
+              -20.993868295684052,
+              220
+            ],
+            "max": [
+              22.650000000000002,
+              20.993868295684052,
+              493
+            ]
+          }
+        },
+        "out_dir": "/tmp/kc-sbx/61075-p04k19x1so/kernelcad-step-SG8vxY",
+        "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+      }
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 111908.66572069694,
+      "faceCount": 874,
+      "size": [
+        43.650000000000006,
+        41.987736591368105,
+        273
+      ]
+    },
+    "featureCount": 613,
+    "diagnostics": [
+      {
+        "target": "export-occt",
+        "code": "authoring.prefer-api.hole-by-cylinder",
+        "severity": "info",
+        "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+        "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+        "nextAction": {
+          "kind": "call-tool",
+          "tool": "lookup_cookbook",
+          "args": {
+            "query": "clearance hole through plate"
+          }
+        }
+      },
+      {
+        "target": "export-occt",
+        "code": "authoring.prefer-api.typed-trace",
+        "severity": "info",
+        "message": "Outline has 40+ hand-typed points: trace it with MCP trace_from_image, then resolve_assumptions for scale (cookbook resolve-photo-trace-assumptions).",
+        "hint": "Do not type outline points by hand: trace the image with MCP trace_from_image, then fix scale and unknowns with resolve_assumptions. Recipe: resolve-photo-trace-assumptions.",
+        "nextAction": {
+          "kind": "call-tool",
+          "tool": "trace_from_image",
+          "args": {}
+        }
+      }
+    ],
+    "featureHealth": [],
+    "evaluationEvidence": {
+      "schema": "kernelcad.evaluation-evidence.v1",
+      "mode": "build",
+      "source": {
+        "sha256": "84a288c7acab461ee893808822234f4cb6841a709e3cef177db25ec5880ceaf4",
+        "byteLength": 15909
+      },
+      "parameters": {
+        "values": {},
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      "engine": {
+        "kernel": "occt",
+        "version": "0.17.4",
+        "revision": null
+      },
+      "dependencies": {
+        "status": "untracked"
+      },
+      "reuse": {
+        "eligible": false,
+        "reason": "dependencies-untracked"
+      },
+      "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+      "identitySha256": "8209d1bb5029d97761587474dc72bcdd3647c19a2ee3b9fb4ef9acac2f707886"
+    },
+    "requirements": {
+      "ok": true,
+      "status": "not-declared",
+      "entries": [],
+      "summary": {
+        "pass": 0,
+        "fail": 0,
+        "notEvaluated": 0
+      }
+    },
+    "ports": [],
+    "parts": {
+      "count": 48,
+      "names": [
+        "avionics-coupler",
+        "switch-band",
+        "bulkhead-aft",
+        "bulkhead-fwd",
+        "avionics-sled",
+        "flight-computer-pcb",
+        "pcb-mcu",
+        "pcb-c_bulk",
+        "pcb-c_5v",
+        "pcb-c_3v3",
+        "pcb-c_dec",
+        "pcb-r_vbat_hi",
+        "pcb-r_vbat_lo",
+        "pcb-baro",
+        "pcb-imu",
+        "pcb-r_scl",
+        "pcb-r_sda",
+        "pcb-sd",
+        "pcb-pyro_term",
+        "pcb-q_pyro",
+        "pcb-r_pyro_g",
+        "pcb-r_pyro_pd",
+        "pcb-r_cont_hi",
+        "pcb-r_cont_lo",
+        "pcb-d_pyro",
+        "pcb-buzzer",
+        "pcb-q_buzz",
+        "pcb-r_buzz_g",
+        "pcb-r_buzz_pd",
+        "pcb-d_buzz",
+        "pcb-led_status",
+        "pcb-r_led",
+        "pcb-cam",
+        "pcb-q_cam",
+        "pcb-r_cam_pu",
+        "pcb-q_cam_drv",
+        "pcb-r_cam_b",
+        "pcb-q_rec",
+        "pcb-r_rec_b",
+        "pcb-uart",
+        "pcb-boost_harness",
+        "pcb-arm_harness",
+        "pcb-battery_harness",
+        "battery-tattu-450mah-envelope",
+        "battery-pigtail-service-envelope",
+        "boost-pololu-u3v70f5",
+        "power-harness-service-envelope",
+        "arm-switch"
+      ]
+    },
+    "mechanism": "real",
+    "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z"
+  },
+  "design_loop": {
+    "ok": true,
+    "goal": "Verify nominal geometric fit of the 235 mm source-bound bench carrier, supports and explicit battery/wire installation volumes in the 250 mm bay. Record only static model fit; exclude hardware, thermal and flight qualification.",
+    "finalAttemptId": "01",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Final source-bound bay with wire service envelopes",
+        "ok": true,
+        "functional": true,
+        "qualityOk": true,
+        "featureCount": 613,
+        "diagnosticCount": 94,
+        "reviewFacts": [],
+        "visualReview": {
+          "accepted": true,
+          "findings": [
+            "Reviewed current isometric and rear elevation renderings for the connected carrier, battery and converter supports and wire-service reservations.",
+            "The models show conservative component bounds and empty service reservations, not a detailed production wiring harness."
+          ],
+          "screenshotPath": "/tmp/kernelcad-mcp-exports/out/render_preview-tmRHDS/iso.png",
+          "checks": [
+            {
+              "code": "main-object-count",
+              "passed": true,
+              "finding": "One carrier assembly stands between the two circular bulkheads. Battery, converter and service volumes are distinct attached bodies."
+            },
+            {
+              "code": "proportions-match-reference",
+              "passed": true,
+              "finding": "The long narrow 235 mm PCB and 242 mm carrier match the 250 mm bay; the 68 mm battery reservation occupies less than a third of the length."
+            },
+            {
+              "code": "required-visible-features",
+              "passed": true,
+              "finding": "Rear views show the battery tray, rear converter, eight pass-through positions, two terminal-service cross regions and both side cable corridors."
+            },
+            {
+              "code": "no-stray-or-floating-geometry",
+              "passed": true,
+              "finding": "Visible purchased-part bounds and service volumes attach to the continuous carrier/PCB assembly; no detached object appears outside the bay assembly."
+            },
+            {
+              "code": "attachment-plausibility",
+              "passed": true,
+              "finding": "The battery rests against the tray and end stops; the converter aligns with its support bars. Rails capture the PCB edges. Actual retention and assembly tolerances remain measured hardware gates."
+            },
+            {
+              "code": "semantic-orientation-alignment",
+              "passed": true,
+              "finding": "The model is Z-up, with the aft bulkhead at the bottom and forward eyelet above. Battery and converter sit on the rear side; the switch projects radially."
+            },
+            {
+              "code": "canonical-views-physically-coherent",
+              "passed": true,
+              "finding": "The isometric and -Y elevation show the same rear battery, upper connector reservation, lower converter and lateral corridors without an unexplained orientation change."
+            }
+          ]
+        },
+        "repairMode": "none",
+        "passedChecks": [
+          "validator-no-errors",
+          "pose-envelope-solved",
+          "pose-envelope-no-interference"
+        ],
+        "blockingReasons": [],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 0,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": true,
+          "status": "not-declared",
+          "entries": [],
+          "summary": {
+            "pass": 0,
+            "fail": 0,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "84a288c7acab461ee893808822234f4cb6841a709e3cef177db25ec5880ceaf4",
+            "byteLength": 15909
+          },
+          "parameters": {
+            "values": {},
+            "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.4",
+            "revision": null
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "454129dac5550d6ea5581d7644a43f3c770771d24b7e14c3b5535db9b9bd5a4f",
+          "identitySha256": "c6ef0d95e41b28d8e9dd99148758bb8b63eed07ae6b207b19c0b0cb6b101626a"
+        },
+        "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Verify nominal geometric fit of the 235 mm source-bound bench carrier, supports and explicit battery/wire installation volumes in the 250 mm bay. Record only static model fit; exclude hardware, thermal and flight qualification.",
+      "steps": []
+    },
+    "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z"
+  },
+  "render_preview": {
+    "ok": true,
+    "images": [
+      {
+        "name": "iso",
+        "path": "/tmp/kernelcad-mcp-exports/out/render_preview-tmRHDS/iso.png",
+        "description": "Geometric Z-up three-quarter overview \u2014 camera in the (+X, -Y, +Z) octant. Product exterior versus underside depends on model orientation.",
+        "byte_count": 56748,
+        "url": "https://api.kernelcad.com/api/v1/exports/20261122-onjZvPk-aHRAuaE8l12h4w/render-iso.png",
+        "expires_at": "2026-11-23T01:14:50.000Z",
+        "inline": true
+      },
+      {
+        "name": "front",
+        "path": "/tmp/kernelcad-mcp-exports/out/render_preview-tmRHDS/front.png",
+        "description": "Front elevation \u2014 camera on -Y looking at the model; screen right = +X, screen up = +Z.",
+        "byte_count": 41452,
+        "url": "https://api.kernelcad.com/api/v1/exports/20261122-2B_GpBWTs8dv4cM8WxLcpA/render-front.png",
+        "expires_at": "2026-11-23T01:14:51.000Z",
+        "inline": true
+      }
+    ],
+    "out_dir": "/tmp/kernelcad-mcp-exports/out/render_preview-tmRHDS",
+    "bounds": {
+      "min": [
+        -21,
+        -20.9510440826416,
+        220
+      ],
+      "max": [
+        22.649999618530273,
+        20.9510440826416,
+        493
+      ]
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 111908.66572069694,
+      "faceCount": 874,
+      "size": [
+        43.650000000000006,
+        41.902088306002646,
+        273
+      ]
+    },
+    "mechanism": "real",
+    "render_source": "static-player",
+    "render_ms": 61273,
+    "diagnostics": [],
+    "server_path_note": "`images[].path` and `out_dir` are paths on the kernelCAD SERVER, not on your or the user's machine; you cannot open them. The images are attached to this result as image content, and `images[].url` is an HTTPS link to each PNG (expires at `images[].expires_at`) you can fetch or give to the user.",
+    "images_inline_count": 2,
+    "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z"
+  },
+  "receipt_redactions": {
+    "reason": "Temporary signed download query parameters omitted from the public receipt. Downloaded artifacts and source identities are retained separately.",
+    "fields": [
+      {
+        "field": "/render_preview/images/0/url",
+        "omitted_query_parameters": [
+          "exp",
+          "sig"
+        ]
+      },
+      {
+        "field": "/render_preview/images/1/url",
+        "omitted_query_parameters": [
+          "exp",
+          "sig"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1769 @@
+{
+  "diagram": {
+    "version": 1,
+    "board": "stm32f411ceu6-blackpill",
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "stm32f411ceu6-blackpill",
+        "x": 0,
+        "y": 0,
+        "rotate": 0,
+        "attrs": {
+          "label": "Flight computer STM32F411",
+          "package": "weact-blackpill-v31-body-envelope"
+        },
+        "manufacturerPart": "weact-ministm32f411"
+      },
+      {
+        "id": "bat",
+        "type": "dc-barrel-jack",
+        "x": -700,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "voltage": "3.8",
+          "label": "Tattu TAA4501S75BT2 1S450mAh LiHV source;3.8Vnominal4.35Vmax; BT2.0 pigtail; source model only",
+          "offboard": "true"
+        }
+      },
+      {
+        "id": "c_bulk",
+        "type": "capacitor",
+        "x": -430,
+        "y": -380,
+        "rotate": 0,
+        "attrs": {
+          "value": "470uF",
+          "voltage": "10V",
+          "label": "Nichicon UPW1A471MPD 470uF 10V reservoir",
+          "package": "radial-d8-p3.5"
+        },
+        "manufacturerPart": "nichicon-upw1a471mpd"
+      },
+      {
+        "id": "boost",
+        "type": "pololu-u3v70f5",
+        "x": -430,
+        "y": -250,
+        "rotate": 0,
+        "attrs": {
+          "label": "Pololu U3V70F5: fixed 5V, direct-wire, reverse sled face",
+          "offboard": "true"
+        },
+        "manufacturerPart": "pololu-2891"
+      },
+      {
+        "id": "c_5v",
+        "type": "capacitor",
+        "x": -300,
+        "y": -330,
+        "rotate": 0,
+        "attrs": {
+          "value": "22uF",
+          "voltage": "10V"
+        },
+        "manufacturerPart": "nichicon-uwp1a220mcl1gb"
+      },
+      {
+        "id": "c_3v3",
+        "type": "capacitor",
+        "x": -180,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "value": "10uF",
+          "voltage": "10V"
+        },
+        "manufacturerPart": "nichicon-uwp1a100mcl1gb"
+      },
+      {
+        "id": "c_dec",
+        "type": "capacitor",
+        "x": -180,
+        "y": -220,
+        "rotate": 0,
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "id": "r_vbat_hi",
+        "type": "resistor",
+        "x": -300,
+        "y": -120,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000",
+          "label": "VBAT divider top",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100kl"
+      },
+      {
+        "id": "r_vbat_lo",
+        "type": "resistor",
+        "x": -300,
+        "y": -60,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000",
+          "label": "VBAT divider bottom",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100kl"
+      },
+      {
+        "id": "baro",
+        "type": "bme280",
+        "x": 300,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "label": "Barometer BME280 0x76"
+        },
+        "manufacturerPart": "adafruit-2652"
+      },
+      {
+        "id": "imu",
+        "type": "mpu6050",
+        "x": 300,
+        "y": -150,
+        "rotate": 0,
+        "attrs": {
+          "label": "IMU MPU-6050 0x68, +Y to nose"
+        },
+        "manufacturerPart": "adafruit-3886"
+      },
+      {
+        "id": "r_scl",
+        "type": "resistor",
+        "x": 160,
+        "y": -380,
+        "rotate": 0,
+        "attrs": {
+          "value": "4700",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-074k7l"
+      },
+      {
+        "id": "r_sda",
+        "type": "resistor",
+        "x": 160,
+        "y": -330,
+        "rotate": 0,
+        "attrs": {
+          "value": "4700",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-074k7l"
+      },
+      {
+        "id": "sd",
+        "type": "microsd",
+        "x": 300,
+        "y": 20,
+        "rotate": 0,
+        "attrs": {
+          "label": "Adafruit4682 3.3V SPI microSD; all9pads retained, card-service envelope included"
+        },
+        "manufacturerPart": "adafruit-4682"
+      },
+      {
+        "id": "arm_switch",
+        "type": "toggle-switch",
+        "x": -330,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "label": "Panel arm switch, existing band port; COM ground, contact1 PB12",
+          "offboard": "true"
+        }
+      },
+      {
+        "id": "pyro_term",
+        "type": "pin-header",
+        "x": 620,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "label": "Phoenix1984617 external bench-load terminal:1VBAT,2switched return"
+        },
+        "manufacturerPart": "phoenix-1984617"
+      },
+      {
+        "id": "ematch",
+        "type": "resistor",
+        "x": 760,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "value": "1.5",
+          "label": "External bench load:1.5ohm;12.62W/12.62J ideal pulse at4.35V; not assembled on carrier",
+          "offboard": "true"
+        }
+      },
+      {
+        "id": "q_pyro",
+        "type": "nmos",
+        "x": 620,
+        "y": -180,
+        "rotate": 0,
+        "attrs": {
+          "label": "External bench-load MOSFET AO3400A",
+          "part": "AO3400A",
+          "package": "sot-23"
+        },
+        "manufacturerPart": "aos-ao3400a"
+      },
+      {
+        "id": "r_pyro_g",
+        "type": "resistor",
+        "x": 500,
+        "y": -180,
+        "rotate": 0,
+        "attrs": {
+          "value": "100",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100rl"
+      },
+      {
+        "id": "r_pyro_pd",
+        "type": "resistor",
+        "x": 500,
+        "y": -110,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000",
+          "label": "Gate pulldown: pyro off at reset",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0710kl"
+      },
+      {
+        "id": "r_cont_hi",
+        "type": "resistor",
+        "x": 760,
+        "y": -150,
+        "rotate": 0,
+        "attrs": {
+          "value": "47000",
+          "label": "Continuity sense top",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0747kl"
+      },
+      {
+        "id": "r_cont_lo",
+        "type": "resistor",
+        "x": 760,
+        "y": -90,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000",
+          "label": "Continuity sense bottom",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100kl"
+      },
+      {
+        "id": "d_pyro",
+        "type": "tvs-diode",
+        "x": 880,
+        "y": -240,
+        "rotate": 0,
+        "attrs": {
+          "label": "Pyro line TVS"
+        }
+      },
+      {
+        "id": "buzzer",
+        "type": "buzzer",
+        "x": 620,
+        "y": 40,
+        "rotate": 0,
+        "attrs": {
+          "label": "Adafruit1536 active3-5V DC locator buzzer"
+        },
+        "manufacturerPart": "adafruit-1536"
+      },
+      {
+        "id": "q_buzz",
+        "type": "nmos",
+        "x": 620,
+        "y": 140,
+        "rotate": 0,
+        "attrs": {
+          "label": "AO3400A buzzer switch"
+        },
+        "manufacturerPart": "aos-ao3400a"
+      },
+      {
+        "id": "r_buzz_g",
+        "type": "resistor",
+        "x": 500,
+        "y": 140,
+        "rotate": 0,
+        "attrs": {
+          "value": "100",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100rl"
+      },
+      {
+        "id": "r_buzz_pd",
+        "type": "resistor",
+        "x": 500,
+        "y": 210,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0710kl"
+      },
+      {
+        "id": "d_buzz",
+        "type": "diode",
+        "x": 740,
+        "y": 60,
+        "rotate": 0,
+        "attrs": {
+          "type": "diode",
+          "value": "1N4148",
+          "label": "Buzzer flyback"
+        }
+      },
+      {
+        "id": "led_status",
+        "type": "led",
+        "x": -330,
+        "y": 250,
+        "rotate": 0,
+        "attrs": {
+          "color": "green",
+          "label": "Status LED"
+        },
+        "manufacturerPart": "kingbright-wp7113gd"
+      },
+      {
+        "id": "r_led",
+        "type": "resistor",
+        "x": -200,
+        "y": 250,
+        "rotate": 0,
+        "attrs": {
+          "value": "330",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07330rl"
+      },
+      {
+        "id": "cam",
+        "type": "pin-header",
+        "x": 620,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "label": "Camera bench harness: 2.54 mm 1x4 carrier header; 1 5V_SW,2 GND,3 REC,4 NC"
+        }
+      },
+      {
+        "id": "q_cam",
+        "type": "pmos",
+        "x": 480,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "label": "Camera power P-MOSFET AO3401A",
+          "part": "AO3401A",
+          "package": "sot-23"
+        },
+        "manufacturerPart": "aos-ao3401a"
+      },
+      {
+        "id": "r_cam_pu",
+        "type": "resistor",
+        "x": 480,
+        "y": 420,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000",
+          "label": "P-MOSFET gate pull-up: camera off at reset",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0710kl"
+      },
+      {
+        "id": "q_cam_drv",
+        "type": "npn",
+        "x": 360,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "label": "Camera power driver"
+        },
+        "manufacturerPart": "nexperia-mmbt3904"
+      },
+      {
+        "id": "r_cam_b",
+        "type": "resistor",
+        "x": 240,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "value": "1000",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-071kl"
+      },
+      {
+        "id": "q_rec",
+        "type": "npn",
+        "x": 360,
+        "y": 460,
+        "rotate": 0,
+        "attrs": {
+          "label": "Record button emulation"
+        },
+        "manufacturerPart": "nexperia-mmbt3904"
+      },
+      {
+        "id": "r_rec_b",
+        "type": "resistor",
+        "x": 240,
+        "y": 460,
+        "rotate": 0,
+        "attrs": {
+          "value": "1000",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-071kl"
+      },
+      {
+        "id": "uart",
+        "type": "pin-header",
+        "x": -330,
+        "y": 380,
+        "rotate": 0,
+        "attrs": {
+          "label": "UART2 3.3V (1 TX, 2 RX, 3 GND, 4 3V3)"
+        }
+      },
+      {
+        "id": "boost_harness",
+        "type": "pin-header",
+        "x": -400,
+        "y": -200,
+        "rotate": 0,
+        "attrs": {
+          "package": "1x04",
+          "label": "Phoenix1984633 converter harness:1VIN,2GND,3regulated5V,4GND"
+        },
+        "manufacturerPart": "phoenix-1984633"
+      },
+      {
+        "id": "arm_harness",
+        "type": "pin-header",
+        "x": -220,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "package": "1x02",
+          "label": "Panel arm harness: 1 GND, 2 PB12"
+        }
+      },
+      {
+        "id": "battery_harness",
+        "type": "pin-header",
+        "manufacturerPart": "phoenix-1984617",
+        "x": -650,
+        "y": -240,
+        "attrs": {
+          "label": "Phoenix1984617 battery input:1VBAT,2GND; matched BT2.0 pigtail"
+        }
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "battery_harness",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "c_bulk",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "c_bulk",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "4"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "c_5v",
+          "pin": "1"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "c_5v",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "c_3v3",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "c_3v3",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "c_dec",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "c_dec",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_vbat_hi",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "r_vbat_hi",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA0"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "r_vbat_lo",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA0"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_vbat_lo",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "SCL"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "SDA"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "SCL"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "SDA"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "SDO"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "CSB"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "AD0"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_scl",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_scl",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "r_sda",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_sda",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "CS"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA4"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "SCK"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA5"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "MISO"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA6"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "MOSI"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA7"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "arm_harness",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "arm_harness",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB12"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "pyro_term",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "ematch",
+          "pin": "1"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "1"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "ematch",
+          "pin": "2"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "q_pyro",
+          "pin": "D"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "q_pyro",
+          "pin": "S"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB0"
+        },
+        "to": {
+          "part": "r_pyro_g",
+          "pin": "1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_pyro_g",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_pyro",
+          "pin": "G"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_pyro_pd",
+          "pin": "1"
+        },
+        "to": {
+          "part": "q_pyro",
+          "pin": "G"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "r_pyro_pd",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_cont_hi",
+          "pin": "1"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "r_cont_hi",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "r_cont_lo",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_cont_lo",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "d_pyro",
+          "pin": "K"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "d_pyro",
+          "pin": "A"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "buzzer",
+          "pin": "+"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "buzzer",
+          "pin": "-"
+        },
+        "to": {
+          "part": "q_buzz",
+          "pin": "D"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "q_buzz",
+          "pin": "S"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB13"
+        },
+        "to": {
+          "part": "r_buzz_g",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_buzz_g",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_buzz",
+          "pin": "G"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "r_buzz_pd",
+          "pin": "1"
+        },
+        "to": {
+          "part": "q_buzz",
+          "pin": "G"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_buzz_pd",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "d_buzz",
+          "pin": "A"
+        },
+        "to": {
+          "part": "buzzer",
+          "pin": "-"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "d_buzz",
+          "pin": "K"
+        },
+        "to": {
+          "part": "buzzer",
+          "pin": "+"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB14"
+        },
+        "to": {
+          "part": "r_led",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_led",
+          "pin": "2"
+        },
+        "to": {
+          "part": "led_status",
+          "pin": "A"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "led_status",
+          "pin": "K"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "q_cam",
+          "pin": "S"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "q_cam",
+          "pin": "D"
+        },
+        "to": {
+          "part": "cam",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "cam",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_cam_pu",
+          "pin": "1"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_cam_pu",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_cam",
+          "pin": "G"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "q_cam_drv",
+          "pin": "C"
+        },
+        "to": {
+          "part": "q_cam",
+          "pin": "G"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "q_cam_drv",
+          "pin": "E"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB15"
+        },
+        "to": {
+          "part": "r_cam_b",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "r_cam_b",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_cam_drv",
+          "pin": "B"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "q_rec",
+          "pin": "C"
+        },
+        "to": {
+          "part": "cam",
+          "pin": "3"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "q_rec",
+          "pin": "E"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        "to": {
+          "part": "r_rec_b",
+          "pin": "1"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_rec_b",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_rec",
+          "pin": "B"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA2"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA3"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "4"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "5V"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "VIN"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "1"
+        }
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "2"
+        }
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "VOUT"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        }
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "4"
+        }
+      },
+      {
+        "from": {
+          "part": "arm_switch",
+          "pin": "COM"
+        },
+        "to": {
+          "part": "arm_harness",
+          "pin": "1"
+        }
+      },
+      {
+        "from": {
+          "part": "arm_switch",
+          "pin": "1"
+        },
+        "to": {
+          "part": "arm_harness",
+          "pin": "2"
+        }
+      },
+      {
+        "from": {
+          "part": "bat",
+          "pin": "+"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        }
+      },
+      {
+        "from": {
+          "part": "bat",
+          "pin": "-"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "2"
+        }
+      }
+    ],
+    "mechanical": {
+      "electronics": {
+        "version": 1,
+        "displays": [],
+        "inputs": [
+          {
+            "id": "arm-key",
+            "component": "arm_switch",
+            "part": "arm-switch",
+            "face": "+x",
+            "channel": "pressed",
+            "travelMm": 1.5
+          }
+        ]
+      },
+      "provider": "kernelcad",
+      "slug": "K_DmeiaD",
+      "projectId": "730ea337-9cd5-4c6f-9df4-21d04787e16c",
+      "version": 2,
+      "title": "LabWired Pathfinder \u2014 42 mm hobby rocket with flight computer, camera and parachute"
+    }
+  },
+  "originalHash": "2e8fef00dc7123091c40e3079e7d127604d5f5c8bb691da02bcd1a230fd70663",
+  "changes": [
+    "Select manufacturer WeAct BlackPill DIP-40 SWD footprint",
+    "Connect prior VCC rail to manufacturer 3V3 pin",
+    "Add boost OUT+ to BlackPill 5V input",
+    "q_pyro AO3400A and q_cam AO3401A bind to AOS manufacturer records and SOT-23 G1/S2/D3",
+    "c_bulk binds Nichicon UPW1A471MPD 470uF 10V, nominal diameter8 x11.5mm, pitch3.5mm; max body diameter8.5 x13mm",
+    "Replace unspecified MT3608 breakout with Pololu U3V70F5 fixed5V module on reverse sled face; preserve every electrical rail through an explicit four-wire connector",
+    "Keep all 44 manufacturer copper pads; widen only the selected WeAct courtyard to its primary V3.1 STEP body plus0.35mm margin; original library aliases preserved",
+    "Retain the arm switch at the existing panel port and connect COM/GND and contact1/PB12 through an explicit two-wire on-board header; no duplicate switch body on PCB",
+    "Bound remaining sensor/storage/buzzer and 10/22uF capacitor selections to primary-source packages; all original wires and sensor address straps preserved.",
+    "Retained1.5ohm simulation load moved offboard as external bench load; battery source model moved offboard through sourced Phoenix1984617 terminals. Selected Tattu1SLiHV3.8Vnominal/4.35Vmax source; all electrical topology preserved through explicit interconnects.",
+    "Selected WP7113GD status LED with source-backed8.85mm maximum body plus specified1mm assembly stand-off; bulk capacitor shifted1mm inward for curved-wall clearance.",
+    "Stage6: select exact Yageo RC0603 signal resistors at unchanged values to reserve terminal wire service space. The 1.5ohm external load is unchanged. Camera header label now states its actual 2.54mm carrier package."
+  ],
+  "provenance": {
+    "previous_candidate": "/data/pathfinder-source-corrected-input-20261121.json",
+    "original_project": "c9ede30a619b12d7c97056a2da040cc1",
+    "original_pcb": "pcb_e2ec5d2f4ade4aac@1",
+    "original_cad": "K_DmeiaD@2",
+    "source_completion": {
+      "adafruit_BME280_PCB_commit": "1ba329baf692f9e681e0deb891c98ce6579a5c26",
+      "adafruit_microSD_PCB_commit": "959792478854acec21fb862650427ffaa32b07f1",
+      "adafruit_microSD_STEP_commit": "9f2a89f3d5c3491886d58cb7fe83385417563cf4",
+      "microSD_card_envelope_mm": [
+        25.4,
+        27.2,
+        3.5
+      ],
+      "Nichicon_UWP_datasheet": "https://www.nichicon.com/en-us/datasheet/4125/"
+    },
+    "battery_current_review": {
+      "kind": "pathfinder-battery-current-design-review",
+      "reviewed_at_utc": "2026-11-22T00:01:41.259316+00:00",
+      "status": "candidate-selected-with-explicit-open-hardware-gates",
+      "diagram_file_sha256": "89086dc5cb27efff6c1cf3cceb46278dd7e7e0f4c862d0ef564d62cc241e7a75",
+      "firmware_source_sha256": "50571b2068a107fc993220384d0f4f3fe6c2b69425217f3e38639672bbc2c90f",
+      "selected_battery": {
+        "manufacturer": "Tattu / Gens ace",
+        "sku": "TAA4501S75BT2",
+        "cell_count": 1,
+        "capacity_mah": 450,
+        "nominal_v": 3.8,
+        "maximum_charge_v": 4.35,
+        "manufacturer_cell_discharge_c": 75,
+        "arithmetic_cell_current_a": 33.75,
+        "cell_rating_is_not_pack_or_harness_acceptance": true,
+        "connector": "BETAFPV BT2.0",
+        "connector_continuous_a": 9,
+        "connector_burst_a": 15,
+        "nominal_lwh_mm": [
+          61,
+          15,
+          7.5
+        ],
+        "published_positive_tolerance_lwh_mm": [
+          5,
+          2,
+          2
+        ],
+        "minimum_part_envelope_lwh_mm": [
+          66,
+          17,
+          9.5
+        ],
+        "envelope_excludes_additional_cable_connector_retention_and_swelling_clearance": true,
+        "mass_nominal_g": 12,
+        "mass_claim_not_a_measured_assembly_mass": true
+      },
+      "electrical_findings": {
+        "load_ohm_nominal": 1.5,
+        "load_supply_net": "VBAT, bypasses the 5V boost",
+        "firmware_on_ms": 1000,
+        "ideal_full_charge_load_a": 2.9,
+        "ideal_full_charge_load_w": 12.614999999999997,
+        "ideal_pulse_energy_j": 12.614999999999997,
+        "losses_and_resistor_tolerance_not_included": true,
+        "vbat_adc_at_full_charge_v": 2.175,
+        "continuity_input_at_full_charge_v": 2.9591836734693873,
+        "boost_part": "Pololu U3V70F5 / 2891",
+        "boost_input_range_v": [
+          2.9,
+          5
+        ],
+        "maximum_battery_v_below_boost_maximum": true,
+        "boost_current_rating_is_input_not_output": true,
+        "boost_output_voltage_v": 5,
+        "battery_current_formula": "I_bat = V_bat / R_load + (5 * I_5V) / (eta * V_bat) + I_aux_battery",
+        "five_volt_camera_and_board_current": "unmeasured; no total-current or endurance pass claimed",
+        "eta_0_8_is_a_budget_scenario_not_guaranteed_minimum": true,
+        "example_budget_rows_excluding_buzzer_and_tolerances": [
+          {
+            "vin_v": 3.5,
+            "five_volt_load_a": 0.5,
+            "assumed_eta": 0.8,
+            "battery_current_a": 3.2261904761904763
+          },
+          {
+            "vin_v": 3.5,
+            "five_volt_load_a": 1.0,
+            "assumed_eta": 0.8,
+            "battery_current_a": 4.119047619047619
+          },
+          {
+            "vin_v": 3.8,
+            "five_volt_load_a": 0.5,
+            "assumed_eta": 0.8,
+            "battery_current_a": 3.3557017543859646
+          },
+          {
+            "vin_v": 3.8,
+            "five_volt_load_a": 1.0,
+            "assumed_eta": 0.8,
+            "battery_current_a": 4.178070175438596
+          },
+          {
+            "vin_v": 4.35,
+            "five_volt_load_a": 0.5,
+            "assumed_eta": 0.8,
+            "battery_current_a": 3.618390804597701
+          },
+          {
+            "vin_v": 4.35,
+            "five_volt_load_a": 1.0,
+            "assumed_eta": 0.8,
+            "battery_current_a": 4.336781609195402
+          }
+        ]
+      },
+      "required_model_changes": [
+        "Set the retained 1.5-ohm resistor to offboard external bench load; do not assemble an unqualified generic 0603 at 12.62W/12.62J.",
+        "Replace barrel-jack stand-in and generic load-header fabrication interfaces with sourced rated connectors or explicit direct wiring. Preserve source model pin semantics and actual topology.",
+        "Fit the battery maximum tolerance envelope and explicit connector/cable/retention volume.",
+        "Record the battery as 1S LiHV and retain maximum 4.35V separately from nominal 3.8V."
+      ],
+      "open_acceptance": [
+        "Physical current, voltage sag, regulator temperature and complete camera/avionics peak budget not measured.",
+        "PCB power path current capacity and connector/cable rating need sourced implementation.",
+        "Original firmware configures VBAT ADC but does not read it; no low-voltage protection claim.",
+        "Original 1.5-ohm part is a model stand-in, not a qualified flight initiator.",
+        "Mass, center of gravity and stability must be recomputed for the new sourced pack and bay; catalogue mass is not measured assembly mass."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://www.genstattu.com/tattu-450mah-3.8v-high-voltage-75c-1s1p-lipo-battery-pack-with-bt-2.0-plug-5pcs/",
+          "supports": "SKU, capacity, nominal voltage, C-rate, nominal dimensions and published tolerance, connector; manufacturer warns C-rate is only a cell rating"
+        },
+        {
+          "url": "https://genstattu.com/blog/high-voltage-and-standard-fpv-lipo-battery/",
+          "supports": "LiHV charge maximum 4.35V per cell"
+        },
+        {
+          "url": "https://betafpv.com/products/bt2-0-connectors-10pcs",
+          "supports": "9A continuous /15A burst connector rating and male/female dimensions"
+        },
+        {
+          "url": "https://www.pololu.com/product/2891",
+          "supports": "2.9\u20135V input,5V output,input-current and thermal qualifications"
+        },
+        {
+          "url": "https://betafpv.com/products/bt2-0-1s-whoop-cable-pigtail",
+          "supports": "Existing matched BT2.0 pigtail option; wire gauge not specified in retrieved text"
+        }
+      ]
+    },
+    "signal_resistors": [
+      {
+        "part": "r_vbat_hi",
+        "resistance_ohms": 100000.0,
+        "mpn": "RC0603FR-07100KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+      },
+      {
+        "part": "r_vbat_lo",
+        "resistance_ohms": 100000.0,
+        "mpn": "RC0603FR-07100KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+      },
+      {
+        "part": "r_scl",
+        "resistance_ohms": 4700.0,
+        "mpn": "RC0603FR-074K7L",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L"
+      },
+      {
+        "part": "r_sda",
+        "resistance_ohms": 4700.0,
+        "mpn": "RC0603FR-074K7L",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L"
+      },
+      {
+        "part": "r_pyro_g",
+        "resistance_ohms": 100.0,
+        "mpn": "RC0603FR-07100RL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL"
+      },
+      {
+        "part": "r_pyro_pd",
+        "resistance_ohms": 10000.0,
+        "mpn": "RC0603FR-0710KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+      },
+      {
+        "part": "r_cont_hi",
+        "resistance_ohms": 47000.0,
+        "mpn": "RC0603FR-0747KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL"
+      },
+      {
+        "part": "r_cont_lo",
+        "resistance_ohms": 100000.0,
+        "mpn": "RC0603FR-07100KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+      },
+      {
+        "part": "r_buzz_g",
+        "resistance_ohms": 100.0,
+        "mpn": "RC0603FR-07100RL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL"
+      },
+      {
+        "part": "r_buzz_pd",
+        "resistance_ohms": 10000.0,
+        "mpn": "RC0603FR-0710KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+      },
+      {
+        "part": "r_led",
+        "resistance_ohms": 330.0,
+        "mpn": "RC0603FR-07330RL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07330RL"
+      },
+      {
+        "part": "r_cam_pu",
+        "resistance_ohms": 10000.0,
+        "mpn": "RC0603FR-0710KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+      },
+      {
+        "part": "r_cam_b",
+        "resistance_ohms": 1000.0,
+        "mpn": "RC0603FR-071KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL"
+      },
+      {
+        "part": "r_rec_b",
+        "resistance_ohms": 1000.0,
+        "mpn": "RC0603FR-071KL",
+        "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL"
+      }
+    ]
+  }
+}

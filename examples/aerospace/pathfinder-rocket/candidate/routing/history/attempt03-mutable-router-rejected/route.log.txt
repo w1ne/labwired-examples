@@ -1,0 +1,35 @@
+/data/lw-api-worker-lifecycle-20261122/packages/board-pcb/src/layout/routers/freerouting.node.ts:331
+      throw new FreeroutingError('Freerouting reported '+violations+' routing violations:\n'+log.slice(-3000));
+            ^
+
+FreeroutingError: Freerouting reported 8 routing violations:
+3 seconds with the score of 890.89 (8 unrouted and 8 violations), using 90.17 CPU seconds and the job allocated 823.77 GB of memory so far.
+2026-11-22 01:56:09.765 INFO   [FD00FD\87B42D] Auto-routing pass #22 on board 'caa8f232071dcaf71618f9eda6bc024d' was completed in 0.31 seconds with the score of 890.89 (8 unrouted and 8 violations), using 90.17 CPU seconds and the job allocated 823.77 GB of memory so far.
+2026-11-22 01:56:10.637 INFO   [FD00FD\87B42D] Auto-routing pass #23 on board '35c16d5f018cbb23448d479badfe11ee' was completed in 0.82 seconds with the score of 890.89 (8 unrouted and 8 violations), using 91.16 CPU seconds and the job allocated 830.67 GB of memory so far.
+2026-11-22 01:56:11.005 INFO   [FD00FD\87B42D] Auto-routing pass #24 on board '570fe892368a01db97ce85f8b58d7d3e' was completed in 0.32 seconds with the score of 890.89 (8 unrouted and 8 violations), using 92.15 CPU seconds and the job allocated 837.43 GB of memory so far.
+2026-11-22 01:56:11.017 INFO   [FD00FD\87B42D] The router's best score (890.89) has not improved by more than 0.5 points since pass #14. Stopping the auto-router after 24 passes (8 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'GND' (2 unrouted connections):
+    - R8-2  ->  via
+    - C3-2  ->  Q1-2
+  Net '+3V3' (5 unrouted connections):
+    - U2-1  ->  J1-1
+    - U1-1  ->  U1-7
+    - J4-4  ->  U1-7
+    - A1-20  ->  J1-1
+    - A1-38  ->  A1-41
+  Net 'PB14' (1 unrouted connection):
+    - A1-3  ->  R11-1
+2026-11-22 01:56:11.061 INFO   [FD00FD\87B42D] Auto-routing stage completed: started with 87 unrouted nets, completed in 94.24 seconds, final score: 890.89 (8 unrouted and 8 violations), using 92.15 total CPU seconds, 837.43 GB total allocated, and 1373.7 MB peak heap usage.
+2026-11-22 01:56:11.084 INFO   [FD00FD\87B42D] Optimization stage started on board '9049c7ff3ce2eb8ba60c2dcb5a6c8e5c' with score 890.89 (8 unrouted and 8 violations).
+2026-11-22 01:56:13.801 INFO   [FD00FD\87B42D] Stopping optimization pass #1 early after 50 consecutive items could not be improved.
+2026-11-22 01:56:13.830 INFO   [FD00FD\87B42D] Optimizer pass #1 on board '0436136daf0811257af33d8fd636c180' was completed in 2.67 seconds with the score of 890.89 (8 unrouted and 8 violations).
+2026-11-22 01:56:13.850 INFO   [FD00FD\87B42D] Stopping optimizer because the improvement in this pass (0.0000%) is below the threshold (1.00%).
+2026-11-22 01:56:13.871 INFO   [FD00FD\87B42D] Optimization stage completed: started with score 890.89 (8 unrouted and 8 violations), completed in 2.77 seconds, final score: 890.89 (8 unrouted and 8 violations), using 2.72 total CPU seconds, 32.88 GB total allocated, and 443.2 MB peak heap usage.
+2026-11-22 01:56:13.872 INFO   [FD00FD\87B42D] Job 'FD00FD\87B42D' finished with state: COMPLETED (elapsed: 1 minute 37.12 seconds, finished at UTC: 2026-11-22T01:56:13.871837897Z).
+
+    at freerouteImportedDsn (/data/lw-api-worker-lifecycle-20261122/packages/board-pcb/src/layout/routers/freerouting.node.ts:331:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async <anonymous> (/data/pathfinder-route-stage7/run.mts:11:18)
+
+Node.js v22.23.4

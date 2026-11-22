@@ -1,0 +1,292 @@
+{
+  "resolverCommit": "73c114434",
+  "resolverPath": "packages/board-pcb/src/board/native-assembly.ts",
+  "resolverSourceSha256": "882f6db095af49ff5c63e90ce53e0d1bd990728b9a88a0e0d3643afd22ff0f39",
+  "catalogSourceCommit": "a865a4a6a080cf43192dc91f187e073b4b370cfb",
+  "note": "Only import specifier paths are rewritten for isolated read-only replay; resolver logic is byte-preserved.",
+  "pcbSha256": "0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+  "sourceDiagramSha256": "a6b3cee4fdb83263addc2ce4fc1bb62d93ddecb64ec7dae35e6d9f56268c31fb",
+  "importMapping": [
+    {
+      "ref": "A1",
+      "value": "MiniSTM32F411",
+      "status": "dropped",
+      "reason": "ic — symbol MiniSTM32F411 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "ic"
+    },
+    {
+      "ref": "C1",
+      "value": "470uF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "C2",
+      "value": "22uF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "C3",
+      "value": "10uF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "C4",
+      "value": "100nF",
+      "status": "mapped",
+      "catalog_type": "capacitor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "D1",
+      "value": "SMAJ5.0A",
+      "status": "mapped",
+      "catalog_type": "tvs-diode"
+    },
+    {
+      "ref": "D2",
+      "value": "1N4148",
+      "status": "mapped",
+      "catalog_type": "diode"
+    },
+    {
+      "ref": "D3",
+      "value": "green",
+      "status": "mapped",
+      "catalog_type": "led"
+    },
+    {
+      "ref": "J1",
+      "value": "4682",
+      "status": "ignored",
+      "reason": "connector — KiCad reserves the `J` designator for it; no simulation behaviour",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "J2",
+      "value": "1984617",
+      "status": "ignored",
+      "reason": "connector — the twin wires nets, not mating halves",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "J3",
+      "value": "pin-header",
+      "status": "mapped",
+      "catalog_type": "pin-header"
+    },
+    {
+      "ref": "J4",
+      "value": "pin-header",
+      "status": "mapped",
+      "catalog_type": "pin-header"
+    },
+    {
+      "ref": "J5",
+      "value": "1984633",
+      "status": "ignored",
+      "reason": "connector — the twin wires nets, not mating halves",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "J6",
+      "value": "pin-header",
+      "status": "mapped",
+      "catalog_type": "pin-header"
+    },
+    {
+      "ref": "J7",
+      "value": "1984617",
+      "status": "ignored",
+      "reason": "connector — the twin wires nets, not mating halves",
+      "symbol_class": "connector"
+    },
+    {
+      "ref": "LS1",
+      "value": "1536",
+      "status": "dropped",
+      "reason": "symbol 1536 is not in the catalog — design via labwired_part/datasheet; never invent pins"
+    },
+    {
+      "ref": "Q1",
+      "value": "AO3400A",
+      "status": "dropped",
+      "reason": "mosfet — symbol AO3400A is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "mosfet"
+    },
+    {
+      "ref": "Q2",
+      "value": "AO3400A",
+      "status": "dropped",
+      "reason": "mosfet — symbol AO3400A is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "mosfet"
+    },
+    {
+      "ref": "Q3",
+      "value": "AO3401A",
+      "status": "dropped",
+      "reason": "mosfet — symbol AO3401A is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "mosfet"
+    },
+    {
+      "ref": "Q4",
+      "value": "MMBT3904",
+      "status": "dropped",
+      "reason": "bjt — symbol MMBT3904 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "bjt"
+    },
+    {
+      "ref": "Q5",
+      "value": "MMBT3904",
+      "status": "dropped",
+      "reason": "bjt — symbol MMBT3904 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "bjt"
+    },
+    {
+      "ref": "R1",
+      "value": "100000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R10",
+      "value": "10000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R11",
+      "value": "330",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R12",
+      "value": "10000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R13",
+      "value": "1000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R14",
+      "value": "1000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R2",
+      "value": "100000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R3",
+      "value": "4700",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R4",
+      "value": "4700",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R5",
+      "value": "100",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R6",
+      "value": "10000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R7",
+      "value": "47000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R8",
+      "value": "100000",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "R9",
+      "value": "100",
+      "status": "mapped",
+      "catalog_type": "resistor",
+      "value_source": "value_field"
+    },
+    {
+      "ref": "U1",
+      "value": "2652",
+      "status": "dropped",
+      "reason": "ic — symbol 2652 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "ic"
+    },
+    {
+      "ref": "U2",
+      "value": "3886",
+      "status": "dropped",
+      "reason": "ic — symbol 3886 is not in the catalog; the catalog has no generic part for this class. Design via labwired_part/datasheet; never invent pins",
+      "symbol_class": "ic"
+    }
+  ],
+  "resolution": {
+    "ok": false,
+    "gaps": [
+      "C1: imported model has no evidenced package pad map",
+      "C2: imported model has no evidenced package pad map",
+      "C3: imported model has no evidenced package pad map",
+      "C4: imported model has no evidenced package pad map",
+      "R1: imported model has no evidenced package pad map",
+      "R2: imported model has no evidenced package pad map",
+      "R3: imported model has no evidenced package pad map",
+      "R4: imported model has no evidenced package pad map",
+      "R5: imported model has no evidenced package pad map",
+      "R6: imported model has no evidenced package pad map",
+      "R7: imported model has no evidenced package pad map",
+      "R8: imported model has no evidenced package pad map",
+      "D1: imported model has no evidenced package pad map",
+      "R9: imported model has no evidenced package pad map",
+      "R10: imported model has no evidenced package pad map",
+      "D2: imported model has no evidenced package pad map",
+      "D3: imported model has no evidenced package pad map",
+      "R11: imported model has no evidenced package pad map",
+      "J3: imported model has no evidenced package pad map",
+      "R12: imported model has no evidenced package pad map",
+      "R13: imported model has no evidenced package pad map",
+      "R14: imported model has no evidenced package pad map",
+      "J4: imported model has no evidenced package pad map",
+      "J6: imported model has no evidenced package pad map"
+    ]
+  }
+}

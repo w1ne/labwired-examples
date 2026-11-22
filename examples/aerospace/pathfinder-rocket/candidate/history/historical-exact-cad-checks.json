@@ -1,0 +1,217 @@
+{
+  "exact_build": {
+    "ok": true,
+    "buildOk": true,
+    "viewerMode": "hosted",
+    "viewerHint": "Use open_in_studio to view this model in hosted Studio.",
+    "step": {
+      "validity": {
+        "status": "valid",
+        "checks": [
+          "build",
+          "feature-health",
+          "finite-geometry"
+        ],
+        "volume": 1886437.5807253385
+      },
+      "snapshots": {
+        "status": "unavailable",
+        "frame": {
+          "view": "iso",
+          "width": 512,
+          "height": 512,
+          "bounds": {
+            "min": [
+              -187,
+              -150,
+              -170
+            ],
+            "max": [
+              113,
+              150,
+              1350
+            ]
+          }
+        },
+        "out_dir": "/tmp/kc-sbx/61030-oy0addwgu1/kernelcad-step-t6cz9e",
+        "error": "Step snapshots require an existing browser attachment (PW_CDP_URL)."
+      }
+    },
+    "sceneSummary": {
+      "valid": true,
+      "volume": 1886437.5807253385,
+      "faceCount": 7802,
+      "size": [
+        300,
+        300,
+        1520
+      ]
+    },
+    "featureCount": 387,
+    "diagnostics": [
+      {
+        "target": "export-occt",
+        "code": "authoring.prefer-api.hole-by-cylinder",
+        "severity": "info",
+        "message": "Holes are cut by subtracting cylinders: use holes(face, { positions, diameter, depth }) so export, drawings and DFM see real hole features (cookbook clearance-hole-through-plate).",
+        "hint": "Replace subtracted cylinders with shape.holes(face, { positions, diameter, depth }); hole features reach export, drawings and DFM. Recipe: clearance-hole-through-plate.",
+        "nextAction": {
+          "kind": "call-tool",
+          "tool": "lookup_cookbook",
+          "args": {
+            "query": "clearance hole through plate"
+          }
+        }
+      },
+      {
+        "target": "export-occt",
+        "code": "mechanism.unverified-budget-exceeded",
+        "severity": "warn",
+        "message": "The articulated BREP pose-sweep (collision/dof/tendon criteria) was SKIPPED: estimated work 46285 exceeds the budget 40000 (67 parts in 4 rigid clusters, 7 poses, 292 pair overlap probes; work is the summed face count of the probed pairs). The mechanism is NOT certified collision-free across its travel. Rest-pose joint-mesh continuity still ran — a link that does not meet its body is 'broken', not unverified. Reduce the part/pose count, verify a tractable sub-assembly. Set mechanismSweepBudget in review_cad or design_loop to request a larger sweep allowance. Internal checkMechanismTruth callers use sweepBudget.",
+        "hint": "The articulated collision/pose sweep was skipped because its estimated work exceeded the budget, so the mechanism is 'unverified' (NOT certified collision-free). Verify a tractable subset of the assembly or reduce the part/pose count. Set mechanismSweepBudget in review_cad or design_loop to request a larger sweep allowance. Internal checkMechanismTruth callers use sweepBudget. The cheap criteria (orphan-part, fastened-rigidity) still ran.",
+        "nextAction": {
+          "kind": "inspect-message"
+        }
+      }
+    ],
+    "featureHealth": [],
+    "evaluationEvidence": {
+      "schema": "kernelcad.evaluation-evidence.v1",
+      "mode": "build",
+      "source": {
+        "sha256": "4fb8299305dbbe7c89e54acf9b6bbc3126ef8d58af5f51549b6b0ef2b0b7770a",
+        "byteLength": 15928
+      },
+      "parameters": {
+        "values": {},
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      "engine": {
+        "kernel": "occt",
+        "version": "0.17.4",
+        "revision": null
+      },
+      "dependencies": {
+        "status": "untracked"
+      },
+      "reuse": {
+        "eligible": false,
+        "reason": "dependencies-untracked"
+      },
+      "optionsSha256": "f42cd6277239ae00a502050ef22f6a020b97da37a4690dba293be9c9fd81ec02",
+      "identitySha256": "25cd9fa9af64fd30a9f1ff743d05f9ce8887005f38e3d740c86060143b86b6e8"
+    },
+    "requirements": {
+      "ok": true,
+      "status": "not-declared",
+      "entries": [],
+      "summary": {
+        "pass": 0,
+        "fail": 0,
+        "notEvaluated": 0
+      }
+    },
+    "ports": [],
+    "parts": {
+      "count": 67,
+      "names": [
+        "launch-pad-rail",
+        "lower-body-tube",
+        "avionics-coupler",
+        "switch-band",
+        "upper-body-tube",
+        "bulkhead-aft",
+        "bulkhead-fwd",
+        "avionics-sled",
+        "flight-computer-pcb",
+        "pcb-mcu",
+        "mcu-pin-spacer-0",
+        "mcu-pin-spacer-1",
+        "pcb-bat",
+        "pcb-c_bulk",
+        "pcb-c_5v",
+        "pcb-c_3v3",
+        "pcb-c_dec",
+        "pcb-r_vbat_hi",
+        "pcb-r_vbat_lo",
+        "pcb-baro",
+        "pcb-imu",
+        "pcb-r_scl",
+        "pcb-r_sda",
+        "pcb-sd",
+        "pcb-pyro_term",
+        "pcb-ematch",
+        "pcb-q_pyro",
+        "pcb-r_pyro_g",
+        "pcb-r_pyro_pd",
+        "pcb-r_cont_hi",
+        "pcb-r_cont_lo",
+        "pcb-d_pyro",
+        "pcb-buzzer",
+        "pcb-q_buzz",
+        "pcb-r_buzz_g",
+        "pcb-r_buzz_pd",
+        "pcb-d_buzz",
+        "pcb-led_status",
+        "pcb-r_led",
+        "pcb-cam",
+        "pcb-q_cam",
+        "pcb-r_cam_pu",
+        "pcb-q_cam_drv",
+        "pcb-r_cam_b",
+        "pcb-q_rec",
+        "pcb-r_rec_b",
+        "pcb-uart",
+        "pcb-boost_harness",
+        "pcb-arm_harness",
+        "lipo-1s-400mah",
+        "boost-pololu-u3v70f5",
+        "arm-switch",
+        "shock-cord-bundle",
+        "parachute-450mm",
+        "ogive-nose-cone",
+        "fin-1",
+        "fin-2",
+        "fin-3",
+        "centering-ring-aft",
+        "centering-ring-fwd",
+        "motor-mount-tube",
+        "motor-retainer",
+        "motor-24mm-F-class",
+        "camera-pod-fairing",
+        "action-camera-19mm",
+        "rail-button-aft",
+        "rail-button-fwd"
+      ]
+    },
+    "mechanism": "unverified",
+    "mechanismSummary": {
+      "verdict": "unverified",
+      "maxLevel": "warning",
+      "statement": "Motion not checked: collision sweep across the joint travel skipped: work 46285 is over the budget 40000. Do not call this mechanism working.",
+      "checked": [],
+      "skipped": [
+        "collision sweep across the joint travel skipped: work 46285 is over the budget 40000",
+        "gravity hold and drop-on-release were not checked"
+      ],
+      "failures": []
+    },
+    "reviewHint": "This model has articulated mates, and evaluate_script's mechanism check is shallow: it does not check joint-support intents, pose-envelope overlap at declared mate limits, or gravity drop / static hold. Run review_cad for pose-envelope + gravity checks before calling the mechanism done.",
+    "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+  },
+  "render": {
+    "ok": false,
+    "error_code": "INVALID_ARGUMENT",
+    "message": "Vendor evaluator exceeded the 2048 MB memory limit (2105 MB) during render_preview and was restarted. Simplify the model (fewer parts, patterns or text) or retry on the fresh evaluator.",
+    "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z",
+    "kernelcadError": {
+      "code": "job.memory-limit",
+      "category": "resource_limit",
+      "stage": "evaluation_budget",
+      "message": "Vendor evaluator exceeded the 2048 MB memory limit (2105 MB) during render_preview and was restarted. Simplify the model (fewer parts, patterns or text) or retry on the fresh evaluator.",
+      "recovery": "Use the diagnostic to choose an appropriate tool or simplify the expensive operation.",
+      "correlationId": "44a2ac10-3a5f-4770-b737-458076e6003c",
+      "serverBuild": "0.1.0+a1e4915f2ef6@2026-11-21T21:47:03.723Z"
+    }
+  }
+}

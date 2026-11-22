@@ -1,0 +1,30 @@
+{
+  "schema": "pathfinder.final-native-drc.v1",
+  "scope": "Independent final-file DRC after identity-only correction; retained router log is not a routing acceptance claim.",
+  "sourceSha256": "91d314f4633ecec3c21778d60a5190117bb79cec968ef9011535f6d95b258d45",
+  "unroutedSourceSha256": "b6df9965b5b01d8a642227726080a3632c6a59e8d6115174abeee78a9f2eccaf",
+  "routedSha256": "0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+  "routingRunRoutedSha256": "bd574454389481d3033f58ba33ab8748d8982baea63c6fa7c5982de8557b050e",
+  "identityCorrection": "native-identity-correction.json",
+  "planSha256": "be4257484faece8f9bca322d1d335f3fcbf4c15472f80036cd3d9f9afd260992",
+  "ruleFileSha256": {
+    "pathfinder-routed.kicad_pro": "ab0b9e966b3a824a1ecf7b6f4d3d63f1d2bf0a43f9ab34ecb8ff8c73c611b36b",
+    "pathfinder-routed.kicad_dru": "2970f64666fdaee437f52bcdba235d4667fffa181fa20d73b46002a3abf22039"
+  },
+  "rulesUnchangedByDrc": true,
+  "kicadVersion": "10.0.8",
+  "routerSummary": [
+    "final score: 959.07 (1 unrouted and 13 violations), using 24.14 total CPU seconds, 131.08 GB total allocated, and 1067.1 MB peak heap usage.",
+    "final score: 959.07 (1 unrouted and 13 violations), using 2.65 total CPU seconds, 26.77 GB total allocated, and 1133.2 MB peak heap usage."
+  ],
+  "drcExit": 5,
+  "geometricErrors": [],
+  "unconnected": [],
+  "warnings": {
+    "lib_footprint_issues": 37
+  },
+  "dimensionViolations": [],
+  "trackCount": 580,
+  "viaCount": 65,
+  "schematicParityChecked": false
+}

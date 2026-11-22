@@ -1,0 +1,168 @@
+{
+  "render": {
+    "ok": true,
+    "images": [
+      {
+        "name": "iso",
+        "path": "/tmp/kernelcad-mcp-exports/out/render_preview-hjntlq/iso.png",
+        "url": "https://api.kernelcad.com/api/v1/exports/20261122-wrrah-Ihdct-V3-imlOtaw/render-iso.png",
+        "byte_count": 93427
+      },
+      {
+        "name": "front",
+        "path": "/tmp/kernelcad-mcp-exports/out/render_preview-hjntlq/front.png",
+        "url": "https://api.kernelcad.com/api/v1/exports/20261122-L3RSEgoNt9YQfjIdoC8-2w/render-front.png",
+        "byte_count": 67176
+      }
+    ],
+    "sceneSummary": {
+      "valid": true,
+      "volume": 111862.98696351371,
+      "faceCount": 939,
+      "size": [
+        43.65,
+        41.902088306002646,
+        273
+      ]
+    },
+    "sourceSha256": "cf4f0100c2ff6814f28792613833f98ef487ee842b56cbc393ccc7b536fdcd6f",
+    "recordNote": "Selected fields retained from the final render_preview response; both images were inspected inline."
+  },
+  "designLoop": {
+    "ok": true,
+    "goal": "Verify final235mm routed carrier and65via drills, sourced component bounds, battery supports and wiring access inside250mm hobby-electronics bench bay. Nominal model fit only.",
+    "finalAttemptId": "01",
+    "attempts": [
+      {
+        "id": "01",
+        "title": "Final via-drilled source-bound bay",
+        "ok": true,
+        "functional": true,
+        "qualityOk": true,
+        "featureCount": 743,
+        "diagnosticCount": 94,
+        "reviewFacts": [],
+        "visualReview": {
+          "accepted": true,
+          "findings": [
+            "Reviewed the final isometric and rear elevation with the exact via holes and corrected divider-resistor position.",
+            "Reserved wiring volumes describe available service space; current capacity, actual routing of wires and physical retention remain open."
+          ],
+          "screenshotPath": "/tmp/kernelcad-mcp-exports/out/render_preview-hjntlq/iso.png",
+          "checks": [
+            {
+              "code": "main-object-count",
+              "passed": true,
+              "finding": "One connected carrier assembly stands between two circular bulkheads with distinct battery, converter and service reservations."
+            },
+            {
+              "code": "proportions-match-reference",
+              "passed": true,
+              "finding": "The 235 mm PCB and242 mm carrier occupy the250 mm bay; the68 mm battery reservation fits within the carrier length."
+            },
+            {
+              "code": "required-visible-features",
+              "passed": true,
+              "finding": "The rear views show the battery tray, converter supports, via perforations, eight wire-pass positions and side cable corridors."
+            },
+            {
+              "code": "no-stray-or-floating-geometry",
+              "passed": true,
+              "finding": "The visible body bounds and service reservations remain attached to the carrier and PCB; no detached geometry appears outside the bay."
+            },
+            {
+              "code": "attachment-plausibility",
+              "passed": true,
+              "finding": "Rails guide the PCB, the tray bounds the battery, and support bars meet the converter. Physical retention and tolerances remain open gates."
+            },
+            {
+              "code": "semantic-orientation-alignment",
+              "passed": true,
+              "finding": "The model isZ-up, with the forward eyelet above and the aft bulkhead below; the battery and converter lie behind the carrier PCB."
+            },
+            {
+              "code": "canonical-views-physically-coherent",
+              "passed": true,
+              "finding": "The isometric and-Y rear view show the same arrangement of battery, connector reservation, converter and side channels."
+            }
+          ]
+        },
+        "repairMode": "none",
+        "passedChecks": [
+          "validator-no-errors",
+          "pose-envelope-solved",
+          "pose-envelope-no-interference"
+        ],
+        "blockingReasons": [],
+        "mechanismSummary": {
+          "sampleCount": 1,
+          "interferenceCount": 0,
+          "trackedConnectorCount": 0
+        },
+        "requirements": {
+          "ok": true,
+          "status": "not-declared",
+          "entries": [],
+          "summary": {
+            "pass": 0,
+            "fail": 0,
+            "notEvaluated": 0
+          }
+        },
+        "evaluationEvidence": {
+          "schema": "kernelcad.evaluation-evidence.v1",
+          "mode": "build",
+          "source": {
+            "sha256": "cf4f0100c2ff6814f28792613833f98ef487ee842b56cbc393ccc7b536fdcd6f",
+            "byteLength": 17953
+          },
+          "parameters": {
+            "values": {},
+            "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "engine": {
+            "kernel": "occt",
+            "version": "0.17.4",
+            "revision": null
+          },
+          "dependencies": {
+            "status": "untracked"
+          },
+          "reuse": {
+            "eligible": false,
+            "reason": "dependencies-untracked"
+          },
+          "optionsSha256": "aae0720f23b246e35e584542ad42e2ec191e1aa30262b436b4f1fc6ad4cac776",
+          "identitySha256": "6d8013a2a5a29cd938d24ee75567cbe826419cac638f22d00ab96591a0c4aef0"
+        },
+        "nextActionPrompt": "No repair needed. Preserve the current topology and keep validating with review_cad after changes."
+      }
+    ],
+    "record": {
+      "title": "kernelCAD design loop",
+      "goal": "Verify final235mm routed carrier and65via drills, sourced component bounds, battery supports and wiring access inside250mm hobby-electronics bench bay. Nominal model fit only.",
+      "steps": []
+    },
+    "serverBuild": "0.1.0+9dafce05b924@2026-11-22T00:15:20.098Z"
+  },
+  "scope": "Final nominal bay geometry and source-bound installation envelope; physical current, fabrication tolerance, retention and flight acceptance remain open.",
+  "receipt_redactions": {
+    "reason": "Temporary signed download query parameters omitted from the public receipt. Downloaded artifacts and source identities are retained separately.",
+    "fields": [
+      {
+        "field": "/render/images/0/url",
+        "omitted_query_parameters": [
+          "exp",
+          "sig"
+        ]
+      },
+      {
+        "field": "/render/images/1/url",
+        "omitted_query_parameters": [
+          "exp",
+          "sig"
+        ]
+      }
+    ]
+  }
+}

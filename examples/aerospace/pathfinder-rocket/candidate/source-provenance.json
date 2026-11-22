@@ -1,0 +1,54 @@
+{
+  "schema": "pathfinder.source-provenance.v1",
+  "labwired_source_commit": "a865a4a6a080cf43192dc91f187e073b4b370cfb",
+  "source_completion_commit": "5b5410c54",
+  "placement_fix_pr": 3951,
+  "source_prs": [
+    3955,
+    3958,
+    3964
+  ],
+  "stock_kicad_footprint_tree_commit": "2b941bf1d97862be429793b46fd52a5add09a2fc",
+  "manufacturer_manifest": {
+    "path": "packages/board-pcb/footprints/manufacturer-footprints.json",
+    "sha256": "c0b4526ce6203ee42802cf06d9da23ab662d45e0ed885246f4521b897a122451",
+    "contents": {
+      "schema": "labwired.manufacturer-footprints.v1",
+      "sources": {
+        "manufacturer-sources/weact/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod.source": {
+          "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/master/Hardware/KiCAD/WeAct.pretty/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod",
+          "sha256": "0471e96920efae81ed43f2a1c0a5aa4526ae8c3db9da9c60cd873c9463f2b612"
+        },
+        "manufacturer-sources/weact/README.upstream.md": {
+          "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/master/Hardware/KiCAD/README.md",
+          "sha256": "856fb38bb92af9c8e7a52999bca4bd2cb086a045b03ccdb0cbc2c310e0e9cfc1"
+        }
+      },
+      "footprints": {
+        "WeAct:WeAct-BlackPill-v3-kicad9": {
+          "sha256": "93d6e6577505a931f59ee0036a07021bb4f353431b50b055ad86a46db55a0673",
+          "attribution": "manufacturer-sources/weact/ATTRIBUTION.md"
+        },
+        "WeAct:WeAct-BlackPill_DIP-40_W15.24mm-SWD": {
+          "sha256": "93d6e6577505a931f59ee0036a07021bb4f353431b50b055ad86a46db55a0673",
+          "attribution": "manufacturer-sources/weact/ATTRIBUTION.md"
+        },
+        "WeAct:WeAct-BlackPill-v31-body-envelope": {
+          "sha256": "30815b574421dbde9e6731b964cd53f5cd04328b8b1311ebd4bfb2d28561e3d4",
+          "attribution": "manufacturer-sources/weact/ATTRIBUTION.md"
+        }
+      }
+    }
+  },
+  "original": {
+    "project": "c9ede30a619b12d7c97056a2da040cc1",
+    "pcb": "pcb_e2ec5d2f4ade4aac@1",
+    "cad": "K_DmeiaD@2"
+  },
+  "native_import_note": "The current local implementation resolves37 sourced/native carrier models and validates explicit bindings; see routing/native-circuit-parity-local.json. Hosted runtime after merge/deploy and physical acceptance remain separate gates.",
+  "native_identity_commit": "14aa25315b8d4f3db16b69332b88e32413d1094a",
+  "native_identity_pr": 3975,
+  "source_completion_parent_commit": "66f9fb3a5253afbcd6e02ff2148a01d68300e40f",
+  "source_selection_metadata_correction": "source-selection-correction.json",
+  "native_identity_implementation_reviewed_commit": "e6c73911ef72eb873c4bce193f3cbf38874cd6c4"
+}

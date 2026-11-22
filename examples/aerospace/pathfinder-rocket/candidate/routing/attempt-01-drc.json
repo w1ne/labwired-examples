@@ -1,0 +1,643 @@
+{
+  "error": "DRC_FAILED",
+  "pcb_ref": "sha256:fec74df2a0263604bc400521d8b1b2a300488aa4308c1f96ce498d2142d36255",
+  "kicad_version": "10.0.8",
+  "blocking_count": 13,
+  "findings": [
+    {
+      "list": "violation",
+      "type": "via_diameter",
+      "severity": "error",
+      "description": "Via diameter (rule 'VBAT_AND_RETURN_via_1' min diameter 2.1000 mm; actual 1.0000 mm)",
+      "items": [
+        {
+          "description": "Via [GND] on F.Cu - B.Cu",
+          "at": {
+            "x": 17.7073,
+            "y": 190.6391
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "via_diameter",
+      "severity": "error",
+      "description": "Via diameter (rule 'VBAT_AND_RETURN_via_1' min diameter 2.1000 mm; actual 1.0000 mm)",
+      "items": [
+        {
+          "description": "Via [GND] on F.Cu - B.Cu",
+          "at": {
+            "x": 22.75,
+            "y": 191.0388
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "via_diameter",
+      "severity": "error",
+      "description": "Via diameter (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min diameter 2.1000 mm; actual 1.0000 mm)",
+      "items": [
+        {
+          "description": "Via [N$11] on F.Cu - B.Cu",
+          "at": {
+            "x": 36.1546,
+            "y": 233.2069
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "via_diameter",
+      "severity": "error",
+      "description": "Via diameter (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min diameter 2.1000 mm; actual 1.0000 mm)",
+      "items": [
+        {
+          "description": "Via [N$11] on F.Cu - B.Cu",
+          "at": {
+            "x": 25.9877,
+            "y": 225.6731
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "track_width",
+      "severity": "error",
+      "description": "Track width (rule 'VBAT_AND_RETURN_track_1' min width 1.5000 mm; actual 0.6010 mm)",
+      "items": [
+        {
+          "description": "Track [GND] on F.Cu, length 3.1262 mm",
+          "at": {
+            "x": 25.9155,
+            "y": 243.3389
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "track_width",
+      "severity": "error",
+      "description": "Track width (rule 'VBAT_AND_RETURN_track_1' min width 1.5000 mm; actual 0.6010 mm)",
+      "items": [
+        {
+          "description": "Track [GND] on F.Cu, length 0.3511 mm",
+          "at": {
+            "x": 29.0417,
+            "y": 243.3389
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "track_width",
+      "severity": "error",
+      "description": "Track width (rule 'VBAT_AND_RETURN_track_0' min width 1.5000 mm; actual 0.8014 mm)",
+      "items": [
+        {
+          "description": "Track [+] on F.Cu, length 1.0125 mm",
+          "at": {
+            "x": 15.4385,
+            "y": 189.026
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "track_width",
+      "severity": "error",
+      "description": "Track width (rule 'VBAT_AND_RETURN_track_0' min width 1.5000 mm; actual 0.8014 mm)",
+      "items": [
+        {
+          "description": "Track [+] on F.Cu, length 0.4228 mm",
+          "at": {
+            "x": 16.451,
+            "y": 189.026
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "drill_out_of_range",
+      "severity": "error",
+      "description": "Hole size out of range (rule 'VBAT_AND_RETURN_via_1' min hole 1.5000 mm; actual 0.4000 mm)",
+      "items": [
+        {
+          "description": "Via [GND] on F.Cu - B.Cu",
+          "at": {
+            "x": 17.7073,
+            "y": 190.6391
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "drill_out_of_range",
+      "severity": "error",
+      "description": "Hole size out of range (rule 'VBAT_AND_RETURN_via_1' min hole 1.5000 mm; actual 0.4000 mm)",
+      "items": [
+        {
+          "description": "Via [GND] on F.Cu - B.Cu",
+          "at": {
+            "x": 22.75,
+            "y": 191.0388
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "drill_out_of_range",
+      "severity": "error",
+      "description": "Hole size out of range (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min hole 1.5000 mm; actual 0.4000 mm)",
+      "items": [
+        {
+          "description": "Via [N$11] on F.Cu - B.Cu",
+          "at": {
+            "x": 36.1546,
+            "y": 233.2069
+          }
+        }
+      ]
+    },
+    {
+      "list": "violation",
+      "type": "drill_out_of_range",
+      "severity": "error",
+      "description": "Hole size out of range (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min hole 1.5000 mm; actual 0.4000 mm)",
+      "items": [
+        {
+          "description": "Via [N$11] on F.Cu - B.Cu",
+          "at": {
+            "x": 25.9877,
+            "y": 225.6731
+          }
+        }
+      ]
+    },
+    {
+      "list": "unconnected",
+      "type": "unconnected_items",
+      "severity": "error",
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [+3V3] on B.Cu, length 9.9283 mm",
+          "at": {
+            "x": 14.825,
+            "y": 93.3067
+          }
+        },
+        {
+          "description": "Track [+3V3] on B.Cu, length 1.8587 mm",
+          "at": {
+            "x": 13.6107,
+            "y": 131.0293
+          }
+        }
+      ]
+    }
+  ],
+  "review": {
+    "source": "kicad-cli",
+    "total": 18,
+    "truncated": false,
+    "counts": {
+      "error": 13,
+      "warning": 5,
+      "info": 0,
+      "excluded": 0
+    },
+    "findings": [
+      {
+        "id": "drc:83b596fb3b48fd68",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "via_diameter",
+        "title": "Via diameter (rule 'VBAT_AND_RETURN_via_1' min diameter 2.1000 mm; actual 1.0000 mm)",
+        "detail": "Via [GND] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [GND] on F.Cu - B.Cu",
+            "uuid": "980775b9-d006-4d71-bb13-a818d0364e72",
+            "x": 17.7073,
+            "y": 190.6391,
+            "net": "GND",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:6f0b955820ef9c6f",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "via_diameter",
+        "title": "Via diameter (rule 'VBAT_AND_RETURN_via_1' min diameter 2.1000 mm; actual 1.0000 mm)",
+        "detail": "Via [GND] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [GND] on F.Cu - B.Cu",
+            "uuid": "e1b10a97-97e6-4c3a-a562-b6adffd194a9",
+            "x": 22.75,
+            "y": 191.0388,
+            "net": "GND",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:c4299e7b6d15dd19",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "via_diameter",
+        "title": "Via diameter (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min diameter 2.1000 mm; actual 1.0000 mm)",
+        "detail": "Via [N$11] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [N$11] on F.Cu - B.Cu",
+            "uuid": "4099d9b2-3585-4189-a33f-78282cb5eef3",
+            "x": 36.1546,
+            "y": 233.2069,
+            "net": "N$11",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:ad11e91efffde49e",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "via_diameter",
+        "title": "Via diameter (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min diameter 2.1000 mm; actual 1.0000 mm)",
+        "detail": "Via [N$11] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [N$11] on F.Cu - B.Cu",
+            "uuid": "94a2ad67-25f2-4860-b4c5-74c24493e8e1",
+            "x": 25.9877,
+            "y": 225.6731,
+            "net": "N$11",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:ffe5b019133bf7d7",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "track_width",
+        "title": "Track width (rule 'VBAT_AND_RETURN_track_1' min width 1.5000 mm; actual 0.6010 mm)",
+        "detail": "Track [GND] on F.Cu, length 3.1262 mm",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Track [GND] on F.Cu, length 3.1262 mm",
+            "uuid": "20a982e9-3631-4437-931a-8b45d0070f93",
+            "x": 25.9155,
+            "y": 243.3389,
+            "net": "GND",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:bd4c6d11d74c3de1",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "track_width",
+        "title": "Track width (rule 'VBAT_AND_RETURN_track_1' min width 1.5000 mm; actual 0.6010 mm)",
+        "detail": "Track [GND] on F.Cu, length 0.3511 mm",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Track [GND] on F.Cu, length 0.3511 mm",
+            "uuid": "fd6d1f05-b52e-4668-ac6a-4a86d4a01164",
+            "x": 29.0417,
+            "y": 243.3389,
+            "net": "GND",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:fb6893088e2528fc",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "track_width",
+        "title": "Track width (rule 'VBAT_AND_RETURN_track_0' min width 1.5000 mm; actual 0.8014 mm)",
+        "detail": "Track [+] on F.Cu, length 1.0125 mm",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Track [+] on F.Cu, length 1.0125 mm",
+            "uuid": "3093fe5c-a183-46c5-87e1-b4190997f733",
+            "x": 15.4385,
+            "y": 189.026,
+            "net": "+",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:596d321e01c46f10",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "track_width",
+        "title": "Track width (rule 'VBAT_AND_RETURN_track_0' min width 1.5000 mm; actual 0.8014 mm)",
+        "detail": "Track [+] on F.Cu, length 0.4228 mm",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Track [+] on F.Cu, length 0.4228 mm",
+            "uuid": "bc1a770b-d075-4d42-8fdc-8e66ee6f86bc",
+            "x": 16.451,
+            "y": 189.026,
+            "net": "+",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:c617682a601cd34a",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "drill_out_of_range",
+        "title": "Hole size out of range (rule 'VBAT_AND_RETURN_via_1' min hole 1.5000 mm; actual 0.4000 mm)",
+        "detail": "Via [GND] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [GND] on F.Cu - B.Cu",
+            "uuid": "980775b9-d006-4d71-bb13-a818d0364e72",
+            "x": 17.7073,
+            "y": 190.6391,
+            "net": "GND",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:8e488a7ea969e241",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "drill_out_of_range",
+        "title": "Hole size out of range (rule 'VBAT_AND_RETURN_via_1' min hole 1.5000 mm; actual 0.4000 mm)",
+        "detail": "Via [GND] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [GND] on F.Cu - B.Cu",
+            "uuid": "e1b10a97-97e6-4c3a-a562-b6adffd194a9",
+            "x": 22.75,
+            "y": 191.0388,
+            "net": "GND",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:35bfa452e5ee7647",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "drill_out_of_range",
+        "title": "Hole size out of range (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min hole 1.5000 mm; actual 0.4000 mm)",
+        "detail": "Via [N$11] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [N$11] on F.Cu - B.Cu",
+            "uuid": "4099d9b2-3585-4189-a33f-78282cb5eef3",
+            "x": 36.1546,
+            "y": 233.2069,
+            "net": "N$11",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:1a6cbe14eb571084",
+        "source": "drc",
+        "list": "violation",
+        "severity": "error",
+        "rule": "drill_out_of_range",
+        "title": "Hole size out of range (rule 'BENCH_LOAD_SWITCHED_RETURN_via_0' min hole 1.5000 mm; actual 0.4000 mm)",
+        "detail": "Via [N$11] on F.Cu - B.Cu",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Via [N$11] on F.Cu - B.Cu",
+            "uuid": "94a2ad67-25f2-4860-b4c5-74c24493e8e1",
+            "x": 25.9877,
+            "y": 225.6731,
+            "net": "N$11",
+            "layer": "F.Cu"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:0f73ee8580ce058d",
+        "source": "drc",
+        "list": "violation",
+        "severity": "warning",
+        "rule": "silk_edge_clearance",
+        "title": "Silkscreen clipped by board edge",
+        "detail": "Circle on Edge.Cuts; Reference field of R6",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Circle on Edge.Cuts",
+            "uuid": "e77c6540-36dc-4223-865f-4ddc39753324",
+            "x": 31,
+            "y": 184
+          },
+          {
+            "doc": "pcb",
+            "text": "Reference field of R6",
+            "uuid": "c5f3f9bc-b777-4812-bad0-2ced1950a4ac",
+            "x": 31.75,
+            "y": 184.5,
+            "reference": "R6"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:712eb62e30f35cbe",
+        "source": "drc",
+        "list": "violation",
+        "severity": "warning",
+        "rule": "silk_edge_clearance",
+        "title": "Silkscreen clipped by board edge",
+        "detail": "Circle on Edge.Cuts; Reference field of R3",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Circle on Edge.Cuts",
+            "uuid": "41db81bc-8ef9-49db-a07d-6cc164387e4d",
+            "x": 24,
+            "y": 184
+          },
+          {
+            "doc": "pcb",
+            "text": "Reference field of R3",
+            "uuid": "00de34ff-9550-4d0a-965a-4da31d4d7e98",
+            "x": 22.75,
+            "y": 184.5,
+            "reference": "R3"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:600749d30bf55d96",
+        "source": "drc",
+        "list": "violation",
+        "severity": "warning",
+        "rule": "silk_edge_clearance",
+        "title": "Silkscreen clipped by board edge",
+        "detail": "Circle on Edge.Cuts; Reference field of R2",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Circle on Edge.Cuts",
+            "uuid": "0210bf92-028e-46b8-a87e-f6c758098eea",
+            "x": 20.5,
+            "y": 184
+          },
+          {
+            "doc": "pcb",
+            "text": "Reference field of R2",
+            "uuid": "ea97e226-415e-40e7-ba6f-8946932b3a95",
+            "x": 19.75,
+            "y": 184.5,
+            "reference": "R2"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:6af2da57bc7153c5",
+        "source": "drc",
+        "list": "violation",
+        "severity": "warning",
+        "rule": "silk_edge_clearance",
+        "title": "Silkscreen clipped by board edge",
+        "detail": "Circle on Edge.Cuts; Reference field of R5",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Circle on Edge.Cuts",
+            "uuid": "2fa7b041-db5c-48e8-a60e-da8a26263d7a",
+            "x": 27.5,
+            "y": 184
+          },
+          {
+            "doc": "pcb",
+            "text": "Reference field of R5",
+            "uuid": "6b6366aa-ef5e-45c8-8cad-8ce7b79cca18",
+            "x": 28.75,
+            "y": 184.5,
+            "reference": "R5"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:a536c26f5e92bc36",
+        "source": "drc",
+        "list": "violation",
+        "severity": "warning",
+        "rule": "silk_edge_clearance",
+        "title": "Silkscreen clipped by board edge",
+        "detail": "Circle on Edge.Cuts; Reference field of R4",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Circle on Edge.Cuts",
+            "uuid": "41db81bc-8ef9-49db-a07d-6cc164387e4d",
+            "x": 24,
+            "y": 184
+          },
+          {
+            "doc": "pcb",
+            "text": "Reference field of R4",
+            "uuid": "f3ab264e-26fa-41c2-806b-3abdb24c7115",
+            "x": 25.75,
+            "y": 184.5,
+            "reference": "R4"
+          }
+        ],
+        "fix": ""
+      },
+      {
+        "id": "drc:9f34658a727f0bde",
+        "source": "drc",
+        "list": "unconnected",
+        "severity": "error",
+        "rule": "unconnected_items",
+        "title": "Missing connection between items",
+        "detail": "Track [+3V3] on B.Cu, length 9.9283 mm; Track [+3V3] on B.Cu, length 1.8587 mm",
+        "anchors": [
+          {
+            "doc": "pcb",
+            "text": "Track [+3V3] on B.Cu, length 9.9283 mm",
+            "uuid": "7fdc7358-c061-4b9d-8643-d9b57cdc312e",
+            "x": 14.825,
+            "y": 93.3067,
+            "net": "+3V3",
+            "layer": "B.Cu"
+          },
+          {
+            "doc": "pcb",
+            "text": "Track [+3V3] on B.Cu, length 1.8587 mm",
+            "uuid": "ad683e62-6f50-4c8d-946c-6b06556fa6f8",
+            "x": 13.6107,
+            "y": 131.0293,
+            "net": "+3V3",
+            "layer": "B.Cu"
+          }
+        ],
+        "fix": "Route the missing connection, or refill copper zones"
+      }
+    ],
+    "native_coordinates": "kicad_xy_mm"
+  },
+  "note": "Native PCB failed independent design-rule checks. No fabrication files are released.",
+  "error_code": "INVALID_ARGUMENT"
+}

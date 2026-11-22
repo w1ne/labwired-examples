@@ -1,0 +1,2635 @@
+{
+  "name": "Pathfinder — source-bound extended bench candidate",
+  "board": "stm32f411ceu6-blackpill",
+  "diagram": {
+    "version": 1,
+    "board": "stm32f411ceu6-blackpill",
+    "parts": [
+      {
+        "id": "mcu",
+        "type": "stm32f411ceu6-blackpill",
+        "x": 0,
+        "y": 0,
+        "rotate": 0,
+        "attrs": {
+          "label": "Flight computer STM32F411",
+          "package": "weact-blackpill-v31-body-envelope"
+        },
+        "manufacturerPart": "weact-ministm32f411",
+        "board": "flight-computer"
+      },
+      {
+        "id": "bat",
+        "type": "dc-barrel-jack",
+        "x": -700,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "voltage": "3.8",
+          "label": "Tattu TAA4501S75BT2 1S450mAh LiHV source;3.8Vnominal4.35Vmax; BT2.0 pigtail; source model only",
+          "offboard": "true"
+        },
+        "board": "battery-pack"
+      },
+      {
+        "id": "c_bulk",
+        "type": "capacitor",
+        "x": -430,
+        "y": -380,
+        "rotate": 0,
+        "attrs": {
+          "value": "470uF",
+          "voltage": "10V",
+          "label": "Nichicon UPW1A471MPD 470uF 10V reservoir",
+          "package": "radial-d8-p3.5"
+        },
+        "manufacturerPart": "nichicon-upw1a471mpd",
+        "board": "flight-computer"
+      },
+      {
+        "id": "boost",
+        "type": "pololu-u3v70f5",
+        "x": -430,
+        "y": -250,
+        "rotate": 0,
+        "attrs": {
+          "label": "Pololu U3V70F5: fixed 5V, direct-wire, reverse sled face",
+          "offboard": "true"
+        },
+        "manufacturerPart": "pololu-2891",
+        "board": "boost-module"
+      },
+      {
+        "id": "c_5v",
+        "type": "capacitor",
+        "x": -300,
+        "y": -330,
+        "rotate": 0,
+        "attrs": {
+          "value": "22uF",
+          "voltage": "10V"
+        },
+        "manufacturerPart": "nichicon-uwp1a220mcl1gb",
+        "board": "flight-computer"
+      },
+      {
+        "id": "c_3v3",
+        "type": "capacitor",
+        "x": -180,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "value": "10uF",
+          "voltage": "10V"
+        },
+        "manufacturerPart": "nichicon-uwp1a100mcl1gb",
+        "board": "flight-computer"
+      },
+      {
+        "id": "c_dec",
+        "type": "capacitor",
+        "x": -180,
+        "y": -220,
+        "rotate": 0,
+        "attrs": {
+          "value": "100nF"
+        },
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_vbat_hi",
+        "type": "resistor",
+        "x": -300,
+        "y": -120,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000",
+          "label": "VBAT divider top",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_vbat_lo",
+        "type": "resistor",
+        "x": -300,
+        "y": -60,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000",
+          "label": "VBAT divider bottom",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "baro",
+        "type": "bme280",
+        "x": 300,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "label": "Barometer BME280 0x76"
+        },
+        "manufacturerPart": "adafruit-2652",
+        "board": "flight-computer"
+      },
+      {
+        "id": "imu",
+        "type": "mpu6050",
+        "x": 300,
+        "y": -150,
+        "rotate": 0,
+        "attrs": {
+          "label": "IMU MPU-6050 0x68, +Y to nose"
+        },
+        "manufacturerPart": "adafruit-3886",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_scl",
+        "type": "resistor",
+        "x": 160,
+        "y": -380,
+        "rotate": 0,
+        "attrs": {
+          "value": "4700",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-074k7l",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_sda",
+        "type": "resistor",
+        "x": 160,
+        "y": -330,
+        "rotate": 0,
+        "attrs": {
+          "value": "4700",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-074k7l",
+        "board": "flight-computer"
+      },
+      {
+        "id": "sd",
+        "type": "microsd",
+        "x": 300,
+        "y": 20,
+        "rotate": 0,
+        "attrs": {
+          "label": "Adafruit4682 3.3V SPI microSD; all9pads retained, card-service envelope included"
+        },
+        "manufacturerPart": "adafruit-4682",
+        "board": "flight-computer"
+      },
+      {
+        "id": "arm_switch",
+        "type": "toggle-switch",
+        "x": -330,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "label": "Panel arm switch, existing band port; COM ground, contact1 PB12",
+          "offboard": "true"
+        },
+        "board": "arm-switch"
+      },
+      {
+        "id": "pyro_term",
+        "type": "pin-header",
+        "x": 620,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "label": "Phoenix1984617 external bench-load terminal:1VBAT,2switched return"
+        },
+        "manufacturerPart": "phoenix-1984617",
+        "board": "flight-computer"
+      },
+      {
+        "id": "ematch",
+        "type": "resistor",
+        "x": 760,
+        "y": -300,
+        "rotate": 0,
+        "attrs": {
+          "value": "1.5",
+          "label": "External bench load:1.5ohm;12.62W/12.62J ideal pulse at4.35V; not assembled on carrier",
+          "offboard": "true"
+        },
+        "board": "bench-load"
+      },
+      {
+        "id": "q_pyro",
+        "type": "nmos",
+        "x": 620,
+        "y": -180,
+        "rotate": 0,
+        "attrs": {
+          "label": "External bench-load MOSFET AO3400A",
+          "part": "AO3400A",
+          "package": "sot-23"
+        },
+        "manufacturerPart": "aos-ao3400a",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_pyro_g",
+        "type": "resistor",
+        "x": 500,
+        "y": -180,
+        "rotate": 0,
+        "attrs": {
+          "value": "100",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100rl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_pyro_pd",
+        "type": "resistor",
+        "x": 500,
+        "y": -110,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000",
+          "label": "Gate pulldown: pyro off at reset",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0710kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_cont_hi",
+        "type": "resistor",
+        "x": 760,
+        "y": -150,
+        "rotate": 0,
+        "attrs": {
+          "value": "47000",
+          "label": "Continuity sense top",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0747kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_cont_lo",
+        "type": "resistor",
+        "x": 760,
+        "y": -90,
+        "rotate": 0,
+        "attrs": {
+          "value": "100000",
+          "label": "Continuity sense bottom",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "d_pyro",
+        "type": "tvs-diode",
+        "x": 880,
+        "y": -240,
+        "rotate": 0,
+        "attrs": {
+          "label": "Pyro line TVS"
+        },
+        "board": "flight-computer"
+      },
+      {
+        "id": "buzzer",
+        "type": "buzzer",
+        "x": 620,
+        "y": 40,
+        "rotate": 0,
+        "attrs": {
+          "label": "Adafruit1536 active3-5V DC locator buzzer"
+        },
+        "manufacturerPart": "adafruit-1536",
+        "board": "flight-computer"
+      },
+      {
+        "id": "q_buzz",
+        "type": "nmos",
+        "x": 620,
+        "y": 140,
+        "rotate": 0,
+        "attrs": {
+          "label": "AO3400A buzzer switch",
+          "value": "AO3400A"
+        },
+        "manufacturerPart": "aos-ao3400a",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_buzz_g",
+        "type": "resistor",
+        "x": 500,
+        "y": 140,
+        "rotate": 0,
+        "attrs": {
+          "value": "100",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07100rl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_buzz_pd",
+        "type": "resistor",
+        "x": 500,
+        "y": 210,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0710kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "d_buzz",
+        "type": "diode",
+        "x": 740,
+        "y": 60,
+        "rotate": 0,
+        "attrs": {
+          "type": "diode",
+          "value": "1N4148",
+          "label": "Buzzer flyback"
+        },
+        "board": "flight-computer"
+      },
+      {
+        "id": "led_status",
+        "type": "led",
+        "x": -330,
+        "y": 250,
+        "rotate": 0,
+        "attrs": {
+          "color": "green",
+          "label": "Status LED"
+        },
+        "manufacturerPart": "kingbright-wp7113gd",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_led",
+        "type": "resistor",
+        "x": -200,
+        "y": 250,
+        "rotate": 0,
+        "attrs": {
+          "value": "330",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-07330rl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "cam",
+        "type": "pin-header",
+        "x": 620,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "label": "Camera bench harness: 2.54 mm 1x4 carrier header; 1 5V_SW,2 GND,3 REC,4 NC"
+        },
+        "board": "flight-computer"
+      },
+      {
+        "id": "q_cam",
+        "type": "pmos",
+        "x": 480,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "label": "Camera power P-MOSFET AO3401A",
+          "part": "AO3401A",
+          "package": "sot-23"
+        },
+        "manufacturerPart": "aos-ao3401a",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_cam_pu",
+        "type": "resistor",
+        "x": 480,
+        "y": 420,
+        "rotate": 0,
+        "attrs": {
+          "value": "10000",
+          "label": "P-MOSFET gate pull-up: camera off at reset",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-0710kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "q_cam_drv",
+        "type": "npn",
+        "x": 360,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "label": "Camera power driver",
+          "value": "MMBT3904"
+        },
+        "manufacturerPart": "nexperia-mmbt3904",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_cam_b",
+        "type": "resistor",
+        "x": 240,
+        "y": 330,
+        "rotate": 0,
+        "attrs": {
+          "value": "1000",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-071kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "q_rec",
+        "type": "npn",
+        "x": 360,
+        "y": 460,
+        "rotate": 0,
+        "attrs": {
+          "label": "Record button emulation",
+          "value": "MMBT3904"
+        },
+        "manufacturerPart": "nexperia-mmbt3904",
+        "board": "flight-computer"
+      },
+      {
+        "id": "r_rec_b",
+        "type": "resistor",
+        "x": 240,
+        "y": 460,
+        "rotate": 0,
+        "attrs": {
+          "value": "1000",
+          "package": "0603"
+        },
+        "manufacturerPart": "yageo-rc0603fr-071kl",
+        "board": "flight-computer"
+      },
+      {
+        "id": "uart",
+        "type": "pin-header",
+        "x": -330,
+        "y": 380,
+        "rotate": 0,
+        "attrs": {
+          "label": "UART2 3.3V (1 TX, 2 RX, 3 GND, 4 3V3)"
+        },
+        "board": "flight-computer"
+      },
+      {
+        "id": "boost_harness",
+        "type": "pin-header",
+        "x": -400,
+        "y": -200,
+        "rotate": 0,
+        "attrs": {
+          "label": "Phoenix1984633 converter harness:1VIN,2GND,3regulated5V,4GND"
+        },
+        "manufacturerPart": "phoenix-1984633",
+        "board": "flight-computer"
+      },
+      {
+        "id": "arm_harness",
+        "type": "pin-header",
+        "x": -220,
+        "y": 120,
+        "rotate": 0,
+        "attrs": {
+          "package": "1x02",
+          "label": "Panel arm harness: 1 GND, 2 PB12"
+        },
+        "board": "flight-computer"
+      },
+      {
+        "id": "battery_harness",
+        "type": "pin-header",
+        "manufacturerPart": "phoenix-1984617",
+        "x": -650,
+        "y": -240,
+        "attrs": {
+          "label": "Phoenix1984617 battery input:1VBAT,2GND; matched BT2.0 pigtail"
+        },
+        "board": "flight-computer"
+      }
+    ],
+    "wires": [
+      {
+        "from": {
+          "part": "battery_harness",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "c_bulk",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "c_bulk",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "4"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "c_5v",
+          "pin": "1"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "c_5v",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "c_3v3",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "c_3v3",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "c_dec",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "c_dec",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_vbat_hi",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "r_vbat_hi",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA0"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "r_vbat_lo",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA0"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_vbat_lo",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "SCL"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "SDA"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "SCL"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "SDA"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "SDO"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "baro",
+          "pin": "CSB"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "imu",
+          "pin": "AD0"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_scl",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_scl",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB6"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "r_sda",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_sda",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB7"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "VCC"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "CS"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA4"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "SCK"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA5"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "MISO"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA6"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "sd",
+          "pin": "MOSI"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA7"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "arm_harness",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "arm_harness",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB12"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "pyro_term",
+          "pin": "1"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "ematch",
+          "pin": "1"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "1"
+        },
+        "color": "#ff6633",
+        "cable": "bench-load-harness"
+      },
+      {
+        "from": {
+          "part": "ematch",
+          "pin": "2"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#00cccc",
+        "cable": "bench-load-harness"
+      },
+      {
+        "from": {
+          "part": "q_pyro",
+          "pin": "D"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "q_pyro",
+          "pin": "S"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB0"
+        },
+        "to": {
+          "part": "r_pyro_g",
+          "pin": "1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_pyro_g",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_pyro",
+          "pin": "G"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_pyro_pd",
+          "pin": "1"
+        },
+        "to": {
+          "part": "q_pyro",
+          "pin": "G"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "r_pyro_pd",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_cont_hi",
+          "pin": "1"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "r_cont_hi",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "r_cont_lo",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PB1"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_cont_lo",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "d_pyro",
+          "pin": "K"
+        },
+        "to": {
+          "part": "pyro_term",
+          "pin": "2"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "d_pyro",
+          "pin": "A"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "buzzer",
+          "pin": "+"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "buzzer",
+          "pin": "-"
+        },
+        "to": {
+          "part": "q_buzz",
+          "pin": "D"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "q_buzz",
+          "pin": "S"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB13"
+        },
+        "to": {
+          "part": "r_buzz_g",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_buzz_g",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_buzz",
+          "pin": "G"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "r_buzz_pd",
+          "pin": "1"
+        },
+        "to": {
+          "part": "q_buzz",
+          "pin": "G"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_buzz_pd",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "d_buzz",
+          "pin": "A"
+        },
+        "to": {
+          "part": "buzzer",
+          "pin": "-"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "d_buzz",
+          "pin": "K"
+        },
+        "to": {
+          "part": "buzzer",
+          "pin": "+"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB14"
+        },
+        "to": {
+          "part": "r_led",
+          "pin": "1"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_led",
+          "pin": "2"
+        },
+        "to": {
+          "part": "led_status",
+          "pin": "A"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "led_status",
+          "pin": "K"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "q_cam",
+          "pin": "S"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "q_cam",
+          "pin": "D"
+        },
+        "to": {
+          "part": "cam",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "cam",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "r_cam_pu",
+          "pin": "1"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "r_cam_pu",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_cam",
+          "pin": "G"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "q_cam_drv",
+          "pin": "C"
+        },
+        "to": {
+          "part": "q_cam",
+          "pin": "G"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "q_cam_drv",
+          "pin": "E"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB15"
+        },
+        "to": {
+          "part": "r_cam_b",
+          "pin": "1"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "r_cam_b",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_cam_drv",
+          "pin": "B"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "q_rec",
+          "pin": "C"
+        },
+        "to": {
+          "part": "cam",
+          "pin": "3"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "q_rec",
+          "pin": "E"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "mcu",
+          "pin": "PB8"
+        },
+        "to": {
+          "part": "r_rec_b",
+          "pin": "1"
+        },
+        "color": "#00cccc"
+      },
+      {
+        "from": {
+          "part": "r_rec_b",
+          "pin": "2"
+        },
+        "to": {
+          "part": "q_rec",
+          "pin": "B"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "1"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA2"
+        },
+        "color": "#27c93f"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "2"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "PA3"
+        },
+        "color": "#569cd6"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "GND"
+        },
+        "color": "#ffcc00"
+      },
+      {
+        "from": {
+          "part": "uart",
+          "pin": "4"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "3V3"
+        },
+        "color": "#ff6633"
+      },
+      {
+        "from": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "to": {
+          "part": "mcu",
+          "pin": "5V"
+        },
+        "color": "#e83e8c"
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "VIN"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "1"
+        },
+        "cable": "boost-module-harness"
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "2"
+        },
+        "cable": "boost-module-harness"
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "VOUT"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "3"
+        },
+        "cable": "boost-module-harness"
+      },
+      {
+        "from": {
+          "part": "boost",
+          "pin": "GND"
+        },
+        "to": {
+          "part": "boost_harness",
+          "pin": "4"
+        },
+        "cable": "boost-module-harness"
+      },
+      {
+        "from": {
+          "part": "arm_switch",
+          "pin": "COM"
+        },
+        "to": {
+          "part": "arm_harness",
+          "pin": "1"
+        },
+        "cable": "arm-switch-harness"
+      },
+      {
+        "from": {
+          "part": "arm_switch",
+          "pin": "1"
+        },
+        "to": {
+          "part": "arm_harness",
+          "pin": "2"
+        },
+        "cable": "arm-switch-harness"
+      },
+      {
+        "from": {
+          "part": "bat",
+          "pin": "+"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "1"
+        },
+        "cable": "battery-pack-harness"
+      },
+      {
+        "from": {
+          "part": "bat",
+          "pin": "-"
+        },
+        "to": {
+          "part": "battery_harness",
+          "pin": "2"
+        },
+        "cable": "battery-pack-harness"
+      }
+    ],
+    "mechanical": {
+      "electronics": {
+        "version": 1,
+        "displays": [],
+        "inputs": [
+          {
+            "id": "arm-key",
+            "component": "arm_switch",
+            "part": "arm-switch",
+            "face": "+x",
+            "channel": "pressed",
+            "travelMm": 1.5
+          }
+        ]
+      },
+      "provider": "kernelcad",
+      "slug": "PuRrQzv1",
+      "projectId": "bd1d0404-3f3f-4317-a8f3-450c83f35a4c",
+      "version": 2,
+      "title": "Pathfinder — sourced bench carrier and 250 mm avionics bay",
+      "pcbBindings": [
+        {
+          "id": "flight-computer",
+          "pcbRef": "sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+          "cadPart": "flight-computer-pcb"
+        }
+      ]
+    },
+    "boards": [
+      {
+        "id": "flight-computer",
+        "kind": "native",
+        "ref": "sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+        "label": "37-part source-bound carrier PCB",
+        "pcbBoard": {
+          "id": "pcb_af828a3152e61e08",
+          "rev": 0
+        },
+        "pcbAssembly": {
+          "pcbRef": "sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+          "bindings": [
+            {
+              "partId": "mcu",
+              "ref": "A1",
+              "pinToPad": {
+                "PB12": [
+                  "1"
+                ],
+                "PB13": [
+                  "2"
+                ],
+                "PB14": [
+                  "3"
+                ],
+                "PB15": [
+                  "4"
+                ],
+                "PA8": [
+                  "5"
+                ],
+                "PA9": [
+                  "6"
+                ],
+                "PA10": [
+                  "7"
+                ],
+                "PA11": [
+                  "8"
+                ],
+                "PA12": [
+                  "9"
+                ],
+                "PA15": [
+                  "10"
+                ],
+                "PB3": [
+                  "11"
+                ],
+                "PB4": [
+                  "12"
+                ],
+                "PB5": [
+                  "13"
+                ],
+                "PB6": [
+                  "14"
+                ],
+                "PB7": [
+                  "15"
+                ],
+                "PB8": [
+                  "16"
+                ],
+                "PB9": [
+                  "17"
+                ],
+                "5V": [
+                  "18",
+                  "40"
+                ],
+                "GND": [
+                  "19",
+                  "39",
+                  "44"
+                ],
+                "3V3": [
+                  "20",
+                  "38",
+                  "41"
+                ],
+                "VBAT": [
+                  "21"
+                ],
+                "PC13": [
+                  "22"
+                ],
+                "PC14": [
+                  "23"
+                ],
+                "PC15": [
+                  "24"
+                ],
+                "NRST": [
+                  "25"
+                ],
+                "PA0": [
+                  "26"
+                ],
+                "PA1": [
+                  "27"
+                ],
+                "PA2": [
+                  "28"
+                ],
+                "PA3": [
+                  "29"
+                ],
+                "PA4": [
+                  "30"
+                ],
+                "PA5": [
+                  "31"
+                ],
+                "PA6": [
+                  "32"
+                ],
+                "PA7": [
+                  "33"
+                ],
+                "PB0": [
+                  "34"
+                ],
+                "PB1": [
+                  "35"
+                ],
+                "PB2": [
+                  "36"
+                ],
+                "PB10": [
+                  "37"
+                ],
+                "PA13": [
+                  "42"
+                ],
+                "PA14": [
+                  "43"
+                ]
+              }
+            },
+            {
+              "partId": "c_bulk",
+              "ref": "C1",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "c_5v",
+              "ref": "C2",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "c_3v3",
+              "ref": "C3",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "c_dec",
+              "ref": "C4",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_vbat_hi",
+              "ref": "R1",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_vbat_lo",
+              "ref": "R2",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "baro",
+              "ref": "U1",
+              "pinToPad": {
+                "VCC": [
+                  "1"
+                ],
+                "GND": [
+                  "3"
+                ],
+                "SCL": [
+                  "4"
+                ],
+                "SDO": [
+                  "5"
+                ],
+                "SDA": [
+                  "6"
+                ],
+                "CSB": [
+                  "7"
+                ]
+              }
+            },
+            {
+              "partId": "imu",
+              "ref": "U2",
+              "pinToPad": {
+                "VCC": [
+                  "1"
+                ],
+                "GND": [
+                  "3",
+                  "7"
+                ],
+                "SCL": [
+                  "4"
+                ],
+                "SDA": [
+                  "5"
+                ],
+                "INT": [
+                  "6"
+                ],
+                "XDA": [
+                  "9"
+                ],
+                "XCL": [
+                  "10"
+                ],
+                "AD0": [
+                  "12"
+                ]
+              }
+            },
+            {
+              "partId": "r_scl",
+              "ref": "R3",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_sda",
+              "ref": "R4",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "sd",
+              "ref": "J1",
+              "pinToPad": {
+                "VCC": [
+                  "1"
+                ],
+                "GND": [
+                  "2"
+                ],
+                "SCK": [
+                  "3"
+                ],
+                "MISO": [
+                  "4"
+                ],
+                "MOSI": [
+                  "5"
+                ],
+                "CS": [
+                  "6"
+                ]
+              }
+            },
+            {
+              "partId": "pyro_term",
+              "ref": "J2",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "q_pyro",
+              "ref": "Q1",
+              "pinToPad": {
+                "G": [
+                  "1"
+                ],
+                "S": [
+                  "2"
+                ],
+                "D": [
+                  "3"
+                ]
+              }
+            },
+            {
+              "partId": "r_pyro_g",
+              "ref": "R5",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_pyro_pd",
+              "ref": "R6",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_cont_hi",
+              "ref": "R7",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_cont_lo",
+              "ref": "R8",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "d_pyro",
+              "ref": "D1",
+              "pinToPad": {
+                "K": [
+                  "1"
+                ],
+                "A": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "buzzer",
+              "ref": "LS1",
+              "pinToPad": {
+                "+": [
+                  "1"
+                ],
+                "-": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "q_buzz",
+              "ref": "Q2",
+              "pinToPad": {
+                "G": [
+                  "1"
+                ],
+                "S": [
+                  "2"
+                ],
+                "D": [
+                  "3"
+                ]
+              }
+            },
+            {
+              "partId": "r_buzz_g",
+              "ref": "R9",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_buzz_pd",
+              "ref": "R10",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "d_buzz",
+              "ref": "D2",
+              "pinToPad": {
+                "K": [
+                  "1"
+                ],
+                "A": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "led_status",
+              "ref": "D3",
+              "pinToPad": {
+                "K": [
+                  "1"
+                ],
+                "A": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "r_led",
+              "ref": "R11",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "cam",
+              "ref": "J3",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ],
+                "3": [
+                  "3"
+                ],
+                "4": [
+                  "4"
+                ]
+              }
+            },
+            {
+              "partId": "q_cam",
+              "ref": "Q3",
+              "pinToPad": {
+                "G": [
+                  "1"
+                ],
+                "S": [
+                  "2"
+                ],
+                "D": [
+                  "3"
+                ]
+              }
+            },
+            {
+              "partId": "r_cam_pu",
+              "ref": "R12",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "q_cam_drv",
+              "ref": "Q4",
+              "pinToPad": {
+                "B": [
+                  "1"
+                ],
+                "E": [
+                  "2"
+                ],
+                "C": [
+                  "3"
+                ]
+              }
+            },
+            {
+              "partId": "r_cam_b",
+              "ref": "R13",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "q_rec",
+              "ref": "Q5",
+              "pinToPad": {
+                "B": [
+                  "1"
+                ],
+                "E": [
+                  "2"
+                ],
+                "C": [
+                  "3"
+                ]
+              }
+            },
+            {
+              "partId": "r_rec_b",
+              "ref": "R14",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "uart",
+              "ref": "J4",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ],
+                "3": [
+                  "3"
+                ],
+                "4": [
+                  "4"
+                ]
+              }
+            },
+            {
+              "partId": "boost_harness",
+              "ref": "J5",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ],
+                "3": [
+                  "3"
+                ],
+                "4": [
+                  "4"
+                ]
+              }
+            },
+            {
+              "partId": "arm_harness",
+              "ref": "J6",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "partId": "battery_harness",
+              "ref": "J7",
+              "pinToPad": {
+                "1": [
+                  "1"
+                ],
+                "2": [
+                  "2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "battery-pack",
+        "kind": "catalog",
+        "ref": "dc-barrel-jack",
+        "label": "Tattu battery source model; external BT2.0 pigtail"
+      },
+      {
+        "id": "boost-module",
+        "kind": "catalog",
+        "ref": "pololu-u3v70f5",
+        "label": "Pololu U3V70F5; separate sourced module on carrier rear"
+      },
+      {
+        "id": "arm-switch",
+        "kind": "catalog",
+        "ref": "toggle-switch",
+        "label": "Panel arm switch; two-wire harness"
+      },
+      {
+        "id": "bench-load",
+        "kind": "catalog",
+        "ref": "resistor",
+        "label": "External 1.5 ohm bench load model; no carrier fabrication part"
+      }
+    ],
+    "hardwareBlocks": [
+      {
+        "id": "flight-computer",
+        "label": "Source-bound bench carrier",
+        "boardId": "flight-computer",
+        "cadPart": "flight-computer-pcb"
+      }
+    ]
+  },
+  "source": "// LabWired Pathfinder — hobby rocket flight computer (STM32F411 BlackPill)\n// Barometric apogee deployment, launch/burnout detection, camera control,\n// arm-switch interlock, single pyro channel with continuity sense.\n// The loop sleeps with WFI between samples, as a battery-powered altimeter should.\n#include <Arduino.h>\n#include <Wire.h>\n#include <SPI.h>\n#include <math.h>\n\n// ---- Pins ----\nstatic const uint32_t PIN_PYRO     = PB0;   // N-MOSFET gate: e-match low side\nstatic const uint32_t PIN_CONT     = PB1;   // continuity sense, HIGH = e-match present\nstatic const uint32_t PIN_ARM      = PB12;  // arm switch to GND, LOW = armed\nstatic const uint32_t PIN_BUZZ     = PB13;  // buzzer low-side MOSFET gate\nstatic const uint32_t PIN_LED      = PB14;  // external status LED\nstatic const uint32_t PIN_CAM_PWR  = PB15;  // camera 5 V high-side switch (via NPN)\nstatic const uint32_t PIN_CAM_REC  = PB8;   // camera record button (open collector)\nstatic const uint32_t PIN_SD_CS    = PA4;\nstatic const uint32_t PIN_VBAT     = PA0;   // VBAT / 2\nstatic const uint32_t PIN_BOARD_LED = PC13; // active low\n\nstatic const uint8_t BARO = 0x76, IMU = 0x68;\n\n// ---- Flight clock ----\n// The LabWired twin runs ~2 s of MCU time per verify call (115 s wall); a full flight is ~92 s.\n// TWIN_TIME_SCALE runs the flight clock (sampling, lockouts, timers) 60x faster in the\n// twin. I2C/SPI transactions stay real-time. SET TO 1 BEFORE FLASHING REAL HARDWARE.\n#define TWIN_TIME_SCALE 60\nstatic uint32_t flightMs() { return (uint32_t)(((uint64_t)micros() * TWIN_TIME_SCALE) / 1000ULL); }\nstatic void flightDelay(uint32_t ms) { delayMicroseconds((ms * 1000UL) / TWIN_TIME_SCALE); }\n\n// ---- Flight constants ----\nstatic const float LAUNCH_G          = 2.5f;   // sensed axial g for launch\nstatic const uint32_t LAUNCH_HOLD_MS = 60;\nstatic const float LAUNCH_ALT_M      = 15.0f;  // baro backup launch detect\nstatic const uint32_t APOGEE_LOCKOUT_MS = 3000; // no deploy before T+3 s\nstatic const float APOGEE_DROP_M     = 1.5f;   // below max altitude\nstatic const uint8_t APOGEE_CONFIRM  = 2;      // consecutive samples\nstatic const uint32_t PYRO_ON_MS     = 1000;\nstatic const float LAND_BAND_M       = 1.0f;\nstatic const uint32_t LAND_STILL_MS  = 5000;\n\nenum Phase : uint8_t { BOOT, PAD_SAFE, PAD_ARMED, BOOST, COAST, DESCENT, LANDED, FAULT };\nstatic const char *PHASE_NAME[] = {\"BOOT\",\"PAD_SAFE\",\"PAD_ARMED\",\"BOOST\",\"COAST\",\"DESCENT\",\"LANDED\",\"FAULT\"};\nstatic Phase phase = BOOT;\n\n// ---- BME280 calibration ----\nstatic uint16_t T1; static int16_t T2, T3;\nstatic uint16_t P1; static int16_t P2, P3, P4, P5, P6, P7, P8, P9;\nstatic int32_t tFine;\n\nstatic float groundPa = 0, altM = 0, maxAltM = 0, axialG = 1.0f, maxG = 0;\nstatic uint32_t launchMs = 0, burnoutMs = 0, apogeeMs = 0, deployMs = 0, landMs = 0;\nstatic uint32_t phaseMs = 0, highGSince = 0, stillSince = 0, pyroOffAt = 0, camRecReleaseAt = 0;\nstatic float stillRef = 0;\nstatic uint8_t dropCount = 0;\nstatic bool pyroFired = false, sdOk = false, camOn = false, camRecStarted = false;\nstatic uint32_t samples = 0;\n\n// ---------------------------------------------------------------- I2C\nstatic bool rd(uint8_t a, uint8_t r, uint8_t *b, uint8_t n) {\n  Wire.beginTransmission(a); Wire.write(r);\n  if (Wire.endTransmission(false) != 0) return false;\n  if (Wire.requestFrom(a, n) != n) return false;\n  for (uint8_t i = 0; i < n; ++i) b[i] = Wire.read();\n  return true;\n}\nstatic void wr(uint8_t a, uint8_t r, uint8_t v) {\n  Wire.beginTransmission(a); Wire.write(r); Wire.write(v); Wire.endTransmission();\n}\nstatic void compT(int32_t adc) {\n  int32_t v1 = ((((adc >> 3) - ((int32_t)T1 << 1))) * ((int32_t)T2)) >> 11;\n  int32_t v2 = (((((adc >> 4) - ((int32_t)T1)) * ((adc >> 4) - ((int32_t)T1))) >> 12) * ((int32_t)T3)) >> 14;\n  tFine = v1 + v2;\n}\nstatic float compP(int32_t adc) {\n  int64_t v1 = ((int64_t)tFine) - 128000, v2 = v1 * v1 * (int64_t)P6;\n  v2 += (v1 * (int64_t)P5) << 17; v2 += ((int64_t)P4) << 35;\n  v1 = ((v1 * v1 * (int64_t)P3) >> 8) + ((v1 * (int64_t)P2) << 12);\n  v1 = (((((int64_t)1) << 47) + v1)) * ((int64_t)P1) >> 33;\n  if (v1 == 0) return 0;\n  int64_t p = 1048576 - adc; p = (((p << 31) - v2) * 3125) / v1;\n  v1 = (((int64_t)P9) * (p >> 13) * (p >> 13)) >> 25; v2 = (((int64_t)P8) * p) >> 19;\n  p = ((p + v1 + v2) >> 8) + (((int64_t)P7) << 4);\n  return (float)p / 256.0f;\n}\nstatic bool initBaro() {\n  uint8_t id = 0;\n  if (!rd(BARO, 0xD0, &id, 1) || id != 0x60) return false;\n  uint8_t c[24];\n  if (!rd(BARO, 0x88, c, 24)) return false;\n  T1 = c[0] | c[1] << 8; T2 = c[2] | c[3] << 8; T3 = c[4] | c[5] << 8;\n  P1 = c[6] | c[7] << 8; P2 = c[8] | c[9] << 8; P3 = c[10] | c[11] << 8; P4 = c[12] | c[13] << 8;\n  P5 = c[14] | c[15] << 8; P6 = c[16] | c[17] << 8; P7 = c[18] | c[19] << 8; P8 = c[20] | c[21] << 8; P9 = c[22] | c[23] << 8;\n  wr(BARO, 0xF2, 0x01); wr(BARO, 0xF5, 0x00); wr(BARO, 0xF4, 0x27);\n  return true;\n}\nstatic bool initImu() {\n  uint8_t who = 0;\n  if (!rd(IMU, 0x75, &who, 1) || who != 0x68) return false;\n  wr(IMU, 0x6B, 0x00);       // wake\n  wr(IMU, 0x1C, 0x18);       // +-16 g\n  wr(IMU, 0x1A, 0x03);       // DLPF 44 Hz\n  return true;\n}\nstatic bool readBaro(float &pa) {\n  uint8_t b[6];\n  if (!rd(BARO, 0xF7, b, 6)) return false;\n  int32_t ap = (int32_t)b[0] << 12 | b[1] << 4 | b[2] >> 4, at = (int32_t)b[3] << 12 | b[4] << 4 | b[5] >> 4;\n  compT(at); pa = compP(ap);\n  return pa > 30000.0f && pa < 110000.0f;\n}\n// Rocket axis = IMU +Y (PCB long axis points to the nose).\nstatic bool readAxialG(float &g) {\n  uint8_t b[2];\n  if (!rd(IMU, 0x3D, b, 2)) return false;\n  g = (int16_t)(b[0] << 8 | b[1]) / 2048.0f;\n  return true;\n}\nstatic float altitude(float pa) { return 44330.0f * (1.0f - powf(pa / groundPa, 0.190295f)); }\n\n// ---------------------------------------------------------------- SD (raw sector log)\nstatic uint8_t sdCmd(uint8_t cmd, uint32_t arg, uint8_t crc) {\n  SPI.transfer(0xFF);\n  SPI.transfer(0x40 | cmd);\n  SPI.transfer(arg >> 24); SPI.transfer(arg >> 16); SPI.transfer(arg >> 8); SPI.transfer(arg);\n  SPI.transfer(crc);\n  for (uint8_t i = 0; i < 10; ++i) { uint8_t r = SPI.transfer(0xFF); if (!(r & 0x80)) return r; }\n  return 0xFF;\n}\nstatic bool initSd() {\n  SPI.beginTransaction(SPISettings(400000, MSBFIRST, SPI_MODE0));\n  digitalWrite(PIN_SD_CS, HIGH);\n  for (uint8_t i = 0; i < 10; ++i) SPI.transfer(0xFF);\n  digitalWrite(PIN_SD_CS, LOW);\n  bool ok = sdCmd(0, 0, 0x95) == 0x01;\n  if (ok) { sdCmd(8, 0x1AA, 0x87); for (uint8_t i = 0; i < 4; ++i) SPI.transfer(0xFF); }\n  uint8_t r = 0xFF;\n  for (uint16_t i = 0; ok && i < 100; ++i) { sdCmd(55, 0, 0x65); r = sdCmd(41, 0x40000000, 0x77); if (r == 0) break; }\n  digitalWrite(PIN_SD_CS, HIGH); SPI.transfer(0xFF);\n  SPI.endTransaction();\n  return ok && r == 0;\n}\nstatic bool sdWriteSector(uint32_t lba, const char *text) {\n  SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));\n  digitalWrite(PIN_SD_CS, LOW);\n  bool ok = sdCmd(24, lba, 0xFF) == 0;\n  if (ok) {\n    SPI.transfer(0xFE);\n    size_t n = strlen(text);\n    for (uint16_t i = 0; i < 512; ++i) SPI.transfer(i < n ? (uint8_t)text[i] : 0);\n    SPI.transfer(0xFF); SPI.transfer(0xFF);\n    uint8_t resp = SPI.transfer(0xFF);\n    ok = (resp & 0x1F) == 0x05;\n    for (uint16_t i = 0; i < 2000 && SPI.transfer(0xFF) == 0; ++i) {}\n  }\n  digitalWrite(PIN_SD_CS, HIGH); SPI.transfer(0xFF);\n  SPI.endTransaction();\n  return ok;\n}\n\n// ---------------------------------------------------------------- outputs\nstatic void event(const char *name) {\n  Serial.print(name); Serial.print(\" t_ms=\"); Serial.print(launchMs ? flightMs() - launchMs : 0);\n  Serial.print(\" alt_m=\"); Serial.print(altM, 1); Serial.print(\" g=\"); Serial.println(axialG, 2);\n}\nstatic void setPhase(uint8_t p) {   // uint8_t: the .ino prototype pass runs before the enum\n  phase = (Phase)p; phaseMs = flightMs();\n  Serial.print(\"PHASE \"); Serial.println(PHASE_NAME[p]);\n}\nstatic void beep(uint32_t ms) { digitalWrite(PIN_BUZZ, HIGH); flightDelay(ms); digitalWrite(PIN_BUZZ, LOW); }\nstatic void cameraPower(bool on) {\n  digitalWrite(PIN_CAM_PWR, on ? HIGH : LOW); camOn = on;\n  Serial.println(on ? \"CAMERA_POWER_ON\" : \"CAMERA_POWER_OFF\");\n}\nstatic void cameraRecPulse(const char *label) {\n  digitalWrite(PIN_CAM_REC, HIGH); camRecReleaseAt = flightMs() + 600;  // hold \"button\" 600 ms\n  Serial.println(label);\n}\nstatic void pyroSafe() { digitalWrite(PIN_PYRO, LOW); pyroOffAt = 0; }\nstatic void fault(const char *why) {\n  pyroSafe(); setPhase(FAULT); Serial.print(\"FAULT \"); Serial.println(why);\n}\n\n// ---------------------------------------------------------------- flight logic\nstatic uint32_t samplePeriod() {\n  switch (phase) {\n    case BOOST: case COAST: return 20;     // 50 Hz\n    case PAD_ARMED: case PAD_SAFE: return 100;   // 10 Hz\n    case DESCENT: return 500;              // 2 Hz: enough for landing detection\n    default: return 500;\n  }\n}\n\nstatic void calibrateGround() {\n  float sum = 0; uint8_t n = 0;\n  for (uint8_t i = 0; i < 16; ++i) { float pa; if (readBaro(pa)) { sum += pa; ++n; } flightDelay(5); }\n  groundPa = n ? sum / n : 101325.0f;\n  Serial.print(\"GROUND_PA=\"); Serial.println(groundPa, 0);\n}\n\nstatic void flightStep(uint32_t now) {\n  float pa;\n  if (!readBaro(pa)) { if (phase >= BOOST && phase <= DESCENT) { Serial.println(\"BARO_READ_FAIL\"); return; } fault(\"BARO\"); return; }\n  bool needImu = phase <= COAST;\n  if (needImu && !readAxialG(axialG)) { fault(\"IMU\"); return; }\n  ++samples;\n  altM = altitude(pa);\n  if (axialG > maxG) maxG = axialG;\n\n  switch (phase) {\n    case PAD_SAFE:\n      if (digitalRead(PIN_ARM) == LOW) {\n        calibrateGround(); altM = 0;\n        Serial.print(\"PYRO_CONTINUITY=\"); Serial.println(digitalRead(PIN_CONT) == HIGH ? 1 : 0);\n        cameraPower(true);\n        setPhase(PAD_ARMED);\n        beep(150);\n      }\n      break;\n    case PAD_ARMED:\n      if (digitalRead(PIN_ARM) == HIGH) { cameraPower(false); setPhase(PAD_SAFE); break; }\n      if (camOn && !camRecStarted && now - phaseMs > 1000) { camRecStarted = true; cameraRecPulse(\"CAMERA_REC_START\"); }\n      if (axialG > LAUNCH_G) { if (!highGSince) highGSince = now; } else highGSince = 0;\n      if ((highGSince && now - highGSince >= LAUNCH_HOLD_MS) || altM > LAUNCH_ALT_M) {\n        launchMs = highGSince ? highGSince : now; maxAltM = altM;\n        event(\"LAUNCH\"); setPhase(BOOST);\n      }\n      break;\n    case BOOST:\n      if (axialG < 0.0f && now - launchMs > 300) { burnoutMs = now; event(\"BURNOUT\"); setPhase(COAST); }\n      // fall through to apogee tracking\n    case COAST:\n      if (altM > maxAltM) { maxAltM = altM; apogeeMs = now; dropCount = 0; }\n      else if (maxAltM - altM >= APOGEE_DROP_M) ++dropCount;\n      if (now - launchMs >= APOGEE_LOCKOUT_MS && dropCount >= APOGEE_CONFIRM && !pyroFired) {\n        event(\"APOGEE_DETECTED\");\n        if (digitalRead(PIN_ARM) == LOW) {\n          digitalWrite(PIN_PYRO, HIGH); pyroFired = true; deployMs = now; pyroOffAt = now + PYRO_ON_MS;\n          event(\"DEPLOY\");\n        } else {\n          Serial.println(\"DEPLOY_INHIBITED_DISARMED\");\n        }\n        setPhase(DESCENT); stillRef = altM; stillSince = now;\n      }\n      break;\n    case DESCENT:\n      if (fabsf(altM - stillRef) > LAND_BAND_M) { stillRef = altM; stillSince = now; }\n      else if (now - stillSince >= LAND_STILL_MS && altM < 10.0f) {\n        landMs = stillSince; event(\"LANDED\"); setPhase(LANDED);\n        cameraRecPulse(\"CAMERA_REC_STOP\");\n      }\n      break;\n    default: break;\n  }\n}\n\nstatic void report() {\n  char line[200];\n  snprintf(line, sizeof(line),\n    \"FLIGHT apogee_m=%d apogee_t_ms=%lu burnout_t_ms=%lu deploy_t_ms=%lu land_t_ms=%lu max_g=%d.%d samples=%lu\",\n    (int)lroundf(maxAltM), (unsigned long)(apogeeMs - launchMs), (unsigned long)(burnoutMs - launchMs),\n    (unsigned long)(deployMs - launchMs), (unsigned long)(landMs - launchMs),\n    (int)maxG, (int)(fabsf(maxG - (int)maxG) * 10), (unsigned long)samples);\n  Serial.println(line);\n  if (sdOk) Serial.println(sdWriteSector(2048, line) ? \"SD_LOG_WRITTEN lba=2048\" : \"SD_LOG_WRITE_FAIL\");\n}\n\nvoid setup() {\n  Serial.begin(115200);\n  pinMode(PIN_PYRO, OUTPUT); digitalWrite(PIN_PYRO, LOW);   // pyro safe first\n  pinMode(PIN_BUZZ, OUTPUT); pinMode(PIN_LED, OUTPUT); pinMode(PIN_BOARD_LED, OUTPUT);\n  pinMode(PIN_CAM_PWR, OUTPUT); pinMode(PIN_CAM_REC, OUTPUT); pinMode(PIN_SD_CS, OUTPUT);\n  digitalWrite(PIN_CAM_PWR, LOW); digitalWrite(PIN_CAM_REC, LOW); digitalWrite(PIN_SD_CS, HIGH);\n  pinMode(PIN_ARM, INPUT_PULLUP); pinMode(PIN_CONT, INPUT); pinMode(PIN_VBAT, INPUT_ANALOG);\n  analogReadResolution(12);\n  Wire.setSCL(PB6); Wire.setSDA(PB7); Wire.begin(); Wire.setClock(400000);\n  SPI.setSCLK(PA5); SPI.setMISO(PA6); SPI.setMOSI(PA7); SPI.begin();\n  Serial.println(\"PATHFINDER_FC_BOOT\");\n  Serial.print(\"FLIGHT_CLOCK_SCALE=\"); Serial.println(TWIN_TIME_SCALE);\n  if (TWIN_TIME_SCALE != 1) Serial.println(\"WARNING TWIN BUILD - SET TWIN_TIME_SCALE 1 BEFORE FLIGHT\");\n  bool b = initBaro(), i = initImu();\n  Serial.print(\"SELFTEST baro=\"); Serial.print(b); Serial.print(\" imu=\"); Serial.println(i);\n  sdOk = initSd();\n  Serial.println(sdOk ? \"SD_OK\" : \"SD_FAIL\");\n  if (!b || !i) { fault(\"SELFTEST\"); return; }\n  groundPa = 101325.0f;\n  setPhase(PAD_SAFE);\n}\n\nvoid loop() {\n  static uint32_t nextSample = 0, ledAt = 0;\n  static bool reported = false;\n  uint32_t now = flightMs();\n  if (pyroOffAt && (int32_t)(now - pyroOffAt) >= 0) { pyroSafe(); event(\"PYRO_OFF\"); }\n  if (camRecReleaseAt && (int32_t)(now - camRecReleaseAt) >= 0) {\n    digitalWrite(PIN_CAM_REC, LOW); camRecReleaseAt = 0;\n    if (phase == LANDED && camOn) cameraPower(false);\n  }\n  if (phase != FAULT && (int32_t)(now - nextSample) >= 0) {\n    nextSample = now + samplePeriod();\n    flightStep(now);\n  }\n  if (phase == LANDED && !reported && !camRecReleaseAt) {\n    reported = true; report();\n    Serial.println(\"OUTPUTS_SAFE PYRO=0 CAM=0\");\n  }\n  if ((int32_t)(now - ledAt) >= 0) {   // status LED: slow on pad, fast in flight\n    ledAt = now + (phase >= BOOST && phase <= DESCENT ? 100 : 500);\n    digitalWrite(PIN_LED, !digitalRead(PIN_LED));\n  }\n  __WFI();\n}\n",
+  "language": "arduino",
+  "entry_path": "src/main.ino",
+  "stimuli": [
+    {
+      "channel": "pressure",
+      "value": 998.92,
+      "component": "baro"
+    },
+    {
+      "channel": "temperature",
+      "value": 14.2,
+      "component": "baro"
+    },
+    {
+      "channel": "ay",
+      "value": 1,
+      "component": "imu"
+    },
+    {
+      "channel": "pressed",
+      "value": 0,
+      "component": "arm_switch"
+    },
+    {
+      "channel": "pressed",
+      "value": 1,
+      "component": "arm_switch",
+      "after_cycles": 800000
+    },
+    {
+      "channel": "ay",
+      "value": 5.14,
+      "component": "imu",
+      "after_cycles": 6480000
+    },
+    {
+      "channel": "ay",
+      "value": 9.11,
+      "component": "imu",
+      "after_cycles": 6800000
+    },
+    {
+      "channel": "ay",
+      "value": 6.46,
+      "component": "imu",
+      "after_cycles": 7200000
+    },
+    {
+      "channel": "pressure",
+      "value": 998.06,
+      "component": "baro",
+      "after_cycles": 7200000
+    },
+    {
+      "channel": "ay",
+      "value": 5.26,
+      "component": "imu",
+      "after_cycles": 8000000
+    },
+    {
+      "channel": "pressure",
+      "value": 995.55,
+      "component": "baro",
+      "after_cycles": 8000000
+    },
+    {
+      "channel": "ay",
+      "value": 4.75,
+      "component": "imu",
+      "after_cycles": 8800000
+    },
+    {
+      "channel": "pressure",
+      "value": 991.79,
+      "component": "baro",
+      "after_cycles": 8800000
+    },
+    {
+      "channel": "ay",
+      "value": 2.76,
+      "component": "imu",
+      "after_cycles": 9440000
+    },
+    {
+      "channel": "pressure",
+      "value": 987.01,
+      "component": "baro",
+      "after_cycles": 9600000
+    },
+    {
+      "channel": "ay",
+      "value": -1.04,
+      "component": "imu",
+      "after_cycles": 9840000
+    },
+    {
+      "channel": "pressure",
+      "value": 982.17,
+      "component": "baro",
+      "after_cycles": 10400000
+    },
+    {
+      "channel": "pressure",
+      "value": 977.88,
+      "component": "baro",
+      "after_cycles": 11200000
+    },
+    {
+      "channel": "pressure",
+      "value": 974.09,
+      "component": "baro",
+      "after_cycles": 12000000
+    },
+    {
+      "channel": "pressure",
+      "value": 970.75,
+      "component": "baro",
+      "after_cycles": 12800000
+    },
+    {
+      "channel": "pressure",
+      "value": 967.82,
+      "component": "baro",
+      "after_cycles": 13600000
+    },
+    {
+      "channel": "ay",
+      "value": -0.24,
+      "component": "imu",
+      "after_cycles": 14400000
+    },
+    {
+      "channel": "pressure",
+      "value": 965.28,
+      "component": "baro",
+      "after_cycles": 14400000
+    },
+    {
+      "channel": "pressure",
+      "value": 963.09,
+      "component": "baro",
+      "after_cycles": 15200000
+    },
+    {
+      "channel": "pressure",
+      "value": 961.23,
+      "component": "baro",
+      "after_cycles": 16000000
+    },
+    {
+      "channel": "pressure",
+      "value": 959.69,
+      "component": "baro",
+      "after_cycles": 16800000
+    },
+    {
+      "channel": "pressure",
+      "value": 958.47,
+      "component": "baro",
+      "after_cycles": 17600000
+    },
+    {
+      "channel": "pressure",
+      "value": 957.53,
+      "component": "baro",
+      "after_cycles": 18400000
+    },
+    {
+      "channel": "ay",
+      "value": -0.01,
+      "component": "imu",
+      "after_cycles": 19200000
+    },
+    {
+      "channel": "pressure",
+      "value": 956.89,
+      "component": "baro",
+      "after_cycles": 19200000
+    },
+    {
+      "channel": "pressure",
+      "value": 956.53,
+      "component": "baro",
+      "after_cycles": 20000000
+    },
+    {
+      "channel": "pressure",
+      "value": 956.46,
+      "component": "baro",
+      "after_cycles": 20800000
+    },
+    {
+      "channel": "pressure",
+      "value": 956.66,
+      "component": "baro",
+      "after_cycles": 21600000
+    },
+    {
+      "channel": "pressure",
+      "value": 957.12,
+      "component": "baro",
+      "after_cycles": 22400000
+    },
+    {
+      "channel": "pressure",
+      "value": 958.28,
+      "component": "baro",
+      "after_cycles": 25600000
+    },
+    {
+      "channel": "pressure",
+      "value": 962.63,
+      "component": "baro",
+      "after_cycles": 38400000
+    },
+    {
+      "channel": "pressure",
+      "value": 966.99,
+      "component": "baro",
+      "after_cycles": 51200000
+    },
+    {
+      "channel": "pressure",
+      "value": 971.36,
+      "component": "baro",
+      "after_cycles": 64000000
+    },
+    {
+      "channel": "pressure",
+      "value": 975.74,
+      "component": "baro",
+      "after_cycles": 76800000
+    },
+    {
+      "channel": "pressure",
+      "value": 980.13,
+      "component": "baro",
+      "after_cycles": 89600000
+    },
+    {
+      "channel": "pressure",
+      "value": 984.52,
+      "component": "baro",
+      "after_cycles": 102400000
+    },
+    {
+      "channel": "pressure",
+      "value": 988.93,
+      "component": "baro",
+      "after_cycles": 115200000
+    },
+    {
+      "channel": "pressure",
+      "value": 993.34,
+      "component": "baro",
+      "after_cycles": 128000000
+    },
+    {
+      "channel": "pressure",
+      "value": 997.76,
+      "component": "baro",
+      "after_cycles": 140800000
+    },
+    {
+      "channel": "ay",
+      "value": 1,
+      "component": "imu",
+      "after_cycles": 144238400
+    },
+    {
+      "channel": "pressure",
+      "value": 998.92,
+      "component": "baro",
+      "after_cycles": 144238400
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "Retained sensor replay: barometer and IMU self-test pass, the external bench-load output is off at reset, and the controller reaches PAD_SAFE.",
+      "check": {
+        "serial": [
+          {
+            "contains": "SELFTEST baro=1 imu=1"
+          },
+          {
+            "contains": "PHASE PAD_SAFE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R2",
+      "text": "Retained sensor replay: the arm input calibrates the supplied ground-pressure vector, powers the camera interface and requests recording before the supplied launch vector.",
+      "check": {
+        "serial": [
+          {
+            "contains": "GROUND_PA=99892"
+          },
+          {
+            "contains": "CAMERA_POWER_ON"
+          },
+          {
+            "contains": "PHASE PAD_ARMED"
+          },
+          {
+            "contains": "CAMERA_REC_START"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R3",
+      "text": "Retained sensor replay: launch and burnout markers satisfy the original synthetic acceleration trace timing, including the 1.9–2.3 s burnout window.",
+      "check": {
+        "serial": [
+          {
+            "matches": "LAUNCH t_ms=\\d+ alt_m="
+          },
+          {
+            "matches": "BURNOUT t_ms=(19|20|21|22)\\d\\d "
+          }
+        ]
+      }
+    },
+    {
+      "id": "R4",
+      "text": "Retained sensor replay: the bench-load output pulse occurs after the original input trajectory peak and within the original timing window, then switches off after 1 s. This is not a flight prediction for the revised hardware.",
+      "check": {
+        "serial": [
+          {
+            "contains": "APOGEE_DETECTED"
+          },
+          {
+            "matches": "DEPLOY t_ms=(88[3-9]\\d|89\\d\\d|9\\d\\d\\d) "
+          },
+          {
+            "contains": "PYRO_OFF"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R5",
+      "text": "Retained sensor replay: landing and camera-off markers appear; the summary reports the original supplied 355–372 m altitude range and all outputs end safe. No revised-airframe altitude or stability claim is made.",
+      "check": {
+        "serial": [
+          {
+            "contains": "PHASE LANDED"
+          },
+          {
+            "contains": "CAMERA_REC_STOP"
+          },
+          {
+            "contains": "CAMERA_POWER_OFF"
+          },
+          {
+            "matches": "FLIGHT apogee_m=3(5[5-9]|6\\d|7[0-2]) "
+          },
+          {
+            "contains": "OUTPUTS_SAFE PYRO=0 CAM=0"
+          }
+        ]
+      }
+    }
+  ],
+  "firmware": [],
+  "visibility": "unlisted",
+  "description": "Sourced 37-part carrier in a 250 mm bay. Native DRC and nominal fit pass; exact native-model parity and physical current/thermal/flight gates remain explicit.",
+  "readme": "# Pathfinder source-bound bench candidate\n\nThis is a separate candidate derived from the preserved Pathfinder project `c9ede30a619b12d7c97056a2da040cc1`. The original PCB and CAD revisions remain preserved.\n\n## Saved assets\n\n- Native carrier: `pcb_af828a3152e61e08@0`, PCB `sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93`.\n- Exact native rules: `sha256:c7b4df33e64a13bc636c3d9718076504a1146dde8c49e8c13f4bb6b3ebb0c850`.\n- CAD: [PuRrQzv1 revision 2](https://app.kernelcad.com/p/PuRrQzv1?version=2&show_electronics=1).\n- CAD source SHA-256: `2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9`.\n- The diagram carries all 37 source-to-native footprint/pad bindings in `pcbAssembly`. A binding declaration requires validation; it is not itself a circuit-parity pass.\n\n## Design and evidence\n\nThe carrier is 31.5 × 235 × 1.6 mm. It fits a 242 mm carrier frame inside a 250 mm coupler with a nominal 38 mm bore. The conservative cassette radius is18.4 mm, giving0.6 mm nominal radial clearance. The minimum component-envelope radial clearance is1.120525 mm. Static CAD and the bounded axial insertion path pass under the documented removal and disconnection steps; fabrication tolerances, retention, wire bends and strain relief remain physical gates.\n\nAll 38 original functional parts remain, with three explicit harness interfaces, giving41 device parts and37 carrier parts. The battery, boost converter, panel switch and1.5-ohm load are off the carrier. The1.5-ohm part is external bench equipment: the unchanged1000 ms pulse dissipates an ideal12.615 W /12.615 J at4.35 V before real losses.\n\nThe current native PCB passed independent hosted KiCad10.0.8 DRC with zero errors and zero open connections. It has580 tracks and65 vias. The sourced identity edit preserved every footprint/pad/net/track/via coordinate and board outline. The native board's generic importer still has explicit identity/model gaps; DRC does not establish logical or runtime parity.\n\nPower tracks use1.8 mm for VBAT/common ground,1.0 mm for the switched bench return,0.6 mm for5 V, and0.5 mm for3.3 V. The nominal2 oz copper and via-plating assumptions, actual path lengths and resistance estimates are recorded in the examples. Current, voltage sag, camera peaks, connector/cable losses and thermal performance remain unmeasured.\n\n## Firmware and acceptance scope\n\nFirmware and all input vectors are retained from the original project. Requirement assertions are unchanged; their text identifies them as replay checks. The old364 m trajectory and old mass/stability claims do not apply to this revised assembly. Complete physical mass, CG and flight stability remain unknown until the measured inputs and asymmetric camera-pod effects are resolved.\n\nThe examples receipt separately records source provenance, nominal fit, routing/DRC, native-model coverage, source-diagram replay, mass assumptions and physical holds. No manufacturing, current/thermal or flight qualification is claimed.\n"
+}
