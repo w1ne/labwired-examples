@@ -1,0 +1,249 @@
+{
+  "schema": "kernelcad.crease-normal-corner-local-correction.v1",
+  "checkedAt": "2026-11-22T03:53:52.104Z",
+  "oldServerCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+  "fixedSourcePath": "/data/kcad-crease-corners-server-20261122/product-web/src/kernel/backends/meshCreases.ts",
+  "fixedSourceSha256": "a35a61f22730d2f7259d17e8e8ccb1d4cdc8483f1b53f079850922dbba1678ff",
+  "oldSourceSha256": "0962bb85a3db873e528b4e0ac2c96d03829665f03a2d72c8b1cf6d093c4675be",
+  "oldArtifactSha256": "e041191cfd930893229d3d569dece43dc5ed8441dff865270f65e09b1f78e141",
+  "cadSourceSha256": "f87316c6a9de81148c8985e9387641a0ead22d5d2744186d2041678c0364a10e",
+  "minimalRegressionPassed": true,
+  "realAssetComparisonPassed": true,
+  "deployedArtifactQualified": false,
+  "cadSourceChanged": false,
+  "results": [
+    {
+      "part": "esc-population-native-mesh",
+      "assetSha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+      "triangles": 56072,
+      "sourceToCorrectedExpandedCoordinates": {
+        "count": 0,
+        "maxCoordinateErrorMm": 0
+      },
+      "positionBufferUnchanged": true,
+      "normalBufferUnchanged": true,
+      "indexChanges": 0,
+      "changes": [],
+      "positionsSha256": "5d578a20de80c00403d89cb77cd6e8d7489f1b78b976dc057ab847d6bd489e9c",
+      "normalsSha256": "4f8744db92e13cd928063d2f962e4bbcf5c6a6bc35275ea9915d8bf54aed6a65",
+      "oldIndicesSha256": "29a6869f4816b022e9d064d9f294360642f938efca9bb60fc38c336e69ae029a",
+      "correctedIndicesSha256": "29a6869f4816b022e9d064d9f294360642f938efca9bb60fc38c336e69ae029a",
+      "oldFunctionReproducesCurrentArtifact": true
+    },
+    {
+      "part": "fc-population-native-mesh",
+      "assetSha256": "70a02a51dfa161cb3eca7974f200a58232c7db43c317ea6d5c2837f216e45a0e",
+      "triangles": 47778,
+      "sourceToCorrectedExpandedCoordinates": {
+        "count": 0,
+        "maxCoordinateErrorMm": 0
+      },
+      "positionBufferUnchanged": true,
+      "normalBufferUnchanged": true,
+      "indexChanges": 28,
+      "changes": [
+        {
+          "index": 31765,
+          "triangle": 10588,
+          "corner": 1,
+          "before": 0,
+          "after": 12169
+        },
+        {
+          "index": 31801,
+          "triangle": 10600,
+          "corner": 1,
+          "before": 0,
+          "after": 12186
+        },
+        {
+          "index": 31907,
+          "triangle": 10635,
+          "corner": 2,
+          "before": 0,
+          "after": 11911
+        },
+        {
+          "index": 31940,
+          "triangle": 10646,
+          "corner": 2,
+          "before": 0,
+          "after": 11924
+        },
+        {
+          "index": 37247,
+          "triangle": 12415,
+          "corner": 2,
+          "before": 0,
+          "after": 14071
+        },
+        {
+          "index": 37430,
+          "triangle": 12476,
+          "corner": 2,
+          "before": 0,
+          "after": 14073
+        },
+        {
+          "index": 37841,
+          "triangle": 12613,
+          "corner": 2,
+          "before": 0,
+          "after": 14134
+        },
+        {
+          "index": 38060,
+          "triangle": 12686,
+          "corner": 2,
+          "before": 0,
+          "after": 14132
+        },
+        {
+          "index": 70957,
+          "triangle": 23652,
+          "corner": 1,
+          "before": 0,
+          "after": 26446
+        },
+        {
+          "index": 70993,
+          "triangle": 23664,
+          "corner": 1,
+          "before": 0,
+          "after": 26463
+        },
+        {
+          "index": 71099,
+          "triangle": 23699,
+          "corner": 2,
+          "before": 0,
+          "after": 26670
+        },
+        {
+          "index": 71132,
+          "triangle": 23710,
+          "corner": 2,
+          "before": 0,
+          "after": 26687
+        },
+        {
+          "index": 77513,
+          "triangle": 25837,
+          "corner": 2,
+          "before": 0,
+          "after": 29338
+        },
+        {
+          "index": 77696,
+          "triangle": 25898,
+          "corner": 2,
+          "before": 0,
+          "after": 29336
+        },
+        {
+          "index": 78107,
+          "triangle": 26035,
+          "corner": 2,
+          "before": 0,
+          "after": 29399
+        },
+        {
+          "index": 78326,
+          "triangle": 26108,
+          "corner": 2,
+          "before": 0,
+          "after": 29397
+        },
+        {
+          "index": 80213,
+          "triangle": 26737,
+          "corner": 2,
+          "before": 0,
+          "after": 30122
+        },
+        {
+          "index": 80396,
+          "triangle": 26798,
+          "corner": 2,
+          "before": 0,
+          "after": 30120
+        },
+        {
+          "index": 80807,
+          "triangle": 26935,
+          "corner": 2,
+          "before": 0,
+          "after": 30183
+        },
+        {
+          "index": 81026,
+          "triangle": 27008,
+          "corner": 2,
+          "before": 0,
+          "after": 30181
+        },
+        {
+          "index": 93442,
+          "triangle": 31147,
+          "corner": 1,
+          "before": 0,
+          "after": 33964
+        },
+        {
+          "index": 93532,
+          "triangle": 31177,
+          "corner": 1,
+          "before": 0,
+          "after": 33962
+        },
+        {
+          "index": 93563,
+          "triangle": 31187,
+          "corner": 2,
+          "before": 0,
+          "after": 34423
+        },
+        {
+          "index": 93635,
+          "triangle": 31211,
+          "corner": 2,
+          "before": 0,
+          "after": 34400
+        },
+        {
+          "index": 111523,
+          "triangle": 37174,
+          "corner": 1,
+          "before": 0,
+          "after": 41530
+        },
+        {
+          "index": 111559,
+          "triangle": 37186,
+          "corner": 1,
+          "before": 0,
+          "after": 41547
+        },
+        {
+          "index": 111665,
+          "triangle": 37221,
+          "corner": 2,
+          "before": 0,
+          "after": 41272
+        },
+        {
+          "index": 111698,
+          "triangle": 37232,
+          "corner": 2,
+          "before": 0,
+          "after": 41285
+        }
+      ],
+      "positionsSha256": "0ec2403a4fee6dd0c0948db4113678e12bbb9de2d6d82bc5ff6d0909a86a22d3",
+      "normalsSha256": "150b040e6f072706f02cc32db54d7303453879a555caf07f3623a252c30ca57a",
+      "oldIndicesSha256": "7a480d65dcc59b961a4c7f23b8ff7a0d07052c04d9781280b86c669fe2460bc4",
+      "correctedIndicesSha256": "4fcb4826f1b6041733800c801b9e87a7ca13383870b74b1abe5d5ef31ba35f25",
+      "oldFunctionReproducesCurrentArtifact": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "labwired.quadrotor.imported-population-geometry.v1",
+  "checkedAt": "2026-11-22T03:41:56.985Z",
+  "sourceSha256": "f87316c6a9de81148c8985e9387641a0ead22d5d2744186d2041678c0364a10e",
+  "meshSha256": "e041191cfd930893229d3d569dece43dc5ed8441dff865270f65e09b1f78e141",
+  "parts": [
+    {
+      "part": "esc-population-native-mesh",
+      "asset": "esc-population-native.stl",
+      "assetSha256": "297c5f78a471d07d12020dfa259906af6ed22339c0b1b8f95531bab1bcb6b3f3",
+      "sourceFacetCount": 56072,
+      "storedTriangleCount": 56072,
+      "translationMm": [
+        -75.63257,
+        34.6,
+        14.4
+      ],
+      "outputVertexPrecisionMm": 0.001,
+      "calculation": "float32(source vertex + authored translation), then round to 0.001 mm; cyclic vertex normalization preserves winding",
+      "missingTriangles": 0,
+      "extraTriangles": 0,
+      "exactOrientedTriangleMultisetMatch": true,
+      "expectedCanonicalSha256": "81d5b68492c55d2b941c53eb248d0448af3cc40e5cf7985c4e1d33886b844f5a",
+      "actualCanonicalSha256": "81d5b68492c55d2b941c53eb248d0448af3cc40e5cf7985c4e1d33886b844f5a"
+    },
+    {
+      "part": "fc-population-native-mesh",
+      "asset": "fc-components.stl",
+      "assetSha256": "70a02a51dfa161cb3eca7974f200a58232c7db43c317ea6d5c2837f216e45a0e",
+      "sourceFacetCount": 47778,
+      "storedTriangleCount": 47778,
+      "translationMm": [
+        0,
+        -12.75,
+        22
+      ],
+      "outputVertexPrecisionMm": 0.001,
+      "calculation": "float32(source vertex + authored translation), then round to 0.001 mm; cyclic vertex normalization preserves winding",
+      "missingTriangles": 28,
+      "extraTriangles": 28,
+      "exactOrientedTriangleMultisetMatch": false,
+      "expectedCanonicalSha256": "6cf1b4d7ba3b59d8d9bc97297df0cf71c9f810d6d18bf54cd3042db59b70d695",
+      "actualCanonicalSha256": "593634cdfc28af120e9a941e168c170e7c9a73b1c1834a5ccf8ec59a72c8f7a2"
+    }
+  ],
+  "allMatch": false,
+  "scope": "Source-asset triangle geometry comparison at recorded initial authored transforms. Does not compare old producer mesh bytes, establish viewer paint, or qualify mechanical fit."
+}
