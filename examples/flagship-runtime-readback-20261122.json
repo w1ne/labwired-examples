@@ -1,0 +1,115 @@
+{
+  "schema": "labwired-flagship-runtime-readback-v1",
+  "observed_date_utc": "2026-11-22",
+  "method": "Authenticated saved-project get, project verification, device assembly, native KiCad DRC and immutable KernelCAD revision inspection. Simulator output is not physical validation.",
+  "historical_evidence": "examples/flagship-hosted-recheck-20261122.json",
+  "quadrotor": {
+    "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+    "project_url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit",
+    "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+    "current_verification": "failed",
+    "verified_hash": null,
+    "requirements": { "R1": "failed", "R2": "failed", "R3": "failed", "R4": "failed" },
+    "interrupted_attempt": {
+      "run_id": "world-job:574bef70-0ad1-48d0-a9ca-df115c7a444a",
+      "max_steps": 2000000,
+      "verified": false,
+      "reason": "config_error",
+      "detail": "the environment run produced no result (simulator terminated by SIGKILL; child-process controller sent the signal, possibly due to deadline)",
+      "controller_serial_count": 0,
+      "behavioral_failure_observed": false,
+      "classification": "infrastructure_interruption_no_oracle_observation"
+    },
+    "prior_passing_oracle_receipt": "examples/robotics/quadrotor-bldc/labwired/evidence/20261121-five-controller-hosted-proof.json",
+    "pcb": { "id": "pcb_156d01483ccb67cb", "revision": 0 },
+    "cad_url": "https://app.kernelcad.com/p/DyJ405zg?version=6",
+    "flight_6dof_live_verified": false,
+    "physical_flight_verified": false
+  },
+  "single_esc_negative_control": {
+    "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+    "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+    "current_verification": "model_verified",
+    "requirement_statuses": ["verified", "verified", "verified", "verified"],
+    "checks": ["Hall-lock before injected driver fault", "Driver fault detected", "Inverter latches off", "Inverter enable PB0 low"],
+    "scope": "One modeled ESC channel; not an in-flight coupled-quadrotor negative control"
+  },
+  "pathfinder": {
+    "original": {
+      "project_id": "c9ede30a619b12d7c97056a2da040cc1",
+      "content_hash": "83fc8079ea49d9207f69371e402318393cd9c304df476844a7b72682633d9dd0",
+      "current_verification": "model_verified",
+      "requirements_verified": 5,
+      "board": { "id": "pcb_e2ec5d2f4ade4aac", "revision": 1, "outline_mm": [60.5, 116], "parts": 38 },
+      "cad_url": "https://app.kernelcad.com/p/K_DmeiaD?version=2",
+      "coupler_inner_diameter_mm": 38.4,
+      "pcb_cad_fit": "rejected"
+    },
+    "source_bound_candidate": {
+      "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+      "content_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+      "current_verification": "failed",
+      "requirements_failed": 5,
+      "pcb": {
+        "id": "pcb_af828a3152e61e08",
+        "revision": 0,
+        "outline_mm": [31.5, 235],
+        "parts": 37,
+        "native_pcb_ref": "sha256:0a2355f26284a52bd9dfdae7e4aa2eb68744fecfe07d463cdb6c3cca607e3c93",
+        "rules_ref": "sha256:c7b4df33e64a13bc636c3d9718076504a1146dde8c49e8c13f4bb6b3ebb0c850",
+        "kicad_drc": { "version": "10.0.8", "passed": true, "findings": 0, "warnings": 0, "schematic_parity_checked": false },
+        "manufacturing_verified": false
+      },
+      "cad": {
+        "url": "https://app.kernelcad.com/p/PuRrQzv1?version=2",
+        "revision_pinned": true,
+        "part": "flight-computer-pcb",
+        "part_bbox_mm": { "min": [-15.75, -1.6, 237.5], "max": [15.75, 0, 472.5] },
+        "bbox_extents_mm": [31.5, 1.6, 235],
+        "bbox_size_matches_pcb": true,
+        "full_clearance_or_collision_verified": false,
+        "source": "KernelCAD get_project_revision(PuRrQzv1,2) then inspect(of=assembly,code=revision.code)"
+      },
+      "pcb_fit_server_receipt_observed": false,
+      "promoted_to_original": false
+    }
+  },
+  "axiom": {
+    "original": {
+      "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+      "content_hash": "0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee",
+      "requirements_stale": 3,
+      "pcb": { "id": "pcb_172fd76a950f0bd9", "revision": 2 }
+    },
+    "candidate": {
+      "project_id": "dab8622b41adbf3b9e2175909146b207",
+      "content_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
+      "verified_hash": "386b3ec5442960f58e4ed8c383810ca704af76de657256ce831ff8fbc6112548",
+      "requirements_verified": 3,
+      "proof_scope": "Controller serial oracles only"
+    },
+    "source_integration": "https://github.com/w1ne/labwired/pull/3676",
+    "cad_joint_coupling_hosted_verified": false,
+    "physical_servo_verified": false
+  },
+  "screenshots": {
+    "previous_static_capture": "examples/flagship-live-snapshots-20261121.json",
+    "fresh_capture_date": null,
+    "fresh_capture_status": "not_available",
+    "browser_observation": "Chrome cannot open the active LabWired page (61696); no screenshot is represented as live simulator proof"
+  },
+  "pending_source_gates": [
+    "https://github.com/w1ne/labwired/pull/3964",
+    "https://github.com/w1ne/labwired/pull/3988",
+    "https://github.com/w1ne/labwired/pull/3989"
+  ],
+  "overall": "NOT END-TO-END ACCEPTED",
+  "limitations": [
+    "SIGKILL with no serial data does not prove Hall-lock behavior failed; live requirements remain failed until a new completed oracle result.",
+    "KiCad native DRC passing does not prove schematic parity, manufactured assembly, thermal or electrical operation.",
+    "PCB-to-CAD bounding box equality does not prove actual surface clearance, fasteners, collision or fabrication tolerance.",
+    "AXIOM candidate serial oracles do not measure servo motion, torque, power, calibration or joint kinematics.",
+    "Previous screenshots are not fresh and are not runtime or physical proof."
+  ]
+}
