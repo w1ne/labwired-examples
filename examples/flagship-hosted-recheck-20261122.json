@@ -126,5 +126,130 @@
       "https://github.com/w1ne/labwired/pull/3677"
     ]
   },
-  "overall": "NOT END-TO-END ACCEPTED: quadrotor 6DOF flight, AXIOM production CAD motion/deployment and physical loads, and Pathfinder PCB-CAD fit are open."
+  "overall": "NOT END-TO-END ACCEPTED: quadrotor 6DOF flight, AXIOM production CAD motion/deployment and physical loads, and Pathfinder PCB-CAD fit are open.",
+  "follow_up_live_20261122_0459Z": {
+    "method": "Fresh hosted MCP project_verify and device_assembly readbacks; no physical device was used",
+    "captured_utc": "2026-11-22T04:59:31Z",
+    "quadrotor": {
+      "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+      "run_id": "world-job:51f475b4-2393-4dda-8f1f-b3bd682e71f3",
+      "content_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+      "verified_hash": "1c89a2f856b3759d7c51e4a9b5080ba60acd63a2c53890e147a4cd23f1524ecc",
+      "verified": true,
+      "proof": "oracle",
+      "oracle_source": "declared",
+      "max_steps": 2000000,
+      "requirements": [
+        {
+          "id": "R1",
+          "node": "ctrl1",
+          "marker": "ROTOR 1 HALL LOCKED",
+          "passed": true
+        },
+        {
+          "id": "R2",
+          "node": "ctrl2",
+          "marker": "ROTOR 2 HALL LOCKED",
+          "passed": true
+        },
+        {
+          "id": "R3",
+          "node": "ctrl3",
+          "marker": "ROTOR 3 HALL LOCKED",
+          "passed": true
+        },
+        {
+          "id": "R4",
+          "node": "ctrl4",
+          "marker": "ROTOR 4 HALL LOCKED",
+          "passed": true
+        }
+      ],
+      "flight_controller_markers": [
+        "FC READY BMI270 ONLINE",
+        "FC ARM COMMAND",
+        "FC TAKEOFF COMMAND"
+      ],
+      "measured_six_dof_flight": false
+    },
+    "single_esc_negative_control": {
+      "project_id": "8beab229c9d4ed650ccbdc8725c233cc",
+      "content_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+      "verified_hash": "cacbee4597d60c8ab76b28d2c8ad66e79ad362be2b1c44bbbca6c58974ba4efd",
+      "verified": true,
+      "proof": "oracle",
+      "max_steps": 2000000,
+      "run_id": null,
+      "assertions": [
+        {
+          "marker": "ROTOR 1 HALL LOCKED",
+          "passed": true
+        },
+        {
+          "marker": "ROTOR 1 FAULT DRIVER",
+          "passed": true
+        },
+        {
+          "marker": "ROTOR 1 INVERTER OFF",
+          "passed": true
+        },
+        {
+          "gpio_pin": "PB0",
+          "state": "low",
+          "passed": true
+        }
+      ],
+      "scope": "One simulated ESC, not all-four-aircraft fault response"
+    },
+    "pathfinder_source_bound_candidate": {
+      "project_id": "d4de8c2bc6aad00bab720da9e1ff2414",
+      "content_hash": "9dedd6609cf6cf3b39e6500823019bb03fc453b21c7bdccd83af67031ea62fb7",
+      "verified": false,
+      "reason": "DIAGRAM_INVALID",
+      "simulator_executed": false,
+      "diagnostic_codes": [
+        "UNKNOWN_COMPONENT",
+        "PACKAGE_UNKNOWN",
+        "PACKAGE_UNKNOWN",
+        "SCHEMA_PART_UNKNOWN",
+        "DEVICE_BOARD_REF"
+      ],
+      "unavailable_component": "pololu-u3v70f5",
+      "unrecognized_packages": [
+        "weact-blackpill-v31-body-envelope",
+        "radial-d8-p3.5"
+      ],
+      "pcb": {
+        "board_id": "pcb_af828a3152e61e08",
+        "revision": 0
+      },
+      "cad": "https://app.kernelcad.com/p/PuRrQzv1?version=2",
+      "dependencies": [
+        "https://github.com/w1ne/labwired/pull/3955",
+        "https://github.com/w1ne/labwired/pull/3958",
+        "https://github.com/w1ne/labwired/pull/3964",
+        "https://github.com/w1ne/labwired/pull/3975"
+      ],
+      "scope": "Native PCB DRC and CAD fit evidence are separate from hosted firmware verification; the production catalog rejects the candidate before execution"
+    },
+    "axiom_original": {
+      "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+      "content_hash": "0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee",
+      "verified_hash": "3fbbe85932524caaf21b5f63d2c2333e177c32320d4e162370c288964cd7cfb3",
+      "requirement_states": [
+        "stale",
+        "stale",
+        "stale"
+      ],
+      "runtime_dependencies": [
+        "https://github.com/w1ne/labwired/pull/3676",
+        "https://github.com/w1ne/labwired/pull/3677"
+      ]
+    },
+    "notes": [
+      "No new screenshots were captured; linked 21-Nov PNGs are UI snapshots, not hardware or model acceptance",
+      "Do not promote Pathfinder candidate or AXIOM original until the deployed runtime and fresh same-hash oracles pass",
+      "The quadrotor Hall-lock and separate fault campaign do not prove measured six-axis flight or physical shutdown"
+    ]
+  }
 }
