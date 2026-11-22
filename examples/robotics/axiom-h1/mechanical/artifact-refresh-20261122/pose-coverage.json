@@ -1,0 +1,444 @@
+{
+  "schema": "labwired-examples/axiom-mechanism-coverage/v1",
+  "sourceSha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+  "sourceBytes": 5966,
+  "method": "evaluate_script default mechanismTruth",
+  "apiInput": {
+    "codeSha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+    "autosave": false
+  },
+  "implementation": {
+    "serverCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+    "sourceHashes": {
+      "product-web/src/modeling/runtime/mechanismTruth.ts": "cf419fcc9cabcd81f53a247934f63f3bd7a83676ea0294b4ae99dfc55768c727",
+      "product-web/src/agent/mcp/tools/evaluateScript.ts": "577d2f347068ffe6e45658c8d158ebdbb2318804cd0f4586160ea1b2653a4bc5"
+    },
+    "poseEnumerationSha256": "2db9e795bbd62dd7b43a73eb7081bd95d824716159e05761649e45354d9f143a"
+  },
+  "graph": {
+    "parts": 27,
+    "revolute": 20,
+    "fastened": 6
+  },
+  "poses": [
+    {
+      "name": "rest",
+      "poses": {}
+    },
+    {
+      "name": "neck_yaw:-60",
+      "mateName": "neck_yaw",
+      "poses": {
+        "neck_yaw": -60
+      }
+    },
+    {
+      "name": "neck_yaw:0",
+      "mateName": "neck_yaw",
+      "poses": {
+        "neck_yaw": 0
+      }
+    },
+    {
+      "name": "neck_yaw:60",
+      "mateName": "neck_yaw",
+      "poses": {
+        "neck_yaw": 60
+      }
+    },
+    {
+      "name": "neck_pitch:-25",
+      "mateName": "neck_pitch",
+      "poses": {
+        "neck_pitch": -25
+      }
+    },
+    {
+      "name": "neck_pitch:0",
+      "mateName": "neck_pitch",
+      "poses": {
+        "neck_pitch": 0
+      }
+    },
+    {
+      "name": "neck_pitch:30",
+      "mateName": "neck_pitch",
+      "poses": {
+        "neck_pitch": 30
+      }
+    },
+    {
+      "name": "left_shoulder_pitch:-95",
+      "mateName": "left_shoulder_pitch",
+      "poses": {
+        "left_shoulder_pitch": -95
+      }
+    },
+    {
+      "name": "left_shoulder_pitch:0",
+      "mateName": "left_shoulder_pitch",
+      "poses": {
+        "left_shoulder_pitch": 0
+      }
+    },
+    {
+      "name": "left_shoulder_pitch:90",
+      "mateName": "left_shoulder_pitch",
+      "poses": {
+        "left_shoulder_pitch": 90
+      }
+    },
+    {
+      "name": "left_shoulder_roll:-70",
+      "mateName": "left_shoulder_roll",
+      "poses": {
+        "left_shoulder_roll": -70
+      }
+    },
+    {
+      "name": "left_shoulder_roll:0",
+      "mateName": "left_shoulder_roll",
+      "poses": {
+        "left_shoulder_roll": 0
+      }
+    },
+    {
+      "name": "left_shoulder_roll:80",
+      "mateName": "left_shoulder_roll",
+      "poses": {
+        "left_shoulder_roll": 80
+      }
+    },
+    {
+      "name": "left_elbow:-5",
+      "mateName": "left_elbow",
+      "poses": {
+        "left_elbow": -5
+      }
+    },
+    {
+      "name": "left_elbow:0",
+      "mateName": "left_elbow",
+      "poses": {
+        "left_elbow": 0
+      }
+    },
+    {
+      "name": "left_elbow:125",
+      "mateName": "left_elbow",
+      "poses": {
+        "left_elbow": 125
+      }
+    },
+    {
+      "name": "left_wrist:-70",
+      "mateName": "left_wrist",
+      "poses": {
+        "left_wrist": -70
+      }
+    },
+    {
+      "name": "left_wrist:0",
+      "mateName": "left_wrist",
+      "poses": {
+        "left_wrist": 0
+      }
+    },
+    {
+      "name": "left_wrist:70",
+      "mateName": "left_wrist",
+      "poses": {
+        "left_wrist": 70
+      }
+    },
+    {
+      "name": "left_gripper:0",
+      "mateName": "left_gripper",
+      "poses": {
+        "left_gripper": 0
+      }
+    },
+    {
+      "name": "left_gripper:35",
+      "mateName": "left_gripper",
+      "poses": {
+        "left_gripper": 35
+      }
+    },
+    {
+      "name": "left_hip_pitch:-85",
+      "mateName": "left_hip_pitch",
+      "poses": {
+        "left_hip_pitch": -85
+      }
+    },
+    {
+      "name": "left_hip_pitch:0",
+      "mateName": "left_hip_pitch",
+      "poses": {
+        "left_hip_pitch": 0
+      }
+    },
+    {
+      "name": "left_hip_pitch:80",
+      "mateName": "left_hip_pitch",
+      "poses": {
+        "left_hip_pitch": 80
+      }
+    },
+    {
+      "name": "left_hip_roll:-40",
+      "mateName": "left_hip_roll",
+      "poses": {
+        "left_hip_roll": -40
+      }
+    },
+    {
+      "name": "left_hip_roll:0",
+      "mateName": "left_hip_roll",
+      "poses": {
+        "left_hip_roll": 0
+      }
+    },
+    {
+      "name": "left_hip_roll:40",
+      "mateName": "left_hip_roll",
+      "poses": {
+        "left_hip_roll": 40
+      }
+    },
+    {
+      "name": "left_knee:-5",
+      "mateName": "left_knee",
+      "poses": {
+        "left_knee": -5
+      }
+    },
+    {
+      "name": "left_knee:0",
+      "mateName": "left_knee",
+      "poses": {
+        "left_knee": 0
+      }
+    },
+    {
+      "name": "left_knee:115",
+      "mateName": "left_knee",
+      "poses": {
+        "left_knee": 115
+      }
+    },
+    {
+      "name": "left_ankle:-35",
+      "mateName": "left_ankle",
+      "poses": {
+        "left_ankle": -35
+      }
+    },
+    {
+      "name": "left_ankle:0",
+      "mateName": "left_ankle",
+      "poses": {
+        "left_ankle": 0
+      }
+    },
+    {
+      "name": "left_ankle:35",
+      "mateName": "left_ankle",
+      "poses": {
+        "left_ankle": 35
+      }
+    },
+    {
+      "name": "right_shoulder_pitch:-95",
+      "mateName": "right_shoulder_pitch",
+      "poses": {
+        "right_shoulder_pitch": -95
+      }
+    },
+    {
+      "name": "right_shoulder_pitch:0",
+      "mateName": "right_shoulder_pitch",
+      "poses": {
+        "right_shoulder_pitch": 0
+      }
+    },
+    {
+      "name": "right_shoulder_pitch:90",
+      "mateName": "right_shoulder_pitch",
+      "poses": {
+        "right_shoulder_pitch": 90
+      }
+    },
+    {
+      "name": "right_shoulder_roll:-80",
+      "mateName": "right_shoulder_roll",
+      "poses": {
+        "right_shoulder_roll": -80
+      }
+    },
+    {
+      "name": "right_shoulder_roll:0",
+      "mateName": "right_shoulder_roll",
+      "poses": {
+        "right_shoulder_roll": 0
+      }
+    },
+    {
+      "name": "right_shoulder_roll:70",
+      "mateName": "right_shoulder_roll",
+      "poses": {
+        "right_shoulder_roll": 70
+      }
+    },
+    {
+      "name": "right_elbow:-5",
+      "mateName": "right_elbow",
+      "poses": {
+        "right_elbow": -5
+      }
+    },
+    {
+      "name": "right_elbow:0",
+      "mateName": "right_elbow",
+      "poses": {
+        "right_elbow": 0
+      }
+    },
+    {
+      "name": "right_elbow:125",
+      "mateName": "right_elbow",
+      "poses": {
+        "right_elbow": 125
+      }
+    },
+    {
+      "name": "right_wrist:-70",
+      "mateName": "right_wrist",
+      "poses": {
+        "right_wrist": -70
+      }
+    },
+    {
+      "name": "right_wrist:0",
+      "mateName": "right_wrist",
+      "poses": {
+        "right_wrist": 0
+      }
+    },
+    {
+      "name": "right_wrist:70",
+      "mateName": "right_wrist",
+      "poses": {
+        "right_wrist": 70
+      }
+    },
+    {
+      "name": "right_gripper:0",
+      "mateName": "right_gripper",
+      "poses": {
+        "right_gripper": 0
+      }
+    },
+    {
+      "name": "right_gripper:35",
+      "mateName": "right_gripper",
+      "poses": {
+        "right_gripper": 35
+      }
+    },
+    {
+      "name": "right_hip_pitch:-85",
+      "mateName": "right_hip_pitch",
+      "poses": {
+        "right_hip_pitch": -85
+      }
+    },
+    {
+      "name": "right_hip_pitch:0",
+      "mateName": "right_hip_pitch",
+      "poses": {
+        "right_hip_pitch": 0
+      }
+    },
+    {
+      "name": "right_hip_pitch:80",
+      "mateName": "right_hip_pitch",
+      "poses": {
+        "right_hip_pitch": 80
+      }
+    },
+    {
+      "name": "right_hip_roll:-40",
+      "mateName": "right_hip_roll",
+      "poses": {
+        "right_hip_roll": -40
+      }
+    },
+    {
+      "name": "right_hip_roll:0",
+      "mateName": "right_hip_roll",
+      "poses": {
+        "right_hip_roll": 0
+      }
+    },
+    {
+      "name": "right_hip_roll:40",
+      "mateName": "right_hip_roll",
+      "poses": {
+        "right_hip_roll": 40
+      }
+    },
+    {
+      "name": "right_knee:-5",
+      "mateName": "right_knee",
+      "poses": {
+        "right_knee": -5
+      }
+    },
+    {
+      "name": "right_knee:0",
+      "mateName": "right_knee",
+      "poses": {
+        "right_knee": 0
+      }
+    },
+    {
+      "name": "right_knee:115",
+      "mateName": "right_knee",
+      "poses": {
+        "right_knee": 115
+      }
+    },
+    {
+      "name": "right_ankle:-35",
+      "mateName": "right_ankle",
+      "poses": {
+        "right_ankle": -35
+      }
+    },
+    {
+      "name": "right_ankle:0",
+      "mateName": "right_ankle",
+      "poses": {
+        "right_ankle": 0
+      }
+    },
+    {
+      "name": "right_ankle:35",
+      "mateName": "right_ankle",
+      "poses": {
+        "right_ankle": 35
+      }
+    }
+  ],
+  "poseCount": 59,
+  "limitsPreserved": true,
+  "coverageDefinition": "One rest pose plus each articulated mate at unique min, zero if in range else midpoint, and max. Every other mate remains at rest. This is a discrete single-joint set, not a continuous trajectory or simultaneous joint-combination check.",
+  "additionalChecks": "Existing default orphan, fastened connectivity, per-pose interpenetration and DOF micro-pose checks remain active. This manifest is not a solver result.",
+  "denseSweep": {
+    "status": "timed_out",
+    "separateCheck": true,
+    "note": "verify(swept-collision) ignores range_samples and defaults to 1-degree increments; its 300-second timeout is not a failure of this 59-pose check."
+  }
+}

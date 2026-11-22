@@ -1,0 +1,85 @@
+{
+  "observedAt": "2026-11-22T03:26:31.108Z",
+  "rows": [
+    {
+      "name": "old-api",
+      "url": "https://api.kernelcad.com/api/v1/projects/45f5VM8t/revisions/1/mesh-artifact?download=1&provenance=091c0eb483f28d952e9835e2c54407be9d937504a8386e8fba861ff1e58f7bba",
+      "status": 404,
+      "bytes": 42,
+      "sha256": "d6bfad0a707b0167578427dcaea08ec6e7946528fd4880c2938d93ee736ec937",
+      "canonicalProvenanceSha256": null,
+      "error": "verified_mesh_artifact_missing",
+      "headers": {
+        "x-mesh-artifact": null,
+        "x-mesh-provenance": null,
+        "x-mesh-source-sha256": null,
+        "access-control-allow-origin": null,
+        "cache-control": "no-store"
+      }
+    },
+    {
+      "name": "current-api",
+      "url": "https://api.kernelcad.com/api/v1/projects/45f5VM8t/revisions/1/mesh-artifact?download=1&provenance=613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+      "status": 200,
+      "bytes": 3107233,
+      "sha256": "aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5",
+      "provenance": {
+        "schema": "kernelcad.revision-mesh-provenance.v1",
+        "source": {
+          "sha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+          "byteLength": 5966
+        },
+        "assetsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "geometryHash": "3b2b45447f0efdec5c17247dae53c8ade82b19b71779a97ee58db135b4032f28",
+        "producer": {
+          "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+          "serverCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+          "runtimeSourceHash": "4293d157357b0f5a75a6a563abff4635247082d63666bda496993222196ad2d0",
+          "sessionArtifactSha256": "72551de25f740cff680c571eebd04e753911e9780d7d21b29122d3fda4628327"
+        }
+      },
+      "canonicalProvenanceSha256": "613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+      "revision": 1,
+      "featureCount": 27,
+      "headers": {
+        "x-mesh-artifact": "stored-verified",
+        "x-mesh-provenance": "613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+        "x-mesh-source-sha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+        "access-control-allow-origin": null,
+        "cache-control": "no-store"
+      }
+    },
+    {
+      "name": "current-cdn",
+      "url": "https://mesh.kernelcad.com/mesh-artifacts/45f5VM8t/v1.json?provenance=613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+      "status": 200,
+      "bytes": 3107233,
+      "sha256": "aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5",
+      "provenance": {
+        "schema": "kernelcad.revision-mesh-provenance.v1",
+        "source": {
+          "sha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+          "byteLength": 5966
+        },
+        "assetsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "geometryHash": "3b2b45447f0efdec5c17247dae53c8ade82b19b71779a97ee58db135b4032f28",
+        "producer": {
+          "serverBuild": "0.1.0+eb097a77bc0e@2026-11-22T02:57:45.592Z",
+          "serverCommit": "eb097a77bc0e2b74c389a21b4d444bf15345c18b",
+          "runtimeSourceHash": "4293d157357b0f5a75a6a563abff4635247082d63666bda496993222196ad2d0",
+          "sessionArtifactSha256": "72551de25f740cff680c571eebd04e753911e9780d7d21b29122d3fda4628327"
+        }
+      },
+      "canonicalProvenanceSha256": "613a4609e40d62c218cd4e276c3bf5835525feb1e068a64acd18a1e6fd1a89ea",
+      "revision": 1,
+      "featureCount": 27,
+      "headers": {
+        "x-mesh-artifact": null,
+        "x-mesh-provenance": null,
+        "x-mesh-source-sha256": null,
+        "access-control-allow-origin": null,
+        "cache-control": "public, max-age=86400, immutable"
+      }
+    }
+  ]
+}

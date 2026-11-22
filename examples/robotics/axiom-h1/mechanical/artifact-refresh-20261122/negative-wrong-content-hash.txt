@@ -1,0 +1,20 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: exact archived mesh bytes
++ actual - expected
+
++ 'aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5'
+- '0000000000000000000000000000000000000000000000000000000000000000'
+
+    at file:///data/axiom-cad-acceptance-20261121/scripts/check-axiom-joint-transforms.mjs:99:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'aaa16db035e4563a94fd3a7e236fe50bcc048f5ef731564912a9083b54e8b8e5',
+  expected: '0000000000000000000000000000000000000000000000000000000000000000',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.4
