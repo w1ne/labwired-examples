@@ -1,0 +1,88 @@
+{
+  "scope": "Archived-baseline comparator validation only; no post-deployment artifact accepted.",
+  "comparator_sha256": "f2600d94173e3f898dc4ff12fdd4eb860422b2da025164b5716079e0ddee0180",
+  "cases": [
+    {
+      "name": "archived-baseline-positive",
+      "expected_success": true,
+      "exit_code": 0,
+      "status": "passed",
+      "changed_features": []
+    },
+    {
+      "name": "changed-vertex",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "failed",
+      "changed_features": [
+        {
+          "index": 0,
+          "before_id": "solvedAssembly_1__launch-pad-rail",
+          "after_id": "solvedAssembly_1__launch-pad-rail",
+          "changed_face_indices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "changed-normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "failed",
+      "changed_features": [
+        {
+          "index": 0,
+          "before_id": "solvedAssembly_1__launch-pad-rail",
+          "after_id": "solvedAssembly_1__launch-pad-rail",
+          "changed_face_indices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wrong-runtime",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "rejected_before_comparison",
+      "changed_features": []
+    },
+    {
+      "name": "changed-source",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "rejected_before_comparison",
+      "changed_features": []
+    },
+    {
+      "name": "changed-project-assets",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "rejected_before_comparison",
+      "changed_features": []
+    },
+    {
+      "name": "changed-revision-assets",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "rejected_before_comparison",
+      "changed_features": []
+    },
+    {
+      "name": "stale-api-query",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "rejected_before_comparison",
+      "changed_features": []
+    },
+    {
+      "name": "stale-cdn-query",
+      "expected_success": false,
+      "exit_code": 1,
+      "status": "rejected_before_comparison",
+      "changed_features": []
+    }
+  ],
+  "raw_archive_sha256": "c5c78d0f0c81dc26833aec7f0d7b4c8e7dfae7dd3d8a0c9e97124634d8c1f0e6"
+}

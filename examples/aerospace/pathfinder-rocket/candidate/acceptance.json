@@ -1,6 +1,6 @@
 {
   "schema": "labwired-examples/pathfinder-candidate-acceptance/v1",
-  "recorded_at_utc": "2026-11-22T03:55:49.296717+00:00",
+  "recorded_at_utc": "2026-11-22T05:17:17.126469+00:00",
   "status": "nominal_fit_and_local_native_model_passed_hosted_release_pending",
   "project": {
     "id": "d4de8c2bc6aad00bab720da9e1ff2414",
@@ -15,7 +15,14 @@
   "cad": {
     "slug": "PuRrQzv1",
     "revision": 2,
-    "sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9"
+    "sha256": "2d632a78aadd0d2900c4d8bd2aa0fe8834411039cfb3d4f038c222e972b5a3d9",
+    "artifact_refresh": {
+      "comparison": "cad-artifact-refresh-20261122/comparison.json",
+      "archive": "cad-artifact-refresh-20261122/archive.json",
+      "runtime_source_sha256": "f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977",
+      "raw_sha256": "aac0e9745afb76049b8537c67e28a9a8a1ef0dc7206b248c8b00b154aa472e09",
+      "canonical_without_provenance_sha256": "2333694a63d0adb227d93409e4c1fd7bf8f428aa7f77903aff02f254f5e0085b"
+    }
   },
   "design_input_sha256": "496440cc518f18dc7c7c9e4c81d8e8179c65ab471a1bd8b453a489afc891aeff",
   "local_implementation_commit": "14aa25315b8d4f3db16b69332b88e32413d1094a",
@@ -36,7 +43,8 @@
     "local physical copper compiler parity without parasitics",
     "nominal source-bound component fit",
     "bounded nominal axial installation path",
-    "saved CAD artifact readiness and byte-identical public delivery"
+    "saved CAD artifact readiness and byte-identical public delivery",
+    "deployed CAD producer artifact identity with exact unchanged geometry outside provenance"
   ],
   "physical_acceptance": {
     "manufacturing": false,
@@ -44,7 +52,7 @@
     "flight": false
   },
   "remaining_holds": [
-    "Deploy the source/importer stack and rerun the same saved project against all five original replay assertions.",
+    "Deploy the source/importer and saved per-board circuit/firmware lookup stack, then rerun the same saved project against all five original replay assertions.",
     "Confirm the six estimated/assumed carrier part bodies and final hardware selection.",
     "Measure actual PCB/print/bore tolerances, battery swelling allowance, solder-tail trim and retention.",
     "Inspect wire bends, access, abrasion protection and strain relief in the assembly.",
@@ -121,6 +129,15 @@
     "cad-artifact-20261122/archive.json": "b953bdb276b471f347e4a564553e13000a63ec4f9e04b2695c9ed7228269512f",
     "cad-artifact-20261122/download-readback.json": "37b8e9933cd814c984f70b2e9c83061302ccef4d9ea4f233a822b6887ba03a16",
     "cad-artifact-20261122/mesh.json.gz": "2dfa06b1a6e845f8c0c9e91f22f9a8dd423a9e47adaf28c96588dcf88361508a",
-    "cad-artifact-20261122/project-readback.json": "d472355df1c3417921d36edd02d19facd8dd72fe5c976e5ad64c9b2432529ea0"
+    "cad-artifact-20261122/project-readback.json": "d472355df1c3417921d36edd02d19facd8dd72fe5c976e5ad64c9b2432529ea0",
+    "compare-cad-artifacts.mjs": "f2600d94173e3f898dc4ff12fdd4eb860422b2da025164b5716079e0ddee0180",
+    "cad-artifact-refresh-20261122/archive.json": "910ccfbe9777136e36b5b295637dec10bdc76fc1a80624473e9b9558e5302b97",
+    "cad-artifact-refresh-20261122/comparator-controls.json": "bd54de00d68aa2c49b3c1975d72d62c3bc8454a2f4d6823e0a2caa6c6cda8f51",
+    "cad-artifact-refresh-20261122/comparison.json": "18e376f6a9520b93414d75aff956ea53485cbb1d7e1a91aa404ba3ca2309a14f",
+    "cad-artifact-refresh-20261122/deployed-building-readback.json": "6db5a5b274a28c404a4a4792d1a1d794fcb62a6afe2d21fffc8e05150ccfdde2",
+    "cad-artifact-refresh-20261122/downloads.json": "3e4048827b1f679fd8836378e0b89ca584d0092034985447257e02b77b540062",
+    "cad-artifact-refresh-20261122/initial-building-readback.json": "67d08ea925b4f6b13b1a7a62a21658c43e4e29fa395e50f1975461fdbf436713",
+    "cad-artifact-refresh-20261122/mesh.json.gz": "515709d789c815ded12aa38ac43b49e7b0dea49c5d8a7967b737f71d95059ee1",
+    "cad-artifact-refresh-20261122/project-readback.json": "ce7504aa39c8ac60028cbb7378f021c31672ca3f35146b532e05e26c42d4a059"
   }
 }
