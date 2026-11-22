@@ -77,5 +77,53 @@ class FlagshipLiveSnapshots(unittest.TestCase):
         self.assertIn('NOT END-TO-END ACCEPTED', latest['overall'])
 
 
+    def test_new_runtime_readback_preserves_failed_live_status_and_fit_scope(self):
+        fresh = json.loads((ROOT / 'examples/flagship-runtime-readback-20261122.json').read_text())
+        self.assertEqual(fresh['schema'], 'labwired-flagship-runtime-readback-v1')
+        old = json.loads((ROOT / fresh['historical_evidence']).read_text())
+        quad = fresh['quadrotor']
+        self.assertEqual(quad['project_id'], old['quadrotor']['project_id'])
+        self.assertEqual(quad['content_hash'], old['quadrotor']['content_hash'])
+        self.assertIsNone(quad['verified_hash'])
+        self.assertEqual(set(quad['requirements'].values()), {'failed'})
+        self.assertEqual(quad['interrupted_attempt']['reason'], 'config_error')
+        self.assertTrue(quad['interrupted_attempt']['run_id'].startswith('world-job:'))
+        self.assertEqual(quad['interrupted_attempt']['controller_serial_count'], 0)
+        self.assertFalse(quad['interrupted_attempt']['behavioral_failure_observed'])
+        self.assertFalse(quad['flight_6dof_live_verified'])
+        self.assertFalse(quad['physical_flight_verified'])
+        neg = fresh['single_esc_negative_control']
+        self.assertEqual(neg['project_id'], old['single_esc_fault_control']['project_id'])
+        self.assertEqual(neg['verified_hash'], neg['content_hash'])
+        self.assertEqual(neg['requirement_statuses'], ['verified'] * 4)
+        orig = fresh['pathfinder']['original']
+        cand = fresh['pathfinder']['source_bound_candidate']
+        self.assertEqual(orig['project_id'], old['pathfinder']['project_id'])
+        self.assertGreater(orig['board']['outline_mm'][0], orig['coupler_inner_diameter_mm'])
+        self.assertEqual(orig['pcb_cad_fit'], 'rejected')
+        self.assertEqual(cand['current_verification'], 'failed')
+        self.assertEqual(cand['requirements_failed'], 5)
+        self.assertTrue(cand['pcb']['kicad_drc']['passed'])
+        self.assertFalse(cand['pcb']['kicad_drc']['schematic_parity_checked'])
+        self.assertFalse(cand['pcb']['manufacturing_verified'])
+        pcb_x, pcb_z = cand['pcb']['outline_mm']
+        cad_x, cad_y, cad_z = cand['cad']['bbox_extents_mm']
+        self.assertEqual((pcb_x, pcb_z), (cad_x, cad_z))
+        self.assertLess(cad_y, pcb_x)
+        self.assertTrue(cand['cad']['bbox_size_matches_pcb'])
+        self.assertFalse(cand['cad']['full_clearance_or_collision_verified'])
+        self.assertFalse(cand['pcb_fit_server_receipt_observed'])
+        self.assertFalse(cand['promoted_to_original'])
+        axi = fresh['axiom']
+        self.assertEqual(axi['original']['project_id'], old['axiom']['original_project_id'])
+        self.assertEqual(axi['original']['requirements_stale'], 3)
+        self.assertEqual(axi['candidate']['requirements_verified'], 3)
+        self.assertEqual(axi['candidate']['content_hash'], axi['candidate']['verified_hash'])
+        self.assertFalse(axi['cad_joint_coupling_hosted_verified'])
+        self.assertFalse(axi['physical_servo_verified'])
+        self.assertIsNone(fresh['screenshots']['fresh_capture_date'])
+        self.assertIn('NOT END-TO-END ACCEPTED', fresh['overall'])
+
+
 if __name__ == '__main__':
     unittest.main()
