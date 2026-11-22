@@ -30,7 +30,9 @@ This result accepts the recorded CAD artifact. The LabWired deployed optimized-e
 
 ## Visual record
 
-The inspected visual record remains pending. The scoped observer attached to an owned browser context, but the existing DemoPlayer did not become ready within its time limit and no frames were captured. This revision publishes the independently verified deployed mesh and its geometry receipts. Any later successful capture will be an additive follow-up using the exact qualified stored bytes. It will remain distinct from a hosted Studio viewer or flight observation. The exact failed receipt is visual/capture-failed.json. Its resource summary records exit 1 after 15.98 seconds, 225,216 KiB peak resident memory, zero transfers and zero frames; owned-context cleanup completed. Private renderer implementations are excluded.
+The inspected visual record remains pending. The scoped observer attached to an owned browser context, but the existing DemoPlayer did not become ready within its time limit and no frames were captured. This revision publishes the independently verified deployed mesh and its geometry receipts. Any later successful capture will be an additive follow-up using the exact qualified stored bytes. It will remain distinct from a hosted Studio viewer or flight observation. The exact failed receipt is visual/capture-failed.json. Its resource summary records exit 1 after 15.98 seconds, 225,216 KiB peak resident memory, zero transfers and zero frames; owned-context cleanup completed. The bounded readiness diagnostic received HTTP 200 for the exact player HTML and JavaScript. At 522 ms, THREE.WebGLRenderer reported that it could not create a WebGL context. Both WebGL2 and WebGL probes failed with the Mesa/ANGLE llvmpipe error `BindToCurrentSequence failed`; no model was loaded. The diagnostic preserved in visual/owned-player-readiness-diagnostic.json also confirms cleanup of its owned context.
+
+Private renderer implementations are excluded.
 
 ## Evidence files
 
