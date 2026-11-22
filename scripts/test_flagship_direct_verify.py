@@ -14,7 +14,7 @@ class FlagshipDirectVerify(unittest.TestCase):
 
     def test_oracle_receipts_are_hash_bound_and_do_not_fabricate_run_ids(self):
         self.assertEqual(self.r['schema'], 'labwired-flagship-direct-live-verify-v1')
-        for key, size in [('quadrotor', 4), ('single_esc_negative_control', 4), ('axiom_h1_candidate', 3)]:
+        for key, size in [('quadrotor', 4), ('single_esc_negative_control', 4), ('axiom_h1_candidate', 3), ('axiom_h1_original', 3)]:
             with self.subTest(key=key):
                 item = self.r[key]
                 self.assertEqual(item['http_status'], 200)
@@ -36,6 +36,7 @@ class FlagshipDirectVerify(unittest.TestCase):
         self.assertEqual(self.r['fresh_readbacks']['quadrotor']['content_hash'], self.r['quadrotor']['verified_hash'])
         self.assertEqual(self.r['fresh_readbacks']['single_esc_negative_control']['verified_hash'], self.r['single_esc_negative_control']['verified_hash'])
         self.assertEqual(self.r['fresh_readbacks']['axiom_h1_candidate']['verified_hash'], self.r['axiom_h1_candidate']['verified_hash'])
+        self.assertEqual(self.r['fresh_readbacks']['axiom_h1_original']['verified_hash'], self.r['axiom_h1_original']['verified_hash'])
 
     def test_mechanical_link_is_saved_but_not_joint_or_physical_proof(self):
         m = self.r['axiom_mechanical_link']
@@ -49,6 +50,9 @@ class FlagshipDirectVerify(unittest.TestCase):
         self.assertFalse(m['physical_joint_motion_verified'])
         self.assertFalse(self.r['pathfinder']['candidate_full_clearance_verified'])
         self.assertFalse(self.r['ui']['fix_deployed_and_ui_rechecked'])
+        self.assertEqual(self.r['axiom_original_mechanical_link']['after_content_hash'], self.r['axiom_h1_original']['verified_hash'])
+        self.assertEqual(self.r['axiom_original_mechanical_link']['motion_bindings'], 20)
+        self.assertFalse(self.r['axiom_original_mechanical_link']['hosted_joint_transform_oracle_verified'])
         self.assertTrue(self.r['unverified'])
 
 

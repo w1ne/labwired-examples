@@ -220,6 +220,10 @@
     "axiom_h1_candidate": {
       "content_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
       "verified_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7"
+    },
+    "axiom_h1_original": {
+      "content_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+      "verified_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7"
     }
   },
   "pathfinder": {
@@ -251,5 +255,85 @@
     "AXIOM hosted PWM-to-CAD joint transformations and physical joint actuation",
     "Pathfinder original/candidate PCB three-dimensional fit and insertion path",
     "physical hardware, wiring current, power or safety"
-  ]
+  ],
+  "axiom_h1_original": {
+    "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+    "project_url": "https://app.labwired.com/p/e6b30d45ba55e64aa450a2aa292edd4b/edit",
+    "started_utc": "2026-11-22T13:50:49Z",
+    "method": "authenticated owner POST /v1/projects/:id/verify with max_steps; subsequent authenticated GET readback",
+    "http_status": 200,
+    "elapsed_s": 3.62,
+    "max_steps": 200000000,
+    "verified": true,
+    "verified_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+    "proof": "oracle",
+    "oracle_source": "declared",
+    "requirements": [
+      {
+        "id": "R1",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_BOOT_OK\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_PCA_I2C:OK\""
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_20_CHANNELS_WRITTEN\""
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "passed": true,
+        "clauses": [
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_FIRST_RANGE_MM:1500\""
+          },
+          {
+            "kind": "serial",
+            "passed": true,
+            "detail": "serial contains \"AXIOM_CLEAR_PATH\""
+          }
+        ]
+      }
+    ],
+    "run_id": null,
+    "run_id_note": "REST returned no world-job/run id; do not invent one"
+  },
+  "axiom_original_mechanical_link": {
+    "project_id": "e6b30d45ba55e64aa450a2aa292edd4b",
+    "before_content_hash": "0487080a9c2eaf9e45fd2fbad8ad42603fdffc09a0aac2ff9bca0146c6d785ee",
+    "after_content_hash": "7aa277f7a35ce1148190c6d3b429bd69598f85ab46576eead248d34e03796bd7",
+    "link_saved_http_status": 200,
+    "model_url": "https://app.kernelcad.com/p/45f5VM8t?version=1",
+    "model_slug": "45f5VM8t",
+    "model_version": 1,
+    "motion_bindings": 20,
+    "circuit_parts_unchanged": true,
+    "circuit_wires_unchanged": true,
+    "static_integration_check": {
+      "ok": true,
+      "status": "integrated",
+      "issue_count": 0,
+      "warning_count": 40
+    },
+    "hosted_joint_transform_oracle_verified": false,
+    "physical_joint_motion_verified": false
+  }
 }
