@@ -125,6 +125,16 @@ The mass calculation applies **1040 kg/m³ to solid ABS envelopes**. It is not t
 
 [Original front view](media/original-frame-front.png) and [revised front view](media/compact-frame-front.png) complete the inspected canonical views. These images came from the real kernelCAD renderer. An earlier 1208 mm wide clearance diagnostic was rejected and is not the delivered frame.
 
+### 23 November AXIOM viewer provenance regression (live browser)
+
+The [source-pinned browser recheck](mechanical/axiom-provenance-embed-recheck-20261123.json) found a **real saved-viewer blocker** beyond the earlier unavailable desktop WebGL device. The older, immutable AXIOM CAD reference `45f5VM8t@1` requests artifact digest `857d1a30…806420`; the current CDN at the same revision URL serves producer digest `27433c92…3d3db`. A Chrome 156 headless public embed with WebGL2 reports **“Mesh artifact provenance does not match the requested digest”** and does not display geometry with the old pin. A fresh public embed requesting the current digest displays the same model with a 1280 × 820 WebGL2 canvas.
+
+The authored source SHA-256 `5c392121…d9ac4496` and geometry hash `3b2b4544…4032f28` match across both producer receipts. The producer identity changed; preserving the old pin is correct until its old artifact can be fetched by immutable address. See [KernelCAD-server #866](https://github.com/w1ne/kernelCAD-server/issues/866) for the artifact-store fix. **No change was made to the live LabWired saved model**, and the public static render does not prove PWM-driven joint motion. The animation artifact returned HTTP 404.
+
+| Old saved artifact digest: rejected | Current producer digest: visible static model |
+| --- | --- |
+| ![Provenance mismatch error](media/live-readback/axiom-public-embed-old-pin-rejected-20261123.png) | ![Public model rendered with current digest](media/live-readback/axiom-public-embed-current-pin-rendered-20261123.png) |
+
 ### Firmware pulse → joint → CAD transform
 
 The [joint-transform receipt](mechanical/joint-transform-evidence.json) passes against the exact saved compact source. It replays the 46 snapshots from the real 185-million-instruction firmware run through the production LabWired `KernelCadRuntimeHost`, kernelCAD `ElectronicsRuntimeStore` and `motionGeometries`.
