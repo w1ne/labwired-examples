@@ -1,0 +1,90 @@
+{
+  "schema": "labwired-examples/axiom-provenance-embed-recheck/v1",
+  "captured_at_utc": "2026-11-23T01:16:26Z",
+  "model": {
+    "slug": "45f5VM8t",
+    "revision": 1,
+    "saved_source_sha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+    "geometry_sha256": "3b2b45447f0efdec5c17247dae53c8ade82b19b71779a97ee58db135b4032f28"
+  },
+  "historical_artifact": "examples/robotics/axiom-h1/mechanical/producer-refresh-20261122/mesh.json.gz",
+  "historical_provenance": {
+    "schema": "kernelcad.revision-mesh-provenance.v1",
+    "source": {
+      "sha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+      "byteLength": 5966
+    },
+    "assetsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "geometryHash": "3b2b45447f0efdec5c17247dae53c8ade82b19b71779a97ee58db135b4032f28",
+    "producer": {
+      "serverBuild": "0.1.0+fd52f2c20b80@2026-11-22T05:05:20.599Z",
+      "serverCommit": "fd52f2c20b801c8a7ab875ebeb6b844a928baf97",
+      "runtimeSourceHash": "f00d5beda7bb1f5befa8f001329013b0c2b1e6b9ae85019837415deee2d89977",
+      "sessionArtifactSha256": "bbbbcf04ef339960dfd03e83f6d1d9725971e80c35a50337957e46144985c507"
+    }
+  },
+  "historical_provenance_digest_sha256": "857d1a3086a88873bcf79a27f5ce6a28f644aaf5877ddedb6e80369180906420",
+  "observed_current_public_artifact_url": "https://mesh.kernelcad.com/mesh-artifacts/45f5VM8t/v1.json",
+  "observed_current_cdn_http_status": 200,
+  "observed_current_cdn_artifact_bytes": 3142099,
+  "observed_current_provenance": {
+    "schema": "kernelcad.revision-mesh-provenance.v1",
+    "source": {
+      "sha256": "5c392121b7cccfd8dc41fb0226ac68e3f344b06bf954ccb35db74e0fd9ac4496",
+      "byteLength": 5966
+    },
+    "assetsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "geometryHash": "3b2b45447f0efdec5c17247dae53c8ade82b19b71779a97ee58db135b4032f28",
+    "producer": {
+      "serverBuild": "0.1.0+26fdc5062065@2026-11-23T00:53:46.639Z",
+      "serverCommit": "26fdc50620653e94c348f1c41bddd45b7da6350b",
+      "runtimeSourceHash": "f5712cda6151850cf48863f9a25a2a481aeb5b18c762dc80d15c0910bdc8f46b",
+      "sessionArtifactSha256": "a5e7d64873d41d3ebff353097188845489ac916d6fde8101f0dd895c7784696d"
+    }
+  },
+  "observed_current_provenance_digest_sha256": "27433c922f4c7c9df079fa6f2d69435aa2d81e8d7cfe99d316d2babd1e83d3db",
+  "identical_authored_source_sha256": true,
+  "identical_geometry_hash": true,
+  "different_producer_identity": true,
+  "viewer": {
+    "old_saved_pin": {
+      "status": "error",
+      "observed_error": "Viewer failed: Mesh artifact provenance does not match the requested digest.",
+      "canvas_present": false
+    },
+    "current_cdn_pin": {
+      "status": "static_model_canvas_rendered",
+      "webgl2": true,
+      "canvas_pixels": [
+        1280,
+        820
+      ],
+      "animation_artifact_http_status": 404,
+      "runtime_servo_motion_verified": false
+    }
+  },
+  "screenshots": [
+    {
+      "status": "rejected_old_pin",
+      "path": "examples/robotics/axiom-h1/media/live-readback/axiom-public-embed-old-pin-rejected-20261123.png",
+      "sha256": "5c2a83c4326a98e9c292224bc6816074078fe887f6c5c70373e3205339cd6b0f",
+      "bytes": 12542,
+      "capture_mode": "Chrome 156 headless, ANGLE SwiftShader/WebGL2; public KernelCAD embed, not authenticated LabWired runtime"
+    },
+    {
+      "status": "displayed_current_pin",
+      "path": "examples/robotics/axiom-h1/media/live-readback/axiom-public-embed-current-pin-rendered-20261123.png",
+      "sha256": "61b98c9181487b5cd1cdbdd1fabd51de63fcef6f7c51e955075f9a6297aec254",
+      "bytes": 67103,
+      "capture_mode": "Chrome 156 headless, ANGLE SwiftShader/WebGL2; public KernelCAD embed, not authenticated LabWired runtime"
+    }
+  ],
+  "tracked_fix": "https://github.com/w1ne/kernelCAD-server/issues/866",
+  "scope": {
+    "live_saved_labwired_view_repaired": false,
+    "servo_pwm_joint_motion_observed": false,
+    "physical_hardware_verified": false,
+    "browser_paint_observed_only_on_public_kernelcad_embed": true
+  },
+  "note": "A producer change overwrote the same revision path; old immutable query-pin now rejects a current artifact. Current pin works in the independent public embed but has not been saved to the LabWired project. No stale pin is silently requalified."
+}
