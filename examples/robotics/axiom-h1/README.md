@@ -125,6 +125,10 @@ The mass calculation applies **1040 kg/m³ to solid ABS envelopes**. It is not t
 
 [Original front view](media/original-frame-front.png) and [revised front view](media/compact-frame-front.png) complete the inspected canonical views. These images came from the real kernelCAD renderer. An earlier 1208 mm wide clearance diagnostic was rejected and is not the delivered frame.
 
+### 23 November archived AXIOM producer restoration (static embed)
+
+The [restoration receipt](mechanical/axiom-restored-producer-proof-20261123.json) records a successful protected, create-only R2 recovery of the original AXIOM producer digest `857d1a30…806420`, without changing the mutable revision pointer or saved CAD source. The public immutable URL now returns **HTTP 200**, **3,107,233 bytes** and the original SHA-256 `3fccde237da7ee0b96019f291f866882766fc42973046747b9470ed1be8a4eb6`. The [new headless-Chrome screenshot](media/live-readback/axiom-restored-original-producer-20261123.png) displays the static robot model from that old digest after a 50-second capture. The original signed-in LabWired Mechanics pane still reports WebGL unavailable in the work-1 desktop. **Neither this restored mesh nor the screenshot proves observed PWM-driven CAD joint motion, populated Pathfinder clearance or physical hardware.**
+
 ### 23 November AXIOM viewer provenance regression (live browser)
 
 The [source-pinned browser recheck](mechanical/axiom-provenance-embed-recheck-20261123.json) found a **real saved-viewer blocker** beyond the earlier unavailable desktop WebGL device. The older, immutable AXIOM CAD reference `45f5VM8t@1` requests artifact digest `857d1a30…806420`; the current CDN at the same revision URL serves producer digest `27433c92…3d3db`. A Chrome 156 headless public embed with WebGL2 reports **“Mesh artifact provenance does not match the requested digest”** and does not display geometry with the old pin. A fresh public embed requesting the current digest displays the same model with a 1280 × 820 WebGL2 canvas.

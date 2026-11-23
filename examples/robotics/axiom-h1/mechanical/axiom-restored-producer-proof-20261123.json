@@ -1,0 +1,41 @@
+{
+  "schema": "labwired-examples/axiom-original-immutable-pin-restoration/v1",
+  "observed_at_utc": "2026-11-23T18:32:38Z",
+  "scope": "Production R2 immutable byte restoration and static public KernelCAD embed paint only",
+  "kernelcad_model": {
+    "slug": "45f5VM8t",
+    "revision": 1,
+    "producer_digest": "857d1a3086a88873bcf79a27f5ce6a28f644aaf5877ddedb6e80369180906420"
+  },
+  "storage": {
+    "restoration_workflow_url": "https://github.com/w1ne/kernelCAD-server/actions/runs/45238911280",
+    "preflight_url": "https://github.com/w1ne/kernelCAD-server/actions/runs/45238795801",
+    "immutable_url": "https://mesh.kernelcad.com/mesh-artifacts/45f5VM8t/v1-857d1a3086a88873bcf79a27f5ce6a28f644aaf5877ddedb6e80369180906420.json",
+    "public_http_status": 200,
+    "body_bytes": 3107233,
+    "body_sha256": "3fccde237da7ee0b96019f291f866882766fc42973046747b9470ed1be8a4eb6",
+    "archive_path": "examples/robotics/axiom-h1/mechanical/producer-refresh-20261122/mesh.json.gz",
+    "archive_sha256": "3127d99a2cc4a434bedbc74a836af6d8d198f5ed852d65a40ae18ceb5a6cc7ef"
+  },
+  "static_embed": {
+    "url": "https://app.kernelcad.com/embed/45f5VM8t?revision=1&meshUrl=https%3A%2F%2Fmesh.kernelcad.com%2Fmesh-artifacts%2F45f5VM8t%2Fv1-857d1a3086a88873bcf79a27f5ce6a28f644aaf5877ddedb6e80369180906420.json%3Fprovenance%3D857d1a3086a88873bcf79a27f5ce6a28f644aaf5877ddedb6e80369180906420",
+    "observed": "static_robot_mesh_visible_in_Chrome_156_headless_SwiftShader_capture",
+    "capture_virtual_time_ms": 50000,
+    "screenshot": {
+      "path": "examples/robotics/axiom-h1/media/live-readback/axiom-restored-original-producer-20261123.png",
+      "bytes": 70888,
+      "sha256": "7ec7f04662f61cbd7bb7447ce6a4e83bfbdd007fc4075db9382b97db1d0cec36"
+    },
+    "no_servo_or_joint_animation_tested": true
+  },
+  "acceptance": {
+    "public_immutable_artifact_restored": true,
+    "static_public_embed_painted": true,
+    "saved_LabWired_browser_mechanics_painted": false,
+    "PWM_to_CAD_motion_verified": false,
+    "physical_actuation_verified": false,
+    "populated_Pathfinder_PCB_fit_verified": false,
+    "six_axis_quadrotor_flight_verified": false
+  },
+  "legacy_negative_evidence": "examples/robotics/axiom-h1/mechanical/axiom-provenance-embed-recheck-20261123.json"
+}
