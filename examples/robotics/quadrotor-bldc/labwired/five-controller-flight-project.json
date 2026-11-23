@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "project_id": "7c92d38a4f2ac205aa91502291fde0d8",
+  "url": "https://app.labwired.com/p/7c92d38a4f2ac205aa91502291fde0d8/edit?share=7c92d38a4f2ac205aa91502291fde0d8&run=1",
+  "board": "stm32l476",
+  "entry_path": "firmware/flight/esc1.c",
+  "language": "c",
+  "channels": [
+    {
+      "controller": "fc",
+      "board": "stm32l476",
+      "source": "firmware/flight/fc.c",
+      "source_sha256": "4c29b8c644d8048f5ee4b83be7db79cbfa5f2d8663dcbc05b5c8a97e74f1d80b",
+      "source_bytes": 13704
+    },
+    {
+      "controller": "ctrl1",
+      "board": "stm32l476",
+      "source": "firmware/flight/esc1.c",
+      "source_sha256": "6f8678f53795b6ad71673f4cb30bf4e68fc9685e289a45c38fe90d1bbde63dae",
+      "source_bytes": 6053
+    },
+    {
+      "controller": "ctrl2",
+      "board": "stm32l476",
+      "source": "firmware/flight/esc2.c",
+      "source_sha256": "2989bd639b80f39a6eff70165db3055d0b0ac7edb577cd5928c4dc7e681f35ff",
+      "source_bytes": 6053
+    },
+    {
+      "controller": "ctrl3",
+      "board": "stm32l476",
+      "source": "firmware/flight/esc3.c",
+      "source_sha256": "36b33f4b5dfed64e65100c5bb92ce97beb0cf4e6df7c7ca2ddab149a648335e7",
+      "source_bytes": 6053
+    },
+    {
+      "controller": "ctrl4",
+      "board": "stm32l476",
+      "source": "firmware/flight/esc4.c",
+      "source_sha256": "414fb55f0005bc49f918681432ca2d65f1699da0877eb15f11dcdfadac0b3dfe",
+      "source_bytes": 6053
+    }
+  ],
+  "diagram": "labwired/five-controller-flight-circuit.json",
+  "mechanical": {
+    "provider": "kernelcad",
+    "slug": "DyJ405zg",
+    "version": 5,
+    "title": "Quadrotor \u00b7 five-controller closed-loop flight twin",
+    "electronics": {
+      "version": 1,
+      "displays": [],
+      "inputs": [],
+      "motions": [
+        {
+          "id": "M1",
+          "component": "rotor1",
+          "joint": "prop-shaft-rear-right",
+          "parts": [
+            "rotor-rear-right-ENVELOPE",
+            "prop-rear-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        },
+        {
+          "id": "M2",
+          "component": "rotor2",
+          "joint": "prop-shaft-front-right",
+          "parts": [
+            "rotor-front-right-ENVELOPE",
+            "prop-front-right-ENVELOPE"
+          ],
+          "origin": [
+            89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M3",
+          "component": "rotor3",
+          "joint": "prop-shaft-rear-left",
+          "parts": [
+            "rotor-rear-left-ENVELOPE",
+            "prop-rear-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": -1
+        },
+        {
+          "id": "M4",
+          "component": "rotor4",
+          "joint": "prop-shaft-front-left",
+          "parts": [
+            "rotor-front-left-ENVELOPE",
+            "prop-front-left-ENVELOPE"
+          ],
+          "origin": [
+            -89,
+            -69.534420756,
+            9.3
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "direction": 1
+        }
+      ],
+      "bodies": [
+        {
+          "id": "airframe",
+          "controller": "fc",
+          "imu": "imu",
+          "parts": [
+            "frame-bottom",
+            "frame-cross",
+            "frame-middle",
+            "camera-side-left",
+            "camera-side-right",
+            "arm-rear-right",
+            "arm-front-right",
+            "arm-rear-left",
+            "arm-front-left",
+            "standoff-rear-left",
+            "standoff-rear-right",
+            "standoff-middle-left",
+            "standoff-middle-right",
+            "frame-top",
+            "esc-grommet-1-ENVELOPE",
+            "esc-grommet-2-ENVELOPE",
+            "esc-grommet-3-ENVELOPE",
+            "esc-grommet-4-ENVELOPE",
+            "esc-board",
+            "fc-grommet-1-ENVELOPE",
+            "fc-grommet-2-ENVELOPE",
+            "fc-grommet-3-ENVELOPE",
+            "fc-grommet-4-ENVELOPE",
+            "esc-population-native-mesh",
+            "fc-board-native",
+            "fc-population-native-mesh",
+            "motor-base-rear-right-ENVELOPE",
+            "rotor-rear-right-ENVELOPE",
+            "prop-rear-right-ENVELOPE",
+            "motor-base-front-right-ENVELOPE",
+            "rotor-front-right-ENVELOPE",
+            "prop-front-right-ENVELOPE",
+            "motor-base-rear-left-ENVELOPE",
+            "rotor-rear-left-ENVELOPE",
+            "prop-rear-left-ENVELOPE",
+            "motor-base-front-left-ENVELOPE",
+            "rotor-front-left-ENVELOPE",
+            "prop-front-left-ENVELOPE"
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "motors": [
+            {
+              "component": "rotor1",
+              "positionMm": [
+                89,
+                69.534420756,
+                9.3
+              ],
+              "spin": 1
+            },
+            {
+              "component": "rotor2",
+              "positionMm": [
+                89,
+                -69.534420756,
+                9.3
+              ],
+              "spin": -1
+            },
+            {
+              "component": "rotor3",
+              "positionMm": [
+                -89,
+                69.534420756,
+                9.3
+              ],
+              "spin": -1
+            },
+            {
+              "component": "rotor4",
+              "positionMm": [
+                -89,
+                -69.534420756,
+                9.3
+              ],
+              "spin": 1
+            }
+          ],
+          "massKg": 0.55,
+          "inertiaKgM2": [
+            0.004,
+            0.005,
+            0.008
+          ],
+          "thrustNPerRpm2": 3.37e-07,
+          "yawNmPerRpm2": 1e-08,
+          "linearDragPerS": 0.8,
+          "angularDragPerS": 6.0,
+          "groundZMm": 0
+        }
+      ]
+    }
+  },
+  "simulation_scope": "Five executing STM32L476 firmware instances, BMI270 closed-loop feedback, four reduced-order BLDC/inverter plants, deterministic rigid-body flight dynamics, universal oscilloscope and logic analyzer. Emergency-stop input; bounded I2C reads and latched IMU/ESC failsafes.",
+  "flight_dynamics": true,
+  "physical_hardware_tested": false,
+  "acceptance": [
+    "five_firmware_boots",
+    "bmi270_online",
+    "arm_takeoff_hover",
+    "commanded_attitude_maneuver",
+    "universal_mixed_signal_instruments",
+    "latched_motor_fault",
+    "flight_controller_all_esc_disarm",
+    "safe_descent",
+    "operator_kill_latches_all_commands_low",
+    "imu_read_failure_disarms_all"
+  ],
+  "safety_inputs": {
+    "emergency_stop": {
+      "component": "kill",
+      "input": "pressed",
+      "fc_pin": "PC4",
+      "active_high": true
+    },
+    "esc_health": [
+      "PC0",
+      "PC1",
+      "PC2",
+      "PC3"
+    ],
+    "imu_timeout_reads": 3,
+    "output_disarm_pins": [
+      "PC8",
+      "PC9",
+      "PC10",
+      "PC11"
+    ]
+  },
+  "esc_behavioral_profile": {
+    "cpu_hz": 4000000,
+    "timer_prescaler": 3,
+    "timer_auto_reload": 999,
+    "inverter_pwm_hz": 1000,
+    "command_decoder_hz": 10000,
+    "hall_control_hz": 500,
+    "motor_model": "reduced-order; not a manufacturable ESC or final 20kHz silicon equivalent",
+    "inverter_enable": "off at boot; asserted only when valid commands arrive",
+    "hall_lock": "original sequence and 1-20 control-tick period rule unchanged"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "scope": "Local five-target compile and link, source integrity, unit tests and diagram validation; not five-firmware execution",
+  "compiler": "13.2.1",
+  "flags": [
+    "-mcpu=cortex-m4",
+    "-mthumb",
+    "-ffreestanding",
+    "-nostdlib",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wl,--gc-sections",
+    "-Wl,--fatal-warnings",
+    "-lgcc"
+  ],
+  "images": [
+    {
+      "source": "firmware/flight/fc.c",
+      "source_sha256": "4c29b8c644d8048f5ee4b83be7db79cbfa5f2d8663dcbc05b5c8a97e74f1d80b",
+      "elf_sha256": "b0f82bd1c76c64df22fe9814c04fb3d672ceed8b2708cc71f115aa4577c0439b",
+      "elf_bytes": 35344,
+      "machine": "ARM Cortex-M4",
+      "startup": "LabWired stm32l476/startup.c",
+      "linker": "LabWired stm32l476/stm32l476.ld",
+      "linked": true,
+      "hosted_artifact_ref": null
+    },
+    {
+      "source": "firmware/flight/esc1.c",
+      "source_sha256": "6f8678f53795b6ad71673f4cb30bf4e68fc9685e289a45c38fe90d1bbde63dae",
+      "elf_sha256": "5c0ba1a591bc89cded4a72bc4782a8b39edb3eecf5b371082ca18b1ff03e2119",
+      "elf_bytes": 16188,
+      "machine": "ARM Cortex-M4",
+      "startup": "LabWired stm32l476/startup.c",
+      "linker": "LabWired stm32l476/stm32l476.ld",
+      "linked": true,
+      "hosted_artifact_ref": null
+    },
+    {
+      "source": "firmware/flight/esc2.c",
+      "source_sha256": "2989bd639b80f39a6eff70165db3055d0b0ac7edb577cd5928c4dc7e681f35ff",
+      "elf_sha256": "bc499b80f30a3690abe8e5e9ad3de06d6938e889b400c4dc6c7193c3005f73d9",
+      "elf_bytes": 16188,
+      "machine": "ARM Cortex-M4",
+      "startup": "LabWired stm32l476/startup.c",
+      "linker": "LabWired stm32l476/stm32l476.ld",
+      "linked": true,
+      "hosted_artifact_ref": null
+    },
+    {
+      "source": "firmware/flight/esc3.c",
+      "source_sha256": "36b33f4b5dfed64e65100c5bb92ce97beb0cf4e6df7c7ca2ddab149a648335e7",
+      "elf_sha256": "ee8d412a91648e9267d0a8cd3469151df645fbde718acc91fd92e00740570671",
+      "elf_bytes": 16188,
+      "machine": "ARM Cortex-M4",
+      "startup": "LabWired stm32l476/startup.c",
+      "linker": "LabWired stm32l476/stm32l476.ld",
+      "linked": true,
+      "hosted_artifact_ref": null
+    },
+    {
+      "source": "firmware/flight/esc4.c",
+      "source_sha256": "414fb55f0005bc49f918681432ca2d65f1699da0877eb15f11dcdfadac0b3dfe",
+      "elf_sha256": "e34d08c6cd1e9b36937a8d23154da9bed2ade325d2c36a8772af303bcb6b6c97",
+      "elf_bytes": 16188,
+      "machine": "ARM Cortex-M4",
+      "startup": "LabWired stm32l476/startup.c",
+      "linker": "LabWired stm32l476/stm32l476.ld",
+      "linked": true,
+      "hosted_artifact_ref": null
+    }
+  ],
+  "source_integrity_tests": 64,
+  "source_integrity_result": "pass",
+  "host_command_mask_test": "pass",
+  "diagram_validation": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "parts": 17,
+    "wires": 81
+  },
+  "five_controller_runtime": "not_executed",
+  "airframe_dynamics_test": "not_executed_in_deployed_lab",
+  "physical_hardware_test": "not_executed",
+  "existing_hosted_compilation_receipt": "historical_stale_after_fc_changes",
+  "notes": [
+    "Rebuilt all five after the FC failsafe text correction.",
+    "Local ELF hashes are independent from hosted firmware_ref hashes; no flight acceptance inferred."
+  ],
+  "five_controller_electrical_world_mcp": "model_verified 4/4 normal motor startup, 9/9 driver fault response",
+  "five_controller_closed_loop_flight": "not verified"
+}

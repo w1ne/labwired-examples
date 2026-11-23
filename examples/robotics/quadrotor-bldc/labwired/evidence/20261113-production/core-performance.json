@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-11-13T00:30:24.242008+00:00",
+  "core_head": "0452122608f772b990c8b2e0087239bb6be22494",
+  "merge_commit": "cfe553f69dfa17e4c1beaaf10046712283722234",
+  "job_url": "https://github.com/w1ne/labwired-core/actions/runs/43325141440/job/131555702783",
+  "log_sha256": "da26d6c27330cafc00663e1eb2f0ca66fff28b78307b96a0856bdbd9f78784d2",
+  "conclusion": "success",
+  "efr32mg26_step": {
+    "unit": "Ir/step",
+    "observed": 1433.2,
+    "baseline": 1513.7,
+    "reported_change_percent": -5.3
+  },
+  "reported_lines": [
+    {
+      "line": 1040,
+      "text": "2026-11-12T23:14:00.0946787Z efr32mg26              78.0        56.68x 55.92-56.84x     1023.8"
+    },
+    {
+      "line": 1126,
+      "text": "2026-11-12T23:14:00.0972101Z all 97 chips meet or exceed 1.00x real time; 25 waived chip(s) not measured"
+    },
+    {
+      "line": 1199,
+      "text": "2026-11-12T23:31:30.5640524Z efr32mg26        stm32     step       1433.2     1513.7    -5.3%          (faster)"
+    },
+    {
+      "line": 1200,
+      "text": "2026-11-12T23:31:30.5640870Z efr32mg26        stm32     batch         2.1        2.2    -2.8%  1023.9"
+    },
+    {
+      "line": 1383,
+      "text": "2026-11-12T23:47:18.2751599Z no throughput regression"
+    }
+  ],
+  "limits_unchanged": true,
+  "waiver_note": "The 25 existing waivers remain unmeasured; success does not establish measurements for those waived chips."
+}

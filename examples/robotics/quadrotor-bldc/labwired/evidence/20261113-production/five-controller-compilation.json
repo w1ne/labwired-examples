@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "compiled_at": "2026-11-13T01:30:37.437554+00:00",
+  "kind": "hosted-compilation-only",
+  "profile": {
+    "board": "stm32l476",
+    "language": "c",
+    "entryPath": "src/main.c"
+  },
+  "all_compiles_succeeded": true,
+  "controllers": [
+    {
+      "controller": "fc",
+      "source_sha256": "accb6677d9a87f497d512b866fde2d6758b6717e179e100038dbaecb221fffff",
+      "source_bytes": 11923,
+      "firmware_ref": "sha256:4e43ccb9cc5ea64138cf92afd3fe512f9a06e9a8fc511a1260c5505f6fe04057",
+      "ok": true,
+      "runnable": true,
+      "verification_status": "not_run",
+      "diagnostics": []
+    },
+    {
+      "controller": "ctrl1",
+      "source_sha256": "57eb2a4f869e117712171a5ec031e67c5e94fd482b11ace6cc13d55f58f2d3e0",
+      "source_bytes": 5964,
+      "firmware_ref": "sha256:d58a31e897e1cfb798be214c52068ae73efeeb1f509aa816a1e4914484514505",
+      "ok": true,
+      "runnable": true,
+      "verification_status": "not_run",
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "file": "src/main.c",
+          "line": 99,
+          "column": 3,
+          "message": "this 'if' clause does not guard... [-Wmisleading-indentation]"
+        }
+      ]
+    },
+    {
+      "controller": "ctrl2",
+      "source_sha256": "55b0dc3488d441092705d1924fe17b59f34d745e4f83ed50f22cc63840983252",
+      "source_bytes": 5964,
+      "firmware_ref": "sha256:65dcb0c9974a0da4ba67f8c2b50ef24fae7df25c3fb6b32380a72973df718485",
+      "ok": true,
+      "runnable": true,
+      "verification_status": "not_run",
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "file": "src/main.c",
+          "line": 99,
+          "column": 3,
+          "message": "this 'if' clause does not guard... [-Wmisleading-indentation]"
+        }
+      ]
+    },
+    {
+      "controller": "ctrl3",
+      "source_sha256": "f7400c7a04eff92076c9aa50469bdd1578545e0fef9d30378a51d11d023f92f6",
+      "source_bytes": 5964,
+      "firmware_ref": "sha256:fe44e9cd8b645102f5016f11348361c5fd20f2c69df1d47035f568228468328b",
+      "ok": true,
+      "runnable": true,
+      "verification_status": "not_run",
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "file": "src/main.c",
+          "line": 99,
+          "column": 3,
+          "message": "this 'if' clause does not guard... [-Wmisleading-indentation]"
+        }
+      ]
+    },
+    {
+      "controller": "ctrl4",
+      "source_sha256": "ed64881e77ae6efbd8af383e4bcc7d68d2fa7c1e81242dd7ea645a82dae6cd60",
+      "source_bytes": 5964,
+      "firmware_ref": "sha256:68f7a5e162cd0965b89754b9f3a78dea5b66b7a190e33c356fa833be7c9dbbe9",
+      "ok": true,
+      "runnable": true,
+      "verification_status": "not_run",
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "file": "src/main.c",
+          "line": 99,
+          "column": 3,
+          "message": "this 'if' clause does not guard... [-Wmisleading-indentation]"
+        }
+      ]
+    }
+  ],
+  "receipt_sha256": "79a3731acc97ff0459c6a44faffc8509a797e9551c411a1acb5e01ce34b9bd10",
+  "flight_verified": false,
+  "physical_hardware_tested": false,
+  "note": "Exact firmware compiles. Execution and production publication remain separate gates."
+}
