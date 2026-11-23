@@ -1,0 +1,262 @@
+{
+  "pcbSha256": "13a9b74e8a0afc65c016302d155bd7b4e10d3edd8cc331822bfb9ccc9e182249",
+  "kicadVersion": "10.0.8-10.0.8~ubuntu24.04.1",
+  "sourceFiles": {
+    "Inc/targets.h": "5182f3a6e0f3538705d00599c1756b829c101854524f6e19cfa9ae823e70d4b7",
+    "Inc/target_sensors.h": "68bac0ee26adebee5456cd35b2f1ee16150c1ba45b46b8a4146d805d46a37607",
+    "Mcu/f421/Src/ADC.c": "0328b7691dc32efa7a672e25afd1d882662b194378a6f519dc77474048eec5ce",
+    "Src/main.c": "c92885e81412f0250434e725d4a594c7ebe759d47b746dd19c86ae2c4f08ec03",
+    "Src/dshot.c": "ed36e282a64a9a2ab19799dad39bfcc14f2d1bf876e8b72ce20a47590f4ee266",
+    "Mcu/f421/Startup/startup_at32f421.s": "ec7c9bf70d6cf1a5fdc7255a551c2985f1cc6bd4e528e11e901c3b2603817ca7"
+  },
+  "gateBindings": [
+    {
+      "mcu": "U2",
+      "gpio": "PA10",
+      "net": "/ESC1/AH",
+      "driver": "U4",
+      "input": "HIN1"
+    },
+    {
+      "mcu": "U2",
+      "gpio": "PB1",
+      "net": "/ESC1/AL",
+      "driver": "U4",
+      "input": "LIN1"
+    },
+    {
+      "mcu": "U2",
+      "gpio": "PA9",
+      "net": "/ESC1/BH",
+      "driver": "U4",
+      "input": "HIN2"
+    },
+    {
+      "mcu": "U2",
+      "gpio": "PB0",
+      "net": "/ESC1/BL",
+      "driver": "U4",
+      "input": "LIN2"
+    },
+    {
+      "mcu": "U2",
+      "gpio": "PA8",
+      "net": "/ESC1/CH",
+      "driver": "U4",
+      "input": "HIN3"
+    },
+    {
+      "mcu": "U2",
+      "gpio": "PA7",
+      "net": "/ESC1/CL",
+      "driver": "U4",
+      "input": "LIN3"
+    },
+    {
+      "mcu": "U5",
+      "gpio": "PA10",
+      "net": "/ESC2/AH",
+      "driver": "U6",
+      "input": "HIN1"
+    },
+    {
+      "mcu": "U5",
+      "gpio": "PB1",
+      "net": "/ESC2/AL",
+      "driver": "U6",
+      "input": "LIN1"
+    },
+    {
+      "mcu": "U5",
+      "gpio": "PA9",
+      "net": "/ESC2/BH",
+      "driver": "U6",
+      "input": "HIN2"
+    },
+    {
+      "mcu": "U5",
+      "gpio": "PB0",
+      "net": "/ESC2/BL",
+      "driver": "U6",
+      "input": "LIN2"
+    },
+    {
+      "mcu": "U5",
+      "gpio": "PA8",
+      "net": "/ESC2/CH",
+      "driver": "U6",
+      "input": "HIN3"
+    },
+    {
+      "mcu": "U5",
+      "gpio": "PA7",
+      "net": "/ESC2/CL",
+      "driver": "U6",
+      "input": "LIN3"
+    },
+    {
+      "mcu": "U7",
+      "gpio": "PA10",
+      "net": "/ESC3/AH",
+      "driver": "U8",
+      "input": "HIN1"
+    },
+    {
+      "mcu": "U7",
+      "gpio": "PB1",
+      "net": "/ESC3/AL",
+      "driver": "U8",
+      "input": "LIN1"
+    },
+    {
+      "mcu": "U7",
+      "gpio": "PA9",
+      "net": "/ESC3/BH",
+      "driver": "U8",
+      "input": "HIN2"
+    },
+    {
+      "mcu": "U7",
+      "gpio": "PB0",
+      "net": "/ESC3/BL",
+      "driver": "U8",
+      "input": "LIN2"
+    },
+    {
+      "mcu": "U7",
+      "gpio": "PA8",
+      "net": "/ESC3/CH",
+      "driver": "U8",
+      "input": "HIN3"
+    },
+    {
+      "mcu": "U7",
+      "gpio": "PA7",
+      "net": "/ESC3/CL",
+      "driver": "U8",
+      "input": "LIN3"
+    },
+    {
+      "mcu": "U9",
+      "gpio": "PA10",
+      "net": "/ESC4/AH",
+      "driver": "U10",
+      "input": "HIN1"
+    },
+    {
+      "mcu": "U9",
+      "gpio": "PB1",
+      "net": "/ESC4/AL",
+      "driver": "U10",
+      "input": "LIN1"
+    },
+    {
+      "mcu": "U9",
+      "gpio": "PA9",
+      "net": "/ESC4/BH",
+      "driver": "U10",
+      "input": "HIN2"
+    },
+    {
+      "mcu": "U9",
+      "gpio": "PB0",
+      "net": "/ESC4/BL",
+      "driver": "U10",
+      "input": "LIN2"
+    },
+    {
+      "mcu": "U9",
+      "gpio": "PA8",
+      "net": "/ESC4/CH",
+      "driver": "U10",
+      "input": "HIN3"
+    },
+    {
+      "mcu": "U9",
+      "gpio": "PA7",
+      "net": "/ESC4/CL",
+      "driver": "U10",
+      "input": "LIN3"
+    }
+  ],
+  "negativeControls": [
+    {
+      "case": "wrong DShot pin",
+      "rejected": true,
+      "errors": [
+        "U2: DShot channel resistor route",
+        "U5: DShot channel resistor route",
+        "U7: DShot channel resistor route",
+        "U9: DShot channel resistor route"
+      ]
+    },
+    {
+      "case": "swapped high-side gates",
+      "rejected": true,
+      "errors": [
+        "U2: AH compiled PA9 does not reach U4 HIN1",
+        "U5: AH compiled PA9 does not reach U6 HIN1",
+        "U7: AH compiled PA9 does not reach U8 HIN1",
+        "U9: AH compiled PA9 does not reach U10 HIN1"
+      ]
+    },
+    {
+      "case": "wrong comparator mux",
+      "rejected": true,
+      "errors": [
+        "U2: comparator A route",
+        "U5: comparator A route",
+        "U7: comparator A route",
+        "U9: comparator A route"
+      ]
+    },
+    {
+      "case": "invented serial telemetry",
+      "rejected": true,
+      "errors": [
+        "serial telemetry pin is unconnected"
+      ]
+    },
+    {
+      "case": "floating external sensing",
+      "rejected": true,
+      "errors": [
+        "floating voltage/current ADC must be disabled"
+      ]
+    }
+  ],
+  "sensorGuards": [
+    {
+      "absentExternalSense": false,
+      "combinations": 9,
+      "passed": true
+    },
+    {
+      "absentExternalSense": true,
+      "combinations": 9,
+      "passed": true
+    },
+    {
+      "unsupportedMode": "USE_ADC_INPUT",
+      "rejected": true
+    },
+    {
+      "unsupportedMode": "USE_NTC",
+      "rejected": true
+    },
+    {
+      "unsupportedMode": "VOLTAGE_BASED_RAMP",
+      "rejected": true
+    },
+    {
+      "unsupportedMode": "FIXED_DUTY_MODE",
+      "rejected": true
+    },
+    {
+      "unsupportedMode": "FIXED_SPEED_MODE",
+      "rejected": true
+    }
+  ],
+  "ok": true,
+  "scope": "Native pad/net and compiled-target validation. No physical switching, motor, current-rating or flight qualification."
+}

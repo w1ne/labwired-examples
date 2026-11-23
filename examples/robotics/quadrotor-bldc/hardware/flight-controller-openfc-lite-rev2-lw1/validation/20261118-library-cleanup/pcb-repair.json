@@ -1,0 +1,109 @@
+{
+  "input_board_sha256": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
+  "output_board_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
+  "physical_geometry_comparison": {
+    "pads": {
+      "before_count": 584,
+      "after_count": 584,
+      "changed": []
+    },
+    "tracks_and_vias": {
+      "before_count": 1753,
+      "after_count": 1753,
+      "changed": []
+    },
+    "zones": {
+      "before_count": 19,
+      "after_count": 19,
+      "changed": []
+    }
+  },
+  "pin_identity_changes": [
+    {
+      "ref": "U12",
+      "uuid": "39ecfca6-02be-4cb0-8193-e6830cc5e434",
+      "old": "3",
+      "new": "4"
+    },
+    {
+      "ref": "U12",
+      "uuid": "5e67bb01-778b-451d-bf38-01e796909ddd",
+      "old": "4",
+      "new": "5"
+    },
+    {
+      "ref": "U12",
+      "uuid": "3c049398-f925-4e98-8e44-6a47c9e46882",
+      "old": "5",
+      "new": "3"
+    }
+  ],
+  "pin_metadata_updates": 296,
+  "renamed_net_aliases": {
+    "/PADS/U1RX": "/PADS/UART1_RX",
+    "/PADS/PU1TX": "/PADS/PIOUART1_TX",
+    "/PADS/PU1RX": "/PADS/PIOUART1_RX",
+    "unconnected-(U9-SDx{slash}AH1{slash}Qvar1-Pad2)": "unconnected-(U9-ASDx-Pad2)",
+    "unconnected-(U9-SCx{slash}AH2{slash}Qvar2-Pad3)": "unconnected-(U9-ASCx-Pad3)",
+    "unconnected-(U9-OCS_Aux-Pad10)": "unconnected-(U9-OCSB-Pad10)",
+    "unconnected-(U9-SDO_Aux-Pad11)": "unconnected-(U9-OSDO-Pad11)"
+  },
+  "schematic_geometry": [
+    {
+      "file": "power.kicad_sch",
+      "wires_and_junctions_preserved": 145,
+      "placed_components_preserved": 30,
+      "pin_positions_preserved": 78
+    },
+    {
+      "file": "pads.kicad_sch",
+      "wires_and_junctions_preserved": 110,
+      "placed_components_preserved": 60,
+      "pin_positions_preserved": 92
+    },
+    {
+      "file": "OpenFC.kicad_sch",
+      "wires_and_junctions_preserved": 29,
+      "placed_components_preserved": 0,
+      "pin_positions_preserved": 0
+    },
+    {
+      "file": "rp2350a.kicad_sch",
+      "wires_and_junctions_preserved": 169,
+      "placed_components_preserved": 48,
+      "pin_positions_preserved": 190
+    },
+    {
+      "file": "blackbox.kicad_sch",
+      "wires_and_junctions_preserved": 15,
+      "placed_components_preserved": 3,
+      "pin_positions_preserved": 17
+    },
+    {
+      "file": "imu.kicad_sch",
+      "wires_and_junctions_preserved": 20,
+      "placed_components_preserved": 4,
+      "pin_positions_preserved": 20
+    },
+    {
+      "file": "osd.kicad_sch",
+      "wires_and_junctions_preserved": 43,
+      "placed_components_preserved": 21,
+      "pin_positions_preserved": 48
+    }
+  ],
+  "net_partition_proof": {
+    "before": 113,
+    "after": 113,
+    "removed": 0,
+    "added": 0,
+    "pin_map_applied": {
+      "U12.3": "U12.4",
+      "U12.4": "U12.5",
+      "U12.5": "U12.3"
+    }
+  },
+  "project_rule_policy_unchanged": true,
+  "project_sha256": "1ad2949fe79436a92685d25c8ddbddc3bda77cf13f8f03889318030023467b95",
+  "scope": "All pad lands, drills, traces, vias, zone polygons, schematic wires, symbol positions and physical pin locations remain structurally identical. Only documented U12 pin numbering and net aliases are normalized for this comparison. Pin types/functions and symbol/library identity are separately corrected."
+}

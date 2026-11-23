@@ -1,0 +1,196 @@
+{
+  "scope": "Explicit initial bench configuration using the pinned AM32 EEPROM v4 layout. No physical calibration or flight qualification.",
+  "layoutSource": "5f8978eeb618c14bb396af7ac049d2a5e7b5a508:Inc/eeprom.h",
+  "base": {
+    "source": "AlkaMotors/AM32-MultiRotor-ESC-firmware",
+    "commit": "9f48b3d4800db0df8d11b1cfdf008bc3728535c9",
+    "path": "eeprom_version_1_7c00.bin",
+    "gitBlob": "a5e5c2bd2305187f980424258233b42239327605",
+    "bytes": 48,
+    "sha256": "f7c8a6289495b68d7a4aa2787483b05367325eb8fbe462b43db5500aa5302262",
+    "data": [
+      1,
+      1,
+      1,
+      1,
+      67,
+      77,
+      112,
+      54,
+      53,
+      51,
+      49,
+      95,
+      68,
+      101,
+      118,
+      32,
+      32,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      24,
+      100,
+      55,
+      14,
+      0,
+      0,
+      5,
+      0,
+      128,
+      128,
+      128,
+      50,
+      0,
+      50,
+      0,
+      79,
+      69,
+      83,
+      67,
+      35,
+      102,
+      48,
+      53,
+      49
+    ]
+  },
+  "overrides": {
+    "1": {
+      "before": 1,
+      "after": 4
+    },
+    "2": {
+      "before": 1,
+      "after": 19
+    },
+    "3": {
+      "before": 1,
+      "after": 2
+    },
+    "4": {
+      "before": 67,
+      "after": 21
+    },
+    "5": {
+      "before": 77,
+      "after": 160
+    },
+    "6": {
+      "before": 112,
+      "after": 1
+    },
+    "7": {
+      "before": 54,
+      "after": 1
+    },
+    "8": {
+      "before": 53,
+      "after": 10
+    },
+    "9": {
+      "before": 51,
+      "after": 100
+    },
+    "10": {
+      "before": 49,
+      "after": 0
+    },
+    "11": {
+      "before": 95,
+      "after": 100
+    },
+    "12": {
+      "before": 68,
+      "after": 0
+    },
+    "13": {
+      "before": 101,
+      "after": 0
+    },
+    "14": {
+      "before": 118,
+      "after": 0
+    },
+    "15": {
+      "before": 32,
+      "after": 0
+    },
+    "16": {
+      "before": 32,
+      "after": 0
+    },
+    "19": {
+      "before": 0,
+      "after": 0
+    },
+    "21": {
+      "before": 1,
+      "after": 0
+    },
+    "23": {
+      "before": 2,
+      "after": 26
+    },
+    "26": {
+      "before": 55,
+      "after": 59
+    },
+    "36": {
+      "before": 0,
+      "after": 0
+    },
+    "39": {
+      "before": 79,
+      "after": 0
+    },
+    "40": {
+      "before": 69,
+      "after": 5
+    },
+    "41": {
+      "before": 83,
+      "after": 10
+    },
+    "42": {
+      "before": 67,
+      "after": 10
+    },
+    "43": {
+      "before": 35,
+      "after": 100
+    },
+    "44": {
+      "before": 102,
+      "after": 0
+    },
+    "45": {
+      "before": 48,
+      "after": 5
+    },
+    "46": {
+      "before": 53,
+      "after": 1
+    },
+    "47": {
+      "before": 49,
+      "after": 0
+    }
+  },
+  "bytes": 192,
+  "sha256": "c74c76fa2814bdd5fdeefcc8fadee99d142a6274d3d2ba50c53047d24fabe31b",
+  "motorKvEncoding": {
+    "selectedMotorKv": 2400,
+    "encoded": 59,
+    "decodedKv": 2380,
+    "formula": "byte*40+20"
+  },
+  "temperatureLimitC": 100,
+  "voltageCutoffAvailable": false,
+  "currentLimitAvailable": false,
+  "input": "DShot"
+}

@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-18",
+  "tool": "KiCad 10.0.8",
+  "baseline_board_sha256": "e7ab39841d2d4c48026c3358c8a9870b8edd0ea7e06d9041a0266295dc9a4641",
+  "current_board_sha256": "5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9",
+  "baseline_erc_warning_categories": {
+    "pin_to_pin_unspecified_roles": 148,
+    "cached_symbol_library_mismatch": 23,
+    "missing_project_definitions": 2,
+    "multiple_net_names": 4,
+    "dangling_no_connect": 1
+  },
+  "baseline_drc_warning_categories": {
+    "footprint_library_mismatch": 4,
+    "nonmirrored_copper_documentation_text": 1
+  },
+  "current": {
+    "erc_errors": 0,
+    "erc_warnings": 0,
+    "drc_errors": 0,
+    "drc_warnings": 0,
+    "unconnected": 0,
+    "schematic_parity": 0
+  },
+  "unchanged_rule_policy": {
+    "project_sha256": "1ad2949fe79436a92685d25c8ddbddc3bda77cf13f8f03889318030023467b95",
+    "new_erc_exclusions": 0,
+    "existing_exact_erc_exclusions": 1,
+    "drc_exclusions": 0
+  },
+  "pin_role_changes": 184,
+  "pad_metadata_changes": 296,
+  "footprint_definitions": [
+    {
+      "refs": [
+        "J52"
+      ],
+      "id": "lib:SolderPad_1mm_J52",
+      "scope": "Preserve actual 1 mm custom land at local y=+0.3 mm as an explicitly named project definition."
+    },
+    {
+      "refs": [
+        "J54"
+      ],
+      "id": "lib:SolderPad_1mm_J54",
+      "scope": "Preserve actual 1 mm custom land at local y=-0.3 mm as an explicitly named project definition."
+    },
+    {
+      "refs": [
+        "Card1"
+      ],
+      "id": "lib:TF-SMD_TF-PUSH",
+      "scope": "Preserve all placed native contact and drill geometry, including restored DAT1, in the project footprint definition."
+    },
+    {
+      "refs": [
+        "USB1"
+      ],
+      "id": "lib:USB-TYPE-C-SMD_TYPE-C-16P-QTWT",
+      "scope": "Preserve all placed native contact and drill geometry, including restored SBU pads, in the project footprint definition."
+    },
+    {
+      "refs": [
+        "U12"
+      ],
+      "id": "lib:TI_DPW0005A_X2SON-5_0.8x0.8mm",
+      "scope": "Normalize terminal numbers to the TI DPW0005A identity. Preserve all existing copper land geometry and connections."
+    }
+  ],
+  "documentation_layer_correction": {
+    "uuid": "faae6a14-d94d-4b98-9e4e-8c303b9810ca",
+    "text": "B = SIGNAL",
+    "from": "B.Cu",
+    "to": "Cmts.User"
+  },
+  "u12_identity": {
+    "part": "TLV7031DPWR",
+    "functional_table": "https://www.ti.com/lit/ds/symlink/tlv7031.pdf#page=3",
+    "selected_package_drawing": "https://www.ti.com/lit/pdf/MPSS088",
+    "package_drawing": "DPW0005A",
+    "mapping": {
+      "1": "OUT",
+      "2": "VCC",
+      "3": "VEE",
+      "4": "IN-",
+      "5": "IN+"
+    },
+    "limit": "The current TI datasheet also appends DPW0005B. This change makes the selected A drawing, schematic and footprint identifiers consistent; it does not establish a repaired physical short or change the physical nets."
+  },
+  "filtered_supply_intent": {
+    "ref": "#FLG9010",
+    "position_mm": [
+      316.23,
+      151.13
+    ],
+    "path": "+3.3V -> R12 30 ohm -> C21.1 and U2.61 VREG_AVDD",
+    "electrical_effect": "ERC intent only; zero added physical parts. Does not establish electrical rail voltage."
+  },
+  "limits": [
+    "No physical electrical, thermal, manufacturing, native firmware or flight qualification is inferred from native rule checks.",
+    "Existing LP5912 source land geometry remains distinct from the TI example pattern.",
+    "The older simulator importer proof remains historical; this source cleanup does not establish native RP2354B firmware operation."
+  ]
+}

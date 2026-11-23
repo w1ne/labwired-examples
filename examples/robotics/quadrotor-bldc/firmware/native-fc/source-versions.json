@@ -1,0 +1,55 @@
+{
+  "source_repo": "https://github.com/OpenDrone-hw/betaflight",
+  "source_commit": "31066c0f3789d2dbc34b394cf383b04394d43724",
+  "base_config_repo": "https://github.com/OpenDrone-hw/betaflight-config",
+  "base_config_commit": "dd0e3200b27f43b581f4559574ddc5d12e6040f0",
+  "base_config_path": "configs/OPDR/OPENFC_LITE_RP2350B/config.h",
+  "config_content_sha256": "1bcff6ed93470a7f2d91bfc5597b66f6473b00d40ee99cbf9049f2a4982feab1",
+  "pico_sdk_commit": "ee68c78d0afae2b69c03ae1a72bf5cc267a2d94c",
+  "tinyusb_commit": "86ad6e56c1700e85f1c5678607a762cfe3aa2f47",
+  "picotool_commit": "de8ae5ac334e1126993f72a5c67949712fd1e1a4",
+  "gcc_archive_sha256": "95c011cee430e64dd6087c75c800f04b9c49832cc1000127a92a97f9c8d83af4",
+  "gcc_version": "13.3.1",
+  "physical_hardware_tested": false,
+  "source_date_epoch": 1787049419,
+  "libcanard_commit": "601ed35467e0ac38819df17cd7c918de19f62d58",
+  "gcc_archive_url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz",
+  "gcc_archive_md5": "0601a9588bc5b9c99ad2b56133b7f118",
+  "native_board_sha256": "3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348",
+  "native_schematic_sha256": "36dba5ebd75912f935bc4d5f2e8f00a7d07f7f4628c6047bb0be40bbb745c0fc",
+  "native_export_uncompressed_sha256": "95348ddeb855a944bc3b0bc13586bc8a7d0638cc81c594c7937e183742b1e52c",
+  "bosch_datasheet": {
+    "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf",
+    "document": "BST-BMI270-DS000-08",
+    "revision": "1.6",
+    "date": "March 2026",
+    "sha256": "0dab40659d3a8598af76a0b2da1fd8a216aeb87254541632c89145f974694af7",
+    "pages": [
+      143,
+      144
+    ]
+  },
+  "output_polarity_authority": {
+    "native_validation": "hardware/flight-controller-openfc-lite-rev2-lw1/validation/schematic-role-edits.json",
+    "q1_mpn": "ALLPOWER AP1606",
+    "q1_datasheet_revision": "V1.0",
+    "q1_datasheet_sha256": "f0ceb0b3865757ae1729798de38daa512bf99b1aa55c55769c1151a3dc410610",
+    "sources": {
+      "src/main/drivers/light_led.c": "efad411a066e411485796b6b8e04b8dd8a8686a61f0296940033b589fcdfa210",
+      "src/main/drivers/light_led.h": "ea0dc8c5487aa8b5c78f7d739abee7d75bc06b7ae9e19b5a11ee167760b6aa05",
+      "src/main/drivers/sound_beeper.c": "1241e9650d7d5562c0f843c221ce514496adf4c405b992f606381e88ef3e6b9e",
+      "src/main/pg/beeper_dev.c": "3ba771515236af328ec51d7ce77598cff265d75db8bbc945f14a2fd018dcfdac",
+      "src/main/pg/beeper_dev.h": "0368b5533524a1a66b3254f952bc9cc3c97dd41fb4e591248c0257601ca72b60",
+      "src/main/drivers/io_def.h": "d8c782e36ec04a76f3b7363bc651aa0156db482a40c97db2cf4081ea53bb173c",
+      "src/platform/PICO/io_def_generated.h": "f70c0c0fff92825d7f34b288a95d13a0b16152a00691382f0d27a3985a4f8987"
+    },
+    "physical_hardware_tested": false
+  },
+  "target_flash_bytes": 2097152,
+  "sdk_flash_override": {
+    "upstream_target_makefile": "src/platform/PICO/target/RP2350B/target.mk",
+    "upstream_default_bytes": 8388608,
+    "native_bytes": 2097152,
+    "reason": "RP2354B has2MiB stacked flash; the pinned generic RP2350B target defaults to8MiB."
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "schema": "labwired.native-esc-build.v1",
+  "toolchain": {
+    "url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.3.1-2.3/xpack-arm-none-eabi-gcc-10.3.1-2.3-linux-x64.tar.gz",
+    "checksumUrl": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.3.1-2.3/xpack-arm-none-eabi-gcc-10.3.1-2.3-linux-x64.tar.gz.sha",
+    "sha256": "559dcf1c2dfddac513110fe23da0ef254032c09967eaa901f075515d51818719",
+    "bytes": 175646740
+  },
+  "compilerVersion": "arm-none-eabi-gcc (xPack GNU Arm Embedded GCC x86_64) 10.3.1 20210824 (release)\nCopyright (C) 2020 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "runs": [
+    {
+      "source": {
+        "name": "am32-f421",
+        "commit": "19df1ecfef4982302cacdd35bb0d921ceac83217",
+        "path": "am32-f421-19df1ecfef49.tar.gz",
+        "sha256": "2d2dac0bb11c5db8aa03c91f2503c0da6bec3a9b25c175acd534aa5d280a346f",
+        "bytes": 383331,
+        "selectedPaths": [
+          ".clang-format-ignore",
+          ".cproject",
+          ".editorconfig",
+          ".gitattributes",
+          ".gitignore",
+          ".mxproject",
+          ".project",
+          "AGENTS.md",
+          "CODE_OF_CONDUCT.md",
+          "LICENSE",
+          "Makefile",
+          "README.md",
+          "STM32F051K6TX_FLASH.ld",
+          "a153makefile.mk",
+          "e230makefile.mk",
+          "f031makefile.mk",
+          "f051_ll_bi_dir Debug.launch",
+          "f051_ll_bi_dir.ioc",
+          "f051makefile.mk",
+          "f415makefile.mk",
+          "f421makefile.mk",
+          "format.sh",
+          "g031makefile.mk",
+          "g071makefile.mk",
+          "g431makefile.mk",
+          "l431makefile.mk",
+          "v203makefile.mk",
+          "Inc",
+          "Mcu/f421",
+          "make",
+          "tools",
+          "env_setup_scripts",
+          "Src"
+        ],
+        "scope": "Complete corresponding source for the F421 build: all common source and headers, F421 vendor/startup sources, make scripts and every root makefile/license. Other MCU implementations and binary manuals are excluded."
+      },
+      "command": [
+        "make",
+        "-j2",
+        "OPENESC_30_F421",
+        "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+        "PART=AT32F421G8U7",
+        "OBJ=obj",
+        "CFLAGS_COMMON=$(CFLAGS_BASE) -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-final-replay/am32-f421=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi -Wa,--debug-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-final-replay/am32-f421=."
+      ],
+      "cwd": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-final-replay/am32-f421",
+      "exit": 0,
+      "seconds": 13.373043343017343,
+      "log": "am32-f421-build.log",
+      "artifacts": {
+        ".elf": {
+          "path": "am32-f421/obj/AM32_OPENESC_30_F421_2.21.elf",
+          "bytes": 567480,
+          "sha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d",
+          "expectedSha256": "2dc65fec5924f31548cc3041690b9b5a1645466832a09e46d012c33b14f8452d"
+        },
+        ".bin": {
+          "path": "am32-f421/obj/AM32_OPENESC_30_F421_2.21.bin",
+          "bytes": 27648,
+          "sha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843",
+          "expectedSha256": "51ed224be09069f0e105517ba7021c8a750f9608470e3d685a7e711767e69843"
+        },
+        ".hex": {
+          "path": "am32-f421/obj/AM32_OPENESC_30_F421_2.21.hex",
+          "bytes": 59024,
+          "sha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0",
+          "expectedSha256": "66b0f22b0bef9b2c52d27ffb75cfa32748f5f47254e229e11a513877a3f5c7b0"
+        }
+      },
+      "reproduced": true
+    },
+    {
+      "source": {
+        "name": "am32-bootloader-f421",
+        "commit": "a340e23f4fe270bf7a767156d3c24b10f22b521a",
+        "path": "am32-bootloader-f421-a340e23f4fe2.tar.gz",
+        "sha256": "42660150d9b3c69f6205aaa78997585c1490a9bda1f8b5186b472b87e937f4b2",
+        "bytes": 330691,
+        "selectedPaths": [
+          ".editorconfig",
+          ".git-blame-ignore-revs",
+          ".gitattributes",
+          ".gitignore",
+          "CODE_OF_CONDUCT.md",
+          "LICENSE",
+          "Makefile",
+          "README.md",
+          "a153makefile.mk",
+          "e230makefile.mk",
+          "f031makefile.mk",
+          "f051makefile.mk",
+          "f415makefile.mk",
+          "f421makefile.mk",
+          "g071makefile.mk",
+          "g431makefile.mk",
+          "l431makefile.mk",
+          "sitlmakefile.mk",
+          "v203makefile.mk",
+          "Inc",
+          "Mcu/f421",
+          "make",
+          "tools",
+          "env_setup_scripts",
+          "bootloader",
+          "bl_update",
+          "scripts"
+        ],
+        "scope": "Complete corresponding source for the F421 build: all common source and headers, F421 vendor/startup sources, make scripts and every root makefile/license. Other MCU implementations and binary manuals are excluded."
+      },
+      "command": [
+        "make",
+        "-j2",
+        "AM32_F421_BOOTLOADER_PB4",
+        "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+        "PART=AT32F421G8U7",
+        "OBJ=obj",
+        "CFLAGS_BASE=-fsingle-precision-constant -fomit-frame-pointer -ffast-math --specs=nosys.specs -IInc -g3 -Os -ffunction-sections -fdata-sections -funsigned-char -flto -Wall -Wextra -Wundef -Werror -Wno-unused-parameter -include Inc/targets.h -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-final-replay/am32-bootloader-f421=. -ffile-prefix-map=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3=/opt/gcc-arm-none-eabi"
+      ],
+      "cwd": "/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/esc-archive-final-replay/am32-bootloader-f421",
+      "exit": 0,
+      "seconds": 21.842811688955408,
+      "log": "am32-bootloader-f421-build.log",
+      "artifacts": {
+        ".elf": {
+          "path": "am32-bootloader-f421/obj/AM32_F421_BOOTLOADER_PB4_V19.elf",
+          "bytes": 231220,
+          "sha256": "64794cce9dd553f83ac149bfc064e205ca2e95b8bfad7dfa553200ab8f507419",
+          "expectedSha256": null
+        },
+        ".bin": {
+          "path": "am32-bootloader-f421/obj/AM32_F421_BOOTLOADER_PB4_V19.bin",
+          "bytes": 4092,
+          "sha256": "0403603dac776f22c1e8d9b2a227f3fe9068e3e099893cb91243621fb49cc248",
+          "expectedSha256": "0403603dac776f22c1e8d9b2a227f3fe9068e3e099893cb91243621fb49cc248"
+        },
+        ".hex": {
+          "path": "am32-bootloader-f421/obj/AM32_F421_BOOTLOADER_PB4_V19.hex",
+          "bytes": 8222,
+          "sha256": "4e6d7fe4f0ab68493dc733c31a6dbbf7a5e098fc445b9575ada3ecefd6e2407f",
+          "expectedSha256": "4e6d7fe4f0ab68493dc733c31a6dbbf7a5e098fc445b9575ada3ecefd6e2407f"
+        }
+      },
+      "reproduced": true
+    }
+  ],
+  "scope": "Application ELF/BIN/HEX identity and bootloader BIN/HEX identity. Bootloader debug ELF paths and temporary assembler filenames are not normalized by the unchanged vendor source."
+}

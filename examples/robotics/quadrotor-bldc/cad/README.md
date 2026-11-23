@@ -1,11 +1,103 @@
 # Quadrotor mechanical model
 
-The current [`drone.kcad.ts`](drone.kcad.ts) candidate contains the pinned 226 mm
-OpenFrame-5F frame, native ESC substrate and population, and the repaired native
-OpenFC-Lite substrate with all 107 assigned component models. Hosted evaluation
-passes with **38 parts and 37 mates**. The source is committed for review; the
-saved [Studio revision 4](https://app.kernelcad.com/p/DyJ405zg?version=4) remains
-the earlier populated-ESC revision with an FC envelope.
+The current editable drone.kcad.ts uses the pinned 226 mm OpenFrame-5F frame,
+the native ESC substrate and population, and the current repaired OpenFC-Lite
+board. [Studio revision 6](https://app.kernelcad.com/p/DyJ405zg?version=6)
+is saved with 12 exact imported assets and a ready cloud display mesh.
+
+## Full native-solid assembly checkpoint — 18 November 2026
+
+The editable `drone-native-solids.kcad.ts` retains all 378 imported FC/ESC
+solids as separate parts with explicit fixed relationships. USB contact and
+shell bodies attach to their native connector housing; microSD contacts and
+shell bodies attach to their native socket housing. The native poses and all
+frame, motor and propeller bodies remain present.
+
+The [local full evaluator receipt](evidence/native-solid-evaluation-20261118/local-evaluation.json)
+passes with **894 features, 412 parts, 411 mates and zero diagnostics**. It checks
+13 poses across four rotor joints in 334.976 seconds on private runtime commit
+`b89aceba980c12ed404ce3963add0ee26106be0f`. Exact downloaded STEP bytes were
+staged locally; their original URLs and hashes are in the receipt. The source
+SHA-256 is `72810ad3fbf9ceb53b29d3fc50abbb2567e3416552b4df77d87d111884098dcb`.
+
+This evaluator checks joint limits, rigid attachment and sampled interference.
+Its own review hint still requires strict pose-envelope, support-intent and
+gravity review. The run used an 8 GiB local Node heap and does not establish
+hosted memory acceptance. Motor/propeller/support envelopes and physical load
+qualification remain separate from the exact imported PCB bodies. Studio
+revision 6 remains the earlier saved checkpoint until the complete strict
+review and hosted save succeed.
+
+## Corrected native model datums — 18 November 2026
+
+The native boards now contain two source-qualified **3D model transform**
+corrections. The routed copper, drill centres, component placements and
+project rules remain unchanged. The matching library footprints carry the
+same corrections.
+
+| Component | Correction | Source/geometry check |
+| --- | --- | --- |
+| FC Card1, Shouhan TF PUSH | Model offset Y = -2.45 mm | Both 0.8 mm locating pegs align with the existing 1.2 mm native holes on 8 mm centres; all nine contact rows align |
+| ESC U12, INA186A3IDCKR | Model offset Z = +0.5 mm; rotation Z = +90 degrees | All six lead soles align with the existing lands; the pin 1 marker faces pad 1; 0.95 mm model height and 0.05 mm standoff agree with TI DCK0006A ranges |
+
+The corrected FC PCB SHA-256 is
+`3216b761288ee06f01527d14041d6debaa2d89da46da4ced76b320c98cc60348`;
+the corrected ESC PCB is
+`13a9b74e8a0afc65c016302d155bd7b4e10d3edd8cc331822bfb9ccc9e182249`.
+KiCad 10.0.8 DRC and schematic parity report zero violations and zero
+unconnected items for both boards under their existing project rules.
+
+The new native STEP files retain **164 valid FC solids and 214 valid ESC
+solids**. Only Card1's eleven solids and ESC U12 move. All other body bounds
+are unchanged within the inspection API's 0.00001 mm comparison tolerance;
+all solid volumes are unchanged within 0.000001 mm3. This is a native datum
+proof. The corrected all-solid evaluator replay above passes; strict physical
+review remains outstanding.
+
+- [Manufacturer drawing identity, exact datum calculations and limits](evidence/model-datum-correction-20261118/component-datums.json)
+- [Four native-source transform-only checks](evidence/model-datum-correction-20261118/source-transform-proof.json)
+- [All-solid before/after comparison](evidence/model-datum-correction-20261118/native-solid-comparison.json)
+- [Exact KiCad export commands and hashes](evidence/model-datum-correction-20261118/native-exports.json)
+
+Rebuild these outputs from the package's checked-in model directories:
+
+```sh
+python3 examples/robotics/quadrotor-bldc/cad/rebuild-native-models.py
+```
+
+## Published native source checkpoint before datum correction — 18 November 2026
+
+The currently saved revision 6 FC input binds to the earlier PCB SHA-256
+5c458e5101e154ade50d4f46838bfef8431463d00d7e8059d6d342e8b68a4dc9 and
+asset commit f741c8ca2ed11c9b55c84bcdae6cc6dec888a676. All 107 assigned
+component models resolve. The current display mesh has 47,778 facets.
+
+The full build passes with 146 features, 38 parts and 37 mates. The shallow
+mechanism screen checks 13 poses across the four rotor joints. The actual
+[strict review](evidence/native-current-design-loop-20261118.json) remains
+**false**: the two population meshes contain 213 and 146 disconnected bodies,
+the articulated assembly lacks a physical-use-case declaration, and exact
+interference coverage is incomplete for the display-mesh pairs. These are
+active package defects, not accepted waivers. Native solid relationships and
+physical-support qualification are the next CAD repair.
+
+The [source binding receipt](evidence/native-current-lab-binding-20261118.json)
+records only native board and model identity. The existing Lab retains its
+unpublished five-controller flight draft, unchanged source/firmware/stimuli,
+and unchanged airframe parameters. Its public revision was not replaced.
+Neither identity metadata nor the shallow motion badge is a full fit result.
+
+Current evidence:
+
+- [Native evaluation](evidence/native-current-evaluate-20261118.json)
+- [Strict physical review](evidence/native-current-design-loop-20261118.json)
+- [Observed visual review](evidence/native-current-visual-review-20261118.json)
+- [Saved revision and ready-mesh readback](evidence/native-current-studio-readback-20261118.json)
+- [Isometric view](evidence/native-current-iso-20261118.png) and [top view](evidence/native-current-top-20261118.png)
+
+The measurements below remain historical source-bound evidence. The legacy
+clearance checker refuses the newer source hash; it must not be presented as
+current full-assembly acceptance.
 
 ## Native FC candidate, 12 November 2026
 
@@ -40,9 +132,9 @@ the source bodies cannot overlap. A 0.00001 mm allowance is subtracted from the
 reported bounds. This is a geometric proof; it does not qualify manufacturing,
 mount compression, solder, wiring or vibration tolerances.
 
-## Reproduce and inspect
+## Historical clearance check and inputs
 
-Run from any working directory:
+The following archived check applies to the earlier source and export hashes:
 
 ```sh
 python3 examples/robotics/quadrotor-bldc/cad/checks/check-native-fc-clearance.py
@@ -113,3 +205,9 @@ The earlier mixed-mesh inventory and hosted attempt-staging tool failures have
 been repaired in the generic CAD service. The current candidate evaluates and
 its assembly inventory succeeds under the existing resource limits; historical
 failure receipts remain intact.
+
+The ESC PCB metadata follow-up corrects 16 copied pin-function labels. The
+[byte-level correction receipt](../hardware/esc-4in1/validation/pad-function-correction-20261118.json)
+proves all non-label PCB bytes are unchanged. The existing native STEP
+geometry and its original export receipt therefore remain unchanged; the
+new PCB hash does not imply a mechanical redesign.

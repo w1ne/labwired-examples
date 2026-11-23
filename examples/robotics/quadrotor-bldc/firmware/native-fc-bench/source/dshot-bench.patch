@@ -1,0 +1,18 @@
+--- upstream/dshot.pio
++++ src/dshot.pio
+@@ -78,7 +78,7 @@
+ outone_tx:
+     ; '1' bit: 84 cycles LOW (67%), 41 cycles HIGH (33%)
+     nop                          [31]       ; 32 cycles
+-    nop                          [10]       ; 18 cycles (total delay=82, LOW=1+1+82=84)
++    nop                          [10]       ; 11 cycles (LOW=32+9+32+11=84)
+     set    pins, 1               [31]       ; 32 cycles HIGH
+     ; 7 cycles HIGH
+     jmp    !osre, bitloop_tx     [7]        ; 1 cycle, + out(1) = 41 HIGH total
+@@ -126,5 +126,5 @@
+     set    pins, 1                          ; Set pin HIGH (idle state)
+     set    y, 4                             ;
+ delay_next_output:
+-    jmp    !y, delay_next_output [29]       ; TODO how much min delay here? 2us seen somewhere?? 5*30/75 = 2 us
++    jmp    y--, delay_next_output [29]      ; Y=4: five30-clock iterations =2us at75MHz
+ .wrap

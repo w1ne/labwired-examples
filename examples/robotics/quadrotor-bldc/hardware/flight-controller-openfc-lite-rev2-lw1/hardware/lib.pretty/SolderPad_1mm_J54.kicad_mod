@@ -1,0 +1,115 @@
+(footprint "SolderPad_1mm_J54"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "01ab6742-463e-4183-9ed5-cbeab4bdb685")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SolderPad_1mm_J54"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bc8248ba-a26c-4a91-8412-7cd07e0456ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dd92d519-75df-49f6-8f54-778d9eb6b191")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9987f2d4-59e3-4088-b28a-06caf062c70d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property ki_fp_filters "Connector*:*_1x??_*")
+	(sheetname "/PADS/")
+	(sheetfile "pads.kicad_sch")
+	(attr smd exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "052a6319-c454-41d6-afa9-ca754cb12e1b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd custom
+		(at 0 -0.3)
+		(size 1 1)
+		(property pad_prop_testpoint)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 90)
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy 0.722031 -0.48903) (xy 0.85004 -0.441286) (xy 0.959411 -0.359411) (xy 1.041286 -0.25004) (xy 1.08903 -0.122031)
+					(xy 1.1 -0.02) (xy 1.1 0.62) (xy 1.08903 0.722031) (xy 1.041286 0.85004) (xy 0.959411 0.959411)
+					(xy 0.85004 1.041286) (xy 0.722031 1.08903) (xy 0.62 1.1) (xy -0.433235 1.1) (xy -0.475178 1) (xy -0.579036 0.897472)
+					(xy -0.646442 0.844155) (xy -0.76461 0.77) (xy -0.943793 0.7) (xy -1.1 0.68) (xy -1.1 -0.02) (xy -1.08903 -0.122031)
+					(xy -1.041286 -0.25004) (xy -0.959411 -0.359411) (xy -0.85004 -0.441286) (xy -0.722031 -0.48903)
+					(xy -0.62 -0.5) (xy 0.62 -0.5)
+				)
+				(width 0)
+				(fill yes)
+			)
+			(gr_poly
+				(pts
+					(xy -1.1 -0.063636) (xy -1.092393 -0.144761) (xy -1.049432 -0.267535) (xy -0.972192 -0.372192)
+					(xy -0.867535 -0.449432) (xy -0.744761 -0.492393) (xy -0.663636 -0.5) (xy 0.663636 -0.5) (xy 0.744761 -0.492393)
+					(xy 0.867535 -0.449432) (xy 0.972192 -0.372192) (xy 1.049432 -0.267535) (xy 1.092393 -0.144761)
+					(xy 1.1 -0.063636) (xy 1.1 0.063636) (xy 1.092393 0.144761) (xy 1.049432 0.267535) (xy 0.972192 0.372192)
+					(xy 0.867535 0.449432) (xy 0.744761 0.492393) (xy 0.663636 0.5) (xy -0.663636 0.5) (xy -0.744761 0.492393)
+					(xy -0.867535 0.449432) (xy -0.972192 0.372192) (xy -1.049432 0.267535) (xy -1.092393 0.144761)
+					(xy -1.1 0.063636)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "3da17f68-f962-45d3-99c4-6866742fd4bc")
+	)
+	(embedded_fonts no)
+)

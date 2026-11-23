@@ -1,0 +1,62 @@
+{
+  "type": "standard",
+  "cpu": {
+    "type": "arm",
+    "registers": [
+      1,
+      537250136,
+      1,
+      537255604,
+      537208984,
+      537182004,
+      105,
+      105,
+      105,
+      0,
+      0,
+      0,
+      255,
+      537402936,
+      537139927,
+      537139880
+    ],
+    "pc": 537139880,
+    "xpsr": 553648128,
+    "primask": true,
+    "pending_exceptions": 0,
+    "pending_exceptions_hi": [
+      0,
+      0,
+      0
+    ],
+    "vtor": 536870912,
+    "waiting_for_event": false,
+    "event_register": true
+  },
+  "steps_executed": 550000,
+  "cycles": 550209,
+  "instructions": 550000,
+  "stop_reason": "halt",
+  "stop_reason_details": {
+    "triggered_stop_condition": "halt",
+    "triggered_limit": null,
+    "observed": null
+  },
+  "limits": {
+    "max_steps": 10000000,
+    "max_cycles": null,
+    "max_uart_bytes": 65536,
+    "no_progress_steps": null,
+    "wall_time_ms": 120000,
+    "max_vcd_bytes": null,
+    "stop_when_assertions_pass": false,
+    "stop_when_assertions_pass_settle_steps": 100000,
+    "stop_when_assertions_pass_min_steps": 0
+  },
+  "firmware_hash": "cfb1f6a19225695804d79200ddc7158bc421365af9cc8b8c74ab06170980d27b",
+  "config": {
+    "firmware": "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/firmware/native-fc/artifacts/betaflight_RP2350B_OPENFC_LITE_REV2_LW1.elf",
+    "system": "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/system.yaml",
+    "script": "/data/worktrees/labwired-examples-quad-fc-20261118/examples/robotics/quadrotor-bldc/runtime/native-fc/probe.yaml"
+  }
+}

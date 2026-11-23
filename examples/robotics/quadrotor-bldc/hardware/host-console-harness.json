@@ -1,0 +1,127 @@
+{
+  "scope": "One canonical physical UART0 console harness. Native pin identity and manufacturer cable specification; fitted routing and actual solder inspection are separate.",
+  "nativePcb": {
+    "path": "hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb",
+    "sha256": "0dd6d998387854d45afd1a9649bfd59e6818aea89bdd68ece065a30a8be3b4b7"
+  },
+  "cable": {
+    "manufacturer": "FTDI",
+    "mpn": "TTL-232R-3V3-WE",
+    "lengthMm": 1800,
+    "signalVoltageV": 3.3,
+    "redSupplyVoltageV": 5,
+    "jacketNominalDiameterMm": 5,
+    "conductors": 6,
+    "wireGaugeAWG": 24,
+    "breakoutLengthNominalToleranceMm": [
+      30,
+      2
+    ],
+    "coreInsulationDiameterMm": null,
+    "usbOvermoldDimensionsMm": null
+  },
+  "sources": [
+    {
+      "url": "https://ftdichip.com/products/ttl-232r-3v3-we/",
+      "section": "Wire-ended product specification"
+    },
+    {
+      "url": "https://ftdichip.com/wp-content/uploads/2023/07/DS_TTL-232R_CABLES.pdf",
+      "version": "2.05",
+      "section": "Table 1.1 cable construction"
+    },
+    {
+      "url": "https://ftdichip.com/Support/Documents/DataSheets/Cables/DS_TTL-232R_CABLES.pdf",
+      "version": "2.04 returned by public extraction",
+      "section": "6.1/Figure 6.2 and Table 6.1 wire-ended dimensions and colors",
+      "sourceEvidence": "Official PDF text/drawing reviewed through public extraction; direct downloads returned 403. No byte hash claimed."
+    }
+  ],
+  "serial": {
+    "peripheral": "uart0",
+    "baud": 115200,
+    "dataBits": 8,
+    "parity": "none",
+    "stopBits": 1,
+    "flowControl": "none"
+  },
+  "connections": [
+    {
+      "color": "orange",
+      "signal": "TXD",
+      "direction": "host-to-FC",
+      "ref": "J48",
+      "pad": "1",
+      "net": "/PADS/UART0_RX",
+      "mcuPad": 78,
+      "gpio": 1,
+      "pcbXYMm": [
+        148.06,
+        103.42
+      ]
+    },
+    {
+      "color": "yellow",
+      "signal": "RXD",
+      "direction": "FC-to-host",
+      "ref": "J49",
+      "pad": "1",
+      "net": "/PADS/UART0_TX",
+      "mcuPad": 77,
+      "gpio": 0,
+      "pcbXYMm": [
+        150.56,
+        103.42
+      ]
+    },
+    {
+      "color": "black",
+      "signal": "GND",
+      "direction": "reference",
+      "ref": "J51",
+      "pad": "1",
+      "net": "GND",
+      "pcbXYMm": [
+        155.5,
+        103.4
+      ]
+    }
+  ],
+  "unusedConductors": [
+    {
+      "color": "red",
+      "signal": "+5V"
+    },
+    {
+      "color": "brown",
+      "signal": "CTS#"
+    },
+    {
+      "color": "green",
+      "signal": "RTS#"
+    }
+  ],
+  "unusedConductorTreatment": "Unconnected and individually insulated; no exposed metal; no connection to an FC supply pin.",
+  "restraint": {
+    "mpn": "111-01910",
+    "installedQuantity": 2,
+    "purpose": [
+      "jacket before breakout",
+      "parked unused conductors"
+    ]
+  },
+  "insulation": {
+    "mpn": "5052942064",
+    "name": "RNF-100-3/32-0-STK",
+    "stockLengthMm": 1220,
+    "designCutsMm": [
+      20,
+      20,
+      20
+    ],
+    "expandedIdMinMm": 2.4,
+    "recoveredIdMaxMm": 1.2
+  },
+  "usbRole": "ROM BOOTSEL programming only; the bench application exposes its console on UART0.",
+  "physicalQualification": false
+}

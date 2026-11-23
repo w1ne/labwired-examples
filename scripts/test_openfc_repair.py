@@ -14,6 +14,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 REV = ROOT / 'examples/robotics/quadrotor-bldc/hardware/flight-controller-openfc-lite-rev2-lw1'
 VAL = REV / 'validation'
+CLEANUP = VAL / '20261118-library-cleanup'
 
 
 def read_json(path):
@@ -42,14 +43,14 @@ class OpenFCRepair(unittest.TestCase):
             self.assertIs(self.manifest[field], False)
 
     def test_native_drc_and_schematic_parity_are_clean(self):
-        report = read_json(VAL / 'final-drc.json')
-        self.assertEqual(collections.Counter(v['severity'] for v in report['violations']), {'warning': 5})
+        report = read_json(CLEANUP / 'drc.json')
+        self.assertEqual(report['violations'], [])
         self.assertEqual(report['unconnected_items'], [])
         self.assertEqual(report['schematic_parity'], [])
 
     def test_card1_dat1_restoration_record(self):
         record = read_json(VAL / 'card1-dat1-pad-restoration.json')
-        self.assertEqual(record['output_sha256'], hashlib.sha256((REV / 'hardware/OpenFC.kicad_pcb').read_bytes()).hexdigest())
+        self.assertEqual(record['output_sha256'], read_json(CLEANUP / 'pcb-repair.json')['input_board_sha256'])
         self.assertFalse(record['rules_changed'])
         self.assertFalse(record['restored_pad']['shrunk_or_modified'])
         comparison = record['connectivity_comparison']
@@ -60,10 +61,12 @@ class OpenFCRepair(unittest.TestCase):
         self.assertEqual(record['drc_after']['errors'], 0)
         self.assertEqual(record['drc_after']['schematic_parity'], [])
 
-    def test_erc_warning_retention_and_exact_pg_exclusion(self):
+    def test_current_erc_clean_and_exact_pg_exclusion_retained(self):
         report = read_json(VAL / 'final-erc.json')
         entries = [v for sheet in report['sheets'] for v in sheet['violations']]
         self.assertEqual(collections.Counter(v['severity'] for v in entries), {'warning': 178})
+        current = read_json(CLEANUP / 'erc.json')
+        self.assertEqual([v for sheet in current['sheets'] for v in sheet['violations']], [])
         before = read_json(VAL / 'final-erc-before-exclusion.json')
         errors = [v for sheet in before['sheets'] for v in sheet['violations'] if v['severity'] == 'error']
         self.assertEqual(len(errors), 1)
@@ -90,13 +93,53 @@ class OpenFCRepair(unittest.TestCase):
 
     def test_native_shape_receipt_matches_board_and_has_no_nc_contacts(self):
         proof = read_json(VAL / 'final-pcb-connectivity-proof.json')
-        self.assertEqual(proof['corrected_sha256'], hashlib.sha256((REV / 'hardware/OpenFC.kicad_pcb').read_bytes()).hexdigest())
+        self.assertEqual(proof['corrected_sha256'], read_json(CLEANUP / 'pcb-repair.json')['input_board_sha256'])
         self.assertEqual((proof['original_pad_objects'], proof['corrected_pad_objects']), (579, 584))
         self.assertEqual(set(proof['isolated_nc_pads']), {'U9.2', 'U9.3', 'USB1.A8', 'USB1.B8', 'U7.2', 'U15.2', 'Card1.8'})
         self.assertTrue(all(not value['copper_contacts'] for value in proof['isolated_nc_pads'].values()))
         self.assertTrue(all(proof['u10_same_net_track_contacts'].values()))
         self.assertTrue(proof['u10_body_pose_preserved'])
         self.assertTrue(proof['physical_rules_and_erc_severities_identical'])
+
+    def test_native_cleanup_chain_and_export_identity(self):
+        proof = read_json(CLEANUP / 'pcb-repair.json')
+        board_hash = hashlib.sha256((REV / 'hardware/OpenFC.kicad_pcb').read_bytes()).hexdigest()
+        datum_dir = REV.parents[1] / 'cad/evidence/model-datum-correction-20261118'
+        datum = read_json(datum_dir / 'source-transform-proof.json')
+        board_datum = next(item for item in datum['files'] if item['file'] == 'hardware/flight-controller-openfc-lite-rev2-lw1/hardware/OpenFC.kicad_pcb')
+        self.assertEqual(proof['output_board_sha256'], board_datum['beforeSha256'])
+        self.assertTrue(board_datum['onlyModelTransformTokensChanged'])
+        self.assertEqual(board_datum['afterSha256'], board_hash)
+        current_drc = read_json(datum_dir / 'fc-drc.json')
+        for key in ('violations', 'unconnected_items', 'schematic_parity'):
+            self.assertEqual(current_drc[key], [], key)
+        self.assertTrue(proof['project_rule_policy_unchanged'])
+        self.assertEqual(proof['project_sha256'], hashlib.sha256((REV / 'hardware/OpenFC.kicad_pro').read_bytes()).hexdigest())
+        for item in proof['physical_geometry_comparison'].values():
+            self.assertEqual(item['before_count'], item['after_count'])
+            self.assertEqual(item['changed'], [])
+        self.assertEqual(proof['net_partition_proof']['before'], 113)
+        self.assertEqual(proof['net_partition_proof']['after'], 113)
+        models = read_json(REV / 'mechanical-review/model-resolution-review.json')
+        self.assertEqual(models['board_sha256'], board_datum['beforeSha256'])
+        self.assertEqual(models['resolved_enabled_entries'], 107)
+        # The newer export receipt owns the current bytes. The earlier model
+        # inventory remains an honest record of its original source/export.
+        exports = read_json(datum_dir / 'native-exports.json')
+        current_exports = [item for item in exports if item['sourceBoard'] == board_datum['file']]
+        self.assertEqual(len(current_exports), 3)
+        self.assertEqual({Path(item['artifact']).name for item in current_exports}, set(models['exports']))
+        for asset in current_exports:
+            path = REV.parents[1] / asset['artifact']
+            self.assertEqual(asset['sourceBoardSha256'], board_hash)
+            self.assertEqual(asset['exit'], 0)
+            self.assertEqual(asset['bytes'], path.stat().st_size)
+            self.assertEqual(asset['sha256'], hashlib.sha256(path.read_bytes()).hexdigest())
+        bodies = next(item for item in read_json(datum_dir / 'native-solid-comparison.json')['boards'] if item['board'] == 'fc')
+        self.assertEqual(bodies['beforeStepSha256'], models['exports']['fc-populated.step']['sha256'])
+        self.assertEqual(bodies['afterStepSha256'], hashlib.sha256((REV / 'mechanical-review/fc-populated.step').read_bytes()).hexdigest())
+        self.assertEqual((bodies['solidCount'], bodies['validCount']), (164, 164))
+        self.assertEqual(len(bodies['samePoseIndices']) + len(bodies['changedSolids']), 164)
 
     def test_erc_annotations_are_not_simulated_sources(self):
         before = json.loads(gzip.decompress((VAL / 'before-erc-intent-audit.json.gz').read_bytes()))

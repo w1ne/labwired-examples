@@ -1,0 +1,26 @@
+{
+  "command": [
+    "make",
+    "-j2",
+    "AM32_F421_BOOTLOADER_PB4",
+    "ARM_SDK_PREFIX=/data/work-evidence/labwired-industrial-packages-20261118/quad-firmware/toolchain/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-",
+    "PART=AT32F421G8U7"
+  ],
+  "sourceCommit": "a340e23f4fe270bf7a767156d3c24b10f22b521a",
+  "exit": 0,
+  "seconds": 20.657837170001585,
+  "artifacts": {
+    "AM32_F421_BOOTLOADER_PB4_V19.bin": {
+      "bytes": 4092,
+      "sha256": "0403603dac776f22c1e8d9b2a227f3fe9068e3e099893cb91243621fb49cc248"
+    },
+    "AM32_F421_BOOTLOADER_PB4_V19.elf": {
+      "bytes": 233324,
+      "sha256": "76f92c0db3423d21ce1358275c707463144bace9f9a79198840f8f15494b2894"
+    },
+    "AM32_F421_BOOTLOADER_PB4_V19.hex": {
+      "bytes": 8222,
+      "sha256": "4e6d7fe4f0ab68493dc733c31a6dbbf7a5e098fc445b9575ada3ecefd6e2407f"
+    }
+  }
+}

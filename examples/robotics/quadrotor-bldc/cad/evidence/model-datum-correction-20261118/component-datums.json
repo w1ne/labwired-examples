@@ -1,0 +1,147 @@
+{
+  "schema": "labwired.native-model-datum-source-proof.v1",
+  "reviewDate": "2026-11-18",
+  "scope": "Correct the transform of existing package STEP geometry to its actual native footprint. No package solid is synthesized or removed; no routed electrical source is changed.",
+  "microSd": {
+    "reference": "Card1",
+    "manufacturer": "Shenzhen Shouhan Technology",
+    "part": "TF PUSH, LCSC C393941",
+    "sourceUrl": "https://storage.googleapis.com/graviton-electric-symbols/document_assets/lcsc/1912111437_SHOU-HAN-TF-PUSH_C393941.pdf",
+    "pdfSha256": "b06d0661bdecbe22f255d9efd78bfe7f3c2618c1b0717da49c9a332803164bac",
+    "drawingPage": 9,
+    "drawingDate": "2017-06-03",
+    "nativeComponentStepSha256": "16f5b6a9bd18cb23307a493375c840808aa8fd8d360f1fa4158c3facec05ff9b",
+    "drawingPegDiameterMm": 0.8,
+    "drawingPegPitchMm": 8.0,
+    "drawingRecommendedHoleDiameterMm": 1.0,
+    "nativeExistingHoleDiameterMm": 1.2,
+    "nativeFootprintHoleCentresMm": [
+      [
+        139.46,
+        92.62
+      ],
+      [
+        139.46,
+        84.62
+      ]
+    ],
+    "oldExportPegAxesMm": [
+      [
+        141.91,
+        -92.62
+      ],
+      [
+        141.91,
+        -84.62
+      ]
+    ],
+    "correctedExportPegAxesMm": [
+      [
+        139.46,
+        -92.62
+      ],
+      [
+        139.46,
+        -84.62
+      ]
+    ],
+    "kicadModelOffsetMm": [
+      0,
+      -2.45,
+      0
+    ],
+    "modelRotationDeg": [
+      0,
+      0,
+      0
+    ],
+    "nativeSolidIndices": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "result": "Both locating axes and all nine contact rows align. Existing larger 1.2mm holes are retained; this change does not qualify their fabrication tolerance or solder joints."
+  },
+  "currentSense": {
+    "reference": "ESC U12",
+    "part": "INA186A3IDCKR",
+    "sourceUrl": "https://www.ti.com/lit/ds/symlink/ina186.pdf",
+    "drawing": "DCK0006A, 4214835/D, 11/2024",
+    "drawingPage": 39,
+    "nativeComponentStepSha256": "b9a3b1777d5c4b7c18adda0fffe0e08bd0fcec68d467b95ed221fbd7f5dc7852",
+    "nativeLeadSoleZMm": -0.5,
+    "nativeSoleCentresMm": [
+      [
+        -0.65,
+        -0.95
+      ],
+      [
+        0,
+        -0.95
+      ],
+      [
+        0.65,
+        -0.95
+      ],
+      [
+        -0.65,
+        0.95
+      ],
+      [
+        0,
+        0.95
+      ],
+      [
+        0.65,
+        0.95
+      ]
+    ],
+    "nativePin1MarkerMm": [
+      -0.76592,
+      -0.331745,
+      0.449
+    ],
+    "drawingPitchMm": 0.65,
+    "drawingHeightRangeMm": [
+      0.8,
+      1.1
+    ],
+    "drawingStandoffRangeMm": [
+      0,
+      0.1
+    ],
+    "correctedModelHeightMm": 0.95,
+    "correctedModelStandoffMm": 0.05,
+    "kicadModelOffsetMm": [
+      0,
+      0,
+      0.5
+    ],
+    "modelRotationDeg": [
+      0,
+      0,
+      90
+    ],
+    "correctedPin1MarkerNativeExportMm": [
+      71.661745,
+      -56.35408,
+      -1.069
+    ],
+    "nativePad1Mm": [
+      72.28,
+      56.47
+    ],
+    "nativeSolidIndex": 143,
+    "result": "All six lead-sole centres align with the existing pad centres. Positive90-degree orientation places the native pin1 mark by pad1; the negative90 candidate is rejected. The footprint/library model are corrected together."
+  },
+  "fullAssemblyAccepted": false,
+  "physicalPrototypeQualified": false
+}
