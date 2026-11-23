@@ -37,3 +37,16 @@ scope, input/output observations, and negative control are recorded. A digital
 firmware test does not require an unrelated analog run. Neither is a full-board
 pass. A whole-board PASS requires an explicit declaration of which proof axes
 apply, complete net/pin/model coverage, and its own positive and negative controls.
+
+## Arcade Invader: independent source connectivity baseline (2026-11-23)
+
+The [pinned HeyPCB Arcade Invader PCB](https://github.com/HeyPCB/led-art/blob/b0830dcfa3f71c409e9784fa784b9c6864a6ff12/boards/arcade-invader/kicad/art_arcade_invader.kicad_pcb) is a separate board from the seven-design sample above. Its [source topology record](arcade-invader-source-topology.json) was computed from the original 1,070,319-byte PCB after checking its Git blob SHA. It contains **54 footprints, 192 physical pads, 190 pads with nets, 2 pads without nets, and 48 distinct pad nets**. Changing one source pad net name without changing the pad count changes the topology digest. This gives a later importer replay an independent connectivity oracle.
+
+The [published import case](https://labwired.com/kicad-pcb-simulation/#arcade-invader-import) records 51 mapped, 2 dropped and 1 ignored footprint, matching the source footprint total. This does not establish imported pad/net completeness. The CH32V003F4P6 and MODE switch remain gaps in that recorded import; neither catalog LED mapping nor the source digest proves DOUT propagation, power behavior or original firmware execution. No whole-board pass is recorded.
+
+Recompute the source inventory with the existing topology tool (no source files need to be added to this repository):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/HeyPCB/led-art/b0830dcfa3f71c409e9784fa784b9c6864a6ff12/boards/arcade-invader/kicad/art_arcade_invader.kicad_pcb -o /tmp/arcade-invader.kicad_pcb
+PYTHONPATH=scripts python3 -c 'from heypcb_topology import source_topology; from pathlib import Path; print(source_topology(Path("/tmp/arcade-invader.kicad_pcb").read_bytes()))'
+```
