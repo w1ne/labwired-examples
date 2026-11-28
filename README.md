@@ -26,7 +26,7 @@ This repository is for runnable hardware verification stories, **not concept art
 
 Open an example directory. The export-backed packs contain the saved LabWired firmware, circuit, stimuli, and requirements in `project.input.json`, plus revision-pinned evidence in `evidence.json`. They link to existing saved projects. Some require separate linked PCB/CAD assets or further integration. An import does **not** imply the original evidence transfers to the new project. The quadrotor and other engineering demos additionally include native sources and recorded tools.
 
-For an introduction to firmware-aware circuit simulation, use the [LabWired circuit simulator guide](https://labwired.com/circuit-simulator/). It links to a GPIO-to-RC oscilloscope demonstration and explains the different browser linear-circuit and native ngspice capabilities. The quadrotor example above is a separate motor-control verification.
+For an introduction to firmware-aware circuit simulation, use the [LabWired circuit simulator guide](https://labwired.com/circuit-simulator/). It links to a GPIO-to-RC oscilloscope demonstration and explains the different browser linear-circuit and native ngspice capabilities. The quadrotor example above is a separate motor-control verification. For imported circuits, see the [KiCad PCB simulation guide](https://labwired.com/kicad-pcb-simulation/) and the [ESP32-S3 BME280 source-net case](https://labwired.com/kicad-pcb-simulation/#bme280-i2c-address). Import is not whole-board simulation.
 
 ## Contribution standard
 

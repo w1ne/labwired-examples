@@ -50,3 +50,9 @@ Recompute the source inventory with the existing topology tool (no source files 
 curl -fsSL https://raw.githubusercontent.com/HeyPCB/led-art/b0830dcfa3f71c409e9784fa784b9c6864a6ff12/boards/arcade-invader/kicad/art_arcade_invader.kicad_pcb -o /tmp/arcade-invader.kicad_pcb
 PYTHONPATH=scripts python3 -c 'from heypcb_topology import source_topology; from pathlib import Path; print(source_topology(Path("/tmp/arcade-invader.kicad_pcb").read_bytes()))'
 ```
+
+## ESP32-S3 sensor source evidence (2026-11-28)
+
+The [BME280 source-net case](https://labwired.com/kicad-pcb-simulation/#bme280-i2c-address) records 12/12 pinned source pad/net checks, two rejected static wiring mutations, and a production import with 23 mapped, zero dropped and one ignored footprint. The [machine-readable audit](https://labwired.com/assets/labs/heypcb-bme280-source-net-audit-20261128.json) separates the test firmware runtime reported by its author from independent production import evidence. Pinned-engine runtime reproduction and full electrical verification remain open.
+
+The separate [VL53L1X source topology record](vl53l1x-source-topology.json) checks the original immutable PCB blob and provides an independent pad/net digest. A net-name mutation changes the digest without changing the pad count. This is source-side evidence for a later import comparison, not a simulator or whole-board pass.
